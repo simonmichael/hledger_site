@@ -6,3 +6,4 @@ irc: http://irc.hledger.org
 
 more:
 http://plaintextaccounting.org
+[ledger's wiki](https://github.com/ledger/ledger/wiki)
