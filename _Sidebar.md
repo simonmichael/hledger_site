@@ -2,9 +2,9 @@ wiki: [[Home]]
 
 site: http://hledger.org  
 docs: http://hledger.org/docs  
+dev: [links](http://hledger.org/contributing.html#links)  
 mail: http://list.hledger.org  
 irc: http://irc.hledger.org  
-[dev links](http://hledger.org/contributing.html#links)  
 
 more:
 http://plaintextaccounting.org
