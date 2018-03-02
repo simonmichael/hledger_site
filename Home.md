@@ -1,3 +1,12 @@
 Welcome to the hledger wiki!
 
-Extra notes and discussion complementing the main docs at http://hledger.org/docs.html. Some things might be easier to note here, outside the main repo and with no pull request needed. Content developed here can move to the main docs later if appropriate.
+This complements the main hledger docs at http://hledger.org/docs.html. 
+Some ways to use it:
+
+- capture quick notes, when you don't want to figure out where it belongs in the main docs, submit a pull request, etc.
+
+- draft new docs here and maybe move to the main website later
+
+- create pages annotating/discussion specific sections of the main docs (eg [[Queries]])
+
+You can edit through the web, or clone and edit locally; a github account is required.
