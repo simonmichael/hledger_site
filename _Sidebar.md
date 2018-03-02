@@ -2,7 +2,7 @@ wiki: [[Home]]
 
 site: [hledger.org](http://hledger.org)  
 docs: [hledger.org/docs](http://hledger.org/docs)  
-manual: [hledger.org/docs](http://hledger.org/manual)  
+manual: [hledger.org/manual](http://hledger.org/manual)  
 dev: [links](http://hledger.org/contributing.html#links)  
 
 issues: [issues.hledger.org](issues.hledger.org)  
