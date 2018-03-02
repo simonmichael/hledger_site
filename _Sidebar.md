@@ -1,4 +1,4 @@
-wiki home: [[Home]]  
+wiki: [[Home]]  
 website: http://hledger.org  
 docs: http://hledger.org/docs  
 mail: http://list.hledger.org  
