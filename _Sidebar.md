@@ -8,6 +8,6 @@ issues: [issues.hledger.org](issues.hledger.org)
 mail: [list.hledger.org](http://list.hledger.org)  
 irc: [irc.hledger.org](http://irc.hledger.org)  
 
-more:
+more:  
 [plaintextaccounting.org](http://plaintextaccounting.org)  
 [ledger's wiki](https://github.com/ledger/ledger/wiki)  
