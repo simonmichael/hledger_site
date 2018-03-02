@@ -8,5 +8,7 @@ Some ways to use it:
 
 - draft new docs here and maybe move to the main website later
 
+- move docs that don't fit on the website back here
+
 - create pages annotating/discussion specific sections of the main docs (eg [[Queries]])
 
