@@ -9,5 +9,5 @@ mail: [list.hledger.org](http://list.hledger.org)
 irc: [irc.hledger.org](http://irc.hledger.org)  
 
 more:
-http://plaintextaccounting.org
-[ledger's wiki](https://github.com/ledger/ledger/wiki)
+[plaintextaccounting.org](http://plaintextaccounting.org)  
+[ledger's wiki](https://github.com/ledger/ledger/wiki)  
