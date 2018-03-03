@@ -5,5 +5,9 @@ I find tracking expenses using a mobile device convenient. One of the challenges
 
 0. [XpenseTracker, BizXpenseTracker](http://www.silverwaresoftware.com/XpenseTracker.html) (iOS)
    * comprehensive and serviceable money & time tracking apps.
-[CSV rules](https://github.com/simonmichael/hledger/blob/master/examples/csv/xpensetracker.csv.rules).
+[CSV rules](https://github.com/simonmichael/hledger/blob/master/examples/csv/xpensetracker.csv.rules),
 [Makefile](https://gist.github.com/simonmichael/06eed26bcc85c76d1604373418bc6c58)
+
+0. [Eternity](http://www.komorian.com/eternity.html) (iOS)
+   * excellent time tracking app.
+[CSV rules](https://github.com/simonmichael/hledger/blob/master/examples/csv/eternity.csv.rules)
