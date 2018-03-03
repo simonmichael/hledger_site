@@ -205,21 +205,9 @@ $ hledger -f Halloween3.hledger register tag:quality=OK
 The above would output something like the following:
  
 ```
-2016/10/31
-Smiths
-Income:Treat
--1 candy
--1 candy
-2016/10/31
-Ms. Miller
-Income:Treat
--1 candy
--2 candy
-2016/10/31
-Mr. Freeman
-Income:Treat
--3 candy
--5 candy
+2016/10/31 Smiths         Income:Treat     -1 candy     -1 candy
+2016/10/31 Ms. Miller     Income:Treat     -1 candy     -2 candy
+2016/10/31 Mr. Freeman    Income:Treat     -3 candy     -5 candy
 ```
  
 On the other hand, if we wanted to list only the treats that were rated as excellent, we could use the command:
@@ -231,11 +219,7 @@ $ hledger -f Halloween3.hledger register tag:quality=excellent
 The above command, lists the following:
  
 ```
-2016/10/31
-Reids
-Income:Treat
--1 candy
--1 candy
+2016/10/31 Reids          Income:Treat     -1 candy     -1 candy
 ```
  
 ## Watch Out for the Spaces
@@ -366,7 +350,7 @@ hledger -f TagsPart3.hledger balance Expenses --pivot trip
  
 Then we get:
 ```
-$15.43  Albany-2014a
+              $15.43  Albany-2014a
               $16.43  Albany-2014b
               $17.43  Austin-2016a
               $14.43  Boise-2013a
