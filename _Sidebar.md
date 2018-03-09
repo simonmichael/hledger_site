@@ -4,8 +4,8 @@
 [issues](issues.hledger.org)  
 [mail list](http://list.hledger.org)   
 [irc](http://irc.hledger.org)  
-[contributors guide](http://hledger.org/contributing.html)  
-[dev links](http://hledger.org/contributing.html#links)  
+[contributors guide](http://hledger.org/contributing)  
+[dev links](http://hledger.org/contributing#links)  
 
 ---
 
@@ -13,42 +13,42 @@
 
 ### Getting started
 
-[hledger Step by Step](step-by-step.html) tutorial  
-[Frequently Asked Questions](faq.html)  
+[hledger Step by Step](step-by-step) tutorial  
+[Frequently Asked Questions](faq)  
 
 ### Journal management
 
-[Start a journal](start-journal.html)  
-[Track changes with version control](version-control.html)  
+[Start a journal](start-journal)  
+[Track changes with version control](version-control)  
 
 ### Account names
 
 [PTA: choosing accounts](http://plaintextaccounting.org/#choosing-accounts)  
-[Rewrite account names](account-aliases.html)  
-[Use another account separator character](account-separator.html)  
+[Rewrite account names](account-aliases)  
+[Use another account separator character](account-separator)  
 
 ### Journal entries
 
-[Basic journal entries](entries.html)  
-[Project accounting](project-accounting.html)  
+[Basic journal entries](entries)  
+[Project accounting](project-accounting)  
 
 ### Data entry/import
 
-[Convert CSV files](csv-import.html)  
+[Convert CSV files](csv-import)  
 
 ### Budgeting/forecasting
 
-[Budgeting and forecasting](budgeting-and-forecasting.html)  
+[Budgeting and forecasting](budgeting-and-forecasting)  
 
 ### Investing
 
-[Track investments](investments.html)  
+[Track investments](investments)  
 
 ### More..
 
-[Save frequently used options](argfiles.html)  
+[Save frequently used options](argfiles)  
 [PTA: Common tasks](http://plaintextaccounting.org/#common-tasks)  
-[More docs](more-docs.html)  
+[More docs](more-docs)  
 
 [plaintextaccounting.org](http://plaintextaccounting.org)  
 [ledger's wiki](https://github.com/ledger/ledger/wiki)  
