@@ -1,6 +1,6 @@
 
 Most of this has been contributed to the new **[plaintextaccounting.org](http://plaintextaccounting.org)** site,
-but not yet eg the [accounting](#accounting) links.
+but not yet all, eg the [accounting](#accounting) links.
 
 ## Blog posts & articles
 
