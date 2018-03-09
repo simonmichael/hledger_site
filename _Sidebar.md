@@ -38,11 +38,11 @@
 
 ### Investing
 
-[[Track investments|investments]]  
+[[Track investments]]  
 
 ### More..
 
-[Save frequently used options](argfiles)  
+[[Save frequently used options]]  
 [More docs](more-docs)  
 
 [plaintextaccounting.org](http://plaintextaccounting.org)  
