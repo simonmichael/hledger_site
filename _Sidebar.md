@@ -12,6 +12,7 @@
 ### Getting started
 
 [[hledger basics tutorial]]  
+[[hledger accounting concepts tutorial]]  
 [[hledger tags tutorial]]  
 [[Addons]]  
 [[Mobile apps]]  
