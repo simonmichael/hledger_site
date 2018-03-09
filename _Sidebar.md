@@ -20,7 +20,6 @@
 
 ### Account names
 
-[PTA: choosing accounts](http://plaintextaccounting.org/#choosing-accounts)  
 [Rewrite account names](account-aliases)  
 [Use another account separator character](account-separator)  
 
@@ -44,7 +43,6 @@
 ### More..
 
 [Save frequently used options](argfiles)  
-[PTA: Common tasks](http://plaintextaccounting.org/#common-tasks)  
 [More docs](more-docs)  
 
 [plaintextaccounting.org](http://plaintextaccounting.org)  
