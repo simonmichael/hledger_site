@@ -13,29 +13,28 @@
 
 [[hledger basics tutorial]]  
 [[hledger accounting concepts tutorial]]  
-[[hledger tags tutorial]]  
-[[Addons]]  
-[[Mobile apps]]  
-[[FAQ]]
-
-### Journal management
-
 [[Start a journal]]  
-[[Track changes with version control]]  
+[[Common journal entries]]  
+[[FAQ]]
 
 ### Account names
 
 [[Rewrite account names]]  
 [[Use another account separator character]]  
 
-### Journal entries
-
-[[Common journal entries]]  
-[[Project accounting]]  
-
-### Data entry/import
+### Data entry/import/management
 
 [[Convert CSV files]]  
+[[Track changes with version control]]  
+
+### Journal entries
+
+[[Project accounting]]  
+
+### Reporting
+
+[[hledger tags tutorial]]  
+[[Queries]]  
 
 ### Budgeting/forecasting
 
@@ -47,7 +46,8 @@
 
 ### Usage tips
 
-[[Queries]]  
+[[Addons]]  
+[[Mobile apps]]  
 [[Save frequently used options]]  
 
 ### More..
