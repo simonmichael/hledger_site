@@ -35,9 +35,7 @@
 ### Accounting tasks
 
 [[Budgeting and forecasting]]  
-
 [[Project accounting]]  
-
 [[Track investments]]  
 
 ### Usage tips
