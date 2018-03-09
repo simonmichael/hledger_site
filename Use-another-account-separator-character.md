@@ -1,5 +1,3 @@
-# Use another account separator character
-
 [Timedot format](manual.html#timedot) makes me want to use dots (`.`) for separating account components, instead of colon (`:`). 
 For example, instead of `fos:hledger:timedot` I'd like to write `fos.hledger.timedot`.
 We can use the powerful [account aliases](manual.html#account-aliases) feature 
