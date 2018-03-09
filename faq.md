@@ -1,11 +1,3 @@
-<style>
-#toc > ol > li > a { display:none; }
-#toc > ol > li > ol > li { padding-left:0; }
-</style>
-* toc
-
-# Frequently asked questions
-
 ## hledger & Ledger
 
 ### History
