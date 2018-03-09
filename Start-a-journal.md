@@ -42,11 +42,11 @@ hledger add -f 2017.journal`
 ```
 
 To avoid typing `-f FILE` every time, set the 
-[`LEDGER_FILE` environment variable](/hledger.html#input-files). Eg:
+[`LEDGER_FILE` environment variable](/hledger.html#input-files). 
+The remaining examples assume you have done this. Eg:
 ```shell
-`echo "export LEDGER_FILE=~/finance/2017.journal" >> ~/.bash_profile && source ~/.bash_profile`
+echo "export LEDGER_FILE=~/finance/2017.journal" >> ~/.bash_profile && source ~/.bash_profile
 ```
-The remaining examples assume you have done this. 
 
 ## with hledger-iadd
 
