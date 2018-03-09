@@ -3,7 +3,7 @@ by practicing, in small hands-on steps. You'll need:
 
 1. A little familiarity with
    the [command](http://tutorial.djangogirls.org/en/intro_to_command_line/index.html)
-   [line](https://en.flossmanuals.net/command-line/).
+   [line](http://write.flossmanuals.net/command-line/introduction).
    Or, the ability to ask for help on the IRC channel.
 
 2. hledger. [Download](http://hledger.org/download.html) and install it if you haven't already.
