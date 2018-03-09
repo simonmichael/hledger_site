@@ -12,13 +12,13 @@
 ### Getting started
 
 [[hledger basics tutorial]]  
-[[hledger accounting concepts tutorial]]  
 [[Start a journal]]  
 [[Common journal entries]]  
 [[FAQ]]
 
 ### Account names
 
+[[hledger accounting concepts tutorial]]  
 [[Rewrite account names]]  
 [[Use another account separator character]]  
 
