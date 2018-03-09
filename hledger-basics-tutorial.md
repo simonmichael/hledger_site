@@ -1,11 +1,3 @@
-<style>
-#toc > ol > li > a { display:none; }
-#toc > ol > li > ol > li { padding-left:0; }
-</style>
-* toc
-
-# hledger Step by Step
-
 Here you can learn hledger (and a little double-entry bookkeeping)
 by practicing, one hands-on exercise at a time. You'll need:
 
