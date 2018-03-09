@@ -1,5 +1,5 @@
 Here you can learn hledger (and a little double-entry bookkeeping)
-by practicing, one hands-on exercise at a time. You'll need:
+by practicing, in small hands-on steps. You'll need:
 
 1. A little familiarity with
    the [command](http://tutorial.djangogirls.org/en/intro_to_command_line/index.html)
@@ -8,7 +8,7 @@ by practicing, one hands-on exercise at a time. You'll need:
 
 2. hledger. [Download](download.html) and install it if you haven't already.
 
-You'll learn the most if you master each small step, in order.  Most
+You'll learn the most if you master each step, in order.  Most
 steps give you a task with a clear goal; if not, your task is to run
 the examples and understand them.
 
