@@ -1,5 +1,3 @@
-# Budgeting and forecasting
-
 Budgeting and forecasting allows you to keep better track of your expenses and future financial situation.
 If you write down your expectations of what your income/expenses/investment yields/etc should be, you can use them to:
 - check how far off are your expectations from reality (budgeting)
