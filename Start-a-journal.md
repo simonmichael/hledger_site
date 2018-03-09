@@ -1,5 +1,3 @@
-# Start a journal
-
 ## by hand
 
 (power users)
