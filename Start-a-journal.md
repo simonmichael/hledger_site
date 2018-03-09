@@ -1,3 +1,5 @@
+There are lots of ways to start a journal file:
+
 ## by hand
 
 (power users)
