@@ -15,5 +15,5 @@ Some ways to use the wiki:
 More wiki help:
 - https://help.github.com/categories/wiki
 - wiki links: `[[WikiPage]]` or `[[Link Text|WikiPage]]`, WikiPage is case insensitive
-- use [[_Sidebar]] to organize pages. This will be mirrored on the docs page later.
+- edit _Sidebar to organize pages. This will be mirrored on the docs page later.
 
