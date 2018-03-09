@@ -1,10 +1,3 @@
-<style>
-#toc > ol > li > a { display:none; }
-#toc > ol > li > ol > li { padding-left:0; }
-</style>
-* toc
-
-# More docs...
 
 Most of this has been contributed to the new **[plaintextaccounting.org](http://plaintextaccounting.org)** site,
 but not yet eg the [accounting](#accounting) links.
