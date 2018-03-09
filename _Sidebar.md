@@ -11,6 +11,8 @@
 ### Getting started
 
 [[hledger basics tutorial]]  
+[[hledger tags tutorial]]  
+[[Addons]]  
 [[FAQ]]
 
 ### Journal management
@@ -42,6 +44,7 @@
 
 ### Usage tips
 
+[[Queries]]  
 [[Save frequently used options]]  
 
 ### More..
