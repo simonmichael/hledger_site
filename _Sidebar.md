@@ -1,4 +1,4 @@
-[hledger.org](http://hledger.org)  
+[hledger.org website](http://hledger.org)  
 [docs](http://hledger.org/docs)  
 [manual](http://hledger.org/manual)  
 [issues](issues.hledger.org)  
@@ -7,7 +7,7 @@
 [contributors guide](http://hledger.org/contributing)  
 [dev links](http://hledger.org/contributing#links)  
 
-[wiki](Home)  
+[hledger wiki](Home)  
 
 ### Getting started
 
