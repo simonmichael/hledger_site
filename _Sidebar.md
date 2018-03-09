@@ -10,7 +10,7 @@
 
 ### Getting started
 
-[hledger Step by Step](step-by-step) tutorial  
+[[hledger basics tutorial]]  
 [[Frequently Asked Questions|FAQ]]
 
 ### Journal management
