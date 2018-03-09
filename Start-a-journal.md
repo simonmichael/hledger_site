@@ -30,7 +30,9 @@ perhaps with one extra subcategory as above.
 
 ## with a text editor
 
-Write transactions in a [text editor](/journal.html#editor-support) and save the file.
+Write transactions in a [text editor](/journal.html#editor-support),
+optionally using an [editor mode](http://hledger.org/manual.html#editor-support),
+and save the file.
 
 ## with hledger add
 
