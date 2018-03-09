@@ -8,7 +8,7 @@ Some ways to use the wiki:
 
 - capture quick notes, without needing a pull request
 
-- draft new docs
+- draft new docs, especially cookbook-style how-tos complementing the main reference docs
 
 - create pages to annotate/discuss specific sections of the main docs (eg [[Queries]])
 
