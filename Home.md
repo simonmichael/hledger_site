@@ -14,6 +14,6 @@ Some ways to use it:
 
 Wiki help:
 - https://help.github.com/categories/wiki
-- wiki links: [[WikiPage]] or [[Link Text|WikiPage]], WikiPage is case insensitive
+- wiki links: `[[WikiPage]]` or `[[Link Text|WikiPage]]`, WikiPage is case insensitive
 
 
