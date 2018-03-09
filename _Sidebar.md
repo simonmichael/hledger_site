@@ -14,23 +14,20 @@
 [[hledger basics tutorial]]  
 [[Start a journal]]  
 [[Common journal entries]]  
-[[FAQ]]
-
-### Account names
-
 [[hledger accounting concepts tutorial]]  
-[[Rewrite account names]]  
-[[Use another account separator character]]  
+[[FAQ]]
 
 ### Data entry, import, management
 
 [[Convert CSV files]]  
 [[Track changes with version control]]  
+[[Use another account separator character]]  
 
 ### Reporting
 
 [[hledger tags tutorial]]  
 [[Queries]]  
+[[Rewrite account names]]  
 
 ### Accounting tasks
 
