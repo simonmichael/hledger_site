@@ -1,5 +1,3 @@
-*Robert Nielsen, 2018*
-
 Don’t be scared away from using tags in your hledger accounting this Halloween, or any other time for that matter. This is a tutorial on using tags with hledger, so if the idea of using tags has been haunting you, but you are not really sure how to use them, read on.
 Let’s start with a file showing someone’s Halloween hledger accounting:
  
