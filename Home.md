@@ -15,4 +15,4 @@ Some ways to use the wiki:
 More wiki help:
 - https://help.github.com/categories/wiki
 - wiki links: `[[WikiPage]]` or `[[Link Text|WikiPage]]`. WikiPage is case insensitive
-- [edit _Sidebar](_Sidebar/_edit) to organize pages
+- use the [_Sidebar](_Sidebar/_edit) to organize pages. This will be mirrored to the docs page at some point.
