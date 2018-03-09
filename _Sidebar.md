@@ -1,7 +1,7 @@
 [hledger.org website](http://hledger.org)  
 [docs](http://hledger.org/docs)  
 [manual](http://hledger.org/manual)  
-[issues](issues.hledger.org)  
+[issues](http://issues.hledger.org)  
 [mail list](http://list.hledger.org)   
 [irc](http://irc.hledger.org)  
 [contributors guide](http://hledger.org/contributing)  
