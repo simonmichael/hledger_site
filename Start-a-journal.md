@@ -1,8 +1,6 @@
 There are lots of ways to start a journal file:
 
-## with cat
-
-(power users)
+## with echo
 
 The simplest possible journal is just an empty file:\
 `echo >2017.journal`
@@ -11,7 +9,8 @@ The name doesn't matter much and can be changed later.
 One file per year is common, 
 and so is a `.journal` or `.hledger` extension.
 
-Record a transaction, using [journal format](/journal.html):
+## with cat
+
 ```shell
 $ cat >>2017.journal
 2017/1/26
