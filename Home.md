@@ -6,13 +6,11 @@ Or by git clone-ing this wiki, edit locally, git push (requires repo collaborato
 
 Some ways to use the wiki:
 
-- capture quick notes, when you don't want to figure out where it belongs in the main docs, submit a pull request, etc.
+- capture quick notes, without needing a pull request
 
-- draft new docs here and maybe move to the main website later
+- draft new docs
 
-- move docs that don't fit on the website back here
-
-- create pages annotating/discussion specific sections of the main docs (eg [[Queries]])
+- create pages to annotate/discuss specific sections of the main docs (eg [[Queries]])
 
 More wiki help:
 - https://help.github.com/categories/wiki
