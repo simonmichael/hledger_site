@@ -36,9 +36,10 @@ and save the file.
 
 ## with hledger add
 
-Use the [add](/hledger.html#add) command:\
-`hledger add -f 2017.journal`\
-enter one or more transactions
+Use the interactive [add](/hledger.html#add) command to enter one or more transactions:
+```shell
+hledger add -f 2017.journal`
+```
 
 To avoid typing `-f FILE` every time, set the 
 [`LEDGER_FILE` environment variable](/hledger.html#input-files). Eg:
