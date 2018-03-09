@@ -1,5 +1,3 @@
-# Track changes with version control
-
 You don't need to do this, but it's a nice way to keep track of changes to your data.  
 
 ## git
