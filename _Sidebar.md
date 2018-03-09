@@ -6,7 +6,7 @@
 [twitter](https://twitter.com/search?q=%23hledger&src=typd&f=realtime) -
 [issues](http://issues.hledger.org) - 
 [Contributor guide](http://hledger.org/contributing) - 
-[dev links](http://hledger.org/contributing#links) 
+[Dev links](http://hledger.org/contributing#links) 
 
 ### Getting started
 
@@ -48,4 +48,4 @@
 [More docs](more-docs)  
 
 [plaintextaccounting.org](http://plaintextaccounting.org)  
-[ledger's wiki](https://github.com/ledger/ledger/wiki)  
+[Ledger's wiki](https://github.com/ledger/ledger/wiki)  
