@@ -1,13 +1,12 @@
-[hledger.org website](http://hledger.org)  
+[hledger.org](http://hledger.org)  
 [docs](http://hledger.org/docs)  
+[wiki](Home)  
 [manual](http://hledger.org/manual)  
 [issues](http://issues.hledger.org)  
 [mail list](http://list.hledger.org)   
 [irc](http://irc.hledger.org)  
 [Contributor guide](http://hledger.org/contributing)  
 [dev links](http://hledger.org/contributing#links)  
-
-[hledger wiki](Home)  
 
 ### Getting started
 
