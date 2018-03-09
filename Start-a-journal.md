@@ -1,6 +1,6 @@
 There are lots of ways to start a journal file:
 
-## by hand
+## with cat
 
 (power users)
 
@@ -27,35 +27,33 @@ start with these five:\
 `expenses`, `income`, `assets`, `liabilities`, and `equity`,\
 perhaps with one extra subcategory as above.
 
-## by text editor
+## with a text editor
 
 Write transactions in a [text editor](/journal.html#editor-support) and save the file.
 
-## by add
+## with hledger add
 
 Use the [add](/hledger.html#add) command:\
 `hledger add -f 2017.journal`\
 enter one or more transactions
 
-## set `LEDGER_FILE`
-
 To avoid typing `-f FILE` every time, set the 
-[`LEDGER_FILE` environment variable](/hledger.html#input-files). Eg:\
+[`LEDGER_FILE` environment variable](/hledger.html#input-files). Eg:
+```shell
 `echo "export LEDGER_FILE=~/finance/2017.journal" >> ~/.bash_profile && source ~/.bash_profile`
+```
+The remaining examples assume you have done this. 
 
-Most examples here assume you have done this. 
-
-## by hledger-iadd
+## with hledger-iadd
 
 ensure $LEDGER_FILE exists\
 `hledger iadd`\
 enter one or more transactions
 
-## by hledger-web
+## with hledger-web
 
 ensure $LEDGER_FILE exists\
 `hledger web`\
 wait for web browser to open\
 click "add transaction" or press "a"\
 enter a transaction, click ok or press enter
-
