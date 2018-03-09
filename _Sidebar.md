@@ -50,11 +50,12 @@
 ### More..
 
 [[More docs]]  
+
 [plaintextaccounting.org](http://plaintextaccounting.org) -
 [ledger-likes](http://plaintextaccounting.org/#ledger-likes) -
 [tools](http://plaintextaccounting.org/#related-tools) -
 [docs](http://plaintextaccounting.org/#docs) -
-[common tasks](http://plaintextaccounting.org/#docs) -
-[discussion](http://plaintextaccounting.org/#docs) -
+[common tasks](http://plaintextaccounting.org/#common-tasks) -
+[discussion](http://plaintextaccounting.org/#discussion) -
   
 [Ledger's wiki](https://github.com/ledger/ledger/wiki)  
