@@ -22,7 +22,7 @@
 [[Rewrite account names]]  
 [[Use another account separator character]]  
 
-### Data entry/import/management
+### Data entry, import, management
 
 [[Convert CSV files]]  
 [[Track changes with version control]]  
