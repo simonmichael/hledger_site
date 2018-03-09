@@ -4,7 +4,7 @@
 [issues](http://issues.hledger.org)  
 [mail list](http://list.hledger.org)   
 [irc](http://irc.hledger.org)  
-[contributors guide](http://hledger.org/contributing)  
+[Contributor guide](http://hledger.org/contributing)  
 [dev links](http://hledger.org/contributing#links)  
 
 [hledger wiki](Home)  
