@@ -56,8 +56,8 @@
 [tools](http://plaintextaccounting.org/#related-tools) -
 [docs](http://plaintextaccounting.org/#docs) -
 [common&nbsp;tasks](http://plaintextaccounting.org/#common-tasks) -
-[discussion](http://plaintextaccounting.org/#discussion) -
-  
+[discussion](http://plaintextaccounting.org/#discussion)  
+
 [reddit: plaintextaccounting](https://www.reddit.com/r/plaintextaccounting)  
 
 [Ledger's wiki](https://github.com/ledger/ledger/wiki)  
