@@ -1,4 +1,4 @@
-Here's an example of using [account aliases](manual.html#account-aliases).
+Here's an example of using [account aliases](http://hledger.org/manual.html#account-aliases).
 
 Say a sole proprietor has a `personal.journal`:
 ```journal

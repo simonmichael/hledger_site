@@ -111,8 +111,8 @@ and [periodic transactions](http://ledger-cli.org/3.0/doc/ledger3.html#Periodic-
 Some features are not currently parsed and will cause an error, eg
 Ledger's more recent top-level directives. There can also be subtle
 differences in parser behaviour, such as with
-[hledger comments](manual.html#comments) vs [Ledger comments](http://ledger-cli.org/3.0/doc/ledger3.html#Commenting-on-your-Journal),
-or [balance assertions](manual.html#assertions-and-ordering).
+[hledger comments](http://hledger.org/manual.html#comments) vs [Ledger comments](http://ledger-cli.org/3.0/doc/ledger3.html#Commenting-on-your-Journal),
+or [balance assertions](http://hledger.org/manual.html#assertions-and-ordering).
 
 ### Functional differences
 
@@ -148,10 +148,10 @@ or [balance assertions](manual.html#assertions-and-ordering).
   seen. Ledger uses D only for commodity display settings and for the
   entry command.
 
-- hledger's [include directive](manual.html#including-other-files) does not support
+- hledger's [include directive](http://hledger.org/manual.html#including-other-files) does not support
   shell glob patterns (eg `include *.journal` ), as Ledger's does.
 
-- when checking [balance assertions](manual.html#balance-assertions)
+- when checking [balance assertions](http://hledger.org/manual.html#balance-assertions)
   hledger sorts the account's postings first by date and then (for
   postings with the same date) by parse order. Ledger checks assertions 
   in parse order, ignoring dates.
@@ -181,7 +181,7 @@ or [balance assertions](manual.html#assertions-and-ordering).
 
 - hledger's journal and timeclock formats are separate; you can't use 
   [both syntaxes in the same file](https://www.reddit.com/r/plaintextaccounting/comments/7buf8q/how_to_balance_working_hours/dpligsd/)
-  unlike Ledger. ([Include](journal.html#including-other-files) a separate timeclock file instead.) 
+  unlike Ledger. ([Include](http://hledger.org/manual.html#including-other-files) a separate timeclock file instead.) 
   
 ### Future ?
 
@@ -252,7 +252,7 @@ $ hledger -f t.j register --width 50
                               USD -1             0  ;
 ```
 
-Newer reports like [multi-column balance reports](manual.html#multicolumn-balance-reports) show multi-commodity amounts on one line instead, comma-separated.
+Newer reports like [multi-column balance reports](http://hledger.org/manual.html#multicolumn-balance-reports) show multi-commodity amounts on one line instead, comma-separated.
 Although wider, this seems clearer and we should probably use it more:
 ```shell
 $ hledger -f t.j balance --yearly
@@ -266,7 +266,7 @@ Balance changes in 2015:
    ||              0 
 ```
 
-You will also see amounts without a corresponding account name if you remove too many account name segments with [`--drop`](manual.html#balance):
+You will also see amounts without a corresponding account name if you remove too many account name segments with [`--drop`](http://hledger.org/manual.html#balance):
 ```shell
 $ hledger -f t.j balance --drop 1
                EUR 1  

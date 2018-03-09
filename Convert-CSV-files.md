@@ -7,7 +7,7 @@ Say we have downloaded `checking.csv` from a bank for the first time:
 "2012/3/23","TRANSFER TO SAVINGS","-10.00"
 ```
 
-We tell hledger how to intepret this with a file named `checking.csv.rules`, using the [CSV rules syntax](manual.html#csv-format). Eg:
+We tell hledger how to intepret this with a file named `checking.csv.rules`, using the [CSV rules syntax](http://hledger.org/manual.html#csv-format). Eg:
 ```rules
 # skip the first CSV line (headings)
 skip 1
