@@ -15,26 +15,26 @@
 
 ### Journal management
 
-[Start a journal](start-journal)  
-[Track changes with version control](version-control)  
+[[Start a journal]]  
+[[Track changes with version control]]  
 
 ### Account names
 
-[Rewrite account names](account-aliases)  
-[Use another account separator character](account-separator)  
+[[Rewrite account names]]  
+[[Use another account separator character]]  
 
 ### Journal entries
 
-[Basic journal entries](entries)  
-[Project accounting](project-accounting)  
+[[Basic journal entries]]  
+[[Project accounting]]  
 
 ### Data entry/import
 
-[Convert CSV files](csv-import)  
+[[Convert CSV files]]  
 
 ### Budgeting/forecasting
 
-[Budgeting and forecasting](budgeting-and-forecasting)  
+[[Budgeting and forecasting]]  
 
 ### Investing
 
@@ -43,7 +43,7 @@
 ### More..
 
 [[Save frequently used options]]  
-[More docs](more-docs)  
+[More docs]]  
 
 [plaintextaccounting.org](http://plaintextaccounting.org)  
 [Ledger's wiki](https://github.com/ledger/ledger/wiki)  
