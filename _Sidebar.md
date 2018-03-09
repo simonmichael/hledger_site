@@ -40,9 +40,12 @@
 
 [[Track investments]]  
 
-### More..
+### Usage tips
 
 [[Save frequently used options]]  
+
+### More..
+
 [[More docs]]  
 
 [plaintextaccounting.org](http://plaintextaccounting.org)  
