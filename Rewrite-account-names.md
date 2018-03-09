@@ -46,4 +46,4 @@ your accountant:
 $ hledger --alias 'my earning=income:business' ...
 ```
 
-See also [How to use another account separator character](how-to-use-another-account-separator-character.html).
+See also [[Use another account separator character]].

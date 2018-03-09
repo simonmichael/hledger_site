@@ -99,7 +99,7 @@ See also the two Twitter feeds:
 
 ## Similar projects
 
-In addition to hledger and Ledger, there are other [Ledger ports](ledgerwiki>Ports) and Ledger-likes, incompatible but similar in concept:
+In addition to hledger and Ledger, there are other [Ledger ports](https://github.com/ledger/ledger/wiki/Ports) and [Ledger-likes](http://plaintextaccounting.org#ledger-likes), incompatible but similar in concept:
 
 - Martin Blais' [beancount](https://furius.ca/beancount/) (python)
 - Harshad RJ's [Abandon](https://github.com/hrj/abandon) (scala)

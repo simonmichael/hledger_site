@@ -6,14 +6,14 @@ by practicing, in small hands-on steps. You'll need:
    [line](https://en.flossmanuals.net/command-line/).
    Or, the ability to ask for help on the IRC channel.
 
-2. hledger. [Download](download.html) and install it if you haven't already.
+2. hledger. [Download](http://hledger.org/download.html) and install it if you haven't already.
 
 You'll learn the most if you master each step, in order.  Most
 steps give you a task with a clear goal; if not, your task is to run
 the examples and understand them.
 
 If you get stuck, find a problem, or have feedback, please report it on the
-[IRC channel or mail list](contributing.html#quick-links),
+[IRC channel or mail list](http://hledger.org/contributing.html#quick-links),
 or send a pull request for this page.
 
 Let's get started!
@@ -22,7 +22,7 @@ Let's get started!
 
 ### Check your hledger installation
 
-Get a command prompt, and run hledger to check the version. It should be reasonably [up to date](release-notes.html). These exercises were last tested with this version:
+Get a command prompt, and run hledger to check the version. It should be reasonably [up to date](http://hledger.org/release-notes.html). These exercises were last tested with this version:
 
 ```shell
 $ hledger --version

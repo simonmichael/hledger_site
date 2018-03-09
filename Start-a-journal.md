@@ -21,7 +21,7 @@ $ cat >>2017.journal
 <CTRL-D>
 ```
 
-[Account names](/journal.html#account-names) can be anything 
+[Account names](http://hledger.org/manual#account-names) can be anything 
 and you can change them later by search and replace. 
 If you don't know what to [choose](http://plaintextaccounting.org/#choosing-accounts), 
 start with these five:\
@@ -30,19 +30,19 @@ perhaps with one extra subcategory as above.
 
 ## with a text editor
 
-Write transactions in a [text editor](/journal.html#editor-support),
-optionally using an [editor mode](http://hledger.org/manual.html#editor-support),
+Write transactions in a text editor, optionally using an
+[editor mode](http://hledger.org/manual#editor-support), 
 and save the file.
 
 ## with hledger add
 
-Use the interactive [add](/hledger.html#add) command to enter one or more transactions:
+Use the interactive [add](http://hledger.org/manual#add) command to enter one or more transactions:
 ```shell
 hledger add -f 2017.journal`
 ```
 
 To avoid typing `-f FILE` every time, set the 
-[`LEDGER_FILE` environment variable](/hledger.html#input-files). 
+[`LEDGER_FILE` environment variable](http://hledger.org/manual#input-files). 
 The remaining examples assume you have done this. Eg:
 ```shell
 echo "export LEDGER_FILE=~/finance/2017.journal" >> ~/.bash_profile && source ~/.bash_profile

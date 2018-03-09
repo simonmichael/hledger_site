@@ -18,3 +18,4 @@ More wiki help:
 - wiki links: `[[WikiPage]]` or `[[Link Text|WikiPage]]`. WikiPage is case insensitive
 - use the [_Sidebar](_Sidebar/_edit) to organize content. Prefer wiki links if possible
 - after renaming a page, fix up the links to it
+- when linking to manuals, use http://hledger.org/manual#ANCHOR
