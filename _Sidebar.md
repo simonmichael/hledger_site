@@ -27,20 +27,16 @@
 [[Convert CSV files]]  
 [[Track changes with version control]]  
 
-### Journal entries
-
-[[Project accounting]]  
-
 ### Reporting
 
 [[hledger tags tutorial]]  
 [[Queries]]  
 
-### Budgeting/forecasting
+### Accounting tasks
 
 [[Budgeting and forecasting]]  
 
-### Investing
+[[Project accounting]]  
 
 [[Track investments]]  
 
