@@ -1,7 +1,7 @@
 [hledger.org](http://hledger.org) - 
 [docs](http://hledger.org/docs) - 
 [wiki](Home) - 
-[mail list](http://list.hledger.org) - 
+[mail&nbsp;list](http://list.hledger.org) - 
 [irc](http://irc.hledger.org) - 
 [twitter](https://twitter.com/search?q=%23hledger&src=typd&f=realtime) -
 [issues](http://issues.hledger.org) - 
@@ -52,10 +52,10 @@
 [[More docs]]  
 
 [plaintextaccounting.org](http://plaintextaccounting.org) -
-[ledger-likes](http://plaintextaccounting.org/#ledger-likes) -
+[ledger-likes](http://plaintextaccounting.org/#ledger-likes){style=white-space:nowrap;} -
 [tools](http://plaintextaccounting.org/#related-tools) -
 [docs](http://plaintextaccounting.org/#docs) -
-[common tasks](http://plaintextaccounting.org/#common-tasks) -
+[common tasks](http://plaintextaccounting.org/#common-tasks){style=white-space:nowrap;} -
 [discussion](http://plaintextaccounting.org/#discussion) -
   
 [Ledger's wiki](https://github.com/ledger/ledger/wiki)  
