@@ -38,7 +38,7 @@
 
 ### Investing
 
-[Track investments](investments)  
+[[Track investments|investments]]  
 
 ### More..
 
