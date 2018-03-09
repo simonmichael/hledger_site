@@ -25,7 +25,7 @@
 
 ### Journal entries
 
-[[Example journal entries]]  
+[[Common journal entries]]  
 [[Project accounting]]  
 
 ### Data entry/import
