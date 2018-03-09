@@ -7,14 +7,12 @@
 [contributors guide](http://hledger.org/contributing)  
 [dev links](http://hledger.org/contributing#links)  
 
----
-
 [wiki](Home)  
 
 ### Getting started
 
 [hledger Step by Step](step-by-step) tutorial  
-[[Frequently Asked Questions][FAQ]]
+[[Frequently Asked Questions|FAQ]]
 
 ### Journal management
 
