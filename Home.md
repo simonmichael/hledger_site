@@ -1,5 +1,6 @@
 Welcome to the hledger wiki!
 This complements the main documentation at [hledger.org/docs](http://hledger.org/docs.html).
+You can find all content in the sidebar to the right.
 
 You are encouraged to edit and improve any of these pages through the web (requires a github account).
 Or by git clone + local edit + git push (requires repo collaborator access, ask for this if you need it *- right ? please update this note*).
