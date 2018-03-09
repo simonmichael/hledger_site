@@ -2,8 +2,10 @@ There are lots of ways to start a journal file:
 
 ## with echo
 
-The simplest possible journal is just an empty file:\
-`echo >2017.journal`
+The simplest possible journal is just an empty file:
+```shell
+echo >2017.journal
+```
 
 The name doesn't matter much and can be changed later. 
 One file per year is common, 
