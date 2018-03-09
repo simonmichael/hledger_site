@@ -4,7 +4,7 @@ This complements the main documentation at [hledger.org/docs](http://hledger.org
 You are encouraged to edit and update any of these pages through the web (requires a github account).
 Or by git clone-ing this wiki, edit locally, git push (requires repo collaborator access, ask for this if you need it *right ? please update this note*).
 
-Some ways to use it:
+Some ways to use the wiki:
 
 - capture quick notes, when you don't want to figure out where it belongs in the main docs, submit a pull request, etc.
 
