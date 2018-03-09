@@ -14,6 +14,7 @@
 [[hledger basics tutorial]]  
 [[hledger tags tutorial]]  
 [[Addons]]  
+[[Mobile apps]]  
 [[FAQ]]
 
 ### Journal management
