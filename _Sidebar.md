@@ -52,7 +52,7 @@
 [[More docs]]  
 
 [plaintextaccounting.org](http://plaintextaccounting.org) -
-<span style="white-space:nowrap;">[ledger-likes](http://plaintextaccounting.org/#ledger-likes)</span> -
+[ledger&#x2011likes](http://plaintextaccounting.org/#ledger-likes) -
 [tools](http://plaintextaccounting.org/#related-tools) -
 [docs](http://plaintextaccounting.org/#docs) -
 [common&nbsp;tasks](http://plaintextaccounting.org/#common-tasks) -
