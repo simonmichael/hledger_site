@@ -12,5 +12,8 @@ Some ways to use it:
 
 - create pages annotating/discussion specific sections of the main docs (eg [[Queries]])
 
-Help: https://help.github.com/categories/wiki/
+Wiki help:
+- https://help.github.com/categories/wiki
+- wiki links: [[WikiPage]] or [[Link Text|WikiPage]], WikiPage is case insensitive
+
 
