@@ -9,7 +9,7 @@
 [contributor guide](http://hledger.org/contributing) - 
 [dev links](http://hledger.org/contributing#links) 
 
-### Getting started
+# Getting started
 
 [[hledger basics tutorial]]  
 [[Start a journal]]  
@@ -17,7 +17,7 @@
 [[hledger accounting concepts tutorial]]  
 [[FAQ]]
 
-### Data entry, import, management
+## Data entry, import, management
 
 [[Convert CSV files]]  
 [[Track changes with version control]]  
