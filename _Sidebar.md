@@ -14,7 +14,7 @@
 ### Getting started
 
 [hledger Step by Step](step-by-step) tutorial  
-[[Frequently Asked Questions]
+[[Frequently Asked Questions]]
 
 ### Journal management
 
