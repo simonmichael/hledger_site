@@ -43,7 +43,7 @@
 ### More..
 
 [[Save frequently used options]]  
-[More docs]]  
+[[More docs]]  
 
 [plaintextaccounting.org](http://plaintextaccounting.org)  
 [Ledger's wiki](https://github.com/ledger/ledger/wiki)  
