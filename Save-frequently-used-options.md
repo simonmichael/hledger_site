@@ -1,5 +1,3 @@
-# Save frequently used options
-
 You can save frequently used options and arguments in an 
 [argument file](manual#argument-files), one per
 line, then reuse them via a @FILE argument on the command line.
