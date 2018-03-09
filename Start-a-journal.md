@@ -1,10 +1,10 @@
 There are lots of ways to start a journal file:
 
-## with echo
+## with touch
 
 The simplest possible journal is just an empty file:
 ```shell
-echo >2017.journal
+touch 2017.journal
 ```
 
 The name doesn't matter much and can be changed later. 
