@@ -1,6 +1,6 @@
 Example hledger journal entries for various kinds of transaction.
  
-A purchase:
+## Shopping
 
 ```hledger
 2017/1/26 market
@@ -8,7 +8,8 @@ A purchase:
   assets:cash
 ```
 
-Tracking a mortgage:
+## Tracking a mortgage
+
 ```hledger
 2019/01/01 Buy House
     Assets:House                                      500,000.00
