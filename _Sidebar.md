@@ -52,10 +52,10 @@
 [[More docs]]  
 
 [plaintextaccounting.org](http://plaintextaccounting.org) -
-[ledger-likes](http://plaintextaccounting.org/#ledger-likes){style=white-space:nowrap;} -
+<span style="white-space:nowrap;">[ledger-likes](http://plaintextaccounting.org/#ledger-likes)</span> -
 [tools](http://plaintextaccounting.org/#related-tools) -
 [docs](http://plaintextaccounting.org/#docs) -
-[common tasks](http://plaintextaccounting.org/#common-tasks){style=white-space:nowrap;} -
+[common&nbsp;tasks](http://plaintextaccounting.org/#common-tasks) -
 [discussion](http://plaintextaccounting.org/#discussion) -
   
 [Ledger's wiki](https://github.com/ledger/ledger/wiki)  
