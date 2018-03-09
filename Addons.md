@@ -12,7 +12,7 @@ generates interest transactions for an account according to various schemes.
 [hledger-irr](http://hackage.haskell.org/package/hledger-irr)
 calculates the internal rate of return of an investment account.
 
-More =tools:
+More tools:
 
 [hledger-check.hs](https://github.com/simonmichael/hledger/blob/master/bin/hledger-check.hs)
 checks more powerful account balance assertions.
