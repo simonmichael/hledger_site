@@ -18,7 +18,6 @@ or send a pull request for this page.
 
 Let's get started!
 
-<div class="clearfix"></div>
 ## SETUP
 
 ### Check your hledger installation
