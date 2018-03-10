@@ -2,18 +2,16 @@ Welcome to the hledger wiki!
 This complements the main documentation at [hledger.org/docs](http://hledger.org/docs.html).
 You can find all content in the sidebar to the right.
 
-You are encouraged to edit and improve any of these pages through the web (requires a github account).
-Or by git clone + local edit + git push (requires repo collaborator access, ask for this if you need it *- right ? please update this note*).
-
-Some ways to use the wiki:
+You are encouraged to edit and improve any of these pages. Some ways to use the wiki:
 
 - capture quick notes, without needing a pull request
 
-- draft new docs, especially cookbook-style how-tos complementing the main reference docs
+- draft new docs, eg how-tos complementing the reference manuals
 
 - create pages to annotate/discuss specific sections of the main docs (eg [[Queries]])
 
 More wiki help:
+- edit by web, or by git clone/local edit/git push (requires a github account)
 - https://help.github.com/categories/wiki
 - linking between wiki pages: use wiki links, `[[WikiPage]]` or `[[Link Text|WikiPage]]`. WikiPage is case insensitive and can have spaces.
 - linking from non-wiki to wiki pages: `https://github.com/simonmichael/hledger/wiki/WikiPage`. WikiPage is case insensitive and can have spaces.
