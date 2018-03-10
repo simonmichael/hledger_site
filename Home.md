@@ -13,8 +13,8 @@ You are encouraged to edit and improve any of these pages. Some ways to use the 
 More wiki help:
 - [Github wikis help](https://help.github.com/categories/wiki)
 - edit by web, or by git clone/local edit/git push (editing requires a github account)
-- linking between wiki pages: use wiki links, `[[WikiPage]]` or `[[Link Text|WikiPage]]`. WikiPage is case insensitive and can have spaces.
+- linking between wiki pages: `[[WikiPage]]` or `[[Link Text|WikiPage]]`. WikiPage is case insensitive and can have spaces.
 - linking from non-wiki to wiki pages: `https://github.com/simonmichael/hledger/wiki/WikiPage`. WikiPage is case insensitive and can have spaces.
-- linking to manuals: use `http://hledger.org/manual#ANCHOR`
+- linking to manuals: `http://hledger.org/manual#ANCHOR`
 - after renaming a page, try also to fix the links to it
 - use the [_Sidebar](_Sidebar/_edit) to organize content. This is mirrored to the main [docs page](http://hledger.org/docs) hourly.
