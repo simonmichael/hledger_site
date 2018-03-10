@@ -16,7 +16,7 @@ Some ways to use the wiki:
 More wiki help:
 - https://help.github.com/categories/wiki
 - wiki links: `[[WikiPage]]` or `[[Link Text|WikiPage]]`. WikiPage is case insensitive
-- use the [_Sidebar](_Sidebar/_edit) to organize content. Prefer wiki links if possible. This is mirrored to the main docs page hourly.
+- use the [_Sidebar](_Sidebar/_edit) to organize content. Prefer wiki links if possible. This is mirrored to the main [docs page](http://hledger.org/docs) hourly.
 - after renaming a page, fix up the links to it
 - when linking to manuals, use http://hledger.org/manual#ANCHOR
 
