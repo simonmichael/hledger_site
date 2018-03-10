@@ -11,7 +11,7 @@ You are encouraged to edit and improve any of these pages. Some ways to use the 
 - create pages to annotate/discuss specific sections of the main docs (eg [[Queries]])
 
 More wiki help:
-- edit by web, or by git clone/local edit/git push (requires a github account)
+- edit by web, or by git clone/local edit/git push (editing requires a github account)
 - https://help.github.com/categories/wiki
 - linking between wiki pages: use wiki links, `[[WikiPage]]` or `[[Link Text|WikiPage]]`. WikiPage is case insensitive and can have spaces.
 - linking from non-wiki to wiki pages: `https://github.com/simonmichael/hledger/wiki/WikiPage`. WikiPage is case insensitive and can have spaces.
