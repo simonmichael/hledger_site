@@ -11,6 +11,8 @@
 
 ### Getting started
 
+test
+
 [[hledger basics tutorial]]  
 [[Start a journal]]  
 [[Common journal entries]]  
