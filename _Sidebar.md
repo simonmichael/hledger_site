@@ -11,8 +11,6 @@
 
 ### Getting started
 
-test
-
 [[hledger basics tutorial]]  
 [[Start a journal]]  
 [[Common journal entries]]  
@@ -57,3 +55,5 @@ test
 [ledger-cli.org](http://ledger-cli.org) - [docs](https://www.ledger-cli.org/docs.html) - [wiki](https://github.com/ledger/ledger/wiki)  
 
 [Beancount's docs](http://furius.ca/beancount/doc/index)
+
+.
