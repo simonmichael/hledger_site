@@ -112,7 +112,6 @@ As the default, hledger offers the amount required to "balance" the postings ent
 The minus sign indicates the money is moving from this account.
 (hledger uses the positive and negative sign instead of accounting's traditional "debit" and "credit" terminology.)
 In a balanced transaction, the sum of posted amounts is zero, in other words no money disappears into thin air.
-hledger does not allow unbalanced transactions.
 Press enter to accept the default. It has an extra decimal place, but never mind.
 
 ```{.shell .continued}
