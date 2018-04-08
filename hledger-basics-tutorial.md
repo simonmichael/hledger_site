@@ -26,7 +26,7 @@ Get a command prompt, and run hledger to check the version. It should be reasona
 
 ```shell
 $ hledger --version
-hledger 0.26
+hledger 1.9
 ```
 
 
