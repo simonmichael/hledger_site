@@ -10,7 +10,6 @@ They are:
 #### hledger-lib
 
 [package](http://hackage.haskell.org/package/hledger-lib),
-[exported modules](http://hackage.haskell.org/package/hledger-lib#modules),
 [code](https://github.com/simonmichael/hledger/tree/master/hledger-lib)
 
 Core data models, parsing, standard reports, and utilities.
@@ -82,9 +81,8 @@ Amount -- AmountStyle
 #### hledger
 
 [package](http://hackage.haskell.org/package/hledger),
-[exported modules](http://hackage.haskell.org/package/hledger#modules),
 [code](https://github.com/simonmichael/hledger/tree/master/hledger),
-[manual](/manual.html#hledger)
+[manual](http://hledger.org/manual.html#hledger)
 
 hledger's command line interface, and command line options and utilities for other hledger tools.
 
@@ -109,18 +107,16 @@ and [hledger-lib:Hledger.Utils](https://github.com/simonmichael/hledger/blob/mas
 #### hledger-ui
 
 [package](http://hackage.haskell.org/package/hledger-ui),
-<!-- [exported modules](http://hackage.haskell.org/package/hledger-ui#modules), -->
 [code](https://github.com/simonmichael/hledger/tree/master/hledger-ui),
-[manual](/manual.html#hledger-ui)
+[manual]((http://hledger.org/manual/manual.html#hledger-ui)
 
 A curses-style text interface.
 
 #### hledger-web
 
 [package](http://hackage.haskell.org/package/hledger-web),
-[exported modules](http://hackage.haskell.org/package/hledger-web#modules),
 [code](https://github.com/simonmichael/hledger/tree/master/hledger-web),
-[manual](/manual.html#hledger-web)
+[manual]((http://hledger.org/manual/manual.html#hledger-web)
 
 A web interface.
 hledger-web starts a web server built with the yesod framework,
@@ -129,13 +125,13 @@ It reads the journal file(s) at startup and again whenever they change.
 It can also write (append) new transactions to the journal file.
 
 There are two main views, which can be filtered with
-[queries](/manual.html#queries):
+[queries]((http://hledger.org/manual/manual.html#queries):
 
 - [/journal](http://demo.hledger.org/journal), showing general journal entries (like `hledger print`)
 
 - [/register](http://demo.hledger.org/register?q=inacct:Expenses:Food),
   showing transactions affecting an account (slightly different from
-  hledger's [register](/manual.html#register) command, which shows postings).
+  hledger's [register]((http://hledger.org/manual/manual.html#register) command, which shows postings).
 
 There is also:
 
@@ -189,9 +185,8 @@ directories, needed in developer mode, so it can run from the top directory. Thi
 #### hledger-api
 
 [package](http://hackage.haskell.org/package/hledger-api),
-<!-- [exported modules](http://hackage.haskell.org/package/hledger-api#modules), -->
 [code](https://github.com/simonmichael/hledger/tree/master/hledger-api),
-[manual](/manual.html#hledger-api)
+[manual]((http://hledger.org/manual/manual.html#hledger-api)
 
 A web API server. Uses the servant framework.
 
