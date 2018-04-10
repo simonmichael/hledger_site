@@ -1,13 +1,13 @@
 Moved from hledger.org/contributing.html, needs update.
 
-#### Review code
+### Review code
 
 - review and discuss new [pull requests](http://prs.hledger.org) and commits on github
 - build hledger and test the latest changes in your own repo
 - read the existing [code docs and source](#quick-links)
 - send feedback or discuss via [IRC or mail list](/docs.html#helpfeedback)
 
-#### Build hledger
+### Build hledger
 
 1. get [`stack`](/download.html#b) and (except on Windows, where stack provides it) [`git`](http://git-scm.com), then:
 2. `git clone https://github.com/simonmichael/hledger && cd hledger && stack install`
@@ -74,7 +74,7 @@ In case of trouble, see [download](/download.html#b).
 
 </div>
 
-#### Use GHCI
+### Use GHCI
 
 These all work from the main hledger source directory (at least).
 
@@ -127,7 +127,7 @@ $ make ghci-dev
 ```
 -->
 
-#### Add a test
+### Add a test
 
 - identify what to test
 - choose the test type: unit ? functional ? benchmark ?
@@ -136,7 +136,7 @@ $ make ghci-dev
 - write test, verify expected result
 - get it committed
 
-#### Fix a bug or add a feature
+### Fix a bug or add a feature
 
 - research, discuss, validate the issue/feature on irc/list/bug tracker
 - look for related tests, run the tests and check they are passing
@@ -145,7 +145,7 @@ $ make ghci-dev
 - include any related issue numbers in the patch name, eg: "fix for blah blah (#NNN)"
 - get it committed
 
-#### Get your changes accepted
+### Get your changes accepted
 
 Follow the usual github workflow:
 
@@ -158,7 +158,7 @@ Follow the usual github workflow:
 
 If you're new to this process, [help.github.com](http://help.github.com) may be useful.
 
-#### Add yourself to the contributor list
+### Add yourself to the contributor list
 
 - after getting something into the master branch, read and sign the [contributor list & agreement](contributors.html). Or, [ask](/docs.html#helpfeedback) to be added.
 - give yourself a high five!
