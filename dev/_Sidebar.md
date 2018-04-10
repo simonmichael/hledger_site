@@ -13,4 +13,4 @@
 
 ## [[Dev Zone]]
 
-[[Issue dashboard]]  
+[[Issues]]  
