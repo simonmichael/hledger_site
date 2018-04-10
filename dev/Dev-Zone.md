@@ -1,6 +1,6 @@
 Welcome to the developer/contributor zone!
 
-You can find all pages of note in the sidebar to the right. The invitation and editing tips on [[User Cookbook]] apply here also.
+You can find all content in the sidebar to the right. The invitation and editing tips on [[User Cookbook|Home]] apply here also.
 
 ### Quick Links
 
