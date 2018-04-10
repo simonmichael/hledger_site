@@ -46,16 +46,13 @@
 ### More..
 
 [[More docs]]  
-
 [plaintextaccounting.org](http://plaintextaccounting.org) -
 [ledger‑likes](http://plaintextaccounting.org/#ledger-likes) -
 [tools](http://plaintextaccounting.org/#related-tools) -
 [docs](http://plaintextaccounting.org/#docs) -
 [common&nbsp;tasks](http://plaintextaccounting.org/#common-tasks) -
 [discussion](http://plaintextaccounting.org/#discussion)  
-
 [ledger-cli.org](http://ledger-cli.org) - [docs](https://www.ledger-cli.org/docs.html) - [wiki](https://github.com/ledger/ledger/wiki)  
-
-[Beancount's docs](http://furius.ca/beancount/doc/index)
+[Beancount's docs](http://furius.ca/beancount/doc/index)  
 
 ## [[Dev Zone]]
