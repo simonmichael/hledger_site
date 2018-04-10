@@ -1,8 +1,11 @@
 Welcome to the hledger wiki!
-This complements the main documentation at [hledger.org/docs](http://hledger.org/docs.html).
+
+Here you can find the User Cookbook and Dev Zone, complementing the main hledger docs on hledger.org.
 You can find all content in the sidebar to the right.
 
-You are encouraged to edit and improve any of these pages. Some ways to use the wiki:
+### Use this wiki
+
+You are encouraged to edit and improve any of these pages and use this wiki freely. Some ideas:
 
 - capture quick notes, without needing a pull request
 
@@ -10,7 +13,8 @@ You are encouraged to edit and improve any of these pages. Some ways to use the 
 
 - create pages to annotate/discuss specific sections of the main docs (eg [[Queries]])
 
-More wiki help:
+### Editing help
+
 - [Github wikis help](https://help.github.com/categories/wiki)
 - edit by web, or by git clone/local edit/git push (editing requires a github account)
 - linking between wiki pages: `[[Pagename]]` or `[[Link text|Pagename]]`. Pagename is case insensitive and can have spaces.
