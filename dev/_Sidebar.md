@@ -11,6 +11,6 @@
 
 ## [[User Cookbook|Home]]
 
-## [[dev/Dev Zone]]
+## [[Dev Zone]]
 
 [[Issue dashboard]]  

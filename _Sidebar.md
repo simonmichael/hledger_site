@@ -58,4 +58,4 @@
 
 [Beancount's docs](http://furius.ca/beancount/doc/index)
 
-## [[dev/Dev Zone]]
+## [[Dev Zone]]
