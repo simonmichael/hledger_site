@@ -115,7 +115,7 @@ Estimates are always for the total time cost (not time remaining).
 Estimates are not usually changed, a new estimate is added instead.
 Numbers are very approximate, but better than nothing.
 
-### Trello
+*** Trello
 
 The [trello board](http://trello.hledger.org) (trello.hledger.org) is a categorised collection of wishlist items,
 this should probably be considered deprecated.
