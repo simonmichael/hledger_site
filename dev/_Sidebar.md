@@ -13,4 +13,12 @@
 
 ## [[Dev Zone]]
 
+[[Benchmarks]]  
+[[Code]]  
+[[Contributor guide]]  
+[[Developer workflows]]  
+[[Docs]]  
 [[Issues]]  
+[[Make]]  
+[[Sample journals]]  
+[[Shake]]  
