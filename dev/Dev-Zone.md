@@ -1,8 +1,8 @@
 Welcome to the developer/contributor zone!
 
-This is the wiki's dev/ subdirectory. Soon it will be the portal for hledger developer and contributor docs.
+You can find all pages of note in the sidebar to the right. The invitation and editing tips on [[User Cookbook]] apply here also.
 
-### Links
+### Quick Links
 
 |-|-|
 |-------------------------|----------------------------------------------------------------------------|
