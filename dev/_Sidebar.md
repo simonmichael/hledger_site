@@ -7,7 +7,7 @@
 [contributor guide](http://hledger.org/contributing) - 
 [dev links](http://hledger.org/contributing#links) 
 
-## [Reference](http://hledger.org/docs)
+## [hledger docs](http://hledger.org/docs)
 
 ## [[User Cookbook|Home]]
 
