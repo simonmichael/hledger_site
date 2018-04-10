@@ -1,6 +1,4 @@
 [hledger.org](http://hledger.org) - 
-[docs](http://hledger.org/docs) - 
-[wiki](Home) - 
 [mail&nbsp;list](http://list.hledger.org) - 
 [irc](http://irc.hledger.org) - 
 [twitter](https://twitter.com/search?q=%23hledger&src=typd&f=realtime) -
@@ -9,7 +7,9 @@
 [contributor guide](http://hledger.org/contributing) - 
 [dev links](http://hledger.org/contributing#links) 
 
-## Using
+## [Reference](http://hledger.org/docs)
+
+## [[User Cookbook|Home]]
 
 ### Getting started
 
@@ -58,6 +58,4 @@
 
 [Beancount's docs](http://furius.ca/beancount/doc/index)
 
-## Contributing
-
-[[Issue dashboard]]
+## [[dev/Dev Zone]]
