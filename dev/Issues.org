@@ -5,16 +5,15 @@ The hledger project's issue tracker is on github. It contains:
 - uncategorised issues - we don't know what these are yet
 - pull requests - proposed changes to code and docs
 
-### Urls
+*** Urls
 
 - <http://bugs.hledger.org>     - show open BUG issues
 - <http://wishes.hledger.org>   - show open WISH issues
 - <http://issues.hledger.org>   - show all issues, open or closed
 - <http://prs.hledger.org>      - show open pull requests
-<!-- - <http://bugs.hledger.org/N>   - show issue number N -->
-<!-- - <http://bugs.hledger.org/new> - create a new issue -->
+- <http://bugs.hledger.org/new> - create a new issue
 
-### Labels
+*** Labels
 
 Labels are used to categorise:
 
@@ -26,7 +25,7 @@ Labels are used to categorise:
 - "easy?", in dim yellow: issues which are probably relatively easy to fix
 - "imported" etc., in white: miscellaneous information
 
-### Components
+*** Components
 
 Issues and the hledger project generally are organised into components:
 mostly non-overlapping topics,
@@ -35,14 +34,14 @@ Each component gets a light blue label in the issue tracker.
 Component names (sometimes abbreviated) are used as a prefix to commit messages, and to organise changelogs and release notes.
 Below are the current components, and their open issues.
 
-### Custodians
+*** Custodians
 
 If you are interested in helping with a particular component for a while, please add your contact info in the custodians column.
 A custodian's job is to help manage the issues, rally the troops, and drive the open issue count towards zero.
 The more custodians, the better!
 By dividing up the work this way, we can scale and make forward progress.
 
-### Open issues
+*** Open issues
 
 # Link templates:
 # https://github.com/simonmichael/hledger/issues?q=is:open+is:issue+-label:"A+BUG"-label:"A+WISH"+label:
@@ -95,11 +94,11 @@ By dividing up the work this way, we can scale and make forward progress.
 | tools               | developer tools, infrastructure | [[https://github.com/simonmichael/hledger/issues?q=is:open+is:issue+-label:"A+BUG"-label:"A+WISH"+label:tools][?]] | [[https://github.com/simonmichael/hledger/issues?q=is:open+is:issue+label:"A+BUG"+label:tools][bugs]] | [[https://github.com/simonmichael/hledger/issues?q=is:open+is:issue+label:"A+WISH"+label:tools][wishes]] | [[https://github.com/simonmichael/hledger/issues?q=is:open+is:pr+label:tools][PRs]] | [[https://github.com/simonmichael/hledger/issues?q=is:open+label:tools][all]] |            |
 
 
-### Milestones and Projects
+*** Milestones and Projects
 
-In 2017, milestones are not used much. Projects are being used to organise the roadmap.
+Milestones are used a little bit to plan releases. In 2017 we experimented with projects, but in 2018 milestones are in favour again..
 
-### Estimates
+*** Estimates
 
 You might see some experiments in estimate tracking, where
 some issue names might have a suffix noting estimated and spent time.
