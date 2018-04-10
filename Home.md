@@ -5,7 +5,7 @@ You can find all content in the sidebar to the right.
 
 ### Use this wiki
 
-You are encouraged to edit and improve any of these pages and use this wiki freely. Some ideas:
+Please edit and improve any of these pages and use this wiki freely. Some ideas:
 
 - capture quick notes, without needing a pull request
 
