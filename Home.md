@@ -3,15 +3,7 @@ Welcome to the hledger wiki!
 Here you can find the User Cookbook and Dev Zone, complementing the main hledger docs on hledger.org.
 You can find all content in the sidebar to the right.
 
-### Use this wiki
-
-Please edit and improve any of these pages and use this wiki freely. Some ideas:
-
-- capture quick notes, without needing a pull request
-
-- draft new docs, eg how-tos complementing the reference manuals
-
-- create pages to annotate/discuss specific sections of the main docs (eg [[Queries]])
+Please edit and improve any of these pages and use this wiki freely.
 
 ### Editing help
 
