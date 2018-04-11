@@ -9,7 +9,7 @@ The invitation and editing tips on [[User Cookbook|Home]] apply here also.
 |-|-|
 |-------------------------|----------------------------------------------------------------------------|
 | IRC                     | Join [#hledger](http://irc.hledger.org) ([chat log](http://ircbrowse.net/browse/hledger); see also [#ledger](http://webchat.freenode.net?channels=ledger&randomnick=1)) |
-| Mail list               | [list.hledger.org](http://list.hledger.org) ([Gmane](http://dir.gmane.org/gmane.comp.finance.ledger.hledger)) |
+| Mail list               | [list.hledger.org](http://list.hledger.org) |
 | Twitter                 | [#hledger](https://twitter.com/search?q=%23hledger&src=typd&f=realtime), see also [#ledgercli](https://twitter.com/search?q=%23ledgercli&src=typd&f=realtime), [#plaintextaccounting](https://twitter.com/search?q=%23plaintextaccounting&src=typd&f=realtime), <a href="https://twitter.com/ledgertips">@LedgerTips</a> |
 | hledger-web demo&nbsp;&nbsp;        | [demo.hledger.org](http://demo.hledger.org) |
 | hledger-api demo        | [api-demo.hledger.org/api/v1/accounts](http://api-demo.hledger.org/api/v1/accounts), [api-demo.hledger.org/swagger.json](http://api-demo.hledger.org/swagger.json), [in swagger editor](http://editor2.swagger.io/#/?import=api-demo.hledger.org/swagger.json&no-proxy) <br>[unfinished angular sample app](http://api-demo.hledger.org) ([code](https://github.com/simonmichael/hledger/tree/master/hledger-api/examples/angular))
