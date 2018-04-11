@@ -6,7 +6,7 @@ The invitation and editing tips on [[User Cookbook|Home]] apply here also.
 
 ### Quick Links
 
-|-|-|
+| | |
 |-------------------------|----------------------------------------------------------------------------|
 | IRC                     | [#hledger](https://kiwiirc.com/nextclient/#ircs://irc.freenode.net/#hledger), [chat log](http://ircbrowse.net/browse/hledger)<br>See also: [#hledger-bots](https://kiwiirc.com/nextclient/#ircs://irc.freenode.net/hledger-bots), [#ledger](https://kiwiirc.com/nextclient/#ircs://irc.freenode.net/hledger), [#beancount](https://kiwiirc.com/nextclient/#ircs://irc.freenode.net/hledger) |
 | Mail list               | [list.hledger.org](http://list.hledger.org) |
