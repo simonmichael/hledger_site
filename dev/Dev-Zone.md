@@ -8,7 +8,7 @@ The invitation and editing tips on [[User Cookbook|Home]] apply here also.
 
 |-|-|
 |-------------------------|----------------------------------------------------------------------------|
-| IRC                     | Join [#hledger](http://irc.hledger.org) ([chat log](http://ircbrowse.net/browse/hledger); see also [#ledger](http://webchat.freenode.net?channels=ledger&randomnick=1)) |
+| IRC                     | [#hledger](https://kiwiirc.com/nextclient/#ircs://irc.freenode.net/#hledger), [chat log @ ircbrowse.net](http://ircbrowse.net/browse/hledger). See also [#hledger-bots](https://kiwiirc.com/nextclient/#ircs://irc.freenode.net/hledger-bots), [#ledger](https://kiwiirc.com/nextclient/#ircs://irc.freenode.net/hledger), [#beancount](https://kiwiirc.com/nextclient/#ircs://irc.freenode.net/hledger), ) |
 | Mail list               | [list.hledger.org](http://list.hledger.org) |
 | Twitter                 | [#hledger](https://twitter.com/search?q=%23hledger&src=typd&f=realtime), see also [#ledgercli](https://twitter.com/search?q=%23ledgercli&src=typd&f=realtime), [#plaintextaccounting](https://twitter.com/search?q=%23plaintextaccounting&src=typd&f=realtime), <a href="https://twitter.com/ledgertips">@LedgerTips</a> |
 | hledger-web demo&nbsp;&nbsp;        | [demo.hledger.org](http://demo.hledger.org) |
