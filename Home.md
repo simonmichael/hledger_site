@@ -2,7 +2,7 @@ Welcome to the hledger wiki! Please edit, improve and use this wiki freely.
 
 Here are the User Cookbook and Dev Zone, complementing the main hledger docs on hledger.org.
 You can find all content in the sidebar to the right.
-<div align=right>
+<div align=center>
 <img width=200 height=200 src="https://www.pdclipart.org/albums/Arrows_and_Pointers/arrow02_1.png">
 </div>
 
