@@ -361,8 +361,8 @@ $ hledger register assets
 
 hledger assumes every account starts with a zero balance,
 so in the previous example, we see the withdrawals producing a negative running balance.
-Let's assume `assets` represents a real-world asset, like your bank checking account, and it contained $500 at the beginning of the month.
-We want to report the real-world account balance, so edit your journal file and add this transaction at the top:
+Let's assume `assets` represents a real-world asset, like your bank checking account, and you want to start tracking it from 2015/05/01 onward, and on that day it contained exactly $500.
+To show the real-world account balance, edit your journal file and add this transaction at the top:
 
 ```journal
 2015/05/01 set initial assets balance
@@ -371,7 +371,7 @@ We want to report the real-world account balance, so edit your journal file and 
 ```
 
 The other account name doesn't matter too much; `equity:opening balances` is conventional.
-(You could also use an [unbalanced transaction http://hledger.org/manual.html#virtual-postings] for this if you prefer.)
+(You could also use an [unbalanced transaction](http://hledger.org/manual.html#virtual-postings) for this if you prefer.)
 Now the report looks like this, with an accurate running balance on each date (hledger calls this a *historical balance*):
 
 ```shell
