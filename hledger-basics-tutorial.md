@@ -357,6 +357,30 @@ $ hledger register assets
 2015/05/26 forgot the bread     assets                         $-5          $-15
 ```
 
+### Set initial account balances
+
+hledger assumes every account starts with a zero balance,
+so in the previous example, we see the withdrawals producing a negative running balance.
+Let's assume `assets` represents a real-world asset, like your bank checking account, and it contained $500 at the beginning of the month.
+We want to report the real-world account balance, so edit your journal file and add this transaction at the top:
+
+```journal
+2015/05/01 set initial assets balance
+    assets                              $500
+    equity:opening balances
+```
+
+The other account name doesn't matter too much; `equity:opening balances` is conventional.
+(You could also use an [unbalanced transaction http://hledger.org/manual.html#virtual-postings] for this if you prefer.)
+Now the report looks like this, with an accurate running balance on each date (hledger calls this a *historical balance*):
+
+```shell
+$ hledger register
+2015/05/01 set initial asset..  assets                        $500          $500
+2015/05/25 trip to the super..  assets                        $-10          $490
+2015/05/26 forgot the bread     assets                         $-5          $485
+```
+
 ### Query expressions
 
 The account name argument above is an example of a
