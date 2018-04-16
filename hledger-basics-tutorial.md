@@ -17,7 +17,7 @@
 1. [Show accounts and their balances with "hledger balance"](#show-accounts-and-their-balances-with-hledger-balance)
 1. [balance shows the sum of matched posting amounts](#balance-shows-the-sum-of-matched-posting-amounts)
 1. [Review](#review)
-1. [Test yourself](#test-yourself)
+
 
 Here you can learn hledger (and a little double-entry bookkeeping)
 by practicing, in small hands-on steps. You'll need:
