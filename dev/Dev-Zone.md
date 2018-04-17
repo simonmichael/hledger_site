@@ -13,6 +13,7 @@ The invitation and editing tips on [[User Cookbook|Home]] apply here also.
 | Twitter                 | [#hledger](https://twitter.com/search?q=%23hledger&src=typd&f=realtime). Also: [#plaintextaccounting](https://twitter.com/search?q=%23plaintextaccounting&src=typd&f=realtime), <a href="https://twitter.com/ledgertips">@LedgerTips</a>, [#ledgercli](https://twitter.com/search?q=%23ledgercli&src=typd&f=realtime) |
 | Reddit                  | [/r/plaintextaccounting](https://www.reddit.com/r/plaintextaccounting/) |
 | Stack Exchange          | [money.stackexchange.com?hledger](https://money.stackexchange.com/search?q=hledger) |
+| Hacker News             | [hledger mentions](https://hn.algolia.com/?query=hledger&sort=byDate&prefix&page=0&dateRange=all&type=all) |
 | hledger-web demo&nbsp;&nbsp; | [demo.hledger.org](http://demo.hledger.org) |
 | hledger-api demo        | [api-demo.hledger.org/api/v1/accounts](http://api-demo.hledger.org/api/v1/accounts), [api-demo.hledger.org/swagger.json](http://api-demo.hledger.org/swagger.json), [in swagger editor](http://editor2.swagger.io/#/?import=api-demo.hledger.org/swagger.json&no-proxy) <br>[unfinished angular sample app](http://api-demo.hledger.org) ([code](https://github.com/simonmichael/hledger/tree/master/hledger-api/examples/angular))
 | Trello                  | [old wishlist planning board](http://trello.hledger.org) |
