@@ -91,19 +91,20 @@ We currently support:
 - some basic output formatting
 - the print, register & balance commands
 - report filtering, using a different query syntax
+- automated postings
+- periodic transactions
+- budget reports
 
 We do not support:
 
-- automated transactions
 - value expressions
-- budget reports
 
-And we add these commands:
+And we add some new commands, such as:
 
 - add
 - balancesheet
 - cashflow
-- chart
+- close
 - incomestatement
 - irr
 - interest
@@ -112,19 +113,19 @@ And we add these commands:
 
 ### File formats
 
-hledger's journal file format is mostly identical with Ledger's, by design.
-Generally, it's easy to keep a journal file that works with both hledger
-and Ledger if you avoid Ledger's and hledger's more specialised syntax
-(or keep it in separate files which you include only when appropriate).
-
-Some Ledger syntax is parsed but ignored (such as
-[automated transactions](http://ledger-cli.org/3.0/doc/ledger3.html#Automated-Transactions)
-and [periodic transactions](http://ledger-cli.org/3.0/doc/ledger3.html#Periodic-Transactions)).
-Some features are not currently parsed and will cause an error, eg
-Ledger's more recent top-level directives. There can also be subtle
-differences in parser behaviour, such as with
+hledger's journal file format is very close to Ledger's.
+Some unsupported Ledger syntax is parsed but ignored; some is not parsed and will cause an error (eg value expressions).
+There can also be subtle differences in parser behaviour, such as with
 [hledger comments](http://hledger.org/manual.html#comments) vs [Ledger comments](http://ledger-cli.org/3.0/doc/ledger3.html#Commenting-on-your-Journal),
 or [balance assertions](http://hledger.org/manual.html#assertions-and-ordering).
+
+It's quite possible (and useful) to keep a journal file that works with both hledger and Ledger, if you avoid the more exotic syntax. Or, you can keep the hledger- and Ledger-specific bits in separate files, which [include](http://hledger.org/manual.html#including-other-files) a common file compatible with both:
+```shell
+$ ls *.journal
+common.journal   # included by:
+hledger.journal
+ledger.journal
+```
 
 ### Functional differences
 
@@ -139,16 +140,12 @@ or [balance assertions](http://hledger.org/manual.html#assertions-and-ordering).
 - hledger shows start and end dates of the intervals requested,
   not just the span containing data
 
-- hledger always shows time balances (from the timeclock/timedot formats) in hours, with two decimal places
+- hledger always shows time balances (from the timeclock/timedot formats) in hours
 
 - hledger splits multi-day time sessions at midnight by default (Ledger does this with an option)
 
 - hledger's output follows the decimal point character, digit grouping,
-  and digit group separator character used in the journal.
-
-- hledger print shows amounts for all postings, and shows unit prices for
-  amounts which have them. (This means that it does not currently print
-  multi-commodity transactions in valid journal format.)
+  and digit group separator character used in the journal (or specified with commodity directives)
 
 - hledger print ignores the --date2 flag, always showing both dates.
   ledger print shows only the secondary date with --aux-date, but not
@@ -180,7 +177,7 @@ or [balance assertions](http://hledger.org/manual.html#assertions-and-ordering).
   Basically if there's a -p, all those others are ignored.
   There's an open issue.
   With hledger you can also specify start and/or end dates with a query argument,
-  date:START-END, which probably doesn't combine perfectly with the options.
+  like date:START-END
 
 - in hledger version 1.3 onward, 
   the "uncleared" status has been renamed to "unmarked",
