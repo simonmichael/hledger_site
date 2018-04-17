@@ -1,3 +1,15 @@
+**Contents**
+
+* [hledger &amp; Ledger](#hledger--ledger)
+   * [History](#history)
+   * [Features](#features)
+   * [File formats](#file-formats)
+   * [Functional differences](#functional-differences)
+   * [Future ?](#future-)
+* [UI surprises](#ui-surprises)
+   * [Why does it complain about missing amounts even though I wrote one ?](#why-does-it-complain-about-missing-amounts-even-though-i-wrote-one-)
+   * [Why do some amounts appear on their own line with no account name ?](#why-do-some-amounts-appear-on-their-own-line-with-no-account-name-)
+
 ## hledger & Ledger
 
 ### History
