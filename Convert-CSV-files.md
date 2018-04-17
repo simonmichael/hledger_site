@@ -41,8 +41,9 @@ using conversion rules file checking.csv.rules
     assets:bank:checking       $-10.00
 ```
 
-We might save this output as `checking.journal`, and/or merge it (manually) into the main journal file.
-We could also run other commands:
+We might save this output as `checking.journal`, and/or merge it (manually, or using the [import](http://hledger.org/manual.html#import) command) into the main journal file.
+
+We could also just run reports on the CSV file directly:
 ```shell
 $ hledger -f checking.csv balance
 using conversion rules file checking.csv.rules
