@@ -95,8 +95,11 @@ We currently support:
 - periodic transactions
 - budget reports
 
-We do not support:
+We do not yet support:
 
+- -X/--exchange
+- generation of revaluation transactions (--revalued)
+- capital gain/loss reporting (--gain)
 - value expressions
 
 And we add some new commands, such as:
