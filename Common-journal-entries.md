@@ -41,13 +41,13 @@ https://en.wikipedia.org/wiki/Basis_of_accounting
 Send an invoice. This is the taxable event:
 
     2018-04-16 * (2018-001) SuperCompany invoice
-        Assets:Accounts Receivable:SuperCompany              $ 2420.00
         Revenue:Software Development                        $ -2420.00
+        Assets:Accounts Receivable:SuperCompany              $ 2420.00
 
 Receive payment:
 
     2018-04-26 * (2018-001) SuperCompany payment
-        Revenue:Software Development                        $ -2420.00
+        Assets:Accounts Receivable:SuperCompany             $ -2420.00 = $0
         Assets:Checking                                      $ 2420.00
 
 ### Cash basis
