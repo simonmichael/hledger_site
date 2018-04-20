@@ -53,7 +53,6 @@ Receive payment:
 ### Cash basis
 
 Invoices aren't normally tracked in cash basis, so we're using unbalanced postings to track them here.
-
 Send an invoice:
 
     2018-04-16 * (2018-001) SuperCompany invoice
