@@ -32,36 +32,39 @@ Example hledger journal entries for various kinds of transaction.
 
 ## Invoicing
 
+Invoicing entries are different for accrual basis or cash basis accounting.
+Large companies use accrual basis, individuals and small companies typically use cash basis.
 https://en.wikipedia.org/wiki/Basis_of_accounting
 
-Accrual basis accounting:
+### Accrual basis
 
-    2016/2/1 * (201602ab) ab client  invoice
-        revenues:business:consulting:ab              $-1000
-        assets:business:accounts receivable:ab        $1000
+Send an invoice. This is the taxable event:
 
-Cash basis accounting. 
-Invoices aren't normally tracked in cash basis, so using an unbalanced posting here:
+    2018-04-16 * (2018-001) SuperCompany invoice
+        Assets:Accounts Receivable:SuperCompany              $ 2420.00
+        Revenue:Software Development                        $ -2420.00
 
-    2016/2/1 * (201602ab) ab client  invoice
-        (assets:business:accounts receivable:ab) $1000
-
-
-Invoice (accrual basis), and estimate the corresponding increase in taxes due:
-
-    2018-04-16 * (2018-001) SuperCompany Invoice
-           Assets:Accounts Receivable:SuperCompany              $ 2420.00
-           Income:Software Development                         $ -2420.00
-           (Liabilities:Tax:2018)                              $  -420.00
-
-Invoice (cash basis), then receive payment, estimating the corresponding tax and setting aside that amount in an "envelope" subaccount:
-
-    2018-04-16 * (2018-001) SuperCompany Invoice
-           (Assets:Accounts Receivable:SuperCompany)             $2420
+Receive payment:
 
     2018-04-26 * (2018-001) SuperCompany payment
-           (Assets:Accounts Receivable:SuperCompany)            $-2420
-           Revenue:Software Development                         $-2420
-           (Liabilities:Tax:2018)                                $-420
-           Assets:Checking:Estimated Tax Savings:2018             $420
-           Assets:Checking                                       $2000
+        Revenue:Software Development                        $ -2420.00
+        Assets:Checking                                      $ 2420.00
+
+### Cash basis
+
+Invoices aren't normally tracked in cash basis, so we're using unbalanced postings to track them here.
+
+Send an invoice:
+
+    2018-04-16 * (2018-001) SuperCompany invoice
+        (Assets:Accounts Receivable:SuperCompany)             $2420
+
+Receive payment. This is the taxable event.
+Also: estimate the corresponding tax, and save that amount in a subaccount so there'll be money to pay taxes:
+
+    2018-04-26 * (2018-001) SuperCompany payment
+        (Assets:Accounts Receivable:SuperCompany)            $-2420 = $0
+        Revenue:Software Development                         $-2420
+        (Liabilities:Tax:2018)                                $-420
+        Assets:Checking:Estimated Tax Savings:2018             $420
+        Assets:Checking                                       $2000
