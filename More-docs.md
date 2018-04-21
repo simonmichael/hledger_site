@@ -55,12 +55,12 @@ See also the two Twitter feeds:
 
 ## Accounting
 
-- 
+- Wikipedia:
  [Accounting](http://en.wikipedia.org/wiki/Accounting),
  [Bookkeeping](http://en.wikipedia.org/wiki/Bookkeeping),
  [Double-entry bookkeeping system](http://en.wikipedia.org/wiki/Double_entry_bookkeeping_system),
  [General journal](http://en.wikipedia.org/wiki/General_journal)
- etc. at Wikipedia
+ etc.
 - [Accounting For Dragons](http://podcastle.org/2009/10/09/pc-miniature-38-accounting-for-dragons) why you should know accounting
 - [Bean Counter](http://www.dwmbeancounter.com/) - tutorials, such as
   [So, you want to learn Bookkeeping!](http://www.dwmbeancounter.com/tutorial/Tutorial.html).
