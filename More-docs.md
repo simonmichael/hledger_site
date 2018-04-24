@@ -116,3 +116,4 @@ Other things of interest:
 - [You Need A Budget](http://www.youneedabudget.com/)
 - Software Freedom Conservancy's [npo-acct](http://npoacct.sfconservancy.org) project
 
+- [Daniel Pocock: Comparison of free, open source accounting software](https://danielpocock.com/comparison-of-free-open-source-accounting-software)
