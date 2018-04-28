@@ -27,7 +27,7 @@ anchor is any manual heading's text, lowercased with punctuation removed and spa
 - when renaming a page, try also to update the links to it
 - use the [_Sidebar](_Sidebar/_edit) to organize content. 
 This is mirrored to the main [docs page](http://hledger.org/docs) hourly.
-We might include some external (non-wiki) links here, italicised.
+We might include some external (non-wiki) links here.
 - Dev Zone content is in the dev/ subdirectory. 
 It has its own _Sidebar, which can only be edited via git. 
 The subdirectory "dev/" does not appear in wiki links or urls. 
