@@ -20,3 +20,4 @@
 [[Make]]  
 [[Sample journals]]  
 [[Shake]]  
+[[Tests]]  
