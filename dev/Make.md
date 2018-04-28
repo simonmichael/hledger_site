@@ -3,6 +3,8 @@ and to insulate us a little from the ever-evolving Haskell tools ecosystem.
 Using it is entirely optional, but recommended.
 You'll need [GNU Make](http://www.gnu.org/software/make) installed.
 
+The Makefile contains a fair amount of obsolete cruft and needs cleanup. Some tasks (docs, website) are now handled by the [[Shake]] file instead.
+
 The Makefile is self-documenting. Run `make` to see a list of the main make rules:
 
 ```shell
