@@ -7,7 +7,7 @@
 
 ## [hledger docs](http://hledger.org/docs)
 
-## [[User Cookbook|Home]]
+# [[User Cookbook|Home]]
 
 ### Getting started
 
