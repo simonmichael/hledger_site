@@ -11,9 +11,10 @@ You can find all content via the sidebar to the right.
 <img width=200 height=200 src="https://www.pdclipart.org/albums/Arrows_and_Pointers/arrow02_1.png">
 </div>
 
-### Editing help
-
 Content is hosted here for quicker editing. Please edit, improve and use the wiki freely.
+
+
+### Editing help
 
 - [Github wikis help](https://help.github.com/categories/wiki)
 - edit by web, or by git clone/local edit/git push (editing requires a github account)
