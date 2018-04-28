@@ -3,13 +3,6 @@
 [What is hledger ?](http://hledger.org/intro.html)  
 [Reference manuals](http://hledger.org/manual.html)  
 [Help/feedback](http://hledger.org#help)  
-<!--
-[mail&nbsp;list](http://list.hledger.org) - 
-[irc](http://irc.hledger.org) - 
-[twitter](https://twitter.com/search?q=%23hledger&src=typd&f=realtime) -
-[reddit](https://www.reddit.com/r/plaintextaccounting) -
-[issues](http://issues.hledger.org)
--->
 
 # > [[User Cookbook|Home]]
 
