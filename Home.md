@@ -17,11 +17,16 @@ This is your wiki! Please edit, improve and use it freely.
 
 - [Github wikis help](https://help.github.com/categories/wiki)
 - edit by web, or by git clone/local edit/git push (editing requires a github account)
-- linking between wiki pages: `[[Pagename]]` or `[[Link text|Pagename]]`. Pagename is case insensitive and can have spaces.
-- linking from non-wiki to wiki pages: `https://github.com/simonmichael/hledger/wiki/Pagename`. Pagename is case insensitive and can have spaces.
-- linking to manuals: `http://hledger.org/manual#anchor`. anchor is any heading text, lowercased with punctuation removed and spaces replaced by hyphens.
+- linking between wiki pages: `[[Pagename]]` or `[[Link text|Pagename]]`. 
+Pagename is case insensitive and can have spaces.
+- linking from non-wiki to wiki pages: `https://github.com/simonmichael/hledger/wiki/Pagename`. 
+Pagename is case insensitive and can have spaces.
+- linking to manuals: `http://hledger.org/manual#anchor`. 
+anchor is any heading text, lowercased with punctuation removed and spaces replaced by hyphens.
 - when renaming a page, try also to fix the links to it
-- use the [_Sidebar](_Sidebar/_edit) to organize content. This is mirrored to the main [docs page](http://hledger.org/docs) hourly.
+- use the [_Sidebar](_Sidebar/_edit) to organize content. 
+This is mirrored to the main [docs page](http://hledger.org/docs) hourly.
+We might include some external (non-wiki) links here, italicised.
 - Dev Zone content is in the dev/ subdirectory. 
 It has its own _Sidebar, which can only be edited via git. 
 The subdirectory "dev/" does not appear in wiki links or urls. 
