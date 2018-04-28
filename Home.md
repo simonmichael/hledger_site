@@ -18,13 +18,13 @@ This is your wiki! Please edit, improve and use it freely.
 - [Github wikis help](https://help.github.com/categories/wiki)
 - editing requires a github account
 - edit by web, or by git clone, local edit, git push
-- linking between wiki pages: `[[Pagename]]` or `[[Link text|Pagename]]`. 
+- link between wiki pages: `[[Pagename]]` or `[[Other text|Pagename]]`. 
 Pagename is case insensitive and can have spaces.
-- linking from non-wiki to wiki pages: `https://github.com/simonmichael/hledger/wiki/Pagename`. 
+- link to wiki pages from elsewhere: `https://github.com/simonmichael/hledger/wiki/Pagename`. 
 Pagename is case insensitive and can have spaces.
-- linking to manuals: `http://hledger.org/manual#anchor`. 
-anchor is any heading text, lowercased with punctuation removed and spaces replaced by hyphens.
-- when renaming a page, try also to fix the links to it
+- link to hledger manual sections: `http://hledger.org/manual#anchor`. 
+anchor is any manual heading's text, lowercased with punctuation removed and spaces replaced by hyphens.
+- when renaming a page, try also to update the links to it
 - use the [_Sidebar](_Sidebar/_edit) to organize content. 
 This is mirrored to the main [docs page](http://hledger.org/docs) hourly.
 We might include some external (non-wiki) links here, italicised.
