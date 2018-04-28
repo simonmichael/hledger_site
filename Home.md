@@ -16,7 +16,8 @@ You can find all content via the sidebar to the right.
 This is your wiki! Please edit, improve and use it freely.
 
 - [Github wikis help](https://help.github.com/categories/wiki)
-- edit by web, or by git clone/local edit/git push (editing requires a github account)
+- editing requires a github account
+- edit by web, or by git clone, local edit, git push
 - linking between wiki pages: `[[Pagename]]` or `[[Link text|Pagename]]`. 
 Pagename is case insensitive and can have spaces.
 - linking from non-wiki to wiki pages: `https://github.com/simonmichael/hledger/wiki/Pagename`. 
