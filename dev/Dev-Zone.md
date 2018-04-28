@@ -1,6 +1,6 @@
 Welcome to the hledger dev zone! (shortcut: `hledger.org/dev`)
 
-This section of the wiki is to help contributors of all kinds to get involved and productively contributing to hledger - designers, coders, writers, supporters, marketers, sustainers - all are welcome.
+This section of the hledger wiki is to help contributors of all kinds to get involved and productively contributing to hledger - designers, coders, writers, supporters, marketers, sustainers - all are welcome.
 You can find all content in the sidebar to the right. 
 The invitation and editing tips on [[User Cookbook|Home]] apply here also.
 
