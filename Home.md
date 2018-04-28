@@ -13,7 +13,7 @@ You can find all content via the sidebar to the right.
 
 ### Editing help
 
-Please edit, improve and use the wiki freely.
+Content is hosted here for quicker editing. Please edit, improve and use the wiki freely.
 
 - [Github wikis help](https://help.github.com/categories/wiki)
 - edit by web, or by git clone/local edit/git push (editing requires a github account)
