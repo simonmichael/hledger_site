@@ -9,7 +9,7 @@
 ### Getting started
 
 [[hledger basics tutorial]]  
-[[Start a journal]]  
+[[Create a journal]]  
 [[Common journal entries]]  
 [[hledger accounting concepts tutorial]]  
 [[FAQ]]
