@@ -4,7 +4,7 @@ There are lots of ways to start a journal file:
 
 The simplest possible journal is just an empty file:
 ```shell
-touch 2017.journal
+touch 2018.journal
 ```
 
 The name doesn't matter much and can be changed later. 
@@ -14,8 +14,8 @@ and so is a `.journal` or `.hledger` extension.
 ## with cat
 
 ```shell
-$ cat >>2017.journal
-2017/1/26
+$ cat >>2018.journal
+2018/1/26
   expenses:food     $10
   assets:cash
 <CTRL-D>
@@ -38,14 +38,14 @@ and save the file.
 
 Use the interactive [add](http://hledger.org/manual#add) command to enter one or more transactions:
 ```shell
-hledger add -f 2017.journal`
+hledger add -f 2018.journal
 ```
 
 To avoid typing `-f FILE` every time, set the 
 [`LEDGER_FILE` environment variable](http://hledger.org/manual#input-files). 
 The remaining examples assume you have done this. Eg:
 ```shell
-echo "export LEDGER_FILE=~/finance/2017.journal" >> ~/.bash_profile && source ~/.bash_profile
+echo "export LEDGER_FILE=~/finance/2018.journal" >> ~/.bash_profile && source ~/.bash_profile
 ```
 
 ## with hledger-iadd
