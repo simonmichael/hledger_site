@@ -48,19 +48,18 @@ Eg:
 
 Then it's just
 
-   hledger add
+    hledger add
 
 ## with hledger-iadd
 
-ensure $LEDGER_FILE exists\
-`hledger iadd`\
-enter one or more transactions
+- ensure $LEDGER_FILE exists
+- `hledger iadd`
+- enter one or more transactions
 
 ## with hledger-web
 
-ensure $LEDGER_FILE exists\
-`hledger web`\
-wait for web browser to open\
-click "add transaction" or press "a"\
-enter a transaction, click ok or press enter
-
+- ensure $LEDGER_FILE exists
+- `hledger web`
+- wait for web browser to open
+- click "add transaction" or press "a"
+- enter a transaction, click ok or press enter
