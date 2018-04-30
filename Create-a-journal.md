@@ -1,4 +1,4 @@
-There are lots of ways to start a journal file:
+There are lots of ways to start or update a journal file:
 
 ## with touch
 
