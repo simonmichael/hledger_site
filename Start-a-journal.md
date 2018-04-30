@@ -3,9 +3,9 @@ There are lots of ways to start a journal file:
 ## with touch
 
 The simplest possible journal is just an empty file:
-```shell
-touch 2018.journal
-```
+
+    touch 2018.journal
+
 
 The name doesn't matter much and can be changed later. 
 One file per year is common, 
@@ -13,13 +13,12 @@ and so is a `.journal` or `.hledger` extension.
 
 ## with cat
 
-```shell
-$ cat >>2018.journal
-2018/1/26
-  expenses:food     $10
-  assets:cash
-<CTRL-D>
-```
+
+    $ cat >>2018.journal
+    2018/1/26
+      expenses:food     $10
+      assets:cash
+    <CTRL-D>
 
 [Account names](http://hledger.org/manual#account-names) can be anything 
 and you can change them later by search and replace. 
@@ -37,16 +36,19 @@ and save the file.
 ## with hledger add
 
 Use the interactive [add](http://hledger.org/manual#add) command to enter one or more transactions:
-```shell
-hledger add -f 2018.journal
-```
+
+    hledger add -f 2018.journal
+
 
 To avoid typing `-f FILE` every time, set the 
 [`LEDGER_FILE` environment variable](http://hledger.org/manual#input-files). 
-The remaining examples assume you have done this. Eg:
-```shell
-echo "export LEDGER_FILE=~/finance/2018.journal" >> ~/.bash_profile && source ~/.bash_profile
-```
+Eg:
+
+    echo "export LEDGER_FILE=~/finance/2018.journal" >> ~/.bash_profile && source ~/.bash_profile
+
+Then it's just
+
+   hledger add
 
 ## with hledger-iadd
 
@@ -61,3 +63,4 @@ ensure $LEDGER_FILE exists\
 wait for web browser to open\
 click "add transaction" or press "a"\
 enter a transaction, click ok or press enter
+
