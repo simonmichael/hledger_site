@@ -163,3 +163,25 @@ If you're new to this process, [help.github.com](http://help.github.com) may be 
 - after getting something into the master branch, read and sign the [contributor list & agreement](contributors.html). Or, [ask](/docs.html#helpfeedback) to be added.
 - give yourself a high five!
 
+### Work on docs
+
+Most docs tasks are handled by [[Shake]]. List Shake rules:
+
+    ./Shake
+
+Generate man/info/txt manuals (in hledger*/) and embed in hledger executables:
+
+    ./Shake manuals
+    stack build
+
+Generate html manuals and the hledger website (in site/_site/):
+
+    ./Shake website
+
+Regenerate the hledger website (just site/*, does not generate manuals) and serve at http://localhost:8000, on file change:
+
+    make site-preview
+
+Regenerate a single html manual, and serve locally, on file change:
+
+    ls hledger-lib/hledger_journal.m4.md | entr -r bash -c './Shake site/journal.md && make site-preview'
