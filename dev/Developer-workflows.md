@@ -182,6 +182,6 @@ Regenerate the hledger website (just site/*, does not generate manuals) and serv
 
     make site-preview
 
-Regenerate a single html manual, and serve locally, on file change:
+Regenerate a single html manual, and serve locally, on file change (using [entr](http://www.entrproject.org)):
 
     ls hledger-lib/hledger_journal.m4.md | entr -r bash -c './Shake site/journal.md && make site-preview'
