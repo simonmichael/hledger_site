@@ -178,13 +178,13 @@ Generate html manuals and the hledger website (in site/_site/):
 
     ./Shake website
 
-Regenerate the hledger website (just site/*, does not generate manuals) and serve at http://localhost:8000, on file change:
+Regenerate the hledger website (does not generate html manuals) and serve locally at http://localhost:8000, on file change:
 
     make site-preview
 
-Regenerate a single html manual, and serve locally, on file change (using [entr](http://www.entrproject.org)):
+Regenerate html manuals and the website and serve locally on file change (using [entr](http://www.entrproject.org)):
 
-    ls hledger-lib/hledger_journal.m4.md | entr -r bash -c './Shake site/journal.md && make site-preview'
+    ls doc/lib.m4 hledger*/*.m4.md site/{index,intro,download,release-notes}.md | entr -r bash -c './Shake website && make site-preview'
 
 site/hakyll-std/hakyll-std.hs is a generic Hakyll script called by Shake.
 It gets confused if you regenerate source files too quickly, and then won't show the latest content.
