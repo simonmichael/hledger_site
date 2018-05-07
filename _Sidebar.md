@@ -32,6 +32,7 @@
 [[Budgeting and forecasting]]  
 [[Project accounting]]  
 [[Track investments]]  
+[[Time planning]]
 
 ### Usage tips
 
