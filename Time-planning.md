@@ -41,9 +41,32 @@ The monthly budget reuses the weekly goals.
 
 I have an iTerm2 Hotkey Window (a terminal that drops down on ALT-space) with six panes:
 
-1. a custom script showing latest laptop wake/sleep and timelog save times, as a memory aid for time logging:
+1. a bash script showing latest laptop wake/sleep and timelog save times, as a memory aid for time logging:
 
-       tlogwatch  
+       tlogwatch
+
+    (Here's that script, useful only to mac users; please show me something better!):
+
+        # show recent wakeup/timelog save times to help with time logging, clipped to screen width
+        # The width clipping is to help watch display this in dashboard.
+        function tlog()
+        {
+          LINES=${1:-20}
+          ( wakelog | tail -$LINES
+            printf " \n"
+            printf "$(timelogcreated) timelog created\n"
+            printf "$(timelogsaved) timelog saved\n"
+            printf "$(timelogaccessed) timelog accessed\n"
+          ) | cut -c-$(expr $COLUMNS - 1)
+        }
+        # run a brief tlog report periodically, passing any args to watch
+        function tlogwatch()
+        {
+          LINES=${1:-20}
+          watch -t -n60 $@ "bash -ic 'tlog '$LINES"
+        }
+        # TODO why does "tlogwatch 10" give "sh: 10: command not found" ?
+
 
 2. a text-mode emacs for updating the time log:
 
