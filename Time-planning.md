@@ -47,6 +47,11 @@ I have an iTerm2 Hotkey Window (a terminal that drops down on ALT-space) with si
 
     (Here's that script, useful only to mac users; please show me something better!):
 
+        # record timelog update times
+        export TIMELOG=$HOME/time-2018.timedot
+        alias timelogsaved="ls -lT $TIMELOG | cut -d' ' -f8-11"
+        alias timelogaccessed="ls -lTu $TIMELOG | cut -d' ' -f8-11"
+        alias timelogcreated="ls -lTU $TIMELOG | cut -d' ' -f8-11"
         # show recent wakeup/timelog save times to help with time logging, clipped to screen width
         # The width clipping is to help watch display this in dashboard.
         function tlog()
