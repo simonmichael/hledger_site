@@ -52,6 +52,14 @@ I have an iTerm2 Hotkey Window (a terminal that drops down on ALT-space) with si
         alias timelogsaved="ls -lT $TIMELOG | cut -d' ' -f8-11"
         alias timelogaccessed="ls -lTu $TIMELOG | cut -d' ' -f8-11"
         alias timelogcreated="ls -lTU $TIMELOG | cut -d' ' -f8-11"
+        
+        # show mac sleep/wake & display on/off  events
+        alias wakelog="pmset -g log | egrep -E '((Sleep|Wake) +\t|Display is)' | sed -E \
+              -e 's/(Notification|Sleep|Wake) *	//' \
+              -e 's/is turned //' \
+              -e 's/Entering Sleep state/Sleep/' \
+              "
+        
         # show recent wakeup/timelog save times to help with time logging, clipped to screen width
         # The width clipping is to help watch display this in dashboard.
         function tlog()
@@ -64,6 +72,7 @@ I have an iTerm2 Hotkey Window (a terminal that drops down on ALT-space) with si
             printf "$(timelogaccessed) timelog accessed\n"
           ) | cut -c-$(expr $COLUMNS - 1)
         }
+        
         # run a brief tlog report periodically, passing any args to watch
         function tlogwatch()
         {
