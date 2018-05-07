@@ -55,6 +55,6 @@ I have an iTerm2 Hotkey Window (a terminal that drops down on CMD-space) with si
        ls time.journal time-2018.timedot time-weekly.budget | entr sh -c 'clear; hledger -f time.journal -f time-weekly.budget bal --budget -1 -W date:thisweek-nextweek'
        ls time.journal time-2018.timedot time-weekly.budget | entr sh -c 'clear; hledger -f time.journal -f time-weekly.budget bal --budget -1 -M date:thismonth-nextmonth'
 
-6. an updating [hledger-ui](http://hledger.org/hledger-ui.html) for exploring time usage:
+6. an updating [hledger-ui](http://hledger.org/hledger-ui.html) for exploring time usage (shift-up/down to resize period, shift-left/right to step through time, t to return to today):
 
        hledger-ui --watch --change --flat -1 date:today -f time.journal
