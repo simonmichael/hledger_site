@@ -24,14 +24,14 @@ I have four files:
 
 3. time-daily.budget defines some daily goals, optionally date-bounded, using [periodic transaction(s)](http://hledger.org/journal.html#periodic-transactions):
 
-       ~ daily  ; [from Y-M-D] [to Y-M-D]
+       ~ daily  ; [from Y/M/D] [to Y/M/D]
            (adm)    1  ; your goals here
            (inc)    1
            (fos)    1
   
 4. time-weekly.budget defines some weekly goals. I like to set these independently of the above, which in current hledger means they must be in a separate file:
 
-       ~ weekly  ; [from Y-M-D] [to Y-M-D]
+       ~ weekly  ; [from Y/M/D] [to Y/M/D]
            (adm)    1
            (biz)    1
            (inc)    1
@@ -39,7 +39,7 @@ I have four files:
   
 The monthly budget reuses the weekly goals.
 
-I have an iTerm2 Hotkey Window (a terminal that drops down on CMD-space) with six panes:
+I have an iTerm2 Hotkey Window (a terminal that drops down on ALT-space) with six panes:
 
 1. a custom script showing latest laptop wake/sleep and timelog save times, as a memory aid for time logging:
 
