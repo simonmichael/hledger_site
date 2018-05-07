@@ -100,4 +100,4 @@ I have an iTerm2 Hotkey Window (a terminal that drops down on ALT-space) with si
 
 6. an updating [hledger-ui](http://hledger.org/hledger-ui.html) for exploring time usage (shift-up/down to resize period, shift-left/right to step through time, t to return to today):
 
-       hledger-ui --watch --change --flat -1 date:today -f time.journal
+       hledger-ui --watch --change date:today -f time.journal
