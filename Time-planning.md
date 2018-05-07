@@ -57,4 +57,4 @@ I have an iTerm2 Hotkey Window (a terminal that drops down on CMD-space) with si
 
 6. an updating [hledger-ui](http://hledger.org/hledger-ui.html) for exploring time usage:
 
-       hledger-ui --watch --change --flat -1 date:today time.journal
+       hledger-ui --watch --change --flat -1 date:today -f time.journal
