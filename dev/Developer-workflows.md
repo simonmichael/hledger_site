@@ -5,26 +5,41 @@
 - read the existing [code docs and source](#quick-links)
 - send feedback or discuss via [IRC or mail list](/docs.html#helpfeedback)
 
-### Build hledger
+### Get developer tools
 
-See also http://hledger.org/download.html#c.-build-the-development-version .
+Ensure [`stack`](https://haskell-lang.org/get-started) is installed
+(or if you’re a cabal expert, feel free to use that.)
 
-Get [`stack`](https://haskell-lang.org/get-started) 
-and (except on Windows, where stack provides it) [`git`](http://git-scm.com).
-(Or if you’re a cabal expert, feel free to use that.)
+Ensure [`git`](http://git-scm.com) is installed. On Windows, it comes with stack.
 
-#### Get the source:
+Here are some useful optional tools:
+
+- [GNU Make](http://www.gnu.org/software/make): to use the convenient [Make rules](#make).
+- [`entr`](http://www.entrproject.org/) runs arbitrary commands when files change.
+- [`ghcid`](http://hackage.haskell.org/package/ghcid) gives real-time GHC feedback as you make code changes.
+- [`shelltestrunner`](http://hackage.haskell.org/package/shelltestrunner) runs hledger's functional tests.
+- [`quickbench`](http://hackage.haskell.org/package/quickbench) measures and reports time taken by commands.
+- [`hasktags`](http://hackage.haskell.org/package/hasktags) generates tag files for quick code navigation in editors like Emacs and vi.
+
+Eg:
+
+    stack install ghcid shelltestrunner quickbench hasktags
+    brew install entr
+
+### Get the source:
 
     git clone https://github.com/simonmichael/hledger
     cd hledger
 
 #### Build in place:
 
+See also http://hledger.org/download.html#c.-build-the-development-version .
+
+    stack build    # hledger hledger-ui ...
+
 This fetches the required GHC version and haskell dependencies from the default stackage snapshot (configured in `stack.yaml`), 
 then builds all hledger packages.
 This can take a while! To save time, you can build individual packages, eg just the CLI and TUI.
-
-    stack build    # hledger hledger-ui ...
 
 Note stack does not fetch C libraries such as curses or terminfo, which you might need to install yourself, using your system's package manager.
 In case of trouble, see [download](/download.html#link-errors).
@@ -45,20 +60,6 @@ This builds and also copies the hledger executables to `~/.local/bin` or the Win
 (which you should  [add to your `$PATH`](/download.html#b)).
 
     stack install    # hledger hledger-ui ...
-
-### Install useful developer tools
-
-- [GNU Make](http://www.gnu.org/software/make): to use the convenient [Make rules](#make).
-- [`entr`](http://www.entrproject.org/) runs arbitrary commands when files change.
-- [`ghcid`](http://hackage.haskell.org/package/ghcid) gives real-time GHC feedback as you make code changes.
-- [`shelltestrunner`](http://hackage.haskell.org/package/shelltestrunner) runs hledger's functional tests.
-- [`quickbench`](http://hackage.haskell.org/package/quickbench) measures and reports time taken by commands.
-- [`hasktags`](http://hackage.haskell.org/package/hasktags) generates tag files for quick code navigation in editors like Emacs and vi.
-
-Eg:
-
-    stack install ghcid shelltestrunner quickbench hasktags
-    brew install entr
 
 ### Use GHCI
 
