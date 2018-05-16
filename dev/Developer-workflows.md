@@ -1,10 +1,3 @@
-### Review code
-
-- review and discuss new [pull requests](http://prs.hledger.org) and commits on github
-- build hledger and test the latest changes in your own repo
-- read the existing [code docs and source](#quick-links)
-- send feedback or discuss via [IRC or mail list](/docs.html#helpfeedback)
-
 ### Get developer tools
 
 Ensure [`stack`](https://haskell-lang.org/get-started) is installed
@@ -19,7 +12,8 @@ Here are some useful optional tools:
 - [`ghcid`](http://hackage.haskell.org/package/ghcid) gives real-time GHC feedback as you make code changes.
 - [`shelltestrunner`](http://hackage.haskell.org/package/shelltestrunner) runs hledger's functional tests.
 - [`quickbench`](http://hackage.haskell.org/package/quickbench) measures and reports time taken by commands.
-- [`hasktags`](http://hackage.haskell.org/package/hasktags) generates tag files for quick code navigation in editors like Emacs and vi.
+- [`hasktags`](http://hackage.haskell.org/package/hasktags) generates tag files for quick code navigation in editors like Emacs and vim.
+- For browsing and editing Haskell code, popular tools include: Emacs, Vim, IDEA, VS Code, Atom..
 
 Eg:
 
@@ -30,6 +24,13 @@ Eg:
 
     git clone https://github.com/simonmichael/hledger
     cd hledger
+
+### Review code
+
+- review and discuss new [pull requests](http://prs.hledger.org) and commits on github
+- build hledger and test the latest changes in your own repo
+- read the existing [code docs and source](#quick-links)
+- send feedback or discuss via [IRC or mail list](/docs.html#helpfeedback)
 
 #### Build in place:
 
