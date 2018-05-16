@@ -20,7 +20,7 @@ Eg:
     stack install ghcid shelltestrunner quickbench hasktags
     brew install entr
 
-### Get the source:
+### Get the code
 
     git clone https://github.com/simonmichael/hledger
     cd hledger
@@ -32,7 +32,7 @@ Eg:
 - read the existing [code docs and source](#quick-links)
 - send feedback or discuss via [IRC or mail list](/docs.html#helpfeedback)
 
-#### Build in place:
+### Build in place
 
 See also http://hledger.org/download.html#c.-build-the-development-version .
 
@@ -49,13 +49,13 @@ If you want to use an older snapshot/GHC for some reason, specify one of the old
 
     stack --stack-yaml stack-ghc8.2.yaml build
     
-#### Run in place:
+### Run in place
 
     stack exec -- hledger     # ARGS...
     stack exec -- hledger-ui  # ARGS...
     stack exec -- which hledger
 
-#### Build and install:
+### Build and install:
 
 This builds and also copies the hledger executables to `~/.local/bin` or the Windows equivalent
 (which you should  [add to your `$PATH`](/download.html#b)).
