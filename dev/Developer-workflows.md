@@ -206,7 +206,9 @@ Some make rules are provided to make running it easier. Run `make` to see a list
 
 ### Use entr for rapid feedback
 
-[entr](http://entrproject.org/) is the most robust cross-platform tool for watching files and running arbitrary commands when they change. It is tremendously useful.
+[entr](http://entrproject.org/) is the most robust cross-platform tool for watching files and running arbitrary commands when they change. 
+
+Its first argument is an executable, to run an arbitrary shell command use `bash -c "CMD"`.
 
 Rerun a single functional test:
 
