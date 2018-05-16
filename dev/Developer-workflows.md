@@ -55,7 +55,7 @@ If you want to use an older snapshot/GHC for some reason, specify one of the old
     stack exec -- hledger-ui  # ARGS...
     stack exec -- which hledger
 
-### Build and install:
+### Build and install
 
 This builds and also copies the hledger executables to `~/.local/bin` or the Windows equivalent
 (which you should  [add to your `$PATH`](/download.html#b)).
