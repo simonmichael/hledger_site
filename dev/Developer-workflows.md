@@ -1,7 +1,7 @@
 ### Get developer tools
 
 Ensure [`stack`](https://haskell-lang.org/get-started) is installed
-(or if you’re a cabal expert, feel free to use that.)
+(or if you’re a [cabal](https://www.haskell.org/cabal/) expert, feel free to use that.)
 
 Ensure [`git`](http://git-scm.com) is installed. On Windows, it comes with stack.
 
