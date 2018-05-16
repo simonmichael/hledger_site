@@ -74,6 +74,12 @@ Runs any performance reports defined by each hledger package.
 
     stack bench    # hledger ...
 
+### Run quickbench benchmarks
+
+Times the end-user commands in `bench.sh` using quickbench.
+
+    make bench
+
 ### Run functional tests
 
 Runs the shelltestrunner tests defined in tests/, which test the hledger CLI.
