@@ -9,10 +9,10 @@
 ### Getting started
 
 [[hledger basics tutorial]]  
+[[hledger terminology]]  
 [[Create a journal]]  
 [[Common journal entries]]  
 [[hledger accounting concepts tutorial]]          
-[[hledger terminology]]  
 [[FAQ]]
 
 ### Data entry, import, management
