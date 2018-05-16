@@ -1,5 +1,3 @@
-Moved from hledger.org/contributing.html, needs update.
-
 ### Review code
 
 - review and discuss new [pull requests](http://prs.hledger.org) and commits on github
