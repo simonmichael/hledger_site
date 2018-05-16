@@ -9,70 +9,58 @@ Moved from hledger.org/contributing.html, needs update.
 
 ### Build hledger
 
-1. get [`stack`](/download.html#b) and (except on Windows, where stack provides it) [`git`](http://git-scm.com), then:
-2. `git clone https://github.com/simonmichael/hledger && cd hledger && stack install`
+See also http://hledger.org/download.html#c.-build-the-development-version .
 
-<div style="margin-left:1em; margin-right:1em; padding:.5em; border:thin solid #ddd; border-radius:.5em;">
-In more detail:
+Get [`stack`](https://haskell-lang.org/get-started) 
+and (except on Windows, where stack provides it) [`git`](http://git-scm.com).
+(Or if you’re a cabal expert, feel free to use that.)
 
-**1. Get tools**
+#### Get the source:
 
-[`stack`](/download.html#b)
-is the recommended tool for building hledger.  You can use cabal-install
-if you prefer, but that requires more expertise;
-the hledger docs assume stack.
+    git clone https://github.com/simonmichael/hledger
+    cd hledger
 
-[`git`](http://git-scm.com) is the version control tool needed to
-fetch the hledger source and submit changes. On Windows, stack will
-install this as well.
+#### Build in place:
 
-<!--
-While you're installing, here are some optional extra tools:
+This fetches the required GHC version and haskell dependencies from the default stackage snapshot (configured in `stack.yaml`), 
+then builds all hledger packages.
+This can take a while! To save time, you can build individual packages, eg just the CLI and TUI.
 
-- `ghcid`: gives real-time feedback as you make code changes, reliable and useful.
-- `hasktags`: generates tag files for quick code navigation in editors like Emacs and vi.
-- `shelltestrunner`: if you want to run hledger's functional tests.
-- [GNU Make](http://www.gnu.org/software/make): if you want to use some convenient [Makefile rules](#make).
+    stack build    # hledger hledger-ui ...
 
-```shell
-$ stack install ghcid hasktags shelltestrunner
-```
--->
+Note stack does not fetch C libraries such as curses or terminfo, which you might need to install yourself, using your system's package manager.
+In case of trouble, see [download](/download.html#link-errors).
 
-**2. Get the source**
+If you want to use an older snapshot/GHC for some reason, specify one of the older stack-ghc*.yaml files:
 
-```shell
-$ git clone https://github.com/simonmichael/hledger   # or git:
-```
+    stack --stack-yaml stack-ghc8.2.yaml build
+    
+#### Run in place:
 
-**3. Build/install**
+    stack exec -- hledger     # ARGS...
+    stack exec -- hledger-ui  # ARGS...
+    stack exec -- which hledger
 
-```shell
-$ cd hledger
-$ stack install
-```
+#### Build and install:
 
-This builds all the hledger packages, and installs executables in
-`$HOME/.local/bin/` (or the Windows equivalent), which you should 
-[add to your `$PATH`](/download.html#b).
+This builds and also copies the hledger executables to `~/.local/bin` or the Windows equivalent
+(which you should  [add to your `$PATH`](/download.html#b)).
 
-This can take a while!
-To save time, you can build fewer [packages](/manual.html#official-add-ons), eg just the CLI:
-```shell
-$ stack install hledger
-```
+    stack install    # hledger hledger-ui ...
 
-You can also build and run in place, without installing executables:
-```shell
-$ stack build; stack exec -- hledger [ARGS]
-```
+### Install useful developer tools
 
-Note stack fetches most required dependencies automatically,
-but not C libraries such as curses or terminfo, which you might need
-to install yourself, using your system's package manager.
-In case of trouble, see [download](/download.html#b).
+- [GNU Make](http://www.gnu.org/software/make): to use the convenient [Make rules](#make).
+- [`entr`](http://www.entrproject.org/) runs arbitrary commands when files change.
+- [`ghcid`](http://hackage.haskell.org/package/ghcid) gives real-time GHC feedback as you make code changes.
+- [`shelltestrunner`](http://hackage.haskell.org/package/shelltestrunner) runs hledger's functional tests.
+- [`quickbench`](http://hackage.haskell.org/package/quickbench) measures and reports time taken by commands.
+- [`hasktags`](http://hackage.haskell.org/package/hasktags) generates tag files for quick code navigation in editors like Emacs and vi.
 
-</div>
+Eg:
+
+    stack install ghcid shelltestrunner quickbench hasktags
+    brew install entr
 
 ### Use GHCI
 
@@ -82,50 +70,30 @@ First, ensure all required dependencies are installed with these
 commands. (You might also need to install some system libs like
 terminfo or curses.)
 
-```shell
-$ stack test
-$ stack bench
-```
+    stack test
+    stack bench
 
-Get a GHCI prompt for hledger-lib:
-```shell
-$ cd hledger-lib; stack ghci hledger-lib
-```
+#### Get a GHCI prompt for hledger-lib:
+
+    cd hledger-lib; stack ghci hledger-lib
+
 Changing into the package directory isn't actually needed, but it
 enables a custom .ghci script which sets a more useful short prompt.
 
-Get a GHCI prompt for hledger:
-```shell
-$ cd hledger; stack ghci hledger
-```
+#### Get a GHCI prompt for hledger:
 
-Get a GHCI prompt for hledger-ui:
-```shell
-$ cd hledger-ui; stack ghci hledger-ui
-```
-Get a GHCI prompt for hledger-web:
-```shell
-$ cd hledger-web; stack ghci hledger-web
-```
+    cd hledger; stack ghci hledger
+
+#### Get a GHCI prompt for hledger-ui:
+
+    cd hledger-ui; stack ghci hledger-ui
+
+#### Get a GHCI prompt for hledger-web:
+
+    cd hledger-web; stack ghci hledger-web
+
 hledger-web also needs to find some things in its current directory (like the static/ directory).
 This normally just works, if not please [send details](https://github.com/simonmichael/hledger/issues/274).
-
-<!--
-Get a GHCI prompt for hledger and hledger-lib:
-```shell
-$ make ghci
-```
-
-Get a GHCI prompt for hledger-web, hledger and hledger-lib:
-```shell
-$ make ghci-web
-```
-
-For the dev.hs developer script:
-```shell
-$ make ghci-dev
-```
--->
 
 ### Add a test
 
@@ -165,34 +133,30 @@ If you're new to this process, [help.github.com](http://help.github.com) may be 
 
 ### Work on docs
 
-Most docs tasks are handled by [[Shake]]. List Shake rules:
+Most docs tasks are handled by [[Shake]]. 
+
+#### List Shake rules:
 
     ./Shake
 
-Generate man/info/txt manuals (in hledger*/) and embed in hledger executables:
+#### Generate man/info/txt manuals (in hledger*/) and embed in hledger executables:
 
     ./Shake manuals
     stack build
 
-Generate html manuals and the hledger website (in site/_site/):
+#### Generate html manuals and the hledger website (in site/_site/):
 
     ./Shake website
 
-Regenerate the hledger website (does not generate html manuals) and serve locally at http://localhost:8000, on file change:
+#### Regenerate the hledger website (does not generate html manuals) and serve locally at http://localhost:8000, on file change:
 
     make site-preview
 
-Regenerate html manuals and the website and serve locally on file change (using [entr](http://www.entrproject.org)):
+#### Regenerate html manuals and the website and serve locally on file change (using [entr](http://www.entrproject.org)):
 
     ls doc/lib.m4 hledger*/*.m4.md site/{index,intro,download,release-notes}.md | entr -r bash -c './Shake website && make site-preview'
 
-site/hakyll-std/hakyll-std.hs is a generic Hakyll script called by Shake.
-It gets confused if you regenerate source files too quickly, and then won't show the latest content.
-To reset it and start over:
-
-    make site-clean
-
-To do the above and also reset all files generated by Shake:
+#### To remove all files generated by Shake:
 
     ./Shake Clean
 
@@ -202,11 +166,11 @@ To do the above and also reset all files generated by Shake:
 
 Some make rules are provided to make running it easier. Run `make` to see a list. These cause ghcid to watch multiple packages rather than just one. 
 
-Watch for compile errors in hledger-lib and hledger:
+#### Watch for compile errors in hledger-lib and hledger:
 
     make ghcid
 
-Watch compile errors and the output of some hledger command:
+#### Watch compile errors and the output of some hledger command:
 
     ghcid -c 'make ghci' -T ':main -f a.j bal --budget -N'
 
@@ -216,6 +180,6 @@ Watch compile errors and the output of some hledger command:
 
 Its first argument is an executable, to run an arbitrary shell command use `bash -c "CMD"`.
 
-Rerun a single functional test as you change it:
+#### Rerun a single functional test as you change it:
 
     ls tests/budget/budget.test | entr bash -c 'clear; COLUMNS=80 stack exec -- shelltest --execdir tests/budget/budget.test -i12'
