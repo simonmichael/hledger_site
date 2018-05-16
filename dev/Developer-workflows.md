@@ -186,7 +186,7 @@ Most docs tasks are handled by [[Shake]].
 
     ./Shake Clean
 
-### Use ghcid for rapid feedback
+### Use ghcid for rapid feedback from GHC
 
 [ghcid](http://hackage.haskell.org/package/ghcid) is the most reliable and fastest way to see GHC's feedback, and optionally run tests or arbitrary GHCI command, as you edit.
 
@@ -200,11 +200,9 @@ Some make rules are provided to make running it easier. Run `make` to see a list
 
     ghcid -c 'make ghci' -T ':main -f a.j bal --budget -N'
 
-### Use entr for rapid feedback
+### Use entr for rapid feedback from arbitrary commands
 
-[entr](http://entrproject.org/) is the most robust cross-platform tool for watching files and running arbitrary commands when they change. 
-
-Its first argument is an executable, to run an arbitrary shell command use `bash -c "CMD"`.
+[entr](http://entrproject.org/) is the most robust cross-platform tool for watching files and running a command when they change. Note its first argument must be an executable, to run an arbitrary shell command or multiple commands use `bash -c "..."`.
 
 #### Rerun a single functional test as you change it:
 
