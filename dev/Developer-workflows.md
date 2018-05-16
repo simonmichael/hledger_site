@@ -186,7 +186,7 @@ Most docs tasks are handled by [[Shake]].
 
     ./Shake Clean
 
-### Use ghcid for rapid feedback from GHC
+### Use ghcid for watching GHC/GHCI
 
 [ghcid](http://hackage.haskell.org/package/ghcid) is the most reliable and fastest way to see GHC's feedback, and optionally run tests or a GHCI command, as you edit. We run it via make, for convenience and to watch multiple packages rather than just one. Run `make help-ghcid` to list related rules.
 
@@ -198,7 +198,15 @@ Most docs tasks are handled by [[Shake]].
 
     ghcid -c 'make ghci' -T ':main -f a.j bal --budget -N'
 
-### Use entr for rapid feedback from arbitrary commands
+### Use --file-watch for watching stack
+
+stack's --file-watch flag will re-run build/test/bench when source files or package.yaml/cabal files change. Eg:
+
+    stack test hledger --file-watch
+
+If you find that adding --fast makes this any faster, please update this.
+
+### Use entr for watching arbitrary commands
 
 [entr](http://entrproject.org/) is the most robust cross-platform tool for watching files and running a command when they change. Note its first argument must be an executable program, to run a shell command or multiple commands use `bash -c "..."`.
 
