@@ -188,9 +188,7 @@ Most docs tasks are handled by [[Shake]].
 
 ### Use ghcid for rapid feedback from GHC
 
-[ghcid](http://hackage.haskell.org/package/ghcid) is the most reliable and fastest way to see GHC's feedback, and optionally run tests or a GHCI command, as you edit.
-
-Some make rules are provided to make running it easier. Run `make` to see a list. These cause ghcid to watch multiple packages rather than just one. 
+[ghcid](http://hackage.haskell.org/package/ghcid) is the most reliable and fastest way to see GHC's feedback, and optionally run tests or a GHCI command, as you edit. We run it via make, for convenience and to watch multiple packages rather than just one. Run `make help-ghcid` to list related rules.
 
 #### Watch for compile errors in hledger-lib and hledger:
 
