@@ -62,16 +62,44 @@ This builds and also copies the hledger executables to `~/.local/bin` or the Win
 
     stack install    # hledger hledger-ui ...
 
+### Run package tests
+
+Runs any HUnit/doctest/easytest tests defined by each hledger package.
+
+    stack test    # hledger ...
+
+### Run package benchmarks
+
+Runs any performance reports defined by each hledger package.
+
+    stack bench    # hledger ...
+
+### Run functional tests
+
+Runs the shelltestrunner tests defined in tests/, which test the hledger CLI.
+
+    stack build hledger
+    make functest
+
+### Run haddock tests
+
+Checks for anything that would break haddock doc generation.
+
+    make haddocktest
+
+### Simulate Travis tests
+
+Locally runs tests similar to what we run on Travis CI.
+
+    make travistest
+
+### Test with all supported GHC versions/stackage snapshots
+
+    make allsnapshotstest
+
 ### Use GHCI
 
-These all work from the main hledger source directory (at least).
-
-First, ensure all required dependencies are installed with these
-commands. (You might also need to install some system libs like
-terminfo or curses.)
-
-    stack test
-    stack bench
+GHCI is GHC's REPL, useful for exploring and calling code interactively.
 
 #### Get a GHCI prompt for hledger-lib:
 
