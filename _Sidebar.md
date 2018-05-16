@@ -52,4 +52,4 @@
 [ledger-cli.org](http://ledger-cli.org) - [docs](https://www.ledger-cli.org/docs.html) - [wiki](https://github.com/ledger/ledger/wiki)  
 [Beancount's docs](http://furius.ca/beancount/doc/index)  
 
-## [[Dev Zone]]
+## [[Dev Zone]] ...

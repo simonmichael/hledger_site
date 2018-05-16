@@ -1,6 +1,6 @@
-## [hledger.org](http://hledger.org)
+## [hledger.org](http://hledger.org) ...
 
-## [[User Cookbook|Home]]
+## [[User Cookbook|Home]] ...
 
 # > [[Dev Zone]]
 
