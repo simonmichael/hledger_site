@@ -12,6 +12,7 @@
 [[Create a journal]]  
 [[Common journal entries]]  
 [[hledger accounting concepts tutorial]]
+
 [[hledger terminology]]  
 [[FAQ]]
 
