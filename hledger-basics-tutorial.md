@@ -390,7 +390,7 @@ The other account name doesn't matter too much; `equity:opening balances` is con
 Now the report looks like this, with an accurate running balance on each date (hledger calls this a *historical balance*):
 
 ```shell
-$ hledger register
+$ hledger register assets
 2015/05/01 set initial asset..  assets                        $500          $500
 2015/05/25 trip to the super..  assets                        $-10          $490
 2015/05/26 forgot the bread     assets                         $-5          $485
