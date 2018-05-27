@@ -77,11 +77,12 @@ See also the two Twitter feeds:
 - [I’ve Tracked My Expenses — Now What?](http://www.getrichslowly.org/blog/2011/04/08/ask-the-readers-ive-tracked-my-expenses-now-what/) Get Rich Slowly
 - [A Slow-Tech Approach to Tracking Spending](http://mobile.nytimes.com/2014/05/12/your-money/household-budgeting/a-slow-tech-approach-to-tracking-spending.html)
 - [Your Financial Network Map](http://www.bargaineering.com/articles/financial-network-map.html)
-- [The Accountancy Model and The Accountancy Model Examples](http://timriley.net/appahost/accountancy_model.html) - two free books by Tim Riley
+- [The Accountancy Model and The Accountancy Model Examples](https://www.google.com/search?hl=en&q=%2B%22The%20Accountancy%20Model%22%20%2B%22The%20Accountancy%20Model%20Examples%22) - two free books by Tim Riley
 - [Gnucash and double entry accounting](http://www.austintek.com/gnucash/ncsa-gnucash-talk.html) - double entry accounting introduction with examples
 - [Accounting for Computer Scientists](http://martin.kleppmann.com/2011/03/07/accounting-for-computer-scientists.html)
 - [Closing Entries](http://www.cliffsnotes.com/more-subjects/accounting/accounting-principles-i/completion-of-the-accounting-cycle/closing-entries)
 - [Tutorial on multiple currency accounting](http://www.mscs.dal.ca/~selinger/accounting/tutorial.html) by Peter Selinger
+- [Algebraic Models for Accounting Systems](https://twitter.com/meekaale/status/1000426850819170304)
 
 ## hledger add-ons
 
