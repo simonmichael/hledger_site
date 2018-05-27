@@ -82,7 +82,7 @@ See also the two Twitter feeds:
 - [Accounting for Computer Scientists](http://martin.kleppmann.com/2011/03/07/accounting-for-computer-scientists.html)
 - [Closing Entries](http://www.cliffsnotes.com/more-subjects/accounting/accounting-principles-i/completion-of-the-accounting-cycle/closing-entries)
 - [Tutorial on multiple currency accounting](http://www.mscs.dal.ca/~selinger/accounting/tutorial.html) by Peter Selinger
-- [Algebraic Models for Accounting Systems](https://twitter.com/meekaale/status/1000426850819170304)
+- [Algebraic Models for Accounting Systems](https://www.amazon.com/Algebraic-Accounting-Systems-Salvador-Rambaud/dp/9814287113) - recommended [on twitter](https://twitter.com/meekaale/status/1000426850819170304)
 
 ## hledger add-ons
 
