@@ -64,7 +64,7 @@ See also the two Twitter feeds:
 - [Accounting For Dragons](http://podcastle.org/2009/10/09/pc-miniature-38-accounting-for-dragons) why you should know accounting
 - [Bean Counter](http://www.dwmbeancounter.com/) - tutorials, such as
   [So, you want to learn Bookkeeping!](http://www.dwmbeancounter.com/tutorial/Tutorial.html).
-  This has been recommended on the ledger list.
+  This has been recommended on the ledger list and on [HN](https://news.ycombinator.com/item?id=17245101).
 - [Accounting Coach](https://www.accountingcoach.com/)
 - [Accounting Basics](http://www.accountingverse.com/accounting-basics/)
 - [Guru 99 Accounting Tutorials](http://www.guru99.com/accounting.html)
