@@ -1,4 +1,4 @@
-I find tracking expenses using a mobile device convenient. One of the challenges has been finding applications that focus primarily on this. Do add ones with a brief description you find useful.
+Entering expenses on the spot using a mobile device can be convenient. One of the challenges is finding applications that focus primarily on making this efficient. Add any others here that you find useful.
 
 1. [expense](http://ela.build/expense) (iOS)
    * minimal interface only for expense tracking. CSV export supported
