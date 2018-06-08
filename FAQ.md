@@ -74,9 +74,8 @@ reports, better depth limiting, an interactive data entry assistant,
 and optional web and curses interfaces.
 
 Compared to hledger, Ledger has additional power-user features such as
-periodic and modifier transactions, budget reports, and the built in
-value expressions language, and it remains faster and more memory
-efficient (for now).
+the built in value expressions language, 
+and it remains faster and more memory efficient on large files (for now).
 
 We currently support:
 
