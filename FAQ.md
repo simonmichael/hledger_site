@@ -263,7 +263,7 @@ $ hledger -f t.j register --width 50
                               USD -1             0  ;
 ```
 
-Newer reports like [multi-column balance reports](http://hledger.org/manual.html#multicolumn-balance-reports) show multi-commodity amounts on one line instead, comma-separated.
+Newer reports like [multi-column balance reports](http://hledger.org/manual.html#multicolumn-balance-report) show multi-commodity amounts on one line instead, comma-separated.
 Although wider, this seems clearer and we should probably use it more:
 ```shell
 $ hledger -f t.j balance --yearly
