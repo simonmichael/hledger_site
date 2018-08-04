@@ -18,7 +18,7 @@
 ### Data entry, import, management
 
 [[Convert CSV files]]  
-[[Customize default CSV account names]]  
+[[Customize default CSV accounts]]  
 [[Track changes with version control]]  
 [[Use another account separator character]]  
 [Full-fledged hledger](https://github.com/adept/full-fledged-hledger)  
