@@ -25,7 +25,7 @@ if cafe
 
 Add two rules like this, before any other account2 rules (eg above the `if cafe` rule):
 ```
-# capitalise default income/expense accounts
+# default income/expense accounts
 account2 Income:Misc
 if ,-[0-9]+(,|$)
  account2 Expenses:Misc
