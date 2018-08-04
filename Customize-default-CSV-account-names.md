@@ -23,7 +23,7 @@ if cafe
   account2 Expenses:Coffee
 ```
 
-You could add two rules like this, before any other account2 rules (eg the `if cafe` above):
+You could add two rules like this, before any other account2 rules (eg above the `if cafe` above):
 ```
 # capitalise default income/expense accounts
 account2 Income:Misc
