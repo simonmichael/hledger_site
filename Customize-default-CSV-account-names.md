@@ -1,4 +1,4 @@
-hledger uses some hard-coded default accounts when converting CSV: `income:unknown`, `expenses:unknown` etc. 
+hledger uses some hard-coded default accounts when converting CSV: `income:unknown` and `expenses:unknown`. 
 
 Normally when you see these, you would add some more CSV rules to assign more specific accounts. 
 They should probably be configurable.
