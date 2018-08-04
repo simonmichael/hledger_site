@@ -1,4 +1,4 @@
-When converting CSV, hledger uses the account names `income:unknown` and `expenses:unknown` as defaults for account2.
+When converting CSV, hledger uses the account names `income:unknown` and `expenses:unknown` as defaults for the second posting's account.
 
 Normally when you see these, you add CSV rules to set a more specific account name. 
 They should probably be configurable.
