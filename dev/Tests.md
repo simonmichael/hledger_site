@@ -1,3 +1,8 @@
+Review test-related make rules:
+```
+$ make help-test
+```
+
 Run unit tests:
 ```
 $ make unittest
