@@ -8,7 +8,7 @@ Run doctests:
 $ make doctest
 ```
 
-Run functional tests:
+Run functional tests (and unit tests, now):
 ```
 $ stack install shelltestrunner
 $ make functest
@@ -21,7 +21,7 @@ of all or selected packages.
 $ stack test [PKG]
 ```
 
-Run package and functional tests:
+Run "default tests: package plus functional tests":
 ```
 $ make test
 ```
