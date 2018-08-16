@@ -1,8 +1,3 @@
-Review test-related make rules:
-```
-$ make help-test
-```
-
 Run unit tests:
 ```
 $ make unittest
@@ -65,4 +60,9 @@ test [TESTPATTERN] [SEED]
 Rebuild and rerun hledger unit tests via ghcid:
 ```
 $ make ghcid-test
+```
+
+See all test-related make rules:
+```
+$ make help-test
 ```
