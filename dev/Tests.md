@@ -57,9 +57,14 @@ test [TESTPATTERN] [SEED]
   seed for easytests.
 ```
 
-Rebuild and rerun hledger unit tests via ghcid:
+Rebuild and rerun hledger/hledger-lib unit tests via ghcid:
 ```
 $ make ghcid-test
+```
+
+Rebuild and rerun only some tests via ghcid (see hledger test --help):
+```
+$ make ghcid-test-TESTPATTERN
 ```
 
 See all test-related make rules:
