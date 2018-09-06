@@ -1,48 +1,49 @@
 Run unit tests:
-```
+
+#+BEGIN_EXAMPLE
 $ make unittest
-```
+#+END_EXAMPLE
 
 Run doctests:
-```
+#+BEGIN_EXAMPLE
 $ make doctest
-```
+#+END_EXAMPLE
 
 Run functional tests (and unit tests, now):
-```
+#+BEGIN_EXAMPLE
 $ stack install shelltestrunner
 $ make functest
-```
+#+END_EXAMPLE
 
 Run the package tests
 (unit tests, maybe doctests, but not functional tests)
 of all or selected packages.
-```
+#+BEGIN_EXAMPLE
 $ stack test [PKG]
-```
+#+END_EXAMPLE
 
 Run "default tests: package plus functional tests":
-```
+#+BEGIN_EXAMPLE
 $ make test
-```
+#+END_EXAMPLE
 
 Test generation of haddock docs:
-```
+#+BEGIN_EXAMPLE
 $ make haddocktest
-```
+#+END_EXAMPLE
 
 Thorough test for build issues with current GHC:
-```
+#+BEGIN_EXAMPLE
 $ make buildtest
-```
+#+END_EXAMPLE
 
 Thorough test for build issues with all supported GHC versions:
-```
+#+BEGIN_EXAMPLE
 $ make buildtestall
-```
+#+END_EXAMPLE
 
 Run built-in hledger/hledger-lib unit tests via hledger command:
-```
+#+BEGIN_EXAMPLE
 $ hledger test  # test installed hledger
 $ stack build hledger && stack exec -- hledger test  # test just-built hledger
 $ hledger test --help
@@ -55,19 +56,19 @@ test [TESTPATTERN] [SEED]
   in that scope and only hunit tests whose name contains it are run.
   If a numeric second argument is provided, it will set the randomness
   seed for easytests.
-```
+#+END_EXAMPLE
 
 Rebuild and rerun hledger/hledger-lib unit tests via ghcid:
-```
+#+BEGIN_EXAMPLE
 $ make ghcid-test
-```
+#+END_EXAMPLE
 
 Rebuild and rerun only some tests via ghcid (see hledger test --help):
-```
+#+BEGIN_EXAMPLE
 $ make ghcid-test-TESTPATTERN
-```
+#+END_EXAMPLE
 
 See all test-related make rules:
-```
+#+BEGIN_EXAMPLE
 $ make help-test
-```
+#+END_EXAMPLE
