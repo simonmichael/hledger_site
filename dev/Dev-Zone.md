@@ -4,7 +4,7 @@ This section of the hledger wiki is to help contributors of all kinds to get inv
 The invitation and editing tips on [[User Cookbook|Home]] apply here also.
 You can find content in the sidebar to the right. 
 <div align=center>
-<img width=200 height=200 src="https://www.pdclipart.org/albums/Arrows_and_Pointers/arrow02_1.png">
+<img width=100 height=100 src="https://www.pdclipart.org/albums/Arrows_and_Pointers/arrow02_1.png">
 </div>
 
 ### Quick Links
