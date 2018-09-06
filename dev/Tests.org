@@ -66,11 +66,16 @@ tests_Foo = tests "Foo" [ -- define tests at the end of each module
   ]
 #+END_SRC
 
-Here's the quick way to run unit tests while developing:\\
-=make ghcid-test= or =make ghcid-test-Hledger.Some.Module=.
+Here are 
+[some](https://github.com/simonmichael/hledger/blob/master/hledger-lib/Hledger/Data/Posting.hs#L296) 
+real-world
+[examples](https://github.com/simonmichael/hledger/blob/master/hledger-lib/Hledger/Read/JournalReader.hs#L579).
 
 The unit tests are shipped as part of the hledger executable,
 and can always be run via the [[http://hledger.org/manual#test][test]] command (=hledger test=).
+
+Here's the quick way to run unit tests while developing:\\
+=make ghcid-test= or =make ghcid-test-Hledger.Some.Module=.
 
 ** Doc tests
 
