@@ -69,7 +69,7 @@ Functional tests test the overall functioning of the program.
 For hledger, that means running =hledger= with various inputs and options and checking for the expected output.
 This exercises functionality in the hledger and hledger-lib packages.
 We do this with [[http://hackage.haskell.org/package/shelltestrunner][shelltestrunner]].
-Tests are defined in files under [[https://github.com/simonmichael/hledger/tree/master/tests][=tests/=]], grouped by [[Issues#components][component]] (command or topic name).
+Tests are defined in files under [[https://github.com/simonmichael/hledger/tree/master/tests][tests/]], grouped by [[Issues#components][component]] (command or topic name).
 
 ** Code tests
 
