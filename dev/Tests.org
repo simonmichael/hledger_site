@@ -22,18 +22,18 @@ Here's the pattern (let us know if you see a better way):
 #+BEGIN_SRC haskell
 module Foo (
   ...
-  easytests_Foo -- export this module's and submodules' tests
+  tests_Foo -- export this module's and submodules' tests
 )
 where
 import Hledger  -- provides Hledger.Utils.Test helpers
-import Bar      -- submodules, providing easytests_Bar etc.
+import Bar      -- submodules, providing tests_Bar etc.
 import Baz
 
 functionA = ...
 functionB = ...
 functionC = ...
 
-easytests_Foo = tests "Foo" [ -- define tests at the end of each module
+tests_Foo = tests "Foo" [ -- define tests at the end of each module
 
    tests "functionA" [
      test "a basic test"      $ SOMEEXPR `is` EXPECTEDVALUE
@@ -54,8 +54,8 @@ easytests_Foo = tests "Foo" [ -- define tests at the end of each module
     ...
     ]
 
-  ,easytests_Foo            -- aggregate submodule tests
-  ,easytests_Bar
+  ,tests_Foo            -- aggregate submodule tests
+  ,tests_Bar
   ]
 #+END_SRC
 
