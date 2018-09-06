@@ -9,7 +9,7 @@ In hledger, that means a function.
 So, many of our functions have one or more unit tests.
 These are mostly in hledger-lib, with a few in hledger.
 
-Our unit tests use [[http://hackage.haskell.org/package/easytest][easytest]] and some [[https://github.com/simonmichael/hledger/blob/master/hledger-lib/Hledger/Utils/Test.hs][helpers]] provided by Hledger.Utils.Test,
+Our unit tests use [[http://hackage.haskell.org/package/easytest][easytest]] and some helpers from [[https://github.com/simonmichael/hledger/blob/master/hledger-lib/Hledger/Utils/Test.hs][Hledger.Utils.Test]],
 and follow a consistent pattern which aims to keep them
 - easy to read (clear, concise)
 - easy to write (low boilerplate, low cognitive load)
@@ -20,31 +20,41 @@ and follow a consistent pattern which aims to keep them
 Here's the pattern (let us know if you see a better way):
 
 #+BEGIN_SRC haskell
-module M (
+module Foo (
   ...
-  easytests_M
+  easytests_Foo -- export this module's and submodules' tests
 )
 where
-import Hledger  -- provides Hledger.Utils.Test
-import Foo      -- submodules, providing easytests_Foo etc.
-import Bar
-...
+import Hledger  -- provides Hledger.Utils.Test helpers
+import Bar      -- submodules, providing easytests_Bar etc.
+import Baz
+
 functionA = ...
 functionB = ...
-...
+functionC = ...
 
-easytests_M = tests "M" [
+easytests_Foo = tests "Foo" [ -- define tests at the end of each module
+
    tests "functionA" [
-     test "something"   $ SOMEEXPR `is` EXPECTEDVALUE  -- name and define a basic test
-    ,test "other thing" $ expectParseEq PARSER INPUT EXPECTEDRESULT
-    ...
+     test "a basic test"      $ SOMEEXPR `is` EXPECTEDVALUE
+    ,test "a parse test"      $ expectParseEq PARSER INPUT EXPECTEDRESULT
+    ,test "a sequential test" $ do
+      A `is` B
+      io $ doSomeIO
+      C `is` D
     ]
+    ,_test "an ignored test"  $ ...  -- will be skipped
+
   ,tests "functionB" [
-     _test "blah" $ ...   -- this test will be skipped
-    ,test "bleh" $ ... 
+     it "does blah"  $ ...  -- alternate spelling
+    ,_it "will bleh" $ ...
+    ]
+
+  ,_tests "functionC" [     -- will be skipped
     ...
     ]
-  ,easytests_Foo
+
+  ,easytests_Foo            -- aggregate submodule tests
   ,easytests_Bar
   ]
 #+END_SRC
