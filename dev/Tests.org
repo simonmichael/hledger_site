@@ -27,9 +27,9 @@ module M (
   easytests_M
 )
 where
-import Hledger       -- includes Hledger.Utils.Test
-import SubmoduleFoo  -- submodules, providing easytests_SubmoduleFoo etc.
-import SubmoduleBar
+import Hledger  -- provides Hledger.Utils.Test
+import Foo      -- submodules, providing easytests_Foo etc.
+import Bar
 ...
 functionA = ...
 functionB = ...
@@ -46,8 +46,8 @@ easytests_M = tests "M" [ -- group and name..
     ,test "bleh" $ ... 
     ...
     ]
-  ,easytests_SubmoduleFoo
-  ,easytests_SubmoduleBar
+  ,easytests_Foo
+  ,easytests_Bar
   ]
 #+END_SRC
 
