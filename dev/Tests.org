@@ -10,12 +10,12 @@ So, many of our functions have one or more unit tests.
 These are mostly in hledger-lib, with a few in hledger.
 
 Our unit tests use [[http://hackage.haskell.org/package/easytest][easytest]] and some [[https://github.com/simonmichael/hledger/blob/master/hledger-lib/Hledger/Utils/Test.hs][helpers]] provided by Hledger.Utils.Test,
-and follow a consistent pattern which aims to keep them:
-- easy to read (clear, concise),
-- easy to write (low boilerplate, low cognitive load),
-- easy to maintain (easy to edit, easy to refactor, robust),
-- easy to associate with the code under test (easy to view/jump between code & test, easy to estimate coverage),
-- and scalable (usable for all devs, suitable for small/large modules/packages, easy to run).
+and follow a consistent pattern which aims to keep them
+- easy to read (clear, concise)
+- easy to write (low boilerplate, low cognitive load)
+- easy to maintain (easy to edit, easy to refactor, robust)
+- easy to associate with the code under test (easy to view/jump between code & test, easy to estimate coverage)
+- and scalable (usable for all devs, easy to run and select, suitable for small/large modules/packages).
 
 Here's the pattern (let us know if you see a better way):
 
