@@ -32,11 +32,12 @@ import Baz
 functionA = ...
 functionB = ...
 functionC = ...
+functionD = ...
 
 tests_Foo = tests "Foo" [ -- define tests at the end of each module
 
    tests "functionA" [
-     test "a basic test"           $ expect BOOL
+     test "a basic test"           $ expect SOMEBOOL
     ,test "a pretty equality test" $ SOMEEXPR `is` EXPECTEDVALUE
     ,test "a pretty parsing test"  $ expectParseEq PARSER INPUT EXPECTEDRESULT
     ,test "a sequential test" $ do
@@ -44,8 +45,6 @@ tests_Foo = tests "Foo" [ -- define tests at the end of each module
       io $ doSomeIO
       C `is` D
     ,_test "an ignored test"  $ ...  -- will be skipped
-    ,expect BOOL            -- unnamed tests (harder to identify/select)
-    ,EXPR `is` VALUE        --
     ]
 
   ,tests "functionB" [
@@ -53,7 +52,12 @@ tests_Foo = tests "Foo" [ -- define tests at the end of each module
     ,_it "will bleh" $ ...
     ]
 
-  ,_tests "functionC" [     -- will be skipped
+  ,tests "functionC" [
+     expect BOOL            -- unnamed tests (harder to identify/select)
+    ,EXPR `is` VALUE
+    ]
+
+  ,_tests "functionD" [     -- will be skipped
     ...
     ]
 
