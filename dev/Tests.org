@@ -1,5 +1,4 @@
-Notes about testing in the hledger project.
-Current as of 201809.
+About testing in the hledger project, as of 201809.
 
 * Kinds of tests
 
