@@ -53,8 +53,8 @@ easytests_M = tests "M" [ -- group and name..
 Here's the quick way to run unit tests while developing:\\
 =make ghcid-test= or =make ghcid-test-Hledger.Some.Module=.
 
-As a user, you can also run the unit tests, which are built in to the hledger executable as the [[http://hledger.org/manual#test][test command]].
-Tests run this way are expected to pass - if not, something has gone wrong, please let us know!
+As a user, you can also run the unit tests, which are built in to the hledger executable as the [[http://hledger.org/manual#test][test]] command (=hledger test=).
+When run this way, all tests are expected to pass; if not, something has gone wrong, please let us know!
 
 ** Doc tests
 
