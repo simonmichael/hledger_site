@@ -1,8 +1,11 @@
 Welcome to the hledger dev zone! (shortcut: `hledger.org/dev`)
 
 This section of the hledger wiki is to help contributors of all kinds to get involved and productively contributing to hledger - designers, coders, writers, supporters, marketers, sustainers - all are welcome.
-You can find all content in the sidebar to the right. 
 The invitation and editing tips on [[User Cookbook|Home]] apply here also.
+You can find content in the sidebar to the right. 
+<div align=center>
+<img width=200 height=200 src="https://www.pdclipart.org/albums/Arrows_and_Pointers/arrow02_1.png">
+</div>
 
 ### Quick Links
 
