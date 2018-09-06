@@ -50,14 +50,18 @@ easytests_M = tests "M" [ -- group and name..
   ]
 #+END_SRC
 
-Here's the quick way to run unit tests while developing:
+Here's the quick way to run unit tests while developing:\\
 =make ghcid-test= or =make ghcid-test-Hledger.Some.Module=.
+
+As a user, you can also run the unit tests, which are built in to the hledger executable as the [[http://hledger.org/manual#test][test command]].
+Tests run this way are expected to pass - if not, something has gone wrong, please let us know!
 
 ** Doc tests
 
 Like unit tests, but defined inside functions' haddock documentation, in the style of a GHCI transcript.
 These test functionality, provide usage examples in the API docs, and test those examples, all at once.
 They are a bit more finicky and slower than unit tests.
+See [[http://hackage.haskell.org/package/doctest][doctest]] for more.
 
 ** Functional tests
 
