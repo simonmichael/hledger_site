@@ -10,7 +10,7 @@ So, many of our functions have one or more unit tests.
 These are mostly in hledger-lib, with a few in hledger.
 
 
-Our unit tests are built with [[http://hackage.haskell.org/package/easytest][easytest]] plus some helpers (provided by Hledger.Utils.Test),
+Our unit tests are built with [[http://hackage.haskell.org/package/easytest][easytest]] plus some [[https://github.com/simonmichael/hledger/blob/master/hledger-lib/Hledger/Utils/Test.hs][helpers]] provided by Hledger.Utils.Test,
 and they follow a consistent pattern, with the intention of keeping them
 easy to read (clear, concise),
 easy to write (low boilerplate, low cognitive load),
@@ -18,7 +18,8 @@ easy to maintain (easy to refactor, robust),
 easy to associate with the code under test (easy to view/jump between code & test, easy to estimate coverage),
 and
 scalable (usable for all devs, suitable for small/large modules/packages, easy to run).
-Here's the current pattern (let us know if you see a better way):
+
+Here's the pattern (let us know if you see a better way):
 
 #+BEGIN_SRC haskell
 module M (
