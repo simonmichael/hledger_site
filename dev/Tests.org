@@ -1,3 +1,117 @@
+Notes about testing in the hledger project.
+Current as of 201809.
+
+* Kinds of tests
+
+** Unit tests
+
+Unit tests exercise small chunks of functionality.
+In hledger, that means a function.
+So, many of our functions have one or more unit tests.
+These are mostly in hledger-lib, with a few in hledger.
+
+
+Our unit tests are built with [[http://hackage.haskell.org/package/easytest][easytest]] plus some helpers (provided by Hledger.Utils.Test),
+and they follow a consistent pattern, with the intention of keeping them
+easy to read (clear, concise),
+easy to write (low boilerplate, low cognitive load),
+easy to maintain (easy to refactor, robust),
+easy to associate with the code under test (easy to view/jump between code & test, easy to estimate coverage),
+and
+scalable (usable for all devs, suitable for small/large modules/packages, easy to run).
+Here's the current pattern (let us know if you see a better way):
+
+#+BEGIN_SRC haskell
+module M (
+  ...
+  easytests_M
+)
+where
+import Hledger       -- includes Hledger.Utils.Test
+import SubmoduleFoo  -- submodules, providing easytests_SubmoduleFoo etc.
+import SubmoduleBar
+...
+functionA = ...
+functionB = ...
+...
+
+easytests_M = tests "M" [ -- group and name..
+   tests "functionA" [
+     test "something"   $ SOMEEXPR `is` EXPECTEDVALUE  -- name and define a basic test
+    ,test "other thing" $ expectParseEq PARSER INPUT EXPECTEDRESULT
+    ...
+    ]
+  ,tests "functionB" [
+     _test "blah" $ ...   -- this test will be skipped
+    ,test "bleh" $ ... 
+    ...
+    ]
+  ,easytests_SubmoduleFoo
+  ,easytests_SubmoduleBar
+  ]
+#+END_SRC
+
+Here's the quick way to run unit tests while developing:
+=make ghcid-test= or =make ghcid-test-Hledger.Some.Module=.
+
+** Doc tests
+
+Like unit tests, but defined inside functions' haddock documentation, in the style of a GHCI transcript.
+These test functionality, provide usage examples in the API docs, and test those examples, all at once.
+They are a bit more finicky and slower than unit tests.
+
+** Functional tests
+
+Functional tests test the overall functioning of the program.
+For hledger, that means running =hledger= with various inputs and options and checking for the expected output.
+This exercises functionality in the hledger and hledger-lib packages.
+We do this with [[http://hackage.haskell.org/package/shelltestrunner][shelltestrunner]].
+Tests are defined in files under tests/, grouped by [topic](Issues) (command or major component name).
+
+** Code tests
+
+We have some tests aimed at testing eg code quality, generally defined as make rules, such as:
+
+| =make haddocktest=  | can haddock process all code docs without error                                     |
+| =make buildtest=    | does all code build warning free with the default GHC version & stackage snapshot   |
+| =make buildtestall= | does the code build warning free with all supported GHC versions/stackage snapshots |
+
+See below for examples.
+
+** Package test suites
+
+Haskell tools like stack and cabal recognise test suites defined in a package's cabal file (or package.yaml file).
+These can be run via =stack test=, =cabal test= etc., and they are required to build and pass by services like Stackage.
+Here are the currently hledger package test suites:
+
+| package     | test suite | what it runs                                                |
+| hledger-lib | doctests   | doctests                                                    |
+| hledger-lib | easytests  | unit tests                                                  |
+| hledger     | test       | builtin test command (hledger's + hledger-lib's unit tests) |
+| hledger-ui  |            |                                                             |
+| hledger-web |            |                                                             |
+| hledger-api |            |                                                             |
+
+* Coverage
+
+This means how thoroughly the code is tested -
+both in breadth (are all parts of the code tested at least a little ?)
+and in depth (are all possible code paths, states, situations tested ?).
+
+Our current test coverage can be summarised like so:
+
+| package     | unit | doc | functional |
+| hledger-lib | X    | X   | X          |
+| hledger     | X    |     | X          |
+| hledger-ui  |      |     |            |
+| hledger-web |      |     |            |
+| hledger-api |      |     |            |
+
+There are ways to generate detailed coverage reports for haskell unit tests, at least.
+It would be useful to set this up for hledger.
+
+* How to run tests
+
 Run unit tests:
 
 #+BEGIN_EXAMPLE
