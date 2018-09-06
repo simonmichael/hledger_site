@@ -36,17 +36,20 @@ functionC = ...
 tests_Foo = tests "Foo" [ -- define tests at the end of each module
 
    tests "functionA" [
-     test "a basic test"      $ SOMEEXPR `is` EXPECTEDVALUE
-    ,test "a parse test"      $ expectParseEq PARSER INPUT EXPECTEDRESULT
+     test "a basic test"           $ expect BOOL
+    ,test "a pretty equality test" $ SOMEEXPR `is` EXPECTEDVALUE
+    ,test "a pretty parsing test"  $ expectParseEq PARSER INPUT EXPECTEDRESULT
     ,test "a sequential test" $ do
       A `is` B
       io $ doSomeIO
       C `is` D
-    ]
     ,_test "an ignored test"  $ ...  -- will be skipped
+    ,expect BOOL            -- unnamed tests (harder to identify/select)
+    ,EXPR `is` VALUE        --
+    ]
 
   ,tests "functionB" [
-     it "does blah"  $ ...  -- alternate spelling
+     it "does blah"  $ ...  -- alternate spelling for test/_test
     ,_it "will bleh" $ ...
     ]
 
