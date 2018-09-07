@@ -81,6 +81,8 @@ These test functionality, provide usage examples in the API docs, and test those
 They are a bit more finicky and slower than unit tests.
 See [[http://hackage.haskell.org/package/doctest][doctest]] for more.
 
+doctests [[https://github.com/sol/doctest/issues/199][do not work on Mac with GHC 8.4+]], out of the box. See [[https://ghc.haskell.org/trac/ghc/ticket/15105#comment:10][ghc#15105]] for current status and a workaround.
+
 ** Functional tests
 
 Functional tests test the overall functioning of the program.
