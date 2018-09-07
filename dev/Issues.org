@@ -117,5 +117,5 @@ Numbers are very approximate, but better than nothing.
 
 *** Trello
 
-The [trello board](http://trello.hledger.org) (trello.hledger.org) is a categorised collection of wishlist items,
-this should probably be considered deprecated.
+The [[http://trello.hledger.org][trello board]] (trello.hledger.org) is an old collection of wishlist items.
+This should probably be considered deprecated.
