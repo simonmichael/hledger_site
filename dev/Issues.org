@@ -52,6 +52,8 @@ By dividing up the work this way, we can scale and make forward progress.
 
 # Aligning columns is optional. In org mode, press tab to align.
 
+# Warning: double-quotes in these urls must be encoded as %22 for github, be careful not to let them get converted
+
 | COMPONENT           | DESCRIPTION                     | ? | BUG  | WISH   | PR  | ALL | CUSTODIANS |
 |                     |                                 |   |      |        |     |     |            |
 | install             | hledger-install script          | [[https://github.com/simonmichael/hledger/issues?q=is:open+is:issue+-label:%22A+BUG%22-label:%22A+WISH%22+label:install][?]] | [[https://github.com/simonmichael/hledger/issues?q=is:open+is:issue+label:%22A+BUG%22+label:install][bugs]] | [[https://github.com/simonmichael/hledger/issues?q=is:open+is:issue+label:%22A+WISH%22+label:install][wishes]] | [[https://github.com/simonmichael/hledger/issues?q=is:open+is:pr+label:install][PRs]] | [[https://github.com/simonmichael/hledger/issues?q=is:open+label:install][all]] |            |
@@ -94,6 +96,7 @@ By dividing up the work this way, we can scale and make forward progress.
 | tools               | developer tools, infrastructure | [[https://github.com/simonmichael/hledger/issues?q=is:open+is:issue+-label:%22A+BUG%22-label:%22A+WISH%22+label:tools][?]] | [[https://github.com/simonmichael/hledger/issues?q=is:open+is:issue+label:%22A+BUG%22+label:tools][bugs]] | [[https://github.com/simonmichael/hledger/issues?q=is:open+is:issue+label:%22A+WISH%22+label:tools][wishes]] | [[https://github.com/simonmichael/hledger/issues?q=is:open+is:pr+label:tools][PRs]] | [[https://github.com/simonmichael/hledger/issues?q=is:open+label:tools][all]] |            |
 
 **** Open bugs, good first issue
+   [[https://github.com/simonmichael/hledger/issues?q=is:open+is:issue+label:%22A+BUG%22+label:%22good+first+issue%22][all]],
    [[https://github.com/simonmichael/hledger/issues?q=is:open+is:issue+label:%22A+BUG%22+label:%22good+first+issue%22+label:install][install]],
    [[https://github.com/simonmichael/hledger/issues?q=is:open+is:issue+label:%22A+BUG%22+label:%22good+first+issue%22+label:cli][cli]],
    [[https://github.com/simonmichael/hledger/issues?q=is:open+is:issue+label:%22A+BUG%22+label:%22good+first+issue%22+label:ui][ui]],
@@ -133,6 +136,7 @@ By dividing up the work this way, we can scale and make forward progress.
    [[https://github.com/simonmichael/hledger/issues?q=is:open+is:issue+label:%22A+BUG%22+label:%22good+first+issue%22+label:site][site]],
    [[https://github.com/simonmichael/hledger/issues?q=is:open+is:issue+label:%22A+BUG%22+label:%22good+first+issue%22+label:tools][tools]]
 **** Open bugs, not good first issue
+   [[https://github.com/simonmichael/hledger/issues?q=is:open+is:issue+label:%22A+BUG%22+-label:%22good+first+issue%22][all]],
    [[https://github.com/simonmichael/hledger/issues?q=is:open+is:issue+label:%22A+BUG%22+-label:%22good+first+issue%22+label:install][install]],
    [[https://github.com/simonmichael/hledger/issues?q=is:open+is:issue+label:%22A+BUG%22+-label:%22good+first+issue%22+label:cli][cli]],
    [[https://github.com/simonmichael/hledger/issues?q=is:open+is:issue+label:%22A+BUG%22+-label:%22good+first+issue%22+label:ui][ui]],
@@ -171,8 +175,7 @@ By dividing up the work this way, we can scale and make forward progress.
    [[https://github.com/simonmichael/hledger/issues?q=is:open+is:issue+label:%22A+BUG%22+-label:%22good+first+issue%22+label:doc][doc]],
    [[https://github.com/simonmichael/hledger/issues?q=is:open+is:issue+label:%22A+BUG%22+-label:%22good+first+issue%22+label:site][site]],
    [[https://github.com/simonmichael/hledger/issues?q=is:open+is:issue+label:%22A+BUG%22+-label:%22good+first+issue%22+label:tools][tools]]
-**** [[https://github.com/simonmichael/hledger/issues?q=is:open+is:issue+label:"A+BUG"+-label:"good+first+issue"+label:easy?][Open bugs, not good first issue, easy]]
-
+**** [[https://github.com/simonmichael/hledger/issues?q=is:open+is:issue+label:%22A+BUG%22+-label:%22good+first+issue%22+label:easy?][Open bugs, not good first issue, easy]]
 
 *** Milestones and Projects
 
