@@ -23,8 +23,8 @@ and help transform world finance!
 - Test installation on platforms you have access to
 - Test examples, advice, and links in the docs
 - Run the latest release or developer build in daily use
-- Run [tests](#tests)
-- Run [benchmarks](#benchmarking)
+- Run [[tests|Developer-workflows#run-package-tests]]
+- Run [[benchmarks|Developer-workflows#run-package-benchmarks]]
 - Report packaging, documentation, UX, functional, performance issues
 - Report and help analyse problems via irc/mail list/bug tracker
 
