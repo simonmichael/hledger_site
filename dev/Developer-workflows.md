@@ -93,6 +93,10 @@ Checks for anything that would break haddock doc generation.
 
     make haddocktest
 
+Checks for the unit-tests embedded in documentation.
+
+    make doctest
+
 ### Simulate Travis tests
 
 Locally runs tests similar to what we run on Travis CI.
