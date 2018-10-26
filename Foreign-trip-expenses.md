@@ -66,7 +66,7 @@ Balance changes in 2018:
                                   || 500 EUR, -580.00 USD 
 ```
 
-Adding the -B/--cost flag converts transaction amounts to the other commodity in the transaction, using the conversion rate specified in the transaction if any. This typically helps collapse the grand total to one commodity, so we can see it is zero as expected here since we're showing all accounts.
+Adding the -B/--cost flag converts transaction amounts to the other commodity in the transaction, using the conversion rate specified in the transaction if any. This typically helps collapse the grand total to one commodity, so we can see it is zero here (expected, since we're showing all accounts).
 ```shell
 $ hledger bal --flat -Y -B
 Balance changes in 2018:
