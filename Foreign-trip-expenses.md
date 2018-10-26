@@ -52,7 +52,7 @@ P 2018-10-25  EUR  1.15 USD
 Here are a few different reports, for comparison:
 
 Simple balance change report for all accounts. --flat and -Y help ensure a readable tabular layout here.
-```shell
+```
 $ hledger bal --flat -Y
 Balance changes in 2018:
 
@@ -67,7 +67,7 @@ Balance changes in 2018:
 ```
 
 Adding the -B/--cost flag converts transaction amounts to the other commodity in the transaction, using the conversion rate specified in the transaction if any. This typically helps collapse the grand total to one commodity, so we can see it is zero here (expected, since we're showing all accounts).
-```shell
+```
 $ hledger bal --flat -Y -B
 Balance changes in 2018:
 
@@ -83,7 +83,7 @@ Balance changes in 2018:
 ```
 
 Adding the -V/--value flag instead converts report amounts using the market price effective on the reporting date (hledger prices and date can help identify that). The grand total of -5 USD here corresponds to our capital loss due to change in exchange rate (the price of a euro went from $1.10 to $1.20 while we still owed some):
-```shell
+```
 $ hledger prices 
 P 2018-10-25 EUR 1.15 USD
 $ date
@@ -102,7 +102,7 @@ Balance changes in 2018:
 ```
 
 The "exp" account query is added to show just the expenses. Now we can see their total.
-```shell
+```
 $ hledger bal --flat -Y -V exp
 Balance changes in 2018:
 
@@ -117,7 +117,7 @@ Balance changes in 2018:
 
 Or you might use the is/incomestatement command which is specialised for income/expense reporting.
 It's tabular and flat by default.
-```shell
+```
 $ hledger is -V
 Income Statement 2018/10/25-2018/10/28
 
