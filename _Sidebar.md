@@ -31,6 +31,7 @@
 
 ### Accounting tasks
 
+[[Foreign trip expenses]]
 [[Budgeting and forecasting]]  
 [[Project accounting]]  
 [[Track investments]]  
