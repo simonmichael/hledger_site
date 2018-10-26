@@ -22,6 +22,7 @@
 [[Track changes with version control]]  
 [[Use another account separator character]]  
 ["Full-fledged Hledger" setup](https://github.com/adept/full-fledged-hledger)  
+["hledger: Make It So" setup](https://github.com/apauley/hledger-makeitso)
 
 ### Reporting
 
