@@ -79,12 +79,14 @@ You can share a rough draft on IRC, on the mail list, in an issue comment,
 or in a "WIP" PR starting with just the proposed docs commit.
 
 This is often the quickest road to getting something merged into hledger.
-hledger's many parts interact in surprisingly complex ways;
+hledger's many parts interact in surprisingly complex ways.
+<!--
 changes can impact past and future users,
 ease of contribution,
 long-term maintenance costs,
 product architecture,
 compatibility with the larger plain text accounting ecosystem,
 etc.
+-->
 The documentation-driven working style lets us discuss, clarify and reach a good-enough consensus economically,
-after which the coding/review/acceptance typically goes quickly.
+after which coding/review/acceptance can go quicker.
