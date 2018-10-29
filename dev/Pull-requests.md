@@ -67,7 +67,7 @@ Reviewers can understand your PR more efficiently once proposed doc changes are 
 We are happy to help with the docs if needed - just ask.
 
 Updating rendered manuals (hledger.{1,info,txt,md,html}) is not required, and probably best avoided to reduce conflicts.
-Updating other docs such as tutorials, how-tos, examples, or screenshots is not required,  
+Updating other docs such as tutorials, how-tos, examples, or screenshots is not required,
 though it's welcome (may be in a different repo).
 
 ## Documentation first
@@ -77,5 +77,14 @@ It is in fact highly effective, and highly recommended,
 to draft and discuss the new docs before writing any code.
 You can share a rough draft on IRC, on the mail list, in an issue comment,
 or in a "WIP" PR starting with just the proposed docs commit.
+
 This is often the quickest road to getting something merged into hledger.
-We can clarify design, costs and benefits, impacts, and reach consensus economically before messing with code.
+hledger's many parts interact in surprisingly complex ways;
+changes can impact past and future users,
+ease of contribution,
+long-term maintenance costs,
+product architecture,
+compatibility with the larger plain text accounting ecosystem,
+etc.
+The documentation-driven working style lets us discuss, clarify and reach a good-enough consensus economically,
+after which the coding/review/acceptance typically goes quickly.
