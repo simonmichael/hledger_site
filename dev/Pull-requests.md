@@ -24,7 +24,9 @@ Patience and persistence pays.
 
 A PR should have a clear purpose, documented in its description. Mention any #ISSUENOs addressed.
 
-Don't tackle too much at once. Smaller/more focussed PRs can be reviewed quicker and accepted (or rejected) quicker.
+Don't tackle too much at once. 
+Smaller/more focussed PRs can be reviewed quicker and accepted (or rejected) quicker.
+Consider producing the documentation first (see below).
 
 ## The commit(s)
 
