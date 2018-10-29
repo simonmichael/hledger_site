@@ -80,6 +80,8 @@ or in a "WIP" PR starting with just the proposed docs commit.
 
 This is often the quickest road to getting something merged into hledger.
 hledger's many parts interact in surprisingly complex ways.
+The documentation-driven working style lets us discuss, clarify and reach a good-enough consensus economically,
+after which coding/review/acceptance can go quicker.
 <!--
 changes can impact past and future users,
 ease of contribution,
@@ -88,5 +90,3 @@ product architecture,
 compatibility with the larger plain text accounting ecosystem,
 etc.
 -->
-The documentation-driven working style lets us discuss, clarify and reach a good-enough consensus economically,
-after which coding/review/acceptance can go quicker.
