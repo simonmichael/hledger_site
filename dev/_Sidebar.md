@@ -11,6 +11,7 @@
 [[Docs]]  
 [[Issues]]  
 [[Make]]  
+[[Pull requests]]  
 [[Sample journals]]  
 [[Shake]]  
 [[Tests]]  
