@@ -56,19 +56,24 @@ so think about future developers trying to understand them, git bisect, etc.
 
 Rebase your commits against latest master for easiest review. Especially if they start to conflict.
 
-## Documentation first
+## Documentation updates are required
 
-hledger follows documentation-driven design. 
-All PRs introducing user-visible changes should include corresponding updates to reference docs.
-Review can proceed more efficiently once these are provided, and may be delayed otherwise.
+All PRs should include appropriate updates to reference documentation.
+Typically this means the manual source files (hledger*/hledger*.m4.md).
+Sometimes it means the developer docs, at least the ones in the main repo (READMEs).
+Reviewers can understand your PR more efficiently once proposed doc changes are provided, and may postpone it otherwise.
+We are happy to help with the docs if needed - just ask.
 
-"Reference docs" typically means the manual source files, hledger*/hledger*.m4.md.
-Updating the rendered manuals is not required, and probably best avoided to reduce conflicts.
+Updating rendered manuals (hledger.{1,info,txt,md,html}) is not required, and probably best avoided to reduce conflicts.
 Updating other docs such as tutorials, how-tos, examples, or screenshots is not required,  
 though it's welcome (may be in a different repo).
 
-It is in fact highly effective and recommended 
-to draft and discuss the new user docs before writing code, 
-to minimise wasted work and clarify design and consensus most economically.
-This can be done by sharing pastes on IRC, on the mail list, in an issue comment,
-or by starting a "WIP" PR with the proposed docs commit.
+## Documentation first
+
+hledger follows documentation-driven design.
+It is in fact highly effective, and highly recommended,
+to draft and discuss the new docs before writing any code.
+You can share a rough draft on IRC, on the mail list, in an issue comment,
+or in a "WIP" PR starting with just the proposed docs commit.
+This is often the quickest road to getting something merged into hledger.
+We can clarify design, costs and benefits, impacts, and reach consensus economically before messing with code.
