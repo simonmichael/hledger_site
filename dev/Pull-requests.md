@@ -67,8 +67,8 @@ PRs should include appropriate updates to reference documentation, unless otherw
 Typically this means the manual source files (hledger*/hledger*.m4.md).
 It can also involve
 command line option names and descriptions,
-other --help text,
-command descriptions in hledger's commands list,
+other --help output,
+hledger's commands list,
 hledger-ui's help dialog,
 hledger-web's help dialog,
 etc.
