@@ -17,7 +17,7 @@ Our process is evolving and imperfect.
 All of this is normal. 
 Please think of it as a golden opportunity to collaborate with experts,
 share and receive knowledge, refine your design/documentation/code,
-and practice your real-world development/communication skills.
+and practice real-world development/communication skills.
 Patience and persistence pays.
 
 ## The pull request
