@@ -65,7 +65,15 @@ Rebase your commits against latest master for easiest review. Especially if they
 
 PRs should include appropriate updates to reference documentation, unless otherwise agreed.
 Typically this means the manual source files (hledger*/hledger*.m4.md).
+It can also involve
+command line option names and descriptions,
+other --help text,
+command descriptions in hledger's commands list,
+hledger-ui's help dialog,
+hledger-web's help dialog,
+etc.
 Sometimes it means the developer docs, at least the ones in the main repo (READMEs).
+
 Reviewers can understand your PR more efficiently once proposed doc changes are provided, and may postpone it otherwise.
 We are happy to help with the docs if needed - just ask.
 
@@ -77,7 +85,7 @@ though it's welcome (may be in a different repo).
 
 hledger follows documentation-driven design.
 It is in fact highly effective, and highly recommended,
-to draft and discuss the new docs (or haddocks) before writing any code.
+to write the new docs (help text/reference manual/haddocks/developer README..) before writing any code.
 You can share a rough draft on IRC, on the mail list, in an issue comment,
 or in a "WIP" PR starting with just the proposed docs commit.
 
