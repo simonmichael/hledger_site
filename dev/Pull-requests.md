@@ -28,7 +28,8 @@ A PR should have a clear purpose, documented in its description. Mention any #IS
 
 Don't tackle too much at once. 
 Smaller/more focussed PRs can be reviewed quicker and accepted (or rejected) quicker.
-Consider showing draft documentation first (see below).
+
+Consider showing just the draft documentation first (see below).
 
 ## The commit(s)
 
