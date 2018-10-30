@@ -10,6 +10,7 @@ Many PRs, especially small ones, and even some big ones, can be merged quickly.
 We love merging quickly.
 
 Some bigger or more risky PRs can require substantial review, discussion, changes, or re-submission. 
+Sometimes this takes more work than the coding.
 Much valuable design, quality control, and knowledge sharing happens at this time. 
 Some PRs get rejected, but their discussion and exploration can still be a useful contribution.
 We very much want to avoid wasted work, but it occasionally happens. 
