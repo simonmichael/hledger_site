@@ -58,9 +58,9 @@ so think about future developers trying to understand them, git bisect, etc.
 
 Rebase your commits against latest master for easiest review. Especially if they start to conflict.
 
-## Documentation updates are required
+## The docs
 
-PRs should include appropriate updates to reference docs, unless otherwise agreed.
+PRs should include appropriate updates to reference documentation, unless otherwise agreed.
 Typically this means the manual source files (hledger*/hledger*.m4.md).
 Sometimes it means the developer docs, at least the ones in the main repo (READMEs).
 Reviewers can understand your PR more efficiently once proposed doc changes are provided, and may postpone it otherwise.
