@@ -15,8 +15,9 @@ Much valuable design, quality control, and knowledge sharing happens at this tim
 Some PRs get rejected, but their discussion and exploration can still be a useful contribution.
 We very much want to avoid wasted work, but it occasionally happens. 
 Our process is evolving and imperfect.
-All of this is normal. 
-Please think of it as a golden opportunity to collaborate with experts,
+All of this is normal.
+
+We hope you'll see it as a golden opportunity to collaborate with experts,
 share and receive knowledge, refine your design/documentation/code,
 and practice real-world development and communication skills.
 Patience and persistence pays.
