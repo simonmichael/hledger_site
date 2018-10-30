@@ -7,7 +7,7 @@ Here are some tips for contributing PRs to hledger.
 We aim to improve and sustain hledger's quality and maintainability over the long term.
 
 Many PRs, especially small ones, and even some big ones, can be merged quickly. 
-We love merging quickly.
+We love merging good PRs quickly.
 
 Some bigger or more risky PRs can require substantial review, discussion, changes, or re-submission. 
 Sometimes this is a bigger task than the coding.
