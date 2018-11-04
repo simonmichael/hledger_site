@@ -9,6 +9,9 @@
 * [UI surprises](#ui-surprises)
    * [Why does it complain about missing amounts even though I wrote one ?](#why-does-it-complain-about-missing-amounts-even-though-i-wrote-one-)
    * [Why do some amounts appear on their own line with no account name ?](#why-do-some-amounts-appear-on-their-own-line-with-no-account-name-)
+* [Other software](#other-software)
+   * [iTerm2](#iterm2)
+      * [Why does Shift-Up/Shift-Down move the cursor instead of adjusting the period in hledger-ui ?](#why-does-shift-up-shift-down-move-the-cursor-instead-of-adjusting-the-period-in-hledger-ui-)
 
 ## hledger & Ledger
 
@@ -287,3 +290,12 @@ $ hledger -f t.j balance --drop 1
 --------------------
                    0
 ```
+
+## Other software
+
+### iTerm2
+
+#### Why does Shift-Up/Shift-Down move the cursor instead of adjusting the period in hledger-ui ?
+
+One way to fix: in iTerm2 do Preferences -> Profiles -> your current profile -> Keys -> Load Preset -> xterm Defaults 
+(not Terminal.app Compatibility). And perhaps open a new tab with this profile. 
