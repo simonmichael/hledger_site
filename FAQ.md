@@ -11,7 +11,7 @@
    * [Why do some amounts appear on their own line with no account name ?](#why-do-some-amounts-appear-on-their-own-line-with-no-account-name-)
 * [Other software](#other-software)
    * [iTerm2](#iterm2)
-      * [Why does Shift-Up/Shift-Down move the cursor instead of adjusting the period in hledger-ui ?](#why-does-shift-up-shift-down-move-the-cursor-instead-of-adjusting-the-period-in-hledger-ui-)
+      * [Why does Shift-Up/Shift-Down move the cursor instead of adjusting the period in hledger-ui ?](#why-does-shift-upshift-down-move-the-cursor-instead-of-adjusting-the-period-in-hledger-ui-)
 
 ## hledger & Ledger
 
