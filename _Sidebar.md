@@ -13,7 +13,7 @@
 [[Create a journal]]  
 [[Common journal entries]]  
 [[hledger accounting concepts tutorial]]   
-[[multicurrency tutorial]]       
+[[hledger multicurrency tutorial]]       
 [[FAQ]]
 
 ### Data entry, import, management
