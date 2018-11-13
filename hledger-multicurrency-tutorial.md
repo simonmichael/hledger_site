@@ -284,4 +284,4 @@ $ hledger reg liberapay -B
 
 In summary, it seems that the balance report must sum either the primary posting amounts (`bal`), or the cost amounts (`bal -B`), consistently for both the account balances above the line, and the total below the line. Otherwise the total would be incorrect. Which means that one or the other of these will be displayed as an unconverted multicurrency amount.
 
-Anya decides to find out more about the other currency flag: [-V](http://hledger.org/manual.html#market-prices)...
+Anya decides to find out more about the other currency flag: [-V](http://hledger.org/manual.html#market-prices) (TBD...)
