@@ -225,7 +225,7 @@ Balance changes in 2018:
 
 Second, the balance report is now showing a non-zero total. The individual euro and ruble totals look correct, but why isn't it zero ? Is the journal unbalanced ?
 
-Anya asks for help on the #hledger IRC channel and is advised to add the -B/--cost flag. Sure enough, the total is now zero:
+Anya asks for help on the #hledger IRC channel and is advised to add the [-B/--cost flag](http://hledger.org/manual.html#cost). Sure enough, the total is now zero:
 
 ```{emphasize=7:21-7:33}
 $ hledger bal -YEB
