@@ -206,7 +206,7 @@ Balance changes in 2018:
                || -10 E, 750 R 
 ```
 
-However, two things surprise her. First, where has the liberapay account gone ? She remembers that balance reports hide zero-balance accounts by default, and adds -E/--empty to show it. (She also notes that no currency symbol is displayed for zero amounts):
+However, two things surprise her. First, where has the liberapay account gone ? She remembers that balance reports hide zero-balance accounts by default, and adds -E/--empty to show it. (She also notes that zero amounts are displayed without a currency symbol, and would be a little clearer with currency symbols on the left):
 
 ```{emphasize=7-7,12-12}
 $ hledger bal  -YE
