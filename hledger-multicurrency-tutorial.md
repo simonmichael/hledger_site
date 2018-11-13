@@ -258,7 +258,7 @@ The manual makes this a bit clearer. Anya wrote the entry in [transaction prices
 With -B added, the 10 euro is converted to its [cost](http://hledger.org/manual.html#cost) in rubles:
 
 ```{emphasize=3:30-3:36}
-$ hledger print -xB date:20181104
+$ hledger print -x date:20181104 -B
 2018/11/04
     assets:liberapay          -750 R
     assets:bank                750 R
