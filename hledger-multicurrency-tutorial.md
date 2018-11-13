@@ -273,7 +273,7 @@ $ hledger reg liberapay
 2018/11/04                     assets:liberapay              -10 E             0
 ```
 
-With -B: 10 euro are added, 750 rubles are removed, the liberapay account's end balance is "10 euro, -750 rubles". (Also, it seems that register aligns the account name with the top amount, unlike the balance command):
+With -B: 10 euro are added, 750 rubles are removed, the liberapay account's end balance is "10 euro, -750 rubles". (With each currency on its own line, again. Also, it seems that register aligns the account name with the top amount, unlike the balance command):
 
 ```{emphasize=3:74-3:80,4:74-4:80}
 $ hledger reg liberapay -B
