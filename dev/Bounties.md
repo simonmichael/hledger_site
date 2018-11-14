@@ -21,26 +21,25 @@ It currently looks like this, and will evolve:
 
 - Issues are marked as bounties by @simonmichael. Feel free to suggest additional issues which should receive the bounty label.
 
-- Bounties are paid from the [hledger project's public Open Collective fund](https://opencollective.com/hledger).
+- Bounties are paid from the hledger project's public [Open Collective fund](https://opencollective.com/hledger).
   By contributing to the fund as an individual or organisation, you enable more bounties.
 
-- These OC bounties (unlike 1 and 2 above) have standard amounts.
-  These may be adjusted over time, depending eg on the state of our funds.
+- These OC bounties (unlike 1 and 2 above) have standard amounts, 
+  from which you can choose,
+  based eg on time or expertise spent, how much you need it,
+  how much remains in our fund for other bounties, etc.
+  These may be adjusted over time, depending eg on our available funds.
   Our current bounty amounts are
   - level 1: 10 USD
   - level 2: 25 USD
   - level 3: 50 USD
 
-- When you complete a bounty, submit an expense to Open Collective,
-  for whichever of the above bounty amounts you think appropriate,
-  based eg on time or expertise spent, how much you need it,
-  how much remains in our fund for other bounties, etc.
-  This will be reviewed by OC and (maybe ?) @simonmichael.
-  Successful claims, like donations, will appear in our public OC ledger.
+- When you complete a bounty, submit an expense to Open Collective for one of the above amounts.
+  This will be approved by OC and hledger developers.
+  Successful payouts will appear in our public OC ledger.
 
 Our bounty amounts are small, and nothing like professional rates in most countries,
 but they still establish a principle of sustainability,
 and help us to experiment.
 You are encouraged to claim your bounties,
 though you can also choose to transfer them to a new issue of your choice.
-
