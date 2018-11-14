@@ -15,7 +15,7 @@ The hledger project's issue tracker is on github. It contains:
 
 *** Labels
 
-[Labels](https://github.com/simonmichael/hledger/labels) are used to categorise:
+[[https://github.com/simonmichael/hledger/labels][Labels]] are used to categorise:
 
 - the issue's type: "A BUG" or "A WISH", in shades of red (The A makes it appear as first label)
 - relevant subsystems/topics, in light blue. More about this below.
