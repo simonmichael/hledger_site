@@ -13,7 +13,7 @@ There are a few ways to do this:
 
 3. You can use the new Open Collective process below.
 
-[[Issues]] with bounties of any kind are marked with the `bounty` label.
+[[Issues]] which have any kind of bounty are marked with the `bounty` label.
 
 ## New bounty process
 
