@@ -5,6 +5,7 @@
 # [[Dev Zone]]
 
 [[Benchmarks]]  
+[[Bounties]]  
 [[Code]]  
 [[Contributor guide]]  
 [[Developer workflows]]  
