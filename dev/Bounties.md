@@ -17,7 +17,7 @@ There are a few ways to do this:
 
 ## New bounty process
 
-It currently looks like this, and will evolve:
+It currently looks like this, and will evolve with your help:
 
 - Issues are marked as bounties by @simonmichael. Feel free to suggest additional issues which should receive the bounty label.
 
