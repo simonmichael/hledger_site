@@ -28,7 +28,7 @@ It currently looks like this, and will evolve with your help:
   from which you can choose,
   based eg on time or expertise spent, how much you need it,
   how much remains in our fund for other bounties, etc.
-  These may be adjusted over time, depending eg on our available funds.
+  These will be adjusted over time, depending eg on our available funds.
   Our current bounty amounts are
   - level 1: 10 USD
   - level 2: 25 USD
