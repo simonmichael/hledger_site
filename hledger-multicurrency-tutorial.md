@@ -284,4 +284,10 @@ $ hledger reg liberapay -B
 
 In summary, it seems that the balance report must sum either the primary posting amounts (`bal`), or the cost amounts (`bal -B`), consistently for both the account balances above the line, and the total below the line. Otherwise the total would be incorrect. Which means that one or the other of these will be displayed as an unconverted multicurrency amount.
 
-Anya decides to find out more about the other currency-related flag: [-V](http://hledger.org/manual.html#market-value) (TBD...)
+Anya decides to find out more about the other currency-related flag: [-V](http://hledger.org/manual.html#market-value).
+
+TBD:
+
+- declaring a market price corresponding to the price in the fourth transaction ( P 2018/11/01 E 75 R ) and adding -V will show everything completely in rubles (with or without -B, at least in this case), preserving the zero total
+
+- declaring an accurate market price instead ( P 2018/11/01 E 74.91 R ), there will be a small non zero total, which corresponds to the gain/loss due to exchanging at a slightly different price. After adding an explicit gain/loss transaction, the zero total is restored.
