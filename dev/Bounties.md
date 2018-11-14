@@ -13,13 +13,13 @@ There are a few ways to do this:
 
 3. You can use the new Open Collective process below.
 
-[[Issues]] which have any kind of bounty are marked with the `bounty` label.
+[[Issues]] which have any kind of bounty are marked with the green `bounty` label.
 
 ## New bounty process
 
 It currently looks like this, and will evolve with your help:
 
-- Issues are marked as [bounties](https://github.com/simonmichael/hledger/labels/bounty) by @simonmichael. Feel free to suggest additional issues which should receive the bounty label.
+- Issues are marked as [bounties](https://github.com/simonmichael/hledger/labels/bounty) by @simonmichael. Feel free to suggest additional issues which should receive the `bounty` label.
 
 - Bounties are paid from the hledger project's public [Open Collective fund](https://opencollective.com/hledger).
   By contributing to the fund as an individual or organisation, you enable more bounties.
