@@ -7,11 +7,11 @@ So we experiment, gently.
 Currently we use bounties as a way to encourage resolution of issues.
 There are a few ways to do this:
 
-1. You or your organisation can offer a bounty simply by saying so on the issue.
+- You or your organisation can offer a bounty simply by saying so on the issue.
 
-2. You can use Bountysource. A few hledger bounties have been completed there.
+- You can use Bountysource. A few hledger bounties have been completed there.
 
-3. You can use the new Open Collective process below.
+- You can use the new Open Collective process below.
 
 [[Issues]] which have any kind of bounty are marked with the green `bounty` label.
 
@@ -24,7 +24,7 @@ It currently looks like this, and will evolve with your help:
 - Bounties are paid from the hledger project's public [Open Collective fund](https://opencollective.com/hledger).
   By contributing to the fund as an individual or organisation, you enable more bounties.
 
-- These OC bounties (unlike 1 and 2 above) have standard amounts, 
+- These OC bounties (unlike the informal or Bountysource bounties above) have standard amounts, 
   from which you can choose,
   based eg on time or expertise spent, how much you need it,
   how much remains in our fund for other bounties, etc.
