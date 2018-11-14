@@ -41,5 +41,5 @@ It currently looks like this, and will evolve with your help:
 Our bounty amounts are small, and nothing like professional rates in most countries,
 but they still establish a principle of sustainability,
 and help us to experiment.
-You are encouraged to claim your bounties,
+You are encouraged to claim as many bounties as you can,
 though you can also choose to transfer them to a new issue of your choice.
