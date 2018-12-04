@@ -57,4 +57,4 @@ using conversion rules file checking.csv.rules
 
 Here are more [CSV rules examples](https://github.com/simonmichael/hledger/tree/master/examples/csv).
 
-Here's how to [[Customize default CSV account names]].
+Here's how to [[Customize default CSV accounts]].
