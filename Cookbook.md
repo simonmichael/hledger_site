@@ -18,5 +18,5 @@ Pagename is case insensitive and can have spaces.
 anchor is any manual heading's text, lowercased with punctuation removed and spaces replaced by hyphens.
 - when renaming a page, try also to update the links to it
 - use the [_Sidebar](_Sidebar/_edit) to organize content. 
-This is mirrored to the main [docs page](http://hledger.org/docs) hourly.
+This is mirrored to the [hledger.org home page](http://hledger.org) hourly.
 We might include some external (non-wiki) links here.
