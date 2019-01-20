@@ -2,7 +2,7 @@ Welcome to the hledger wiki, AKA the Cookbook!
 
 This complements the main hledger website and the reference manuals on [hledger.org](http://hledger.org)
 with additional how-tos, tutorials, examples, freeform notes, etc.
-You can find all content via the sidebar to the right. **===========>>>**
+You can find all content via the sidebar to the right. **&rarr;**
 
 ### Editing help
 
