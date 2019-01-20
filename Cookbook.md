@@ -14,7 +14,7 @@ This is your wiki! Please edit, improve and use it freely.
 Pagename is case insensitive and can have spaces.
 - link to wiki pages from elsewhere: `https://github.com/simonmichael/hledger/wiki/Pagename`. 
 Pagename is case insensitive and can have spaces.
-- link to hledger manual sections: `http://hledger.org/manual#anchor`. 
+- link to hledger manual sections from the wiki: `http://hledger.org/manual#anchor`. 
 anchor is any manual heading's text, lowercased with punctuation removed and spaces replaced by hyphens.
 - when renaming a page, try also to update the links to it
 - use the [_Sidebar](_Sidebar/_edit) to organize content. 
