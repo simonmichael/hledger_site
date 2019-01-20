@@ -1,4 +1,4 @@
-Welcome to the hledger wiki, AKA the Cookbook!
+Welcome to the hledger wiki, also known as the Cookbook!
 
 This complements the main hledger website and the reference manuals on [hledger.org](http://hledger.org)
 with additional how-tos, tutorials, examples, freeform notes, etc.
