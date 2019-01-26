@@ -1,4 +1,4 @@
-# Shell-completion of hledger commands using the Tab key
+# Shell-completion of hledger commands using the tab key
 
 Shell completion is a feature in shells (Bash, Fish, Zsh, ...) to automatically complete a command, argument, or option. Usually, the completion is triggered by pressing the tab key once or twice
 after typing `hledger `.
