@@ -44,6 +44,7 @@
 [[Addons]]  
 [[Mobile apps]]  
 [[Save frequently used options]]  
+[[Tab-completion of hledger commands]]  
 
 ### More..
 
