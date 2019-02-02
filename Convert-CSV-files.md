@@ -58,3 +58,5 @@ using conversion rules file checking.csv.rules
 Here are more [CSV rules examples](https://github.com/simonmichael/hledger/tree/master/examples/csv).
 
 Here's how to [[Customize default CSV accounts]].
+
+There are many altenate CSV conversion tools at https://plaintextaccounting.org/#data-importconversion (9 CSV -> *ledger at last count). For a fully powered hledger-ish option, how about https://github.com/hpdeifel/hledger-import-dsl ?
