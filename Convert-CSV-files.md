@@ -59,4 +59,4 @@ Here are more [CSV rules examples](https://github.com/simonmichael/hledger/tree/
 
 Here's how to [[Customize default CSV accounts]].
 
-There are many altenate CSV conversion tools at https://plaintextaccounting.org/#data-importconversion (9 CSV -> *ledger at last count). For a fully powered hledger-ish option, how about https://github.com/hpdeifel/hledger-import-dsl ?
+There are many alternate CSV conversion tools at [plaintextaccounting.org -> data import/conversion](https://plaintextaccounting.org/#data-importconversion) (nine CSV->*ledger tools at last count). [hledger-import-dsl](https://github.com/hpdeifel/hledger-import-dsl) is a fully programmable hledger-ish option.
