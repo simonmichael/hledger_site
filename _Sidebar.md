@@ -4,7 +4,7 @@
 [Reference manuals](http://hledger.org/manual.html)  
 [Help/feedback](http://hledger.org#help)  
 
-## [[Cookbook]]
+## [[Wiki/Cookbook|Home]]
 
 ### Getting started
 
