@@ -1,5 +1,5 @@
 Welcome to the hledger Cookbook!
-This complements the main hledger website and reference manuals ([hledger.org](http://hledger.org))
+This complements the main [hledger website and reference docs](http://hledger.org)
 with additional how-tos, tutorials, notes, etc.
 Unlike the main content, it is stored in [hledger's Github wiki](https://github.com/simonmichael/hledger/wiki).
 This means you can make quick edits via Github's web UI, without pull requests or tool setup.
