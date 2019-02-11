@@ -1,18 +1,3 @@
-**Contents**
-
-* [hledger &amp; Ledger](#hledger--ledger)
-   * [History](#history)
-   * [Features](#features)
-   * [File formats](#file-formats)
-   * [Functional differences](#functional-differences)
-   * [Future ?](#future-)
-* [UI surprises](#ui-surprises)
-   * [Why does it complain about missing amounts even though I wrote one ?](#why-does-it-complain-about-missing-amounts-even-though-i-wrote-one-)
-   * [Why do some amounts appear on their own line with no account name ?](#why-do-some-amounts-appear-on-their-own-line-with-no-account-name-)
-* [Other software](#other-software)
-   * [iTerm2](#iterm2)
-      * [Why does Shift-Up/Shift-Down move the cursor instead of adjusting the period in hledger-ui ?](#why-does-shift-upshift-down-move-the-cursor-instead-of-adjusting-the-period-in-hledger-ui-)
-
 ## hledger & Ledger
 
 ### History
