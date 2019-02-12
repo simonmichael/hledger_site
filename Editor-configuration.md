@@ -2,20 +2,20 @@ If you edit your journals (and other hledger data files) with a text
 editor, you want that frequent task to be as pleasant and non-tedious
 as possible.
 
-So it's worth using a powerful editor, one with (eg) comfortable
-copy/paste, search & replace, and macros. And, taking the time to
-configure it, installing any useful helpers, and learning their
-features.
+So it's worth using a powerful editor, one with comfortable
+copy/paste, search & replace, and perhaps more advanced features like
+templates, abbreviations and macros. And, taking the time to configure
+it, installing any useful helpers, and learning their features.
 
 ## Editor modes
 
 For most editors there are helper modes to make editing hledger files
-for convenient. They provide things like syntactic highlighting,
+more convenient. They provide things like syntactic highlighting,
 formatting aids, tab completion of account names, and helpful
-commands. Using one of these modes is quite recommended. 
+commands. Using one of these modes is recommended. 
 
-Note there are a few modes written specifically for hledger,
-but you should also consider the modes with "ledger" in their name,
+There are modes written specifically for hledger,
+but also consider the modes with "ledger" in their name,
 as these will also work well for the most part.
 
 You can find the latest modes at:
@@ -50,18 +50,19 @@ with a command or arguments that hledger doesn't support. In this case you can
 - do something locally to keep ledger-mode happy, eg define a
   small add-on command mimicking the required ledger command.
 
-Eg: `ledger-display-balance-at-point` (`C-c C-p`) runs 
+Eg: `ledger-display-balance-at-point` (C-c C-p) runs 
 `ledger cleared ACCT`.
-hledger doesn't have this command, so you could make it by
+hledger doesn't have a "cleared" command, so you could make it by
 creating `hledger-cleared.sh` in $PATH:
 
     #!/bin/sh
     hledger balance -N "$@"  # or add -C, or whatever you like
 
-To toggle a transaction's cleared status in ledger-mode: move point to it, C-c C-e. To toggle just a posting's status: C-c C-c.
-
 [#367 ledger-mode setup for hledger needs documenting](https://github.com/simonmichael/hledger/issues/367)
-has more discussion and tips.
+has more discussion and tips, which should be collected here.
+
+To toggle a transaction's cleared status: move point to it, C-c C-e.
+To toggle just a posting's status: move point to it, C-c C-c.
 
 #### General tips
 
