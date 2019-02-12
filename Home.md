@@ -36,6 +36,7 @@ Please edit freely!
 [[hledger accounting concepts]]   
 [[Common journal entries]]  
 [[FAQ]]  
+[[Accounting links]]  
 
 ### Managing data
 
@@ -66,11 +67,11 @@ Please edit freely!
 [[Addons]]  
 [[Mobile apps]]  
 [[Save frequently used options]]  
+[[Scripting]]  
 [[Tab-completion of hledger commands]]  
 
-### More..
+### See also
 
-[[More docs]]  
 [plaintextaccounting.org](http://plaintextaccounting.org)  
 ([software](http://plaintextaccounting.org/#software),
 [docs](http://plaintextaccounting.org/#docs),
