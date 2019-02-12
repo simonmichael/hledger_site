@@ -35,6 +35,7 @@ Please edit freely!
 [[Create a journal]]  
 [[hledger accounting concepts]]   
 [[Common journal entries]]  
+[[FAQ]]  
 
 ### Managing data
 
@@ -69,7 +70,6 @@ Please edit freely!
 
 ### More..
 
-[[FAQ]]  
 [[More docs]]  
 [plaintextaccounting.org](http://plaintextaccounting.org)  
 ([software](http://plaintextaccounting.org/#software),
