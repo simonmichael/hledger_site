@@ -65,6 +65,7 @@ Please edit freely!
 ### Usage tips
 
 [[Addons]]  
+[[Editor configuration]]  
 [[Mobile apps]]  
 [[Save frequently used options]]  
 [[Scripting]]  
