@@ -47,9 +47,10 @@ Then you can type a part of one of the suggestions and press tab again to
 complete it.
 If you only see filenames, the completions are not correctly installed.
 
-## Completion scripts for other shells (e.g. Fish or Zsh)
+## Completion scripts for other shells
 
-You're welcome to add completion scripts for other shells! It should not be too
-hard. All available hledger options and commands are already there. Only the shell hooks and logic is missing.
+You're welcome to add completion scripts for other shells (e.g. Fish or Zsh)! 
+It should not be too hard. All available hledger options and commands
+are already there. Only the shell hooks and logic is missing.
 
 Please refer to the README in the [shell-completion](https://github.com/simonmichael/hledger/tree/master/shell-completion) folder.
