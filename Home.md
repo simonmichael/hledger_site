@@ -65,11 +65,11 @@ Please edit freely!
 ### Usage tips
 
 [[Addons]]  
+[[Command-line completion]]  
 [[Editor configuration]]  
 [[Mobile apps]]  
 [[Save frequently used options]]  
 [[Scripting]]  
-[[Tab-completion of hledger commands]]  
 
 ### See also...
 

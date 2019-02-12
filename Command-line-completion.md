@@ -1,8 +1,8 @@
-# Shell-completion of hledger commands using the tab key
-
-Shell completion is a feature in shells (Bash, Fish, Zsh, ...) to automatically complete a command, argument, or option. Usually, the completion is triggered by pressing the tab key once or twice
-after typing `hledger `.
-(The exact behavior may differ in shells other than Bash.)
+[Command-line completion](https://en.wikipedia.org/wiki/Command-line_completion)
+is a feature in shells (Bash, Fish, Zsh, ...) to automatically complete a
+command, argument, or option. Usually, the completion is triggered by
+pressing the tab key once or twice after typing `hledger `.  (The
+exact behavior may differ in shells other than Bash.)
 
 Here is a [demonstration video](https://asciinema.org/a/PdV2PzIU9oDQg1K5FjAX9n3vL).
 
@@ -14,8 +14,7 @@ The completions handle hledger's CLI:
 - account names from journal files (but not yet for files named by `--file`)
 - query filter keywords like `status:`, `tag:`, or `amt:`
 
-Installation for end users
---------------------------
+## Installation for end users
 
 Completions are currently only implemented for the Bash shell.
 
@@ -48,8 +47,7 @@ Then you can type a part of one of the suggestions and press tab again to
 complete it.
 If you only see filenames, the completions are not correctly installed.
 
-Completion scripts for other shells (e.g. Fish or Zsh)
-------------------------------------------------------
+## Completion scripts for other shells (e.g. Fish or Zsh)
 
 You're welcome to add completion scripts for other shells! It should not be too
 hard. All available hledger options and commands are already there. Only the shell hooks and logic is missing.
