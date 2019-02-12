@@ -44,8 +44,8 @@ Please edit freely!
 [[Customize default CSV accounts]]  
 [[Track changes with version control]]  
 [[Use another account separator character]]  
-["Full-fledged Hledger" setup](https://github.com/adept/full-fledged-hledger)  
-["hledger: Make It So" setup](https://github.com/apauley/hledger-makeitso)
+["Full-fledged Hledger" setup](https://github.com/adept/full-fledged-hledger)&nbsp;&rarr;  
+["hledger: Make It So" setup](https://github.com/apauley/hledger-makeitso)&nbsp;&rarr;
 
 ### Reporting
 
@@ -70,14 +70,18 @@ Please edit freely!
 [[Scripting]]  
 [[Tab-completion of hledger commands]]  
 
-### See also
+### See also...
 
-[plaintextaccounting.org](http://plaintextaccounting.org)  
+[plaintextaccounting.org](http://plaintextaccounting.org)
 ([software](http://plaintextaccounting.org/#software),
 [docs](http://plaintextaccounting.org/#docs),
 [common&nbsp;tasks](http://plaintextaccounting.org/#common-tasks),
-[discussion](http://plaintextaccounting.org/#discussion))  
-[ledger-cli.org](http://ledger-cli.org)  
+[discussion](http://plaintextaccounting.org/#discussion))
+&nbsp;&rarr;  
+[Ledger](http://ledger-cli.org)
 ([docs](https://www.ledger-cli.org/docs.html),
-[wiki](https://github.com/ledger/ledger/wiki))  
-[Beancount's docs](http://furius.ca/beancount/doc/index)  
+[wiki](https://github.com/ledger/ledger/wiki))
+&nbsp;&rarr;  
+[Beancount](http://furius.ca/beancount)
+([docs](http://furius.ca/beancount/doc/index))
+&nbsp;&rarr;  
