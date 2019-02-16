@@ -4,7 +4,7 @@ command, argument, or option. Usually, the completion is triggered by
 pressing the tab key once or twice after typing `hledger `.  (The
 exact behavior may differ in shells other than Bash.)
 
-Here is a [demonstration video](https://asciinema.org/a/PdV2PzIU9oDQg1K5FjAX9n3vL).
+[![asciicast](https://asciinema.org/a/227935.svg)](https://asciinema.org/a/227935)
 
 The completions handle hledger's CLI:
 
