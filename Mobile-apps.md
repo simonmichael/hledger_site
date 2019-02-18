@@ -11,3 +11,5 @@ Entering expenses on the spot using a mobile device can be convenient. One of th
 0. [Eternity](http://www.komorian.com/eternity.html) (iOS)
    * excellent time tracking app.
 [CSV rules](https://github.com/simonmichael/hledger/blob/master/examples/csv/eternity.csv.rules)
+
+[MoLe](https://gitlab.com/fdroid/fdroiddata/merge_requests/4450#note_142213241) is an android client that talks to a [hledger-web](http://hledger.org/hledger-web.html) server.
