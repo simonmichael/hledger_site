@@ -12,4 +12,4 @@ The url for the editform looks like this:
 http://127.0.0.1:5000/edit/%2Fabsolute%2Fpath%2Fno%2Fsymlinks%2Fto%2Fdesired.file
 ```
 
-See also: http://hledger.org/hledger-web.html#permissions
+See also: <http://hledger.org/hledger-web.html#permissions>
