@@ -67,6 +67,7 @@ Please edit freely!
 [[Addons]]  
 [[Command-line completion]]  
 [[Editor configuration]]  
+[[hledger-web tips]]  
 [[Mobile apps]]  
 [[Save frequently used options]]  
 [[Scripting]]  
