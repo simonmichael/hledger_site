@@ -4,18 +4,22 @@ Entering expenses on the spot using a mobile device can be convenient. One of th
 
 Here are some I have used, add any others that you find useful.
 
-- [expense](http://ela.build/expense) (iOS)
-   * minimal interface only for expense tracking. CSV export supported
+- [expense](http://ela.build/expense) (iOS).
+Minimal interface for expense tracking only. CSV export supported.
 
-- [XpenseTracker, BizXpenseTracker](http://www.silverwaresoftware.com/XpenseTracker.html) (iOS)
-   * comprehensive and serviceable money & time tracking apps.
+- [XpenseTracker, BizXpenseTracker](http://www.silverwaresoftware.com/XpenseTracker.html) (iOS).
+Comprehensive and serviceable money & time tracking apps.
 [CSV rules](https://github.com/simonmichael/hledger/blob/master/examples/csv/xpensetracker.csv.rules),
 [Makefile](https://gist.github.com/simonmichael/06eed26bcc85c76d1604373418bc6c58)
 
-- [Eternity](http://www.komorian.com/eternity.html) (iOS)
-   * excellent time tracking app.
+- [Eternity](http://www.komorian.com/eternity.html) (iOS).
+Excellent time tracking app.
 [CSV rules](https://github.com/simonmichael/hledger/blob/master/examples/csv/eternity.csv.rules)
 
 ## Mobile clients for a hledger-web or hledger-api server
 
-- [MoLe](https://gitlab.com/fdroid/fdroiddata/merge_requests/4450#note_142213241) is an android client that talks to a [hledger-web](http://hledger.org/hledger-web.html) server.
+- [MoLe](https://gitlab.com/fdroid/fdroiddata/merge_requests/4450#note_142213241) (Android).
+A data entry app that talks to a hledger-web server.
+Currently hledger-web 1.10 only.
+![MoLe-1](https://i.imgur.com/DUUlv2H.png){width=30%}
+![MoLe-2](https://i.imgur.com/QN66xpJ.png){width=30%}
