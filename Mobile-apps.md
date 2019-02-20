@@ -1,6 +1,6 @@
 Entering expenses on the spot using a mobile device can be convenient. One of the challenges is finding apps that focus on making this efficient. 
 
-## Mobile expense apps with CSV export
+## Apps with CSV export
 
 The general workflow here is that every so often you manually initiate a CSV export from the app.
 Usually it runs a HTTP server and you can fetch the data to your main machine with curl.
@@ -22,7 +22,7 @@ Comprehensive and serviceable money & time tracking apps.
 Excellent time tracking app.
 [CSV rules](https://github.com/simonmichael/hledger/blob/master/examples/csv/eternity.csv.rules)
 
-## Mobile clients for a hledger-web or hledger-api server
+## Apps that talk to a hledger-web or hledger-api server
 
 - [MoLe](https://gitlab.com/fdroid/fdroiddata/merge_requests/4450#note_142213241) (Android).
 A data entry app that talks to a hledger-web server.
