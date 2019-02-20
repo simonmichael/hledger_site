@@ -15,7 +15,7 @@ Here are some apps I have tried, add any others that you find useful.
 Excellent time tracking app.
 [CSV rules](https://github.com/simonmichael/hledger/blob/master/examples/csv/eternity.csv.rules)
 
-### expense (IOS)
+### Expense (IOS)
 <http://ela.build/expense>\
 Minimal interface for expense tracking only. CSV export supported.
 
