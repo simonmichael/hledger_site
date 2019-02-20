@@ -1,8 +1,14 @@
 Entering expenses on the spot using a mobile device can be convenient. One of the challenges is finding apps that focus on making this efficient. 
 
-## Mobile expense apps with CSV export to hledger
+## Mobile expense apps with CSV export
 
-Here are some I have used, add any others that you find useful.
+The general workflow here is that every so often you manually initiate a CSV export from the app.
+Usually it runs a HTTP server and you can fetch the data to your main machine with curl.
+Then, with suitable CSV rules, either run hledger reports directly from the CSV file,
+or convert it/import the new transactions into a more permanent journal file.
+A script or Makefile to automate this can be helpful.
+
+Here are some apps I have tried, add any others that you find useful.
 
 - [expense](http://ela.build/expense) (iOS).
 Minimal interface for expense tracking only. CSV export supported.
