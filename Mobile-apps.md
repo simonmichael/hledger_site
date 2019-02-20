@@ -27,6 +27,7 @@ Excellent time tracking app.
 ### [MoLe](https://gitlab.com/fdroid/fdroiddata/merge_requests/4450#note_142213241) (Android)
 A data entry app that talks to a hledger-web server.
 Only works with certain hledger-web versions, eg 1.10.
+
 ![MoLe-1](https://i.imgur.com/DUUlv2H.png){width=30%}
 ![MoLe-2](https://i.imgur.com/QN66xpJ.png){width=30%}
 
