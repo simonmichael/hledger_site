@@ -25,11 +25,12 @@ Comprehensive and serviceable money & time tracking apps.
 [CSV rules](https://github.com/simonmichael/hledger/blob/master/examples/csv/xpensetracker.csv.rules),
 [Makefile](https://gist.github.com/simonmichael/06eed26bcc85c76d1604373418bc6c58)
 
-## Apps that talk to a hledger-web or hledger-api server
+## Apps that use the ledger format
 
 ### cone (Android)
+
 <https://f-droid.org/en/packages/info.tangential.cone>\
-Status TBD.
+Currently implements offline data entry to local directory, and so can be synced with server via Syncthing.
 
 ### MoLe (Android)
 <https://gitlab.com/fdroid/fdroiddata/merge_requests/4450#note_142213241>\
@@ -38,4 +39,3 @@ Only works with certain hledger-web versions, eg 1.10.
 
 ![MoLe-1](https://i.imgur.com/DUUlv2H.png){width=30%}
 ![MoLe-2](https://i.imgur.com/QN66xpJ.png){width=30%}
-
