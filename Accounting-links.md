@@ -1,4 +1,4 @@
-Some general accounting links:
+## General
 
 - Wikipedia:
  [Accounting](http://en.wikipedia.org/wiki/Accounting),
@@ -15,7 +15,6 @@ Some general accounting links:
 - [Guru 99 Accounting Tutorials](http://www.guru99.com/accounting.html)
 - [principlesofaccounting.com](http://www.principlesofaccounting.com)
 - [Double Entry Bookkeeping](http://c2.com/cgi/wiki?DoubleEntryBookkeeping) discussion by software developers at the WikiWikiWeb
-- [The Vanished Grandeur of Accounting](http://www.bostonglobe.com/ideas/2014/06/07/the-vanished-grandeur-accounting/3zcbRBoPDNIryWyNYNMvbO/story.html) (Boston Globe) & [discussion](https://news.ycombinator.com/item?id=7933746)
 - [Winning Financially is Simple](http://directory.libsyn.com/episode/index/show/youneedabudget/id/2657122) and other good episodes from the [YNAB Podcast](http://directory.libsyn.com/shows/view/id/youneedabudget)
 - [Back to the Stone Age: Low-Tech Expense Tracking](http://www.getrichslowly.org/blog/2011/02/28/back-to-the-stone-age-low-tech-expense-tracking/) Get Rich Slowly
 - [Track Every Penny You Spend](http://www.getrichslowly.org/blog/2006/09/22/track-every-penny-you-spend/) Get Rich Slowly
@@ -27,5 +26,15 @@ Some general accounting links:
 - [Accounting for Computer Scientists](http://martin.kleppmann.com/2011/03/07/accounting-for-computer-scientists.html)
 - [Closing Entries](http://www.cliffsnotes.com/more-subjects/accounting/accounting-principles-i/completion-of-the-accounting-cycle/closing-entries)
 - [Tutorial on multiple currency accounting](http://www.mscs.dal.ca/~selinger/accounting/tutorial.html) by Peter Selinger
+
+## Theory
+
 - [Algebraic Models for Accounting Systems](https://www.amazon.com/Algebraic-Accounting-Systems-Salvador-Rambaud/dp/9814287113) - recommended [on twitter](https://twitter.com/meekaale/status/1000426850819170304)
-- [On Double-Entry Bookkeeping: The Mathematical Treatment](https://arxiv.org/abs/1407.1898) David Ellerman 2014
+- [On Double-Entry Bookkeeping: The Mathematical Treatment](https://arxiv.org/abs/1407.1898) David Ellerman 2014, <http://www.ellerman.org/double-entry-bookkeeping>
+
+## History
+
+- <https://en.wikipedia.org/wiki/History_of_accounting>
+- [The Vanished Grandeur of Accounting](http://www.bostonglobe.com/ideas/2014/06/07/the-vanished-grandeur-accounting/3zcbRBoPDNIryWyNYNMvbO/story.html) (Boston Globe) & [discussion](https://news.ycombinator.com/item?id=7933746)
+- <https://www.bbc.com/news/business-39870485>
+- <http://www.accountingin.com/accounting-historians-journal/volume-11-number-1/the-significance-of-ancient-mesopotamia-in-accounting-history/>
