@@ -29,7 +29,7 @@ Comprehensive and serviceable money & time tracking apps.
 
 ### cone (Android)
 
-<https://github.com/bradyt/cone>, [f-droid](https://f-droid.org/en/packages/info.tangential.cone\
+<https://github.com/bradyt/cone>, [f-droid](https://f-droid.org/en/packages/info.tangential.cone)\
 Currently implements offline data entry to local directory, and so can be synced with server via Syncthing.
 
 ### MoLe (Android)
