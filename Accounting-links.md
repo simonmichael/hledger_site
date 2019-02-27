@@ -38,3 +38,5 @@
 - [The Vanished Grandeur of Accounting](http://www.bostonglobe.com/ideas/2014/06/07/the-vanished-grandeur-accounting/3zcbRBoPDNIryWyNYNMvbO/story.html) (Boston Globe) & [discussion](https://news.ycombinator.com/item?id=7933746)
 - <https://www.bbc.com/news/business-39870485>
 - <http://www.accountingin.com/accounting-historians-journal/volume-11-number-1/the-significance-of-ancient-mesopotamia-in-accounting-history/>
+- [Mesopotamian Tablet Collection](https://www.spurlock.illinois.edu/collections/notable-collections/profiles/mesopotamian-tablet.html) (Spurlock Museum}
+- [Ledger Art](https://www.mpm.edu/research-collections/anthropology/online-collections-research/ledger-art-collection)
