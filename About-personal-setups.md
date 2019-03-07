@@ -9,13 +9,13 @@ exactly, or simply read for ideas.
 
 Once you have had some success with hledger, feel free to add a page,
 or several, describing your setup or workflows (the two usually go
-together). These docs need not be complete, up to date, or
-reproducible, but they should be based on a real-world setup that you
-found useful over a period of time.
+together). These docs are not required to be complete, reproducible,
+or maintained (though those things are nice!), but they should give
+some insight into a real-world setup that you found useful.
 
 Here's a rough template to consider as a starting point:
 
-## X's
+## X's setup
 
 Author:       X  
 Last updated: DATE  
@@ -23,7 +23,7 @@ Last updated: DATE
 ### Requirements
 
 Tested on:    PLATFORM(S)  
-Tested with:  HLEDGER VERSION...
+Tested with:  HLEDGER VERSION  
 Other tools:  
 
 ### File structure
