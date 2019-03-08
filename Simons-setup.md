@@ -13,11 +13,36 @@ GNU make,
 
 ## Files
 
-One journal file per year containing all transactions in date order.
-Includes:
+Financial files are in `~/notes`.
 
-- forecast.journal containing periodic transaction rules
+One journal file per year containing all transactions in date order.
+It includes:
+
 - YYYY.prices containing P records for the year
+- forecast.journal containing periodic transaction rules
+
+A current.journal symlink for scripts which don't know the year.
+Though symbolic links are a mixed blessing, causing file path confusion in emacs, eg.
+
+## Environment
+
+The `LEDGER_FILE` environment variable is currently set to `/Users/simon/notes/2019.journal`.
+This is done in some super secret way that I'll have to track down, or more likely several ways,
+to ensure that it is consistent for:
+
+- programs started from command line in iTerm/Terminal windows
+- programs started from emacs shell buffers
+- emacs modes such as ledger-mode
+- for both text-mode and graphical emacs, whether started from command line or mac GUI (Dock/Finder/Spotlight)
+- etc.
+
+```
+.
+├── 2019.journal
+├── 2019.prices
+├── current.journal -> 2019.journal
+├── forecast.journal
+```
 
 ## Data entry / conversion
 
