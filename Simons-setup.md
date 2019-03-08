@@ -37,11 +37,13 @@ to ensure that it is consistent for:
 - etc.
 
 ```
-.
+~$ tree notes
+notes
 ├── 2019.journal
 ├── 2019.prices
 ├── current.journal -> 2019.journal
 ├── forecast.journal
+...
 ```
 
 ## Data entry / conversion
