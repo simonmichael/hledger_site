@@ -13,22 +13,25 @@ GNU make,
 
 ## Files
 
-Financial files are in `~/notes`.
-
-One journal file per year containing all transactions in date order.
+Files are in `~/notes`.
+There's one YYYY.journal file per year containing all transactions in date order.
 It includes:
 
 - YYYY.prices containing P records for the year
 - forecast.journal containing periodic transaction rules
 
-A current.journal symlink for scripts which don't know the year.
-Though symbolic links are a mixed blessing, causing file path confusion in emacs, eg.
+all.journal includes all the year journals. 
+It provides all historical data, but is slow, and my old journals are inconsistent/broken, so it's currently rarely used.
+
+current.journal is a symlink for scripts which don't know the year.
+Symbolic links are a mixed blessing, causing file path confusion in emacs, eg.
 
 ```
-~$ tree notes
-notes
+$ tree ~/notes
+/Users/simon/notes
 ├── 2019.journal
 ├── 2019.prices
+├── all.journal
 ├── current.journal -> 2019.journal
 ├── forecast.journal
 ...
