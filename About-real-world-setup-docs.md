@@ -21,10 +21,11 @@ Last updated: DATE
 
 Tested on:    PLATFORM(S)  
 Tested with:  HLEDGER VERSION  
-
-## Tools
-
-Tools used: hledger, hledger-ui, GNU make, sed..
+Tools used: 
+hledger, 
+hledger-ui, 
+GNU make, 
+sed..
 
 ## Files
 

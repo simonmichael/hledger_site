@@ -5,9 +5,6 @@ Last updated: 201903
 
 Tested on:    mac  
 Tested with:  hledger 1.14  
-
-## Tools
-
 Tools used: 
 hledger, 
 hledger-ui,
