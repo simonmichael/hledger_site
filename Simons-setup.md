@@ -24,6 +24,16 @@ It includes:
 A current.journal symlink for scripts which don't know the year.
 Though symbolic links are a mixed blessing, causing file path confusion in emacs, eg.
 
+```
+~$ tree notes
+notes
+├── 2019.journal
+├── 2019.prices
+├── current.journal -> 2019.journal
+├── forecast.journal
+...
+```
+
 ## Environment
 
 The `LEDGER_FILE` environment variable is currently set to `/Users/simon/notes/2019.journal`.
@@ -35,16 +45,6 @@ to ensure that it is consistent for:
 - emacs modes such as ledger-mode
 - for both text-mode and graphical emacs, whether started from command line or mac GUI (Dock/Finder/Spotlight)
 - etc.
-
-```
-~$ tree notes
-notes
-├── 2019.journal
-├── 2019.prices
-├── current.journal -> 2019.journal
-├── forecast.journal
-...
-```
 
 ## Data entry / conversion
 
