@@ -94,9 +94,9 @@ Food, but to compute budget report they have all been rolled up into a nearest p
 do not have such parent went into `<unbudgeted>` row.
 
 Allright, it seems that for Jan 2013 we have ~3000 USD of budgeted expenses and almost twice as much unbudgeted. Lets figure out what they are.
-We can see more details if we add `--show-unbudgeted` switch:
+We can see more details if we add `-E` switch:
 ```shell
-$ hledger balance -f bcexample.hledger -f budget.journal -M -b 2013-01 -e 2013-02 --budget cur:USD --show-unbudgeted
+$ hledger balance -f bcexample.hledger -f budget.journal -M -b 2013-01 -e 2013-02 --budget cur:USD -E
 Balance changes in 2013/01:
 
                                   ||                            2013/01 
