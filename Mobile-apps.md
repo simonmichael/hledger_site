@@ -1,5 +1,20 @@
 Entering expenses on the spot using a mobile device can be convenient. One of the challenges is finding apps that focus on making this efficient. 
 
+## Apps that use the ledger format
+
+### cone (Android)
+
+<https://github.com/bradyt/cone>, [f-droid](https://f-droid.org/en/packages/info.tangential.cone)\
+Currently implements offline data entry to local directory, and so can be synced with server via Syncthing.
+
+### MoLe (Android)
+<https://gitlab.com/fdroid/fdroiddata/merge_requests/4450#note_142213241>\
+A data entry app that talks to a hledger-web server.
+Only works with certain hledger-web versions, eg 1.10.
+
+<img src="https://camo.githubusercontent.com/7b3e91a4eca44a63091fb4dd3c969aa66bff9ded/68747470733a2f2f692e696d6775722e636f6d2f4455556c7632482e706e67" alt="MoLe-1" data-canonical-src="https://i.imgur.com/DUUlv2H.png" width="30%">
+<img src="https://camo.githubusercontent.com/e38a7d08970fd0c024b52b28b26454761c705a9b/68747470733a2f2f692e696d6775722e636f6d2f514e363678704a2e706e67" alt="MoLe-2" data-canonical-src="https://i.imgur.com/QN66xpJ.png" width="30%">
+
 ## Apps with CSV export
 
 The general workflow here is that every so often you manually initiate a CSV export from the app.
@@ -25,17 +40,9 @@ Comprehensive and serviceable money & time tracking apps.
 [CSV rules](https://github.com/simonmichael/hledger/blob/master/examples/csv/xpensetracker.csv.rules),
 [Makefile](https://gist.github.com/simonmichael/06eed26bcc85c76d1604373418bc6c58)
 
-## Apps that use the ledger format
+## Apps with other ways to export
 
-### cone (Android)
-
-<https://github.com/bradyt/cone>, [f-droid](https://f-droid.org/en/packages/info.tangential.cone)\
-Currently implements offline data entry to local directory, and so can be synced with server via Syncthing.
-
-### MoLe (Android)
-<https://gitlab.com/fdroid/fdroiddata/merge_requests/4450#note_142213241>\
-A data entry app that talks to a hledger-web server.
-Only works with certain hledger-web versions, eg 1.10.
-
-<img src="https://camo.githubusercontent.com/7b3e91a4eca44a63091fb4dd3c969aa66bff9ded/68747470733a2f2f692e696d6775722e636f6d2f4455556c7632482e706e67" alt="MoLe-1" data-canonical-src="https://i.imgur.com/DUUlv2H.png" width="30%">
-<img src="https://camo.githubusercontent.com/e38a7d08970fd0c024b52b28b26454761c705a9b/68747470733a2f2f692e696d6775722e636f6d2f514e363678704a2e706e67" alt="MoLe-2" data-canonical-src="https://i.imgur.com/QN66xpJ.png" width="30%">
+### MyExpenses (Android)
+<http://www.myexpenses.mobi>\
+GPL personal finance manager for Android.
+<https://github.com/ony/ledger-myexpenses> converts the exported sqlite db to *ledger format.
