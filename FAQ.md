@@ -1,17 +1,16 @@
 <!-- 
-I'd rather maintain this in org mode.
-As of 20190418 github (org-ruby ?) doesn't render org well;
-it converts to "smart" quotes/hyphens, and misrenders =--drop=.
-This would make our docs look bad when viewed on github.
-They are intended to be viewed on hledger.org, which avoids these problems.
-Still, keeping it in markdown for now.
+20190418: I'd rather maintain this in org mode.
+But this would make our docs look bad when viewed on github,
+since github (org-ruby ?) converts to "smart" quotes/hyphens, and misrenders =--drop=.
+Our docs are intended to be viewed on hledger.org, not on github.
+But it's reason enough to stick with markdown.
 -->
 
-## hledger & Ledger
+## Project
 
-### History
+### How/why was hledger started ?
 
-I discovered John Wiegley's [Ledger](http://ledger-cli.org) in 2006,
+I ([Simon Michael](http://joyful.com)) discovered John Wiegley's [Ledger](http://ledger-cli.org) in 2006,
 and was very happy to find this efficient command-line reporting tool with a transparent data format.
 
 Initially, I used it to generate time reports for my job.
@@ -23,11 +22,6 @@ But, I didn't want to spend time learning C++.
 I was learning Haskell, which I did want to spend time in.
 I felt Ledger could be implemented well and, in the long run, more efficiently in that language,
 which has some compelling advantages such as lower maintenance costs.
-<!-- ([eg](http://neilmitchell.blogspot.com/2016/02/selling-haskell-in-pub.html)). -->
-<!-- (It encourages the coding style known as pure functional programming, -->
-<!-- allowing more bug-free, concise and maintainable software. It provides -->
-<!-- a more abstracted, portable platform making installation easier. It is -->
-<!-- attractive for contributors to work on.) -->
 I urgently needed a reliable accounting tool that I enjoyed using.
 I also wanted to see what I could do to reduce roadbumps and confusion for newcomers.
 
@@ -48,7 +42,7 @@ and by maintaining high compatibility, I now had two tools  with different stren
 each providing a comparison for the other in case of confusion or suspected bugs,
 which was itself quite valuable.
 
-Happily, the Ledger project later revived and has attracted new active contributors.
+The Ledger project later revived and has attracted new active contributors.
 I have remained active in that community, sharing discoveries and
 design discussions, and we have seen many ideas travelling in both directions.
 hledger shared #ledger's IRC channel until 2014, when I added
@@ -63,7 +57,10 @@ the [ledger-cli.org](http://ledger-cli.org) site,
 IRC support on #ledger,
 and now [plaintextaccounting.org](http://plaintextaccounting.org).
 
-### Features
+## Comparisons with other ledgerlikes
+### Ledger
+
+#### Features
 
 Compared to Ledger, hledger builds quickly and has a complete and
 accurate manual, an easier report query syntax, multi-column balance
@@ -110,7 +107,7 @@ And we add some new commands, such as:
 - ui
 - web
 
-### File formats
+#### File formats
 
 hledger's journal file format is very close to Ledger's.
 Some unsupported Ledger syntax is parsed but ignored; some is not parsed and will cause an error (eg value expressions).
@@ -126,7 +123,7 @@ hledger.journal
 ledger.journal
 ```
 
-### Functional differences
+#### Functional differences
 
 - hledger recognises description and negative patterns by "desc:"
   and "not:" prefixes, unlike Ledger 3's free-form parser
@@ -191,35 +188,19 @@ ledger.journal
   [both syntaxes in the same file](https://www.reddit.com/r/plaintextaccounting/comments/7buf8q/how_to_balance_working_hours/dpligsd/)
   unlike Ledger. ([Include](http://hledger.org/manual.html#including-other-files) a separate timeclock file instead.) 
   
-### Future ?
+#### The "ledger4" parser
 
-There is a [ledger4](https://github.com/ledger/ledger4) repo on
-github; this is John's 2012/2013 rewrite of some parts of Ledger 3,
-including the parser, in Haskell. We have a plan to add this parser to
-hledger in 2015/2016, increasing its ability to read Ledger's files.
-
-
-## UI surprises
-
-### Why does it complain about missing amounts even though I wrote one ?
-
-This is an easy mistake at first. This journal entry:
-```journal
-1/1
-  a 1
-  b
-```
-will give a parse error (`...can't have more than one real posting with no amount...`).
-
-There must always be at least two spaces between the account name and amount. So instead, it should be:
-```journal
-1/1
-  a  1
-  b
-```
+[ledger4](https://github.com/ledger/ledger4) is John's 2012/2013
+rewrite of some parts of Ledger 3, including the parser, in Haskell.
+We added this to hledger for a while, 
+hoping to attract contributions to improve this "bridge" between the projects,
+and improve our support for reading Ledger's files.
+Neither happened, so it was removed.
 
 
-### Why do some amounts appear on their own line with no account name ?
+## hledger CLI
+
+### With multiple commodities, output looks weird; why are some amounts shown with no account name ?
 
 When hledger needs to show a multi-commodity amount, each commodity is displayed on its own line, one above the other (like Ledger).
 
@@ -286,9 +267,24 @@ $ hledger -f t.j balance --drop 1
 ```
 
 
+## File formats
+### Journal format
+#### Why does this entry give a "no amount" error even though I wrote an amount ?
+
+```journal
+2019-01-01
+  a 1
+  b
+```
+Because there's only a single space between `a` and `1`,
+so this is parsed as an account named <span style="white-space:nowrap;">"a 1"</span>, with no amount.
+There must be at least two spaces between account name and amount.
+
+
+
 ## Other software
 
-### iTerm2
+### iTerm2/iTerm3
 
 #### Why does Shift-Up/Shift-Down move the cursor instead of adjusting the period in hledger-ui ?
 
