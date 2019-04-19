@@ -280,6 +280,51 @@ Because there's only a single space between `a` and `1`,
 so this is parsed as an account named <span style="white-space:nowrap;">"a 1"</span>, with no amount.
 There must be at least two spaces between account name and amount.
 
+#### Why do some directives not affect other files ? Why can't I put account aliases in an included file ?
+
+This is documented at [journal format: directives](/manual.html#directives).
+(Also mentioned at [hledger: Input files](https://hledger.org/hledger.html#input-files).)
+These docs could be improved.
+
+Directives which affect parsing of data vary in their scope, 
+ie the area of input data they affect. Eg, should they affect: 
+
+- entries after the directive, in this file only ? 
+  - Eg: 
+    `alias`, 
+    `apply account`, 
+    `comment`, 
+    `Y`
+- entries before and after the directive, in this file only ?
+- entries and included files after the directive, until this file's end ?
+- all entries after the directive, in this and all included or subsequent files, including parent files ?
+  - Eg: 
+    the number notation specified by `D`
+    or `commodity`
+- all entries in all files ?
+  - Eg: 
+    the default commodity specified by `D`,
+    and `account`
+
+The differences are partly due to historical accident, and partly by design.
+We would like to preserve these properties:
+
+- Reordering files does not change their meaning.
+- Adding a file does not change the meaning of the other files.
+
+This is why some directives are designed to last only until the end of the current file.
+This can be annoying, but it seems worthwhile to ensure reports are
+robust, and not changed by simply moving `include` directives or `-f`
+options around.
+
+For `alias` directives, when you have multiple files, the workaround
+is to put them inline in a top-level file, before including the other
+files that the aliases should affect.
+See [#1007](https://github.com/simonmichael/hledger/issues/1007).
+
+See also:
+[#510](https://github.com/simonmichael/hledger/issues/510),
+[#217](https://github.com/simonmichael/hledger/issues/217)
 
 
 ## Other software
