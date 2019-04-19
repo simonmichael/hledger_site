@@ -1,3 +1,12 @@
+<!-- 
+I'd rather maintain this in org mode.
+As of 20190418 github (org-ruby ?) doesn't render org well;
+it converts to "smart" quotes/hyphens, and misrenders =--drop=.
+This would make our docs look bad when viewed on github.
+They are intended to be viewed on hledger.org, which avoids these problems.
+Still, keeping it in markdown for now.
+-->
+
 ## hledger & Ledger
 
 ### History
@@ -275,6 +284,7 @@ $ hledger -f t.j balance --drop 1
 --------------------
                    0
 ```
+
 
 ## Other software
 
