@@ -1,3 +1,5 @@
+#+OPTIONS: ':nil *:t -:nil ::T <:t \n:nil ^:nil \n:nil |:t
+
 ** hledger & Ledger
    :PROPERTIES:
    :CUSTOM_ID: hledger-ledger
