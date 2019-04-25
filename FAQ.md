@@ -189,7 +189,7 @@ ledger.journal
   unlike Ledger. ([Include](http://hledger.org/manual.html#including-other-files) a separate timeclock file instead.) 
   
 - hledger's and Ledger's -H/--historical flags are completely unrelated.
-  In hledger, -H includes balances from before the report start date:
+  hledger's -H makes register and balance-like commands include balances from before the report start date, instead of starting at zero:
 
       hledger register --help:
       -H --historical           show historical running total/balance
@@ -198,7 +198,8 @@ ledger.journal
       hledger balance --help:
       -H --historical           show historical ending balance in each period
                                 (includes postings before report start date)
-  In Ledger, -H modifies -V/-X's behaviour:
+
+  Ledger's -H changes the valuation date used by -V/-X:
 
       ledger --help:
       --historical (-H)
