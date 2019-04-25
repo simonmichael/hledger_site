@@ -188,6 +188,22 @@ ledger.journal
   [both syntaxes in the same file](https://www.reddit.com/r/plaintextaccounting/comments/7buf8q/how_to_balance_working_hours/dpligsd/)
   unlike Ledger. ([Include](http://hledger.org/manual.html#including-other-files) a separate timeclock file instead.) 
   
+- hledger's and Ledger's -H/--historical flags are completely unrelated.
+  In hledger, -H includes balances from before the report start date:
+
+      hledger register --help:
+      -H --historical           show historical running total/balance
+                                (includes postings before report start date)
+
+      hledger balance --help:
+      -H --historical           show historical ending balance in each period
+                                (includes postings before report start date)
+  In Ledger, -H modifies -V/-X's behaviour:
+
+      ledger --help:
+      --historical (-H)
+                                Value commodities at the time of their acquisition.
+
 #### The "ledger4" parser
 
 [ledger4](https://github.com/ledger/ledger4) is John's 2012/2013
