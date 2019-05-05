@@ -46,3 +46,8 @@ Comprehensive and serviceable money & time tracking apps.
 <http://www.myexpenses.mobi>\
 GPL personal finance manager for Android.
 <https://github.com/ony/ledger-myexpenses> converts the exported sqlite db to *ledger format.
+
+### MoneyManagerEx for Android
+<http://android.moneymanagerex.org/>
+Currently exports Qif format. 
+[MoneyManagerExLib](https://gitlab.com/alensiljak/moneymanagerexlib) is a Python library that reads MMEx database and can export CSV.
