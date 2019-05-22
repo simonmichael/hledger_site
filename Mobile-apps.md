@@ -1,6 +1,6 @@
 Entering expenses on the spot using a mobile device can be convenient. One of the challenges is finding apps that focus on making this efficient. 
 
-## Apps that use the ledger format
+## Apps that use the h/ledger format
 
 ### cone (Android)
 
