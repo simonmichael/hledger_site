@@ -15,6 +15,15 @@ Only works with certain hledger-web versions, eg 1.10.
 <img src="https://camo.githubusercontent.com/7b3e91a4eca44a63091fb4dd3c969aa66bff9ded/68747470733a2f2f692e696d6775722e636f6d2f4455556c7632482e706e67" alt="MoLe-1" data-canonical-src="https://i.imgur.com/DUUlv2H.png" width="30%">
 <img src="https://camo.githubusercontent.com/e38a7d08970fd0c024b52b28b26454761c705a9b/68747470733a2f2f692e696d6775722e636f6d2f514e363678704a2e706e67" alt="MoLe-2" data-canonical-src="https://i.imgur.com/QN66xpJ.png" width="30%">
 
+### Cashier (PWA)
+
+https://cashier.alensiljak.ml/, [Source](https://gitlab.com/alensiljak/cashier)
+
+<img src="https://i.imgur.com/NdaUPtM.png" alt="Cashier" width="30%" />
+
+is a progressive web application that can be used on desktop and (offline!) on mobile devices for transaction entry. The transactions can be exported as a (h)ledger file. It also shows the current balance, using the entered transactions.
+The future plans include data synchronization with an instance of hledger-web.
+
 ## Apps with CSV export
 
 The general workflow here is that every so often you manually initiate a CSV export from the app.
