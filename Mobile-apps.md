@@ -19,7 +19,8 @@ Only works with certain hledger-web versions, eg 1.10.
 
 https://cashier.alensiljak.ml/, [Source](https://gitlab.com/alensiljak/cashier)
 
-<img src="https://i.imgur.com/NdaUPtM.png" alt="Cashier" width="30%" />
+<img src="https://i.imgur.com/NdaUPtM.png" alt="Cashier options" width="30%" />
+<img src="https://i.imgur.com/NMmmde3.png" alt="Cashier new transaction screen" width="30%" />
 
 is a progressive web application that can be used on desktop and (offline!) on mobile devices for transaction entry. The transactions can be exported as a (h)ledger file. It also shows the current balance, using the entered transactions.
 The future plans include data synchronization with an instance of hledger-web.
