@@ -36,6 +36,7 @@ Please edit freely!
 [[hledger accounting concepts]]   
 [[Common journal entries]]  
 [[FAQ]]  
+[[Videos]]  
 [[Accounting links]]  
 
 ### Managing data
