@@ -22,8 +22,7 @@ The future plans include data synchronization with an instance of hledger-web.
 
 ### cone (Android, GNU GPL v3)
 
-<https://github.com/bradyt/cone>,
-[f-droid](https://f-droid.org/en/packages/info.tangential.cone)\
+<https://github.com/bradyt/cone>\
 Currently implements offline data entry, 
 and saves a local *ledger file,
 which can be synced with a server via Syncthing.
@@ -32,8 +31,7 @@ which can be synced with a server via Syncthing.
 ### MoLe (Android, GNU GPL v3+)
 
 <https://mole.ktnx.net>,
-<https://git.ktnx.net/?p=mobile-ledger.git>,
-[f-droid](https://f-droid.org/en/packages/net.ktnx.mobileledger)\
+<https://git.ktnx.net/?p=mobile-ledger.git>\
 A data entry app that talks to a hledger-web (1.14+) server.
 
 <img src="https://camo.githubusercontent.com/7b3e91a4eca44a63091fb4dd3c969aa66bff9ded/68747470733a2f2f692e696d6775722e636f6d2f4455556c7632482e706e67" alt="MoLe-1" data-canonical-src="https://i.imgur.com/DUUlv2H.png" width="30%">
@@ -79,8 +77,7 @@ Comprehensive and serviceable money & time tracking apps.
 ### Money Manager Ex for Android (Android, GNU GPL v3)
 
 <http://android.moneymanagerex.org>,
-<https://github.com/moneymanagerex/android-money-manager-ex>,
-[f-droid](https://f-droid.org/packages/com.money.manager.ex)\
+<https://github.com/moneymanagerex/android-money-manager-ex>\
 Android port of the [Money Manager Ex](https://www.moneymanagerex.org) cross platform finance application.
 The [MoneyManagerExLib](https://gitlab.com/alensiljak/moneymanagerexlib) python library can be used to convert its db to *ledger format.
 
