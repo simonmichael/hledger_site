@@ -28,6 +28,13 @@ and saves a local *ledger file,
 which can be synced with a server via Syncthing.
 
 
+### Ledger Expense Tracking (Android)
+
+<https://github.com/jduepmeier/ledger-app>, 
+[google play](https://play.google.com/store/apps/details?id=com.mpease.ledger)\
+Expense tracking app with *ledger export.
+
+
 ### MoLe (Android, GNU GPL v3+)
 
 <https://mole.ktnx.net>,
