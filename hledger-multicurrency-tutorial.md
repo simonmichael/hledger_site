@@ -1,7 +1,4 @@
-<!-- not supported on github wiki
----
-title: hledger multicurrency tutorial
----
+# hledger multicurrency tutorial
 
 <style>
 code mark {

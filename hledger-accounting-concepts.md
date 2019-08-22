@@ -1,3 +1,5 @@
+# hledger accounting concepts
+
 ### Assets, Liabilities and Equity
 
 Accounting describes the status of a business, person or other entity at any point in time in terms of three amounts:

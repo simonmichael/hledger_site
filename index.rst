@@ -10,6 +10,7 @@ hledger docs
    :maxdepth: 2
    :caption: Contents:
 
+   home
    intro
    download
 
@@ -31,6 +32,7 @@ hledger docs
    hledger-tags-tutorial
    
    ..
+      cookbook
       About-real-world-setup-docs
       Accounting-links
       Addons

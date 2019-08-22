@@ -1,6 +1,4 @@
----
-title: home
-...
+# Home
 
 <style>
  .highslide img {max-width:200px; float:right; margin:0 0 1em 1em;}
@@ -179,83 +177,6 @@ Making good software and documentation costs a lot.
 
 </div>
 
-
-</div> <!-- column -->
-<div class="col-sm-4">
-
-<div id=wiki class=contentbox>
-<div class=subcontent>
-<!-- WIKICONTENT -->
-## Cookbook
-
-### Getting started
-
-[[hledger basics tutorial]]  
-[[hledger terminology]]  
-[[Create a journal]]  
-[[hledger accounting concepts]]   
-[[Common journal entries]]  
-[[FAQ]]  
-[[Videos]]  
-[[Accounting links]]  
-
-### Managing data
-
-[[Convert CSV files]]  
-[[Customize default CSV accounts]]  
-[[Track changes with version control]]  
-[[Use another account separator character]]  
-
-### Reporting
-
-[[Queries]]  
-[[hledger tags tutorial]]  
-[[Rewrite account names]]  
-
-### Real world setups
-
-[[About real world setup docs]]  
-["Full-fledged Hledger" tutorial](https://github.com/adept/full-fledged-hledger)&nbsp;&rarr;  
-["Hledger Flow" tutorial & slideshow](https://github.com/apauley/hledger-flow)&nbsp;&rarr;  
-[[Simons setup]]  
-
-### Accounting tasks
-
-[[hledger multicurrency tutorial]]  
-[[Foreign trip expenses]]  
-[[Budgeting and forecasting]]  
-[[Project accounting]]  
-[[Track investments]]  
-[[Time planning]]
-
-### Usage tips
-
-[[Addons]]  
-[[Command-line completion]]  
-[[Editor configuration]]  
-[[hledger-web tips]]  
-[[Mobile apps]]  
-[[Save frequently used options]]  
-[[Scripting]]  
-
-### See also...
-
-[plaintextaccounting.org](http://plaintextaccounting.org)
-([software](http://plaintextaccounting.org/#software),
-[docs](http://plaintextaccounting.org/#docs),
-[common&nbsp;tasks](http://plaintextaccounting.org/#common-tasks),
-[discussion](http://plaintextaccounting.org/#discussion))
-&nbsp;&rarr;  
-[Ledger](http://ledger-cli.org)
-([docs](https://www.ledger-cli.org/docs.html),
-[wiki](https://github.com/ledger/ledger/wiki))
-&nbsp;&rarr;  
-[Beancount](http://furius.ca/beancount)
-([docs](http://furius.ca/beancount/doc/index))
-&nbsp;&rarr;  
-<!-- ENDWIKICONTENT -->
-</div>
-</div>
 
 </div> <!-- column -->
 </div> <!-- row -->

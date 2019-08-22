@@ -30,9 +30,6 @@ if you have any trouble.
 
 The current hledger release is **1.14.2**; here are the [release notes](release-notes.html).
 
-<br>
-<br>
-
 ## Binary packages
 
 These prebuilt binaries will install quickly:

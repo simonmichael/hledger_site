@@ -1,6 +1,4 @@
----
-title: intro
-...
+# What is hledger ?
 
 <style>
  .highslide img {max-width:200px; float:right; margin:0 0 1em 1em;}
@@ -16,8 +14,6 @@ title: intro
 
 <!-- main content -->
 
-## What is hledger ?
-
 It's a [plain text accounting](http://plaintextaccounting.org) program, 
 for tracking money, time, or other commodities, 
 on unix, mac and windows. 
@@ -25,8 +21,7 @@ on unix, mac and windows.
 With simple yet powerful functionality accessed from command line, terminal or web browser, 
 it is a dependable, cross-platform alternative to Quickbooks, GnuCash, spreadsheets etc.
 
-<div class="indent0">
-### plain text ? How does that work ?
+## plain text (How does that work ?)
 
 **Step 1:**
 Record your transactions in a plain text file.
@@ -54,10 +49,8 @@ Read on for more about hledger, or if you're keen to get going,
 <!-- - getting accurate numbers for client billing and tax filing -->
 <!-- - tracking invoices -->
 <!-- - building financial and time clarity and serenity -->
-</div>
 
-<div class="indent1">
-### hledger is Free software
+## Free software
 
 <a href="http://www.gnu.org/licenses/gpl.html" style="float:right; margin:0 0 1em 0;"><img width="104" height="20" src="https://img.shields.io/badge/license-GPLv3+-brightgreen.svg" /></a>
 hledger is Free software, created by [Simon Michael](http://joyful.com)
@@ -65,10 +58,8 @@ and released under GNU GPLv3+.
 
 I have been actively developing and using hledger since 2007,
 together with 80+ other committers and an unknown number of usually happy-sounding users.
-</div>
 
-<div class="indent2">
-### inspired by Ledger
+## inspired by Ledger
 
 hledger is a Haskell [reimplementation](https://github.com/simonmichael/hledger/wiki/FAQ#hledger--ledger)
 of the excellent [Ledger](http://ledger-cli.org).
@@ -76,10 +67,7 @@ It remains substantially compatible with Ledger, and if you wish you can keep yo
 Read more about the [differences](https://github.com/simonmichael/hledger/wiki/FAQ#features) in the FAQ.
 
 
-</div>
-
-<div class="indent1">
-### a command-line tool, that respects your data
+## a command-line tool (that respects your data)
 
 <a href="images/balance-q-inc.png" class="highslide" onclick="return hs.expand(this)"><img src="images/balance-q-inc.png" title="Balance report showing income/expense by quarter" /></a>
 
@@ -88,20 +76,15 @@ Your data lives in a plain text journal file which you can edit
 any way you wish; hledger reads that file and produces reports of
 various kinds, without changing your data. (It can help you add new
 transactions, but does not change existing ones.)
-</div>
 
-<a name="and-a-console-ui"></a>
-<div class="indent0">
-### a console UI
+## a console UI
 
 <a href="images/hledger-ui/hledger-ui-bcexample-acc.png" class="highslide" onclick="return hs.expand(this)"><img src="images/hledger-ui/hledger-ui-bcexample-acc.png" title="hledger-ui accounts screen" /></a>
 hledger also provides a curses-style [console&nbsp;interface](manual#ui)
 that lets you review account balances and transactions quickly and without fuss.
 ([screencast](https://asciinema.org/a/29665))
-</div>
 
-<div class="indent1">
-### a web UI
+## a web UI
 
 <a href="images/hledger-web/normal/register.png" class="highslide" onclick="return hs.expand(this)"><img src="images/hledger-web/normal/register.png" title="Account register view with accounts sidebar" /></a>
 
@@ -115,10 +98,7 @@ or set it up with a few clicks on
 There's also a [UI running in the browser](https://hledger.alhur.es) (hledger compiled with GHCJS).
 This is a prototype, but it's nice sandbox for trying out hledger's journal syntax.
 
-</div>
-
-<div class="indent2">
-### a Haskell application and library
+## a Haskell application and library
 
 <a href="images/hledger-lib-api.png" class="highslide" onclick="return hs.expand(this)"><img src="images/hledger-lib-api.png" title="Part of hledger-lib's haddock api documentation" /></a>
 
@@ -133,7 +113,6 @@ easy to write your own hledger-compatible
 [scripts](more-docs.html#scripting-examples), [add-ons](manual.html#add-ons) and
 applications.
 &nbsp;&nbsp;[![build status (travis)](https://travis-ci.org/simonmichael/hledger.svg?branch=master)](https://travis-ci.org/simonmichael/hledger)
-</div>
 
 <!-- <div class="indent1"> -->
 <!-- ### comfortable for techies, usable by all -->
@@ -145,23 +124,16 @@ applications.
 <!-- folk as well. -->
 <!-- </div> -->
 
-<div class="indent1">
-### fully documented
+## fully documented
 
 We practice documentation-driven development. 
 Every feature must be **[well documented](index.html#reference)**, 
 and getting started must be easy.
 
-</div>
-
-<div class="indent0">
-### focussed on serving users
+## focussed on serving users
 
 hledger strives to be usable, practical and to provide real-world value.
 Intuitive features, bug-free operation and complete, accurate documentation are top goals.
 Currently it is particularly suited to techies, ie users who appreciate the
 power of text files, revision control, scriptability and double entry
 accounting.
-
-</div>
-

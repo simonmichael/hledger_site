@@ -1,3 +1,5 @@
+# hledger basics tutorial
+
 Here you can learn hledger (and a little double-entry bookkeeping)
 by practicing, in small hands-on steps. You'll need:
 

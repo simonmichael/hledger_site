@@ -1,3 +1,5 @@
+# hledger Terminology
+
 ## A Visual Approach
 
 ### First, a basic hledger transaction with the parts named:
