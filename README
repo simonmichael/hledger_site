@@ -1,10 +1,22 @@
-This is the README for the site/ directory.
+This is hledger_site, the repo for the hledger.org website.
+It contains most of the source files for the hledger.org website.
 
-(Confusingly, README.md from the parent directory is also symlinked
-here, to get it rendered as part of the website, and it might take
-precedence when viewing this dir on github.)
+This repo was created in 2019 by combining the site/ subfolder
+previously in the main hledger repo, and the github wiki, preserving
+the essential histories of both (though for the true original history
+of site/ up to 2019/08, see the main hledger repo.)
 
-Source files for the hledger.org website. 
-To generate the website, run ./Shake website. 
-This will add the web manuals' markdown to this directory, 
-render all markdown as html, and copy static files, to site/_site/.
+It is intended to be cloned as the "site" subdirectory of the main
+hledger repo. Currently this is done manually, not via git submodule
+or subtree.
+
+Some hledger docs kept in the main hledger repo - reference manuals,
+developer docs - are included in the website via symbolic links to the
+parent directory. README.md is one of these, and does not pertain to
+this directory, though Github shows it as if it did.
+
+Site building scripts are in the main hledger repo (mostly in
+Shake.hs), and should be run from there, not from here. Eg:
+
+hledger$ make Shake      # compile Shake.hs before using it
+hledger$ ./Shake website # generate the website in site/_site/
