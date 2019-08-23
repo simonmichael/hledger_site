@@ -7,7 +7,7 @@ hledger docs
 ============
 
 .. toctree::
-   :maxdepth: 99
+   :maxdepth: 2
    :caption: Contents:
 
    intro
