@@ -48,6 +48,49 @@ source_suffix = {
 #    '.txt': 'markdown',
 }
 
+suppress_warnings = [
+    # 'misc.highlighting_failure',
+]
+
+
+# https://stackoverflow.com/questions/16469869/custom-syntax-highlighting-with-sphinx
+from pygments.lexer import RegexLexer
+from pygments import token
+from sphinx.highlighting import lexers
+
+# silence unknown lexer warnings
+
+for l in [
+    'shell',
+    'timeclock',
+    'timedot',
+    'csv',
+    'rules',
+    'haskell',
+    'hledger',
+    'example',
+  ]:
+    class NullLexer(RegexLexer):
+        name = l
+        tokens = { 'root': [] }
+    lexers[l] = lexers['{.'+l+'}'] = NullLexer(startinline=True)
+
+# define custom lexers
+
+class JournalLexer(RegexLexer):
+    name = 'journal'
+
+    tokens = {
+        'root': [
+            (r'(\d\d\d\d[.-/])?\d\d?[.-/]\d\d?', token.Keyword),
+            # (r'[a-zA-Z]', token.Name),
+            (r'\s', token.Text)
+        ]
+    }
+
+lexers['journal'] = lexers['{.journal}'] = JournalLexer(startinline=True)
+
+
 # https://recommonmark.readthedocs.io/en/latest/index.html#linking-to-headings-in-other-files
 # For linking to headings in other files you can use the autosectionlabel sphinx feature, e.g.
 #extensions = [
