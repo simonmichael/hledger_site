@@ -25,8 +25,8 @@
 project = 'hledger'
 author = 'Simon Michael'
 copyright = '2019, Simon Michael'
-version = '1.14'
-release = '1.14'
+# version = '1.14'
+# release = '1.14'
 
 
 # -- General configuration ---------------------------------------------------
