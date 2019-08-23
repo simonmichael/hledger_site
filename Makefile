@@ -18,3 +18,15 @@ help:
 # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
 %: Makefile
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+
+html-live:
+	ls *.rst *.md conf.py | entr make html
+
+LIVERELOADPORT=8001
+LIVERELOAD=livereloadx -p $(LIVERELOADPORT)
+BROWSE=open
+
+html-watch:
+	make html-live &
+	(sleep 1; $(BROWSE) http://localhost:$(LIVERELOADPORT)/) &
+	$(LIVERELOAD) -s _build/html/
