@@ -4,25 +4,44 @@
    contain the root `toctree` directive.
    http://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#toctree-directive
 
-hledger docs
+hledger
 ============
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
 
    home
    intro
    download
 
+Tools
+-----
+
+.. toctree::
+   :maxdepth: 3
+
    hledger
    hledger-ui
    hledger-web
-   hledger-api
+   ..
+      hledger-api
+
+File formats
+------------
+
+.. toctree::
+   :maxdepth: 3
 
    journal
    csv
    timeclock
    timedot
+
+Cookbook
+--------
+
+.. toctree::
+   :maxdepth: 3
 
    hledger-terminology
    hledger-basics-tutorial
@@ -31,7 +50,7 @@ hledger docs
    hledger-multicurrency-tutorial
    hledger-tags-tutorial
    
-   ..
+..
       cookbook
       About-real-world-setup-docs
       Accounting-links
