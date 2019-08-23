@@ -11,7 +11,6 @@ hledger
    :maxdepth: 3
 
    home
-   intro
    download
 
 Tools
