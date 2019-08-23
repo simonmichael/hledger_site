@@ -95,7 +95,10 @@ Contribute
    Developer README <README>
    CONTRIBUTING
    contributors
-   
+
+.. toctree::
+
+   Site map <self>
 
 Indices and tables
 ==================
