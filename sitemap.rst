@@ -10,7 +10,7 @@ hledger
 .. toctree::
    :maxdepth: 2
 
-   Home <home>
+   Home <index>
    download
    release-notes
 
@@ -92,7 +92,7 @@ Contribute
 .. toctree::
    :maxdepth: 3
 
-   Developer README <README>
+   Dev README <README>
    CONTRIBUTING
    contributors
 
