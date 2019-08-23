@@ -13,6 +13,11 @@ hledger
    home
    download
 
+.. toctree::
+   :maxdepth: 2
+
+   release-notes
+
 Tools
 -----
 
@@ -85,7 +90,6 @@ Cookbook
    ..
       ledgertips   
 
-   release-notes
    ..
       README
    CONTRIBUTING

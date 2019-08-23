@@ -4,74 +4,17 @@
 #toc > ol > li { padding-top:0; }
 h4 { margin-top:2em; }
 </style>
-<nav id="toc">
-<ol>
-<li><a href="#hledger-install">hledger-install</a>
-<!-- <li><a href="#latest-minor-release">Latest (2018/4/30)</a> -->
-<li><a href="#hledger-1.14">hledger 1.14 (2019/03/01)</a>
-<li><a href="#hledger-1.13">hledger 1.13 (2019/02/01)</a>
-<li><a href="#hledger-1.12">hledger 1.12 (2018/12/02)</a>
-<li><a href="#hledger-1.11">hledger 1.11 (2018/9/30)</a>
-<li><a href="#hledger-1.10">hledger 1.10 (2018/6/30)</a>
-<li><a href="#hledger-1.9">hledger 1.9 (2018/3/31)</a>
-<li><a href="#hledger-1.5">hledger 1.5 (2017/12/31)</a>
-<li><a href="#hledger-1.4">hledger 1.4 (2017/9/30)</a>
-<li><a href="#hledger-1.3">hledger 1.3 (2017/6/30)</a>
-<li><a href="#hledger-1.2">hledger 1.2 (2017/3/31)</a>
-<li><a href="#hledger-1.1">hledger 1.1 (2016/12/31)</a>
-<li><a href="#hledger-1.0">hledger 1.0 (2016/10/26)</a>
-<li><a href="#hledger-0.27">hledger 0.27 (2015/10/30)</a>
-<li><a href="#hledger-0.26">hledger 0.26 (2015/7/12)</a>
-<li><a href="#hledger-0.25">hledger 0.25 (2015/4/7)</a>
-<li><a href="#hledger-0.24">hledger 0.24 (2014/12/25)</a>
-<li><a href="#hledger-0.23">hledger 0.23 (2014/5/1)</a>
-<li><a href="#hledger-0.22">hledger 0.22 (2013/12/13)</a>
-<li><a href="#hledger-0.21">hledger 0.21 (2013/6/1)</a>
-<li><a href="#hledger-0.20">hledger 0.20 (2013/5/1)</a>
-<li><a href="#hledger-0.19">hledger 0.19 (2012/10/21)</a>
-<li><a href="#hledger-0.18">hledger 0.18 (2012/5/29)</a>
-<li><a href="#hledger-0.17">hledger 0.17 (2012/2/1)</a>
-<li><a href="#hledger-0.16">hledger 0.16 (2011/10/1)</a>
-<li><a href="#hledger-0.15">hledger 0.15 (2011/9/1)</a>
-<li><a href="#hledger-0.14">hledger 0.14 (2011/4/22)</a>
-<li><a href="#hledger-0.13">hledger 0.13 (2010/12/6)</a>
-<li><a href="#hledger-0.12">hledger 0.12 (2010/9/5)</a>
-<li><a href="#hledger-0.11">hledger 0.11 (2010/07/17)</a>
-<li><a href="#hledger-0.10">hledger 0.10 (2010/05/23)</a>
-<li><a href="#hledger-0.9">hledger 0.9 (2010/04/10)</a>
-<li><a href="#hledger-0.8">hledger 0.8 (2010/02/11)</a>
-<li><a href="#hledger-0.7">hledger 0.7 (2009/12/11)</a>
-<li><a href="#hledger-0.6">hledger 0.6 (2009/06/13)</a>
-<li><a href="#hledger-0.5">hledger 0.5 (2009/05/23)</a>
-<li><a href="#hledger-0.4">hledger 0.4 (2009/04/03)</a>
-<li><a href="#hledger-0.3">hledger 0.3 (2009/01/17)</a>
-<li><a href="#hledger-0.2">hledger 0.2 (2008/11/23)</a>
-<li><a href="#hledger-0.1">hledger 0.1 (2008/10/15)</a>
-</ol>
-</nav>
-
+ 
 # Release notes
 
-
-### hledger-install
-
-The [hledger installer](download.html#b1.-with-hledger-install)
-is updated as needed; here are the
-[latest changes](https://github.com/simonmichael/hledger/commits/master/hledger-install/hledger-install.sh).
-
-
-
-
-## Latest minor release
-
-These packages have had minor updates since the last major release:
-
-<http://hackage.haskell.org/package/hledger-lib-1.14.1/changelog>\
-<http://hackage.haskell.org/package/hledger-1.14.2/changelog>\
-<http://hackage.haskell.org/package/hledger-ui-1.14.2/changelog>\
-<http://hackage.haskell.org/package/hledger-web-1.14.1/changelog>\
-<!-- <http://hackage.haskell.org/package/hledger-api-1.14.1/changelog>\   -->
-
+Major releases are shown below. 
+Minor release notes can be seen in the package changelogs:
+[hledger-lib](http://hackage.haskell.org/package/hledger-lib-1.14.1/changelog),
+[hledger](http://hackage.haskell.org/package/hledger-1.14.2/changelog),
+[hledger-ui](http://hackage.haskell.org/package/hledger-ui-1.14.2/changelog),
+[hledger-web](http://hackage.haskell.org/package/hledger-web-1.14.1/changelog).
+Changes in hledger-install.sh are shown
+[here](https://github.com/simonmichael/hledger/commits/master/hledger-install/hledger-install.sh).
 
 ## 2019/03/01 hledger 1.14
 
