@@ -8,14 +8,10 @@ hledger
 ============
 
 .. toctree::
-   :maxdepth: 3
-
-   home
-   download
-
-.. toctree::
    :maxdepth: 2
 
+   Home <home>
+   download
    release-notes
 
 Tools

@@ -67,7 +67,8 @@ accessible from command line, terminal or web browser.
 
 hledger is one of the leading implementations of [plain text accounting](http://plaintextaccounting.org),
 and is a modern and largely compatible reimplementation of [Ledger](https://ledger-cli.org).
-Compared to other ledgerlikes, hledger is robust, consistent, and intuitive, with excellent documentation.
+Compared to [the other ledgerlikes](https://plaintextaccounting.org/#software), 
+hledger is robust, consistent, and intuitive, with excellent documentation.
 
 hledger is cross platform GNU GPLv3 free software, written in Haskell.
 The project is led by Simon Michael, with 100+ contributors.
@@ -81,12 +82,12 @@ I hope you too will find it helpful in mastering your time and money.
 </div>
 
 
-## Features
+## Quick start
 
-### plain text!
+Here's the basic workflow when using hledger:
 
 **Step 1:**
-Record your transactions in a plain text file.
+Record your transactions in a [plain text file](journal.html).
 (Use hledger's interactive assistant.. the web interface.. any text editor.. a shell alias.. CSV/OFX import..)
 <!-- using a simple format. -->
 <!-- Do it daily, or all at once. -->
@@ -98,11 +99,11 @@ You can start very simply, and get more sophisticated as you learn more about do
 
 There is an enthusiastic and growing community practising this way of accounting.
 which can be quite educational and enjoyable.
-If you'd like more background,
-we have collected many useful resources at **[plaintextaccounting.org](http://plaintextaccounting.org)**.
+If you'd like more background, 
+we have collected many useful resources at plaintextaccounting.org (see link above).
 
 Read on for more about hledger, or if you're keen to get going,
-**[download](download.html)** it and start the **[tutorial](step-by-step.html)** now!
+**[download](download.html)** it and start the **[tutorial](basics-tutorial.html)** now!
 
 <!-- I use it for: -->
 
@@ -111,6 +112,8 @@ Read on for more about hledger, or if you're keen to get going,
 <!-- - getting accurate numbers for client billing and tax filing -->
 <!-- - tracking invoices -->
 <!-- - building financial and time clarity and serenity -->
+
+## Features
 
 ### Free software
 
