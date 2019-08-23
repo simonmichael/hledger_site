@@ -7,7 +7,6 @@ code mark {
   font-weight:bold;
 }
 </style>
--->
 
 Anya begins using hledger without any currency symbols. She adds some [journal entries](http://hledger.org/manual.html#journal-format) like this (not bothering with descriptions, either):
 
