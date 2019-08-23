@@ -30,3 +30,7 @@ html-watch:
 	make html-live &
 	(sleep 1; $(BROWSE) http://localhost:$(LIVERELOADPORT)/) &
 	$(LIVERELOAD) -s _build/html/
+
+
+install:
+	pip3 install -U sphinx recommonmark sphinx-markdown-tables
