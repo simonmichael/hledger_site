@@ -1,4 +1,4 @@
-# hledger accounting concepts
+# Accounting concepts
 
 ### Assets, Liabilities and Equity
 

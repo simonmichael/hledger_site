@@ -43,12 +43,12 @@ Cookbook
 .. toctree::
    :maxdepth: 3
 
-   hledger-terminology
-   hledger-basics-tutorial
+   terminology
+   basics-tutorial
+   accounting-concepts
+   multicurrency-tutorial
+   tags-tutorial
    hledger-web-tips
-   hledger-accounting-concepts
-   hledger-multicurrency-tutorial
-   hledger-tags-tutorial
    
 ..
       cookbook

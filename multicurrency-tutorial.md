@@ -1,4 +1,4 @@
-# hledger multicurrency tutorial
+# Multicurrency tutorial
 
 <style>
 code mark {

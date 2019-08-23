@@ -1,4 +1,4 @@
-# hledger Terminology
+# Terminology
 
 ## A Visual Approach
 
