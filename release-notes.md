@@ -19,8 +19,7 @@ Changes in hledger-install.sh are shown
 ## 2019/03/01 hledger 1.14
 
 ***inclusive balance assertions, commodities command, --invert option,
-JSON get/add support in hledger-web
-***
+JSON get/add support in hledger-web***
 ([announcement](https://groups.google.com/d/topic/hledger/f4Mir3PLooI/discussion))
 
   [project](#project-wide-changes-for-1.14)
@@ -115,8 +114,7 @@ Jakub Zárybnický.
 
 ***Unified command CLI help/manuals, bash completions, docker support,
 improved budget report, --transpose, new account types syntax, 
-usability & bug fixes.
-***
+usability & bug fixes.***
 ([announcement](https://groups.google.com/d/topic/hledger/ffkwwkcHmmU/discussion))
 
   [project](#project-wide-changes-for-1.13)
@@ -285,8 +283,7 @@ Dmitry Astapov.
 complete balance assertions,
 GHC 8.6 support,
 hledger-ui usability updates,
-misc fixes
-***
+misc fixes***
 ([announcement](https://groups.google.com/d/topic/hledger/H7NYdvo0FeQ/discussion))
 
   <!-- [project](#project-wide-changes-for-1.12) -->
@@ -511,8 +508,7 @@ Nikhil Jha.
 ***Customisable account display order,
 support for other delimiter-separated formats (eg semicolon-separated),
 new files and roi commands,
-fixes
-***
+fixes***
 ([announcement](https://groups.google.com/d/topic/hledger/V62txFLaD_U/discussion))
 
   <!-- [project](#project-wide-changes-for-1.11) -->
@@ -686,8 +682,7 @@ SpicyCat.
 ***hledger-web edit/upload/download and permissions,
 more expressive periodic transactions,
 more informative parse errors,
-misc fixes
-***
+misc fixes***
 ([announcement](https://groups.google.com/forum/#!msg/hledger/SWFV2n6xMQA/Ss78nil8AQAJ))
 
   [project](#project-wide-changes-for-1.10)
@@ -837,8 +832,7 @@ Nana Amfo.
 normal-positive reports,
 HTML output,
 account sort codes,
-budget improvements.
-***
+budget improvements.***
 
 ([announcement](https://groups.google.com/forum/#!topic/hledger/DifO6UbeKnU))
 
@@ -949,9 +943,6 @@ ignores --date2.
 
 
 ## 2017/12/31 hledger 1.5
-
-***
-***
 
 ([announcement](https://groups.google.com/forum/#!topic/hledger/CyNifndzZxk))
 
@@ -1074,8 +1065,7 @@ new balancesheetequity/tags commands,
 new import command for easy CSV merging,
 print can detect new transactions,
 balance reports can sort by amount,
-cli conveniences
-***
+cli conveniences***
 
 ([announcement](https://groups.google.com/forum/#!topic/hledger/tdtkhchqg9k))
 
@@ -1489,8 +1479,7 @@ more parseable print output,
 better --pivot, 
 basic automated postings and periodic transactions support,
 more and easier addons,
-bugfixes
-***
+bugfixes***
 
 <!-- ([announcement](http://thread.gmane.org/gmane.comp.finance.ledger.hledger/1267)) -->
 <!-- ([announcement](https://groups.google.com/d/topic/hledger/WgdTy3-a6sc/discussion))  -->
@@ -1751,8 +1740,7 @@ integration of WIP ledger4 parser,
 balance assignments,
 hledger-ui --watch,
 hledger-iadd integration,
-bugfixes
-***
+bugfixes***
 
 <!-- ([announcement](http://thread.gmane.org/gmane.comp.finance.ledger.hledger/1267)) -->
 <!-- ([announcement](https://groups.google.com/d/topic/hledger/WgdTy3-a6sc/discussion))  -->
@@ -1893,8 +1881,8 @@ new hledger-api server,
 new timedot format, 
 --pivot & --anon, 
 reorganized multi-format docs,
-built-in help. 
-***
+built-in help.***
+
 <!-- ([announcement](http://thread.gmane.org/gmane.comp.finance.ledger.hledger/1267)) -->
 ([announcement](https://groups.google.com/d/topic/hledger/WgdTy3-a6sc/discussion)) 
 
