@@ -1,3 +1,5 @@
+(Very out of date:)
+
 # hledger Contributors
 
 hledger is brought to you by:
@@ -20,13 +22,7 @@ Also:
 
 -   John Wiegley - created the original ledger program
 
-<br>
-
-* * * * *
-
-<br>
-
-# hledger Contributor Agreement
+## hledger Contributor Agreement
 
 This is the official contributor agreement (v1) and contributor list for
 the hledger project. If you have contributed non-trivial code changes to

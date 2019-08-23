@@ -90,8 +90,13 @@ Cookbook
    ..
       ledgertips   
 
-   ..
-      README
+Contribute
+----------
+
+.. toctree::
+   :maxdepth: 3
+
+   Developer README <README>
    CONTRIBUTING
    contributors
    
