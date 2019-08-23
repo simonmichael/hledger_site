@@ -23,8 +23,10 @@
 # -- Project information -----------------------------------------------------
 
 project = 'hledger'
-copyright = '2019, Simon Michael'
 author = 'Simon Michael'
+copyright = '2019, Simon Michael'
+version = '1.14'
+release = '1.14'
 
 
 # -- General configuration ---------------------------------------------------
@@ -84,6 +86,27 @@ exclude_patterns = [
 # a list of builtin themes.
 #
 html_theme = 'alabaster'
+
+# https://alabaster.readthedocs.io/en/latest/installation.html
+# https://www.sphinx-doc.org/en/master/usage/configuration.html?highlight=html_sidebars#options-for-html-output
+# Builtin sidebar templates that can be rendered are:
+#     localtoc.html – a fine-grained table of contents of the current document
+#     globaltoc.html – a coarse-grained table of contents for the whole documentation set, collapsed
+#     relations.html – two links to the previous and next documents
+#     sourcelink.html – a link to the source of the current document, if enabled in html_show_sourcelink
+#     searchbox.html – the “quick search” box
+html_sidebars = {
+    '**': [
+        # 'about.html',
+        # 'localtoc.html',
+        # 'globaltoc.html',
+        'navigation.html',
+        'relations.html',
+        # 'sourcelink.html',
+        'searchbox.html',
+        # 'donate.html',
+    ]
+}
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,

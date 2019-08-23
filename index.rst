@@ -2,13 +2,13 @@
    sphinx-quickstart on Thu Aug 22 16:16:37 2019.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
+   http://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#toctree-directive
 
 hledger docs
 ============
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
 
    home
    intro
