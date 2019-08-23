@@ -120,9 +120,14 @@ html_static_path = ['_static']
 #     app.add_config_value('recommonmark_config', {
 #             'url_resolver': lambda url: github_doc_root + url,
 #             'auto_toc_tree_section': 'Contents',
+#             'enable_eval_rst': True,
 #             }, True)
-#     app.add_transform(AutoStructify)
-#
+    # app.add_transform(AutoStructify)   # IndexError: list index out of range
+      # Exception occurred:
+      #   File "/usr/local/lib/python3.7/site-packages/docutils/parsers/rst/roles.py", line 356, in math_role
+      #     text = rawtext.split('`')[1]
+      # IndexError: list index out of range
+
 # AutoStructify comes with the following options:
 # enable_auto_toc_tree: enable the Auto Toc Tree feature.
 # auto_toc_maxdepth: The max depth of the Auto Toc. Defaults to 1.
@@ -133,3 +138,4 @@ html_static_path = ['_static']
 # enable_eval_rst: enable the evaluate embedded reStructuredText feature.
 # url_resolver: a function that maps a existing relative position in the document to a http link
 # known_url_schemes: a list of url schemes to treat as URLs, schemes not in this list will be assumed to be Sphinx cross-references. Defaults to None, which means treat all URL schemes as URLs. Example: ['http', 'https', 'mailto']
+
