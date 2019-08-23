@@ -37,7 +37,12 @@ master_doc = 'sitemap'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'recommonmark'
+    # https://recommonmark.readthedocs.io
+    'recommonmark',
+    # https://github.com/ryanfox/sphinx-markdown-tables
+    # https://python-markdown.github.io/extensions/tables
+    # https://michelf.ca/projects/php-markdown/extra/#table
+    'sphinx_markdown_tables',
 ]
 
 # http://www.sphinx-doc.org/en/master/usage/markdown.html#configuration
