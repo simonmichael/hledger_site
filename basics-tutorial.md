@@ -68,7 +68,7 @@ Date [2015/05/25]:
 `add` prompts for each transaction field. The first is the date.
 The value in square brackets is the suggested default (today's date). Press enter to accept it.
 
-```{.shell .continued}
+```shell
 Description: trip to the supermarket
 ```
 
@@ -76,7 +76,7 @@ Transactions have an optional description (a single line of text) to help you un
 You can describe the transaction here, or put a payee name, or leave it blank. 
 Type `trip to the supermarket` and press enter.
 
-```{.shell .continued}
+```shell
 Account 1: expenses
 ```
 
@@ -87,19 +87,19 @@ A purchase is a transfer of money from an asset account to an expense account.
 An asset is something you own, like some money in a bank account or in your pocket.
 Once the money has been "moved" to an expense, you no longer own it, but the increasing balance in the expense account reminds you where it went.
 
-```{.shell .continued}
+```shell
 Amount  1: $10
 ```
 
 The amount being "moved" to `expenses`. In this case 10 US dollars.
 
-```{.shell .continued}
+```shell
 Account 2: assets
 ```
 
 Next, specify which account the money comes from. Just say `assets`.
 
-```{.shell .continued}
+```shell
 Amount  2 ? [$-10.0]: 
 ```
 
@@ -110,13 +110,13 @@ The minus sign indicates the money is moving from this account.
 In a balanced transaction, the sum of posted amounts is zero, in other words no money disappears into thin air.
 Press enter to accept the default. It has an extra decimal place, but never mind.
 
-```{.shell .continued}
+```shell
 Account 3 (or . to finish this transaction): .
 ```
 
 Type `.` (period) and press enter.
 
-```{.shell .continued}
+```shell
 2015/05/25 trip to the supermarket
     expenses           $10
     assets          $-10.0
@@ -132,7 +132,7 @@ two or more spaces, and an amount.
 (Account names can contain spaces, so at least two spaces are needed to separate them from the amount.)
 Press enter.
 
-```{.shell .continued}
+```shell
 Saved.
 Starting the next transaction (. or ctrl-D/ctrl-C to quit)
 Date [2015/05/25]: <CTRL-D>
@@ -420,7 +420,7 @@ The third of hledger's three core reporting commands is [balance](http://hledger
 Use it to list all the accounts posted to, and their ending balance.
 You should see account balances agreeing with the final running total in the register reports above:
 
-```{.shell .nobold}
+```shell
 $ hledger balance
                 $-15  assets
                  $15  expenses

@@ -11,7 +11,8 @@ code mark {
 
 Anya begins using hledger without any currency symbols. She adds some [journal entries](http://hledger.org/manual.html#journal-format) like this (not bothering with descriptions, either):
 
-```{.hledger emphasize=1-7}
+<!-- emphasize=1-7 -->
+```journal
 2018/11/01
   income:gifts
   assets:bank          1000
@@ -59,7 +60,8 @@ Anya maintains a popular free software project. She remembers that she added a L
 
 She realises she had better start tracking currencies in her journal or things will get confusing. So she adds currency symbols throughout her journal:
 
-```{.hledger emphasize=3:22-3:23,7:23-7:24}
+<!-- emphasize=3:22-3:23,7:23-7:24 -->
+```journal
 2018/11/01
   income:gifts
   assets:bank         ₽1000
@@ -71,7 +73,8 @@ She realises she had better start tracking currencies in her journal or things w
 
 Thinking ahead, she sees that entering euro symbols will be a bit unergonomic on her keyboard. She thinks perhaps she'll use standard alphabetic currency codes instead, and on the right-hand side:
 
-```{.hledger emphasize=3:28-3:31,7:28-7:31}
+<!-- emphasize=3:28-3:31,7:28-7:31 -->
+```journal
 2018/11/01
   income:gifts
   assets:bank          1000 RUB
@@ -83,7 +86,8 @@ Thinking ahead, she sees that entering euro symbols will be a bit unergonomic on
 
 But she finds this a bit verbose. She decides to use single letters - R for rubles:
 
-```{.hledger emphasize=3:28-3:29,7:28-7:29}
+<!-- emphasize=3:28-3:29,7:28-7:29 -->
+```journal
 2018/11/01
   income:gifts
   assets:bank          1000 R
@@ -106,7 +110,8 @@ $ hledger bal
 
 And she is ready for multicurrency accounting. Just in time, because next day a donation of 10 euros arrives! She records it, using E for euros:
 
-```{.hledger emphasize=9-11}
+<!-- emphasize=9-11 -->
+```journal
 2018/11/01
   income:gifts
   assets:bank          1000 R
@@ -169,7 +174,8 @@ Balance changes in 2018:
 
 Anya requests a withdrawal of the Liberapay funds to her bank. Her bank holds rubles, so the euros will get converted. She's not sure of the exact exchange rate or fees, but next day, when the transaction clears, she can see that 10 euros left her liberapay account and 750 rubles arrived in her bank account. She decides to just record that:
 
-```{.hledger emphasize=13-15}
+<!-- emphasize=13-15 -->
+```journal
 2018/11/01
   income:gifts
   assets:bank          1000 R
@@ -205,7 +211,8 @@ Balance changes in 2018:
 
 However, two things surprise her. First, where has the liberapay account gone ? She remembers that balance reports hide zero-balance accounts by default, and adds -E/--empty to show it. (She also notes that zero amounts are displayed without a currency symbol, and would be a little clearer with currency symbols on the left):
 
-```{emphasize=7-7,12-12}
+<!-- emphasize=7-7,12-12 -->
+```shell
 $ hledger bal  -YE
 Balance changes in 2018:
 
@@ -224,7 +231,8 @@ Second, the balance report is now showing a non-zero total. The individual euro 
 
 Anya asks for help on the #hledger IRC channel and is advised to add the [-B/--cost flag](http://hledger.org/manual.html#cost). Sure enough, the total is now zero:
 
-```{emphasize=7:21-7:33}
+<!-- emphasize=7:21-7:33 -->
+```shell
 $ hledger bal -YEB
 Balance changes in 2018:
 
@@ -243,7 +251,8 @@ But now the liberapay account, which should be empty, is showing a positive euro
 
 With a little help, Anya goes troubleshooting. Inspecting the multicurrency transaction with print -x (and a date filter to exclude the rest) shows how hledger has parsed it:
 
-```{emphasize=3:24-3:38}
+<!-- emphasize=3:24-3:38 -->
+```shell
 $ hledger print -x date:20181104
 2018/11/04
     assets:liberapay    -10 E @@ 750 R
@@ -254,7 +263,8 @@ The manual makes this a bit clearer. Anya wrote the entry in [transaction prices
 
 With -B added, the 10 euro is converted to its [cost](http://hledger.org/manual.html#cost) in rubles:
 
-```{emphasize=3:30-3:36}
+<!-- emphasize=3:30-3:36 -->
+```shell
 $ hledger print -x date:20181104 -B
 2018/11/04
     assets:liberapay          -750 R
@@ -264,7 +274,8 @@ $ hledger print -x date:20181104 -B
 
 The register command shows how the balance reports above calculate the liberapay balance. Without -B: 10 euro are added, 10 euro are removed, the liberapay account's end balance is zero:
 
-```{emphasize=3:74-3:80}
+<!-- emphasize=3:74-3:80 -->
+```shell
 $ hledger reg liberapay
 2018/11/03                     assets:liberapay               10 E          10 E
 2018/11/04                     assets:liberapay              -10 E             0
@@ -272,7 +283,8 @@ $ hledger reg liberapay
 
 With -B: 10 euro are added, 750 rubles are removed, the liberapay account's end balance is "10 euro, -750 rubles". (With each currency on its own line, again. Also, it seems that register aligns the account name with the top amount, unlike the balance command):
 
-```{emphasize=3:74-3:80,4:74-4:80}
+<!-- emphasize=3:74-3:80,4:74-4:80 -->
+```shell
 $ hledger reg liberapay -B
 2018/11/03                      assets:liberapay              10 E          10 E
 2018/11/04                      assets:liberapay            -750 R          10 E
