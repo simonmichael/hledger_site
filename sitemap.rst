@@ -23,8 +23,7 @@ Tools
    hledger
    hledger-ui
    hledger-web
-   ..
-      hledger-api
+   hledger-api
 
 File formats
 ------------

@@ -87,7 +87,7 @@ I hope you too will find it helpful in mastering your time and money.
 Here's the basic workflow when using hledger:
 
 **Step 1:**
-Record your transactions in a [plain text file](journal.html).
+Record your transactions in a [plain text file](journal).
 (Use hledger's interactive assistant.. the web interface.. any text editor.. a shell alias.. CSV/OFX import..)
 <!-- using a simple format. -->
 <!-- Do it daily, or all at once. -->
@@ -103,7 +103,7 @@ If you'd like more background,
 we have collected many useful resources at plaintextaccounting.org (see link above).
 
 Read on for more about hledger, or if you're keen to get going,
-**[download](download.html)** it and start the **[tutorial](basics-tutorial.html)** now!
+**[download](download)** it and start the **[tutorial](basics-tutorial)** now!
 
 <!-- I use it for: -->
 
@@ -154,7 +154,7 @@ that lets you review account balances and transactions quickly and without fuss.
 <a href="images/hledger-web/normal/register.png" class="highslide" onclick="return hs.expand(this)"><img src="images/hledger-web/normal/register.png" title="Account register view with accounts sidebar" /></a>
 
 And, a zero-setup
-[web&nbsp;app](hledger-web.html) for a more point-and-click experience
+[web&nbsp;app](hledger-web) for a more point-and-click experience
 ([demo](http://demo.hledger.org)).
 Run it on your local machine, or on a server, 
 or set it up with a few clicks on

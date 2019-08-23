@@ -28,7 +28,7 @@ And please do [let us know](index.html#helpfeedback) or
 [update this page](https://github.com/simonmichael/hledger/blob/master/site/download.md)
 if you have any trouble.
 
-The current hledger release is **1.14.2**; here are the [release notes](release-notes.html).
+The current hledger release is **1.14.2**; here are the [release notes](release-notes).
 
 ## Binary packages
 
