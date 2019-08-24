@@ -186,7 +186,7 @@ Making good software and documentation costs a lot.
 <div id=wiki class=contentbox>
 <div class=subcontent>
 <!-- WIKICONTENT -->
-## [[Cookbook|Home]]
+## Cookbook
 
 ### Getting started
 
