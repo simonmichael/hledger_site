@@ -61,6 +61,7 @@ suppress_warnings = [
 # https://stackoverflow.com/questions/16469869/custom-syntax-highlighting-with-sphinx
 from pygments.lexer import RegexLexer
 from pygments import token
+#from pygments.token import *
 from sphinx.highlighting import lexers
 
 # silence unknown lexer warnings
@@ -81,9 +82,14 @@ for l in [
     lexers[l] = lexers['{.'+l+'}'] = NullLexer(startinline=True)
 
 # define custom lexers
+# http://pygments.org/docs/lexerdevelopment
+# pygmentize -l conf.py:JournalLexer -x
+# pygments.highlight(code, lexer, formatter, outfile=None)
 
 class JournalLexer(RegexLexer):
     name = 'journal'
+    # aliases = ['hledger']
+    # filenames = ['*.journal']
 
     tokens = {
         'root': [
@@ -92,6 +98,13 @@ class JournalLexer(RegexLexer):
             (r'\s', token.Text)
         ]
     }
+            # (r' .*\n', Text),
+            # (r'\+.*\n', Generic.Inserted),
+            # (r'-.*\n', Generic.Deleted),
+            # (r'@.*\n', Generic.Subheading),
+            # (r'Index.*\n', Generic.Heading),
+            # (r'=.*\n', Generic.Heading),
+            # (r'.*\n', Text),
 
 lexers['journal'] = lexers['{.journal}'] = JournalLexer(startinline=True)
 
