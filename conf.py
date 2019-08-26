@@ -45,6 +45,11 @@ extensions = [
     'sphinx_markdown_tables',
 ]
 
+# needs_extensions = {
+#     'recommonmark': '1.1',
+#     'sphinx_markdown_tables': '2.2',
+# }
+
 # http://www.sphinx-doc.org/en/master/usage/markdown.html#configuration
 # https://spec.commonmark.org
 source_suffix = {
