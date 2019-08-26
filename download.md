@@ -122,9 +122,10 @@ To solve this, just install the appropriate system package(s) and run the build 
 These package names vary by platform. If you don't see your platform below,
 do a web search for the link error message (and send updates for this list):
 
-|-----------------|-------------------------------------------------------------------
-| Debian, Ubuntu: | **`sudo apt install -y libtinfo-dev`**
-| Fedora, RHEL:   | **`sudo dnf install -y gmp-devel ncurses-devel`**
+|                 |                                                   |
+|-----------------|---------------------------------------------------|
+| Debian, Ubuntu: | **`sudo apt install -y libtinfo-dev`**            |
+| Fedora, RHEL:   | **`sudo dnf install -y gmp-devel ncurses-devel`** |
 
 <a name="build-issues"></a><a name="windows-build-issues"></a>
 
