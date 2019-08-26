@@ -1,3 +1,4 @@
+/*
 $(document).ready( function() {
   addDocVersions();
   highlightCurrentDocVersion();
@@ -47,3 +48,4 @@ function highlightCurrentDocVersion() {
     });
   });
 }
+*/
