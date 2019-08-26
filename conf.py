@@ -205,20 +205,9 @@ html_static_path = ['_static']
 
 # Add stylesheets to HEAD
 html_css_files = [
-    # we were using bootstrap 3.3, which was not good on small screens. (Now we use sphinx's theme.)
-    # we got it from CDN for speed:
-    #'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css',
-    # or from same host, to work offline:
-    # #$siteRoot$/css/bootstrap.min.css  #  did it need to be an absolute url ?
-    #'css/bootstrap.min.css',
-
-    # we're still using some addon styles from the bootswatch "readable" theme.
-    'https://maxcdn.bootstrapcdn.com/bootswatch/3.3.0/readable/bootstrap.min.css',
-
-    # and the styles for the highslide image zoomer
+    # styles for the highslide image zoomer
     'js/highslide/highslide.css',
-
-    # and our old custom style overides
+    # our old custom style overides
     'css/style.css',
 ]
 
