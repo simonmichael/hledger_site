@@ -150,6 +150,11 @@ exclude_patterns = [
 #
 html_theme = 'alabaster'
 
+# html_theme_options = {
+#     "rightsidebar": "true",
+#     "relbarbgcolor": "black"
+# }
+
 # https://alabaster.readthedocs.io/en/latest/installation.html
 # https://www.sphinx-doc.org/en/master/usage/configuration.html?highlight=html_sidebars#options-for-html-output
 # Builtin sidebar templates that can be rendered are:
@@ -175,6 +180,33 @@ html_sidebars = {
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+
+# Add stylesheets to HEAD
+html_css_files = [
+    # bootstrap
+    # get resources from CDN/jquery.com, loads fast
+    #'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css',
+    'https://maxcdn.bootstrapcdn.com/bootswatch/3.3.0/readable/bootstrap.min.css',
+    #'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js',
+    # or get resources from same host (except readable theme), works offline
+    # $siteRoot$/css/bootstrap.min.css
+    # does it need to be an absolute url ?
+    'css/bootstrap.min.css',
+    # highslide
+    'js/highslide/highslide.css',
+    # custom
+    'css/style.css',
+]
+
+# Add javascript files to HEAD. See also _template/layout.html.
+html_js_files = [
+    'js/bootstrap.min.js',
+    'js/highslide/highslide.js',
+    # 'site.js',
+]
+
+
+html_extra_path = []
 
 # https://recommonmark.readthedocs.io/en/latest/index.html#autostructify
 # def setup(app):

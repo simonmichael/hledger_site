@@ -43,7 +43,7 @@ td:nth-child(1) { padding-right:1em; white-space:nowrap; }
 }
 </style>
 
-<img src="images/coins2-248.png" width="" height="200" style="float:right; margin:1em 1em 0 1em;" />
+<img src="_static/images/coins2-248.png" width="" height="200" style="float:right; margin:1em 1em 0 1em;" />
 
 # hledger
 
@@ -134,7 +134,7 @@ Read more about the [differences](https://github.com/simonmichael/hledger/wiki/F
 
 ### a command-line tool
 
-<a href="images/balance-q-inc.png" class="highslide" onclick="return hs.expand(this)"><img src="images/balance-q-inc.png" title="Balance report showing income/expense by quarter" /></a>
+<a href="_static/images/balance-q-inc.png" class="highslide" onclick="return hs.expand(this)"><img src="_static/images/balance-q-inc.png" title="Balance report showing income/expense by quarter" /></a>
 
 hledger is first a command-line tool.
 Your data lives in a plain text journal file which you can edit
@@ -144,14 +144,14 @@ transactions, but does not change existing ones.)
 
 ### a console UI
 
-<a href="images/hledger-ui/hledger-ui-bcexample-acc.png" class="highslide" onclick="return hs.expand(this)"><img src="images/hledger-ui/hledger-ui-bcexample-acc.png" title="hledger-ui accounts screen" /></a>
+<a href="_static/images/hledger-ui/hledger-ui-bcexample-acc.png" class="highslide" onclick="return hs.expand(this)"><img src="_static/images/hledger-ui/hledger-ui-bcexample-acc.png" title="hledger-ui accounts screen" /></a>
 hledger also provides a curses-style [console&nbsp;interface](manual#ui)
 that lets you review account balances and transactions quickly and without fuss.
 ([screencast](https://asciinema.org/a/29665))
 
 ### a web UI
 
-<a href="images/hledger-web/normal/register.png" class="highslide" onclick="return hs.expand(this)"><img src="images/hledger-web/normal/register.png" title="Account register view with accounts sidebar" /></a>
+<a href="_static/images/hledger-web/normal/register.png" class="highslide" onclick="return hs.expand(this)"><img src="_static/images/hledger-web/normal/register.png" title="Account register view with accounts sidebar" /></a>
 
 And, a zero-setup
 [web&nbsp;app](hledger-web) for a more point-and-click experience
@@ -165,7 +165,7 @@ This is a prototype, but it's nice sandbox for trying out hledger's journal synt
 
 ### a Haskell app and library
 
-<a href="images/hledger-lib-api.png" class="highslide" onclick="return hs.expand(this)"><img src="images/hledger-lib-api.png" title="Part of hledger-lib's haddock api documentation" /></a>
+<a href="_static/images/hledger-lib-api.png" class="highslide" onclick="return hs.expand(this)"><img src="_static/images/hledger-lib-api.png" title="Part of hledger-lib's haddock api documentation" /></a>
 
 hledger is written in Haskell, a modern, highly-regarded
 programming language which contributes to hledger's robustness,
