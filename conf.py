@@ -188,25 +188,30 @@ html_static_path = ['_static']
 
 # Add stylesheets to HEAD
 html_css_files = [
-    # bootstrap
-    # get resources from CDN/jquery.com, loads fast
+    # we were using bootstrap 3.3, which was not good on small screens. (Now we use sphinx's theme.)
+    # we got it from CDN for speed:
     #'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css',
+    # or from same host, to work offline:
+    # #$siteRoot$/css/bootstrap.min.css  #  did it need to be an absolute url ?
+    #'css/bootstrap.min.css',
+
+    # we're still using some addon styles from the bootswatch "readable" theme.
     'https://maxcdn.bootstrapcdn.com/bootswatch/3.3.0/readable/bootstrap.min.css',
-    #'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js',
-    # or get resources from same host (except readable theme), works offline
-    # $siteRoot$/css/bootstrap.min.css
-    # does it need to be an absolute url ?
-    'css/bootstrap.min.css',
-    # highslide
+
+    # and the styles for the highslide image zoomer
     'js/highslide/highslide.css',
-    # custom
+
+    # and our old custom style overides
     'css/style.css',
 ]
 
 # Add javascript files to HEAD. See also _template/layout.html.
 html_js_files = [
-    'js/bootstrap.min.js',
+    # bootstrap js, I think not used
+    # 'js/bootstrap.min.js',
+    # highslide image zoomer
     'js/highslide/highslide.js',
+    # custom js, currently none
     # 'site.js',
 ]
 
