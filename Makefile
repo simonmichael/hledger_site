@@ -33,4 +33,4 @@ html-watch:
 
 
 install:
-	pip3 install -U sphinx recommonmark sphinx-markdown-tables
+	pip3 install -U sphinx recommonmark sphinx-markdown-tables sphinx_rtd_theme
