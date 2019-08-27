@@ -41,21 +41,28 @@ td:nth-child(1) { padding-right:1em; white-space:nowrap; }
 }
 #wiki .subcontent {
 }
-</style>
 
-<img src="_static/images/coins2-248.png" width="" height="200" style="float:right; margin:1em 1em 0 1em;" />
+#tagline {
+  font-size:xx-large;
+  font-style:italic; 
+  position:relative; 
+  top:-.5em;
+}
+
+</style>
 
 # hledger
 
-<span style="font-size:xx-large;">
+<div id=tagline>
 Robust plain text accounting.
 <!-- Friendly, robust plain text accounting. -->
 <!-- Robust, powerful, plain text accounting. -->
 <!-- Robust, precise, plain text accounting. -->
 <!-- Plain text accounting for everyone. -->
 <!-- Making accounting fun for techies. -->
-</span>
+</div>
 
+<img id="coins" src="_static/images/coins2-248.png" style="width:33%; float:right; margin:1em 1em 0 1em;" />
 <span style="font-size:x-large;">hledger</span> 
 is an elegant, versatile accounting program, 
 for tracking money, time, or other commodities
