@@ -65,43 +65,40 @@ suppress_warnings = [
 ]
 
 
-# https://stackoverflow.com/questions/16469869/custom-syntax-highlighting-with-sphinx
-from pygments.lexer import RegexLexer
-from pygments import token
-#from pygments.token import *
-from sphinx.highlighting import lexers
-
 # define some custom pygments highlighters for literal blocks
+# https://stackoverflow.com/questions/16469869/custom-syntax-highlighting-with-sphinx
 # http://pygments.org/docs/lexerdevelopment
-# pygmentize -l conf.py:JournalLexer -x
-# pygments.highlight(code, lexer, formatter, outfile=None)
+# http://pygments.org/docs/tokens/
 
+from sphinx.highlighting import lexers
+from pygments.lexer import RegexLexer
+from pygments.token import *
+
+datere = r'(\d\d\d\d[.-/])?\d\d?[.-/]\d\d?'
+
+# journal format.
 class JournalLexer(RegexLexer):
-    name = 'journal'
-    # aliases = ['hledger']
-    # filenames = ['*.journal']
-
     tokens = {
         'root': [
-            (r'(\d\d\d\d[.-/])?\d\d?[.-/]\d\d?', token.Keyword),
-            # (r'[a-zA-Z]', token.Name),
-            (r'.*\n', token.Text),
+            (datere+'(='+datere+')?', Keyword.Declaration),
+            (r'.*\n', Text),
         ]
     }
-            # (r' .*\n', Text),
-            # (r'\+.*\n', Generic.Inserted),
-            # (r'-.*\n', Generic.Deleted),
-            # (r'@.*\n', Generic.Subheading),
-            # (r'Index.*\n', Generic.Heading),
-            # (r'=.*\n', Generic.Heading),
-            # (r'.*\n', Text),
-
 lexers['journal'] = lexers['{.journal}'] = JournalLexer(startinline=True)
+
+# transcript of a shell session. lines beginning with $ are commands
+class ShellLexer(RegexLexer):
+    tokens = {
+        'root': [
+            (r'^\$ [^#\n]*', Generic.Prompt),
+            (r'.*\n', Text),
+        ]
+    }
+lexers['shell'] = lexers['{.shell}'] = ShellLexer(startinline=True)
 
 # silence warnings about these other kinds of literal block
 
 for l in [
-    'shell',
     'timeclock',
     'timedot',
     'csv',
@@ -114,9 +111,10 @@ for l in [
         name = l
         tokens = {
             'root': [
-                (r'.*\n', token.Text),
+                (r'.*\n', Text),
             ] }
     lexers[l] = lexers['{.'+l+'}'] = NullLexer(startinline=True)
+lexers['{.rules .display-table}'] = NullLexer(startinline=True)
 
 
 # https://recommonmark.readthedocs.io/en/latest/index.html#linking-to-headings-in-other-files
