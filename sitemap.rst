@@ -13,6 +13,7 @@ hledger
    release-notes
    FAQ
    Videos
+   seealso
 
 .. toctree::
    :caption: Reference manuals
@@ -72,6 +73,7 @@ hledger
 
    Addons
    Command-line-completion
+   Combining-Comments-and-Tags
    Editor-configuration
    hledger-web-tips
    Mobile-apps
