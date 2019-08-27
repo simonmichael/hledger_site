@@ -85,8 +85,8 @@ hledger
    :maxdepth: 3
 
    About-real-world-setup-docs
-   "Full-fledged Hledger" tutorial <https://github.com/adept/full-fledged-hledger>
-   "Hledger Flow" tutorial & slideshow <https://github.com/apauley/hledger-flow>
+   Full-fledged Hledger tutorial <https://github.com/adept/full-fledged-hledger>
+   Hledger Flow tutorial & slideshow <https://github.com/apauley/hledger-flow>
    Simons-setup
 
 .. toctree::
