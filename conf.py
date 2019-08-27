@@ -1,5 +1,4 @@
 # Configuration file for the Sphinx documentation builder.
-#
 # This file only contains a selection of the most common options. For a full
 # list see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
@@ -24,7 +23,7 @@
 
 project = 'hledger'
 author = 'Simon Michael'
-copyright = '2019, Simon Michael'
+copyright = '2019, Simon Michael & co.'
 # version = '1.14'
 # release = '1.14'
 
@@ -60,10 +59,10 @@ source_suffix = {
 #    '.txt': 'markdown',
 }
 
+# https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-suppress_warnings
 suppress_warnings = [
     # 'misc.highlighting_failure',
 ]
-
 
 # define some custom pygments highlighters for literal blocks
 # https://stackoverflow.com/questions/16469869/custom-syntax-highlighting-with-sphinx
@@ -153,52 +152,6 @@ exclude_patterns = [
 
 # -- Options for HTML output -------------------------------------------------
 
-# The theme to use for HTML and HTML Help pages.  See the documentation for
-# a list of builtin themes.
-#
-# html_theme = 'alabaster'
-
-import sphinx_rtd_theme
-html_theme = "sphinx_rtd_theme"
-html_theme_options = {
-    # https://sphinx-rtd-theme.readthedocs.io/en/latest/configuring.html
-    # 'canonical_url': '',
-    # 'analytics_id': 'UA-XXXXXXX-1',  #  Provided by Google in your dashboard
-    # 'logo_only': False,
-    # 'display_version': True,
-    # 'prev_next_buttons_location': 'bottom',
-    # 'style_external_links': False,
-    # 'vcs_pageview_mode': '',
-    # 'style_nav_header_background': 'white',
-    # # Toc options
-    # 'collapse_navigation': True,
-    # 'sticky_navigation': True,
-    # 'navigation_depth': 4,
-    # 'includehidden': True,
-    # 'titles_only': False,
-}
-
-# https://alabaster.readthedocs.io/en/latest/installation.html
-# https://www.sphinx-doc.org/en/master/usage/configuration.html?highlight=html_sidebars#options-for-html-output
-# Builtin sidebar templates that can be rendered are:
-#     localtoc.html – a fine-grained table of contents of the current document
-#     globaltoc.html – a coarse-grained table of contents for the whole documentation set, collapsed
-#     relations.html – two links to the previous and next documents
-#     sourcelink.html – a link to the source of the current document, if enabled in html_show_sourcelink
-#     searchbox.html – the “quick search” box
-html_sidebars = {
-    '**': [
-        # 'about.html',
-        # 'localtoc.html',
-        # 'globaltoc.html',
-        'navigation.html',
-        'relations.html',
-        # 'sourcelink.html',
-        'searchbox.html',
-        # 'donate.html',
-    ]
-}
-
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
@@ -249,3 +202,68 @@ html_extra_path = []
 # url_resolver: a function that maps a existing relative position in the document to a http link
 # known_url_schemes: a list of url schemes to treat as URLs, schemes not in this list will be assumed to be Sphinx cross-references. Defaults to None, which means treat all URL schemes as URLs. Example: ['http', 'https', 'mailto']
 
+# The theme to use for HTML and HTML Help pages.  See the documentation for
+# a list of builtin themes.
+import sphinx_rtd_theme
+html_theme = "sphinx_rtd_theme"
+
+html_theme_options = {
+    # https://sphinx-rtd-theme.readthedocs.io/en/latest/configuring.html
+    # 'canonical_url': '',
+    # 'analytics_id': 'UA-XXXXXXX-1',
+    # 'logo_only': False,
+    'display_version': False,
+    # 'prev_next_buttons_location': 'bottom',
+    # 'style_external_links': False,
+    ## 'vcs_pageview_mode': 'edit',  # unsupported
+    # 'style_nav_header_background': 'white',
+    # Toc options
+    # 'collapse_navigation': True,  # hides the + button on other top-level items
+    # 'sticky_navigation': True,
+    # 'navigation_depth': 4,
+    # 'includehidden': True,
+    # 'titles_only': False,
+}
+
+# https://docs.readthedocs.io/en/stable/development/design/theme-context.html
+# Before calling sphinx-build to render your docs, Read the Docs
+# injects some extra context in the templates by using the
+# html_context Sphinx setting in the conf.py file. In case you want to
+# access to this data from your theme, you can use it like this:
+# {% if readthedocs.v1.vcs.type == 'github' %}
+#     <a href="https://github.com/{{ readthedocs.v1.vcs.user }}/{{ readthedocs.v1.vcs.repo }}
+#     /blob/{{ readthedocs.v1.vcs.version }}{{ readthedocs.v1.vcs.conf_py_path }}{{ pagename }}.rst">
+#     Show on GitHub</a>
+# {% endif %}
+# see also http://www.sphinx-doc.org/en/master/templating.html#global-variables
+html_context = {
+
+    # "edit on github" links. XXX currently not correct for the manuals.
+    "display_github": True,        # Integrate GitHub
+    "github_user": "simonmichael", # Username
+    "github_repo": "hledger_site", # Repo name
+    "github_version": "sphinx",    # Version
+    "conf_py_path": "/",           # Path in the checkout to the docs root
+}
+
+# https://docs.readthedocs.io/en/stable/index.html
+# https://sphinx-rtd-theme.readthedocs.io/en/latest/demo/demo.html  paragraph level markup
+# https://sphinx-rtd-theme.readthedocs.io/en/latest/demo/lists_tables.html  lists & tables
+
+# html_short_title = 'hledger'
+# html_baseurl = '/index.html'
+# html_logo = '_static/images/coins2-248.png'
+html_last_updated_fmt = ''
+#html_show_sphinx = False
+
+# -- Options for manual page output ---------------------------------------
+
+# One entry per manual page. List of tuples
+# (source start file, name, description, authors, manual section).
+# man_pages = [
+#     ('hledger', 'hledger', u'a command-line accounting tool',
+#      [author], 1)
+# ]
+
+# If true, show URL addresses after external links.
+# man_show_urls = False
