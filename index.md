@@ -63,6 +63,7 @@ Robust plain text accounting.
 </div>
 
 <img id="coins" src="_static/images/coins2-248.png" style="width:33%; float:right; margin:1em 1em 0 1em;" />
+
 <span style="font-size:x-large;">hledger</span> 
 is an elegant, versatile accounting program, 
 for tracking money, time, or other commodities
@@ -74,7 +75,7 @@ accessible from command line, terminal or web browser.
 
 hledger is one of the leading implementations of [plain text accounting](http://plaintextaccounting.org),
 and is a modern and largely compatible reimplementation of [Ledger](https://ledger-cli.org).
-Compared to [the other ledgerlikes](https://plaintextaccounting.org/#software), 
+Compared to the [other ledgerlikes](https://plaintextaccounting.org/#software), 
 hledger is robust, consistent, and intuitive, with excellent documentation.
 
 hledger is cross platform GNU GPLv3 free software, written in Haskell.
