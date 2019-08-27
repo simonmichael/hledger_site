@@ -1,3 +1,5 @@
+# Addons
+
 Additional hledger tools you can install with stack or cabal. Once installed, these will appear in hledger's commands list:
 
 [hledger-diff](http://hackage.haskell.org/package/hledger-diff)

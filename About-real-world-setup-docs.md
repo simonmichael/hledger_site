@@ -1,3 +1,5 @@
+# About real world setup docs
+
 hledger and plain text accounting tools generally are highly flexible
 and don't impose much structure or process. This can make it hard to
 get started.

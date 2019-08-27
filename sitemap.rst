@@ -7,88 +7,143 @@
 hledger
 ============
 
+About
+-----
+
 .. toctree::
+   :caption: About
    :maxdepth: 2
 
    Home <index>
    download
    release-notes
 
-Tools
------
+Reference
+---------
 
 .. toctree::
+   :caption: Reference
    :maxdepth: 3
 
    hledger
+   journal
    hledger-ui
    hledger-web
-   hledger-api
-
-File formats
-------------
-
-.. toctree::
-   :maxdepth: 3
-
-   journal
    csv
    timeclock
    timedot
+..
+   hledger-api
 
 Cookbook
 --------
 
 .. toctree::
+   :caption: Getting started
    :maxdepth: 3
 
-   terminology
    basics-tutorial
+   terminology
+   Create-a-journal
    accounting-concepts
-   multicurrency-tutorial
-   tags-tutorial
-   hledger-web-tips
-   
-..
-      cookbook
-      About-real-world-setup-docs
-      Accounting-links
-      Addons
-      Budgeting-and-forecasting
-      CONTRIBUTING
-      Combining-Comments-and-Tags
-      Command-line-completion
-      Common-journal-entries
-      Convert-CSV-files
-      Create-a-journal
-      Customize-default-CSV-accounts
-      Editor-configuration
-      FAQ
-      Foreign-trip-expenses
-      Home
-      Makefile
-      Mobile-apps
-      Project-accounting
-      Queries
-      README
-      README
-      Rewrite-account-names
-      Save-frequently-used-options
-      Scripting
-      Simons-setup
-      Time-planning
-      Track-changes-with-version-control
-      Track-investments
-      Use-another-account-separator-character
-      Videos
+   Common-journal-entries
+   FAQ
+   Videos
+   Accounting-links
 
-   ..
-      ledgertips   
+.. toctree::
+   :caption: Managing data
+   :maxdepth: 3
+
+   Convert-CSV-files
+   Customize-default-CSV-accounts
+   Track-changes-with-version-control
+   Use-another-account-separator-character
+
+.. toctree::
+   :caption: Reporting
+   :maxdepth: 3
+
+   Queries
+   tags-tutorial
+   Rewrite-account-names
+
+.. toctree::
+   :caption: Real world setups
+   :maxdepth: 3
+
+   About-real-world-setup-docs
+   "Full-fledged Hledger" tutorial <https://github.com/adept/full-fledged-hledger>
+   "Hledger Flow" tutorial & slideshow <https://github.com/apauley/hledger-flow>
+   Simons-setup
+
+.. toctree::
+   :caption: Accounting tasks
+   :maxdepth: 3
+
+   multicurrency-tutorial
+   Foreign-trip-expenses
+   Budgeting-and-forecasting
+   Project-accounting
+   Track-investments
+   Time-planning
+
+.. toctree::
+   :caption: Usage tips
+   :maxdepth: 3
+
+   Addons
+   Command-line-completion
+   Editor-configuration
+   hledger-web-tips
+   Mobile-apps
+   Save-frequently-used-options
+   Scripting
+
+..
+   See also
+
+..
+   cookbook
+
+..
+   About-real-world-setup-docs
+   Accounting-links
+   Addons
+   Budgeting-and-forecasting
+   CONTRIBUTING
+   Combining-Comments-and-Tags
+   Command-line-completion
+   Common-journal-entries
+   Convert-CSV-files
+   Create-a-journal
+   Customize-default-CSV-accounts
+   Editor-configuration
+   FAQ
+   Foreign-trip-expenses
+   Home
+   Makefile
+   Mobile-apps
+   Project-accounting
+   Queries
+   README
+   README
+   Rewrite-account-names
+   Save-frequently-used-options
+   Scripting
+   Simons-setup
+   Time-planning
+   Track-changes-with-version-control
+   Track-investments
+   Use-another-account-separator-character
+   Videos
+
 
 Contribute
 ----------
 
 .. toctree::
+   :caption: Contribute
    :maxdepth: 3
 
    Dev README <README>

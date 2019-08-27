@@ -1,3 +1,5 @@
+# Queries
+
 Notes related to http://hledger.org/manual#queries.
 
 https://github.com/simonmichael/hledger/issues/203#issuecomment-369972593  

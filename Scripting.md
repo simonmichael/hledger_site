@@ -1,3 +1,5 @@
+# Scripting
+
 Examples of hledger [add-ons](hledger.html#add-on-commands) or hledger-related scripting.
 
 Some things in [bin/](https://github.com/simonmichael/hledger/tree/master/bin/)

@@ -1,3 +1,5 @@
+# FAQ
+
 <!-- 
 20190418: I'd rather maintain this in org mode.
 But this would make our docs look bad when viewed on github,

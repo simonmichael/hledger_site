@@ -1,3 +1,5 @@
+# Editor configuration
+
 If you edit your journals (and other hledger data files) with a text
 editor, you want that frequent task to be as pleasant and non-tedious
 as possible.

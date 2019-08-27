@@ -1,3 +1,5 @@
+# Time planning
+
 ## Simon's hledger time dashboard 2018/05
 
 Here's how I have been logging time for a few years, and showing budget reports for a few weeks.

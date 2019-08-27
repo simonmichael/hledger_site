@@ -1,3 +1,5 @@
+# Combining Comments and Tags
+
 hledger tags go inside a comment, but the tag should come at the end of the comment.
 
 For example, you make a purchase of an _inflatable turkey_ and want to include that fact in a comment. However, in the same line you also want to tag it as _holiday:Thanksgiving_. The correct order to do this is:

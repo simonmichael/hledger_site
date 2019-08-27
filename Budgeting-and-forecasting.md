@@ -1,3 +1,5 @@
+# Budgeting and forecasting
+
 *This doc is for hledger 1.5. It is also somewhat useful for hledger 1.9.1+, which has more robust budgeting. hledger 1.9 had bugs and should not be used for budgeting.*
 
 Budgeting and forecasting allows you to keep better track of your expenses and future financial situation.
@@ -187,7 +189,7 @@ If you look at Expenses:Food category, you will see that every month budget is i
 is 1500 USD, of which 1481.26 USD is spent. If you look back at the previous non-cumulative monthly budget report, you will see that in March food expenses
 were 121% of the budgeted amount, but cumulative report shows that taking into account budget carry-over from Jan and Feb we are well withing planned numbers.
 
-# Forecasting
+## Forecasting
 
 Budget transaction that was created could be used to predict what would be our financial situation in the future. If you add `--forecast` switch, you will
 see how budgeted income and expense affects you past the last transaction in the journal. Since journal ends in Oct 2014, lets see next two month:

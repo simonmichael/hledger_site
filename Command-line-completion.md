@@ -1,3 +1,5 @@
+# Command line completion
+
 [Command-line completion](https://en.wikipedia.org/wiki/Command-line_completion)
 is a feature in shells (Bash, Fish, Zsh, ...) to automatically complete a
 command, argument, or option. Usually, the completion is triggered by

@@ -1,3 +1,5 @@
+# Simons setup
+
 Author:       Simon Michael  
 Last updated: 201903  
 Tested on:    mac mojave  

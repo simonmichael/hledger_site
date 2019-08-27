@@ -1,3 +1,5 @@
+# Create a journal
+
 There are lots of ways to start and update a journal file:
 
 ## with touch
