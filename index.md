@@ -83,9 +83,9 @@ I've been building and relying on hledger since 2007;
 I hope you too will find it helpful in mastering your time and money.
 
 <div class="row" style="text-align:center; ">
-<a href="download.html"><button type="button" class="btn btn-default btn-success" title="All the ways to install hledger. Get it now!">Download</button></a>
+<a href="download.html"><button type="button" class="btn btn-primary" title="All the ways to install hledger. Get it now!">Download</button></a>
 &nbsp;
-<a href="https://github.com/simonmichael/hledger"><button type="button" class="btn btn-default" style="border:none; min-width:102;" title="hledger on Github. Star us!"><img src="https://img.shields.io/github/stars/simonmichael/hledger.svg?style=for-the-badge&logo=GitHub&label=Github&color=lightgrey"></button></a>
+<a href="https://github.com/simonmichael/hledger"><button type="button" class="btn btn-neutral" style="padding:4px;" title="hledger on Github. Star us!"><img width="142" src="https://img.shields.io/github/stars/simonmichael/hledger.svg?style=for-the-badge&logo=GitHub&label=Github&color=lightgrey"></button></a>
 </div>
 
 
