@@ -1,14 +1,8 @@
-.. hledger documentation master file, created by
-   sphinx-quickstart on Thu Aug 22 16:16:37 2019.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+.. hledger documentation master file
    http://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#toctree-directive
 
 hledger
 ============
-
-About
------
 
 .. toctree::
    :caption: About
@@ -17,12 +11,11 @@ About
    Home <index>
    download
    release-notes
-
-Reference
----------
+   FAQ
+   Videos
 
 .. toctree::
-   :caption: Reference
+   :caption: Reference manuals
    :maxdepth: 3
 
    hledger
@@ -32,11 +25,7 @@ Reference
    csv
    timeclock
    timedot
-..
    hledger-api
-
-Cookbook
---------
 
 .. toctree::
    :caption: Getting started
@@ -47,8 +36,6 @@ Cookbook
    Create-a-journal
    accounting-concepts
    Common-journal-entries
-   FAQ
-   Videos
    Accounting-links
 
 .. toctree::
@@ -67,15 +54,6 @@ Cookbook
    Queries
    tags-tutorial
    Rewrite-account-names
-
-.. toctree::
-   :caption: Real world setups
-   :maxdepth: 3
-
-   About-real-world-setup-docs
-   "Full-fledged Hledger" tutorial <https://github.com/adept/full-fledged-hledger>
-   "Hledger Flow" tutorial & slideshow <https://github.com/apauley/hledger-flow>
-   Simons-setup
 
 .. toctree::
    :caption: Accounting tasks
@@ -100,47 +78,14 @@ Cookbook
    Save-frequently-used-options
    Scripting
 
-..
-   See also
+.. toctree::
+   :caption: Real world setups
+   :maxdepth: 3
 
-..
-   cookbook
-
-..
    About-real-world-setup-docs
-   Accounting-links
-   Addons
-   Budgeting-and-forecasting
-   CONTRIBUTING
-   Combining-Comments-and-Tags
-   Command-line-completion
-   Common-journal-entries
-   Convert-CSV-files
-   Create-a-journal
-   Customize-default-CSV-accounts
-   Editor-configuration
-   FAQ
-   Foreign-trip-expenses
-   Home
-   Makefile
-   Mobile-apps
-   Project-accounting
-   Queries
-   README
-   README
-   Rewrite-account-names
-   Save-frequently-used-options
-   Scripting
+   "Full-fledged Hledger" tutorial <https://github.com/adept/full-fledged-hledger>
+   "Hledger Flow" tutorial & slideshow <https://github.com/apauley/hledger-flow>
    Simons-setup
-   Time-planning
-   Track-changes-with-version-control
-   Track-investments
-   Use-another-account-separator-character
-   Videos
-
-
-Contribute
-----------
 
 .. toctree::
    :caption: Contribute
@@ -151,6 +96,7 @@ Contribute
    contributors
 
 .. toctree::
+   :caption: ...
 
    Site map <self>
 

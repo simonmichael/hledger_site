@@ -1,4 +1,4 @@
-# Simons setup
+# Simon's setup
 
 Author:       Simon Michael  
 Last updated: 201903  
