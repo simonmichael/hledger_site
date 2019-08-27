@@ -209,7 +209,7 @@ html_css_files = [
     # styles for the highslide image zoomer
     'js/highslide/highslide.css',
     # our old custom style overides
-    'css/style.css',
+    # 'css/style.css',
 ]
 
 # Add javascript files to HEAD. See also _template/layout.html.
