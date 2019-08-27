@@ -1,4 +1,4 @@
-# Use another account separator character
+# Change account name separator
 
 [Timedot format](http://hledger.org/manual.html#timedot-format) makes me want to use dots (`.`) for separating account components, instead of colon (`:`). 
 For example, instead of `fos:hledger:timedot` I'd like to write `fos.hledger.timedot`.

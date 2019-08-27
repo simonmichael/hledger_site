@@ -46,7 +46,7 @@ hledger
    Convert-CSV-files
    Customize-default-CSV-accounts
    Track-changes-with-version-control
-   Use-another-account-separator-character
+   change-account-name-separator
 
 .. toctree::
    :caption: Reporting
