@@ -71,24 +71,7 @@ from pygments import token
 #from pygments.token import *
 from sphinx.highlighting import lexers
 
-# silence unknown lexer warnings
-
-for l in [
-    'shell',
-    'timeclock',
-    'timedot',
-    'csv',
-    'rules',
-    'haskell',
-    'hledger',
-    'example',
-  ]:
-    class NullLexer(RegexLexer):
-        name = l
-        tokens = { 'root': [] }
-    lexers[l] = lexers['{.'+l+'}'] = NullLexer(startinline=True)
-
-# define custom lexers
+# define some custom pygments highlighters for literal blocks
 # http://pygments.org/docs/lexerdevelopment
 # pygmentize -l conf.py:JournalLexer -x
 # pygments.highlight(code, lexer, formatter, outfile=None)
@@ -102,7 +85,7 @@ class JournalLexer(RegexLexer):
         'root': [
             (r'(\d\d\d\d[.-/])?\d\d?[.-/]\d\d?', token.Keyword),
             # (r'[a-zA-Z]', token.Name),
-            (r'\s', token.Text)
+            (r'.*\n', token.Text),
         ]
     }
             # (r' .*\n', Text),
@@ -114,6 +97,26 @@ class JournalLexer(RegexLexer):
             # (r'.*\n', Text),
 
 lexers['journal'] = lexers['{.journal}'] = JournalLexer(startinline=True)
+
+# silence warnings about these other kinds of literal block
+
+for l in [
+    'shell',
+    'timeclock',
+    'timedot',
+    'csv',
+    'rules',
+    'haskell',
+    'hledger',
+    'example',
+  ]:
+    class NullLexer(RegexLexer):
+        name = l
+        tokens = {
+            'root': [
+                (r'.*\n', token.Text),
+            ] }
+    lexers[l] = lexers['{.'+l+'}'] = NullLexer(startinline=True)
 
 
 # https://recommonmark.readthedocs.io/en/latest/index.html#linking-to-headings-in-other-files
