@@ -3,6 +3,17 @@
  .highslide-caption {color:white; background-color:black;}
  a {white-space:nowrap;}
 
+h1 { font-size:4em; margin-bottom:.3em; }
+
+#tagline {
+  font-size:xx-large;
+  font-style:italic; 
+  position:relative; 
+  top:-.5em;
+  left:.5em;
+  /*text-align:right;*/
+}
+
 /* h2 { font-size:x-large; margin-top:.5em; } */
 /* h3 { font-size:large; margin-bottom:.2em; } */
 tr { border-top:thin solid #bbb; border-bottom:thin solid #bbb; vertical-align:top; }
@@ -40,13 +51,6 @@ td:nth-child(1) { padding-right:1em; white-space:nowrap; }
   text-align:center;
 }
 #wiki .subcontent {
-}
-
-#tagline {
-  font-size:xx-large;
-  font-style:italic; 
-  position:relative; 
-  top:-.5em;
 }
 
 </style>
