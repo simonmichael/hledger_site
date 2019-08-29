@@ -216,7 +216,7 @@ html_theme_options = {
     # 'prev_next_buttons_location': 'bottom',
     # 'style_external_links': False,
     ## 'vcs_pageview_mode': 'edit',  # unsupported
-    # 'style_nav_header_background': 'white',
+    'style_nav_header_background': '#343131',
     # Toc options
     # 'collapse_navigation': True,  # hides the + button on other top-level items
     # 'sticky_navigation': True,
