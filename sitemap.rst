@@ -11,8 +11,8 @@ hledger
    Home <index>
    download
    release-notes
-   FAQ
-   Videos
+   faq
+   videos
    seealso
 
 .. toctree::
@@ -34,60 +34,60 @@ hledger
 
    basics-tutorial
    terminology
-   Create-a-journal
+   create-a-journal
    accounting-concepts
-   Common-journal-entries
-   Accounting-links
+   common-journal-entries
+   accounting-links
 
 .. toctree::
    :caption: Managing data
    :maxdepth: 3
 
-   Convert-CSV-files
-   Customize-default-CSV-accounts
-   Track-changes-with-version-control
+   convert-csv-files
+   customize-default-csv-accounts
+   track-changes-with-version-control
    change-account-name-separator
 
 .. toctree::
    :caption: Reporting
    :maxdepth: 3
 
-   Queries
+   queries
    tags-tutorial
-   Rewrite-account-names
+   rewrite-account-names
 
 .. toctree::
    :caption: Accounting tasks
    :maxdepth: 3
 
    multicurrency-tutorial
-   Foreign-trip-expenses
-   Budgeting-and-forecasting
-   Project-accounting
-   Track-investments
-   Time-planning
+   foreign-trip-expenses
+   budgeting-and-forecasting
+   project-accounting
+   track-investments
+   time-planning
 
 .. toctree::
    :caption: Usage tips
    :maxdepth: 3
 
-   Addons
-   Command-line-completion
-   Combining-Comments-and-Tags
-   Editor-configuration
+   addons
+   command-line-completion
+   combining-comments-and-tags
+   editor-configuration
    hledger-web-tips
-   Mobile-apps
-   Save-frequently-used-options
-   Scripting
+   mobile-apps
+   save-frequently-used-options
+   scripting
 
 .. toctree::
    :caption: Real world setups
    :maxdepth: 3
 
-   About-real-world-setup-docs
+   about-real-world-setup-docs
    Full-fledged Hledger tutorial <https://github.com/adept/full-fledged-hledger>
    Hledger Flow tutorial & slideshow <https://github.com/apauley/hledger-flow>
-   Simons-setup
+   simons-setup
 
 .. toctree::
    :caption: Contribute
