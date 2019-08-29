@@ -61,8 +61,31 @@ source_suffix = {
 
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-suppress_warnings
 suppress_warnings = [
+    # 'ref.term',
+    # 'ref.ref',
+    # 'ref.numref',
+    # 'ref.keyword',
+    # 'ref.option',
+    # 'ref.citation',
+    # 'ref.footnote',
+    # 'ref.doc',
+    # 'ref.python',
     # 'misc.highlighting_failure',
 ]
+
+# Sphinx gives some bogus warnings about valid references (unless the
+# file extension is removed, but then the links would work only when
+# rendered by sphinx). Silence them all here, at the cost of also
+# hiding invalid ones. (suppress_warnings above doesn't do it.)
+# https://stackoverflow.com/questions/37359407/suppress-warnings-for-unfound-references-with-default-role-any-in-sphinx
+# WARNING, watch for other side effects
+def on_missing_reference(app, env, node, contnode):
+    if node['reftype'] == 'any':
+        return contnode
+    else:
+        return None
+def setup(app):
+    app.connect('missing-reference', on_missing_reference)
 
 # define some custom pygments highlighters for literal blocks
 # https://stackoverflow.com/questions/16469869/custom-syntax-highlighting-with-sphinx
@@ -267,3 +290,4 @@ html_last_updated_fmt = ''
 
 # If true, show URL addresses after external links.
 # man_show_urls = False
+
