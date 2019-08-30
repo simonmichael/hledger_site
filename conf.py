@@ -220,7 +220,7 @@ html_context = {
     "display_github": True,        # Integrate GitHub
     "github_user": "simonmichael", # Username
     "github_repo": "hledger_site", # Repo name
-    "github_version": "sphinx",    # Version
+    "github_version": "master",    # Version
     "conf_py_path": "/",           # Path in the checkout to the docs root
     'vcs_pageview_mode': 'edit',   # not working
 
