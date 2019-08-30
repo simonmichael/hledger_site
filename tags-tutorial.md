@@ -3,7 +3,7 @@
 Don’t be scared away from using tags in your hledger accounting this Halloween, or any other time for that matter. This is a tutorial on using tags with hledger, so if the idea of using tags has been haunting you, but you are not really sure how to use them, read on.
 Let’s start with a file showing someone’s Halloween hledger accounting:
  
-```
+```journal
 ; ================ Begin File ================
 
 2016/09/25 ACME Costume
@@ -51,7 +51,7 @@ We want to categorize all the above transactions as having to do with Halloween.
 
 One of the simplest tags is a word, which is inside a comment, immediately followed by a colon. In the file below, you will see all the transactions have a tag, which I named Halloween, added to them:
 
-```
+```journal
 ; ================ begin file ================
 
 2016/09/25 ACME Costume ; Halloween:
@@ -99,8 +99,8 @@ Once we incorporate tags in our hledger file, we can use them in a variety of wa
  
 This command:
  
-```
-hledger -f Halloween2.hledger register Expenses tag:Halloween
+```shell
+$ hledger -f Halloween2.hledger register Expenses tag:Halloween
 ```
  
 Produces something like the following output (all the Expenses tagged “Halloween”):
@@ -125,7 +125,7 @@ For the example we will be using below, a person wishes to rate the quality of t
  
 To add a value to a tag, you add one or more words to the tag. For example, the transaction below has the tag “quality” and the value is “very good”:
  
-```
+```journal
 2016/10/31 Johnsons
    Income:Treat   -2 candy ; quality:very good
    Assets:Food
@@ -133,7 +133,7 @@ To add a value to a tag, you add one or more words to the tag. For example, the 
  
 Note that you can optionally put a space after the colon, as shown immediately below:
  
-```
+```journal
 2016/10/31 Johnsons
    Income:Treat   -2 candy ; quality: very good
    Assets:Food
@@ -141,7 +141,7 @@ Note that you can optionally put a space after the colon, as shown immediately b
  
 Let’s show the file we will be working with, which was saved as Halloween3.hledger:
  
-```
+```journal
 ; ================ begin file ================
  
 2016/09/25 ACME Costume ; Halloween:
@@ -198,7 +198,7 @@ Let’s say we want to list all the treats that were rated “OK.”
  
 We could use the command:
  
-```
+```shell
 $ hledger -f Halloween3.hledger register tag:quality=OK
 ```
  
@@ -212,7 +212,7 @@ The above would output something like the following:
  
 On the other hand, if we wanted to list only the treats that were rated as excellent, we could use the command:
  
-```
+```shell
 $ hledger -f Halloween3.hledger register tag:quality=excellent
 ```
  
@@ -226,7 +226,7 @@ The above command, lists the following:
  
 Now, let’s look for every treat rated as “very good.” If we try,
  
-```
+```shell
 $ hledger -f Halloween3.hledger register tag:quality=very good
 ```
  
@@ -234,7 +234,7 @@ We get exactly nothing. What happened? As you most likely guessed from the title
  
 Therefore, you will need something like the following, to find all the treats rated “very good”:
  
-```
+```shell
 $ hledger -f Halloween3.hledger register tag:quality=”very good”
 ```
  
@@ -262,7 +262,7 @@ Thus, with one tag value we track the destination (Atlanta), the year of the tri
  
 Therefore, a sample expense for the Atlanta trip could look like the following:
  
-```
+```journal
 2017/01/12 My Gas Station  ; trip: Atlanta-2017a
    Expenses:Travel  $18.43
    Liabilities:CreditCard
@@ -272,13 +272,13 @@ Therefore, a sample expense for the Atlanta trip could look like the following:
  
 To see the total expenses sorted by each tag value, you use the --pivot option with the balance command. Note, though, the advice to limit the report to expenses, as follows:
  
-```
-hledger –f filename.hledger balance Expenses --pivot trip
+```shell
+$ hledger –f filename.hledger balance Expenses --pivot trip
 ```
  
 If your tags are 100% limited to your expenses, that is, they all have the tag in the Expenses line as shown below:
  
-```
+```journal
 2018/01/12 My Gas Station
    Expenses:Travel  $14.43 ; trip: Boise-2018a
    Liabilities:CreditCard
@@ -286,13 +286,13 @@ If your tags are 100% limited to your expenses, that is, they all have the tag i
  
 Then with the above, you can shorten the command to:
  
-```
-hledger –f filename.hledger balance --pivot trip
+```shell
+$ hledger –f filename.hledger balance --pivot trip
 ```
  
 However, if the tag is applied to the whole transaction:
  
-```
+```journal
 2018/01/12 My Gas Station  ; trip: Boise-2018a
    Expenses:Travel  $14.43
    Liabilities:CreditCard
@@ -300,8 +300,8 @@ However, if the tag is applied to the whole transaction:
  
 Then for the above you need to use the command limiting the balance report to Expenses.
  
-```
-hledger –f filename.hledger balance Expenses --pivot trip
+```shell
+$ hledger –f filename.hledger balance Expenses --pivot trip
 ```
  
 Otherwise, the liability will balance the expense to zero.
@@ -310,7 +310,7 @@ Otherwise, the liability will balance the expense to zero.
  
 Let’s add some sample data to work with, which will be in a file named TagsPart3.hledger:
  
-```
+```journal
 ; ================ begin file ================
  
 2013/01/12 My Gas Station  ; trip: Boise-2013a
@@ -344,8 +344,8 @@ Let’s add some sample data to work with, which will be in a file named TagsPar
  
 If we run the command:
  
-```
-hledger -f TagsPart3.hledger balance Expenses --pivot trip
+```shell
+$ hledger -f TagsPart3.hledger balance Expenses --pivot trip
 ```
  
 Then we get:
@@ -366,8 +366,8 @@ We now have the totals for each trip, so we can see how much it costs to visit A
  
 To see totals for all trips in 2014, we could run the command:
  
-```
-hledger -f TagsPart3.hledger balance Expenses --pivot trip tag:trip=2014
+```shell
+$ hledger -f TagsPart3.hledger balance Expenses --pivot trip tag:trip=2014
 ```
  
 Output:
@@ -388,8 +388,8 @@ tag:trip=2014
  
 Similarly, to see totals for all trips in 2016:
  
-```
-hledger -f TagsPart3.hledger balance Expenses --pivot trip tag:trip=2016
+```shell
+$ hledger -f TagsPart3.hledger balance Expenses --pivot trip tag:trip=2016
 ```
  
 Output:
@@ -405,8 +405,8 @@ Output:
  
 Finally, how much did we spend on trips to Albany, no matter what year the trip(s) took place in?
  
-```
-hledger -f TagsPart3.hledger balance Expenses --pivot trip tag:trip=Albany
+```shell
+$ hledger -f TagsPart3.hledger balance Expenses --pivot trip tag:trip=Albany
 ```
  
 Output:
@@ -421,7 +421,7 @@ Output:
  
 The above examples were highly simplified, with just one expense per trip. Just to show that we can work with something more complicated, let’s create some new data, assumed to be in a file TagsPart3b.hledger:
  
-```
+```journal
 ; ================ begin file ================
  
 2013/12/01 Ariline  ; trip: Boise-2014a
@@ -475,8 +475,8 @@ Output:
  
 How much did the 2014 trips cost?
  
-```
-hledger -f TagsPart3b.hledger balance Expenses --pivot trip tag:trip=2014
+```shell
+$ hledger -f TagsPart3b.hledger balance Expenses --pivot trip tag:trip=2014
 ```
  
 Output:
@@ -505,7 +505,7 @@ This tutorial has shown how to:
  
 Inside a comment write a word immediately followed by a colon:
  
-```
+```journal
 2016/09/25 ACME Costume ; Halloween:
    Expenses:Entertainment     $45.99
    Liabilities:CreditCard
@@ -513,7 +513,7 @@ Inside a comment write a word immediately followed by a colon:
  
 A tag can apply to a whole transaction, as in the above, or just one of the lines as in:
  
-```
+```journal
 2016/09/25 ACME Costume
    Expenses:Entertainment     $45.99 ; Halloween:
    Liabilities:CreditCard
@@ -521,15 +521,15 @@ A tag can apply to a whole transaction, as in the above, or just one of the line
  
 ### Use tags with the register command to list only the expenses for a given tag
  
-```
-hledger -f Halloween2.hledger register Expenses tag:Halloween
+```shell
+$ hledger -f Halloween2.hledger register Expenses tag:Halloween
 ```
  
 ### Add values to tags
  
 To add a value to a tag, add one or more words to the tag:
  
-```
+```journal
 2016/10/31 Johnsons
    Income:Treat   -2 candy ; quality: very good
    Assets:Food
@@ -537,7 +537,7 @@ To add a value to a tag, add one or more words to the tag:
  
 ### Limit a command to tags with specified values
  
-```
+```shell
 $ hledger -f Halloween3.hledger register tag:quality=”very good”
 ```
  
@@ -545,7 +545,7 @@ Note that if your tag value has a space in it, you must do something such as put
  
 ### Trick: Tag values can include multiple pieces of information
  
-```
+```journal
 2016/11/21 My Gas Station  ; trip: Houston-2016a
    Expenses:Travel  $19.43
    Liabilities:CreditCard
@@ -555,14 +555,14 @@ In the above, the tag includes information for the destination, the year of the 
  
 ### Use the --pivot option to total expenses by tag value
  
-```
-hledger -f TagsPart3.hledger balance Expenses --pivot trip tag:trip=Houston
+```shell
+$ hledger -f TagsPart3.hledger balance Expenses --pivot trip tag:trip=Houston
 ```
  
 or
  
-```
-hledger -f TagsPart3.hledger balance Expenses --pivot trip tag:trip=2016
+```shell
+$ hledger -f TagsPart3.hledger balance Expenses --pivot trip tag:trip=2016
 ```
  
 ## Conclusion
