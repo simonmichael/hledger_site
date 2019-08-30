@@ -139,10 +139,10 @@ together with 80+ other committers and an unknown number of usually happy-soundi
 
 ### inspired by Ledger
 
-hledger is a Haskell [reimplementation](https://github.com/simonmichael/hledger/wiki/FAQ#hledger--ledger)
+hledger is a Haskell [reimplementation](faq.html#how-why-was-hledger-started)
 of the excellent [Ledger](http://ledger-cli.org).
 It remains substantially compatible with Ledger, and if you wish you can keep your data compatible with both.
-Read more about the [differences](https://github.com/simonmichael/hledger/wiki/FAQ#features) in the FAQ.
+Read more about the [differences](https://hledger.org/faq.html#ledger) in the FAQ.
 
 
 ### a command-line tool
@@ -158,7 +158,7 @@ transactions, but does not change existing ones.)
 ### a console UI
 
 <a href="_static/images/hledger-ui/hledger-ui-bcexample-acc.png" class="highslide" onclick="return hs.expand(this)"><img src="_static/images/hledger-ui/hledger-ui-bcexample-acc.png" title="hledger-ui accounts screen" /></a>
-hledger also provides a curses-style [console&nbsp;interface](manual#ui)
+hledger also provides a curses-style [console&nbsp;interface](hledger-ui.html)
 that lets you review account balances and transactions quickly and without fuss.
 ([screencast](https://asciinema.org/a/29665))
 
@@ -188,7 +188,7 @@ exposed as
 [Haskell](http://hackage.haskell.org/package/hledger)
 [libraries](http://hackage.haskell.org/package/hledger-web), making it
 easy to write your own hledger-compatible
-[scripts](more-docs.html#scripting-examples), [add-ons](manual.html#add-ons) and
+[scripts](scripting.html), [add-ons](hledger.html#add-on-commands) and
 applications.
 &nbsp;&nbsp;[![build status (travis)](https://travis-ci.org/simonmichael/hledger.svg?branch=master)](https://travis-ci.org/simonmichael/hledger)
 
@@ -205,7 +205,7 @@ applications.
 ### fully documented
 
 We practice documentation-driven development. 
-Every feature must be **[well documented](index.html#reference)**, 
+Every feature must be **well documented**, 
 and getting started must be easy.
 
 ### focussed on serving users
@@ -220,29 +220,15 @@ accounting.
 
 ## Help/Feedback
 
-<table>
-<tr><td>IRC:         </td><td><small>
-
-[#hledger](http://irc.hledger.org) on Freenode <!-- [chat log](http://ircbrowse.net/browse/hledger); --> <!-- see also [#ledger](http://webchat.freenode.net?channels=ledger&randomnick=1) --> <!-- *Quick help and background chat.* --> <!-- *If you don't get an answer promptly, you can type `sm` to alert me, or leave the window open and check back later.* --></small></td></tr>
-<tr><td>Twitter:     </td><td><small>
-
-[#hledger, #plaintextaccounting](#twitter)</small></td></tr>
-<tr><td>Reddit:      </td><td><small>
-
-[/r/plaintextaccounting](https://www.reddit.com/r/plaintextaccounting/)</small></td></tr>
-<tr><td>Hacker News: </td><td><small>
-
-[stories](https://hn.algolia.com/?query=hledger&sort=byDate&prefix&page=0&dateRange=all&type=story), [comments](https://hn.algolia.com/?query=hledger&sort=byDate&prefix=false&page=0&dateRange=all&type=comment)</small></td></tr>
-<tr><td>Mail list:   </td><td><small>
-
-[list.hledger.org](http://list.hledger.org), [hledger@googlegroups.com](mailto:hledger@googlegroups.com)</small></td></tr>
-<tr><td>Issues:      </td><td><small>
-
-[bugs.hledger.org](http://bugs.hledger.org)&nbsp;(bugs), [issues.hledger.org](http://issues.hledger.org)&nbsp;(all), [open issues](CONTRIBUTING.html#open-issues)&nbsp;(overview)</small></td></tr>
-<tr><td>Other:       </td><td><small>
-
-[simon@joyful.com](mailto:simon@joyful.com)</small></td></tr>
-</table>
+|              |                                                                                                                                                                                                                   |
+|--------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| IRC:         | [#hledger](http://irc.hledger.org) on Freenode                                                                                                                                                                    |
+| Twitter:     | [#hledger](https://twitter.com/search?q=%23hledger&src=typed_query&f=live), [#plaintextaccounting](https://twitter.com/search?q=%23plaintextaccounting&src=typed_query&f=live)                                    |
+| Reddit:      | [/r/plaintextaccounting](https://www.reddit.com/r/plaintextaccounting/)                                                                                                                                           |
+| Hacker News: | [stories](https://hn.algolia.com/?query=hledger&sort=byDate&prefix&page=0&dateRange=all&type=story), [comments](https://hn.algolia.com/?query=hledger&sort=byDate&prefix=false&page=0&dateRange=all&type=comment) |
+| Mail list:   | [list.hledger.org](http://list.hledger.org), [hledger@googlegroups.com](mailto:hledger@googlegroups.com)                                                                                                          |
+| Issues:      | [bugs.hledger.org](http://bugs.hledger.org) (bugs), [issues.hledger.org](http://issues.hledger.org) (all), [open issues overview](CONTRIBUTING.html#open-issues)                                                |
+| Other:       | [simon@joyful.com](mailto:simon@joyful.com)                                                                                                                                                                       |
 
 
 <div id=dev class=contentbox>
