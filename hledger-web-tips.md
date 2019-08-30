@@ -1,3 +1,5 @@
+# hledger-web tips
+
 ## Edit, upload, download
 
 hledger-web does allow you to edit, upload or download the whole journal file, but for some time it has been undocumented.
