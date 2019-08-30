@@ -23,7 +23,7 @@ Anya begins using hledger without any currency symbols. She adds some [journal e
 
 She knows hledger is filling in the missing amounts, which can be seen with [print's -x/--explicit](http://hledger.org/manual.html#print) flag:
 
-```
+```shell
 $ hledger print -x
 2018/11/01
     income:gifts            -1000
@@ -37,7 +37,7 @@ $ hledger print -x
 
 The [balance](http://hledger.org/manual.html#balance) command with no arguments shows all balance changes. The total is zero, as Anya expects - each transaction sums to zero, and all transactions are included in this report, so the report also sums to zero:
 
-```
+```shell
 $ hledger bal
                  500  assets:bank
                  500  expenses:food
@@ -48,7 +48,7 @@ $ hledger bal
 
 Unlike partial balance reports (omitting some accounts), which typically do not have a zero total:
 
-```
+```shell
 $ hledger bal food
                  500  expenses:food
 --------------------
@@ -98,7 +98,7 @@ But she finds this a bit verbose. She decides to use single letters - R for rubl
 
 Now her reports show the currency symbol:
 
-```
+```shell
 $ hledger bal 
                500 R  assets:bank
                500 R  expenses:food
@@ -126,7 +126,7 @@ And she is ready for multicurrency accounting. Just in time, because next day a 
 
 Now she has a multicurrency journal, and the balance report shows both currencies:
 
-```
+```shell
 $ hledger bal 
                 10 E        
                500 R  assets
@@ -143,7 +143,7 @@ $ hledger bal
 
 However, it's a bit confusing. The `assets` and `income` parent accounts now have multicurrency balances, and each currency is displayed on its own line. She tries [flat mode](http://hledger.org/manual.html#flat-mode), and finds it clearer:
 
-```
+```shell
 $ hledger bal --flat
                500 R  assets:bank
                 10 E  assets:liberapay
@@ -156,7 +156,7 @@ $ hledger bal --flat
 
 But she has heard that hledger's [tabular output](http://hledger.org/manual.html#multicolumn-balance-report) is best for multicurrency reports, always showing amounts on one line. She starts using that, adding one of the [report interval](http://hledger.org/manual.html#report-intervals) flags (-Y/--yearly) to activate it:
 
-```
+```shell
 $ hledger bal -Y
 Balance changes in 2018:
 
@@ -194,7 +194,7 @@ Anya requests a withdrawal of the Liberapay funds to her bank. Her bank holds ru
 
 This is her first multicurrency transaction. She hasn't written the exchange rate explicitly, but the manual [says](http://hledger.org/manual.html#transaction-prices) hledger can figure it out. It seems to work:
 
-```
+```shell
 $ hledger bal  -Y
 Balance changes in 2018:
 
