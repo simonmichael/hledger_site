@@ -1,11 +1,22 @@
-<!-- Web release notes. Content since 1.0 comes from doc/release-notes.org. -->
-<!-- Putting the dates last is preferred for readability, but they are first in the headings below since that nicely keeps them out of the anchor urls. -->
-<style>
-#toc > ol > li { padding-top:0; }
-h4 { margin-top:2em; }
-</style>
- 
 # Release notes
+
+<!-- 
+The release notes collect user-visible changes from the changelogs.
+The older releases show changelog-level detail and should probably be
+thinned out.
+
+In the release headings, dates appear first to keep them out of the
+permalink urls, though it's not ideal for readability. The text part
+("hledger") is needed for stable urls.
+
+The subheadings for the hledger package are written as "hledger cli"
+to avoid clashing with the release headings and being assigned
+unstable urls.
+
+Releases before 1.0 are grouped under a parent heading to avoid
+dominating the site's sidebar.
+
+-->
 
 Major releases are shown below. 
 Minor release notes can be seen in the package changelogs:
@@ -22,15 +33,7 @@ Changes in hledger-install.sh are shown
 JSON get/add support in hledger-web***
 ([announcement](https://groups.google.com/d/topic/hledger/f4Mir3PLooI/discussion))
 
-  [project](#project-wide-changes-for-1.14)
-| [hledger](#hledger-1.14-1)
-| [hledger-ui](#hledger-ui-1.14)
-| [hledger-web](#hledger-web-1.14)
-| [hledger-api](#hledger-api-1.14)
-| [hledger-lib](#hledger-lib-1.14)
-| [credits](#credits-1.14)
-
-### project-wide changes for 1.14
+### project-wide changes 1.14
 
 - hledger.org website: now uses https, home page updates,
   download page improved package list with status badges.
@@ -47,7 +50,7 @@ JSON get/add support in hledger-web***
 
 - makefile cleanups; make site-liverender helps with local site preview
 
-### hledger 1.14
+### hledger cli 1.14
 
 - journal: subaccount-including balance assertions have been
   added, with syntax =* and ==* (experimental) (#290)
@@ -117,15 +120,7 @@ improved budget report, --transpose, new account types syntax,
 usability & bug fixes.***
 ([announcement](https://groups.google.com/d/topic/hledger/ffkwwkcHmmU/discussion))
 
-  [project](#project-wide-changes-for-1.13)
-| [hledger](#hledger-1.13-1)
-| [hledger-ui](#hledger-ui-1.13)
-| [hledger-web](#hledger-web-1.13)
-| [hledger-api](#hledger-api-1.13)
-| [hledger-lib](#hledger-lib-1.13)
-| [credits](#credits-1.13)
-
-### project-wide changes for 1.13
+### project-wide changes 1.13
 
 - packaging: A docker image providing the main hledger tools is now
   linked on the download page. This is another way to get up-to-date
@@ -167,7 +162,7 @@ Developers:
   
 - doc files and hpack/cabal files are included in TAGS again
 
-### hledger 1.13
+### hledger cli 1.13
 
 - cli: reorganised commands list. Addons now have a + prefix.
 
@@ -286,17 +281,7 @@ hledger-ui usability updates,
 misc fixes***
 ([announcement](https://groups.google.com/d/topic/hledger/H7NYdvo0FeQ/discussion))
 
-  <!-- [project](#project-wide-changes-for-1.12) -->
-  [hledger](#hledger-1.12-1)
-| [hledger-ui](#hledger-ui-1.12)
-| [hledger-web](#hledger-web-1.12)
-| [hledger-api](#hledger-api-1.12)
-| [hledger-lib](#hledger-lib-1.12)
-| [credits](#credits-1.12)
-
-<!-- ### project-wide changes for 1.12 -->
-
-### hledger 1.12
+### hledger cli 1.12
 
 * install script: ensure a new-enough version of stack; more informative output  
 
@@ -511,18 +496,7 @@ new files and roi commands,
 fixes***
 ([announcement](https://groups.google.com/d/topic/hledger/V62txFLaD_U/discussion))
 
-  <!-- [project](#project-wide-changes-for-1.11) -->
-  [hledger](#hledger-1.11-1)
-| [hledger-ui](#hledger-ui-1.11)
-| [hledger-web](#hledger-web-1.11)
-| [hledger-api](#hledger-api-1.11)
-| [hledger-lib](#hledger-lib-1.11)
-| [credits](#credits-1.11)
-
-<!-- ### project-wide changes for 1.11 -->
-
-
-### hledger 1.11
+### hledger cli 1.11
 
 * The default display order of accounts is now influenced by
   the order of account directives. Accounts declared by account
@@ -685,15 +659,7 @@ more informative parse errors,
 misc fixes***
 ([announcement](https://groups.google.com/forum/#!msg/hledger/SWFV2n6xMQA/Ss78nil8AQAJ))
 
-  [project](#project-wide-changes-for-1.10)
-| [hledger-lib](#hledger-lib-1.10)
-| [hledger](#hledger-1.10-1)
-| [hledger-ui](#hledger-ui-1.10)
-| [hledger-web](#hledger-web-1.10)
-| [hledger-api](#hledger-api-1.10)
-| [credits](#credits-1.10)
-
-### project-wide changes for 1.10
+### project-wide changes 1.10
 
 * build cleanly with all supported GHC versions again (7.10 to 8.4)
 
@@ -711,7 +677,7 @@ misc fixes***
 * doctests now run a bit faster ([#802](https://github.com/simonmichael/hledger/issues/802))
 
 
-### hledger 1.10
+### hledger cli 1.10
 
 * journal: many parse error messages have become more informative, and
   some now show the source line and error location.
@@ -845,16 +811,6 @@ agander,
 M Parker,
 Moritz Kiefer,
 Mykola Orliuk.
-
-  [project](#project-wide-changes-for-1.9)
-| [hledger-lib](#hledger-lib-1.9)
-| [hledger](#hledger-1.9-1)
-| [hledger-ui](#hledger-ui-1.9)
-| [hledger-web](#hledger-web-1.9)
-| [hledger-api](#hledger-api-1.9)
-
-### project-wide changes for 1.9
-
 * support ghc 8.4, latest deps
 
 
@@ -865,7 +821,7 @@ found when reading files.
 
 * CompoundBalanceReport amounts are now normally positive. (experimental)
 
-### hledger 1.9
+### hledger cli 1.9
 
 * journal: account directives can define a numeric account code to
 customize sorting.  bal/bs/cf/is will sort accounts by account code,
@@ -959,14 +915,7 @@ Mick Dekkers,
 Nadrieril,
 Alvaro Fernando García.
 
-  [project](#project-wide-changes-for-1.5)
-| [hledger-lib](#hledger-lib-1.5)
-| [hledger](#hledger-1.5-1)
-| [hledger-ui](#hledger-ui-1.5)
-| [hledger-web](#hledger-web-1.5)
-| [hledger-api](#hledger-api-1.5)
-
-### project-wide changes for 1.5
+### project-wide changes 1.5
 
 * remove upper bounds on all but hledger* and base (experimental)
   It's rare that my deps break their api or that newer versions must
@@ -1013,7 +962,7 @@ Alvaro Fernando García.
 
 * period expressions: support "every Tuesday", short for "every <n>th day of week" (Dmitry Astapov)
 
-### hledger 1.5
+### hledger cli 1.5
 
 * --auto adds Ledger-style automated postings to transactions (Dmitry Astapov, Mykola Orliuk)
 
@@ -1080,14 +1029,6 @@ Christian G. Warden,
 Nissar Chababy,
 Peter Simons.
 
-  [project](#project-wide-changes-for-1.4)
-| [hledger-lib](#hledger-lib-1.4)
-| [hledger](#hledger-1.4-1)
-| [hledger-ui](#hledger-ui-1.4)
-| [hledger-web](#hledger-web-1.4)
-| [hledger-api](#hledger-api-1.4)
-
-### project-wide changes for 1.4
 
 * update stack configs for the last three GHC versions, add "make
 test-stackage" for finding stackage build problems, switch to GHC
@@ -1154,7 +1095,7 @@ but with the extra advantage of not showing empty accounts)
 
 * fix test suite with Cabal 2 ([#596](https://github.com/simonmichael/hledger/issues/596))
 
-### hledger 1.4
+### hledger cli 1.4
 
 * cli: a @FILE argument reads flags & args from FILE, one per line
 
@@ -1322,16 +1263,6 @@ David Reaver,
 Felix Yan,
 Nissar Chababy,
 Jan Zerebecki.
-
-  [project](#project-wide-changes-for-1.3)
-| [hledger-lib](#hledger-lib-1.3)
-| [hledger](#hledger-1.3-1)
-| [hledger-ui](#hledger-ui-1.3)
-| [hledger-web](#hledger-web-1.3)
-| [hledger-api](#hledger-api-1.3)
-
-### project-wide changes for 1.3
-
 <!-- #### Packaging -->
 
 <!-- #### Finance -->
@@ -1373,7 +1304,7 @@ Multiple status: query terms are now OR'd together. ([#564](https://github.com/s
 
 Deps: allow megaparsec 5.3.
 
-### hledger 1.3
+### hledger cli 1.3
 
 #### CLI
 
@@ -1499,14 +1430,7 @@ Joshua Chia,
 Joshua Kehn,
 Michael Walker.
 
-  [project](#project-wide-changes-for-1.2)
-| [hledger-lib](#hledger-lib-1.2)
-| [hledger](#hledger-1.2-1)
-| [hledger-ui](#hledger-ui-1.2)
-| [hledger-web](#hledger-web-1.2)
-| [hledger-api](#hledger-api-1.2)
-
-### project-wide changes for 1.2
+### project-wide changes 1.2
 
 #### Packaging
 
@@ -1588,7 +1512,7 @@ Allow megaparsec 5.2 ([#503](https://github.com/simonmichael/hledger/issues/503)
 
 Rename optserror -> usageError, consolidate with other error functions
 
-### hledger 1.2
+### hledger cli 1.2
 
 #### CLI
 
@@ -1748,14 +1672,7 @@ bugfixes***
 Release contributors:
 Simon Michael, Johannes Gerer, Mykola Orliuk, Shubham Lagwankar.
 
-  [project-wide](#project-wide-changes-for-1.1)
-| [hledger-lib](#hledger-lib-1.1)
-| [hledger](#hledger-1.1-1)
-| [hledger-ui](#hledger-ui-1.1)
-| [hledger-web](#hledger-web-1.1)
-| [hledger-api](#hledger-api-1.1)
-
-### project-wide changes for 1.1
+### project-wide changes 1.1
 
 #### misc
 
@@ -1811,7 +1728,7 @@ Simon Michael, Johannes Gerer, Mykola Orliuk, Shubham Lagwankar.
 
 -   more general parser types enabling reuse outside of IO ([#439](http://bugs.hledger.org/439))
 
-### hledger 1.1
+### hledger cli 1.1
 
 #### balance
 
@@ -1891,14 +1808,6 @@ Simon Michael, Dominik Süß, Thomas R. Koll, Moritz Kiefer,
 jungle-boogie, Sergei Trofimovich, Malte Brandy, Sam Doshi, 
 Mitchell Rosen, Hans-Peter Deifel, Brian Scott, and Andrew Jones.
 
-  [project-wide](#project-wide-changes-for-1.0)
-| [hledger-lib](#hledger-lib-1.0)
-| [hledger](#hledger-1.0-1)
-| [hledger-ui](#hledger-ui-1.0)
-| [hledger-web](#hledger-web-1.0)
-| [hledger-api](#hledger-api-1.0)
-
-### project-wide changes for 1.0
 
 #### misc
 
@@ -2123,7 +2032,7 @@ Mitchell Rosen, Hans-Peter Deifel, Brian Scott, and Andrew Jones.
 
 -   more unit tests, start using doctest
 
-### hledger 1.0
+### hledger cli 1.0
 
 #### add
 
@@ -2337,7 +2246,8 @@ Mitchell Rosen, Hans-Peter Deifel, Brian Scott, and Andrew Jones.
 
 
 
-## 2015/10/30 hledger 0.27
+## 2008-2015 Pre-1.0
+### 2015/10/30 hledger 0.27
 
 ***New curses-style interface, market value reporting, wide characters, fast regex aliases, man pages***
 ([announcement](http://thread.gmane.org/gmane.comp.finance.ledger.hledger/1267))
@@ -2473,7 +2383,7 @@ register:
   by real postings.
 
 
-## 2015/7/12 hledger 0.26
+### 2015/7/12 hledger 0.26
 
 <!-- [announcement](http://thread.gmane.org/gmane.comp.finance.ledger.hledger/N) -->
 <!-- [announcement](https://groups.google.com/forum/#!topic/hledger/k2Y_NYZGGJw) -->
@@ -2623,7 +2533,7 @@ stats:
     | -f data/10000x1000x10.journal  stats ||  58.92 |   2.16 |
     +--------------------------------------++--------+--------+
     ```
-    
+
 Miscellaneous:
 
 - The June 30 day span was not being rendered correctly; fixed. (#272)
@@ -2645,19 +2555,19 @@ Miscellaneous:
 - fix a js error breaking add form in browsers other than firefox (fixes #251)
 - drop deprecated network-conduit dependency
 
-#### 2015/4/29 hledger-web 0.25.1
+##### 2015/4/29 hledger-web 0.25.1
 
 - support/require base-compat >0.8 (#245)
 
-#### 2015/4/29 hledger 0.25.1
+##### 2015/4/29 hledger 0.25.1
 
 - timelog: support the description field (#247)
 
-#### 2015/4/29 hledger-lib 0.25.1
+##### 2015/4/29 hledger-lib 0.25.1
 
 - support/require base-compat >0.8 (#245)
 
-## 2015/4/7 hledger 0.25
+### 2015/4/7 hledger 0.25
 
 <!-- [announcement](http://thread.gmane.org/gmane.comp.finance.ledger.hledger/N) -->
 [announcement](https://groups.google.com/forum/#!topic/hledger/k2Y_NYZGGJw)
@@ -2739,24 +2649,24 @@ Julien Moutinho.
 
 - keep the add button right-aligned when pressing ctrl - on the add form
 
-#### 2015/3/15 hledger 0.24.1
+##### 2015/3/15 hledger 0.24.1
 
 - timelog: show hours with 2 decimal places, not 1 ([#237](http://bugs.hledger.org/237))
 - fix balance accumulation through assertions in several commodities ([#195](http://bugs.hledger.org/195))
 - fix rendering of week 52 heading in weekly reports
 - allow utf8-string-1 ([fpco/stackage/#426](https://github.com/fpco/stackage/issues/426))
 
-#### 2015/3/15 hledger-lib 0.24.1
+##### 2015/3/15 hledger-lib 0.24.1
 
 - fix JournalReader "ctx" compilation warning
 - add some type signatures in Utils to help make ghci-web
 
-#### 2015/1/10 hledger-web 0.24.1
+##### 2015/1/10 hledger-web 0.24.1
 
 - add missing modules to fix cabal tests ([#232](http://bugs.hledger.org/232))
 
 
-## 2014/12/25 hledger 0.24
+### 2014/12/25 hledger 0.24
 
 Release contributors:
 Simon Michael,
@@ -2945,19 +2855,19 @@ Dependencies:
 - more debug helpers
 
 
-#### 2014/9/12 hledger-web 0.23.3
+##### 2014/9/12 hledger-web 0.23.3
 
 - remove warp, wai-handler-launch upper bounds (fixes [#205](http://bugs.hledger.org/205))
 
-#### 2014/9/12 hledger 0.23.3
+##### 2014/9/12 hledger 0.23.3
 
 - allow text 1.2+ (fixes [#207](http://bugs.hledger.org/207))
 
-#### 2014/5/8 hledger 0.23.2
+##### 2014/5/8 hledger 0.23.2
 
 - register: also fix date sorting of postings ([#184](http://bugs.hledger.org/184))
 
-#### 2014/5/7 hledger 0.23.1
+##### 2014/5/7 hledger 0.23.1
 
 - register: fix a refactoring-related regression that the tests
   missed: if transactions were not ordered by date in the journal,
@@ -2969,7 +2879,7 @@ Dependencies:
 - csv: don't validate fields count in skipped lines ([#177](http://bugs.hledger.org/177))
 
 
-## 2014/5/1 hledger 0.23
+### 2014/5/1 hledger 0.23
 
 [announcement](http://thread.gmane.org/gmane.comp.finance.ledger.hledger/1028)
 ***command-line fixes and polish, a new accounts
@@ -3062,7 +2972,7 @@ Miscellaneous:
 - Compatible with GHC 7.2 ([#155](http://bugs.hledger.org/155)) - GHC 7.8, shakespeare 2
 
 
-## 2014/5/1 hledger-web 0.23
+### 2014/5/1 hledger-web 0.23
 
 Changes since 0.22.8:
 
@@ -3071,39 +2981,39 @@ Changes since 0.22.8:
   so may be a little quicker/less memory-hungry to install.
 
 
-#### 2014/4/29 hledger-web 0.22.8
+##### 2014/4/29 hledger-web 0.22.8
 
 - allow shakespeare 2.* ([#179](http://bugs.hledger.org/179))
 
-#### 2014/4/17 hledger-web 0.22.7
+##### 2014/4/17 hledger-web 0.22.7
 
 - add Peter Simons' patch fixing Data.Conduit.Network HostIPv4 error ([#171](http://bugs.hledger.org/171))
 
-#### 2014/4/16 hledger-web 0.22.6
+##### 2014/4/16 hledger-web 0.22.6
 
 - depend on hledger[-lib] 0.22.2
 
-#### 2014/4/16 hledger 0.22.2
+##### 2014/4/16 hledger 0.22.2
 
 - display years before 1000 with four digits, not three
 - avoid pretty-show to build with GHC < 7.4
 - allow text 1.1, drop data-pprint to build with GHC 7.8.x
 
-#### 2014/4/15 hledger-web 0.22.5
+##### 2014/4/15 hledger-web 0.22.5
 
 - allow http-client 0.3.*, fixing cabal install again with GHC <= 7.6 (not yet 7.8)
 - use pretty-show only with GHC 7.4+, fixing GHC 7.2 (fixes [#155](http://bugs.hledger.org/155))
 - allow warp 2.1, fixing cabal install
 
-#### 2014/2/10 hledger-web 0.22.4
+##### 2014/2/10 hledger-web 0.22.4
 
 * web: include the right unminified version of jquery.url.js (1.1) to avoid js breakage
 
-#### 2014/2/10 hledger-web 0.22.3
+##### 2014/2/10 hledger-web 0.22.3
 
 * web: fix version number reported by --version
 
-#### 2014/2/10 hledger-web 0.22.2
+##### 2014/2/10 hledger-web 0.22.2
 
 New:
 
@@ -3116,7 +3026,7 @@ Improved:
 * web: allow blaze-html 0.7 (closes [#159](http://bugs.hledger.org/159))
 
 
-#### 2014/1/6 hledger 0.22.1
+##### 2014/1/6 hledger 0.22.1
 
 - require the latest pretty-show so hledger installation no longer
   needs an upgraded version of happy, and the docs build on hackage
@@ -3124,7 +3034,7 @@ Improved:
 - require regex-tdfa directly instead of regex-compat-tdfa,
   simplifying Debian packaging
 
-## 2013/12/13 hledger 0.22
+### 2013/12/13 hledger 0.22
 
 [announcement](http://thread.gmane.org/gmane.comp.finance.ledger.general/5333)
 
@@ -3185,26 +3095,26 @@ Release contributors:
 
 Marko Kocić, Max Bolingbroke, and a big welcome to first-time committer John Wiegley! :)
 
-#### 2013/7/10 hledger-web 0.21.3
+##### 2013/7/10 hledger-web 0.21.3
 
   - drop yesod-platform dependency, it is not worthwhile. The other
     yesod dependencies are currently without version ranges, so cabal
     install might require --constraint to restrict them in some cases.
 
-#### 2013/6/23 hledger 0.21.3
+##### 2013/6/23 hledger 0.21.3
 
   - csv: fix wrong application of multiple assignments in a conditional block
 
-#### 2013/6/4 hledger 0.21.2
+##### 2013/6/4 hledger 0.21.2
 
   - web: fix a build failure
 
-#### 2013/6/3 hledger 0.21.1
+##### 2013/6/3 hledger 0.21.1
 
   - web: show proper Y-values in register chart (fixes [#122](http://bugs.hledger.org/122))
   - web: avoid trailing commas in register chart values, in case of trouble with IE
 
-## 2013/6/1 hledger 0.21
+### 2013/6/1 hledger 0.21
 
 Bugs fixed:
 
@@ -3227,12 +3137,12 @@ Documentation and infrastructure:
 
   - add basic cabal test suites for hledger-lib and hledger
 
-#### 2013/5/4 hledger 0.20.0.1
+##### 2013/5/4 hledger 0.20.0.1
 
   * web: require at least version 1.1.7 of yesod-core to avoid a potential build error
   * Update the bug tracker and source repository links on hackage
 
-## 2013/5/1 hledger 0.20
+### 2013/5/1 hledger 0.20
 
 Bugs fixed:
 
@@ -3326,19 +3236,19 @@ Release contributors:
 <!-- Commits since last release: 105 -->
 
 
-#### 2012/11/24 hledger-web 0.19.3
+##### 2012/11/24 hledger-web 0.19.3
 
   * web: fix "Prelude.read: no parse" errors with GHC >= 7.6
   * web & lib refactoring
 
-## 2012/11/16 hledger-web 0.19
+### 2012/11/16 hledger-web 0.19
 
   * builds with yesod 1.1.3
   * obeys command-line query options at startup again
   * the autogenerated session file is now a dot file
     (.hledger-web_client_session.aes)
 
-#### 2012/11/16 hledger 0.19.1
+##### 2012/11/16 hledger 0.19.1
 
   * [87](http://bugs.hledger.org/87): fix an arithmetic and transaction balancing bug with multiple
     total-priced amounts ( @@ PRICE )
@@ -3346,7 +3256,7 @@ Release contributors:
     lot price declarations ( {= PRICE} )
 
 
-## 2012/10/21 hledger 0.19
+### 2012/10/21 hledger 0.19
 
 [announcement](http://thread.gmane.org/gmane.comp.finance.ledger.general/4190)
 ***a much faster balance command, and support for the latest GHC and libs.***
@@ -3385,7 +3295,7 @@ Release contributors:
   * expose more utilities from CsvReader
   * remove ensureRulesFile debug trace
 
-## 2012/5/29 hledger 0.18
+### 2012/5/29 hledger 0.18
 
 [announcement](http://thread.gmane.org/gmane.comp.finance.ledger.general/3736)
 
@@ -3402,11 +3312,11 @@ Release contributors:
   * unicode is now handled properly on all supported GHC versions
   * API and internal cleanups
 
-#### 2012/3/3 hledger-web 0.17.1
+##### 2012/3/3 hledger-web 0.17.1
 
   * set more upper bounds to fix cabal install issues with latest packages
 
-## 2012/2/1 hledger 0.17
+### 2012/2/1 hledger 0.17
 
 [announcement](http://thread.gmane.org/gmane.comp.finance.ledger.general/3149)
 ***fixes bugs and updates dependencies***
@@ -3424,30 +3334,30 @@ Release contributors:
   * web: add form allowed blank account names ([#81](http://bugs.hledger.org/81))
   * chart, vty: hledger-chart and hledger-vty demoted to non-maintained extras for now
 
-#### 2011/10/26 hledger-web 0.16.5
+##### 2011/10/26 hledger-web 0.16.5
 
   * web: fix a ghc 6.12 incompatibility in Settings.hs
 
-#### 2011/10/24 hledger-web 0.16.4
+##### 2011/10/24 hledger-web 0.16.4
 
   * web: yet another cabal install fix, fix AppConfig name clash
 
-#### 2011/10/4 hledger-web 0.16.3
+##### 2011/10/4 hledger-web 0.16.3
 
   * web: another cabal install fix, disable favicon.ico since it's not easily embeddable
 
-#### 2011/10/4 hledger-web 0.16.2
+##### 2011/10/4 hledger-web 0.16.2
 
   * web: more cabal install fixes (remove bad path, add routes and models) ([#63](http://bugs.hledger.org/63))
 
-#### 2011/10/4 hledger 0.16.1
+##### 2011/10/4 hledger 0.16.1
 
   * parsing: show correct line number for posting parse errors ([#67](http://bugs.hledger.org/67))
   * web: declare static files as extra-source-files to fix cabal install ([#63](http://bugs.hledger.org/63))
   * web: add a threaded flag for debian ([#68](http://bugs.hledger.org/68))
   * web: fewer build warnings by default
 
-## 2011/10/1 hledger 0.16
+### 2011/10/1 hledger 0.16
 
 [announcement](http://thread.gmane.org/gmane.comp.finance.ledger.hledger/521)
 ***a stability/bugfix/polish release (which may become the pattern for
@@ -3476,7 +3386,7 @@ even-numbered releases in future.)***
   * web: adjust --help to indicate command-line arguments are not expected
   * web: don't bother running cli unit tests at startup
 
-#### 2011/9/12 hledger 0.15.2, hledger-web 0.15.3
+##### 2011/9/12 hledger 0.15.2, hledger-web 0.15.3
 
   * handle multiple filter patterns on the command-line again
   * don't pass an add-on command's name to it as an extra argument
@@ -3486,13 +3396,13 @@ even-numbered releases in future.)***
   * web: fix wrong transaction amount in account register with virtual postings
   * web: fix some invalid html
 
-#### 2011/9/2 hledger 0.15.1, hledger-web 0.15.2
+##### 2011/9/2 hledger 0.15.1, hledger-web 0.15.2
 
   * fix a parsec 2 incompatibility
   * web: add missing Hledger.Web.Options to cabal file
   * web: tighten up dependencies to reduce build problems
 
-## 2011/9/1 hledger 0.15
+### 2011/9/1 hledger 0.15
 
 [announcement](http://thread.gmane.org/gmane.comp.finance.ledger.general/2748)
 
@@ -3528,7 +3438,7 @@ even-numbered releases in future.)***
   * some old base 3 support has been dropped
   * the old -s flag has been dropped
 
-## 2011/4/22 hledger 0.14
+### 2011/4/22 hledger 0.14
 
 [announcement](http://thread.gmane.org/gmane.comp.finance.ledger.hledger/383)
 
@@ -3565,7 +3475,7 @@ Stats:
 189 unit & functional tests and 59% unit test coverage (hledger, hledger-lib packages).
 5540 lines of code (all packages).
 
-## 2010/12/6 hledger 0.13
+### 2010/12/6 hledger 0.13
 
 [announcement](http://thread.gmane.org/gmane.comp.finance.ledger.hledger/296)
 ***readline editing and tab completion
@@ -3598,14 +3508,14 @@ installable web interface, bugfixes, and a much-deliberated package split.***
   * transaction balancing is now based on display precision ([#23](http://bugs.hledger.org/23))
   * briefer, more informative usage error messages
 
-#### 2010/9/6 hledger 0.12.1
+##### 2010/9/6 hledger 0.12.1
 
 [announcement](http://thread.gmane.org/gmane.comp.finance.ledger.hledger/272)
 
   * web: fix account filtering breakage
   * installing: tighten up utf8-string dependency
 
-## 2010/9/5 hledger 0.12
+### 2010/9/5 hledger 0.12
 
   * web: new, better web ui; accounts are now a permanent sidebar; add form uses auto-completing combo fields
   * installing: fix a build error with parsec 3 ([#22](http://bugs.hledger.org/22))
@@ -3626,11 +3536,11 @@ installable web interface, bugfixes, and a much-deliberated package split.***
 Stats: 50 days and 90 commits since last release, now at 5741
 lines of code with 136 tests and 41% unit test coverage.
 
-#### 2010/07/17 hledger 0.11.1
+##### 2010/07/17 hledger 0.11.1
 
   * fix --version output
 
-## 2010/07/17 hledger 0.11
+### 2010/07/17 hledger 0.11
 
 [announcement](http://thread.gmane.org/gmane.comp.finance.ledger.hledger/253)
 
@@ -3679,7 +3589,7 @@ lines of code with 136 tests and 41% unit test coverage.
 Stats: 55 days and 136 commits since last release. Now at 5552
 lines of code with 132 tests and 54% unit test coverage.
 
-## 2010/05/23 hledger 0.10
+### 2010/05/23 hledger 0.10
 
 [announcement](http://thread.gmane.org/gmane.comp.finance.ledger.hledger/242)
 ***installation and bug fixes and api improvements***
@@ -3712,7 +3622,7 @@ lines of code with 132 tests and 54% unit test coverage.
 Stats: 44 days, 81 commits since last release. Now at 4904 lines of
 code including tests, 144 tests, 53% coverage.
 
-## 2010/04/10 hledger 0.9
+### 2010/04/10 hledger 0.9
 
 [announcement](http://thread.gmane.org/gmane.comp.finance.ledger.hledger/239)
 ***many bugfixes and small improvements, GHC 6.12 support, and a separate library package
@@ -3766,7 +3676,7 @@ to make building (h)ledger-compatible tools easier.***
 Stats: 58 days, 2 contributors, 102 commits since last release. Now
 at 3983 lines of non-test code, 139 tests, 53% coverage.
 
-## 2010/02/11 hledger 0.8
+### 2010/02/11 hledger 0.8
 
 [announcement](http://thread.gmane.org/gmane.comp.finance.ledger.hledger/210)
 ***Bug fixes, refactoring and Hi-Res Graphical Charts.***
@@ -3799,7 +3709,7 @@ at 3983 lines of non-test code, 139 tests, 53% coverage.
 Stats: 62 days, 2 contributors, 76 commits since last release. Now
 at 3464 lines of non-test code, 97 tests, 53% test coverage.
 
-## 2009/12/11 hledger 0.7
+### 2009/12/11 hledger 0.7
 
 [announcement](http://thread.gmane.org/gmane.comp.finance.ledger.hledger/193)
 
@@ -3841,12 +3751,12 @@ at 3464 lines of non-test code, 97 tests, 53% test coverage.
 Stats: 60 days, 1 contributor, 50 commits since last release. Now
 at 3377 lines of non-test code, 97 tests, 53% test coverage.
 
-#### 2009/06/22 hledger 0.6.1
+##### 2009/06/22 hledger 0.6.1
 
   * avoid use of exitSuccess which was breaking ghc 6.8/base 3
     compatibility (issue [#2](http://bugs.hledger.org/2))
 
-## 2009/06/13 hledger 0.6
+### 2009/06/13 hledger 0.6
 
 [announcement](http://thread.gmane.org/gmane.comp.finance.ledger.general/1215)
 ***Some pre-built binaries are now available. cabal install works on gnu/linux, mac and windows. Hurrah!***
@@ -3885,12 +3795,12 @@ Release stats:
   * Performance: similar
     (http://hledger.org/profs/200906131120.bench)
 
-#### 2009/05/23 hledger 0.5.1
+##### 2009/05/23 hledger 0.5.1
 
   * two fixes: really disable vty flag by default, and include
     ConvertCommand in cabal file
 
-## 2009/05/23 hledger 0.5
+### 2009/05/23 hledger 0.5
 
 [announcement](http://thread.gmane.org/gmane.comp.finance.ledger.general/1181)
 
@@ -3933,7 +3843,7 @@ Release stats:
   * Tests: 76
   * Known errors: 0
 
-## 2009/04/03 hledger 0.4
+### 2009/04/03 hledger 0.4
 
 [announcement](http://thread.gmane.org/gmane.comp.finance.ledger.general/1097)
 ***There is also a new website at hledger.org, with screenshots (textual!),
@@ -3985,7 +3895,7 @@ Release stats:
   * Tests: 56
   * Known errors: 0
 
-## 2009/01/17 hledger 0.3
+### 2009/01/17 hledger 0.3
 
 [announcement](http://thread.gmane.org/gmane.comp.finance.ledger.hledger/67)
 
@@ -4021,7 +3931,7 @@ Release stats:
   * Tests: 58
   * Known errors: 1
 
-## 2008/11/23 hledger 0.2
+### 2008/11/23 hledger 0.2
 
 [announcement](http://thread.gmane.org/gmane.comp.finance.ledger.general/826)
 
@@ -4071,7 +3981,7 @@ Release stats:
   * Tests: 43
   * Known errors: 0
 
-## 2008/10/15 hledger 0.1
+### 2008/10/15 hledger 0.1
 
 [announcement](http://thread.gmane.org/gmane.comp.finance.ledger.general/775)
 ***I'm pleased to announce the first release of hledger, a command-line
