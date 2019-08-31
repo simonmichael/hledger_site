@@ -1,5 +1,7 @@
 # Tags tutorial
 
+Author: Robert Nielsen (hledger fan) with helpful input from Simon Michael
+
 Don’t be scared away from using tags in your hledger accounting this Halloween, or any other time for that matter. This is a tutorial on using tags with hledger, so if the idea of using tags has been haunting you, but you are not really sure how to use them, read on.
 Let’s start with a file showing someone’s Halloween hledger accounting:
  
@@ -106,8 +108,8 @@ $ hledger -f Halloween2.hledger register Expenses tag:Halloween
 Produces something like the following output (all the Expenses tagged “Halloween”):
 
 ```
-2016/09/25     ACME Costume           Liabilities:CreditCard  -$45.99              -$45.99
-2016/11/01     Medical Associates     Liabilities:CreditCard  -$80.00            -$125.99
+2016/09/25     ACME Costume           Liabilities:CreditCard   -$45.99          -$45.99
+2016/11/01     Medical Associates     Liabilities:CreditCard   -$80.00          -$125.99
 2016/12/15     West End Dentistry     Liabilities:CreditCard  -$160.00          -$285.99
 ```
 
@@ -237,7 +239,35 @@ Therefore, you will need something like the following, to find all the treats ra
 ```shell
 $ hledger -f Halloween3.hledger register tag:quality=”very good”
 ```
- 
+
+## Combining Tags and Comments
+
+What if you want both a tag and a comment in the same line? A tag goes in a comment, but what are the restrictions? Glad you asked that question!
+
+Answer: hledger tags go inside a comment, but the tag must come at the end of the comment.
+
+For example, you make a purchase of an inflatable turkey and want to include that fact in a comment. However, in the same line you also want to tag it as holiday:Thanksgiving. The correct order to do this first, the comment, then, the tag:
+
+```journal
+2016/09/26 ACME Holiday Supplies 
+  Expenses:Entertainment    $58.99 ; inflatable turkey holiday:Thanksgiving
+  Liabilities:CreditCard
+```
+
+## Multiple Tags
+
+Using the example above, let’s say that we want to track the wattage of any electrical items that we purchase. We have also decided that we want to use a tag for this purpose. However, we already have a tag (holiday:Thanksgiving). What can we do?
+
+Answer: hledger allows multiple tags, separated by commas. Therefore, our transaction can look like this:
+
+```journal
+2016/09/26 ACME Holiday Supplies  
+  Expenses:Entertainment    $58.99 ; holiday:Thanksgiving, wattage:200
+  Liabilities:CreditCard
+```
+
+If you put the comments after the tag, they become part of the tag value, and this can cause unwanted results. You do not want unwanted results when working with important data!
+
 ## Multiple Values per Tag
  
 Sometimes, it’s useful to have more than one value per tag. For example, you have a budget category for travel, something that looks like:
@@ -496,6 +526,8 @@ This tutorial has shown how to:
 -      Use tags with the register command to list only those expenses with a given tag
 -      Add values to tags
 -      Use tag values with the register command to list only those expenses a given tag with a given value
+-      Combine comments and tags in the same line
+-      Use multiple tags in the same line
 -      Use tag values in such a way that it works as if you had multiple values for one tag
 -      Use the --pivot option to total expenses by tag value
  
@@ -542,7 +574,26 @@ $ hledger -f Halloween3.hledger register tag:quality=”very good”
 ```
  
 Note that if your tag value has a space in it, you must do something such as put quotation marks around the entire tag value. If there are no spaces in your tag value, the quotation marks are optional.
- 
+
+### Combine comments and tags
+
+Write comments first, put tags at the end:
+
+```journal
+2016/10/31 Grocery Store   
+   Expenses     $3.52   ;  on sale today item:candy
+   Liabilities:CreditCard
+```
+
+### Use multiple tags on the same line
+
+Separate multiple tags with a comma:
+
+```journal
+2016/09/26 ACME Holiday Supplies  
+  Expenses:Entertainment    $58.99 ; holiday:Thanksgiving, wattage:200
+  Liabilities:CreditCard
+```
 ### Trick: Tag values can include multiple pieces of information
  
 ```journal
