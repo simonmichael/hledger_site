@@ -227,7 +227,7 @@ accounting.
 | Reddit:      | [/r/plaintextaccounting](https://www.reddit.com/r/plaintextaccounting/)                                                                                                                                           |
 | Hacker News: | [stories](https://hn.algolia.com/?query=hledger&sort=byDate&prefix&page=0&dateRange=all&type=story), [comments](https://hn.algolia.com/?query=hledger&sort=byDate&prefix=false&page=0&dateRange=all&type=comment) |
 | Mail list:   | [list.hledger.org](http://list.hledger.org), [hledger@googlegroups.com](mailto:hledger@googlegroups.com)                                                                                                          |
-| Issues:      | [bugs.hledger.org](http://bugs.hledger.org) (bugs), [issues.hledger.org](http://issues.hledger.org) (all), [open issues overview](CONTRIBUTING.html#open-issues)                                                |
+| Issues:      | [bugs.hledger.org](http://bugs.hledger.org) (bugs), [issues.hledger.org](http://issues.hledger.org) (all), [open issues overview](CONTRIBUTING.html#open-issues), [website issues](https://github.com/simonmichael/hledger_site/issues?utf8=%E2%9C%93&q=)    |
 | Other:       | [simon@joyful.com](mailto:simon@joyful.com)                                                                                                                                                                       |
 
 
