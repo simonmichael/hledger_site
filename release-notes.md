@@ -29,9 +29,9 @@ Changes in hledger-install.sh are shown
 
 ## 2019/03/01 hledger 1.14
 
-***inclusive balance assertions, commodities command, --invert option,
-JSON get/add support in hledger-web***
-([announcement](https://groups.google.com/d/topic/hledger/f4Mir3PLooI/discussion))
+**inclusive balance assertions, commodities command, --invert option,
+JSON get/add support in hledger-web**
+([mail](https://groups.google.com/d/topic/hledger/f4Mir3PLooI/discussion))
 
 ### project-wide changes 1.14
 
@@ -115,10 +115,10 @@ Jakub Zárybnický.
 
 ## 2019/02/01 hledger 1.13
 
-***Unified command CLI help/manuals, bash completions, docker support,
+**Unified command CLI help/manuals, bash completions, docker support,
 improved budget report, --transpose, new account types syntax, 
-usability & bug fixes.***
-([announcement](https://groups.google.com/d/topic/hledger/ffkwwkcHmmU/discussion))
+usability & bug fixes.**
+([mail](https://groups.google.com/d/topic/hledger/ffkwwkcHmmU/discussion))
 
 ### project-wide changes 1.13
 
@@ -274,12 +274,12 @@ Dmitry Astapov.
 
 ## 2018/12/02 hledger 1.12
 
-***Account type declarations,
+**Account type declarations,
 complete balance assertions,
 GHC 8.6 support,
 hledger-ui usability updates,
-misc fixes***
-([announcement](https://groups.google.com/d/topic/hledger/H7NYdvo0FeQ/discussion))
+misc fixes**
+([mail](https://groups.google.com/d/topic/hledger/H7NYdvo0FeQ/discussion))
 
 ### hledger cli 1.12
 
@@ -490,11 +490,11 @@ Nikhil Jha.
 
 ## 2018/9/30 hledger 1.11
 
-***Customisable account display order,
+**Customisable account display order,
 support for other delimiter-separated formats (eg semicolon-separated),
 new files and roi commands,
-fixes***
-([announcement](https://groups.google.com/d/topic/hledger/V62txFLaD_U/discussion))
+fixes**
+([mail](https://groups.google.com/d/topic/hledger/V62txFLaD_U/discussion))
 
 ### hledger cli 1.11
 
@@ -653,11 +653,11 @@ SpicyCat.
 
 ## 2018/6/30 hledger 1.10
 
-***hledger-web edit/upload/download and permissions,
+**hledger-web edit/upload/download and permissions,
 more expressive periodic transactions,
 more informative parse errors,
-misc fixes***
-([announcement](https://groups.google.com/forum/#!msg/hledger/SWFV2n6xMQA/Ss78nil8AQAJ))
+misc fixes**
+([mail](https://groups.google.com/forum/#!msg/hledger/SWFV2n6xMQA/Ss78nil8AQAJ))
 
 ### project-wide changes 1.10
 
@@ -794,13 +794,12 @@ Nana Amfo.
 
 ## 2018/3/31 hledger 1.9
 
-***Report cleanups,
+**Report cleanups,
 normal-positive reports,
 HTML output,
 account sort codes,
-budget improvements.***
-
-([announcement](https://groups.google.com/forum/#!topic/hledger/DifO6UbeKnU))
+budget improvements.**
+([mail](https://groups.google.com/forum/#!topic/hledger/DifO6UbeKnU))
 
 Release contributors:
 Simon Michael,
@@ -900,7 +899,7 @@ ignores --date2.
 
 ## 2017/12/31 hledger 1.5
 
-([announcement](https://groups.google.com/forum/#!topic/hledger/CyNifndzZxk))
+([mail](https://groups.google.com/forum/#!topic/hledger/CyNifndzZxk))
 
 Release contributors:
 Simon Michael,
@@ -1007,16 +1006,15 @@ Alvaro Fernando García.
 
 ## 2017/9/30 hledger 1.4
 
-***easy install script,
+**easy install script,
 simpler help commands,
 experimental addon commands now built in,
 new balancesheetequity/tags commands,
 new import command for easy CSV merging,
 print can detect new transactions,
 balance reports can sort by amount,
-cli conveniences***
-
-([announcement](https://groups.google.com/forum/#!topic/hledger/tdtkhchqg9k))
+cli conveniences**
+([mail](https://groups.google.com/forum/#!topic/hledger/tdtkhchqg9k))
 
 Release contributors:
 Simon Michael,
@@ -1241,12 +1239,11 @@ but with the extra advantage of not showing empty accounts)
 
 ## 2017/6/30 hledger 1.3
 
-***terminology/UI improvements for the status field,
+**terminology/UI improvements for the status field,
 selection/scrolling/movement improvements in hledger-ui,
 negative amounts shown in red,
-bugfixes.***
-
-([announcement](https://groups.google.com/d/msg/hledger/X4iR1wpaq0E/_v5BLQIXAgAJ))
+bugfixes.**
+([mail](https://groups.google.com/d/msg/hledger/X4iR1wpaq0E/_v5BLQIXAgAJ))
 
 Release contributors:
 Simon Michael,
@@ -1404,16 +1401,15 @@ Depends on hledger 1.3.
 
 ## 2017/3/31 hledger 1.2
 
-***new commands list,
+**new commands list,
 more powerful balancesheet/incomestatement/cashflow commands,
 more parseable print output,
 better --pivot, 
 basic automated postings and periodic transactions support,
 more and easier addons,
-bugfixes***
-
-<!-- ([announcement](http://thread.gmane.org/gmane.comp.finance.ledger.hledger/1267)) -->
-<!-- ([announcement](https://groups.google.com/d/topic/hledger/WgdTy3-a6sc/discussion))  -->
+bugfixes**
+<!-- ([mail](http://thread.gmane.org/gmane.comp.finance.ledger.hledger/1267)) -->
+<!-- ([mail](https://groups.google.com/d/topic/hledger/WgdTy3-a6sc/discussion))  -->
 
 Release contributors:
 Simon Michael,
@@ -1659,15 +1655,14 @@ Allow megaparsec 5.2 (fixes [#503](https://github.com/simonmichael/hledger/issue
 
 ## 2016/12/31 hledger 1.1
 
-***more robust file format detection,
+**more robust file format detection,
 integration of WIP ledger4 parser,
 balance assignments,
 hledger-ui --watch,
 hledger-iadd integration,
-bugfixes***
-
-<!-- ([announcement](http://thread.gmane.org/gmane.comp.finance.ledger.hledger/1267)) -->
-<!-- ([announcement](https://groups.google.com/d/topic/hledger/WgdTy3-a6sc/discussion))  -->
+bugfixes**
+<!-- ([mail](http://thread.gmane.org/gmane.comp.finance.ledger.hledger/1267)) -->
+<!-- ([mail](https://groups.google.com/d/topic/hledger/WgdTy3-a6sc/discussion))  -->
 
 Release contributors:
 Simon Michael, Johannes Gerer, Mykola Orliuk, Shubham Lagwankar.
@@ -1792,16 +1787,15 @@ Simon Michael, Johannes Gerer, Mykola Orliuk, Shubham Lagwankar.
 
 ## 2016/10/26 hledger 1.0
 
-***More hledger-ui features, 
+**More hledger-ui features, 
 better hledger-web layout,
 new hledger-api server, 
 new timedot format, 
 --pivot & --anon, 
 reorganized multi-format docs,
-built-in help.***
-
-<!-- ([announcement](http://thread.gmane.org/gmane.comp.finance.ledger.hledger/1267)) -->
-([announcement](https://groups.google.com/d/topic/hledger/WgdTy3-a6sc/discussion)) 
+built-in help.**
+<!-- ([mail](http://thread.gmane.org/gmane.comp.finance.ledger.hledger/1267)) -->
+([mail](https://groups.google.com/d/topic/hledger/WgdTy3-a6sc/discussion)) 
 
 Release contributors:
 Simon Michael, Dominik Süß, Thomas R. Koll, Moritz Kiefer,
@@ -2249,9 +2243,9 @@ Mitchell Rosen, Hans-Peter Deifel, Brian Scott, and Andrew Jones.
 ## 2008-2015 Pre-1.0
 ### 2015/10/30 hledger 0.27
 
-***New curses-style interface, market value reporting, wide characters, fast regex aliases, man pages***
-([announcement](http://thread.gmane.org/gmane.comp.finance.ledger.hledger/1267))
-<!-- [announcement](https://groups.google.com/forum/#!topic/hledger/3w7G0H9e7aE) -->
+**New curses-style interface, market value reporting, wide characters, fast regex aliases, man pages**
+([mail](http://thread.gmane.org/gmane.comp.finance.ledger.hledger/1267))
+<!-- [mail](https://groups.google.com/forum/#!topic/hledger/3w7G0H9e7aE) -->
 
 Release contributors:
 Simon Michael,
@@ -2385,9 +2379,9 @@ register:
 
 ### 2015/7/12 hledger 0.26
 
-<!-- [announcement](http://thread.gmane.org/gmane.comp.finance.ledger.hledger/N) -->
-<!-- [announcement](https://groups.google.com/forum/#!topic/hledger/k2Y_NYZGGJw) -->
-***Website & doc updates, account aliases, misc. bugfixes & cleanups, performance.***
+**Website & doc updates, account aliases, misc. bugfixes & cleanups, performance.**
+<!-- [mail](http://thread.gmane.org/gmane.comp.finance.ledger.hledger/N) -->
+<!-- [mail](https://groups.google.com/forum/#!topic/hledger/k2Y_NYZGGJw) -->
 
 Release contributors:
 Simon Michael,
@@ -2569,9 +2563,9 @@ Miscellaneous:
 
 ### 2015/4/7 hledger 0.25
 
-<!-- [announcement](http://thread.gmane.org/gmane.comp.finance.ledger.hledger/N) -->
-[announcement](https://groups.google.com/forum/#!topic/hledger/k2Y_NYZGGJw)
-***GHC 7.10 compatibility, terminal width awareness, useful averages and totals columns, and a more robust hledger-web add form.***
+**GHC 7.10 compatibility, terminal width awareness, useful averages and totals columns, and a more robust hledger-web add form.**
+<!-- [mail](http://thread.gmane.org/gmane.comp.finance.ledger.hledger/N) -->
+[mail](https://groups.google.com/forum/#!topic/hledger/k2Y_NYZGGJw)
 
 Release contributors:
 Simon Michael,
@@ -2675,13 +2669,13 @@ Ryan Desfosses,
 Gergely Risko,
 Gwern Branwen.
 
-<!-- [announcement](http://thread.gmane.org/gmane.comp.finance.ledger.hledger/N) -->
-***CSV export,
+**CSV export,
 a non-floating point number representation,
 more powerful account aliases,
 speedups,
 and
-a streamlined web UI.***
+a streamlined web UI.**
+<!-- [mail](http://thread.gmane.org/gmane.comp.finance.ledger.hledger/N) -->
 
 **User-visible changes in hledger since 0.23.3:**
 
@@ -2881,11 +2875,11 @@ Dependencies:
 
 ### 2014/5/1 hledger 0.23
 
-[announcement](http://thread.gmane.org/gmane.comp.finance.ledger.hledger/1028)
-***command-line fixes and polish, a new accounts
+**command-line fixes and polish, a new accounts
 command, and a number of changes to the balance command relating
 to --depth, --flat, and multicolumn mode, which I find has made it much
-more useful.***
+more useful.**
+[mail](http://thread.gmane.org/gmane.comp.finance.ledger.hledger/1028)
 
 Changes since 0.22.2:
 
@@ -3036,7 +3030,7 @@ Improved:
 
 ### 2013/12/13 hledger 0.22
 
-[announcement](http://thread.gmane.org/gmane.comp.finance.ledger.general/5333)
+[mail](http://thread.gmane.org/gmane.comp.finance.ledger.general/5333)
 
 New:
 
@@ -3258,8 +3252,8 @@ Release contributors:
 
 ### 2012/10/21 hledger 0.19
 
-[announcement](http://thread.gmane.org/gmane.comp.finance.ledger.general/4190)
-***a much faster balance command, and support for the latest GHC and libs.***
+**a much faster balance command, and support for the latest GHC and libs.**
+[mail](http://thread.gmane.org/gmane.comp.finance.ledger.general/4190)
 
   * hledger, hledger-lib: support GHC 7.6 and latest cmdargs, haskeline, split
   * balance report no longer has an O(n^2) slowdown with large numbers of accounts,
@@ -3297,7 +3291,7 @@ Release contributors:
 
 ### 2012/5/29 hledger 0.18
 
-[announcement](http://thread.gmane.org/gmane.comp.finance.ledger.general/3736)
+[mail](http://thread.gmane.org/gmane.comp.finance.ledger.general/3736)
 
   * web: hledger-web is now based on yesod 1.0
   * web: fix js error breaking second use of add form ([#72](http://bugs.hledger.org/72))
@@ -3318,8 +3312,8 @@ Release contributors:
 
 ### 2012/2/1 hledger 0.17
 
-[announcement](http://thread.gmane.org/gmane.comp.finance.ledger.general/3149)
-***fixes bugs and updates dependencies***
+**fixes bugs and updates dependencies**
+[mail](http://thread.gmane.org/gmane.comp.finance.ledger.general/3149)
 
   * support HP 2011.4.0.0
   * support and require cmdargs 0.9
@@ -3359,9 +3353,9 @@ Release contributors:
 
 ### 2011/10/1 hledger 0.16
 
-[announcement](http://thread.gmane.org/gmane.comp.finance.ledger.hledger/521)
-***a stability/bugfix/polish release (which may become the pattern for
-even-numbered releases in future.)***
+**a stability/bugfix/polish release (which may become the pattern for
+even-numbered releases in future.)**
+[mail](http://thread.gmane.org/gmane.comp.finance.ledger.hledger/521)
 
   * cli: strip the -- when calling add-on commands, so their options work ([#64](http://bugs.hledger.org/64))
   * cli: hledger ADDON --version now shows add-on command's version
@@ -3404,7 +3398,7 @@ even-numbered releases in future.)***
 
 ### 2011/9/1 hledger 0.15
 
-[announcement](http://thread.gmane.org/gmane.comp.finance.ledger.general/2748)
+[mail](http://thread.gmane.org/gmane.comp.finance.ledger.general/2748)
 
   * hledger's options are now modal, providing better help (using cmdargs)
   * hledger now lists and runs any hledger-* add-ons found in the user's path
@@ -3440,7 +3434,7 @@ even-numbered releases in future.)***
 
 ### 2011/4/22 hledger 0.14
 
-[announcement](http://thread.gmane.org/gmane.comp.finance.ledger.hledger/383)
+[mail](http://thread.gmane.org/gmane.comp.finance.ledger.hledger/383)
 
   * remove the specific process dependency that caused too many cabal install problems
   * treat arguments as possibly-encoded platform strings, do not assume UTF-8
@@ -3477,10 +3471,10 @@ Stats:
 
 ### 2010/12/6 hledger 0.13
 
-[announcement](http://thread.gmane.org/gmane.comp.finance.ledger.hledger/296)
-***readline editing and tab completion
+**readline editing and tab completion
 from Judah Jacobson, more ledger compatibility, a more robust and
-installable web interface, bugfixes, and a much-deliberated package split.***
+installable web interface, bugfixes, and a much-deliberated package split.**
+[mail](http://thread.gmane.org/gmane.comp.finance.ledger.hledger/296)
 
   * move web, vty, chart commands into separate hledger-web, hledger-vty,
     hledger-chart packages. This both simplifies (no more build flags) and
@@ -3510,7 +3504,7 @@ installable web interface, bugfixes, and a much-deliberated package split.***
 
 ##### 2010/9/6 hledger 0.12.1
 
-[announcement](http://thread.gmane.org/gmane.comp.finance.ledger.hledger/272)
+[mail](http://thread.gmane.org/gmane.comp.finance.ledger.hledger/272)
 
   * web: fix account filtering breakage
   * installing: tighten up utf8-string dependency
@@ -3542,7 +3536,7 @@ lines of code with 136 tests and 41% unit test coverage.
 
 ### 2010/07/17 hledger 0.11
 
-[announcement](http://thread.gmane.org/gmane.comp.finance.ledger.hledger/253)
+[mail](http://thread.gmane.org/gmane.comp.finance.ledger.hledger/253)
 
   * split --help, adding --help-options and --help-all/-H, and make
     it the default command
@@ -3591,8 +3585,8 @@ lines of code with 132 tests and 54% unit test coverage.
 
 ### 2010/05/23 hledger 0.10
 
-[announcement](http://thread.gmane.org/gmane.comp.finance.ledger.hledger/242)
-***installation and bug fixes and api improvements***
+**installation and bug fixes and api improvements**
+[mail](http://thread.gmane.org/gmane.comp.finance.ledger.hledger/242)
 
   * fix too-loose testpack dependency, missing safe dependency
   * fix ghc 6.12 compatibility with -fweb
@@ -3624,9 +3618,9 @@ code including tests, 144 tests, 53% coverage.
 
 ### 2010/04/10 hledger 0.9
 
-[announcement](http://thread.gmane.org/gmane.comp.finance.ledger.hledger/239)
-***many bugfixes and small improvements, GHC 6.12 support, and a separate library package
-to make building (h)ledger-compatible tools easier.***
+**many bugfixes and small improvements, GHC 6.12 support, and a separate library package
+to make building (h)ledger-compatible tools easier.**
+[mail](http://thread.gmane.org/gmane.comp.finance.ledger.hledger/239)
 
   * ghc 6.12 support
   * split off hledger-lib package, containing core types & utils
@@ -3678,8 +3672,8 @@ at 3983 lines of non-test code, 139 tests, 53% coverage.
 
 ### 2010/02/11 hledger 0.8
 
-[announcement](http://thread.gmane.org/gmane.comp.finance.ledger.hledger/210)
-***Bug fixes, refactoring and Hi-Res Graphical Charts.***
+**Bug fixes, refactoring and Hi-Res Graphical Charts.**
+[mail](http://thread.gmane.org/gmane.comp.finance.ledger.hledger/210)
 
   * parsing: in date=date2, use first date's year as a default for
     the second
@@ -3711,7 +3705,7 @@ at 3464 lines of non-test code, 97 tests, 53% test coverage.
 
 ### 2009/12/11 hledger 0.7
 
-[announcement](http://thread.gmane.org/gmane.comp.finance.ledger.hledger/193)
+[mail](http://thread.gmane.org/gmane.comp.finance.ledger.hledger/193)
 
   * price history support (first cut): P directives now work,
     though differently from ledger. Each posting amount takes its
@@ -3758,8 +3752,8 @@ at 3377 lines of non-test code, 97 tests, 53% test coverage.
 
 ### 2009/06/13 hledger 0.6
 
-[announcement](http://thread.gmane.org/gmane.comp.finance.ledger.general/1215)
-***Some pre-built binaries are now available. cabal install works on gnu/linux, mac and windows. Hurrah!***
+**Some pre-built binaries are now available. cabal install works on gnu/linux, mac and windows. Hurrah!**
+[mail](http://thread.gmane.org/gmane.comp.finance.ledger.general/1215)
 
   * now cabal-installable on unix, mac, and windows, with Haskell
     Platform
@@ -3802,7 +3796,7 @@ Release stats:
 
 ### 2009/05/23 hledger 0.5
 
-[announcement](http://thread.gmane.org/gmane.comp.finance.ledger.general/1181)
+[mail](http://thread.gmane.org/gmane.comp.finance.ledger.general/1181)
 
   * the vty flag is disabled by default again, to ease installation
     on windows
@@ -3845,11 +3839,11 @@ Release stats:
 
 ### 2009/04/03 hledger 0.4
 
-[announcement](http://thread.gmane.org/gmane.comp.finance.ledger.general/1097)
-***There is also a new website at hledger.org, with screenshots (textual!),
+**There is also a new website at hledger.org, with screenshots (textual!),
 a demo (will it survive!?), and docs (not too many!) ...
 I wrote it because I did not want to hack on c++ and because haskell seemed a good fit ...
-new happstack-based web interface.***
+new happstack-based web interface.**
+[mail](http://thread.gmane.org/gmane.comp.finance.ledger.general/1097)
 
   * new "web" command serves reports in a web browser (install with
     -f happs to build this)
@@ -3897,7 +3891,7 @@ Release stats:
 
 ### 2009/01/17 hledger 0.3
 
-[announcement](http://thread.gmane.org/gmane.comp.finance.ledger.hledger/67)
+[mail](http://thread.gmane.org/gmane.comp.finance.ledger.hledger/67)
 
   * count timelog sessions on the day they end, like ledger, for
     now
@@ -3933,7 +3927,7 @@ Release stats:
 
 ### 2008/11/23 hledger 0.2
 
-[announcement](http://thread.gmane.org/gmane.comp.finance.ledger.general/826)
+[mail](http://thread.gmane.org/gmane.comp.finance.ledger.general/826)
 
   * fix balance report totals when filtering by account
   * fix balance report selection of accounts when filtering by
@@ -3983,8 +3977,8 @@ Release stats:
 
 ### 2008/10/15 hledger 0.1
 
-[announcement](http://thread.gmane.org/gmane.comp.finance.ledger.general/775)
-***I'm pleased to announce the first release of hledger, a command-line
+[mail](http://thread.gmane.org/gmane.comp.finance.ledger.general/775)
+**I'm pleased to announce the first release of hledger, a command-line
 accounting tool similar to John Wiegley's c++ ledger. hledger generates
 simple ledger-compatible transaction & account balance reports from a
 plain text ledger file. It's simple to use, at least for techies.
@@ -3997,7 +3991,7 @@ enjoy a look. It is currently ~1100 lines of haskell excluding tests.
 My thanks to John Wiegley for help with compatibility and for his very
 useful ledger tool. I use it (and now, both of them) daily to track time
 and money. This is of course a hot topic around our planet. I hope you
-find it useful or intriguing.***
+find it useful or intriguing.**
 
 Release stats:
 
