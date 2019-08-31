@@ -74,7 +74,7 @@ hledger
    addons
    command-line-completion
    combining-comments-and-tags
-   editor-configuration
+   editors
    hledger-web-tips
    mobile-apps
    save-frequently-used-options
