@@ -253,7 +253,7 @@ For example, you make a purchase of an inflatable turkey and want to include tha
   Expenses:Entertainment    $58.99 ; inflatable turkey holiday:Thanksgiving
   Liabilities:CreditCard
 ```
-The second option is to end the tab with a comma. You can then put a comment after the comma.
+The second option is to end the tag with a comma. You can then put a comment after the comma.
 
 For example, we have the tag first (holiday:Thanksgiving) followed by a comma. After the comma is a comment (inflatable turkey).  
 
@@ -262,6 +262,8 @@ For example, we have the tag first (holiday:Thanksgiving) followed by a comma. A
   Expenses:Entertainment    $58.99 ; holiday:Thanksgiving, inflatable turkey
   Liabilities:CreditCard
 ```
+
+Note that if you put a comment after the tag without separating the tag and comment with a comma, the comment becomes part of the tag value, and this can cause unwanted results. You do not want unwanted results when working with important data!  
 
 Finally, it's possible to have a comment, followed by a tag, and as long as you end the tag in a comma, you can have additional comment after the tag.  
 
@@ -276,8 +278,6 @@ Answer: hledger allows multiple tags, separated by commas. Therefore, our transa
   Expenses:Entertainment    $58.99 ; holiday:Thanksgiving, wattage:200
   Liabilities:CreditCard
 ```
-
-If you put a comment after the tag without separating the tag and comment with a comma, the comment becomes part of the tag value, and this can cause unwanted results. You do not want unwanted results when working with important data!
 
 ## Multiple Values per Tag
  
