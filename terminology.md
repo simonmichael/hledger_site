@@ -5,7 +5,6 @@
 ### First, a basic hledger transaction with the parts named:
 
 ![hledger basic transaction, showing names of parts](https://github.com/RobertNielsen1/hledger/blob/master/hledger%20basic%20transaction%20--%20terms.png)
-(https://raw.githubusercontent.com/RobertNielsen1/hledger/master/hledger%20basic%20transaction%20--%20terms.png)
 
 ### Second, a more complicated hledger transaction with the parts named: 
 
