@@ -1,6 +1,6 @@
 # Tags tutorial
 
-Author: Robert Nielsen (hledger fan) with helpful input from Simon Michael
+Author: Robert Nielsen (hledger fan) with invaluable input from Simon Michael
 
 Don’t be scared away from using tags in your hledger accounting this Halloween, or any other time for that matter. This is a tutorial on using tags with hledger, so if the idea of using tags has been haunting you, but you are not really sure how to use them, read on.
 Let’s start with a file showing someone’s Halloween hledger accounting:
@@ -244,15 +244,26 @@ $ hledger -f Halloween3.hledger register tag:quality=”very good”
 
 What if you want both a tag and a comment in the same line? A tag goes in a comment, but what are the restrictions? Glad you asked that question!
 
-Answer: hledger tags go inside a comment, but the tag must come at the end of the comment.
+Answer: hledger tags go inside a comment, and there are two options. First, the tag can go at the end of the comment.  
 
-For example, you make a purchase of an inflatable turkey and want to include that fact in a comment. However, in the same line you also want to tag it as holiday:Thanksgiving. The correct order to do this first, the comment, then, the tag:
+For example, you make a purchase of an inflatable turkey and want to include that fact in a comment. However, in the same line you also want to tag it as holiday:Thanksgiving. One option is to write the comment followed by the tag:  
 
 ```journal
 2016/09/26 ACME Holiday Supplies 
   Expenses:Entertainment    $58.99 ; inflatable turkey holiday:Thanksgiving
   Liabilities:CreditCard
 ```
+The second option is to end the tab with a comma. You can then put a comment after the comma.
+
+For example, we have the tag first (holiday:Thanksgiving) followed by a comma. After the comma is a comment (inflatable turkey).  
+
+```journal
+2016/09/26 ACME Holiday Supplies 
+  Expenses:Entertainment    $58.99 ; holiday:Thanksgiving, inflatable turkey
+  Liabilities:CreditCard
+```
+
+Finally, it's possible to have a comment, followed by a tag, and as long as you end the tag in a comma, you can have additional comment after the tag.  
 
 ## Multiple Tags
 
@@ -577,13 +588,23 @@ Note that if your tag value has a space in it, you must do something such as put
 
 ### Combine comments and tags
 
-Write comments first, put tags at the end:
+Two options. The first is to write comments first, and put tags at the end:
 
 ```journal
 2016/10/31 Grocery Store   
    Expenses     $3.52   ;  on sale today item:candy
    Liabilities:CreditCard
 ```
+
+The second option is to put a comma after the tag, and then add a comment after the comma:     
+
+```journal
+2016/10/31 Grocery Store   
+   Expenses     $3.52   ;  item:candy, on sale today
+   Liabilities:CreditCard
+```
+
+You can even have comment, tag, comma, and comment.
 
 ### Use multiple tags on the same line
 
