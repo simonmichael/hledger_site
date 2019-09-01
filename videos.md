@@ -2,9 +2,28 @@
 
 ### hledger
 
-<!-- - [hledger fan Youtube channel](https://www.youtube.com/channel/UCZLxXTjOqLzq4z5Jy0AyWSQ), including: -->
-- [The Basics: An hledger Transaction](https://www.youtube.com/watch?v=SSz09ThShrs) (2m, 2019) <!-- may 29 -->  
-  hledger fan
+- [hledger fan Youtube channel](https://www.youtube.com/channel/UCZLxXTjOqLzq4z5Jy0AyWSQ), including: -->
+
+  - [hledger: untie your data with "nots"](https://www.youtube.com/watch?v=nMt5VxZv-78) (3m, 2019) <!-- aug 25 -->  
+    hledger fan (Robert Nielsen)  
+  
+  - [hledger: looking under the hood](https://www.youtube.com/watch?v=2Gw_9faB18c) (2m, 2019) <!-- aug 18 -->  
+    hledger fan (Robert Nielsen)  
+  
+  - [hledger basics: save keystrokes!](https://www.youtube.com/watch?v=Kg8u819XH4Y) (3m, 2019) <!-- aug 9 -->  
+    hledger fan (Robert Nielsen)  
+  
+  - [hledger Basics: Focus on Months](https://www.youtube.com/watch?v=U7XCbriMWGk) (3m, 2019) <!-- jun 16 -->  
+    hledger fan (Robert Nielsen)  
+  
+  - [The Basics: The hledger Register Command](https://www.youtube.com/watch?v=C75nM7lQzJY) (4m, 2019) <!-- jun 4 -->  
+    hledger fan (Robert Nielsen)  
+  
+  - [hledger Basics: 3 Must-Know Options for the Balance Command](https://www.youtube.com/watch?v=JZE5302SrtM) (3m, 2019) <!-- jun 30 -->  
+    hledger fan (Robert Nielsen)  
+  
+  - [The Basics: An hledger Transaction](https://www.youtube.com/watch?v=SSz09ThShrs) (2m, 2019) <!-- may 29 -->  
+    hledger fan (Robert Nielsen)  
   
 - [Simon Michael - Hands-on with hledger](https://www.youtube.com/watch?v=H_CdGzLbc7A) (2h, 2016)  <!-- sep 2 -->  
   Brainium Haskell meetup, Santa Monica.
