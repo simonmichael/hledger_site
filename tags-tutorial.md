@@ -277,7 +277,7 @@ Answer: hledger allows multiple tags, separated by commas. Therefore, our transa
   Liabilities:CreditCard
 ```
 
-If you put the comments after the tag, they become part of the tag value, and this can cause unwanted results. You do not want unwanted results when working with important data!
+If you put a comment after the tag without separating the tag and comment with a comma, the comment becomes part of the tag value, and this can cause unwanted results. You do not want unwanted results when working with important data!
 
 ## Multiple Values per Tag
  
