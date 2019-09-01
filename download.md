@@ -28,7 +28,7 @@ And please do [let us know](index.html#helpfeedback) or
 [update this page](https://github.com/simonmichael/hledger/blob/master/site/download.md)
 if you have any trouble.
 
-The current hledger release is **1.14.2**; here are the [release notes](release-notes).
+The current hledger release is **1.15**; here are the [release notes](release-notes).
 
 ## Binary packages
 
@@ -71,8 +71,8 @@ Or, you can install stack or cabal yourself and deal with them directly.
 |--------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |                                                                    |                                                                                                                                                                                                                                                                                                                                                                         |
 | [hledger-install.sh](https://github.com/simonmichael/hledger/blob/master/hledger-install/hledger-install.sh)<br><small>*Linux,&nbsp;Mac,&nbsp;WSL*</small> | <span style="font-size:medium;">**`curl -s https://raw.githubusercontent.com/simonmichael/hledger/master/hledger-install/hledger-install.sh -O`**<br>**`less hledger-install.sh`**&nbsp;&nbsp;&nbsp;&nbsp;*# satisfy yourself that the script is safe*<br>**`bash hledger-install.sh`**&nbsp;&nbsp;&nbsp;&nbsp;*# runs stack or cabal, installing stack if needed*</span> |
-| [stack](https://haskell.fpcomplete.com/get-started)<br><small>*Linux,&nbsp;Mac,&nbsp;Windows*</small>          | <span style="font-size:medium;">**`stack install --resolver=lts-14.1 hledger hledger-web hledger-ui --verbosity=error`**</span>&nbsp;&nbsp;&nbsp;&nbsp;*# installs GHC if needed.*                                                                                                                                                                                              |
-| [cabal](https://www.haskell.org/cabal)<br><small>*Linux,&nbsp;Mac,&nbsp;Windows*</small>          | <span style="font-size:medium;">**`cabal v2-update && cabal v2-install hledger-1.14.2 hledger-web-1.14.1 hledger-ui-1.14.2`**</span>                                                                                                                                                                                                                                    |
+| [stack](https://haskell.fpcomplete.com/get-started)<br><small>*Linux,&nbsp;Mac,&nbsp;Windows*</small>          | <span style="font-size:medium;">**`stack install --resolver=lts-14.4 hledger-1.15 hledger-web-1.15 hledger-ui-1.15 --verbosity=error`**</span>&nbsp;&nbsp;&nbsp;&nbsp;*# installs GHC if needed.*                                                                                                                                                                                              |
+| [cabal](https://www.haskell.org/cabal)<br><small>*Linux,&nbsp;Mac,&nbsp;Windows*</small>          | <span style="font-size:medium;">**`cabal v2-update && cabal v2-install hledger-1.15 hledger-web-1.15 hledger-ui-1.15`**</span>                                                                                                                                                                                                                                    |
 
 On Windows, hledger-ui is not available and should be omitted from the commands above (except, it probably works in WSL).
 
@@ -188,11 +188,11 @@ After a successful build and install, you should be able to run the
 hledger tools (whichever ones you installed) and see the expected versions:
 
   `$`**`hledger --version`**\
-  `hledger 1.14.2`\
+  `hledger 1.15`\
   `$`**`hledger-ui --version`**\
-  `hledger-ui 1.14.2`\
+  `hledger-ui 1.15`\
   `$`**`hledger web --version`**\
-  `hledger-web 1.14.1`\
+  `hledger-web 1.15`\
   `$`**`hledger iadd --version`**\
   `This is hledger-iadd version 1.3.9`
 
@@ -219,7 +219,7 @@ This will build and install all of the main hledger tools using stack:
 cabal users may find the `cabal-install.sh` or `cabal.project` files useful.
 
 The --version output of development builds has a .99 suffix meaning "dev".
-So 1.14.99 means "1.15-dev", the in-development version of 1.15.
+So 1.15.99 means "1.16-dev", the in-development version of 1.16.
 
 ### Building the development version with docker
 
