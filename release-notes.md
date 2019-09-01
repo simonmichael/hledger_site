@@ -1,10 +1,6 @@
 # Release notes
 
 <!-- 
-The release notes collect user-visible changes from the changelogs.
-The older releases show changelog-level detail and should probably be
-thinned out.
-
 In the release headings, dates appear first to keep them out of the
 permalink urls, though it's not ideal for readability. The text part
 ("hledger") is needed for stable urls.
@@ -16,19 +12,194 @@ unstable urls.
 Releases before 1.0 are grouped under a parent heading to avoid
 dominating the site's sidebar.
 
+The older releases show changelog-level detail and should probably be
+thinned out.
+
 -->
 <style>
-h2 { margin-top:4em; }
+h2, h2:last-child > h3 { margin-top:4em; }
 </style>
 
-Major releases are shown below. 
-Minor release notes can be seen in the package changelogs:
-[hledger-lib](http://hackage.haskell.org/package/hledger-lib-1.14.1/changelog),
-[hledger](http://hackage.haskell.org/package/hledger-1.14.2/changelog),
-[hledger-ui](http://hackage.haskell.org/package/hledger-ui-1.14.2/changelog),
-[hledger-web](http://hackage.haskell.org/package/hledger-web-1.14.1/changelog).
+Major releases and user-visible changes, collected from the changelogs (
+[hledger-lib](http://hackage.haskell.org/package/hledger-lib/changelog),
+[hledger](http://hackage.haskell.org/package/hledger/changelog),
+[hledger-ui](http://hackage.haskell.org/package/hledger-ui/changelog),
+[hledger-web](http://hackage.haskell.org/package/hledger-web/changelog)
+).
 Changes in hledger-install.sh are shown
 [here](https://github.com/simonmichael/hledger/commits/master/hledger-install/hledger-install.sh).
+
+
+
+## 2019/09/01 hledger 1.15
+
+**new website, faster and more flexible valuation, more accurate close command,
+tags --values, new descriptions/payees/notes/diff commands, misc. fixes.**
+([mail](https://groups.google.com/d/topic/hledger/ZIuHR_Gv7o8/discussion))
+
+### project-wide changes 1.15
+
+- new unified website: hledger.org now has its own git repo, has
+  absorbed the github wiki, and is generated with Sphinx.
+
+- hledger-api is now mothballed. Its functionality is included in hledger-web.
+
+- hledger-install.sh: bump to lts-14.4, hledger 1.15, drop
+  hledger-api, now also works on FreeBSD 12.
+
+- Wine has been added to the list of install options.
+
+- Dmitry Astapov's hledger docker image is now based on the "haskell" image.
+
+- Andreas Pauley's hledger-makeitso has been renamed to hledger-flow.
+
+- bin/ addon scripts: hledger-swap-dates added; hledger-check,
+  hledger-smooth updated. (#1072)
+
+- shell-completion scripts: updated
+
+- github: FUNDING.yml / sponsor button configured
+
+- tools: generatejournal updates: vary amount, make reports with fewer
+  zeroes, start from a fixed year to keep tests stable, also generate
+  P records. (#999)
+
+- tools: make, shake, CI: misc. updates
+
+- doc: add a README for the functional tests, linked from contrib guide
+
+### hledger cli 1.15
+
+- There is a new valuation option `--value=TYPE[,COMM]`, with
+  backwards-compatible `-B/--cost`, `-V/--market`, `-X/--exchange=COMM`
+  variants. These provide control over valuation date (#329), and
+  inference of indirect market prices (similar to Ledger's -X) (#131).
+  Experimental.
+  
+- Market valuation (-V/-X/--value) is now much faster (#999):
+
+      +-------------------------------------------++--------------+--------------+
+      |                                           || hledger-1.14 | hledger-1.15 |
+      +===========================================++==============+==============+
+      | -f examples/10000x1000x10.journal bal -Y  ||         2.43 |         2.44 |
+      | -f examples/10000x1000x10.journal bal -YV ||        44.91 |         6.48 |
+      | -f examples/10000x1000x10.journal reg -Y  ||         4.60 |         4.15 |
+      | -f examples/10000x1000x10.journal reg -YV ||        61.09 |         7.21 |
+      +-------------------------------------------++--------------+--------------+
+
+- How date options like `-M` and `-p` interact has been updated and clarified.
+  (Jakob Schöttl) (#1008, #1009, #1011)
+
+- Restore `--aux-date` and `--effective` as `--date2` aliases (#1034).
+  These Ledger-ish spellings were dropped over the years, to improve
+  `--help`'s layout. Now we support them again, as semi-hidden flags
+  (`--help` doesn't list them, but they are mentioned in `--date2`'s help).
+
+#### commands
+
+- add, web: on Windows, trying to add transactions to a file path
+  containing trailing periods (eg `hledger add -f  Documents.\.hledger.journal`) 
+  now gives an error, since this could cause data loss otherwise (#1056).
+  This affects the add command and hledger-web's add form.
+
+- bal: --budget: don't always convert to cost.
+
+- bal: --budget: don't show a percentage when budgeted and actual
+  amounts are in different commodities.
+
+- bal/bs/bse: `-H/--historical` or `--cumulative` now disables `-T/--row-total` (#329).
+  Multiperiod balance reports which show end balances (eg, `bal -MH` or `bs -M`)
+  no longer show a Totals column, since summing end balances generally
+  doesn't make sense.
+
+- bs: show end date(s) in title, not transactions date span (#1078)
+  Compound balance reports showing ending balances (eg balancesheet),
+  now show the ending date (single column) or range of ending
+  dates (multi column) in their title. ,, (double comma) is used
+  rather than - (hyphen) to suggest a sequence of discrete dates
+  rather than a continuous span.
+
+- close: preserve transaction prices (costs) accurately (#1035).
+  The generated closing/opening transactions were collapsing/misreporting
+  the costs in balances involving multiple costs.
+  Now, each separately-priced amount gets its own posting.
+  (And only the last of these (for each commodity) gets a balance assertion.)
+  Also the equity posting's amount is now always shown explicitly, 
+  which in multicommodity situations means that multiple equity postings are shown. 
+  The upshot is that a balance -B report will be unchanged after
+  the closing & opening transactions generated by the close command.
+
+- descriptions, payees, notes commands added (Caleb Maclennan)
+
+- diff: Gabriel Ebner's hledger-diff is now a built in command,
+  and https://github.com/gebner/hledger-diff is deprecated.
+
+- help: don't require a journal file
+
+- print: now also canonicalises the display style of balance assertion amounts (#1042)
+
+- reg: show negative amounts in red, like balance and Ledger
+
+- reg: fix `--average`, broken since 1.12 (#1003)
+
+- stats: show count of market prices (P directives), and the commodities covered
+
+- tags: add --values flag to list tag values.
+
+- tags: now runs much faster when there many tags
+
+#### journal format
+
+- Transactions and postings generated/modified by periodic transaction
+  rules and/or transaction modifier rules are now marked with
+  `generated-transaction`, `generated-posting`, and `modified` tags,
+  for easier troubleshooting and filtering.
+
+#### csv format
+
+- When interpolating CSV values, outer whitespace is now stripped.
+  This removes a potential snag in amount field assignments (#1051),
+  and hopefully is harmless and acceptable otherwise.
+
+- We no longer add inter-field spaces in CSV error messages,
+  which was misleading and not valid RFC-4180 CSV format.
+
+- CSV parse errors are human-readable again (broken since 1.11) (#1038)
+
+- CSV rules now allow the amount to be left unassigned if there is an
+  assignment to "balance", which generates a balance assignment. (#1000)
+
+### hledger-ui 1.15
+
+- uses hledger 1.15
+
+### hledger-web 1.15
+
+- --serve-api disables the usual server-side web UI (leaving only the API routes)
+
+- register page: account names are hyperlinked
+
+- ?sidebar= now hides the sidebar, same as ?sidebar=0
+
+- fix "_create_locale could not be located" error on windows 7 (#1039)
+
+- uses hledger 1.15
+
+### credits 1.15
+
+Release contributors:
+Simon Michael,
+Caleb Maclennan,
+Jakob Schöttl,
+Henning Thielemann,
+Dmitry Astapov,
+Ben Creasy,
+zieone,
+Boyd Kelly,
+Gabriel Ebner,
+Hans-Peter Deifel,
+Andreas Pauley.
+
 
 ## 2019/03/01 hledger 1.14
 
@@ -2244,6 +2415,7 @@ Mitchell Rosen, Hans-Peter Deifel, Brian Scott, and Andrew Jones.
 
 
 ## 2008-2015 Pre-1.0
+
 ### 2015/10/30 hledger 0.27
 
 **New curses-style interface, market value reporting, wide characters, fast regex aliases, man pages**
