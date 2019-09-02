@@ -73,7 +73,6 @@ hledger
 
    addons
    command-line-completion
-   combining-comments-and-tags
    editors
    hledger-web-tips
    mobile-apps
