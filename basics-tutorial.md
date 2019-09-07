@@ -8,21 +8,21 @@ by practicing, in small hands-on steps. You'll need:
    [line](http://write.flossmanuals.net/command-line/introduction).
    Or, the ability to ask for help on IRC.
 
-2. hledger. [Download](http://hledger.org/download.html) and install it if you haven't already.
+2. hledger. [Download](download.html) and install it if you haven't already.
 
 You'll learn the most if you master each step, in order.  Most
 steps give you a task with a clear goal; if not, your task is to run
 the examples and understand them.
 
 If you get stuck, find a problem, or have feedback, please report it on the
-[IRC channel or mail list](http://hledger.org/docs#helpfeedback),
+[IRC channel or mail list](index.html#help-feedback),
 or send a pull request for this page.
 
 Let's get started!
 
 ## Check your hledger installation
 
-Get a command prompt, and run hledger to check the version. It should be reasonably [up to date](http://hledger.org/release-notes.html). These exercises were last tested with this version:
+Get a command prompt, and run hledger to check the version. It should be reasonably [up to date](release-notes.html). These exercises were last tested with this version:
 
 ```shell
 $ hledger --version
@@ -32,7 +32,7 @@ hledger 1.9
 ## Locate your journal file with "hledger stats"
 
 hledger reads financial transactions from a "journal file" (so named because it represents a [General Journal](http://en.wikipedia.org/wiki/General_Journal)).
-The default journal file is in your home directory; check its path using the [stats](http://hledger.org/manual.html#stats) command.
+The default journal file is in your home directory; check its path using the [stats](hledger.html#stats) command.
 You should see something like:
 ```shell
 $ hledger stats
@@ -47,7 +47,7 @@ Most hledger commands read this file but can not change it; the `add` and `web` 
 
 ## Record a transaction with "hledger add"
 
-Follow the help and use the [add](http://hledger.org/manual.html#add) command to record your first transaction,
+Follow the help and use the [add](hledger.html#add) command to record your first transaction,
 an imaginary purchase at the supermarket.
 We'll go through this in detail. Later you'll learn other ways to enter data.
 
@@ -159,7 +159,7 @@ Commodities              : 1 ($)
 
 ## Show transactions with "hledger print"
 
-The [print](http://hledger.org/manual.html#print) command shows a tidied-up view of the transaction entries in your journal.
+The [print](hledger.html#print) command shows a tidied-up view of the transaction entries in your journal.
 Since there's just one so far, you should see:
 
 ```shell
@@ -308,7 +308,7 @@ $ hledger print
 
 ## Show postings and a running total with "hledger register"
 
-The [register](http://hledger.org/manual.html#register) command shows transactions in a different format. More precisely, it shows postings.
+The [register](hledger.html#register) command shows transactions in a different format. More precisely, it shows postings.
 Remember, a posting is an increase or decrease of some account by some amount, and a transaction contains two or more of them.
 Run `register` and compare with the output of `print` above. You should see:
 
@@ -367,7 +367,7 @@ To show the real-world account balance, edit your journal file and add this tran
 ```
 
 The other account name doesn't matter too much; `equity:opening balances` is conventional.
-(You could also use an [unbalanced transaction](http://hledger.org/manual.html#virtual-postings) for this if you prefer.)
+(You could also use an [unbalanced transaction](journal.html#virtual-postings) for this if you prefer.)
 Now the report looks like this, with an accurate running balance on each date (hledger calls this a *historical balance*):
 
 ```shell
@@ -380,7 +380,7 @@ $ hledger register assets
 ## Query expressions
 
 The account name argument above is an example of a
-[query expression](http://hledger.org/manual.html#queries), a search pattern which restricts a report to a subset of the data.
+[query expression](hledger.html#queries), a search pattern which restricts a report to a subset of the data.
 In this way  you can make very precise queries.
 
 Note that it is a case-insensitive regular expression which matches anywhere inside the account name.
@@ -389,7 +389,7 @@ So "`e`" would match both `expenses` and `assets`.
 And if you had an account named `other assets`, "`assets`" would also match that, so to match only the `assets`
 account you'd need a more precise pattern like "`^assets$`".
 (In a regular expression `^` means "match at the beginning" and `$` means "match at the end".)
-If this doesn't make sense, read a little about [regular expressions](http://hledger.org/manual.html#regular-expressions).
+If this doesn't make sense, read a little about [regular expressions](hledger.html#regular-expressions).
 
 Multiple query arguments are ANDed and ORed together in a fixed way - follow the link for details.
 Basically queries on the same field are ORed, and queries on different fields are ANDed.
@@ -416,7 +416,7 @@ $ hledger register date:2015/5/26- exp
 
 ## Show accounts and their balances with "hledger balance"
 
-The third of hledger's three core reporting commands is [balance](http://hledger.org/manual.html#balance).
+The third of hledger's three core reporting commands is [balance](hledger.html#balance).
 Use it to list all the accounts posted to, and their ending balance.
 You should see account balances agreeing with the final running total in the register reports above:
 
