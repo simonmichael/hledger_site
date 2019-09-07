@@ -55,10 +55,6 @@ The current hledger release is **1.15.2** ([release notes](release-notes)).
 These prebuilt binaries will install quickly:
 
 <table id="downloads">
-  <!-- <colgroup> -->
-  <!--   <col style="width: 50%" /> -->
-  <!--   <col style="width: 50%" /> -->
-  <!-- </colgroup> -->
   <tbody>
     <tr>
       <td colspan=2><div class="platform">Multiplatform</div></td>
@@ -112,6 +108,21 @@ These prebuilt binaries will install quickly:
       <td>
         <div class="command"></div>
         <div class="notes">Install Wine and use the Windows binary</div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="distro"><a href="https://sandstorm.io">Sandstorm</a></div>
+        <div class="notes">Cloud-hosted</div>
+        <div class="badges"><img alt="Sandstorm" src="https://img.shields.io/badge/Sandstorm_app-1.9.1-red.svg" /></div>
+      </td>
+      <td>
+        <div class="command"><a href="https://apps.sandstorm.io/app/8x12h6p0x0nrzk73hfq6zh2jxtgyzzcty7qsatkg7jfg2mzw5n90">HLedger Web app</a></div>
+        <div class="notes">
+          <!-- <span class=warnings> -->
+          <!--   [features needed](https://github.com/simonmichael/hledger/issues/425) -->
+          <!-- </span> -->
+        </div>
       </td>
     </tr>
     <tr>
@@ -239,24 +250,9 @@ These prebuilt binaries will install quickly:
         <div class="notes"></div>
       </td>
     </tr>
-    <tr>
-      <td colspan=2><div class="platform">Other</div></td>
-    </tr>
-    <tr>
-      <td>
-        <div class="distro"><a href="https://sandstorm.io">Sandstorm</a></div>
-        <div class="notes">Cloud software</div>
-        <div class="badges"><img alt="Sandstorm" src="https://img.shields.io/badge/Sandstorm_app-1.9.1-red.svg" /></div>
-      </td>
-      <td>
-        <div class="command"><a href="https://apps.sandstorm.io/app/8x12h6p0x0nrzk73hfq6zh2jxtgyzzcty7qsatkg7jfg2mzw5n90">HLedger Web app</a></div>
-        <div class="notes">
-          <!-- <span class=warnings> -->
-          <!--   [features needed](https://github.com/simonmichael/hledger/issues/425) -->
-          <!-- </span> -->
-        </div>
-      </td>
-    </tr>
+    <!-- <tr> -->
+    <!--   <td colspan=2><div class="platform">Other</div></td> -->
+    <!-- </tr> -->
   </tbody>
 </table>
 
