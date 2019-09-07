@@ -1,21 +1,44 @@
 # Download
 
 <style>
-table { margin-left:1em; }
-tr { /*border-top:thin solid #ddd;*/ border-bottom:thin solid #ddd; }
-div > p > strong > code { margin-left:1em; } /* top-level code lines */
-code { white-space:nowrap; }
-tr { vertical-align:top; }
-td { padding-bottom:.5em; padding-right:1em; }
-td:first-of-type { 
-  /* white-space:nowrap; */
-  /* width:1%; */
+table#downloads > tbody > tr { 
+  border-bottom:thin solid #ddd; 
 }
-a { white-space:nowrap; }
-.warnings {
-    display:inline-block;
-    font-style:italic;
-    font-size:small;
+table#downloads > tbody > tr > td { 
+  padding-top:0.5em;
+  padding-bottom:0.5em;
+}
+table#downloads td:first-child {
+  padding-right:1em;
+}
+/*
+table { 
+  border:thin solid black; 
+  max-width:50%;
+}
+td { 
+  overflow-x:scroll;
+}
+*/
+div.platform {
+  margin-top:1em;
+  font-size:big;
+  font-weight:bold;
+}
+div.distro {
+}
+div.command {
+  margin-top:1em;
+  font-weight:bold;
+  white-space:nowrap;
+}
+div.notes {
+  font-size:small;
+  font-style:italic;
+}
+div.badges {
+  font-size:small;
+  font-style:italic;
 }
 .warnings > a:before {
     content: " ⚠ ";
@@ -31,26 +54,211 @@ The current hledger release is **1.15.2** ([release notes](release-notes)).
 
 These prebuilt binaries will install quickly:
 
-|                                                                                                            |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-|------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <br><big>**Multiplatform**</big>                                                                           |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | <br><small>*Packaged&nbsp;version(s):*</small>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| [Nix](https://nixos.org/nix)<br><small>*Linux,&nbsp;Mac*</small>                                           | <span style="font-size:small;">**`nix-env -i -f https://github.com/NixOS/nixpkgs/archive/22fb70a.tar.gz -A hledger hledger-web hledger-ui`**<br>*On Linux, note <span class=warnings>[#1030](https://github.com/simonmichael/hledger/issues/1030), [#1033](https://github.com/simonmichael/hledger/issues/1033)</span>*</span>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | [![](https://img.shields.io/badge/Nix_package-1.15.2-brightgreen.svg)](https://hydra.nixos.org/search?query=hledger)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| [Docker](https://www.docker.com/products/docker-desktop)<br><small>*Linux,&nbsp;Mac,&nbsp;Windows*</small> | **`docker pull dastapov/hledger`**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | [![](https://img.shields.io/badge/Docker_image-1.15.1-red.svg)](https://hub.docker.com/r/dastapov/hledger)<br><small>[more..](https://hub.docker.com/search?q=hledger&type=image&sort=updated_at&order=desc)</small>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| [Homebrew](https://brew.sh)<br><small>*Linux,&nbsp;Mac,&nbsp;Windows*</small>                              | **`brew install hledger`**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | <!--[![](https://repology.org/badge/version-for-repo/homebrew/hledger.svg)]-->[![](https://img.shields.io/badge/Homebrew_formula-1.15.1-red.svg)](https://formulae.brew.sh/formula/hledger)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| [Wine](https://www.winehq.org)<br><small>*Linux,&nbsp;Mac,&nbsp;FreeBSD*</small>                           | <span style="font-size:small;">*Install Wine & use the Windows binary below*</span>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| <br><big>**Windows**</big>                                                                                 |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| Windows&nbsp;binaries                                                                                      | <code>**[hledger.zip](https://ci.appveyor.com/api/buildjobs/hm882buev9bjjd6i/artifacts/hledger.zip)**</code> <span style="font-size:small;">*from Appveyor CI*</span> <br>or <code>[latest dev build](https://ci.appveyor.com/api/projects/simonmichael/hledger/artifacts/hledger.zip?branch=master)</code> <span style="font-size:small;">*may fix Windows 7 <span class=warnings>[#1039](https://github.com/simonmichael/hledger/issues/1039)</span>*</span> <!-- <span class=warnings> [no hledger-ui](https://github.com/jtdaugherty/vty/pull/1#issuecomment-297143444),[doesn't work on old windows ?](https://github.com/simonmichael/hledger/issues/774),[many files in PATH causing hangs](https://github.com/simonmichael/hledger/issues/791) --><!-- ,[appveyor builds failing](https://github.com/simonmichael/hledger/issues/832) </span>--> | [![](https://img.shields.io/badge/Windows_binaries-1.15.2-brightgreen.svg)](https://ci.appveyor.com/project/simonmichael/hledger/builds/22955930/artifacts) <br>[![](https://img.shields.io/badge/Windows_binaries-nightly-brightgreen.svg)](https://ci.appveyor.com/project/simonmichael/hledger/build/artifacts)                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| <br><big>**GNU/Linux**</big>                                                                               |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| Arch                                                                                                       | **`pacman -S hledger hledger-ui hledger-web`**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | [![](https://repology.org/badge/version-for-repo/arch/hledger.svg)](https://www.archlinux.org/packages/?sort=&q=hledger)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| Gentoo                                                                                                     | **`sudo layman -a haskell && sudo emerge hledger hledger-ui hledger-web`**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | [![](https://img.shields.io/badge/Gentoo_package-1.14.2-red.svg)](https://gentoo.zugaina.org/Search?search=hledger)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| Debian                                                                                                     | **`sudo apt install hledger hledger-ui hledger-web`**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | [![Debian Unstable](https://repology.org/badge/version-for-repo/debian_unstable/hledger.svg)](https://packages.debian.org/unstable/hledger)<br>[![Debian Testing](https://repology.org/badge/version-for-repo/debian_testing/hledger.svg)](https://packages.debian.org/testing/hledger)<br>[![Debian Stable](https://repology.org/badge/version-for-repo/debian_stable/hledger.svg)](https://packages.debian.org/stable/hledger)<br>[![Debian Oldstable](https://repology.org/badge/version-for-repo/debian_oldstable/hledger.svg)](https://packages.debian.org/oldstable/hledger)<br><small>[more..](https://packages.debian.org/search?searchon=names&keywords=hledger)</small>                                                                                                                       |
-| Ubuntu                                                                                                     | **`sudo apt install hledger hledger-ui hledger-web`**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | [![Ubuntu 19.04](https://repology.org/badge/version-for-repo/ubuntu_19_04/hledger.svg)](https://packages.ubuntu.com/disco/hledger)<br>[![Ubuntu 18.10](https://repology.org/badge/version-for-repo/ubuntu_18_10/hledger.svg)](https://packages.ubuntu.com/cosmic/hledger)<br>[![Ubuntu 18.04](https://repology.org/badge/version-for-repo/ubuntu_18_04/hledger.svg)](https://packages.ubuntu.com/bionic/hledger)<br>[![Ubuntu 16.04](https://repology.org/badge/version-for-repo/ubuntu_16_04/hledger.svg)](https://packages.ubuntu.com/xenial/hledger)<br>[![Ubuntu 14.04](https://repology.org/badge/version-for-repo/ubuntu_14_04/hledger.svg)](https://packages.ubuntu.com/trusty/hledger)<br><small>[more..](https://packages.ubuntu.com/search?suite=all&searchon=names&keywords=hledger)</small> |
-| Fedora                                                                                                     | **`sudo dnf install hledger`**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | [![Fedora Rawhide](https://img.shields.io/badge/Fedora_Rawhide_package-1.12.1-red.svg)](https://apps.fedoraproject.org/packages/hledger/)<br>[![Fedora 32](https://img.shields.io/badge/Fedora_32_package-1.12.1-red.svg)](https://apps.fedoraproject.org/packages/hledger/)<br>[![Fedora 31](https://img.shields.io/badge/Fedora_31_package-1.12.1-red.svg)](https://apps.fedoraproject.org/packages/hledger/)<br>[![Fedora 30](https://img.shields.io/badge/Fedora_30_package-1.10-red.svg)](https://apps.fedoraproject.org/packages/hledger/)<br>[![Fedora 29](https://repology.org/badge/version-for-repo/fedora_29/hledger.svg)](https://apps.fedoraproject.org/packages/hledger/)<br><small>[more..](https://apps.fedoraproject.org/packages/s/hledger)</small>                              |
-| Void                                                                                                       | **`xbps-install -S hledger hledger-ui hledger-web`**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | [![Void Linux x86_64](https://repology.org/badge/version-for-repo/void_x86_64/hledger.svg)](https://voidlinux.org/packages/?q=hledger)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| <br><big>**BSD**</big>                                                                                     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| [OpenBSD&nbsp;WIP](https://github.com/jasperla/openbsd-wip#how-to-use-this-tree)                           | **`make -C /usr/ports/openbsd-wip/productivity/hledger install`**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | [![openbsd-wip port](https://img.shields.io/badge/openbsd--wip_port-1.10-red.svg)](https://github.com/jasperla/openbsd-wip/tree/master/productivity/hledger)<br><small>[more..](https://github.com/jasperla/openbsd-wip/tree/master/productivity)</small>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| <br><big>**Other**</big>                                                                                   |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| [Sandstorm](https://sandstorm.io)<br><small>*Community/private cloud platform*</small>                     | **[HLedger Web app](https://apps.sandstorm.io/app/8x12h6p0x0nrzk73hfq6zh2jxtgyzzcty7qsatkg7jfg2mzw5n90)** <!-- <br><span class=warnings>[features needed](https://github.com/simonmichael/hledger/issues/425)</span> -->                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | ![](https://img.shields.io/badge/Sandstorm_app-1.9.1-red.svg)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+<table id="downloads">
+  <!-- <colgroup> -->
+  <!--   <col style="width: 50%" /> -->
+  <!--   <col style="width: 50%" /> -->
+  <!-- </colgroup> -->
+  <tbody>
+    <tr>
+      <td colspan=2><div class="platform">Multiplatform</div></td>
+    </tr>
+    <tr>
+      <td>
+        <div class="distro"><a href="https://nixos.org/nix">Nix</a></div>
+        <div class="notes">Linux, Mac</div>
+        <div class="badges">
+          <a href="https://hydra.nixos.org/search?query=hledger"><img alt="Nix" src="https://img.shields.io/badge/Nix_package-1.15.2-brightgreen.svg" /></a>
+        </div>
+      </td>
+      <td>
+        <div class="command">nix-env -i -f https://github.com/NixOS/nixpkgs/archive/65000c.tar.gz -A hledger hledger-web hledger-ui</div>
+        <div class="notes">
+            On Linux, note <span class="warnings"><a href="https://github.com/simonmichael/hledger/issues/1030">#1030</a>, 
+            <a href="https://github.com/simonmichael/hledger/issues/1033">#1033</a>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="distro"><a href="https://www.docker.com/products/docker-desktop">Docker</a></div>
+        <div class="notes">Linux, Mac, Windows</div>
+        <div class="badges">
+          <a href="https://hub.docker.com/r/dastapov/hledger"><img alt="Docker" src="https://img.shields.io/badge/Docker_image-1.15.1-red.svg" /></a>
+          <a href="https://hub.docker.com/search?q=hledger&amp;type=image&amp;sort=updated_at&amp;order=desc">more..</a>
+        </div>
+      </td>
+      <td>
+        <div class="command">docker pull dastapov/hledger</div>
+      </td>
+    <tr>
+      <td>
+        <div class="distro"><a href="https://brew.sh">Homebrew</a></div>
+        <div class="notes">Linux, Mac, Windows</div>
+        <div class="badges">
+          <!--[![](https://repology.org/badge/version-for-repo/homebrew/hledger.svg)]-->
+          <a href="https://formulae.brew.sh/formula/hledger"><img alt="Homebrew" src="https://img.shields.io/badge/Homebrew-1.15.1-red.svg" /></a>
+        </div>
+      </td>
+      <td>
+        <div class="command">brew install hledger</div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="distro"><a href="https://www.winehq.org">Wine</a></div>
+        <div class="notes">Linux, Mac, FreeBSD</div>
+      </td>
+      <td>
+        <div class="command"></div>
+        <div class="notes">Install Wine and use the Windows binary</div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan=2><div class="platform">Windows</div></td>
+    </tr>
+    <tr>
+      <td>
+        <div class="distro">Appveyor builds</div>
+        <div class="badges">
+          <a href="https://ci.appveyor.com/project/simonmichael/hledger/builds/22955930/artifacts"><img alt="Windows release"" src="https://img.shields.io/badge/Windows_zip-1.15.2-brightgreen.svg" /></a>
+          <a href="https://ci.appveyor.com/project/simonmichael/hledger/build/artifacts"><img alt="Windows nightly" src="https://img.shields.io/badge/Windows_zip-nightly-brightgreen.svg" /></a>
+      </td>
+      <td>
+        <div class="command"><a href="https://ci.appveyor.com/api/buildjobs/hm882buev9bjjd6i/artifacts/hledger.zip">hledger.zip (release)</a></div>
+        <div class="notes"></div>
+        <div class="command"><a href="https://ci.appveyor.com/api/projects/simonmichael/hledger/artifacts/hledger.zip?branch=master">hledger.zip (dev)</a></div>
+        <div class="notes">
+          may fix Windows 7
+          <span class="warnings">
+            <a href="https://github.com/simonmichael/hledger/issues/1039">#1039</a>
+            <!-- [no hledger-ui](https://github.com/jtdaugherty/vty/pull/1#issuecomment-297143444), -->
+            <!-- [doesn't work on old windows ?](https://github.com/simonmichael/hledger/issues/774), -->
+            <!-- [many files in PATH causing hangs](https://github.com/simonmichael/hledger/issues/791), -->
+            <!-- [appveyor builds failing](https://github.com/simonmichael/hledger/issues/832) -->
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan=2><div class="platform">GNU/Linux</div></td>
+    </tr>
+    <tr>
+      <td>
+        <div class="distro">Arch</div>
+        <div class="badges">
+          <a href="https://www.archlinux.org/packages/?sort=&amp;q=hledger"><img alt="Arch" src="https://repology.org/badge/version-for-repo/arch/hledger.svg" /></a>
+        </div>
+      </td>
+      <td>
+        <div class="command">pacman -S hledger hledger-ui hledger-web</div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="distro">Gentoo</div>
+        <div class="badges">
+          <a href="https://gentoo.zugaina.org/Search?search=hledger"><img alt="Gentoo" src="https://img.shields.io/badge/Gentoo_package-1.14.2-red.svg" /></a>
+        </div>
+      </td>
+      <td>
+        <div class="command">sudo layman -a haskell &amp;&amp; sudo emerge hledger hledger-ui hledger-web</div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="distro">Debian</div>
+        <div class="badges">
+          <a href="https://packages.debian.org/unstable/hledger"><img src="https://repology.org/badge/version-for-repo/debian_unstable/hledger.svg" alt="Debian Unstable" /></a>
+          <a href="https://packages.debian.org/testing/hledger"><img src="https://repology.org/badge/version-for-repo/debian_testing/hledger.svg" alt="Debian Testing" /></a>
+          <a href="https://packages.debian.org/stable/hledger"><img src="https://repology.org/badge/version-for-repo/debian_stable/hledger.svg" alt="Debian Stable" /></a>
+          <a href="https://packages.debian.org/oldstable/hledger"><img src="https://repology.org/badge/version-for-repo/debian_oldstable/hledger.svg" alt="Debian Oldstable" /></a>
+          <a href="https://packages.debian.org/search?searchon=names&amp;keywords=hledger">more..</a>
+        </div>
+      </td>
+      <td>
+        <div class="command">sudo apt install hledger hledger-ui hledger-web</div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="distro">Ubuntu</div>
+        <div class="badges">
+          <a href="https://packages.ubuntu.com/disco/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_19_04/hledger.svg" alt="Ubuntu 19.04" /></a>
+          <a href="https://packages.ubuntu.com/cosmic/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_18_10/hledger.svg" alt="Ubuntu 18.10" /></a>
+          <a href="https://packages.ubuntu.com/bionic/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_18_04/hledger.svg" alt="Ubuntu 18.04" /></a>
+          <a href="https://packages.ubuntu.com/xenial/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_16_04/hledger.svg" alt="Ubuntu 16.04" /></a>
+          <a href="https://packages.ubuntu.com/trusty/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_14_04/hledger.svg" alt="Ubuntu 14.04" /></a>
+          <a href="https://packages.ubuntu.com/search?suite=all&amp;searchon=names&amp;keywords=hledger">more..</a>
+        </div>
+      </td>
+      <td>
+        <div class="command">sudo apt install hledger hledger-ui hledger-web</div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="distro">Fedora</div>
+        <div class="badges">
+          <a href="https://apps.fedoraproject.org/packages/hledger/"><img src="https://img.shields.io/badge/Fedora_Rawhide_package-1.12.1-red.svg" alt="Fedora Rawhide" /></a>
+          <a href="https://apps.fedoraproject.org/packages/hledger/"><img src="https://img.shields.io/badge/Fedora_32_package-1.12.1-red.svg" alt="Fedora 32" /></a>
+          <a href="https://apps.fedoraproject.org/packages/hledger/"><img src="https://img.shields.io/badge/Fedora_31_package-1.12.1-red.svg" alt="Fedora 31" /></a>
+          <a href="https://apps.fedoraproject.org/packages/hledger/"><img src="https://img.shields.io/badge/Fedora_30_package-1.10-red.svg" alt="Fedora 30" /></a>
+          <a href="https://apps.fedoraproject.org/packages/hledger/"><img src="https://repology.org/badge/version-for-repo/fedora_29/hledger.svg" alt="Fedora 29" /></a>
+          <a href="https://apps.fedoraproject.org/packages/s/hledger">more..</a>
+        </div>
+      </td>
+      <td>
+        <div class="command">sudo dnf install hledger</div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="distro">Void</div>
+        <div class="badges">
+          <a href="https://voidlinux.org/packages/?q=hledger"><img src="https://repology.org/badge/version-for-repo/void_x86_64/hledger.svg" alt="Void Linux x86_64" /></a>
+        </div>
+      </td>
+      <td>
+        <div class="command">xbps-install -S hledger hledger-ui hledger-web</div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan=2><div class="platform">BSD</div></td>
+    </tr>
+    <tr>
+      <td>
+        <div class="distro"><a href="https://github.com/jasperla/openbsd-wip#how-to-use-this-tree">OpenBSD WIP</a></div>
+        <div class="badges">
+          <a href="https://github.com/jasperla/openbsd-wip/tree/master/productivity/hledger"><img src="https://img.shields.io/badge/openbsd--wip_port-1.10-red.svg" alt="openbsd-wip port" /></a>
+          <a href="https://github.com/jasperla/openbsd-wip/tree/master/productivity">more..</a>
+        </div>
+      </td>
+      <td>
+        <div class="command">make -C /usr/ports/openbsd-wip/productivity/hledger install</div>
+        <div class="notes"></div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan=2><div class="platform">Other</div></td>
+    </tr>
+    <tr>
+      <td>
+        <div class="distro"><a href="https://sandstorm.io">Sandstorm</a></div>
+        <div class="notes">Cloud software</div>
+        <div class="badges"><img alt="Sandstorm" src="https://img.shields.io/badge/Sandstorm_app-1.9.1-red.svg" /></div>
+      </td>
+      <td>
+        <div class="command"><a href="https://apps.sandstorm.io/app/8x12h6p0x0nrzk73hfq6zh2jxtgyzzcty7qsatkg7jfg2mzw5n90">HLedger Web app</a></div>
+        <div class="notes">
+          <!-- <span class=warnings> -->
+          <!--   [features needed](https://github.com/simonmichael/hledger/issues/425) -->
+          <!-- </span> -->
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 <!-- <br><br><small>*Or: (nix-channel --update may be needed. CI [build][nix unstable linux builds] [issues][nix unstable mac builds] may cause failure/large downloads; check those links/try with --dry-run first)*</small> <br><span style="font-size:small;">**`nix-env -i hledger-1.14.2 hledger-ui-1.14.2 hledger-web-1.14.1`**</span> -->
 
