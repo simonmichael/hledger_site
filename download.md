@@ -52,7 +52,7 @@ The current hledger release is **1.15.2** ([release notes](release-notes)).
 
 ## Binary packages
 
-These prebuilt binaries will install quickly:
+<div>These prebuilt binaries will install quickly:</div><!-- reduce whitespace -->
 
 <table id="downloads">
   <tbody>
