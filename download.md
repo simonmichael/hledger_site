@@ -46,13 +46,14 @@ div.badges {
 }
 </style>
 
-Here are some ways to install hledger - choose one that suits you.
-And please do [report](index.html#helpfeedback) any trouble.
-The current hledger release is **1.15.2** ([release notes](release-notes)).
+Here are some ways to install hledger.
+[Binary packages](#binary-packages) will install quickly,
+or you can [run our install script, or build from source](#building-from-source).
+Please do [report](index.html#help-feedback) any trouble.
+The current hledger release is:
+**1.15.2** ([release notes](release-notes)).
 
 ## Binary packages
-
-<div>These prebuilt binaries will install quickly:</div><!-- reduce whitespace -->
 
 <table id="downloads">
   <tbody>
@@ -125,9 +126,8 @@ The current hledger release is **1.15.2** ([release notes](release-notes)).
         <div class="notes"></div>
         <div class="command"><a href="https://ci.appveyor.com/api/projects/simonmichael/hledger/artifacts/hledger.zip?branch=master">hledger.zip (dev)</a></div>
         <div class="notes">
-          may fix Windows 7
           <span class="warnings">
-            <a href="https://github.com/simonmichael/hledger/issues/1039">#1039</a>
+            <!-- <a href="https://github.com/simonmichael/hledger/issues/1039">#1039</a> -->
             <!-- [no hledger-ui](https://github.com/jtdaugherty/vty/pull/1#issuecomment-297143444), -->
             <!-- [doesn't work on old windows ?](https://github.com/simonmichael/hledger/issues/774), -->
             <!-- [many files in PATH causing hangs](https://github.com/simonmichael/hledger/issues/791), -->
@@ -163,6 +163,17 @@ The current hledger release is **1.15.2** ([release notes](release-notes)).
     </tr>
     <tr>
       <td>
+        <div class="distro">Void</div>
+        <div class="badges">
+          <a href="https://voidlinux.org/packages/?q=hledger"><img src="https://repology.org/badge/version-for-repo/void_x86_64/hledger.svg" alt="Void Linux x86_64" /></a>
+        </div>
+      </td>
+      <td>
+        <div class="command">xbps-install -S hledger hledger-ui hledger-web</div>
+      </td>
+    </tr>
+    <tr>
+      <td>
         <div class="distro">Debian</div>
         <div class="badges">
           <a href="https://packages.debian.org/unstable/hledger"><img src="https://repology.org/badge/version-for-repo/debian_unstable/hledger.svg" alt="Debian Unstable" /></a>
@@ -170,22 +181,6 @@ The current hledger release is **1.15.2** ([release notes](release-notes)).
           <a href="https://packages.debian.org/stable/hledger"><img src="https://repology.org/badge/version-for-repo/debian_stable/hledger.svg" alt="Debian Stable" /></a>
           <a href="https://packages.debian.org/oldstable/hledger"><img src="https://repology.org/badge/version-for-repo/debian_oldstable/hledger.svg" alt="Debian Oldstable" /></a>
           <a href="https://packages.debian.org/search?searchon=names&amp;keywords=hledger">more..</a>
-        </div>
-      </td>
-      <td>
-        <div class="command">sudo apt install hledger hledger-ui hledger-web</div>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div class="distro">Ubuntu</div>
-        <div class="badges">
-          <a href="https://packages.ubuntu.com/disco/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_19_04/hledger.svg" alt="Ubuntu 19.04" /></a>
-          <a href="https://packages.ubuntu.com/cosmic/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_18_10/hledger.svg" alt="Ubuntu 18.10" /></a>
-          <a href="https://packages.ubuntu.com/bionic/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_18_04/hledger.svg" alt="Ubuntu 18.04" /></a>
-          <a href="https://packages.ubuntu.com/xenial/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_16_04/hledger.svg" alt="Ubuntu 16.04" /></a>
-          <a href="https://packages.ubuntu.com/trusty/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_14_04/hledger.svg" alt="Ubuntu 14.04" /></a>
-          <a href="https://packages.ubuntu.com/search?suite=all&amp;searchon=names&amp;keywords=hledger">more..</a>
         </div>
       </td>
       <td>
@@ -210,13 +205,18 @@ The current hledger release is **1.15.2** ([release notes](release-notes)).
     </tr>
     <tr>
       <td>
-        <div class="distro">Void</div>
+        <div class="distro">Ubuntu</div>
         <div class="badges">
-          <a href="https://voidlinux.org/packages/?q=hledger"><img src="https://repology.org/badge/version-for-repo/void_x86_64/hledger.svg" alt="Void Linux x86_64" /></a>
+          <a href="https://packages.ubuntu.com/disco/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_19_04/hledger.svg" alt="Ubuntu 19.04" /></a>
+          <a href="https://packages.ubuntu.com/cosmic/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_18_10/hledger.svg" alt="Ubuntu 18.10" /></a>
+          <a href="https://packages.ubuntu.com/bionic/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_18_04/hledger.svg" alt="Ubuntu 18.04" /></a>
+          <a href="https://packages.ubuntu.com/xenial/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_16_04/hledger.svg" alt="Ubuntu 16.04" /></a>
+          <a href="https://packages.ubuntu.com/trusty/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_14_04/hledger.svg" alt="Ubuntu 14.04" /></a>
+          <a href="https://packages.ubuntu.com/search?suite=all&amp;searchon=names&amp;keywords=hledger">more..</a>
         </div>
       </td>
       <td>
-        <div class="command">xbps-install -S hledger hledger-ui hledger-web</div>
+        <div class="command">sudo apt install hledger hledger-ui hledger-web</div>
       </td>
     </tr>
     <tr>
@@ -245,7 +245,7 @@ The current hledger release is **1.15.2** ([release notes](release-notes)).
         <div class="badges"><img alt="Sandstorm" src="https://img.shields.io/badge/Sandstorm_app-1.9.1-red.svg" /></div>
       </td>
       <td>
-        <div class="command"><a href="https://apps.sandstorm.io/app/8x12h6p0x0nrzk73hfq6zh2jxtgyzzcty7qsatkg7jfg2mzw5n90">HLedger Web app</a></div>
+        <div class="command"><a href="https://apps.sandstorm.io/app/8x12h6p0x0nrzk73hfq6zh2jxtgyzzcty7qsatkg7jfg2mzw5n90">HLedger Web sandstorm app</a></div>
         <div class="notes">
           <!-- <span class=warnings> -->
           <!--   [features needed](https://github.com/simonmichael/hledger/issues/425) -->
@@ -255,8 +255,6 @@ The current hledger release is **1.15.2** ([release notes](release-notes)).
     </tr>
   </tbody>
 </table>
-
-<!-- <br><br><small>*Or: (nix-channel --update may be needed. CI [build][nix unstable linux builds] [issues][nix unstable mac builds] may cause failure/large downloads; check those links/try with --dry-run first)*</small> <br><span style="font-size:small;">**`nix-env -i hledger-1.14.2 hledger-ui-1.14.2 hledger-web-1.14.1`**</span> -->
 
 <a name="b"></a>
 
