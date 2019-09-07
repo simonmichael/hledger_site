@@ -93,7 +93,7 @@ The current hledger release is **1.15.2** ([release notes](release-notes)).
         <div class="notes">Linux, Mac, Windows</div>
         <div class="badges">
           <!--[![](https://repology.org/badge/version-for-repo/homebrew/hledger.svg)]-->
-          <a href="https://formulae.brew.sh/formula/hledger"><img alt="Homebrew" src="https://img.shields.io/badge/Homebrew-1.15.1-red.svg" /></a>
+          <a href="https://formulae.brew.sh/formula/hledger"><img alt="Homebrew" src="https://img.shields.io/badge/Homebrew-1.15.2-brightgreen.svg" /></a>
         </div>
       </td>
       <td>
