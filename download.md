@@ -329,11 +329,12 @@ On Windows, the 64-bit version of stack is recommended.
 ### Build tips
 
 - If you haven't built any Haskell code before, know that building
-  hledger could take 1-2G of disk, 1-2G of free memory, and perhaps up
-  to an hour (though usually much less).
+  hledger the first time could take 1-2G of disk, 1-2G of free memory,
+  and perhaps up to an hour (though usually much less).
+  Subsequent builds will be much faster.
 
-- It's fine to kill a build and restart it later, and subsequent
-  builds will be much faster.
+- It's fine to kill a build and restart it later, you won't lose
+  progress.
 
 - With stack or cabal (or nix, etc.) you can add `--dry-run` to the
   install command to see how much building is still to do.
@@ -362,23 +363,21 @@ On Windows, the 64-bit version of stack is recommended.
     </tr>
   </table>
 
-<a name="build-issues"></a><a name="windows-build-issues"></a>
+- Here are some known build issues/workarounds on certain platforms:
 
-Here are some known build issues/workarounds on certain platforms:
-
-<blockquote class="warnings">
-  <a href="https://github.com/simonmichael/hledger/issues/1030">nix: nix install on linux can fail with “cloning builder process: Operation not permitted”</a><br>
-  <a href="https://github.com/simonmichael/hledger/issues/1033">nix: on Linux, nix-installed hledger won’t handle non-ascii data</a><br>
-  <a href="https://github.com/simonmichael/hledger/issues/1039">windows: hledger-web fails to start on Windows 7</a><br>
-  <a href="https://github.com/jtdaugherty/vty/pull/1#issuecomment-297143444">windows: hledger-ui is not available</a><br>
-  <a href="https://github.com/well-typed/generics-sop/issues/93">windows: build hangs using GHC 8.6.3</a><br>
-  <a href="https://github.com/simonmichael/hledger/issues/961#issuecomment-471229644">windows: cross-environment non-ascii display issues</a><br>
-  <a href="https://wiki.archlinux.org/index.php/Haskell">arch: haskell build advice from Arch wiki</a><br>
-  <a href="https://github.com/commercialhaskell/stack/issues/3984">arch: No information found for ghc-8.4.2</a><br>
-  <a href="https://github.com/simonmichael/hledger/issues/709">freebsd 12: no cabal file found</a><br>
-  <a href="https://deftly.net/posts/2017-10-12-using-cabal-on-openbsd.html">openbsd 6: exec permission denied</a><br>
-  <a href="https://github.com/commercialhaskell/stack/issues/2822#issuecomment-318892816">openbsd: how to get stack</a><br>
-</blockquote>
+  <blockquote class="warnings">
+    <a href="https://github.com/simonmichael/hledger/issues/1030">nix: nix install on linux can fail with “cloning builder process: Operation not permitted”</a><br>
+    <a href="https://github.com/simonmichael/hledger/issues/1033">nix: on Linux, nix-installed hledger won’t handle non-ascii data</a><br>
+    <a href="https://github.com/simonmichael/hledger/issues/1039">windows: hledger-web fails to start on Windows 7</a><br>
+    <a href="https://github.com/jtdaugherty/vty/pull/1#issuecomment-297143444">windows: hledger-ui is not available</a><br>
+    <a href="https://github.com/well-typed/generics-sop/issues/93">windows: build hangs using GHC 8.6.3</a><br>
+    <a href="https://github.com/simonmichael/hledger/issues/961#issuecomment-471229644">windows: cross-environment non-ascii display issues</a><br>
+    <a href="https://wiki.archlinux.org/index.php/Haskell">arch: haskell build advice from Arch wiki</a><br>
+    <a href="https://github.com/commercialhaskell/stack/issues/3984">arch: No information found for ghc-8.4.2</a><br>
+    <a href="https://github.com/simonmichael/hledger/issues/709">freebsd 12: no cabal file found</a><br>
+    <a href="https://deftly.net/posts/2017-10-12-using-cabal-on-openbsd.html">openbsd 6: exec permission denied</a><br>
+    <a href="https://github.com/commercialhaskell/stack/issues/2822#issuecomment-318892816">openbsd: how to get stack</a><br>
+  </blockquote>
 
 <a name="c"></a>
 
@@ -470,7 +469,7 @@ $ hledger test <br>
 
 <br>
 
-Nicely done! Next, see the Getting Started docs in the sidebar, such
+Nicely done. Next, see the Getting Started docs in the sidebar, such
 as the **[Basics tutorial](basics-tutorial.html)**,
 or introduce yourself in the **[IRC channel/Matrix room](index.html#help-feedback)**.
 
