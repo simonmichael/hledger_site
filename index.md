@@ -220,15 +220,15 @@ accounting.
 
 ## Help/Feedback
 
-|              |                                                                                                                                                                                                                   |
-|--------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| IRC:         | [#hledger](http://irc.hledger.org) on Freenode                                                                                                                                                                    |
-| Twitter:     | [#hledger](https://twitter.com/search?q=%23hledger&src=typed_query&f=live), [#plaintextaccounting](https://twitter.com/search?q=%23plaintextaccounting&src=typed_query&f=live)                                    |
-| Reddit:      | [/r/plaintextaccounting](https://www.reddit.com/r/plaintextaccounting/)                                                                                                                                           |
-| Hacker News: | [stories](https://hn.algolia.com/?query=hledger&sort=byDate&prefix&page=0&dateRange=all&type=story), [comments](https://hn.algolia.com/?query=hledger&sort=byDate&prefix=false&page=0&dateRange=all&type=comment) |
-| Mail list:   | [list.hledger.org](http://list.hledger.org), [hledger@googlegroups.com](mailto:hledger@googlegroups.com)                                                                                                          |
-| Issues:      | [bugs.hledger.org](http://bugs.hledger.org) (bugs), [issues.hledger.org](http://issues.hledger.org) (all), [open issues overview](CONTRIBUTING.html#open-issues), [website issues](https://github.com/simonmichael/hledger_site/issues?utf8=%E2%9C%93&q=)    |
-| Other:       | [simon@joyful.com](mailto:simon@joyful.com)                                                                                                                                                                       |
+|              |                                                                                                                                                                                                                                                           |
+|--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| IRC (Chat)   | [#hledger](http://irc.hledger.org) on Freenode ([#freenode_#hledger:matrix.org](http://matrix.hledger.org) on Matrix)                                                                                                                                       |
+| Twitter:     | [#hledger](https://twitter.com/search?q=%23hledger&src=typed_query&f=live), [#plaintextaccounting](https://twitter.com/search?q=%23plaintextaccounting&src=typed_query&f=live)                                                                            |
+| Reddit:      | [/r/plaintextaccounting](https://www.reddit.com/r/plaintextaccounting/)                                                                                                                                                                                   |
+| Hacker News: | [stories](https://hn.algolia.com/?query=hledger&sort=byDate&prefix&page=0&dateRange=all&type=story), [comments](https://hn.algolia.com/?query=hledger&sort=byDate&prefix=false&page=0&dateRange=all&type=comment)                                         |
+| Mail list:   | [list.hledger.org](http://list.hledger.org), [hledger@googlegroups.com](mailto:hledger@googlegroups.com)                                                                                                                                                  |
+| Issues:      | [bugs.hledger.org](http://bugs.hledger.org) (bugs), [issues.hledger.org](http://issues.hledger.org) (all), [open issues overview](CONTRIBUTING.html#open-issues), [website issues](https://github.com/simonmichael/hledger_site/issues?utf8=%E2%9C%93&q=) |
+| Other:       | [simon@joyful.com](mailto:simon@joyful.com)                                                                                                                                                                                                               |
 
 
 <div id=dev class=contentbox>
