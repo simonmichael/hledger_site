@@ -60,7 +60,7 @@ div.badges {
 
 Here are some ways to install hledger.
 [Binary packages](#binary-packages) will install quickly,
-or you can [run our install script, or build from source](#building-from-source).
+or you can [run our install script, or build with stack/cabal](#building-from-source).
 Please do [report](index.html#help-feedback) any trouble.
 The current hledger release is:
 **1.15.2** ([release notes](release-notes)).
@@ -347,20 +347,18 @@ On Windows, the 64-bit version of stack is recommended.
   installed, the build will fail at the end with a link error such as
   `/bin/ld.gold: error: cannot find -ltinfo`. To solve this, use your
   system's package manager to install the appropriate system package,
-  and install hledger again.
-
-  Here are some of those C packages by platform; you can also do a web
-  search for the link error message. Please
-  [report](/index.html#help-feedback) any omissions:
+  and install hledger again. Here are some of those C packages by
+  platform; you can also do a web search for the link error message.
+  Please [report](/index.html#help-feedback) any omissions:
 
   <table>
     <tr>
       <td><div class="distro">Debian, Ubuntu:</div></td>
-      <td><div class="command"> sudo apt install -y libtinfo-dev </div></td>
+      <td><div class="command"> sudo apt install libtinfo-dev </div></td>
     </tr>
     <tr>
       <td><div class="distro">Fedora, RHEL:</div></td>
-      <td><div class="command"> sudo dnf install -y gmp-devel ncurses-devel </div></td>
+      <td><div class="command"> sudo dnf install gmp-devel ncurses-devel </div></td>
     </tr>
   </table>
 
@@ -386,7 +384,7 @@ Here are some known build issues/workarounds on certain platforms:
 
 ### Building the development version
 
-The master branch in hledger's git repo is stable enough for daily use,
+The master branch in hledger's github repo is suitable for daily use,
 and includes the [latest improvements](https://github.com/simonmichael/hledger/commits/master).
 You'll need [git](https://en.wikipedia.org/wiki/Git) and 
 [stack](https://haskell.fpcomplete.com/get-started) or [cabal](https://www.haskell.org/cabal/).
@@ -406,7 +404,7 @@ version of 1.16.
 
 ### Building the development version with Docker
 
-You can also the build development version in a Docker container which
+You can also build the development version in a Docker container which
 will take care of pulling all the necessary tools and dependencies:
 
 <div class="builder-command">
