@@ -68,7 +68,7 @@ The current hledger release is **1.15.2** ([release notes](release-notes)).
         </div>
       </td>
       <td>
-        <div class="command">nix-env -i -f https://github.com/NixOS/nixpkgs/archive/65000c.tar.gz -A hledger hledger-web hledger-ui</div>
+        <div class="command">nix-env -f https://github.com/NixOS/nixpkgs/archive/22fb70a.tar.gz -iA hledger hledger-web hledger-ui</div>
         <div class="notes">
             On Linux, note <span class="warnings"><a href="https://github.com/simonmichael/hledger/issues/1030">#1030</a>, 
             <a href="https://github.com/simonmichael/hledger/issues/1033">#1033</a>
