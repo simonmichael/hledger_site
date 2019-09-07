@@ -8,27 +8,39 @@ table#downloads > tbody > tr > td {
   padding-top:0.5em;
   padding-bottom:0.5em;
 }
-table#downloads td:first-child {
+table#downloads > tbody > tr > td:nth-child(2) { 
+  padding-top:1.5em;
+}
+div.section > table td:first-child {
   padding-right:1em;
 }
-/*
-table { 
-  border:thin solid black; 
-  max-width:50%;
-}
-td { 
-  overflow-x:scroll;
-}
-*/
 div.platform {
   margin-top:1em;
   font-size:big;
   font-weight:bold;
+  white-space:nowrap;
 }
 div.distro {
+  margin-right:1em;
 }
 div.command {
+  font-weight:bold;
+  white-space:nowrap;
+  margin-bottom:1em;
+}
+div.builder {
+  border-top:thin solid #ddd; 
+  padding-top:0.5em;
+  font-size:big;
+  font-weight:bold;
+  white-space:nowrap;
   margin-top:1em;
+}
+div.builder-text {
+  margin-top:1em;
+}
+div.builder-command {
+  margin:1em 0.5em 1em;
   font-weight:bold;
   white-space:nowrap;
 }
@@ -107,7 +119,6 @@ The current hledger release is:
         <div class="notes">Linux, Mac, FreeBSD</div>
       </td>
       <td>
-        <div class="command"></div>
         <div class="notes">Install Wine and use the Windows binary</div>
       </td>
     </tr>
@@ -262,174 +273,207 @@ The current hledger release is:
 
 You can build hledger wherever the Glasgow Haskell Compiler is supported.
 This can take a while, but it's normally a reliable process.
-Use one of the methods below to build the current hledger release.
-The hledger-install script requires only bash and installs the required tools.
-Or, you can install stack or cabal yourself and deal with them directly.
+Use one of the tools below to build the current hledger release.
+On Windows, hledger-ui is not available and should be omitted from the commands below (except in WSL).
 
-|                                                                    |                                                                                                                                                                                                                                                                                                                                                                         |
-|--------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|                                                                    |                                                                                                                                                                                                                                                                                                                                                                         |
-| [hledger-install.sh](https://github.com/simonmichael/hledger/blob/master/hledger-install/hledger-install.sh)<br><small>*Linux,&nbsp;Mac,&nbsp;WSL*</small> | <span style="font-size:medium;">**`curl -s https://raw.githubusercontent.com/simonmichael/hledger/master/hledger-install/hledger-install.sh -O`**<br>**`less hledger-install.sh`**&nbsp;&nbsp;&nbsp;&nbsp;*# satisfy yourself that the script is safe*<br>**`bash hledger-install.sh`**&nbsp;&nbsp;&nbsp;&nbsp;*# runs stack or cabal, installing stack if needed*</span> |
-| [stack](https://haskell.fpcomplete.com/get-started)<br><small>*Linux,&nbsp;Mac,&nbsp;Windows*</small>          | <span style="font-size:medium;">**`stack update && stack install --resolver=lts-14.3 hledger-lib-1.15.2 hledger-1.15.2 hledger-web-1.15 hledger-ui-1.15 --verbosity=error`**</span>                                                                                                                                                                                              |
-| [cabal](https://www.haskell.org/cabal)<br><small>*Linux,&nbsp;Mac,&nbsp;Windows*</small>          | <span style="font-size:medium;">**`cabal v2-update && cabal v2-install hledger-1.15.2 hledger-web-1.15 hledger-ui-1.15`**</span>                                                                                                                                                                                                                                    |
+<div class="builder">
+  <a href="https://github.com/simonmichael/hledger/blob/master/hledger-install/hledger-install.sh">hledger-install.sh</a>
+</div>
+<div class="notes">Linux, Mac, WSL</div>
+<div class="badges">
+  <img alt="installs" src="https://img.shields.io/badge/installs_hledger-1.15.2-brightgreen.svg" />
+</div>
+<div class="builder-text">
+  The hledger-install script requires only bash. 
+  It runs stack or cabal for you, installing stack if needed.
+  It's good practice to inspect the script and satisfy yourself that it's safe before running it.
+</div>
+<div class="builder-command">
+  curl -sO https://raw.githubusercontent.com/simonmichael/hledger/master/hledger-install/hledger-install.sh <br>
+  less hledger-install.sh <br>
+  bash hledger-install.sh
+</div>
 
-On Windows, hledger-ui is not available and should be omitted from the commands above (except, it probably works in WSL).
-
-#### Resource usage
-
-Building Haskell programs typically involves downloading and compiling and
-optimising a lot of Haskell libraries. 
-If you are doing it for the first time, know that building hledger could take 
-1-2G of disk, 1-2G of free memory, and up to an hour (though usually it's much less).
-It's fine to kill a build and restart it later;
-and your later builds will be much faster.
-
-If needed, you can save time/memory/disk space by omitting the
-[hledger-web](http://hackage.haskell.org/package/hledger-web) and
-[hledger-ui](http://hackage.haskell.org/package/hledger-ui) packages
-from the stack or cabal commands above.
-To estimate the build time remaining, add `--dry-run`.
-
-#### Using stack
-
+<div class="builder">
+  <a href="https://haskell.fpcomplete.com/get-started">stack</a>
+</div>
+<div class="notes">Linux, Mac, Windows</div>
+<div class="badges">
+  <img alt="installs" src="https://img.shields.io/badge/installs_hledger-1.15.2-brightgreen.svg" />
+</div>
+<div class="builder-text">
 The latest version of stack (2.1.3 as of 2019-07) will likely work best, so we recommend it.
-If you have an older version, you can usually upgrade quickly with `stack upgrade`.
-Versions older than 1.7.1 will definitely not work.
+If you have an older version, you can usually upgrade quickly with <code>stack upgrade</code>.
+Versions older than 1.7.1 will not work.
 On Windows, the 64-bit version of stack is recommended.
+</div>
+<div class="builder-command">
+  stack update <br>
+  stack install --resolver=lts-14.3 hledger-lib-1.15.2 hledger-1.15.2 hledger-web-1.15 hledger-ui-1.15 --silent
+</div>
 
-<!--
-Some other [add-on tools](/hledger.html#third-party-add-ons) like
-[hledger-api](http://hackage.haskell.org/package/hledger-api),
-[hledger-iadd](http://hackage.haskell.org/package/hledger-iadd),
-and [hledger-interest](http://hackage.haskell.org/package/hledger-interest)
-can be installed like so:
+<div class="builder">
+  <a href="https://www.haskell.org/cabal">cabal</a>
+</div>
+<div class="notes">Linux, Mac, Windows</div>
+<div class="badges">
+  <img alt="installs" src="https://img.shields.io/badge/installs_hledger-1.15.2-brightgreen.svg" />
+</div>
+<div class="builder-text">
+</div>
+<div class="builder-command">
+  cabal v2-update <br>
+  cabal v2-install hledger-1.15.2 hledger-web-1.15 hledger-ui-1.15
+</div>
 
-  **`stack install --resolver=lts-14.1 hledger-api hledger-interest hledger-iadd hledger-interest-1.5.3 hledger-iadd-1.3.9`**
--->
+### Build tips
 
-<!-- <a name="b3"></a> -->
+- If you haven't built any Haskell code before, know that building
+  hledger could take 1-2G of disk, 1-2G of free memory, and perhaps up
+  to an hour (though usually much less).
 
-<!-- #### cabal -->
+- It's fine to kill a build and restart it later, and subsequent
+  builds will be much faster.
 
-#### C libraries may be required
+- With stack or cabal (or nix, etc.) you can add `--dry-run` to the
+  install command to see how much building is still to do.
 
-A few C libraries, like terminfo, are required but not installed by the commands above.
-When such C libs are missing, the build will fail at the end with a link error 
-such as "/bin/ld.gold: error: cannot find -ltinfo".
-To solve this, just install the appropriate system package(s) and run the build command again. 
+- You may be able to save some time/memory/disk space by omitting the
+  [hledger-web](http://hackage.haskell.org/package/hledger-web) and
+  [hledger-ui](http://hackage.haskell.org/package/hledger-ui) packages
+  from the commands above.
 
-These package names vary by platform. If you don't see your platform below,
-do a web search for the link error message (and send updates for this list):
+- When certain required C libraries, like `terminfo`, are not
+  installed, the build will fail at the end with a link error such as
+  `/bin/ld.gold: error: cannot find -ltinfo`. To solve this, use your
+  system's package manager to install the appropriate system package,
+  and install hledger again.
 
-|                 |                                                   |
-|-----------------|---------------------------------------------------|
-| Debian, Ubuntu: | **`sudo apt install -y libtinfo-dev`**            |
-| Fedora, RHEL:   | **`sudo dnf install -y gmp-devel ncurses-devel`** |
+  Here are some of those C packages by platform; you can also do a web
+  search for the link error message. Please
+  [report](/index.html#help-feedback) any omissions:
+
+  <table>
+    <tr>
+      <td><div class="distro">Debian, Ubuntu:</div></td>
+      <td><div class="command"> sudo apt install -y libtinfo-dev </div></td>
+    </tr>
+    <tr>
+      <td><div class="distro">Fedora, RHEL:</div></td>
+      <td><div class="command"> sudo dnf install -y gmp-devel ncurses-devel </div></td>
+    </tr>
+  </table>
 
 <a name="build-issues"></a><a name="windows-build-issues"></a>
 
-#### Platform-specific build issues
+Here are some known build issues/workarounds on certain platforms:
 
-Here are some known build issues and workarounds on certain platforms:
-
-<!--
-<div class="warnings" style="font-size:medium;">
-
-[nix: nix install on linux can fail with "cloning builder process: Operation not permitted"](https://github.com/simonmichael/hledger/issues/1030)\
-[nix: on Linux, nix-installed hledger won't handle non-ascii data](https://github.com/simonmichael/hledger/issues/1033)\
-[windows: hledger-web fails to start on Windows 7](https://github.com/simonmichael/hledger/issues/1039)\
-[windows: hledger-ui is not available](https://github.com/jtdaugherty/vty/pull/1#issuecomment-297143444)\
-[windows: build hangs using GHC 8.6.3](https://github.com/well-typed/generics-sop/issues/93)\
-[windows: cross-environment non-ascii display issues](https://github.com/simonmichael/hledger/issues/961#issuecomment-471229644)\
-[arch: haskell build advice from Arch wiki](https://wiki.archlinux.org/index.php/Haskell)\
-[arch: No information found for ghc-8.4.2](https://github.com/commercialhaskell/stack/issues/3984)\
-[freebsd 12: no cabal file found](https://github.com/simonmichael/hledger/issues/709)\
-[openbsd 6: exec permission denied](https://deftly.net/posts/2017-10-12-using-cabal-on-openbsd.html)\
-[openbsd: how to get stack](https://github.com/commercialhaskell/stack/issues/2822#issuecomment-318892816)\
-
-</div>
--->
-<!-- [arch: some past problems](https://github.com/simonmichael/hledger/issues/668) -->
-
-<p><span class="warnings" style="font-size:medium;"> <a href="https://github.com/simonmichael/hledger/issues/1030">nix: nix install on linux can fail with “cloning builder process: Operation not permitted”</a><br />
-<a href="https://github.com/simonmichael/hledger/issues/1033">nix: on Linux, nix-installed hledger won’t handle non-ascii data</a><br />
-<a href="https://github.com/simonmichael/hledger/issues/1039">windows: hledger-web fails to start on Windows 7</a><br />
-<a href="https://github.com/jtdaugherty/vty/pull/1#issuecomment-297143444">windows: hledger-ui is not available</a><br />
-<a href="https://github.com/well-typed/generics-sop/issues/93">windows: build hangs using GHC 8.6.3</a><br />
-<a href="https://github.com/simonmichael/hledger/issues/961#issuecomment-471229644">windows: cross-environment non-ascii display issues</a><br />
-<a href="https://wiki.archlinux.org/index.php/Haskell">arch: haskell build advice from Arch wiki</a><br />
-<a href="https://github.com/commercialhaskell/stack/issues/3984">arch: No information found for ghc-8.4.2</a><br />
-<!-- [arch: some past problems](https://github.com/simonmichael/hledger/issues/668) --> <a href="https://github.com/simonmichael/hledger/issues/709">freebsd 12: no cabal file found</a><br />
-<a href="https://deftly.net/posts/2017-10-12-using-cabal-on-openbsd.html">openbsd 6: exec permission denied</a><br />
-<a href="https://github.com/commercialhaskell/stack/issues/2822#issuecomment-318892816">openbsd: how to get stack</a><br />
-</span></p>
-
-#### Setting $PATH may be required
-
-After building you may see a message about where the executables were installed.
-After installation, make sure this install directory is configured in your shell's \$PATH
-(preferably near the start of it, in case you have older hledger binaries lying around).
-The install directory is:
-
-|                    | on non-Windows systems | on Windows 
-|--------------------|------------------------|------------------------------------------
-| If stack was used  | `$HOME/.local/bin`     | `%APPDATA%\local\bin` (eg&nbsp;`C:\Users\Joe\AppData\Roaming\local\bin`)
-| If cabal was used  | `$HOME/.cabal/bin`     | `%APPDATA%\cabal\bin`
-
-How to configure \$PATH is platform- and shell-specific.
-If you are using bash, this should take care of it:
-
-  **`echo "export PATH=~/.local/bin:~/.cabal/bin:$PATH" >> ~/.bashrc && source ~/.bashrc`**
-
-#### Test the installation
-
-After a successful build and install, you should be able to run the
-hledger tools (whichever ones you installed) and see the expected versions:
-
-  `$`**`hledger --version`**\
-  `hledger 1.15.2`\
-  `$`**`hledger-ui --version`**\
-  `hledger-ui 1.15`\
-  `$`**`hledger web --version`**\
-  `hledger-web 1.15`\
-  `$`**`hledger iadd --version`**\
-  `This is hledger-iadd version 1.3.9`
-
-And you can check that the unit tests pass (just for fun):
-
-  `$`**`hledger test`**\
-  `...`\
-  `✅  198 tests passed, no failures! 👍 🎉`
+<blockquote class="warnings">
+  <a href="https://github.com/simonmichael/hledger/issues/1030">nix: nix install on linux can fail with “cloning builder process: Operation not permitted”</a><br>
+  <a href="https://github.com/simonmichael/hledger/issues/1033">nix: on Linux, nix-installed hledger won’t handle non-ascii data</a><br>
+  <a href="https://github.com/simonmichael/hledger/issues/1039">windows: hledger-web fails to start on Windows 7</a><br>
+  <a href="https://github.com/jtdaugherty/vty/pull/1#issuecomment-297143444">windows: hledger-ui is not available</a><br>
+  <a href="https://github.com/well-typed/generics-sop/issues/93">windows: build hangs using GHC 8.6.3</a><br>
+  <a href="https://github.com/simonmichael/hledger/issues/961#issuecomment-471229644">windows: cross-environment non-ascii display issues</a><br>
+  <a href="https://wiki.archlinux.org/index.php/Haskell">arch: haskell build advice from Arch wiki</a><br>
+  <a href="https://github.com/commercialhaskell/stack/issues/3984">arch: No information found for ghc-8.4.2</a><br>
+  <a href="https://github.com/simonmichael/hledger/issues/709">freebsd 12: no cabal file found</a><br>
+  <a href="https://deftly.net/posts/2017-10-12-using-cabal-on-openbsd.html">openbsd 6: exec permission denied</a><br>
+  <a href="https://github.com/commercialhaskell/stack/issues/2822#issuecomment-318892816">openbsd: how to get stack</a><br>
+</blockquote>
 
 <a name="c"></a>
 
 ### Building the development version
 
 The master branch in hledger's git repo is stable enough for daily use,
-and includes the [latest improvements](https://github.com/simonmichael/hledger/commits/master).
+and includes the [latest improvements](https://github.com/simonmichael/hledger/commits/master).
 You'll need [git](https://en.wikipedia.org/wiki/Git) and 
-[`stack`](http://haskell-lang.org/get-started) or [cabal](https://www.haskell.org/cabal/).
+[stack](https://haskell.fpcomplete.com/get-started) or [cabal](https://www.haskell.org/cabal/).
 This will build and install all of the main hledger tools using stack:
 
-  **`git clone https://github.com/simonmichael/hledger`**\
-  **`cd hledger`**\
-  **`stack install`**
+<div class="builder-command">
+git clone https://github.com/simonmichael/hledger <br>
+cd hledger <br>
+stack install
+</div>
 
 cabal users may find the `cabal-install.sh` or `cabal.project` files useful.
 
-The --version output of development builds has a .99 suffix meaning "dev".
-So 1.15.99 means "1.16-dev", the in-development version of 1.16.
+Development builds of hledger show a `.99` suffix in their `--version`
+output, meaning "dev". So 1.15.99 means "1.16-dev", the in-development
+version of 1.16.
 
-### Building the development version with docker
+### Building the development version with Docker
 
-You can also build development version in the docker container, which will take care of pulling
-all the necessary tools and dependencies:
+You can also the build development version in a Docker container which
+will take care of pulling all the necessary tools and dependencies:
 
-  **`git clone https://github.com/simonmichael/hledger`**\
-  **`cd hledger/docker`**\
-  **`./build.sh`**
+<div class="builder-command">
+git clone https://github.com/simonmichael/hledger <br>
+cd hledger/docker <br>
+./build.sh
+</div>
 
-This will build image tagged `hledger` with just the latest binaries inside.
+This will build the image tagged `hledger` with just the latest binaries inside.
 
-If you want to keep all the build artifacts and use the resulting image for hledger development, use
-`build-dev.sh` instead.
+If you want to keep all the build artifacts and use the resulting
+image for hledger development, run `./build-dev.sh` instead.
+
+## Check your PATH
+
+After building/installing, you may see a message about where the executables were installed.
+Eg:
+
+- with stack: `$HOME/.local/bin` (on Windows, `%APPDATA%\local\bin`)
+- with cabal: `$HOME/.cabal/bin` (on Windows, `%APPDATA%\cabal\bin`)
+- with nix:   `$HOME/.nix-profile/bin`
+
+Make sure that this install directory is included in your shell's `$PATH`
+(preferably near the start, to preempt any old hledger binaries you might have lying around),
+so that you can run the hledger tools easily.
+How to configure this depends on your platform and shell.
+If you are using bash, this will show it:
+
+<div class="command">
+  echo $PATH
+</div>
+
+and here's a way to add the stack and cabal install dirs permanently:
+
+<div class="command">
+  echo "export PATH=~/.local/bin:~/.cabal/bin:$PATH" >> ~/.bashrc <br>
+  source ~/.bashrc
+</div>
+
+## Test your installation
+
+After a successful installation, you should be able to run the hledger
+tools (that you installed), and see the expected versions. Eg:
+
+<div class="command">
+$ hledger --version <br>
+hledger 1.15.2 <br>
+$ hledger-ui --version <br>
+hledger-ui 1.15 <br>
+$ hledger web --version <br>
+hledger-web 1.15 <br>
+$ hledger iadd --version <br>
+This is hledger-iadd version 1.3.9
+</div>
+
+And you could see the unit tests pass (just for fun):
+
+<div class="command">
+$ hledger test <br>
+... <br>
+199 tests passed, no failures!
+</div>
+
+<br>
+
+Nicely done! Next, see the Getting Started docs in the sidebar, such
+as the **[Basics tutorial](basics-tutorial.html)**,
+or introduce yourself in the **[IRC channel/Matrix room](index.html#help-feedback)**.
+
+<br>
