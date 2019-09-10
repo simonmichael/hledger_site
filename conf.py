@@ -16,8 +16,8 @@
 # https://recommonmark.readthedocs.io/en/latest/index.html#autostructify
 # https://recommonmark.readthedocs.io/en/latest/auto_structify.html
 # This enables additional features of recommonmark syntax
-# import recommonmark
-# from recommonmark.transform import AutoStructify
+import recommonmark
+from recommonmark.transform import AutoStructify
 
 # -- Project information -----------------------------------------------------
 
@@ -64,6 +64,7 @@ source_suffix = {
 }
 
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-suppress_warnings
+# doesn't help, see setup below
 suppress_warnings = [
     # 'ref.term',
     # 'ref.ref',
@@ -76,20 +77,6 @@ suppress_warnings = [
     # 'ref.python',
     # 'misc.highlighting_failure',
 ]
-
-# Sphinx gives some bogus warnings about valid references (unless the
-# file extension is removed, but then the links would work only when
-# rendered by sphinx). Silence them all here, at the cost of also
-# hiding invalid ones. (suppress_warnings above doesn't do it.)
-# https://stackoverflow.com/questions/37359407/suppress-warnings-for-unfound-references-with-default-role-any-in-sphinx
-# WARNING, watch for other side effects
-def on_missing_reference(app, env, node, contnode):
-    if node['reftype'] == 'any':
-        return contnode
-    else:
-        return None
-def setup(app):
-    app.connect('missing-reference', on_missing_reference)
 
 # https://recommonmark.readthedocs.io/en/latest/index.html#linking-to-headings-in-other-files
 # For linking to headings in other files you can use the autosectionlabel sphinx feature, e.g.
@@ -126,6 +113,13 @@ exclude_patterns = [
     # '*.md',  # XXX for testing templates etc: exclude all but what's in sitemap (all but sitemap.html ?)
 ]
 
+# A string of reStructuredText that will be included at the beginning of
+# every source file that is read. This is a possible place to add
+# substitutions that should be available in every file (another being rst_epilog). 
+# rst_prolog = """
+# .. |psf| replace:: Python Software Foundation
+# """
+
 
 # -- Options for HTML output -------------------------------------------------
 
@@ -157,30 +151,6 @@ html_js_files = [
     # 'site.js',
 ]
 
-
-# https://recommonmark.readthedocs.io/en/latest/index.html#autostructify
-# def setup(app):
-#     app.add_config_value('recommonmark_config', {
-#             'url_resolver': lambda url: github_doc_root + url,
-#             'auto_toc_tree_section': 'Contents',
-#             'enable_eval_rst': True,
-#             }, True)
-    # app.add_transform(AutoStructify)   # IndexError: list index out of range
-      # Exception occurred:
-      #   File "/usr/local/lib/python3.7/site-packages/docutils/parsers/rst/roles.py", line 356, in math_role
-      #     text = rawtext.split('`')[1]
-      # IndexError: list index out of range
-
-# AutoStructify comes with the following options:
-# enable_auto_toc_tree: enable the Auto Toc Tree feature.
-# auto_toc_maxdepth: The max depth of the Auto Toc. Defaults to 1.
-# auto_toc_tree_section: when True, Auto Toc Tree will only be enabled on section that matches the title.
-# enable_auto_doc_ref: enable the Auto Doc Ref feature. Deprecated
-# enable_math: enable the Math Formula feature.
-# enable_inline_math: enable the Inline Math feature.
-# enable_eval_rst: enable the evaluate embedded reStructuredText feature.
-# url_resolver: a function that maps a existing relative position in the document to a http link
-# known_url_schemes: a list of url schemes to treat as URLs, schemes not in this list will be assumed to be Sphinx cross-references. Defaults to None, which means treat all URL schemes as URLs. Example: ['http', 'https', 'mailto']
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
@@ -356,3 +326,42 @@ lexers['{.rules .display-table}'] = NullLexer(startinline=True)
 # If true, show URL addresses after external links.
 # man_show_urls = False
 
+
+# -- app setup hook ---------------------------------------
+
+def setup(app):
+
+    # Sphinx gives some bogus warnings about valid references (unless the
+    # file extension is removed, but then the links would work only when
+    # rendered by sphinx). Silence them all here, at the cost of also
+    # hiding invalid ones. (suppress_warnings above doesn't do it.)
+    # https://stackoverflow.com/questions/37359407/suppress-warnings-for-unfound-references-with-default-role-any-in-sphinx
+    # WARNING, watch for other side effects
+    def on_missing_reference(app, env, node, contnode):
+        if node['reftype'] == 'any':
+            return contnode
+        else:
+            return None
+    app.connect('missing-reference', on_missing_reference)
+
+    # Enable AutoStructify, an optional recommonmark component providing
+    # various features, in particular evaluation of RST directives.
+    # https://recommonmark.readthedocs.io/en/latest/index.html#autostructify
+    # default_config = {
+    #     'enable_auto_doc_ref': False,
+    #     'auto_toc_maxdepth': 1,
+    #     'auto_toc_tree_section': None,
+    #     'enable_auto_toc_tree': True,
+    #     'enable_eval_rst': True,
+    #     'enable_math': True,
+    #     'enable_inline_math': True,
+    #     'commonmark_suffixes': ['.md'],
+    #     'url_resolver': lambda x: x,
+    #     'known_url_schemes': None,
+    # }
+    app.add_config_value('recommonmark_config', {
+        'enable_math':        False,
+        'enable_inline_math': False,
+        'enable_eval_rst':    True,
+    }, True)
+    app.add_transform(AutoStructify)
