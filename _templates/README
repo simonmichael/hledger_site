@@ -1,0 +1,7 @@
+Customizations to the sphinx RTD theme.
+
+Default templates:
+https://github.com/readthedocs/sphinx_rtd_theme/tree/master/sphinx_rtd_theme
+
+Example of a custom fork of this theme:
+https://git.zrythm.org/cgit/zrythm/tree/doc/user/sphinx_zrythm_theme
