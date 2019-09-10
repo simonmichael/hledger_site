@@ -1,7 +1,7 @@
 # Save frequently used options
 
 You can save frequently used options and arguments in an 
-[argument file](http://hledger.org/manual#argument-files), one per
+[argument file](hledger.html#argument-files), one per
 line, then reuse them via a @FILE argument on the command line.
 (hledger 1.4+)
 
@@ -25,9 +25,9 @@ by all of the above options/flags.
 
 The options above are just an example, but in case you're wondering:
 
-- the [aliases](http://hledger.org/manual.html#account-aliases) simplify the chart of accounts, hiding some distinctions (eg business vs. personal) and flattening some bank account names
-- the `-2` [depth flag](http://hledger.org/manual.html#depth-limiting) limits account depth to 2, hiding deeper subaccounts
-- the `cur:.` [query argument](http://hledger.org/manual.html#queries) shows only single-character currencies, hiding a bunch of cluttersome commodities I don't want to see
+- the [aliases](journal.html#rewriting-accounts) simplify the chart of accounts, hiding some distinctions (eg business vs. personal) and flattening some bank account names
+- the `-2` [depth flag](hledger.html#depth-limiting) limits account depth to 2, hiding deeper subaccounts
+- the `cur:.` [query argument](hledger.html#queries) shows only single-character currencies, hiding a bunch of cluttersome commodities I don't want to see
 
 Ie they remove some detail, giving simplified reports which are easier for me to read at a glance.
 
@@ -43,7 +43,7 @@ $ hledger-ui --watch @simple.args assets
 ```
 
 Options in the arguments file can be overridden by similar options later on
-the command line, in the [usual way](http://hledger.org/manual.html#options). 
+the command line, in the [usual way](hledger.html#options). 
 Eg, to show just a little more account detail:
 ```shell
 $ hledger bal @simple.args -3
@@ -51,10 +51,10 @@ $ hledger bal @simple.args -3
 
 ## Quoting
 
-[Special characters](http://hledger.org/manual.html#special-characters) in the arguments file 
-may need to be quoted, depending on your shell (bash, fish etc.) 
-They'll need one less level of quoting than on the command line.
-I think
+[Special characters](hledger.html#special-characters-in-arguments-and-queries) 
+in the arguments file may need to be quoted, depending on your shell
+(bash, fish etc.) They'll need one less level of quoting than on the
+command line. I think
 ```shell
 $ hledger bal @simple.args
 ```

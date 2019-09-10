@@ -2511,7 +2511,7 @@ register:
 
 **hledger-ui 0.27:**
 
-- [hledger-ui](manual#ui) is a new curses-style UI, intended to be a standard part
+- [hledger-ui](ui.html) is a new curses-style UI, intended to be a standard part
   of the hledger toolset for all users (except on native MS Windows,
   where the vty lib is not [yet](https://github.com/coreyoconnor/vty/pull/1) supported).
 
@@ -2649,7 +2649,7 @@ print:
     
     When a transaction posts to two commodities without specifying the
     conversion price, we generate a price which makes it balance (cf
-    http://hledger.org/manual.html#prices). The print command showed
+    <http://hledger.org/journal.html#transaction-prices). The print command showed
     this with full precision (so that manual calculations with the
     displayed numbers would look right), but this sometimes meant we
     showed 255 digits (when there are multiple postings in the
@@ -3210,7 +3210,7 @@ Improved:
 New:
 
 - balance: with a reporting interval (monthly, yearly etc.), the
-  [balance command](manual.html#balance) will now show a multi-column report, showing either
+  [balance command](hledger.html#balance) will now show a multi-column report, showing either
   the per-period changes in balance (by default),
   the period ending balances starting from zero (`--cumulative`),
   or the actual period ending balances (`--historical`).
@@ -3335,7 +3335,7 @@ Journal reading:
 
 CSV reading:
 
-  - CSV conversion rules have a simpler, more flexible [syntax](manual.html#csv).
+  - CSV conversion rules have a simpler, more flexible [syntax](csv.html).
     Existing rules files will need to be updated manually:
     - the filename is now `FILE.csv.rules` instead of `FILE.rules`
     - `FIELD-field N` is now `FIELD %N+1` (or set them all at once with a `fields` rule)
@@ -3471,9 +3471,9 @@ Release contributors:
   * web: hledger-web is now based on yesod 1.0
   * web: fix js error breaking second use of add form ([#72](http://bugs.hledger.org/72))
   * web: make `yesod devel` work
-  * the command-line now supports a more powerful [query language](manual.html#queries), consistent with the web UI
-  * hledger now fully supports [tags](manual.html#tags) (aka metadata) on both transactions and postings, and querying by tag or tag value
-  * new [commands](manual.html#incomestatement) `incomestatement`, `balancesheet`, and `cashflow` provide basic financial statements under certain conditions
+  * the command-line now supports a more powerful [query language](hledger.html#queries), consistent with the web UI
+  * hledger now fully supports [tags](journal.html#tags) (aka metadata) on both transactions and postings, and querying by tag or tag value
+  * new [commands](hledger.html#incomestatement) `incomestatement`, `balancesheet`, and `cashflow` provide basic financial statements under certain conditions
   * format conversion is now done on demand, and the convert command has been dropped. So instead of
     `hledger convert FILE.csv` just do `hledger -f FILE.csv print` or any other command.
     You can also pipe any supported format into `hledger -f- CMD` and hledger will try to do the right thing.

@@ -6,7 +6,7 @@ Here's how I have been logging time for a few years, and showing budget reports 
 
 I have four files:
 
-1. time-2018.timedot is the current year's time log. It contains daily entries in [timedot](http://hledger.org/timedot.html)-ish format, like:
+1. time-2018.timedot is the current year's time log. It contains daily entries in [timedot](timedot.html)-ish format, like:
 
        2018/5/7
        adm.email             20m
@@ -15,7 +15,7 @@ I have four files:
        inc.client1.enh.1335  ..
        fos.hledger.support
     
-2. time.journal is in [journal](http://hledger.org/journal.html) format so it can [include](http://hledger.org/journal.html#including-other-files) multiple timedot file(s) and provide an [account alias](http://hledger.org/journal.html#rewriting-accounts) allowing period instead of colon in account names:
+2. time.journal is in [journal](journal.html) format so it can [include](journal.html#including-other-files) multiple timedot file(s) and provide an [account alias](journal.html#rewriting-accounts) allowing period instead of colon in account names:
 
        ; allow . as subaccount separator in timedot files
        alias /\./=:
@@ -24,7 +24,7 @@ I have four files:
        ;include time-2017.timedot
        include time-2018.timedot
 
-3. time-daily.budget defines some daily goals, optionally date-bounded, using [periodic transaction(s)](http://hledger.org/journal.html#periodic-transactions):
+3. time-daily.budget defines some daily goals, optionally date-bounded, using [periodic transaction(s)](journal.html#periodic-transactions):
 
        ~ daily  ; [from Y/M/D] [to Y/M/D]
            (adm)    1  ; your goals here
@@ -88,7 +88,7 @@ I have an iTerm2 Hotkey Window (a terminal that drops down on ALT-space) with si
 
        emacs -nw time-2018.timedot
 
-3. -5: updating (using [entr](http://www.entrproject.org)) time [budget reports](http://hledger.org/hledger.html#budget-report) for the current day/week/month, using [hledger 1.9.1+](http://hledger.org/download.html):
+3. -5: updating (using [entr](http://www.entrproject.org)) time [budget reports](hledger.html#budget-report) for the current day/week/month, using [hledger 1.9.1+](download.html):
 
        ls time.journal time-2018.timedot time-daily.budget  | entr sh -c 'clear; hledger -f time.journal -f time-daily.budget  bal --budget -1 -D date:today-tomorrow'
 
@@ -100,6 +100,6 @@ I have an iTerm2 Hotkey Window (a terminal that drops down on ALT-space) with si
 
        ls time.journal time-2018.timedot time-weekly.budget | entr sh -c 'clear; hledger -f time.journal -f time-weekly.budget bal --budget -1 -M date:thismonth-nextmonth'
 
-6. an updating [hledger-ui](http://hledger.org/hledger-ui.html) for exploring time usage (shift-up/down to resize period, shift-left/right to step through time, t to return to today):
+6. an updating [hledger-ui](hledger-ui.html) for exploring time usage (shift-up/down to resize period, shift-left/right to step through time, t to return to today):
 
        hledger-ui --watch --change date:today -f time.journal

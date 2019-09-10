@@ -114,10 +114,14 @@ And we add some new commands, such as:
 hledger's journal file format is very close to Ledger's.
 Some unsupported Ledger syntax is parsed but ignored; some is not parsed and will cause an error (eg value expressions).
 There can also be subtle differences in parser behaviour, such as with
-[hledger comments](http://hledger.org/manual.html#comments) vs [Ledger comments](http://ledger-cli.org/3.0/doc/ledger3.html#Commenting-on-your-Journal),
-or [balance assertions](http://hledger.org/manual.html#assertions-and-ordering).
+[hledger comments](journal.html#comments) vs [Ledger comments](http://ledger-cli.org/3.0/doc/ledger3.html#Commenting-on-your-Journal),
+or [balance assertions](journal.html#assertions-and-ordering).
 
-It's quite possible (and useful) to keep a journal file that works with both hledger and Ledger, if you avoid the more exotic syntax. Or, you can keep the hledger- and Ledger-specific bits in separate files, which [include](http://hledger.org/manual.html#including-other-files) a common file compatible with both:
+It's quite possible (and useful) to keep a journal file that works
+with both hledger and Ledger, if you avoid the more exotic syntax. Or,
+you can keep the hledger- and Ledger-specific bits in separate files,
+which [include](journal.html#including-other-files)
+a common file compatible with both:
 ```shell
 $ ls *.journal
 common.journal   # included by:
@@ -155,10 +159,10 @@ ledger.journal
   seen. Ledger uses D only for commodity display settings and for the
   entry command.
 
-- hledger's [include directive](http://hledger.org/manual.html#including-other-files) does not support
+- hledger's [include directive](journal.html#including-other-files) does not support
   shell glob patterns (eg `include *.journal` ), as Ledger's does.
 
-- when checking [balance assertions](http://hledger.org/manual.html#balance-assertions)
+- when checking [balance assertions](journal.html#balance-assertions)
   hledger sorts the account's postings first by date and then (for
   postings with the same date) by parse order. Ledger checks assertions 
   in parse order, ignoring dates.
@@ -188,7 +192,7 @@ ledger.journal
 
 - hledger's journal and timeclock formats are separate; you can't use 
   [both syntaxes in the same file](https://www.reddit.com/r/plaintextaccounting/comments/7buf8q/how_to_balance_working_hours/dpligsd/)
-  unlike Ledger. ([Include](http://hledger.org/manual.html#including-other-files) a separate timeclock file instead.) 
+  unlike Ledger. ([Include](journal.html#including-other-files) a separate timeclock file instead.) 
   
 - hledger's and Ledger's -H/--historical flags are completely unrelated.
   hledger's -H makes register and balance-like commands include balances from before the report start date, instead of starting at zero:
@@ -260,7 +264,7 @@ $ hledger -f t.j register --width 50
                               USD -1             0  ;
 ```
 
-Newer reports like [multi-column balance reports](http://hledger.org/manual.html#multicolumn-balance-report) show multi-commodity amounts on one line instead, comma-separated.
+Newer reports like [multi-column balance reports](hledger.html#multicolumn-balance-report) show multi-commodity amounts on one line instead, comma-separated.
 Although wider, this seems clearer and we should probably use it more:
 ```shell
 $ hledger -f t.j balance --yearly
@@ -274,7 +278,8 @@ Balance changes in 2015:
    ||              0 
 ```
 
-You will also see amounts without a corresponding account name if you remove too many account name segments with [`--drop`](http://hledger.org/manual.html#balance):
+You will also see amounts without a corresponding account name if you
+remove too many account name segments with [`--drop`](hledger.html#balance):
 ```shell
 $ hledger -f t.j balance --drop 1
                EUR 1  
@@ -301,8 +306,8 @@ There must be at least two spaces between account name and amount.
 
 #### Why do some directives not affect other files ? Why can't I put account aliases in an included file ?
 
-This is documented at [journal format: directives](/manual.html#directives).
-(Also mentioned at [hledger: Input files](https://hledger.org/hledger.html#input-files).)
+This is documented at [journal format: directives](journal.html#directives).
+(Also mentioned at [hledger: Input files](hledger.html#input-files).)
 These docs could be improved.
 
 Directives which affect parsing of data vary in their scope, 

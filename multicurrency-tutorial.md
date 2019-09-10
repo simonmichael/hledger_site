@@ -8,7 +8,9 @@ code mark {
 }
 </style>
 
-Anya begins using hledger without any currency symbols. She adds some [journal entries](http://hledger.org/manual.html#journal-format) like this (not bothering with descriptions, either):
+Anya begins using hledger without any currency symbols. She adds some
+[journal entries](journal.html) like this (not bothering with
+descriptions, either):
 
 <!-- emphasize=1-7 -->
 ```journal
@@ -21,7 +23,8 @@ Anya begins using hledger without any currency symbols. She adds some [journal e
   expenses:food         500
 ```
 
-She knows hledger is filling in the missing amounts, which can be seen with [print's -x/--explicit](http://hledger.org/manual.html#print) flag:
+She knows hledger is filling in the missing amounts, which can be seen
+with [print's -x/--explicit](hledger.html#print) flag:
 
 ```shell
 $ hledger print -x
@@ -35,7 +38,10 @@ $ hledger print -x
 
 ```
 
-The [balance](http://hledger.org/manual.html#balance) command with no arguments shows all balance changes. The total is zero, as Anya expects - each transaction sums to zero, and all transactions are included in this report, so the report also sums to zero:
+The [balance](hledger.html#balance) command with no arguments shows
+all balance changes. The total is zero, as Anya expects - each
+transaction sums to zero, and all transactions are included in this
+report, so the report also sums to zero:
 
 ```shell
 $ hledger bal
@@ -141,7 +147,10 @@ $ hledger bal
                    0
 ```
 
-However, it's a bit confusing. The `assets` and `income` parent accounts now have multicurrency balances, and each currency is displayed on its own line. She tries [flat mode](http://hledger.org/manual.html#flat-mode), and finds it clearer:
+However, it's a bit confusing. The `assets` and `income` parent
+accounts now have multicurrency balances, and each currency is
+displayed on its own line. She tries 
+[flat mode](hledger.html#flat-mode), and finds it clearer:
 
 ```shell
 $ hledger bal --flat
@@ -154,7 +163,12 @@ $ hledger bal --flat
                    0
 ```
 
-But she has heard that hledger's [tabular output](http://hledger.org/manual.html#multicolumn-balance-report) is best for multicurrency reports, always showing amounts on one line. She starts using that, adding one of the [report interval](http://hledger.org/manual.html#report-intervals) flags (-Y/--yearly) to activate it:
+But she has heard that hledger's 
+[tabular output](hledger.html#multicolumn-balance-report) is best for
+multicurrency reports, always showing amounts on one line. She starts
+using that, adding one of the 
+[report interval](hledger.html#report-intervals) flags (-Y/--yearly)
+to activate it:
 
 ```shell
 $ hledger bal -Y
@@ -192,7 +206,10 @@ Anya requests a withdrawal of the Liberapay funds to her bank. Her bank holds ru
   assets:bank           750 R
 ```
 
-This is her first multicurrency transaction. She hasn't written the exchange rate explicitly, but the manual [says](http://hledger.org/manual.html#transaction-prices) hledger can figure it out. It seems to work:
+This is her first multicurrency transaction. She hasn't written the
+exchange rate explicitly, but the manual
+[says](journal.html#transaction-prices) hledger can figure it out. It
+seems to work:
 
 ```shell
 $ hledger bal  -Y
@@ -228,7 +245,9 @@ Balance changes in 2018:
 
 Second, the balance report is now showing a non-zero total. The individual euro and ruble totals look correct, but why isn't it zero ? Is the journal unbalanced ?
 
-Anya asks for help on the #hledger IRC channel and is advised to add the [-B/--cost flag](http://hledger.org/manual.html#cost). Sure enough, the total is now zero:
+Anya asks for help on the #hledger IRC channel and is advised to add
+the [-B/--cost flag](hledger.html#b-cost). Sure enough, the total is now
+zero:
 
 <!-- emphasize=7:21-7:33 -->
 ```shell
@@ -258,9 +277,15 @@ $ hledger print -x date:20181104
     assets:bank                  750 R
 ```
 
-The manual makes this a bit clearer. Anya wrote the entry in [transaction prices](http://hledger.org/manual.html#transaction-prices) style 3 (*"let hledger infer the price that balances the transaction"*). hledger has converted this to style 2 (*"@@ TOTALPRICE after the amount"*), recording that the 10 euro were priced at 750 rubles in this transaction.
+The manual makes this a bit clearer. Anya wrote the entry in
+[transaction prices](journal.html#transaction-prices) style 3 (*"let
+hledger infer the price that balances the transaction"*). hledger has
+converted this to style 2 (*"@@ TOTALPRICE after the amount"*),
+recording that the 10 euro were priced at 750 rubles in this
+transaction.
 
-With -B added, the 10 euro is converted to its [cost](http://hledger.org/manual.html#cost) in rubles:
+With -B added, the 10 euro is converted to its
+[cost](hledger.html#b-cost) in rubles:
 
 <!-- emphasize=3:30-3:36 -->
 ```shell
@@ -292,10 +317,14 @@ $ hledger reg liberapay -B
 
 In summary, it seems that the balance report must sum either the primary posting amounts (`bal`), or the cost amounts (`bal -B`), consistently for both the account balances above the line, and the total below the line. Otherwise the total would be incorrect. Which means that one or the other of these will be displayed as an unconverted multicurrency amount.
 
-Anya decides to find out more about the other currency-related flag: [-V](http://hledger.org/manual.html#market-value).
+Anya decides to find out more about the other currency-related flag:
+[-V](journal.html#v-market-value).
 
 TBD:
 
 - declaring a market price corresponding to the price in the fourth transaction ( P 2018/11/01 E 75 R ) and adding -V will show everything completely in rubles (with or without -B, at least in this case), preserving the zero total
 
 - declaring an accurate market price instead ( P 2018/11/01 E 74.91 R ), there will be a small non zero total, which corresponds to the gain/loss due to exchanging at a slightly different price. After adding an explicit gain/loss transaction, the zero total is restored.
+
+- The new [-X](hledger.html#x-market-value-in-specified-commodity)
+  and [--value](hledger.html#value-flexible-valuation) options.

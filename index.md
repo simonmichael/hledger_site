@@ -85,7 +85,7 @@ together with 80+ other committers and an unknown number of usually happy-soundi
 hledger is a Haskell [reimplementation](faq.html#how-why-was-hledger-started)
 of the excellent [Ledger](http://ledger-cli.org).
 It remains substantially compatible with Ledger, and if you wish you can keep your data compatible with both.
-Read more about the [differences](https://hledger.org/faq.html#ledger) in the FAQ.
+Read more about the [differences](faq.html#ledger) in the FAQ.
 
 
 ### a command-line tool

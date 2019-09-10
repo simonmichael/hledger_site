@@ -22,7 +22,7 @@ and so is a `.journal` or `.hledger` extension.
       assets:cash
     <CTRL-D>
 
-[Account names](http://hledger.org/manual#account-names) can be anything 
+[Account names](journal.html#account-names) can be anything 
 and you can change them later by search and replace. 
 If you don't know what to [choose](http://plaintextaccounting.org/#choosing-accounts), 
 start with these five:\
@@ -32,18 +32,18 @@ perhaps with one extra subcategory as above.
 ## with a text editor
 
 Write transactions in a text editor, optionally using an
-[editor mode](http://hledger.org/manual#editor-support), 
+[editor mode](editors.html), 
 and save the file.
 
 ## with hledger add
 
-Use the interactive [add](http://hledger.org/manual#add) command to enter one or more transactions:
+Use the interactive [add](hledger.html#add) command to enter one or more transactions:
 
     hledger add -f 2018.journal
 
 
 To avoid typing `-f FILE` every time, set the 
-[`LEDGER_FILE` environment variable](http://hledger.org/manual#input-files). 
+[`LEDGER_FILE` environment variable](hledger.html#input-files). 
 Eg:
 
     echo "export LEDGER_FILE=~/finance/2018.journal" >> ~/.bash_profile && source ~/.bash_profile

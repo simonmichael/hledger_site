@@ -9,7 +9,10 @@ Say we have downloaded `checking.csv` from a bank for the first time:
 "2012/3/23","TRANSFER TO SAVINGS","-10.00"
 ```
 
-We tell hledger how to intepret this with a file named `checking.csv.rules`, using the [CSV rules syntax](http://hledger.org/manual.html#csv-format). Eg:
+We tell hledger how to intepret this with a file named
+`checking.csv.rules`, using the 
+[CSV rules syntax](csv.html). Eg:
+
 ```rules
 # skip the first CSV line (headings)
 skip 1
@@ -43,7 +46,10 @@ using conversion rules file checking.csv.rules
     assets:bank:checking       $-10.00
 ```
 
-We might save this output as `checking.journal`, and/or merge it (manually, or using the [import](http://hledger.org/manual.html#import) command) into the main journal file.
+We might save this output as `checking.journal`, and/or merge it
+(manually, or using the
+[import](hledger.html#import) command) into the main
+journal file.
 
 We could also just run reports on the CSV file directly:
 ```shell
@@ -59,6 +65,6 @@ using conversion rules file checking.csv.rules
 
 Here are more [CSV rules examples](https://github.com/simonmichael/hledger/tree/master/examples/csv).
 
-Here's how to [[Customize default CSV accounts]].
+Here's how to [Customize default CSV accounts](customize-default-csv-account.html).
 
 There are many alternate CSV conversion tools at [plaintextaccounting.org -> data import/conversion](https://plaintextaccounting.org/#data-importconversion) (nine CSV->*ledger tools at last count). [hledger-import-dsl](https://github.com/hpdeifel/hledger-import-dsl) is a fully programmable hledger-ish option.
