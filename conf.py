@@ -123,6 +123,7 @@ exclude_patterns = [
     '_site',
     # exclude the old manual source files for speed
     'doc',
+    # '*.md',  # XXX for testing templates etc: exclude all but what's in sitemap (all but sitemap.html ?)
 ]
 
 
@@ -216,13 +217,23 @@ html_theme_options = {
 # see also http://www.sphinx-doc.org/en/master/templating.html#global-variables
 html_context = {
 
-    # "edit on github" links. XXX currently not correct for the manuals.
+    # "edit on github" links.
     "display_github": True,        # Integrate GitHub
     "github_user": "simonmichael", # Username
     "github_repo": "hledger_site", # Repo name
     "github_version": "master",    # Version
     "conf_py_path": "/",           # Path in the checkout to the docs root
     'vcs_pageview_mode': 'edit',   # not working
+    # different edit links for the manuals. Cf _templates/breadcrumbs.html
+    "special_edit_paths": {
+        "journal"     : "hledger/blob/master/hledger-lib/hledger_journal.m4.md",
+        "csv"         : "hledger/blob/master/hledger-lib/hledger_csv.m4.md",
+        "timeclock"   : "hledger/blob/master/hledger-lib/hledger_timeclock.m4.md",
+        "timedot"     : "hledger/blob/master/hledger-lib/hledger_timedot.m4.md",
+        "hledger"     : "hledger/blob/master/hledger/hledger.m4.md",
+        "hledger-ui"  : "hledger/blob/master/hledger-ui/hledger-ui.m4.md",
+        "hledger-web" : "hledger/blob/master/hledger-web/hledger-web.m4.md",
+    },
 
     # Config for the versions pane, shown on manuals.
     # cf html_extra_path, exclude_patterns (above).
