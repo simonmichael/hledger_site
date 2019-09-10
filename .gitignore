@@ -15,3 +15,7 @@ manual.md
 cookbook.md
 [0-9].*
 .snapshot
+TAGS
+.notes
+_templates/sphinx_rtd_theme
+_templates/sphinx_zrythm_theme
