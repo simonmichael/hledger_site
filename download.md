@@ -165,7 +165,7 @@ The current hledger release is:
       <td>
         <div class="distro">Gentoo</div>
         <div class="badges">
-          <a href="https://gentoo.zugaina.org/Search?search=hledger"><img alt="Gentoo" src="https://img.shields.io/badge/Gentoo_package-1.14.2-red.svg" /></a>
+          <a href="https://gentoo.zugaina.org/Search?search=hledger"><img alt="Gentoo" src="https://img.shields.io/badge/Gentoo_package-1.15.2-brightgreen.svg" /></a>
         </div>
       </td>
       <td>
