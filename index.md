@@ -1,60 +1,3 @@
-<style>
- .highslide img {max-width:200px; float:right; margin:0 0 1em 1em;}
- .highslide-caption {color:white; background-color:black;}
- a {white-space:nowrap;}
-
-h1 { font-size:4em; margin-bottom:.3em; }
-
-#tagline {
-  font-size:xx-large;
-  font-style:italic; 
-  position:relative; 
-  top:-.5em;
-  left:.5em;
-  /*text-align:right;*/
-}
-
-/* h2 { font-size:x-large; margin-top:.5em; } */
-/* h3 { font-size:large; margin-bottom:.2em; } */
-tr { border-top:thin solid #bbb; border-bottom:thin solid #bbb; vertical-align:top; }
-td:nth-child(1) { padding-right:1em; white-space:nowrap; }
-.col-sm-3, .col-sm-4 {
-  padding:0;
-}
-.contentbox {
-  margin:1em .5em .5em 0;
-  padding:.1em .5em;
-  border-radius:1em;
-}
-#introduction {
-/*  background-color:#ffb; */
-}
-#help {
-  background-color:#fdd;
-}
-#reference {
-  background-color:#eef;
-  text-align:left;
-}
-#reference .subcontent {
-  margin-left:1em;
-}
-#dev {
-  background-color:#eee;
-  text-align:left;
-}
-#dev .subcontent {
-  margin-left:1em;
-}
-#wiki {
-  background-color:#efe;
-  text-align:center;
-}
-#wiki .subcontent {
-}
-
-</style>
-
 # hledger
 
 <div id=tagline>
@@ -241,3 +184,61 @@ Building and supporting good software and documentation costs a lot.
 <a href="https://opencollective.com/hledger#support"><img border="0" src="https://opencollective.com/hledger/sponsors/badge.svg" title="Sponsor us with a $100+ monthly donation at Open Collective and get your organization's logo on our README" alt="open collective sponsors"></a>
 <a href="https://www.bountysource.com/trackers/536505-simonmichael-hledger"><img border=0 src="https://www.bountysource.com/badge/tracker?tracker_id=536505" title="Contribute or claim issue bounties via Bountysource" alt="bountysource"></a>
 </div>
+
+
+
+<style>
+ .highslide img {max-width:200px; float:right; margin:0 0 1em 1em;}
+ .highslide-caption {color:white; background-color:black;}
+ a {white-space:nowrap;}
+
+h1 { font-size:4em; margin-bottom:.3em; }
+
+#tagline {
+  font-size:xx-large;
+  font-style:italic; 
+  position:relative; 
+  top:-.5em;
+  left:.5em;
+  /*text-align:right;*/
+}
+
+/* h2 { font-size:x-large; margin-top:.5em; } */
+/* h3 { font-size:large; margin-bottom:.2em; } */
+tr { border-top:thin solid #bbb; border-bottom:thin solid #bbb; vertical-align:top; }
+td:nth-child(1) { padding-right:1em; white-space:nowrap; }
+.col-sm-3, .col-sm-4 {
+  padding:0;
+}
+.contentbox {
+  margin:1em .5em .5em 0;
+  padding:.1em .5em;
+  border-radius:1em;
+}
+#introduction {
+/*  background-color:#ffb; */
+}
+#help {
+  background-color:#fdd;
+}
+#reference {
+  background-color:#eef;
+  text-align:left;
+}
+#reference .subcontent {
+  margin-left:1em;
+}
+#dev {
+  background-color:#eee;
+  text-align:left;
+}
+#dev .subcontent {
+  margin-left:1em;
+}
+#wiki {
+  background-color:#efe;
+  text-align:center;
+}
+#wiki .subcontent {
+}
+</style>
