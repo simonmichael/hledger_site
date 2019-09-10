@@ -20,7 +20,7 @@ help:
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
 html-live:
-	ls *.rst *.md conf.py | entr make html
+	ls *.rst *.md conf.py _templates/*.html | entr make html
 
 LIVERELOADPORT=8001
 LIVERELOAD=livereloadx -p $(LIVERELOADPORT)
