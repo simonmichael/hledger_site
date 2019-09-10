@@ -22,14 +22,16 @@ help:
 html-live:
 	ls *.rst *.md conf.py _templates/*.html | entr make html
 
-LIVERELOADPORT=8001
-LIVERELOAD=livereloadx -p $(LIVERELOADPORT)
 BROWSE=open
+LIVERELOADPORT=8001
+LIVERELOAD=livereloadx -p $(LIVERELOADPORT) -s --exclude '*.html'
+  # Exclude html files to avoid reloading browser as every page is generated.
+  # A reload happens at the end when the css/js files get copied.
 
 html-watch:
 	make html-live &
 	(sleep 1; $(BROWSE) http://localhost:$(LIVERELOADPORT)/) &
-	$(LIVERELOAD) -s _build/html/
+	$(LIVERELOAD) _build/html/
 
 
 install:
