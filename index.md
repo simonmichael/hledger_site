@@ -101,7 +101,7 @@ transactions, but does not change existing ones.)
 ### a console UI
 
 <a href="_static/images/hledger-ui/hledger-ui-bcexample-acc.png" class="highslide" onclick="return hs.expand(this)"><img src="_static/images/hledger-ui/hledger-ui-bcexample-acc.png" title="hledger-ui accounts screen" /></a>
-hledger also provides a curses-style [console&nbsp;interface](hledger-ui.html)
+hledger also provides a [terminal&nbsp;interface](hledger-ui.html)
 that lets you review account balances and transactions quickly and without fuss.
 ([screencast](https://asciinema.org/a/29665))
 

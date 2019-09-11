@@ -67,7 +67,7 @@ and now [plaintextaccounting.org](http://plaintextaccounting.org).
 Compared to Ledger, hledger builds quickly and has a complete and
 accurate manual, an easier report query syntax, multi-column balance
 reports, better depth limiting, an interactive data entry assistant,
-and optional web and curses interfaces.
+and optional web and terminal interfaces.
 
 Compared to hledger, Ledger has additional power-user features such as
 the built in value expressions language, 

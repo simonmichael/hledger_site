@@ -6,7 +6,7 @@ Additional hledger tools you can install with stack or cabal. Once installed, th
 shows differences in an account's transactions between one journal file and another.
 
 [hledger-iadd](http://hackage.haskell.org/package/hledger-iadd)
-is a curses-style replacement for hledger's add command. 
+is a terminal UI replacement for hledger's add command. 
 
 [hledger-interest](http://hackage.haskell.org/package/hledger-interest)
 generates interest transactions for an account according to various schemes. 
