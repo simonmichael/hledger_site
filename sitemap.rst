@@ -21,12 +21,11 @@ hledger
 
    hledger
    journal
-   hledger-ui
-   hledger-web
    csv
    timeclock
    timedot
-   hledger-api
+   hledger-ui
+   hledger-web
 
 .. toctree::
    :caption: Getting started
