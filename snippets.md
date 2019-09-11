@@ -22,6 +22,7 @@
     indented
 
     paragraphs
+
 another field: 
     without leading colon, does not have the field-even/field-odd class
 ```
@@ -125,6 +126,7 @@ name:
 
 ```eval_rst
 .. |renderdate| date::
+
 Defining a text substitution, and the date directive.
 This document was rendered on: |renderdate|.
 ```
