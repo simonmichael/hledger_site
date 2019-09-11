@@ -20,12 +20,12 @@ hledger
    :maxdepth: 3
 
    hledger
+   hledger-ui
+   hledger-web
    journal
    csv
    timeclock
    timedot
-   hledger-ui
-   hledger-web
 
 .. toctree::
    :caption: Getting started
