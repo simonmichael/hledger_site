@@ -10,46 +10,54 @@ But it's reason enough to stick with markdown.
 
 ## What can hledger do for me ?
 
-Give it a file listing your transactions, and it can:
+hledger is a suite of reporting tools and mini-apps which can provide
+clarity and insight into your personal or business finances, time log,
+or any other dated quantitative data.
+It reads a list of "transactions", stored in a plain text format, or
+as time log records, or as CSV data, and generates a variety of useful
+reports and interactive views.
 
--   show transactions, payees, commodities, accounts, statistics
--   show your account hierarchy
--   show the transactions affecting a particular account, and its
-    running balance
--   make a balance sheet, showing your asset and liability balances
--   make a cashflow report, showing changes in your cash assets
--   make an income statement, showing your incomes and expenses
--   show a forecast of future activity, eg to help with cashflow
-    planning
--   show a bar chart of transaction activity by time period
--   filter reports to see just the data or time period you\'re
-    interested in
--   show multiple time periods side by side
--   summarise accounts to give the big picture
--   rewrite or pivot account names on the fly to give different views of
-    your data
--   show purchase costs/selling prices
--   show market values, in any commodity at any valuation date
--   calculate the rate of return of a savings account or investment
--   output reports as HTML or CSV
--   run as a live-updating terminal UI, for fast exploration
--   run as a web app, allowing remote/multi-user browsing and data entry
--   run as a HTTP API serving JSON, for integration with custom apps
+It does this with relatively little effort on your part: you need only
+provide the list of transactions and choose the report you want. From
+this, hledger can:
+
+- list your transactions, payees, currencies/commodities, accounts, statistics
+- show the hierarchy of accounts and subaccounts
+- show the transactions affecting any account, and calculate its running balance
+- make a balance sheet, showing your asset and liability account balances
+- make a cashflow report, showing changes in your cash assets
+- make an income statement, showing your revenues and expenses
+- show a forecast of future activity, eg to help with cashflow planning
+- show a bar chart of transaction activity by period
+- show purchase costs/selling prices
+- show market values in any currency at any valuation date
+- calculate the rate of return of a savings account or investment
+
+It can slice, dice, and present your reports in different ways:
+
+- show multiple time periods side by side
+- summarise accounts to give the big picture
+- filter out just the items or time period you're interested in
+- rewrite or pivot account names to give different views
+- output reports as plain text, HTML for sharing, CSV for export or spreadsheet viewing
+- run as a live-updating terminal UI, for fast exploration
+- run as a web app, allowing remote/multi-user browsing and data entry
+- run as a JSON web API, for integrating with custom apps
 
 Add a few directives to the file, and it can:
 
--   generate recurring transactions by rule
--   add extra postings (splits) to transactions by rule
--   make a budget report, showing your budget goals and status
+- include and combine multiple data sets
+- generate recurring transactions by rule
+- add extra postings (splits) to transactions by rule
+- make a budget report, showing your budget goals and status
 
-Also, it can:
+Also, hledger can:
 
--   help you enter new transactions with prompts or a terminal UI
--   help you convert and import new transactions from external sources,
-    eg banks
--   make reports from any CSV file
--   make reports from timeclock or timedot time logs
--   generate interest transactions by rule
+- help you enter new transactions with prompts or a terminal UI
+- help you convert and import new transactions from external sources, eg banks
+- make reports from any CSV file
+- make reports from timeclock or timedot time logs
+- generate interest transactions by rule
 
 ## How would that help me ?
 
