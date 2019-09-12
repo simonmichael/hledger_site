@@ -8,6 +8,112 @@ Our docs are intended to be viewed on hledger.org, not on github.
 But it's reason enough to stick with markdown.
 -->
 
+## Why hledger
+### What can hledger do for me ?
+
+Give it a file listing your transactions, and it can:
+
+-   show transactions, payees, commodities, accounts, statistics
+-   show your account hierarchy
+-   show the transactions affecting a particular account, and its
+    running balance
+-   make a balance sheet, showing your asset and liability balances
+-   make a cashflow report, showing changes in your cash assets
+-   make an income statement, showing your incomes and expenses
+-   show a forecast of future activity, eg to help with cashflow
+    planning
+-   show a bar chart of transaction activity by time period
+-   calculate the rate of return of a savings account or investment
+-   filter reports to see just the data or time period you\'re
+    interested in
+-   show multiple time periods side by side
+-   summarise accounts to give the big picture
+-   rewrite or pivot account names on the fly to give different views of
+    your data
+-   show purchase costs/selling prices
+-   show market values, in any commodity at any valuation date
+-   output reports as CSV or HTML
+-   run as a live-updating terminal UI, for fast exploration
+-   run as a web app, allowing remote/multi-user browsing and data entry
+-   run as a HTTP API serving JSON, for integration with custom apps
+
+Add a few directives to the file, and it can:
+
+-   generate recurring transactions by rule
+-   add extra postings (splits) to transactions by rule
+-   make a budget report, showing your budget goals and status
+
+Also, it can:
+
+-   help you enter new transactions with prompts or a terminal UI
+-   help you convert and import new transactions from external sources,
+    eg banks
+-   make reports from timeclock or timedot time logs
+-   make reports from any CSV file
+-   generate interest transactions by rule
+
+### How would all that help me ?
+
+- More clarity, transparency and accountability, for yourself or others
+- Know what you owe, or who owes you
+- Know where the money went; steer your spending
+- Know how you spent your time; easy client invoicing
+- More foresight and ability to plan; avoid overdrafts, late fees, cashflow crunches
+- Know all the numbers you need for tax reporting; know how much to save for estimated taxes
+- Less stress, fear or overwhelm, more satisfaction, empowerment, and prosperity
+
+### Isn't manual data entry a huge hassle ?
+
+- Not if you spend a few minutes every day.
+- Not if the benefits are worth it to you.
+- Not if you use a comfortable editor and copy/paste a lot.
+- Not if you use tools like editor modes, hledger add, hledger-iadd, hledger-web.
+- Not if you use rules to generate your recurring transactions.
+- ...
+
+### Isn't importing from banks a huge hassle ?
+
+No, not once you have put together some kind of manual routine or automated workflow.
+The possibilities vary by bank and country, but here are two simple
+workflows that are almost always possible:
+
+Manual CSV import:
+
+1. Manually download CSV from your bank's website
+2. hledger import BANK.csv
+3. Review/clean up the new journal entries.
+
+Automated CSV import:
+
+1. Review/clean up the new journal entries. (CSV was downloaded and imported overnight by a cron job.)
+
+Ask us for help setting this up.
+
+### Isn't plain text ugly and hard to use ?
+
+No, it's great, honest. You'll love it.
+It's fast, it's cheap.
+You do not need "Plaintext Reader, trial version" to read it;
+you do not need "Plaintext Studio Pro" to write it.
+You can use your favorite editor and skills you already have. 
+You can search in it! 
+You can version control it. 
+It's future proof.
+It will be just as usable in 15 or 50 years.
+You can still read it even without the right software or (if printed) a working computer.
+
+<http://plaintextaccounting.org>:\
+"Accounting data is valuable; we want to know that it will be
+accessible for ever - even without software. We want to know when it
+changes, and revision-control it. We want to search and manipulate it
+efficiently. So, we store it as human-readable plain text."
+
+### Isn't this too weird for my family, business partners, tax accountant to use ?
+
+Maybe. You can ask them to enter data via hledger-web, 
+or import from their mobile expenses app or a shared spreadsheet.
+You can show them the hledger-web UI, or HTML reports, or CSV they open in a spreadsheet.
+
 ## Project
 
 ### How/why was hledger started ?
