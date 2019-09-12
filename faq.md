@@ -8,8 +8,7 @@ Our docs are intended to be viewed on hledger.org, not on github.
 But it's reason enough to stick with markdown.
 -->
 
-## Why hledger
-### What can hledger do for me ?
+## What can hledger do for me ?
 
 Give it a file listing your transactions, and it can:
 
@@ -23,7 +22,6 @@ Give it a file listing your transactions, and it can:
 -   show a forecast of future activity, eg to help with cashflow
     planning
 -   show a bar chart of transaction activity by time period
--   calculate the rate of return of a savings account or investment
 -   filter reports to see just the data or time period you\'re
     interested in
 -   show multiple time periods side by side
@@ -32,7 +30,8 @@ Give it a file listing your transactions, and it can:
     your data
 -   show purchase costs/selling prices
 -   show market values, in any commodity at any valuation date
--   output reports as CSV or HTML
+-   calculate the rate of return of a savings account or investment
+-   output reports as HTML or CSV
 -   run as a live-updating terminal UI, for fast exploration
 -   run as a web app, allowing remote/multi-user browsing and data entry
 -   run as a HTTP API serving JSON, for integration with custom apps
@@ -48,11 +47,11 @@ Also, it can:
 -   help you enter new transactions with prompts or a terminal UI
 -   help you convert and import new transactions from external sources,
     eg banks
--   make reports from timeclock or timedot time logs
 -   make reports from any CSV file
+-   make reports from timeclock or timedot time logs
 -   generate interest transactions by rule
 
-### How would all that help me ?
+## How would that help me ?
 
 - More clarity, transparency and accountability, for yourself or others
 - Know what you owe, or who owes you
@@ -62,24 +61,23 @@ Also, it can:
 - Know all the numbers you need for tax reporting; know how much to save for estimated taxes
 - Less stress, fear or overwhelm, more satisfaction, empowerment, and prosperity
 
-### Isn't manual data entry a huge hassle ?
+## Isn't manual data entry a pain ?
 
 - Not if you spend a few minutes every day.
 - Not if the benefits are worth it to you.
 - Not if you use a comfortable editor and copy/paste a lot.
-- Not if you use tools like editor modes, hledger add, hledger-iadd, hledger-web.
+- Not if you use tools to help (editor modes, hledger add, hledger-iadd, hledger-web..)
 - Not if you use rules to generate your recurring transactions.
-- ...
 
-### Isn't importing from banks a huge hassle ?
+## Isn't importing from banks a pain ?
 
-No, not once you have put together some kind of manual routine or automated workflow.
+Not once you have set up a manual or automated routine for it.
 The possibilities vary by bank and country, but here are two simple
 workflows that are almost always possible:
 
 Manual CSV import:
 
-1. Manually download CSV from your bank's website
+1. Manually download CSV from your bank's website.
 2. hledger import BANK.csv
 3. Review/clean up the new journal entries.
 
@@ -89,34 +87,42 @@ Automated CSV import:
 
 Ask us for help setting this up.
 
-### Isn't plain text ugly and hard to use ?
+## Isn't plain text ugly and hard to use ?
 
-No, it's great, honest. You'll love it.
-It's fast, it's cheap.
-You do not need "Plaintext Reader, trial version" to read it;
+No way, we love it.
+it's great, honest.
+You'll love it.
+It's fast.
+It's cheap.
+It's resizable.
+You can pick the font and colours.
+But it's non-distracting.
+It keeps you focussed on the content.
+It's copy-pasteable.
+It's accessible to screen readers.
+You do not need "Plaintext Reader, Trial Version" to read it.
 you do not need "Plaintext Studio Pro" to write it.
 You can use your favorite editor and skills you already have. 
 You can search in it! 
 You can version control it. 
-It's future proof.
+It works well over remote/slow connections.
+It's future-proof.
 It will be just as usable in 15 or 50 years.
-You can still read it even without the right software or (if printed) a working computer.
+You can still read it even without the right software or (if you print it) a working computer.
 
-<http://plaintextaccounting.org>:\
-"Accounting data is valuable; we want to know that it will be
+*Accounting data is valuable; we want to know that it will be
 accessible for ever - even without software. We want to know when it
 changes, and revision-control it. We want to search and manipulate it
-efficiently. So, we store it as human-readable plain text."
+efficiently. So, we store it as human-readable plain text.*
+--<http://plaintextaccounting.org>
 
-### Isn't this too weird for my family, business partners, tax accountant to use ?
+## Isn't this too weird for my family, business partners, tax accountant to use ?
 
 Maybe. You can ask them to enter data via hledger-web, 
 or import from their mobile expenses app or a shared spreadsheet.
-You can show them the hledger-web UI, or HTML reports, or CSV they open in a spreadsheet.
+You can show them the hledger-web UI, or HTML reports, or give them CSV to open in a spreadsheet.
 
-## Project
-
-### How/why was hledger started ?
+## Why did you start hledger ? How does it relate to Ledger ?
 
 I ([Simon Michael](http://joyful.com)) discovered John Wiegley's [Ledger](http://ledger-cli.org) in 2006,
 and was very happy to find this efficient command-line reporting tool with a transparent data format.
@@ -165,10 +171,9 @@ the [ledger-cli.org](http://ledger-cli.org) site,
 IRC support on #ledger,
 and now [plaintextaccounting.org](http://plaintextaccounting.org).
 
-## Comparisons with other ledgerlikes
-### Ledger
+## How is hledger different from Ledger ?
 
-#### Features
+### Feature differences
 
 Compared to Ledger, hledger builds quickly and has a complete and
 accurate manual, an easier report query syntax, multi-column balance
@@ -195,10 +200,10 @@ We currently support:
 - automated postings
 - periodic transactions
 - budget reports
+- -X/--exchange
 
 We do not yet support:
 
-- -X/--exchange
 - generation of revaluation transactions (--revalued)
 - capital gain/loss reporting (--gain)
 - value expressions
@@ -215,7 +220,7 @@ And we add some new commands, such as:
 - ui
 - web
 
-#### File formats
+### File format differences
 
 hledger's journal file format is very close to Ledger's.
 Some unsupported Ledger syntax is parsed but ignored; some is not parsed and will cause an error (eg value expressions).
@@ -235,7 +240,7 @@ hledger.journal
 ledger.journal
 ```
 
-#### Functional differences
+### Functional differences
 
 - hledger recognises description and negative patterns by "desc:"
   and "not:" prefixes, unlike Ledger 3's free-form parser
@@ -317,19 +322,16 @@ ledger.journal
       --historical (-H)
                                 Value commodities at the time of their acquisition.
 
-#### The "ledger4" parser
+## What was ledger4 ?
 
-[ledger4](https://github.com/ledger/ledger4) is John's 2012/2013
-rewrite of some parts of Ledger 3, including the parser, in Haskell.
-We added this to hledger for a while, 
+[ledger4](https://github.com/ledger/ledger4) was John's 2012 start
+at rewriting parts of Ledger 3, eg the parser, in Haskell.
+We included this in hledger for a while, 
 hoping to attract contributions to improve this "bridge" between the projects,
 and improve our support for reading Ledger's files.
-Neither happened, so it was removed.
+Neither happened, so it was removed again.
 
-
-## hledger CLI
-
-### With multiple commodities, output looks weird; why are some amounts shown with no account name ?
+## With multiple commodities, output looks weird; why are some amounts shown with no account name ?
 
 When hledger needs to show a multi-commodity amount, each commodity is displayed on its own line, one above the other (like Ledger).
 
@@ -397,9 +399,7 @@ $ hledger -f t.j balance --drop 1
 ```
 
 
-## File formats
-### Journal format
-#### Why does this entry give a "no amount" error even though I wrote an amount ?
+## Why does this entry give a "no amount" error even though I wrote an amount ?
 
 ```journal
 2019-01-01
@@ -410,7 +410,8 @@ Because there's only a single space between `a` and `1`,
 so this is parsed as an account named <span style="white-space:nowrap;">"a 1"</span>, with no amount.
 There must be at least two spaces between account name and amount.
 
-#### Why do some directives not affect other files ? Why can't I put account aliases in an included file ?
+
+## Why do some directives not affect other files ? Why can't I put account aliases in an included file ?
 
 This is documented at [journal format: directives](journal.html#directives).
 (Also mentioned at [hledger: Input files](hledger.html#input-files).)
@@ -456,12 +457,7 @@ See also:
 [#510](https://github.com/simonmichael/hledger/issues/510),
 [#217](https://github.com/simonmichael/hledger/issues/217)
 
-
-## Other software
-
-### iTerm2/iTerm3
-
-#### Why does Shift-Up/Shift-Down move the cursor instead of adjusting the period in hledger-ui ?
+## With hledger-ui in iTerm2/3, why does Shift-Up/Shift-Down move the cursor instead of adjusting the period ?
 
 One way to fix: in iTerm2 do Preferences -> Profiles -> your current profile -> Keys -> Load Preset -> xterm Defaults 
 (not Terminal.app Compatibility). And perhaps open a new tab with this profile. 
