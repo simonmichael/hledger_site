@@ -163,15 +163,50 @@ accounting.
 
 ## Help/Feedback
 
-|              |                                                                                                                                                                                                                                                           |
-|--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| IRC (Chat)   | [#hledger](http://irc.hledger.org) on Freenode ([#freenode_#hledger:matrix.org](http://matrix.hledger.org) on Matrix)                                                                                                                                       |
-| Twitter:     | [#hledger](https://twitter.com/search?q=%23hledger&src=typed_query&f=live), [#plaintextaccounting](https://twitter.com/search?q=%23plaintextaccounting&src=typed_query&f=live)                                                                            |
-| Reddit:      | [/r/plaintextaccounting](https://www.reddit.com/r/plaintextaccounting/)                                                                                                                                                                                   |
-| Hacker News: | [stories](https://hn.algolia.com/?query=hledger&sort=byDate&prefix&page=0&dateRange=all&type=story), [comments](https://hn.algolia.com/?query=hledger&sort=byDate&prefix=false&page=0&dateRange=all&type=comment)                                         |
-| Mail list:   | [list.hledger.org](http://list.hledger.org), [hledger@googlegroups.com](mailto:hledger@googlegroups.com)                                                                                                                                                  |
-| Issues:      | [bugs.hledger.org](http://bugs.hledger.org) (bugs), [issues.hledger.org](http://issues.hledger.org) (all), [open issues overview](CONTRIBUTING.html#open-issues), [website issues](https://github.com/simonmichael/hledger_site/issues?utf8=%E2%9C%93&q=) |
-| Other:       | [simon@joyful.com](mailto:simon@joyful.com)                                                                                                                                                                                                               |
+<table>
+  <tr>
+    <td>IRC (Chat)</td>
+    <td>
+      <a href="http://irc.hledger.org">#hledger</a> on Freenode (<a href="http://matrix.hledger.org">#freenode_#hledger:matrix.org</a> on Matrix)
+    </td>
+  </tr>
+  <tr>
+    <td>Twitter:</td>
+    <td>
+      <a href="https://twitter.com/search?q=%23hledger&amp;src=typed_query&amp;f=live">#hledger</a>, <a href="https://twitter.com/search?q=%23plaintextaccounting&amp;src=typed_query&amp;f=live">#plaintextaccounting</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Reddit:</td>
+    <td>
+      <a href="https://www.reddit.com/r/plaintextaccounting/">/r/plaintextaccounting</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Hacker News:</td>
+    <td>
+      <a href="https://hn.algolia.com/?query=hledger&amp;sort=byDate&amp;prefix&amp;page=0&amp;dateRange=all&amp;type=story">stories</a>, <a href="https://hn.algolia.com/?query=hledger&amp;sort=byDate&amp;prefix=false&amp;page=0&amp;dateRange=all&amp;type=comment">comments</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Mail list:</td>
+    <td>
+      <a href="http://list.hledger.org">list.hledger.org</a>, <a href="mailto:hledger@googlegroups.com">hledger@googlegroups.com</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Issues:</td>
+    <td>
+      <a href="http://bugs.hledger.org">bugs.hledger.org</a> (bugs), <a href="http://issues.hledger.org">issues.hledger.org</a> (all), <a href="CONTRIBUTING.html#open-issues">open issues overview</a>, <a href="https://github.com/simonmichael/hledger_site/issues?utf8=%E2%9C%93&amp;q=">website issues</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Other:</td>
+    <td>
+      <a href="mailto:simon@joyful.com">simon@joyful.com</a>
+    </td>
+  </tr>
+</table>
 
 
 <div id=dev class=contentbox>
