@@ -16,11 +16,10 @@ or any other dated quantitative data.
 
 It reads a list of "transactions", stored in a plain text double-entry
 journal format, or as time log records, or as CSV data, and generates
-a variety of useful reports and interactive views.
-
-It does this with relatively little effort on your part: you need only
-provide the list of transactions and choose the report you want. From
-this, hledger can:
+a variety of useful reports and interactive views. You need only
+provide the transactions file and choose the report you want. 
+hledger can: 
+<!-- It does this with relatively little effort on your part: -->
 
 - list your transactions, payees, currencies/commodities, accounts, statistics
 - show the hierarchy of accounts and subaccounts
@@ -28,39 +27,40 @@ this, hledger can:
 - make a balance sheet, showing your asset and liability account balances
 - make a cashflow report, showing changes in your cash assets
 - make an income statement, showing your revenues and expenses
-- show a forecast of future activity, eg to help with cashflow planning
 - show a bar chart of transaction activity by period
 - show purchase costs/selling prices
 - show market values in any currency at any valuation date
 - calculate the rate of return of a savings account or investment
+- make reports from timeclock or timedot time logs
+- make reports from any CSV file
 
 It can slice, dice, and present your reports in different ways:
 
-- show multiple time periods side by side
-- summarise accounts to give the big picture
 - filter out just the items or time period you're interested in
+- show multiple periods side by side
+- summarise accounts to give the big picture
 - rewrite or pivot account names to give different views
 - output reports as plain text, HTML, or CSV
 - run as a live-updating terminal UI, for fast interactive exploration
 - run as a web app, allowing remote/multi-user browsing and data entry
 - run as a JSON web API, for integrating with custom apps
+- be linked into a Haskell script or program
 
-Add a few directives to the file, and it can:
+Add a few directives to the file, and hledger can:
 
 - include and combine multiple data sets
 - generate recurring transactions by rule
 - add extra postings (splits) to transactions by rule
+- show a forecast of future activity, eg to help with cashflow planning
 - make a budget report, showing your budget goals and status by account and period
 
-Also, hledger can:
+Also, it can:
 
+- generate interest transactions by rule
 - help you enter new transactions with prompts or a terminal UI
 - help you convert and import new transactions from external sources, eg banks
-- make reports from any CSV file
-- make reports from timeclock or timedot time logs
-- generate interest transactions by rule
 
-## How would that help me ?
+## How could that help me ?
 
 - More clarity, transparency and accountability, for yourself or others
 - Know what you owe, or who owes you
@@ -68,7 +68,8 @@ Also, hledger can:
 - Know how you spent your time; easy client invoicing
 - More foresight and ability to plan; avoid overdrafts, late fees, cashflow crunches
 - Know all the numbers you need for tax reporting; know how much to save for estimated taxes
-- Less stress, fear or overwhelm, more satisfaction, empowerment, and prosperity
+- Less stress, fear or overwhelm
+- More satisfaction, empowerment, and prosperity!
 
 ## Isn't manual data entry a pain ?
 
@@ -94,7 +95,7 @@ Automated CSV import:
 
 1. Review/clean up the new journal entries. (CSV was downloaded and imported overnight by a cron job.)
 
-Ask us for help setting this up.
+Ask us for help setting this up. See also [How could I import/migrate from...](#how-could-i-import-migrate-from).
 
 ## Isn't plain text ugly and hard to use ?
 
@@ -147,7 +148,7 @@ Now `hledger stats` and `hledger bal` should show lots of data. That's your past
 
 Then, if you want to leave Mint, you'll need to replace their automatic
 import from banks with 
-[your own import process](https://hledger.org/faq.html#isn-t-importing-from-banks-a-pain).
+[your own import process](#isn-t-importing-from-banks-a-pain).
 
 Or if you want to keep using Mint for that, because you like how they
 aggregate and clean the data: just periodically re-export from Mint,
