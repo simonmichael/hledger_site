@@ -13,9 +13,10 @@ But it's reason enough to stick with markdown.
 hledger is a suite of reporting tools and mini-apps which can provide
 clarity and insight into your personal or business finances, time log,
 or any other dated quantitative data.
-It reads a list of "transactions", stored in a plain text format, or
-as time log records, or as CSV data, and generates a variety of useful
-reports and interactive views.
+
+It reads a list of "transactions", stored in a plain text double-entry
+journal format, or as time log records, or as CSV data, and generates
+a variety of useful reports and interactive views.
 
 It does this with relatively little effort on your part: you need only
 provide the list of transactions and choose the report you want. From
@@ -39,8 +40,8 @@ It can slice, dice, and present your reports in different ways:
 - summarise accounts to give the big picture
 - filter out just the items or time period you're interested in
 - rewrite or pivot account names to give different views
-- output reports as plain text, HTML for sharing, CSV for export or spreadsheet viewing
-- run as a live-updating terminal UI, for fast exploration
+- output reports as plain text, HTML, or CSV
+- run as a live-updating terminal UI, for fast interactive exploration
 - run as a web app, allowing remote/multi-user browsing and data entry
 - run as a JSON web API, for integrating with custom apps
 
@@ -49,7 +50,7 @@ Add a few directives to the file, and it can:
 - include and combine multiple data sets
 - generate recurring transactions by rule
 - add extra postings (splits) to transactions by rule
-- make a budget report, showing your budget goals and status
+- make a budget report, showing your budget goals and status by account and period
 
 Also, hledger can:
 
@@ -130,6 +131,29 @@ Maybe. You can ask them to enter data via hledger-web,
 or import from their mobile expenses app or a shared spreadsheet.
 You can show them the hledger-web UI, or HTML reports, or give them CSV to open in a spreadsheet.
 
+## How could I import/migrate from...
+
+Some quick/rough migration recipes:
+
+### Mint.com ?
+
+1. download [examples/csv/mint.csv.rules](https://github.com/simonmichael/hledger/blob/master/examples/csv/mint.csv.rules), and adjust the `account1` & `account2` rules
+2. `touch ~/.hledger.journal`
+3. log in to Mint, go to TRANSACTIONS, scroll to the bottom of the page, click on the "Export all N transactions" link, save it as `mint.csv` on your computer
+4. `cd ~/Downloads` (or wherever you saved it)
+5. `hledger import mint.csv`
+
+Now `hledger stats` and `hledger bal` should show lots of data. That's your past data migrated. 
+
+Then, if you want to leave Mint, you'll need to replace their automatic
+import from banks with 
+[your own import process](https://hledger.org/faq.html#isn-t-importing-from-banks-a-pain).
+
+Or if you want to keep using Mint for that, because you like how they
+aggregate and clean the data: just periodically re-export from Mint,
+repeating steps 3-5 above.
+
+
 ## Why did you start hledger ? How does it relate to Ledger ?
 
 I ([Simon Michael](http://joyful.com)) discovered John Wiegley's [Ledger](http://ledger-cli.org) in 2006,
@@ -181,7 +205,7 @@ and now [plaintextaccounting.org](http://plaintextaccounting.org).
 
 ## How is hledger different from Ledger ?
 
-### Feature differences
+### Feature differences ?
 
 Compared to Ledger, hledger builds quickly and has a complete and
 accurate manual, an easier report query syntax, multi-column balance
@@ -228,7 +252,7 @@ And we add some new commands, such as:
 - ui
 - web
 
-### File format differences
+### File format differences ?
 
 hledger's journal file format is very close to Ledger's.
 Some unsupported Ledger syntax is parsed but ignored; some is not parsed and will cause an error (eg value expressions).
@@ -248,7 +272,7 @@ hledger.journal
 ledger.journal
 ```
 
-### Functional differences
+### Functional differences ?
 
 - hledger recognises description and negative patterns by "desc:"
   and "not:" prefixes, unlike Ledger 3's free-form parser
