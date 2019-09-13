@@ -1,25 +1,15 @@
 # FAQ
 
-<!-- 
-20190418: I'd rather maintain this in org mode.
-But this would make our docs look bad when viewed on github,
-since github (org-ruby ?) converts to "smart" quotes/hyphens, and misrenders =--drop=.
-Our docs are intended to be viewed on hledger.org, not on github.
-But it's reason enough to stick with markdown.
--->
-
 ## What can hledger do for me ?
 
-hledger is a suite of reporting tools and mini-apps which can provide
-clarity and insight into your personal or business finances, time log,
-or any other dated quantitative data.
+hledger is a suite of reporting tools which can provide clarity and
+insight into your personal or business finances, time logs, or other
+dated quantitative data, with relatively little effort on your part.
 
-It reads a list of "transactions", stored in a plain text double-entry
-journal format, or as time log records, or as CSV data, and generates
-a variety of useful reports and interactive views. You need only
-provide the transactions file and choose the report you want. 
-hledger can: 
-<!-- It does this with relatively little effort on your part: -->
+You need only provide a list of transactions, as a plain text file in
+a simple human-readable format. (Or a time log, or a CSV file with
+conversion rules.) From this hledger can generate a variety of useful
+reports and interactive views:
 
 - list your transactions, payees, currencies/commodities, accounts, statistics
 - show the hierarchy of accounts and subaccounts
@@ -34,7 +24,7 @@ hledger can:
 - make reports from timeclock or timedot time logs
 - make reports from any CSV file
 
-It can slice, dice, and present your reports in different ways:
+It can slice, dice, and present your data in different ways:
 
 - filter out just the items or time period you're interested in
 - show multiple periods side by side
@@ -44,11 +34,10 @@ It can slice, dice, and present your reports in different ways:
 - run as a live-updating terminal UI, for fast interactive exploration
 - run as a web app, allowing remote/multi-user browsing and data entry
 - run as a JSON web API, for integrating with custom apps
-- be linked into a Haskell script or program
 
-Add a few directives to the file, and hledger can:
+If you add a few directives to the file, hledger can:
 
-- include and combine multiple data sets
+- include multiple data sets
 - generate recurring transactions by rule
 - add extra postings (splits) to transactions by rule
 - show a forecast of future activity, eg to help with cashflow planning
@@ -59,6 +48,7 @@ Also, it can:
 - generate interest transactions by rule
 - help you enter new transactions with prompts or a terminal UI
 - help you convert and import new transactions from external sources, eg banks
+- be used as a library in a quick Haskell script or compiled program
 
 ## How could that help me ?
 
@@ -99,17 +89,17 @@ Ask us for help setting this up. See also [How could I import/migrate from...](#
 
 ## Isn't plain text ugly and hard to use ?
 
-No way, we love it.
-it's great, honest.
+No way, it's great, honest.
+We love it.
 You'll love it.
 It's fast.
 It's cheap.
-It's resizable.
-You can pick the font and colours.
-But it's non-distracting.
+It's non-distracting.
 It keeps you focussed on the content.
 It's copy-pasteable.
 It's accessible to screen readers.
+It's resizable.
+You can pick the font and colours.
 You do not need "Plaintext Reader, Trial Version" to read it.
 you do not need "Plaintext Studio Pro" to write it.
 You can use your favorite editor and skills you already have. 
@@ -131,29 +121,6 @@ efficiently. So, we store it as human-readable plain text.*
 Maybe. You can ask them to enter data via hledger-web, 
 or import from their mobile expenses app or a shared spreadsheet.
 You can show them the hledger-web UI, or HTML reports, or give them CSV to open in a spreadsheet.
-
-## How could I import/migrate from...
-
-Some quick/rough migration recipes:
-
-### Mint.com ?
-
-1. download [examples/csv/mint.csv.rules](https://github.com/simonmichael/hledger/blob/master/examples/csv/mint.csv.rules), and adjust the `account1` & `account2` rules
-2. `touch ~/.hledger.journal`
-3. log in to Mint, go to TRANSACTIONS, scroll to the bottom of the page, click on the "Export all N transactions" link, save it as `mint.csv` on your computer
-4. `cd ~/Downloads` (or wherever you saved it)
-5. `hledger import mint.csv`
-
-Now `hledger stats` and `hledger bal` should show lots of data. That's your past data migrated. 
-
-Then, if you want to leave Mint, you'll need to replace their automatic
-import from banks with 
-[your own import process](#isn-t-importing-from-banks-a-pain).
-
-Or if you want to keep using Mint for that, because you like how they
-aggregate and clean the data: just periodically re-export from Mint,
-repeating steps 3-5 above.
-
 
 ## Why did you start hledger ? How does it relate to Ledger ?
 
@@ -364,72 +331,27 @@ hoping to attract contributions to improve this "bridge" between the projects,
 and improve our support for reading Ledger's files.
 Neither happened, so it was removed again.
 
-## With multiple commodities, output looks weird; why are some amounts shown with no account name ?
+## How could I import/migrate from...
 
-When hledger needs to show a multi-commodity amount, each commodity is displayed on its own line, one above the other (like Ledger).
+Some quick/rough migration recipes:
 
-Here are some examples. With this journal, the implicit balancing amount drawn from the `b` account will be a multicommodity amount (a euro and a dollar):
-```journal
-2015/1/1
-    a         EUR 1
-    a         USD 1
-    b
-```
-the `print` command shows the `b` posting's amount on two lines, bottom-aligned:
-```shell
-$ hledger -f t.j print
-2015/01/01
-    a         USD 1
-    a         EUR 1
-             EUR -1  ; <-
-    b        USD -1  ; <- a euro and a dollar is drawn from b
-```
-the `balance` command shows that both `a` and `b` have a multi-commodity balance (again, bottom-aligned):
-```shell
-$ hledger -f t.j balance
-               EUR 1     ; <-
-               USD 1  a  ; <- a's balance is a euro and a dollar
-              EUR -1     ; <-
-              USD -1  b  ; <- b's balance is a negative euro and dollar
---------------------
-                   0
-```
-while the `register` command shows (top-aligned, this time!) a multi-commodity running total after the second posting,
-and a multi-commodity amount in the third posting:
-```shell
-$ hledger -f t.j register --width 50
-2015/01/01       a             EUR 1         EUR 1
-                 a             USD 1         EUR 1  ; <- the running total is now a euro and a dollar        
-                                             USD 1  ;                                                        
-                 b            EUR -1                ; <- the amount posted to b is a negative euro and dollar
-                              USD -1             0  ;
-```
+### Mint.com ?
 
-Newer reports like [multi-column balance reports](hledger.html#multicolumn-balance-report) show multi-commodity amounts on one line instead, comma-separated.
-Although wider, this seems clearer and we should probably use it more:
-```shell
-$ hledger -f t.j balance --yearly
-Balance changes in 2015:
+1. download [examples/csv/mint.csv.rules](https://github.com/simonmichael/hledger/blob/master/examples/csv/mint.csv.rules), and adjust the `account1` & `account2` rules
+2. `touch ~/.hledger.journal`
+3. log in to Mint, go to TRANSACTIONS, scroll to the bottom of the page, click on the "Export all N transactions" link, save it as `mint.csv` on your computer
+4. `cd ~/Downloads` (or wherever you saved it)
+5. `hledger import mint.csv`
 
-   ||           2015 
-===++================
- a ||   EUR 1, USD 1 
- b || EUR -1, USD -1 
----++----------------
-   ||              0 
-```
+Now `hledger stats` and `hledger bal` should show lots of data. That's your past data migrated. 
 
-You will also see amounts without a corresponding account name if you
-remove too many account name segments with [`--drop`](hledger.html#balance):
-```shell
-$ hledger -f t.j balance --drop 1
-               EUR 1  
-               USD 1  
-              EUR -1  
-              USD -1  
---------------------
-                   0
-```
+Then, if you want to leave Mint, you'll need to replace their automatic
+import from banks with 
+[your own import process](#isn-t-importing-from-banks-a-pain).
+
+Or if you want to keep using Mint for that, because you like how they
+aggregate and clean the data: just periodically re-export from Mint,
+repeating steps 3-5 above.
 
 
 ## Why does this entry give a "no amount" error even though I wrote an amount ?
@@ -489,6 +411,78 @@ See [#1007](https://github.com/simonmichael/hledger/issues/1007).
 See also:
 [#510](https://github.com/simonmichael/hledger/issues/510),
 [#217](https://github.com/simonmichael/hledger/issues/217)
+
+## Why am I seeing some amounts without an account name in reports ?
+
+Some of hledger's older commands (balance, print, register) show a
+multi-commodity amount with each commodity on its own line, by default
+(like Ledger).
+
+Here are some examples. 
+In the following journal entry, the implicit balancing amount drawn from the `b` account will be a multicommodity amount (a euro and a dollar):
+```journal
+2015/1/1
+    a         EUR 1
+    a         USD 1
+    b
+```
+the `print` command shows the `b` posting's amount on two lines, bottom-aligned:
+```shell
+$ hledger -f t.j print
+2015/01/01
+    a         USD 1
+    a         EUR 1
+             EUR -1  ; <-
+    b        USD -1  ; <- a euro and a dollar is drawn from b
+```
+the `balance` command shows that both `a` and `b` have a multi-commodity balance (again, bottom-aligned):
+```shell
+$ hledger -f t.j balance
+               EUR 1     ; <-
+               USD 1  a  ; <- a's balance is a euro and a dollar
+              EUR -1     ; <-
+              USD -1  b  ; <- b's balance is a negative euro and dollar
+--------------------
+                   0
+```
+while the `register` command shows (top-aligned, this time!) a multi-commodity running total after the second posting,
+and a multi-commodity amount in the third posting:
+```shell
+$ hledger -f t.j register --width 50
+2015/01/01       a             EUR 1         EUR 1
+                 a             USD 1         EUR 1  ; <- the running total is now a euro and a dollar        
+                                             USD 1  ;                                                        
+                 b            EUR -1                ; <- the amount posted to b is a negative euro and dollar
+                              USD -1             0  ;
+```
+
+Newer reports like [multi-column balance reports](hledger.html#multicolumn-balance-report) show multi-commodity amounts on one line instead, comma-separated.
+Although wider, this seems clearer and we should probably use it more:
+```shell
+$ hledger -f t.j balance --yearly
+Balance changes in 2015:
+
+   ||           2015 
+===++================
+ a ||   EUR 1, USD 1 
+ b || EUR -1, USD -1 
+---++----------------
+   ||              0 
+```
+
+You will also see amounts without a corresponding account name if you
+remove too many account name segments with [`--drop`](hledger.html#balance)
+(a bug, which we'd like to see fixed):
+```shell
+$ hledger -f t.j balance --drop 1
+               EUR 1  
+               USD 1  
+              EUR -1  
+              USD -1  
+--------------------
+                   0
+```
+
 
 ## With hledger-ui in iTerm2/3, why does Shift-Up/Shift-Down move the cursor instead of adjusting the period ?
 
