@@ -228,28 +228,6 @@ html_context = {
         # ('1.1'    ,'1.1'),
         # ('1.0'    ,'1.0'),
     ]
-    # 'languages':
-    #     [('en', 'English'),
-    #      ('fr', 'Français'),
-    #      ('it', 'Italiano'),
-    #      ('es', "Español"),
-    #      ('pt', "Português"),
-    #      ('pt_BR', 'Português do Brasil'),
-    #      ('de', 'Deutsch'),
-    #      ('nb_NO', 'Bokmål'),
-    #      ('es', 'Español'),
-    #      ('ru', 'русский'),
-    #      ('ja', '日本語'),
-    #      ('zh', '中文'),
-    #     ],
-    # 'downloads':
-    #     [('pdf',
-    #       'https://manual.zrythm.org/en/Zrythm.pdf'),
-    #      ('htmlzip',
-    #       'https://www.zrythm.org'),
-    #      ('epub',
-    #       'https://www.zrythm.org'),
-    #     ]
 
 }
 
