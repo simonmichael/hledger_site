@@ -108,9 +108,13 @@ exclude_patterns = [
     'Thumbs.db',
     '.DS_Store',
     '_site',
-    # exclude the old manual source files for speed
-    'doc',
-    # '*.md',  # XXX for testing templates etc: exclude all but what's in sitemap (all but sitemap.html ?)
+
+    # don't render the old manuals for now
+    '[0-9]*',
+
+    # exclude more, for faster testing
+    # '[a-gi-z]*.md',
+    # '*.md',  
 ]
 
 # A string of reStructuredText that will be included at the beginning of
@@ -303,6 +307,11 @@ for l in [
     'haskell',
     'hledger',
     'example',
+    # still in old manuals:
+    '{.shells}',
+    '{.bash}',
+    '{.console}',
+    '{.diff}',
   ]:
     class NullLexer(RegexLexer):
         name = l
