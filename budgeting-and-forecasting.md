@@ -44,7 +44,7 @@ create a budget for them.
 Budgets are described with periodic transactions. Periodic transaction
 has `~` instead of date and period expression instead of description. In this case
 we want to create a monthly budget that will come into effect starting from January 2013,
-which will include income of 10000 USD that is partically spent on Food, Health, Home and Transport
+which will include income of 10000 USD that is partially spent on Food, Health, Home and Transport
 and the rest becomes our Assets:
 
 ```journal
