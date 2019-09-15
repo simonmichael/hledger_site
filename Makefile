@@ -19,8 +19,9 @@ help:
 %: Makefile
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
-html-live:
-	ls *.rst *.md conf.py _templates/*.html | entr make html
+# Auto-rebuild site when any source files change.
+html-auto:
+	fd -e .py -e .css -e .html -e .js -e .md -e .rst | entr make html
 
 BROWSE=open
 LIVERELOADPORT=8001
@@ -28,8 +29,9 @@ LIVERELOAD=livereloadx -p $(LIVERELOADPORT) -s --exclude '*.html'
   # Exclude html files to avoid reloading browser as every page is generated.
   # A reload happens at the end when the css/js files get copied.
 
+# Auto-rebuild site, and watch changes in a new browser window.
 html-watch:
-	make html-live &
+	make html-auto &
 	(sleep 1; $(BROWSE) http://localhost:$(LIVERELOADPORT)/) &
 	$(LIVERELOAD) _build/html/
 
