@@ -35,6 +35,10 @@ html-watch:
 	(sleep 1; $(BROWSE) http://localhost:$(LIVERELOADPORT)/) &
 	$(LIVERELOAD) _build/html/
 
+# Auto-update and watch changes in CSS files only, for speed.
+css-watch:
+	fd -e .css | entr cp -r _static/css/* _build/html/_static/css &
+	$(LIVERELOAD) _build/html/
 
 install:
 	pip3 install -U sphinx recommonmark sphinx-markdown-tables sphinx_rtd_theme
