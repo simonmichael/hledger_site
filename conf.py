@@ -64,14 +64,17 @@ release_versions = [
 
 # only these versions will be shown in the version selector
 show_release_versions = [
-    '1.15',
-    '1.14',
+    # all versions shown on the 20190915 download page (overkill):
+    '1.15', # arch, gentoo
+    '1.14', # void
     '1.13',
-    '1.12',
+    '1.12', # debian sid, fedora 31, fedora 32, fedora rawhide
     '1.11',
-    '1.10',
-    '1.9',
-    '1.5',
+    '1.10', # debian buster, debian bullseye, ubuntu disco, fedora 30, openbsd wip
+    '1.9',  # sandstorm
+    '1.5',  # ubuntu cosmic, fedora 29
+    '1.2',  # ubuntu bionic
+    '1.0',  # debian stretch
 ]
 
 # these non-shown versions will be excluded from site building, below
