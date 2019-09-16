@@ -1,0 +1,96 @@
+/* sphinx rtd theme customisations */
+
+.wy-nav-top {
+    background:#343131;
+}
+.rst-versions {
+    position: static;
+    width: auto;
+    display: inline-block;
+    margin-left: 50px;
+    color: initial;
+    background: initial;
+    font-family: "Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;
+    white-space: nowrap;
+    /* z-index: 400; */
+}
+.rst-versions.shift-up {
+    /* height: auto; */
+    /* max-height: 100%; */
+    overflow-y: initial;
+}
+.rst-versions .rst-current-version {
+    background: initial;
+    color: initial;
+}
+.rst-versions .viewed-version {
+    font-weight:bold;
+}
+.rst-versions .rst-other-versions {
+    /* display:block; */
+    /* max-width:400px; */
+    /* border:thin solid red; */
+    position:fixed;
+    background:rgb(252, 252, 252);
+    border-left: thin solid #343131;
+    border-right: thin solid #343131;
+    border-bottom: thin solid #343131;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius:3px;
+    z-index:100;
+}
+.fa-book, .fa-caret-down { 
+/* , .wy-menu-vertical li span.toctree-expand::before, .wy-menu-vertical li.on a span.toctree-expand::before, .wy-menu-vertical li.current > a span.toctree-expand::before, .rst-content .admonition-title::before, .rst-content h1 .headerlink::before, .rst-content h2 .headerlink::before, .rst-content h3 .headerlink::before, .rst-content h4 .headerlink::before, .rst-content h5 .headerlink::before, .rst-content h6 .headerlink::before, .rst-content dl dt .headerlink::before, .rst-content p.caption .headerlink::before, .rst-content table > caption .headerlink::before, .rst-content .code-block-caption .headerlink::before, .rst-content tt.download span:first-child::before, .rst-content code.download span:first-child::before, .icon::before, .wy-dropdown .caret::before, .wy-inline-validate.wy-inline-validate-success .wy-input-context::before, .wy-inline-validate.wy-inline-validate-danger .wy-input-context::before, .wy-inline-validate.wy-inline-validate-warning .wy-input-context::before, .wy-inline-validate.wy-inline-validate-info .wy-input-context::before { */
+    font-family: "FontAwesome";
+    /* display: inline-block; */
+    /* font-style: normal; */
+    /* font-weight: normal; */
+    /* line-height: 1; */
+    /* text-decoration: inherit; */
+}
+/* .rst-versions .rst-content dl:not(.docutils) { */
+/*     margin-bottom: 0; */
+/* } */
+/* .rst-versions .rst-content dl { */
+/*     margin-bottom: 0; */
+/* } */
+/* .rst-versions .rst-other-versions li { */
+/*     display: inline; */
+/* } */
+/* .rst-versions .rst-other-versions li a { */
+/*     /\* background: initial; *\/ */
+/*     color: initial; */
+/* } */
+
+li.wy-breadcrumbs-aside {
+    position:relative;
+    top:8px;
+}
+
+/* * { */
+/*     -webkit-box-sizing: border-box; */
+/*     -moz-box-sizing: border-box; */
+/*     box-sizing: border-box; */
+/* } */
+/* * { */
+/*     -webkit-box-sizing: border-box; */
+/*     -moz-box-sizing: border-box; */
+/*     box-sizing: border-box; */
+/* } */
+/* ul, ol, dl { */
+/*     list-style: none; */
+/*         list-style-image: none; */
+/*     list-style-image: none; */
+/* } */
+/* body { */
+/*     font-family: "Lato","proxima-nova","Helvetica Neue",Arial,sans-serif; */
+/*     font-weight: normal; */
+/*     color: #404040; */
+/* } */
+/* html { */
+/*     font-size: 16px; */
+/* } */
+/* html { */
+/*     font-size: 100%; */
+/*     -webkit-text-size-adjust: 100%; */
+/* } */
