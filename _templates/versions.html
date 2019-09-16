@@ -1,34 +1,24 @@
-{% if pagename in [ 'hledger', 'hledger-ui', 'hledger-web', 'hledger-api', 'journal', 'csv', 'timeclock', 'timedot' ] %} 
-{# Add rst-badge after rst-versions for small badge style. #}
-  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
-    <span class="rst-current-version" data-toggle="rst-current-version">
-      <span class="fa fa-book"> This doc is for version:</span>
-      {{ current_version }}
-      <span class="fa fa-caret-down"></span>
-    </span>
+{% if isManual(pagename) %} 
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions"> {# Add rst-badge class for small badge style. #}
+    <span class="rst-current-version" data-toggle="rst-current-version"> 
+      <span class="fa-book" style="margin-right:.5em;"></span>
+      This doc is for version:
+      {% set viewed_manual = manualFrom(pagename) %}
+      {% set viewed_version = versionFrom(pagename) %}
+      {% set viewed_version_desc = viewed_version + (' (current release)' if viewed_version==current_release_version else '') %}
+      {% set viewed_version_desc = viewed_version_desc or 'dev (latest)' %}
+      <span class="viewed-version">{{ viewed_version_desc }}</span>
+      <span class="fa-caret-down"></span> 
+    </span> 
     <div class="rst-other-versions">
-      <dl>
-        <dt>{{ _('Versions') }}</dt>
-        {% for slug, url in versions %}
-          <dd><a href="{{ url }}/{{ pagename }}.html">{{ slug }}</a></dd>
-        {% endfor %}
-      </dl>
-      {# <dl> #}
-      {#   <dt>{{ _('Downloads') }}</dt> #}
-      {#   {% for type, url in downloads %} #}
-      {#     <dd><a href="{{ url }}">{{ type }}</a></dd> #}
-      {#   {% endfor %} #}
-      {# </dl> #}
-      {# <dl> #}
-      {#   {\# Translators: The phrase "Read the Docs" is not translated #\} #}
-      {#   <dt>{{ _('On Read the Docs') }}</dt> #}
-      {#     <dd> #}
-      {#       <a href="//{{ PRODUCTION_DOMAIN }}/projects/{{ slug }}/?fromdocs={{ slug }}">{{ _('Project Home') }}</a> #}
-      {#     </dd> #}
-      {#     <dd> #}
-      {#       <a href="//{{ PRODUCTION_DOMAIN }}/builds/{{ slug }}/?fromdocs={{ slug }}">{{ _('Builds') }}</a> #}
-      {#     </dd> #}
-      {# </dl> #}
-    </div>
-  </div>
+      <ul> 
+        <li {% if viewed_version=='' %}class="viewed-version"{% endif %}><a href="/{{ viewed_manual }}.html">dev</a></li> 
+        {% for v in versions %} 
+          <li {% if viewed_version==v %}class="viewed-version"{% endif %}>
+            <a href="/{{ v }}/{{ viewed_manual }}.html">{{ v }}</a>
+          </li> 
+        {% endfor %} 
+      </ul> 
+    </div> 
+  </div> 
 {% endif %} 

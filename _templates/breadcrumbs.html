@@ -38,6 +38,11 @@
         {% endfor %}
       <li>{{ title }}</li>
     {% endblock %}
+{## custom version links location #}
+    <li>
+      {% include "versions.html" %}  
+    </li>
+{##}
     {% block breadcrumbs_aside %}
       <li class="wy-breadcrumbs-aside">
         {% if hasdoc(pagename) %}

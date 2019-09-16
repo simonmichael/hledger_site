@@ -2,6 +2,7 @@
 # This file only contains a selection of the most common options. For a full
 # list see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
+# https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html
 
 # -- Path setup --------------------------------------------------------------
 
@@ -31,6 +32,116 @@ copyright = '2019, Simon Michael & co.'
 # version = 'latest (master)'
 # release = 'latest (master)'
 
+manuals = [
+    'hledger',
+    'hledger-ui',
+    'hledger-web',
+    'journal',
+    'csv',
+    'timeclock',
+    'timedot',
+    # old manuals
+    'hledger-api',
+    'manual',
+]
+
+# all hledger versions we might want to show docs for (since 1.0)
+release_versions = [
+    '1.15',
+    '1.14',
+    '1.13',
+    '1.12',
+    '1.11',
+    '1.10',
+    '1.9',
+    '1.5',
+    '1.4',
+    '1.3',
+    '1.2',
+    '1.1',
+    '1.0',
+]
+
+# only these versions will be shown in the version selector
+show_release_versions = [
+    '1.15',
+    '1.14',
+    '1.13',
+    '1.12',
+    '1.11',
+    '1.10',
+    '1.9',
+    '1.5',
+]
+
+# these non-shown versions will be excluded from site building, below
+hide_release_versions = []
+for v in release_versions:
+    if v not in show_release_versions:
+        hide_release_versions.append(v)
+
+current_release_version = release_versions[0]
+dev_version = current_release_version + '.99 (dev)'
+
+def manualAndVersionFrom(pagename): 
+    parts = pagename.split('/')
+    if len(parts) == 1 and parts[0] in manuals:
+        return (parts[0], '')
+    elif len(parts) == 2 and parts[0] in release_versions and parts[1] in manuals:
+        return (parts[1], parts[0])
+    else:
+        return ('','')
+
+def manualFrom(pagename): 
+    return manualAndVersionFrom(pagename)[0]
+
+def versionFrom(pagename): 
+    return manualAndVersionFrom(pagename)[1]
+
+def isManual(pagename):
+    return manualFrom(pagename) and True or False
+
+# -- Some definitions for theme templates ---------------------------------------------------
+
+# https://docs.readthedocs.io/en/stable/development/design/theme-context.html
+# Before calling sphinx-build to render your docs, Read the Docs
+# injects some extra context in the templates by using the
+# html_context Sphinx setting in the conf.py file. In case you want to
+# access to this data from your theme, you can use it like this:
+# {% if readthedocs.v1.vcs.type == 'github' %}
+#     <a href="https://github.com/{{ readthedocs.v1.vcs.user }}/{{ readthedocs.v1.vcs.repo }}
+#     /blob/{{ readthedocs.v1.vcs.version }}{{ readthedocs.v1.vcs.conf_py_path }}{{ pagename }}.rst">
+#     Show on GitHub</a>
+# {% endif %}
+# see also http://www.sphinx-doc.org/en/master/templating.html#global-variables
+html_context = {
+
+    # "edit on github" links.
+    "display_github": True,        # Integrate GitHub
+    "github_user": "simonmichael", # Username
+    "github_repo": "hledger_site", # Repo name
+    "github_version": "master",    # Version
+    "conf_py_path": "/",           # Path in the checkout to the docs root
+    'theme_vcs_pageview_mode': 'edit',
+    "manuals": manuals,
+    'versions': show_release_versions,
+    "isManual": isManual,
+    "manualFrom": manualFrom,
+    "versionFrom": versionFrom,
+    'current_release_version': current_release_version,
+    'dev_version': dev_version,
+    # custom edit links for certain pages (the manuals). Cf _templates/breadcrumbs.html
+    "special_edit_paths": {
+        "journal"     : "hledger/edit/master/hledger-lib/hledger_journal.m4.md",
+        "csv"         : "hledger/edit/master/hledger-lib/hledger_csv.m4.md",
+        "timeclock"   : "hledger/edit/master/hledger-lib/hledger_timeclock.m4.md",
+        "timedot"     : "hledger/edit/master/hledger-lib/hledger_timedot.m4.md",
+        "hledger"     : "hledger/edit/master/hledger/hledger.m4.md",
+        "hledger-ui"  : "hledger/edit/master/hledger-ui/hledger-ui.m4.md",
+        "hledger-web" : "hledger/edit/master/hledger-web/hledger-web.m4.md",
+    },
+
+}
 
 # -- General configuration ---------------------------------------------------
 
@@ -108,14 +219,12 @@ exclude_patterns = [
     'Thumbs.db',
     '.DS_Store',
     '_site',
-
-    # don't render the old manuals for now
-    '[0-9]*',
-
-    # exclude more, for faster testing
+    # exclude more things, for faster testing
     # '[a-gi-z]*.md',
+    # '[0-9]*',
     # '*.md',  
-]
+] + hide_release_versions   # exclude some old manuals
+
 
 # A string of reStructuredText that will be included at the beginning of
 # every source file that is read. This is a possible place to add
@@ -141,6 +250,8 @@ html_static_path = ['_static']
 html_css_files = [
     # styles for the highslide image zoomer
     'js/highslide/highslide.css',
+    # overrides for the sphinx theme
+    'css/theme-overrides.css',
     # our old custom style overides
     # 'css/style.css',
 ]
@@ -176,59 +287,6 @@ html_theme_options = {
     # 'navigation_depth': 4,
     # 'includehidden': True,
     # 'titles_only': False,
-}
-
-# https://docs.readthedocs.io/en/stable/development/design/theme-context.html
-# Before calling sphinx-build to render your docs, Read the Docs
-# injects some extra context in the templates by using the
-# html_context Sphinx setting in the conf.py file. In case you want to
-# access to this data from your theme, you can use it like this:
-# {% if readthedocs.v1.vcs.type == 'github' %}
-#     <a href="https://github.com/{{ readthedocs.v1.vcs.user }}/{{ readthedocs.v1.vcs.repo }}
-#     /blob/{{ readthedocs.v1.vcs.version }}{{ readthedocs.v1.vcs.conf_py_path }}{{ pagename }}.rst">
-#     Show on GitHub</a>
-# {% endif %}
-# see also http://www.sphinx-doc.org/en/master/templating.html#global-variables
-html_context = {
-
-    # "edit on github" links.
-    "display_github": True,        # Integrate GitHub
-    "github_user": "simonmichael", # Username
-    "github_repo": "hledger_site", # Repo name
-    "github_version": "master",    # Version
-    "conf_py_path": "/",           # Path in the checkout to the docs root
-    'theme_vcs_pageview_mode': 'edit',
-    # different edit links for the manuals. Cf _templates/breadcrumbs.html
-    "special_edit_paths": {
-        "journal"     : "hledger/edit/master/hledger-lib/hledger_journal.m4.md",
-        "csv"         : "hledger/edit/master/hledger-lib/hledger_csv.m4.md",
-        "timeclock"   : "hledger/edit/master/hledger-lib/hledger_timeclock.m4.md",
-        "timedot"     : "hledger/edit/master/hledger-lib/hledger_timedot.m4.md",
-        "hledger"     : "hledger/edit/master/hledger/hledger.m4.md",
-        "hledger-ui"  : "hledger/edit/master/hledger-ui/hledger-ui.m4.md",
-        "hledger-web" : "hledger/edit/master/hledger-web/hledger-web.m4.md",
-    },
-
-    # Config for the versions pane, shown on manuals.
-    # cf html_extra_path, exclude_patterns (above).
-    'current_version': 'latest (master)',  # '{0}'.format(release),
-    'versions': [
-        # ( link text, relative url of subdirectory )
-        ('latest' ,'.'),
-        # ('1.14'   ,'1.14'),
-        # ('1.13'   ,'1.13'),
-        # ('1.12'   ,'1.12'),
-        # ('1.11'   ,'1.11'),
-        # ('1.10'   ,'1.10'),
-        # ('1.9'    ,'1.9'),
-        # ('1.5'    ,'1.5'),
-        # ('1.4'    ,'1.4'),
-        # ('1.3'    ,'1.3'),
-        # ('1.2'    ,'1.2'),
-        # ('1.1'    ,'1.1'),
-        # ('1.0'    ,'1.0'),
-    ]
-
 }
 
 # https://docs.readthedocs.io/en/stable/index.html
