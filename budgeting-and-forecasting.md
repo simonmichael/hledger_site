@@ -187,7 +187,7 @@ Ending balances (cumulative) in 2013q1:
 
 If you look at Expenses:Food category, you will see that every month budget is increased by 500 USD, and by March total amount budgeted
 is 1500 USD, of which 1481.26 USD is spent. If you look back at the previous non-cumulative monthly budget report, you will see that in March food expenses
-were 121% of the budgeted amount, but cumulative report shows that taking into account budget carry-over from Jan and Feb we are well withing planned numbers.
+were 121% of the budgeted amount, but cumulative report shows that taking into account budget carry-over from Jan and Feb we are well within planned numbers.
 
 ## Forecasting
 
