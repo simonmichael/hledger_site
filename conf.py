@@ -86,24 +86,6 @@ for v in release_versions:
 current_release_version = release_versions[0]
 dev_version = current_release_version + '.99 (dev)'
 
-def manualAndVersionFrom(pagename): 
-    parts = pagename.split('/')
-    if len(parts) == 1 and parts[0] in manuals:
-        return (parts[0], '')
-    elif len(parts) == 2 and parts[0] in release_versions and parts[1] in manuals:
-        return (parts[1], parts[0])
-    else:
-        return ('','')
-
-def manualFrom(pagename): 
-    return manualAndVersionFrom(pagename)[0]
-
-def versionFrom(pagename): 
-    return manualAndVersionFrom(pagename)[1]
-
-def isManual(pagename):
-    return manualFrom(pagename) and True or False
-
 # -- Some definitions for theme templates ---------------------------------------------------
 
 # https://docs.readthedocs.io/en/stable/development/design/theme-context.html
@@ -117,6 +99,7 @@ def isManual(pagename):
 #     Show on GitHub</a>
 # {% endif %}
 # see also http://www.sphinx-doc.org/en/master/templating.html#global-variables
+# Don't store functions here, it causes all files to be rebuilt
 html_context = {
 
     # "edit on github" links.
@@ -128,9 +111,6 @@ html_context = {
     'theme_vcs_pageview_mode': 'edit',
     "manuals": manuals,
     'versions': show_release_versions,
-    "isManual": isManual,
-    "manualFrom": manualFrom,
-    "versionFrom": versionFrom,
     'current_release_version': current_release_version,
     'dev_version': dev_version,
     # custom edit links for certain pages (the manuals). Cf _templates/breadcrumbs.html
@@ -223,7 +203,7 @@ exclude_patterns = [
     '.DS_Store',
     '_site',
     # exclude more things, for faster testing
-    # '[a-gi-z]*.md',
+    # '[A-Za-gi-z]*.md',
     # '[0-9]*',
     # '*.md',  
 ] + hide_release_versions   # exclude some old manuals

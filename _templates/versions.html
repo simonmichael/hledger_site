@@ -1,10 +1,12 @@
-{% if isManual(pagename) %} 
+{% set parts = ('/'+pagename).split('/') %}
+{% set viewed_version = parts[-2] %}
+{% set viewed_manual  = parts[-1] if parts[-1] in manuals else '' %}
+
+{% if viewed_manual %} 
   <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions"> {# Add rst-badge class for small badge style. #}
     <span class="rst-current-version" data-toggle="rst-current-version"> 
       <span class="fa-book" style="margin-right:.5em;"></span>
       This doc is for version:
-      {% set viewed_manual = manualFrom(pagename) %}
-      {% set viewed_version = versionFrom(pagename) %}
       {% set viewed_version_desc = viewed_version + (' (current release)' if viewed_version==current_release_version else '') %}
       {% set viewed_version_desc = viewed_version_desc or 'dev (latest)' %}
       <span class="viewed-version">{{ viewed_version_desc }}</span>
