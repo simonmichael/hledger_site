@@ -285,8 +285,9 @@ On Windows, hledger-ui is not available and should be omitted from the commands 
 </div>
 <div class="builder-text">
   The hledger-install script requires only bash. 
-  It runs stack or cabal for you, installing stack if needed.
   It's good practice to inspect the script and satisfy yourself that it's safe before running it.
+  It runs stack or cabal for you, installing stack if needed.
+  It installs the main hledger tools plus some addons (hledger-iadd, hledger-interest).
 </div>
 <div class="builder-command">
   curl -sO https://raw.githubusercontent.com/simonmichael/hledger/master/hledger-install/hledger-install.sh <br>
