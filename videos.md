@@ -1,6 +1,6 @@
 # Videos
 
-### hledger
+hledger-related videos:
 
 - [hledger fan Youtube channel](https://www.youtube.com/channel/UCZLxXTjOqLzq4z5Jy0AyWSQ), including: -->
 
@@ -48,6 +48,7 @@
 
 - [Search for "hledger" on Youtube](https://www.youtube.com/results?search_query=hledger)
 
-### Ledger and plain text accounting in general
+
+See also:
 
 - [plaintextaccounting.org videos](https://plaintextaccounting.org/#videos)
