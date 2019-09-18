@@ -51,4 +51,4 @@ hledger-related videos:
 
 See also:
 
-- [plaintextaccounting.org videos](https://plaintextaccounting.org/#videos)
+- The [videos on plaintextaccounting.org](https://plaintextaccounting.org/#videos)
