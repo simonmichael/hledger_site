@@ -257,8 +257,9 @@ ledger.journal
 
 - hledger splits multi-day time sessions at midnight by default (Ledger does this with an option)
 
-- hledger's output follows the decimal point character, digit grouping,
-  and digit group separator character used in the journal (or specified with commodity directives)
+- hledger's output follows the decimal mark, digit grouping, and digit
+  group mark used in the journal (or specified with commodity
+  directives)
 
 - hledger print ignores the --date2 flag, always showing both dates.
   ledger print shows only the secondary date with --aux-date, but not
