@@ -92,8 +92,8 @@ hledger
    :maxdepth: 3
 
    Dev README <README>
-   CONTRIBUTING
    ROADMAP
+   CONTRIBUTING
    contributors
 
 .. toctree::
