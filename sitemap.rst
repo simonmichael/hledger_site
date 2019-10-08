@@ -93,6 +93,7 @@ hledger
 
    Dev README <README>
    CONTRIBUTING
+   ROADMAP
    contributors
 
 .. toctree::
