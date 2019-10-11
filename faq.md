@@ -173,16 +173,47 @@ and now [plaintextaccounting.org](http://plaintextaccounting.org).
 
 ## How is hledger different from Ledger ?
 
+### File format differences
+
+hledger's journal file format is very similar to Ledger's.
+Some syntactic forms can be interpreted in slightly different ways,
+eg [hledger comments](journal.html#comments) 
+vs [Ledger comments](https://www.ledger-cli.org/3.0/doc/ledger3.html#Commenting-on-your-Journal),
+or [balance assertions](journal.html#assertions-and-ordering).
+
+A small number of Ledger's syntactic forms are ignored (`{ }` prices)
+or rejected (value expressions). If you avoid these, it's quite easy
+to keep a journal file that works with both hledger and Ledger.
+
+Or, you can keep the hledger- and Ledger-specific bits in separate files,
+both [including](journal.html#including-other-files) a common file. Eg:
+```shell
+$ ls *.journal
+common.journal   # included by hledger.journal and ledger.journal
+hledger.journal
+ledger.journal
+$ hledger -f hledger.journal CMD
+$ ledger -f ledger.journal CMD
+```
+
+hledger's timeclock format is also very similar to Ledger's.
+hledger also provides a new timedot format, allowing a different style
+of time logging.
+
 ### Feature differences
 
 Compared to Ledger, hledger builds quickly and has a complete and
 accurate manual, an easier report query syntax, multi-column balance
-reports, better depth limiting, an interactive data entry assistant,
-and optional web and terminal interfaces.
+reports, much better depth limiting, an interactive data entry
+assistant, and optional web and terminal interfaces. hledger provides
+a different system for converting CSV data, with rules files and
+new-transaction detection which simplify the task of importing new
+data from banks.
 
-Compared to hledger, Ledger has additional power-user features such as
-the built in value expressions language, 
-and it remains faster and more memory efficient on large files (for now).
+Compared to hledger, Ledger has some additional power-user features
+such as the built in value expressions language, and basic
+lots/capital gains reporting. Also, Ledger generates reports up to 10x
+faster, and using less memory, when files get large.
 
 We currently support Ledger's main features:
 
@@ -231,31 +262,6 @@ We do not yet support:
 - reporting capital gain/loss (--gain)
 - value expressions
 
-### File format differences
-
-hledger's journal file format is very similar to Ledger's.
-Some syntactic forms can be interpreted in slightly different ways,
-eg [hledger comments](journal.html#comments) 
-vs [Ledger comments](https://www.ledger-cli.org/3.0/doc/ledger3.html#Commenting-on-your-Journal),
-or [balance assertions](journal.html#assertions-and-ordering).
-
-A small number of Ledger's syntactic forms are ignored (`{ }` prices)
-or rejected (value expressions). If you avoid these, it's quite easy
-to keep a journal file that works with both hledger and Ledger.
-
-You can also keep the hledger- and Ledger-specific bits in separate files,
-both [including](journal.html#including-other-files) a common file
-containing the compatible bits. Eg:
-
-```shell
-$ ls *.journal
-common.journal   # included by hledger.journal and ledger.journal
-hledger.journal
-ledger.journal
-$ hledger -f hledger.journal CMD
-$ ledger -f ledger.journal CMD
-```
-
 ### Functional differences
 
 #### Command line interface
@@ -267,13 +273,12 @@ $ ledger -f ledger.journal CMD
   You can also specify start and/or end dates with a query argument,
   eg `date:START-` or `date:START-END`.
 
-- hledger's query language is a little less powerful than Ledger's,
-  simpler, and easier to remember.
+- hledger's [query language](hledger.html#queries) is a little less
+  powerful than Ledger's, simpler, and easier to remember.
   It uses google-like prefixes, eg `desc:`, `payee:`, `amt:`, `not:`.
-  Multiple patterns are combined using fixed [AND/OR rules](hledger.html#queries).
-
-  Unlike Ledger, we don't yet support full boolean expressions. This means some
-  advanced queries require two invocations of hledger in a pipe, eg:
+  Multiple patterns are combined using fixed AND/OR rules.
+  We don't yet support full boolean expressions, so some more advanced
+  queries require two invocations of hledger in a pipe, eg: 
   `hledger print QUERY1 | hledger -f- reg QUERY2`
 
 - hledger uses --ignore-assertions/-I to disable balance assertions. 
@@ -324,7 +329,8 @@ $ ledger -f ledger.journal CMD
   in date order (and then by parse order, for postings on the same date).
   This ensures correct, deterministic behaviour, independent of the ordering of
   journal entries and files. 
-  Ledger checks assertions in the order they are parsed, ignoring dates.
+  Ledger checks assertions in the order they are parsed (ignoring dates), which is fragile.
+
   Also, hledger correctly handles multiple balance assignments/assertions in a single transaction.
 
 - hledger's default commodity directive (D) sets the commodity to be
@@ -333,7 +339,7 @@ $ ledger -f ledger.journal CMD
   seen. Ledger uses D only for commodity display settings and for the
   entry command.
 
-- Ledger supports alternate (`{ }`, `{{ }}`) and different (`{= }`) price syntax,
+- Ledger supports some additional price syntaxes (`{ }`, `{{ }}`, `{= }`),
   instead of or before or after `@`, `@@` prices.
   hledger currently ignores any `{ }`, `{{ }}`, `{= }` prices, and
   requires them to be written after `@`, `@@`. (#1084)
