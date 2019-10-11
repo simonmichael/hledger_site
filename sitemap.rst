@@ -97,6 +97,14 @@ hledger
    contributors
 
 .. toctree::
+   :caption: Sandbox
+   :maxdepth: 3
+
+   price-syntax
+   gains-model
+   gains-hledger
+
+.. toctree::
    :caption: ...
 
    Site map <self>
