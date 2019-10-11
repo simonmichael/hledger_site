@@ -173,7 +173,7 @@ and now [plaintextaccounting.org](http://plaintextaccounting.org).
 
 ## How is hledger different from Ledger ?
 
-### Feature differences ?
+### Feature differences
 
 Compared to Ledger, hledger builds quickly and has a complete and
 accurate manual, an easier report query syntax, multi-column balance
@@ -184,7 +184,7 @@ Compared to hledger, Ledger has additional power-user features such as
 the built in value expressions language, 
 and it remains faster and more memory efficient on large files (for now).
 
-We currently support:
+We currently support Ledger's main features:
 
 - Ledger's journal format, mostly
 - csv format
@@ -196,118 +196,107 @@ We currently support:
 - virtual postings
 - some basic output formatting
 - the print, register & balance commands
-- report filtering, using a different query syntax
+- report filtering, using flags and query arguments
 - automated postings
 - periodic transactions
 - budget reports
 - -X/--exchange
 
-We do not yet support:
+We add some new commands, such as:
 
-- generation of revaluation transactions (--revalued)
-- capital gain/loss reporting (--gain)
-- value expressions
-
-And we add some new commands, such as:
-
+- activity
 - add
 - balancesheet
 - cashflow
+- check-dates
+- check-dupes
 - close
+- descriptions
+- diff
+- files
+- import
 - incomestatement
 - irr
 - interest
+- notes
+- prices
+- rewrite
 - ui
 - web
 
-### File format differences ?
+We do not yet support:
 
-hledger's journal file format is very close to Ledger's.
-Some unsupported Ledger syntax is parsed but ignored; some is not parsed and will cause an error (eg value expressions).
-There can also be subtle differences in parser behaviour, such as with
-[hledger comments](journal.html#comments) vs [Ledger comments](http://ledger-cli.org/3.0/doc/ledger3.html#Commenting-on-your-Journal),
+- revaluation transactions (--revalued)
+- reporting lots (--lots)
+- reporting capital gain/loss (--gain)
+- value expressions
+
+### File format differences
+
+hledger's journal file format is very similar to Ledger's.
+Some syntactic forms can be interpreted in slightly different ways,
+eg [hledger comments](journal.html#comments) 
+vs [Ledger comments](https://www.ledger-cli.org/3.0/doc/ledger3.html#Commenting-on-your-Journal),
 or [balance assertions](journal.html#assertions-and-ordering).
 
-It's quite possible (and useful) to keep a journal file that works
-with both hledger and Ledger, if you avoid the more exotic syntax. Or,
-you can keep the hledger- and Ledger-specific bits in separate files,
-which [include](journal.html#including-other-files)
-a common file compatible with both:
+A small number of Ledger's syntactic forms are ignored (`{ }` prices)
+or rejected (value expressions). If you avoid these, it's quite easy
+to keep a journal file that works with both hledger and Ledger.
+
+You can also keep the hledger- and Ledger-specific bits in separate files,
+both [including](journal.html#including-other-files) a common file
+containing the compatible bits. Eg:
+
 ```shell
 $ ls *.journal
-common.journal   # included by:
+common.journal   # included by hledger.journal and ledger.journal
 hledger.journal
 ledger.journal
+$ hledger -f hledger.journal CMD
+$ ledger -f ledger.journal CMD
 ```
 
-### Functional differences ?
+### Functional differences
 
-- hledger recognises description and negative patterns by "desc:"
-  and "not:" prefixes, unlike Ledger 3's free-form parser
+#### Command line interface
 
 - hledger does not require a space between command-line flags and their values,
   eg `-fFILE` works as well as `-f FILE`
 
-- hledger's weekly reporting intervals always start on mondays
+- hledger's -b, -e, -D, -W, -M, -Q, -Y and -p options combine nicely.
+  You can also specify start and/or end dates with a query argument,
+  eg `date:START-` or `date:START-END`.
 
-- hledger shows start and end dates of the intervals requested,
-  not just the span containing data
+- hledger's query language is a little less powerful than Ledger's,
+  simpler, and easier to remember.
+  It uses google-like prefixes, eg `desc:`, `payee:`, `amt:`, `not:`.
+  Multiple patterns are combined using fixed [AND/OR rules](hledger.html#queries).
 
-- hledger always shows time balances (from the timeclock/timedot formats) in hours
-
-- hledger splits multi-day time sessions at midnight by default (Ledger does this with an option)
-
-- hledger's output follows the decimal mark, digit grouping, and digit
-  group mark used in the journal (or specified with commodity
-  directives)
-
-- hledger print ignores the --date2 flag, always showing both dates.
-  ledger print shows only the secondary date with --aux-date, but not
-  vice versa.
-
-- hledger's default commodity directive (D) sets the commodity to be
-  used for subsequent commodityless amounts, and also sets that
-  commodity's display settings if such an amount is the first
-  seen. Ledger uses D only for commodity display settings and for the
-  entry command.
-
-- hledger's [include directive](journal.html#including-other-files) does not support
-  shell glob patterns (eg `include *.journal` ), as Ledger's does.
-
-- when checking [balance assertions](journal.html#balance-assertions)
-  hledger sorts the account's postings first by date and then (for
-  postings with the same date) by parse order. Ledger checks assertions 
-  in parse order, ignoring dates.
-
-- Ledger allows amounts to have a fixed lot price (the {} syntax ?)
-  and a regular price in any order (and uses whichever appears
-  first). hledger requires the fixed lot price to come last (and
-  ignores it).
+  Unlike Ledger, we don't yet support full boolean expressions. This means some
+  advanced queries require two invocations of hledger in a pipe, eg:
+  `hledger print QUERY1 | hledger -f- reg QUERY2`
 
 - hledger uses --ignore-assertions/-I to disable balance assertions. 
-  Ledger uses --permissive, and -I means something else (--prices).  
+  Ledger uses --permissive for that, and uses -I as the short form of --prices.
 
-- hledger's -p option doesn't combine nicely with -b/-e/-D/-W/-M/-Q/-Y.
-  Basically if there's a -p, all those others are ignored.
-  There's an open issue.
-  With hledger you can also specify start and/or end dates with a query argument,
-  like date:START-END
+- hledger cleans up some semantic confusion with status matching (#564):
 
-- in hledger version 1.3 onward, 
-  the "uncleared" status has been renamed to "unmarked",
-  it is matched by the -U/--unmarked flag.
-  Also, the --unmarked/--pending/--cleared flags can be combined,
-  so eg -UP matches unmarked and pending, similar to Ledger's --uncleared flag.
-  (#564)
+  - hledger uses -P as the short form of --pending. Ledger uses it for grouping by payee. 
+  - hledger renames Ledger's "uncleared" status (ie, when the status field
+    is empty) to "unmarked", and the --uncleared/-U flag to --unmarked/-U
+  - each of hledger's --unmarked/-U, --pending/-P, --cleared/-C flags match only that single status.
+    To match more than one status, the flags can be combined.
+    So the hledger equivalent of `ledger print -U` (ie: match all but
+    cleared transactions) is `hledger print -UP`.
 
-- hledger's -P flag is short for --pending. Ledger uses it for grouping by payee. 
+- hledger print shows both the primary date and the secondary date if any, always.
+  ledger print shows both by default, but with --aux-date it hides the primary date.
 
-- hledger's journal and timeclock formats are separate; you can't use 
-  [both syntaxes in the same file](https://www.reddit.com/r/plaintextaccounting/comments/7buf8q/how_to_balance_working_hours/dpligsd/)
-  unlike Ledger. ([Include](journal.html#including-other-files) a separate timeclock file instead.) 
-  
-- hledger's and Ledger's -H/--historical flags are completely unrelated.
-  hledger's -H makes register and balance-like commands include balances from before the report start date, instead of starting at zero:
+- hledger's and Ledger's -H/--historical flags are unrelated:
+
+  hledger's -H makes register and balance-like commands include
+  balances from before the report start date, instead of starting at
+  zero:
 
       hledger register --help:
       -H --historical           show historical running total/balance
@@ -323,14 +312,54 @@ ledger.journal
       --historical (-H)
                                 Value commodities at the time of their acquisition.
 
-## What was ledger4 ?
+#### journal format
+
+- hledger supports international number formats, auto-detecting the
+  decimal mark (comma or period), digit group mark (period, comma, or
+  space) and digit group sizes to use for each commodity. Or, these can
+  be declared explicitly with commodity directives.
+
+- hledger applies [balance assignments](journal.html#balance-assignments) 
+  and checks [balance assertions](journal.html#balance-assertions)
+  in date order (and then by parse order, for postings on the same date).
+  This ensures correct, deterministic behaviour, independent of the ordering of
+  journal entries and files. 
+  Ledger checks assertions in the order they are parsed, ignoring dates.
+  Also, hledger correctly handles multiple balance assignments/assertions in a single transaction.
+
+- hledger's default commodity directive (D) sets the commodity to be
+  used for subsequent commodityless amounts, and also sets that
+  commodity's display settings if such an amount is the first
+  seen. Ledger uses D only for commodity display settings and for the
+  entry command.
+
+- Ledger supports alternate (`{ }`, `{{ }}`) and different (`{= }`) price syntax,
+  instead of or before or after `@`, `@@` prices.
+  hledger currently ignores any `{ }`, `{{ }}`, `{= }` prices, and
+  requires them to be written after `@`, `@@`. (#1084)
+
+#### timeclock & timedot formats
+
+- hledger's journal, timeclock and timedot formats are separate; you can't 
+  mix them all in one file as in Ledger.
+  (Though you can specify all files on the command line, or have a parent journal file include them all.)
+  This simplifies the implementation and helps ensure useful parse error messages.
+  
+- hledger always shows time balances (from the timeclock/timedot formats) in hours
+
+#### timeclock format
+
+- hledger always splits multi-day time sessions at midnight, showing accurate per-day amounts.
+  Ledger does this only with the --day-break flag.
+
+## What is ledger4 ?
 
 [ledger4](https://github.com/ledger/ledger4) was John's 2012 start
 at rewriting parts of Ledger 3, eg the parser, in Haskell.
 We included this in hledger for a while, 
 hoping to attract contributions to improve this "bridge" between the projects,
 and improve our support for reading Ledger's files.
-Neither happened, so it was removed again.
+After some time it was removed again.
 
 ## How could I import/migrate from...
 
@@ -489,3 +518,11 @@ $ hledger -f t.j balance --drop 1
 
 One way to fix: in iTerm2 do Preferences -> Profiles -> your current profile -> Keys -> Load Preset -> xterm Defaults 
 (not Terminal.app Compatibility). And perhaps open a new tab with this profile. 
+
+<!-- 
+
+## How do I set the LEDGER_FILE environment variable on Windows?
+
+https://www.reddit.com/r/plaintextaccounting/comments/cr5jjk/help_set_ledger_file_environment_variable_in/
+
+-->
