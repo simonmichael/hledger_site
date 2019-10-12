@@ -1,5 +1,7 @@
 ### Capital gains in hledger
 
+WIP
+
 -  postings can have multiple commodities and multiple prices; each of
    these parts is a deposit or withdrawal to the account
 
