@@ -68,12 +68,6 @@ These [CSV rules](https://github.com/simonmichael/hledger/blob/master/examples/c
 can be used to convert its CSV export to *ledger format.
 
 
-### Expense (IOS)
-
-<http://ela.build/expense>\
-Minimal interface for expense tracking only. CSV export supported.
-
-
 ### XpenseTracker, BizXpenseTracker (IOS)
 
 <http://www.silverwaresoftware.com/XpenseTracker.html>\
