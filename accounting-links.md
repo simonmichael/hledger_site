@@ -9,6 +9,9 @@
  [General journal](http://en.wikipedia.org/wiki/General_journal)
  etc.
 - [Accounting For Dragons](http://podcastle.org/2009/10/09/pc-miniature-38-accounting-for-dragons) why you should know accounting
+- Cliffs Notes:
+  [Accounting Principles I](https://www.cliffsnotes.com/study-guides/accounting/accounting-principles-i),
+  [Accounting Principles II](https://www.cliffsnotes.com/study-guides/accounting/accounting-principles-ii)
 - [Bean Counter](http://www.dwmbeancounter.com/) - tutorials, such as
   [So, you want to learn Bookkeeping!](http://www.dwmbeancounter.com/tutorial/Tutorial.html).
   This has been recommended on the ledger list and [on HN](https://news.ycombinator.com/item?id=17245101).
@@ -26,7 +29,6 @@
 - [The Accountancy Model and The Accountancy Model Examples](https://www.google.com/search?hl=en&q=%2B%22The%20Accountancy%20Model%22%20%2B%22The%20Accountancy%20Model%20Examples%22) - two free books by Tim Riley
 - [Gnucash and double entry accounting](http://www.austintek.com/gnucash/ncsa-gnucash-talk.html) - double entry accounting introduction with examples
 - [Accounting for Computer Scientists](http://martin.kleppmann.com/2011/03/07/accounting-for-computer-scientists.html)
-- [Cliffs Notes: Closing Entries](https://www.cliffsnotes.com/study-guides/accounting/accounting-principles-i/completion-of-the-accounting-cycle/closing-entries)
 - [Tutorial on multiple currency accounting](http://www.mscs.dal.ca/~selinger/accounting/tutorial.html) by Peter Selinger
 
 ## Theory
