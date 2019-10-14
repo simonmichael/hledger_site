@@ -4,6 +4,9 @@ hledger-related videos:
 
 - [hledger fan Youtube channel](https://www.youtube.com/channel/UCZLxXTjOqLzq4z5Jy0AyWSQ), including: -->
 
+  - [hledger: fun and profit with incomestatement](https://www.youtube.com/watch?v=U4An3AHtDkg) (3m, 2019) <!-- oct 12 -->  
+    hledger fan (Robert Nielsen)  
+  
   - [hledger: untie your data with "nots"](https://www.youtube.com/watch?v=nMt5VxZv-78) (3m, 2019) <!-- aug 25 -->  
     hledger fan (Robert Nielsen)  
   
