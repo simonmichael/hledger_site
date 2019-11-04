@@ -2,6 +2,8 @@
 
 hledger-related videos:
 
+- [Учет сделок с проводками в текстовом формате](https://www.youtube.com/watch?v=1qrFjSVav2Q) (2019, 34m)
+
 - [hledger fan Youtube channel](https://www.youtube.com/channel/UCZLxXTjOqLzq4z5Jy0AyWSQ), including: -->
 
   - [hledger: fun and profit with incomestatement](https://www.youtube.com/watch?v=U4An3AHtDkg) (3m, 2019) <!-- oct 12 -->  
