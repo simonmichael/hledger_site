@@ -231,7 +231,7 @@ We currently support Ledger's main features:
 - automated postings
 - periodic transactions
 - budget reports
-- -X/--exchange
+- `-X`/`--exchange`
 
 We add some new commands, such as:
 
@@ -257,9 +257,9 @@ We add some new commands, such as:
 
 We do not yet support:
 
-- revaluation transactions (--revalued)
-- reporting lots (--lots)
-- reporting capital gain/loss (--gain)
+- revaluation transactions (`--revalued`)
+- reporting lots (`--lots`)
+- reporting capital gain/loss (`--gain`)
 - value expressions
 
 ### Functional differences
@@ -269,7 +269,7 @@ We do not yet support:
 - hledger does not require a space between command-line flags and their values,
   eg `-fFILE` works as well as `-f FILE`
 
-- hledger's -b, -e, -D, -W, -M, -Q, -Y and -p options combine nicely.
+- hledger's `-b`, `-e`, `-D`, `-W`, `-M`, `-Q`, `-Y` and `-p` options combine nicely.
   You can also specify start and/or end dates with a query argument,
   eg `date:START-` or `date:START-END`.
 
@@ -281,25 +281,25 @@ We do not yet support:
   queries require two invocations of hledger in a pipe, eg: 
   `hledger print QUERY1 | hledger -f- reg QUERY2`
 
-- hledger uses --ignore-assertions/-I to disable balance assertions. 
-  Ledger uses --permissive for that, and uses -I as the short form of --prices.
+- hledger uses `--ignore-assertions`/`-I` to disable balance assertions. 
+  Ledger uses `--permissive` for that, and uses `-I` as the short form of `--prices`.
 
 - hledger cleans up some semantic confusion with status matching (#564):
 
-  - hledger uses -P as the short form of --pending. Ledger uses it for grouping by payee. 
+  - hledger uses `-P` as the short form of `--pending`. Ledger uses it for grouping by payee. 
   - hledger renames Ledger's "uncleared" status (ie, when the status field
-    is empty) to "unmarked", and the --uncleared/-U flag to --unmarked/-U
-  - each of hledger's --unmarked/-U, --pending/-P, --cleared/-C flags match only that single status.
+    is empty) to "unmarked", and the `--uncleared`/`-U` flag to `--unmarked`/`-U`
+  - each of hledger's `--unmarked`/`-U`, `--pending`/`-P`, `--cleared`/`-C` flags match only that single status.
     To match more than one status, the flags can be combined.
     So the hledger equivalent of `ledger print -U` (ie: match all but
     cleared transactions) is `hledger print -UP`.
 
 - hledger print shows both the primary date and the secondary date if any, always.
-  ledger print shows both by default, but with --aux-date it hides the primary date.
+  ledger print shows both by default, but with `--aux-date` it hides the primary date.
 
-- hledger's and Ledger's -H/--historical flags are unrelated:
+- hledger's and Ledger's `-H`/`--historical` flags are unrelated:
 
-  hledger's -H makes register and balance-like commands include
+  hledger's `-H` makes register and balance-like commands include
   balances from before the report start date, instead of starting at
   zero:
 
@@ -311,7 +311,7 @@ We do not yet support:
       -H --historical           show historical ending balance in each period
                                 (includes postings before report start date)
 
-  Ledger's -H changes the valuation date used by -V/-X:
+  Ledger's `-H` changes the valuation date used by `-V`/`-X`:
 
       ledger --help:
       --historical (-H)
@@ -356,7 +356,7 @@ We do not yet support:
 #### timeclock format
 
 - hledger always splits multi-day time sessions at midnight, showing accurate per-day amounts.
-  Ledger does this only with the --day-break flag.
+  Ledger does this only with the `--day-break` flag.
 
 ## What is ledger4 ?
 
