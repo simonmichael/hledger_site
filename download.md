@@ -1,4 +1,4 @@
-# Download
+# Download/Install
 
 <style>
 table#downloads > tbody > tr { 

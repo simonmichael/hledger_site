@@ -9,7 +9,7 @@ hledger
    :maxdepth: 2
 
    Home <index>
-   download
+   Download/Install <download>
    release-notes
    faq
    videos
