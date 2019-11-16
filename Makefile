@@ -20,8 +20,9 @@ help:
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
 # Auto-rebuild site when any source files change.
-html-auto:
-	fd -e .py -e .css -e .html -e .js -e .md -e .rst | entr make html
+# Avoid .gitignore with fd so that generated manuals are included.
+html-auto auto:
+	fd --no-ignore-vcs -E _build -e .py -e .css -e .html -e .js -e .md -e .rst | entr make html
 
 BROWSE=open
 LIVERELOADPORT=8001
@@ -30,7 +31,7 @@ LIVERELOAD=livereloadx -p $(LIVERELOADPORT) -s --exclude '*.html'
   # A reload happens at the end when the css/js files get copied.
 
 # Auto-rebuild site, and watch changes in a new browser window.
-html-watch:
+html-watch watch:
 	make html-auto &
 	(sleep 1; $(BROWSE) http://localhost:$(LIVERELOADPORT)/) &
 	$(LIVERELOAD) _build/html/
