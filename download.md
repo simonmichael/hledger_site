@@ -154,7 +154,8 @@ The current hledger release is:
       <td>
         <div class="distro">Arch</div>
         <div class="badges">
-          <a href="https://www.archlinux.org/packages/?sort=&amp;q=hledger"><img alt="Arch" src="https://repology.org/badge/version-for-repo/arch/hledger.svg" /></a>
+          <!-- <a href="https://www.archlinux.org/packages/?sort=&amp;q=hledger"><img alt="Arch" src="https://repology.org/badge/version-for-repo/arch/hledger.svg" /></a> -->
+          <a href="https://www.archlinux.org/packages/?sort=&amp;q=hledger"><img alt="Arch" src="https://img.shields.io/badge/Arch_package-1.15.2-red.svg" /></a>
         </div>
       </td>
       <td>
@@ -176,7 +177,8 @@ The current hledger release is:
       <td>
         <div class="distro">Void</div>
         <div class="badges">
-          <a href="https://voidlinux.org/packages/?q=hledger"><img src="https://repology.org/badge/version-for-repo/void_x86_64/hledger.svg" alt="Void Linux x86_64" /></a>
+          <!-- <a href="https://voidlinux.org/packages/?q=hledger"><img src="https://repology.org/badge/version-for-repo/void_x86_64/hledger.svg" alt="Void Linux x86_64" /></a> -->
+          <a href="https://voidlinux.org/packages/?q=hledger"><img src="https://img.shields.io/badge/Void_package-1.15.2-red.svg" alt="Void Linux x86_64" /></a>
         </div>
       </td>
       <td>
