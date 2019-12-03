@@ -63,7 +63,7 @@ Here are some ways to install hledger.
 or you can [run our install script, or build with stack/cabal](#building-from-source).
 Please do [report](index.html#help-feedback) any trouble.
 The current hledger release is:
-**1.16** ([release notes](release-notes)).
+**1.16.1** ([release notes](release-notes)).
 
 ## Binary packages
 
@@ -283,7 +283,7 @@ On Windows, hledger-ui is not available and should be omitted from the commands 
 </div>
 <div class="notes">Linux, Mac, WSL</div>
 <div class="badges">
-  <img alt="installs" src="https://img.shields.io/badge/installs_hledger-1.15.2-red.svg" />
+  <img alt="installs" src="https://img.shields.io/badge/installs_hledger-1.16.1-brightgreen.svg" />
 </div>
 <div class="builder-text">
   The hledger-install script requires only bash. 
@@ -302,7 +302,7 @@ On Windows, hledger-ui is not available and should be omitted from the commands 
 </div>
 <div class="notes">Linux, Mac, Windows</div>
 <div class="badges">
-  <img alt="installs" src="https://img.shields.io/badge/installs_hledger-1.16-brightgreen.svg" />
+  <img alt="installs" src="https://img.shields.io/badge/installs_hledger-1.16.1-brightgreen.svg" />
 </div>
 <div class="builder-text">
 The latest version of stack (2.1.3 as of 2019-07) will likely work best, so we recommend it.
@@ -312,7 +312,7 @@ On Windows, the 64-bit version of stack is recommended.
 </div>
 <div class="builder-command">
   stack update <br>
-  stack install --resolver=lts hledger-lib-1.16 hledger-1.16 hledger-ui-1.16 hledger-web-1.16 --silent
+  stack install --resolver=lts hledger-lib-1.16.1 hledger-1.16.1 hledger-ui-1.16.1 hledger-web-1.16.1 --silent
 </div>
 
 <div class="builder">
@@ -320,13 +320,13 @@ On Windows, the 64-bit version of stack is recommended.
 </div>
 <div class="notes">Linux, Mac, Windows</div>
 <div class="badges">
-  <img alt="installs" src="https://img.shields.io/badge/installs_hledger-1.16-brightgreen.svg" />
+  <img alt="installs" src="https://img.shields.io/badge/installs_hledger-1.16.1-brightgreen.svg" />
 </div>
 <div class="builder-text">
 </div>
 <div class="builder-command">
   cabal v2-update <br>
-  cabal v2-install hledger-1.16 hledger-web-1.16 hledger-ui-1.16
+  cabal v2-install hledger-1.16.1 hledger-web-1.16.1 hledger-ui-1.16.1
 </div>
 
 ### Build tips
@@ -453,11 +453,11 @@ tools (that you installed), and see the expected versions. Eg:
 
 <div class="command">
 $ hledger --version <br>
-hledger 1.16 <br>
+hledger 1.16.1 <br>
 $ hledger-ui --version <br>
-hledger-ui 1.16 <br>
+hledger-ui 1.16.1 <br>
 $ hledger web --version <br>
-hledger-web 1.16 <br>
+hledger-web 1.16.1 <br>
 $ hledger iadd --version <br>
 This is hledger-iadd version 1.3.9
 </div>
