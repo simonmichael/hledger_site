@@ -33,7 +33,7 @@ Changes in hledger-install.sh are shown
 
 ## 2019/12/01 hledger 1.16
 
-** GHC 8.8 support, much more powerful CSV conversion rules,
+**GHC 8.8 support, much more powerful CSV conversion rules,
 percentage balance reports, misc improvements.**
 <!-- ([mail](https://groups.google.com/d/topic/hledger/ZIuHR_Gv7o8/discussion)) -->
 
