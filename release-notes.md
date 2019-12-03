@@ -33,9 +33,9 @@ Changes in hledger-install.sh are shown
 
 ## 2019/12/01 hledger 1.16
 
-**new website, faster and more flexible valuation, more accurate close command,
-tags --values, new descriptions/payees/notes/diff commands, misc. fixes.**
-([mail](https://groups.google.com/d/topic/hledger/ZIuHR_Gv7o8/discussion))
+** GHC 8.8 support, much more powerful CSV conversion rules,
+percentage balance reports, misc improvements.**
+<!-- ([mail](https://groups.google.com/d/topic/hledger/ZIuHR_Gv7o8/discussion)) -->
 
 ### project-wide changes 1.16
 
