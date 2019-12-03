@@ -35,7 +35,7 @@ Changes in hledger-install.sh are shown
 
 **GHC 8.8 support, much more powerful CSV conversion rules,
 percentage balance reports, misc improvements.**
-<!-- ([mail](https://groups.google.com/d/topic/hledger/ZIuHR_Gv7o8/discussion)) -->
+([mail](https://groups.google.com/d/topic/hledger/wiMafb11uBQ/discussion))
 
 ### project-wide changes 1.16
 
