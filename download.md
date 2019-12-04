@@ -127,7 +127,7 @@ The current hledger release is:
     </tr>
     <tr>
       <td>
-        <div class="distro">Appveyor builds</div>
+        <div class="distro">Appveyor builds</div>
         <div class="badges">
           <a href="https://ci.appveyor.com/project/simonmichael/hledger/builds/27217977/artifacts"><img alt="Windows release"" src="https://img.shields.io/badge/Windows_zip-1.15.2-red.svg" /></a>
           <a href="https://ci.appveyor.com/project/simonmichael/hledger/build/artifacts"><img alt="Windows nightly" src="https://img.shields.io/badge/Windows_zip-nightly-red.svg" /></a>
