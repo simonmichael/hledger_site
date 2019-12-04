@@ -308,7 +308,7 @@ On Windows, hledger-ui is not available and should be omitted from the commands 
   <img alt="installs" src="https://img.shields.io/badge/installs_hledger-1.16.1-brightgreen.svg" />
 </div>
 <div class="builder-text">
-The latest version of stack (2.1.3 as of 2019-07) will likely work best, so we recommend it.
+The latest version of stack (2.1.3) is likely to work best, so we recommend it.
 If you have an older version, you can usually upgrade quickly with <code>stack upgrade</code>.
 Versions older than 1.7.1 will not work.
 On Windows, the 64-bit version of stack is recommended.
@@ -470,13 +470,14 @@ And you could see the unit tests pass (just for fun):
 <div class="command">
 $ hledger test <br>
 ... <br>
-199 tests passed, no failures!
+All 188 tests passed (4.30s)
 </div>
 
 <br>
 
-Nicely done. Next, see the Getting Started docs in the sidebar, such
+Nicely done! Next, see the Getting Started docs in the sidebar, such
 as the **[Basics tutorial](basics-tutorial.html)**,
-or introduce yourself in the **[IRC channel/Matrix room](index.html#help-feedback)**.
+or come to the **[IRC channel/Matrix room](index.html#help-feedback)** 
+where we'll help you out, or gladly hear your feedback.
 
 <br>
