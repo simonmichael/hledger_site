@@ -62,8 +62,8 @@ Here are some ways to install hledger.
 [Binary packages](#binary-packages) will install quickly,
 or you can [run our install script, or build with stack/cabal](#building-from-source).
 Please do [report](index.html#help-feedback) any trouble.
-The current hledger release is:
-**1.16.1** ([release notes](release-notes)).
+The current release is **1.16.1** (look for the green badges!)
+Here are the [release notes](release-notes) describing each version.
 
 ## Binary packages
 
@@ -86,7 +86,7 @@ The current hledger release is:
             <!-- nix-env -f https://github.com/NixOS/nixpkgs/archive/a6efc8.tar.gz -iA hledger hledger-web hledger-ui -->
         </div>
         <div class="notes">
-            May do some building, when new; try with --dry-run to see.
+            May do some building when new; try with --dry-run to see.
             On Linux, note <span class="warnings"><a href="https://github.com/simonmichael/hledger/issues/1030">#1030</a>, 
             <a href="https://github.com/simonmichael/hledger/issues/1033">#1033</a>.
         </div>
@@ -123,7 +123,7 @@ The current hledger release is:
         <div class="notes">Linux, Mac, FreeBSD</div>
       </td>
       <td>
-        <div class="notes">Install Wine and use the Windows binary</div>
+        <div class="notes">Install Wine and use the Windows binary below</div>
       </td>
     </tr>
     <tr>
@@ -290,14 +290,13 @@ On Windows, hledger-ui is not available and should be omitted from the commands 
   <img alt="installs" src="https://img.shields.io/badge/installs_hledger-1.16.1-brightgreen.svg" />
 </div>
 <div class="builder-text">
-  The hledger-install script requires only bash. 
-  It's good practice to inspect the script and satisfy yourself that it's safe before running it.
-  It runs stack or cabal for you, installing stack if needed.
-  It installs the main hledger tools plus some addons (hledger-iadd, hledger-interest).
+  The hledger-install script is a robust install method that requires only <a href=https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29">bash</a>. 
+  It runs stack or cabal for you, installing stack if you have neither, and installs all the main hledger tools and some addons,
+  in ~/.local/bin or ~/.cabal/bin.
 </div>
 <div class="builder-command">
   curl -sO https://raw.githubusercontent.com/simonmichael/hledger/master/hledger-install/hledger-install.sh <br>
-  less hledger-install.sh <br>
+  less hledger-install.sh <em style="margin-left:1em; font-weight:normal;"># good practice: inspect scripts before running</em><br>
   bash hledger-install.sh
 </div>
 
