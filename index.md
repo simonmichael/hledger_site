@@ -171,6 +171,12 @@ accounting.
     </td>
   </tr>
   <tr>
+    <td>Mail list:</td>
+    <td>
+      <a href="http://list.hledger.org">list.hledger.org</a>, <a href="mailto:hledger@googlegroups.com">hledger@googlegroups.com</a>
+    </td>
+  </tr>
+  <tr>
     <td>Twitter:</td>
     <td>
       <a href="https://twitter.com/search?q=%23hledger&amp;src=typed_query&amp;f=live">#hledger</a>, <a href="https://twitter.com/search?q=%23plaintextaccounting&amp;src=typed_query&amp;f=live">#plaintextaccounting</a>
@@ -186,12 +192,6 @@ accounting.
     <td>Hacker News:</td>
     <td>
       <a href="https://hn.algolia.com/?query=hledger&amp;sort=byDate&amp;prefix&amp;page=0&amp;dateRange=all&amp;type=story">stories</a>, <a href="https://hn.algolia.com/?query=hledger&amp;sort=byDate&amp;prefix=false&amp;page=0&amp;dateRange=all&amp;type=comment">comments</a>
-    </td>
-  </tr>
-  <tr>
-    <td>Mail list:</td>
-    <td>
-      <a href="http://list.hledger.org">list.hledger.org</a>, <a href="mailto:hledger@googlegroups.com">hledger@googlegroups.com</a>
     </td>
   </tr>
   <tr>
