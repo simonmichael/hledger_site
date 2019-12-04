@@ -129,13 +129,13 @@ The current hledger release is:
       <td>
         <div class="distro">Appveyor builds</div>
         <div class="badges">
-          <a href="https://ci.appveyor.com/project/simonmichael/hledger/builds/27217977/artifacts"><img alt="Windows release"" src="https://img.shields.io/badge/Windows_zip-1.15.2-red.svg" /></a>
-          <a href="https://ci.appveyor.com/project/simonmichael/hledger/build/artifacts"><img alt="Windows nightly" src="https://img.shields.io/badge/Windows_zip-nightly-red.svg" /></a>
+          <a href="https://ci.appveyor.com/project/simonmichael/hledger/builds/29292447/artifacts"><img alt="Windows release"" src="https://img.shields.io/badge/Windows_zip-1.16.1-brightgreen.svg" /></a>
+          <a href="https://ci.appveyor.com/project/simonmichael/hledger/build/artifacts"><img alt="Windows master" src="https://img.shields.io/badge/Windows_zip-master-brightgreen.svg" /></a>
       </td>
       <td>
-        <div class="command"><a href="https://ci.appveyor.com/api/buildjobs/hm882buev9bjjd6i/artifacts/hledger.zip">hledger.zip (release)</a></div>
+        <div class="command" style="margin-bottom:4px;"><a href="https://ci.appveyor.com/api/buildjobs/hm882buev9bjjd6i/artifacts/hledger.zip">hledger.zip (latest release)</a></div>
         <div class="notes"></div>
-        <div class="command"><a href="https://ci.appveyor.com/api/projects/simonmichael/hledger/artifacts/hledger.zip?branch=master">hledger.zip (dev)</a></div>
+        <div class="command"><a href="https://ci.appveyor.com/api/projects/simonmichael/hledger/artifacts/hledger.zip?branch=master">hledger.zip (unreleased master)</a></div>
         <div class="notes">
           <span class="warnings">
             <!-- <a href="https://github.com/simonmichael/hledger/issues/1039">#1039</a> -->
