@@ -77,11 +77,14 @@ The current hledger release is:
         <div class="distro"><a href="https://nixos.org/nix">Nix</a></div>
         <div class="notes">Linux, Mac</div>
         <div class="badges">
-          <a href="https://hydra.nixos.org/search?query=hledger"><img alt="Nix" src="https://img.shields.io/badge/Nix_package-1.15.2-red.svg" /></a>
+          <a href="https://hydra.nixos.org/search?query=hledger"><img alt="Nix" src="https://img.shields.io/badge/Nix_package-1.16-brightgreen.svg" /></a>
         </div>
       </td>
       <td>
-        <div class="command">nix-env -f https://github.com/NixOS/nixpkgs/archive/4179ba0.tar.gz -iA hledger hledger-web hledger-ui</div>
+        <div class="command">
+            nix-env -f https://github.com/NixOS/nixpkgs/archive/6da889.tar.gz -iA hledger hledger-web hledger-ui
+            <!-- nix-env -f https://github.com/NixOS/nixpkgs/archive/a6efc8.tar.gz -iA hledger hledger-web hledger-ui -->
+        </div>
         <div class="notes">
             On Linux, note <span class="warnings"><a href="https://github.com/simonmichael/hledger/issues/1030">#1030</a>, 
             <a href="https://github.com/simonmichael/hledger/issues/1033">#1033</a>
@@ -106,7 +109,7 @@ The current hledger release is:
         <div class="notes">Linux, Mac, Windows</div>
         <div class="badges">
           <!--[![](https://repology.org/badge/version-for-repo/homebrew/hledger.svg)]-->
-          <a href="https://formulae.brew.sh/formula/hledger"><img alt="Homebrew" src="https://img.shields.io/badge/Homebrew-1.15.2-red.svg" /></a>
+          <a href="https://formulae.brew.sh/formula/hledger"><img alt="Homebrew" src="https://img.shields.io/badge/Homebrew-1.16.1-brightgreen.svg" /></a>
         </div>
       </td>
       <td>
