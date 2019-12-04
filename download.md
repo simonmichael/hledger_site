@@ -86,8 +86,9 @@ The current hledger release is:
             <!-- nix-env -f https://github.com/NixOS/nixpkgs/archive/a6efc8.tar.gz -iA hledger hledger-web hledger-ui -->
         </div>
         <div class="notes">
+            May do some building, when new; try with --dry-run to see.
             On Linux, note <span class="warnings"><a href="https://github.com/simonmichael/hledger/issues/1030">#1030</a>, 
-            <a href="https://github.com/simonmichael/hledger/issues/1033">#1033</a>
+            <a href="https://github.com/simonmichael/hledger/issues/1033">#1033</a>.
         </div>
       </td>
     </tr>
