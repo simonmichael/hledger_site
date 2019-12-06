@@ -1,3 +1,8 @@
+(See also: some great beginner-level
+[blog posts](https://plaintextaccounting.org/#articles-blog-posts),
+such as S.M. Oliva's; and [hledger fan's youtube videos](videos.html)).
+
+
 # Basics tutorial
 
 Here you can learn hledger (and a little double-entry bookkeeping)
