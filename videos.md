@@ -2,9 +2,7 @@
 
 hledger-related videos:
 
-- [Учет сделок с проводками в текстовом формате](https://www.youtube.com/watch?v=1qrFjSVav2Q) (2019, 34m)
-
-- [hledger fan Youtube channel](https://www.youtube.com/channel/UCZLxXTjOqLzq4z5Jy0AyWSQ), including: -->
+- The [hledger fan Youtube channel](https://www.youtube.com/channel/UCZLxXTjOqLzq4z5Jy0AyWSQ) has a series of beginner lessons, including:
 
   - [hledger: fun and profit with incomestatement](https://www.youtube.com/watch?v=U4An3AHtDkg) (3m, 2019) <!-- oct 12 -->  
     hledger fan (Robert Nielsen)  
@@ -30,6 +28,8 @@ hledger-related videos:
   - [The Basics: An hledger Transaction](https://www.youtube.com/watch?v=SSz09ThShrs) (2m, 2019) <!-- may 29 -->  
     hledger fan (Robert Nielsen)  
   
+- [Учет сделок с проводками в текстовом формате](https://www.youtube.com/watch?v=1qrFjSVav2Q) (2019, 34m)
+
 - [Simon Michael - Hands-on with hledger](https://www.youtube.com/watch?v=H_CdGzLbc7A) (2h, 2016)  <!-- sep 2 -->  
   Brainium Haskell meetup, Santa Monica.
   *Simon will present a practical session where we'll learn and
