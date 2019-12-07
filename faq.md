@@ -317,6 +317,9 @@ We do not yet support:
       --historical (-H)
                                 Value commodities at the time of their acquisition.
 
+- hledger's `-x`/`--explicit` flag (makes print show all amounts) 
+  and Ledger's `--explicit` flag (does something else) are unrelated.
+
 #### journal format
 
 - hledger supports international number formats, auto-detecting the
