@@ -13,7 +13,7 @@ Here are some options. See also:
 
 ### Cashier (PWA, GNU GPL v3)
 
-<https://gitlab.com/alensiljak/cashier>,
+<https://gitlab.com/alensiljak/cashier>\
 [demo](https://cashier.alensiljak.eu.org)\
 A progressive web application that can be used on desktop and
 (offline!) on web-capable mobile devices for entering transactions
@@ -35,14 +35,14 @@ which can be synced with a server via Syncthing.
 
 ### Ledger Expense Tracking (Android)
 
-<https://github.com/jduepmeier/ledger-app>, 
+<https://github.com/jduepmeier/ledger-app>\
 [google play](https://play.google.com/store/apps/details?id=com.mpease.ledger)\
 Expense tracking app with *ledger export.
 
 
 ### MoLe (Android, GNU GPL v3+)
 
-<https://mole.ktnx.net>,
+<https://mole.ktnx.net>\
 <https://git.ktnx.net/?p=mobile-ledger.git>\
 A data entry app that talks to a hledger-web (1.14+) server.
 
@@ -59,6 +59,16 @@ Then, with suitable CSV rules, either run hledger reports directly from the CSV 
 or convert it/import the new transactions into a more permanent journal file.
 A script or Makefile to automate this can be helpful.
 
+
+### GnuCash for Android
+
+<https://github.com/codinguser/gnucash-android>\
+[google play](https://play.google.com/store/apps/details?id=org.gnucash.android)\
+Mobile UI for the mature GnuCash desktop accounting app.
+
+<img src="https://lh3.googleusercontent.com/a3iiOacFjYfVIWuvfZ9mCgOgrlXwsFR_dsJEVfAXA6i1DaXWBCePrANMDQ-pdQQmaQ=w1280-h815" alt="GnuCash for Android accounts" width="30%" />
+<img src="https://lh3.googleusercontent.com/du--h97sS01pb1w4vy05hvbCJWJinEqhNFtqn9g6NG94qch1Wd3d-2jTxVdBlrP1etQ=w1280-h815" alt="GnuCash for Android transactions" width="30%" />
+<img src="https://lh3.googleusercontent.com/dobjDMrp2shRT6pc_UHxnQUhUdsG66XBKtadb71nLXkuJfbvca6MWUm4dC8KimnspA=w1280-h815" alt="GnuCash for Android reports" width="30%" />
 
 ### Eternity (IOS)
 
