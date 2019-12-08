@@ -49,33 +49,33 @@ percentage balance reports, misc improvements.**
 
 ### hledger cli 1.16
 
-- The --anon flag now also anonymises transaction codes and account
+- The `--anon` flag now also anonymises transaction codes and account
   names declared with account directives. (Mykola Orliuk) (#901)
 
 - The benchmark suite has been disabled.
 
 #### commands
 
-- balance/bs/cf/is: balance commands now support the -%/--percent flag
+- balance/bs/cf/is: balance commands now support the `-%`/`--percent` flag
   to show amounts as percentages of the column's total. (Michael Kainer)
 
   If there are multiple commodities involved in a report hledger bails
-  with an error message. This can be avoided by using -B/--cost. Also note
+  with an error message. This can be avoided by using `-B`/`--cost`. Also note
   that if one uses -% with the balance command the chances are high that
   all numbers are 0. This is due to the fact that by default balance sums
   up to zero. If one wants to use -% in a meaningful way with balance one
   has to add a query.
 
-  In order to keep the implementation as simple as possible --tree has no
+  In order to keep the implementation as simple as possible `--tree` has no
   influence over how the percentages are calculated, i.e., the percentages
   always represent the fraction of the columns total. If one wants to know
   the percentages relative to a parent account, one has to use a query to
   narrow down the accounts.
 
-- balance: --budget no longer errors when there is neither budget nor
+- balance: `--budget` no longer errors when there is neither budget nor
   transactions in the report period (Dmitry Astapov)
 
-- balance: --budget has improved debug output (shows budget txns)
+- balance: `--budget` has improved debug output (shows budget txns)
   (Dmitry Astapov)
 
 - check-dates: now sets the exit status code (Amitai Burstein)
@@ -83,13 +83,13 @@ percentage balance reports, misc improvements.**
 - close: no longer strips zeroes after the decimal mark, and preserves
   parseable output (#1137)
 
-- close: the --close-to, --open-from options allow closing/opening
+- close: the `--close-to`, `--open-from` options allow closing/opening
   account names to be chosen
 
 - import: create the journal if missing, like the add command
   Streamlines import/migration instructions.
 
-- import: --catchup marks all transactions imported, without importing
+- import: `--catchup` marks all transactions imported, without importing
 
 - import: more informative output: mention the input files, also show
   a message when nothing was imported
@@ -155,8 +155,8 @@ Migration notes:
 
 - When `print`ing from CSV, there is now one less space between
   transaction descriptions and comments, which may generate noisy
-  diffs if you are comparing old and new reports. diff -w
-  (--ignore-all-space) will filter these out.
+  diffs if you are comparing old and new reports. `diff -w`
+  (`--ignore-all-space`) will filter these out.
 
 - CSV rules now give you more freedom to generate any journal
   entries you want, including malformed or unbalanced ones. 
@@ -172,14 +172,14 @@ Migration notes:
 
 ### hledger-ui 1.16
 
-- the B and V keys toggle cost or value display (like the -B and -V
+- the B and V keys toggle cost or value display (like the `-B` and `-V`
   command line flags)
 
 - uses hledger 1.16.1
 
 ### hledger-web 1.16
 
-- The --cors option allows simple cross-origin requests to hledger-web
+- The `--cors` option allows simple cross-origin requests to hledger-web
   (Alejandro García Montoro)
 
 - Weeks in the add form's date picker now start on Mondays (#1109)
@@ -205,7 +205,7 @@ Michael Kainer.
 ## 2019/09/01 hledger 1.15
 
 **new website, faster and more flexible valuation, more accurate close command,
-tags --values, new descriptions/payees/notes/diff commands, misc. fixes.**
+tags `--values`, new descriptions/payees/notes/diff commands, misc. fixes.**
 ([mail](https://groups.google.com/d/topic/hledger/ZIuHR_Gv7o8/discussion))
 
 ### project-wide changes 1.15
@@ -242,12 +242,12 @@ tags --values, new descriptions/payees/notes/diff commands, misc. fixes.**
 ### hledger cli 1.15
 
 - There is a new valuation option `--value=TYPE[,COMM]`, with
-  backwards-compatible `-B/--cost`, `-V/--market`, `-X/--exchange=COMM`
+  backwards-compatible `-B`/`--cost`, `-V`/`--market`, `-X`/`--exchange=COMM`
   variants. These provide control over valuation date (#329), and
-  inference of indirect market prices (similar to Ledger's -X) (#131).
+  inference of indirect market prices (similar to Ledger's `-X`) (#131).
   Experimental.
   
-- Market valuation (-V/-X/--value) is now much faster (#999):
+- Market valuation (`-V`/`-X`/`--value`) is now much faster (#999):
 
       +-------------------------------------------++--------------+--------------+
       |                                           || hledger-1.14 | hledger-1.15 |
