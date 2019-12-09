@@ -294,7 +294,7 @@ On Windows, hledger-ui is not available and should be omitted from the commands 
   The hledger-install script is a robust install method that requires only
   <a href=https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29">bash</a>. 
   It runs stack or cabal for you, installing stack if you have neither, 
-  and installs all the main hledger tools and some [add-on commands](hledger.html#add-on-commands),
+  and installs all the main hledger tools and some <a href="hledger.html#add-on-commands">add-on commands</a>,
   in ~/.local/bin or ~/.cabal/bin.
 </div>
 <div class="builder-command">
