@@ -291,8 +291,10 @@ On Windows, hledger-ui is not available and should be omitted from the commands 
   <img alt="installs" src="https://img.shields.io/badge/installs_hledger-1.16.1-brightgreen.svg" />
 </div>
 <div class="builder-text">
-  The hledger-install script is a robust install method that requires only <a href=https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29">bash</a>. 
-  It runs stack or cabal for you, installing stack if you have neither, and installs all the main hledger tools and some addons,
+  The hledger-install script is a robust install method that requires only
+  <a href=https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29">bash</a>. 
+  It runs stack or cabal for you, installing stack if you have neither, 
+  and installs all the main hledger tools and some [add-on commands](hledger.html#add-on-commands),
   in ~/.local/bin or ~/.cabal/bin.
 </div>
 <div class="builder-command">
@@ -462,8 +464,6 @@ $ hledger-ui --version <br>
 hledger-ui 1.16.1 <br>
 $ hledger web --version <br>
 hledger-web 1.16.1 <br>
-$ hledger iadd --version <br>
-This is hledger-iadd version 1.3.9
 </div>
 
 And you could see the unit tests pass (just for fun):
