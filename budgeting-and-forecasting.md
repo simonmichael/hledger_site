@@ -16,11 +16,11 @@ your paychecks -- monthly or weekly.
 
 Lets create monthly (-M) report for years 2013-2014 (-b 2013) of all
 top-level expense categories (--depth 2 Expenses), looking for average
-figures (-A) in the cost at the time of transaction (-B), limiting
+figures (-A), limiting
 ourselves to USD transactions only, to save screen space:
 
 ```shell
-$ hledger balance -f bcexample.hledger -MBA -b 2013 --depth 2 Expenses cur:USD
+$ hledger balance -f bcexample.hledger -MA -b 2013 --depth 2 Expenses cur:USD
 Balance changes in 2013/01/01-2014/10/31:
 
                     ||     2013/01      2013/02      2013/03  ...      2014/07      2014/08      2014/09      2014/10      Average 
