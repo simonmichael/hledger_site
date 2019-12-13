@@ -138,7 +138,7 @@ Here are the [release notes](release-notes) describing each version.
           <a href="https://ci.appveyor.com/project/simonmichael/hledger/build/artifacts"><img alt="Windows master" src="https://img.shields.io/badge/Windows_zip-master-brightgreen.svg" /></a>
       </td>
       <td>
-        <div class="command" style="margin-bottom:4px;"><a href="https://ci.appveyor.com/api/buildjobs/hm882buev9bjjd6i/artifacts/hledger.zip">hledger.zip (latest release)</a></div>
+        <div class="command" style="margin-bottom:4px;"><a href="https://ci.appveyor.com/api/buildjobs/x91mc06wd37m0coa/artifacts/hledger.zip">hledger.zip (latest release)</a></div>
         <div class="notes"></div>
         <div class="command"><a href="https://ci.appveyor.com/api/projects/simonmichael/hledger/artifacts/hledger.zip?branch=master">hledger.zip (unreleased master)</a></div>
         <div class="notes">
@@ -279,7 +279,7 @@ Here are the [release notes](release-notes) describing each version.
 ## Building from source
 
 You can build hledger wherever the Glasgow Haskell Compiler is supported.
-This can take a while, but it's normally a reliable process.
+This can take a while, but it's normall a reliable process.
 Use one of the tools below to build the current hledger release.
 On Windows, hledger-ui is not available and should be omitted from the commands below (except in WSL).
 
