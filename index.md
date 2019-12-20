@@ -1,7 +1,8 @@
 # hledger
 
 <div id=tagline>
-Robust plain text accounting.
+Easy plain text accounting.
+<!-- Robust plain text accounting. -->
 <!-- Friendly, robust plain text accounting. -->
 <!-- Robust, powerful, plain text accounting. -->
 <!-- Robust, precise, plain text accounting. -->
