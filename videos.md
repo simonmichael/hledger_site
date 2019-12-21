@@ -50,6 +50,7 @@ hledger-related videos:
 
 - [Evolution of hledger](https://www.youtube.com/watch?v=dEADGr9dqow) (15m, 2015) <!-- jul 20 -->  
   Gource visualization of hledger development activity up to 2015
+  [currently [missing](https://www.reddit.com/r/haskell/comments/cr4dkm/evolution_of_ghc_glasgow_haskell_compiler_video/ex3k02j/)]
 
 - [Search for "hledger" on Youtube](https://www.youtube.com/results?search_query=hledger)
 
