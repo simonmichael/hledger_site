@@ -65,6 +65,6 @@ using conversion rules file checking.csv.rules
 
 Here are more [CSV rules examples](https://github.com/simonmichael/hledger/tree/master/examples/csv).
 
-Here's how to [Customize default CSV accounts](customize-default-csv-account.html).
+Here's how to [Customize default CSV accounts](customize-default-csv-accounts.html).
 
 There are many alternate CSV conversion tools at [plaintextaccounting.org -> data import/conversion](https://plaintextaccounting.org/#data-importconversion) (nine CSV->*ledger tools at last count). [hledger-import-dsl](https://github.com/hpdeifel/hledger-import-dsl) is a fully programmable hledger-ish option.
