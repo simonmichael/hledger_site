@@ -3,7 +3,6 @@
 You can save frequently used options and arguments in an 
 [argument file](hledger.html#argument-files), one per
 line, then reuse them via a @FILE argument on the command line.
-(hledger 1.4+)
 
 Here's an example.
 I keep frequently-used options for quick daily reports in a file
@@ -18,18 +17,19 @@ so I can find these easily. Here's the content of `simple.args`:
 -2
 cur:.
 ```
-
 The format is one command-line flag or command-line argument per line.
+Special characters should have one less level of quoting than at the command prompt
+(so no quotes around those (|) characters),
+and spaces should be avoided except inside quotes (so = is used between flags and arguments).
+
 Now if I write `@simple.args` in a hledger command line, it will be replaced
 by all of the above options/flags.
 
-The options above are just an example, but in case you're wondering:
+(In case you're wondering about this example: it removes some detail, giving simplified reports which were easier for me to read at a glance):
 
 - the [aliases](journal.html#rewriting-accounts) simplify the chart of accounts, hiding some distinctions (eg business vs. personal) and flattening some bank account names
 - the `-2` [depth flag](hledger.html#depth-limiting) limits account depth to 2, hiding deeper subaccounts
 - the `cur:.` [query argument](hledger.html#queries) shows only single-character currencies, hiding a bunch of cluttersome commodities I don't want to see
-
-Ie they remove some detail, giving simplified reports which are easier for me to read at a glance.
 
 ## Usage
 
@@ -49,22 +49,6 @@ Eg, to show just a little more account detail:
 $ hledger bal @simple.args -3
 ```
 
-## Quoting
-
-[Special characters](hledger.html#special-characters-in-arguments-and-queries) 
-in the arguments file may need to be quoted, depending on your shell
-(bash, fish etc.) They'll need one less level of quoting than on the
-command line. I think
-```shell
-$ hledger bal @simple.args
-```
-is equivalent to writing:
-```shell
-$ hledger bal "--alias=/:(business|personal):/=:" "--alias=/:(bank|cash|online):/=:" "--alias=/:bofi:/=:b" "--alias=/:unify:/=:u" "--alias=/:wf:/=:w" "-2" "cur:."
-```
-So in this example, using the bash shell, the `|` pipe character did 
-not need to be quoted in the arguments file (and should not be). 
-
 ## Suppressing this feature
 
 If you actually need to write an argument beginning with @, 
@@ -77,4 +61,3 @@ $ hledger bal -- @somewhere.com    # matches account names containing "@somewher
 ```
 
 On windows, this double hyphen trick [might](https://ghc.haskell.org/trac/ghc/ticket/13287) require a hledger built with GHC 8.2+. 
-(Let us know.)
