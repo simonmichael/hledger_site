@@ -29,8 +29,7 @@ To install the completions manually, follow this steps:
   or copy the file `shell-completion/hledger-completion.bash` and save
   it as `~/.hledger-completion.bash`.
 
-- Add the command `'source ~/.hledger-completion.bash'` this to the end of your
-  `~/.bashrc` file.
+- Add the command `source ~/.hledger-completion.bash` to the end of your `~/.bashrc` file.
 
 - Then, you have to start a new Bash, e.g. by typing `bash` on the current
   shell.
