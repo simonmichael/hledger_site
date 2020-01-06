@@ -160,7 +160,7 @@ Here are the [release notes](release-notes) describing each version.
         <div class="distro">Arch</div>
         <div class="badges">
           <!-- <a href="https://www.archlinux.org/packages/?sort=&amp;q=hledger"><img alt="Arch" src="https://repology.org/badge/version-for-repo/arch/hledger.svg" /></a> -->
-          <a href="https://www.archlinux.org/packages/?sort=&amp;q=hledger"><img alt="Arch" src="https://img.shields.io/badge/Arch_package-1.15.2-red.svg" /></a>
+          <a href="https://www.archlinux.org/packages/?sort=&amp;q=hledger"><img alt="Arch" src="https://img.shields.io/badge/Arch_package-1.16-brightgreen.svg" /></a>
         </div>
       </td>
       <td>
@@ -171,7 +171,7 @@ Here are the [release notes](release-notes) describing each version.
       <td>
         <div class="distro">Gentoo</div>
         <div class="badges">
-          <a href="https://gentoo.zugaina.org/Search?search=hledger"><img alt="Gentoo" src="https://img.shields.io/badge/Gentoo_package-1.15.2-red.svg" /></a>
+          <a href="https://gentoo.zugaina.org/Search?search=hledger"><img alt="Gentoo" src="https://img.shields.io/badge/Gentoo_package-1.16.1-brightgreen.svg" /></a>
         </div>
       </td>
       <td>
@@ -260,7 +260,7 @@ Here are the [release notes](release-notes) describing each version.
       <td>
         <div class="distro"><a href="https://sandstorm.io">Sandstorm</a></div>
         <div class="notes"></div>
-        <div class="badges"><img alt="Sandstorm" src="https://img.shields.io/badge/Sandstorm_app-1.9.1-red.svg" /></div>
+        <div class="badges"><a href="https://apps.sandstorm.io/search?term=hledger"><img alt="Sandstorm" src="https://img.shields.io/badge/Sandstorm_app-1.9.1-red.svg" /></a></div>
       </td>
       <td>
         <div class="command"><a href="https://apps.sandstorm.io/app/8x12h6p0x0nrzk73hfq6zh2jxtgyzzcty7qsatkg7jfg2mzw5n90">HLedger Web sandstorm app</a></div>
@@ -471,7 +471,7 @@ And you could see the unit tests pass (just for fun):
 <div class="command">
 $ hledger test <br>
 ... <br>
-All 188 tests passed (4.30s)
+All 190 tests passed (4.30s)
 </div>
 
 <br>
