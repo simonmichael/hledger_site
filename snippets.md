@@ -14,26 +14,26 @@
 ``` eval_rst
 :name:   Site snippets
 :description:
-  Miscellaneous examples of how to do things on this site. 
+  Miscellaneous examples of how to do things on this site.
   Follow the edit link to see the page source.
 :author: The Author
 :date:   2019-09-10
-:another field: 
+:another field:
     indented
 
     paragraphs
 
-another field: 
+another field:
     without leading colon, does not have the field-even/field-odd class
 ```
 
 ## Commonmark
 
-This site's native markup is [Commonmark](https://commonmark.org/) markdown, 
+This site's native markup is [Commonmark](https://commonmark.org/) markdown,
 via Sphinx's [recommonmark](https://recommonmark.readthedocs.io/en/latest/index.html) extension.
 Here's Commonmark's syntax: <https://spec.commonmark.org/0.29/>
 
-Forced line breaks: 
+Forced line breaks:
 write `<br>`<br>
 or `\` (backslash)\
 at line end.
@@ -55,7 +55,7 @@ There's also a short form: write the RST directive (dots not necessary) at the s
     ```centered:: Centered text.
     ```
 
-Eg:
+E.g.,
 
 ```centered:: Centered text.
 ```

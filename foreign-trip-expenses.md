@@ -44,7 +44,7 @@ My attempt follows. Notes:
     Assets:Cash
 
 ; Conversion rate to use in reports for the trip period.
-; You could declare each time it changed, eg:
+; You could declare each time it changed, e.g.,
 ; P 2018-10-25 EUR 1.10 USD
 ; P 2018-10-28 EUR 1.20 USD
 ; but hledger currently picks just one,
@@ -58,14 +58,14 @@ Simple balance change report for all accounts. --flat and -Y help ensure a reada
 $ hledger bal --flat -Y
 Balance changes in 2018:
 
-                                  ||                 2018 
+                                  ||                 2018
 ==================================++======================
- Assets:Bank                      ||          -590.00 USD 
- Expenses:Fees:CurrencyConversion ||            10.00 USD 
- Expenses:Vacation:Food           ||              190 EUR 
- Expenses:Vacation:Hotel          ||              310 EUR 
+ Assets:Bank                      ||          -590.00 USD
+ Expenses:Fees:CurrencyConversion ||            10.00 USD
+ Expenses:Vacation:Food           ||              190 EUR
+ Expenses:Vacation:Hotel          ||              310 EUR
 ----------------------------------++----------------------
-                                  || 500 EUR, -580.00 USD 
+                                  || 500 EUR, -580.00 USD
 ```
 
 Adding the -B/--cost flag converts transaction amounts to the other commodity in the transaction, using the conversion rate specified in the transaction if any. This typically helps collapse the grand total to one commodity, so we can see it is zero here (expected, since we're showing all accounts).
@@ -73,34 +73,34 @@ Adding the -B/--cost flag converts transaction amounts to the other commodity in
 $ hledger bal --flat -Y -B
 Balance changes in 2018:
 
-                                  ||                 2018 
+                                  ||                 2018
 ==================================++======================
- Assets:Bank                      ||          -590.00 USD 
- Assets:Cash                      || -500 EUR, 580.00 USD 
- Expenses:Fees:CurrencyConversion ||            10.00 USD 
- Expenses:Vacation:Food           ||              190 EUR 
- Expenses:Vacation:Hotel          ||              310 EUR 
+ Assets:Bank                      ||          -590.00 USD
+ Assets:Cash                      || -500 EUR, 580.00 USD
+ Expenses:Fees:CurrencyConversion ||            10.00 USD
+ Expenses:Vacation:Food           ||              190 EUR
+ Expenses:Vacation:Hotel          ||              310 EUR
 ----------------------------------++----------------------
-                                  ||                    0 
+                                  ||                    0
 ```
 
 Adding the -V/--value flag instead converts report amounts using the market price effective on the reporting date (hledger prices and date can help identify that). The grand total of -5 USD here corresponds to our capital loss due to change in exchange rate (the price of a euro went from $1.10 to $1.20 while we still owed some):
 ```
-$ hledger prices 
+$ hledger prices
 P 2018-10-25 EUR 1.15 USD
 $ date
 Fri Oct 26 15:03:00 PDT 2018
 $ hledger bal --flat -Y -V
 Balance changes in 2018:
 
-                                  ||        2018 
+                                  ||        2018
 ==================================++=============
- Assets:Bank                      || -590.00 USD 
- Expenses:Fees:CurrencyConversion ||   10.00 USD 
- Expenses:Vacation:Food           ||  218.50 USD 
- Expenses:Vacation:Hotel          ||  356.50 USD 
+ Assets:Bank                      || -590.00 USD
+ Expenses:Fees:CurrencyConversion ||   10.00 USD
+ Expenses:Vacation:Food           ||  218.50 USD
+ Expenses:Vacation:Hotel          ||  356.50 USD
 ----------------------------------++-------------
-                                  ||   -5.00 USD 
+                                  ||   -5.00 USD
 ```
 
 The "exp" account query is added to show just the expenses. Now we can see their total.
@@ -108,13 +108,13 @@ The "exp" account query is added to show just the expenses. Now we can see their
 $ hledger bal --flat -Y -V exp
 Balance changes in 2018:
 
-                                  ||       2018 
+                                  ||       2018
 ==================================++============
- Expenses:Fees:CurrencyConversion ||  10.00 USD 
- Expenses:Vacation:Food           || 218.50 USD 
- Expenses:Vacation:Hotel          || 356.50 USD 
+ Expenses:Fees:CurrencyConversion ||  10.00 USD
+ Expenses:Vacation:Food           || 218.50 USD
+ Expenses:Vacation:Hotel          || 356.50 USD
 ----------------------------------++------------
-                                  || 585.00 USD 
+                                  || 585.00 USD
 ```
 
 Or you might use the is/incomestatement command which is specialised for income/expense reporting.
@@ -123,20 +123,20 @@ It's tabular and flat by default.
 $ hledger is -V
 Income Statement 2018/10/25-2018/10/28
 
-                                  || 2018/10/25-2018/10/28 
+                                  || 2018/10/25-2018/10/28
 ==================================++=======================
- Revenues                         ||                       
+ Revenues                         ||
 ----------------------------------++-----------------------
 ----------------------------------++-----------------------
-                                  ||                       
+                                  ||
 ==================================++=======================
- Expenses                         ||                       
+ Expenses                         ||
 ----------------------------------++-----------------------
- Expenses:Fees:CurrencyConversion ||             10.00 USD 
- Expenses:Vacation:Food           ||            218.50 USD 
- Expenses:Vacation:Hotel          ||            356.50 USD 
+ Expenses:Fees:CurrencyConversion ||             10.00 USD
+ Expenses:Vacation:Food           ||            218.50 USD
+ Expenses:Vacation:Hotel          ||            356.50 USD
 ----------------------------------++-----------------------
-                                  ||            585.00 USD 
+                                  ||            585.00 USD
 ==================================++=======================
- Net:                             ||           -585.00 USD 
+ Net:                             ||           -585.00 USD
 ```
