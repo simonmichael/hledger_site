@@ -12,8 +12,8 @@ Easy plain text accounting.
 
 <img id="coins" src="_static/images/coins2-248.png" style="width:33%; float:right; margin:1em 1em 0 1em;" />
 
-<span style="font-size:x-large;">hledger</span> 
-is an elegant, versatile accounting program, 
+<span style="font-size:x-large;">hledger</span>
+is an elegant, versatile accounting program,
 for tracking money, time, or other commodities,
 on unix, mac and windows,
 with command line, terminal and web interfaces.
@@ -24,7 +24,7 @@ Quicken, Xero, or GnuCash.
 
 hledger is one of the leading implementations of [plain text accounting](http://plaintextaccounting.org),
 and is a modern and largely compatible reimplementation of [Ledger](https://ledger-cli.org).
-Compared to [the others](https://plaintextaccounting.org/#software), 
+Compared to [the others](https://plaintextaccounting.org/#software),
 hledger is robust, consistent, and intuitive, with excellent documentation.
 
 hledger is cross platform GNU GPLv3 free software, written in Haskell.
@@ -56,7 +56,7 @@ You can start very simply, and get more sophisticated as you learn more about do
 
 There is an enthusiastic and growing community practising this way of accounting.
 which can be quite educational and enjoyable.
-If you'd like more background, 
+If you'd like more background,
 we have collected many useful resources at plaintextaccounting.org (see link above).
 
 Read on for more about hledger, or if you're keen to get going,
@@ -113,7 +113,7 @@ that lets you review account balances and transactions quickly and without fuss.
 And, a zero-setup
 [web&nbsp;app](hledger-web) for a more point-and-click experience
 ([demo](http://demo.hledger.org)).
-Run it on your local machine, or on a server, 
+Run it on your local machine, or on a server,
 or set it up with a few clicks on
 [Sandstorm](https://apps.sandstorm.io/app/8x12h6p0x0nrzk73hfq6zh2jxtgyzzcty7qsatkg7jfg2mzw5n90).
 
@@ -148,15 +148,15 @@ applications.
 
 ### fully documented
 
-We practice documentation-driven development. 
-Every feature must be **well documented**, 
+We practice documentation-driven development.
+Every feature must be **well documented**,
 and getting started must be easy.
 
 ### focussed on serving users
 
 hledger strives to be usable, practical and to provide real-world value.
 Intuitive features, bug-free operation and complete, accurate documentation are top goals.
-Currently it is particularly suited to techies, ie users who appreciate the
+Currently it is particularly suited to techies, i.e. users who appreciate the
 power of text files, revision control, scriptability and double entry
 accounting.
 
@@ -232,8 +232,8 @@ h1 { font-size:4em; margin-bottom:.3em; }
 
 #tagline {
   font-size:xx-large;
-  font-style:italic; 
-  position:relative; 
+  font-style:italic;
+  position:relative;
   top:-.5em;
   left:.5em;
   /*text-align:right;*/

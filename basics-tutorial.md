@@ -348,7 +348,7 @@ $ hledger register expenses
 2015/05/26 forgot the bread     expenses                        $5           $15
 ```
 
-Now it's clear that your `expenses` balance - ie, the total amount spent - has increased to $15.
+Now it's clear that your `expenses` balance - i.e., the total amount spent - has increased to $15.
 
 Your `assets` balance should have dropped accordingly. Check it:
 

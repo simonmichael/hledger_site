@@ -287,11 +287,11 @@ We do not yet support:
 - hledger cleans up some semantic confusion with status matching (#564):
 
   - hledger uses `-P` as the short form of `--pending`. Ledger uses it for grouping by payee.
-  - hledger renames Ledger's "uncleared" status (ie, when the status field
+  - hledger renames Ledger's "uncleared" status (i.e., when the status field
     is empty) to "unmarked", and the `--uncleared`/`-U` flag to `--unmarked`/`-U`
   - each of hledger's `--unmarked`/`-U`, `--pending`/`-P`, `--cleared`/`-C` flags match only that single status.
     To match more than one status, the flags can be combined.
-    So the hledger equivalent of `ledger print -U` (ie: match all but
+    So the hledger equivalent of `ledger print -U` (i.e., match all but
     cleared transactions) is `hledger print -UP`.
 
 - hledger print shows both the primary date and the secondary date if any, always.
@@ -412,7 +412,7 @@ This is documented at [journal format: directives](journal.html#directives).
 These docs could be improved.
 
 Directives which affect parsing of data vary in their scope,
-ie the area of input data they affect. E.g., should they affect:
+i.e. the area of input data they affect. E.g., should they affect:
 
 - entries after the directive, in this file only ?
   - E.g.,
