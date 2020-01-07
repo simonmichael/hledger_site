@@ -25,7 +25,7 @@ may be better accounting terms I'm not familiar with yet.
 
 - You might have paid current market value for the lot, or you might have
   paid less or more than that. We'll call what you paid/exchanged the *acquisition amount*.
-  
+
 - I think the acquisition amount is also called the *basis* or *cost basis*.
   Or possibly the current market value is the basis, regardless of what you paid.
   Perhaps it depends. To be clarified. The basis at which you acquired a lot is important.
@@ -37,7 +37,7 @@ may be better accounting terms I'm not familiar with yet.
   This is not considered revenue, or taxable.
 
 - It's common to be holding multiple lots, perhaps many, even in a single account.
-  Eg, say you buy a small amount of some stock or cryptocurrency each week.
+  E.g., say you buy a small amount of some stock or cryptocurrency each week.
   Each purchase adds a new lot to your assets. We'll call this a *multi-lot balance*, or *balance*.
 
 - URG is calculated for a lot at a certain point in time.

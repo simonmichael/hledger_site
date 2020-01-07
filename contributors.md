@@ -33,7 +33,7 @@ hledger, please sign this, to help ensure:
 2.  that you get proper credit for your work
 
 3.  that we are able to remain license-compatible with related software
-    by updating to newer versions of our license when appropriate (eg
+    by updating to newer versions of our license when appropriate (e.g.
     GPLv2 -\> GPLv3)
 
 To "sign", read the conditions below and then send a darcs patch to

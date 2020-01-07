@@ -1,11 +1,11 @@
 # Simon's setup
 
-Author:       Simon Michael  
-Last updated: 201903  
-Tested on:    mac mojave  
-Tested with:  hledger 1.14  
-Tools used: 
-hledger, 
+Author:       Simon Michael
+Last updated: 201903
+Tested on:    mac mojave
+Tested with:  hledger 1.14
+Tools used:
+hledger,
 hledger-ui,
 GNU make,
 ...
@@ -42,11 +42,11 @@ It includes:
 - YEAR.prices containing P records for the year
 - forecast.journal containing periodic transaction rules
 
-all.journal includes all the year journals. 
+all.journal includes all the year journals.
 It provides all historical data, but is slow, and my old journals are inconsistent/broken, so it's currently rarely used.
 
 current.journal is a symlink for scripts which don't know the year.
-Symbolic links are a mixed blessing, causing file path confusion in emacs, eg.
+Symbolic links are a mixed blessing, causing file path confusion in emacs, e.g.
 
 ## Data entry
 
@@ -64,12 +64,12 @@ For troubleshooting: when downloading a CSV the previous copy is saved as FILE.c
 $ make csv
 ```
 
-Cash transactions are entered in emacs, using ledger-mode. 
+Cash transactions are entered in emacs, using ledger-mode.
 Mostly by copying and pasting similar past transactions.
 
-When rewriting account names, I use either 
+When rewriting account names, I use either
 ledger-mode completion (`TAB`) or dabbrev-expand completion (`M-/`),
-which have different strengths. 
+which have different strengths.
 
 I fetch currency prices with barrucadu's market-prices.py script
 ([details](https://gist.github.com/simonmichael/9ca4d74b30567dcc3b93763ffe88abf9)).

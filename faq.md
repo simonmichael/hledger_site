@@ -40,14 +40,14 @@ If you add a few directives to the file, hledger can:
 - include multiple data sets
 - generate recurring transactions by rule
 - add extra postings (splits) to transactions by rule
-- show a forecast of future activity, eg to help with cashflow planning
+- show a forecast of future activity, e.g. to help with cashflow planning
 - make a budget report, showing your budget goals and status by account and period
 
 Also, it can:
 
 - generate interest transactions by rule
 - help you enter new transactions with prompts or a terminal UI
-- help you convert and import new transactions from external sources, eg banks
+- help you convert and import new transactions from external sources, e.g. banks
 - be used as a library in a quick Haskell script or compiled program
 
 ## How could that help me ?
@@ -102,9 +102,9 @@ It's resizable.
 You can pick the font and colours.
 You do not need "Plaintext Reader, Trial Version" to read it.
 you do not need "Plaintext Studio Pro" to write it.
-You can use your favorite editor and skills you already have. 
-You can search in it! 
-You can version control it. 
+You can use your favorite editor and skills you already have.
+You can search in it!
+You can version control it.
 It works well over remote/slow connections.
 It's future-proof.
 It will be just as usable in 15 or 50 years.
@@ -118,7 +118,7 @@ efficiently. So, we store it as human-readable plain text.*
 
 ## Isn't this too weird for my family, business partners, tax accountant to use ?
 
-Maybe. You can ask them to enter data via hledger-web, 
+Maybe. You can ask them to enter data via hledger-web,
 or import from their mobile expenses app or a shared spreadsheet.
 You can show them the hledger-web UI, or HTML reports, or give them CSV to open in a spreadsheet.
 
@@ -177,7 +177,7 @@ and now [plaintextaccounting.org](http://plaintextaccounting.org).
 
 hledger's journal file format is very similar to Ledger's.
 Some syntactic forms can be interpreted in slightly different ways,
-eg [hledger comments](journal.html#comments) 
+e.g. [hledger comments](journal.html#comments)
 vs [Ledger comments](https://www.ledger-cli.org/3.0/doc/ledger3.html#Commenting-on-your-Journal),
 or [balance assertions](journal.html#assertions-and-ordering).
 
@@ -186,7 +186,7 @@ or rejected (value expressions). If you avoid these, it's quite easy
 to keep a journal file that works with both hledger and Ledger.
 
 Or, you can keep the hledger- and Ledger-specific bits in separate files,
-both [including](journal.html#including-other-files) a common file. Eg:
+both [including](journal.html#including-other-files) a common file. E.g.,
 ```shell
 $ ls *.journal
 common.journal   # included by hledger.journal and ledger.journal
@@ -267,26 +267,26 @@ We do not yet support:
 #### Command line interface
 
 - hledger does not require a space between command-line flags and their values,
-  eg `-fFILE` works as well as `-f FILE`
+  e.g. `-fFILE` works as well as `-f FILE`
 
 - hledger's `-b`, `-e`, `-D`, `-W`, `-M`, `-Q`, `-Y` and `-p` options combine nicely.
   You can also specify start and/or end dates with a query argument,
-  eg `date:START-` or `date:START-END`.
+  e.g. `date:START-` or `date:START-END`.
 
 - hledger's [query language](hledger.html#queries) is a little less
   powerful than Ledger's, simpler, and easier to remember.
-  It uses google-like prefixes, eg `desc:`, `payee:`, `amt:`, `not:`.
+  It uses google-like prefixes, e.g. `desc:`, `payee:`, `amt:`, `not:`.
   Multiple patterns are combined using fixed AND/OR rules.
   We don't yet support full boolean expressions, so some more advanced
-  queries require two invocations of hledger in a pipe, eg: 
+  queries require two invocations of hledger in a pipe, e.g.,
   `hledger print QUERY1 | hledger -f- reg QUERY2`
 
-- hledger uses `--ignore-assertions`/`-I` to disable balance assertions. 
+- hledger uses `--ignore-assertions`/`-I` to disable balance assertions.
   Ledger uses `--permissive` for that, and uses `-I` as the short form of `--prices`.
 
 - hledger cleans up some semantic confusion with status matching (#564):
 
-  - hledger uses `-P` as the short form of `--pending`. Ledger uses it for grouping by payee. 
+  - hledger uses `-P` as the short form of `--pending`. Ledger uses it for grouping by payee.
   - hledger renames Ledger's "uncleared" status (ie, when the status field
     is empty) to "unmarked", and the `--uncleared`/`-U` flag to `--unmarked`/`-U`
   - each of hledger's `--unmarked`/`-U`, `--pending`/`-P`, `--cleared`/`-C` flags match only that single status.
@@ -317,7 +317,7 @@ We do not yet support:
       --historical (-H)
                                 Value commodities at the time of their acquisition.
 
-- hledger's `-x`/`--explicit` flag (makes print show all amounts) 
+- hledger's `-x`/`--explicit` flag (makes print show all amounts)
   and Ledger's `--explicit` flag (does something else) are unrelated.
 
 #### journal format
@@ -327,11 +327,11 @@ We do not yet support:
   space) and digit group sizes to use for each commodity. Or, these can
   be declared explicitly with commodity directives.
 
-- hledger applies [balance assignments](journal.html#balance-assignments) 
+- hledger applies [balance assignments](journal.html#balance-assignments)
   and checks [balance assertions](journal.html#balance-assertions)
   in date order (and then by parse order, for postings on the same date).
   This ensures correct, deterministic behaviour, independent of the ordering of
-  journal entries and files. 
+  journal entries and files.
   Ledger checks assertions in the order they are parsed (ignoring dates), which is fragile.
 
   Also, hledger correctly handles multiple balance assignments/assertions in a single transaction.
@@ -349,11 +349,11 @@ We do not yet support:
 
 #### timeclock & timedot formats
 
-- hledger's journal, timeclock and timedot formats are separate; you can't 
+- hledger's journal, timeclock and timedot formats are separate; you can't
   mix them all in one file as in Ledger.
   (Though you can specify all files on the command line, or have a parent journal file include them all.)
   This simplifies the implementation and helps ensure useful parse error messages.
-  
+
 - hledger always shows time balances (from the timeclock/timedot formats) in hours
 
 #### timeclock format
@@ -364,8 +364,8 @@ We do not yet support:
 ## What is ledger4 ?
 
 [ledger4](https://github.com/ledger/ledger4) was John's 2012 start
-at rewriting parts of Ledger 3, eg the parser, in Haskell.
-We included this in hledger for a while, 
+at rewriting parts of Ledger 3, e.g. the parser, in Haskell.
+We included this in hledger for a while,
 hoping to attract contributions to improve this "bridge" between the projects,
 and improve our support for reading Ledger's files.
 After some time it was removed again.
@@ -382,10 +382,10 @@ Some quick/rough migration recipes:
 4. `cd ~/Downloads` (or wherever you saved it)
 5. `hledger import mint.csv`
 
-Now `hledger stats` and `hledger bal` should show lots of data. That's your past data migrated. 
+Now `hledger stats` and `hledger bal` should show lots of data. That's your past data migrated.
 
 Then, if you want to leave Mint, you'll need to replace their automatic
-import from banks with 
+import from banks with
 [your own import process](#isn-t-importing-from-banks-a-pain).
 
 Or if you want to keep using Mint for that, because you like how they
@@ -411,23 +411,23 @@ This is documented at [journal format: directives](journal.html#directives).
 (Also mentioned at [hledger: Input files](hledger.html#input-files).)
 These docs could be improved.
 
-Directives which affect parsing of data vary in their scope, 
-ie the area of input data they affect. Eg, should they affect: 
+Directives which affect parsing of data vary in their scope,
+ie the area of input data they affect. E.g., should they affect:
 
-- entries after the directive, in this file only ? 
-  - Eg: 
-    `alias`, 
-    `apply account`, 
-    `comment`, 
+- entries after the directive, in this file only ?
+  - E.g.,
+    `alias`,
+    `apply account`,
+    `comment`,
     `Y`
 - entries before and after the directive, in this file only ?
 - entries and included files after the directive, until this file's end ?
 - all entries after the directive, in this and all included or subsequent files, including parent files ?
-  - Eg: 
+  - E.g.,
     the number notation specified by `D`
     or `commodity`
 - all entries in all files ?
-  - Eg: 
+  - E.g.,
     the default commodity specified by `D`,
     and `account`
 
@@ -457,7 +457,7 @@ Some of hledger's older commands (balance, print, register) show a
 multi-commodity amount with each commodity on its own line, by default
 (like Ledger).
 
-Here are some examples. 
+Here are some examples.
 In the following journal entry, the implicit balancing amount drawn from the `b` account will be a multicommodity amount (a euro and a dollar):
 ```journal
 2015/1/1
@@ -489,8 +489,8 @@ and a multi-commodity amount in the third posting:
 ```shell
 $ hledger -f t.j register --width 50
 2015/01/01       a             EUR 1         EUR 1
-                 a             USD 1         EUR 1  ; <- the running total is now a euro and a dollar        
-                                             USD 1  ;                                                        
+                 a             USD 1         EUR 1  ; <- the running total is now a euro and a dollar
+                                             USD 1  ;
                  b            EUR -1                ; <- the amount posted to b is a negative euro and dollar
                               USD -1             0  ;
 ```
@@ -501,12 +501,12 @@ Although wider, this seems clearer and we should probably use it more:
 $ hledger -f t.j balance --yearly
 Balance changes in 2015:
 
-   ||           2015 
+   ||           2015
 ===++================
- a ||   EUR 1, USD 1 
- b || EUR -1, USD -1 
+ a ||   EUR 1, USD 1
+ b || EUR -1, USD -1
 ---++----------------
-   ||              0 
+   ||              0
 ```
 
 You will also see amounts without a corresponding account name if you
@@ -514,10 +514,10 @@ remove too many account name segments with [`--drop`](hledger.html#balance)
 (a bug, which we'd like to see fixed):
 ```shell
 $ hledger -f t.j balance --drop 1
-               EUR 1  
-               USD 1  
-              EUR -1  
-              USD -1  
+               EUR 1
+               USD 1
+              EUR -1
+              USD -1
 --------------------
                    0
 ```
@@ -525,10 +525,10 @@ $ hledger -f t.j balance --drop 1
 
 ## With hledger-ui in iTerm2/3, why does Shift-Up/Shift-Down move the cursor instead of adjusting the period ?
 
-One way to fix: in iTerm2 do Preferences -> Profiles -> your current profile -> Keys -> Load Preset -> xterm Defaults 
-(not Terminal.app Compatibility). And perhaps open a new tab with this profile. 
+One way to fix: in iTerm2 do Preferences -> Profiles -> your current profile -> Keys -> Load Preset -> xterm Defaults
+(not Terminal.app Compatibility). And perhaps open a new tab with this profile.
 
-<!-- 
+<!--
 
 ## How do I set the LEDGER_FILE environment variable on Windows?
 

@@ -2,9 +2,9 @@
 
 When converting CSV, hledger uses the account names `income:unknown` and `expenses:unknown` as defaults for the second posting's account.
 
-Normally when you see these, you will add CSV rules to set a more specific account name. 
+Normally when you see these, you will add CSV rules to set a more specific account name.
 But they should probably be configurable.
-Here are some ways to customize them for now. 
+Here are some ways to customize them for now.
 
 ## By CSV rule
 
@@ -25,7 +25,7 @@ if cafe
   account2 Expenses:Coffee
 ```
 
-Add two rules like this, before any other account2 rules (eg above the `if cafe` rule):
+Add two rules like this, before any other account2 rules (e.g. above the `if cafe` rule):
 ```
 # default income/expense accounts
 account2 Income:Misc
@@ -33,7 +33,7 @@ if ,-[0-9]+(,|$)
  account2 Expenses:Misc
 ```
 
-The first sets the account to Income:Misc, 
+The first sets the account to Income:Misc,
 and the second changes it to Expenses:Misc if the amount field is negative.
 The regular expression matching negative amounts works for the example above, but you may need to adapt it for your data.
 

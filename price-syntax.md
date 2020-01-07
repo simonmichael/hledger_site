@@ -8,15 +8,15 @@ WIP
   (A timestamp may be added, but is ignored.)
 
 - In a posting, `AMT @ UNITPRICE` declares the per-unit price that was used to convert AMT into the price's commodity.
-  Eg: `2A @ 3B` records that 2A was posted, in exchange for 6B.
+  E.g., `2A @ 3B` records that 2A was posted, in exchange for 6B.
 
 - `@@ TOTALPRICE` is another form of `@`, sometimes more convenient.
-  Eg: `2A @@ 5.99B` records that 2A was posted in exchange for 5.99B.
+  E.g., `2A @@ 5.99B` records that 2A was posted in exchange for 5.99B.
 
 ## In Ledger
 
 - Any use of `@` also generates an implicit `P` directive.
-  Eg:
+  E.g.,
 
       2019/1/1
         a  2A @ 3B
@@ -36,7 +36,7 @@ These need testing:
 
 - `{`` UNITPRICE}` is like `@` but it also causes capital gains transactions to be generated
 
-- a `@`/`@@` and a `{ }`/`{{ }}`/`{ `` }`/ may be combined; the first is used 
+- a `@`/`@@` and a `{ }`/`{{ }}`/`{ `` }`/ may be combined; the first is used
 
 ## In hledger
 

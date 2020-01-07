@@ -10,8 +10,8 @@ Say we have downloaded `checking.csv` from a bank for the first time:
 ```
 
 We tell hledger how to intepret this with a file named
-`checking.csv.rules`, using the 
-[CSV rules syntax](csv.html). Eg:
+`checking.csv.rules`, using the
+[CSV rules syntax](csv.html). E.g.,
 
 ```rules
 # skip the first CSV line (headings)

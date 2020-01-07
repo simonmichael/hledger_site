@@ -9,10 +9,10 @@ Revenue is declared when work is performed:
 ```journal
 ; budget:* - virtual accounts tracking what customers have committed
 ; to pay for various things. Should not go below 0.
-2017/10/30 Order from CUSTOMER (order id) 
+2017/10/30 Order from CUSTOMER (order id)
     (budget:CUSTOMER:PROJECT_ID:pos1)                       1000
     (budget:CUSTOMER:PROJECT_ID:pos2)                       3000
-     
+
 ; some work was done on pos1 and pos2, invoice for it.
 ; Using accrual accounting method
 ; (revenue is declared when work is done, ~= when invoiced)
@@ -22,7 +22,7 @@ Revenue is declared when work is performed:
     assets:receivable:CUSTOMER:PROJECT_ID:pos1               500
     assets:receivable:CUSTOMER:PROJECT_ID:pos2              1000
     revenues:CUSTOMER
-    (liabilities:tax:federal)                               -150  ; note tax due, eg 15% of revenue
+    (liabilities:tax:federal)                               -150  ; note tax due, e.g. 15% of revenue
 
 ; a customer payment is received
 2017/11/15 Payment for INVOICE_ID
@@ -41,7 +41,7 @@ Revenue is declared when work is performed:
 Revenue is declared when payment is received:
 
 ```journal
-2017/10/30 Order from CUSTOMER (order id) 
+2017/10/30 Order from CUSTOMER (order id)
     (budget:CUSTOMER:PROJECT_ID:pos1)                       1000
     (budget:CUSTOMER:PROJECT_ID:pos2)                       3000
 
@@ -58,7 +58,7 @@ Revenue is declared when payment is received:
     (assets:receivable:CUSTOMER:PROJECT_ID:pos1)            -500
     (assets:receivable:CUSTOMER:PROJECT_ID:pos2)           -1000
     revenues:CUSTOMER                                      -1500
-    (liabilities:tax:federal)                               -150  ; note tax due, eg 15% of revenue
+    (liabilities:tax:federal)                               -150  ; note tax due, e.g. 15% of revenue
     assets:bank:checking
 
 ; make a tax payment

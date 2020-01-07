@@ -42,13 +42,13 @@ You should see something like:
 ```shell
 $ hledger stats
 The hledger journal file "/home/YOU/.hledger.journal" was not found.
-Please create it first, eg with "hledger add" or a text editor.
+Please create it first, e.g. with "hledger add" or a text editor.
 Or, specify an existing journal file with -f or LEDGER_FILE.
 ```
 
 Most hledger commands read this file but can not change it; the `add` and `web` commands can also write it.
 
-(If `stats` reports that the file exists, eg because you previously created it, move it out of the way temporarily for these exercises.)
+(If `stats` reports that the file exists, e.g., because you previously created it, move it out of the way temporarily for these exercises.)
 
 ## Record a transaction with "hledger add"
 
@@ -78,7 +78,7 @@ Description: trip to the supermarket
 ```
 
 Transactions have an optional description (a single line of text) to help you understand them.
-You can describe the transaction here, or put a payee name, or leave it blank. 
+You can describe the transaction here, or put a payee name, or leave it blank.
 Type `trip to the supermarket` and press enter.
 
 ```shell
@@ -105,7 +105,7 @@ Account 2: assets
 Next, specify which account the money comes from. Just say `assets`.
 
 ```shell
-Amount  2 ? [$-10.0]: 
+Amount  2 ? [$-10.0]:
 ```
 
 Now you're asked for the amount to "move" to or from the `assets` account.
@@ -133,7 +133,7 @@ You are given a chance to review the transaction just entered.
 Here you see hledger's plain text data format for journal entries:
 a non-indented YYYY/MM/DD date, space, and description,
 followed by two or more indented posting lines, each containing an account name,
-two or more spaces, and an amount. 
+two or more spaces, and an amount.
 (Account names can contain spaces, so at least two spaces are needed to separate them from the amount.)
 Press enter.
 
@@ -151,7 +151,7 @@ entry.  Press control-d (on Windows, control-c) once to exit.
 ```shell
 $ hledger stats
 Main journal file        : /home/YOU/.hledger.journal
-Included journal files   : 
+Included journal files   :
 Transactions span        : 2015-05-25 to 2015-05-26 (1 days)
 Last transaction         : 2015-05-25 (0 days ago)
 Transactions             : 1 (1.0 per day)
@@ -202,7 +202,7 @@ Only one missing amount is allowed in each transaction.
 ## Edit the journal file
 
 Since the journal file is plain text, you can edit it directly with any text editor.
-Edit the file and change it to test whether two missing amounts is reported as an error. Eg:
+Edit the file and change it to test whether two missing amounts is reported as an error. E.g.,
 
 ```shell
 $ emacs ~/.hledger.journal
@@ -212,7 +212,7 @@ Remove the expenses amount and save the file. It now looks like this:
 
 ```journal
 2015/05/25 trip to the supermarket
-    expenses           
+    expenses
     assets
 ```
 
@@ -256,7 +256,7 @@ Edit the file to look like this:
 ```
 
 Here, we wrote both posting amounts but got the sign wrong on one of them, so they don't add up to zero.
-hledger should detect this mistake. Verify it by running some command, eg `print`. You should see:
+hledger should detect this mistake. Verify it by running some command, e.g. `print`. You should see:
 
 ```shell
 $ hledger print
@@ -434,7 +434,7 @@ $ hledger balance
 ```
 
 The overall total of these balances is also shown. As with other reports, you can use a query expression to select a subset of the data to report on.
-Eg:
+E.g.,
 
 ```shell
 $ hledger balance assets

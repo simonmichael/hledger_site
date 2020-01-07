@@ -1,14 +1,14 @@
 # Download/Install
 
 <style>
-table#downloads > tbody > tr { 
-  border-bottom:thin solid #ddd; 
+table#downloads > tbody > tr {
+  border-bottom:thin solid #ddd;
 }
-table#downloads > tbody > tr > td { 
+table#downloads > tbody > tr > td {
   padding-top:0.5em;
   padding-bottom:0.5em;
 }
-table#downloads > tbody > tr > td:nth-child(2) { 
+table#downloads > tbody > tr > td:nth-child(2) {
   padding-top:1.5em;
 }
 div.section > table td:first-child {
@@ -29,7 +29,7 @@ div.command {
   margin-bottom:1em;
 }
 div.builder {
-  border-top:thin solid #ddd; 
+  border-top:thin solid #ddd;
   padding-top:0.5em;
   font-size:big;
   font-weight:bold;
@@ -86,9 +86,9 @@ Here are the [release notes](release-notes) describing each version.
         </div>
         <div class="notes">
             In the first days after release, this may do some building (not fully cached yet)
-            or fail with "HTTP error 404" (not built for your platform yet); 
+            or fail with "HTTP error 404" (not built for your platform yet);
             try it with --dry-run to see.
-            On Linux, note <span class="warnings"><a href="https://github.com/simonmichael/hledger/issues/1030">#1030</a>, 
+            On Linux, note <span class="warnings"><a href="https://github.com/simonmichael/hledger/issues/1030">#1030</a>,
             <a href="https://github.com/simonmichael/hledger/issues/1033">#1033</a>.
         </div>
       </td>
@@ -292,8 +292,8 @@ On Windows, hledger-ui is not available and should be omitted from the commands 
 </div>
 <div class="builder-text">
   The hledger-install script is a robust install method that requires only
-  <a href=https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29">bash</a>. 
-  It runs stack or cabal for you, installing stack if you have neither, 
+  <a href=https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29">bash</a>.
+  It runs stack or cabal for you, installing stack if you have neither,
   and installs all the main hledger tools and some <a href="hledger.html#add-on-commands">add‑on commands</a>,
   in ~/.local/bin or ~/.cabal/bin.
 </div>
@@ -394,7 +394,7 @@ On Windows, the 64-bit version of stack is recommended.
 
 The master branch in hledger's github repo is suitable for daily use,
 and includes the [latest improvements](https://github.com/simonmichael/hledger/commits/master).
-You'll need [git](https://en.wikipedia.org/wiki/Git) and 
+You'll need [git](https://en.wikipedia.org/wiki/Git) and
 [stack](https://haskell.fpcomplete.com/get-started) or [cabal](https://www.haskell.org/cabal/).
 This will build and install all of the main hledger tools using stack:
 
@@ -429,7 +429,7 @@ image for hledger development, run `./build-dev.sh` instead.
 ## Check your PATH
 
 After building/installing, you may see a message about where the executables were installed.
-Eg:
+E.g.,
 
 - with stack: `$HOME/.local/bin` (on Windows, `%APPDATA%\local\bin`)
 - with cabal: `$HOME/.cabal/bin` (on Windows, `%APPDATA%\cabal\bin`)
@@ -455,7 +455,7 @@ and here's a way to add the stack and cabal install dirs permanently:
 ## Test your installation
 
 After a successful installation, you should be able to run the hledger
-tools (that you installed), and see the expected versions. Eg:
+tools (that you installed), and see the expected versions. E.g.,
 
 <div class="command">
 $ hledger --version <br>
@@ -478,7 +478,7 @@ All 190 tests passed (4.30s)
 
 Nicely done! Next, see the Getting Started docs in the sidebar, such
 as the **[Basics tutorial](basics-tutorial.html)**,
-or come to the **[IRC channel/Matrix room](index.html#help-feedback)** 
+or come to the **[IRC channel/Matrix room](index.html#help-feedback)**
 where we'll help you out, or gladly hear your feedback.
 
 <br>

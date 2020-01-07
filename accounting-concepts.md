@@ -68,13 +68,13 @@ expenses
   supplies
 ```
 
-In some organisations and accounting systems (eg, QuickBooks), the
+In some organisations and accounting systems (e.g. QuickBooks), the
 tree structure is de-emphasised, so the above is represented more
 like:
 
 ```
  Account name      Account type
- ------------------------------- 
+ -------------------------------
  checking          ASSET
  cash              ASSET
  business income   REVENUE
@@ -190,7 +190,7 @@ $ hledger balance --depth 1
 A transaction is a movement of money from some account(s) to some
 other account(s).  There are many common types of transaction.  A
 purchase is where money moves from an asset account to an expense
-account.  Eg, buying food.
+account.  E.g. buying food.
 
 -->
 

@@ -33,11 +33,11 @@ with a command or arguments that hledger doesn't support. In this case you can
 
 - open an ledger-mode issue, asking, suggesting how, and/or
   providing a pull request to make it more hledger-compatible (best)
-  
-- do something locally to keep ledger-mode happy, eg define a
+
+- do something locally to keep ledger-mode happy, e.g., define a
   small add-on command mimicking the required ledger command.
 
-Eg: `ledger-display-balance-at-point` (C-c C-p) runs 
+E.g., `ledger-display-balance-at-point` (C-c C-p) runs
 `ledger cleared ACCT`.
 hledger doesn't have a "cleared" command, so you could make it by
 creating `hledger-cleared.sh` in $PATH:
@@ -53,7 +53,7 @@ To toggle just a posting's status: move point to it, C-c C-c.
 
 ## Emacs tips
 
-Ledger entries can be embedded in a org file and manipulated using Babel. See eg
+Ledger entries can be embedded in a org file and manipulated using Babel. See e.g.
 [Using Ledger for Accounting in Org-mode with Babel](https://orgmode.org/worg/org-contrib/babel/languages/ob-doc-ledger.html)
 
 A helper to browse TODO tags in the journal:
