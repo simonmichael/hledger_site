@@ -62,7 +62,7 @@ Here are some ways to install hledger.
 [Binary packages](#binary-packages) will install quickly,
 or you can [run our install script, or build with stack/cabal](#building-from-source).
 Please do [report](index.html#help-feedback) any trouble.
-The current release is **1.16.1** (look for the green badges!)
+The current release is **1.16.2** (look for the green badges!)
 Here are the [release notes](release-notes) describing each version.
 
 ## Binary packages
@@ -288,7 +288,7 @@ On Windows, hledger-ui is not available and should be omitted from the commands 
 </div>
 <div class="notes">Linux, Mac, WSL</div>
 <div class="badges">
-  <img alt="installs" src="https://img.shields.io/badge/installs_hledger-1.16.1-brightgreen.svg" />
+  <img alt="installs" src="https://img.shields.io/badge/installs_hledger-1.16.2-brightgreen.svg" />
 </div>
 <div class="builder-text">
   The hledger-install script is a robust install method that requires only
@@ -308,7 +308,7 @@ On Windows, hledger-ui is not available and should be omitted from the commands 
 </div>
 <div class="notes">Linux, Mac, Windows</div>
 <div class="badges">
-  <img alt="installs" src="https://img.shields.io/badge/installs_hledger-1.16.1-brightgreen.svg" />
+  <img alt="installs" src="https://img.shields.io/badge/installs_hledger-1.16.2-brightgreen.svg" />
 </div>
 <div class="builder-text">
 The latest version of stack (2.1.3) is likely to work best, so we recommend it.
@@ -318,7 +318,7 @@ On Windows, the 64-bit version of stack is recommended.
 </div>
 <div class="builder-command">
   stack update <br>
-  stack install --resolver=lts hledger-lib-1.16.1 hledger-1.16.1 hledger-ui-1.16.1 hledger-web-1.16.1 --silent
+  stack install --resolver=lts hledger-lib-1.16.2 hledger-1.16.2 hledger-ui-1.16.2 hledger-web-1.16.2 --silent
 </div>
 
 <div class="builder">
@@ -326,13 +326,13 @@ On Windows, the 64-bit version of stack is recommended.
 </div>
 <div class="notes">Linux, Mac, Windows</div>
 <div class="badges">
-  <img alt="installs" src="https://img.shields.io/badge/installs_hledger-1.16.1-brightgreen.svg" />
+  <img alt="installs" src="https://img.shields.io/badge/installs_hledger-1.16.2-brightgreen.svg" />
 </div>
 <div class="builder-text">
 </div>
 <div class="builder-command">
   cabal v2-update <br>
-  cabal v2-install hledger-1.16.1 hledger-web-1.16.1 hledger-ui-1.16.1
+  cabal v2-install hledger-1.16.2 hledger-web-1.16.2 hledger-ui-1.16.2
 </div>
 
 ### Build tips
@@ -459,11 +459,11 @@ tools (that you installed), and see the expected versions. Eg:
 
 <div class="command">
 $ hledger --version <br>
-hledger 1.16.1 <br>
+hledger 1.16.2 <br>
 $ hledger-ui --version <br>
-hledger-ui 1.16.1 <br>
+hledger-ui 1.16.2 <br>
 $ hledger web --version <br>
-hledger-web 1.16.1 <br>
+hledger-web 1.16.2 <br>
 </div>
 
 And you could see the unit tests pass (just for fun):
