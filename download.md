@@ -77,7 +77,7 @@ Here are the [release notes](release-notes) describing each version.
         <div class="distro"><a href="https://nixos.org/nix">Nix</a></div>
         <div class="notes">Linux, Mac</div>
         <div class="badges">
-          <a href="https://hydra.nixos.org/search?query=hledger"><img alt="Nix" src="https://img.shields.io/badge/Nix_package-1.16-brightgreen.svg" /></a>
+          <a href="https://hydra.nixos.org/search?query=hledger"><img alt="Nix" src="https://img.shields.io/badge/Nix_package-1.16-red.svg" /></a>
         </div>
       </td>
       <td>
@@ -98,7 +98,7 @@ Here are the [release notes](release-notes) describing each version.
         <div class="distro"><a href="https://www.docker.com/products/docker-desktop">Docker</a></div>
         <div class="notes">Linux, Mac, Windows</div>
         <div class="badges">
-          <a href="https://hub.docker.com/r/dastapov/hledger"><img alt="Docker" src="https://img.shields.io/badge/Docker_image-1.16.1-brightgreen.svg" /></a>
+          <a href="https://hub.docker.com/r/dastapov/hledger"><img alt="Docker" src="https://img.shields.io/badge/Docker_image-1.16.1-red.svg" /></a>
           <a href="https://hub.docker.com/search?q=hledger&amp;type=image&amp;sort=updated_at&amp;order=desc">more..</a>
         </div>
       </td>
@@ -111,7 +111,7 @@ Here are the [release notes](release-notes) describing each version.
         <div class="notes">Linux, Mac, Windows</div>
         <div class="badges">
           <!--[![](https://repology.org/badge/version-for-repo/homebrew/hledger.svg)]-->
-          <a href="https://formulae.brew.sh/formula/hledger"><img alt="Homebrew" src="https://img.shields.io/badge/Homebrew-1.16.1-brightgreen.svg" /></a>
+          <a href="https://formulae.brew.sh/formula/hledger"><img alt="Homebrew" src="https://img.shields.io/badge/Homebrew-1.16.1-red.svg" /></a>
         </div>
       </td>
       <td>
@@ -134,7 +134,7 @@ Here are the [release notes](release-notes) describing each version.
       <td>
         <div class="distro">Appveyor builds</div>
         <div class="badges">
-          <a href="https://ci.appveyor.com/project/simonmichael/hledger/builds/29292447/artifacts"><img alt="Windows release"" src="https://img.shields.io/badge/Windows_zip-1.16.1-brightgreen.svg" /></a>
+          <a href="https://ci.appveyor.com/project/simonmichael/hledger/builds/29292447/artifacts"><img alt="Windows release"" src="https://img.shields.io/badge/Windows_zip-1.16.1-red.svg" /></a>
           <a href="https://ci.appveyor.com/project/simonmichael/hledger/build/artifacts"><img alt="Windows master" src="https://img.shields.io/badge/Windows_zip-master-brightgreen.svg" /></a>
       </td>
       <td>
@@ -160,7 +160,7 @@ Here are the [release notes](release-notes) describing each version.
         <div class="distro">Arch</div>
         <div class="badges">
           <!-- <a href="https://www.archlinux.org/packages/?sort=&amp;q=hledger"><img alt="Arch" src="https://repology.org/badge/version-for-repo/arch/hledger.svg" /></a> -->
-          <a href="https://www.archlinux.org/packages/?sort=&amp;q=hledger"><img alt="Arch" src="https://img.shields.io/badge/Arch_package-1.16-brightgreen.svg" /></a>
+          <a href="https://www.archlinux.org/packages/?sort=&amp;q=hledger"><img alt="Arch" src="https://img.shields.io/badge/Arch_package-1.16-red.svg" /></a>
         </div>
       </td>
       <td>
@@ -171,7 +171,7 @@ Here are the [release notes](release-notes) describing each version.
       <td>
         <div class="distro">Gentoo</div>
         <div class="badges">
-          <a href="https://gentoo.zugaina.org/Search?search=hledger"><img alt="Gentoo" src="https://img.shields.io/badge/Gentoo_package-1.16.1-brightgreen.svg" /></a>
+          <a href="https://gentoo.zugaina.org/Search?search=hledger"><img alt="Gentoo" src="https://img.shields.io/badge/Gentoo_package-1.16.1-red.svg" /></a>
         </div>
       </td>
       <td>
