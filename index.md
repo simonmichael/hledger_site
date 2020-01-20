@@ -166,7 +166,7 @@ accounting.
 
 <table>
   <tr>
-    <td>Chat</td>
+    <td>Chat:</td>
     <td>
       <a href="http://irc.hledger.org">#hledger</a> on Freenode IRC (<a href="http://matrix.hledger.org">#freenode_#hledger:matrix.org</a> on Matrix)
     </td>
