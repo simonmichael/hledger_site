@@ -1,19 +1,47 @@
+<!-- stylesheet at bottom -->
+
+<div id="grabber">
+<div class="heading">
+Do any of these apply to you
+</div>
+
+Confused or vague about your finances ?\
+Unable to document how you spent time ?\
+Dreading: tax season, wasteful fees, running out of cash ?\
+Overwhelmed by endless bookkeeping or complex accounting tools ?\
+Concerned about you or your software making a mistake ?\
+Unable to fully trust your financial reports ?\
+Lacking a coherent, complete picture of your finances in one place ?\
+Tired of starting over with a new accounting system every few years ?\
+Short of cash, time, focus, know-how, patience ?\
+In search of a community of helpful folks solving similar problems ?\
+Interested in efficiency, custom workflows, and automating boring work ?\
+Open to the idea of accounting being empowering and 
+<span style="color:red; font-weight:bold; font-style:italic; position:relative; top:-1px;">f</span>
+<span style="color:blue; font-weight:bold; font-style:normal; position:relative; top:2px;">u</span>
+<span style="color:darkorange; font-weight:bold; font-style:italic; position:relative; top:-1px;">n</span>
+?
+</div>
+
 # hledger
 
-<div id=tagline>
-Easy plain text accounting.
+<div id="tagline">
+and plain text accounting<br>
+are here to help!
+</div>
+<!-- Easy plain text accounting. -->
 <!-- Robust plain text accounting. -->
 <!-- Friendly, robust plain text accounting. -->
 <!-- Robust, powerful, plain text accounting. -->
 <!-- Robust, precise, plain text accounting. -->
 <!-- Plain text accounting for everyone. -->
 <!-- Making accounting fun for techies. -->
-</div>
 
-<img id="coins" src="_static/images/coins2-248.png" style="width:33%; float:right; margin:1em 1em 0 1em;" />
+<img id="coins" src="_static/images/coins2-248.png" 
+     style="width:33%; float:right; margin:1em 1em 0 1em;" />
 
-<span style="font-size:x-large;">hledger</span> 
-is an elegant, versatile accounting program, 
+<span id="leadingword">hledger</span>
+is a robust, efficient accounting program,
 for tracking money, time, or other commodities,
 on unix, mac and windows,
 with command line, terminal and web interfaces.
@@ -161,9 +189,9 @@ power of text files, revision control, scriptability and double entry
 accounting.
 
 
-
 ## Help/Feedback
 
+<div id="help">
 <table>
   <tr>
     <td>Chat:</td>
@@ -208,73 +236,99 @@ accounting.
     </td>
   </tr>
 </table>
-
-
-<div id=dev class=contentbox>
-
-**Help fund hledger!**\
-Building and supporting good software and documentation costs a lot.
-
-<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=5J33NLXYXCYAY"><img width=62 height=31 border=0 src="https://www.paypal.com/en_US/i/btn/x-click-but04.gif" title="Give one time or recurringly with Paypal" alt="paypal"></a>
-<a href="https://opencollective.com/hledger#support"><img border="0" src="https://opencollective.com/hledger/backers/badge.svg" title="Back us with a monthly donation at Open Collective" alt="open collective backers"></a>
-<a href="https://opencollective.com/hledger#support"><img border="0" src="https://opencollective.com/hledger/sponsors/badge.svg" title="Sponsor us with a $100+ monthly donation at Open Collective and get your organization's logo on our README" alt="open collective sponsors"></a>
-<a href="https://www.bountysource.com/trackers/536505-simonmichael-hledger"><img border=0 src="https://www.bountysource.com/badge/tracker?tracker_id=536505" title="Contribute or claim issue bounties via Bountysource" alt="bountysource"></a>
 </div>
 
 
+## Sponsorship
+
+<div id="fund">
+<table>
+  <tr>
+    <td>
+Building and supporting good software and documentation costs a lot.
+Maybe these thousands of person-hours have helped you ?
+You can be one of the wise and attractive people helping to sustain and accelerate the hledger project.
+    </td>
+    <td>
+<a href="https://opencollective.com/hledger#support"><img border="0" src="https://opencollective.com/hledger/backers/badge.svg" title="Back us with a monthly donation at Open Collective" alt="open collective backers"></a>
+<a href="https://opencollective.com/hledger#support"><img border="0" src="https://opencollective.com/hledger/sponsors/badge.svg" title="Sponsor us with a $100+ monthly donation at Open Collective and get your organization's logo on our README" alt="open collective sponsors"></a>
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=5J33NLXYXCYAY"><img width=62 height=31 border=0 src="https://www.paypal.com/en_US/i/btn/x-click-but04.gif" title="Give one time or recurringly with Paypal" alt="paypal"></a>
+<!-- <a href="https://www.bountysource.com/trackers/536505-simonmichael-hledger"><img border=0 src="https://www.bountysource.com/badge/tracker?tracker_id=536505" title="Contribute or claim issue bounties via Bountysource" alt="bountysource"></a> -->
+    </td>
+  </tr>
+</table>
+</div>
 
 <style>
- .highslide img {max-width:200px; float:right; margin:0 0 1em 1em;}
- .highslide-caption {color:white; background-color:black;}
- a {white-space:nowrap;}
 
-h1 { font-size:4em; margin-bottom:.3em; }
+#grabber {
+  text-align:center;
+  padding:1em 1em 0 1em;
+  border:thin solid red;
+  border-radius:8px; 
+  margin:1em;
+}
+#grabber .heading {
+  /*font-style: italic; */
+  font-size:x-large;
+  font-weight:bold;
+}
+
+h1 { 
+  font-size: 4em;
+  font-style: italic;
+  text-align:center;
+  margin: 0.5em 0 0;
+}
+
+h2 { 
+  margin-top:1em; 
+}
+
+/* h3 { font-size:large; margin-bottom:.2em; } */
 
 #tagline {
   font-size:xx-large;
   font-style:italic; 
-  position:relative; 
-  top:-.5em;
-  left:.5em;
-  /*text-align:right;*/
+  text-align:center;
+  margin-bottom:1em;
 }
 
-/* h2 { font-size:x-large; margin-top:.5em; } */
-/* h3 { font-size:large; margin-bottom:.2em; } */
-tr { border-top:thin solid #bbb; border-bottom:thin solid #bbb; vertical-align:top; }
-td:nth-child(1) { padding-right:1em; white-space:nowrap; }
-.col-sm-3, .col-sm-4 {
-  padding:0;
+#leadingword {
+  font-weight:bold;
+  font-style:italic;
+  font-size:large;
 }
-.contentbox {
-  margin:1em .5em .5em 0;
-  padding:.1em .5em;
-  border-radius:1em;
-}
-#introduction {
-/*  background-color:#ffb; */
-}
+
 #help {
   background-color:#fdd;
 }
-#reference {
-  background-color:#eef;
-  text-align:left;
+
+#help tr { 
+  border-top:thin solid #faa; 
+  border-bottom:thin solid #faa; 
+  vertical-align:top; 
 }
-#reference .subcontent {
-  margin-left:1em;
+#help td:nth-child(1) { 
+  padding-right:1em; 
+  white-space:nowrap; 
 }
-#dev {
-  background-color:#eee;
-  text-align:left;
+
+#fund {
+/*
+  background-color: #eee;
+  border-radius:1em;
+  margin:1em .5em .5em 0;
+  padding:.1em .5em;
+*/
 }
-#dev .subcontent {
-  margin-left:1em;
+#fund td { 
+  width:50%;
 }
-#wiki {
-  background-color:#efe;
-  text-align:center;
-}
-#wiki .subcontent {
-}
+
+a { white-space:nowrap; }
+
+.highslide img {max-width:200px; float:right; margin:0 0 1em 1em;}
+.highslide-caption {color:white; background-color:black;}
+
 </style>
