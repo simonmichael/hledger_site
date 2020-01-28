@@ -2,7 +2,7 @@
 
 <div id="grabber">
 <div class="heading">
-Do any of these apply to you
+Hi. Do any of these apply to you ?
 </div>
 
 Confused or vague about your finances ?\
@@ -67,7 +67,7 @@ I hope you too will find it helpful in mastering your time and money.
 </div>
 
 
-## Quick start
+## Overview
 
 Here's the basic workflow when using hledger:
 
@@ -275,7 +275,7 @@ You can be one of the wise and attractive people helping to sustain and accelera
 }
 
 h1 { 
-  font-size: 4em;
+  font-size: 5em;
   font-style: italic;
   text-align:center;
   margin: 0.5em 0 0;
