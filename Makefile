@@ -19,9 +19,13 @@ help:
 %: Makefile
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
-# Auto-rebuild site when any source files change.
-# Avoid .gitignore with fd so that generated manuals are included.
+# Auto-rebuild site when any source files change, except for old manuals.
+# Avoid .gitignore so that generated manuals are included.
 html-auto auto:
+	fd --no-ignore-vcs -E _build -E '[0-9]*' -e .py -e .css -e .html -e .js -e .md -e .rst | entr make html
+
+# Auto-rebuild site when any source files change, including old manuals.
+html-auto-all:
 	fd --no-ignore-vcs -E _build -e .py -e .css -e .html -e .js -e .md -e .rst | entr make html
 
 BROWSE=open
@@ -36,9 +40,17 @@ html-watch watch:
 	(sleep 1; $(BROWSE) http://localhost:$(LIVERELOADPORT)/) &
 	$(LIVERELOAD) _build/html/
 
+# Copy CSS files, since sphinx-build doesn't seem to.
+css:
+	cp -r _static/css/* _build/html/_static/css
+
+# Auto-re-copy CSS files when they change, since sphinx-build doesn't seem to.
+css-auto:
+	fd -e .css . _static/css | entr cp -r _static/css/* _build/html/_static/css
+
 # Auto-update and watch changes in CSS files only, for speed.
 css-watch:
-	fd -e .css | entr cp -r _static/css/* _build/html/_static/css &
+	make css-auto &
 	$(LIVERELOAD) _build/html/
 
 install:
