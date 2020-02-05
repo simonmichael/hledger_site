@@ -59,12 +59,12 @@ hledger
    :caption: Accounting tasks
    :maxdepth: 3
 
-   multicurrency-tutorial
-   foreign-trip-expenses
    budgeting-and-forecasting
+   foreign-trip-expenses
+   multicurrency-tutorial
    project-accounting
-   track-investments
    time-planning
+   track-investments
 
 .. toctree::
    :caption: Usage tips
