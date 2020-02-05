@@ -58,25 +58,28 @@ $ hledger bal receivable
 
 ## Creating Invoices
 
-How to translate the data from the receivables report into a real
-invoice you can send to clients ? You can create the invoice manually
-or semi-manually, eg using a tool like Freshbooks, and copy-paste the
-numbers in. 
+How to translate the data from your ledger into a professional-looking
+invoice you can send to clients ?
 
-Or you can automate this somehow. There's no ready-made tool for this.
+You can create the invoice manually or semi-manually, eg using a tool
+like Freshbooks, and copy-paste the numbers in.
+
+Or you can automate this somehow. There's no ready-made tool for this,
+you will have to build it yourself.
 
 ### With pandoc
 
-Here's a method I use. This is based on 
-[Generate PDF invoices from Markdown using Pandoc](https://martinbetz.eu/articles/pandoc-invoices) 
-by Martin Betz, see that page for more background.
-
+But here's a method I use to semi-automate the invoice generation.
+It still requires some manual work, but much less than otherwise.
 The workflow is: 
 
-1. figure out the amount to be invoiced, eg from a timelog
+1. figure out the amount to be invoiced, eg from a timelog report
 2. use the makefile below to help create the invoice
-3. an invoice transaction is added to your journal, which you adjust manually.
+3. adjust the invoice transaction which it added to the journal.
 
+This is based on 
+[Generate PDF invoices from Markdown using Pandoc](https://martinbetz.eu/articles/pandoc-invoices) 
+by Martin Betz, see that page for more background.
 [Copy-pasted from a working setup, you may need to adapt this]:
 
 ```
