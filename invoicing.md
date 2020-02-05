@@ -32,7 +32,6 @@ Cash accounting is simpler; you record revenue at the time of receiving the mone
 Invoices and receivables aren't part of cash accounting,
 but we'll use unbalanced postings to track them anyway.
 
-Send an invoice:
 ```journal
 ; send an invoice:
 2020-02-01 * (201602ab) AB Inc. | invoice
