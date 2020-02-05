@@ -87,10 +87,9 @@ by Martin Betz, see that page for more background.
 # Generates HTML/PDF invoices from a markdown template
 
 help:
-	@echo "make copy     # copies last invoice to YYYYMMab.md, opens it in emacs"
+	@echo "make copy     # copy last invoice to YYYYMMab.md, open in emacs"
 	@echo "(edit)"
-	@echo "make invoice  # makes YYYYMMab.pdf and YYYYMMab.html, adds invoice transaction to journal"
-	@echo "git add YYYYMM*; git commit  # commit invoice src & output"
+	@echo "make invoice  # make YYYYMMab.pdf and YYYYMMab.html, git commit, add invoice transaction to journal"
 
 CSS=invoice.css
 LAST=`ls -t 2*md | head -1`
@@ -112,14 +111,14 @@ invoice:
 %ab:
 	@make $@.pdf $@.html
 
-%.pdf: %.md $(CSS) logo.jpg
+%.pdf: %.md $(CSS) #logo.jpg
 	pandoc $< -t html5 --css $(CSS) -o $@ --metadata title=" "
 # --metadata title to silence warning, space to avoid unwanted display
 
 %.pdf-watch:
 	ls | entr make -s $*.pdf
 
-%.html: %.md $(CSS) logo.jpg
+%.html: %.md $(CSS) #logo.jpg
 	pandoc $< -t html5 -s --css $(CSS) -o $@ --metadata title=" "
 
 %.html-watch:
@@ -246,7 +245,7 @@ margin: 0;
 }  
 ```
 
-A sample invoice source file, 202002ab.md:
+A sample invoice source file, 202001ab.md:
 ```
 ---
 papersize: letter
@@ -264,9 +263,9 @@ AB Inc.\
 PO Box 11111\
 CA 20000\
 
-February 1, 2020
+January 1, 2020
 
-# Invoice 202002ab
+# Invoice 202001ab
 
 <THIS LINE ADDED TO PREVENT SPHINX TABLE RENDERING; REMOVE IT>
 | Description                                 |   Rate | Qty |  Total |
