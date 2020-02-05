@@ -34,6 +34,9 @@ LIVERELOAD=livereloadx -p $(LIVERELOADPORT) -s --exclude '*.html'
   # Exclude html files to avoid reloading browser as every page is generated.
   # A reload happens at the end when the css/js files get copied.
 
+livereload:
+	$(LIVERELOAD) _build/html/
+
 # Auto-rebuild site, and watch changes in a new browser window.
 html-watch watch:
 	make html-auto &
