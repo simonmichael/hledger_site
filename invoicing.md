@@ -246,7 +246,7 @@ margin: 0;
 }  
 ```
 
-A sample invoice source file, 202001ab.md:
+A sample invoice source file, 202002ab.md:
 ```
 ---
 papersize: letter
@@ -266,7 +266,7 @@ CA 20000\
 
 February 1, 2020
 
-# Invoice 202002cv
+# Invoice 202002ab
 
 <THIS LINE ADDED TO PREVENT SPHINX TABLE RENDERING; REMOVE IT>
 | Description                                 |   Rate | Qty |  Total |
