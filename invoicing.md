@@ -3,7 +3,8 @@
 Freelancers and businesses send invoices to clients to request payment.
 You can use hledger to track how much is due, and how much has been paid.
 
-See also:
+See also:\
+[examples/invoicing/](https://github.com/simonmichael/hledger/tree/master/examples/invoicing)\
 <https://plaintextaccounting.org/#invoicing>
 
 ## Journal entries
