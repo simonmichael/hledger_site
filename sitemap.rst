@@ -61,6 +61,7 @@ hledger
 
    budgeting-and-forecasting
    foreign-trip-expenses
+   invoicing
    multicurrency-tutorial
    project-accounting
    time-planning
