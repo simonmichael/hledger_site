@@ -82,7 +82,7 @@ This is based on
 by Martin Betz, see that page for more background.
 Some version of the files below can also be found in
 [examples/invoicing/](https://github.com/simonmichael/hledger/tree/master/examples/invoicing).
-[Copy-pasted from a working setup, not tested, expect to adapt this].
+[Copy-pasted from a working setup, not regularly tested, expect to adapt this].
 
 ```
 # Makefile
