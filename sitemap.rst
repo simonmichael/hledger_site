@@ -12,12 +12,18 @@ hledger
    faq
    videos
    seealso
+   release-notes
+
+.. can we get Release Notes to show as subheadings of Download/Install ?
+ .. toctree::
+   :hidden:
+
+   release-notes
 
 .. toctree::
    :caption: Getting started
    :maxdepth: 3
 
-   release-notes
    Download/Install <download>
    basics-tutorial
    terminology
