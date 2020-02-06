@@ -33,7 +33,7 @@ hledger
    accounting-links
 
 .. toctree::
-   :caption: Manuals
+   :caption: User manuals
    :maxdepth: 3
 
    hledger
