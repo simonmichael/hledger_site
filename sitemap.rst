@@ -9,14 +9,25 @@ hledger
    :maxdepth: 2
 
    Home <index>
-   Download/Install <download>
-   release-notes
    faq
    videos
    seealso
 
 .. toctree::
-   :caption: Reference manuals
+   :caption: Getting started
+   :maxdepth: 3
+
+   release-notes
+   Download/Install <download>
+   basics-tutorial
+   terminology
+   create-a-journal
+   accounting-concepts
+   common-journal-entries
+   accounting-links
+
+.. toctree::
+   :caption: Manuals
    :maxdepth: 3
 
    hledger
@@ -28,35 +39,24 @@ hledger
    timedot
 
 .. toctree::
-   :caption: Getting started
+   :caption: Cookbook: Managing data
    :maxdepth: 3
 
-   basics-tutorial
-   terminology
-   create-a-journal
-   accounting-concepts
-   common-journal-entries
-   accounting-links
-
-.. toctree::
-   :caption: Managing data
-   :maxdepth: 3
-
+   change-account-name-separator
    convert-csv-files
    customize-default-csv-accounts
    track-changes-with-version-control
-   change-account-name-separator
 
 .. toctree::
-   :caption: Reporting
+   :caption: Cookbook: Reporting
    :maxdepth: 3
 
    queries
-   tags-tutorial
    rewrite-account-names
+   tags-tutorial
 
 .. toctree::
-   :caption: Accounting tasks
+   :caption: Cookbook: Accounting tasks
    :maxdepth: 3
 
    budgeting-and-forecasting
@@ -68,7 +68,7 @@ hledger
    track-investments
 
 .. toctree::
-   :caption: Usage tips
+   :caption: Cookbook: Usage tips
    :maxdepth: 3
 
    addons
@@ -80,7 +80,7 @@ hledger
    scripting
 
 .. toctree::
-   :caption: Real world setups
+   :caption: Cookbook: Real world setups
    :maxdepth: 3
 
    about-real-world-setup-docs
