@@ -63,7 +63,7 @@ Here are some ways to install hledger.
 or you can [run our install script, or build with stack/cabal](#building-from-source).
 Please do [report](index.html#help-feedback) any trouble.
 The current release is **1.16.2** (look for the green badges!)
-Here are the [release notes](release-notes) describing each version.
+Here are the [release notes](release-notes) describing the changes in each version.
 
 ## Binary packages
 
