@@ -64,6 +64,7 @@ release_versions = [
 ]
 
 # only these versions will be shown in the version selector
+# may want to comment out all of these when previewing docs locally
 show_release_versions = [
     # all versions shown on the download page (overkill):
     '1.16', # 
@@ -267,11 +268,15 @@ html_theme_options = {
     # 'style_external_links': False,
     'style_nav_header_background': '#343131',
     # Toc options
-    # 'collapse_navigation': True,  # hides the + button on other top-level items
-    # 'sticky_navigation': True,
-    # 'navigation_depth': 4,
+    'sticky_navigation': True,
     # 'includehidden': True,
     # 'titles_only': False,
+
+    # https://sphinx-rtd-theme.readthedocs.io/en/latest/configuring.html#how-the-table-of-contents-displays
+    # Setting collapse_navigation to False and using a high value for navigation_depth on projects with many files and a deep file structure can cause long compilation times and can result in HTML files that are significantly larger in file size.
+    'collapse_navigation': True,  # hides the + button on other top-level items
+    'navigation_depth': 4,
+
 }
 
 # https://docs.readthedocs.io/en/stable/index.html
