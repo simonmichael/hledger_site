@@ -1,0 +1,163 @@
+﻿; Welcome to hledger, This file is where your financial history will be recorded.
+; It is a plain text file, so it is easy to edit and manipulate, and you can use
+; search and replace functionality in your text editor
+
+; Everything after ';' is a comment. It can be used to tell hledger not to read the content
+; or to add extra information called 'tag' that follow the format 'tag:value' separated
+; by comma.
+
+; To start configuring our journal, it is a good idea to define a default currency
+
+D USD 1,000.00  ; Format - D Currency amountFormat - Could have been 1.000,00
+
+
+; Now let's declare our main accounts. The order they appear is the order they will
+; show on the reports. The type tag is useful if we use a different name than the default.
+; I wanted 'Expense' to be in plural.
+; Attention! Here and in some other places you may need at least 2 spaces, instead of 1
+
+account Asset                  ; type:Asset
+account Liabilities            ; type:Liability
+account Revenue                ; type:Revenue
+account Expenses               ; type:Expense
+account Equity                 ; type:Equity
+
+
+; Let's declare some other accounts, so they will appear in the desired order
+; You can organize them in a tree structure using ':' to indicate a a parent-child relation.
+
+account Asset:Cash
+account Asset:Investments
+account Asset:Real Estate
+account Liabilities:Credit Card
+account Liabilities:Mortgage
+
+
+; Possibly you will not start from scratch. You may import your data from a previous software that you
+; want to adapt for the powerful hierarchical account system hledger provides. For that we will use alias so that
+; whenever hledger sees an old account, it will substitute for its new name
+
+alias jpm=Asset:Bank:JP Morgan Chase                     ; Format - alias OLD=NEW
+alias visa=Liabilities:Credit Card:Visa Platinum         ; Substitute 'visa' for 'Liabilities:Credit Card:Visa Platinum'
+
+
+; Now we will finally start adding transactions to our ledger. For that, you will need to understand the format. Don't
+; worry if it seems complicated. You will quickly be used to it, and hledger offers some great tools to make that
+; process easier like interactive form with auto-complete, and data import. If your transactions repeats each month,
+; it may even guess the accounts by looking to past transactions, saving you for most of hard work.
+
+; A transaction is a financial event that has multiple postings showing where the money came from and where it goes to.
+; The main property of a transaction is that it always need to balance, or in other words, it values should sum to 0.
+; This property is called 'double-entry accounting'. It may seem hard to use, but hledger uses some ingenious approach
+; that makes it almost as simple as a regular 'single-entry-accounting' that you may be used to do.
+
+; Our first transaction will be the initial balances each account in the first day of the year. 
+; A good practice is to have one file for each year. Let's do it for 2018, so the date will be 31th, December 2017.
+; Before that, we need to be aware of the 3 spacing rules of a transaction. We denote a space with '_' in the format comments.
+; 1 - At least 2 spaces between between the transaction data and the comment
+; 2 - At least 2 spaces between the account name and the amount
+; 3 - At least 1 space indentation before account name 
+
+2017/12/31 Initial Balance                               ; Format: date_description. Date format: YYYY/MM/DD
+    Asset:Cash                                   300     ; <-- This is a posting. Format: account__amount
+    Asset:Bank:JP Morgan Chase                  4800.81  ; <-- After a ';' it is comment.
+    Asset:Bank:Weels Fargo                      2400.23  ; <-- More posting. A transaction can have multiple postings!
+    Asset:Online Account:Apple Pay               120.34  ; <-- You don't need to declare accounts before using
+    Asset:Online Account:Paypal                   83.24  ; 
+    Equity:Initial Balance                               ; Why the amount is empty? See below
+
+; Remember that them sum of the transaction postings should equals 0 (zero). That is apparently not case, but in fact it is.
+; We did an "implicit posting". Hledger considers a posting with empty amount to be the value needed so the transaction
+; equals zero. In the case above, the implicit amount for "Equity:Initial Balance" is -7704.62.I could have made this amount explicit
+; if I wanted, but if I do a mistake, hledger will complain, that's why it may be a good idea to let him to the sum for us.
+
+; Finally we are going to add some real transactions. Take a look at the comments because they will introduce you to more
+; great features that will help you to control your finances like never before
+
+; The description is split by a '|' symbol. What comes to the left is the payee and to the right is a note (transaction explanation)
+; This feature is optional, we will use it only when we have the payee information easily available or when we think it is important
+2018/01/03 Uncle Mario | New Year's Eve celebration drinks and snacks      ; Splitting what is the payee and the notes will help us to better analyze our spending
+    Asset:Bank:Weels Fargo                   -125.00                     
+    Expenses:Leisure:Events                                                ; Remember that positive 125.00 is implicit here
+
+; We can add before the payee between parenthesis a code that identify the transaction. In this case it is the check number
+2018/01/10 (365727) Wallace Real Estate Corp | Monthly rental payment check  ; Add the code only if you find this information relevant. Usually it is not
+    Asset:Bank:JP Morgan                     -1850.00 USD  ; I don't need to inform the default currency explicitly. This is just to let you know we can.
+    Expenses:Housing:Rental
+
+2018/01/15 Acme Group | Salary
+    Asset:Bank:JP Morgan                        7200
+    Revenue:Salary                             -7200  ; This time I recorded an explicit amount, even if I didn't have to. Let's discuss how a Revenue can be negative
+
+; As we discussed before, transactions must ALWAYS sum to 0. Since the Revenue increased my balance at the bank, the other posting needs to be negative to balance the transaction.
+; This indeed sound strange and it will be the most difficult concept to grasp if you are not used to double-entry accounting. In fact, most of the time you will not need to worry
+; about that because you will make use of implicit posting amount discussed in previous examples but anyway it is important to understand. By the other hand, Expenses are positive,
+; the opposite of what we may expect because it will decrease the balance in our Asset Account. Think of it like a Revenue is negative for the other party and an Expense is positive
+; for him. So don't worry when you see Revenue as negative in your reports, that's the expected behavior.
+
+; Now it is your turn. Create 2 expenses and think about what is the best account other than the bank with implicit amount that help you to organize you finances
+; After you are done, go to the terminal, in the folder where this file is save and enter the following command: hledger -f demo.hledger stats. If you don't get an error,
+; congratulations, you have done your first transactions correctly!!!
+
+
+
+
+
+
+
+
+; The next transaction are expenses payed using a credit card. Note that the amount doesn't leave you account immediately. You will pay the bank later in the month,
+; so it is an amount you OWE to the bank, in other words, a Liability.
+2018/01/16 Wesley Pub  ; I don't need either the code nor the payee
+    Liabilities:Credit Card:Visa Platinum       -150  ; I could have use only 'visa' as the account name because hledger would recognized as an alias defined above, but I preferred not
+    Expenses:Leisure:Events                           ; Remember Expenses are positive, the opposite of Liabilities
+
+2018/01/17 Calvin Klein
+    Expenses:Products:Clothing                    80
+    Liabilities:Credit Card:Visa Platinum             ; It doesn't matter the posting order nor which of them is implicit
+
+2018/01/20 Visa | Invoice                             ; Paying the credit card invoice
+    Asset:Bank:JP Morgan                         -230 ; Payment decrease my bank balance
+    Liabilities:Credit Card:Visa Platinum             ; This account will go to zero after this payment, meaning I don't owe anything anymore to the bank 
+
+
+; Now we will start to see how hledger can help us to get a picture of our financial life by running some commands. In your terminal, set LEDGER_FILE variable to be this file path.
+; If you are already on this file's folder type: 'LEDGER_FILE=demo.hledger'. Now run the commands below and analyze the results.
+
+; hledger print --explicit
+; hledger register "Bank:"
+; hledger register ":Credit Card"
+; hledger balance  <-- Sum is zero, our accounting is balanced!
+; hledger balancesheetequity && hledger incomestatement. See that the increase in assets is justified by the same amount in our profit as shown by the incomestatement
+; hledger balance "Expenses:" --weekly --tree
+; hledger balance "Expenses:" --weekly --depth 2 --transpose
+; hledger balance "Bank:" --weekly --row-total --tree
+; hledger balance "Bank:" --weekly --row-total --historical --tree
+; hledger balance "Expenses:" --pivot payee
+; hledger-ui --tree  - Navigate thru your transactions. Type ? for help and the effect of Shift-Arrow
+; hledger-web - It should open your browser. Another way to navigate and add transactions
+
+; In February, we will learn some more advanced concepts. See comments on each transaction.
+
+2018/02/03 ! (0345MX4) Peter's Plumbing | Fixed leaking in the bathroom  ; The '!' symbol means this transaction is pending. I didn't see it in the bank statement yet
+    Asset:Bank:Wells Fargo                       110                     ; Hledger also offers '*' symbol in the place of '!', meaning the transaction is cleared
+    Expenses:Housing:Maintenance
+
+; In the next transactions, we will use the comment to add some tags. It will be very helpful to analyze our financial situation
+2018/02/05 Uber | Driving Revenue    ; ride:Uber,  -> Tag Format - key:value, key:value, ...
+    Asset:Bank:Wells Fargo                       180
+    Revenue:Riding App
+
+2018/02/06 Lyft | Driving Revenue    ; ride:Lyft
+    Asset:Bank:Wells Fargo                       120
+    Revenue:Riding App
+
+2018/02/07 Texaco | Gas Refill       ; ride:Expenses
+    Asset:Online Account:Apple Pay             -78.37
+    Expenses:Car:Gas
+
+; Tags allows different ways to organize transaction, in the case above it is my secondary job as Riding app driver. Run the commands below to see the effects
+; If not set yet, run 'LEDGER_FILE=demo.hledger'
+; hledger print tag:ride
+; hledger balance "Revenue:|Expenses:" tag:ride
+; hledger balance "Revenue:|Expenses:" tag:ride --pivot ride
