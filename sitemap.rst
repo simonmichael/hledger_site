@@ -25,11 +25,8 @@ hledger
    :maxdepth: 3
 
    Download/Install <download>
-   basics-tutorial
-   terminology
-   create-a-journal
+   Quick Start <start>
    accounting-concepts
-   common-journal-entries
    accounting-links
 
 .. toctree::
@@ -48,6 +45,7 @@ hledger
    :caption: Cookbook: Managing data
    :maxdepth: 3
 
+   create-a-journal
    change-account-name-separator
    convert-csv-files
    customize-default-csv-accounts
@@ -66,6 +64,7 @@ hledger
    :maxdepth: 3
 
    budgeting-and-forecasting
+   common-journal-entries
    foreign-trip-expenses
    invoicing
    multicurrency-tutorial

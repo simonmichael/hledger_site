@@ -1,9 +1,33 @@
-(See also: some great beginner-level
-[blog posts](https://plaintextaccounting.org/#articles-blog-posts),
-such as S.M. Oliva's; and [hledger fan's youtube videos](videos.html)).
+# Quick Start
 
+[Download/Install](download.html) hledger.
 
-# Basics tutorial
+Note the sidebar to your left. You can find everything from there.
+Note that it scrolls, and expands to show the current page's table of contents.
+
+Now choose your path to hledger mastery - any will do:
+
+## Speedy - let's get it done
+
+- Read the start of the **[hledger manual](hledger.html)** - the intro and COMMON TASKS sections.
+- Skim the rest of the hledger manual - at least the table of contents, so you'll have an idea of what's there.
+- Also skim the **[journal manual](journal.html)**, describing hledger's main data format and data model.
+- Maybe continue with demo.hledger or jump to topics of interest in the Cookbook.
+
+## Browse - let's read blogs
+
+- Browse the [blog posts](https://plaintextaccounting.org/#articles-blog-posts),
+  over on plaintextaccounting.org. Look for the hledger-related ones,
+  though some of the others can be helpful too.
+
+## Gentle - let's watch videos
+
+- Proceed to the [Videos](videos.html).
+  The "hledger fan" channel linked there is a series of easy bite-sized introductory videos.
+
+## Steps - tell me exactly what to do
+
+- Read on!
 
 Here you can learn hledger (and a little double-entry bookkeeping)
 by practicing, in small hands-on steps. You'll need:
@@ -25,7 +49,7 @@ or send a pull request for this page.
 
 Let's get started!
 
-## Check your hledger installation
+### Check your hledger installation
 
 Get a command prompt, and run hledger to check the version. It should be reasonably [up to date](release-notes.html). These exercises were last tested with this version:
 
@@ -34,7 +58,7 @@ $ hledger --version
 hledger 1.9
 ```
 
-## Locate your journal file with "hledger stats"
+### Locate your journal file with "hledger stats"
 
 hledger reads financial transactions from a "journal file" (so named because it represents a [General Journal](http://en.wikipedia.org/wiki/General_Journal)).
 The default journal file is in your home directory; check its path using the [stats](hledger.html#stats) command.
@@ -50,7 +74,7 @@ Most hledger commands read this file but can not change it; the `add` and `web` 
 
 (If `stats` reports that the file exists, eg because you previously created it, move it out of the way temporarily for these exercises.)
 
-## Record a transaction with "hledger add"
+### Record a transaction with "hledger add"
 
 Follow the help and use the [add](hledger.html#add) command to record your first transaction,
 an imaginary purchase at the supermarket.
@@ -162,7 +186,7 @@ Accounts                 : 2 (depth 1)
 Commodities              : 1 ($)
 ```
 
-## Show transactions with "hledger print"
+### Show transactions with "hledger print"
 
 The [print](hledger.html#print) command shows a tidied-up view of the transaction entries in your journal.
 Since there's just one so far, you should see:
@@ -175,7 +199,7 @@ $ hledger print
 
 ```
 
-## Examine your journal file
+### Examine your journal file
 
 List and print the journal file (on Windows, use `dir` and `type` and the file path from `hledger stats`):
 
@@ -190,7 +214,7 @@ $ cat ~/.hledger.journal
     assets
 ```
 
-## A convenience: inferred amounts
+### A convenience: inferred amounts
 
 Why is the amount missing from the assets posting above ?
 As a convenience to make manual data entry easier, if one amount is missing
@@ -199,7 +223,7 @@ Only one missing amount is allowed in each transaction.
 `add` uses the same convention when it writes an entry.
 (To see all such inferred amounts in full, you can use `hledger print -x`.)
 
-## Edit the journal file
+### Edit the journal file
 
 Since the journal file is plain text, you can edit it directly with any text editor.
 Edit the file and change it to test whether two missing amounts is reported as an error. Eg:
@@ -229,7 +253,7 @@ hledger: could not balance this transaction (can't have more than one missing am
 
 All hledger commands expect the journal to be well-formed, and will report an error and exit otherwise.
 
-## Two spaces
+### Two spaces
 
 Notice the last part of that error message: "`... remember to put 2 or more spaces before amounts)`".
 Another cause of this error is forgetting to put two spaces before the
@@ -245,7 +269,7 @@ Since account names may contain spaces, hledger thinks the first
 posting is to an account named "`expenses $10`", with a missing
 amount.  So remember: two or more spaces.
 
-## Unbalanced transactions
+### Unbalanced transactions
 
 Edit the file to look like this:
 
@@ -280,7 +304,7 @@ $ hledger print
 
 ```
 
-## Record a transaction by editing
+### Record a transaction by editing
 
 Edit the file again and manually add a second purchase transaction.
 It's often quickest to copy & paste a similar entry, then change it.
@@ -311,7 +335,17 @@ $ hledger print
 
 ```
 
-## Show postings and a running total with "hledger register"
+### What's in a Transaction ?
+
+Here's a basic hledger transaction with the parts named:
+
+[![hledger basic transaction, showing names of parts](https://raw.githubusercontent.com/RobertNielsen1/hledger/master/hledger%20basic%20transaction%20--%20terms.png)](https://github.com/RobertNielsen1/hledger/blob/master/hledger%20basic%20transaction%20--%20terms.png)
+
+And here's a more complicated hledger transaction:
+
+[![hledger complicated transaction with names of parts](https://raw.githubusercontent.com/RobertNielsen1/hledger/master/hledger%20complicated%20transaction%20%26%20terms.png)](https://github.com/RobertNielsen1/hledger/blob/master/hledger%20complicated%20transaction%20%26%20terms.png)
+
+### Show postings and a running total with "hledger register"
 
 The [register](hledger.html#register) command shows transactions in a different format. More precisely, it shows postings.
 Remember, a posting is an increase or decrease of some account by some amount, and a transaction contains two or more of them.
@@ -330,7 +364,7 @@ The transaction's date and description is displayed only for the first posting i
 Next we see the posted account's name and the amount posted.
 The final column is a running total of the posted amounts.
 
-## Show a per-account register report
+### Show a per-account register report
 
 Notice how the running total above keeps resetting to 0.
 This makes sense (since we know each transaction's postings add up to zero) but isn't very useful.
@@ -358,7 +392,7 @@ $ hledger register assets
 2015/05/26 forgot the bread     assets                         $-5          $-15
 ```
 
-## Set initial account balances
+### Set initial account balances
 
 hledger assumes every account starts with a zero balance,
 so in the previous example, we see the withdrawals producing a negative running balance.
@@ -382,7 +416,7 @@ $ hledger register assets
 2015/05/26 forgot the bread     assets                         $-5          $485
 ```
 
-## Query expressions
+### Query expressions
 
 The account name argument above is an example of a
 [query expression](hledger.html#queries), a search pattern which restricts a report to a subset of the data.
@@ -419,7 +453,7 @@ $ hledger register date:2015/5/26- exp
 2015/05/26 forgot the bread     expenses                        $5            $5
 ```
 
-## Show accounts and their balances with "hledger balance"
+### Show accounts and their balances with "hledger balance"
 
 The third of hledger's three core reporting commands is [balance](hledger.html#balance).
 Use it to list all the accounts posted to, and their ending balance.
@@ -443,7 +477,7 @@ $ hledger balance assets
                 $-15
 ```
 
-## balance shows the sum of matched posting amounts
+### balance shows the sum of matched posting amounts
 
 Here's a balance report based only on the postings dated 2015/5/26:
 ```shell
@@ -465,7 +499,7 @@ $ hledger register date:2015/5/26
                                 assets                         $-5             0
 ```
 
-## Review
+### Review
 
 You have learned:
 
@@ -491,7 +525,7 @@ You have learned:
 
 <!--
 
-## Test yourself
+### Test yourself
 
 Start a journal tracking the cash in your pocket or wallet. Every day for one week,
 
