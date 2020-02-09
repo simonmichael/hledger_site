@@ -4,6 +4,9 @@ hledger-related videos:
 
 - The [hledger fan Youtube channel](https://www.youtube.com/channel/UCZLxXTjOqLzq4z5Jy0AyWSQ) has a series of beginner lessons, including:
 
+  - [hledger: fast fancy formatting](https://www.youtube.com/watch?v=Hb-hK8Lc67s) (5m, 2020) <!-- feb 1 --> 
+    hledger fan (Robert Nielsen)
+
   - [hledger: fun and profit with incomestatement](https://www.youtube.com/watch?v=U4An3AHtDkg) (3m, 2019) <!-- oct 12 -->  
     hledger fan (Robert Nielsen)  
   
