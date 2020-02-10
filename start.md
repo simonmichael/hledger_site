@@ -16,13 +16,13 @@ Now choose your path to hledger mastery - any will do:
 
 ## Browse - let's read blogs
 
-- Browse the [blog posts](https://plaintextaccounting.org/#articles-blog-posts),
+- Browse the **[blog posts](https://plaintextaccounting.org/#articles-blog-posts)**,
   over on plaintextaccounting.org. Look for the hledger-related ones,
   though some of the others can be helpful too.
 
 ## Gentle - let's watch videos
 
-- Proceed to the [Videos](videos.html).
+- Proceed to the **[Videos](videos.html)**.
   The "hledger fan" channel linked there is a series of easy bite-sized introductory videos.
 
 ## Steps - tell me exactly what to do
