@@ -312,8 +312,8 @@ On Windows, hledger-ui is not available and should be omitted from the commands 
 </div>
 <div class="builder-text">
 The latest version of stack (2.1.3) is likely to work best, so we recommend it.
-If you have an older version, you can usually upgrade quickly with <code>stack upgrade</code>.
-Versions older than 1.7.1 will not work.
+If you have an older stack installed, you can usually upgrade it quickly with <code>stack upgrade</code>.
+Versions older than 1.9 will definitely not work.
 On Windows, the 64-bit version of stack is recommended.
 </div>
 <div class="builder-command">
