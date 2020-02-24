@@ -98,7 +98,7 @@ Here are the [release notes](release-notes) describing the changes in each vers
         <div class="distro"><a href="https://www.docker.com/products/docker-desktop">Docker</a></div>
         <div class="notes">Linux, Mac, Windows</div>
         <div class="badges">
-          <a href="https://hub.docker.com/r/dastapov/hledger"><img alt="Docker" src="https://img.shields.io/badge/Docker_image-1.16.1-red.svg" /></a>
+          <a href="https://hub.docker.com/r/dastapov/hledger"><img alt="Docker" src="https://img.shields.io/badge/Docker_image-1.16.2-brightgreen.svg" /></a>
           <a href="https://hub.docker.com/search?q=hledger&amp;type=image&amp;sort=updated_at&amp;order=desc">more..</a>
         </div>
       </td>
