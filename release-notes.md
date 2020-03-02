@@ -31,6 +31,226 @@ Changes in hledger-install.sh are shown
 
 
 
+## 2020/03/01 hledger 1.17
+
+**CSV single-field matching; easier SSV/TSV conversion; 
+fixed/enhanced close command; undo in add command; more JSON output; 
+org headline support in timedot format; GHC 8.10 support.**
+([mail](https://groups.google.com/d/topic/hledger//discussion))
+
+### project-wide changes 1.17
+
+### hledger cli 1.17
+
+- hledger's default date format is now YYYY-MM-DD (ISO-8601 dates).
+  (Brian Wignall, Jakob Schöttl, Simon Michael)
+
+- Drop the file format auto-detection feature.
+
+  For a long time hledger has auto-detected the file format when it's
+  not known, eg when reading from a file with unusual extension (like
+  .dat or .txt), or from standard input (-f-), or when using the
+  include directive (which currently ignores file extensions).  This
+  was done by trying all readers until one succeeded.  This worked
+  well in practice. But recent changes to timedot format have made
+  this kind of auto-detection unreliable. (timedot and journal formats
+  overlap).
+
+  For predictability and to minimise confusion, hledger will no longer
+  guess; when there's no file extension or reader prefix available, it
+  always assumes journal format.
+
+  To specify one of the other formats, you must use its standard file
+  extension (`.timeclock`, `.timedot`, `.csv`, `.ssv`, `.tsv`), or a
+  reader prefix (`-f csv:foo.txt`, `-f timedot:-`).
+
+  Experimental, feedback welcome.
+
+- Fix extra $ symbol (Mateus Furquim)
+
+- --output-format now rejects invalid formats
+
+- Numbers in JSON output now provide a floating point Number
+  representation as well as our native Decimal object representation,
+  since the later can sometimes contain 255-digit integers. The
+  floating point numbers can have up to 10 decimal digits (and an
+  unbounded number of integer digits.)
+  Experimental, suggestions needed. (#1195)
+
+- Fix finding latest date in queryEndDate Or queries and simplify
+  date comparison code. (Stephen Morgan)
+
+- Fix issue 457. (Jacek Generowicz)
+  Issue #457 pointed out that commands such as
+
+      hledger ui 'amt:>200'
+
+  failed. This was becasue the process of dispatching from `hledger ui`
+  to `hledger-ui` (note addition of `-`) lost the quotes around
+  `amt:>20` and the `>` character was interpreted as a shell redirection
+  operator, rather than as part of the argument.
+
+  The machinery for quoting or escaping arguements which contain
+  characters which require quoting or escaping (thus far whitespace and
+  quotes) already existed. This solution simply adds shell stdio
+  redirection characters to this set.
+
+#### commands
+
+- add: you can use `<` to undo and redo previous inputs (Gaith Hallak)
+
+- bs, cf, is, bal, print, reg: support json output
+
+- bs, cf, is: fix excess subreport columns in csv output
+
+- bs, cf, is, bal: fix an issue with border intersections in
+  --pretty-tables output. (Eric Mertens)
+
+- close: fix a rounding bug that could generate unbalanced transactions. (#1164)
+
+- close: hide cost prices by default, show them with --show-costs.
+  close no longer preserves costs (transaction prices) unless you ask
+  it to, since that can generate huge entries when there are many
+  foreign currency/investment transactions. (#1165)
+
+- close: equity amounts are omitted by default, for simpler entries;
+  -x/--explicit shows them (usually causing more postings). (#1165)
+
+- close: --interleaved generates equity postings alongside each closed
+  account, making troubleshooting easier.
+
+- close: "equity:opening/closing balances" is now the default
+  closing and opening account.
+
+- close: --close-desc/--open-desc customise the closing/opening
+  transaction descriptions. (#1165)
+
+- close: some --open*/--close* flags have been simplified for memorability:
+
+  --closing -> --close
+  --opening -> --open
+  --close-to -> --close-acct
+  --open-from -> --open-acct
+
+  The old flags are accepted as hidden aliases, and deprecated. (#1165)
+
+- print, register: a new valuation type, --value=then, shows the
+  market value at each posting's date.
+
+- print: -V/-X/--value now imply -x/--explicit, as -B/--cost does.
+  This avoids a bug where print -V of a transaction with an implicit
+  commodity conversion would convert only some of its postings to value.
+
+#### journal format
+
+- The include directive no longer tries all readers.  It now picks
+  just one, based on the included file's extension, defaulting to
+  journal.  (It doesn't yet handle a reader prefix.)
+
+- The default commodity (D) directive now limits display precision too. (#1187)
+  D directives are now fully equivalent to commodity directives for
+  setting a commodity's display style. (Previously it couldn't limit
+  the number of decimal places.)  When both kinds of directive exist,
+  commodity directives take precedence.  When there are multiple D
+  directives in the journal, only the last one affects display style.
+
+#### csv format
+
+- Conditional blocks can now match single fields. \o/
+
+- The experimental --separator command line option has been dropped,
+  replaced a new `separator` directive in CSV rule files. (Aleksandar Dimitrov)
+  Also the `.tsv` and `.ssv` file extensions are now recognised,
+  and set the default `separator` to TAB and semicolon respectively.
+  (#1179)
+
+- Allow manual assignment of the "expenses:unknown" account name. (#1192)
+
+- CSV rule keywords are now case insensitive. (Aleksandar Dimitrov)
+
+## timeclock format
+
+- Misc. fixes making parsing more robust. (Jakob Schöttl)
+
+#### timeclock format
+
+- Misc. fixes making parsing more robust. (Jakob Schöttl)
+
+#### timedot format
+
+- More support for org mode: org headlines can now be used for date
+  lines and timelog items (the stars are ignored). Also, any org
+  headlines before the first date line are ignored.
+
+- You can now write a description after a date, which will be used in
+  all of that day's transactions.
+
+### hledger-ui 1.17
+
+- Don't enable --forecast by default; drop the --future flag. (#1193)
+
+  Previously, periodic transactions occurring today were always shown,
+  in both "present" and "future" modes.
+
+  Now, generation of periodic transactions and display of future
+  transactions (all kinds) are combined as "forecast mode", which can
+  be enabled with --forecast and/or the F key.  The --future flag is
+  now a hidden alias for --forecast, and deprecated.
+
+- Don't enable --auto by default.
+
+### hledger-web 1.17
+
+- Fonts have been improved on certain platforms. (David Zhang)
+
+- IPv6 is supported (Amarandus) (#1145)
+
+- The --host option can now take a local hostname (Amarandus) (#1145)
+
+- New --socket option to run hledger-web over an AF_UNIX socket file. (Carl Richard Theodor Schneider)
+  This allows running multiple instances of hledger-web on the same
+  system without having to manually choose a port for each instance,
+  which is helpful for running individual instances for multiple
+  users. In this scenario, the socket path is predictable, as it can
+  be derived from the username.
+
+- The edit and upload forms now normalise line endings, avoiding parse
+  errors (#1194). Summary of current behaviour:
+
+  - hledger add and import commands will append with (at least some)
+    unix line endings, possibly causing the file to have mixed line
+    endings
+
+  - hledger-web edit and upload forms will write the file with
+    the current system's native line endings, ie changing all
+    line endings if the file previously used foreign line endings.
+
+- Numbers in JSON output now provide a floating point Number
+  representation as well as our native Decimal object representation,
+  since the later can sometimes contain 255-digit integers. The
+  floating point numbers can have up to 10 decimal digits (and an
+  unbounded number of integer digits.)
+  Experimental, suggestions needed. (#1195)
+
+### credits 1.17
+
+Release contributors:
+Simon Michael
+Aleksandar Dimitrov,
+Brian Wignall,
+Stephen Morgan,
+Jacek Generowicz,
+Gaith Hallak,
+Eric Mertens,
+Jakob Schöttl,
+Carl Richard Theodor Schneider,
+David Zhang,
+Amarandus,
+Evilham,
+Mateus Furquim,
+Rui Chen.
+
+
 ## 2019/12/01 hledger 1.16
 
 **GHC 8.8 support, much more powerful CSV conversion rules,
