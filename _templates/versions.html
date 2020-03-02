@@ -1,20 +1,23 @@
 {% set parts = ('/'+pagename).split('/') %}
 {% set viewed_version = parts[-2] %}
 {% set viewed_manual  = parts[-1] if parts[-1] in manuals else '' %}
+{% set viewed_manual_ = viewed_manual if viewed_manual.startswith('hledger') else 'hledger' %}
 
 {% if viewed_manual %} 
   <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions"> {# Add rst-badge class for small badge style. #}
     <span class="rst-current-version" data-toggle="rst-current-version"> 
       <span class="fa-book" style="margin-right:.5em;"></span>
-      This doc is for version:
-      {% set viewed_version_desc = viewed_version + (' (current release)' if viewed_version==current_release_version else '') %}
-      {% set viewed_version_desc = viewed_version_desc or 'dev (unreleased)' %}
-      <span class="viewed-version">{{ viewed_version_desc }}</span>
+      {% set viewed_version_desc = 
+			viewed_version 
+			and viewed_manual_ + ' ' + viewed_version + ', released ' + version_dates.get(viewed_version,'-') + (' (CURRENT)' if viewed_version==current_release_version else '')
+			or  viewed_manual_ + ' ' + 'DEV (UNRELEASED)'
+			%}
+      <span class="viewed-version">This doc is for {{ viewed_version_desc }}</span>
       <span class="fa-caret-down"></span> 
     </span> 
     <div class="rst-other-versions">
       <ul> 
-        <li {% if viewed_version=='' %}class="viewed-version"{% endif %}><a href="/{{ viewed_manual }}.html">dev</a></li> 
+        <li {% if viewed_version=='' %}class="viewed-version"{% endif %}><a href="/{{ viewed_manual }}.html">DEV</a></li> 
         {% for v in versions %} 
           <li {% if viewed_version==v %}class="viewed-version"{% endif %}>
             <a href="/{{ v }}/{{ viewed_manual }}.html">{{ v }}</a>

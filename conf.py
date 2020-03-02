@@ -64,6 +64,24 @@ release_versions = [
     '1.0',
 ]
 
+version_dates = {
+    '1.17': '2020-03-01',
+    '1.16': '2019-12-01',
+    '1.15': '2019-09-01',
+    '1.14': '2019-03-01',
+    '1.13': '2019-02-01',
+    '1.12': '2018-12-02',
+    '1.11': '2018-09-30',
+    '1.10': '2018-06-30',
+    '1.9' : '2018-03-31',
+    '1.5' : '2017-12-31',
+    '1.4' : '2017-09-30',
+    '1.3' : '2017-06-30',
+    '1.2' : '2017-03-31',
+    '1.1' : '2016-12-31',
+    '1.0' : '2016-10-26',
+}
+
 # only these versions will be shown in the version selector
 # may want to comment out all of these when previewing docs locally
 show_release_versions = [
@@ -89,7 +107,7 @@ for v in release_versions:
         hide_release_versions.append(v)
 
 current_release_version = release_versions[0]
-dev_version = current_release_version + '.99 (dev)'
+# dev_version = current_release_version + '.99 (dev)'
 
 # -- Some definitions for theme templates ---------------------------------------------------
 
@@ -116,8 +134,9 @@ html_context = {
     'theme_vcs_pageview_mode': 'edit',
     "manuals": manuals,
     'versions': show_release_versions,
+    'version_dates': version_dates,
     'current_release_version': current_release_version,
-    'dev_version': dev_version,
+    # 'dev_version': dev_version,
     # custom edit links for certain pages (the manuals). Cf _templates/breadcrumbs.html
     "special_edit_paths": {
         "journal"     : "hledger/edit/master/hledger-lib/hledger_journal.m4.md",
