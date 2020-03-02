@@ -49,20 +49,14 @@ org headline support in timedot format; GHC 8.10 support.**
   For a long time hledger has auto-detected the file format when it's
   not known, eg when reading from a file with unusual extension (like
   .dat or .txt), or from standard input (-f-), or when using the
-  include directive (which currently ignores file extensions).  This
-  was done by trying all readers until one succeeded.  This worked
-  well in practice. But recent changes to timedot format have made
-  this kind of auto-detection unreliable. (timedot and journal formats
-  overlap).
-
-  For predictability and to minimise confusion, hledger will no longer
-  guess; when there's no file extension or reader prefix available, it
-  always assumes journal format.
-
-  To specify one of the other formats, you must use its standard file
-  extension (`.timeclock`, `.timedot`, `.csv`, `.ssv`, `.tsv`), or a
-  reader prefix (`-f csv:foo.txt`, `-f timedot:-`).
-
+  include directive (which currently ignores file extensions). This
+  was done by trying all readers until one succeeded. Recent changes
+  to timedot format have made this unreliable. So now, hledger will no
+  longer guess; when there's no file extension or reader prefix
+  available, it always assumes journal format. To specify one of the
+  other formats, you must use its standard file extension
+  (`.timeclock`, `.timedot`, `.csv`, `.ssv`, `.tsv`), or a reader
+  prefix (`-f csv:foo.txt`, `-f timedot:-`).
   Experimental, feedback welcome.
 
 - Fix extra $ symbol (Mateus Furquim)
@@ -79,15 +73,13 @@ org headline support in timedot format; GHC 8.10 support.**
 - Fix finding latest date in queryEndDate Or queries and simplify
   date comparison code. (Stephen Morgan)
 
-- Fix issue 457. (Jacek Generowicz)
-  Issue #457 pointed out that commands such as
+- Fix issue 457. (Jacek Generowicz) 
 
-      hledger ui 'amt:>200'
-
-  failed. This was becasue the process of dispatching from `hledger ui`
-  to `hledger-ui` (note addition of `-`) lost the quotes around
-  `amt:>20` and the `>` character was interpreted as a shell redirection
-  operator, rather than as part of the argument.
+  Issue #457 pointed out that commands such as `hledger ui 'amt:>200'`
+  failed. This was becasue the process of dispatching from 
+  `hledger ui` to `hledger-ui` (note addition of `-`) lost the quotes
+  around `amt:>20` and the `>` character was interpreted as a shell
+  redirection operator, rather than as part of the argument.
 
   The machinery for quoting or escaping arguements which contain
   characters which require quoting or escaping (thus far whitespace and
@@ -166,10 +158,6 @@ org headline support in timedot format; GHC 8.10 support.**
 - Allow manual assignment of the "expenses:unknown" account name. (#1192)
 
 - CSV rule keywords are now case insensitive. (Aleksandar Dimitrov)
-
-## timeclock format
-
-- Misc. fixes making parsing more robust. (Jakob Schöttl)
 
 #### timeclock format
 
