@@ -62,7 +62,7 @@ Here are some ways to install hledger.
 [Binary packages](#binary-packages) will install quickly,
 or you can [run our install script, or build with stack/cabal](#building-from-source).
 Please do [report](index.html#help-feedback) any trouble.
-The current release is **1.16.2** (look for the green badges!)
+The current release is **1.17** (look for the green badges!)
 Here are the [release notes](release-notes) describing the changes in each version.
 
 ## Binary packages
@@ -98,7 +98,7 @@ Here are the [release notes](release-notes) describing the changes in each vers
         <div class="distro"><a href="https://www.docker.com/products/docker-desktop">Docker</a></div>
         <div class="notes">Linux, Mac, Windows</div>
         <div class="badges">
-          <a href="https://hub.docker.com/r/dastapov/hledger"><img alt="Docker" src="https://img.shields.io/badge/Docker_image-1.16.2-brightgreen.svg" /></a>
+          <a href="https://hub.docker.com/r/dastapov/hledger"><img alt="Docker" src="https://img.shields.io/badge/Docker_image-1.16.2-red.svg" /></a>
           <a href="https://hub.docker.com/search?q=hledger&amp;type=image&amp;sort=updated_at&amp;order=desc">more..</a>
         </div>
       </td>
@@ -111,7 +111,7 @@ Here are the [release notes](release-notes) describing the changes in each vers
         <div class="notes">Linux, Mac, Windows</div>
         <div class="badges">
           <!--[![](https://repology.org/badge/version-for-repo/homebrew/hledger.svg)]-->
-          <a href="https://formulae.brew.sh/formula/hledger"><img alt="Homebrew" src="https://img.shields.io/badge/Homebrew-1.16.2-brightgreen.svg" /></a>
+          <a href="https://formulae.brew.sh/formula/hledger"><img alt="Homebrew" src="https://img.shields.io/badge/Homebrew-1.16.2-red.svg" /></a>
         </div>
       </td>
       <td>
@@ -171,7 +171,7 @@ Here are the [release notes](release-notes) describing the changes in each vers
       <td>
         <div class="distro">Gentoo</div>
         <div class="badges">
-          <a href="https://gentoo.zugaina.org/Search?search=hledger"><img alt="Gentoo" src="https://img.shields.io/badge/Gentoo_package-1.16.2-brightgreen.svg" /></a>
+          <a href="https://gentoo.zugaina.org/Search?search=hledger"><img alt="Gentoo" src="https://img.shields.io/badge/Gentoo_package-1.16.2-red.svg" /></a>
         </div>
       </td>
       <td>
@@ -288,7 +288,7 @@ On Windows, hledger-ui is not available and should be omitted from the commands 
 </div>
 <div class="notes">Linux, Mac, WSL</div>
 <div class="badges">
-  <img alt="installs" src="https://img.shields.io/badge/installs_hledger-1.16.2-brightgreen.svg" />
+  <img alt="installs" src="https://img.shields.io/badge/installs_hledger-1.17-brightgreen.svg" />
 </div>
 <div class="builder-text">
   The hledger-install script is a robust install method that requires only
@@ -308,7 +308,7 @@ On Windows, hledger-ui is not available and should be omitted from the commands 
 </div>
 <div class="notes">Linux, Mac, Windows</div>
 <div class="badges">
-  <img alt="installs" src="https://img.shields.io/badge/installs_hledger-1.16.2-brightgreen.svg" />
+  <img alt="installs" src="https://img.shields.io/badge/installs_hledger-1.17-brightgreen.svg" />
 </div>
 <div class="builder-text">
 The latest version of stack (2.1.3) is likely to work best, so we recommend it.
@@ -318,7 +318,7 @@ On Windows, the 64-bit version of stack is recommended.
 </div>
 <div class="builder-command">
   stack update <br>
-  stack install --resolver=lts hledger-lib-1.16.2 hledger-1.16.2 hledger-ui-1.16.2 hledger-web-1.16.2 --silent
+  stack install --resolver=lts hledger-lib-1.17 hledger-1.17 hledger-ui-1.17 hledger-web-1.17 --silent
 </div>
 
 <div class="builder">
@@ -326,13 +326,13 @@ On Windows, the 64-bit version of stack is recommended.
 </div>
 <div class="notes">Linux, Mac, Windows</div>
 <div class="badges">
-  <img alt="installs" src="https://img.shields.io/badge/installs_hledger-1.16.2-brightgreen.svg" />
+  <img alt="installs" src="https://img.shields.io/badge/installs_hledger-1.17-brightgreen.svg" />
 </div>
 <div class="builder-text">
 </div>
 <div class="builder-command">
   cabal v2-update <br>
-  cabal v2-install hledger-1.16.2 hledger-web-1.16.2 hledger-ui-1.16.2
+  cabal v2-install hledger-1.17 hledger-web-1.17 hledger-ui-1.17
 </div>
 
 ### Build tips
@@ -459,11 +459,11 @@ tools (that you installed), and see the expected versions. Eg:
 
 <div class="command">
 $ hledger --version <br>
-hledger 1.16.2 <br>
+hledger 1.17 <br>
 $ hledger-ui --version <br>
-hledger-ui 1.16.2 <br>
+hledger-ui 1.17 <br>
 $ hledger web --version <br>
-hledger-web 1.16.2 <br>
+hledger-web 1.17 <br>
 </div>
 
 And you could see the unit tests pass (just for fun):
@@ -471,7 +471,7 @@ And you could see the unit tests pass (just for fun):
 <div class="command">
 $ hledger test <br>
 ... <br>
-All 190 tests passed (4.30s)
+All 198 tests passed (4.30s)
 </div>
 
 <br>
