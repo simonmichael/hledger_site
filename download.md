@@ -318,7 +318,7 @@ On Windows, the 64-bit version of stack is recommended.
 </div>
 <div class="builder-command">
   stack update <br>
-  stack install --resolver=lts hledger-lib-1.17 hledger-1.17 hledger-ui-1.17 hledger-web-1.17 --silent
+  stack install --resolver=lts hledger-lib-1.17.0.1 hledger-1.17 hledger-ui-1.17 hledger-web-1.17 --silent
 </div>
 
 <div class="builder">
