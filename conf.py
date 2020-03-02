@@ -47,6 +47,7 @@ manuals = [
 
 # all hledger versions we might want to show docs for (since 1.0)
 release_versions = [
+    '1.17',
     '1.16',
     '1.15',
     '1.14',
@@ -67,6 +68,7 @@ release_versions = [
 # may want to comment out all of these when previewing docs locally
 show_release_versions = [
     # all versions shown on the download page (overkill):
+    '1.17', # 
     '1.16', # 
     '1.15', # arch, gentoo
     '1.14', # void
