@@ -39,6 +39,21 @@ org headline support in timedot format; GHC 8.10 support.**
 
 ### project-wide changes 1.17
 
+- hledger-install tweaks
+
+- Simpler, clearer structure in the manuals and hledger.org sidebar.
+
+- A new [Quick Start](https://hledger.org/start.html) page
+
+- A new [Common Tasks](https://hledger.org/hledger.html#common-tasks) section in the hledger manual
+
+- A new invoicing how-to: https://hledger.org/invoicing.html
+
+- A basic example of rule parsing for the output of csb2format. (Evilham)
+  csb2format deals with the CSB43/AEB43 format, which all banks operating in
+  Spain must support.
+
+
 ### hledger cli 1.17
 
 - hledger's default date format is now YYYY-MM-DD (ISO-8601 dates).
@@ -59,13 +74,17 @@ org headline support in timedot format; GHC 8.10 support.**
   prefix (`-f csv:foo.txt`, `-f timedot:-`).
   Experimental, feedback welcome.
 
-- Fix extra $ symbol (Mateus Furquim)
+- More robust quoting of arguments for addons (#457). (Jacek Generowicz) 
+  Command lines like `hledger ui 'amt:>200'` failed, because the
+  process of dispatching from `hledger` to `hledger-ui` lost the
+  quotes around `amt:>20` and the `>` character was interpreted as a
+  shell redirection operator.
 
 - --output-format now rejects invalid formats
 
 - Numbers in JSON output now provide a floating point Number
   representation as well as our native Decimal object representation,
-  since the later can sometimes contain 255-digit integers. The
+  since the latter can sometimes contain 255-digit integers. The
   floating point numbers can have up to 10 decimal digits (and an
   unbounded number of integer digits.)
   Experimental, suggestions needed. (#1195)
@@ -73,18 +92,8 @@ org headline support in timedot format; GHC 8.10 support.**
 - Fix finding latest date in queryEndDate Or queries and simplify
   date comparison code. (Stephen Morgan)
 
-- Fix issue 457. (Jacek Generowicz) 
+- Fix extra $ symbol (Mateus Furquim)
 
-  Issue #457 pointed out that commands such as `hledger ui 'amt:>200'`
-  failed. This was becasue the process of dispatching from 
-  `hledger ui` to `hledger-ui` (note addition of `-`) lost the quotes
-  around `amt:>20` and the `>` character was interpreted as a shell
-  redirection operator, rather than as part of the argument.
-
-  The machinery for quoting or escaping arguements which contain
-  characters which require quoting or escaping (thus far whitespace and
-  quotes) already existed. This solution simply adds shell stdio
-  redirection characters to this set.
 
 #### commands
 
@@ -117,12 +126,12 @@ org headline support in timedot format; GHC 8.10 support.**
   transaction descriptions. (#1165)
 
 - close: some --open*/--close* flags have been simplified for memorability:
-
+  ```plain
   --closing -> --close
   --opening -> --open
   --close-to -> --close-acct
   --open-from -> --open-acct
-
+  ```
   The old flags are accepted as hidden aliases, and deprecated. (#1165)
 
 - print, register: a new valuation type, --value=then, shows the
@@ -150,12 +159,13 @@ org headline support in timedot format; GHC 8.10 support.**
 - Conditional blocks can now match single fields. \o/
 
 - The experimental --separator command line option has been dropped,
-  replaced a new `separator` directive in CSV rule files. (Aleksandar Dimitrov)
-  Also the `.tsv` and `.ssv` file extensions are now recognised,
-  and set the default `separator` to TAB and semicolon respectively.
+  replaced by a new `separator` directive in CSV rule files. (Aleksandar Dimitrov)
+
+- The `.tsv` and `.ssv` file extensions are now recognised,
+  and will set the default `separator` to TAB and semicolon respectively.
   (#1179)
 
-- Allow manual assignment of the "expenses:unknown" account name. (#1192)
+- Manually assigning the "expenses:unknown" account name now works. (#1192)
 
 - CSV rule keywords are now case insensitive. (Aleksandar Dimitrov)
 
@@ -165,26 +175,29 @@ org headline support in timedot format; GHC 8.10 support.**
 
 #### timedot format
 
-- More support for org mode: org headlines can now be used for date
-  lines and timelog items (the stars are ignored). Also, any org
-  headlines before the first date line are ignored.
-
+- Org mode headlines (lines beginning with one or more `*` followed by
+  a space) can be used as date lines or timelog items (the stars are
+  ignored). Also all org headlines before the first date line are
+  ignored. This means org users can manage their timelog as an org
+  outline (eg using org-mode/orgstruct-mode in Emacs), for
+  organisation, faster navigation, controlling visibility etc.
+  Experimental.
 - You can now write a description after a date, which will be used in
   all of that day's transactions.
+  Experimental.
 
 ### hledger-ui 1.17
+
+- Don't enable --auto by default.
 
 - Don't enable --forecast by default; drop the --future flag. (#1193)
 
   Previously, periodic transactions occurring today were always shown,
-  in both "present" and "future" modes.
-
-  Now, generation of periodic transactions and display of future
-  transactions (all kinds) are combined as "forecast mode", which can
-  be enabled with --forecast and/or the F key.  The --future flag is
-  now a hidden alias for --forecast, and deprecated.
-
-- Don't enable --auto by default.
+  in both "present" and "future" modes. To fix this, generation of
+  periodic transactions and display of future transactions (all kinds)
+  have been combined as "forecast mode", which can be enabled with
+  --forecast and/or toggled with the F key. The --future flag is now a
+  hidden alias for --forecast, and deprecated.
 
 ### hledger-web 1.17
 
