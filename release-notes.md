@@ -30,7 +30,6 @@ Changes in hledger-install.sh are shown
 [here](https://github.com/simonmichael/hledger/commits/master/hledger-install/hledger-install.sh).
 
 
-
 ## 2020/03/01 hledger 1.17
 
 **CSV single-field matching; easier SSV/TSV conversion; 
@@ -47,7 +46,7 @@ org headline support in timedot format; GHC 8.10 support.**
 
 - A new [Common Tasks](https://hledger.org/hledger.html#common-tasks) section in the hledger manual
 
-- A new invoicing how-to: https://hledger.org/invoicing.html
+- A new [Invoicing](https://hledger.org/invoicing.html) how-to
 
 - A basic example of rule parsing for the output of csb2format. (Evilham)
   csb2format deals with the CSB43/AEB43 format, which all banks operating in
@@ -56,7 +55,7 @@ org headline support in timedot format; GHC 8.10 support.**
 
 ### hledger cli 1.17
 
-- hledger's default date format is now YYYY-MM-DD (ISO-8601 dates).
+- hledger's default date format is now ISO-8601 (YYYY-MM-DD).
   (Brian Wignall, Jakob Schöttl, Simon Michael)
 
 - Drop the file format auto-detection feature.
@@ -147,12 +146,9 @@ org headline support in timedot format; GHC 8.10 support.**
   just one, based on the included file's extension, defaulting to
   journal.  (It doesn't yet handle a reader prefix.)
 
-- The default commodity (D) directive now limits display precision too. (#1187)
-  D directives are now fully equivalent to commodity directives for
-  setting a commodity's display style. (Previously it couldn't limit
-  the number of decimal places.)  When both kinds of directive exist,
-  commodity directives take precedence.  When there are multiple D
-  directives in the journal, only the last one affects display style.
+- The default commodity (`D`) directive now limits display precision
+  too, and is fully equivalent to `commodity` directives for setting a
+  commodity's display style. (#1187)
 
 #### csv format
 
@@ -227,15 +223,15 @@ org headline support in timedot format; GHC 8.10 support.**
 
 - Numbers in JSON output now provide a floating point Number
   representation as well as our native Decimal object representation,
-  since the later can sometimes contain 255-digit integers. The
+  since the latter can sometimes contain 255-digit integers. The
   floating point numbers can have up to 10 decimal digits (and an
   unbounded number of integer digits.)
   Experimental, suggestions needed. (#1195)
 
 ### credits 1.17
 
-Release contributors:
-Simon Michael
+This release was brought to you by
+Simon Michael,
 Aleksandar Dimitrov,
 Brian Wignall,
 Stephen Morgan,
@@ -247,7 +243,7 @@ Carl Richard Theodor Schneider,
 David Zhang,
 Amarandus,
 Evilham,
-Mateus Furquim,
+Mateus Furquim and
 Rui Chen.
 
 
