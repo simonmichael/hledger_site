@@ -36,7 +36,6 @@ Changes in hledger-install.sh are shown
 **CSV single-field matching; easier SSV/TSV conversion; 
 fixed/enhanced close command; undo in add command; more JSON output; 
 org headline support in timedot format; GHC 8.10 support.**
-([mail](https://groups.google.com/d/topic/hledger//discussion))
 
 ### project-wide changes 1.17
 
