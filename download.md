@@ -279,7 +279,7 @@ Here are the [release notes](release-notes) describing the changes in each vers
 ## Building from source
 
 You can build hledger wherever the Glasgow Haskell Compiler is supported.
-This can take a while, but it's normall a reliable process.
+This can take a while, but it's normally a reliable process.
 Use one of the tools below to build the current hledger release.
 On Windows, hledger-ui is not available and should be omitted from the commands below (except in WSL).
 
