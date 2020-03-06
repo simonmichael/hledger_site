@@ -164,7 +164,8 @@ easy to write your own hledger-compatible
 applications.
 &nbsp;&nbsp;
 [![hledger CI](https://github.com/simonmichael/hledger/workflows/hledger%20CI/badge.svg)](https://github.com/simonmichael/hledger/actions)
-<!-- [![build status (travis)](https://travis-ci.org/simonmichael/hledger.svg?branch=master)](https://travis-ci.org/simonmichael/hledger) -->
+[![on hackage](https://img.shields.io/hackage/v/hledger.svg?label=hackage&colorB=green)](http://hackage.haskell.org/package/hledger)
+[![](https://repology.org/badge/version-for-repo/stackage_nighly/hledger.svg)](https://repology.org/metapackage/hledger)
 
 <!-- <div class="indent1"> -->
 <!-- ### comfortable for techies, usable by all -->
