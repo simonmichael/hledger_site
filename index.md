@@ -162,7 +162,9 @@ exposed as
 easy to write your own hledger-compatible
 [scripts](scripting.html), [add-ons](hledger.html#add-on-commands) and
 applications.
-&nbsp;&nbsp;[![build status (travis)](https://travis-ci.org/simonmichael/hledger.svg?branch=master)](https://travis-ci.org/simonmichael/hledger)
+&nbsp;&nbsp;
+![hledger CI](https://github.com/simonmichael/hledger/workflows/hledger%20CI/badge.svg)
+[![build status (travis)](https://travis-ci.org/simonmichael/hledger.svg?branch=master)](https://travis-ci.org/simonmichael/hledger)
 
 <!-- <div class="indent1"> -->
 <!-- ### comfortable for techies, usable by all -->
