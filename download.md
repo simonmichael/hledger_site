@@ -138,7 +138,7 @@ Here are the [release notes](release-notes) describing the changes in each vers
           <a href="https://ci.appveyor.com/project/simonmichael/hledger/build/artifacts"><img alt="Windows master" src="https://img.shields.io/badge/Windows_zip-master-brightgreen.svg" /></a>
       </td>
       <td>
-        <div class="command" style="margin-bottom:4px;"><a href="https://ci.appveyor.com/api/buildjobs/x91mc06wd37m0coa/artifacts/hledger.zip">hledger.zip (latest release)</a></div>
+        <div class="command" style="margin-bottom:4px;"><a href="https://ci.appveyor.com/api/buildjobs/adymn76m8jnl27sm/artifacts/hledger.zip">hledger.zip (latest release)</a></div>
         <div class="notes"></div>
         <div class="command"><a href="https://ci.appveyor.com/api/projects/simonmichael/hledger/artifacts/hledger.zip?branch=master">hledger.zip (unreleased master)</a></div>
         <div class="notes">
