@@ -134,7 +134,7 @@ Here are the [release notes](release-notes) describing the changes in each vers
       <td>
         <div class="distro">Appveyor builds</div>
         <div class="badges">
-          <a href="https://ci.appveyor.com/project/simonmichael/hledger/builds/29292447/artifacts"><img alt="Windows release"" src="https://img.shields.io/badge/Windows_zip-1.16.1-red.svg" /></a>
+          <a href="https://ci.appveyor.com/project/simonmichael/hledger/builds/31279595/artifacts"><img alt="Windows release"" src="https://img.shields.io/badge/Windows_zip-1.17-brightgreen.svg" /></a>
           <a href="https://ci.appveyor.com/project/simonmichael/hledger/build/artifacts"><img alt="Windows master" src="https://img.shields.io/badge/Windows_zip-master-brightgreen.svg" /></a>
       </td>
       <td>
