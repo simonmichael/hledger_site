@@ -77,12 +77,12 @@ Here are the [release notes](release-notes) describing the changes in each vers
         <div class="distro"><a href="https://nixos.org/nix">Nix</a></div>
         <div class="notes">Linux, Mac</div>
         <div class="badges">
-          <a href="https://hydra.nixos.org/search?query=hledger"><img alt="Nix" src="https://img.shields.io/badge/Nix_package-1.16-red.svg" /></a>
+          <a href="https://hydra.nixos.org/search?query=hledger"><img alt="Nix" src="https://img.shields.io/badge/Nix_package-1.17-brightgreen.svg" /></a>
         </div>
       </td>
       <td>
         <div class="command">
-            nix-env -f https://github.com/NixOS/nixpkgs/archive/6da889.tar.gz -iA hledger hledger-web hledger-ui
+            nix-env -f https://github.com/NixOS/nixpkgs/archive/e8d5bdb7.tar.gz -iA hledger hledger-web hledger-ui
         </div>
         <div class="notes">
             In the first days after release, this may do some building (not fully cached yet)
