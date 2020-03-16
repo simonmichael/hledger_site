@@ -250,7 +250,9 @@ Here are the [release notes](release-notes) describing the changes in each vers
       </td>
       <td>
         <div class="command">make -C /usr/ports/openbsd-wip/productivity/hledger install</div>
-        <div class="notes"></div>
+        <div class="notes">
+            See also [stack#3313](https://github.com/commercialhaskell/stack/issues/3313#issuecomment-570353913)
+        </div>
       </td>
     </tr>
     <tr>
@@ -384,6 +386,7 @@ On Windows, the 64-bit version of stack is recommended.
     <!-- <a href="https://github.com/simonmichael/hledger/issues/709">freebsd 12: no cabal file found</a><br> -->
     <!-- <a href="https://github.com/commercialhaskell/stack/issues/2822#issuecomment-318892816">openbsd: how to install stack</a><br> -->
     <a href="https://deftly.net/posts/2017-10-12-using-cabal-on-openbsd.html">openbsd 6: exec: permission denied</a><br>
+    <a href="https://github.com/commercialhaskell/stack/issues/3313#issuecomment-570353913">openbsd: stack install tips</a><br>
     <a href="https://github.com/simonmichael/hledger/issues/1030">nix: nix install on linux can fail with “cloning builder process: Operation not permitted”</a><br>
     <a href="https://github.com/simonmichael/hledger/issues/1033">nix: on Linux, nix-installed hledger won’t handle non-ascii data</a><br>
   </blockquote>
