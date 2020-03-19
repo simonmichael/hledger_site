@@ -1,6 +1,7 @@
 # Budgeting and forecasting
 
-*This doc is for hledger 1.5. It is also somewhat useful for hledger 1.9.1+, which has more robust budgeting. hledger 1.9 had bugs and should not be used for budgeting.*
+*Note: this is a cookbook doc, written for hledger 1.5; still somewhat useful but in need of update.
+You may want to read the official [manual](hledger.html#budget-report) instead.*
 
 Budgeting and forecasting allows you to keep better track of your expenses and future financial situation.
 If you write down your expectations of what your income/expenses/investment yields/etc should be, you can use them to:
