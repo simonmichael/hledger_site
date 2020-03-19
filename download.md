@@ -62,7 +62,7 @@ Here are some ways to install hledger.
 [Binary packages](#binary-packages) will install quickly,
 or you can [run our install script, or build with stack/cabal](#building-from-source).
 Please do [report](index.html#help-feedback) any trouble.
-The current release is **1.17** (look for the green badges!)
+The current release is **1.17.1** (look for the green badges!)
 Here are the [release notes](release-notes) describing the changes in each version.
 
 ## Binary packages
@@ -77,7 +77,7 @@ Here are the [release notes](release-notes) describing the changes in each vers
         <div class="distro"><a href="https://nixos.org/nix">Nix</a></div>
         <div class="notes">Linux, Mac</div>
         <div class="badges">
-          <a href="https://hydra.nixos.org/search?query=hledger"><img alt="Nix" src="https://img.shields.io/badge/Nix_package-1.17-brightgreen.svg" /></a>
+          <a href="https://hydra.nixos.org/search?query=hledger"><img alt="Nix" src="https://img.shields.io/badge/Nix_package-1.17-red.svg" /></a>
         </div>
       </td>
       <td>
@@ -98,7 +98,7 @@ Here are the [release notes](release-notes) describing the changes in each vers
         <div class="distro"><a href="https://www.docker.com/products/docker-desktop">Docker</a></div>
         <div class="notes">Linux, Mac, Windows</div>
         <div class="badges">
-          <a href="https://hub.docker.com/r/dastapov/hledger"><img alt="Docker" src="https://img.shields.io/badge/Docker_image-1.17-brightgreen.svg" /></a>
+          <a href="https://hub.docker.com/r/dastapov/hledger"><img alt="Docker" src="https://img.shields.io/badge/Docker_image-1.17-red.svg" /></a>
           <a href="https://hub.docker.com/search?q=hledger&amp;type=image&amp;sort=updated_at&amp;order=desc">more..</a>
         </div>
       </td>
@@ -134,7 +134,7 @@ Here are the [release notes](release-notes) describing the changes in each vers
       <td>
         <div class="distro">Appveyor builds</div>
         <div class="badges">
-          <a href="https://ci.appveyor.com/project/simonmichael/hledger/builds/31279595/artifacts"><img alt="Windows release"" src="https://img.shields.io/badge/Windows_zip-1.17-brightgreen.svg" /></a>
+          <a href="https://ci.appveyor.com/project/simonmichael/hledger/builds/31279595/artifacts"><img alt="Windows release"" src="https://img.shields.io/badge/Windows_zip-1.17-red.svg" /></a>
           <a href="https://ci.appveyor.com/project/simonmichael/hledger/build/artifacts"><img alt="Windows master" src="https://img.shields.io/badge/Windows_zip-master-brightgreen.svg" /></a>
       </td>
       <td>
@@ -160,7 +160,7 @@ Here are the [release notes](release-notes) describing the changes in each vers
         <div class="distro">Arch</div>
         <div class="badges">
           <!-- <a href="https://www.archlinux.org/packages/?sort=&amp;q=hledger"><img alt="Arch" src="https://repology.org/badge/version-for-repo/arch/hledger.svg" /></a> -->
-          <a href="https://www.archlinux.org/packages/?sort=&amp;q=hledger"><img alt="Arch" src="https://img.shields.io/badge/Arch_package-1.17-brightgreen.svg" /></a>
+          <a href="https://www.archlinux.org/packages/?sort=&amp;q=hledger"><img alt="Arch" src="https://img.shields.io/badge/Arch_package-1.17-red.svg" /></a>
         </div>
       </td>
       <td>
@@ -171,7 +171,7 @@ Here are the [release notes](release-notes) describing the changes in each vers
       <td>
         <div class="distro">Gentoo</div>
         <div class="badges">
-          <a href="https://gentoo.zugaina.org/Search?search=hledger"><img alt="Gentoo" src="https://img.shields.io/badge/Gentoo_package-1.17-brightgreen.svg" /></a>
+          <a href="https://gentoo.zugaina.org/Search?search=hledger"><img alt="Gentoo" src="https://img.shields.io/badge/Gentoo_package-1.17-red.svg" /></a>
         </div>
       </td>
       <td>
@@ -290,7 +290,7 @@ On Windows, hledger-ui is not available and should be omitted from the commands 
 </div>
 <div class="notes">Linux, Mac, WSL</div>
 <div class="badges">
-  <img alt="installs" src="https://img.shields.io/badge/installs_hledger-1.17-brightgreen.svg" />
+  <img alt="installs" src="https://img.shields.io/badge/installs_hledger-1.17.1-brightgreen.svg" />
 </div>
 <div class="builder-text">
   The hledger-install script is a robust install method that requires only
@@ -310,7 +310,7 @@ On Windows, hledger-ui is not available and should be omitted from the commands 
 </div>
 <div class="notes">Linux, Mac, Windows</div>
 <div class="badges">
-  <img alt="installs" src="https://img.shields.io/badge/installs_hledger-1.17-brightgreen.svg" />
+  <img alt="installs" src="https://img.shields.io/badge/installs_hledger-1.17.1-brightgreen.svg" />
 </div>
 <div class="builder-text">
 The latest version of stack (2.1.3) is likely to work best, so we recommend it.
@@ -320,7 +320,7 @@ On Windows, the 64-bit version of stack is recommended.
 </div>
 <div class="builder-command">
   stack update <br>
-  stack install --resolver=lts hledger-lib-1.17.0.1 hledger-1.17 hledger-ui-1.17 hledger-web-1.17 --silent
+  stack install --resolver=lts hledger-lib-1.17.0.1 hledger-1.17.1 hledger-ui-1.17.1 hledger-web-1.17 --silent
 </div>
 
 <div class="builder">
@@ -328,13 +328,13 @@ On Windows, the 64-bit version of stack is recommended.
 </div>
 <div class="notes">Linux, Mac, Windows</div>
 <div class="badges">
-  <img alt="installs" src="https://img.shields.io/badge/installs_hledger-1.17-brightgreen.svg" />
+  <img alt="installs" src="https://img.shields.io/badge/installs_hledger-1.17.1-brightgreen.svg" />
 </div>
 <div class="builder-text">
 </div>
 <div class="builder-command">
   cabal v2-update <br>
-  cabal v2-install hledger-1.17 hledger-web-1.17 hledger-ui-1.17
+  cabal v2-install hledger-1.17.1 hledger-web-1.17 hledger-ui-1.17.1
 </div>
 
 ### Build tips
@@ -462,9 +462,9 @@ tools (that you installed), and see the expected versions. Eg:
 
 <div class="command">
 $ hledger --version <br>
-hledger 1.17 <br>
+hledger 1.17.1 <br>
 $ hledger-ui --version <br>
-hledger-ui 1.17 <br>
+hledger-ui 1.17.1 <br>
 $ hledger web --version <br>
 hledger-web 1.17 <br>
 </div>
