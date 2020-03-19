@@ -320,7 +320,7 @@ On Windows, the 64-bit version of stack is recommended.
 </div>
 <div class="builder-command">
   stack update <br>
-  stack install --resolver=lts hledger-lib-1.17.0.1 hledger-1.17.1 hledger-ui-1.17.1 hledger-web-1.17 --silent
+  stack install --resolver=lts hledger-lib-1.17.1 hledger-1.17.1.1 hledger-ui-1.17.1.1 hledger-web-1.17.1 --silent
 </div>
 
 <div class="builder">
@@ -334,7 +334,7 @@ On Windows, the 64-bit version of stack is recommended.
 </div>
 <div class="builder-command">
   cabal v2-update <br>
-  cabal v2-install hledger-1.17.1 hledger-web-1.17 hledger-ui-1.17.1
+  cabal v2-install hledger-1.17.1.1 hledger-web-1.17.1 hledger-ui-1.17.1.1
 </div>
 
 ### Build tips
@@ -462,11 +462,11 @@ tools (that you installed), and see the expected versions. Eg:
 
 <div class="command">
 $ hledger --version <br>
-hledger 1.17.1 <br>
+hledger 1.17.1.1 <br>
 $ hledger-ui --version <br>
-hledger-ui 1.17.1 <br>
+hledger-ui 1.17.1.1 <br>
 $ hledger web --version <br>
-hledger-web 1.17 <br>
+hledger-web 1.17.1 <br>
 </div>
 
 And you could see the unit tests pass (just for fun):
