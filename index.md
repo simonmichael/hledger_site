@@ -9,7 +9,7 @@ Unable to document how you spent time ?\
 Dreading: taxes.. wasting money.. running out of cash.. ?\
 Overwhelmed by bookkeeping or complex accounting software ?\
 Wanting a complete, up-to-date model of all your finances under your control ?\
-Ready for a lean, robust, Free, private, supported accounting tool that fits your brain ?\
+Ready for a lean, robust, private, Free, supported accounting tool that fits your brain ?\
 Just wanting basic financial reports, forecasting, and budgets with minimum effort ?\
 Interested in efficiency, complex transactions, and automating your finances ?\
 Keen to see principled double entry bookkeeping finally making sense ?\
