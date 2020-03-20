@@ -255,9 +255,13 @@ Maybe these thousands of person-hours have helped you ?
 You can be one of the wise and attractive people helping to sustain and accelerate the hledger project.
     </td>
     <td>
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=5J33NLXYXCYAY"><img width=62 height=31 border=0 src="https://www.paypal.com/en_US/i/btn/x-click-but04.gif" title="Give one time or recurringly with Paypal" alt="paypal"></a><br>
+<a href="https://github.com/sponsors/simonmichael"><img border="0" src="https://img.shields.io/badge/Sponsor_on-Github-limegreen" title="Sponsor the project leader on Github" alt="github"></a><br>
+<a href="https://liberapay.com/simonmichael"><img border="0" src="https://img.shields.io/badge/Sponsor_on-Liberapay-limegreen" title="Sponsor the project leader on Github" alt="liberapay"></a><br>
+<span style="font-size:small; white-space:nowrap;">Open Collective:</span><br>
 <a href="https://opencollective.com/hledger#support"><img border="0" src="https://opencollective.com/hledger/backers/badge.svg" title="Back us with a monthly donation at Open Collective" alt="open collective backers"></a>
-<a href="https://opencollective.com/hledger#support"><img border="0" src="https://opencollective.com/hledger/sponsors/badge.svg" title="Sponsor us with a $100+ monthly donation at Open Collective and get your organization's logo on our README" alt="open collective sponsors"></a>
-<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=5J33NLXYXCYAY"><img width=62 height=31 border=0 src="https://www.paypal.com/en_US/i/btn/x-click-but04.gif" title="Give one time or recurringly with Paypal" alt="paypal"></a>
+<a href="https://opencollective.com/hledger#support"><img border="0" src="https://opencollective.com/hledger/sponsors/badge.svg" title="Sponsor us with a $100+ monthly donation at Open Collective and get your organization's logo on our README" alt="open collective sponsors"></a><br>
+<!-- <a href="https://patreon.com/simonmichael"><img border="0" src="https://img.shields.io/badge/Sponsor_on-Patreon-limegreen" title="Sponsor the project leader on Github" alt="patreon"></a><br> -->
 <!-- <a href="https://www.bountysource.com/trackers/536505-simonmichael-hledger"><img border=0 src="https://www.bountysource.com/badge/tracker?tracker_id=536505" title="Contribute or claim issue bounties via Bountysource" alt="bountysource"></a> -->
     </td>
   </tr>
