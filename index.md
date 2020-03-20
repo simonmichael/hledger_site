@@ -1,26 +1,28 @@
 <!-- stylesheet at bottom -->
 
 <div id="grabber">
-<div class="heading">
-Hi. Do any of these apply to you ?
-</div>
+<div class="heading" style="margin:0.5em;">Hi. Do any of these apply to you ?</div>
 
-Confused or vague about your finances ?\
+Vague about your finances ?\
+Not trusting your financial reports ?\
 Unable to document how you spent time ?\
-Dreading: tax season, wasteful fees, running out of cash ?\
-Overwhelmed by endless bookkeeping or complex accounting tools ?\
-Concerned about you or your software making a mistake ?\
-Unable to fully trust your financial reports ?\
-Lacking a coherent, complete picture of your finances in one place ?\
-Tired of starting over with a new accounting system every few years ?\
-Short of cash, time, focus, know-how, patience ?\
-In search of a community of helpful folks solving similar problems ?\
-Interested in efficiency, custom workflows, and automating boring work ?\
-Open to the idea of accounting being empowering and 
+Dreading: taxes.. wasting money.. running out of cash.. ?\
+Overwhelmed by bookkeeping or complex accounting software ?\
+Wanting a complete, up-to-date model of all your finances under your control ?\
+Ready for a lean, robust, Free, private, supported accounting tool that fits your brain ?\
+Just wanting basic financial reports, forecasting, and budgets with minimum effort ?\
+Interested in efficiency, complex transactions, and automating your finances ?\
+Keen to see principled double entry bookkeeping finally making sense ?\
+Seeking a community of helpful folks solving similar problems ?\
+Open to accounting being empowering and 
 <span style="color:red; font-weight:bold; font-style:italic; position:relative; top:-1px;">f</span>
 <span style="color:blue; font-weight:bold; font-style:normal; position:relative; top:2px;">u</span>
 <span style="color:darkorange; font-weight:bold; font-style:italic; position:relative; top:-1px;">n</span>
 ?
+<!-- Concerned about you or your software making a mistake ?\ -->
+<!-- Tired of starting over with a new accounting system every few years ?\ -->
+<!-- Short of cash, time, focus, know-how, patience ?\ -->
+<div class="heading" style="position:relative; top:-0.5em;">Don't Panic!</div>
 </div>
 
 # hledger
@@ -267,7 +269,7 @@ You can be one of the wise and attractive people helping to sustain and accelera
 #grabber {
   text-align:center;
   padding:1em 1em 0 1em;
-  border:thin solid red;
+  border:2px solid limegreen;
   border-radius:8px; 
   margin:1em;
 }
