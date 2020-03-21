@@ -4,9 +4,7 @@ Here we'll give a quick hledger-oriented intro to some useful accounting concept
 (continuing with the journal file from [Basic concepts, hledger add](basics.html)).
 At the end, there's a collection of useful links to learn more.
 
-## Accounting concepts
-
-### Assets, Liabilities and Equity
+## Assets, Liabilities and Equity
 
 Accounting describes the status of a business, person or other entity at any point in time in terms of three amounts:
 
@@ -23,7 +21,7 @@ Another way to say it: what the entity owns is funded either by debt or by the c
 These three are called the Balance Sheet accounts. Their balances summarise the overall financial status at some point in time.
 
 
-### Revenue and Expenses
+## Revenue and Expenses
 
 Two more amounts are used to describe changes in the above during a given period:
 
@@ -40,7 +38,7 @@ outflows during that period (which will affect the Assets and
 Liabilities balances).
 
 
-### Chart of Accounts
+## Chart of Accounts
 
 Five numbers do not give a lot of detail. If you want to know what
 portion of expenses went to buy food, you could add up just the
@@ -107,7 +105,7 @@ In others, the tree structure is encoded as decimal account numbers, something l
 5300   supplies
 ```
 
-### A digression: subaccounts in hledger
+## A digression: subaccounts in hledger
 
 With hledger, tree structure is implied by writing account names like `ACCOUNT:SUBACCOUNT`.
 Try it: edit your journal file and change the account names like so:
