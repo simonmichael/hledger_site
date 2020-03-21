@@ -146,7 +146,33 @@ Income Statement 2020-01-01-2020-03-20
 <!-- - tracking invoices -->
 <!-- - building financial and time clarity and serenity -->
 
-Read on to learn more. Or, dive in to, uh, the other **[quick start](start.html)**.
+All hledger docs are linked in the sidebar to your left;
+note that it scrolls, and expands to show the current page's table of contents.
+ABOUT, TUTORIALS, and MANUALS are official docs, expected to be up to date;
+COOKBOOK docs are not.
+
+Next, depending on how you like to learn, you could:
+
+- Jump to interesting tutorials or cookbook topics in the sidebar
+- Read the hledger manual's **[intro](hledger.html#hledger)** 
+  and **[COMMON TASKS](hledger.html#common-tasks)**
+- Skim or read the manuals in full:\
+  the **[hledger](hledger.html)**,
+  **[hledger-ui](hledger-ui.html)**,
+  **[hledger-web](hledger-web.html)** tools and
+  **[journal](journal.html)**,
+  **[csv](csv.html)**,
+  **[timeclock](timeclock.html)**,
+  **[timedot](timedot.html)** file formats
+- Watch **[videos](videos.html)**, such as the "hledger fan" lessons on youtube
+- Browse the hledger-related 
+  **[blog posts](https://plaintextaccounting.org/#articles-blog-posts)**
+  on plaintextaccounting.org\
+  (some of the others can be helpful too).
+- Look at **[example files](https://github.com/simonmichael/hledger/tree/master/examples)**
+- Introduce yourself in our chat room, or browse the mail list archive
+  (**[below](#help)**)
+- Read on...
 
 ## hledger is...
 
