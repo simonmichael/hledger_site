@@ -149,8 +149,9 @@ Income Statement 2020-01-01-2020-03-20
 <!-- - tracking invoices -->
 <!-- - building financial and time clarity and serenity -->
 
-All hledger docs are linked in the sidebar to your left;
-note that it scrolls, and expands to show the current page's table of contents.
+All hledger docs are linked in the sidebar to your left
+(or on small screens, in the drop-down menu at top left).
+Note that it scrolls, and expands to show the current page's table of contents.
 ABOUT, TUTORIALS, and MANUALS are official docs, expected to be up to date;
 COOKBOOK docs are not.
 
