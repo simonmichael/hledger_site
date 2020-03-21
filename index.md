@@ -92,7 +92,10 @@ Here's the most basic workflow:
 </td>
 <td>
 
-**Step 2.** Run hledger to report balances, activity, averages (and much more):
+**Step 2.** Run hledger in a [terminal](https://itconnect.uw.edu/learn/workshops/online-tutorials/web-publishing/what-is-a-terminal/)
+to report [balances](https://en.wikipedia.org/wiki/Balance_sheet#Personal), 
+[income and expenses](https://en.wikipedia.org/wiki/Income_statement), 
+and more:
 ```shell
 $ hledger bs
 Balance Sheet 2020-03-20
