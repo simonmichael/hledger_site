@@ -26,8 +26,7 @@ hledger
 
    Download/Install <download>
    Quick Start <start>
-   accounting-concepts
-   accounting-links
+   accounting
 
 .. toctree::
    :caption: User manuals
