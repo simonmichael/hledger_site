@@ -1,36 +1,9 @@
-# Quick Start
+# Basic concepts, hledger add
 
-[Download/Install](download.html) hledger.
-
-Note the sidebar to your left. You can find everything from there.
-Note that it scrolls, and expands to show the current page's table of contents.
-
-Now choose your path to hledger mastery - any will do:
-
-## Speedy - let's get it done
-
-- Read the start of the **[hledger manual](hledger.html)** - the intro and COMMON TASKS sections.
-- Skim the rest of the hledger manual - at least the table of contents, so you'll have an idea of what's there.
-- Also skim the **[journal manual](journal.html)**, describing hledger's main data format and data model.
-- Maybe continue with demo.hledger or jump to topics of interest in the Cookbook.
-
-## Browse - let's read blogs
-
-- Browse the **[blog posts](https://plaintextaccounting.org/#articles-blog-posts)**,
-  over on plaintextaccounting.org. Look for the hledger-related ones,
-  though some of the others can be helpful too.
-
-## Gentle - let's watch videos
-
-- Proceed to the **[Videos](videos.html)**.
-  The "hledger fan" channel linked there is a series of easy bite-sized introductory videos.
-
-## Steps - tell me exactly what to do
-
-- Read on!
-
-Here you can learn hledger (and a little double-entry bookkeeping)
-by practicing, in small hands-on steps. You'll need:
+Here you can learn a simple hledger workflow,
+using the terminal and hledger's [add](hledger.html#add) command,
+by practicing in small hands-on steps. 
+You'll need:
 
 1. A little familiarity with
    the [command](http://tutorial.djangogirls.org/en/intro_to_command_line/index.html)
