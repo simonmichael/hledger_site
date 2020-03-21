@@ -1,4 +1,4 @@
-# Basic concepts, hledger add
+# Basic concepts; hledger add
 
 Here you can learn a simple hledger workflow,
 using the terminal and hledger's [add](hledger.html#add) command,
