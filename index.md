@@ -1,9 +1,9 @@
 <!-- stylesheet at bottom -->
 
 <div id="grabber">
-<div class="heading" style="margin:0.5em;">Hi. Do any of these apply to you ?</div>
+<div class="heading" style="margin:0.5em;">Are you...</div>
 
-Vague about your finances ?\
+Vague about money ?\
 Not trusting your financial reports ?\
 Unable to document how you spent time ?\
 Dreading: taxes.. wasting money.. running out of cash.. ?\
@@ -15,20 +15,14 @@ Interested in efficiency, complex transactions, and automating your finances ?\
 Keen to see principled double entry bookkeeping finally making sense ?\
 Seeking a community of helpful folks solving similar problems ?\
 Open to accounting being empowering and 
-<span style="color:red; font-weight:bold; font-style:italic; position:relative; top:-1px;">f</span>
-<span style="color:blue; font-weight:bold; font-style:normal; position:relative; top:2px;">u</span>
-<span style="color:darkorange; font-weight:bold; font-style:italic; position:relative; top:-1px;">n</span>
-?
-<!-- Concerned about you or your software making a mistake ?\ -->
-<!-- Tired of starting over with a new accounting system every few years ?\ -->
-<!-- Short of cash, time, focus, know-how, patience ?\ -->
+<span style="color:red; font-weight:bold; font-style:italic; position:relative; top:-1px;">f</span><span style="color:blue; font-weight:bold; font-style:normal; position:relative; top:2px;">u</span><span style="color:darkorange; font-weight:bold; font-style:italic; position:relative; top:-1px;">n</span> ?
 <div class="heading" style="position:relative; top:-0.5em;">Don't Panic!</div>
 </div>
 
 # hledger
-
 <div id="tagline">
-and plain text accounting<br>
+and <span style="font-size:100%; font-weight:bold;">plain text accounting</span>
+<br>
 are here to help!
 </div>
 <!-- Easy plain text accounting. -->
@@ -38,59 +32,111 @@ are here to help!
 <!-- Robust, precise, plain text accounting. -->
 <!-- Plain text accounting for everyone. -->
 <!-- Making accounting fun for techies. -->
+<!-- save time: drop these for now: -->
+<!-- <img id="coins" src="_static/images/coins2-248.png"  style="width:120px; position:absolute; margin:3em 2em;" /> -->
+<!-- <img id="coins" src="_static/images/coins2-248.png"  style="width:120px; position:absolute; margin:1em 2em;" /> -->
 
-<img id="coins" src="_static/images/coins2-248.png" 
-     style="width:33%; float:right; margin:1em 1em 0 1em;" />
+<span id="leadingword">hledger</span> is a robust, cross-platform accounting tool,
+freely licensed under GNU GPLv3.
+You can use it to track time, money, investments, cryptocurrencies, inventory and more,
+using the command line, terminal, or a web browser.
 
-<span id="leadingword">hledger</span>
-is a robust, efficient accounting program,
-for tracking money, time, or other commodities,
-on unix, mac and windows,
-with command line, terminal and web interfaces.
 If you know a little double entry accounting,
-it can be a fast, dependable, secure alternative to applications like
-Quicken, Xero, or GnuCash.
-(And if you don't, it is a great way to learn.)
+hledger can be a fast, dependable, secure alternative to applications like
+Quicken, Xero, YNAB or GnuCash.
+And if you don't, it is a great way to learn!
 
-hledger is one of the leading implementations of [plain text accounting](http://plaintextaccounting.org),
-and is a modern and largely compatible reimplementation of [Ledger](https://ledger-cli.org).
-Compared to [the others](https://plaintextaccounting.org/#software), 
-hledger is robust, consistent, and intuitive, with excellent documentation.
+hledger is one of the leading [plain text accounting](http://plaintextaccounting.org) apps, 
+known for their plain text data formats, flexibility, and simplicity.
+There is an enthusiastic and growing community practising this way of accounting,
+which can be quite educational and enjoyable.
 
-hledger is cross platform GNU GPLv3 free software, written in Haskell.
-The project is led by Simon Michael, with 100+ contributors.
-I've been building and relying on hledger since 2007;
-I hope you too will find it helpful in mastering your time and money.
+Compared to [the others](http://plaintextaccounting.org#software), hledger is robust, consistent, and intuitive, with a high level of documentation and maintenance.
+It is a high quality rewrite, in [Haskell](https://haskell.org), of the pioneering [Ledger](https://ledger-cli.org).
+hledger has been created by [Simon Michael](http://joyful.com) and 120+ contributors.
+I've been building and relying on it continuously    since 2007;
+I hope you too will find it helpful in mastering your time and money!
 
-<div class="row" style="text-align:center; margin-bottom:24px;">
-<a href="download.html"><button type="button" class="btn btn-primary" title="All the ways to install hledger. Get it now!">Download</button></a>
-&nbsp;
+## Quick Start
+
+<div style="text-align:center; margin:1em;">
+<a href="download.html"><button type="button" class="btn btn-primary" title="All the ways to install hledger. Get it now!">Download/Install</button></a>
 <a href="https://github.com/simonmichael/hledger"><button type="button" class="btn btn-neutral" style="padding:4px;" title="hledger on Github. Star us!"><img width="142" src="https://img.shields.io/github/stars/simonmichael/hledger.svg?style=for-the-badge&logo=GitHub&label=Github&color=lightgrey"></button></a>
 </div>
 
+You can start with hledger very simply, and get more sophisticated as you learn more about double-entry accounting.
+Here's the most basic workflow:
 
-## Overview
+<table>
+<tr>
+<td style="padding-right:1em;">
 
-Here's the basic workflow when using hledger:
+**Step 1.** Record transactions in a [plain text file](journal.html) (one way or another). For example:
+```journal
+; $HOME/.hledger.journal (or $LEDGER_FILE)
 
-**Step 1:**
-Record your transactions in a [plain text file](journal).
-(Use hledger's interactive assistant.. the web interface.. any text editor.. a shell alias.. CSV/OFX import..)
-<!-- using a simple format. -->
-<!-- Do it daily, or all at once. -->
-<!-- Record what you know; you'll get better at it. -->
+2020-01-01 opening balances
+    assets:checking         $1234
+    equity
 
-**Step 2:**
-Ask hledger about your accounts.. transactions.. balances.. currencies.. monthly averages.. budgets.. market values..
-You can start very simply, and get more sophisticated as you learn more about double-entry accounting.
+2020-03-15 client payment
+    assets:checking         $2000
+    income:consulting
 
-There is an enthusiastic and growing community practising this way of accounting.
-which can be quite educational and enjoyable.
-If you'd like more background, 
-we have collected many useful resources at plaintextaccounting.org (see link above).
+2020-03-20 Sprouts
+    expenses:food:groceries  $100
+    assets:cash               $40
+    assets:checking
+```
 
-Read on for more about hledger, or if you're keen to get going,
-**[download](download)** it and start the **[tutorial](basics-tutorial)** now!
+</td>
+<td>
+
+**Step 2.** Run hledger to report balances, activity, averages (and much more):
+```shell
+$ hledger bs
+Balance Sheet 2020-03-20
+
+             || 2020-03-20 
+=============++============
+ Assets      ||            
+-------------++------------
+ assets      ||      $3134 
+   cash      ||        $40 
+   checking  ||      $3094 
+-------------++------------
+             ||      $3134 
+=============++============
+ Liabilities ||            
+-------------++------------
+-------------++------------
+             ||            
+=============++============
+ Net:        ||      $3134 
+
+$ hledger is -M
+Income Statement 2020-01-01-2020-03-20
+
+                         || Jan  Feb    Mar 
+=========================++=================
+ Revenues                ||                 
+-------------------------++-----------------
+ income:consulting       ||   0    0  $2000 
+-------------------------++-----------------
+                         ||   0    0  $2000 
+=========================++=================
+ Expenses                ||                 
+-------------------------++-----------------
+ expenses:food:groceries ||   0    0   $100 
+-------------------------++-----------------
+                         ||   0    0   $100 
+=========================++=================
+ Net:                    ||   0    0  $1900 
+```
+
+</td>
+</tr>
+</table>
 
 <!-- I use it for: -->
 
@@ -100,7 +146,9 @@ Read on for more about hledger, or if you're keen to get going,
 <!-- - tracking invoices -->
 <!-- - building financial and time clarity and serenity -->
 
-## Features
+Read on to learn more. Or, dive in to, uh, the other **[quick start](start.html)**.
+
+## hledger is...
 
 ### Free software
 
@@ -108,16 +156,12 @@ Read on for more about hledger, or if you're keen to get going,
 hledger is Free software, created by [Simon Michael](http://joyful.com)
 and released under GNU GPLv3+.
 
-I have been actively developing and using hledger since 2007,
-together with 80+ other committers and an unknown number of usually happy-sounding users.
-
 ### inspired by Ledger
 
 hledger is a Haskell [reimplementation](faq.html#how-why-was-hledger-started)
 of the excellent [Ledger](http://ledger-cli.org).
 It remains substantially compatible with Ledger, and if you wish you can keep your data compatible with both.
-Read more about the [differences](faq.html#ledger) in the FAQ.
-
+Read more about the [differences](faq.html#ledger) in our FAQ.
 
 ### a command-line tool
 
@@ -182,7 +226,7 @@ applications.
 ### fully documented
 
 We practice documentation-driven development. 
-Every feature must be **well documented**, 
+Every feature must be well documented,
 and getting started must be easy.
 
 ### focussed on serving users
@@ -201,7 +245,7 @@ accounting.
   <tr>
     <td>Chat:</td>
     <td>
-      <a href="http://irc.hledger.org">#hledger</a> on Freenode IRC (<a href="http://matrix.hledger.org">#freenode_#hledger:matrix.org</a> on Matrix)
+      <a href="http://irc.hledger.org">#hledger</a> on Freenode IRC (<a href="http://matrix.hledger.org">#freenode_#hledger:matrix.org</a> via Matrix)
     </td>
   </tr>
   <tr>
@@ -258,7 +302,7 @@ You can be one of the wise and attractive people helping to sustain and accelera
 <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=5J33NLXYXCYAY"><img width=62 height=31 border=0 src="https://www.paypal.com/en_US/i/btn/x-click-but04.gif" title="Give one time or recurringly with Paypal" alt="paypal"></a><br>
 <a href="https://github.com/sponsors/simonmichael"><img border="0" src="https://img.shields.io/badge/Sponsor_on-Github-limegreen" title="Sponsor the project leader on Github" alt="github"></a><br>
 <a href="https://liberapay.com/simonmichael"><img border="0" src="https://img.shields.io/badge/Sponsor_on-Liberapay-limegreen" title="Sponsor the project leader on Github" alt="liberapay"></a><br>
-<span style="font-size:small; white-space:nowrap;">Open Collective:</span><br>
+<div style="margin-top:0.5em; font-size:small; white-space:nowrap;">Open Collective:</div>
 <a href="https://opencollective.com/hledger#support"><img border="0" src="https://opencollective.com/hledger/backers/badge.svg" title="Back us with a monthly donation at Open Collective" alt="open collective backers"></a>
 <a href="https://opencollective.com/hledger#support"><img border="0" src="https://opencollective.com/hledger/sponsors/badge.svg" title="Sponsor us with a $100+ monthly donation at Open Collective and get your organization's logo on our README" alt="open collective sponsors"></a><br>
 <!-- <a href="https://patreon.com/simonmichael"><img border="0" src="https://img.shields.io/badge/Sponsor_on-Patreon-limegreen" title="Sponsor the project leader on Github" alt="patreon"></a><br> -->
@@ -268,12 +312,14 @@ You can be one of the wise and attractive people helping to sustain and accelera
 </table>
 </div>
 
+
+
 <style>
 
 #grabber {
   text-align:center;
   padding:1em 1em 0 1em;
-  border:2px solid limegreen;
+/*  border:2px solid limegreen; */
   border-radius:8px; 
   margin:1em;
 }
@@ -288,10 +334,13 @@ h1 {
   font-style: italic;
   text-align:center;
   margin: 0.5em 0 0;
+  display:block;
 }
 
 h2 { 
-  margin-top:1em; 
+  text-align:center;
+  font-size: 2em;
+  margin-top:2em; 
 }
 
 /* h3 { font-size:large; margin-bottom:.2em; } */
@@ -300,7 +349,7 @@ h2 {
   font-size:xx-large;
   font-style:italic; 
   text-align:center;
-  margin-bottom:1em;
+  margin:0 0 1em;
 }
 
 #leadingword {
@@ -310,12 +359,12 @@ h2 {
 }
 
 #help {
-  background-color:#fdd;
+  background-color:lavenderblush;
 }
 
 #help tr { 
-  border-top:thin solid #faa; 
-  border-bottom:thin solid #faa; 
+  border-top:   thin solid lightpink; 
+  border-bottom:thin solid lightpink; 
   vertical-align:top; 
 }
 #help td:nth-child(1) { 
