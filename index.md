@@ -61,7 +61,7 @@ I hope you too will find it helpful in mastering your time and money!
 
 <div style="text-align:center; margin:1em;">
 <a href="download.html"><button type="button" class="btn btn-primary" title="All the ways to install hledger. Get it now!">Download/Install</button></a>
-<a href="https://github.com/simonmichael/hledger"><button type="button" class="btn btn-neutral" style="padding:4px;" title="hledger on Github. Star us!"><img width="142" src="https://img.shields.io/github/stars/simonmichael/hledger.svg?style=for-the-badge&logo=GitHub&label=Github&color=lightgrey"></button></a>
+<a href="https://github.com/simonmichael/hledger"><button type="button" class="btn btn-neutral" style="padding:4px;" title="hledger code and issue tracker on Github. Star us!"><img width="142" src="https://img.shields.io/github/stars/simonmichael/hledger.svg?style=for-the-badge&logo=GitHub&label=Github&color=lightgrey"></button></a>
 </div>
 
 You can start with hledger very simply, and get more sophisticated as you learn more about double-entry accounting.
@@ -149,19 +149,18 @@ Income Statement 2020-01-01-2020-03-20
 <!-- - tracking invoices -->
 <!-- - building financial and time clarity and serenity -->
 
-All hledger docs are linked in the sidebar to your left
-(or on small screens, in the drop-down menu at top left).
-Note that it scrolls, and expands to show the current page's table of contents.
-ABOUT, TUTORIALS, and MANUALS are official docs, expected to be up to date;
-COOKBOOK docs are not.
+Note the sidebar to your left (or on small screens, the drop-down menu at top left);
+it scrolls, expands, and all hledger docs can be found there.
+ABOUT, TUTORIALS, and MANUALS are expected to be up to date;
+COOKBOOK docs may not be.
 
 Next, depending on how you like to learn, you could:
 
 - Jump to interesting tutorials or cookbook topics in the sidebar
 - Read the hledger manual's **[intro](hledger.html#hledger)** 
   and **[COMMON TASKS](hledger.html#common-tasks)**
-- Skim or read the manuals in full:\
-  the **[hledger](hledger.html)**,
+- Skim all manuals for an overview: the
+  **[hledger](hledger.html)**,
   **[hledger-ui](hledger-ui.html)**,
   **[hledger-web](hledger-web.html)** tools and
   **[journal](journal.html)**,
@@ -173,7 +172,7 @@ Next, depending on how you like to learn, you could:
   **[blog posts](https://plaintextaccounting.org/#articles-blog-posts)**
   on plaintextaccounting.org\
   (some of the others can be helpful too).
-- Look at **[example files](https://github.com/simonmichael/hledger/tree/master/examples)**
+- Look at lots of **[example files](https://github.com/simonmichael/hledger/tree/master/examples)**
 - Introduce yourself in our chat room, or browse the mail list archive
   (**[below](#help)**)
 - Read on...
