@@ -96,10 +96,10 @@ hledger
    :caption: Contribute
    :maxdepth: 3
 
-   Dev README <README>
-   ROADMAP
-   CONTRIBUTING
-   contributors
+   README <README>
+   ROADMAP <ROADMAP>
+   CONTRIBUTING <CONTRIBUTING>
+   CREDITS <CREDITS>
 
 .. toctree::
    :caption: Sandbox
