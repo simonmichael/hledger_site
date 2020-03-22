@@ -1,30 +1,23 @@
-# Basic concepts; hledger add
+# Getting started, with hledger add
 
-Here you can learn a simple hledger workflow,
-using the terminal and hledger's [add](hledger.html#add) command,
-by practicing in small hands-on steps. 
-You'll need:
+Here we'll walk you through a simple way of using hledger, using the
+built-in [add](hledger.html#add) command. This requires only
+command-line hledger, and works on all platforms with no further
+setup. 
 
-1. A little familiarity with
-   the [command](http://tutorial.djangogirls.org/en/intro_to_command_line/index.html)
-   [line](http://write.flossmanuals.net/command-line/introduction).
-   Or, the ability to ask for help on IRC.
+We'll also introduce some basic hledger concepts. So even if you don't
+plan on using hledger add, it might be worth reading through this
+quickly.
 
-2. hledger. [Download](download.html) and install it if you haven't already.
-
-You'll learn the most if you master each step, in order.  Most
-steps give you a task with a clear goal; if not, your task is to run
-the examples and understand them.
-
-If you get stuck, find a problem, or have feedback, please report it on the
-[IRC channel or mail list](index.html#help-feedback),
-or send a pull request for this page.
-
-Let's get started!
+[Download/install](download.html) hledger and let's get started!
 
 ### Check your hledger installation
 
-Get a command prompt, and run hledger to check the version. It should be reasonably [up to date](release-notes.html). These exercises were last tested with this version:
+Open a
+[terminal](https://itconnect.uw.edu/learn/workshops/online-tutorials/web-publishing/what-is-a-terminal/)
+or command prompt, and run hledger to check the version. It should be
+reasonably [up to date](release-notes.html). These exercises were last
+tested with this version:
 
 ```shell
 $ hledger --version
