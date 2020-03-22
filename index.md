@@ -413,8 +413,6 @@ h2 {
   width:50%;
 }
 
-a { white-space:nowrap; }
-
 .highslide img {max-width:200px; float:right; margin:0 0 1em 1em;}
 .highslide-caption {color:white; background-color:black;}
 
