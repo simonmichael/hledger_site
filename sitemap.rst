@@ -22,13 +22,6 @@ hledger
    release-notes
 
 .. toctree::
-   :caption: Tutorials
-   :maxdepth: 3
-
-   basics
-   accounting
-
-.. toctree::
    :caption: Manuals
    :maxdepth: 3
 
@@ -39,6 +32,13 @@ hledger
    csv
    timeclock
    timedot
+
+.. toctree::
+   :caption: Tutorials
+   :maxdepth: 3
+
+   basics
+   accounting
 
 .. toctree::
    :caption: Cookbook: Managing data
