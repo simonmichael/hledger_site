@@ -2,6 +2,7 @@
 
 [hledger-web](hledger-web.html) is hledger's web browser-based UI.
 It's simple but serviceable, and probably the easiest way to get started with hledger.
+Eg on windows, you can download and unpack hledger.zip and double click on hledger-web.exe.
 Screenshots below!
 
 ### Check your installation
@@ -149,19 +150,20 @@ and a chart of that total over time:
 Press `j`, or click `Journal`, to return to the General Journal page showing everything:
 [![](/_static/web/Screen%20Shot%202020-03-22%20at%206.22.53%20PM.png)](/_static/web/Screen%20Shot%202020-03-22%20at%206.22.53%20PM.png)
 
-Press `?`, or click the `?` button near the search field, to show a quick help popup
-(more help is available in the [hledger-web](hledger-web.html) and [hledger](hledger.html) manuals, of course):
-[![](/_static/web/Screen%20Shot%202020-03-22%20at%206.23.44%20PM.png)](/_static/web/Screen%20Shot%202020-03-22%20at%206.23.44%20PM.png)
-
-Let's try filtering the transactions with a [query](hledger.html#queries).
+Let's try filtering these transactions with a [query](hledger.html#queries).
 Type `food` in the search field and press `RETURN`. 
 Now we see just the transaction involving a `food` account:
 [![](/_static/web/Screen%20Shot%202020-03-22%20at%206.24.19%20PM.png)](/_static/web/Screen%20Shot%202020-03-22%20at%206.24.19%20PM.png)
 
-Click the `x` button or `Journal` or press `j` to show the full results again.
+Click the `x` button or click `Journal` or press `j` to see all data again.
+
+You can see quick help by pressing `?`, or clicking the `?` button near the search field.
+More help is available in the [hledger-web](hledger-web.html) and other manuals, of course:
+[![](/_static/web/Screen%20Shot%202020-03-22%20at%206.23.44%20PM.png)](/_static/web/Screen%20Shot%202020-03-22%20at%206.23.44%20PM.png)
 
 That's mostly it!
 There is a bit more you can do with
 [permissions](hledger-web.html#permissions) and
 [enabling edit/upload/download access](hledger-web.html#editing-uploading-downloading),
-and a bunch of startup flags to help with serving on the web.
+and a bunch of 
+[startup options](hledger-web.html#options) to help with serving on the web.
