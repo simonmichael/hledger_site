@@ -37,8 +37,9 @@ hledger
    :caption: Tutorials
    :maxdepth: 3
 
-   basics
+   add
    accounting
+   web
 
 .. toctree::
    :caption: Cookbook: Managing data

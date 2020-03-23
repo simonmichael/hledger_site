@@ -1,4 +1,4 @@
-# Accounting concepts; hledger account hierarchy
+# Accounting concepts; hledger's account hierarchy
 
 Here we'll give a quick hledger-oriented intro to some useful accounting concepts
 (continuing with the journal file from [Basic concepts, hledger add](basics.html)).

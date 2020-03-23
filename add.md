@@ -1,4 +1,4 @@
-# Getting started, with hledger add
+# Easy workflow #1: hledger add
 
 Here we'll walk you through a simple way of using hledger, using the
 built-in [add](hledger.html#add) command. This requires only
@@ -11,14 +11,13 @@ quickly.
 
 [Download/install](download.html) hledger and let's get started!
 
-### Check your hledger installation
+### Check your installation
 
 Open a
 [terminal](https://itconnect.uw.edu/learn/workshops/online-tutorials/web-publishing/what-is-a-terminal/)
-or command prompt, and run hledger to check the version. It should be
-reasonably [up to date](release-notes.html). These exercises were last
-tested with this version:
-
+or command prompt, and check your hledger version. 
+It should be reasonably [up to date](release-notes.html).
+This doc was last tested with:
 ```shell
 $ hledger --version
 hledger 1.9
