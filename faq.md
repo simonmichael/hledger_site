@@ -535,3 +535,19 @@ One way to fix: in iTerm2 do Preferences -> Profiles -> your current profile -> 
 https://www.reddit.com/r/plaintextaccounting/comments/cr5jjk/help_set_ledger_file_environment_variable_in/
 
 -->
+## How do I display a decimal mark different from the one in the input file ?
+
+You can't yet do this with hledger:
+<https://github.com/simonmichael/hledger/issues/793#issuecomment-603994809>
+
+A workaround for now:
+```shell
+$ hledger -f a.j print
+2020-01-01
+    (a)       $1.000,23
+
+$ hledger -f a.j print | sed 's/\./~/g; s/,/./g; s/~/,/g'
+2020-01-01
+    (a)       $1,000.23
+
+```
