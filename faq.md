@@ -535,19 +535,40 @@ One way to fix: in iTerm2 do Preferences -> Profiles -> your current profile -> 
 https://www.reddit.com/r/plaintextaccounting/comments/cr5jjk/help_set_ledger_file_environment_variable_in/
 
 -->
-## How do I display a decimal mark different from the one in the input file ?
+## How do I display a decimal separator different from the one in the input file ?
 
-You can't yet do this with hledger:
+It's not yet easy to do this with hledger:\
 <https://github.com/simonmichael/hledger/issues/793#issuecomment-603994809>
 
-A workaround:
+There's just one special case where it works, by a quirk of the implementation: 
+if in the journal you use space as thousands separator, comma as decimal separator, 
+and no commodity directive, hledger will print numbers with period as decimal separator:
+```journal
+; journal
+2020-01-01
+    (a)       $1 234,56
+```
 ```shell
 $ hledger print
 2020-01-01
-    (a)       $1.000,23
+    (a)       $1 234.56
+
+```
+
+Here's a more general workaround, post-processing the output with sed.
+Adjust if needed:
+```journal
+; journal
+2020-01-01
+    (a)       $1.234,56
+```
+```shell
+$ hledger print
+2020-01-01
+    (a)       $1.234,56
 
 $ hledger print | sed 's/\./~/g; s/,/./g; s/~/,/g'
 2020-01-01
-    (a)       $1,000.23
+    (a)       $1,234.56
 
 ```
