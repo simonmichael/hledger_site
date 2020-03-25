@@ -540,13 +540,13 @@ https://www.reddit.com/r/plaintextaccounting/comments/cr5jjk/help_set_ledger_fil
 You can't yet do this with hledger:
 <https://github.com/simonmichael/hledger/issues/793#issuecomment-603994809>
 
-A workaround for now:
+A workaround:
 ```shell
-$ hledger -f a.j print
+$ hledger print
 2020-01-01
     (a)       $1.000,23
 
-$ hledger -f a.j print | sed 's/\./~/g; s/,/./g; s/~/,/g'
+$ hledger print | sed 's/\./~/g; s/,/./g; s/~/,/g'
 2020-01-01
     (a)       $1,000.23
 
