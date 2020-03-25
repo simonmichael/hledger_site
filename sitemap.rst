@@ -38,8 +38,9 @@ hledger
    :maxdepth: 3
 
    add
-   accounting
    web
+   ui
+   accounting
 
 .. toctree::
    :caption: Cookbook: Managing data
