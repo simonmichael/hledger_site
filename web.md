@@ -66,6 +66,7 @@ For normal local use, we can ignore them all.
 Normally, you start hledger-web by running `hledger-web` in a
 terminal, with no arguments. Browsing to the executable file and
 double-clicking on it can also work.
+Normally, this will start the web app, making it accessible only from your local machine.
 
 For this tutorial, to follow the steps/screenshots below and avoid disturbing any
 existing data, we'll start hledger-web with a new temporary journal file:
@@ -162,8 +163,10 @@ More help is available in the [hledger-web](hledger-web.html) and other manuals,
 [![](/_static/web/Screen%20Shot%202020-03-22%20at%206.23.44%20PM.png)](/_static/web/Screen%20Shot%202020-03-22%20at%206.23.44%20PM.png)
 
 That's mostly it!
-There is a bit more you can do with
-[permissions](hledger-web.html#permissions) and
-[enabling edit/upload/download access](hledger-web.html#editing-uploading-downloading),
-and a bunch of 
-[startup options](hledger-web.html#options) to help with serving on the web.
+Although there are basically just two screens, 
+with hledger's full [query language](hledger.html#queries) available
+(and with the [general flags](hledger.html#general-options) available on the command line),
+you can do a surprising amount with hledger-web.
+You can also change
+[permissions](hledger-web.html#permissions) to enable
+[edit/upload/download access](hledger-web.html#editing-uploading-downloading).
