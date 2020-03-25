@@ -228,5 +228,19 @@ To close it, press `?` again, or `ESC`.
 [![](/_static/ui/Screen%20Shot%202020-03-24%20at%203.20.27%20PM.png)](/_static/ui/Screen%20Shot%202020-03-24%20at%203.20.27%20PM.png)
 
 While the help dialog is open, you can press `p`, `m` or `i`
-to hledger-ui's reference manual as plain text, a man page, or GNU Info hypertext.
-(Convenient if you can't access the web version of the [hledger-ui](hledger-ui.html) manual.)
+to see the [hledger-ui](hledger-ui.html) reference manual in several offline formats
+(useful if you can't access the web version).
+
+The formats are: plain text (`p`), using your $PAGER for scrolling if possible:
+
+[![](/_static/ui/Screen%20Shot%202020-03-24%20at%205.46.40%20PM.png)](/_static/ui/Screen%20Shot%202020-03-24%20at%205.46.40%20PM.png)
+
+Unix man (`m`):
+
+[![](/_static/ui/Screen%20Shot%202020-03-24%20at%205.46.57%20PM.png)](/_static/ui/Screen%20Shot%202020-03-24%20at%205.46.57%20PM.png)
+
+or GNU info (`i`):
+
+[![](/_static/ui/Screen%20Shot%202020-03-24%20at%205.47.14%20PM.png)](/_static/ui/Screen%20Shot%202020-03-24%20at%205.47.14%20PM.png)
+
+Press `q` to return to hledger-ui.
