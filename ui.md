@@ -59,7 +59,7 @@ $ echo > tmp.journal
 $ hledger-ui -f tmp.journal
 ```
 
-### A tour of the terminal UI
+### A quick tour
 
 With an empty journal, there's not much to see. But we can see: the
 name of the journal file (`tmp.journal`) and the screen (`account balances`)

@@ -95,7 +95,7 @@ And, your web browser should open, showing the UI.
 If not, open it yourself and browse to the url shown,
 ie http://127.0.0.1:5000 (and [let us know](index.html#help)).
 
-### A tour of the web UI
+### A quick tour
 
 <!-- highslide zooming:
 <a href="/_static/web/Screen%20Shot%202020-03-22%20at%206.10.29%20PM.png" class="highslide" onclick="return hs.expand(this)"><img src="/_static/web/Screen%20Shot%202020-03-22%20at%206.10.29%20PM.png" /></a>
