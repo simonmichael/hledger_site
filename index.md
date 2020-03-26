@@ -315,9 +315,6 @@ accounting.
     <td>
       <a href="http://irc.hledger.org">#hledger</a> on Freenode IRC
       (or via Matrix: <a href="http://matrix.hledger.org">#freenode_#hledger:matrix.org</a>)
-      <br>
-      <a href="http://irc.hledger.org">#plaintextaccounting</a>
-      (or <a href="https://matrix.to/#/#freenode_#hledger:matrix.org">#freenode_#plaintextaccounting:matrix.org</a>)
     </td>
   </tr>
   <tr>
@@ -354,6 +351,21 @@ accounting.
     <td>Other:</td>
     <td>
       <a href="mailto:simon@joyful.com">simon@joyful.com</a>
+    </td>
+  </tr>
+  <tr>
+    <td>See also:</td>
+    <td>
+      <a href="https://plaintextaccounting.org">plaintextaccounting.org</a>
+      <br>
+      <a href="http://irc.hledger.org">#plaintextaccounting</a> chat
+      (or <a href="https://matrix.to/#/#freenode_#hledger:matrix.org">#freenode_#plaintextaccounting:matrix.org</a>)
+      <br>
+      <a href="https://www.ledger-cli.org/docs.html">Ledger CLI docs</a>
+      <br>
+      <a href="http://furius.ca/beancount/doc/index">Beancount docs</a>
+      <br>
+      <a href="https://twitter.com/LedgerTips">@LedgerTips tweets</a>
     </td>
   </tr>
 </table>

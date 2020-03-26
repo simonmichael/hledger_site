@@ -11,7 +11,6 @@ hledger
    Home <index>
    faq
    videos
-   seealso
    Download/Install <download>
    release-notes
 
