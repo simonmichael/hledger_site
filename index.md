@@ -1,5 +1,6 @@
 <!-- stylesheet at bottom -->
 
+<!--
 <div id="grabber">
 <div class="heading" style="margin:0.5em;">Are you...</div>
 
@@ -35,26 +36,63 @@ are here to help!
 <!-- save time: drop these for now: -->
 <!-- <img id="coins" src="_static/images/coins2-248.png"  style="width:120px; position:absolute; margin:3em 2em;" /> -->
 <!-- <img id="coins" src="_static/images/coins2-248.png"  style="width:120px; position:absolute; margin:1em 2em;" /> -->
+<span id="leadingword"></span> 
 
-<span id="leadingword">hledger</span> is a robust, cross-platform accounting tool,
-freely licensed under GNU GPLv3.
-You can use it to track time, money, investments, cryptocurrencies, inventory and more,
-using the command line, terminal, or a web browser.
+# hledger
 
+is cross-platform accounting software with an unusual combination of strengths:
+
+1. It is a **high quality implementation of [Plain Text Accounting].** This means:
+   - Your data is stored as future-proof, human-readable, editable plain text.
+   - You can use a [version control system], such as [Git], to safeguard your data;
+     track changes; manage alternate what-if scenarios; and collaborate with others.
+   - There is a command-line interface, making scripting and automation easy.
+   - It is a simple, powerful, general-purpose [double-entry accounting] system
+     that can track money, time, investments, cryptocurrencies, inventory and more.
+   - It grows with you; you start with a simple text file (or one of
+     the UIs), and add more features only when you need them.
+ 
+2. But unlike other [plain text accounting apps], it
+   - is **actively maintained and supported**, with regular releases
+   - is **easy to [install] on mac, windows, and unix** platforms
+   - comes with officially supported **command line, terminal, and web user interfaces**
+   - aims to serve **both power users, and folks new to accounting or computers**.
+
+3. It is **written in [Haskell],** with extensive tests and a documentation-first philosophy.
+   These help make it robust, consistent, and maintainable. <!-- , and interesting to work on. -->
+   The core code is provided as a Haskell library, useful for building custom commands and integrations.
+
+4. Unlike cloud-based accounting apps, it runs on your local computer,
+   keeping your financial data **private and under your control**. But
+   you can use the web app or a version control system to publish or
+   collaborate online when you wish.
+
+5. **It's licensed under GNU GPLv3**, providing the strongest guarantee
+   that you will always have the right to run, inspect, modify, or share it.
+
+[plain text accounting]:      http://plaintextaccounting.org
+[plain text accounting apps]: https://plaintextaccounting.org/#plain-text-accounting-apps
+[version control system]:     https://en.wikipedia.org/wiki/Version_control
+[git]:                        https://en.wikipedia.org/wiki/Git
+[haskell]:                    https://wiki.haskell.org/Haskell
+[double-entry accounting]:    https://en.wikipedia.org/wiki/Double-entry_bookkeeping
+[install]:                    download.html
+
+<!--
 If you know a little double entry accounting,
 hledger can be a fast, dependable, secure alternative to applications like
 Quicken, Xero, YNAB or GnuCash.
 And if you don't, it is a great way to learn!
 
-hledger is one of the leading [plain text accounting](http://plaintextaccounting.org) apps, 
-known for their plain text data formats, flexibility, and simplicity.
 There is an enthusiastic and growing community practising this way of accounting,
 which can be quite educational and enjoyable.
 
 Compared to [the others](http://plaintextaccounting.org#software), hledger is robust, consistent, and intuitive, with a high level of documentation and maintenance.
 It is a high quality rewrite, in [Haskell](https://haskell.org), of the pioneering [Ledger](https://ledger-cli.org).
-hledger has been created by [Simon Michael](http://joyful.com) and 120+ contributors.
-I've been building and relying on it continuously    since 2007;
+-->
+
+hledger is brought to you by [Simon Michael](http://joyful.com) and 120+ contributors.
+I've been building and relying on it continuously since 2007;
 I hope you too will find it helpful in mastering your time and money!
 
 ## Quick Start
