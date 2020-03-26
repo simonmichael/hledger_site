@@ -312,7 +312,11 @@ accounting.
   <tr>
     <td>Chat:</td>
     <td>
-      <a href="http://irc.hledger.org">#hledger</a> on Freenode IRC (<a href="http://matrix.hledger.org">#freenode_#hledger:matrix.org</a> via Matrix)
+      <a href="http://irc.hledger.org">#hledger</a> on Freenode IRC
+      (or via Matrix: <a href="http://matrix.hledger.org">#freenode_#hledger:matrix.org</a>)
+      <br>
+      <a href="http://irc.hledger.org">#plaintextaccounting</a>
+      (or <a href="https://matrix.to/#/#freenode_#hledger:matrix.org">#freenode_#plaintextaccounting:matrix.org</a>)
     </td>
   </tr>
   <tr>
