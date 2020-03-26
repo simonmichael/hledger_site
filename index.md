@@ -43,18 +43,18 @@ are here to help!
 is cross-platform accounting software with an unusual combination of strengths:
 
 1. It is a **high quality implementation of [Plain Text Accounting]**. This means:
-   - Your data is stored as future-proof, human-readable, editable plain text.
+   - It is a simple yet powerful [double-entry accounting] system
+     that can track money, time, investments, cryptocurrencies, inventory and more.
+   - Your data is stored as future-proof, human-readable plain text.
+   - You can add data with your favourite text editor, a UI, or import from banks or any CSV.
    - You can use a version control system, such as [Git], to safeguard your data;
      track changes; manage alternate what-if scenarios; and collaborate with others.
    - There is a command-line interface, making scripting and automation easy.
-   - It is a simple yet powerful [double-entry accounting] system
-     that can track money, time, investments, cryptocurrencies, inventory and more.
    - It grows with you; you can start with very basic journal entries,
      and use more features only when you're ready.
  
-2. But unlike other [plain text accounting apps], it
-   - is **actively maintained**, with regular releases
-     and **[quick support](#help)**
+2. Compared to other [plain text accounting apps], it
+   - is **actively maintained**, with regular stable releases
    - is **easy to [install] on mac, windows, and unix** platforms
    - comes with officially supported **command line, terminal, and web user interfaces**
    - aims to serve **both power users and folks new to accounting or computers**.
@@ -65,11 +65,15 @@ is cross-platform accounting software with an unusual combination of strengths:
    collaborate online when you wish.
 
 4. It is **written in [Haskell]**, with extensive tests and a documentation-first philosophy.
-   These help make it robust, consistent, and maintainable. <!-- , and interesting to work on. -->
+   These help make it robust, consistent, and maintainable.
    The core code is provided as a Haskell library, useful for building custom commands and integrations.
 
 5. **It's licensed under GNU GPLv3**, providing the strongest guarantee
    that you will always have the right to run, inspect, modify, or share it.
+
+6. It has a **[large responsive chat room](#help)**,
+   a [mail list](http://list.hledger.org), and
+   [additional support resources](#help) from the enthusiastic plain text accounting community.
 
 [plain text accounting]:      http://plaintextaccounting.org
 [plain text accounting apps]: https://plaintextaccounting.org/#plain-text-accounting-apps
@@ -365,7 +369,7 @@ accounting.
       <br>
       <a href="http://furius.ca/beancount/doc/index">Beancount docs</a>
       <br>
-      <a href="https://twitter.com/LedgerTips">@LedgerTips tweets</a>
+      <a href="https://twitter.com/LedgerTips">@LedgerTips (2014-2018)</a>
     </td>
   </tr>
 </table>
