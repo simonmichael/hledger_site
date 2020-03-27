@@ -24,7 +24,7 @@ is cross-platform accounting software with an unusual combination of strengths:
      and use more features only when you're ready.
  
 2. Compared to other [plain text accounting apps], it
-   - is **actively maintained**, with regular stable releases
+   - is **[actively maintained]**, with regular stable releases
    - is **easy to [install] on mac, windows, and unix** platforms
    - comes with officially supported **command line, terminal, and web user interfaces**
    - aims to serve **both power users and folks new to accounting or computers**.
@@ -45,6 +45,7 @@ is cross-platform accounting software with an unusual combination of strengths:
    a [mail list](http://list.hledger.org), and
    [additional support resources](#help) from the enthusiastic plain text accounting community.
 
+[actively maintained]:        https://github.com/simonmichael/hledger/graphs/contributors
 [plain text accounting]:      http://plaintextaccounting.org
 [plain text accounting apps]: https://plaintextaccounting.org/#plain-text-accounting-apps
 [version control system]:     https://en.wikipedia.org/wiki/Version_control
