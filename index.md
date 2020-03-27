@@ -144,10 +144,9 @@ Income Statement 2020-01-01-2020-03-20
 </tr>
 </table>
 
-Note the sidebar to your left (or on small screens, the drop-down menu at top left);
-it scrolls, expands, and all hledger docs can be found there.
-ABOUT, TUTORIALS, and MANUALS are expected to be up to date;
-COOKBOOK docs may not be.
+Take note of the sidebar to your left (on small screens, it's a menu button at top left).
+It scrolls, expands, and all hledger docs can be found there.
+ABOUT, TUTORIALS, and MANUALS are expected to be up to date; COOKBOOK docs may not be.
 
 Next, depending on how you like to learn, you could:
 
@@ -172,70 +171,56 @@ Next, depending on how you like to learn, you could:
   (**[below](#help)**)
 - Read on...
 
-## hledger is...
+<!-- <img width="104" height="20" src="https://img.shields.io/badge/license-GPLv3+-brightgreen.svg" /> -->
 
-### Free software
+## More about hledger...
 
-<a href="http://www.gnu.org/licenses/gpl.html" style="float:right; margin:0 0 1em 0;"><img width="104" height="20" src="https://img.shields.io/badge/license-GPLv3+-brightgreen.svg" /></a>
-hledger is Free software, created by [Simon Michael](http://joyful.com)
-and released under GNU GPLv3+.
+hledger is a Haskell reimplementation of the pioneering [Ledger](http://ledger-cli.org).
+([Why?](faq.html#how-why-was-hledger-started))
+Ledger users will find it very familiar, and you can keep your data compatible with both tools if you wish.
+Read more about the [differences](faq.html#ledger).
 
-### inspired by Ledger
-
-hledger is a Haskell [reimplementation](faq.html#how-why-was-hledger-started)
-of the excellent [Ledger](http://ledger-cli.org).
-It remains substantially compatible with Ledger, and if you wish you can keep your data compatible with both.
-Read more about the [differences](faq.html#ledger) in our FAQ.
-
-### a command-line tool
+hledger strives to be usable, practical and to provide real-world value.
+Intuitive features, dependable bug-free operation and complete, accurate documentation are top goals.
 
 <a href="_static/images/balance-q-inc.png" class="highslide" onclick="return hs.expand(this)"><img src="_static/images/balance-q-inc.png" title="Balance report showing income/expense by quarter" /></a>
-
 hledger is first a command-line tool.
 Your data lives in a plain text journal file which you can edit
 any way you wish; hledger reads that file and produces reports of
 various kinds, without changing your data. (It can help you add new
 transactions, but does not change existing ones.)
-
-### a console UI
+<br clear="all">
 
 <a href="_static/images/hledger-ui/hledger-ui-bcexample-acc.png" class="highslide" onclick="return hs.expand(this)"><img src="_static/images/hledger-ui/hledger-ui-bcexample-acc.png" title="hledger-ui accounts screen" /></a>
 hledger also provides a [terminal&nbsp;interface](hledger-ui.html)
 that lets you review account balances and transactions quickly and without fuss.
 ([screencast](https://asciinema.org/a/29665))
-
-### a web UI
+<br clear="all">
 
 <a href="_static/images/hledger-web/normal/register.png" class="highslide" onclick="return hs.expand(this)"><img src="_static/images/hledger-web/normal/register.png" title="Account register view with accounts sidebar" /></a>
-
 And, a zero-setup
 [web&nbsp;app](hledger-web) for a more point-and-click experience
 ([demo](http://demo.hledger.org)).
 Run it on your local machine, or on a server, 
 or set it up with a few clicks on
 [Sandstorm](https://apps.sandstorm.io/app/8x12h6p0x0nrzk73hfq6zh2jxtgyzzcty7qsatkg7jfg2mzw5n90).
+<br clear="all">
 
-There's also a [UI running in the browser](https://hledger.alhur.es) (hledger compiled with GHCJS).
-This is a prototype, but it's nice sandbox for trying out hledger's journal syntax.
-
-### a Haskell app and library
+<!-- There's also a [UI running in the browser](https://hledger.alhur.es) (hledger compiled with GHCJS). -->
+<!-- This is a prototype, but it's nice sandbox for trying out hledger's journal syntax. -->
 
 <a href="_static/images/hledger-lib-api.png" class="highslide" onclick="return hs.expand(this)"><img src="_static/images/hledger-lib-api.png" title="Part of hledger-lib's haddock api documentation" /></a>
-
 hledger is written in Haskell, a modern, highly-regarded
 programming language which contributes to hledger's robustness,
 performance and long-term maintainability.  Most functionality is
-exposed as
-[reusable](http://hackage.haskell.org/package/hledger-lib)
-[Haskell](http://hackage.haskell.org/package/hledger)
-[libraries](http://hackage.haskell.org/package/hledger-web), making it
-easy to write your own hledger-compatible
-[scripts](scripting.html), [add-ons](hledger.html#add-on-commands) and
-applications.
+exposed as [Haskell libraries](http://hackage.haskell.org/package/hledger-lib),
+making it easy to write your own hledger-compatible
+[scripts](scripting.html), [addons](hledger.html#add-on-commands) and applications.
 &nbsp;&nbsp;
 [![hledger CI](https://github.com/simonmichael/hledger/workflows/hledger%20CI/badge.svg)](https://github.com/simonmichael/hledger/actions)
 [![on hackage](https://img.shields.io/hackage/v/hledger.svg?label=hackage&colorB=green)](http://hackage.haskell.org/package/hledger)
 [![](https://repology.org/badge/version-for-repo/stackage_nighly/hledger.svg)](https://repology.org/metapackage/hledger)
+<br clear="all">
 
 <!-- <div class="indent1"> -->
 <!-- ### comfortable for techies, usable by all -->
@@ -246,21 +231,6 @@ applications.
 <!-- accounting. The web interface helps make it accessible to GUI-only -->
 <!-- folk as well. -->
 <!-- </div> -->
-
-### fully documented
-
-We practice documentation-driven development. 
-Every feature must be well documented,
-and getting started must be easy.
-
-### focussed on serving users
-
-hledger strives to be usable, practical and to provide real-world value.
-Intuitive features, bug-free operation and complete, accurate documentation are top goals.
-Currently it is particularly suited to techies, ie users who appreciate the
-power of text files, revision control, scriptability and double entry
-accounting.
-
 
 ## Help/Feedback
 
@@ -330,15 +300,7 @@ accounting.
 
 ## Sponsorship
 
-<div id="fund">
-<table>
-  <tr>
-    <td>
-Building and supporting good software and documentation costs a lot.
-Maybe these thousands of person-hours have helped you ?
-You can be one of the wise and attractive people helping to sustain and accelerate the hledger project.
-    </td>
-    <td>
+<div id="fund" style="float:right; margin:0 2em;">
 <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=5J33NLXYXCYAY"><img width=62 height=31 border=0 src="https://www.paypal.com/en_US/i/btn/x-click-but04.gif" title="Give one time or recurringly with Paypal" alt="paypal"></a><br>
 <a href="https://github.com/sponsors/simonmichael"><img border="0" src="https://img.shields.io/badge/Sponsor_on-Github-limegreen" title="Sponsor the project leader on Github" alt="github"></a><br>
 <a href="https://liberapay.com/simonmichael"><img border="0" src="https://img.shields.io/badge/Sponsor_on-Liberapay-limegreen" title="Sponsor the project leader on Github" alt="liberapay"></a><br>
@@ -347,13 +309,16 @@ You can be one of the wise and attractive people helping to sustain and accelera
 <a href="https://opencollective.com/hledger#support"><img border="0" src="https://opencollective.com/hledger/sponsors/badge.svg" title="Sponsor us with a $100+ monthly donation at Open Collective and get your organization's logo on our README" alt="open collective sponsors"></a><br>
 <!-- <a href="https://patreon.com/simonmichael"><img border="0" src="https://img.shields.io/badge/Sponsor_on-Patreon-limegreen" title="Sponsor the project leader on Github" alt="patreon"></a><br> -->
 <!-- <a href="https://www.bountysource.com/trackers/536505-simonmichael-hledger"><img border=0 src="https://www.bountysource.com/badge/tracker?tracker_id=536505" title="Contribute or claim issue bounties via Bountysource" alt="bountysource"></a> -->
-    </td>
-  </tr>
-</table>
 </div>
 
+Building and supporting good software and documentation costs a lot.
+Maybe these thousands of person-hours have helped you ?
+You can be one of the wise and attractive people helping to sustain and accelerate the hledger project.
 
+<br>
+<br>
 
+<!---------------------------------------------------------------------------->
 <style>
 
 #grabber {
@@ -420,9 +385,11 @@ h2 {
   padding:.1em .5em;
 */
 }
+/*
 #fund td { 
   width:50%;
 }
+*/
 
 .highslide img {max-width:200px; float:right; margin:0 0 1em 1em;}
 .highslide-caption {color:white; background-color:black;}
