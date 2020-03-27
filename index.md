@@ -1,45 +1,15 @@
 <!-- stylesheet at bottom -->
 
-<!--
-<div id="grabber">
-<div class="heading" style="margin:0.5em;">Are you...</div>
-
-Vague about money ?\
-Not trusting your financial reports ?\
-Unable to document how you spent time ?\
-Dreading: taxes.. wasting money.. running out of cash.. ?\
-Overwhelmed by bookkeeping or complex accounting software ?\
-Wanting a complete, up-to-date model of all your finances under your control ?\
-Ready for a lean, robust, private, Free, supported accounting tool that fits your brain ?\
-Just wanting basic financial reports, forecasting, and budgets with minimum effort ?\
-Interested in efficiency, complex transactions, and automating your finances ?\
-Keen to see principled double entry bookkeeping finally making sense ?\
-Seeking a community of helpful folks solving similar problems ?\
-Open to accounting being empowering and 
-<span style="color:red; font-weight:bold; font-style:italic; position:relative; top:-1px;">f</span><span style="color:blue; font-weight:bold; font-style:normal; position:relative; top:2px;">u</span><span style="color:darkorange; font-weight:bold; font-style:italic; position:relative; top:-1px;">n</span> ?
-<div class="heading" style="position:relative; top:-0.5em;">Don't Panic!</div>
-</div>
+<img id="coins" src="_static/images/coins2-248.png" style="width:120px; margin:2em 1em; float:left;" />
+<img id="coins" src="_static/images/coins2-248.png" style="width:120px; margin:2em 1em; float:right;" />
 
 # hledger
 <div id="tagline">
-and <span style="font-size:100%; font-weight:bold;">plain text accounting</span>
-<br>
-are here to help!
+easy plain text accounting
+<!-- robust accounting software -->
 </div>
-<!-- Easy plain text accounting. -->
-<!-- Robust plain text accounting. -->
-<!-- Friendly, robust plain text accounting. -->
-<!-- Robust, powerful, plain text accounting. -->
-<!-- Robust, precise, plain text accounting. -->
-<!-- Plain text accounting for everyone. -->
-<!-- Making accounting fun for techies. -->
-<!-- save time: drop these for now: -->
-<!-- <img id="coins" src="_static/images/coins2-248.png"  style="width:120px; position:absolute; margin:3em 2em;" /> -->
-<!-- <img id="coins" src="_static/images/coins2-248.png"  style="width:120px; position:absolute; margin:1em 2em;" /> -->
-<span id="leadingword"></span> 
 
-# hledger
-
+<span id="leadingword">hledger</span> 
 is cross-platform accounting software with an unusual combination of strengths:
 
 1. It is a **high quality implementation of [Plain Text Accounting]**. This means:
@@ -83,19 +53,6 @@ is cross-platform accounting software with an unusual combination of strengths:
 [double-entry accounting]:    https://en.wikipedia.org/wiki/Double-entry_bookkeeping
 [install]:                    download.html
 
-<!--
-If you know a little double entry accounting,
-hledger can be a fast, dependable, secure alternative to applications like
-Quicken, Xero, YNAB or GnuCash.
-And if you don't, it is a great way to learn!
-
-There is an enthusiastic and growing community practising this way of accounting,
-which can be quite educational and enjoyable.
-
-Compared to [the others](http://plaintextaccounting.org#software), hledger is robust, consistent, and intuitive, with a high level of documentation and maintenance.
-It is a high quality rewrite, in [Haskell](https://haskell.org), of the pioneering [Ledger](https://ledger-cli.org).
--->
-
 hledger is brought to you by [Simon Michael](http://joyful.com) and 120+ contributors.
 I've been building and relying on it continuously since 2007;
 I hope you too will find it helpful in mastering your time and money!
@@ -114,7 +71,8 @@ Here's the most basic workflow:
 <tr>
 <td style="padding-right:1em;">
 
-**Step 1.** Record transactions in a [plain text file](journal.html) (one way or another). For example:
+**Step 1.**
+Record transactions in a [plain text file](journal.html) (one way or another). For example:
 ```journal
 ; $HOME/.hledger.journal (or $LEDGER_FILE)
 
@@ -135,7 +93,8 @@ Here's the most basic workflow:
 </td>
 <td>
 
-**Step 2.** Run hledger in a [terminal](https://itconnect.uw.edu/learn/workshops/online-tutorials/web-publishing/what-is-a-terminal/)
+**Step 2.**
+Run hledger in a [terminal](https://itconnect.uw.edu/learn/workshops/online-tutorials/web-publishing/what-is-a-terminal/)
 to report [balances](https://en.wikipedia.org/wiki/Balance_sheet#Personal), 
 [income and expenses](https://en.wikipedia.org/wiki/Income_statement), 
 and more:
@@ -183,14 +142,6 @@ Income Statement 2020-01-01-2020-03-20
 </td>
 </tr>
 </table>
-
-<!-- I use it for: -->
-
-<!-- - tracking spending and income -->
-<!-- - seeing time reports by day/week/month/project -->
-<!-- - getting accurate numbers for client billing and tax filing -->
-<!-- - tracking invoices -->
-<!-- - building financial and time clarity and serenity -->
 
 Note the sidebar to your left (or on small screens, the drop-down menu at top left);
 it scrolls, expands, and all hledger docs can be found there.
@@ -443,7 +394,7 @@ h2 {
 #leadingword {
   font-weight:bold;
   font-style:italic;
-  font-size:large;
+  font-size:x-large;
 }
 
 #help {
