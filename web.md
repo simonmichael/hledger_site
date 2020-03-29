@@ -1,7 +1,7 @@
 # Easy workflow #2: hledger-web
 
 [hledger-web](hledger-web.html) is hledger's web browser-based UI.
-It's simple but serviceable, and probably the easiest way to get started with hledger.
+It's probably the easiest way to get started with hledger.
 Eg on windows, you can download and unpack hledger.zip and double click on hledger-web.exe.
 Screenshots below!
 
