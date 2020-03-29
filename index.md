@@ -24,9 +24,9 @@ is cross-platform accounting software with an unusual combination of strengths:
      and use more features only when you're ready.
  
 2. Compared to other [plain text accounting apps], it
-   - is **[actively maintained]**, with regular stable releases
-   - is **easy to [install] on mac, windows, and unix** platforms
-   - comes with officially supported **command line, terminal, and web user interfaces**
+   - is **[actively maintained]**, with regular [releases]
+   - is **easy to [install] on mac, windows, and gnu/linux**
+   - has officially supported, zero-setup **command line, terminal, and web user interfaces**
    - aims to serve **both power users and folks new to accounting or computers**.
 
 3. Unlike cloud-based accounting apps, it runs on your local computer,
@@ -43,9 +43,10 @@ is cross-platform accounting software with an unusual combination of strengths:
 
 6. It has a **[large responsive chat room](#help)**,
    a [mail list](http://list.hledger.org), and
-   [additional support resources](#help) from the enthusiastic plain text accounting community.
+   [more support resources](#help) from the enthusiastic plain text accounting community.
 
 [actively maintained]:        https://github.com/simonmichael/hledger/graphs/contributors
+[releases]:                   https://hledger.org/release-notes
 [plain text accounting]:      http://plaintextaccounting.org
 [plain text accounting apps]: https://plaintextaccounting.org/#plain-text-accounting-apps
 [version control system]:     https://en.wikipedia.org/wiki/Version_control
@@ -65,15 +66,30 @@ I hope you too will find it helpful in mastering your time and money!
 <a href="https://github.com/simonmichael/hledger"><button type="button" class="btn btn-neutral" style="padding:4px;" title="hledger code and issue tracker on Github. Star us!"><img width="142" src="https://img.shields.io/github/stars/simonmichael/hledger.svg?style=for-the-badge&logo=GitHub&label=Github&color=lightgrey"></button></a>
 </div>
 
-You can start with hledger very simply, and get more sophisticated as you learn more about double-entry accounting.
-Here's the most basic workflow:
+You can start with hledger very simply, and get more sophisticated as
+you learn more about double-entry accounting and automation.
+Here are some common ways of using it:
 
+**Command line:**
+[Use hledger add](add.html)'s interactive prompts to enter transactions,
+run hledger commands to see reports.
+
+**Web or terminal UI:**
+[Use hledger-web](web.html) or [use hledger-ui](ui.html) to enter
+transactions and see reports.
+
+**Automated import:**
+Download CSV files from financial institutions, perhaps using an API like Plaid or Tiller,
+use hledger's import command to [convert](convert-csv-files.html) and [import](hledger.html#import)
+the new transactions, and use any UI to see reports.
+
+**Text editor:**
 <table>
 <tr>
 <td style="padding-right:1em;">
 
-**Step 1.**
-Record transactions in a [plain text file](journal.html) (one way or another). For example:
+Record transactions in a [plain text file](journal.html),
+perhaps assisted by an [editor mode](editors.html):
 ```journal
 ; $HOME/.hledger.journal (or $LEDGER_FILE)
 
@@ -94,9 +110,8 @@ Record transactions in a [plain text file](journal.html) (one way or another). F
 </td>
 <td>
 
-**Step 2.**
-Run hledger in a [terminal](https://itconnect.uw.edu/learn/workshops/online-tutorials/web-publishing/what-is-a-terminal/)
-to report [balances](https://en.wikipedia.org/wiki/Balance_sheet#Personal), 
+Run hledger commands to report
+[balances](https://en.wikipedia.org/wiki/Balance_sheet#Personal), 
 [income and expenses](https://en.wikipedia.org/wiki/Income_statement), 
 and more:
 ```shell
