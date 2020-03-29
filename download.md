@@ -162,8 +162,7 @@ Here are the [release notes](release-notes) describing the changes in each vers
       <td>
         <div class="distro">Arch</div>
         <div class="badges">
-          <!-- <a href="https://www.archlinux.org/packages/?sort=&amp;q=hledger"><img alt="Arch" src="https://repology.org/badge/version-for-repo/arch/hledger.svg" /></a> -->
-          <a href="https://www.archlinux.org/packages/?sort=&amp;q=hledger"><img alt="Arch" src="https://img.shields.io/badge/Arch_package-1.17-red.svg" /></a>
+          <a href="https://www.archlinux.org/packages/?sort=&amp;q=hledger"><img alt="Arch" src="https://repology.org/badge/version-for-repo/arch/hledger.svg" /></a>
         </div>
       </td>
       <td>
