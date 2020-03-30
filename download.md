@@ -278,12 +278,49 @@ Please [report](index.html#help) any trouble.
 
 <a name="b"></a>
 
+[ghc]:             https://www.haskell.org/ghc
+[bash]:            https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29
+[stack]:           https://haskell.fpcomplete.com/get-started
+[cabal]:           https://www.haskell.org/cabal
+[hledger-install]: https://github.com/simonmichael/hledger/blob/master/hledger-install/hledger-install.sh
+[add-on commands]: hledger.html#add-on-commands
+
 ## Building from source
 
-You can build hledger wherever [GHC] is supported.
-This takes a while but it's normally reliable. 
-Our install script is the easiest way to build the current release, requiring only [bash]:
+<div class="notes" style="position:relative; top:-1em;">Linux, Unix, Mac, Windows, WSL, ...</div>
 
+You can build hledger wherever [GHC] is supported.
+This takes a while, and up to ~1G of disk space, but it's normally reliable. 
+It's ok to kill a build and retry it later, you won't lose progress.
+
+### 1. Install required C libs
+
+Linux/Unix users: run the appropriate command below to ensure all
+required C libraries are installed. Or, you can skip this step and
+just try building hledger. If it ends with a link error (eg:
+`/bin/ld.gold: error: cannot find -ltinfo`),
+web-search the error message to find the right system package to install
+(and please [let us know](/index.html#help) so we can update this list):
+<table>
+  <tr>
+    <td width="1%" style="white-space:nowrap;"><div class="distro">Debian, Ubuntu:</div></td>
+    <td><div class="command" style="margin:0;"> sudo apt install libtinfo-dev </div></td>
+  </tr>
+  <tr>
+    <td><div class="distro">Fedora, RHEL:</div></td>
+    <td><div class="command"> sudo dnf install gmp-devel ncurses-devel </div></td>
+  </tr>
+</table>
+
+### 2. Build and install hledger
+
+<img style="position:relative; top:-1em; margin:0;" alt="installs" src="https://img.shields.io/badge/installs_hledger-1.17.1-brightgreen.svg" />
+
+Our [install script][hledger-install] is the easiest way to build hledger. 
+It builds the current release, plus some [add-on commands].
+It requires only [bash]:
+
+<!--
 <div class="builder">
   <a href="https://github.com/simonmichael/hledger/blob/master/hledger-install/hledger-install.sh">hledger-install.sh</a>
 </div>
@@ -291,24 +328,22 @@ Our install script is the easiest way to build the current release, requiring on
 <div class="badges">
   <img alt="installs" src="https://img.shields.io/badge/installs_hledger-1.17.1-brightgreen.svg" />
 </div>
+-->
 <div class="builder-command">
   curl -sO https://raw.githubusercontent.com/simonmichael/hledger/master/hledger-install/hledger-install.sh <br>
   less hledger-install.sh <em style="margin-left:1em; font-weight:normal;"># good practice: inspect downloaded scripts before running</em><br>
   bash hledger-install.sh
 </div>
 <div class="builder-text">
-  It runs stack or cabal for you, installing stack in ~/.local/bin if needed,
-  and installs the main hledger tools plus some
-  <a href="hledger.html#add-on-commands">add‑on commands</a>
-  in ~/.local/bin or ~/.cabal/bin.
+  It runs the haskell build tools stack or cabal for you, 
+  installing stack in ~/.local/bin if needed,
+  and installs the hledger tools in ~/.local/bin or ~/.cabal/bin.
 </div>
+<br>
 
-[ghc]: https://www.haskell.org/ghc
-[bash]: https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29
+Or, if you prefer to run [stack] yourself:
 
-<hr>
-Or, if you prefer to run stack yourself:
-
+<!--
 <div class="builder">
   <a href="https://haskell.fpcomplete.com/get-started">stack</a>
 </div>
@@ -316,6 +351,7 @@ Or, if you prefer to run stack yourself:
 <div class="badges">
   <img alt="installs" src="https://img.shields.io/badge/installs_hledger-1.17.1-brightgreen.svg" />
 </div>
+-->
 <div class="builder-command">
   stack update <br>
   stack install --resolver=lts hledger-lib-1.17.1 hledger-1.17.1.1 hledger-ui-1.17.1.1 hledger-web-1.17.1 --silent
@@ -327,10 +363,11 @@ You can usually upgrade stack quickly with <code>stack upgrade</code>.
 Windows users: the 64-bit version of stack is preferable;
 and you should omit hledger-ui from this command, unless using WSL.
 </div>
+<br>
 
-<hr>
-Or cabal:
+Or [cabal]:
 
+<!--
 <div class="builder">
   <a href="https://www.haskell.org/cabal">cabal</a>
 </div>
@@ -338,6 +375,7 @@ Or cabal:
 <div class="badges">
   <img alt="installs" src="https://img.shields.io/badge/installs_hledger-1.17.1-brightgreen.svg" />
 </div>
+-->
 <div class="builder-command">
   cabal v2-update <br>
   cabal v2-install alex happy<br>
@@ -348,46 +386,17 @@ This installs the main hledger tools in ~/.cabal/bin.
 Windows users: omit hledger-ui from this command, unless using WSL.
 </div>
 
-<hr>
+<br>
 
 ### Tips for building from source
 
-- When required C libraries are not installed (like `terminfo`), the
-  build will fail at the end with a link error such as `/bin/ld.gold:
-  error: cannot find -ltinfo`. To solve this, use your system's
-  package manager to install the appropriate system package, and run
-  the hledger install command again. Here are some of those C packages
-  by platform; you can also do a web search for the link error
-  message. Please [report](/index.html#help-feedback) any omissions:
+- With stack or cabal (or nix) you can add `--dry-run` to the install
+  command to see how much building remains.
 
-  <table>
-    <tr>
-      <td><div class="distro">Debian, Ubuntu:</div></td>
-      <td><div class="command"> sudo apt install libtinfo-dev </div></td>
-    </tr>
-    <tr>
-      <td><div class="distro">Fedora, RHEL:</div></td>
-      <td><div class="command"> sudo dnf install gmp-devel ncurses-devel </div></td>
-    </tr>
-  </table>
+- You can reduce build time by omitting the hledger-web and hledger-ui
+  packages from the commands above.
 
-- If you haven't built any Haskell code before, know that building
-  hledger the first time could take 1+G of disk, 1-2G of free memory,
-  and perhaps up to an hour (though usually much less).
-  Subsequent builds will be much faster.
-
-- It's fine to kill a build and restart it later, you won't lose
-  progress.
-
-- With stack or cabal (or nix) you can add `--dry-run` to the
-  install command to see how much building is still to do.
-
-- You can reduce build time by omitting the
-  [hledger-web](http://hackage.haskell.org/package/hledger-web) and
-  [hledger-ui](http://hackage.haskell.org/package/hledger-ui) packages
-  from the commands above.
-
-- Here are some known build issues/workarounds on certain platforms:
+- Here are some known build issues and workarounds on certain platforms:
 
   <blockquote class="warnings">
     <a href="https://github.com/jtdaugherty/vty/pull/1#issuecomment-297143444">windows: hledger-ui is not available</a><br>
@@ -416,13 +425,13 @@ git clone https://github.com/simonmichael/hledger <br>
 cd hledger
 </div>
 
-and install executables to ~/.local/bin with [stack](https://haskell.fpcomplete.com/get-started):
+and install executables to ~/.local/bin with [stack]:
 <div class="builder-command">
 stack update<br>
 stack install
 </div>
 
-or to ~/.cabal/bin with [cabal](https://www.haskell.org/cabal/):
+or to ~/.cabal/bin with [cabal]:
 <div class="builder-command">
 cabal v2-update<br>
 cabal v2-install alex happy<br>
@@ -497,9 +506,8 @@ All 198 tests passed (4.30s)
 
 <br>
 
-Nicely done! Next, see the Getting Started docs in the sidebar, such
-as the **[Basics tutorial](basics-tutorial.html)**,
-or come to the **[IRC channel/Matrix room](index.html#help-feedback)** 
-where we'll help you out, or gladly hear your feedback.
+Nicely done! Now check the **[Quick Start](index.html#quick-start)**
+for next steps, or come to the **[#hledger chat](index.html#help)**
+where we'll gladly share tips or receive your feedback.
 
 <br>
