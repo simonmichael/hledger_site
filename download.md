@@ -62,8 +62,8 @@ div.badges {
 </style>
 
 The current hledger release is **1.17.1.1** ([release notes](release-notes)).\
-[Binary packages](#binary-packages) install quickly but may not be the latest release.\
-[Building from source](#building-from-source) takes longer but ensures an up to date version.\
+[Binary packages](#binary-packages) install quickly.\
+[Building from source](#building-from-source) takes longer but ensures you get the latest release.\
 Please [report](index.html#help) any trouble.
 
 ## Binary packages
@@ -293,14 +293,10 @@ You can build hledger wherever [GHC] is supported.
 This takes a while, and up to ~1G of disk space, but it's normally reliable. 
 It's ok to kill a build and retry it later, you won't lose progress.
 
-### 1. Install required C libs
+### 1. Ensure C libraries are installed
 
-Linux/Unix users: run the appropriate command below to ensure all
-required C libraries are installed. Or, you can skip this step and
-just try building hledger. If it ends with a link error (eg:
-`/bin/ld.gold: error: cannot find -ltinfo`),
-web-search the error message to find the right system package to install
-(and please [let us know](/index.html#help) so we can update this list):
+If you're on one of the following platforms, please run the command to
+ensure all required C libraries are installed:
 <table>
   <tr>
     <td width="1%" style="white-space:nowrap;"><div class="distro">Debian, Ubuntu:</div></td>
@@ -312,13 +308,18 @@ web-search the error message to find the right system package to install
   </tr>
 </table>
 
+Or, you can skip this step and just try building hledger. 
+If it fails with a link error
+(eg: `/bin/ld.gold: error: cannot find -ltinfo`),
+please web-search the error message to find the right system package to install on your platform.
+And [let us know](/index.html#help), so we can update this list.
+
 ### 2. Build and install hledger
 
 <img style="position:relative; top:-1em; margin:0;" alt="installs" src="https://img.shields.io/badge/installs_hledger-1.17.1-brightgreen.svg" />
 
 Our [install script][hledger-install] is the easiest way to build hledger. 
-It builds the current release, plus some [add-on commands].
-It requires only [bash]:
+It builds the current release plus some [add-on commands], and requires only [bash]:
 
 <!--
 <div class="builder">
