@@ -61,12 +61,10 @@ div.badges {
 }
 </style>
 
-Here are some ways to install hledger.
-[Binary packages](#binary-packages) will install quickly,
-or you can [run our install script, or build with stack/cabal](#building-from-source).
-Please do [report](index.html#help-feedback) any trouble.
-The current release is **1.17.1** (look for the green badges!)
-Here are the [release notes](release-notes) describing the changes in each version.
+The current hledger release is **1.17.1.1** ([release notes](release-notes)).\
+[Binary packages](#binary-packages) install quickly but may not be the latest release.\
+[Building from source](#building-from-source) takes longer but ensures an up to date version.\
+Please [report](index.html#help) any trouble.
 
 ## Binary packages
 
@@ -309,7 +307,7 @@ Our install script is the easiest way to build the current release, requiring on
 [bash]: https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29
 
 <hr>
-Or, if you prefer to run stack or cabal yourself:
+Or, if you prefer to run stack yourself:
 
 <div class="builder">
   <a href="https://haskell.fpcomplete.com/get-started">stack</a>
@@ -326,9 +324,12 @@ Or, if you prefer to run stack or cabal yourself:
 This installs the main hledger tools in ~/.local/bin.
 Use the latest stack (2.1.3) for best results.
 You can usually upgrade stack quickly with <code>stack upgrade</code>.
-Windows users: the 64-bit version of stack is recommended,
+Windows users: the 64-bit version of stack is preferable;
 and you should omit hledger-ui from this command, unless using WSL.
 </div>
+
+<hr>
+Or cabal:
 
 <div class="builder">
   <a href="https://www.haskell.org/cabal">cabal</a>
@@ -351,22 +352,6 @@ Windows users: omit hledger-ui from this command, unless using WSL.
 
 ### Tips for building from source
 
-- If you haven't built any Haskell code before, know that building
-  hledger the first time could take 1+G of disk, 1-2G of free memory,
-  and perhaps up to an hour (though usually much less).
-  Subsequent builds will be much faster.
-
-- It's fine to kill a build and restart it later, you won't lose
-  progress.
-
-- With stack or cabal (or nix) you can add `--dry-run` to the
-  install command to see how much building is still to do.
-
-- You can reduce build time by omitting the
-  [hledger-web](http://hackage.haskell.org/package/hledger-web) and
-  [hledger-ui](http://hackage.haskell.org/package/hledger-ui) packages
-  from the commands above.
-
 - When required C libraries are not installed (like `terminfo`), the
   build will fail at the end with a link error such as `/bin/ld.gold:
   error: cannot find -ltinfo`. To solve this, use your system's
@@ -385,6 +370,22 @@ Windows users: omit hledger-ui from this command, unless using WSL.
       <td><div class="command"> sudo dnf install gmp-devel ncurses-devel </div></td>
     </tr>
   </table>
+
+- If you haven't built any Haskell code before, know that building
+  hledger the first time could take 1+G of disk, 1-2G of free memory,
+  and perhaps up to an hour (though usually much less).
+  Subsequent builds will be much faster.
+
+- It's fine to kill a build and restart it later, you won't lose
+  progress.
+
+- With stack or cabal (or nix) you can add `--dry-run` to the
+  install command to see how much building is still to do.
+
+- You can reduce build time by omitting the
+  [hledger-web](http://hackage.haskell.org/package/hledger-web) and
+  [hledger-ui](http://hackage.haskell.org/package/hledger-ui) packages
+  from the commands above.
 
 - Here are some known build issues/workarounds on certain platforms:
 
