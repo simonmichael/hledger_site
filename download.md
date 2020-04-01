@@ -195,7 +195,6 @@ Please [report](index.html#help) any trouble.
         <div class="distro">Debian</div>
         <div class="badges">
           <a href="https://packages.debian.org/unstable/hledger"><img src="https://repology.org/badge/version-for-repo/debian_unstable/hledger.svg" alt="Debian Unstable" /></a>
-          <a href="https://packages.debian.org/testing/hledger"><img src="https://repology.org/badge/version-for-repo/debian_testing/hledger.svg" alt="Debian Testing" /></a>
           <a href="https://packages.debian.org/stable/hledger"><img src="https://repology.org/badge/version-for-repo/debian_stable/hledger.svg" alt="Debian Stable" /></a>
           <a href="https://packages.debian.org/oldstable/hledger"><img src="https://repology.org/badge/version-for-repo/debian_oldstable/hledger.svg" alt="Debian Oldstable" /></a>
           <a href="https://packages.debian.org/search?searchon=names&amp;keywords=hledger">more..</a>
@@ -209,8 +208,9 @@ Please [report](index.html#help) any trouble.
       <td>
         <div class="distro">Fedora</div>
         <div class="badges">
-          <a href="https://apps.fedoraproject.org/packages/hledger/"><img src="https://img.shields.io/badge/Fedora_Rawhide_package-1.12.1-red.svg" alt="Fedora Rawhide" /></a>
-          <a href="https://apps.fedoraproject.org/packages/hledger/"><img src="https://img.shields.io/badge/Fedora_32_package-1.12.1-red.svg" alt="Fedora 32" /></a>
+          <a href="https://apps.fedoraproject.org/packages/hledger/"><img src="https://img.shields.io/badge/Fedora_Rawhide_package-1.14.2-red.svg" alt="Fedora Rawhide" /></a>
+          <a href="https://apps.fedoraproject.org/packages/hledger/"><img src="https://img.shields.io/badge/Fedora_33_package-1.14.2-red.svg" alt="Fedora 33" /></a>
+          <a href="https://apps.fedoraproject.org/packages/hledger/"><img src="https://img.shields.io/badge/Fedora_32_package-1.14.2-red.svg" alt="Fedora 32" /></a>
           <a href="https://apps.fedoraproject.org/packages/hledger/"><img src="https://img.shields.io/badge/Fedora_31_package-1.12.1-red.svg" alt="Fedora 31" /></a>
           <a href="https://apps.fedoraproject.org/packages/hledger/"><img src="https://img.shields.io/badge/Fedora_30_package-1.10-red.svg" alt="Fedora 30" /></a>
           <a href="https://apps.fedoraproject.org/packages/hledger/"><img src="https://repology.org/badge/version-for-repo/fedora_29/hledger.svg" alt="Fedora 29" /></a>
@@ -225,11 +225,11 @@ Please [report](index.html#help) any trouble.
       <td>
         <div class="distro">Ubuntu</div>
         <div class="badges">
+          <a href="https://packages.ubuntu.com/focal/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_20_04/hledger.svg" alt="Ubuntu 20.04" /></a>
+          <a href="https://packages.ubuntu.com/eoan/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_19_10/hledger.svg" alt="Ubuntu 19.10" /></a>
           <a href="https://packages.ubuntu.com/disco/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_19_04/hledger.svg" alt="Ubuntu 19.04" /></a>
-          <a href="https://packages.ubuntu.com/cosmic/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_18_10/hledger.svg" alt="Ubuntu 18.10" /></a>
           <a href="https://packages.ubuntu.com/bionic/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_18_04/hledger.svg" alt="Ubuntu 18.04" /></a>
           <a href="https://packages.ubuntu.com/xenial/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_16_04/hledger.svg" alt="Ubuntu 16.04" /></a>
-          <a href="https://packages.ubuntu.com/trusty/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_14_04/hledger.svg" alt="Ubuntu 14.04" /></a>
           <a href="https://packages.ubuntu.com/search?suite=all&amp;searchon=names&amp;keywords=hledger">more..</a>
         </div>
       </td>
