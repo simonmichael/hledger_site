@@ -133,15 +133,15 @@ Please [report](index.html#help) any trouble.
     </tr>
     <tr>
       <td>
-        <div class="distro">Appveyor builds</div>
+        <div class="distro">CI builds</div>
         <div class="badges">
-          <a href="https://ci.appveyor.com/project/simonmichael/hledger/builds/31279595/artifacts"><img alt="Windows release"" src="https://img.shields.io/badge/Windows_zip-1.17-red.svg" /></a>
-          <a href="https://ci.appveyor.com/project/simonmichael/hledger/build/artifacts"><img alt="Windows master" src="https://img.shields.io/badge/Windows_zip-master-brightgreen.svg" /></a>
+          <img alt="Windows release" src="https://img.shields.io/badge/Windows_zip-1.17.1-brightgreen.svg" />
+          <img alt="Windows master" src="https://img.shields.io/badge/Windows_zip-nightly-brightgreen.svg" />
       </td>
       <td>
-        <div class="command" style="margin-bottom:4px;"><a href="https://ci.appveyor.com/api/buildjobs/adymn76m8jnl27sm/artifacts/hledger.zip">hledger.zip (current release)</a></div>
+        <div class="command" style="margin-bottom:4px;"><a href="https://github.com/simonmichael/hledger/actions/runs/68340796">-> hledger.zip</a></div>
         <div class="notes"></div>
-        <div class="command"><a href="https://ci.appveyor.com/api/projects/simonmichael/hledger/artifacts/hledger.zip?branch=master">hledger.zip (unreleased nightly build)</a></div>
+        <div class="command"><a href="https://github.com/simonmichael/hledger/actions?query=workflow%3A%22windows+CI%22+branch%3Amaster+is%3Asuccess+event%3Aschedule">windows CI -> hledger.zip</a></div>
         <div class="notes">
           <span class="warnings">
             <!-- <a href="https://github.com/simonmichael/hledger/issues/1039">#1039</a> -->
