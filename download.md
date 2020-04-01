@@ -342,7 +342,7 @@ It builds the current release plus some [add-on commands], and requires only [ba
 </div>
 <br>
 
-Or, if you prefer to run [stack] yourself:
+2b. Or, if you prefer to run [stack] yourself:
 
 <!--
 <div class="builder">
@@ -366,7 +366,7 @@ and you should omit hledger-ui from this command, unless using WSL.
 </div>
 <br>
 
-Or [cabal]:
+2c. Or [cabal]:
 
 <!--
 <div class="builder">
