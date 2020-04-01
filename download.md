@@ -262,7 +262,7 @@ Please [report](index.html#help) any trouble.
       <td>
         <div class="distro"><a href="https://sandstorm.io">Sandstorm</a></div>
         <div class="notes"></div>
-        <div class="badges"><a href="https://apps.sandstorm.io/search?term=hledger"><img alt="Sandstorm" src="https://img.shields.io/badge/Sandstorm_app-1.9.1-red.svg" /></a></div>
+        <div class="badges"><a href="https://apps.sandstorm.io/search?term=hledger"><img alt="Sandstorm" src="https://img.shields.io/badge/Sandstorm_app-1.9.2-red.svg" /></a></div>
       </td>
       <td>
         <div class="command"><a href="https://apps.sandstorm.io/app/8x12h6p0x0nrzk73hfq6zh2jxtgyzzcty7qsatkg7jfg2mzw5n90">HLedger Web sandstorm app</a></div>
