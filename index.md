@@ -1,50 +1,66 @@
 <!-- stylesheet at bottom -->
 
+
 <img id="coins" src="_static/images/coins2-248.png" style="width:120px; margin:2em 1em; float:left;" />
 <img id="coins" src="_static/images/coins2-248.png" style="width:120px; margin:2em 1em; float:right;" />
 
 # hledger
 <div id="tagline">
 easy plain text accounting
-<!-- robust accounting software -->
 </div>
 
 <span id="leadingword">hledger</span> 
-is cross-platform accounting software with an unusual combination of strengths:
+is cross-platform accounting software with a unique combination of strengths:
 
-1. It is a **high quality implementation of [Plain Text Accounting]**. This means:
+1. It has no purchase price and no monthly fees. You can use all of it
+   for **free**.
+
+2. It aims to serve **both power users and folks new to accounting or computers**,
+   and comes with supported, zero-setup 
+   **[command line]**, **[terminal]**, and **[web]** user interfaces.
+
+3. It is **easy to [install] on all supported platforms**, with official **mac, windows & linux** builds.
+
+4. Unlike cloud-based accounting apps, it runs on your local computer,
+   keeping your financial data **private and under your control**.
+   (But you can share/collaborate online if you wish.)
+
+5. It is **[actively maintained]**, with regular [releases],
+   a large [chat room](#help) and other [support resources](#help).
+
+6. It is a **high quality implementation of [Plain Text Accounting]**. This means:
+
    - It is a simple yet powerful [double-entry accounting] system
      that can track money, time, investments, cryptocurrencies, inventory and more.
+
    - Your data is stored as future-proof, human-readable plain text.
+
+   - There is no data lock-in; it's easy to migrate to/from 
+     [Ledger, Beancount][plain text accounting apps], spreadsheets etc.
+
+   - It grows with you; you can start with 
+     [very basic journal entries and reports](#quick-start),
+     and get more sophisticated when you're ready.
+
    - You can add data with your favourite text editor, a UI, or import from banks or any CSV.
+
    - You can use a version control system, such as [Git], to safeguard your data;
      track changes; manage alternate what-if scenarios; and collaborate with others.
-   - There is a command-line interface, making scripting and automation easy.
-   - It grows with you; you can start with very basic journal entries,
-     and use more features only when you're ready.
- 
-2. Compared to other [plain text accounting apps], it
-   - is **[actively maintained]**, with regular [releases]
-   - is **easy to [install] on mac, windows, and gnu/linux**
-   - has officially supported, zero-setup **command line, terminal, and web user interfaces**
-   - aims to serve **both power users and folks new to accounting or computers**.
 
-3. Unlike cloud-based accounting apps, it runs on your local computer,
-   keeping your financial data **private and under your control**. But
-   you can use the web app or a version control system to publish or
-   collaborate online when you wish.
+   - The plain text format and fast command-line interface
+     (plus a reusable [library] for building your own [commands][script])
+     are great for scripting and automation.
 
-4. It is **written in [Haskell]**, with extensive tests and a documentation-first philosophy.
-   These help make it robust, consistent, and maintainable.
-   The core code is provided as a Haskell library, useful for building custom commands and integrations.
+7. It is built with **[Haskell]** and extensive tests, making it robust and maintainable,
+   and documentation/UX-driven design, making it consistent and intuitive.
 
-5. **It's licensed under GNU GPLv3**, providing the strongest guarantee
+8. It is licensed under **[GNU GPLv3][gpl]**, providing the strongest guarantee
    that you will always have the right to run, inspect, modify, or share it.
 
-6. It has a **[large responsive chat room](#help)**,
-   a [mail list](http://list.hledger.org), and
-   [more support resources](#help) from the enthusiastic plain text accounting community.
 
+[command line]:               add.html
+[terminal]:                   ui.html
+[web]:                        web.html
 [actively maintained]:        https://github.com/simonmichael/hledger/graphs/contributors
 [releases]:                   https://hledger.org/release-notes
 [plain text accounting]:      http://plaintextaccounting.org
@@ -54,10 +70,13 @@ is cross-platform accounting software with an unusual combination of strengths:
 [haskell]:                    https://wiki.haskell.org/Haskell
 [double-entry accounting]:    https://en.wikipedia.org/wiki/Double-entry_bookkeeping
 [install]:                    download.html
+[sponsor]:                    #sponsorship
+[ledger]:                     https://plaintextaccounting.org/#plain-text-accounting-apps
+[beancount]:                  https://plaintextaccounting.org/#plain-text-accounting-apps
+[gpl]:                        https://en.wikipedia.org/wiki/GNU_General_Public_License
+[library]:                    https://hackage.haskell.org/package/hledger-lib
+[script]:                     https://github.com/simonmichael/hledger/blob/master/bin/hledger-check-tag-files.hs
 
-hledger is brought to you by [Simon Michael](http://joyful.com) and 120+ contributors.
-I've been building and relying on it continuously since 2007;
-I hope you too will find it helpful in mastering your time and money!
 
 ## Quick Start
 
@@ -78,13 +97,8 @@ run hledger commands to see reports.
 [Use hledger-web](web.html) or [use hledger-ui](ui.html) to enter
 transactions and see reports.
 
-**Automated import:**
-Download CSV files from financial institutions, perhaps using an API like Plaid or Tiller,
-use hledger's import command to [convert](convert-csv-files.html) and [import](hledger.html#import)
-the new transactions, and use any UI to see reports.
-
 **Text editor:**
-<table>
+<table id="example">
 <tr>
 <td style="padding-right:1em;">
 
@@ -159,36 +173,48 @@ Income Statement 2020-01-01-2020-03-20
 </tr>
 </table>
 
-Take note of the sidebar to your left (on small screens, it's a menu button at top left).
-It scrolls, expands, and all hledger docs can be found there.
-ABOUT, TUTORIALS, and MANUALS are expected to be up to date; COOKBOOK docs may not be.
+**Automated import:**
+Download CSV files from financial institutions, perhaps using an API like Plaid or Tiller,
+use hledger's import command to [convert](convert-csv-files.html) and [import](hledger.html#import)
+the new transactions, and use any UI to see reports.
 
-Next, depending on how you like to learn, you could:
+\
+Next, you could:
 
-- Jump to interesting tutorials or cookbook topics in the sidebar
-- Read the hledger manual's **[intro](hledger.html#hledger)** 
-  and **[COMMON TASKS](hledger.html#common-tasks)**
-- Skim all manuals for an overview: the
+- Explore the sidebar to your left (or on small screens, the menu button at top left).
+  It scrolls and expands, and all hledger docs can be found there.
+- Look at some tutorials, about
+  **[hledger add](add.html)**,
+  **[hledger-web](web.html)**,
+  **[hledger-ui](ui.html)**, or
+  **[accounting](add.html)**.
+- Read or skim the manuals: the
   **[hledger](hledger.html)**,
-  **[hledger-ui](hledger-ui.html)**,
-  **[hledger-web](hledger-web.html)** tools and
+  **[hledger-ui](hledger-ui.html)**, and
+  **[hledger-web](hledger-web.html)** tools 
+  and the
   **[journal](journal.html)**,
   **[csv](csv.html)**,
   **[timeclock](timeclock.html)**,
-  **[timedot](timedot.html)** file formats
-- Watch **[videos](videos.html)**, such as the "hledger fan" lessons on youtube
-- Browse the hledger-related 
-  **[blog posts](https://plaintextaccounting.org/#articles-blog-posts)**
-  on plaintextaccounting.org\
-  (some of the others can be helpful too).
-- Look at lots of **[example files](https://github.com/simonmichael/hledger/tree/master/examples)**
-- Introduce yourself in our chat room, or browse the mail list archive
-  (**[below](#help)**)
+  **[timedot](timedot.html)** file formats.
+  Or just the **[intro](hledger.html#hledger)** and **[COMMON TASKS](hledger.html#common-tasks)**.
+- Browse the **[blog posts]** on plaintextaccounting.org.
+- Watch **[videos](videos.html)**, such as "hledger fan"'s beginner lessons.
+- Look at lots of **[example files]**.
+- Introduce yourself in our **[chat room](#help)**, or browse the **[mail list]**.
 - Read on...
 
-<!-- <img width="104" height="20" src="https://img.shields.io/badge/license-GPLv3+-brightgreen.svg" /> -->
+[blog posts]: https://plaintextaccounting.org/#articles-blog-posts
+[example files]: https://github.com/simonmichael/hledger/tree/master/examples
+[mail list]: https://groups.google.com/forum/#!forum/hledger
 
-## More about hledger...
+## More...
+
+hledger is brought to you by [Simon Michael](http://joyful.com) and 120+ contributors.
+I've been building and relying on it continuously since 2007;
+I hope you too will find it helpful in mastering your time and money!
+When your wealth allows, perhaps you'll feel inspired to become a
+[sponsor] and help us do more.
 
 hledger is a Haskell reimplementation of the pioneering [Ledger](http://ledger-cli.org).
 ([Why?](faq.html#how-why-was-hledger-started))
@@ -237,15 +263,6 @@ making it easy to write your own hledger-compatible
 [![](https://repology.org/badge/version-for-repo/stackage_nighly/hledger.svg)](https://repology.org/metapackage/hledger)
 <br clear="all">
 
-<!-- <div class="indent1"> -->
-<!-- ### comfortable for techies, usable by all -->
-
-<!-- hledger aims to be useful to both computer experts and regular folks. -->
-<!-- Currently it is a bit more suited to power users, who appreciate the -->
-<!-- power of text files, revision control, scriptability and double entry -->
-<!-- accounting. The web interface helps make it accessible to GUI-only -->
-<!-- folk as well. -->
-<!-- </div> -->
 
 ## Help/Feedback
 
@@ -315,7 +332,7 @@ making it easy to write your own hledger-compatible
 
 ## Sponsorship
 
-<div id="fund" style="float:right; margin:0 2em;">
+<div id="fund" style="float:right; margin:0 2em 4em;">
 <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=5J33NLXYXCYAY"><img width=62 height=31 border=0 src="https://www.paypal.com/en_US/i/btn/x-click-but04.gif" title="Give one time or recurringly with Paypal" alt="paypal"></a><br>
 <a href="https://github.com/sponsors/simonmichael"><img border="0" src="https://img.shields.io/badge/Sponsor_on-Github-limegreen" title="Sponsor the project leader on Github" alt="github"></a><br>
 <a href="https://liberapay.com/simonmichael"><img border="0" src="https://img.shields.io/badge/Sponsor_on-Liberapay-limegreen" title="Sponsor the project leader on Github" alt="liberapay"></a><br>
@@ -326,12 +343,15 @@ making it easy to write your own hledger-compatible
 <!-- <a href="https://www.bountysource.com/trackers/536505-simonmichael-hledger"><img border=0 src="https://www.bountysource.com/badge/tracker?tracker_id=536505" title="Contribute or claim issue bounties via Bountysource" alt="bountysource"></a> -->
 </div>
 
-Building and supporting good software and documentation costs a lot.
+Building and supporting good software and documentation requires a lot of time and life energy.
 Maybe these thousands of person-hours have helped you ?
-You can be one of the wise and attractive people helping to sustain and accelerate the hledger project.
+You can give back at any level and be one of the generous Sponsors
+helping to sustain and accelerate the hledger project, and helping
+more people to achieve financial freedom.
 
 <br>
 <br>
+
 
 <!---------------------------------------------------------------------------->
 <style>
