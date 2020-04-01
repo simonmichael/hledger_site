@@ -139,11 +139,12 @@ Please [report](index.html#help) any trouble.
           <img alt="Windows master" src="https://img.shields.io/badge/Windows_zip-nightly-brightgreen.svg" />
       </td>
       <td>
-        <div class="command" style="margin-bottom:4px;"><a href="https://github.com/simonmichael/hledger/actions/runs/68340796">-> hledger.zip</a></div>
+        <div class="command" style="margin-bottom:4px;"><a href="https://github.com/simonmichael/hledger/actions/runs/68340796">hledger.zip</a></div>
         <div class="notes"></div>
-        <div class="command"><a href="https://github.com/simonmichael/hledger/actions?query=workflow%3A%22windows+CI%22+branch%3Amaster+is%3Asuccess+event%3Aschedule">windows CI -> hledger.zip</a></div>
+        <div class="command"><a href="https://github.com/simonmichael/hledger/actions?query=workflow%3A%22windows+CI%22+branch%3Amaster+is%3Asuccess+event%3Aschedule">latest windows CI -> hledger.zip</a></div>
         <div class="notes">
           <span class="warnings">
+            Downloading the zip file requires a Github login for now :-( We'll fix it.
             <!-- <a href="https://github.com/simonmichael/hledger/issues/1039">#1039</a> -->
             <!-- [no hledger-ui](https://github.com/jtdaugherty/vty/pull/1#issuecomment-297143444), -->
             <!-- [doesn't work on old windows ?](https://github.com/simonmichael/hledger/issues/774), -->
