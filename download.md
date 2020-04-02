@@ -99,7 +99,7 @@ Please [report](index.html#help) any trouble.
         <div class="distro"><a href="https://www.docker.com/products/docker-desktop">Docker</a></div>
         <div class="notes">Linux, Mac, Windows</div>
         <div class="badges">
-          <a href="https://hub.docker.com/r/dastapov/hledger"><img alt="Docker" src="https://img.shields.io/badge/Docker_image-1.17-red.svg" /></a>
+          <a href="https://hub.docker.com/r/dastapov/hledger"><img alt="Docker" src="https://img.shields.io/badge/Docker_image-1.17.1.1-brightgreen.svg" /></a>
           <a href="https://hub.docker.com/search?q=hledger&amp;type=image&amp;sort=updated_at&amp;order=desc">more..</a>
         </div>
       </td>
