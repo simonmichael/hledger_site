@@ -49,7 +49,7 @@ is cross-platform accounting software with an unusual combination of strengths:
 0. It comes with supported, zero-setup **[command line]**, **[terminal]**, and **[web]** user interfaces,
    and aims to serve **both power users and folks new to accounting or computers**.
 
-0. It prioritises **robustness**, **usability**, and **up-to-date documentation**.
+0. It prioritises **robustness**, **usability**, and **thorough documentation**.
 
 0. It is **[actively maintained]**, with regular [releases],
    a large [chat room](#help) and other [support resources](#help).
