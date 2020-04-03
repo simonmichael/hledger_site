@@ -46,15 +46,14 @@ is cross-platform accounting software with an unusual combination of strengths:
 
 0. It is **easy to [install] on all supported platforms**, with official **mac, windows & linux** builds.
 
-0. It aims to serve **both power users and folks new to accounting or computers**,
-   and comes with supported, zero-setup 
-   **[command line]**, **[terminal]**, and **[web]** user interfaces.
+0. It comes with supported, zero-setup **[command line]**, **[terminal]**, and **[web]** user interfaces,
+   and aims to serve **both power users and folks new to accounting or computers**.
+
+0. It prioritises **robustness**, **usability**, and **up-to-date documentation**.
 
 0. It is **[actively maintained]**, with regular [releases],
    a large [chat room](#help) and other [support resources](#help).
 
-0. It is built with **[Haskell]** and extensive tests, making it robust and maintainable,
-   and documentation/UX-driven design, making it consistent and intuitive.
 
 
 
@@ -218,7 +217,7 @@ I hope you too will find it helpful in mastering your time and money!
 When your wealth allows, perhaps you'll feel inspired to become a
 [sponsor] and help us do more.
 
-hledger is a Haskell reimplementation of the pioneering [Ledger](http://ledger-cli.org).
+hledger is a [Haskell] rewrite/reboot of the pioneering [Ledger](http://ledger-cli.org).
 ([Why?](faq.html#how-why-was-hledger-started))
 Ledger users will find it very familiar, and you can keep your data compatible with both tools if you wish.
 Read more about the [differences](faq.html#ledger).
