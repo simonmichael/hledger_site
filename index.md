@@ -12,36 +12,37 @@ easy plain text accounting
 <span id="leadingword">hledger</span> 
 is cross-platform accounting software with an unusual combination of strengths:
 
-0. It is **free to use**, with no purchase price or monthly fees.
-   And it is licensed under **[GNU GPLv3][gpl]**, providing the strongest guarantee
-   that you will always have the right to run, inspect, modify, or share it.
-
-0. Unlike cloud-based accounting apps, it runs on your local computer,
-   keeping your financial data **private and under your control**.
-   (You can also share/collaborate online if you wish.)
-
 0. It is a **high quality implementation of [Plain Text Accounting]**. This means:
 
    - It is a simple yet powerful [double-entry accounting] system
      that can track money, time, investments, cryptocurrencies, inventory and more.
 
    - Your data is stored as future-proof, human-readable plain text.
+     There is no data lock-in; you can migrate to/from other 
+     [plain text accounting apps], spreadsheets etc.
 
-   - There is no data lock-in; it's easy to migrate to/from 
-     [Ledger, Beancount][plain text accounting apps], spreadsheets etc.
+   - You can add data with your favourite text editor, or a UI, or
+     download it from banks or [any CSV file][convert].
 
-   - It grows with you; you can start with 
+   - You can optionally use a version control system, such as [Git],
+     to safeguard your data; track changes; manage alternate what-if
+     scenarios; and collaborate with others.
+
+   - You can start with 
      [very basic journal entries and reports](#quick-start),
      and get more sophisticated when you're ready.
 
-   - You can add data with your favourite text editor, a UI, or import from banks or any CSV.
-
-   - You can use a version control system, such as [Git], to safeguard your data;
-     track changes; manage alternate what-if scenarios; and collaborate with others.
-
    - The plain text format and fast command-line interface
      (plus a reusable [library] for building your own [commands][script])
-     facilitate scripting and automation.
+     facilitate scripting and customisation.
+
+0. It is **free to use**, with no purchase price or monthly fees.
+   And it is licensed under **[GNU GPLv3][gpl]**, providing the strongest guarantee
+   that you will always have the right to run, inspect, modify, or share it.
+
+0. It runs on your local computer, keeping your financial data
+   **private and under your control**. (You can also share/collaborate
+   online if you wish.)
 
 0. It is **easy to [install] on all supported platforms**, with official **mac, windows & linux** builds.
 
@@ -75,6 +76,8 @@ is cross-platform accounting software with an unusual combination of strengths:
 [gpl]:                        https://en.wikipedia.org/wiki/GNU_General_Public_License
 [library]:                    https://hackage.haskell.org/package/hledger-lib
 [script]:                     https://github.com/simonmichael/hledger/blob/master/bin/hledger-check-tag-files.hs
+[import]: hledger.html#import
+[convert]: convert-csv-files.html
 
 
 ## Quick Start
@@ -173,9 +176,9 @@ Income Statement 2020-01-01-2020-03-20
 </table>
 
 **Automated import:**
-Download CSV files from financial institutions, perhaps using an API like Plaid or Tiller,
-use hledger's import command to [convert](convert-csv-files.html) and [import](hledger.html#import)
-the new transactions, and use any UI to see reports.
+Download CSV files from financial institutions, perhaps using an API
+like Plaid or Tiller, use hledger's import command to [convert] and
+[import] the new transactions, and use any UI to see reports.
 
 \
 Next, you could:
