@@ -10,25 +10,17 @@ easy plain text accounting
 </div>
 
 <span id="leadingword">hledger</span> 
-is cross-platform accounting software with a unique combination of strengths:
+is cross-platform accounting software with an unusual combination of strengths:
 
-1. It has no purchase price and no monthly fees. You can use all of it
-   for **free**.
+0. It is **free to use**, with no purchase price or monthly fees.
+   And it is licensed under **[GNU GPLv3][gpl]**, providing the strongest guarantee
+   that you will always have the right to run, inspect, modify, or share it.
 
-2. It aims to serve **both power users and folks new to accounting or computers**,
-   and comes with supported, zero-setup 
-   **[command line]**, **[terminal]**, and **[web]** user interfaces.
-
-3. It is **easy to [install] on all supported platforms**, with official **mac, windows & linux** builds.
-
-4. Unlike cloud-based accounting apps, it runs on your local computer,
+0. Unlike cloud-based accounting apps, it runs on your local computer,
    keeping your financial data **private and under your control**.
-   (But you can share/collaborate online if you wish.)
+   (You can also share/collaborate online if you wish.)
 
-5. It is **[actively maintained]**, with regular [releases],
-   a large [chat room](#help) and other [support resources](#help).
-
-6. It is a **high quality implementation of [Plain Text Accounting]**. This means:
+0. It is a **high quality implementation of [Plain Text Accounting]**. This means:
 
    - It is a simple yet powerful [double-entry accounting] system
      that can track money, time, investments, cryptocurrencies, inventory and more.
@@ -49,13 +41,20 @@ is cross-platform accounting software with a unique combination of strengths:
 
    - The plain text format and fast command-line interface
      (plus a reusable [library] for building your own [commands][script])
-     are great for scripting and automation.
+     facilitate scripting and automation.
 
-7. It is built with **[Haskell]** and extensive tests, making it robust and maintainable,
+0. It is **easy to [install] on all supported platforms**, with official **mac, windows & linux** builds.
+
+0. It aims to serve **both power users and folks new to accounting or computers**,
+   and comes with supported, zero-setup 
+   **[command line]**, **[terminal]**, and **[web]** user interfaces.
+
+0. It is **[actively maintained]**, with regular [releases],
+   a large [chat room](#help) and other [support resources](#help).
+
+0. It is built with **[Haskell]** and extensive tests, making it robust and maintainable,
    and documentation/UX-driven design, making it consistent and intuitive.
 
-8. It is licensed under **[GNU GPLv3][gpl]**, providing the strongest guarantee
-   that you will always have the right to run, inspect, modify, or share it.
 
 
 [command line]:               add.html
