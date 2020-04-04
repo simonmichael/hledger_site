@@ -155,6 +155,17 @@ And please [report](index.html#help) any trouble.
   </tbody>
 </table>
 
+<!-- 
+
+https://unix.stackexchange.com/questions/388986/what-is-the-difference-between-freebsd-ports-and-pkgsrc
+https://wiki.freebsd.org/PackageSystemsComparison
+https://www.pkgsrc.org
+http://cdn.netbsd.org/pub/pkgsrc/current/pkgsrc/finance/README.html
+http://cdn.netbsd.org/pub/pkgsrc/current/pkgsrc/finance/hledger/README.html
+http://cdn.netbsd.org/pub/pkgsrc/current/pkgsrc/finance/hledger/
+
+-->
+
 ### Windows
 
 <table class="windows downloads">
@@ -273,9 +284,32 @@ And please [report](index.html#help) any trouble.
   </tbody>
 </table>
 
-### BSD
 
-<table class="bsd downloads">
+<!-- ### NetBSD -->
+
+<!-- <table class="netbsd bsd downloads"> -->
+<!--   <tbody> -->
+<!--     <tr> -->
+<!--       <td> -->
+<!--         <div class="distro"><a href="https://www.netbsd.org/">NetBSD</a></div> -->
+<!--         <div class="badges"> -->
+<!--           <a href=""><img src="https://img.shields.io/badge/netbsd-1.17.1.1-brightgreen.svg" alt="netbsd package" /></a><br> -->
+<!--           <a href="">more..</a> -->
+<!--         </div> -->
+<!--       </td> -->
+<!--       <td> -->
+<!--         <\!-- <div class="command">cd pkgsrc && ./bootstrap/bootstrap --prefix=$HOME/pkg --unprivileged --make-jobs 8 && cd finance/hledger && env PATH=$PATH:$HOME/pkg bmake install</div> -\-> -->
+<!--         <div class="command">pkg_add hledger</div> -->
+<!--         <div class="notes"> -->
+<!--         </div> -->
+<!--       </td> -->
+<!--     </tr> -->
+<!--   </tbody> -->
+<!-- </table> -->
+
+### OpenBSD
+
+<table class="openbsd bsd downloads">
   <tbody>
     <tr>
       <td>
