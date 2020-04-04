@@ -47,7 +47,7 @@ is cross-platform accounting software with an unusual combination of strengths:
 0. It comes with supported, zero-setup **[command line]**, **[terminal]**, and **[web]** user interfaces,
    and aims to serve **both power users and folks new to accounting or computers**.
 
-0. It is **easy to [install] on all supported platforms**, with official **mac, windows & linux** builds.
+0. It is **easy to [install] on many platforms**, with official **mac, windows & linux** builds.
 
 0. It prioritises **robustness**, **usability**, and **thorough documentation**.
 
@@ -62,7 +62,7 @@ is cross-platform accounting software with an unusual combination of strengths:
    And it is licensed under **[GNU GPLv3][gpl]**, providing the strongest guarantee
    that you will always have the right to run, inspect, modify, or share it.
 
-And here are some limitations, currently:
+And here are some current limitations:
 
 - The "GUIs" are minimalist; there is no rich polished GUI at the level of
   Quicken/Quickbooks.

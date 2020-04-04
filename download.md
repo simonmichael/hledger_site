@@ -136,7 +136,7 @@ And please [report](index.html#help) any trouble.
     <tr>
       <td>
         <div class="distro"><a href="https://www.winehq.org">Wine</a></div>
-        <div class="notes">Linux, Mac, FreeBSD</div>
+        <div class="notes">Linux, Mac, *BSD, ...</div>
       </td>
       <td>
         <div class="notes">Install Wine and use the Windows binary below</div>
