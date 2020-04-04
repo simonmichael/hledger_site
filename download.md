@@ -164,6 +164,14 @@ http://cdn.netbsd.org/pub/pkgsrc/current/pkgsrc/finance/README.html
 http://cdn.netbsd.org/pub/pkgsrc/current/pkgsrc/finance/hledger/README.html
 http://cdn.netbsd.org/pub/pkgsrc/current/pkgsrc/finance/hledger/
 
+Once pkgsrc 2020Q2 ships (in 202005W1):
+
+Build hledger from source on netbsd:
+cd /usr/pkgsrc/net/hledger && make install
+
+Install pkgsrc & build hledger from source on non-netbsd:
+cd pkgsrc && ./bootstrap/bootstrap --prefix=$HOME/pkg --unprivileged --make-jobs 8 && cd finance/hledger && env PATH=$PATH:$HOME/pkg bmake install
+
 -->
 
 ### Windows
@@ -298,7 +306,6 @@ http://cdn.netbsd.org/pub/pkgsrc/current/pkgsrc/finance/hledger/
 <!--         </div> -->
 <!--       </td> -->
 <!--       <td> -->
-<!--         <\!-- <div class="command">cd pkgsrc && ./bootstrap/bootstrap --prefix=$HOME/pkg --unprivileged --make-jobs 8 && cd finance/hledger && env PATH=$PATH:$HOME/pkg bmake install</div> -\-> -->
 <!--         <div class="command">pkg_add hledger</div> -->
 <!--         <div class="notes"> -->
 <!--         </div> -->
