@@ -4,17 +4,28 @@
 h2 {
     margin-top:2em;
 }
-table#downloads > tbody > tr { 
+h3 {
+    margin-top:1em;
+    margin-bottom:0;
+}
+table.downloads { 
+  width:100%;
+}
+table.downloads > tbody > tr { 
+  border-top:thin solid #ddd; 
   border-bottom:thin solid #ddd; 
 }
-table#downloads > tbody > tr > td { 
+table.downloads > tbody > tr > td { 
   padding-top:0.5em;
   padding-bottom:0.5em;
 }
-table#downloads > tbody > tr > td:nth-child(2) { 
-  padding-top:1.5em;
+table.downloads > tbody > tr > td:nth-child(1) { 
+  min-width:10em;
 }
-div.section > table td:first-child {
+table.downloads > tbody > tr > td:nth-child(2) { 
+  width:99%;
+}
+div.section > table td:nth-child(1) {
   padding-right:1em;
 }
 div.platform {
@@ -25,6 +36,19 @@ div.platform {
 }
 div.distro {
   margin-right:1em;
+}
+.bsd .distro, .cloud .distro {
+}
+.distro {
+}
+.downloads > tbody > tr > td:nth-child(2) { 
+  padding-top:1.5em;
+}
+.linux .distro {
+  display:none;
+}
+.linux.downloads > tbody > tr > td:nth-child(2) { 
+  padding-top:0.5em;
 }
 div.command {
   font-weight:bold;
@@ -64,15 +88,15 @@ div.badges {
 The current hledger release is **1.17.1.1** ([release notes](release-notes)).\
 [Binary packages](#binary-packages) install quickly.\
 [Building from source](#building-from-source) takes longer but ensures you get the latest release.\
-Please [report](index.html#help) any trouble.
+Afterward, [check your PATH](#check-your-path) and [test your installation](#test-your-installation).
+And please [report](index.html#help) any trouble.
 
-## Binary packages
+## Binary packages:
 
-<table id="downloads">
+### Multiplatform
+
+<table class="multiplatform downloads">
   <tbody>
-    <tr>
-      <td colspan=2><div class="platform">Multiplatform</div></td>
-    </tr>
     <tr>
       <td>
         <div class="distro"><a href="https://nixos.org/nix">Nix</a></div>
@@ -99,7 +123,7 @@ Please [report](index.html#help) any trouble.
         <div class="distro"><a href="https://www.docker.com/products/docker-desktop">Docker</a></div>
         <div class="notes">Linux, Mac, Windows</div>
         <div class="badges">
-          <a href="https://hub.docker.com/r/dastapov/hledger"><img alt="Docker" src="https://img.shields.io/badge/Docker_image-1.17.1.1-brightgreen.svg" /></a>
+          <a href="https://hub.docker.com/r/dastapov/hledger"><img alt="Docker" src="https://img.shields.io/badge/Docker_image-1.17.1.1-brightgreen.svg" /></a><br>
           <a href="https://hub.docker.com/search?q=hledger&amp;type=image&amp;sort=updated_at&amp;order=desc">more..</a>
         </div>
       </td>
@@ -128,9 +152,13 @@ Please [report](index.html#help) any trouble.
         <div class="notes">Install Wine and use the Windows binary below</div>
       </td>
     </tr>
-    <tr>
-      <td colspan=2><div class="platform">Windows</div></td>
-    </tr>
+  </tbody>
+</table>
+
+### Windows
+
+<table class="windows downloads">
+  <tbody>
     <tr valign="top">
       <td>
         <!-- <div class="distro">CI builds</div> -->
@@ -154,9 +182,13 @@ Please [report](index.html#help) any trouble.
         <!-- </div> -->
       </td>
     </tr>
-    <tr>
-      <td colspan=2><div class="platform">GNU/Linux</div></td>
-    </tr>
+  </tbody>
+</table>
+
+### GNU/Linux
+
+<table class="linux downloads">
+  <tbody>
     <tr>
       <td>
         <div class="distro">Arch</div>
@@ -195,9 +227,9 @@ Please [report](index.html#help) any trouble.
       <td>
         <div class="distro">Debian</div>
         <div class="badges">
-          <a href="https://packages.debian.org/unstable/hledger"><img src="https://repology.org/badge/version-for-repo/debian_unstable/hledger.svg" alt="Debian Unstable" /></a>
-          <a href="https://packages.debian.org/stable/hledger"><img src="https://repology.org/badge/version-for-repo/debian_stable/hledger.svg" alt="Debian Stable" /></a>
-          <a href="https://packages.debian.org/oldstable/hledger"><img src="https://repology.org/badge/version-for-repo/debian_oldstable/hledger.svg" alt="Debian Oldstable" /></a>
+          <a href="https://packages.debian.org/unstable/hledger"><img src="https://repology.org/badge/version-for-repo/debian_unstable/hledger.svg" alt="Debian Unstable" /></a><br>
+          <a href="https://packages.debian.org/stable/hledger"><img src="https://repology.org/badge/version-for-repo/debian_stable/hledger.svg" alt="Debian Stable" /></a><br>
+          <a href="https://packages.debian.org/oldstable/hledger"><img src="https://repology.org/badge/version-for-repo/debian_oldstable/hledger.svg" alt="Debian Oldstable" /></a><br>
           <a href="https://packages.debian.org/search?searchon=names&amp;keywords=hledger">more..</a>
         </div>
       </td>
@@ -209,12 +241,12 @@ Please [report](index.html#help) any trouble.
       <td>
         <div class="distro">Fedora</div>
         <div class="badges">
-          <a href="https://apps.fedoraproject.org/packages/hledger/"><img src="https://img.shields.io/badge/Fedora_Rawhide_package-1.14.2-red.svg" alt="Fedora Rawhide" /></a>
-          <a href="https://apps.fedoraproject.org/packages/hledger/"><img src="https://img.shields.io/badge/Fedora_33_package-1.14.2-red.svg" alt="Fedora 33" /></a>
-          <a href="https://apps.fedoraproject.org/packages/hledger/"><img src="https://img.shields.io/badge/Fedora_32_package-1.14.2-red.svg" alt="Fedora 32" /></a>
-          <a href="https://apps.fedoraproject.org/packages/hledger/"><img src="https://img.shields.io/badge/Fedora_31_package-1.12.1-red.svg" alt="Fedora 31" /></a>
-          <a href="https://apps.fedoraproject.org/packages/hledger/"><img src="https://img.shields.io/badge/Fedora_30_package-1.10-red.svg" alt="Fedora 30" /></a>
-          <a href="https://apps.fedoraproject.org/packages/hledger/"><img src="https://repology.org/badge/version-for-repo/fedora_29/hledger.svg" alt="Fedora 29" /></a>
+          <a href="https://apps.fedoraproject.org/packages/hledger/"><img src="https://img.shields.io/badge/Fedora_Rawhide_package-1.14.2-red.svg" alt="Fedora Rawhide" /></a><br>
+          <a href="https://apps.fedoraproject.org/packages/hledger/"><img src="https://img.shields.io/badge/Fedora_33_package-1.14.2-red.svg" alt="Fedora 33" /></a><br>
+          <a href="https://apps.fedoraproject.org/packages/hledger/"><img src="https://img.shields.io/badge/Fedora_32_package-1.14.2-red.svg" alt="Fedora 32" /></a><br>
+          <a href="https://apps.fedoraproject.org/packages/hledger/"><img src="https://img.shields.io/badge/Fedora_31_package-1.12.1-red.svg" alt="Fedora 31" /></a><br>
+          <a href="https://apps.fedoraproject.org/packages/hledger/"><img src="https://img.shields.io/badge/Fedora_30_package-1.10-red.svg" alt="Fedora 30" /></a><br>
+          <a href="https://apps.fedoraproject.org/packages/hledger/"><img src="https://repology.org/badge/version-for-repo/fedora_29/hledger.svg" alt="Fedora 29" /></a><br>
           <a href="https://apps.fedoraproject.org/packages/s/hledger">more..</a>
         </div>
       </td>
@@ -226,11 +258,11 @@ Please [report](index.html#help) any trouble.
       <td>
         <div class="distro">Ubuntu</div>
         <div class="badges">
-          <a href="https://packages.ubuntu.com/focal/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_20_04/hledger.svg" alt="Ubuntu 20.04" /></a>
-          <a href="https://packages.ubuntu.com/eoan/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_19_10/hledger.svg" alt="Ubuntu 19.10" /></a>
-          <a href="https://packages.ubuntu.com/disco/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_19_04/hledger.svg" alt="Ubuntu 19.04" /></a>
-          <a href="https://packages.ubuntu.com/bionic/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_18_04/hledger.svg" alt="Ubuntu 18.04" /></a>
-          <a href="https://packages.ubuntu.com/xenial/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_16_04/hledger.svg" alt="Ubuntu 16.04" /></a>
+          <a href="https://packages.ubuntu.com/focal/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_20_04/hledger.svg" alt="Ubuntu 20.04" /></a><br>
+          <a href="https://packages.ubuntu.com/eoan/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_19_10/hledger.svg" alt="Ubuntu 19.10" /></a><br>
+          <a href="https://packages.ubuntu.com/disco/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_19_04/hledger.svg" alt="Ubuntu 19.04" /></a><br>
+          <a href="https://packages.ubuntu.com/bionic/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_18_04/hledger.svg" alt="Ubuntu 18.04" /></a><br>
+          <a href="https://packages.ubuntu.com/xenial/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_16_04/hledger.svg" alt="Ubuntu 16.04" /></a><br>
           <a href="https://packages.ubuntu.com/search?suite=all&amp;searchon=names&amp;keywords=hledger">more..</a>
         </div>
       </td>
@@ -238,14 +270,18 @@ Please [report](index.html#help) any trouble.
         <div class="command">sudo apt install hledger hledger-ui hledger-web</div>
       </td>
     </tr>
-    <tr>
-      <td colspan=2><div class="platform">BSD</div></td>
-    </tr>
+  </tbody>
+</table>
+
+### BSD
+
+<table class="bsd downloads">
+  <tbody>
     <tr>
       <td>
         <div class="distro"><a href="https://github.com/jasperla/openbsd-wip#how-to-use-this-tree">OpenBSD WIP</a></div>
         <div class="badges">
-          <a href="https://github.com/jasperla/openbsd-wip/tree/master/productivity/hledger"><img src="https://img.shields.io/badge/openbsd--wip_port-1.10-red.svg" alt="openbsd-wip port" /></a>
+          <a href="https://github.com/jasperla/openbsd-wip/tree/master/productivity/hledger"><img src="https://img.shields.io/badge/openbsd--wip_port-1.10-red.svg" alt="openbsd-wip port" /></a><br>
           <a href="https://github.com/jasperla/openbsd-wip/tree/master/productivity">more..</a>
         </div>
       </td>
@@ -256,14 +292,20 @@ Please [report](index.html#help) any trouble.
         </div>
       </td>
     </tr>
-    <tr>
-      <td colspan=2><div class="platform">Cloud</div></td>
-    </tr>
+  </tbody>
+</table>
+
+### Cloud
+
+<table class="cloud downloads">
+  <tbody>
     <tr>
       <td>
         <div class="distro"><a href="https://sandstorm.io">Sandstorm</a></div>
         <div class="notes"></div>
-        <div class="badges"><a href="https://apps.sandstorm.io/search?term=hledger"><img alt="Sandstorm" src="https://img.shields.io/badge/Sandstorm_app-1.9.2-red.svg" /></a></div>
+        <div class="badges">
+            <a href="https://apps.sandstorm.io/search?term=hledger"><img alt="Sandstorm" src="https://img.shields.io/badge/Sandstorm_app-1.9.2-red.svg" /></a>
+        </div>
       </td>
       <td>
         <div class="command"><a href="https://apps.sandstorm.io/app/8x12h6p0x0nrzk73hfq6zh2jxtgyzzcty7qsatkg7jfg2mzw5n90">HLedger Web sandstorm app</a></div>
@@ -286,9 +328,10 @@ Please [report](index.html#help) any trouble.
 [hledger-install]: https://github.com/simonmichael/hledger/blob/master/hledger-install/hledger-install.sh
 [add-on commands]: hledger.html#add-on-commands
 
-## Building from source
+## Building from source:
 
-<div class="notes" style="position:relative; top:-1em;">Linux, Unix, Mac, Windows, WSL, ...</div>
+<!-- <div class="notes" style="position:relative; top:-1em; margin-bottom:2em;">Linux, Unix, Mac, Windows, WSL, ...</div> -->
+<br>
 
 You can build hledger wherever [GHC] is supported.
 This takes a while, and up to ~1G of disk space, but it's normally reliable. 
@@ -316,8 +359,6 @@ please web-search the error message to find the right system package to install 
 And [let us know](/index.html#help), so we can update this list.
 
 ### 2. Build and install hledger
-
-<img style="position:relative; top:-1em; margin:0;" alt="installs" src="https://img.shields.io/badge/installs_hledger-1.17.1-brightgreen.svg" />
 
 Our [install script][hledger-install] is the easiest way to build hledger. 
 It builds the current release plus some [add-on commands], and requires only [bash]:
@@ -427,7 +468,7 @@ git clone https://github.com/simonmichael/hledger <br>
 cd hledger
 </div>
 
-and install executables to ~/.local/bin with [stack]:
+and build and install executables to ~/.local/bin with [stack]:
 <div class="builder-command">
 stack update<br>
 stack install
@@ -458,7 +499,7 @@ This will build the image tagged `hledger` with just the latest binaries inside.
 If you want to keep all the build artifacts and use the resulting
 image for hledger development, run `./build-dev.sh` instead.
 
-## Check your PATH
+## Check your PATH:
 
 After building/installing, you may see a message about where the executables were installed.
 Eg:
@@ -484,10 +525,12 @@ and here's a way to add the stack and cabal install dirs permanently:
   source ~/.bashrc
 </div>
 
-## Test your installation
+## Test your installation:
 
 After a successful installation, you should be able to run the hledger
-tools (that you installed), and see the expected versions. Eg:
+tools and see the expected versions (the ones you just installed, and
+not any older versions that may exist somewhere else in your PATH).
+Eg:
 
 <div class="command">
 $ hledger --version <br>
