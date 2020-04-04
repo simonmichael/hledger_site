@@ -17,6 +17,10 @@ is cross-platform accounting software with an unusual combination of strengths:
    - It is a simple yet powerful [double-entry accounting] system
      that can track money, time, investments, cryptocurrencies, inventory and more.
 
+   - It runs on your local computer, keeping your financial data
+     **private and under your control**. (You can also
+     share/collaborate online if you wish.)
+
    - Your data is stored as future-proof, human-readable plain text.
      There is no data lock-in; you can migrate to/from other 
      [plain text accounting apps], spreadsheets etc.
@@ -24,38 +28,58 @@ is cross-platform accounting software with an unusual combination of strengths:
    - You can add data with your favourite text editor, or a UI, or
      download it from banks or [any CSV file][convert].
 
-   - You can optionally use a version control system, such as [Git],
-     to safeguard your data; track changes; manage alternate what-if
-     scenarios; and collaborate with others.
-
    - You can start with 
      [very basic journal entries and reports](#quick-start),
      and get more sophisticated when you're ready.
+
+   - You can optionally use a version control system, such as [Git],
+     to safeguard your data; track changes; manage alternate what-if
+     scenarios; and collaborate with others.
 
    - The plain text format and fast command-line interface
      (plus a reusable [library] for building your own [commands][script])
      facilitate scripting and customisation.
 
-0. It is **free to use**, with no purchase price or monthly fees.
-   And it is licensed under **[GNU GPLv3][gpl]**, providing the strongest guarantee
-   that you will always have the right to run, inspect, modify, or share it.
-
-0. It runs on your local computer, keeping your financial data
-   **private and under your control**. (You can also share/collaborate
-   online if you wish.)
-
-0. It is **easy to [install] on all supported platforms**, with official **mac, windows & linux** builds.
+0. It is modelled after the pioneering [Ledger], 
+   and will read many Ledger files without change. 
+   Ledger users will find the data formats and commands familiar.
 
 0. It comes with supported, zero-setup **[command line]**, **[terminal]**, and **[web]** user interfaces,
    and aims to serve **both power users and folks new to accounting or computers**.
 
+0. It is **easy to [install] on all supported platforms**, with official **mac, windows & linux** builds.
+
 0. It prioritises **robustness**, **usability**, and **thorough documentation**.
+
+0. It is quite **fast**, parsing and analysing ~2000 txns/s on a
+   2013 macbook. Typically, reports take a fraction of a second and
+   hledger-ui updates instantly as you edit.
 
 0. It is **[actively maintained]**, with regular [releases],
    a large [chat room](#help) and other [support resources](#help).
 
+0. It is **free**, with no purchase price or monthly fees.
+   And it is licensed under **[GNU GPLv3][gpl]**, providing the strongest guarantee
+   that you will always have the right to run, inspect, modify, or share it.
 
+And here are some limitations, currently:
 
+- The "GUIs" are minimalist; there is no rich polished GUI at the level of
+  Quicken/Quickbooks.
+
+- In the beginning it might feel like there's too much freedom and
+  not enough guidance.
+  Some common needs are not yet satisfactorily documented. 
+  (Tip: a request in chat often produces a quick doc!)
+
+- Importing bank CSV files requires a little bit of configuration,
+  and direct download from banks requires a bit more.
+
+- hledger doesn't yet calculate capital gains automatically, you must do
+  that semi-manually. (Ledger and Beancount have partial support for this.)
+
+- hledger is not yet as fast as Ledger, which can be ~10x faster
+  (with some sacrifices, like non-date-aware balance assertions).
 
 [command line]:               add.html
 [terminal]:                   ui.html
@@ -70,8 +94,10 @@ is cross-platform accounting software with an unusual combination of strengths:
 [double-entry accounting]:    https://en.wikipedia.org/wiki/Double-entry_bookkeeping
 [install]:                    download.html
 [sponsor]:                    #sponsorship
-[ledger]:                     https://plaintextaccounting.org/#plain-text-accounting-apps
-[beancount]:                  https://plaintextaccounting.org/#plain-text-accounting-apps
+[ledgerlikes]:                https://plaintextaccounting.org/#plain-text-accounting-apps
+[ledger]:                     https://www.ledger-cli.org
+[ledger features]:            https://www.ledger-cli.org/features.html
+[beancount]:                  http://furius.ca/beancount
 [gpl]:                        https://en.wikipedia.org/wiki/GNU_General_Public_License
 [library]:                    https://hackage.haskell.org/package/hledger-lib
 [script]:                     https://github.com/simonmichael/hledger/blob/master/bin/hledger-check-tag-files.hs
@@ -87,16 +113,16 @@ is cross-platform accounting software with an unusual combination of strengths:
 </div>
 
 You can start with hledger very simply, and get more sophisticated as
-you learn more about double-entry accounting and automation.
+you learn more about double-entry accounting and hledger best practices.
 Here are some common ways of using it:
-
-**Command line:**
-[Use hledger add](add.html)'s interactive prompts to enter transactions,
-run hledger commands to see reports.
 
 **Web or terminal UI:**
 [Use hledger-web](web.html) or [use hledger-ui](ui.html) to enter
 transactions and see reports.
+
+**Command line:**
+[Use hledger add](add.html)'s interactive prompts to enter transactions,
+run hledger commands to see reports.
 
 **Text editor:**
 <table id="example">
@@ -184,6 +210,7 @@ Next, you could:
 
 - Explore the sidebar to your left (or on small screens, the menu button at top left).
   It scrolls and expands, and all hledger docs can be found there.
+- Check the **[FAQ](faq.html)**.
 - Look at some tutorials, about
   **[hledger add](add.html)**,
   **[hledger-web](web.html)**,
@@ -217,7 +244,7 @@ I hope you too will find it helpful in mastering your time and money!
 When your wealth allows, perhaps you'll feel inspired to become a
 [sponsor] and help us do more.
 
-hledger is a [Haskell] rewrite/reboot of the pioneering [Ledger](http://ledger-cli.org).
+hledger is a [Haskell] rewrite/reboot of the pioneering [Ledger].
 ([Why?](faq.html#how-why-was-hledger-started))
 Ledger users will find it very familiar, and you can keep your data compatible with both tools if you wish.
 Read more about the [differences](faq.html#ledger).
