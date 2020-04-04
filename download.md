@@ -111,8 +111,8 @@ Please [report](index.html#help) any trouble.
         <div class="distro"><a href="https://brew.sh">Homebrew</a></div>
         <div class="notes">Linux, Mac, Windows</div>
         <div class="badges">
-          <!--[![](https://repology.org/badge/version-for-repo/homebrew/hledger.svg)]-->
-          <a href="https://formulae.brew.sh/formula/hledger"><img alt="Homebrew" src="https://img.shields.io/badge/Homebrew-1.16.2-red.svg" /></a>
+          <a href="https://formulae.brew.sh/formula/hledger"><img alt="Homebrew" src="https://repology.org/badge/version-for-repo/homebrew/hledger.svg" /></a>
+          <!-- <a href="https://formulae.brew.sh/formula/hledger"><img alt="Homebrew" src="https://img.shields.io/badge/Homebrew-1.17.1.1-brightgreen.svg" /></a> -->
         </div>
       </td>
       <td>
