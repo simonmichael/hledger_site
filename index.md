@@ -301,6 +301,14 @@ making it easy to write your own hledger-compatible
     <td>
       <a href="http://irc.hledger.org">#hledger</a> on Freenode IRC
       (or via Matrix: <a href="http://matrix.hledger.org">#freenode_#hledger:matrix.org</a>)
+      <br>
+      To talk, <a href="https://freenode.net/kb/answer/registration">register your nick</a>:
+      <br>
+      on IRC, <code>/msg NickServ register newpassword youremailaddress</code>
+      <br>
+      on Matrix, 
+      use <a href="https://github.com/matrix-org/matrix-appservice-irc/wiki/End-user-FAQ#how-do-i-registeridentify-to-nickserv">@freenode_NickServ:matrix.org</a>
+      and <a href="https://github.com/matrix-org/matrix-appservice-irc/wiki/End-user-FAQ#and-do-it-automatically">@appservice-irc:matrix.org</a>
     </td>
   </tr>
   <tr>
