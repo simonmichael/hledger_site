@@ -344,8 +344,8 @@ making it easy to write your own hledger-compatible
     <td>
       <a href="https://plaintextaccounting.org">plaintextaccounting.org</a>
       <br>
-      <a href="http://irc.hledger.org">#plaintextaccounting</a> chat
-      (or <a href="https://matrix.to/#/#freenode_#hledger:matrix.org">#freenode_#plaintextaccounting:matrix.org</a>)
+      <a href="https://webchat.freenode.net/#plaintextaccounting">#plaintextaccounting</a> chat
+      (or <a href="https://matrix.to/#/#freenode_#plaintextaccounting:matrix.org">#freenode_#plaintextaccounting:matrix.org</a>)
       <br>
       <a href="https://www.ledger-cli.org/docs.html">Ledger CLI docs</a>
       <br>
