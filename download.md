@@ -127,7 +127,7 @@ And please [report](index.html#help) any trouble.
           <!-- <a href="https://formulae.brew.sh/formula/hledger"><img alt="Homebrew" src="https://img.shields.io/badge/Homebrew-1.17.1.1-brightgreen.svg" /></a> -->
         </div>
         <div class="distro"><a href="https://brew.sh">Homebrew</a></div>
-        <div class="notes">Linux, Mac, Windows</div>
+        <div class="notes">Linux, Mac, WSL</div>
       </td>
       <td>
         <div class="command">brew install hledger</div>
