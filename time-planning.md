@@ -79,6 +79,7 @@ I have an iTerm2 Hotkey Window (a terminal that drops down on ALT-space) with si
         function tlogwatch()
         {
           LINES=${1:-20}
+          shift
           watch -t -n60 $@ "bash -ic 'tlog '$LINES"
         }
         # TODO why does "tlogwatch 10" give "sh: 10: command not found" ?
