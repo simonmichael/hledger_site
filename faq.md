@@ -320,6 +320,9 @@ We do not yet support:
 - hledger's `-x`/`--explicit` flag (makes print show all amounts) 
   and Ledger's `--explicit` flag (does something else) are unrelated.
 
+- hledger [period expressions](hledger.html#period-expressions) (before 1.18) 
+  don't understand `until`, use `to` instead.
+
 #### journal format
 
 - hledger supports international number formats, auto-detecting the
