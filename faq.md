@@ -345,7 +345,8 @@ We do not yet support:
 - Ledger supports some additional price syntaxes (`{ }`, `{{ }}`, `{= }`),
   instead of or before or after `@`, `@@` prices.
   hledger currently ignores any `{ }`, `{{ }}`, `{= }` prices, and
-  requires them to be written after `@`, `@@`. (#1084)
+  requires them to be written after `@`, `@@`. 
+  ([#1084](https://github.com/simonmichael/hledger/issues/1084))
 
 #### timeclock & timedot formats
 
