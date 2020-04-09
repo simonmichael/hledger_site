@@ -345,13 +345,11 @@ We do not yet support:
   seen. Ledger uses D only for commodity display settings and for the
   entry command.
 
-- hledger up to 1.17.1 does not accept Ledger's lot price syntax except
+- hledger up to 1.17.1 does not accept Ledger's lot price or lot date syntax except
   in vary limited circumstances (`{= }` at the end of the posting line).
-  hledger 1.17.99+ accepts all four of Ledger's lot price syntaxes 
-  (`{PRICE}`, `{{PRICE}}`, `{=PRICE}`, `{{=PRICE}}`),
-  after the posting amount and before the balance assertion if any
-  (either before or after the transaction price, if any).
-  In all cases lot prices are ignored.
+  hledger 1.17.99+ accepts, but ignores, Ledger-style lot prices
+  (`{PRICE}`, `{{PRICE}}`, `{=PRICE}`, `{{=PRICE}}`) and/or lot dates
+  (`[DATE]`), after the posting amount and before the balance assertion if any.
   ([#1084](https://github.com/simonmichael/hledger/issues/1084))
 
 #### timeclock & timedot formats
