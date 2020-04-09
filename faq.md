@@ -345,15 +345,27 @@ We do not yet support:
   seen. Ledger uses D only for commodity display settings and for the
   entry command.
 
+- hledger up to 1.17.1 does not accept Ledger's virtual posting cost syntax (`(@)`, `(@@)`).
+  hledger 1.17.99+ accepts it, and ignores the parentheses.
+
 - hledger up to 1.17.1 does not accept Ledger's lot price or lot date syntax except
   in vary limited circumstances (`{= }` at the end of the posting line).
   hledger 1.17.99+ accepts, but ignores, Ledger-style lot prices
   (`{PRICE}`, `{{PRICE}}`, `{=PRICE}`, `{{=PRICE}}`) and/or lot dates
   (`[DATE]`), after the posting amount and before the balance assertion if any.
   ([#1084](https://github.com/simonmichael/hledger/issues/1084))
+  Relatedly, hledger will not calculate capital gains when balancing a transaction
+  selling a lot at a different price from its cost basis, as Ledger does. Eg:
+  ```journal
+  ; Ledger expects the 5 EUR capital gain income here because selling a 10 EUR lot at 15 EUR.
+  ; hledger does not. Must leave that amount implicit to allow both to parse this.
+  2019-03-01 Sell
+    Assets:Shares           -1 ETF {10 EUR} @ 15 EUR
+    Assets:Cash             15 EUR
+    Income:Capital Gains   ;-5 EUR
+  ```
 
-- hledger up to 1.17.1 does not accept Ledger's virtual posting cost syntax (`(@)`, `(@@)`).
-  hledger 1.17.99+ accepts it, and ignores the parentheses.
+- hledger does not support Ledger's --lots or --gain reports.
 
 #### timeclock & timedot formats
 
