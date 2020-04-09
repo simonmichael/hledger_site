@@ -352,6 +352,9 @@ We do not yet support:
   (`[DATE]`), after the posting amount and before the balance assertion if any.
   ([#1084](https://github.com/simonmichael/hledger/issues/1084))
 
+- hledger up to 1.17.1 does not accept Ledger's virtual posting cost syntax (`(@)`, `(@@)`).
+  hledger 1.17.99+ accepts it, and ignores the parentheses.
+
 #### timeclock & timedot formats
 
 - hledger's journal, timeclock and timedot formats are separate; you can't 
