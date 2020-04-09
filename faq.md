@@ -320,7 +320,7 @@ We do not yet support:
 - hledger's `-x`/`--explicit` flag (makes print show all amounts) 
   and Ledger's `--explicit` flag (does something else) are unrelated.
 
-- hledger [period expressions](hledger.html#period-expressions) (before 1.18) 
+- hledger [period expressions](hledger.html#period-expressions) (up to 1.17) 
   don't understand `until`, use `to` instead.
 
 #### journal format
@@ -345,10 +345,13 @@ We do not yet support:
   seen. Ledger uses D only for commodity display settings and for the
   entry command.
 
-- Ledger supports some additional price syntaxes (`{ }`, `{{ }}`, `{= }`),
-  instead of or before or after `@`, `@@` prices.
-  hledger currently ignores any `{ }`, `{{ }}`, `{= }` prices, and
-  requires them to be written after `@`, `@@`. 
+- hledger up to 1.17.1 does not accept Ledger's lot price syntax except
+  in vary limited circumstances (`{= }` at the end of the posting line).
+  hledger 1.17.99+ accepts all four of Ledger's lot price syntaxes 
+  (`{PRICE}`, `{{PRICE}}`, `{=PRICE}`, `{{=PRICE}}`),
+  after the posting amount and before the balance assertion if any
+  (either before or after the transaction price, if any).
+  In all cases lot prices are ignored.
   ([#1084](https://github.com/simonmichael/hledger/issues/1084))
 
 #### timeclock & timedot formats
