@@ -349,7 +349,7 @@ We do not yet support:
   hledger 1.17.99+ accepts it, and ignores the parentheses.
 
 - hledger up to 1.17.1 does not accept Ledger's lot price or lot date syntax except
-  in vary limited circumstances (`{= }` at the end of the posting line).
+  in very limited circumstances (`{= }` at the end of the posting line).
   hledger 1.17.99+ accepts, but ignores, Ledger-style lot prices
   (`{PRICE}`, `{{PRICE}}`, `{=PRICE}`, `{{=PRICE}}`) and/or lot dates
   (`[DATE]`), after the posting amount and before the balance assertion if any.
