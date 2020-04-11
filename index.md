@@ -368,26 +368,66 @@ making it easy to write your own hledger-compatible
 
 ## Sponsorship
 
-<div id="fund" style="float:right; margin:0 2em 4em;">
-<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=5J33NLXYXCYAY"><img width=62 height=31 border=0 src="https://www.paypal.com/en_US/i/btn/x-click-but04.gif" title="Give one time or recurringly with Paypal" alt="paypal"></a><br>
-<a href="https://github.com/sponsors/simonmichael"><img border="0" src="https://img.shields.io/badge/Sponsor_on-Github-limegreen" title="Sponsor the project leader on Github" alt="github"></a><br>
-<a href="https://liberapay.com/simonmichael"><img border="0" src="https://img.shields.io/badge/Sponsor_on-Liberapay-limegreen" title="Sponsor the project leader on Github" alt="liberapay"></a><br>
-<div style="margin-top:0.5em; font-size:small; white-space:nowrap;">Open Collective:</div>
-<a href="https://opencollective.com/hledger#support"><img border="0" src="https://opencollective.com/hledger/backers/badge.svg" title="Back us with a monthly donation at Open Collective" alt="open collective backers"></a>
-<a href="https://opencollective.com/hledger#support"><img border="0" src="https://opencollective.com/hledger/sponsors/badge.svg" title="Sponsor us with a $100+ monthly donation at Open Collective and get your organization's logo on our README" alt="open collective sponsors"></a><br>
-<!-- <a href="https://patreon.com/simonmichael"><img border="0" src="https://img.shields.io/badge/Sponsor_on-Patreon-limegreen" title="Sponsor the project leader on Github" alt="patreon"></a><br> -->
-<!-- <a href="https://www.bountysource.com/trackers/536505-simonmichael-hledger"><img border=0 src="https://www.bountysource.com/badge/tracker?tracker_id=536505" title="Contribute or claim issue bounties via Bountysource" alt="bountysource"></a> -->
-</div>
-
 Building and supporting good software and documentation requires a lot of time and life energy.
 Maybe these thousands of person-hours have helped you ?
-You can give back at any level and be one of the generous Sponsors
-helping to sustain and accelerate the hledger project, and helping
-more people to achieve financial freedom.
+You can give back at any level and be one of the generous sponsors
+helping to sustain and accelerate this project and 
+its core mission of helping more people achieve financial freedom.
+
+<!-- keep synced with README.md: -->
+
+Sponsor Simon (project leader):
+[![github](https://img.shields.io/badge/Sponsor_on-Github-limegreen "Sponsor the project leader via Github")](https://github.com/sponsors/simonmichael)
+[![liberapay](https://img.shields.io/badge/Sponsor_on-Liberapay-limegreen "Sponsor the project leader via Liberapay")](https://liberapay.com/simonmichael)
+[![paypal](https://www.paypal.com/en_US/i/btn/x-click-but04.gif "Give one time or recurringly via Paypal")](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5J33NLXYXCYAY)
+
+Organisations sponsoring the hledger project on Open Collective:
+[![OpenCollective](https://opencollective.com/hledger/sponsors/badge.svg)][oc contributors] <!-- wrong count --> \
+[![](https://opencollective.com/hledger/sponsor/0/avatar.svg)](https://opencollective.com/hledger/sponsor/0/website)
+[![](https://opencollective.com/hledger/sponsor/1/avatar.svg)](https://opencollective.com/hledger/sponsor/1/website)
+[![](https://opencollective.com/hledger/sponsor/2/avatar.svg)](https://opencollective.com/hledger/sponsor/2/website)
+[![](https://opencollective.com/hledger/sponsor/3/avatar.svg)](https://opencollective.com/hledger/sponsor/3/website)
+[![](https://opencollective.com/hledger/sponsor/4/avatar.svg)](https://opencollective.com/hledger/sponsor/4/website)
+[![](https://opencollective.com/hledger/sponsor/5/avatar.svg)](https://opencollective.com/hledger/sponsor/5/website)
+[![](https://opencollective.com/hledger/sponsor/6/avatar.svg)](https://opencollective.com/hledger/sponsor/6/website)
+[![](https://opencollective.com/hledger/sponsor/7/avatar.svg)](https://opencollective.com/hledger/sponsor/7/website)
+[![](https://opencollective.com/hledger/sponsor/8/avatar.svg)](https://opencollective.com/hledger/sponsor/8/website)
+[![](https://opencollective.com/hledger/sponsor/9/avatar.svg)](https://opencollective.com/hledger/sponsor/9/website)
+[![](https://opencollective.com/hledger/sponsor/10/avatar.svg)](https://opencollective.com/hledger/sponsor/10/website)
+
+Individuals backing the hledger project on Open Collective:
+[![OpenCollective](https://opencollective.com/hledger/backers/badge.svg)][oc contributors] <!-- wrong count --> \
+[![](https://opencollective.com/hledger/backer/0/avatar.svg)](https://opencollective.com/hledger/backer/0/website)
+[![](https://opencollective.com/hledger/backer/1/avatar.svg)](https://opencollective.com/hledger/backer/1/website)
+[![](https://opencollective.com/hledger/backer/2/avatar.svg)](https://opencollective.com/hledger/backer/2/website)
+[![](https://opencollective.com/hledger/backer/3/avatar.svg)](https://opencollective.com/hledger/backer/3/website)
+[![](https://opencollective.com/hledger/backer/4/avatar.svg)](https://opencollective.com/hledger/backer/4/website)
+[![](https://opencollective.com/hledger/backer/5/avatar.svg)](https://opencollective.com/hledger/backer/5/website)
+[![](https://opencollective.com/hledger/backer/6/avatar.svg)](https://opencollective.com/hledger/backer/6/website)
+[![](https://opencollective.com/hledger/backer/7/avatar.svg)](https://opencollective.com/hledger/backer/7/website)
+[![](https://opencollective.com/hledger/backer/8/avatar.svg)](https://opencollective.com/hledger/backer/8/website)
+[![](https://opencollective.com/hledger/backer/9/avatar.svg)](https://opencollective.com/hledger/backer/9/website)
+[![](https://opencollective.com/hledger/backer/10/avatar.svg)](https://opencollective.com/hledger/backer/10/website)
+[![](https://opencollective.com/hledger/backer/11/avatar.svg)](https://opencollective.com/hledger/backer/11/website)
+[![](https://opencollective.com/hledger/backer/12/avatar.svg)](https://opencollective.com/hledger/backer/12/website)
+[![](https://opencollective.com/hledger/backer/13/avatar.svg)](https://opencollective.com/hledger/backer/13/website)
+[![](https://opencollective.com/hledger/backer/14/avatar.svg)](https://opencollective.com/hledger/backer/14/website)
+[![](https://opencollective.com/hledger/backer/15/avatar.svg)](https://opencollective.com/hledger/backer/15/website)
+[![](https://opencollective.com/hledger/backer/16/avatar.svg)](https://opencollective.com/hledger/backer/16/website)
+[![](https://opencollective.com/hledger/backer/17/avatar.svg)](https://opencollective.com/hledger/backer/17/website)
+[![](https://opencollective.com/hledger/backer/18/avatar.svg)](https://opencollective.com/hledger/backer/18/website)
+[![](https://opencollective.com/hledger/backer/19/avatar.svg)](https://opencollective.com/hledger/backer/19/website)
+[![](https://opencollective.com/hledger/backer/20/avatar.svg)](https://opencollective.com/hledger/backer/20/website)
+
+Bounties for specific tasks:
+[![all bounties](https://img.shields.io/badge/github-All_bountied_issues-30bae8 "all bountied issues, bountysource and otherwise")](https://github.com/simonmichael/hledger/issues?q=label:bounty)
+[![bountysource bounties](https://api.bountysource.com/badge/team?team_id=75979&style=bounties_received "issues bountied via bountysource")](https://www.bountysource.com/teams/hledger)
+
+[oc contributors]: https://opencollective.com/hledger#section-contributors
+
 
 <br>
 <br>
-
 
 <!---------------------------------------------------------------------------->
 <style>
@@ -447,20 +487,6 @@ h2 {
   padding-right:1em; 
   white-space:nowrap; 
 }
-
-#fund {
-/*
-  background-color: #eee;
-  border-radius:1em;
-  margin:1em .5em .5em 0;
-  padding:.1em .5em;
-*/
-}
-/*
-#fund td { 
-  width:50%;
-}
-*/
 
 .highslide img {max-width:200px; float:right; margin:0 0 1em 1em;}
 .highslide-caption {color:white; background-color:black;}
