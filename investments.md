@@ -652,3 +652,5 @@ possible to make an entry that both tools will accept, though with different mea
 [accounting equation]:   https://en.wikipedia.org/wiki/Accounting_equation
 [beancount_cookbook]:    http://furius.ca/beancount/doc/cookbook
 [beancount_trading]:     http://furius.ca/beancount/doc/trading
+[investopedia:gain]:     https://www.investopedia.com/terms/c/capitalgain.asp
+[SO: gain entry]:        https://money.stackexchange.com/a/22266/1127
