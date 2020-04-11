@@ -555,9 +555,19 @@ c. use an unbalanced equity posting ?
 
 bse now shows a zero total, but reports will not show a revenue
 
-Related: https://money.stackexchange.com/a/22266/1127
+d. 1. convert the lot to cash using its original cost, 2. balanced equity & assets postings for the gain
+(related: https://money.stackexchange.com/a/22266/1127)
 
-<!--
+```journal
+2020-03-02
+    assets:cc:ada:20200201                     -2000 ADA @ $0.02  ; use the original cost here
+    assets:bank:checking                         $40
+    equity:capital gain                         $-40              ; and add the capital gain here
+    assets:bank:checking                         $40              
+```
+
+bse is now correct ?
+
 ```shell
 $ hledger bse --flat 
 Balance Sheet With Equity 2020-03-02
@@ -577,13 +587,13 @@ Balance Sheet With Equity 2020-03-02
 =================================++============
  Equity                          ||            
 ---------------------------------++------------
+ equity:capital gain             ||     $40.00 
  equity:opening/closing balances ||   $1000.00 
 ---------------------------------++------------
-                                 ||   $1000.00 
+                                 ||   $1040.00 
 =================================++============
- Net:                            ||     $40.00 
+ Net:                            ||          0 
 ```
--->
 
 <!--
 (hledger 1.17.99+ will parse Ledger's lot notation; in this case it's
