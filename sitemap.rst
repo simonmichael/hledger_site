@@ -71,6 +71,7 @@ hledger
    project-accounting
    time-planning
    track-investments
+   investments
 
 .. toctree::
    :caption: Cookbook: Usage tips
