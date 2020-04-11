@@ -556,7 +556,7 @@ c. use an unbalanced equity posting ?
 bse now shows a zero total, but reports will not show a revenue
 
 d. 1. convert the lot to cash using its original cost, 2. balanced equity & assets postings for the gain
-(related: https://money.stackexchange.com/a/22266/1127)
+(related: <https://money.stackexchange.com/a/22266/1127>)
 
 ```journal
 2020-03-02
@@ -565,6 +565,13 @@ d. 1. convert the lot to cash using its original cost, 2. balanced equity & asse
     equity:capital gain                         $-40              ; and add the capital gain here
     assets:bank:checking                         $40              
 ```
+
+Ie when selling stock, 
+
+1. convert to cash at cost price
+2. transfer the capital gain from/loss to equity
+3. make sure that gets picked up as a sort of revenue/expense in tax reports
+
 
 bse is now correct ?
 
