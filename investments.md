@@ -125,7 +125,7 @@ If you know a little about investing, or have read Ledger or Beancount docs,
 you'll know that it's important to track the date and cost of each stock purchase,
 or *lot*. This information is needed:
 
-- While holding investments, to calculate *unrealised capital gains/losses*,
+- While holding investments, to calculate *unrealised [capital gains][investopedia:gain]/losses*,
   ie the change in their value "on paper" as market prices fluctuate.
   
 - When selling an investment, so that:
@@ -554,6 +554,8 @@ c. use an unbalanced equity posting ?
 ```
 
 bse now shows a zero total, but reports will not show a revenue
+
+Related: https://money.stackexchange.com/a/22266/1127
 
 <!--
 ```shell
