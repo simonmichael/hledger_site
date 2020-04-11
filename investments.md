@@ -520,7 +520,7 @@ balanced.
 
 With hledger, we must instead ....
 
-use an [unbalanced posting], by parenthesising the account name: ?
+a. use an [unbalanced posting], by parenthesising the account name: ?
 
 ```journal
 2020-03-02
@@ -529,8 +529,33 @@ use an [unbalanced posting], by parenthesising the account name: ?
     (revenues:capital gain)                     $-40
 ```
 
-not right ? bse is unchanged:
+bse is unchanged
 
+b. balance it with an equity posting ?
+
+```journal
+2020-03-02
+    assets:cc:ada:20200201                     -2000 ADA @ $0.04 = 0 ADA
+    assets:bank:checking                         $80
+    revenues:capital gain                       $-40
+    equity:capital gain                          $40
+```
+
+bse looks worse, now the Net total is $80:
+
+c. use an unbalanced equity posting ?
+
+```journal
+2020-03-02
+    assets:cc:ada:20200201                     -2000 ADA @ $0.04 = 0 ADA
+    assets:bank:checking                         $80
+    revenues:capital gain                       $-40
+    equity:capital gain                          $40
+```
+
+bse now shows a zero total, but reports will not show a revenue
+
+<!--
 ```shell
 $ hledger bse --flat 
 Balance Sheet With Equity 2020-03-02
@@ -556,6 +581,7 @@ Balance Sheet With Equity 2020-03-02
 =================================++============
  Net:                            ||     $40.00 
 ```
+-->
 
 <!--
 (hledger 1.17.99+ will parse Ledger's lot notation; in this case it's
@@ -568,6 +594,11 @@ possible to make an entry that both tools will accept, though with different mea
     revenues:capital gain                             ; Ledger infers $-40, hledger infers 0
 ```
 -->
+
+
+
+
+
 
 
 
