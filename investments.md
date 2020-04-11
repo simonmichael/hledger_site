@@ -602,6 +602,9 @@ Balance Sheet With Equity 2020-03-02
  Net:                            ||          0 
 ```
 
+or: has it been thrown off by not using the
+[more correct entry](#a-more-correct-entry) for the purchase ?
+
 <!--
 (hledger 1.17.99+ will parse Ledger's lot notation; in this case it's
 possible to make an entry that both tools will accept, though with different meaning):
