@@ -1,6 +1,6 @@
 # Track investments 2
 
-*0.1, first draft, 2020-04*
+*0.1 (first draft), 2020-04*
 
 Here's a tutorial on tracking "investments" - stocks, cryptocurrencies, and similar - in hledger.
 This is a more in-depth version of [Tracking investments](tracking-investments.html),
