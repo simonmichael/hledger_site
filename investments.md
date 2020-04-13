@@ -1,11 +1,25 @@
 # Track investments 2
 
-*First draft (202004, WIP)*
+*0.1, first draft, 2020-04*
 
-Here's an updated exploration of tracking stock investments, cryptocurrencies and the like,
-using the features available in hledger 1.17. 
-(Older hledger versions may not match this doc.)
+Here's a tutorial on tracking "investments" - stocks, cryptocurrencies, and similar - in hledger.
+This is a more in-depth version of [Tracking investments](tracking-investments.html),
+using hledger 1.17; older hledger versions may not match this doc.
+I hope to teach you a little basic investment accounting, 
+or a little about doing it with hledger (and other PTA tools), 
+or a little of both.
+Notably, you'll see three different ways to record lots and capital gains: 
 
+1. using {} notation (works in Ledger, Beancount)
+
+ 2. using just @ notation (works in hledger, Ledger, Beancount..)
+
+3. using just standard postings (works in any double-entry accounting system).
+
+
+## A stock purchase
+
+We'll use a cryptocurrency and fictitious prices here, but these examples apply equally well to stocks.
 Let's say we start the year with $1000 for investment:
 ```journal
 2020-01-01 opening balances
@@ -13,9 +27,6 @@ Let's say we start the year with $1000 for investment:
     equity:opening/closing balances
 ```
 
-## A stock purchase
-
-We'll use a cryptocurrency and fictitious prices here, but these examples apply equally well to stocks.
 In february we see ADA is priced at $0.02, and decide to buy a little. 
 We'll spend $40, which at 2 cents per ADA buys 2000 ADA.
 Here's the most straightforward journal entry:
@@ -83,13 +94,13 @@ But here are two more ways of writing the above, just for completeness:
 
 ## A more correct entry
 
-Do you find this still unsatisfactory ? 
+Do you find this still wrong ? 
 Some amount of dollars seems to disappear, and some amount of ADA appears.
 Doesn't this violate the [accounting equation], the foundation of
 double entry bookkeeping, which essentially says "money is not created
 out of thin air" ?
-[#1177] agrees with you; in summary, it seems the most correct kind
-of entry for this transaction is:
+[#1177] agrees with you; in summary, it seems the correct entry for
+this transaction is more like:
 
 ```journal
 2020-02-01
@@ -99,25 +110,27 @@ of entry for this transaction is:
     assets:bank:checking   -$40
 ```
 
-The `equity:conversion` account name isn't special, but it's
-considered to be an equity account.
-
 This entry might look a little strange to you, but it does show more
 clearly that the transaction is balanced; it gathers commodity
 conversions into a single "conversion" account which can provide
 useful information; and it preserves the [accounting equation].
+The "conversion" account name isn't special, but it's an equity account.
+Another way to write it, relying on automatic transaction balancing, is:
 
-However, for our needs, it has a problem: hledger (like other PTA
-tools) will not recognise this more general form as a commodity
-conversion, so will not be able to show cost reports. For that reason,
-we're going to stick with the explicit `@`/`@@` notation here.
-Also, in practice:
+```journal
+2020-02-01
+    assets:cc:ada          2000 ADA
+    assets:bank:checking   -$40
+    equity:conversion                 ; -2000 ADA, +$40 inferred here
+```
 
-- The unbalanced accounting equation isn't noticeable in the kind of
-  reports we're typically doing.
-
-- Typos won't be a problem, because any kind of reconciliation will
-  quickly lead us to find and fix the error.
+There's a problem, however: hledger (and other PTA tools) do not
+recognise these more general forms as a commodity conversion, so will
+not be able to show cost reports (with `-B`, at least..).
+For this reason, 
+and considering that the unbalanced accounting equation often does not affect your everyday reports,
+you might prefer to stick with the @ notation.
+<!-- and typos aren't a problem, because any kind of reconciliation quickly leads to finding and fixing the error. -->
 
 ## What about lots ?
 
@@ -440,8 +453,8 @@ Balance Sheet 2020-03-31
 
 ## Realised capital gain
 
-Our dollar balance has increased, from $1000 to $1040,
-but somewhat magically, with no record of it in the journal.
+Our dollar balance has increased, from $1000 to $1040, but somewhat
+magically - there seems to be no transaction causing it.
 This seems like a bad sign.
 And indeed a full balance sheet including equity shows a non-zero
 total, confirming that the Accounting Equation has been disturbed:
@@ -515,38 +528,44 @@ and will consider this transaction to be balanced:
 
 But hledger doesn't know about lots or capital gains, as mentioned.
 (hledger 1.17.99+ will parse the {} notation, but ignores it.)
-So how can we model it in hledger ?
-After some experimentation, the right approach seems to be:
-when selling stock, 
+So how can we model a stock sale in hledger ? In general, we should:
 
-1. convert to back cash using the original cost price
-2. calculate and transfer the capital gain from (or loss to) equity
-3. but count this equity gain/loss as a revenue/expense in tax reports
+1. convert back to cash using the lot's *cost price*
+2. manually calculate the capital gain (difference of cost and selling price) and record it as a revenue/expense
 
-If we used the @ notation for the purchase, it looks like this:
+If we used the @ notation for the purchase, we should use it here too. The sale looks like this:
 
 ```journal
 2020-03-02 sell ada
     assets:cc:ada:20200201                     -2000 ADA @ $0.02  ; the original cost
-    equity:capital gain                         $-40              ; the capital gain, 2000 x ($0.04-$0.02)
+    revenues:capital gain                       $-40              ; the capital gain, 2000 x ($0.04-$0.02)
     assets:bank:checking                         $80              
 ```
 
 Or if we used the [more correct entry](#a-more-correct-entry) for the purchase,
-ie just standard double entry bookkeeping postings, it looks like this:
+ie just standard double entry bookkeeping postings, the sale looks like this:
 
 ```journal
 2020-03-02 sell ada
     assets:cc:ada:20200201                     -2000 ADA
     equity:conversion                           2000 ADA
     equity:conversion                           $-40       ; the original cost
-    equity:capital gain                         $-40       ; the capital gain
+    revenues:capital gain                       $-40       ; the capital gain
     assets:bank:checking                         $80              
 ```
 
-Why is capital gain recorded as equity, not revenue ? 
-In short, that's what is required to keep the accounting equation balanced,
-preserving the 0 total of the `bse` report:
+If we check the `bse` report now, we'll still see a $40 total, but
+this is expected because a revenue has been recorded and not yet
+merged into equity by "closing the books". If we were to do that
+temporarily:
+
+```journal
+2020-03-02 close the books, just for testing
+    revenues:capital gain                        $40 = $0
+    equity:retained earnings                    -$40
+```
+
+We would see the proper zero total:
 
 ```shell
 $ hledger bse --flat 
@@ -567,25 +586,27 @@ Balance Sheet With Equity 2020-03-02
 =================================++============
  Equity                          ||            
 ---------------------------------++------------
- equity:capital gain             ||     $40.00 
  equity:opening/closing balances ||   $1000.00 
+ equity:retained earnings        ||     $40.00 
 ---------------------------------++------------
                                  ||   $1040.00 
 =================================++============
  Net:                            ||          0 
 ```
 
-See also discussions on the web, like <https://money.stackexchange.com/a/22266/1127>.
-However, it *is* a kind of revenue (or expense) for tax purposes, so we
-will need to remember to include it in our tax reports.
-(For example, we could run `hledger bal revenue expenses 'capital gain'`).
+A variation:
+[some discussions](https://money.stackexchange.com/a/22266/1127) on the web
+suggest transferring directly from equity, bypassing revenues. In that
+case we would need to remember to include it in our tax reports, eg we
+would need to look at `hledger bal revenue expenses 'capital gain'`
+instead of just `hledger is`.
 
 
 
 
 
 
-<br><br><br><br>TBC<br><br><br><br><br>
+<br><br><br><br>
 
 
 
