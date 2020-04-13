@@ -406,22 +406,23 @@ Balance Sheet 2020q1 (Balance Changes), valued at period ends
 ## A sale
 
 The next day, we decide to sell all the ADA, just to test the process
-and capture a little profit:
+and capture a little profit.
+Assuming that this will look much like the purchase transaction in reverse,
+using the @ notation again, we come up with this:
 
 ```journal
 2020-03-02 sell all ada
-    assets:cc:ada:20200201  -2000 ADA @ $0.04 = 0 ADA
+    assets:cc:ada:20200201  -2000 ADA @ $0.04
     assets:bank:checking      $80
 ```
 
 For a little extra error checking, this time we used the `@ UNITPRICE`
 form, so we can visually check that the per-unit cost looks correct
-(at or close to the market price). Also we've used a 
-[balance assertion] (`= 0 ADA`) to show (and automatically check)
-the balance remaining in that account. 
+(at or close to the market price). 
+<!-- Also we've used a [balance assertion] (`= 0 ADA`) to show (and automatically check) the balance remaining in that account. -->
 
 Here's the new balance sheet, with `-E` (empty) to make it show the
-empty ada account:
+now empty ada account:
 
 ```shell
 $ hledger bs --flat -e apr -E | head -10
@@ -478,16 +479,13 @@ loss, which is an expense.
 
 We want this gain/loss to be recorded in the journal, to satisfy the
 accounting equation and keep accurate records, and also because it is
-typically a taxable event. We'll need to know all of these
+typically a taxable event; we'll need to know all of these
 revenues/expenses when filing taxes.
 
 ## Recording capital gain
 
-As mentioned above, hledger currently doesn't know about lots or
-capital gains; it is mystified by this new money. So if we try to add
-a posting for it, like so, hledger thinks the transaction is
-unbalanced:
-
+The sale transaction above is balanced, with no room for an extra
+revenue posting. If we try, hledger complains:
 
 ```journal
 2020-03-02 sell all ada
@@ -502,9 +500,11 @@ could not balance this transaction (real postings are off by $-40.00)
 ...
 ```
 
-Ledger does know about lots and gains, and will calculate them if you
-use a special notation, identifying the lot being sold by its cost
-and/or purchase date. It can look like this:
+Ledger (and Beancount) will accept an entry like this, if you add a
+special `{}` notation identifying the lot's original cost. Below, note
+the extra `{$0.02}`, which says "this is a lot, and was purchased at
+$0.02 each". Ledger will calculate the expected capital gain of $40
+and will consider this transaction to be balanced:
 
 ```journal
 2020-03-02
@@ -513,67 +513,40 @@ and/or purchase date. It can look like this:
     revenues:capital gain                       $-40
 ```
 
-Note the extra `{$0.02}`, which means "this is a lot, and was
-purchased at $0.02 each". Based on this, Ledger calculates the
-expected capital gain and considers the above transaction to be
-balanced.
+But hledger doesn't know about lots or capital gains, as mentioned.
+(hledger 1.17.99+ will parse the {} notation, but ignores it.)
+So how can we model it in hledger ?
+After some experimentation, the right approach seems to be:
+when selling stock, 
 
-With hledger, we must instead ....
+1. convert to back cash using the original cost price
+2. calculate and transfer the capital gain from (or loss to) equity
+3. but count this equity gain/loss as a revenue/expense in tax reports
 
-a. use an [unbalanced posting], by parenthesising the account name: ?
-
-```journal
-2020-03-02
-    assets:cc:ada:20200201                     -2000 ADA @ $0.04 = 0 ADA
-    assets:bank:checking                         $80
-    (revenues:capital gain)                     $-40
-```
-
-bse is unchanged
-
-b. balance it with an equity posting ?
+If we used the @ notation for the purchase, it looks like this:
 
 ```journal
-2020-03-02
-    assets:cc:ada:20200201                     -2000 ADA @ $0.04 = 0 ADA
-    assets:bank:checking                         $80
-    revenues:capital gain                       $-40
-    equity:capital gain                          $40
+2020-03-02 sell ada
+    assets:cc:ada:20200201                     -2000 ADA @ $0.02  ; the original cost
+    equity:capital gain                         $-40              ; the capital gain, 2000 x ($0.04-$0.02)
+    assets:bank:checking                         $80              
 ```
 
-bse looks worse, now the Net total is $80:
-
-c. use an unbalanced equity posting ?
+Or if we used the [more correct entry](#a-more-correct-entry) for the purchase,
+ie just standard double entry bookkeeping postings, it looks like this:
 
 ```journal
-2020-03-02
-    assets:cc:ada:20200201                     -2000 ADA @ $0.04 = 0 ADA
-    assets:bank:checking                         $80
-    revenues:capital gain                       $-40
-    equity:capital gain                          $40
+2020-03-02 sell ada
+    assets:cc:ada:20200201                     -2000 ADA
+    equity:conversion                           2000 ADA
+    equity:conversion                           $-40       ; the original cost
+    equity:capital gain                         $-40       ; the capital gain
+    assets:bank:checking                         $80              
 ```
 
-bse now shows a zero total, but reports will not show a revenue
-
-d. 1. convert the lot to cash using its original cost, 2. balanced equity & assets postings for the gain
-(related: <https://money.stackexchange.com/a/22266/1127>)
-
-```journal
-2020-03-02
-    assets:cc:ada:20200201                     -2000 ADA @ $0.02  ; use the original cost here
-    assets:bank:checking                         $40
-    equity:capital gain                         $-40              ; and add the capital gain here
-    assets:bank:checking                         $40              
-```
-
-Ie when selling stock, 
-
-1. convert to cash at cost price
-2. transfer the capital gain from/loss to equity
-3. make sure that gets picked up as a sort of revenue/expense in tax reports
-
-
-bse is now correct ?
+Why is capital gain recorded as equity, not revenue ? 
+In short, that's what is required to keep the accounting equation balanced,
+preserving the 0 total of the `bse` report:
 
 ```shell
 $ hledger bse --flat 
@@ -602,24 +575,10 @@ Balance Sheet With Equity 2020-03-02
  Net:                            ||          0 
 ```
 
-or: has it been thrown off by not using the
-[more correct entry](#a-more-correct-entry) for the purchase ?
-
-<!--
-(hledger 1.17.99+ will parse Ledger's lot notation; in this case it's
-possible to make an entry that both tools will accept, though with different meaning):
-
-```journal
-2020-03-02
-    assets:cc:ada:20200201                     -2000 ADA {$0.02} @ $0.04 = 0 ADA
-    assets:bank:checking                         $80
-    revenues:capital gain                             ; Ledger infers $-40, hledger infers 0
-```
--->
-
-
-
-
+See also discussions on the web, like <https://money.stackexchange.com/a/22266/1127>.
+However, it *is* a kind of revenue (or expense) for tax purposes, so we
+will need to remember to include it in our tax reports.
+(For example, we could run `hledger bal revenue expenses 'capital gain'`).
 
 
 
