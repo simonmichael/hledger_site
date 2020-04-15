@@ -2,7 +2,7 @@
 
 ## Lending, calculating interest manually
 
-5% interest on the outstanding balance each first of the month, calculated manually:
+0.41% interest per month (roughly equivalent to 5% APR), calculated manually:
 
 ```journal
 2020-01-01 opening balances
@@ -11,23 +11,24 @@
 
 2020-01-01 lend to Trusty Tara
   assets:bank:checking
-  assets:receivable:tt    100 = 100
+  assets:receivable:tt    100
   
 2020-02-01 charge 5% interest
-  assets:receivable:tt      5 = 105
+  assets:receivable:tt      0.41   ; 100 x 0.41
   revenues:interest:tt
 
 2020-02-15 Tara payment
-  assets:receivable:tt    -50 = 55
+  assets:receivable:tt    -50
   assets:bank:checking
 
 2020-03-01 charge 5% interest
-  assets:receivable:tt      2.75 = 57.75
+  assets:receivable:tt      0.21   ; 50.41 x 0.41, rounded
   revenues:interest:tt
 
-2020-03-15 Tara final payment
-  assets:receivable:tt    -57.75 = 0
+2020-03-15 Tara payment
+  assets:receivable:tt    -50
   assets:bank:checking
+
 ```
 
 Monthly balance sheet:
@@ -40,17 +41,17 @@ Balance Sheet 2020-01-31,,2020-03-31
 ======================++====================================
  Assets               ||                                    
 ----------------------++------------------------------------
- assets:bank:checking ||     900.00      950.00     1007.75 
- assets:receivable:tt ||     100.00       55.00           0 
+ assets:bank:checking ||     900.00      950.00     1000.00 
+ assets:receivable:tt ||     100.00       50.41        0.62 
 ----------------------++------------------------------------
-                      ||    1000.00     1005.00     1007.75 
+                      ||    1000.00     1000.41     1000.62 
 ======================++====================================
  Liabilities          ||                                    
 ----------------------++------------------------------------
 ----------------------++------------------------------------
                       ||                                    
 ======================++====================================
- Net:                 ||    1000.00     1005.00     1007.75 
+ Net:                 ||    1000.00     1000.41     1000.62 
 ```
 
 ## Lending, calculating interest with hledger-interest
