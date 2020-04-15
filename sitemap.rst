@@ -66,6 +66,7 @@ hledger
    budgeting-and-forecasting
    common-journal-entries
    foreign-trip-expenses
+   loans
    invoicing
    multicurrency-tutorial
    project-accounting
