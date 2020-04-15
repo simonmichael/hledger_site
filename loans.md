@@ -1,6 +1,6 @@
 # Borrowing and Lending
 
-## Lending, calculating interesting manually
+## Lending, calculating interest manually
 
 5% interest on the outstanding balance each first of the month, calculated manually:
 
