@@ -12,6 +12,29 @@
 
   <hr/>
 
+  <div id="remark42"></div>
+	<noscript><em>Comments are disabled since javascript is not available.</em></noscript>
+  <script>
+    var remark_config = {
+      host: "https://comments.hledger.org",
+      site_id: 'hledger',
+      components: ['embed'],
+      //url: 'PAGE_URL', // window.location.origin + window.location.pathname
+      max_shown_comments: 100, // 15
+      theme: 'light', // ?
+      //page_title: 'Moving to Remark42', // document.title
+      locale: 'en'
+    };
+    (function(c) {
+      for(var i = 0; i < c.length; i++){
+        var d = document, s = d.createElement('script');
+        s.src = remark_config.host + '/web/' +c[i] +'.js';
+        s.defer = true;
+        (d.head || d.body).appendChild(s);
+      }
+    })(remark_config.components || ['embed']);
+  </script>
+
   <div role="contentinfo">
     <p>
     {%- if show_copyright %}
