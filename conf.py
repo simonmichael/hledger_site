@@ -24,7 +24,7 @@ from recommonmark.transform import AutoStructify
 
 project = 'hledger'
 author = 'Simon Michael'
-copyright = '2020, Simon Michael & co.'
+copyright = '2020, Simon Michael & contributors'
 
 # version of the reference manuals (the rest of the docs aren't really versioned)
 # version = '1.14'
