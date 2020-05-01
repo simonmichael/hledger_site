@@ -308,7 +308,7 @@ html_theme_options = {
 # html_baseurl = '/index.html'
 # html_logo = '_static/images/coins2-248.png'
 html_last_updated_fmt = ''
-#html_show_sphinx = False
+html_show_sphinx = False
 
 
 # -- Pygments highlighting tweaks ---------------------------------------
