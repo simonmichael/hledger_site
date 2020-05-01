@@ -37,6 +37,11 @@
 				<!-- User defined GitHub URL -->
 				<a href="{{ meta['github_url'] }}" class="fa fa-github"> {{ _('Edit/PR this page') }}</a>
 			{% else %}
+				{% if page_source_suffix %}
+  				{% set suffix = page_source_suffix %}
+				{% else %}
+  				{% set suffix = source_suffix %}
+				{% endif %}
 				{## custom edit links for certain pages: #}
 				{% set special_edit_path = special_edit_paths.get(pagename,"") %}
 				{% if special_edit_path %}
