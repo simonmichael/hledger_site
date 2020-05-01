@@ -55,9 +55,19 @@
 
   {%- block extrafooter %} {% endblock %}
 
+	<noscript>
+			<p style="font-size:small;">
+			Comments are disabled since javascript is not available.
+			</p>
+	</noscript>
+	<div id="comments-help" style="display:none; font-size:small;">
+			Do you have quick feedback or improvements for this page ?
+			(Comments may be cleaned occasionally; for questions/discussion/permanence, use
+			<a href="https://hledger.org/#help-feedback" target="_blank">chat, mail list or issue trackers</a>.)
+	</div>
   <div id="remark42"></div>
-	<noscript><em>Comments are disabled since javascript is not available.</em></noscript>
   <script>
+		document.getElementById('comments-help').style.display='block';
     var remark_config = {
       host: "https://comments.hledger.org",
       site_id: 'hledger',
