@@ -45,23 +45,11 @@
     </li>
 {##}
     {% block breadcrumbs_aside %}
+{#
       <li class="wy-breadcrumbs-aside">
         {% if hasdoc(pagename) %}
-            {% if display_github %}
-            {% if check_meta and 'github_url' in meta %}
-              <!-- User defined GitHub URL -->
-              <a href="{{ meta['github_url'] }}" class="fa fa-github"> {{ _('Edit on GitHub') }}</a>
-            {% else %}
-{## custom edit links on certain pages #}
-              {% set special_edit_path = special_edit_paths.get(pagename,"") %}
-              {% if special_edit_path %}
-              <a href="https://{{ github_host|default("github.com") }}/{{ github_user }}/{{ special_edit_path }}" class="fa fa-github"> {{ _('Edit on GitHub') }}</a>
-              {% else %}
-{##}
-              <a href="https://{{ github_host|default("github.com") }}/{{ github_user }}/{{ github_repo }}/{{ theme_vcs_pageview_mode|default("blob") }}/{{ github_version }}{{ conf_py_path }}{{ pagename }}{{ suffix }}" class="fa fa-github"> {{ _('Edit on GitHub') }}</a>
-
-              {% endif %} {##}
-            {% endif %}
+          {% if display_github %}
+				    MOVED TO FOOTER.HTML
           {% elif display_bitbucket %}
             {% if check_meta and 'bitbucket_url' in meta %}
               <!-- User defined Bitbucket URL -->
@@ -83,6 +71,7 @@
           {% endif %}
         {% endif %}
       </li>
+#}
     {% endblock %}
   </ul>
 

@@ -12,39 +12,42 @@
 
   <hr/>
 
-  <div role="contentinfo">
-    <p>
-    {%- if show_copyright %}
-      {%- if hasdoc('copyright') %}
-        {% set path = pathto('copyright') %}
-        {% set copyright = copyright|e %}
-        &copy; <a href="{{ path }}">{% trans %}Copyright{% endtrans %}</a> {{ copyright }}
-      {%- else %}
-        {% set copyright = copyright|e %}
-        &copy; {% trans %}Copyright{% endtrans %} {{ copyright }}
-      {%- endif %}
-    {%- endif %}
-
-{#
-    {%- if build_id and build_url %}
-      <span class="build">
-#}
-        {# Translators: Build is a noun, not a verb #}
-{#
-        {% trans %}Build{% endtrans %}
-        <a href="{{ build_url }}">{{ build_id }}</a>.
-      </span>
-    {%- elif commit %}
-      <span class="commit">
-        {% trans %}Revision{% endtrans %} <code>{{ commit }}</code>.
-      </span>
-    {%- elif last_updated %}
-      <span class="lastupdated">
-        {% trans last_updated=last_updated|e %}Last updated on {{ last_updated }}.{% endtrans %}
-      </span>
-    {%- endif %}
-#}
-    </p>
+  <div role="contentinfo" style="font-size:small; white-space:nowrap;">
+    <div style="width: 50%; float:left;">
+			{%- if show_copyright %}
+				{%- if hasdoc('copyright') %}
+					{% set path = pathto('copyright') %}
+					{% set copyright = copyright|e %}
+					&copy; <a href="{{ path }}">{% trans %}Copyright{% endtrans %}</a> {{ copyright }}
+				{%- else %}
+					{% set copyright = copyright|e %}
+					&copy; {% trans %}Copyright{% endtrans %} {{ copyright }}
+				{%- endif %}
+			{%- endif %}
+    </div>
+    <div style="width: 25%; float:left; padding-left:1em; text-align:right;">
+			{%- if last_updated %}
+				<span class="lastupdated">
+					{% trans last_updated=last_updated|e %}Rendered {{ last_updated }}{% endtrans %}
+				</span>
+			{%- endif %}
+    </div>
+    <div style="width: 25%; float:right; padding-left:1em; text-align:right;">
+			{% if check_meta and 'github_url' in meta %}
+				<!-- User defined GitHub URL -->
+				<a href="{{ meta['github_url'] }}" class="fa fa-github"> {{ _('Edit/PR this page') }}</a>
+			{% else %}
+				{## custom edit links for certain pages: #}
+				{% set special_edit_path = special_edit_paths.get(pagename,"") %}
+				{% if special_edit_path %}
+				<a href="https://{{ github_host|default("github.com") }}/{{ github_user }}/{{ special_edit_path }}" class="fa fa-github"> {{ _('Edit/PR this page') }}</a>
+				{% else %}
+				<a href="https://{{ github_host|default("github.com") }}/{{ github_user }}/{{ github_repo }}/{{ theme_vcs_pageview_mode|default("blob") }}/{{ github_version }}{{ conf_py_path }}{{ pagename }}{{ suffix }}" class="fa fa-github"> {{ _('Edit/PR this page') }}</a>
+				{% endif %}
+				{##}
+			{% endif %}
+    </div>
+		<br style="clear:both;">
   </div>
 
   {%- if show_sphinx %}
@@ -55,48 +58,50 @@
 
   {%- block extrafooter %} {% endblock %}
 
-	<noscript>
-			<p style="font-size:small;">
-			Comments are disabled since javascript is not available.
-			</p>
-	</noscript>
-	<div id="comments-help" style="display:none; font-size:small;">
-			Do you have feedback or improvements for this page ? We'd like to hear it.
-{#
-			Comments are fairly 
-			<a target="_blank" title="privacy info, in new tab" href="https://github.com/umputun/remark42#privacy">private</a>.
-#}
-			Comment feeds:
-			<a href="https://comments.hledger.org/api/v1/rss/site?site=hledger">page</a>
-			|
-			<a href="https://comments.hledger.org/api/v1/rss/site?site=hledger&url=https://hledger.org/index.html">site</a>
-			<br>For other things, like getting help, consider
-			<a target="_blank" title="chat info, in new tab" href="https://hledger.org/?highlight=Chat:#help">chat</a>,
-			<a target="_blank" title="mail list info, in new tab" href="https://hledger.org/?highlight=Mail+list:#help">mail list</a> or
-			<a target="_blank" title="issue tracker info, in new tab" href="https://hledger.org/?highlight=Issues:#help">issue tracker</a>.
-			Comments may be cleaned occasionally.
-	</div>
-  <div id="remark42"></div>
-  <script>
-		document.getElementById('comments-help').style.display='block';
-    var remark_config = {
-      host: "https://comments.hledger.org",
-      site_id: 'hledger',
-      components: ['embed'],
-      //url: 'PAGE_URL', // window.location.origin + window.location.pathname
-      max_shown_comments: 100, // 15
-      theme: 'light', // ?
-      //page_title: 'Moving to Remark42', // document.title
-      locale: 'en'
-    };
-    (function(c) {
-      for(var i = 0; i < c.length; i++){
-        var d = document, s = d.createElement('script');
-        s.src = remark_config.host + '/web/' +c[i] +'.js';
-        s.defer = true;
-        (d.head || d.body).appendChild(s);
-      }
-    })(remark_config.components || ['embed']);
-  </script>
+  <div role="comments" style="margin-top:1em;">
+  	<noscript>
+  			<p style="font-size:small;">
+  			Comments are disabled since javascript is not available.
+  			</p>
+  	</noscript>
+  	<div id="comments-help" style="display:none; font-size:small;">
+  			Do you have feedback or improvements for this page ? We'd like to hear it.
+  {#
+  			Comments are fairly 
+  			<a target="_blank" title="privacy info, in new tab" href="https://github.com/umputun/remark42#privacy">private</a>.
+  #}
+  			Comment feeds:
+  			<a href="https://comments.hledger.org/api/v1/rss/site?site=hledger">page</a>
+  			|
+  			<a href="https://comments.hledger.org/api/v1/rss/site?site=hledger&url=https://hledger.org/index.html">site</a>
+  			<br>For other things, like getting help, consider
+  			<a target="_blank" title="chat info, in new tab" href="https://hledger.org/?highlight=Chat:#help">chat</a>,
+  			<a target="_blank" title="mail list info, in new tab" href="https://hledger.org/?highlight=Mail+list:#help">mail list</a> or
+  			<a target="_blank" title="issue tracker info, in new tab" href="https://hledger.org/?highlight=Issues:#help">issue tracker</a>.
+  			Comments may be cleaned occasionally.
+  	</div>
+    <div id="remark42"></div>
+    <script>
+  		document.getElementById('comments-help').style.display='block';
+      var remark_config = {
+        host: "https://comments.hledger.org",
+        site_id: 'hledger',
+        components: ['embed'],
+        //url: 'PAGE_URL', // window.location.origin + window.location.pathname
+        max_shown_comments: 100, // 15
+        theme: 'light', // ?
+        //page_title: 'Moving to Remark42', // document.title
+        locale: 'en'
+      };
+      (function(c) {
+        for(var i = 0; i < c.length; i++){
+          var d = document, s = d.createElement('script');
+          s.src = remark_config.host + '/web/' +c[i] +'.js';
+          s.defer = true;
+          (d.head || d.body).appendChild(s);
+        }
+      })(remark_config.components || ['embed']);
+    </script>
+  </div>
 
 </footer>
