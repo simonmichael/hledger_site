@@ -433,7 +433,7 @@ It builds the current release plus some [add-on commands], and requires only [ba
 </div>
 <div class="builder-text">
 This installs the main hledger tools in ~/.local/bin.
-Use the latest stack (2.1.3) for best results.
+Use the latest stack (2.3.1) for best results.
 You can usually upgrade stack quickly with <code>stack upgrade</code>.
 Windows users: the 64-bit version of stack is preferable;
 and you should omit hledger-ui from this command, unless using WSL.
