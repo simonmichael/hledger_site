@@ -96,21 +96,14 @@ hledger
    simons-setup
 
 .. toctree::
-   :caption: Contribute
+   :caption: Dev
    :maxdepth: 3
 
    README <README>
-   ROADMAP <ROADMAP>
    CONTRIBUTING <CONTRIBUTING>
    CREDITS <CREDITS>
-
-.. toctree::
-   :caption: Sandbox
-   :maxdepth: 3
-
-   price-syntax
-   gains-model
-   gains-hledger
+   ROADMAP <ROADMAP>
+   mockups
 
 .. toctree::
    :caption: ...
