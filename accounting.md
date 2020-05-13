@@ -237,6 +237,8 @@ account.  Eg, buying food.
 
 - [Algebraic Models for Accounting Systems](https://www.amazon.com/Algebraic-Accounting-Systems-Salvador-Rambaud/dp/9814287113) - recommended [on twitter](https://twitter.com/meekaale/status/1000426850819170304)
 - [On Double-Entry Bookkeeping: The Mathematical Treatment](https://arxiv.org/abs/1407.1898) David Ellerman 2014, <http://www.ellerman.org/double-entry-bookkeeping>
+- [Essence of Accounting](http://xbrl.squarespace.com/journal/2020/5/12/essence-of-accounting.html?printerFriendly=true) 
+  *"A logical description of the record to report process: accounting, reporting, auditing, analysis"*, Charles Hoffman 2020
 
 ### History
 
