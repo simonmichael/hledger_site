@@ -112,11 +112,14 @@ may be better accounting terms I'm not familiar with yet.)
   -- another, shorter, list of amounts).
   sumLots :: [Amount] -> [Amount]
   ```
-## Ease of use
-- CI-generated binaries for linux & mac too
-- Web docs
+## Ease of getting started
 
-## CI-generated binaries for linux & mac too
+What could make getting started substantially easier ?
+
+- Official CI-generated binaries for all major platforms
+- Builtin access to docs in web format
+
+## CI-generated binaries for linux & mac
 
 Provide official static linux/mac release binaries with CI, like windows.
 
@@ -132,12 +135,50 @@ Provide the seven embedded reference manuals as HTML also. Eg:
 
 ## Config file
 
-Name: hledger.conf. 
+Name: hledger.conf (and possibly ~/.hledger.conf as well).
 
 - easy to say and spell
 - good highlighting support in editors
 
-Format: toml/ini-ish format, but customised for our needs (if necessary ?)
+Format: toml/ini-ish format, but customised for our needs (if necessary).
+
+Example:
+```
+# hledger.conf
+
+[defaults]
+# Set options/arguments to be always used with hledger commands.
+# Each line is: HLEDGERCMD ARGS, or: hledger ARGS
+hledger -f hledger.journal
+bal -M --flat -b lastmonth
+ui --watch
+web -V
+help --html
+
+[commands]
+# Define aliases for custom hledger commands.
+# Each line is: CMDALIAS = HLEDGERCMD ARGS
+assets = bal -M ^assets\b
+liab   = bal -M ^liabilities\b
+
+# Or use colon, like make ?
+bs2:   bs --no-total date:thisyear
+
+# Or just whitespace, like hledger csv rules ?
+smui   ui ^sm\b
+
+# Allow arbitrary shell commands ?
+2019:    hledger -f 2019.journal
+jstatus: git status -sb -- *.journal
+
+# Allow multi-command shell scripts, with optional help string ?
+bsis:
+  "Show monthly balance sheet and income statement"
+  hledger bs -M
+  echo
+  hledger is -M
+  echo
+```
 
 Loaded: 
 
@@ -146,52 +187,33 @@ and ideally:
 - hledger-web: on each page load if changed, like journals
 - hledger-ui --watch: on change, like journals
 
-Location: search these locations in this order:
+Location: 
 
-1. user config file: $HOME/.config/hledger.conf if it exists,
-   otherwise $HOME/.hledger.conf if it exists.
-   Some unix folk will want the former, sometimes the latter will be preferred/easier (windows ?)
-
-2. parent directory config files: a hledger.conf in all directories from / down to the current parent directory
-
-3. current directory config file: ./hledger.conf
-
+Search a number of locations in order.
 Values from multiple files are combined, with later files taking precedence.
 
-Eg if you run hledger in /home/simon/project/finance, the following files will be combined if they exist:
+User config file: should it be "modern"  ~/.config/hledger.conf or "old/simple" ~/.hledger.conf ? 
+One or the other may be preferred/easier/more portable.
+If we support both, should it be one or the other, or both ?
 
+Parent directory config files: we'd probably like to recognise config files in parent directories.
+How far up should we look - 
+to the root dir ? 
+to the user's home dir ? and if not under the user's home dir, don't look up at all ?
+to the nearest VCS working directory root ?
 
+This would be the simplest comprehensive scheme: use all of
 
+1. ~/.config/hledger.conf
+2. ~/.hledger.conf
+3. hledger.conf in all directories from / down to the current directory
 
+Eg: running hledger in /home/simon/project/finance would combine any of the following which exist:
 
-Example:
-```
-[defaults]
-# options/arguments always prepended to commands' args
-# (hledger|CMD) ARGS
-hledger -f hledger.journal
-bal -M --flat -b lastmonth
-ui --watch
-help --html
-
-[commands]
-# custom command aliases
-# CMDNAME = CMD ARGS
-assets = bal ^assets\b
-liab = bal ^liabilities\b
-
-# or with make-style colon:
-bs2: bs --no-total date:thisyear
-#2019: -f 2019.journal
-
-# arbitrary shell commands
-jstatus: git status -sb -- *.journal
-
-# arbitrary shell scripts, perhaps with help text
-bsis:
-  "Show monthly balance sheet and income statement"
-  hledger bs -M
-  echo
-  hledger is -M
-  echo
-```
+- ~/.config/hledger.conf
+- ~/.hledger.conf
+- /hledger.conf
+- /home/hledger.conf
+- /home/simon/hledger.conf
+- /home/simon/project/hledger.conf
+- /home/simon/project/finance/hledger.conf
