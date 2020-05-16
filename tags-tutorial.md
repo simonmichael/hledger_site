@@ -377,7 +377,7 @@ $ hledger register tag:color=parchment
 One common question is how much did we spend in total for each tag value? For example, how much did the mummy spend on each color of wrapping? To find out, we can run a balance report for our expenses pivoted by color:
 
 ```shell
-$ hledger -f balance expenses --pivot color
+$ hledger balance expenses --pivot color
 ```
 
 The result is:
@@ -395,7 +395,7 @@ Aha, we see a lot of spending on “ancient white.”
 Similarly, if we want to see the expenses by type of fabric, we type:
 
 ```shell
-$ hledger -f balance expenses --pivot fabric
+$ hledger balance expenses --pivot fabric
 ```
 And we get:
 
@@ -495,18 +495,17 @@ Separate multiple tags with a comma:
     Liabilities:MonsterCard
 ```
  
-In the above, the tag includes information for the destination, the year of the trip, and which number trip it was to this location in this year.
  
 ### Use the --pivot option to total expenses by tag value
  
 ```shell
-$ hledger -f balance expenses --pivot color
+$ hledger balance expenses --pivot color
 ```
  
 or
  
 ```shell
-$ hledger -f balance expenses --pivot fabric
+$ hledger balance expenses --pivot fabric
 ```
  
 ## Conclusion
