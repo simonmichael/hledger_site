@@ -268,266 +268,146 @@ Note that if you put a comment after the tag without separating the tag and comm
 Finally, it's possible to have a comment, followed by a tag, and as long as you end the tag in a comma, you can have additional comment after the tag.  
 
 ## Multiple Tags
+ 
+Sometimes things get frighteningly complicated, as in the case of the mummy, a monster popular in fiction and film.
 
-Using the example above, let’s say that we want to track the wattage of any electrical items that we purchase. We have also decided that we want to use a tag for this purpose. However, we already have a tag (holiday:Thanksgiving). What can we do?
+Our mummy in question likes to have a variety of changes of wrappings, and so it has made several purchases from its favorite online store:
 
-Answer: hledger allows multiple tags, separated by commas. Therefore, our transaction can look like this:
+```journal 
+2020/05/13 AcmeWrappings.com
+    Expenses:Clothing                         $28.00
+    Liabilities:MonsterCard
+
+2020/05/15 AcmeWrappings.com
+    Expenses:Clothing                         $44.90  
+    Liabilities:MonsterCard
+
+2020/05/17 AcmeWrappings.com
+    Expenses:Clothing                         $36.50  
+    Liabilities:MonsterCard
+
+2020/05/20 AcmeWrappings.com
+    Expenses:Clothing                         $58.99  
+    Liabilities:MonsterCard
+
+2020/05/28 AcmeWrappings.com
+    Expenses:Clothing                         $39.00  
+    Liabilities:MonsterCard
+
+```
+In addition to recording the above, our mummy wants to track which type of wrappings it buys. Specifically, it needs to track the type of fabric, the width of the cloth, and the color of the material. How does it do this?
+
+Fortunately, hledger allows multiple tags, with each tag separated by a comma. Here is an example:
+
+```
+; fabric:cotton, width:15, color:parchment
+```
+ 
+The mummy now adds the tags to each purchase, resulting in:
 
 ```journal
-2016/09/26 ACME Holiday Supplies  
-  Expenses:Entertainment    $58.99 ; holiday:Thanksgiving, wattage:200
-  Liabilities:CreditCard
+2020/05/13 AcmeWrappings.com  Expenses:Clothing  $28.00  ; fabric:cotton, width:15, color:parchment
+    Liabilities:MonsterCard
+
+2020/05/15 AcmeWrappings.com  Expenses:Clothing  $44.90  ; fabric:nylon, width:20, color:ancient white
+    Liabilities:MonsterCard
+
+2020/05/17 AcmeWrappings.com  Expenses:Clothing  $36.50  ; fabric:wool, width:15, color:dust
+    Liabilities:MonsterCard
+
+2020/05/20 AcmeWrappings.com  Expenses:Clothing  $58.99  ; fabric:wool, width:20, color:ancient white
+    Liabilities:MonsterCard
+
+2020/05/28 AcmeWrappings.com  Expenses:Clothing  $39.00  ; fabric:cotton, width:30, color:parchment
+    Liabilities:MonsterCard
 ```
 
-## Multiple Values per Tag
- 
-Sometimes, it’s useful to have more than one value per tag. For example, you have a budget category for travel, something that looks like:
-``` 
-Expenses:Travel
+To see everything purchased made of wool, the mummy types:
+
+```shell
+$ hledger register tag:fabric=wool
 ```
 
-However, you would also like to be able to isolate expenses by:
- 
--      The year of the trip (as opposed to the year the expense occurred, useful, for example, if you purchase airline tickets in December for a flight the following January)
--      The destination of the trip
--      Each individual trip (even if the trips are to the same destination)
- 
-## Tags and Values for Trip Tracking
- 
-In the examples we will be working with we will have one tag, “trip,” and the values will be in the form of DESTINATION-YEAR[one letter trip identifier]. For example, if one of your trips is to Atlanta, you traveled in 2017, and it was the first trip to Atlanta in 2017, the value of the tag would be:
+The result is:
+
 ```
-Atlanta-2017a
+2020/05/17 AcmeWrappings.com  Expenses:Clothing  $36.50  $36.50
+2020/05/20 AcmeWrappings.com  Expenses:Clothing  $58.99  $95.49
 ```
- 
-Thus, with one tag value we track the destination (Atlanta), the year of the trip (2017, even if any of the expenses were in 2016), and the individual trip (Atlanta-2017a, meaning the first trip we took to Atlanta in 2017).
- 
-Therefore, a sample expense for the Atlanta trip could look like the following:
- 
-```journal
-2017/01/12 My Gas Station  ; trip: Atlanta-2017a
-   Expenses:Travel  $18.43
-   Liabilities:CreditCard
-```
- 
-## How Much Did It Cost to Go Where?
- 
-To see the total expenses sorted by each tag value, you use the --pivot option with the balance command. Note, though, the advice to limit the report to expenses, as follows:
- 
+
+Or to see which wrappings had a width of 20:
+
 ```shell
-$ hledger –f filename.hledger balance Expenses --pivot trip
+$ hledger register tag:width=20
 ```
- 
-If your tags are 100% limited to your expenses, that is, they all have the tag in the Expenses line as shown below:
- 
-```journal
-2018/01/12 My Gas Station
-   Expenses:Travel  $14.43 ; trip: Boise-2018a
-   Liabilities:CreditCard
+which outputs...
 ```
- 
-Then with the above, you can shorten the command to:
- 
+2020/05/15 AcmeWrappings.com  Expenses:Clothing  $44.90   $44.90
+2020/05/20 AcmeWrappings.com  Expenses:Clothing  $58.99  $103.89
+```
+
+## Multiple Tags in a Query
+
+Multiple tags can be used in the same query. For example, our monster friend wants to find out how much parchment colored cotton it has purchased:
+
 ```shell
-$ hledger –f filename.hledger balance --pivot trip
+$ hledger register tag:fabric=cotton tag:color=parchment
 ```
- 
-However, if the tag is applied to the whole transaction:
- 
-```journal
-2018/01/12 My Gas Station  ; trip: Boise-2018a
-   Expenses:Travel  $14.43
-   Liabilities:CreditCard
+Notice that there is no comma between the two tags in the above query. You use the comma to separate tags in the data file, but not the query. 
+
+By the way, the above command outputs:
+
 ```
- 
-Then for the above you need to use the command limiting the balance report to Expenses.
- 
+2020/05/13 AcmeWrappings.com   Expenses:Clothing  $28.00  $28.00
+2020/05/28 AcmeWrappings.com   Expenses:Clothing  $39.00  $67.00
+```
+
+Each wrapping purchased above is both made of cotton AND has the color of parchment.
+
+If you wish to find all wrappings, say, made of wool OR colored parchment, you can run two queries. First, we find all the wool wrappings:
+
 ```shell
-$ hledger –f filename.hledger balance Expenses --pivot trip
+$ hledger register tag:fabric=wool
 ```
- 
-Otherwise, the liability will balance the expense to zero.
- 
-## Some Examples
- 
-Let’s add some sample data to work with, which will be in a file named TagsPart3.hledger:
- 
-```journal
-; ================ begin file ================
- 
-2013/01/12 My Gas Station  ; trip: Boise-2013a
-   Expenses:Travel  $14.43
-   Liabilities:CreditCard
- 
-2014/01/12 My Gas Station  ; trip: Albany-2014a
-   Expenses:Travel  $15.43
-   Liabilities:CreditCard
- 
-2014/09/15 My Gas Station  ; trip: Albany-2014b
-   Expenses:Travel  $16.43
-   Liabilities:CreditCard
- 
-2016/01/12 My Gas Station  ; trip: Austin-2016a
-   Expenses:Travel  $17.43
-   Liabilities:CreditCard
- 
-2016/05/18 My Gas Station  ; trip: Fort Lauderdale-2016a
-   Expenses:Travel  $18.43
-   Liabilities:CreditCard
- 
-2016/11/21 My Gas Station  ; trip: Houston-2016a
-   Expenses:Travel  $19.43
-   Liabilities:CreditCard
- 
-; ================ end file ================
-```
- 
-## Totaling Expenses per Trip
- 
-If we run the command:
- 
+Then we find all the parchment colored ones:
 ```shell
-$ hledger -f TagsPart3.hledger balance Expenses --pivot trip
+$ hledger register tag:color=parchment
 ```
- 
-Then we get:
+## Expenses per Category
+One common question is how much did we spend in total for each tag value? For example, how much did the mummy spend on each color of wrapping? To find out, we can run a balance report for our expenses pivoted by color:
+
+```shell
+$ hledger -f balance expenses --pivot color
 ```
-              $15.43  Albany-2014a
-              $16.43  Albany-2014b
-              $17.43  Austin-2016a
-              $14.43  Boise-2013a
-              $18.43  Fort Lauderdale-2016a
-              $19.43  Houston-2016a
+
+The result is:
+
+```
+             $103.89  ancient white
+              $36.50  dust
+              $67.00  parchment
 --------------------
-             $101.58
+             $207.39
 ```
- 
-We now have the totals for each trip, so we can see how much it costs to visit Aunt Anna in Albany. Hmm, not that much…. I will have to visit more often!
- 
-## Totaling Expenses per Year
- 
-To see totals for all trips in 2014, we could run the command:
- 
+
+Aha, we see a lot of spending on “ancient white.” 
+
+Similarly, if we want to see the expenses by type of fabric, we type:
+
 ```shell
-$ hledger -f TagsPart3.hledger balance Expenses --pivot trip tag:trip=2014
+$ hledger -f balance expenses --pivot fabric
 ```
- 
-Output:
+And we get:
+
 ```
-              $15.43  Albany-2014a
-              $16.43  Albany-2014b
---------------------
-              $31.86
+              $67.00  cotton
+              $44.90  nylon
+              $95.49  wool
+         --------------------
+             $207.39
 ```
- 
-Here is one of the powers of using tags, that when we specify:
- 
-```
-tag:trip=2014
-```
- 
-…we are saying to match any tags whose values include “2014,” even if the values contain more than just “2014,” such as “Albany-2014a.”
- 
-Similarly, to see totals for all trips in 2016:
- 
-```shell
-$ hledger -f TagsPart3.hledger balance Expenses --pivot trip tag:trip=2016
-```
- 
-Output:
-```
-              $17.43  Austin-2016a
-              $18.43  Fort Lauderdale-2016a
-              $19.43  Houston-2016a
---------------------
-              $55.29
-```
- 
-## Trip Expenses by Destination
- 
-Finally, how much did we spend on trips to Albany, no matter what year the trip(s) took place in?
- 
-```shell
-$ hledger -f TagsPart3.hledger balance Expenses --pivot trip tag:trip=Albany
-```
- 
-Output:
-```
-              $15.43  Albany-2014a
-              $16.43  Albany-2014b
---------------------
-              $31.86
-```
- 
-## More Complicated, Like Real Life
- 
-The above examples were highly simplified, with just one expense per trip. Just to show that we can work with something more complicated, let’s create some new data, assumed to be in a file TagsPart3b.hledger:
- 
-```journal
-; ================ begin file ================
- 
-2013/12/01 Ariline  ; trip: Boise-2014a
-    Expenses:Travel                          $200.00 ;round trip tickets
-    Liabilities:CreditCard
- 
-2014/01/10 ACME Rideshare ; trip: Boise 2014a
-    Expenses:Travel                           $30.00 ; to airport
-    Liabilities:CreditCard
- 
-2014/01/12 Hotel  ; trip: Boise-2014a
-    Expenses:Travel                          $300.00 
-    Liabilities:CreditCard
- 
-2014/01/12 ACME Rideshare  ; trip: Boise 2014a
-    Expenses:Travel                           $16.43  ; airport to home
-    Liabilities:CreditCard
- 
-2014/09/12 My Gas Station  ; trip: Austin-2014a
-    Expenses:Travel                         $17.43
-    Liabilities:CreditCard
- 
-2014/10/18 My Gas Station  ; trip: Austin-2014b
-    Expenses:Travel                      $18.43
-    Liabilities:CreditCard
- 
-2014/12/01 Airline  ; trip:Boise-2015a
-    Expenses:Travel                          $212.00  ; round trip tickets
-    Liabilities:CreditCard
- 
-; ================ end file ================
-```
- 
-In the above, we purchase airline tickets in 2013 for travel to Boise in 2014. We also take two trips by car to Austin in 2014. Finally, in December of 2014 we buy tickets for travel in 2015.
- 
-How much did each trip cost?
- 
-```
- hledger -f TagsPart3b.hledger balance Expenses --pivot trip
-```
- 
-Output:
-``` 
-              $17.43  Austin-2014a
-              $18.43  Austin-2014b
-             $546.43  Boise-2014a
-             $212.00  Boise-2015a
---------------------
-             $794.29
-```
- 
-How much did the 2014 trips cost?
- 
-```shell
-$ hledger -f TagsPart3b.hledger balance Expenses --pivot trip tag:trip=2014
-```
- 
-Output:
-```
-              $17.43  Austin-2014a
-              $18.43  Austin-2014b
-             $546.43  Boise-2014a
---------------------
-             $582.29
-```
+
+From the above, we observe that the mummy has spent the more on wool wrappings than on either cotton or nylon ones.
  
 ## Summary
  
@@ -539,7 +419,6 @@ This tutorial has shown how to:
 -      Use tag values with the register command to list only those expenses a given tag with a given value
 -      Combine comments and tags in the same line
 -      Use multiple tags in the same line
--      Use tag values in such a way that it works as if you had multiple values for one tag
 -      Use the --pivot option to total expenses by tag value
  
 ## Hledger Tag Summary with Examples
@@ -611,16 +490,9 @@ You can even have comment, tag, comma, and comment.
 Separate multiple tags with a comma:
 
 ```journal
-2016/09/26 ACME Holiday Supplies  
-  Expenses:Entertainment    $58.99 ; holiday:Thanksgiving, wattage:200
-  Liabilities:CreditCard
-```
-### Trick: Tag values can include multiple pieces of information
- 
-```journal
-2016/11/21 My Gas Station  ; trip: Houston-2016a
-   Expenses:Travel  $19.43
-   Liabilities:CreditCard
+2020/05/20 AcmeWrappings.com  
+    Expenses:Clothing  $58.99  ; fabric:wool, width:20, color:ancient white
+    Liabilities:MonsterCard
 ```
  
 In the above, the tag includes information for the destination, the year of the trip, and which number trip it was to this location in this year.
@@ -628,13 +500,13 @@ In the above, the tag includes information for the destination, the year of the 
 ### Use the --pivot option to total expenses by tag value
  
 ```shell
-$ hledger -f TagsPart3.hledger balance Expenses --pivot trip tag:trip=Houston
+$ hledger -f balance expenses --pivot color
 ```
  
 or
  
 ```shell
-$ hledger -f TagsPart3.hledger balance Expenses --pivot trip tag:trip=2016
+$ hledger -f balance expenses --pivot fabric
 ```
  
 ## Conclusion
