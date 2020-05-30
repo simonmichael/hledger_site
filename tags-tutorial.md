@@ -1,6 +1,6 @@
 # Tags tutorial
 
-Author: Robert Nielsen (hledger fan) with invaluable input from Simon Michael
+Author: Robert Nielsen (YouTube: hledger fan) with invaluable input from Simon Michael
 
 Don’t be scared away from using tags in your hledger accounting this Halloween, or any other time for that matter. This is a tutorial on using tags with hledger, so if the idea of using tags has been haunting you, but you are not really sure how to use them, read on.
 Let’s start with a file showing someone’s Halloween hledger accounting:
@@ -51,7 +51,7 @@ We want to categorize all the above transactions as having to do with Halloween.
 
 ## Mechanics of Writing a Tag
 
-One of the simplest tags is a word, which is inside a comment, immediately followed by a colon. In the file below, you will see all the transactions have a tag, which I named Halloween, added to them:
+One of the simplest tags is a word, which is inside a comment, immediately followed by a colon. In the file below, you will see all the transactions have a tag, named Halloween, added to them:
 
 ```journal
 ; ================ begin file ================
@@ -97,12 +97,12 @@ One of the simplest tags is a word, which is inside a comment, immediately follo
 
 ## Using Tags
  
-Once we incorporate tags in our hledger file, we can use them in a variety of ways. Here, we will look at one way, which is to use the tags to filter a command. For example, assume that the above file is named Halloween2.hledger.
+Once we incorporate tags in our hledger file, we can use them in a variety of ways. Here, we will look at one way, which is to use the tags to filter a command. 
  
 This command:
  
 ```shell
-$ hledger -f Halloween2.hledger register Expenses tag:Halloween
+$ hledger register Expenses tag:Halloween
 ```
  
 Produces something like the following output (all the Expenses tagged “Halloween”):
@@ -141,18 +141,10 @@ Note that you can optionally put a space after the colon, as shown immediately b
    Assets:Food
 ```
  
-Let’s show the file we will be working with, which was saved as Halloween3.hledger:
+Here is the file that we will be working with:
  
 ```journal
 ; ================ begin file ================
- 
-2016/09/25 ACME Costume ; Halloween:
-   Expenses:Entertainment     $45.99 ;Amoeba Man
-   Liabilities:CreditCard
- 
-2016/09/26 ACME Costume ; Thanksgiving:
-  Expenses:Entertainment    $58.99 ; inflatable turkey
-  Liabilities:CreditCard
  
 2016/10/31 Smiths ; Halloween:
    Income:Treat   -1 candy ; quality: OK
@@ -201,7 +193,7 @@ Let’s say we want to list all the treats that were rated “OK.”
 We could use the command:
  
 ```shell
-$ hledger -f Halloween3.hledger register tag:quality=OK
+$ hledger register tag:quality=OK
 ```
  
 The above would output something like the following:
@@ -215,7 +207,7 @@ The above would output something like the following:
 On the other hand, if we wanted to list only the treats that were rated as excellent, we could use the command:
  
 ```shell
-$ hledger -f Halloween3.hledger register tag:quality=excellent
+$ hledger register tag:quality=excellent
 ```
  
 The above command, lists the following:
@@ -229,7 +221,7 @@ The above command, lists the following:
 Now, let’s look for every treat rated as “very good.” If we try,
  
 ```shell
-$ hledger -f Halloween3.hledger register tag:quality=very good
+$ hledger register tag:quality=very good
 ```
  
 We get exactly nothing. What happened? As you most likely guessed from the title of this section, the space between “very” and “good” is throwing things off.
@@ -237,7 +229,7 @@ We get exactly nothing. What happened? As you most likely guessed from the title
 Therefore, you will need something like the following, to find all the treats rated “very good”:
  
 ```shell
-$ hledger -f Halloween3.hledger register tag:quality=”very good”
+$ hledger register tag:quality=”very good”
 ```
 
 ## Combining Tags and Comments
@@ -250,16 +242,16 @@ For example, you make a purchase of an inflatable turkey and want to include tha
 
 ```journal
 2016/09/26 ACME Holiday Supplies 
-  Expenses:Entertainment    $58.99 ; inflatable turkey holiday:Thanksgiving
+  Expenses:Entertainment    $58.99 ; inflatable pumpkin holiday:Halloween
   Liabilities:CreditCard
 ```
 The second option is to end the tag with a comma. You can then put a comment after the comma.
 
-For example, we have the tag first (holiday:Thanksgiving) followed by a comma. After the comma is a comment (inflatable turkey).  
+For example, we have the tag first (holiday:Halloween) followed by a comma. After the comma is a comment (inflatable pumpkin).  
 
 ```journal
 2016/09/26 ACME Holiday Supplies 
-  Expenses:Entertainment    $58.99 ; holiday:Thanksgiving, inflatable turkey
+  Expenses:Entertainment    $58.99 ; holiday:Halloween, inflatable pumpkin
   Liabilities:CreditCard
 ```
 
