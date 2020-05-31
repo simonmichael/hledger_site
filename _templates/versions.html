@@ -20,7 +20,8 @@
         <li {% if viewed_version=='' %}class="viewed-version"{% endif %}><a href="/{{ viewed_manual }}.html">DEV</a></li> 
         {% for v in versions %} 
           <li {% if viewed_version==v %}class="viewed-version"{% endif %}>
-            <a href="/{{ v }}/{{ viewed_manual }}.html">{{ v }}</a>
+            {% set m = 'hledger-web' if (viewed_manual=='hledger-api' and v>'1.14') else viewed_manual %}
+            <a href="/{{ v }}/{{ m }}.html">{{ v }}</a>
           </li> 
         {% endfor %} 
       </ul> 
