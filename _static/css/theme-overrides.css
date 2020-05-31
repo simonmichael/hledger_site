@@ -25,6 +25,9 @@
 }
 .rst-versions .viewed-version {
     font-weight:bold;
+		background-color:red;
+		color:white;
+		text-shadow: 1px 1px black;
 }
 .rst-versions .rst-other-versions {
     /* display:block; */

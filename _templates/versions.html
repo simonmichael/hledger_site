@@ -12,9 +12,10 @@
 			and viewed_manual_ + ' ' + viewed_version + ', released ' + version_dates.get(viewed_version,'-') + (' (CURRENT)' if viewed_version==current_release_version else '')
 			or  viewed_manual_ + ' ' + 'DEV (UNRELEASED)'
 			%}
-      <span class="viewed-version">This doc is for {{ viewed_version_desc }}</span>
+      This doc is for <span class="viewed-version">{{ viewed_version_desc }}</span>
       <span class="fa-caret-down"></span> 
-    </span> 
+			<- select your version
+    </span>
     <div class="rst-other-versions">
       <ul> 
         {% set m = 'hledger-web' if viewed_manual=='hledger-api' else viewed_manual %}
