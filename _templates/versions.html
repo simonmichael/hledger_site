@@ -17,7 +17,8 @@
     </span> 
     <div class="rst-other-versions">
       <ul> 
-        <li {% if viewed_version=='' %}class="viewed-version"{% endif %}><a href="/{{ viewed_manual }}.html">DEV</a></li> 
+        {% set m = 'hledger-web' if viewed_manual=='hledger-api' else viewed_manual %}
+        <li {% if viewed_version=='' %}class="viewed-version"{% endif %}><a href="/{{ m }}.html">DEV</a></li> 
         {% for v in versions %} 
           <li {% if viewed_version==v %}class="viewed-version"{% endif %}>
             {% set m = 'hledger-web' if (viewed_manual=='hledger-api' and v>'1.14') else viewed_manual %}
