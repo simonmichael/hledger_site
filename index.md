@@ -1,85 +1,134 @@
 <!-- stylesheet at bottom -->
-
-
 <img id="coins" src="_static/images/coins2-248.png" style="width:120px; margin:2em 1em; float:left;" />
 <img id="coins" src="_static/images/coins2-248.png" style="width:120px; margin:2em 1em; float:right;" />
+<!-- 
+https://www.stephendiehl.com/posts/marketing.html#persuasion-and-decision-makers
+1. It is memorable
+2. It includes a key benefit
+3. It differentiates
+4. It imparts positivity
+-->
 
 # hledger
+
 <div id="tagline">
-easy plain text accounting
+plain text accounting<br>made easy !
 </div>
 
-<span id="leadingword">hledger</span> 
-is cross-platform accounting software with an unusual combination of strengths:
+<div style="text-align:center; margin:1em;">
+<a href="download.html"><button type="button" class="btn btn-primary" title="All the ways to install hledger. Get it now!">Download/Install</button></a>
+<a href="https://github.com/simonmichael/hledger"><button type="button" class="btn btn-neutral" style="padding:4px;" title="hledger code and issue tracker on Github. Star us!"><img width="142" src="https://img.shields.io/github/stars/simonmichael/hledger.svg?style=for-the-badge&logo=GitHub&label=Github&color=lightgrey"></button></a>
+</div>
 
-0. It is a **high quality implementation of [Plain Text Accounting]**. This means:
+<span id="leadingword">hledger</span> is cross-platform accounting software 
+for both power users and folks new to accounting.
+It's good for tracking money, time, investments, cryptocurrencies, inventory and more.
+It is an alternative implementation of [Ledger CLI], with a particular focus on **ease of use** and **robustness**.
+Here are some things hledger provides out of the box:
 
-   - It is a simple yet powerful [double-entry accounting] system
-     that can track money, time, investments, cryptocurrencies, inventory and more.
+- Easy multi-currency double-entry accounting [using only a plain text file](#quick-start)
 
-   - It runs on your local computer, keeping your financial data
-     **private and under your control**. (You can also
-     share/collaborate online if you wish.)
+- Easy [assisted data entry](add.html) or [CSV import][convert]
 
-   - Your data is stored as future-proof, human-readable plain text.
-     There is no data lock-in; you can migrate to/from other 
-     [plain text accounting apps], spreadsheets etc.
+- Easy zero-setup [command line], [terminal], and [web] user interfaces
 
-   - You can add data with your favourite text editor, or a UI, or
-     download it from banks or [any CSV file][convert].
+- Easy multi-period [balance sheet], [income statement], and [cashflow] reports
 
-   - You can start with 
-     [very basic journal entries and reports](#quick-start),
-     and get more sophisticated when you're ready.
+- Easy summarising of account balances to a [desired depth][depth limiting]
 
-   - You can optionally use a version control system, such as [Git],
-     to safeguard your data; track changes; manage alternate what-if
-     scenarios; and collaborate with others.
+- Easy output to [text, HTML, CSV or JSON][output format]
 
-   - The plain text format and fast command-line interface
-     (plus a reusable [library] for building your own [commands][script])
-     facilitate scripting and customisation.
+- Easy import/export/co-usage with Ledger CLI or Beancount
 
-0. It is modelled after the pioneering [Ledger], 
-   and will read many Ledger files without change. 
-   Ledger users will find the data formats and commands familiar.
+- Easy to [download] or [build] on all major platforms
 
-0. It comes with supported, zero-setup **[command line]**, **[terminal]**, and **[web]** user interfaces,
-   and aims to serve **both power users and folks new to accounting or computers**.
+[Ledger CLI]: https://ledger-cli.org
+[command line]: hledger.html
+[terminal]: ui.html
+[web]: web.html
+[balance sheet]: hledger.html#balancesheet
+[income statement]: hledger.html#incomestatement
+[cashflow]: hledger.html#cashflow
+[depth limiting]: hledger.html#depth-limiting
+[output format]: hledger.html#output-format
+[download]: download.html#binary-packages
+[build]: download.html#building-from-source
 
-0. It is **easy to [install] on many platforms**, with official **mac, windows & linux** builds.
 
-0. It prioritises **robustness**, **usability**, and **thorough documentation**.
 
-0. It is quite **fast**, parsing and analysing ~2000 txns/s on a
-   2013 macbook. Typically, reports take a fraction of a second and
-   hledger-ui updates instantly as you edit.
+hledger is a **[Plain Text Accounting]** system.
+Some strengths of the PTA approach:
 
-0. It is **[actively maintained]**, with regular [releases],
-   a large [chat room](#help) and other [support resources](#help).
+- Runs on your local computer, keeping your financial data private and under your control
+  
+- Simple model of  operation: put a log of transactions in, get reports out
 
-0. It is **free**, with no purchase price or monthly fees.
-   And it is licensed under **[GNU GPLv3][gpl]**, providing the strongest guarantee
-   that you will always have the right to run, inspect, modify, or share it.
+- Simple, expressive, human-readable, future-proof plain text format
 
-And here are some current limitations:
+- Can be version controlled, eg with [Git], to safeguard your data,
+  track changes, or collaborate
 
-- The "GUIs" are minimalist; there is no rich polished GUI at the level of
-  Quicken/Quickbooks.
+- Edit with your favourite text editor, or a data entry UI, or import
+  from other formats
 
-- In the beginning it might feel like there's too much freedom and
-  not enough guidance.
-  Some common needs are not yet satisfactorily documented. 
-  (Tip: a request in chat often produces a quick doc!)
+- Easy to script, automate, and integrate into custom workflows
 
-- Importing bank CSV files requires a little bit of configuration,
-  and direct download from banks requires a bit more.
+- Lightweight, fast, non-distracting to use
 
-- hledger doesn't yet calculate capital gains automatically, you must do
-  that semi-manually. (Ledger and Beancount have partial support for this.)
+- Great for learning more of double-entry bookkeeping and accounting.
 
-- hledger is not yet as fast as Ledger, which can be ~10x faster
-  (with some sacrifices, like non-date-aware balance assertions).
+
+
+Here are some ways in which hledger strives to provide robustness:
+
+- Robust installation: multiple options are provided for binary and
+  source installation. Building from source is reliable and consistent
+  across platforms.
+
+- Robust execution: runtime crashes are minimised by Haskell's memory
+  management and strong compile-time type checking. 
+  The software is also heavily tested by automated test suites and CI.
+  Failures caused by user input are reported clearly and promptly.
+
+- Robust features: built-in commands and options combine well with one
+  another, and are expected to do something sensible in all cases,
+  with all kinds of input.
+
+- Robust calculation: results are expected to always perfectly match
+  what you would calculate on paper, up to 255 decimal places.
+
+- Robust parsing: dated items, such as balance assertions and balance
+  assignments, are processed in date order. Assertions/assignments
+  with the same date are processed in parse order. Multiple
+  assertions/assignments within a single transaction work as you would
+  expect.
+  
+- Robust reporting: reports are deterministic and not affected by the
+  order of input files or data items except where that is part of
+  their spec.
+
+- Robust documentation: all functionality is documented precisely,
+  with a mnemonic permalink. Reference manuals for your hledger
+  version are available online, and built in for offline viewing.
+  General and command-specific command line help is provided. We
+  favour documentation-driven development.
+
+hledger is **free software**, with no purchase price or monthly fees.
+It is licensed under **[GNU GPLv3][gpl]**, providing the strongest guarantee
+that you will always have the right to run, inspect, modify, or share it.
+It is [actively maintained], with regular [releases],
+a large [chat room](#help) and other [support resources](#help).
+
+hledger is modelled after the pioneering [Ledger CLI], 
+and will read many Ledger files without change. 
+Ledger users will find the data formats and commands familiar.
+Though not yet as fast as Ledger, it is quite fast,
+parsing and analysing ([correctly](faq.html#journal-format)) ~2000 txns/s on a 2013 macbook.
+Reports normally take a fraction of a second, and hledger-ui updates instantly as you edit.
+
+<!-- - The plain text format and fast command-line interface -->
+<!--   (plus a reusable [library] for building your own [commands][script]) -->
+<!--   facilitate scripting and customisation. -->
 
 [command line]:               add.html
 [terminal]:                   ui.html
@@ -107,13 +156,8 @@ And here are some current limitations:
 
 ## Quick Start
 
-<div style="text-align:center; margin:1em;">
-<a href="download.html"><button type="button" class="btn btn-primary" title="All the ways to install hledger. Get it now!">Download/Install</button></a>
-<a href="https://github.com/simonmichael/hledger"><button type="button" class="btn btn-neutral" style="padding:4px;" title="hledger code and issue tracker on Github. Star us!"><img width="142" src="https://img.shields.io/github/stars/simonmichael/hledger.svg?style=for-the-badge&logo=GitHub&label=Github&color=lightgrey"></button></a>
-</div>
-
 You can start with hledger very simply, and get more sophisticated as
-you learn more about double-entry accounting and hledger best practices.
+you learn more about double-entry accounting.
 Here are some common ways of using it:
 
 **Web or terminal UI:**
@@ -215,7 +259,7 @@ Next, you could:
   **[hledger add](add.html)**,
   **[hledger-web](web.html)**,
   **[hledger-ui](ui.html)**, or
-  **[accounting](add.html)**.
+  **[accounting](accounting.html)**.
 - Read or skim the manuals: the
   **[hledger](hledger.html)**,
   **[hledger-ui](hledger-ui.html)**, and
@@ -246,7 +290,6 @@ When your wealth allows, perhaps you'll feel inspired to become a
 
 hledger is a [Haskell] rewrite/reboot of the pioneering [Ledger].
 ([Why?](faq.html#how-why-was-hledger-started))
-Ledger users will find it very familiar, and you can keep your data compatible with both tools if you wish.
 Read more about the [differences](faq.html#ledger).
 
 hledger strives to be usable, practical and to provide real-world value.
@@ -291,6 +334,32 @@ making it easy to write your own hledger-compatible
 [![](https://repology.org/badge/version-for-repo/stackage_nighly/hledger.svg)](https://repology.org/metapackage/hledger)
 <br clear="all">
 
+
+What are some (current) limitations of PTA and hledger ?
+
+- The "GUIs" are minimalist; there is no rich GUI at the level of
+  Quicken or GNUCash.
+
+- As a beginner you might feel there's too much freedom, too much to
+  read, yet not enough clear guidance. Some common needs are not yet
+  satisfactorily documented.
+  (Tip: a request in chat often produces a quick result.)
+
+- hledger doesn't yet calculate capital gains automatically, as Ledger
+  and Beancount can; you must do that semi-manually.
+
+- hledger is not yet as fast as Ledger.
+
+What is planned for hledger ?
+
+More support for investing,
+more support for correctness and accounting/business rules,
+more input/output formats,
+more speed,
+more GUI,
+charts,
+better getting started experience.
+See also [ROADMAP](ROADMAP.html).
 
 ## Help/Feedback
 
