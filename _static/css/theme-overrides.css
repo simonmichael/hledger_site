@@ -23,11 +23,15 @@
     background: initial;
     color: initial;
 }
-.rst-versions .viewed-version {
+.rst-versions .viewed-version a {
     font-weight:bold;
 		background-color:red;
+		outline: thin solid red;
 		color:white;
 		text-shadow: 1px 1px black;
+}
+.wy-breadcrumbs li a {
+		padding:0;
 }
 .rst-versions .rst-other-versions {
     /* display:block; */

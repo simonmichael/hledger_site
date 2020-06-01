@@ -4,29 +4,19 @@
 {% set viewed_manual_ = viewed_manual if viewed_manual.startswith('hledger') else 'hledger' %}
 
 {% if viewed_manual %} 
-  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions"> {# Add rst-badge class for small badge style. #}
-    <span class="rst-current-version" data-toggle="rst-current-version"> 
-      <span class="fa-book" style="margin-right:.5em;"></span>
+  <div class="rst-versions rst-badge" role="note" aria-label="versions">
       {% set viewed_version_desc = 
 			viewed_version 
-			and viewed_manual_ + ' ' + viewed_version + ', released ' + version_dates.get(viewed_version,'-') + (' (CURRENT)' if viewed_version==current_release_version else '')
-			or  viewed_manual_ + ' ' + 'DEV (UNRELEASED)'
+			and viewed_manual_ + ' ' + viewed_version + ', released ' + version_dates.get(viewed_version,'-')
+			or  viewed_manual_ + ' ' + 'DEV'
 			%}
-      This doc is for <span class="viewed-version">{{ viewed_version_desc }}</span>
-      <span class="fa-caret-down"></span> 
-			<- select your version
-    </span>
-    <div class="rst-other-versions">
-      <ul> 
-        {% set m = 'hledger-web' if viewed_manual=='hledger-api' else viewed_manual %}
-        <li {% if viewed_version=='' %}class="viewed-version"{% endif %}><a href="/{{ m }}.html">DEV</a></li> 
-        {% for v in versions %} 
-          <li {% if viewed_version==v %}class="viewed-version"{% endif %}>
-            {% set m = 'hledger-web' if (viewed_manual=='hledger-api' and v>'1.14') else viewed_manual %}
-            <a href="/{{ v }}/{{ m }}.html">{{ v }}</a>
-          </li> 
-        {% endfor %} 
-      </ul> 
-    </div> 
+      {% set m = 'hledger-web' if viewed_manual=='hledger-api' else viewed_manual %}
+      <span {% if viewed_version=='' %}class="viewed-version"{% endif %}><a href="/{{ m }}.html">DEV</a></span> 
+      {% for v in versions %} 
+        {% set m = 'hledger-web' if (viewed_manual=='hledger-api' and v>'1.14') else viewed_manual %}
+        &middot; <span {% if viewed_version==v %}class="viewed-version"{% endif %}>
+          <a href="/{{ v }}/{{ m }}.html">{{ v }}</a>
+        </span> 
+      {% endfor %} 
   </div> 
 {% endif %} 
