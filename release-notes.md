@@ -57,7 +57,7 @@ misc. fixes and improvements.**
   - harmless commits are ignored automatically ([ci skip] no longer needed for doc commits)
   - scheduled and on-demand testing (push to master, push to ci-* branches, pull request, weekly)
   - now tested: all GHC versions, doctests, haddock building
-  - new shortcut url: http://ci.hledger.org
+  - new shortcut url: https://ci.hledger.org
 
 ### hledger cli 1.18
 
