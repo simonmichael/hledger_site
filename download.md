@@ -75,7 +75,7 @@ div.badges {
 }
 </style>
 
-The current hledger release is **1.17.1.1** ([release notes](release-notes)).\
+The current hledger release is **1.18** ([release notes](release-notes)).\
 [Binary packages](#binary-packages) install quickly.\
 [Building from source](#building-from-source) takes longer but ensures you get the latest release.\
 Afterward, [check your PATH](#check-your-path) and [test your installation](#test-your-installation).
@@ -90,7 +90,7 @@ And please [report](index.html#help) any trouble.
     <tr>
       <td>
         <div class="badges">
-          <a href="https://hydra.nixos.org/search?query=hledger"><img alt="Nix" src="https://img.shields.io/badge/Nix_package-1.17.1.1-brightgreen.svg" /></a>
+          <a href="https://hydra.nixos.org/search?query=hledger"><img alt="Nix" src="https://img.shields.io/badge/Nix_package-1.17.1.1-red.svg" /></a>
         </div>
         <div class="distro"><a href="https://nixos.org/nix">Nix</a></div>
         <div class="notes">Linux, Mac</div>
@@ -111,7 +111,7 @@ And please [report](index.html#help) any trouble.
     <tr>
       <td>
         <div class="badges">
-          <a href="https://hub.docker.com/r/dastapov/hledger"><img alt="Docker" src="https://img.shields.io/badge/Docker_image-1.17.1.1-brightgreen.svg" /></a><br>
+          <a href="https://hub.docker.com/r/dastapov/hledger"><img alt="Docker" src="https://img.shields.io/badge/Docker_image-1.17.1.1-red.svg" /></a><br>
           <a href="https://hub.docker.com/search?q=hledger&amp;type=image&amp;sort=updated_at&amp;order=desc">more..</a>
         </div>
         <div class="distro"><a href="https://www.docker.com/products/docker-desktop">Docker</a></div>
@@ -124,7 +124,7 @@ And please [report](index.html#help) any trouble.
       <td>
         <div class="badges">
           <a href="https://formulae.brew.sh/formula/hledger"><img alt="Homebrew" src="https://repology.org/badge/version-for-repo/homebrew/hledger.svg" /></a>
-          <!-- <a href="https://formulae.brew.sh/formula/hledger"><img alt="Homebrew" src="https://img.shields.io/badge/Homebrew-1.17.1.1-brightgreen.svg" /></a> -->
+          <!-- <a href="https://formulae.brew.sh/formula/hledger"><img alt="Homebrew" src="https://img.shields.io/badge/Homebrew-1.17.1.1-red.svg" /></a> -->
         </div>
         <div class="distro"><a href="https://brew.sh">Homebrew</a></div>
         <div class="notes">Linux, Mac, WSL</div>
@@ -171,8 +171,8 @@ cd pkgsrc && ./bootstrap/bootstrap --prefix=$HOME/pkg --unprivileged --make-jobs
     <tr valign="top">
       <td>
         <div class="badges">
-          <img alt="Windows release" src="https://img.shields.io/badge/Windows_zip-1.17.1-brightgreen.svg" />
-          <!-- <img alt="Windows master" src="https://img.shields.io/badge/Windows_zip-nightly-brightgreen.svg" /> -->
+          <img alt="Windows release" src="https://img.shields.io/badge/Windows_zip-1.17.1-red.svg" />
+          <!-- <img alt="Windows master" src="https://img.shields.io/badge/Windows_zip-nightly-red.svg" /> -->
         </div>
         <!-- <div class="distro">CI builds</div> -->
       </td>
@@ -291,7 +291,7 @@ cd pkgsrc && ./bootstrap/bootstrap --prefix=$HOME/pkg --unprivileged --make-jobs
 <!--     <tr> -->
 <!--       <td> -->
 <!--         <div class="badges"> -->
-<!--           <a href=""><img src="https://img.shields.io/badge/netbsd-1.17.1.1-brightgreen.svg" alt="netbsd package" /></a><br> -->
+<!--           <a href=""><img src="https://img.shields.io/badge/netbsd-1.17.1.1-red.svg" alt="netbsd package" /></a><br> -->
 <!--           <a href="">more..</a> -->
 <!--         </div> -->
 <!--         <div class="distro"><a href="https://www.netbsd.org/">NetBSD</a></div> -->
@@ -397,7 +397,7 @@ It builds the current release plus some [add-on commands], and requires only [ba
 
 <!--
 <div class="badges">
-  <img alt="installs" src="https://img.shields.io/badge/installs_hledger-1.17.1-brightgreen.svg" />
+  <img alt="installs" src="https://img.shields.io/badge/installs_hledger-1.17.1-red.svg" />
 </div>
 <div class="builder">
   <a href="https://github.com/simonmichael/hledger/blob/master/hledger-install/hledger-install.sh">hledger-install.sh</a>
@@ -420,7 +420,7 @@ It builds the current release plus some [add-on commands], and requires only [ba
 
 <!--
 <div class="badges">
-  <img alt="installs" src="https://img.shields.io/badge/installs_hledger-1.17.1-brightgreen.svg" />
+  <img alt="installs" src="https://img.shields.io/badge/installs_hledger-1.17.1-red.svg" />
 </div>
 <div class="builder">
   <a href="https://haskell.fpcomplete.com/get-started">stack</a>
@@ -429,7 +429,7 @@ It builds the current release plus some [add-on commands], and requires only [ba
 -->
 <div class="builder-command">
   stack update <br>
-  stack install --resolver=lts hledger-lib-1.17.1 hledger-1.17.1.1 hledger-ui-1.17.1.1 hledger-web-1.17.1 --silent
+  stack install --resolver=lts hledger-lib-1.18 hledger-1.18 hledger-ui-1.18 hledger-web-1.18 --silent
 </div>
 <div class="builder-text">
 This installs the main hledger tools in ~/.local/bin.
@@ -444,7 +444,7 @@ and you should omit hledger-ui from this command, unless using WSL.
 
 <!--
 <div class="badges">
-  <img alt="installs" src="https://img.shields.io/badge/installs_hledger-1.17.1-brightgreen.svg" />
+  <img alt="installs" src="https://img.shields.io/badge/installs_hledger-1.17.1-red.svg" />
 </div>
 <div class="builder">
   <a href="https://www.haskell.org/cabal">cabal</a>
@@ -454,7 +454,7 @@ and you should omit hledger-ui from this command, unless using WSL.
 <div class="builder-command">
   cabal v2-update <br>
   cabal v2-install alex happy<br>
-  cabal v2-install hledger-1.17.1.1 hledger-web-1.17.1 hledger-ui-1.17.1.1
+  cabal v2-install hledger-1.18 hledger-web-1.18 hledger-ui-1.18
 </div>
 <div class="builder-text">
 This installs the main hledger tools in ~/.cabal/bin.
@@ -566,11 +566,11 @@ Eg:
 
 <div class="command">
 $ hledger --version <br>
-hledger 1.17.1.1 <br>
+hledger 1.18 <br>
 $ hledger-ui --version <br>
-hledger-ui 1.17.1.1 <br>
+hledger-ui 1.18 <br>
 $ hledger web --version <br>
-hledger-web 1.17.1 <br>
+hledger-web 1.18 <br>
 </div>
 
 And you could see the unit tests pass (just for fun):
