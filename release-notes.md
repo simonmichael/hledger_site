@@ -30,6 +30,144 @@ Changes in hledger-install.sh are shown
 [here](https://github.com/simonmichael/hledger/commits/master/hledger-install/hledger-install.sh).
 
 
+## 2020/03/01 hledger 1.18
+
+**Fixed JSON output;
+market prices inferred from transactions;
+more Ledger file compatibility;
+more flexible journal entries from CSV;
+misc. fixes and improvements.**
+
+### project-wide changes 1.18
+
+- new example scripts:
+
+  - hledger-combine-balances.hs, hledger-balance-as-budget.hs  (Dmitry Astapov)
+  - hledger-check-tag-files.hs, hledger-check-tag-files2.hs
+
+- more CSV rule examples: coinbase, waveapp
+
+- new CI (continuous integration) system using Github Actions.
+  Thanks to Travis and Appveyor for their service to date.
+  Improvements:
+
+  - one CI service instead of several
+  - more closely integrated with code repo
+  - tests run on the three main platforms (linux, mac, windows)
+  - harmless commits are ignored automatically ([ci skip] no longer needed for doc commits)
+  - scheduled and on-demand testing (push to master, push to ci-* branches, pull request, weekly)
+  - now tested: all GHC versions, doctests, haddock building
+  - new shortcut url: http://ci.hledger.org
+
+### hledger cli 1.18
+
+- The --forecast flag now takes an optional argument
+  (--forecast=PERIODICEXPR), allowing periodic transactions to
+  start/end on any date and to overlap recorded transactions.
+  (#835, #1236) (Dmitry Astapov)
+
+- An upper case file extension no longer confuses file format
+  detection. (#1225)
+
+- In the commands list, redundant source scripts are now hidden
+  properly when a corresponding .com/.exe file exists. (#1225)
+
+- We now show `..` instead of `-` to indicate date ranges, eg in
+  report titles, to stand out more from hyphenated dates. 
+  
+- Period expressions (eg in -p, date:, and periodic rules) now accept
+  `to`, `until`, `-`, or `..` as synonyms.
+
+- When parsing amounts, whitespace between sign and number is now allowed.
+
+- A clearer error message is shown on encountering a malformed regular
+  expression.
+
+#### commands
+
+- commands allowing different output formats now list their supported
+  formats accurately in --help (#689)
+
+- commands allowing JSON output now actually produce JSON (#689)
+
+- bal, bs: show .. (not ,,) in report titles, like other reports
+
+#### journal format
+
+- We now also infer market prices from transactions, like Ledger.
+  See https://hledger.org/hledger.html#market-prices (#1239). 
+  
+  Upgrade note: this means value reports (-V, -X etc.) can give
+  different output compared to hledger 1.17. If needed, you can
+  prevent this by adding a P directive declaring the old price, on or
+  after the date of the transaction causing the issue.
+
+- The include directive now accepts a file format prefix, like the
+  -f/--file option. This works with glob patterns too, applying the
+  prefix to each path. This can be useful when included files don't
+  have the standard file extension, eg:
+
+      include timedot:2020*.md
+
+- We now accept (and ignore) Ledger-style lot dates
+  (`[DATE]`) and four lot price forms (`{PRICE}`, `{{PRICE}}`,
+  `{=PRICE}`, `{{=PRICE}}`), anywhere after the posting amount but
+  before any balance assertion.
+
+- We now accept Ledger-style parenthesised "virtual posting
+  costs" (`(@)`, `(@@)`). In hledger these are equivalent to the
+  unparenthesised form.
+
+- The unbalanced transaction error message is clearer, especially when
+  postings all have the same sign, and is split into multiple lines
+  for readability.
+
+#### csv format
+
+- You can now generate up to 99 postings in a transaction. (Vladimir Sorokin)
+
+- You can now generate postings with an explicit 0 amount. (#1112)
+
+- For each posting, when both numbered and unnumbered amount
+  assignments are active (eg: both `amount` and `amount1`), we ignore
+  the unnumbered ones. This makes it easier to override old `amount`
+  rules.
+  
+- Fix a 1.17.1 regression involving amount-in/amount-out. (#1226)
+
+- Assigning too many non-zero or zero values to a posting amount now
+  gives a clearer error. (#1226)
+
+### hledger-ui 1.18
+
+- builds with hledger 1.18
+
+### hledger-web 1.18
+
+- Hyperlinks are now more robust when there are multiple journal
+  files, eg links from register to journal now work properly. (#1041)
+
+#### add form
+
+- Fixed a 2016 regression causing too many rows to be added by
+  keypresses in the last amount field or CTRL-plus (#422, #1059).
+
+- Always start with four rows when opened.
+
+- Drop unneeded C-minus/C-plus keys & related help text.
+
+### credits 1.18
+
+This release was brought to you by
+Simon Michael,
+Stephen Morgan,
+Dmitry Astapov,
+Henning Thielemann,
+Andriy Mykhaylyk,
+Pavan Rikhi,
+Vladimir Sorokin.
+
+
 ## 2020/03/01 hledger 1.17
 
 **CSV single-field matching; easier SSV/TSV conversion; 
