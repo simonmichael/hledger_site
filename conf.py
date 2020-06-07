@@ -47,6 +47,7 @@ manuals = [
 
 # all hledger versions we might want to show docs for (since 1.0)
 release_versions = [
+    '1.18',
     '1.17',
     '1.16',
     '1.15',
@@ -65,6 +66,7 @@ release_versions = [
 ]
 
 version_dates = {
+    '1.18': '2020-06-07',
     '1.17': '2020-03-01',
     '1.16': '2019-12-01',
     '1.15': '2019-09-01',
@@ -86,6 +88,7 @@ version_dates = {
 # may want to comment out all of these when previewing docs locally
 show_release_versions = [
     # all versions shown on the download page (overkill):
+    '1.18', # 
     '1.17', # 
     '1.16', # 
     '1.15', # arch, gentoo
