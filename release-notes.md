@@ -73,10 +73,10 @@ misc. fixes and improvements.**
   properly when a corresponding .com/.exe file exists. (#1225)
 
 - We now show `..` instead of `-` to indicate date ranges, eg in
-  report titles, to stand out more from hyphenated dates. 
+  report titles, to stand out more from hyphenated dates. (Stephen Morgan)
   
 - Period expressions (eg in -p, date:, and periodic rules) now accept
-  `to`, `until`, `-`, or `..` as synonyms.
+  `to`, `until`, `-`, or `..` as synonyms. (Stephen Morgan)
 
 - When parsing amounts, whitespace between sign and number is now allowed.
 
@@ -144,8 +144,12 @@ misc. fixes and improvements.**
 
 ### hledger-web 1.18
 
+- The filter query is now preserved when clicking a different account
+  in the sidebar. (Henning Thielemann)
+
 - Hyperlinks are now more robust when there are multiple journal
-  files, eg links from register to journal now work properly. (#1041)
+  files, eg links from register to journal now work properly.
+  (#1041) (Henning Thielemann)
 
 #### add form
 
