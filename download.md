@@ -433,7 +433,7 @@ It builds the current release plus some [add-on commands], and requires only [ba
 </div>
 <div class="builder-text">
 This installs the main hledger tools in ~/.local/bin.
-Your `stack --version` should be not too ancient; use the latest release (2.3.1) for best results.
+Your <code>stack --version</code> should be not too ancient; use the latest release (2.3.1) for best results.
 You can usually upgrade stack quickly with <code>stack upgrade</code>.
 Windows users: the 64-bit version of stack is preferable;
 and you should omit hledger-ui from this command, unless using WSL.
@@ -458,7 +458,7 @@ and you should omit hledger-ui from this command, unless using WSL.
 </div>
 <div class="builder-text">
 This installs the main hledger tools in ~/.cabal/bin.
-Your `cabal --version` should be not too ancient; use a recent release (eg 3.0 or newer) for best results.
+Your <code>cabal --version</code> should be not too ancient; use a recent release (eg 3.0 or newer) for best results.
 Windows users: omit hledger-ui from this command, unless using WSL.
 </div>
 
