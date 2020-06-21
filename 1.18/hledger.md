@@ -553,13 +553,20 @@ General reporting options:
     hledger-ui/hledger-web)
 
 `-B --cost`
-:   convert amounts to their cost at transaction time (using the
-    [transaction price](journal.html#transaction-prices), if any)
+:   convert amounts to their cost/selling amount at transaction time
 
-`-V --value`
-:   convert amounts to their market value on the report end date (using
-    the most recent applicable [market
-    price](journal.html#market-prices), if any)
+`-V --market`
+:   convert amounts to their market value in default valuation
+    commodities
+
+`-X --exchange=COMM`
+:   convert amounts to their market value in commodity COMM
+
+`--value`
+:   convert amounts to cost or market value, more flexibly than -B/-V/-X
+
+`--infer-value`
+:   with -V/-X/--value, also infer market prices from transactions
 
 `--auto`
 :   apply [automated posting rules](journal.html#auto-postings) to
@@ -1278,46 +1285,139 @@ $ hledger balance --pivot member acct:.
 
 ### Valuation
 
-hledger can show cost reports, where amounts are converted to their cost
-or sale amount at transaction time; or value reports, where amounts are
-converted to their market value in another currency/commodity at a
-specified date (using market prices inferred from your transactions, or
-declared with P directives).
-
-We call this "valuation", and it is controlled by the
-`--value=VALUATIONTYPE[,COMMODITY]` option. It can get a little
-involved, so we cover all the details below. But most of the time, all
-you need to do is use these simpler flags instead:
-
--   `-B` to convert to cost/sale amount, or
--   `-V` to convert to market value in your base currency. Or
-    occasionally,
--   `-X COMMODITY` to convert to market value in some other currency.
+Instead of reporting amounts in their original commodity, hledger can
+convert them to cost/sale amount (using the conversion rate recorded in
+the transaction), or to market value (using some market price on a
+certain date). This is controlled by the `--value=TYPE[,COMMODITY]`
+option, but we also provide the simpler `-B`/`-V`/`-X` flags, and
+usually one of those is all you need.
 
 #### -B: Cost
 
 The `-B/--cost` flag converts amounts to their cost or sale amount at
 transaction time, if they have a [transaction
-price](journal.html#transaction-prices) specified. (It is equivalent to
-`--value=cost`.)
+price](journal.html#transaction-prices) specified.
 
 #### -V: Value
 
-The `-V/--market` flag converts reported amounts to market value in
-their *default valuation commodity*, using the [market
-prices](#market-prices) in effect on a *default valuation date*. (More
-on these below.)
+The `-V/--market` flag converts amounts to market value in their default
+*valuation commodity*, using the [market prices](#market-prices) in
+effect on the *valuation date(s)*, if any. More on these in a minute.
 
-The default valuation commodity is the one referenced in the latest
-applicable market price dated on or before the valuation date. Typically
-your P declarations or currency exchange transactions reference a single
-base currency, and -V will pick that.
+#### -X: Value in specified commodity
 
-The default valuation date is today for single period reports
-(equivalent to `--value=now`), or the last day of each subperiod for
-[multiperiod reports](#report-intervals) (equivalent to `--value=end`).
+The `-X/--exchange=COMM` option is like `-V`, except you tell it which
+currency you want to convert to, and it tries to convert everything to
+that.
 
-An example:
+#### Valuation date
+
+Since market prices can change from day to day, market value reports
+have a valuation date (or more than one), which determines which market
+prices will be used.
+
+For single period reports, if an explicit [report end
+date](#report-start-end-date) is specified, that will be used as the
+valuation date; otherwise the valuation date is "today".
+
+For [multiperiod reports](#report-intervals), each column/period is
+valued on the last day of the period.
+
+#### Market prices
+
+*(experimental)*
+
+To convert a commodity A to its market value in another commodity B,
+hledger looks for a suitable market price (exchange rate) as follows, in
+this order of preference :
+
+1.  A *declared market price* or *inferred market price*: A's latest
+    market price in B on or before the valuation date as declared by a
+    [P directive](journal.html#declaring-market-prices), or (if the
+    `--infer-value` flag is used) inferred from [transaction
+    prices](journal.html#transaction-prices).
+
+2.  A *reverse market price*: the inverse of a declared or inferred
+    market price from B to A.
+
+3.  A *chained market price*: a synthetic price formed by combining the
+    shortest chain of market prices (any of the above types) leading
+    from A to B.
+
+Amounts for which no applicable market price can be found, are not
+converted.
+
+#### --infer-value: market prices from transactions
+
+*(experimental)*
+
+Normally, market value in hledger is fully controlled by, and requires,
+[P directives](journal.html#declaring-market-prices) in your journal.
+Since adding and updating those can be a chore, and since transactions
+usually take place at close to market value, why not use the recorded
+[transaction prices](journal.html#transaction-prices) as additional
+market prices (as Ledger does) ? We could produce value reports without
+needing P directives at all.
+
+Adding the `--infer-value` flag to `-V`, `-X` or `--value` enables this.
+So for example, `hledger bs -V --infer-value` will get market prices
+both from P directives and from transactions.
+
+There is a downside: value reports can sometimes be affected in
+confusing/undesired ways by your journal entries. If this happens to
+you, read all of this [Valuation](#valuation) section carefully, and try
+adding `--debug` or `--debug=2` to troubleshoot.
+
+`--infer-value` can infer market prices from:
+
+-   multicommodity transactions with explicit prices (`@`/`@@`)
+
+-   multicommodity transactions with implicit prices (no `@`, two
+    commodities, unbalanced). (With these, the order of postings
+    matters. `hledger print -x` can be useful for troubleshooting.)
+
+-   but not, currently, from "[more
+    correct](investments.html#a-more-correct-entry)" multicommodity
+    transactions (no `@`, multiple commodities, balanced).
+
+#### Valuation commodity
+
+*(experimental)*
+
+**When you specify a valuation commodity (`-X COMM` or
+`--value TYPE,COMM`):**\
+hledger will convert all amounts to COMM, wherever it can find a
+suitable market price (including by reversing or chaining prices).
+
+**When you leave the valuation commodity unspecified (`-V` or
+`--value TYPE`):**\
+For each commodity A, hledger picks a default valuation commodity as
+follows, in this order of preference:
+
+1.  The price commodity from the latest P-declared market price for A on
+    or before valuation date.
+
+2.  The price commodity from the latest P-declared market price for A on
+    any date. (Allows conversion to proceed when there are inferred
+    prices before the valuation date.)
+
+3.  If there are no P directives at all (any commodity or date) and the
+    `--infer-value` flag is used: the price commodity from the latest
+    transaction-inferred price for A on or before valuation date.
+
+This means:
+
+-   If you have [P directives](journal.html#declaring-market-prices),
+    they determine which commodities `-V` will convert, and to what.
+
+-   If you have no P directives, and use the `--infer-value` flag,
+    [transaction prices](journal.html#transaction-prices) determine it.
+
+Amounts for which no valuation commodity can be found are not converted.
+
+#### Simple valuation examples
+
+Here are some quick examples of `-V`:
 
 ``` journal
 ; one euro is worth this many dollars from nov 1
@@ -1354,39 +1454,7 @@ $ hledger -f t.j bal -N euros -V
              $103.00  assets:euros
 ```
 
-#### -X: Market value in specified commodity
-
-The `-X/--exchange` option is like `-V`, except it specifies the target
-commodity you would like to convert to. (It is equivalent to
-`--value=now,COMM` or `--value=end,COMM`.)
-
-#### Market prices
-
-To convert a commodity A to commodity B, hledger looks for a suitable
-market price (exchange rate) in the following ways, in this order of
-preference:
-
-1.  a *declared market price* - the latest [P
-    directive](journal.html#declaring-market-prices) specifying the
-    exchange rate from A to B, dated on or before the valuation date.
-
-2.  a *transaction-implied market price* - a market price matching the
-    [transaction price](journal.html#transaction-prices) used in the
-    latest transaction where A is converted to B, dated on or before the
-    valuation date. (*since hledger 1.18; experimental*)
-
-3.  a *reverse declared market price* - calculated by inverting a
-    declared market price from B to A.
-
-4.  a *reverse transaction-implied market price* - calculated by
-    inverting a transaction-implied market price from B to A.
-
-5.  an *indirect market price* - calculated by combining the shortest
-    chain of market prices (any of the above types) leading from A to B.
-
 #### --value: Flexible valuation
-
-*(experimental, added 201905)*
 
 `-B`, `-V` and `-X` are special cases of the more general `--value`
 option:
@@ -1400,51 +1468,40 @@ option:
                           - default valuation commodity (or COMM) using current market prices
                           - default valuation commodity (or COMM) using market prices at some date
 
-The TYPE part basically selects either "cost", or "market value" plus a
-valuation date:
+The TYPE part selects cost or value and valuation date:
 
 `--value=cost`
 :   Convert amounts to cost, using the prices recorded in transactions.
 
 `--value=then`
-:   Convert amounts to their value in a default valuation commodity,
-    using market prices on each posting's date. This is currently
-    supported only by the [print](#print) and [register](#register)
-    commands.
+:   Convert amounts to their value in the [default valuation
+    commodity](#valuation-commodity), using market prices on each
+    posting's date. This is currently supported only by the
+    [print](#print) and [register](#register) commands.
 
 `--value=end`
-:   Convert amounts to their value in a default valuation commodity,
+:   Convert amounts to their value in the default valuation commodity,
     using market prices on the last day of the report period (or if
     unspecified, the journal's end date); or in multiperiod reports,
     market prices on the last day of each subperiod.
 
 `--value=now`
-:   Convert amounts to their value in default valuation commodity using
-    current market prices (as of when report is generated).
+:   Convert amounts to their value in the default valuation commodity
+    using current market prices (as of when report is generated).
 
 `--value=YYYY-MM-DD`
-:   Convert amounts to their value in default valuation commodity using
-    market prices on this date.
-
-The default valuation commodity is the commodity mentioned in the most
-recent applicable market price declaration. When all your price
-declarations lead to a single home currency, this will usually do what
-you want.
+:   Convert amounts to their value in the default valuation commodity
+    using market prices on this date.
 
 To select a different valuation commodity, add the optional `,COMM`
 part: a comma, then the target commodity's symbol. Eg:
 **`--value=now,EUR`**. hledger will do its best to convert amounts to
-this commodity, using:
+this commodity, deducing [market prices](#market-prices) as described
+above.
 
--   declared prices (from source commodity to valuation commodity)
--   reverse prices (declared prices from valuation to source commodity,
-    inverted)
--   indirect prices (prices calculated from the shortest chain of
-    declared or reverse prices from source to valuation commodity)
+#### More valuation examples
 
-in that order.
-
-Here are some examples showing the effect of `--value` as seen with
+Here are some examples showing the effect of `--value`, as seen with
 `print`:
 
 ``` journal
@@ -1534,16 +1591,20 @@ $ hledger -f- print --value=2000-01-15
 You may need to explicitly set a commodity's display style, when reverse
 prices are used. Eg this output might be surprising:
 
-    P 2000-01-01 A 2B
+``` journal
+P 2000-01-01 A 2B
 
-    2000-01-01
-      a  1B
-      b
+2000-01-01
+  a  1B
+  b
+```
 
-    $ hledger print -x -X A
-    2000-01-01
-        a               0
-        b               0
+``` shell
+$ hledger print -x -X A
+2000-01-01
+    a               0
+    b               0
+```
 
 Explanation: because there's no amount or commodity directive specifying
 a display style for A, 0.5A gets the default style, which shows no
@@ -1551,25 +1612,28 @@ decimal digits. Because the displayed amount looks like zero, the
 commodity symbol and minus sign are not displayed either. Adding a
 commodity directive sets a more useful display style for A:
 
-    P 2000-01-01 A 2B
-    commodity 0.00A
+``` journal
+P 2000-01-01 A 2B
+commodity 0.00A
 
-    2000-01-01
-      a  1B
-      b
+2000-01-01
+  a  1B
+  b
+```
 
-    $ hledger print -X A
-    2000-01-01
-        a           0.50A
-        b          -0.50A
+``` shell
+$ hledger print -X A
+2000-01-01
+    a           0.50A
+    b          -0.50A
+```
 
-#### Effect of --value on reports
+#### Effect of valuation on reports
 
-Here is a reference for how `--value` currently affects each part of
-hledger's reports. It's work in progress, but may be useful for
-troubleshooting or reporting bugs. See also the definitions and notes
-below. If you find problems, please report them, ideally with a
-reproducible example. Related:
+Here is a reference for how valuation is supposed to affect each part of
+hledger's reports (and a glossary). (It's wide, you'll have to scroll
+sideways.) It may be useful when troubleshooting. If you find problems,
+please report them, ideally with a reproducible example. Related:
 [\#329](https://github.com/simonmichael/hledger/issues/329),
 [\#1083](https://github.com/simonmichael/hledger/issues/1083).
 
@@ -1596,7 +1660,7 @@ reproducible example. Related:
 | grand total/average                             | sum/average of column totals                  | sum/average of column totals                     | not supported                                         | sum/average of column totals                       | sum/average of column totals            |
 | <br>                                            |                                               |                                                  |                                                       |                                                    |                                         |
 
-**Additional notes**
+**Glossary:**
 
 *cost*
 :   calculated using price(s) recorded in the transaction(s).

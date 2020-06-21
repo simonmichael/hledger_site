@@ -165,13 +165,20 @@ hledger reporting options:
     hledger-ui/hledger-web)
 
 `-B --cost`
-:   convert amounts to their cost at transaction time (using the
-    [transaction price](journal.html#transaction-prices), if any)
+:   convert amounts to their cost/selling amount at transaction time
 
-`-V --value`
-:   convert amounts to their market value on the report end date (using
-    the most recent applicable [market
-    price](journal.html#market-prices), if any)
+`-V --market`
+:   convert amounts to their market value in default valuation
+    commodities
+
+`-X --exchange=COMM`
+:   convert amounts to their market value in commodity COMM
+
+`--value`
+:   convert amounts to cost or market value, more flexibly than -B/-V/-X
+
+`--infer-value`
+:   with -V/-X/--value, also infer market prices from transactions
 
 `--auto`
 :   apply [automated posting rules](journal.html#auto-postings) to
@@ -226,7 +233,7 @@ for communication. This is an alternative way of running multiple
 hledger-web instances behind a reverse proxy that handles authentication
 for different users. The path can be derived in a predictable way, eg by
 using the username within the path. As an example, `nginx` as reverse
-proxy can use the variabel `$remote_user` to derive a path from the
+proxy can use the variable `$remote_user` to derive a path from the
 username used in a [HTTP basic
 authentication](https://docs.nginx.com/nginx/admin-guide/security-controls/configuring-http-basic-authentication/).
 The following `proxy_pass` directive allows access to all `hledger-web`

@@ -496,8 +496,8 @@ commodity. This can be used to document the cost (in a purchase) or
 selling price (in a sale). For example, transaction prices are useful to
 record purchases of a foreign currency. Note transaction prices are
 fixed at the time of the transaction, and do not change over time. See
-also [market prices](#market-prices), which represent prevailing
-exchange rates on a certain date.
+also [market prices](#declaring-market-prices), which represent
+prevailing exchange rates on a certain date.
 
 There are several ways to record a transaction price:
 
@@ -850,14 +850,19 @@ files can be included (not CSV files, currently).
 If the file path does not begin with a slash, it is relative to the
 current file's folder.
 
-It may contain [glob
+A tilde means home directory, eg: `include ~/main.journal`.
+
+The path may contain [glob
 patterns](https://hackage.haskell.org/package/Glob-0.9.2/docs/System-FilePath-Glob.html#v:compile)
 to match multiple files, eg: `include *.journal`.
 
-Or a tilde, meaning home directory: `include ~/main.journal`.
+There is limited support for recursive wildcards: `**/` (the slash is
+required) matches 0 or more subdirectories. It's not super convenient
+since you have to avoid include cycles and including directories, but
+this can be done, eg: `include */**/*.journal`.
 
-It may also be prefixed to force a specific file format, overriding the
-file extension (as described in [hledger.1 -\> Input
+The path may also be prefixed to force a specific file format,
+overriding the file extension (as described in [hledger.1 -\> Input
 files](hledger.html#input-files)): `include timedot:~/notes/2020*.md`.
 
 #### Default year

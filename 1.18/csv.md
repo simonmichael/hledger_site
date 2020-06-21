@@ -813,7 +813,7 @@ See:
 
 A posting amount can be set in one of these ways:
 
--   by assigning (with a fields list or field assigment) to `amountN`
+-   by assigning (with a fields list or field assignment) to `amountN`
     (posting N's amount) or `amount` (posting 1's amount)
 
 -   by assigning to `amountN-in` and `amountN-out` (or `amount-in` and
