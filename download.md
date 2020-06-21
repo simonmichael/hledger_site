@@ -75,7 +75,7 @@ div.badges {
 }
 </style>
 
-The current hledger release is **1.18** ([release notes](release-notes)).\
+The current hledger release is **1.18.1** ([release notes](release-notes)).\
 [Binary packages](#binary-packages) install quickly.\
 [Building from source](#building-from-source) takes longer but ensures you get the latest release.\
 Afterward, [check your PATH](#check-your-path) and [test your installation](#test-your-installation).
@@ -111,7 +111,7 @@ And please [report](index.html#help) any trouble.
     <tr>
       <td>
         <div class="badges">
-          <a href="https://hub.docker.com/r/dastapov/hledger"><img alt="Docker" src="https://img.shields.io/badge/Docker_image-1.18-brightgreen.svg" /></a><br>
+          <a href="https://hub.docker.com/r/dastapov/hledger"><img alt="Docker" src="https://img.shields.io/badge/Docker_image-1.18-red.svg" /></a><br>
           <a href="https://hub.docker.com/search?q=hledger&amp;type=image&amp;sort=updated_at&amp;order=desc">more..</a>
         </div>
         <div class="distro"><a href="https://www.docker.com/products/docker-desktop">Docker</a></div>
@@ -429,7 +429,7 @@ It builds the current release plus some [add-on commands], and requires only [ba
 -->
 <div class="builder-command">
   stack update <br>
-  stack install --resolver=lts hledger-lib-1.18 hledger-1.18 hledger-ui-1.18 hledger-web-1.18 --silent
+  stack install --resolver=lts hledger-lib-1.18.1 hledger-1.18.1 hledger-ui-1.18.1 hledger-web-1.18.1 --silent
 </div>
 <div class="builder-text">
 This installs the main hledger tools in ~/.local/bin.
@@ -454,7 +454,7 @@ and you should omit hledger-ui from this command, unless using WSL.
 <div class="builder-command">
   cabal update <br>
   cabal install alex happy<br>
-  cabal install hledger-1.18 hledger-web-1.18 hledger-ui-1.18
+  cabal install hledger-1.18.1 hledger-web-1.18.1 hledger-ui-1.18.1
 </div>
 <div class="builder-text">
 This installs the main hledger tools in ~/.cabal/bin.
@@ -569,11 +569,11 @@ Eg:
 
 <div class="command">
 $ hledger --version <br>
-hledger 1.18 <br>
+hledger 1.18.1 <br>
 $ hledger-ui --version <br>
-hledger-ui 1.18 <br>
+hledger-ui 1.18.1 <br>
 $ hledger web --version <br>
-hledger-web 1.18 <br>
+hledger-web 1.18.1 <br>
 </div>
 
 And you could see the unit tests pass (just for fun):
