@@ -30,6 +30,26 @@ Changes in hledger-install.sh are shown
 [here](https://github.com/simonmichael/hledger/commits/master/hledger-install/hledger-install.sh).
 
 
+## 2020/06/21 hledger 1.18.1
+
+### hledger cli 1.18.1
+
+- value reports now work as in 1.17 again; inferring market prices from
+  transactions is now an option, requiring the --infer-value flag.
+  (#1239, #1253)
+
+- print: amounts in csv output now have commodity symbol, digit group
+  separators and prices removed (Dmitry Astapov)
+
+- begin more systematic level usage in --debug output
+
+- journal: document recursive wildcards
+
+### hledger-ui 1.18.1
+
+- Fix F key having no effect (#1255) (Dmitry Astapov)
+
+
 ## 2020/03/01 hledger 1.18
 
 **Fixed JSON output;
