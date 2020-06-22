@@ -90,6 +90,32 @@ And please [report](index.html#help) any trouble.
     <tr>
       <td>
         <div class="badges">
+          <a href="https://hub.docker.com/r/dastapov/hledger"><img alt="Docker" src="https://img.shields.io/badge/Docker_image-1.18.1-brightgreen.svg" /></a><br>
+          <a href="https://hub.docker.com/search?q=hledger&amp;type=image&amp;sort=updated_at&amp;order=desc">more..</a>
+        </div>
+        <div class="distro"><a href="https://www.docker.com/products/docker-desktop">Docker</a></div>
+        <div class="notes">Linux, Mac, Windows</div>
+      </td>
+      <td>
+        <div class="command">docker pull dastapov/hledger</div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="badges">
+          <a href="https://formulae.brew.sh/formula/hledger"><img alt="Homebrew" src="https://repology.org/badge/version-for-repo/homebrew/hledger.svg" /></a>
+          <!-- <a href="https://formulae.brew.sh/formula/hledger"><img alt="Homebrew" src="https://img.shields.io/badge/Homebrew-1.17.1.1-red.svg" /></a> -->
+        </div>
+        <div class="distro"><a href="https://brew.sh">Homebrew</a></div>
+        <div class="notes">Linux, Mac, WSL</div>
+      </td>
+      <td>
+        <div class="command">brew install hledger</div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="badges">
           <a href="https://hydra.nixos.org/search?query=hledger"><img alt="Nix" src="https://img.shields.io/badge/Nix_package-1.17.1.1-red.svg" /></a>
         </div>
         <div class="distro"><a href="https://nixos.org/nix">Nix</a></div>
@@ -106,31 +132,6 @@ And please [report](index.html#help) any trouble.
             On Linux, note <span class="warnings"><a href="https://github.com/simonmichael/hledger/issues/1030">#1030</a>, 
             <a href="https://github.com/simonmichael/hledger/issues/1033">#1033</a>.
         </div>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div class="badges">
-          <a href="https://hub.docker.com/r/dastapov/hledger"><img alt="Docker" src="https://img.shields.io/badge/Docker_image-1.18.1-brightgreen.svg" /></a><br>
-          <a href="https://hub.docker.com/search?q=hledger&amp;type=image&amp;sort=updated_at&amp;order=desc">more..</a>
-        </div>
-        <div class="distro"><a href="https://www.docker.com/products/docker-desktop">Docker</a></div>
-        <div class="notes">Linux, Mac, Windows</div>
-      </td>
-      <td>
-        <div class="command">docker pull dastapov/hledger</div>
-      </td>
-    <tr>
-      <td>
-        <div class="badges">
-          <a href="https://formulae.brew.sh/formula/hledger"><img alt="Homebrew" src="https://repology.org/badge/version-for-repo/homebrew/hledger.svg" /></a>
-          <!-- <a href="https://formulae.brew.sh/formula/hledger"><img alt="Homebrew" src="https://img.shields.io/badge/Homebrew-1.17.1.1-red.svg" /></a> -->
-        </div>
-        <div class="distro"><a href="https://brew.sh">Homebrew</a></div>
-        <div class="notes">Linux, Mac, WSL</div>
-      </td>
-      <td>
-        <div class="command">brew install hledger</div>
       </td>
     </tr>
     <tr>
@@ -171,18 +172,17 @@ cd pkgsrc && ./bootstrap/bootstrap --prefix=$HOME/pkg --unprivileged --make-jobs
     <tr valign="top">
       <td>
         <div class="badges">
-          <img alt="Windows release" src="https://img.shields.io/badge/Windows_zip-1.17.1-red.svg" />
+          <img alt="CI binaries" src="https://img.shields.io/badge/CI_binaries-1.18.1-brightgreen.svg" />
           <!-- <img alt="Windows master" src="https://img.shields.io/badge/Windows_zip-nightly-red.svg" /> -->
         </div>
         <!-- <div class="distro">CI builds</div> -->
       </td>
       <td style="padding-top:10px;">
-        <div class="command" style="margin-bottom:4px;"><a href="https://github.com/simonmichael/hledger/releases/tag/hledger-1.17.1.1">hledger.zip</a></div>
+        <div class="command" style="margin-bottom:4px;"><a href="https://github.com/simonmichael/hledger/releases/tag/1.18.1">hledger-windows.zip</a></div>
         <div class="notes"></div>
         <!-- <div class="command"><a href="https://github.com/simonmichael/hledger/actions?query=workflow%3A%22windows+CI%22+branch%3Amaster+is%3Asuccess+event%3Aschedule">latest windows CI -> hledger.zip</a></div> -->
         <!-- <div class="notes"> -->
         <!--   <span class="warnings"> -->
-        <!--     downloading from Github CI requires a Github login for now -->
         <!--     <\!-- <a href="https://github.com/simonmichael/hledger/issues/1039">#1039</a> -\-> -->
         <!--     <\!-- [no hledger-ui](https://github.com/jtdaugherty/vty/pull/1#issuecomment-297143444), -\-> -->
         <!--     <\!-- [doesn't work on old windows ?](https://github.com/simonmichael/hledger/issues/774), -\-> -->
@@ -195,10 +195,39 @@ cd pkgsrc && ./bootstrap/bootstrap --prefix=$HOME/pkg --unprivileged --make-jobs
   </tbody>
 </table>
 
+### Mac
+
+<table class="mac downloads">
+  <tbody>
+    <tr valign="top">
+      <td>
+        <div class="badges">
+          <img alt="CI binaries" src="https://img.shields.io/badge/CI_binaries-1.18.1-brightgreen.svg" />
+        </div>
+      </td>
+      <td style="padding-top:10px;">
+        <div class="command" style="margin-bottom:4px;"><a href="https://github.com/simonmichael/hledger/releases/tag/1.18.1">hledger-macos.zip</a></div>
+        <div class="notes"></div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 ### GNU/Linux
 
 <table class="linux downloads">
   <tbody>
+    <tr valign="top">
+      <td>
+        <div class="badges">
+          <img alt="CI binaries" src="https://img.shields.io/badge/CI_binaries-1.18.1-brightgreen.svg" />
+        </div>
+      </td>
+      <td style="padding-top:10px;">
+        <div class="command" style="margin-bottom:4px;"><a href="https://github.com/simonmichael/hledger/releases/tag/1.18.1">hledger-ubuntu.zip</a></div>
+        <div class="notes"></div>
+      </td>
+    </tr>
     <tr>
       <td>
         <div class="badges">
@@ -213,7 +242,7 @@ cd pkgsrc && ./bootstrap/bootstrap --prefix=$HOME/pkg --unprivileged --make-jobs
     <tr>
       <td>
         <div class="badges">
-          <a href="https://gentoo.zugaina.org/Search?search=hledger"><img alt="Gentoo" src="https://img.shields.io/badge/Gentoo_package-1.17-red.svg" /></a>
+          <a href="https://gentoo.zugaina.org/Search?search=hledger"><img alt="Gentoo" src="https://img.shields.io/badge/Gentoo_package-1.18-red.svg" /></a>
         </div>
         <div class="distro">Gentoo</div>
       </td>
@@ -225,7 +254,7 @@ cd pkgsrc && ./bootstrap/bootstrap --prefix=$HOME/pkg --unprivileged --make-jobs
       <td>
         <div class="badges">
           <!-- <a href="https://voidlinux.org/packages/?q=hledger"><img src="https://repology.org/badge/version-for-repo/void_x86_64/hledger.svg" alt="Void Linux x86_64" /></a> -->
-          <a href="https://voidlinux.org/packages/?q=hledger"><img src="https://img.shields.io/badge/Void_package-1.15.2-red.svg" alt="Void Linux x86_64" /></a>
+          <a href="https://voidlinux.org/packages/?q=hledger"><img src="https://img.shields.io/badge/Void_package-1.18-red.svg" alt="Void Linux x86_64" /></a>
         </div>
         <div class="distro">Void</div>
       </td>
@@ -267,6 +296,7 @@ cd pkgsrc && ./bootstrap/bootstrap --prefix=$HOME/pkg --unprivileged --make-jobs
     <tr>
       <td>
         <div class="badges">
+          <a href="https://packages.ubuntu.com/groovy/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_20_10/hledger.svg" alt="Ubuntu 20.10" /></a><br>
           <a href="https://packages.ubuntu.com/focal/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_20_04/hledger.svg" alt="Ubuntu 20.04" /></a><br>
           <a href="https://packages.ubuntu.com/eoan/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_19_10/hledger.svg" alt="Ubuntu 19.10" /></a><br>
           <a href="https://packages.ubuntu.com/disco/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_19_04/hledger.svg" alt="Ubuntu 19.04" /></a><br>
@@ -322,6 +352,24 @@ cd pkgsrc && ./bootstrap/bootstrap --prefix=$HOME/pkg --unprivileged --make-jobs
         <div class="notes">
             See also <a href="https://github.com/commercialhaskell/stack/issues/3313#issuecomment-570353913">stack#3313</a>
         </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### Raspberry Pi
+
+<table class="raspberrypi downloads">
+  <tbody>
+    <tr>
+      <td>
+        <div class="badges">
+          <img alt="Contributed binaries" src="https://img.shields.io/badge/Contributed_binaries-1.18-red.svg" />
+        </div>
+      </td>
+      <td>
+        <div class="command" style="margin-bottom:4px;"><a href="https://github.com/simonmichael/hledger/releases/tag/1.18">hledger-raspberrypi.zip</a></div>
+        <div class="notes"></div>
       </td>
     </tr>
   </tbody>
@@ -509,9 +557,9 @@ stack install
 
 or to ~/.cabal/bin with [cabal]:
 <div class="builder-command">
-cabal v2-update<br>
-cabal v2-install alex happy<br>
-cabal v2-install ./hledger-lib ./hledger ./hledger-ui ./hledger-web
+cabal update<br>
+cabal install alex happy<br>
+cabal install ./hledger-lib ./hledger ./hledger-ui ./hledger-web
 </div>
 
 hledger development builds show a ".99" suffix in their `--version` output, 
