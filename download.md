@@ -104,7 +104,6 @@ And please [report](index.html#help) any trouble.
       <td>
         <div class="badges">
           <a href="https://formulae.brew.sh/formula/hledger"><img alt="Homebrew" src="https://repology.org/badge/version-for-repo/homebrew/hledger.svg" /></a>
-          <!-- <a href="https://formulae.brew.sh/formula/hledger"><img alt="Homebrew" src="https://img.shields.io/badge/Homebrew-1.17.1.1-red.svg" /></a> -->
         </div>
         <div class="distro"><a href="https://brew.sh">Homebrew</a></div>
         <div class="notes">Linux, Mac, WSL</div>
@@ -116,7 +115,7 @@ And please [report](index.html#help) any trouble.
     <tr>
       <td>
         <div class="badges">
-          <a href="https://hydra.nixos.org/search?query=hledger"><img alt="Nix" src="https://img.shields.io/badge/Nix_package-1.17.1.1-red.svg" /></a>
+          <a href="https://github.com/search?l=&o=desc&q=%22automatic+Haskell+package+set+update%22+repo%3ANixOS%2Fnixpkgs+filename%3Ahaskell-packages.nix&s=committer-date&type=Commits"><img alt="Nix" src="https://img.shields.io/badge/Nix_package-1.17.1.1-red.svg" /></a>
         </div>
         <div class="distro"><a href="https://nixos.org/nix">Nix</a></div>
         <div class="notes">Linux, Mac</div>
@@ -173,15 +172,11 @@ cd pkgsrc && ./bootstrap/bootstrap --prefix=$HOME/pkg --unprivileged --make-jobs
       <td>
         <div class="badges">
           <img alt="CI binaries" src="https://img.shields.io/badge/CI_binaries-1.18.1-brightgreen.svg" />
-          <!-- <img alt="Windows master" src="https://img.shields.io/badge/Windows_zip-nightly-red.svg" /> -->
         </div>
-        <!-- <div class="distro">CI builds</div> -->
       </td>
       <td style="padding-top:10px;">
         <div class="command" style="margin-bottom:4px;"><a href="https://github.com/simonmichael/hledger/releases/tag/1.18.1">hledger-windows.zip</a></div>
-        <div class="notes"></div>
-        <!-- <div class="command"><a href="https://github.com/simonmichael/hledger/actions?query=workflow%3A%22windows+CI%22+branch%3Amaster+is%3Asuccess+event%3Aschedule">latest windows CI -> hledger.zip</a></div> -->
-        <!-- <div class="notes"> -->
+        <div class="notes">
         <!--   <span class="warnings"> -->
         <!--     <\!-- <a href="https://github.com/simonmichael/hledger/issues/1039">#1039</a> -\-> -->
         <!--     <\!-- [no hledger-ui](https://github.com/jtdaugherty/vty/pull/1#issuecomment-297143444), -\-> -->
@@ -189,7 +184,7 @@ cd pkgsrc && ./bootstrap/bootstrap --prefix=$HOME/pkg --unprivileged --make-jobs
         <!--     <\!-- [many files in PATH causing hangs](https://github.com/simonmichael/hledger/issues/791), -\-> -->
         <!--     <\!-- [appveyor builds failing](https://github.com/simonmichael/hledger/issues/832) -\-> -->
         <!--   </span> -->
-        <!-- </div> -->
+        </div>
       </td>
     </tr>
   </tbody>
@@ -242,7 +237,7 @@ cd pkgsrc && ./bootstrap/bootstrap --prefix=$HOME/pkg --unprivileged --make-jobs
     <tr>
       <td>
         <div class="badges">
-          <a href="https://gentoo.zugaina.org/Search?search=hledger"><img alt="Gentoo" src="https://img.shields.io/badge/Gentoo_package-1.18-red.svg" /></a>
+          <a href="https://gentoo.zugaina.org/Search?search=hledger"><img alt="Gentoo" src="https://img.shields.io/badge/Gentoo_package-1.18.1-brightgreen.svg" /></a>
         </div>
         <div class="distro">Gentoo</div>
       </td>
@@ -253,8 +248,7 @@ cd pkgsrc && ./bootstrap/bootstrap --prefix=$HOME/pkg --unprivileged --make-jobs
     <tr>
       <td>
         <div class="badges">
-          <!-- <a href="https://voidlinux.org/packages/?q=hledger"><img src="https://repology.org/badge/version-for-repo/void_x86_64/hledger.svg" alt="Void Linux x86_64" /></a> -->
-          <a href="https://voidlinux.org/packages/?q=hledger"><img src="https://img.shields.io/badge/Void_package-1.18-red.svg" alt="Void Linux x86_64" /></a>
+          <a href="https://voidlinux.org/packages/?q=hledger"><img src="https://repology.org/badge/version-for-repo/void_x86_64/hledger.svg" alt="Void Linux x86_64" /></a>
         </div>
         <div class="distro">Void</div>
       </td>
@@ -279,11 +273,12 @@ cd pkgsrc && ./bootstrap/bootstrap --prefix=$HOME/pkg --unprivileged --make-jobs
     <tr>
       <td>
         <div class="badges">
-          <a href="https://apps.fedoraproject.org/packages/hledger/"><img src="https://img.shields.io/badge/Fedora_Rawhide_package-1.14.2-red.svg" alt="Fedora Rawhide" /></a><br>
+          <a href="https://apps.fedoraproject.org/packages/hledger/"><img src="https://repology.org/badge/version-for-repo/fedora_rawhide/hledger.svg" alt="Fedora Rawhide" /></a><br>
           <a href="https://apps.fedoraproject.org/packages/hledger/"><img src="https://img.shields.io/badge/Fedora_33_package-1.14.2-red.svg" alt="Fedora 33" /></a><br>
-          <a href="https://apps.fedoraproject.org/packages/hledger/"><img src="https://img.shields.io/badge/Fedora_32_package-1.14.2-red.svg" alt="Fedora 32" /></a><br>
-          <a href="https://apps.fedoraproject.org/packages/hledger/"><img src="https://img.shields.io/badge/Fedora_31_package-1.12.1-red.svg" alt="Fedora 31" /></a><br>
-          <a href="https://apps.fedoraproject.org/packages/hledger/"><img src="https://img.shields.io/badge/Fedora_30_package-1.10-red.svg" alt="Fedora 30" /></a><br>
+          <!-- <a href="https://apps.fedoraproject.org/packages/hledger/"><img src="https://repology.org/badge/version-for-repo/fedora_33/hledger.svg" alt="Fedora 33" /></a><br> -->
+          <a href="https://apps.fedoraproject.org/packages/hledger/"><img src="https://repology.org/badge/version-for-repo/fedora_32/hledger.svg" alt="Fedora 32" /></a><br>
+          <a href="https://apps.fedoraproject.org/packages/hledger/"><img src="https://repology.org/badge/version-for-repo/fedora_31/hledger.svg" alt="Fedora 31" /></a><br>
+          <a href="https://apps.fedoraproject.org/packages/hledger/"><img src="https://repology.org/badge/version-for-repo/fedora_30/hledger.svg" alt="Fedora 30" /></a><br>
           <a href="https://apps.fedoraproject.org/packages/hledger/"><img src="https://repology.org/badge/version-for-repo/fedora_29/hledger.svg" alt="Fedora 29" /></a><br>
           <a href="https://apps.fedoraproject.org/packages/s/hledger">more..</a>
         </div>
@@ -299,7 +294,6 @@ cd pkgsrc && ./bootstrap/bootstrap --prefix=$HOME/pkg --unprivileged --make-jobs
           <a href="https://packages.ubuntu.com/groovy/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_20_10/hledger.svg" alt="Ubuntu 20.10" /></a><br>
           <a href="https://packages.ubuntu.com/focal/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_20_04/hledger.svg" alt="Ubuntu 20.04" /></a><br>
           <a href="https://packages.ubuntu.com/eoan/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_19_10/hledger.svg" alt="Ubuntu 19.10" /></a><br>
-          <a href="https://packages.ubuntu.com/disco/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_19_04/hledger.svg" alt="Ubuntu 19.04" /></a><br>
           <a href="https://packages.ubuntu.com/bionic/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_18_04/hledger.svg" alt="Ubuntu 18.04" /></a><br>
           <a href="https://packages.ubuntu.com/xenial/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_16_04/hledger.svg" alt="Ubuntu 16.04" /></a><br>
           <a href="https://packages.ubuntu.com/search?suite=all&amp;searchon=names&amp;keywords=hledger">more..</a>
