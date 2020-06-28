@@ -397,7 +397,7 @@ cd pkgsrc && ./bootstrap/bootstrap --prefix=$HOME/pkg --unprivileged --make-jobs
 
 [ghc]:             https://www.haskell.org/ghc
 [bash]:            https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29
-[stack]:           https://haskell.fpcomplete.com/get-started
+[stack]:           https://www.fpcomplete.com/haskell/get-started
 [cabal]:           https://www.haskell.org/cabal
 [hledger-install]: https://github.com/simonmichael/hledger/blob/master/hledger-install/hledger-install.sh
 [add-on commands]: hledger.html#add-on-commands
