@@ -432,7 +432,26 @@ If it fails with a link error
 please web-search the error message to find the right system package to install on your platform.
 And [let us know](/index.html#help), so we can update this list.
 
-### 2. Build and install hledger
+### 2. Ensure your system locale supports UTF-8
+
+When building or running GHC haskell programs, the `LANG` environment
+variable must be set to UTF-8-aware locale, or you will see "invalid
+byte sequence" or similar errors when processing non-ascii text. Eg on
+unix, if you see:
+```
+$ echo $LANG
+C
+```
+you should change it to a UTF-8-aware locale that's installed on your system,
+such as `C.UTF-8`, `en_US.UTF-8`, `fr_FR.utf8` or similar:
+```
+$ export LANG=C.UTF-8
+$ echo $LANG
+C.UTF-8
+```
+See [hledger: Troubleshooting](hledger.html#troubleshooting) for more instructions.
+
+### 3. Build and install hledger
 
 Our [install script][hledger-install] is the easiest way to build hledger. 
 It builds the current release plus some [add-on commands], and requires only [bash]:
@@ -458,7 +477,7 @@ It builds the current release plus some [add-on commands], and requires only [ba
 </div>
 <br>
 
-2b. Or, if you prefer to run [stack] yourself:
+3b. Or, if you prefer to run [stack] yourself:
 
 <!--
 <div class="badges">
@@ -482,7 +501,7 @@ and you should omit hledger-ui from this command, unless using WSL.
 </div>
 <br>
 
-2c. Or [cabal]:
+3c. Or [cabal]:
 
 <!--
 <div class="badges">
