@@ -1551,6 +1551,7 @@ By default, accounts are displayed hierarchically, with subaccounts
 indented below their parent. At each level of the tree, accounts are
 sorted by [account code](/journal.html#declaring-accounts) if any, then
 by account name. Or with `-S/--sort-amount`, by their balance amount.
+(Note: `-S` has a [problem](https://github.com/simonmichael/hledger/issues/1279) in hledger 1.11-1.18).
 
 "Boring" accounts, which contain a single interesting subaccount and no
 balance of their own, are elided into the following line for more
