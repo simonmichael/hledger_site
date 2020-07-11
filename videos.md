@@ -4,6 +4,8 @@ hledger-related videos:
 
 - The [hledger fan Youtube channel](https://www.youtube.com/channel/UCZLxXTjOqLzq4z5Jy0AyWSQ) (2019-2020)
   has a series of short beginner lessons, including:
+  - [hledger: commands to help with reconciling](https://www.youtube.com/watch?v=gt4hm8pfMHk)
+  - [hledger: bring order to your expenses](https://www.youtube.com/watch?v=O7_--Jz0jeQ&t=2s)
   - [hledger: who did you pay?](https://www.youtube.com/watch?v=DrMoawQBKHE)
   - [hledger: fast fancy formatting](https://www.youtube.com/watch?v=Hb-hK8Lc67s)
   - [hledger: fun and profit with incomestatement](https://www.youtube.com/watch?v=U4An3AHtDkg)
