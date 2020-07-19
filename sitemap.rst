@@ -9,6 +9,7 @@ hledger
    :maxdepth: 2
 
    Home <index>
+   Just the essentials <https://hledger.org/essentials.html>
    faq
    videos
    Download/Install <download>

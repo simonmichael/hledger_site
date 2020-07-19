@@ -14,6 +14,10 @@ https://www.stephendiehl.com/posts/marketing.html#persuasion-and-decision-makers
 <div id="tagline">
 plain text accounting<br>made easy !
 </div>
+<div style="text-align:center; margin:1em;">
+Woah, too much to read ? Here's 
+<a href="_static/essentials.html">just the essentials</a>.
+</div>
 
 <div style="text-align:center; margin:1em;">
 <a href="download.html"><button type="button" class="btn btn-primary" title="All the ways to install hledger. Get it now!">Download/Install</button></a>
@@ -534,7 +538,7 @@ h2 {
   font-size:xx-large;
   font-style:italic; 
   text-align:center;
-  margin:0 0 1em;
+  margin:0 0 0.5em;
 }
 
 #leadingword {
