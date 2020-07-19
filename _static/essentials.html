@@ -16,7 +16,7 @@ h2 { margin:0; font-size:1em; }
 <pre>
 <h1>hledger essentials</h1
 >Welcome! This is the quick intro to hledger. For more detail, see the <a href="https://hledger.org">full website</a>.
-<a href="#about">What is it ?</a> | <a href="#install">Install</a> | <a href="#transactions">Transactions</a> | <a href="#reports">Reports</a> | <a href="#files">Files</a> | <a href="#vcs">Versioning</a> | <a href="#csv">Import</a>
+<a href="#about">What is it ?</a> | <a href="#install">Install</a> | <a href="#transactions">Transactions</a> | <a href="#reports">Reports</a> | <a href="#files">Files</a> | <a href="#csv">Import</a>
 
 <a name="about"></a><h2>What is it ?</h2
 >hledger: free GPLv3+ accounting software for linux, mac, windows, web, etc. 
@@ -181,33 +181,28 @@ like so:
   hledger hledger-ui hledger-web journal csv timeclock timedot
 
 <a name="files"></a><h2>File management</h2
->You may want a dedicated directory for financial files, and a separate
-journal file for each year:
+>Many folks use a dedicated directory, and a journal file for each year:
 
  $ mkdir ~/finance
  $ mv ~/.hledger.journal ~/finance/2020.journal   # move old file here if you had one
 
-The filename doesn't matter much, but a .journal, .hledger or .j extension is conventional
-and may activate syntax highlighting in your editor.
-
-To make hledger use it without needing the -f option, set LEDGER_FILE. Eg for bash:
+To make hledger use this file without needing the -f option, set LEDGER_FILE.
+Eg if you use bash:
 
  $ echo "export LEDGER_FILE=~/finance/2020.journal" >> ~/.bashrc; source ~/.bashrc
 
-Or, you can keep a ~/.hledger.journal file, containing just:
+Or, you can keep a ~/.hledger.journal file that points to the main file:
 
- ; .hledger.journal, just includes the real file
  include ~/finance/2020.journal
 
-<a name="vcs"></a><h2>Version control</h2
->Good idea. Eg with git:
+Version control is optional, and useful. Eg with git:
 
  $ cd ~/finance
  $ git init
  $ git add 2020.journal
  $ git commit -am 'initial commit'
 
-Don't forget to also keep <i>backups</i> (not the same thing!) <!-- ' -->
+Don't forget to also keep <i>backups</i>! <!-- ' -->
 
 <a name="csv"></a><h2>Import CSV</h2
 >Download one or more CSV files containing transaction info, then create a 
@@ -270,8 +265,7 @@ Now to commit the new rules file and changed journal file:
 
 In the above workflow, the journal file is permanent and downloaded csv files
 are temporary. Some folks (<a href="https://github.com/adept/full-fledged-hledger">Full-fledged hledger</a>, <a href="https://github.com/apauley/hledger-flow">hledger-flow</a>) prefer to commit 
-all csv files and regenerate the whole journal file whenever needed. The
-journal file can optionally be committed as well, for extra change visibility.
+all csv files and regenerate the whole journal file whenever needed.
 
 <h2></h2>
 
