@@ -353,16 +353,27 @@ cd pkgsrc && ./bootstrap/bootstrap --prefix=$HOME/pkg --unprivileged --make-jobs
 
 ### Raspberry Pi
 
-<table class="raspberrypi downloads">
+<table class="pi downloads">
   <tbody>
-    <tr>
+    <tr valign="top">
+      <td>
+        <div class="badges">
+          <img alt="Contributed binaries" src="https://img.shields.io/badge/Contributed_binaries-1.18.1-brightgreen.svg" />
+        </div>
+      </td>
+      <td style="padding-top:10px;">
+        <div class="command" style="margin-bottom:4px;"><a href="https://github.com/simonmichael/hledger/releases/tag/1.18.1">hledger-aarch64-manjaro.gz</a></div>
+        <div class="notes"></div>
+      </td>
+    </tr>
+    <tr valign="top">
       <td>
         <div class="badges">
           <img alt="Contributed binaries" src="https://img.shields.io/badge/Contributed_binaries-1.18-red.svg" />
         </div>
       </td>
-      <td>
-        <div class="command" style="margin-bottom:4px;"><a href="https://github.com/simonmichael/hledger/releases/tag/1.18">hledger-raspberrypi.zip</a></div>
+      <td style="padding-top:10px;">
+        <div class="command" style="margin-bottom:4px;"><a href="https://github.com/simonmichael/hledger/releases/tag/1.18">hledger-armhf32-debian.gz</a></div>
         <div class="notes"></div>
       </td>
     </tr>
