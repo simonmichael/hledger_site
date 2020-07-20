@@ -32,6 +32,20 @@
     <link rel="canonical" href="{{ theme_canonical_url }}{{ pagename }}.html"/>
   {% endif %}
 
+{# SKWM kludge: disable most visible theme elements for the essentials page #}
+{% if pagename == 'essentials' %}
+{#
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+  <script type="text/javascript" src="_static/jquery.js"></script>
+  <script type="text/javascript" src="_static/underscore.js"></script>
+  <script type="text/javascript" src="_static/doctools.js"></script>
+  <script type="text/javascript" src="_static/language_data.js"></script>
+  <script type="text/javascript" src="_static/js/highslide/highslide.js"></script>
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+#}
+{% else %} {# essentials #}
+
   {# JAVASCRIPTS #}
   {%- block scripts %}
   <script type="text/javascript" src="{{ pathto('_static/js/modernizr.min.js', 1) }}"></script>
@@ -69,6 +83,7 @@
   {%- endif %}
   {%- endblock %}
 
+{% endif %} {# essentials #} {# the first stylesheet below enables permalink symbol hiding #}
   {# CSS #}
   <link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}" type="text/css" />
   <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css" />
@@ -84,6 +99,7 @@
     <link rel="stylesheet" href="{{ pathto(cssfile, 1) }}" type="text/css" />
   {%- endfor %}
 
+{% if pagename != 'essentials' %}
   {%- block linktags %}
     {%- if hasdoc('about') %}
     <link rel="author" title="{{ _('About these documents') }}" href="{{ pathto('about') }}" />
@@ -111,10 +127,12 @@
 </script>      
 
   {%- block extrahead %} {% endblock %}
+
+{% endif %} {# essentials #}
 </head>
 
 <body class="wy-body-for-nav">
-
+{% if pagename != 'essentials' %}
   {% block extrabody %} {% endblock %}
   <div class="wy-grid-for-nav">
     {# SIDE NAV, TOGGLES ON MOBILE #}
@@ -194,14 +212,17 @@
 
 
       <div class="wy-nav-content">
+{% endif %} {# essentials #}
       {%- block content %}
         {% if theme_style_external_links|tobool %}
         <div class="rst-content style-external-links">
         {% else %}
         <div class="rst-content">
         {% endif %}
+{% if pagename != 'essentials' %}
           {% include "breadcrumbs.html" %}
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+{% endif %} {# essentials #}
           {%- block document %}
            <div itemprop="articleBody">
             {% block body %}{% endblock %}
@@ -213,9 +234,12 @@
            {% endif%}
           </div>
           {%- endblock %}
+{% if pagename != 'essentials' %}
           {% include "footer.html" %}
+{% endif %} {# essentials #}
         </div>
       {%- endblock %}
+{% if pagename != 'essentials' %}
       </div>
 
     </section>
@@ -248,5 +272,6 @@
 
   {%- block footer %} {% endblock %}
 
+{% endif %} {# essentials #}
 </body>
 </html>

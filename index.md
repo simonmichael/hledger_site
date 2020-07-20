@@ -15,8 +15,7 @@ https://www.stephendiehl.com/posts/marketing.html#persuasion-and-decision-makers
 plain text accounting<br>made easy !
 </div>
 <div style="text-align:center; margin:1em;">
-Woah, too much to read ? Here's 
-<a href="_static/essentials.html">just the essentials</a>.
+(Woah, too much to read right now ? Here's <b><a href="essentials.html">just the essentials</a></b>).
 </div>
 
 <div style="text-align:center; margin:1em;">
