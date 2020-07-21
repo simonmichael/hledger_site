@@ -3,35 +3,30 @@ The TL;DR intro to hledger.           -*- fill-column:78; -*-
 Maintained as a .md file but intended to be read as rendered HTML.
 -->
 <style>
-/* mimic old-school plain text docs a little */
-body, p {
+/* mimic old-school plain text docs a bit. */
+
+body, p, h1, h2, h3, h4, h5, h6, pre {
+    /* some of these fonts are wide and push numbered list labels off screen, requiring body padding */
+    font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",Courier,monospace;
     color: black;
-    font-family: Monaco,Consolas,"Liberation Mono","Courier New",Courier,monospace;
-    font-size: 13px;
+}
+body { padding: 2em; }
+body, p {
     line-height: normal;
 }
-h1, h2, h3, h4, h5, h6 {
-    font-family: Monaco,Consolas,"Liberation Mono","Courier New",Courier,monospace;
-}
-h1 { padding:0; font-size:2em; }
-h2 { padding:0; font-size:1em; }
-body { margin: 8px; }
 p { margin-bottom: 1em; max-width:55em; }
-a { text-decoration:underline; }
-ol pre { line-height: normal; }
-pre, .rst-content div[class^="highlight"], .rst-content div[class^="highlight"] pre { 
-    overflow:visible; 
-/*    overflow:auto; */
-}
-.rst-content div[class^="highlight"] pre {
-    margin:1em; 
-    padding:0;
-}
-.rst-content pre.literal-block, .rst-content div[class^="highlight"] { 
-    border:none; 
-    margin: 1px 0 1px 0;
+/* !important makes it easier to neutralise the complicated sphinx styles */
+pre, div[class^="highlight"] {
+    line-height: normal !important;
+    font-size: inherit !important;
+    border: none !important;
+    overflow:visible !important; 
+/*    overflow:auto !important; */
 }
 .highlight { background:none; }
+h1 { padding:0; font-size:2em; }
+h2 { padding:0; font-size:1em; }
+a { text-decoration:underline; }
 </style>
 
 # hledger essentials
@@ -45,10 +40,10 @@ pre, .rst-content div[class^="highlight"], .rst-content div[class^="highlight"] 
 | [Import](#csv)
 -->
 
-Welcome!
-You've found the quick intro to hledger. 
-This doc aims to distill just the most frequently needed, practical info to
-help you get productive as efficiently as possible.
+Welcome! You've found the quickest, newest (2020-07) intro to hledger.
+
+This doc distills just the most frequently needed, practical info to help you
+get productive as efficiently as possible.
 When you want more detail, follow links to the [full website] (and
 particularly the manuals, which describe everything hledger does: [hledger],
 [hledger-ui], [hledger-web], [journal], [csv], [timeclock], [timedot]).
@@ -129,29 +124,29 @@ Or using a [text editor](editors.html), record transactions in
 ~/.hledger.journal or $LEDGER_FILE like so:
 
 ```journal
- ; Optional account declarations, good for non-english names and display order:
- account assets       ; type:A
- account assets:cash  ; type:C
- account liabilities  ; type:L
- account equity       ; type:E
- account revenues     ; type:R
- account expenses     ; type:X
+; Optional account declarations, good for non-english names and display order:
+account assets       ; type:A
+account assets:cash  ; type:C
+account liabilities  ; type:L
+account equity       ; type:E
+account revenues     ; type:R
+account expenses     ; type:X
 
- ; A transaction. Usually the first one is to set opening balances:
- 2020-01-01 opening balances on january 1st
-     assets:checking         $1000  ; a posting, increasing assets:checking's balance by $1000
-     assets:cash              $100
-     liabilities                $0
-     equity                 $-1100  ; each transaction must sum to zero
+; A transaction. Usually the first one is to set opening balances:
+2020-01-01 opening balances on january 1st
+    assets:checking         $1000  ; a posting, increasing assets:checking's balance by $1000
+    assets:cash              $100
+    liabilities                $0
+    equity                 $-1100  ; each transaction must sum to zero
 
- 2020-03-05 client payment
-     assets:checking         $2000
-     revenues:consulting    $-2000  ; revenues/liabilities/equity normally appear negative
+2020-03-05 client payment
+    assets:checking         $2000
+    revenues:consulting    $-2000  ; revenues/liabilities/equity normally appear negative
 
- 2020-03-20 Sprouts
-     expenses:food:groceries  $100
-     assets:cash               $40
-     assets:checking                ; a missing amount will be inferred ($-140 here)
+2020-03-20 Sprouts
+    expenses:food:groceries  $100
+    assets:cash               $40
+    assets:checking                ; a missing amount will be inferred ($-140 here)
 ```
 
 <a name="reports"></a>
