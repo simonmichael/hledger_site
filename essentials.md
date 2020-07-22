@@ -28,18 +28,21 @@ h1 { padding:0; font-size:2em; }
 h2 { margin-top:2em; font-size:1em; }
 a { text-decoration:underline; }
 ol ul { padding-bottom:1em; }
+a:visited { color:black; }
+/* a:hover { color:#9B59B6; } */
+a:active { color:red; }
 </style>
 
 
 # hledger essentials
 
-Welcome! You've found the quickest, newest (2020-07) intro to hledger.
-
-This doc distills just the most frequently needed, practical info to help you
-get productive as efficiently as possible.
-When you want more detail, follow links to the [full website] (and
-particularly the manuals, which describe everything hledger does: [hledger],
-[hledger-ui], [hledger-web], [journal], [csv], [timeclock], [timedot]).
+Welcome! You've found the
+<a href="https://github.com/simonmichael/hledger_site/commits/master/essentials.md">newest</a>
+intro to hledger. This one aims to distill just the most needed practical info
+to help you get productive as efficiently as possible. When you want more
+detail, follow links to the [full website] (and particularly the manuals,
+which describe everything hledger does: [hledger], [hledger-ui],
+[hledger-web], [journal], [csv], [timeclock], [timedot]).
 
 [full website]: https://hledger.org
 [hledger]:      https://hledger.org/hledger.html
@@ -56,14 +59,39 @@ particularly the manuals, which describe everything hledger does: [hledger],
 
 hledger: free GPLv3+ accounting software for linux, mac, windows, web, etc. 
 
-- reads a flexible, future-proof, version-controllable, expressive plain text format
-- or any CSV file downloaded from financial institutions
-- produces powerful, precise financial reports as text/HTML/CSV/JSON:
-  balance sheet, income statement, cashflow, budget, roi, transaction register, time, ...
-- use via CLI, TUI, WUI, HTTP API or Haskell library
-- easy to script and extend
+- reads transactions from a flexible, future-proof, version-controllable [plain text format][journal]
+- or [CSV files][csv] from any financial institution
+- produces precise [multiperiod] financial reports as [text/HTML/CSV/JSON/SQL][output-format]<br> 
+  ([balance sheet], [income statement], [cashflow], [budget], [roi],
+  [transactions], [time], [forecast]...)
+- unlimited account hierarchy with [summarising], [aliasing], [pivoting]
+- unlimited currencies/commodities, with cost/market [valuation]
+- use via [CLI], [TUI], [WUI], [JSON API] or [Haskell library]
+- easy to [script and extend]
 - user-friendly, well documented, robust
-- scales smoothly from simple to complex accounting, and makes it fun.
+- scales smoothly from simple, easy accounting needs to complex ones.
+
+[output-format]: hledger.html#output-format
+[balance sheet]: hledger.html#balancesheet
+[income statement]: hledger.html#incomestatement
+[cashflow]: hledger.html#cashflow
+[budget]: hledger.html#budget-report
+[roi]: hledger.html#roi
+[transactions]: hledger.html#aregister
+[time]: timedot.html
+[forecast]: journal.html#periodic-transactions
+[multiperiod]: hledger.html#multicolumn-balance-report
+[multiple currencies]: journal.html#declaring-commodities
+[valuation]: hledger.html#valuation
+[summarising]: hledger.html#depth-limiting
+[aliasing]: journal.html#rewriting-accounts
+[pivoting]: hledger.html#pivoting
+[CLI]: hledger.html
+[TUI]: ui.html
+[WUI]: web.html
+[JSON API]: hledger-web.html#json-api
+[Haskell library]: https://hackage.haskell.org/package/hledger-lib
+[script and extend]: scripting.html
 
 
 <a name="workflow"></a>
@@ -238,8 +266,8 @@ show accurate real-world account balances from this date onward, as long as
 you record the subsequent transactions.
 
 To make things easy on yourself, you can pick a very recent start date, like
-today or last monday. Prioritise adding and reconciling new transactions.
-Tip: the more often you do this, the easier it is.
+today or last monday. Prioritise recording the transactions that happen after
+this date. (Tip: the more often you do this, the easier it is.)
 
 Then, as your time and financial records and desire for historical reports
 allow, you can add older transactions. As you do, you'll need to adjust the
@@ -288,10 +316,11 @@ $ hledger -f SomeBank.csv print
     assets:cash              $10.00
 ```
 
-You can run reports directly from the csv, but I like to import it into the
-main journal, keeping things in one place. The import command ignores csv
-records it has seen before, saving the latest dates in .latest.SomeBank.csv.
-This works for most csv files - you can try a dry run first:
+You can run reports directly from the csv, but I like to import the new
+transactions into the main journal, keeping things in one place. The import
+command ignores csv records it has seen before, saving the latest dates in
+.latest.SomeBank.csv. This works for most csv files - you can try a dry run
+first:
 
 ```shell
 $ hledger import *.csv --dry-run
