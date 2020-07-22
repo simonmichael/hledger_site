@@ -222,6 +222,10 @@ But here are some common changes people make sooner or later, so why not now:
 <a name="transactions"></a>
 ## Enter transactions
 
+Recording transactions manually may sound tedious, but with a good text editor
+or other tools it can be very fast. It also provides greatest financial
+awareness. Some people enter everything by hand for this reason.
+
 Run the add command for assisted data entry in the terminal ([tutorial](add.html)):
 
 ```shell
@@ -277,6 +281,12 @@ necessary.
 
 <a name="import"></a>
 ## Import transactions
+
+Import means 1. convert transaction data from some other format (usually a
+downloaded CSV file) and 2. save any new transactions to the main journal
+file. It is often possible to automate this, perhaps to the point of a nightly
+cron job and no manual data entry at all. This is convenient but costs some
+financial awareness.
 
 Download one or more CSV files containing transaction info, then create a 
 [csv rules file](convert-csv-files.html) for each. Eg if SomeBank.csv looks
