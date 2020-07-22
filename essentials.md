@@ -176,7 +176,8 @@ But here are some common changes people make sooner or later, so why not now:
   ; Declare commodities/currencies and their decimal mark, digit grouping,
   ; number of decimal places..
   commodity $1000.00
-
+  commodity 1.000,00 EUR
+  
   <CTRL-D> (paste the command & text above into the terminal, then press control-d)
   ```
 
