@@ -177,7 +177,7 @@ But here are some typical changes people make sooner or later, so why not now:
   ; number of decimal places..
   commodity $1000.00
 
-  <CTRL-D> (run the cat command, copy/paste the text above, press control-d)
+  <CTRL-D> (copy/paste the command & text above into a terminal, then press control-d)
   ```
 
 - Version control, for tracking changes:
