@@ -21,8 +21,7 @@ pre, div[class^="highlight"] {
     line-height: normal !important;
     font-size: inherit !important;
     border: none !important;
-    overflow:visible !important; 
-/*    overflow:auto !important; */
+    overflow:auto !important;
 }
 .highlight { background:none; }
 h1 { padding:0; font-size:2em; }
