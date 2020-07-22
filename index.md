@@ -39,7 +39,7 @@ Here are some things hledger provides out of the box:
 
 - Easy summarising of account balances to a [desired depth][depth limiting]
 
-- Easy output to [text, HTML, CSV or JSON][output format]
+- Easy output to [text, HTML, CSV, JSON or SQL][output format]
 
 - Easy import/export/co-usage with Ledger CLI or Beancount
 
