@@ -134,7 +134,7 @@ recorded. By default it is ~/.hledger.journal, and the add command or web add
 form described below will create it automatically, so actually you don't need
 to do anything here.
 
-But here are some typical changes people make sooner or later, so why not now:
+But here are some common changes people make sooner or later, so why not now:
 
 - A dedicated folder, to consolidate financial files and make version control
   and backups easier:
@@ -171,7 +171,7 @@ But here are some typical changes people make sooner or later, so why not now:
   account liabilities ; type:L, things I owe
   account equity      ; type:E, net worth, A - L
   account revenues    ; type:R, money sources
-  account expenses    ; type:E, money sinks
+  account expenses    ; type:X, money sinks
 
   ; Declare commodities/currencies and their decimal mark, digit grouping,
   ; number of decimal places..
