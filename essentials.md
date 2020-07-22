@@ -25,20 +25,13 @@ pre, div[class^="highlight"] {
 }
 .highlight { background:none; }
 h1 { padding:0; font-size:2em; }
-h2 { padding:0; font-size:1em; }
+h2 { margin-top:2em; font-size:1em; }
 a { text-decoration:underline; }
+ol ul { padding-bottom:1em; }
 </style>
 
-# hledger essentials
 
-<!--
-  [What is it ?](#about)
-| [Install](#install)
-| [Transactions](#transactions)
-| [Reports](#reports)
-| [Files](#files)
-| [Import](#csv)
--->
+# hledger essentials
 
 Welcome! You've found the quickest, newest (2020-07) intro to hledger.
 
@@ -57,6 +50,7 @@ particularly the manuals, which describe everything hledger does: [hledger],
 [timeclock]:    https://hledger.org/timeclock.html
 [timedot]:      https://hledger.org/timedot.html
 
+
 <a name="about"></a>
 ## What is it ?
 
@@ -71,6 +65,37 @@ hledger: free GPLv3+ accounting software for linux, mac, windows, web, etc.
 - user-friendly, well documented, robust
 - scales smoothly from simple to complex accounting, and makes it fun.
 
+
+<a name="workflow"></a>
+## How do I use it ?
+
+<!-- Here's the most common getting started/work flow for hledger users: -->
+At the start:
+
+1. [Install](#install) one or more of the hledger tools
+2. [Set up a journal](#setup), and maybe version control
+
+On a regular basis (eg daily, can be <5m):
+
+3. [Enter transactions](#transactions) manually and/or
+4. [Import transactions](#import) from banks' CSV
+5. [Reconcile](#reconcile) to catch mistakes
+
+Whenever you like:
+
+6. [Run reports](#reports) to answer questions and gain insight
+7. Refine things (account names, CSV rules, file layout, scripts) 
+   when you want to improve your reports and efficiency.
+
+Knowing some [double entry accounting] will help you get the most from hledger,
+but you can do fine just by following the examples below. You'll find your
+bookkeeping/accounting skills improve naturally (and [help] is available).
+
+[double entry accounting]: https://hledger.org/accounting.html#accounting-links
+[help]: https://hledger.org/#help-feedback
+
+
+<a name="install"></a>
 ## Install
 
 Fastest: [download binaries](download.html), eg one of:
@@ -100,10 +125,76 @@ Freshest: [build from source](download.html#building-from-source):
    $ git clone https://github.com/simonmichael/hledger; cd hledger; stack install  # super fresh
    </pre>
 
-<a name="transactions"></a>
-## Enter some transactions
 
-Run the add command for assisted data entry ([tutorial](add.html)):
+<a name="setup"></a>
+## Set up a journal
+
+The [journal file](journal.html) is a plain text file where transactions are
+recorded. By default it is ~/.hledger.journal, and the add command or web add
+form described below will create it automatically, so actually you don't need
+to do anything here.
+
+But here are some typical changes people make sooner or later, so why not now:
+
+- A dedicated folder, to consolidate financial files and make version control
+  and backups easier:
+
+  ```shell
+  $ mkdir ~/finance
+  $ cd ~/finance
+  ```
+
+- A separate journal file for each year, for performance and data
+  compartmentalisation:
+
+  ```shell
+  $ touch 2020.journal
+  ```
+
+- A [LEDGER_FILE](hledger.html#environment) environment variable, so you won't
+  have to add -f FILE to every command:
+
+  ```shell
+  $ echo "export LEDGER_FILE=~/finance/2020.journal" >> ~/.bashrc
+  $ source ~/.bashrc
+  ```
+
+- Some optional [directives](journal.html#directives), useful especially with
+  non-english account names (replace the account names below with the names
+  you will be using):
+
+  ```shell
+  $ cat > 2020.journal
+
+  ; Declare top level accounts, setting their types and display order
+  account assets      ; type:A, things I own
+  account liabilities ; type:L, things I owe
+  account equity      ; type:E, net worth, A - L
+  account revenues    ; type:R, money sources
+  account expenses    ; type:E, money sinks
+
+  ; Declare commodities/currencies and their decimal mark, digit grouping,
+  ; number of decimal places..
+  commodity $1000.00
+
+  <CTRL-D> (run the cat command, copy/paste the text above, press control-d)
+  ```
+
+- Version control, for tracking changes:
+
+  ```shell
+  $ git init
+  $ git add 2020.journal
+  $ git commit 2020.journal -m 'start journal for 2020'
+  ```
+
+- Remember to also keep *backups*.
+
+
+<a name="transactions"></a>
+## Enter transactions
+
+Run the add command for assisted data entry in the terminal ([tutorial](add.html)):
 
 ```shell
 $ hledger add
@@ -111,7 +202,7 @@ $ hledger add
 Date [2020-07-19]: ...
 ```
 
-Or run hledger-web, and when the web browser opens, press a to add
+Or run hledger-web and when the web browser opens, press a to add
 ([tutorial](web.html)):
 
 ```shell
@@ -120,19 +211,10 @@ $ hledger-web
 Opening web browser...
 ```
 
-Or using a [text editor](editors.html), record transactions in
-~/.hledger.journal or $LEDGER_FILE like so:
+Or using a [text editor](editors.html), add transactions to
+[your journal file](essentials.html#setup) like so:
 
 ```journal
-; Optional account declarations, good for non-english names and display order:
-account assets       ; type:A
-account assets:cash  ; type:C
-account liabilities  ; type:L
-account equity       ; type:E
-account revenues     ; type:R
-account expenses     ; type:X
-
-; A transaction. Usually the first one is to set opening balances:
 2020-01-01 opening balances on january 1st
     assets:checking         $1000  ; a posting, increasing assets:checking's balance by $1000
     assets:cash              $100
@@ -149,8 +231,111 @@ account expenses     ; type:X
     assets:checking                ; a missing amount will be inferred ($-140 here)
 ```
 
+As shown above, make the first transaction a dummy one that sets the opening
+balances of your asset & liability accounts on some start date. hledger will
+show accurate real-world account balances from this date onward, as long as
+you record the subsequent transactions.
+
+To make things easy on yourself, you can pick a very recent start date, like
+today or last monday. Prioritise adding and reconciling new transactions.
+Tip: the more often you do this, the easier it is.
+
+Then, as your time and financial records and desire for historical reports
+allow, you can add older transactions. As you do, you'll need to adjust the
+opening balances transaction, moving it back in time. Perhaps focus on one
+account at a time, each with its own opening balances transaction if
+necessary.
+
+
+<a name="import"></a>
+## Import transactions
+
+Download one or more CSV files containing transaction info, then create a 
+[csv rules file](convert-csv-files.html) for each. Eg if SomeBank.csv looks
+like:
+
+```csv
+"Date","Note","Amount"
+"2020/3/22","DEPOSIT","50.00"
+"2020/3/23","ATM WITHDRAWAL","-10.00"
+```
+
+Create SomeBank.csv.rules containing rules like:
+
+```rules
+skip 1
+fields date, description, amount
+currency $
+account1 assets:checking
+account2 expenses:misc
+if DEPOSIT
+ account2 revenues:misc
+if ATM WITHDRAWAL
+ account2 assets:cash
+```
+
+Check the csv conversion looks ok:
+
+```shell
+$ hledger -f SomeBank.csv print
+2020-03-22 DEPOSIT
+    assets:checking          $50.00
+    revenues:misc           $-50.00
+
+2020-03-23 ATM WITHDRAWAL
+    assets:checking         $-10.00
+    assets:cash              $10.00
+```
+
+You can run reports directly from the csv, but I like to import it into the
+main journal, keeping things in one place. The import command ignores csv
+records it has seen before, saving the latest dates in .latest.SomeBank.csv.
+This works for most csv files - you can try a dry run first:
+
+```shell
+$ hledger import *.csv --dry-run
+; would import 2 new transactions from SomeBank.csv:
+
+2020-03-22 DEPOSIT
+    assets:checking          $50.00
+    revenues:misc           $-50.00
+
+2020-03-23 ATM WITHDRAWAL
+    assets:checking         $-10.00
+    assets:cash              $10.00
+
+$ hledger import *.csv 
+imported 2 new transactions from SomeBank.csv
+$ hledger import *.csv
+no new transactions found in SomeBank.csv
+```
+
+Now to commit the new rules file and changed journal file:
+
+```shell
+$ git add SomeBank.csv.rules
+$ git commit -m 'SomeBank csv rules' SomeBank.csv.rules
+$ git commit -m 'txns' 2020.journal
+```
+
+In the above workflow, the journal file is permanent and downloaded csv files
+are temporary. Some folks ([Full-fledged hledger], [hledger-flow]) prefer to
+instead commit all csv files and regenerate the journal file.
+
+[Full-fledged hledger]: https://github.com/adept/full-fledged-hledger
+[hledger-flow]: https://github.com/apauley/hledger-flow
+
+
+<a name="reconcile"></a>
+## Reconcile
+
+After entering or importing transactions, it's important to check for mistakes
+(yours or others'), by comparing your reports with reality - your wallet,
+statements, online balances etc.
+See [Reconciling](hledger.html#reconciling).
+
 <a name="reports"></a>
-## Run some reports
+## Run reports
 
 ```shell
 $ hledger accounts   # account names declared and used, as a list
@@ -238,114 +423,3 @@ or type "hledger help -h" to see options. Manuals available:
  hledger hledger-ui hledger-web journal csv timeclock timedot
 ```
 
-<a name="files"></a>
-## File management
-
-Many folks use a dedicated directory, and a journal file for each year:
-
-```shell
-$ mkdir ~/finance
-$ mv ~/.hledger.journal ~/finance/2020.journal   # move old file here if you had one
-```
-
-To make hledger use this file without needing the -f option, set LEDGER_FILE.
-Eg if you use bash:
-
-```shell
-$ echo "export LEDGER_FILE=~/finance/2020.journal" >> ~/.bashrc; source ~/.bashrc
-```
-
-Or, you can keep a ~/.hledger.journal file that points to the main file:
-
-```journal
-include ~/finance/2020.journal
-```
-
-Version control is optional, and useful. Eg with git:
-
-```shell
-$ cd ~/finance
-$ git init
-$ git add 2020.journal
-$ git commit -am 'initial commit'
-```
-
-Don't forget to also keep *backups*!
-
-<a name="csv"></a>
-## Import CSV
-
-Download one or more CSV files containing transaction info, then create a 
-[csv rules file](convert-csv-files.html) for each. Eg if SomeBank.csv looks
-like:
-
-```csv
-"Date","Note","Amount"
-"2020/3/22","DEPOSIT","50.00"
-"2020/3/23","ATM WITHDRAWAL","-10.00"
-```
-
-Create SomeBank.csv.rules containing rules like:
-
-```rules
-skip 1
-fields date, description, amount
-currency $
-account1 assets:checking
-account2 expenses:misc
-if DEPOSIT
- account2 revenues:misc
-if ATM WITHDRAWAL
- account2 assets:cash
-```
-
-Check the csv conversion looks ok:
-
-```shell
-$ hledger -f SomeBank.csv print
-2020-03-22 DEPOSIT
-    assets:checking          $50.00
-    revenues:misc           $-50.00
-
-2020-03-23 ATM WITHDRAWAL
-    assets:checking         $-10.00
-    assets:cash              $10.00
-```
-
-You can run reports directly from the csv, but I like to import it into the
-main journal, keeping things in one place. The import command ignores csv
-records it has seen before, saving the latest dates in .latest.SomeBank.csv.
-This works for most csv files - you can try a dry run first:
-
-```shell
-$ hledger import *.csv --dry-run
-; would import 2 new transactions from SomeBank.csv:
-
-2020-03-22 DEPOSIT
-    assets:checking          $50.00
-    revenues:misc           $-50.00
-
-2020-03-23 ATM WITHDRAWAL
-    assets:checking         $-10.00
-    assets:cash              $10.00
-
-$ hledger import *.csv 
-imported 2 new transactions from SomeBank.csv
-$ hledger import *.csv
-no new transactions found in SomeBank.csv
-```
-
-Now to commit the new rules file and changed journal file:
-
-```shell
-$ git add SomeBank.csv.rules
-$ git commit -m 'SomeBank csv rules' SomeBank.csv.rules
-$ git commit -m 'txns' 2020.journal
-```
-
-In the above workflow, the journal file is permanent and downloaded csv files
-are temporary. Some folks ([Full-fledged hledger], [hledger-flow]) prefer to
-instead commit all csv files and regenerate the journal file.
-
-[Full-fledged hledger]: https://github.com/adept/full-fledged-hledger
-[hledger-flow]: https://github.com/apauley/hledger-flow
