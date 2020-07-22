@@ -112,8 +112,7 @@ On a regular basis (eg daily, can be <5m):
 Whenever you like:
 
 6. [Run reports](#reports) to answer questions and gain insight
-7. Refine things (account names, CSV rules, file layout, scripts) 
-   when you want to improve your reports and efficiency.
+7. Refine account names, CSV rules etc. to improve your reports and efficiency.
 
 Knowing some [double entry accounting] will help you get the most from hledger,
 but you can do fine just by following the examples below. You'll find your
