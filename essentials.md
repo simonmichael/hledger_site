@@ -6,11 +6,12 @@ Maintained as a .md file but intended to be read as rendered HTML.
 /* mimic old-school plain text docs a bit. */
 
 body, p, h1, h2, h3, h4, h5, h6, pre {
-    /* some of these fonts are wide and push numbered list labels off screen, requiring body padding */
     font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",Courier,monospace;
     color: black;
 }
-body { padding: 2em; }
+/* workaround for some of those fonts causing numbered list labels to overflow */
+li::marker { font-size: small; }
+body { padding: 2%; }
 body, p {
     line-height: normal;
 }
