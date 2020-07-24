@@ -232,6 +232,7 @@ account.  Eg, buying food.
 - [Gnucash and double entry accounting](http://www.austintek.com/gnucash/ncsa-gnucash-talk.html) - double entry accounting introduction with examples
 - [Accounting for Computer Scientists](http://martin.kleppmann.com/2011/03/07/accounting-for-computer-scientists.html)
 - [Tutorial on multiple currency accounting](http://www.mscs.dal.ca/~selinger/accounting/tutorial.html) by Peter Selinger
+- [Financial Statements: A Beginner's Guide](https://www.causal.app/blog/whats-a-financial-statement)
 
 ### Theory
 
