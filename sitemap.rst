@@ -48,9 +48,8 @@ hledger
 
    create-a-journal
    change-account-name-separator
-   convert-csv-files
-   customize-default-csv-accounts
    track-changes-with-version-control
+   import-csv
    export
 
 .. toctree::
