@@ -87,52 +87,42 @@ to run it repeatedly. (It creates a hidden `.latest.checking.csv` file
 in the same directory. If you need to forget the state and start over,
 delete this.)
 
-## Customize default CSV accounts
+## Customize the default "unknown" accounts
 
-When converting CSV, hledger uses the account names `income:unknown` and `expenses:unknown` as defaults for the second posting's account.
+When converting CSV, hledger uses the account names `income:unknown`
+and `expenses:unknown` as defaults. Normally when you see these, you
+will want to add CSV rules to set a more specific account name.
+But you may want to change these defaults, eg into your language.
 
-Normally when you see these, you will add CSV rules to set a more specific account name. 
-But they should probably be configurable.
-Here are some ways to customize them for now. 
+Method 1:
+You can add rules something like these, as the first account2 rules:
 
-### By CSV rule
+```rules
+# set account2 to this:
+account2 Revenues:Misc
 
-Given `a.csv`:
-```
-2018/07/01,dentist,-50
-2018/07/02,cafe,-2
-2018/07/03,some income,100
-```
-
-and `a.csv.rules`:
-```
-fields date, description, amount
-currency $
-account1 Assets:Checking
-
-if cafe
-  account2 Expenses:Coffee
-```
-
-Add two rules like this, before any other account2 rules (eg above the `if cafe` rule):
-```
-# default income/expense accounts
-account2 Income:Misc
-if ,-[0-9]+(,|$)
+# change it to Expenses:Misc if the csv "amount" field contains a minus sign:
+if %amount -
  account2 Expenses:Misc
+
+# override it with more specific rules below...
 ```
 
-The first sets the account to Income:Misc, 
-and the second changes it to Expenses:Misc if the amount field is negative.
-The regular expression matching negative amounts works for the example above, but you may need to adapt it for your data.
+Method 2:
+You can use --alias options to rewrite those account names.
+Currently --alias doesn't affect CSV files, so you have to pipe it through another hledger invocation:
 
-### By account alias
+```shell
+$ hledger -f checking.csv print | hledger -f- --alias income:unknown=Income:Misc --alias expenses:unknown=Expenses:Misc print
+2012-03-22 DEPOSIT
+    assets:bank:checking          $50.00
+    Income:Misc                  $-50.00
+
+2012-03-23 TRANSFER TO SAVINGS
+    assets:bank:checking         $-10.00
+    assets:bank:savings           $10.00
 
 ```
-$ hledger -f a.csv print | hledger -f- print --alias income:unknown=Income:Misc --alias expenses:unknown=Expenses:Misc
-```
-
-Note --alias doesn't affect CSV conversion as of hledger 1.10, so you have to pipe it through another hledger invocation.
 
 
 ## See also
