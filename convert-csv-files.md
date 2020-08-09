@@ -1,70 +1,152 @@
-# Convert CSV files
+# Importing CSV data
 
-Here's a quick example of reading CSV data with hledger.
+hledger has a powerful CSV converter built in. After saving a few
+declarations in a "CSV rules file", it can read transactions from
+almost any CSV file. This is described in detail in the [csv format] manual,
+but here are some quick examples.
 
-Say we have downloaded `checking.csv` from a bank for the first time:
+Say you have downloaded this `checking.csv` file from a bank for the first time:
 ```csv
 "Date","Note","Amount"
 "2012/3/22","DEPOSIT","50.00"
 "2012/3/23","TRANSFER TO SAVINGS","-10.00"
 ```
 
-We tell hledger how to intepret this with a file named
-`checking.csv.rules`, using the 
-[CSV rules syntax](csv.html). Eg:
-
+Create a [rules file][csv format] named `checking.csv.rules` in the same directory.
+This tells hledger how to read this CSV file. Eg:
 ```rules
-# skip the first CSV line (headings)
+# skip the headings line:
 skip 1
 
-# use the first three fields in each CSV record as transaction date, description and amount respectively
-fields   date, description, amount
+# use the first three CSV fields for hledger's transaction date, description and amount:
+fields date, description, amount
 
-# prepend $ to CSV amounts
+# specify the date field's format - not needed here since date is Y/M/D
+# date-format %-d/%-m/%Y
+# date-format %-m/%-d/%Y
+# date-format %Y-%h-%d
+
+# since the CSV amounts have no currency symbol, add one:
 currency $
 
-# always set the first account to assets:bank:checking
+# set the base account that this CSV file corresponds to
 account1 assets:bank:checking
 
-# if the CSV record contains ‘SAVINGS’, set the second account to assets:bank:savings
-# (if not set, it will be expenses:unknown or income:unknown)
-if SAVINGS
+# the other account will default to expenses:unknown or income:unknown;
+# we can optionally refine it by matching patterns in the CSV record:
+if (TO|FROM) SAVINGS
   account2 assets:bank:savings
+
+if WHOLE FOODS
+  account2 expenses:food
 ```
 
-Now hledger can read this CSV file as journal data:
-
+You can [print] the resulting transactions in any of hledger's [output formats]:
 ```shell
 $ hledger -f checking.csv print
-using conversion rules file checking.csv.rules
-2012/03/22 DEPOSIT
-    income:unknown             $-50.00
-    assets:bank:checking        $50.00
+2012-03-22 DEPOSIT
+    assets:bank:checking          $50.00
+    income:unknown               $-50.00
 
-2012/03/23 TRANSFER TO SAVINGS
-    assets:bank:savings         $10.00
-    assets:bank:checking       $-10.00
+2012-03-23 TRANSFER TO SAVINGS
+    assets:bank:checking         $-10.00
+    assets:bank:savings           $10.00
+
 ```
 
-We might save this output as `checking.journal`, and/or merge it
-(manually, or using the
-[import](hledger.html#import) command) into the main
-journal file.
-
-We could also just run reports on the CSV file directly:
+Or run reports directly from the CSV:
 ```shell
-$ hledger -f checking.csv balance
-using conversion rules file checking.csv.rules
-              $50.00  assets:bank
-              $40.00    checking
-              $10.00    savings
+$ hledger -f checking.csv bal
+              $40.00  assets:bank:checking
+              $10.00  assets:bank:savings
              $-50.00  income:unknown
 --------------------
                    0
 ```
 
-Here are more [CSV rules examples](https://github.com/simonmichael/hledger/tree/master/examples/csv).
+Or [import] any new transactions, saving them into your main journal:
 
-Here's how to [Customize default CSV accounts](customize-default-csv-accounts.html).
+```shell
+$ hledger import checking.csv --dry-run 
+; would import 2 new transactions from checking.csv:
 
-There are many alternate CSV conversion tools at [plaintextaccounting.org -> data import/conversion](https://plaintextaccounting.org/#data-importconversion) (nine CSV->*ledger tools at last count). [hledger-import-dsl](https://github.com/hpdeifel/hledger-import-dsl) is a fully programmable hledger-ish option.
+2012-03-22 DEPOSIT
+    assets:bank:checking          $50.00
+    income:unknown               $-50.00
+
+2012-03-23 TRANSFER TO SAVINGS
+    assets:bank:checking         $-10.00
+    assets:bank:savings           $10.00
+
+$ hledger import checking.csv
+imported 2 new transactions from checking.csv
+```
+
+hledger import ignores transactions it has seen before, so it's safe
+to run it repeatedly. (It creates a hidden `.latest.checking.csv` file
+in the same directory. If you need to forget the state and start over,
+delete this.)
+
+## Customize default CSV accounts
+
+When converting CSV, hledger uses the account names `income:unknown` and `expenses:unknown` as defaults for the second posting's account.
+
+Normally when you see these, you will add CSV rules to set a more specific account name. 
+But they should probably be configurable.
+Here are some ways to customize them for now. 
+
+### By CSV rule
+
+Given `a.csv`:
+```
+2018/07/01,dentist,-50
+2018/07/02,cafe,-2
+2018/07/03,some income,100
+```
+
+and `a.csv.rules`:
+```
+fields date, description, amount
+currency $
+account1 Assets:Checking
+
+if cafe
+  account2 Expenses:Coffee
+```
+
+Add two rules like this, before any other account2 rules (eg above the `if cafe` rule):
+```
+# default income/expense accounts
+account2 Income:Misc
+if ,-[0-9]+(,|$)
+ account2 Expenses:Misc
+```
+
+The first sets the account to Income:Misc, 
+and the second changes it to Expenses:Misc if the amount field is negative.
+The regular expression matching negative amounts works for the example above, but you may need to adapt it for your data.
+
+### By account alias
+
+```
+$ hledger -f a.csv print | hledger -f- print --alias income:unknown=Income:Misc --alias expenses:unknown=Expenses:Misc
+```
+
+Note --alias doesn't affect CSV conversion as of hledger 1.10, so you have to pipe it through another hledger invocation.
+
+
+## See also
+
+Full documentation of CSV conversion, and more rules examples, can be
+found in the [csv format] manual and in [examples/csv/] in the hledger
+repo.
+
+There are many other CSV conversion tools (nine CSV->*ledger tools at last count), linked at
+[plaintextaccounting.org -> data import/conversion](https://plaintextaccounting.org/#data-importconversion).
+
+
+[output formats]: hledger.html#output-format
+[csv format]: csv.html
+[print]: hledger.html#print
+[import]: hledger.html#import
+[examples/csv/]: https://github.com/simonmichael/hledger/tree/master/examples/csv
