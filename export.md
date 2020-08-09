@@ -28,6 +28,12 @@ $ hledger -f examples/sample.journal areg checking -O csv cur:'\$'
 "5","2008-12-31","","pay off","li:debts","$-1","0"
 ```
 
+hledger supports other [output formats], including HTML, JSON and SQL.
+Not all formats are supported by all commands and report modes though.
+For a given report, you can check the --help or just try an output
+format to see if it has been added.
+
 
 [register]: hledger.html#register
 [aregister]: hledger.html#aregister
+[output formats]: hledger.html#output-format
