@@ -29,7 +29,7 @@ $ hledger -f examples/sample.journal areg checking -O csv cur:'\$'
 ```
 
 hledger supports other [output formats], including HTML, JSON and SQL.
-Not all formats are supported by all commands and report modes though.
+Not all formats are supported by all commands/reports though.
 For a given report, you can check the --help or just try an output
 format to see if it has been added.
 
