@@ -4,6 +4,7 @@ hledger-related videos:
 
 - The [hledger fan Youtube channel](https://www.youtube.com/channel/UCZLxXTjOqLzq4z5Jy0AyWSQ) (2019-2020)
   has a series of short beginner lessons, including:
+  - [hledger: shortcuts part 3](https://www.youtube.com/watch?v=_3pHNICDgHc)
   - [hledger: shortcuts part 2](https://www.youtube.com/watch?v=0d-28UIFhlo)
   - [hledger: shortcuts part 1](https://www.youtube.com/watch?v=ItnYCw8cgKc)
   - [hledger: commands to help with reconciling](https://www.youtube.com/watch?v=gt4hm8pfMHk)
