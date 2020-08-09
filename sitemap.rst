@@ -51,6 +51,7 @@ hledger
    convert-csv-files
    customize-default-csv-accounts
    track-changes-with-version-control
+   export
 
 .. toctree::
    :caption: Cookbook: Reporting
