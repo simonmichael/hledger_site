@@ -488,7 +488,8 @@ Your <code>cabal --version</code> should be not too ancient; use a recent releas
 Windows users: omit hledger-ui from this command, unless you are in [WSL].
 
 Or, [nix] users can use nix-env to build hledger from source (but we
-try to provide a nix command that installs already-cached binaries, [above](#multiplatform).)
+try to [provide](#multiplatform) a nix command that installs
+already-cached binaries.)
 
 
 ### Build tips
