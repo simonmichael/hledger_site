@@ -434,7 +434,7 @@ UTF-8-aware locale, or you'll see errors (eg: "*invalid byte
 sequence*") when processing non-ascii text. Check that LANG's value
 mentions UTF-8, and if not, change it:
 
-```
+```shell
 $ echo $LANG
 C
 $ export LANG=C.UTF-8    # or en_US.UTF-8, fr_FR.utf8, etc.
