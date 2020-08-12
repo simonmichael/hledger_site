@@ -9,7 +9,6 @@ hledger
    :maxdepth: 2
 
    Home <index>
-   Essentials <essentials>
    faq
    videos
    Download/Install <download>
@@ -22,6 +21,16 @@ hledger
    release-notes
 
 .. toctree::
+   :caption: First steps
+   :maxdepth: 3
+
+   quickstart
+   add
+   web
+   ui
+   accounting
+
+.. toctree::
    :caption: Manuals
    :maxdepth: 3
 
@@ -32,15 +41,6 @@ hledger
    csv
    timeclock
    timedot
-
-.. toctree::
-   :caption: Tutorials
-   :maxdepth: 3
-
-   add
-   web
-   ui
-   accounting
 
 .. toctree::
    :caption: Cookbook: Managing data

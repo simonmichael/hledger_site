@@ -34,12 +34,12 @@ a:active { color:red; }
 </style>
 
 
-# hledger essentials
+# hledger Quick Start
 
 Welcome! You've found the
-<a href="https://github.com/simonmichael/hledger_site/commits/master/essentials.md">newest</a>
+<a href="https://github.com/simonmichael/hledger_site/commits/master/quickstart.md">newest</a>
 intro to hledger. This one aims to distill just the most needed practical info
-to help you get productive as efficiently as possible. When you want more
+to help you get productive as quickly as possible. When you want more
 detail, follow links to the [full website] (and particularly the manuals,
 which describe everything hledger does: [hledger], [hledger-ui],
 [hledger-web], [journal], [csv], [timeclock], [timedot]).

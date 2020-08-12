@@ -15,7 +15,7 @@ https://www.stephendiehl.com/posts/marketing.html#persuasion-and-decision-makers
 plain text accounting<br>made easy !
 </div>
 <div style="text-align:center; margin:1em;">
-(Woah, too much to read right now ? Here's <b><a href="essentials.html">just the essentials</a></b>).
+(Woah, too much to read here ? Here's the hands-on <b><a href="quickstart.html">quick start</a></b>).
 </div>
 
 <div style="text-align:center; margin:1em;">
@@ -29,7 +29,7 @@ It's good for tracking money, time, investments, cryptocurrencies, inventory and
 It is an alternative implementation of [Ledger CLI], with a particular focus on **ease of use** and **robustness**.
 Here are some things hledger provides out of the box:
 
-- Easy multi-currency double-entry accounting [using only a plain text file](#quick-start)
+- Easy multi-currency double-entry accounting [using only a plain text file](#usage)
 
 - Easy [assisted data entry](add.html) or [CSV import][convert]
 
@@ -157,7 +157,7 @@ Reports normally take a fraction of a second, and hledger-ui updates instantly a
 [convert]: convert-csv-files.html
 
 
-## Quick Start
+## Usage
 
 You can start with hledger very simply, and get more sophisticated as
 you learn more about double-entry accounting.
