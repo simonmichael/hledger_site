@@ -56,6 +56,7 @@ hledger
    :caption: Cookbook: Reporting
    :maxdepth: 3
 
+   report-examples
    queries
    rewrite-account-names
    tags-tutorial
