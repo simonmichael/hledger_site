@@ -32,8 +32,8 @@
     <link rel="canonical" href="{{ theme_canonical_url }}{{ pagename }}.html"/>
   {% endif %}
 
-{# SKWM kludge: disable most visible theme elements for the essentials page #}
-{% if pagename == 'essentials' %}
+{# SKWM kludge: disable most visible theme elements for the quickstart page #}
+{% if pagename == 'quickstart' %}
 {#
   <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
   <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -44,7 +44,7 @@
   <script type="text/javascript" src="_static/js/highslide/highslide.js"></script>
   <script type="text/javascript" src="_static/js/theme.js"></script>
 #}
-{% else %} {# essentials #}
+{% else %} {# quickstart #}
 
   {# JAVASCRIPTS #}
   {%- block scripts %}
@@ -83,7 +83,7 @@
   {%- endif %}
   {%- endblock %}
 
-{% endif %} {# essentials #} {# the first stylesheet below enables permalink symbol hiding #}
+{% endif %} {# quickstart #} {# the first stylesheet below enables permalink symbol hiding #}
   {# CSS #}
   <link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}" type="text/css" />
   <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css" />
@@ -99,7 +99,7 @@
     <link rel="stylesheet" href="{{ pathto(cssfile, 1) }}" type="text/css" />
   {%- endfor %}
 
-{% if pagename != 'essentials' %}
+{% if pagename != 'quickstart' %}
   {%- block linktags %}
     {%- if hasdoc('about') %}
     <link rel="author" title="{{ _('About these documents') }}" href="{{ pathto('about') }}" />
@@ -128,11 +128,11 @@
 
   {%- block extrahead %} {% endblock %}
 
-{% endif %} {# essentials #}
+{% endif %} {# quickstart #}
 </head>
 
 <body class="wy-body-for-nav">
-{% if pagename != 'essentials' %}
+{% if pagename != 'quickstart' %}
   {% block extrabody %} {% endblock %}
   <div class="wy-grid-for-nav">
     {# SIDE NAV, TOGGLES ON MOBILE #}
@@ -212,17 +212,17 @@
 
 
       <div class="wy-nav-content">
-{% endif %} {# essentials #}
+{% endif %} {# quickstart #}
       {%- block content %}
         {% if theme_style_external_links|tobool %}
         <div class="rst-content style-external-links">
         {% else %}
         <div class="rst-content">
         {% endif %}
-{% if pagename != 'essentials' %}
+{% if pagename != 'quickstart' %}
           {% include "breadcrumbs.html" %}
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-{% endif %} {# essentials #}
+{% endif %} {# quickstart #}
           {%- block document %}
            <div itemprop="articleBody">
             {% block body %}{% endblock %}
@@ -234,12 +234,12 @@
            {% endif%}
           </div>
           {%- endblock %}
-{% if pagename != 'essentials' %}
+{% if pagename != 'quickstart' %}
           {% include "footer.html" %}
-{% endif %} {# essentials #}
+{% endif %} {# quickstart #}
         </div>
       {%- endblock %}
-{% if pagename != 'essentials' %}
+{% if pagename != 'quickstart' %}
       </div>
 
     </section>
@@ -272,6 +272,6 @@
 
   {%- block footer %} {% endblock %}
 
-{% endif %} {# essentials #}
+{% endif %} {# quickstart #}
 </body>
 </html>
