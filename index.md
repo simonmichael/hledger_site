@@ -434,7 +434,7 @@ See also [ROADMAP](ROADMAP.html).
       <br>
       <a href="https://www.ledger-cli.org/docs.html">Ledger CLI docs</a>
       <br>
-      <a href="http://furius.ca/beancount/doc/index">Beancount docs</a>
+      <a href="https://beancount.github.io/docs">Beancount docs</a>
       <br>
       <a href="https://twitter.com/LedgerTips">@LedgerTips (2014-2018)</a>
     </td>
