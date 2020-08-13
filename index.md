@@ -456,11 +456,10 @@ literacy and empowerment. Thank you!
 
 <!-- keep synced with README.md: -->
 
-- Sponsor Simon (project leader):
+- Sponsor Simon (project leader / broom pusher):\
 [![github](https://img.shields.io/badge/Sponsor_on-Github-limegreen "Sponsor the project leader via Github")](https://github.com/sponsors/simonmichael)
 [![liberapay](https://img.shields.io/badge/Sponsor_on-Liberapay-limegreen "Sponsor the project leader via Liberapay")](https://liberapay.com/simonmichael)
 [![paypal](https://www.paypal.com/en_US/i/btn/x-click-but04.gif "Give one time or recurringly via Paypal")](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5J33NLXYXCYAY)
-<!-- trying to space list items a little.. in firefox, one makes more space than two -->
 
 <!-- OC badges are flaky/confusing. hledger tiers are: Backers, Sponsors -->
 <!-- doesn't show correct count: -->
@@ -520,11 +519,10 @@ literacy and empowerment. Thank you!
 <!-- doesn't show all: -->
 <!-- - <object type="image/svg+xml" data="https://opencollective.com/hledger/tiers/backers.svg?avatarHeight=36&width=600"></object> -->
 
-- Bounties for specific tasks:
+- Sponsor specific tasks with bounties:\
 [![all bounties](https://img.shields.io/badge/github-All_bountied_issues-30bae8 "all bountied issues, bountysource and otherwise")](https://github.com/simonmichael/hledger/issues?q=label:bounty)
 [![bountysource bounties](https://api.bountysource.com/badge/team?team_id=75979&style=bounties_received "issues bountied via bountysource")](https://www.bountysource.com/teams/hledger)
 
-[oc contributors]: https://opencollective.com/hledger#section-contributors
 
 <!---------------------------------------------------------------------------->
 <style>
