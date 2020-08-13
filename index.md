@@ -12,10 +12,10 @@ https://www.stephendiehl.com/posts/marketing.html#persuasion-and-decision-makers
 # hledger
 
 <div id="tagline">
-plain text accounting<br>made easy !
+plain text accounting,<br>made easy
 </div>
 <div style="text-align:center; margin:1em;">
-(Woah, too much to read here ? Here's the hands-on <b><a href="quickstart.html">quick start</a></b>).
+(Woah, too much to read ? Here's the <b><a href="quickstart.html">quick start</a></b>.)
 </div>
 
 <div style="text-align:center; margin:1em;">
@@ -26,8 +26,11 @@ plain text accounting<br>made easy !
 <span id="leadingword">hledger</span> is cross-platform accounting software 
 for both power users and folks new to accounting.
 It's good for tracking money, time, investments, cryptocurrencies, inventory and more.
-It is an alternative implementation of [Ledger CLI], with a particular focus on **ease of use** and **robustness**.
-Here are some things hledger provides out of the box:
+It is a reimplementation of [Ledger CLI] 
+(*I liked Ledger so much, I rebuilt it in Haskell*)
+with a particular focus on **ease of use** and **robustness**.
+
+Here are some things it provides out of the box:
 
 - Easy multi-currency double-entry accounting [using only a plain text file](#usage)
 
@@ -252,18 +255,20 @@ Download CSV files from financial institutions, perhaps using an API
 like Plaid or Tiller, use hledger's import command to [convert] and
 [import] the new transactions, and use any UI to see reports.
 
-\
+## More details
+
 Next, you could:
 
 - Explore the sidebar to your left (or on small screens, the menu button at top left).
   It scrolls and expands, and all hledger docs can be found there.
 - Check the **[FAQ](faq.html)**.
-- Look at some tutorials, about
+- Do a tutorial:
+  **[Quick Start](quickstart.html)**,
   **[hledger add](add.html)**,
   **[hledger-web](web.html)**,
   **[hledger-ui](ui.html)**, or
-  **[accounting](accounting.html)**.
-- Read or skim the manuals: the
+  **[accounting concepts](accounting.html)**.
+- Read or skim the reference manuals: the
   **[hledger](hledger.html)**,
   **[hledger-ui](hledger-ui.html)**, and
   **[hledger-web](hledger-web.html)** tools 
@@ -283,15 +288,13 @@ Next, you could:
 [example files]: https://github.com/simonmichael/hledger/tree/master/examples
 [mail list]: https://groups.google.com/forum/#!forum/hledger
 
-## More...
-
 hledger is brought to you by [Simon Michael](http://joyful.com) and 120+ contributors.
 I've been building and relying on it continuously since 2007;
 I hope you too will find it helpful in mastering your time and money!
 When your wealth allows, perhaps you'll feel inspired to become a
 [sponsor] and help us do more.
 
-hledger is a [Haskell] rewrite/reboot of the pioneering [Ledger].
+hledger is a rewrite/reboot of the pioneering [Ledger].
 ([Why?](faq.html#how-why-was-hledger-started))
 Read more about the [differences](faq.html#ledger).
 
@@ -325,7 +328,7 @@ or set it up with a few clicks on
 <!-- This is a prototype, but it's nice sandbox for trying out hledger's journal syntax. -->
 
 <a href="_static/images/hledger-lib-api.png" class="highslide" onclick="return hs.expand(this)"><img src="_static/images/hledger-lib-api.png" title="Part of hledger-lib's haddock api documentation" /></a>
-hledger is written in Haskell, a modern, highly-regarded
+hledger is written in [Haskell], a modern, highly-regarded
 programming language which contributes to hledger's robustness,
 performance and long-term maintainability.  Most functionality is
 exposed as [Haskell libraries](http://hackage.haskell.org/package/hledger-lib),
@@ -364,9 +367,11 @@ charts,
 better getting started experience.
 See also [ROADMAP](ROADMAP.html).
 
-## Help/Feedback
+<a name="help"></a><a name="help-feedback"></a>
 
-<div id="help">
+## Getting help
+
+<div>
 <table>
   <tr>
     <td>Chat:</td>
@@ -443,17 +448,18 @@ See also [ROADMAP](ROADMAP.html).
 Building and supporting good software and documentation requires a lot of time and life energy.
 Maybe these thousands of person-hours have helped you ?
 You can give back at any level and be one of the generous sponsors
-helping to sustain and accelerate this project and 
-its core mission of helping more people achieve financial freedom.
+helping to support this project and its core mission of helping more
+people achieve financial literacy and empowerment. Thank you!
 
 <!-- keep synced with README.md: -->
 
-Sponsor Simon (project leader):
+- Sponsor Simon (project leader):
 [![github](https://img.shields.io/badge/Sponsor_on-Github-limegreen "Sponsor the project leader via Github")](https://github.com/sponsors/simonmichael)
 [![liberapay](https://img.shields.io/badge/Sponsor_on-Liberapay-limegreen "Sponsor the project leader via Liberapay")](https://liberapay.com/simonmichael)
 [![paypal](https://www.paypal.com/en_US/i/btn/x-click-but04.gif "Give one time or recurringly via Paypal")](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5J33NLXYXCYAY)
+<br><br> <!-- trying to space list items a little.. in firefox, one makes more space than two -->
 
-Sponsor the hledger project with your organisation:
+- Sponsor the hledger project with your organisation:
 [![OpenCollective](https://opencollective.com/hledger/sponsors/badge.svg)][oc contributors] <!-- wrong count --> \
 [![](https://opencollective.com/hledger/sponsor/0/avatar.svg)](https://opencollective.com/hledger/sponsor/0/website)
 [![](https://opencollective.com/hledger/sponsor/1/avatar.svg)](https://opencollective.com/hledger/sponsor/1/website)
@@ -466,8 +472,9 @@ Sponsor the hledger project with your organisation:
 [![](https://opencollective.com/hledger/sponsor/8/avatar.svg)](https://opencollective.com/hledger/sponsor/8/website)
 [![](https://opencollective.com/hledger/sponsor/9/avatar.svg)](https://opencollective.com/hledger/sponsor/9/website)
 [![](https://opencollective.com/hledger/sponsor/10/avatar.svg)](https://opencollective.com/hledger/sponsor/10/website)
+<br><br>
 
-Sponsor the hledger project as an individual:
+- Sponsor the hledger project as an individual:
 [![OpenCollective](https://opencollective.com/hledger/backers/badge.svg)][oc contributors] <!-- wrong count --> \
 [![](https://opencollective.com/hledger/backer/0/avatar.svg)](https://opencollective.com/hledger/backer/0/website)
 [![](https://opencollective.com/hledger/backer/1/avatar.svg)](https://opencollective.com/hledger/backer/1/website)
@@ -490,16 +497,13 @@ Sponsor the hledger project as an individual:
 [![](https://opencollective.com/hledger/backer/18/avatar.svg)](https://opencollective.com/hledger/backer/18/website)
 [![](https://opencollective.com/hledger/backer/19/avatar.svg)](https://opencollective.com/hledger/backer/19/website)
 [![](https://opencollective.com/hledger/backer/20/avatar.svg)](https://opencollective.com/hledger/backer/20/website)
+<br><br>
 
-Bounties for specific tasks:
+- Bounties for specific tasks:
 [![all bounties](https://img.shields.io/badge/github-All_bountied_issues-30bae8 "all bountied issues, bountysource and otherwise")](https://github.com/simonmichael/hledger/issues?q=label:bounty)
 [![bountysource bounties](https://api.bountysource.com/badge/team?team_id=75979&style=bounties_received "issues bountied via bountysource")](https://www.bountysource.com/teams/hledger)
 
 [oc contributors]: https://opencollective.com/hledger#section-contributors
-
-
-<br>
-<br>
 
 <!---------------------------------------------------------------------------->
 <style>

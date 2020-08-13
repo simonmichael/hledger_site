@@ -1,7 +1,8 @@
-# Accounting concepts; hledger's account hierarchy
+# Accounting concepts
 
 Here we'll give a quick hledger-oriented intro to some useful accounting concepts
 (continuing with the journal file from [Easy workflow #1: hledger add](add.html)).
+Also we'll discuss account hierarchy in hledger.
 At the end, there's a collection of useful links to learn more.
 
 ## Assets, Liabilities and Equity

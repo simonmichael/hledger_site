@@ -24,14 +24,14 @@ hledger
    :caption: First steps
    :maxdepth: 3
 
-   quickstart
+   Quick Start <quickstart>
    add
    web
    ui
    accounting
 
 .. toctree::
-   :caption: Manuals
+   :caption: Reference Manuals
    :maxdepth: 3
 
    hledger

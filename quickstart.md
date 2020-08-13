@@ -36,13 +36,12 @@ a:active { color:red; }
 
 # hledger Quick Start
 
-Welcome! You've found the
-<a href="https://github.com/simonmichael/hledger_site/commits/master/quickstart.md">newest</a>
-intro to hledger. This one aims to distill just the most needed practical info
-to help you get productive as quickly as possible. When you want more
-detail, follow links to the [full website] (and particularly the manuals,
-which describe everything hledger does: [hledger], [hledger-ui],
-[hledger-web], [journal], [csv], [timeclock], [timedot]).
+Welcome! You've found the newest intro to hledger. This one aims to
+distill just the most needed practical info to help you get productive
+as quickly as possible. When you want more detail, follow links to the
+[full website] (and particularly the manuals, which describe
+everything hledger does: [hledger], [hledger-ui], [hledger-web],
+[journal], [csv], [timeclock], [timedot]).
 
 [full website]: https://hledger.org
 [hledger]:      https://hledger.org/hledger.html
