@@ -180,9 +180,8 @@ Haskell scripts are the most powerful, as they can call the same
 internally by hledger.
 
 You can run them interpreted for easy tweaking, or compiled for speed
-and durability (eg: `stack ghc hledger-estimatedtax.hs`). A compiled
-script runs much faster and is more likely to keep working, at least
-on your machine.
+and durability. A compiled script runs faster and is more likely to
+keep working (across GHC upgrades, disk cleanups etc.)
 
 If you want others (or future-you) to be able to run your scripts
 reliably, make them [cabal scripts] or [stack scripts]. stack scripts
