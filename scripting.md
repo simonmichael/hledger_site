@@ -185,10 +185,13 @@ script runs much faster and is more likely to keep working, at least
 on your machine.
 
 If you want others (or future-you) to be able to run your scripts
-reliably, make them [cabal scripts] or [stack scripts]. stack is best
-for durability and scripting, eg it can ensure the required GHC
-version is installed, and will automatically recompile the script when
-you've changed it.
+reliably, make them [cabal scripts] or [stack scripts]. stack scripts
+are currently best for durability and convenience, because they:
+
+- ensure the required GHC version is installed
+- ensure the required haskell packages are installed, based on the script's imports
+- specify all package versions for more reliable builds
+- automatically recompile themselves when changed.
 
 Example scripts can usually be found at\
 <https://github.com/simonmichael/hledger/tree/master/bin/>
