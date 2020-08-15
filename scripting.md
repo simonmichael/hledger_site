@@ -193,13 +193,8 @@ are currently best for durability and convenience, because they:
 - specify all package versions for more reliable builds
 - automatically recompile themselves when changed.
 
-Example scripts can usually be found at\
+Example scripts and more tips can be found at
 <https://github.com/simonmichael/hledger/tree/master/bin/>
-
-Scripts can use hledger's command line helpers to provide a consistent
-hledger-style CLI with the usual options, help, etc. 
-Here's the basic template for a hledger haskell script:\
-[hledger-swap-dates.hs](https://github.com/simonmichael/hledger/blob/master/bin/hledger-swap-dates.hs)
 
 Such "scripts" can grow as large and powerful as you need. They are
 often a good way to prototype a new command, perhaps to become a
