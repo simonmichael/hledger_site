@@ -179,21 +179,22 @@ Haskell scripts are the most powerful, as they can call the same
 [hledger](https://hackage.haskell.org/package/hledger) APIs used
 internally by hledger.
 
-You can run them interpreted for easy tweaking, or compiled for speed
-and durability. A compiled script runs faster and is more likely to
-keep working (across GHC upgrades, disk cleanups etc.)
-
 If you want others (or future-you) to be able to run your scripts
 reliably, make them [cabal scripts] or [stack scripts]. stack scripts
-are currently best for durability and convenience, because they:
+are currently best for durability, convenience, and sharing, because they:
 
 - ensure the required GHC version is installed
 - ensure the required haskell packages are installed, based on the script's imports
 - specify all package versions for more reliable builds
 - automatically recompile themselves when changed.
 
-Example scripts and more tips can be found at
+Example scripts and more tips can be found at:\
 <https://github.com/simonmichael/hledger/tree/master/bin/>
+
+You can run haskell scripts interpreted for easy tweaking and
+portability, or compiled for speed and durability. stack scripts
+compile themselves when needed and run the compiled version otherwise,
+giving the benefits of both.
 
 Such "scripts" can grow as large and powerful as you need. They are
 often a good way to prototype a new command, perhaps to become a
