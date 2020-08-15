@@ -181,7 +181,7 @@ internally by hledger.
 
 If you want others (or future-you) to be able to run your scripts
 reliably, make them [cabal scripts] or [stack scripts]. stack scripts
-are currently best for durability, convenience, and sharing, because they:
+are currently best for reliability, performance, and sharing, because they:
 
 - ensure the required GHC version is installed
 - ensure the required haskell packages are installed, based on the script's imports
