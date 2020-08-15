@@ -188,13 +188,13 @@ are currently best for reliability, performance, and sharing, because they:
 - specify all package versions for more reliable builds
 - automatically recompile themselves when changed.
 
-Example scripts and more tips can be found at:\
-<https://github.com/simonmichael/hledger/tree/master/bin/>
-
 You can run haskell scripts interpreted for easy tweaking and
 portability, or compiled for speed and durability. stack scripts
 compile themselves when needed and run the compiled version otherwise,
 giving the benefits of both.
+
+Example scripts and more tips can be found at:\
+<https://github.com/simonmichael/hledger/tree/master/bin/>
 
 Such "scripts" can grow as large and powerful as you need. They are
 often a good way to prototype a new command, perhaps to become a
