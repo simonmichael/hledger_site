@@ -330,6 +330,28 @@ cd pkgsrc && ./bootstrap/bootstrap --prefix=$HOME/pkg --unprivileged --make-jobs
 <!--   </tbody> -->
 <!-- </table> -->
 
+
+### FreeBSD
+
+<table class="freebsd bsd downloads">
+  <tbody>
+    <tr>
+      <td>
+        <div class="badges">
+          <a href="https://www.freshports.org/finance/hs-hledger"><img src="https://img.shields.io/badge/freebsd--port-1.18.1-brightgreen.svg" alt="freebsd port" /></a><br>
+          <!-- <a href="">more..</a> -->
+        </div>
+        <div class="distro"><a href="https://www.freebsd.org">FreeBSD</a></div>
+      </td>
+      <td>
+        <div class="command">pkg install hs-hledger</div>
+        <div class="notes">
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 ### OpenBSD
 
 <table class="openbsd bsd downloads">
