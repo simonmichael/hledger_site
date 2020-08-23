@@ -340,7 +340,7 @@ cd pkgsrc && ./bootstrap/bootstrap --prefix=$HOME/pkg --unprivileged --make-jobs
         <div class="badges">
           <a href="https://www.freshports.org/search.php?query=hledger"><img src="https://img.shields.io/badge/freebsd--ports-1.18.1-brightgreen.svg" alt="freebsd ports" /></a><br>
         </div>
-        <div class="distro"><a href="https://www.freebsd.org">FreeBSD</a></div>
+        <div class="distro"></div>
       </td>
       <td>
         <div class="command">pkg install hs-hledger hs-hledger-ui hs-hledger-web</div>
@@ -361,12 +361,13 @@ cd pkgsrc && ./bootstrap/bootstrap --prefix=$HOME/pkg --unprivileged --make-jobs
           <a href="https://github.com/jasperla/openbsd-wip/tree/master/productivity/hledger"><img src="https://img.shields.io/badge/openbsd--wip_port-1.10-red.svg" alt="openbsd-wip port" /></a><br>
           <a href="https://github.com/jasperla/openbsd-wip/tree/master/productivity">more..</a>
         </div>
-        <div class="distro"><a href="https://github.com/jasperla/openbsd-wip#how-to-use-this-tree">OpenBSD WIP</a></div>
+        <div class="distro"></div>
       </td>
       <td>
         <div class="command">make -C /usr/ports/openbsd-wip/productivity/hledger install</div>
-        <div class="notes">
-            See also <a href="https://github.com/commercialhaskell/stack/issues/3313#issuecomment-570353913">stack#3313</a>
+        <div class="notes">            
+            <a href="https://github.com/jasperla/openbsd-wip#how-to-use-this-tree">How to use OpenBSD WIP</a>,
+            <a href="https://github.com/commercialhaskell/stack/issues/3313#issuecomment-570353913">stack#3313</a>
         </div>
       </td>
     </tr>
@@ -412,7 +413,6 @@ cd pkgsrc && ./bootstrap/bootstrap --prefix=$HOME/pkg --unprivileged --make-jobs
             <a href="https://apps.sandstorm.io/search?term=hledger"><img alt="Sandstorm" src="https://img.shields.io/badge/Sandstorm_app-1.9.2-red.svg" /></a>
         </div>
         <div class="distro"><a href="https://sandstorm.io">Sandstorm</a></div>
-        <div class="notes"></div>
       </td>
       <td>
         <div class="command"><a href="https://apps.sandstorm.io/app/8x12h6p0x0nrzk73hfq6zh2jxtgyzzcty7qsatkg7jfg2mzw5n90">HLedger Web sandstorm app</a></div>
