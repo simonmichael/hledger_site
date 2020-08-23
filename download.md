@@ -116,19 +116,17 @@ And please [report](index.html#help) any trouble.
     <tr>
       <td>
         <div class="badges">
-          <a href="https://github.com/search?l=&o=desc&q=%22automatic+Haskell+package+set+update%22+repo%3ANixOS%2Fnixpkgs+filename%3Ahaskell-packages.nix&s=committer-date&type=Commits"><img alt="Nix" src="https://img.shields.io/badge/Nix_package-1.17.1.1-red.svg" /></a>
+          <a href="https://github.com/search?l=&o=desc&q=%22automatic+Haskell+package+set+update%22+repo%3ANixOS%2Fnixpkgs+filename%3Ahaskell-packages.nix&s=committer-date&type=Commits"><img alt="Nix" src="https://img.shields.io/badge/Nix_package-1.18.1-brightgreen.svg" /></a>
         </div>
         <divC class="distro"><a href="https://nixos.org/nix">Nix</a></div>
         <div class="notes">Linux, Mac</div>
       </td>
       <td>
         <div class="command">
-            nix-env -f https://github.com/NixOS/nixpkgs/archive/2f9a9064.tar.gz -iA hledger hledger-web hledger-ui
+            nix-env -f https://github.com/NixOS/nixpkgs/archive/b8b74435.tar.gz -iA hledger hledger-web hledger-ui
         </div>
         <div class="notes">
-            In the first days after release, this may do some building (not fully cached yet)
-            or fail with "HTTP error 404" (not built for your platform yet); 
-            try it with --dry-run to see.
+            Binaries may not yet be fully cached for your platform, try with --dry-run to estimate how much building will be required.
             On Linux, note <span class="warnings"><a href="https://github.com/simonmichael/hledger/issues/1030">#1030</a>, 
             <a href="https://github.com/simonmichael/hledger/issues/1033">#1033</a>.
         </div>
