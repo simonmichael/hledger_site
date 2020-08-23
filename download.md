@@ -118,7 +118,7 @@ And please [report](index.html#help) any trouble.
         <div class="badges">
           <a href="https://github.com/search?l=&o=desc&q=%22automatic+Haskell+package+set+update%22+repo%3ANixOS%2Fnixpkgs+filename%3Ahaskell-packages.nix&s=committer-date&type=Commits"><img alt="Nix" src="https://img.shields.io/badge/Nix_package-1.17.1.1-red.svg" /></a>
         </div>
-        <div class="distro"><a href="https://nixos.org/nix">Nix</a></div>
+        <divC class="distro"><a href="https://nixos.org/nix">Nix</a></div>
         <div class="notes">Linux, Mac</div>
       </td>
       <td>
@@ -338,13 +338,12 @@ cd pkgsrc && ./bootstrap/bootstrap --prefix=$HOME/pkg --unprivileged --make-jobs
     <tr>
       <td>
         <div class="badges">
-          <a href="https://www.freshports.org/finance/hs-hledger"><img src="https://img.shields.io/badge/freebsd--port-1.18.1-brightgreen.svg" alt="freebsd port" /></a><br>
-          <!-- <a href="">more..</a> -->
+          <a href="https://www.freshports.org/search.php?query=hledger"><img src="https://img.shields.io/badge/freebsd--ports-1.18.1-brightgreen.svg" alt="freebsd ports" /></a><br>
         </div>
         <div class="distro"><a href="https://www.freebsd.org">FreeBSD</a></div>
       </td>
       <td>
-        <div class="command">pkg install hs-hledger</div>
+        <div class="command">pkg install hs-hledger hs-hledger-ui hs-hledger-web</div>
         <div class="notes">
         </div>
       </td>
