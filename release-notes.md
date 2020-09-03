@@ -43,52 +43,65 @@ more speed.**
 
 ### hledger cli 1.19
 
-#### general
+#### new
 
-- When parsing dates, we now require the year to have at least four
-  digits. So eg Feb 1 in the year 10 would need to be written
-  `0010-02-01`, not `10/02/01`. would need to be written `0200/1/1`.
-  This change was made for consistency and to avoid ambiguities; let
-  us know if it causes you trouble.
+- [aregister]: a new command showing a transaction-oriented register
+  for a single account. This is like hledger-ui, hledger-web, or your
+  bank statement, and unlike the register command which shows
+  individual postings possibly spanning multiple accounts. You might
+  prefer aregister when reconciling real-world asset/liability
+  accounts, and register when reviewing detailed revenues/expenses.
+  (#1294)
 
-- In the argument of `amt:` queries, whitespace around the operator,
-  sign, or number no longer causes a parse error. (#1312)
+- [codes]: a new command for listing transaction codes
 
-- A new --color/--colour=WHEN command line option, support for the
-  NO_COLOR environment variable, and smarter autodetection of colour
-  terminals have been added. (#1296)
+- print: a new `sql` [output format] has been added (Dmitry Astapov)
 
-- Command line options taking a numeric argument are now validated
-  more carefully to avoid any issues with unexpected negatives or Int
-  overflow. (Stephen Morgan)
+- A `--color/--colour` command line option, support for the `NO_COLOR`
+  environment variable, and smarter autodetection of colour terminals
+  have been added. (#1296)
 
-- In queries, you can now specify a quarter like `2020q1` or `q4`
-  (the q is case-insensitive). (#1247, Henning Thieleman, Stephen Morgan)
+- In queries, you can now use q or Q to specify a year quarter, like
+  `2020q1` or `Q4`. (#1247, Henning Thieleman, Stephen Morgan)
 
-- In report intervals, `fortnightly` has been added as a synonym for
-  `biweekly`. (Stephen Morgan)
+- When specifying report intervals, you can use `fortnightly` as a
+  synonym for `biweekly`. (Stephen Morgan)
 
-- -t and -l command line flags have been added as short forms of
-  --tree and --flat (#1286)
+#### improved
 
-- All reports displaying accounts now choose flat mode by default
+- Reports involving multiple commodities now show at most two
+  commodities per amount by default, making multicolumn reports less
+  wide and more readable. Use the --no-elide flag to prevent this.
+
+- Flat (AKA list) mode is now the consistent default used by all
+  balance reports and other commands showing accounts. (Stephen
+  Morgan)
+
+- All commands supporting tree/list mode now accept -t and -l as short
+  forms of the --tree and --flat flags. (#1286)
+
+- account,bal,bs,cf,is: --drop now also works in tree mode (Stephen Morgan)
+
+- bal,bs,cf,is: tabular balance reports now elide (compress) boring
+  parent accounts, like the non-tabular reports. (Stephen Morgan)
+
+- bal,bs,cf,is: monthly column headings are no longer be displayed as
+  just the month abbreviations, if multiple years are being displayed.
+
+- bal --budget: with --cumulative or --historical, column headings now
+  correctly show the period end dates rather than date spans.
+
+- bs,cf,is: --no-total now hides subtotals as well as the grand total
   (Stephen Morgan)
 
-- Reports now show at most 2 commodities of multicommodity amounts,
-  unless the --no-elide flag is used. This helps keep them readable by
-  default, since multicolumn, multicommodity balance reports otherwise
-  tend to become very wide, especially in tree mode.
+- bs,cf,is: -%/--percent no longer implies --no-total. (Stephen
+  Morgan)
 
-- Numbers with more than 255 decimal places, which we do not support,
-  now give an error instead of silently misparsing. (#1326)
+- roi: errors are now shown without a call stack
 
-- Digit groups are now limited to at most 255 digits each. (#1326)
-
-- Account aliases (on command line or in journal) containing a bad
-  regular expression now give a more detailed error message.
-
-- A tab character could get parsed as part of a commodity symbol, with
-  confusing results. This no longer happens. (#1301, Dmitry Astapov)
+- tags: the new --parsed flag causes all tags or values to be shown,
+  including duplicates, in the order they were parsed. Blank/empty
+  values are omitted by default and can be shown with -E/--empty.
 
 - Debug output is now organised better by debug level.
   The levels are:
@@ -104,49 +117,38 @@ more speed.**
   8. command line parsing
   9. any other rarely needed or more in-depth info
 
+#### correctness/robustness
+
 - Added a missing lower bound for aeson, making cabal installs more
   reliable. (#1268)
 
-#### commands
+- When parsing dates, we now require the year to have at least four
+  digits. So eg Feb 1 in the year 10 would need to be written
+  `0010-02-01`, not `10/02/01`. would need to be written `0200/1/1`.
+  This change was made for consistency and to avoid ambiguities; let
+  us know if it causes you trouble.
 
-- account,bal,bs,cf,is: --drop now also works in tree mode (Stephen Morgan)
+- Command line options taking a numeric argument are now validated
+  more carefully to avoid any issues with unexpected negatives or Int
+  overflow. (Stephen Morgan)
 
-- add: fix an error in the command line help (arguments are inputs,
+- Numbers with more than 255 decimal places, which we do not support,
+  now give an error instead of silently misparsing. (#1326)
+
+- Digit groups in numbers are now limited to at most 255 digits each.
+  (#1326)
+
+- Account aliases (on command line or in journal) containing a bad
+  regular expression now give a more detailed error message.
+
+- In the argument of `amt:` queries, whitespace around the operator,
+  sign, or number no longer causes a parse error. (#1312)
+
+- A tab character could get parsed as part of a commodity symbol, with
+  confusing results. This no longer happens. (#1301, Dmitry Astapov)
+
+- add: fixed an error in the command line help (arguments are inputs,
   not a query)
-
-- [aregister]: a new command showing a transaction-oriented account
-  register, like hledger-ui, hledger-web, or your bank statement. 
-  Each line represents a whole transaction in one account, unlike
-  the register command which shows individual postings possibly from
-  multiple accounts. You might prefer aregister when reconciling
-  real-world asset/liability accounts, and register when reviewing
-  detailed revenues/expenses. (#1294)
-
-- bal,bs,cf,is: boring parents are now elided by default in tabular
-  balance reports too, like single-column reports. (Stephen Morgan)
-
-- bal,bs,cf,is: monthly column headings are no longer elided to just
-  the short month name, if multiple years are being displayed.
-
-- bal --budget's column headings are now end dates rather than
-  periods when appropriate (ie with --cumulative or --historical).
-
-- bs,cf,is: -%/--no-total no longer forces --no-total (Stephen Morgan)
-
-- bs,cf,is: --no-total now hides subtotals as well as the grand total
-  (Stephen Morgan)
-
-- [codes]: a new command for listing transaction codes
-
-- print: a new `sql` [output format] has been added (Dmitry Astapov)
-
-- roi: errors are now shown without a call stack
-
-- tags: add --parsed flag, hide empties without --empty. With the
-  --parsed flag, all tags or values are shown in the order they are
-  parsed from the input data, including duplicates. With -E/--empty,
-  any blank/empty values will also be shown, otherwise they are
-  omitted.
 
 #### journal format
 
@@ -160,61 +162,63 @@ more speed.**
 
 #### csv format
 
-- Inferring the appropriate default field separator based on file
-  extension (, for .csv, ; for .ssv, \t for .tsv) now works as
-  documented.
-
 - Conditional rule patterns can now be grouped with the `&` (AND) operator,
   allowing more powerful matching. (Michael Sanders)
-
-- Invalid csv rules files now give clearer parse error messages.
-  (Dmitry Astapov)
 
 - "If tables", a compact bulk format for conditional rules, have been
   added. (Dmitry Astapov)
 
 - csv conversion with a lot of conditional rules is now faster (Dmitry Astapov)
 
+- Invalid csv rules files now give clearer parse error messages.
+  (Dmitry Astapov)
+
+- Inferring the appropriate default field separator based on file
+  extension (, for .csv, ; for .ssv, \t for .tsv) now works as
+  documented.
+
 ### hledger-ui 1.19
 
-- The --color/--colour=WHEN command line option, support for the
-  NO_COLOR environment variable, and smarter autodetection of colour
-  terminals have been added (#1296)
+- A --color/--colour command line option, support for the NO_COLOR
+  environment variable, and smarter autodetection of colour terminals
+  have been added. (#1296)
 
-- -t and -l command line flags have been added as short forms of
-  --tree and --flat (#1286)
+- -t and -l have been added as short forms of --tree and --flat
+  command line flags.
 
-- Flat (AKA list) mode is now the default
+- Flat (AKA list) mode is now the default for the accounts screen.
 
-- t now toggles tree mode, while T sets the "today" period (#1286)
+- t now toggles tree/list mode, while T sets the "today" period
+  (#1286)
 
-- register: multicommodity amounts containing more than two
-  commodities are now elided
+- register screen: multicommodity amounts containing more than two
+  commodities are now elided, unless the --no-elide flag is used.
 
-- register: a transaction dated outside the report period now is not
-  shown even if it has postings dated inside the report period.
+- register screen: a transaction dated outside the report period now
+  is not shown even if it has postings dated inside the report period.
 
 - ESC now restores exactly the app's state at startup, which includes
-  clearing any report period limit (#1286)
+  clearing any report period limit. (#1286)
 
-- DEL/BS no longer changes the tree/list mode
+- DEL/BS no longer changes the tree/list mode.
 
-- q now exits help before exiting the app (#1286)
+- q now exits the help dialog, if active; press q again to exit the
+  app. (#1286)
 
-- The help dialog's layout is improved
+- The help dialog's layout is improved.
 
 ### hledger-web 1.19
 
+- Added a missing lower bound for aeson, making cabal installs more
+  reliable. (#1268)
+
 - Queries containing a malformed regular expression (eg the single
   character `?`) now show a tidy error message instead "internal
-  server error" (Stephen Morgan, Simon Michael) (#1245)
+  server error". (Stephen Morgan, Simon Michael) (#1245)
 
 - In account registers, a transaction dated outside the report period
   now is not shown even if it has postings dated inside the report
   period.
-
-- Added a missing lower bound for aeson, making cabal installs more
-  reliable. (#1268)
 
 ### credits 1.19
 
