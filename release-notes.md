@@ -152,13 +152,11 @@ more speed.**
 
 #### journal format
 
-- account directives can specify a new `Cash` account type. This is a
-  subtype of `Asset`, denoting accounts which should be displayed
-  in `cashflow` reports. 
+- account directives can specify a new account type, `Cash`, for
+  accounts which should be displayed in the `cashflow` report. `Cash`
+  accounts are also `Asset` accounts.
   
-- The built-in regular expressions for choosing default account types
-  have been tweaked, and documentation for account types has been
-  improved.
+- Documentation of [account types] has been improved.
 
 #### csv format
 
@@ -234,7 +232,7 @@ Colin Woodbury.
 [aregister]: hledger.html#aregister
 [codes]: hledger.html#codes
 [output format]: hledger.html#output-format
-
+[account types]: journal.html#account-types
 
 ## 2020/06/21 hledger 1.18.1
 
