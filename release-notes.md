@@ -45,17 +45,21 @@ more speed.**
 
 #### general
 
-- When parsing dates, the year is now required to have at least four
-  digits. So eg we no longer accept `200/1/1` as a valid date, it
-  would need to be written `0200/1/1`. This was done for.. reasons,
-  and is experimental; let us know if it causes you trouble.
+- When parsing dates, we now require the year to have at least four
+  digits. So eg Feb 1 in the year 10 would need to be written
+  `0010-02-01`, not `10/02/01`. would need to be written `0200/1/1`.
+  This change was made for consistency and to avoid ambiguities; let
+  us know if it causes you trouble.
 
-- The --color/--colour=WHEN command line option, support for the
+- In the argument of `amt:` queries, whitespace around the operator,
+  sign, or number no longer causes a parse error. (#1312)
+
+- A new --color/--colour=WHEN command line option, support for the
   NO_COLOR environment variable, and smarter autodetection of colour
-  terminals have been added (#1296)
+  terminals have been added. (#1296)
 
 - Command line options taking a numeric argument are now validated
-  more carefully, preventing issues with unexpected negatives or Int
+  more carefully to avoid any issues with unexpected negatives or Int
   overflow. (Stephen Morgan)
 
 - In queries, you can now specify a quarter like `2020q1` or `q4`
@@ -103,9 +107,6 @@ more speed.**
 - Added a missing lower bound for aeson, making cabal installs more
   reliable. (#1268)
 
-- lib: parseAmountQueryTerm: allow whitespace around arg parts (#1312)
-  Whitespace around the operator, sign, or number is now tolerated.
-
 #### commands
 
 - account,bal,bs,cf,is: --drop now also works in tree mode (Stephen Morgan)
@@ -113,7 +114,7 @@ more speed.**
 - add: fix an error in the command line help (arguments are inputs,
   not a query)
 
-- aregister: a new command showing a transaction-oriented account
+- [aregister]: a new command showing a transaction-oriented account
   register, like hledger-ui, hledger-web, or your bank statement. 
   Each line represents a whole transaction in one account, unlike
   the register command which shows individual postings possibly from
@@ -135,9 +136,9 @@ more speed.**
 - bs,cf,is: --no-total now hides subtotals as well as the grand total
   (Stephen Morgan)
 
-- codes: a new command for listing transaction codes
+- [codes]: a new command for listing transaction codes
 
-- print: a new `sql` output format has been added (Dmitry Astapov)
+- print: a new `sql` [output format] has been added (Dmitry Astapov)
 
 - roi: errors are now shown without a call stack
 
@@ -225,6 +226,11 @@ Michael Sanders,
 Henning Thielemann,
 Martin Michlmayr,
 Colin Woodbury.
+
+[aregister]: hledger.html#aregister
+[codes]: hledger.html#codes
+[output format]: hledger.html#output-format
+
 
 ## 2020/06/21 hledger 1.18.1
 
