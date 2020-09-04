@@ -160,11 +160,12 @@ more speed.**
 
 #### csv format
 
-- Conditional rule patterns can now be grouped with the `&` (AND) operator,
+- Conditional rule patterns can now be
+  [grouped](csv.html#combining-matchers) with the `&` (AND) operator,
   allowing more powerful matching. (Michael Sanders)
 
-- "If tables", a compact bulk format for conditional rules, have been
-  added. (Dmitry Astapov)
+- "[If tables](csv.html#if-table)", a compact bulk format for
+  conditional rules, have been added. (Dmitry Astapov)
 
 - csv conversion with a lot of conditional rules is now faster (Dmitry Astapov)
 
