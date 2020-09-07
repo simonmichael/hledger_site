@@ -30,6 +30,27 @@ Changes in hledger-install.sh are shown
 [here](https://github.com/simonmichael/hledger/commits/master/hledger-install/hledger-install.sh).
 
 
+## 2020/09/07 hledger 1.19.1
+
+### hledger cli 1.19.1
+
+- Fix alignment of coloured numbers (#1345, #1349, Stephen Morgan)
+
+- Fix a regression in account type autodetection for accounts with
+  capitalised names. (#1341)
+
+- Allow megaparsec 9
+
+### hledger-ui 1.19.1
+
+- Allow megaparsec 9
+
+### hledger-web 1.19.1
+
+- Allow megaparsec 9
+
+- Drop redundant semigroups dependency (Felix Yan)
+
 ## 2020/09/01 hledger-1.19
 
 **New aregister and codes commands,
