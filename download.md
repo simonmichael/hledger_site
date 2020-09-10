@@ -116,14 +116,14 @@ and please [report](index.html#help) any trouble.
     <tr>
       <td>
         <div class="badges">
-          <a href="https://github.com/search?l=&o=desc&q=%22automatic+Haskell+package+set+update%22+repo%3ANixOS%2Fnixpkgs+filename%3Ahaskell-packages.nix&s=committer-date&type=Commits"><img alt="Nix" src="https://img.shields.io/badge/Nix_package-1.18.1-red.svg" /></a>
+          <a href="https://github.com/search?l=&o=desc&q=%22automatic+Haskell+package+set+update%22+repo%3ANixOS%2Fnixpkgs+filename%3Ahaskell-packages.nix&s=committer-date&type=Commits"><img alt="Nix" src="https://img.shields.io/badge/Nix_package-1.19-red.svg" /></a>
         </div>
         <divC class="distro"><a href="https://nixos.org/nix">Nix</a></div>
         <div class="notes">Linux, Mac</div>
       </td>
       <td>
         <div class="command">
-            nix-env -f https://github.com/NixOS/nixpkgs/archive/b8b74435.tar.gz -iA hledger hledger-web hledger-ui
+            nix-env -f https://github.com/NixOS/nixpkgs/archive/8065407b.tar.gz -iA hledger hledger-web hledger-ui
         </div>
         <div class="notes">
             Binaries may not yet be fully cached for your platform, try with --dry-run to estimate how much building will be required.
