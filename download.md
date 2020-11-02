@@ -437,7 +437,7 @@ please [send improvements for this list](#comment)):
 <table>
   <tr>
     <td width="1%" style="white-space:nowrap;"><div class="distro">Debian, Ubuntu:</div></td>
-    <td><div class="command" style="margin:0;"> sudo apt install libtinfo-dev </div></td>
+    <td><div class="command" style="margin:0;"> sudo apt install libtinfo-dev libtinfo5 </div></td>
   </tr>
   <tr>
     <td><div class="distro">Fedora, RHEL:</div></td>
