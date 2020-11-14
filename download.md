@@ -450,8 +450,9 @@ please [send improvements for this list](#comment)):
 On unix systems, when building or running hledger (and GHC haskell
 programs in general), the `LANG` environment variable must be set to a
 UTF-8-aware locale, or you'll see errors (eg: "*invalid byte
-sequence*") when processing non-ascii text. Check that LANG's value
-mentions UTF-8, and if not, change it:
+sequence*" or "*mkTextEncoding: invalid argument*") when processing
+non-ascii text. Check that LANG's value mentions UTF-8, and if not,
+change it:
 
 ```shell
 $ echo $LANG
