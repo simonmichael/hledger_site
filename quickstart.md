@@ -129,11 +129,11 @@ Fastest: [download binaries](download.html), eg one of:
 ```
 $ apt install hledger hledger-ui hledger-web
 $ brew install hledger
-$ curl -LO https://github.com/simonmichael/hledger/releases/download/1.18.1/hledger-ubuntu.zip; unzip hledger-ubuntu.zip  # also macos, windows, etc.
+$ curl -LO https://github.com/simonmichael/hledger/releases/download/1.19.1/hledger-ubuntu.zip; unzip hledger-ubuntu.zip  # also macos, windows, etc.
 $ dnf install hledger
 $ docker pull dastapov/hledger
 $ make -C /usr/ports/openbsd-wip/productivity/hledger install
-$ nix-env -f https://github.com/NixOS/nixpkgs/archive/2f9a9064.tar.gz -iA hledger hledger-web hledger-ui 
+$ nix-env -f https://github.com/NixOS/nixpkgs/archive/cacf9f44.tar.gz -iA hledger hledger-web hledger-ui 
 $ pacman -S hledger hledger-ui hledger-web
 $ sudo layman -a haskell && sudo emerge hledger hledger-ui hledger-web
 $ xbps-install -S hledger hledger-ui hledger-web
@@ -146,8 +146,8 @@ Freshest: [build from source](download.html#building-from-source):
 3. then one of:
    <pre>
    $ curl -sO https://raw.githubusercontent.com/simonmichael/hledger/master/hledger-install/hledger-install.sh; less hledger-install.sh; bash hledger-install.sh
-   $ <a href="https://haskellstack.org">stack</a> update; stack install --resolver=lts hledger-lib-1.18.1 hledger-1.18.1 hledger-ui-1.18.1 hledger-web-1.18.1 --silent
-   $ <a href="https://www.haskell.org/cabal/#install-upgrade">cabal</a> update; cabal install hledger-1.18.1 hledger-web-1.18.1 hledger-ui-1.18.1
+   $ <a href="https://haskellstack.org">stack</a> update; stack install --resolver=lts hledger-lib-1.19.1 hledger-1.19.1 hledger-ui-1.19.1 hledger-web-1.19.1 --silent
+   $ <a href="https://www.haskell.org/cabal/#install-upgrade">cabal</a> update; cabal install hledger-1.19.1 hledger-web-1.19.1 hledger-ui-1.19.1
    $ git clone https://github.com/simonmichael/hledger; cd hledger; stack install  # super fresh
    </pre>
 
@@ -448,7 +448,7 @@ $ hledger-ui
 
 $ hledger
 -------------------------------------------------------------------------------
-hledger 1.18.99
+hledger 1.19.1
 Usage: hledger COMMAND [OPTIONS] [-- ADDONCMDOPTIONS]
 Commands (+ addons found in $PATH):
 ...
