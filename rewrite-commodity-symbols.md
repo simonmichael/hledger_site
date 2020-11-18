@@ -2,32 +2,39 @@
 
 Three ways to temporarily change a commodity symbol, eg to show "$" as "USD" in a report:
 
-1. postprocess
+## Postprocess
 
-Simplest. Here, we use `sed`:
+Simplest. 
+Here, we use `sed` to replace all `$` with `USD` in the output:
 
 ```shell
-hledger bal | sed 's/\$/USD /g'
+$ hledger bal | sed 's/\$/USD /g'
 ```
 
-2. preprocess
+## Preprocess
 
-Most powerful, eg you can merge multiple symbols into a single commodity this way:
+Most powerful. 
+We rewrite the journal file before hledger processes it. You can merge multiple symbols into one this way, eg if inconsistent symbols have been used for a currency:
 
 ```shell
-cat $LEDGER_FILE | sed 's/\$/USD /g' | hledger -f- bal
+$ cat $LEDGER_FILE | sed 's/\$/USD /g' | hledger -f- bal
 ```
 
-3. value conversion
+## Value conversion
 
-Most portable, requiring only hledger.
-This assumes your other P directives, if any, don't interfere:
+Most portable, requires only hledger.
+We create a dummy one-to-one [market price](journal.html#declaring-market-prices) between the old and new commodity symbols,
+and use [market value reports](hledger.html#v-value) to convert.
+This assumes your other market prices, if any, don't interfere.
 
-Create a dummy one-to-one conversion rate between the two commodity symbols,
-in your main journal or in a separate file you can include only when needed:
+You can add the market price in the main journal:
 ```shell
-echo 'P 2000-01-01 $ 1 USD' >> rewrite-symbols.j
+$ echo 'P 2000-01-01 $ 1 USD' >> $LEDGER_FILE  # once
+$ hledger bal -V
 ```
+
+Or in a separate file that you include only when needed:
 ```shell
-hledger -f rewrite-symbols.j -f $LEDGER_FILE bal -V
+$ echo 'P 2000-01-01 $ 1 USD' >> rewrite-symbols.j  # once
+$ hledger bal -V -f $LEDGER_FILE -f rewrite-symbols.j
 ```
