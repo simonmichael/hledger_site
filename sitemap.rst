@@ -59,6 +59,7 @@ hledger
    report-examples
    queries
    rewrite-account-names
+   rewrite-commodity-symbols
    tags-tutorial
 
 .. toctree::
