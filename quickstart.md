@@ -178,26 +178,30 @@ But here are some common changes people make sooner or later, so why not now:
   ```
 
 - A [LEDGER_FILE](hledger.html#environment) environment variable, so you won't
-  have to add -f FILE to every command:
+  have to type "-f ~/finance/2020.journal" with every command:
 
   ```shell
   $ echo "export LEDGER_FILE=~/finance/2020.journal" >> ~/.bashrc
   $ source ~/.bashrc
   ```
+  Or if environment variables annoy you, symbolic-link the file to ~/.hledger.journal:
+  ```shell
+  $ ln -s ~/finance/2020.journal ~/.hledger.journal
+  ```
 
 - Some optional [directives](journal.html#directives), useful especially with
-  non-english account names (replace the account names below with the names
-  you will be using):
+  non-english account names:
 
   ```shell
   $ cat > 2020.journal
 
-  ; Declare top level accounts, setting their types and display order
+  ; Declare top level accounts, setting their types and display order;
+  ; Replace these account names with yours; it helps commands like bs and is detect them.
   account assets      ; type:A, things I own
   account liabilities ; type:L, things I owe
-  account equity      ; type:E, net worth, A - L
-  account revenues    ; type:R, money sources
-  account expenses    ; type:X, money sinks
+  account equity      ; type:E, net worth or "total investment"; equal to A - L
+  account revenues    ; type:R, inflow categories; part of E, separated for reporting
+  account expenses    ; type:X, outflow categories; part of E, separated for reporting
 
   ; Declare commodities/currencies and their decimal mark, digit grouping,
   ; number of decimal places..
@@ -212,7 +216,7 @@ But here are some common changes people make sooner or later, so why not now:
   ```shell
   $ git init
   $ git add 2020.journal
-  $ git commit 2020.journal -m 'start journal for 2020'
+  $ git commit 2020.journal -m 'start 2020 journal'
   ```
 
 - Remember to also keep *backups*.
@@ -222,7 +226,7 @@ But here are some common changes people make sooner or later, so why not now:
 ## Enter transactions
 
 Recording transactions manually may sound tedious, but with a good text editor
-or other tools it can be very fast. It also provides greatest financial
+or other data entry tool it can be fast. It also provides greatest financial
 awareness. Some people enter everything by hand for this reason.
 
 Run the add command for assisted data entry in the terminal ([tutorial](add.html)):
