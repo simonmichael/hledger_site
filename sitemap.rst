@@ -66,7 +66,7 @@ hledger
    :caption: Cookbook: Accounting tasks
    :maxdepth: 3
 
-   budgeting-and-forecasting
+   budgeting
    common-journal-entries
    foreign-trip-expenses
    loans
