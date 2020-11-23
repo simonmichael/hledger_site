@@ -96,6 +96,7 @@ hledger
    about-real-world-setup-docs
    Full-fledged Hledger tutorial <https://github.com/adept/full-fledged-hledger>
    Hledger Flow tutorial & slideshow <https://github.com/apauley/hledger-flow>
+   rotorkunstkultur's German setup <https://github.com/rotorkunstkultur/rtrledger>
    simons-setup
 
 .. toctree::
