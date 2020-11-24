@@ -110,10 +110,10 @@ if %amount -
 
 Method 2:
 You can use --alias options to rewrite those account names.
-Currently --alias doesn't affect CSV files, so you have to pipe it through another hledger invocation:
+With hledger 1.20+:
 
 ```shell
-$ hledger -f checking.csv print | hledger -f- --alias income:unknown=Income:Misc --alias expenses:unknown=Expenses:Misc print
+$ hledger -f checking.csv --alias income:unknown=Income:Misc --alias expenses:unknown=Expenses:Misc print
 2012-03-22 DEPOSIT
     assets:bank:checking          $50.00
     Income:Misc                  $-50.00
@@ -122,6 +122,12 @@ $ hledger -f checking.csv print | hledger -f- --alias income:unknown=Income:Misc
     assets:bank:checking         $-10.00
     assets:bank:savings           $10.00
 
+```
+
+(Before hledger 1.20, --alias only worked with journal format so you had to pipe it like this:)
+
+```shell
+$ hledger -f checking.csv print | hledger -f- --alias income:unknown=Income:Misc --alias expenses:unknown=Expenses:Misc print
 ```
 
 
