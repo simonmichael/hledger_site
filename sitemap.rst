@@ -68,6 +68,7 @@ hledger
 
    budgeting
    common-journal-entries
+   Depreciation <http://rantsideasstuff.com/posts/2018/07/08-depreciation-in-personal-finance-with-hledger/>
    foreign-trip-expenses
    loans
    invoicing
