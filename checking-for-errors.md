@@ -26,9 +26,9 @@ $ hledger stats >/dev/null
 These checks are run by special commands (for now):
 
 - **dates** - transactions are ordered by date (command: [`check-dates`](hledger.html#check-dates))
-- **leafnames** - all account leaf names are unique (command: [`check-dupes`](hledger.html#check-dupes))
-- **tagfiles** - all tag values containing / (a forward slash) exist as file paths (addon command: `hledger-check-tag-files.hs`)
-- **fancyassertions** - more complex balance assertions are passing (addon command: `hledger-check.hs`)
+- **leafnames** - all account leaf names are unique (command: [`check-leafnames`](hledger.html#check-leafnames))
+- **tagfiles** - all tag values containing / (a forward slash) exist as file paths (addon command: `hledger-check-tagfiles.hs`)
+- **fancyassertions** - more complex balance assertions are passing (addon command: `hledger-check-fancyassertions.hs`)
 
 The addon commands are available in <https://github.com/simonmichael/hledger/tree/master/bin> (cf [Scripting](scripting.html)).
 
