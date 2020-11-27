@@ -1,13 +1,17 @@
 # Checking for errors
 
 hledger can check your data in various ways. 
-Here are some checks/desirable properties, named for convenience, and when they happen.
+Here are some checks/desirable properties, with short names for convenience:
 
 These checks are run always (with all hledger commands):
 
 - `parseable` - data files are well-formed and can be successfully parsed
 - `autobalanced` - all transactions are balanced, possibly by converting commodities using [transaction prices] or automatically-inferred transaction prices
 - `assertions` - all [balance assertions] are passing (except with `-I`/`--ignore-assertions`)
+
+[transaction prices]: journal.html#transaction-prices
+[balance assertions]: journal.html#balance-assertions
+[strict mode]: hledger.html#strict-mode
 
 These checks are run only in hledger-1.19.99's [strict mode] (with `-s`/`--strict`):
 
