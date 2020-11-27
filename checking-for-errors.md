@@ -5,8 +5,8 @@ Here are some checks/desirable properties, with short names for convenience:
 
 These checks are run always (with all hledger commands):
 
-- `parseable` - data files are well-formed and can be successfully parsed
-- `autobalanced` - all transactions are balanced, possibly by converting commodities using [transaction prices] or automatically-inferred transaction prices
+- `parseable` - data files are well-formed and can be [successfully parsed](hledger.html#input-files)
+- `autobalanced` - all transactions are [balanced](journal.html#postings), possibly by converting commodities using [transaction prices] (see case 1 or 2) or automatically-inferred transaction prices (case 3)
 - `assertions` - all [balance assertions] are passing (except with `-I`/`--ignore-assertions`)
 
 [transaction prices]: journal.html#transaction-prices
@@ -15,7 +15,7 @@ These checks are run always (with all hledger commands):
 
 These checks are run only in hledger-1.19.99's [strict mode] (with `-s`/`--strict`):
 
-- `accounts` - all account names used by transactions have been declared
+- `accounts` - all account names used by transactions [have been declared](journal.html#account-existence)
 
 To perform the above checks, run any command, eg
 (on Windows, omit the `>/dev/null` part):
@@ -25,8 +25,8 @@ $ hledger stats >/dev/null
 
 These checks are run by special commands (for now):
 
-- `dates` - transactions are ordered by date (command: `check-date`)
-- `leafnames` - all account leaf names are unique (command: `check-dupes`)
+- `dates` - transactions are ordered by date (command: [`check-dates`](hledger.html#check-dates))
+- `leafnames` - all account leaf names are unique (command: [`check-dupes`](hledger.html#check-dupes))
 - `tagfiles` - all tag values containing / (a forward slash) exist as file paths (addon command: `hledger-check-tag-files.hs`)
 - `fancyassertions` - more complex balance assertions are passing (addon command: `hledger-check.hs`)
 
