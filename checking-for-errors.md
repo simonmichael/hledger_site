@@ -5,9 +5,9 @@ Here are some checks/desirable properties, with short names for convenience:
 
 These checks are run always (with all hledger commands):
 
-- `parseable` - data files are well-formed and can be [successfully parsed](hledger.html#input-files)
-- `autobalanced` - all transactions are [balanced](journal.html#postings), inferring missing amounts where necessary, and possibly converting commodities using [transaction prices] or automatically-inferred transaction prices
-- `assertions` - all [balance assertions] are passing (except with `-I`/`--ignore-assertions`)
+- **parseable** - data files are well-formed and can be [successfully parsed](hledger.html#input-files)
+- **autobalanced** - all transactions are [balanced](journal.html#postings), inferring missing amounts where necessary, and possibly converting commodities using [transaction prices] or automatically-inferred transaction prices
+- **assertions** - all [balance assertions] are passing (except with `-I`/`--ignore-assertions`)
 
 [transaction prices]: journal.html#transaction-prices
 [balance assertions]: journal.html#balance-assertions
@@ -15,7 +15,7 @@ These checks are run always (with all hledger commands):
 
 These checks are run only in hledger-1.19.99's [strict mode] (with `-s`/`--strict`):
 
-- `accounts` - all account names used by transactions [have been declared](journal.html#account-existence)
+- **accounts** - all account names used by transactions [have been declared](journal.html#account-existence)
 
 To perform the above checks, run any command, eg
 (on Windows, omit the `>/dev/null` part):
@@ -25,10 +25,10 @@ $ hledger stats >/dev/null
 
 These checks are run by special commands (for now):
 
-- `dates` - transactions are ordered by date (command: [`check-dates`](hledger.html#check-dates))
-- `leafnames` - all account leaf names are unique (command: [`check-dupes`](hledger.html#check-dupes))
-- `tagfiles` - all tag values containing / (a forward slash) exist as file paths (addon command: `hledger-check-tag-files.hs`)
-- `fancyassertions` - more complex balance assertions are passing (addon command: `hledger-check.hs`)
+- **dates** - transactions are ordered by date (command: [`check-dates`](hledger.html#check-dates))
+- **leafnames** - all account leaf names are unique (command: [`check-dupes`](hledger.html#check-dupes))
+- **tagfiles** - all tag values containing / (a forward slash) exist as file paths (addon command: `hledger-check-tag-files.hs`)
+- **fancyassertions** - more complex balance assertions are passing (addon command: `hledger-check.hs`)
 
 The addon commands are available in <https://github.com/simonmichael/hledger/tree/master/bin> (cf [Scripting](scripting.html)).
 
@@ -36,15 +36,15 @@ The addon commands are available in <https://github.com/simonmichael/hledger/tre
 
 These are some checks we might add in future:
 
-- `accountsactive` - for each account used, if there is posting with an `open:` [tag](journal.html#tags), 
+- **accountsactive** - for each account used, if there is posting with an `open:` [tag](journal.html#tags), 
   it must have a corresponding posting with a `close:` tag, and all other postings 
   must be chronologically between (and if on the same date, textually between)
   open and close postings. ("Accounts are posted to only within their declared active period.")
-- `commodities` - all commodity symbols used have been declared
-- `payees` - all payee names used have been declared
-- `pricebalanced` - transactions are balanced, possibly using explicit transaction prices but not auto-inferred ones
-- `fullybalanced` - transactions are balanced in each commodity, without needing any conversions
-- `explicitamounts` - all transaction amounts have been recorded explicitly
+- **commodities** - all commodity symbols used have been declared
+- **payees** - all payee names used have been declared
+- **pricebalanced** - transactions are balanced, possibly using explicit transaction prices but not auto-inferred ones
+- **fullybalanced** - transactions are balanced in each commodity, without needing any conversions
+- **explicitamounts** - all transaction amounts have been recorded explicitly
 
 ## Other ways to detect problems
 
