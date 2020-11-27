@@ -51,6 +51,7 @@ hledger
    track-changes-with-version-control
    import-csv
    export
+   checking-for-errors
 
 .. toctree::
    :caption: Cookbook: Reporting
