@@ -6,7 +6,7 @@ Here are some checks/desirable properties, with short names for convenience:
 These checks are run always (with all hledger commands):
 
 - `parseable` - data files are well-formed and can be [successfully parsed](hledger.html#input-files)
-- `autobalanced` - all transactions are [balanced](journal.html#postings), possibly by converting commodities using [transaction prices] (see case 1 or 2) or automatically-inferred transaction prices (case 3)
+- `autobalanced` - all transactions are [balanced](journal.html#postings), inferring missing amounts where necessary, and possibly converting commodities using [transaction prices] or automatically-inferred transaction prices
 - `assertions` - all [balance assertions] are passing (except with `-I`/`--ignore-assertions`)
 
 [transaction prices]: journal.html#transaction-prices
@@ -32,16 +32,21 @@ These checks are run by special commands (for now):
 
 The addon commands are available in <https://github.com/simonmichael/hledger/tree/master/bin> (cf [Scripting](scripting.html)).
 
+## Todo / maybe
+
 These are some checks we might add in future:
 
+- `accountsactive` - for each account used, if there is posting with an `open:` [tag](journal.html#tags), 
+  it must have a corresponding posting with a `close:` tag, and all other postings 
+  must be chronologically between (and if on the same date, textually between)
+  open and close postings. ("Accounts are posted to only within their declared active period.")
 - `commodities` - all commodity symbols used have been declared
 - `payees` - all payee names used have been declared
 - `pricebalanced` - transactions are balanced, possibly using explicit transaction prices but not auto-inferred ones
 - `fullybalanced` - transactions are balanced in each commodity, without needing any conversions
 - `explicitamounts` - all transaction amounts have been recorded explicitly
 
-
-## Other ways
+## Other ways to detect problems
 
 Commit some hledger report output into your version control system.
 Then you can detect any changes, eg:
