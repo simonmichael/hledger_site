@@ -3,7 +3,7 @@
 hledger can check your data in various ways. 
 Here are some checks/desirable properties, with short names for convenience:
 
-These checks are run always (with all hledger commands):
+These checks are run always (with all hledger commands, eg `hledger stats >/dev/null`):
 
 - **parseable** - data files are well-formed and can be [successfully parsed](hledger.html#input-files)
 - **autobalanced** - all transactions are [balanced](journal.html#postings), inferring missing amounts where necessary, and possibly converting commodities using [transaction prices] or automatically-inferred transaction prices
@@ -13,20 +13,10 @@ These checks are run always (with all hledger commands):
 [balance assertions]: journal.html#balance-assertions
 [strict mode]: hledger.html#strict-mode
 
-These checks are run only in hledger-1.19.99's [strict mode] (with `-s`/`--strict`):
+These checks are run only in hledger-1.19.99's [strict mode] (eg `hledger stats --strict`):
 
 - **accounts** - all account names used by transactions [have been declared](journal.html#account-error-checking)
 - **commodities** - all commodity symbols used [have been declared](journal.html#commodity-error-checking)
-
-To perform the above checks, run any command, eg
-(the `>/dev/null` part hides the usual output, on Windows it's something different):
-```shell
-$ hledger stats >/dev/null
-```
-or
-```shell
-$ hledger stats --strict >/dev/null
-```
 
 These checks are run by special commands (for now):
 
