@@ -19,9 +19,13 @@ These checks are run only in hledger-1.19.99's [strict mode] (with `-s`/`--stric
 - **commodities** - all commodity symbols used [have been declared](journal.html#commodity-error-checking)
 
 To perform the above checks, run any command, eg
-(on Windows, omit the `>/dev/null` part):
+(the `>/dev/null` part hides the usual output, on Windows it's something different):
 ```shell
 $ hledger stats >/dev/null
+```
+or
+```shell
+$ hledger stats --strict >/dev/null
 ```
 
 These checks are run by special commands (for now):
@@ -63,5 +67,5 @@ is run and required to succeed before each commit. Eg:
 ```bash
 #!/bin/bash
 set -e
-hledger stats --strict
+hledger stats -s
 ```
