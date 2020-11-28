@@ -15,7 +15,8 @@ These checks are run always (with all hledger commands):
 
 These checks are run only in hledger-1.19.99's [strict mode] (with `-s`/`--strict`):
 
-- **accounts** - all account names used by transactions [have been declared](journal.html#account-existence)
+- **accounts** - all account names used by transactions [have been declared](journal.html#account-error-checking)
+- **commodities** - all commodity symbols used [have been declared](journal.html#commodity-error-checking)
 
 To perform the above checks, run any command, eg
 (on Windows, omit the `>/dev/null` part):
@@ -40,17 +41,27 @@ These are some checks we might add in future:
   it must have a corresponding posting with a `close:` tag, and all other postings 
   must be chronologically between (and if on the same date, textually between)
   open and close postings. ("Accounts are posted to only within their declared active period.")
-- **commodities** - all commodity symbols used have been declared
 - **payees** - all payee names used have been declared
 - **pricebalanced** - transactions are balanced, possibly using explicit transaction prices but not auto-inferred ones
 - **fullybalanced** - transactions are balanced in each commodity, without needing any conversions
 - **explicitamounts** - all transaction amounts have been recorded explicitly
 
-## Other ways to detect problems
+## Comparing report output
 
 Commit some hledger report output into your version control system.
 Then you can detect any changes, eg:
 
 ```shell
 $ hledger COMMAND > report.txt; git diff -- report.txt
+```
+
+## Pre-commit hook
+
+Version control systems often support a "pre-commit hook", a script which
+is run and required to succeed before each commit. Eg:
+
+```bash
+#!/bin/bash
+set -e
+hledger stats --strict
 ```
