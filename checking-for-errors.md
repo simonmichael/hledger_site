@@ -20,8 +20,8 @@ These checks are run only in hledger-1.19.99's [strict mode] (eg `hledger stats 
 
 These checks are run by special commands (for now):
 
-- **dates** - transactions are ordered by date (command: [`check-dates`](hledger.html#check-dates))
-- **leafnames** - all account leaf names are unique (command: [`check-leafnames`](hledger.html#check-leafnames))
+- **dates** - transactions are ordered by date (command: [`hledger check-dates`](hledger.html#check-dates))
+- **leafnames** - all account leaf names are unique (command: [`hledger check-leafnames`](hledger.html#check-leafnames))
 - **tagfiles** - all tag values containing / (a forward slash) exist as file paths (addon command: `hledger-check-tagfiles.hs`)
 - **fancyassertions** - more complex balance assertions are passing (addon command: `hledger-check-fancyassertions.hs`)
 
