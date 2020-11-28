@@ -59,3 +59,11 @@ is run and required to succeed before each commit. Eg:
 set -e
 hledger stats -s
 ```
+
+## Diffing
+
+Here's another way to check for undeclared accounts, that works with older hledger versions,
+showing some diff tricks:
+```shell
+$ diff -U0 --label "Unused Accounts" --label "Undeclared Accounts" <(hledger accounts --declared) <(hledger accounts --used)
+```
