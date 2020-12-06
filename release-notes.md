@@ -30,6 +30,167 @@ Changes in hledger-install.sh are shown
 [here](https://github.com/simonmichael/hledger/commits/master/hledger-install/hledger-install.sh).
 
 
+
+## 2020-12-05 hledger-1.20
+
+**Strict mode; check command; rendering, speed, and valuation fixes**
+
+### project-wide changes 1.20
+
+- examples: clean up & add more budgeting examples; stripe csv
+
+- a hie.yaml file has been added, so hledger source loads
+  easily in IDEs supporting haskell-language-server
+
+- The functional tests in tests/ have been moved into the respective
+  packages, eg hledger/test/ and hledger-ui/test/.
+
+- Shake cabalfiles: now gives an error when it fails
+
+- make bench: add some large tabular reports; 
+  run just the slowest commands by default;
+  run after make (func)test
+
+### hledger cli 1.20
+
+#### general
+
+- strict mode: with -s/--strict, hledger requires that
+  all accounts and commodities are declared with directives.
+
+- Reverted a stripAnsi change in 1.19.1 that caused a 3x slowdown of amount rendering
+  in terminal reports. (#1350)
+
+- Amount and table rendering has been improved, so that stripAnsi is no longer needed.
+  This speeds up amount rendering in the terminal, speeding up some reports by 10% or more since 1.19.
+  (Stephen Morgan)
+
+- Amount eliding no longer displays corrupted ANSI codes (#1352, Stephen Morgan)
+
+- Eliding of multicommodity amounts now makes better use of available space,
+  avoiding unnecessary eliding (showing as many amounts as possible within
+  32 characters). (Stephen Morgan)
+
+- Command line help for --no-elide now mentions that it also disables eliding of
+  multicommodity amounts.
+
+- Query terms containing quotes (eg to match account names containing quotes)
+  now work properly. (#1368, Stephen Morgan)
+
+- cli, journal: Date range parsing is more robust, fixing failing/incorrect cases such as: (Stephen Morgan)
+
+  - a hyphenated range with just years (`2017-2018`)
+  - a hyphenated date with no day in a hyphenated range (`2017-07-2018`)
+  - a dotted date with no day in a dotted range (`2017.07..2018.02`)
+ 
+- Debug output is prettier (eg, in colour), using pretty-simple instead of pretty-show.
+
+- csv, timedot, timeclock files now respect command line --alias options,
+  like journal files.  (#859)
+
+- Market price lookup for value reports is now more robust, fixing several bugs
+  (and debug output is more informative).
+  There has been a slight change in functionality: when chaining prices,
+  we now prefer chains of all "forward" prices, even if longer, with chains
+  involving reverse prices being the last resort.
+  (#1402)
+
+#### commands
+
+- add: number style (eg thousands separators) no longer disturbs the value
+  that is offered as default. (#1378)
+
+- bal: --invert now affects -S/--sort-amount, reversing the order. (#1283, #1379) (Stephen Morgan)
+
+- bal: --budget reports no longer insert an extra space inside the brackets. (Stephen Morgan)
+
+- bal, is, bs --change: 
+  Valued multiperiod balance change reports now show changes of value, 
+  rather than the value of changes. (#1353, Stephen Morgan)
+
+- bal: improve budget, MultiBalanceReport debug output
+  Comply with debug levels policy, clarify some labels.
+
+- bal: support CSV output for --budget reports (#1155)
+
+- check: A new command which consolidating the various check-* commands.
+  It runs the default, strict, or specified checks and produces
+  no output and a zero exit code if all is well.
+
+- check-dates: this command is deprecated and will be removed
+  in next release; use "hledger check ordereddates" instead.
+
+- check-dupes: this command is deprecated and will be removed
+  in next release; use "hledger check uniqueleafnames" instead.
+
+- import: The journal's commodity styles (declared or inferred) are now applied
+  to imported amounts, overriding their original number format.
+
+- roi: TWR now handles same-day pnl changes and cashflows,
+  calculation failure messages have been improved, and
+  the documentation includes more detail and examples.
+  (#1398) (Dmitry Astapov)
+
+#### journal format
+
+- The journal's commodity styles are now applied to forecasted transactions. (#1371)
+
+- journal, csv: commodity style is now inferred from the first amount, as documented,
+  not the last. This was "working wrongly" since hledger 1.12..
+
+- A zero market price no longer causes "Ratio has zero denominator" error
+  in valued reports. (#1373)
+
+#### csv format
+
+- The new `decimal-mark` rule allows reliable number parsing
+  when CSV numbers contain digit group marks (eg thousands separators).
+
+- The CSV reader's verbose "assignment" debug output is now at level 9.
+
+### hledger-ui 1.20
+
+- When entering a query with `/`, malformed queries/regular expressions
+  no longer cause the program to exit. (Stephen Morgan)
+
+- Eliding of multicommodity amounts now makes better use of available space. (Stephen Morgan)
+
+- `E` now parses the `HLEDGER_UI_EDITOR` or `EDITOR` environment variable
+  correctly on Windows (ignoring the file extension), so if you have that set
+  it should be better at opening your editor at the correct line.
+
+- `E` now supports positioning when `HLEDGER_UI_EDITOR` or `EDITOR` 
+  is VS Code ("`code`") (#1359)
+
+- hledger-ui now has a (human-powered) test suite.
+
+### hledger-web 1.20
+
+- hledger-web's test suite is re-enabled, now included in the main executable.
+  hledger-web --test [-- HSPECARGS] runs it.
+
+- Fix --forecast, broken in hledger-web since 1.18 (#1390)
+
+- Fix unescaped slashes in hledger-web description on hackage  (TANIGUCHI Kohei)
+
+- The hledger-web version string is now provided at /version, as JSON (#1152)
+
+- The session file (hledger-web_client_session_key.aes) is now written in 
+  $XDG_DATA_DIR rather than the current directory.
+  Eg on non-Windows systems this is ~/.cache/ by default (cf
+  https://hackage.haskell.org/package/directory/docs/System-Directory.html#t:XdgDirectory).
+  (#1344) (Félix Sipma)
+
+### credits 1.20
+
+This release was brought to you by
+Simon Michael,
+Stephen Morgan,
+Dmitry Astapov,
+TANIGUCHI Kohei,
+legrostdg.
+
+
 ## 2020/09/07 hledger 1.19.1
 
 ### hledger cli 1.19.1
