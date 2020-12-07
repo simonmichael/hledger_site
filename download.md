@@ -75,7 +75,7 @@ div.badges {
 }
 </style>
 
-The current hledger release is **1.19.1** ([release notes](release-notes)). Below are lots of ways to install:\
+The current hledger release is *1.20** ([release notes](release-notes)). Below are lots of ways to install: *2020-12-06: not yet updated*\
 \- [Binary packages](#binary-packages) install quickly\
 \- [Building from source](#building-from-source) takes longer but ensures you get the latest release.\
 You may also need some [C libraries](#c-libraries) or a [UTF-8 locale](#utf-8-locale).\
