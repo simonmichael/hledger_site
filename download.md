@@ -514,22 +514,30 @@ already-cached binaries.)
 
 ### Build tips
 
-- You can build hledger wherever [GHC] is supported. It could take up
-  to half an hour (or more), ~1G of disk space and ~4G of RAM. It's
-  normally a reliable process you don't have to babysit.
+- You can build hledger from source wherever [GHC] is supported.
 
-- Building in less RAM may fail with an error, or may use swap space
-  and take a very long time (overnight). If a low-RAM build dies, try
-  adding `-j1` to the stack/cabal install command, and retry a few
-  times, or ask for [help].
+- A build can require up to 2G of free RAM and disk space, 
+  and could take from a minute to an hour.
+  It's normally a reliable process requiring no babysitting.
 
-- It's ok to kill a build and retry it later, you won't lose progress.
-
-- You can add `--dry-run` to the stack/cabal/nix install command to
-  see how much building remains.
-
-- You can reduce build time by omitting the hledger-web and hledger-ui
+- You can use less resources by omitting the hledger-ui and hledger-web
   packages from the commands above.
+
+- It's ok to kill a build and rerun the command later; you won't lose progress.
+
+- You can add `--dry-run` to the stack/cabal/nix install commands
+  to see how much building remains.
+
+- If you already have hledger tools installed, 
+  they will usually be overwritten by the new version.
+  If you have them installed in multiple places in your PATH, 
+  you may see a warning, reminding you to remove or rename the old executables.
+
+- If you try to build with insufficient free RAM,
+  it may use swap space and take a very long time (overnight).
+  Or it may fail with an error; in this case try adding `-j1`
+  to the stack/cabal install command and retry a few times, 
+  or ask for [help].
 
 - Here are some known build issues and workarounds on certain platforms:
 
