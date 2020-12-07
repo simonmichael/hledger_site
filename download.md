@@ -490,7 +490,7 @@ Or, if you prefer to run [stack] yourself:
 </div>
 
 This installs the main hledger tools in ~/.local/bin.
-Your <code>stack --version</code> should be not too ancient; use a recent release (2.3.1+) for best results.
+Your <code>stack --version</code> should be not too ancient; use a recent release (2.5.1+) for best results.
 You can usually upgrade stack quickly with <code>stack upgrade</code>.
 Windows users: the 64-bit version of stack is preferable;
 and you should omit hledger-ui from this command, unless you are in [WSL].
