@@ -31,6 +31,11 @@ Changes in hledger-install.sh are shown
 
 
 
+## 2020-12-06 hledger-web-1.20.1
+
+- don't hang when reloading the journal, eg after adding a transaction
+  or editing the file. (#1409)
+
 ## 2020-12-05 hledger-1.20
 
 **Strict mode; check command; rendering, speed, and valuation fixes**
@@ -104,14 +109,13 @@ Changes in hledger-install.sh are shown
 
 - bal: --budget reports no longer insert an extra space inside the brackets. (Stephen Morgan)
 
+- bal: --budget reports now support CSV output (#1155)
+
 - bal, is, bs --change: 
   Valued multiperiod balance change reports now show changes of value, 
   rather than the value of changes. (#1353, Stephen Morgan)
 
-- bal: improve budget, MultiBalanceReport debug output
-  Comply with debug levels policy, clarify some labels.
-
-- bal: support CSV output for --budget reports (#1155)
+- bal: clearer debug output, following debug levels policy
 
 - check: A new command which consolidating the various check-* commands.
   It runs the default, strict, or specified checks and produces
