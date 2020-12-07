@@ -486,7 +486,7 @@ Or, if you prefer to run [stack] yourself:
 
 <div class="builder-command">
   stack update <br>
-  stack install --resolver=lts hledger-lib-1.20 hledger-1.20 hledger-ui-1.20 hledger-web-1.20.1 pretty-simple-4.0.0.0 prettyprinter-1.7.0 --silent
+  stack install --resolver=lts-16 hledger-lib-1.20 hledger-1.20 hledger-ui-1.20 hledger-web-1.20.1 pretty-simple-4.0.0.0 prettyprinter-1.7.0 --silent
 </div>
 
 This installs the main hledger tools in ~/.local/bin.
