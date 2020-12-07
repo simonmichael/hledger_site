@@ -170,11 +170,11 @@ cd pkgsrc && ./bootstrap/bootstrap --prefix=$HOME/pkg --unprivileged --make-jobs
     <tr valign="top">
       <td>
         <div class="badges">
-          <img alt="CI binaries" src="https://img.shields.io/badge/CI_binaries-1.19.1-red.svg" />
+          <img alt="CI binaries" src="https://img.shields.io/badge/CI_binaries-1.20-brightgreen.svg" />
         </div>
       </td>
       <td style="padding-top:10px;">
-        <div class="command" style="margin-bottom:4px;"><a href="https://github.com/simonmichael/hledger/releases/tag/1.19.1">hledger-windows.zip</a></div>
+        <div class="command" style="margin-bottom:4px;"><a href="https://github.com/simonmichael/hledger/releases/tag/1.20">hledger-windows.zip</a></div>
         <div class="notes">
         <!--   <span class="warnings"> -->
         <!--     <\!-- <a href="https://github.com/simonmichael/hledger/issues/1039">#1039</a> -\-> -->
@@ -196,11 +196,11 @@ cd pkgsrc && ./bootstrap/bootstrap --prefix=$HOME/pkg --unprivileged --make-jobs
     <tr valign="top">
       <td>
         <div class="badges">
-          <img alt="CI binaries" src="https://img.shields.io/badge/CI_binaries-1.19.1-red.svg" />
+          <img alt="CI binaries" src="https://img.shields.io/badge/CI_binaries-1.20-brightgreen.svg" />
         </div>
       </td>
       <td style="padding-top:10px;">
-        <div class="command" style="margin-bottom:4px;"><a href="https://github.com/simonmichael/hledger/releases/tag/1.19.1">hledger-macos.zip</a></div>
+        <div class="command" style="margin-bottom:4px;"><a href="https://github.com/simonmichael/hledger/releases/tag/1.20">hledger-macos.zip</a></div>
         <div class="notes"></div>
       </td>
     </tr>
@@ -214,11 +214,11 @@ cd pkgsrc && ./bootstrap/bootstrap --prefix=$HOME/pkg --unprivileged --make-jobs
     <tr valign="top">
       <td>
         <div class="badges">
-          <img alt="CI binaries" src="https://img.shields.io/badge/CI_binaries-1.19.1-red.svg" />
+          <img alt="CI binaries" src="https://img.shields.io/badge/CI_binaries-1.20-brightgreen.svg" />
         </div>
       </td>
       <td style="padding-top:10px;">
-        <div class="command" style="margin-bottom:4px;"><a href="https://github.com/simonmichael/hledger/releases/tag/1.19.1">hledger-ubuntu.zip</a></div>
+        <div class="command" style="margin-bottom:4px;"><a href="https://github.com/simonmichael/hledger/releases/tag/1.20">hledger-ubuntu.zip</a></div>
         <div class="notes"></div>
       </td>
     </tr>
