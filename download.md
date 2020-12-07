@@ -75,7 +75,7 @@ div.badges {
 }
 </style>
 
-The current hledger release is *1.20** ([release notes](release-notes)). Below are lots of ways to install: *2020-12-06: not yet updated*\
+The current hledger release is *1.20** ([release notes](release-notes)). Below are lots of ways to install:\
 \- [Binary packages](#binary-packages) install quickly\
 \- [Building from source](#building-from-source) takes longer but ensures you get the latest release.\
 You may also need some [C libraries](#c-libraries) or a [UTF-8 locale](#utf-8-locale).\
@@ -91,7 +91,7 @@ And, please [report any roadbumps](index.html#help) so we can fix them.
     <tr>
       <td>
         <div class="badges">
-          <a href="https://hub.docker.com/r/dastapov/hledger"><img alt="Docker" src="https://img.shields.io/badge/Docker_image-1.19.1-brightgreen.svg" /></a><br>
+          <a href="https://hub.docker.com/r/dastapov/hledger"><img alt="Docker" src="https://img.shields.io/badge/Docker_image-1.19.1-red.svg" /></a><br>
           <a href="https://hub.docker.com/search?q=hledger&amp;type=image&amp;sort=updated_at&amp;order=desc">more..</a>
         </div>
         <div class="distro"><a href="https://www.docker.com/products/docker-desktop">Docker</a></div>
@@ -116,7 +116,7 @@ And, please [report any roadbumps](index.html#help) so we can fix them.
     <tr>
       <td>
         <div class="badges">
-          <a href="https://github.com/search?l=&o=desc&q=%22automatic+Haskell+package+set+update%22+repo%3ANixOS%2Fnixpkgs+filename%3Ahaskell-packages.nix&s=committer-date&type=Commits"><img alt="Nix" src="https://img.shields.io/badge/Nix_package-1.19.1-brightgreen.svg" /></a>
+          <a href="https://github.com/search?l=&o=desc&q=%22automatic+Haskell+package+set+update%22+repo%3ANixOS%2Fnixpkgs+filename%3Ahaskell-packages.nix&s=committer-date&type=Commits"><img alt="Nix" src="https://img.shields.io/badge/Nix_package-1.19.1-red.svg" /></a>
         </div>
         <divC class="distro"><a href="https://nixos.org/nix">Nix</a></div>
         <div class="notes">Linux, Mac</div>
@@ -170,7 +170,7 @@ cd pkgsrc && ./bootstrap/bootstrap --prefix=$HOME/pkg --unprivileged --make-jobs
     <tr valign="top">
       <td>
         <div class="badges">
-          <img alt="CI binaries" src="https://img.shields.io/badge/CI_binaries-1.19.1-brightgreen.svg" />
+          <img alt="CI binaries" src="https://img.shields.io/badge/CI_binaries-1.19.1-red.svg" />
         </div>
       </td>
       <td style="padding-top:10px;">
@@ -196,7 +196,7 @@ cd pkgsrc && ./bootstrap/bootstrap --prefix=$HOME/pkg --unprivileged --make-jobs
     <tr valign="top">
       <td>
         <div class="badges">
-          <img alt="CI binaries" src="https://img.shields.io/badge/CI_binaries-1.19.1-brightgreen.svg" />
+          <img alt="CI binaries" src="https://img.shields.io/badge/CI_binaries-1.19.1-red.svg" />
         </div>
       </td>
       <td style="padding-top:10px;">
@@ -214,7 +214,7 @@ cd pkgsrc && ./bootstrap/bootstrap --prefix=$HOME/pkg --unprivileged --make-jobs
     <tr valign="top">
       <td>
         <div class="badges">
-          <img alt="CI binaries" src="https://img.shields.io/badge/CI_binaries-1.19.1-brightgreen.svg" />
+          <img alt="CI binaries" src="https://img.shields.io/badge/CI_binaries-1.19.1-red.svg" />
         </div>
       </td>
       <td style="padding-top:10px;">
@@ -236,7 +236,7 @@ cd pkgsrc && ./bootstrap/bootstrap --prefix=$HOME/pkg --unprivileged --make-jobs
     <tr>
       <td>
         <div class="badges">
-          <a href="https://gentoo.zugaina.org/Search?search=hledger"><img alt="Gentoo" src="https://img.shields.io/badge/Gentoo_package-1.19.1-brightgreen.svg" /></a>
+          <a href="https://gentoo.zugaina.org/Search?search=hledger"><img alt="Gentoo" src="https://img.shields.io/badge/Gentoo_package-1.19.1-red.svg" /></a>
         </div>
         <div class="distro">Gentoo</div>
       </td>
@@ -486,7 +486,7 @@ Or, if you prefer to run [stack] yourself:
 
 <div class="builder-command">
   stack update <br>
-  stack install --resolver=lts hledger-lib-1.19.1 hledger-1.19.1 hledger-ui-1.19.1 hledger-web-1.19.1 --silent
+  stack install --resolver=lts hledger-lib-1.20 hledger-1.20 hledger-ui-1.20 hledger-web-1.20.1 --silent
 </div>
 
 This installs the main hledger tools in ~/.local/bin.
@@ -500,7 +500,7 @@ Or, if you prefer to run [cabal] yourself:
 <div class="builder-command">
   cabal update <br>
   cabal install alex happy<br>
-  cabal install hledger-1.19.1 hledger-ui-1.19.1 hledger-web-1.19.1
+  cabal install hledger-1.20 hledger-ui-1.20 hledger-web-1.20.1
 </div>
 
 This installs the main hledger tools in ~/.cabal/bin.
@@ -628,11 +628,11 @@ Eg:
 
 <div class="command">
 $ hledger --version <br>
-hledger 1.19.1 <br>
+hledger 1.20 <br>
 $ hledger-ui --version <br>
-hledger-ui 1.19.1 <br>
+hledger-ui 1.20 <br>
 $ hledger web --version <br>
-hledger-web 1.19.1 <br>
+hledger-web 1.20.1 <br>
 </div>
 
 And you could see the unit tests pass (just for fun):
