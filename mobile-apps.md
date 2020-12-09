@@ -3,8 +3,7 @@
 Entering expenses on the spot using a mobile device can be convenient. 
 One of the challenges is finding apps that focus on making this efficient. 
 Here are some options. See also:
-
-- <https://github.com/bradyt/cone/wiki/Mobile-ledgers>
+- <https://cone.tangential.info/wiki/Mobile-ledgers/>
 - <https://plaintextaccounting.org/#ui-mobile>
 
 
