@@ -75,7 +75,7 @@ div.badges {
 }
 </style>
 
-The current hledger release is **1.20** ([release notes](release-notes)). Below are lots of ways to install:\
+The current hledger release is **1.20.1** ([release notes](release-notes)). Below are lots of ways to install:\
 \- [Binary packages](#binary-packages) install quickly\
 \- [Building from source](#building-from-source) takes longer but ensures you get the latest release.\
 You may also need some [C libraries](#c-libraries) or a [UTF-8 locale](#utf-8-locale).\
@@ -91,7 +91,7 @@ And, please [report any roadbumps](index.html#help) so we can fix them.
     <tr>
       <td>
         <div class="badges">
-          <a href="https://hub.docker.com/r/dastapov/hledger"><img alt="Docker" src="https://img.shields.io/badge/Docker_image-1.20-brightgreen.svg" /></a><br>
+          <a href="https://hub.docker.com/r/dastapov/hledger"><img alt="Docker" src="https://img.shields.io/badge/Docker_image-1.20-red.svg" /></a><br>
           <a href="https://hub.docker.com/search?q=hledger&amp;type=image&amp;sort=updated_at&amp;order=desc">more..</a>
         </div>
         <div class="distro"><a href="https://www.docker.com/products/docker-desktop">Docker</a></div>
@@ -170,7 +170,7 @@ cd pkgsrc && ./bootstrap/bootstrap --prefix=$HOME/pkg --unprivileged --make-jobs
     <tr valign="top">
       <td>
         <div class="badges">
-          <img alt="CI binaries" src="https://img.shields.io/badge/CI_binaries-1.20-brightgreen.svg" />
+          <img alt="CI binaries" src="https://img.shields.io/badge/CI_binaries-1.20-red.svg" />
         </div>
       </td>
       <td style="padding-top:10px;">
@@ -196,7 +196,7 @@ cd pkgsrc && ./bootstrap/bootstrap --prefix=$HOME/pkg --unprivileged --make-jobs
     <tr valign="top">
       <td>
         <div class="badges">
-          <img alt="CI binaries" src="https://img.shields.io/badge/CI_binaries-1.20-brightgreen.svg" />
+          <img alt="CI binaries" src="https://img.shields.io/badge/CI_binaries-1.20-red.svg" />
         </div>
       </td>
       <td style="padding-top:10px;">
@@ -214,7 +214,7 @@ cd pkgsrc && ./bootstrap/bootstrap --prefix=$HOME/pkg --unprivileged --make-jobs
     <tr valign="top">
       <td>
         <div class="badges">
-          <img alt="CI binaries" src="https://img.shields.io/badge/CI_binaries-1.20-brightgreen.svg" />
+          <img alt="CI binaries" src="https://img.shields.io/badge/CI_binaries-1.20-red.svg" />
         </div>
       </td>
       <td style="padding-top:10px;">
@@ -486,7 +486,7 @@ Or, if you prefer to run [stack] yourself:
 
 <div class="builder-command">
   stack update <br>
-  stack install --resolver=lts-16 hledger-lib-1.20 hledger-1.20 hledger-ui-1.20 hledger-web-1.20.1 pretty-simple-4.0.0.0 prettyprinter-1.7.0 --silent
+  stack install --resolver=lts-16 hledger-lib-1.20.1 hledger-1.20.1 hledger-ui-1.20.1 hledger-web-1.20.1 pretty-simple-4.0.0.0 prettyprinter-1.7.0 --silent
 </div>
 
 This installs the main hledger tools in ~/.local/bin.
@@ -500,7 +500,7 @@ Or, if you prefer to run [cabal] yourself:
 <div class="builder-command">
   cabal update <br>
   cabal install alex happy<br>
-  cabal install hledger-1.20 hledger-ui-1.20 hledger-web-1.20.1
+  cabal install hledger-1.20.1 hledger-ui-1.20.1 hledger-web-1.20.1
 </div>
 
 This installs the main hledger tools in ~/.cabal/bin.
@@ -636,9 +636,9 @@ Eg:
 
 <div class="command">
 $ hledger --version <br>
-hledger 1.20 <br>
+hledger 1.20.1 <br>
 $ hledger-ui --version <br>
-hledger-ui 1.20 <br>
+hledger-ui 1.20.1 <br>
 $ hledger web --version <br>
 hledger-web 1.20.1 <br>
 </div>
