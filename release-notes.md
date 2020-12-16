@@ -31,6 +31,21 @@ Changes in hledger-install.sh are shown
 
 
 
+## 2020-12-15 1.20.1 
+
+- bal, bs, cf, is: In amount-sorted balance reports, equal-balance accounts 
+  are now reliably sorted by name. (Simon Michael, Stephen Morgan)
+
+- help: Fix the topic hierarchy in Info manuals.
+
+## 2020-12-151.20.1 
+
+- Fix the F key (toggle future/forecast transactions), which in 1.20 
+  would only work twice. (#1411)
+
+- Fix loss of forecasted transactions when the journal was reloaded
+  while they were hidden. (#1204)
+
 ## 2020-12-06 hledger-web-1.20.1
 
 - don't hang when reloading the journal, eg after adding a transaction
