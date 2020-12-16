@@ -31,14 +31,14 @@ Changes in hledger-install.sh are shown
 
 
 
-## 2020-12-15 1.20.1 
+## 2020-12-15 hledger 1.20.1 
 
 - bal, bs, cf, is: In amount-sorted balance reports, equal-balance accounts 
   are now reliably sorted by name. (Simon Michael, Stephen Morgan)
 
 - help: Fix the topic hierarchy in Info manuals.
 
-## 2020-12-151.20.1 
+## 2020-12-15 hledger-ui 1.20.1 
 
 - Fix the F key (toggle future/forecast transactions), which in 1.20 
   would only work twice. (#1411)
