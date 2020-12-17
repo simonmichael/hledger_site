@@ -8,10 +8,11 @@ Here is a start at gathering budgeting-related resources.
 - [Budgeting with hledger](https://gist.github.com/ony/bbec599c0893e676b772559909b81de6), ony's notes on budgeting with auto postings
 - <https://plaintextaccounting.org/#budgeting> budgeting-related blogs posts and resources for all PTA tools
 
-
+```
  <sm> two commands that are roughly equivalent: ledger budget --add-budget expenses, hledger balance --budget -E expenses
                                                                  [16:05]
  <sm> they show both budgeted and unbudgeted accounts            [16:06]
+
 
 
 ***** --budget has no effect on single-column reports, it requires a reporting interval
@@ -30,7 +31,7 @@ ry savings accounts), b. virtual (imaginary) subaccounts of a real-world account
 ovides this report
                                                                 [16:54]
 <sm> I think that's 7 ways
-
+```
 
 
 https://www.reddit.com/r/plaintextaccounting/comments/doq9p5/new_to_ledger_budgeting_question/
@@ -41,12 +42,15 @@ Also search for budgeting links at http://plaintextaccounting.org . You'll see t
 
 2. the other kind ("report-based budgeting" ?). Based around a special budget report provided by Ledger/hledger, which uses periodic transaction rules to set budget goals. Automatic posting rules might be useful here too, I'm not sure. Provides less enforcement, requires less work. Fewer ways to do it, perhaps provides simpler/clearer reports.
 
-[PS, I often find "budgeting" covers/touches on quite a lot of topics: setting earning/spending goals, reviewing performance against those goals, controlling earning/spending based on the goals, allocating funds for short term expenses, allocating funds towards savings goals, updating allocated funds as transactions occur, reallocating funds/balancing the budget, end of period actions (roll over ? reset ?), forecasting cash balances and managing cashflow, forecasting income/expenses... Note to self: OP has asked about budgeting upcoming expenses in ledger, and about virtual postings not showing up in balance reports.]
+\[PS, I often find "budgeting" covers/touches on quite a lot of topics: setting earning/spending goals, reviewing performance against those goals, controlling earning/spending based on the goals, allocating funds for short term expenses, allocating funds towards savings goals, updating allocated funds as transactions occur, reallocating funds/balancing the budget, end of period actions (roll over ? reset ?), forecasting cash balances and managing cashflow, forecasting income/expenses... Note to self: OP has asked about budgeting upcoming expenses in ledger, and about virtual postings not showing up in balance reports.\]
 
 
 
 time tracking: summary of my 2018-2019 workflow https://news.ycombinator.com/item?id=19203521
+
 I keep a hledger timedot file[1] open in a hot-key drop-down iTerm window. Each 15-minute chunk is logged with a dot. I group dots into hours for quick visual scanning.
+
+
     2019-01-08
     fos.hledger.sup  .
     adm.email  ..
@@ -55,6 +59,7 @@ I keep a hledger timedot file[1] open in a hot-key drop-down iTerm window. Each 
     fos.hledger.issues.941  .... .
     has-res  ...
     biz-res  ..
+
 I've trained myself to update this often while at the computer, and before walking away. Delayed retroactive logging is also pretty easy. Working in quarter/half/whole hour chunks, and in rhythm with the clock, and having a pane showing recent sleep/wake/timelog-saved events, all help. Not every day is the same; this system has been quick and flexible enough to suit a range of conditions. I can set daily/weekly/monthly time budgets if I want. Some more details at [2].
 
 
@@ -72,7 +77,7 @@ I've trained myself to update this often while at the computer, and before walki
 *** blog post: world carbon budget
 
 
-
+```
 **** how to budget time
 ***** if not using journal format for time logging, create a time.journal which includes the timelog file
  include time.timedot
@@ -95,3 +100,6 @@ I've trained myself to update this often while at the computer, and before walki
   ser:some:proj || 0.75h [19% of 4h] 
  ---------------++-------------------
                 ||             1.00h 
+                
+                
+```
