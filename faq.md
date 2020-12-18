@@ -1,5 +1,51 @@
 # FAQ
 
+Welcome to the hledger FAQ!
+
+This FAQ has not yet received a lot of maintenance and is a bit limited/verbose/disorganised. 
+Sorry! If you'd like to help we'd sure appreciate it. 
+Click the "Edit/PR this page" link at the bottom, or [chat](index.html#help) with us.
+
+## Why would I need to keep accounts ?
+
+For clarity, control, planning, accountability, compliance, tax reporting, tax audits. 
+It clarifies activity, priorities, obligations, opportunities.
+
+## What's double-entry accounting ?
+
+Accounting means keeping track of the flow of valuable commodities, such as money or time. 
+Double-entry bookkeeping is a method for keeping accounting records reliably. For every movement of value (a transaction), both the source and destination are recorded. Simple arithmetic invariants help prevent errors.
+
+## We already use Tally/other proprietary system
+
+Every tool has strengths and weaknesses. hledger is lightweight, flexible and relatively easy to glue into other systems; it might be worth exploring as a complementary tool.
+
+## How do I convey the information in this to my accountant for tax work / to auditors for financial statements ?
+
+Depending on their needs, you send them a few standard reports (balance sheet, income statement, itemized account registers or a full transaction journal)
+
+- as plain text (optionally spruced up with your own templates)
+- or as HTML
+- or as PDF
+- or as CSV they can import into Excel and elsewhere
+
+## I have to enter data in a text editor ??
+
+No. A good text editor can be a very efficient way to work on your data, but there are other ways:
+
+- use a terminal-based data entry tool like hledger add or hledger-iadd
+- use a web-based data entry tool like hledger-web
+- use a phone-based data entry app like MoLe
+- import CSV data, avoiding manual data entry.
+
+## What account names do I use? Why aren't there any default list of commonly used accounts the way other software provide ?
+
+Any standard set of account names you're familiar with. Feel free to copy list from any other software. A default list is a good idea, but right now we don't really provide one because
+
+- hledger aims to be useful for many needs and in many languages, so a single list won't do
+- we are not that large and organised yet
+- no-one has stepped up and worked on it.
+
 ## What can hledger do for me ?
 
 hledger is a suite of reporting tools which can provide clarity and
