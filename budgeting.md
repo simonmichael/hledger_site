@@ -32,7 +32,7 @@ and then measuring how the actual flows compare with the goals. balance --budget
 <sm> I think that's 7 ways
 ```
 
-From https://www.reddit.com/r/plaintextaccounting/comments/doq9p5/new_to_ledger_budgeting_question/:
+From <https://www.reddit.com/r/plaintextaccounting/comments/doq9p5/new_to_ledger_budgeting_question>:
 
 > Also search for budgeting links at http://plaintextaccounting.org . You'll see two main approaches discussed:
 > 
@@ -80,7 +80,7 @@ Some other budgeting tools: <https://github.com/Kickball/awesome-selfhosted#mone
 
 ## A time budgeting workflow
 
-From https://news.ycombinator.com/item?id=19203521, summary of my 2018-2019 time budgeting workflow:
+From <https://news.ycombinator.com/item?id=19203521>, summary of my 2018-2019 time budgeting workflow:
 
 > I keep a hledger timedot file[1] open in a hot-key drop-down iTerm window. Each 15-minute chunk is logged with a dot. I group dots into hours for > quick visual scanning.
 > 
