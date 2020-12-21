@@ -6,8 +6,10 @@ Here is a start at gathering budgeting-related resources.
 - [Budgeting and forecasting](budgeting-and-forecasting.html), a older introduction to these (written for hledger 1.5 in 2018)
 - <https://github.com/simonmichael/hledger/tree/master/examples/budgeting> annotated examples of journals implementing budgets
 - [plaintextaccounting.org: Budgeting](https://plaintextaccounting.org/#budgeting) more budgeting-related docs, for all PTA tools
+- The YNAB (YouNeedABudget) way: [Age Your Money](https://www.youneedabudget.com/guides/age-your-money)
+- Some other budgeting tools for comparison: <https://github.com/Kickball/awesome-selfhosted#money-budgeting-and-management>
 
-Some old notes:
+## PTA budgeting notes
 
 ```
  <sm> two commands that are roughly equivalent: ledger budget --add-budget expenses, hledger balance --budget -E expenses
@@ -40,11 +42,17 @@ From <https://www.reddit.com/r/plaintextaccounting/comments/doq9p5/new_to_ledger
 > 
 > 2. the other kind ("report-based budgeting" ?). Based around a special budget report provided by Ledger/hledger, which uses periodic transaction > rules to set budget goals. Automatic posting rules might be useful here too, I'm not sure. Provides less enforcement, requires less work. Fewer ways > to do it, perhaps provides simpler/clearer reports.
 > 
-> \[PS, I often find "budgeting" covers/touches on quite a lot of topics: setting earning/spending goals, reviewing performance against those goals, > controlling earning/spending based on the goals, allocating funds for short term expenses, allocating funds towards savings goals, updating allocated > funds as transactions occur, reallocating funds/balancing the budget, end of period actions (roll over ? reset ?), forecasting cash balances and > managing cashflow, forecasting income/expenses... Note to self: OP has asked about budgeting upcoming expenses in ledger, and about virtual postings > not showing up in balance reports.\]
-
-How to age your money YNAB style: <https://www.youneedabudget.com/guides/age-your-money/#aging-your-money>
-
-Some other budgeting tools: <https://github.com/Kickball/awesome-selfhosted#money-budgeting-and-management>
+> I often find "budgeting" covers/touches on quite a lot of topics: 
+> - setting earning/spending goals, 
+> - reviewing performance against those goals, 
+> - controlling earning/spending based on the goals, 
+> - allocating funds for short term expenses, 
+> - allocating funds towards savings goals, 
+> - updating allocated funds as transactions occur, 
+> - reallocating funds/balancing the budget, 
+> - end of period actions (roll over ? reset ?), 
+> - forecasting cash balances and managing cashflow, 
+> - forecasting income/expenses... 
 
 
 ## How to set up a time budget
