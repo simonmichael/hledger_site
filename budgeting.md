@@ -2,10 +2,10 @@
 
 Here is a start at gathering budgeting-related resources.
 
-- hledger's built-in periodic budget report, [balance --budget](hledger.html#budget-report)
+- [hledger > balance > Budget report](hledger.html#budget-report), hledger's built-in periodic budget report
 - [Budgeting and forecasting](budgeting-and-forecasting.html), a older introduction to these (written for hledger 1.5 in 2018)
-- <https://github.com/simonmichael/hledger/tree/master/examples/budgeting> annotated examples of journals implementing budgets
-- [plaintextaccounting.org: Budgeting](https://plaintextaccounting.org/#budgeting) more budgeting-related docs, for all PTA tools
+- <https://github.com/simonmichael/hledger/tree/master/examples/budgeting>, annotated examples of journals implementing budgets
+- [plaintextaccounting.org: Budgeting](https://plaintextaccounting.org/#budgeting), more budgeting-related docs, for all PTA tools
 - The YNAB (YouNeedABudget) way: [Age Your Money](https://www.youneedabudget.com/guides/age-your-money)
 - Some other budgeting tools for comparison: <https://github.com/Kickball/awesome-selfhosted#money-budgeting-and-management>
 
