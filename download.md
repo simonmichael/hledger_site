@@ -516,10 +516,10 @@ already-cached binaries.)
 ### Build tips
 
 - You can build hledger from source wherever [GHC] is supported.
+  It's normally routine, requiring no babysitting.
 
-- A build can require up to 2G of free RAM and disk space, 
-  and could take from a minute to an hour.
-  It's normally a reliable process requiring no babysitting.
+- A build can require up to 2G of free RAM and disk space, and could take 
+  [between a minute and an hour](https://ro-che.info/articles/2020-12-22-haskell-compilation-laptop-desktop#specs).
 
 - You can use less resources by omitting the hledger-ui and hledger-web
   packages from the commands above.
