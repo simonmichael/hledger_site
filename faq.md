@@ -638,3 +638,13 @@ $ hledger print | sed 's/\./~/g; s/,/./g; s/~/,/g'
     (a)       $1,234.56
 
 ```
+## How do I control the number of decimal places displayed ?
+
+Use a commodity directive <!-- ](journal.html#declaring-commodities) -->
+to  set the commodity's [display style](journal.html#commodity-display-style).
+Eg:
+```journal
+commodity $1000.00
+commodity EUR 1.000,
+commodity 1000.00000000 BTC
+```
