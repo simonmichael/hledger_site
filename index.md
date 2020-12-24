@@ -269,7 +269,7 @@ Next, you could:
   **[#2](web.html)**, or
   **[#3](ui.html)**.
 - Read or skim the **[hledger](hledger.html)** user manual to become a hledger expert.
-  Or just the **[COMMON TASKS](hledger.html#common-tasks)**.
+- Or just the **[COMMON TASKS](hledger.html#common-tasks)**.
 - Check out the **[hledger-ui](hledger-ui.html)** and **[hledger-web](hledger-web.html)** manuals.
 - Browse the **[blog posts]** on plaintextaccounting.org.
 - Watch **[videos](videos.html)**, such as "hledger fan"'s beginner lessons.
