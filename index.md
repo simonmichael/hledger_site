@@ -264,20 +264,13 @@ Next, you could:
 - Check the **[FAQ](faq.html)**.
 - Do a tutorial:
   **[Quick Start](quickstart.html)**,
-  **[hledger add](add.html)**,
-  **[hledger-web](web.html)**,
-  **[hledger-ui](ui.html)**, or
-  **[accounting concepts](accounting.html)**.
-- Read or skim the reference manuals: the
-  **[hledger](hledger.html)**,
-  **[hledger-ui](hledger-ui.html)**, and
-  **[hledger-web](hledger-web.html)** tools 
-  and the
-  **[journal](journal.html)**,
-  **[csv](csv.html)**,
-  **[timeclock](timeclock.html)**,
-  **[timedot](timedot.html)** file formats.
-  Or just the **[intro](hledger.html#hledger)** and **[COMMON TASKS](hledger.html#common-tasks)**.
+  **[Accounting concepts](accounting.html)**, or
+  **[Easy workflow #1](add.html)**,
+  **[#2](web.html)**, or
+  **[#3](ui.html)**.
+- Read or skim the **[hledger](hledger.html)** user manual to become a hledger expert.
+  Or just the **[COMMON TASKS](hledger.html#common-tasks)**.
+- Check out the **[hledger-ui](hledger-ui.html)** and **[hledger-web](hledger-web.html)** manuals.
 - Browse the **[blog posts]** on plaintextaccounting.org.
 - Watch **[videos](videos.html)**, such as "hledger fan"'s beginner lessons.
 - Look at lots of **[example files]**.
