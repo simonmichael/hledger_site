@@ -37,10 +37,6 @@ hledger
    hledger
    hledger-ui
    hledger-web
-   journal
-   csv
-   timeclock
-   timedot
 
 .. toctree::
    :caption: Cookbook: Managing data
