@@ -260,7 +260,7 @@ like Plaid or Tiller, use hledger's import command to [convert] and
 Next, you could:
 
 - Explore the sidebar to your left (or on small screens, the menu button at top left).
-  It scrolls and expands, and all hledger docs can be found there.
+  It scrolls and expands; all hledger docs can be found there.
 - Check the **[FAQ](faq.html)**.
 - Do a tutorial:
   **[Quick Start](quickstart.html)**,
@@ -268,11 +268,11 @@ Next, you could:
   **[Easy workflow #1](add.html)**,
   **[#2](web.html)**, or
   **[#3](ui.html)**.
-- Read or skim the **[hledger](hledger.html)** user manual to become a hledger expert.
+- Become an expert: read or skim the **[hledger](hledger.html)** user manual.
 - Or just the **[COMMON TASKS](hledger.html#common-tasks)**.
 - Check out the **[hledger-ui](hledger-ui.html)** and **[hledger-web](hledger-web.html)** manuals.
 - Browse the **[blog posts]** on plaintextaccounting.org.
-- Watch **[videos](videos.html)**, such as "hledger fan"'s beginner lessons.
+- Watch **[videos](videos.html)**, such as hledger fan's beginner lessons.
 - Look at lots of **[example files]**.
 - Introduce yourself in our **[chat room](#help)**, or browse the **[mail list]**.
 - Read on...
