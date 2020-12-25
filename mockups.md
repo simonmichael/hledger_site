@@ -125,7 +125,7 @@ Provide official static linux/mac release binaries with CI, like windows.
 
 ## Web docs
 
-Provide the seven embedded reference manuals as HTML also. Eg:
+Provide the embedded user manuals as HTML also. Eg:
 
 - hledger help --html   # temporary static html files
 - hledger help --web    # serve from local hledger-web instance if installed

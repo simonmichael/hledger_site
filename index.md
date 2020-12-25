@@ -114,7 +114,7 @@ Here are some ways in which hledger strives to provide robustness:
   their spec.
 
 - Robust documentation: all functionality is documented precisely,
-  with a mnemonic permalink. Reference manuals for your hledger
+  with a mnemonic permalink. User manuals for your hledger
   version are available online, and built in for offline viewing.
   General and command-specific command line help is provided. We
   favour documentation-driven development.

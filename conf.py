@@ -26,7 +26,7 @@ project = 'hledger'
 author = 'Simon Michael'
 copyright = '2007-2020, Simon Michael & contributors'
 
-# version of the reference manuals (the rest of the docs aren't really versioned)
+# version of the user manuals (the rest of the docs aren't really versioned)
 # version = '1.14'
 # release = '1.14'
 # version = 'latest (master)'

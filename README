@@ -10,7 +10,7 @@ It is intended to be cloned as the "site" subdirectory of the main
 hledger repo. Currently this is done manually, not via git submodule
 or subtree.
 
-Some hledger docs kept in the main hledger repo - reference manuals,
+Some hledger docs kept in the main hledger repo - user manuals,
 developer docs - are included in the website via symbolic links to the
 parent directory. README.md is one of these, and does not pertain to
 this directory, though Github shows it as if it did.

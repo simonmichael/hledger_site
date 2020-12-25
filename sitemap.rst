@@ -31,7 +31,7 @@ hledger
    accounting
 
 .. toctree::
-   :caption: Reference Manuals
+   :caption: User Manuals
    :maxdepth: 3
 
    hledger
