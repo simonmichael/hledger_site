@@ -31,6 +31,24 @@ Changes in hledger-install.sh are shown
 
 
 
+## 2020-12-28 hledger 1.20.2 
+
+- help: Fix loss of capitalisation in part of the hledger-ui manual. 
+
+- help: Fix the node structure in info manuals.
+
+- Drop unused parsec dependency.
+
+## 2020-12-28 hledger-ui 1.20.2 
+
+- Fix loss of capitalisation in part of the manual. 
+
+- Fix the info manual's node structure.
+
+## 2020-12-28 hledger-web 1.20.2 
+
+- Fix the info manual's node structure.
+
 ## 2020-12-15 hledger 1.20.1 
 
 - bal, bs, cf, is: In amount-sorted balance reports, equal-balance accounts 
