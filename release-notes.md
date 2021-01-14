@@ -30,6 +30,39 @@ Changes in hledger-install.sh are shown
 [here](https://github.com/simonmichael/hledger/commits/master/hledger-install/hledger-install.sh).
 
 
+## 2021-01-14 hledger 1.20.3, hledger-ui 1.20.3, hledger-web 1.20.3
+
+- When searching for price chains during valuation/currency conversion:
+
+  - It no longer hangs when there are price loops. (And in case of
+    future bugs, it will give up rather than search forever.) (#1439)
+  - It now really finds the shortest path. (#1443)
+  - Useful progress info is displayed with `--debug=1` or `--debug=2`.
+
+- balance, incomestatement: End-valued multi-period balance change
+  reports (eg: `bal -MV`) have been reverted to show value-of-change,
+  as in previous hledger versions, rather than change-of-value, for
+  now. (#1353, #1428) (Stephen Morgan)
+
+- balance: End-valued balance change reports now choose the same final
+  valuation date and show consistent results whether single-period or
+  multi-period. (#1424) (Stephen Morgan)
+
+- balance: the `--drop` option now works with `csv` and `html` output.
+  (#1456) (Ilya Konovalov)
+
+- check: the `commodities` check, and `-s`/`--strict` mode, now ignore
+  the "AUTO" internal pseudo-commodity. (#1419) (Ilya Konovalov)
+
+- register: Then-valued multi-period register reports
+  (eg: `register -M --value=then`) now calculate the correct values.
+  (#1449) (Stephen Morgan)
+
+- roi: now shows a better error message when required prices are
+  missing. (#1446) (Dmitry Astapov)
+
+- The no-symbol commodity's input number format can now be set by a
+  `commodity` directive, like other commodities. (#1461)
 
 ## 2020-12-28 hledger 1.20.2 
 
