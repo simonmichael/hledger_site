@@ -91,7 +91,7 @@ And, please [report any roadbumps](index.html#help) so we can fix them.
     <tr>
       <td>
         <div class="badges">
-          <a href="https://hub.docker.com/r/dastapov/hledger"><img alt="Docker" src="https://img.shields.io/badge/Docker_image-1.20.2-red.svg" /></a><br>
+          <a href="https://hub.docker.com/r/dastapov/hledger"><img alt="Docker" src="https://img.shields.io/badge/Docker_image-1.20.3-brightgreen.svg" /></a><br>
           <a href="https://hub.docker.com/search?q=hledger&amp;type=image&amp;sort=updated_at&amp;order=desc">more..</a>
         </div>
         <div class="distro"><a href="https://www.docker.com/products/docker-desktop">Docker</a></div>
@@ -170,11 +170,11 @@ cd pkgsrc && ./bootstrap/bootstrap --prefix=$HOME/pkg --unprivileged --make-jobs
     <tr valign="top">
       <td>
         <div class="badges">
-          <img alt="CI binaries" src="https://img.shields.io/badge/CI_binaries-1.20.3-brightgreen.svg" />
+          <img alt="CI binaries" src="https://img.shields.io/badge/CI_binaries-1.20.2-red.svg" />
         </div>
       </td>
       <td style="padding-top:10px;">
-        <div class="command" style="margin-bottom:4px;"><a href="https://github.com/simonmichael/hledger/releases/tag/1.20.3">hledger-windows.zip</a></div>
+        <div class="command" style="margin-bottom:4px;"><a href="https://github.com/simonmichael/hledger/releases/tag/1.20.2">hledger-windows.zip</a></div>
         <div class="notes">
         <!--   <span class="warnings"> -->
         <!--     <\!-- <a href="https://github.com/simonmichael/hledger/issues/1039">#1039</a> -\-> -->
@@ -196,11 +196,11 @@ cd pkgsrc && ./bootstrap/bootstrap --prefix=$HOME/pkg --unprivileged --make-jobs
     <tr valign="top">
       <td>
         <div class="badges">
-          <img alt="CI binaries" src="https://img.shields.io/badge/CI_binaries-1.20.3-brightgreen.svg" />
+          <img alt="CI binaries" src="https://img.shields.io/badge/CI_binaries-1.20.2-red.svg" />
         </div>
       </td>
       <td style="padding-top:10px;">
-        <div class="command" style="margin-bottom:4px;"><a href="https://github.com/simonmichael/hledger/releases/tag/1.20.3">hledger-macos.zip</a></div>
+        <div class="command" style="margin-bottom:4px;"><a href="https://github.com/simonmichael/hledger/releases/tag/1.20.2">hledger-macos.zip</a></div>
         <div class="notes"></div>
       </td>
     </tr>
@@ -214,23 +214,12 @@ cd pkgsrc && ./bootstrap/bootstrap --prefix=$HOME/pkg --unprivileged --make-jobs
     <tr valign="top">
       <td>
         <div class="badges">
-          <img alt="CI binaries" src="https://img.shields.io/badge/CI_binaries-1.20.3-brightgreen.svg" />
+          <img alt="CI binaries" src="https://img.shields.io/badge/CI_binaries-1.20.2-red.svg" />
         </div>
       </td>
       <td style="padding-top:10px;">
-        <div class="command" style="margin-bottom:4px;"><a href="https://github.com/simonmichael/hledger/releases/tag/1.20.3">hledger-ubuntu.zip</a></div>
+        <div class="command" style="margin-bottom:4px;"><a href="https://github.com/simonmichael/hledger/releases/tag/1.20.2">hledger-ubuntu.zip</a></div>
         <div class="notes"></div>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div class="badges">
-          <a href="https://gentoo.zugaina.org/Search?search=hledger"><img alt="Gentoo" src="https://img.shields.io/badge/Gentoo_package-1.20.3-brightgreen.svg" /></a>
-        </div>
-        <div class="distro">Gentoo</div>
-      </td>
-      <td>
-        <div class="command">sudo layman -a haskell &amp;&amp; sudo emerge hledger hledger-ui hledger-web</div>
       </td>
     </tr>
     <tr>
@@ -242,6 +231,17 @@ cd pkgsrc && ./bootstrap/bootstrap --prefix=$HOME/pkg --unprivileged --make-jobs
       </td>
       <td>
         <div class="command">pacman -S hledger hledger-ui hledger-web</div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="badges">
+          <a href="https://gentoo.zugaina.org/Search?search=hledger"><img alt="Gentoo" src="https://img.shields.io/badge/Gentoo_package-1.20.3-brightgreen.svg" /></a>
+        </div>
+        <div class="distro">Gentoo</div>
+      </td>
+      <td>
+        <div class="command">sudo layman -a haskell &amp;&amp; sudo emerge hledger hledger-ui hledger-web</div>
       </td>
     </tr>
     <tr>
