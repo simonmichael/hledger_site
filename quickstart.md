@@ -89,7 +89,7 @@ hledger: free GPLv3+ accounting software for linux, mac, windows, web, etc.
 [WUI]:                 web.html
 [JSON API]:            hledger-web.html#json-api
 [Haskell library]:     https://hackage.haskell.org/package/hledger-lib
-[script and extend]:   scripting. html
+[script and extend]:   scripting.html
 
 
 <a name="workflow"></a>
