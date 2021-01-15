@@ -225,23 +225,23 @@ cd pkgsrc && ./bootstrap/bootstrap --prefix=$HOME/pkg --unprivileged --make-jobs
     <tr>
       <td>
         <div class="badges">
-          <a href="https://www.archlinux.org/packages/?sort=&amp;q=hledger"><img alt="Arch" src="https://img.shields.io/badge/Arch_package-1.20-red.svg" /></a>  <!-- wrong color, until hledger-web 1.20.1 https://repology.org/badge/version-for-repo/arch/hledger.svg -->
-        </div>
-        <div class="distro">Arch</div>
-      </td>
-      <td>
-        <div class="command">pacman -S hledger hledger-ui hledger-web</div>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div class="badges">
           <a href="https://gentoo.zugaina.org/Search?search=hledger"><img alt="Gentoo" src="https://img.shields.io/badge/Gentoo_package-1.20.3-brightgreen.svg" /></a>
         </div>
         <div class="distro">Gentoo</div>
       </td>
       <td>
         <div class="command">sudo layman -a haskell &amp;&amp; sudo emerge hledger hledger-ui hledger-web</div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="badges">
+          <a href="https://www.archlinux.org/packages/?sort=&amp;q=hledger"><img alt="Arch" src="https://img.shields.io/badge/Arch_package-1.20-red.svg" /></a>  <!-- wrong color, until hledger-web 1.20.1 https://repology.org/badge/version-for-repo/arch/hledger.svg -->
+        </div>
+        <div class="distro">Arch</div>
+      </td>
+      <td>
+        <div class="command">pacman -S hledger hledger-ui hledger-web</div>
       </td>
     </tr>
     <tr>
