@@ -653,6 +653,19 @@ $ hledger test <br>
 All 215 tests passed (0.12s)
 </div>
 
+Or if you have checked out the hledger source, also the functional tests:
+
+<div class="command">
+$ make functest <br>
+Excluding 2 test files<br>
+<br>
+         Test Cases    Total        <br>
+ Passed  694           694          <br>
+ Failed  0             0            <br>
+ Total   694           694          <br>
+functest PASSED
+</div>
+
 <br>
 
 Nicely done! Now check the **[Quick Start](index.html#quick-start)**
