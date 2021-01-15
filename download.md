@@ -236,7 +236,7 @@ cd pkgsrc && ./bootstrap/bootstrap --prefix=$HOME/pkg --unprivileged --make-jobs
     <tr>
       <td>
         <div class="badges">
-          <a href="https://www.archlinux.org/packages/?sort=&amp;q=hledger"><img alt="Arch" src="https://img.shields.io/badge/Arch_package-1.20-red.svg" /></a>  <!-- wrong color, until hledger-web 1.20.1 https://repology.org/badge/version-for-repo/arch/hledger.svg -->
+          <a href="https://www.archlinux.org/packages/?sort=&amp;q=hledger"><img alt="Arch" src="https://img.shields.io/badge/Arch_package-1.20.2-red.svg" /></a>  <!-- wrong color, until hledger-web 1.20.1 https://repology.org/badge/version-for-repo/arch/hledger.svg -->
         </div>
         <div class="distro">Arch</div>
       </td>
@@ -650,7 +650,7 @@ And you could see the unit tests pass (just for fun):
 <div class="command">
 $ hledger test <br>
 ... <br>
-All 198 tests passed (4.30s)
+All 215 tests passed (0.12s)
 </div>
 
 <br>
