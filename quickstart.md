@@ -39,18 +39,17 @@ a:active { color:red; }
 Welcome! You've found the newest intro to hledger. This one aims to
 distill just the most needed practical info to help you get productive
 as quickly as possible. When you want more detail, follow links to the
-[full website] (and particularly the manuals, which describe
-everything hledger does: [hledger], [hledger-ui], [hledger-web],
-[journal], [csv], [timeclock], [timedot]).
+[full website] (and particularly the [hledger manual]).
 
-[full website]: https://hledger.org
-[hledger]:      https://hledger.org/hledger.html
-[hledger-ui]:   https://hledger.org/hledger-ui.html
-[hledger-web]:  https://hledger.org/hledger-web.html
-[journal]:      https://hledger.org/journal.html
-[csv]:          https://hledger.org/csv.html
-[timeclock]:    https://hledger.org/timeclock.html
-[timedot]:      https://hledger.org/timedot.html
+[full website]:   https://hledger.org
+[hledger]:        hledger.html
+[hledger manual]: hledger.html
+[hledger-ui]:     hledger-ui.html
+[hledger-web]:    hledger-web.html
+[journal]:        hledger.html#journal-format
+[csv]:            hledger.html#csv-format
+[timeclock]:      hledger.html#timeclock-format
+[timedot]:        hledger.html#timedot-format
 
 
 <a name="about"></a>
@@ -70,27 +69,27 @@ hledger: free GPLv3+ accounting software for linux, mac, windows, web, etc.
 - user-friendly, well documented, robust
 - scales smoothly from simple, easy accounting needs to complex ones.
 
-[output-format]: hledger.html#output-format
-[balance sheet]: hledger.html#balancesheet
-[income statement]: hledger.html#incomestatement
-[cashflow]: hledger.html#cashflow
-[budget]: hledger.html#budget-report
-[roi]: hledger.html#roi
-[transactions]: hledger.html#aregister
-[time]: timedot.html
-[forecast]: journal.html#periodic-transactions
-[multiperiod]: hledger.html#multicolumn-balance-report
-[multiple currencies]: journal.html#declaring-commodities
-[valuation]: hledger.html#valuation
-[summarising]: hledger.html#depth-limiting
-[aliasing]: journal.html#rewriting-accounts
-[pivoting]: hledger.html#pivoting
-[CLI]: hledger.html
-[TUI]: ui.html
-[WUI]: web.html
-[JSON API]: hledger-web.html#json-api
-[Haskell library]: https://hackage.haskell.org/package/hledger-lib
-[script and extend]: scripting.html
+[output-format]:       hledger.html#output-format
+[balance sheet]:       hledger.html#balancesheet
+[income statement]:    hledger.html#incomestatement
+[cashflow]:            hledger.html#cashflow
+[budget]:              hledger.html#budget-report
+[roi]:                 hledger.html#roi
+[transactions]:        hledger.html#aregister
+[time]:                hledger.html#timedot-format
+[forecast]:            hledger.html#periodic-transactions
+[multiperiod]:         hledger.html#multicolumn-balance-report
+[multiple currencies]: hledger.html#declaring-commodities
+[valuation]:           hledger.html#valuation
+[summarising]:         hledger.html#depth-limiting
+[aliasing]:            hledger.html#rewriting-accounts
+[pivoting]:            hledger.html#pivoting
+[CLI]:                 hledger.html
+[TUI]:                 ui.html
+[WUI]:                 web.html
+[JSON API]:            hledger-web.html#json-api
+[Haskell library]:     https://hackage.haskell.org/package/hledger-lib
+[script and extend]:   scripting. html
 
 
 <a name="workflow"></a>
@@ -155,7 +154,7 @@ Freshest: [build from source](download.html#building-from-source):
 <a name="setup"></a>
 ## Set up a journal
 
-The [journal file](journal.html) is a plain text file where transactions are
+The [journal file][journal] is a plain text file where transactions are
 recorded. By default it is ~/.hledger.journal, and the add command or web add
 form described below will create it automatically, so actually you don't need
 to do anything here.
@@ -189,7 +188,7 @@ But here are some common changes people make sooner or later, so why not now:
   $ ln -s ~/finance/2020.journal ~/.hledger.journal
   ```
 
-- Some optional [directives](journal.html#directives), useful especially with
+- Some optional [directives](hledger.html#directives), useful especially with
   non-english account names:
 
   ```shell
