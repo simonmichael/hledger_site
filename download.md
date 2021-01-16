@@ -544,7 +544,6 @@ already-cached binaries.)
 
   <blockquote class="warnings">
     <a href="https://github.com/jtdaugherty/vty/pull/1#issuecomment-297143444">windows: hledger-ui is not available</a><br>
-    <a href="https://github.com/well-typed/generics-sop/issues/93">windows: GHC 8.6.3 hangs while building</a><br>
     <a href="https://github.com/simonmichael/hledger/issues/961#issuecomment-471229644">windows: cross-environment non-ascii display issues</a><br>
     <!-- <a href="https://github.com/simonmichael/hledger/issues/1039">windows: hledger-web fails to start on Windows 7</a><br> -->
     <a href="https://wiki.archlinux.org/index.php/Haskell">arch: haskell build advice from Arch wiki</a><br>
