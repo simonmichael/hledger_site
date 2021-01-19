@@ -1,66 +1,97 @@
-# Editor configuration
+# Text editors
 
 If you edit your journals (and other hledger data files) with a [text
 editor](https://en.wikipedia.org/wiki/Text_editor), you want that
 frequent task to be as pleasant and non-tedious as possible. So it's
-worth using a powerful editor - one with comfortable copy/paste, search
+worth using a powerful text editor - one with comfortable copy/paste, search
 & replace, and perhaps more advanced features like macros.
 
-Also, for most editors there are helper modes which can make editing
+For the popular text editors there are helper modes/extensions which can make editing
 hledger journal files much more convenient. These provide things like
 syntactic highlighting, auto indentation, and tab completion of
-account names. You can find the latest modes at:
+account names.  You can find a list of these extensions at \
+<https://plaintextaccounting.org/#editor-support>.\
+The ones with "hledger" in their name are designed specifically for working with hledger journals, while the ones with "ledger" in their name are not, but can often work well with hledger as well (eg: ledger-mode).
 
-<https://plaintextaccounting.org/#editor-support>
+Here are more details and tips.
 
-hledger-mode, hledger-vim, hledger-vscode etc. are designed specifically for hledger.
-Modes with "ledger" in their name, such as
-ledger-mode, vim-ledger etc., can also work well for hledger journals.
+## Emacs
 
-## ledger-mode tips
+### ledger-mode
 
 <https://github.com/ledger/ledger-mode>
 ([manual](http://www.ledger-cli.org/3.0/doc/ledger-mode.html)), for
 [Emacs](https://www.gnu.org/software/emacs/), is the most used and
-maintained helper mode for h/ledger files. Use M-x customize to browse
-ledger-mode's settings and change them as seems wise.
+maintained helper mode for hledger and Ledger files. 
 
-Change `ledger-binary-path` to hledger
-(unless your hledger journal is ledger-compatible and you also have ledger installed).
+It has some hard-coded dependence on Ledger's command-line interface,  so does not work perfectly with hledger, whose CLI is similar but not identical. There are a few ways to get around this:
 
-A typical cause of incompatibility is when ledger-mode tries to call the "ledger" binary
-with a command or arguments that hledger doesn't support. In this case you can
+- Most common: configure ledger-mode to run `hledger`, and accept that some more advanced features (reports, reconcile-mode) will not work for now; help welcome. Configure ledger-mode this way:
 
-- open an ledger-mode issue, asking, suggesting how, and/or
-  providing a pull request to make it more hledger-compatible (best)
-  
-- do something locally to keep ledger-mode happy, eg define a
-  small add-on command mimicking the required ledger command.
+  1. M-x customize-group, ledger-exec
+  2. change `ledger-binary-path` to hledger
 
-Eg: `ledger-display-balance-at-point` (C-c C-p) runs 
-`ledger cleared ACCT`.
-hledger doesn't have a "cleared" command, so you could make it by
-creating `hledger-cleared.sh` in $PATH:
+- Or: keep your hledger journal 100% Ledger-compatible, and let ledger-mode run `ledger` as it usually does. Unless you are a Ledger user who wants to run both tools, you may find this too limiting.
 
-    #!/bin/sh
-    hledger balance -N "$@"  # or add -C, or whatever you like
+- Or: set up compatibility scripts emulating the ledger command set and CLI with hledger. For example: `ledger-display-balance-at-point` (C-c C-p) runs 
+`ledger cleared ACCT`. hledger doesn't have a "cleared" command, but you could make one similar to Ledger's using an add-on script: `hledger-cleared.sh` in $PATH containing:
+  ```shell
+  #!/bin/sh
+  hledger balance -N -C "$@"
+  ```
+  This approach can solve some of the incompatibilities, but it's a hassle.
 
-[#367 ledger-mode setup for hledger needs documenting](https://github.com/simonmichael/hledger/issues/367)
-has more discussion and tips, which should be collected here.
+More tips:
 
 To toggle a transaction's cleared status: move point to it, C-c C-e.
+
 To toggle just a posting's status: move point to it, C-c C-c.
 
-## Emacs tips
+[#367 ledger-mode setup for hledger needs documenting](https://github.com/simonmichael/hledger/issues/367) has more tips to be collected here.
 
-Ledger entries can be embedded in a org file and manipulated using Babel. See eg
+
+### hledger-mode
+
+<https://github.com/narendraj9/hledger-mode>\
+An alternative to ledger-mode, written specifically for hledger. Has some different features. Less actively maintained.
+
+### flycheck-hledger
+
+<https://github.com/DamienCassou/flycheck-hledger>\
+Provides realtime indication of problems in your journal.
+Can be combined with ledger-mode or hledger-mode.
+
+### org
+
+Ledger entries can be embedded in a org outline and manipulated using Babel. See eg
 [Using Ledger for Accounting in Org-mode with Babel](https://orgmode.org/worg/org-contrib/babel/languages/ob-doc-ledger.html)
+
+### Misc
 
 A helper to browse TODO tags in the journal:
 
     (defun journal-todos nil (interactive) (lgrep "TODO:" "current.journal" "~/finance" nil))
 
-## General editing tips
 
-From the mail list, somebody's trick for alignment: "Space-indent the account, tab-indent the amount, set a large tab stop."
+
+## Vim
+
+### vim-ledger
+
+<https://github.com/ledger/vim-ledger>
+
+### hledger-vim
+
+<https://github.com/anekos/hledger-vim>
+
+## VS Code
+
+### hledger-vscode
+
+<https://github.com/mhansen/hledger-vscode>
+
+## Miscellaneous
+
+From the mail list, a trick for aligning transaction amounts: 
+"Space-indent the account, tab-indent the amount, set a large tab stop."
 
