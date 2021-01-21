@@ -217,3 +217,78 @@ Eg: running hledger in /home/simon/project/finance would combine any of the foll
 - /home/simon/hledger.conf
 - /home/simon/project/hledger.conf
 - /home/simon/project/finance/hledger.conf
+
+## balance
+
+Mockup/outline for improved balance command docs, and notes for [#1353](https://github.com/simonmichael/hledger/issues/1353).
+
+The balance command is hledger's most versatile command, with various modes and options.
+
+### Simple vs. periodic balance reports
+
+By default, the balance command shows a list of accounts, and the
+amounts posted to them during a single time period.
+
+With a [report interval](#report-intervals) flag (`-D`/`--daily`,
+`-W`/`--weekly`, `-M`/`--monthly`, `-Q`/`--quarterly`, or
+`-Y`/`--yearly`), the balance command gives a tabular report with one
+or more columns representing successive time periods.
+
+Periodic reports also work for a single time period, so you might
+prefer to always use them (eg by adding `-Y`), for consistency.
+
+### List vs. tree mode
+
+By default (or with `-l`/`--flat`), accounts' full names are shown, as a flat list.
+
+With `-t`/`--tree`, the account hierarchy is shown, 
+with subaccounts' short names indented below their parent.
+"Boring" accounts (containing a single interesting subaccount and no
+balance of their own) are elided into their subaccount's name to save
+space, unless `--no-elide` is used.
+
+In tree mode, "inclusive" account balances are shown,
+meaning they always include the balances of subaccounts.
+(And the report's final total will be the sum of top-level balances,
+not of all the balances shown.)
+
+### Balance report types
+
+Balance reports offer several variants, each showing different information. These are:
+
+| Report mode            | Shows, for each account and period:                                                                                                |
+|------------------------|------------------------------------------------------------------------------------------------------------------------------------|
+| `balance [--change]`   | "Balance changes": the change of balance (sum of amounts posted) in each period. This is the default.                              |
+| `balance --cumulative` | "Relative end balances": the change accumulated from report start to each period's end.                                            |
+| `balance --historical` | "Historical end balances": the change accumulated from journal start to each period's end. Ie, actual real-world account balances. |
+| `balance --budget`     | "Actual and target changes": like --change, but also shows a budget goal for the period.                                           |
+<br>
+
+## Valuation
+
+### Balance report valuation
+
+In hledger 1.20.3, here is what the balance report types show, for each account and period, with each [valuation type](#valuation):
+
+|                        | (no valuation)                          | `--value=cost`                         | `--value=then`                                                     | `--value=end`                                               | `--value=DATE`,<br>`--value=now`                          |
+|------------------------|-----------------------------------------|----------------------------------------|--------------------------------------------------------------------|-------------------------------------------------------------|-----------------------------------------------------------|
+| `balance [--change]`   | change in period                        | costs in period                        | sum of posting-date market values in period                        | period-end value of change in period                        | DATE/now-value of change in period                        |
+| `balance --cumulative` | change from report start to period end  | costs from report start to period end  | sum of posting-date market values from report start to period end  | period-end value of change from report start to period end  | DATE/now-value of change from report start to period end  |
+| `balance --historical` | change from journal start to period end | costs from journal start to period end | sum of posting-date market values from journal start to period end | period-end value of change from journal start to period end | DATE/now-value of change from journal start to period end |
+| `balance --budget`     | like --change, plus budget goals        | "                                      | "                                                                  | "                                                           | "                                                         |
+<br>
+
+<!--
+Old doc: from on "Effect of valuation on reports":
+
+| Report mode:                                        | `-V`, `-X`                                                        | `--value=then`                                                                                | `--value=end`                                                     | `--value=DATE`, `--value=now`           |
+|-----------------------------------------------------|-------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|-------------------------------------------------------------------|-----------------------------------------|
+| starting balances (-H)                              | value at report start of sums of all postings before report start | sums of values of postings before report start at respective posting dates                    | value at report start of sums of all postings before report start | sums of postings before report start    |
+| balance changes (bal, is, bs --change, cf --change) | same as --value=end                                               | sums of values of postings in period at respective posting dates                              | balance change in each period, valued at period ends              | value at DATE/today of sums of postings |
+| end balances (bal -H, is --H, bs, cf)               | same as --value=end                                               | sums of values of postings from before period start to period end at respective posting dates | period end balances, valued at period ends                        | value at DATE/today of sums of postings |
+| budget amounts (--budget)                           | like balance changes/end balances                                 | like balance changes/end balances                                                             | like balances                                                     | like balance changes/end balances       |
+| row totals, row averages (-T, -A)                   | sums, averages of displayed values                                | sums, averages of displayed values                                                            | sums, averages of displayed values                                | sums, averages of displayed values      |
+| column totals                                       | sums of displayed values                                          | sums of displayed values                                                                      | sums of displayed values                                          | sums of displayed values                |
+| grand total, grand average                          | sum, average of column totals                                     | sum, average of column totals                                                                 | sum, average of column totals                                     | sum, average of column totals           |
+<br>
+-->
