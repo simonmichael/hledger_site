@@ -224,18 +224,17 @@ Mockup/outline for improved balance command docs, and notes for [#1353](https://
 
 The balance command is hledger's most versatile command, with various modes and options.
 
-### Simple vs. periodic balance reports
+### Single-period vs. multi-period balance reports
 
 By default, the balance command shows a list of accounts, and the
-amounts posted to them during a single time period.
+amounts posted to them during a single time period, as in Ledger.
 
 With a [report interval](#report-intervals) flag (`-D`/`--daily`,
 `-W`/`--weekly`, `-M`/`--monthly`, `-Q`/`--quarterly`, or
-`-Y`/`--yearly`), the balance command gives a tabular report with one
-or more columns representing successive time periods.
-
-Periodic reports also work for a single time period, so you might
-prefer to always use them (eg by adding `-Y`), for consistency.
+`-Y`/`--yearly`), the balance command shows a tabular report,
+with one or more columns representing successive time periods,
+and perhaps Average and Total columns.
+This is a hledger feature.
 
 ### List vs. tree mode
 
@@ -256,15 +255,13 @@ not of all the balances shown.)
 
 Balance reports offer several variants, each showing different information. These are:
 
-| Report mode            | Shows, for each account and period:                                                                                                |
-|------------------------|------------------------------------------------------------------------------------------------------------------------------------|
-| `balance [--change]`   | "Balance changes": the change of balance (sum of amounts posted) in each period. This is the default.                              |
-| `balance --cumulative` | "Relative end balances": the change accumulated from report start to each period's end.                                            |
-| `balance --historical` | "Historical end balances": the change accumulated from journal start to each period's end. Ie, actual real-world account balances. |
-| `balance --budget`     | "Actual and target changes": like --change, but also shows a budget goal for the period.                                           |
+| Report mode            | Shows, for each account and period:                                                                                                                 |
+|------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
+| `balance [--change]`   | "Balance changes": the change of balance (sum of amounts posted) in each period. This is the default.                                               |
+| `balance --cumulative` | "Relative end balances": the change accumulated from report start to each period's end.                                                             |
+| `balance --historical` | "Historical end balances": the change accumulated from journal start to each period's end. Ie, the real-world account balances at period end dates. |
+| `balance --budget`     | "Actual and target changes": like --change, but also shows a budget goal for each period.                                                           |
 <br>
-
-## Valuation
 
 ### Balance report valuation
 
