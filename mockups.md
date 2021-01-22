@@ -236,6 +236,8 @@ This command supports the
 [output format](hledger.html#output-format) options.
 It supports output formats `txt`, `csv`, `json`, and (multi-period reports only:) `html`.
 
+In terminal output, when colour is enabled, negative amounts are shown in red.
+
 ### Single-period balance reports
 
 With no arguments, `balance` shows a list of all accounts and their
@@ -362,10 +364,6 @@ Accounts at the depth limit will include the balances of any hidden subaccounts
 You can also hide account name components at the start of account
 names, using `--drop N`. This can be useful for hiding uninteresting
 top-level account name parts.
-
-### Colour support
-
-In terminal output, when colour is enabled, `balance` shows negative amounts in red.
 
 ### Sorting by amount
 
