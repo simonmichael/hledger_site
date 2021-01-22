@@ -326,12 +326,12 @@ to pipe it into `less -RS`. Eg: `hledger bal -D --color=yes | less -RS`.
 Balance reports offer several variants, each showing different
 information. These are:
 
-| Report mode               | Shows, for each account and period:                                                                                                                 |
-|---------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
-| `balance [--change]`      | "Balance changes": the change of balance (sum of amounts posted) in each period. This is the default.                                               |
-| `balance --cumulative`    | "Relative end balances": the change accumulated from report start to each period's end.                                                             |
-| `balance --historical/-H` | "Historical end balances": the change accumulated from journal start to each period's end. Ie, the real-world account balances at period end dates. |
-| `balance --budget`        | "Actual and target changes": like --change, but also shows a predefined goal for each period. (See below.)                                          |
+| Report mode               | Shows, for each account and period:                                                                                                        |
+|---------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
+| `balance [--change]`      | "Balance changes": the change of balance (sum of amounts posted) in each period. This is the default.                                      |
+| `balance --cumulative`    | "Relative end balances": the change accumulated from report start to each period's end.                                                    |
+| `balance --historical/-H` | "Historical end balances": the change accumulated from journal start to each period's end. Ie, the real-world period-end account balances. |
+| `balance --budget`        | "Actual and target changes": like --change, but also shows a predefined goal for each period. (See below.)                                 |
 <br>
 
 `--row-total/-T` is disabled with `--cumulative` or `--historical/-H` (since summing end balances generally does not make sense).
