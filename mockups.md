@@ -218,6 +218,12 @@ Eg: running hledger in /home/simon/project/finance would combine any of the foll
 - /home/simon/project/hledger.conf
 - /home/simon/project/finance/hledger.conf
 
+<style>
+.wy-table-responsive { 
+  overflow:visible;
+}
+</style>
+
 ## balance
 
 *Mockup/outline for improved balance command docs, and notes for [#1353](https://github.com/simonmichael/hledger/issues/1353).*
