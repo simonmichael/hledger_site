@@ -706,3 +706,23 @@ Budget performance in 2019/01:
                                         ||        0 [                 0] 
 ```
 
+## Valuation short flags
+
+| Short flag            | Equivalent to      |
+|-----------------------|--------------------|
+| `-B/--cost`           | `--value=cost`     |
+| `-V`                  | `--value=end`      |
+| `-X/--exchange  COMM` | `--value=end,COMM` |
+<br>
+
+## Upgrade notes
+
+1.20.3 to master:
+
+|                       | User-visible changes                                                                           |
+|-----------------------|------------------------------------------------------------------------------------------------|
+| `--value=cost`        |                                                                                                |
+| `-B/--cost`           |                                                                                                |
+| `--value=end`         | Shows change of end values instead of end value of change. For old behaviour use --value=then. |
+| `-V`, `-X/--exchange` | Shows change of end values instead of end value of change. For old behaviour use --value=then. |
+<br>
