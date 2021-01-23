@@ -119,10 +119,6 @@ What could make getting started substantially easier ?
 - Official CI-generated binaries for all major platforms
 - Builtin access to docs in web format
 
-## CI-generated binaries for linux & mac
-
-Provide official static linux/mac release binaries with CI, like windows.
-
 ## Web docs
 
 Provide the embedded user manuals as HTML also. Eg:
