@@ -30,6 +30,26 @@ Changes in hledger-install.sh are shown
 [here](https://github.com/simonmichael/hledger/commits/master/hledger-install/hledger-install.sh).
 
 
+## 2021-01-29 hledger-1.20.4
+
+- aregister: ignore a depth limit, as in 1.19 (#1468).
+  In 1.20-1.20.3, aregister had stopped showing transactions in subaccounts 
+  below a depth limit. Now it properly shows all subaccount transactions, 
+  ensuring that the register's final total matches a balance report with 
+  similar arguments.
+
+## 2021-01-29 hledger-ui-1.20.4
+
+- ui: register: show all txns in/under an account at the depth limit (#1468).
+  In 1.20-1.20.3, the register screen had stopped showing transactions 
+  in accounts below a depth limit. Now it properly shows all subaccount transactions,
+  even when there is a depth limit, ensuring that the register's final total 
+  matches the balance shown on the account screen.
+
+# 2021-01-29 hledger-web-1.20.4
+
+- Use hledger 1.20.4.
+
 ## 2021-01-14 hledger 1.20.3, hledger-ui 1.20.3, hledger-web 1.20.3
 
 - When searching for price chains during valuation/currency conversion:
