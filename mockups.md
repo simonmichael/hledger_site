@@ -222,23 +222,43 @@ Eg: running hledger in /home/simon/project/finance would combine any of the foll
 
 ## balance
 
-*Mockup/outline for improved balance command docs, and notes for [#1353](https://github.com/simonmichael/hledger/issues/1353).*
+*2021-01-30 draft of improved balance command docs, keeping [#1353](https://github.com/simonmichael/hledger/issues/1353) in mind.*
 
-hledger's `balance` command is a powerful and flexible reporting command.
-There are some easier-to-user variants of it for producing standard financial reports, including
-[`balancesheet`](hledger.html#balancesheet), 
-[`balancesheetequity`](hledger.html#balancesheetequity), 
-[`incomestatement`](hledger.html#incomestatement) and 
-[`cashflow`](hledger.html#cashflow).
-If you find those too limiting, you can use the `balance` command directly.
-Most of the features described below are common to all of these commands.
+The `balance` command is a general-purpose report that lists accounts
+(all of them, by default) along with the amounts posted to them during
+some period (the whole journal period, by default). You can use
+[query](#queries) arguments or options to limit the report to specific
+accounts, a different time period, only cleared transactions, etc.
+
+hledger's balance command is based on Ledger's, and adds
+hledger-specific features such as multi-period reports. It is
+flexible; use it when you want maximum control. For everyday financial
+reporting, however, consider using the following higher-level reports
+instead; they are aware of [account types](hledger.html#account-types)
+and have convenient defaults, making them easier to use correctly:
+[`balancesheet`](hledger.html#balancesheet)/[`balancesheetequity`](hledger.html#balancesheetequity),
+[`incomestatement`](hledger.html#incomestatement) and
+[`cashflow`](hledger.html#cashflow). These commands also support many
+of the balance command's optional features.
+
+As a quick overview, the balance command can show:
+
+- accounts as a flat list or a tree, optionally depth-limited (`-l`, `-t`, `-[1-9]`)
+- one time period, or multiple periods (`-D`, `-W`, `-M`, `-Q`, `-Y`, `-p INTERVAL`)
+- custom-formatted line items (in single-period reports) (`--format`)
+- balance changes in each period (`--change`)
+- actual and planned balance changes, and their relative percentage, in each period (`--budget`)
+- accumulated totals at the end of each period (counting from report start) (`--cumulative`)
+- historical end balances at the end of each period (assuming a suitable opening balances transaction) (`--historical`)
+- totals, averages, percentages (`-T`, `-A`, `-%`)
+- pivoted data (using a different field as the "account name") (`--pivot FIELD`)
+
 
 This command supports the
 [output destination](hledger.html#output-destination) and
 [output format](hledger.html#output-format) options.
-It supports output formats `txt`, `csv`, `json`, and (multi-period reports only:) `html`.
-
-In terminal output, when colour is enabled, negative amounts are shown in red.
+It supports output formats `txt`, `csv`, `json`, and (multi-period reports only:) `html`. 
+In `txt` output in a colour-supporting terminal, negative amounts are shown in red.
 
 ### Single-period balance reports
 
