@@ -614,10 +614,12 @@ instead of just `hledger is`.
 
 ## Related
 
+- [Trading With Ledger-cli And Lots](https://www.d10.dev/blog/ledger-cli-trade) and [lotter](https://src.d10.dev/lotter/doc/tip/README.md)
 - [Beancount: Command-line Accounting Cookbook][beancount_cookbook]: Account naming, basic trading transactions
   [Beancount: Trading with Beancount][beancount_trading]: More complicated trading transactions, discussion on tricky cost basis adjustments
 - [Issue #624 Tracking investments in hledger](https://github.com/simonmichael/hledger/issues/624)
 - [Discussion on investment modeling from the mailing list](https://groups.google.com/forum/#!topic/hledger/e8Ss7ZL4ADI)
+<!-- - ["Unconfirmed" podcast episode on cryptocurrency taxes](https://unchainedpodcast.com/the-irs-is-cracking-down-on-crypto-taxes-what-you-need-to-know/) -->
 
 
 [transaction price]:     journal.html#transaction-prices
