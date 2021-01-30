@@ -722,23 +722,28 @@ Budget performance in 2019/01:
                                         ||        0 [                 0] 
 ```
 
-## Valuation short flags
-
-| Short flag            | Equivalent to      |
-|-----------------------|--------------------|
-| `-B/--cost`           | `--value=cost`     |
-| `-V`                  | `--value=end`      |
-| `-X/--exchange  COMM` | `--value=end,COMM` |
-<br>
 
 ## Upgrade notes
 
-1.20.3 to master:
+*Cf [#1353](https://github.com/simonmichael/hledger/issues/1353)*
 
-|                       | User-visible changes                                                                           |
-|-----------------------|------------------------------------------------------------------------------------------------|
-| `--value=cost`        |                                                                                                |
-| `-B/--cost`           |                                                                                                |
-| `--value=end`         | Shows change of end values instead of end value of change. For old behaviour use --value=then. |
-| `-V`, `-X/--exchange` | Shows change of end values instead of end value of change. For old behaviour use --value=then. |
+User-visible changes when going from 1.20.4 to master:
+
+|                            |                                                                                                                                                              |
+|----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `-B/--cost`                | Now a primary flag.                                                                                                                                          |
+| `--value=cost`             | Now an alias for `-B/--cost`, and deprecated.                                                                                                                |
+| `--value=cost,COMM`        | No longer supported, suggests `-B --value=X,COMM`.                                                                                                           |
+| `--value=end`              | With `--change`, shows change of end values instead of end value of change.<br>`--value=then` approximates and hopefully is preferable to the old behaviour. |
+|                            |                                                                                                                                                              |
+<br>
+
+Meaning of the cost/valuation short flags in master:
+
+| Short flag            | Equivalent to              |
+|-----------------------|----------------------------|
+| `-B`                  | `--cost`                   |
+| `-V`                  | `--value=then` (soon)      |
+| `-X/--exchange  COMM` | `--value=then,COMM` (soon) |
+|                       |                            |
 <br>
