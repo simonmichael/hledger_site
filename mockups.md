@@ -225,8 +225,8 @@ Eg: running hledger in /home/simon/project/finance would combine any of the foll
 *2021-01-30 draft of improved balance command docs, keeping [#1353](https://github.com/simonmichael/hledger/issues/1353) in mind.*
 
 The `balance` command is a general-purpose report that lists accounts
-(all of them, by default) along with the amounts posted to them during
-some period (the whole journal period, by default). You can use
+(all of them, by default) along with the total amounts posted to them
+(during the whole journal period, by default). You can use
 [query](#queries) arguments or options to limit the report to specific
 accounts, a different time period, only cleared transactions, etc.
 
@@ -239,7 +239,7 @@ and have convenient defaults, making them easier to use correctly:
 [`balancesheet`](hledger.html#balancesheet)/[`balancesheetequity`](hledger.html#balancesheetequity),
 [`incomestatement`](hledger.html#incomestatement) and
 [`cashflow`](hledger.html#cashflow). These commands also support many
-of the balance command's optional features.
+of the balance command's optional features, described below.
 
 As a quick overview, the balance command can show:
 
@@ -250,127 +250,146 @@ As a quick overview, the balance command can show:
 - actual and planned balance changes, and their relative percentage, in each period (`--budget`)
 - accumulated totals at the end of each period (counting from report start) (`--cumulative`)
 - historical end balances at the end of each period (assuming a suitable opening balances transaction) (`--historical`)
-- totals, averages, percentages (`-T`, `-A`, `-%`)
-- pivoted data (using a different field as the "account name") (`--pivot FIELD`)
+- totals, averages, percentages, inverted sign (`-T`, `-A`, `-%`, `--invert`)
+- transposed data - swapping the rows and columns (in multi-period reports) (`--transpose`)
+- pivoted data - using a different field as the "account name" (`--pivot FIELD`)
 
-
-This command supports the
+The balance command supports the
 [output destination](hledger.html#output-destination) and
 [output format](hledger.html#output-format) options.
 It supports output formats `txt`, `csv`, `json`, and (multi-period reports only:) `html`. 
 In `txt` output in a colour-supporting terminal, negative amounts are shown in red.
 
-### Single-period balance reports
+<a name="classic-balance-report"></a>
+
+### Single-period balance report
 
 With no arguments, `balance` shows a list of all accounts and their
-*change of balance* - the sum of posting amounts, both inflows and
-outflows - during the entire period of the journal, by default.
+change of balance - ie, the sum of posting amounts, both inflows and
+outflows - during the entire period of the journal.
+Accounts are sorted by [declaration order](https://hledger.org/hledger.html#declaring-accounts)
+if any, and then alphabetically by account name.
+For instance, using [examples/sample.journal](https://github.com/simonmichael/hledger/blob/master/examples/sample.journal):
 
-You can see fewer accounts, a different time period, totals of cleared
-transactions, etc. by using [query](#queries) arguments or options to
-limit the postings being matched.
+```shell
+$ hledger bal
+                  $1  assets:bank:saving
+                 $-2  assets:cash
+                  $1  expenses:food
+                  $1  expenses:supplies
+                 $-1  income:gifts
+                 $-1  income:salary
+                  $1  liabilities:debts
+--------------------
+                   0  
+```
 
-Note, to see current balances of real-world accounts, two things are needed:
+Accounts with a zero balance (and no non-zero subaccounts, in tree
+mode - see below) are not shown by default. Use `-E/--empty` to see
+them (assets:bank:checking here):
+ 
+```shell
+$ hledger -f examples/sample.journal  bal  -E
+                   0  assets:bank:checking
+                  $1  assets:bank:saving
+                 $-2  assets:cash
+                  $1  expenses:food
+                  $1  expenses:supplies
+                 $-1  income:gifts
+                 $-1  income:salary
+                  $1  liabilities:debts
+--------------------
+                   0  
+```
 
-1. the journal must include a transaction properly setting their initial balance on some date
-2. the report must include all of their postings since then.
+You can see fewer accounts, a different time period, totals from
+cleared transactions only, etc. by using [query](#queries) arguments
+or options to limit the postings being matched:
+
+```shell
+$ hledger bal --cleared assets date:200806
+                 $-2  assets:cash
+--------------------
+                 $-2  
+```
 
 The reported balances' total is shown as the last line, unless `-N`/`--no-total` is used.
 
-Accounts are sorted by [declaration order](https://hledger.org/hledger.html#declaring-accounts)
-if any, and then by account name.
+### Balance changes or end balances?
+
+Note that the balance command simply sums the amounts of the matched
+postings (per account). This means that in general it shows balance
+*changes* during the period. That is useful when reviewing income and
+expense accounts.
+
+By contrast, when reviewing asset, liability and equity accounts,
+you'll usually want to see historically accurate point-in-time end
+balances. For this, two things are needed:
+
+1. The report must include all of the account's prior postings -
+   eg by leaving the report start date unspecified, or by using
+   the `-H/--historical` flag (see below) to include the prior
+   postings in the calculation.
+
+2. For accounts whose full history is not recorded in the journal,
+   there must be an "opening balances" transaction that accurately
+   initialises their balance on some past date (usually the journal's
+   start date, often the first of the year).
+
+We'll revisit this in the "All balance report types" section, below.
+
+<!-- examples -->
+
+<a name="tree-mode"></a>
 
 ### List or tree mode
 
-By default, or with `-l`/`--flat`, accounts are shown as a flat list, with their full names visible.
+By default, or with `-l/--flat`, accounts are shown as a flat list
+with their full names visible, as in the examples above.
 
-With `-t`/`--tree`, the account hierarchy is shown, with subaccounts'
-"leaf" names indented below their parent. 
-Also, "boring" accounts (with a single interesting subaccount and no
-balance of their own) are elided into their subaccount's name for more
-compact output, unless `--no-elide` is used.
+With `-t/--tree`, the account hierarchy is shown, with subaccounts'
+"leaf" names indented below their parent:
 
-Other features of tree mode:
+```shell
+$ hledger balance
+                 $-1  assets
+                  $1    bank:saving
+                 $-2    cash
+                  $2  expenses
+                  $1    food
+                  $1    supplies
+                 $-2  income
+                 $-1    gifts
+                 $-1    salary
+                  $1  liabilities:debts
+--------------------
+                   0
+```
 
-"Inclusive" account balances are shown, meaning they always include
-the balances of subaccounts. (And the report's final total will be the
-sum of top-level balances, not of all the balances shown.)
+Also:
 
-Each group of sibling accounts is sorted by
-[declaration order](https://hledger.org/hledger.html#declaring-accounts) 
-and then by account name.
+- "Boring" accounts are combined with their subaccount for more
+compact output, unless `--no-elide` is used. Boring accounts have no
+balance of their own and just one subaccount (eg `assets:bank` and
+`liabilities` above).
 
-### "Empty" accounts
+- All balances shown are "inclusive", ie including the balances from
+all subaccounts. Note this means some repetition in the output, which
+requires explanation when sharing reports with
+non-plaintextaccounting-users. A tree mode report's final total is the
+sum of the top-level balances shown, not of all the balances shown.
 
-Accounts with a zero balance (and no non-zero subaccounts, in tree
-mode) are not shown unless `-E/--empty` is used.
-<!-- Note: a zero balance does not necessarily mean empty of postings. -->
- 
-### Multi-period balance reports
-
-With a [report interval](#report-intervals) - usually set by a `-D`/`--daily`,
-`-W`/`--weekly`, `-M`/`--monthly`, `-Q`/`--quarterly`, or `-Y`/`--yearly` flag - 
-`balance` shows a tabular report with one or more columns representing successive time periods. 
-<!-- This is a particular strength of hledger. -->
-Commands like `balancesheet`, `incomestatement` etc. always use this report style.
-
-Other features of multi-period balance reports:
-
-Average and/or total columns can be added with the `-A`/`--average` or `-T`/`--row-total` flags.
-
-The report's start/end dates will be expanded, if necessary, to fully
-encompass the displayed subperiods (so that the first and last
-subperiods have the same duration as the others).
-
-Accounts which have no posting activity during the report period (rows
-containing all zeroes) are not shown, unless `-E/--empty` is used.
-
-Leading and trailing columns containing all zeroes are not shown,
-unless `-E/--empty` is used.
-
-The `--transpose` flag can be used to exchange the rows and columns.
-     
-Amounts with many commodities are elided, unless `--no-elide` is used
-(since they can make the table very wide). 
-
-Hiding the totals row with `-N/--no-total` can also help reduce the
-table width. If the the report is still too wide, a good workaround is
-to pipe it into `less -RS`. Eg: `hledger bal -D --color=yes | less -RS`.
-
-### Balance report types
-
-Balance reports offer several variants, each showing different
-information. These are:
-
-| Report mode               | Shows, for each account and period:                                                                                                        |
-|---------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
-| `balance [--change]`      | "Balance changes": the change of balance (sum of amounts posted) in each period. This is the default.                                      |
-| `balance --cumulative`    | "Relative end balances": the change accumulated from report start to each period's end.                                                    |
-| `balance --historical/-H` | "Historical end balances": the change accumulated from journal start to each period's end. Ie, the real-world period-end account balances. |
-| `balance --budget`        | "Actual and target changes": like --change, but also shows a predefined goal for each period. (See below.)                                 |
-<br>
-
-`--row-total/-T` is disabled with `--cumulative` or `--historical/-H` (since summing end balances generally does not make sense).
-
-### Balance report valuation
-
-Here is what the balance report types show, for each account and period, with each [valuation type](#valuation):
-
-|                           | (no valuation)                          | `--value=cost`                         | `--value=then`                                                     | `--value=end`                                                                                                       | `--value=DATE`,<br>`--value=now`                      |
-|---------------------------|-----------------------------------------|----------------------------------------|--------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------|
-| `balance [--change]`      | change in period                        | costs in period                        | sum of posting-date market values in period                        | **1.20.3:** period-end value of change in period                        <br>**master:** change of period-end values | DATE value of change in period                        |
-| `balance --cumulative`    | change from report start to period end  | costs from report start to period end  | sum of posting-date market values from report start to period end  | **1.20.3:** period-end value of change from report start to period end  <br>**master:** change of period-end values | DATE value of change from report start to period end  |
-| `balance --historical/-H` | change from journal start to period end | costs from journal start to period end | sum of posting-date market values from journal start to period end | **1.20.3:** period-end value of change from journal start to period end <br>**master:** change of period-end values | DATE value of change from journal start to period end |
-| `balance --budget`        | like --change, plus budget goals        | "                                      | "                                                                  | "                                                                                                                   | "                                                     |
-<br>
+- Each group of sibling accounts (ie, under a common parent) is sorted separately.
 
 ### Depth limiting
 
 With a `depth:N` query, or `--depth N` option, or just `-N`, 
 balance reports will show accounts only to the specified depth,
-hiding the deeper subaccounts. This can be useful for getting an overview.
-<!--
-Eg, limiting to depth 1 shows the top-level accounts:
+hiding the deeper subaccounts. 
+Account balances at the depth limit remain accurate, always including
+the balances from any hidden subaccounts (even in list mode).
+This can be useful for getting an overview. Eg, limiting to depth 1:
+
 ```shell
 $ hledger balance -N -1
                  $-1  assets
@@ -378,18 +397,174 @@ $ hledger balance -N -1
                  $-2  income
                   $1  liabilities
 ```
+
+You can also hide top-level account name parts, using `--drop N`.
+This can be useful for hiding repetitive top-level account names:
+
+```shell
+$ hledger bal expenses --drop 1
+                  $1  food
+                  $1  supplies
+--------------------
+                  $2  
+```
+
+<a name="multicolumn-balance-report"></a>
+
+### Multi-period balance report
+
+With a [report interval](#report-intervals) (set by the `-D/--daily`,
+`-W/--weekly`, `-M/--monthly`, `-Q/--quarterly`, `-Y/--yearly`, or
+`-p/--period` flag), `balance` shows a tabular report, with columns
+representing successive time periods (and a title). (The higher-level
+`balancesheet`/`incomestatement`/`cashflow` commands always use this
+tabular report style, even for a single period.)
+
+```shell
+$ hledger balance --quarterly income expenses -E
+Balance changes in 2008:
+
+                   ||  2008q1  2008q2  2008q3  2008q4 
+===================++=================================
+ expenses:food     ||       0      $1       0       0 
+ expenses:supplies ||       0      $1       0       0 
+ income:gifts      ||       0     $-1       0       0 
+ income:salary     ||     $-1       0       0       0 
+-------------------++---------------------------------
+                   ||     $-1      $1       0       0 
+
+```
+
+Also:
+
+- The report's start/end dates will be expanded, if necessary, to fully
+encompass the displayed subperiods (so that the first and last
+subperiods have the same duration as the others).
+
+- Leading and trailing periods (columns) containing all zeroes are not
+shown, unless `-E/--empty` is used.
+
+- Accounts (rows) containing all zeroes are not shown, unless
+`-E/--empty` is used.
+
+- Amounts with many commodities are shown in abbreviated form, unless
+`--no-elide` is used. *experimental*
+
+- Average and/or total columns can be added with the `-A/--average` and
+`-T/--row-total` flags.
+
+- The `--transpose` flag can be used to exchange rows and columns.
+     
+<!--
+```shell
+$ hledger balance income expenses -tQETA
+Balance changes in 2008:
+
+            ||  2008q1  2008q2  2008q3  2008q4    Total  Average 
+============++===================================================
+ expenses   ||       0      $2       0       0       $2       $1 
+   food     ||       0      $1       0       0       $1        0 
+   supplies ||       0      $1       0       0       $1        0 
+ income     ||     $-1     $-1       0       0      $-2      $-1 
+   gifts    ||       0     $-1       0       0      $-1        0 
+   salary   ||     $-1       0       0       0      $-1        0 
+------------++---------------------------------------------------
+            ||     $-1      $1       0       0        0        0 
+
+(Average is rounded to the dollar here since all journal amounts are)
+```
 -->
 
-Accounts at the depth limit will include the balances of any hidden subaccounts
-(even in flat mode, which normally shows exclusive balances).
+Multi-period reports with many periods can be wide.
+Converting to a single currency with `-V`, or hiding the totals row
+with `-N/--no-total`, are some ways to reduce the width.
+When reports are still too wide for comfortable viewing, here are some tips:
 
-You can also hide account name components at the start of account
-names, using `--drop N`. This can be useful for hiding uninteresting
-top-level account name parts.
+- Maximize terminal, reduce font size
+- View with a pager like less, eg: `hledger bal -D --color=yes | less -RS`
+- Output as CSV and view with visidata: `hledger bal -D -O csv | vd -f csv`
+  or with a spreadsheet: `hledger bal -D -o a.csv && open -a Numbers a.csv`
+- Output as HTML and view with a browser: `hledger bal -D -o a.html && open a.html`
+
+[visidata]: https://www.visidata.org
+
+### Balance report types
+
+As mentioned in the "Balance changes or end balances?" section above,
+it's important to be clear on the meaning of the numbers being shown.
+Are they Balance change in period ? Or Historical balance at period
+end ? With multi-period balance reports, there is a third possibility:
+Balance change since report start. And a fourth variant, the budget
+report, is described below.
+
+The `balance` command can show any of these variants, selected by a
+flag, with `--change` being the default:
+
+| Report mode               | Shows, for each account and period:                                                                                               |
+|---------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
+| `balance [--change]`      | "Balance changes": the change of balance in each period.                                                                          |
+| `balance --cumulative`    | "Cumulative balances": the change accumulated from report start to each period's end.                                             |
+| `balance --historical/-H` | "Historical balances": the change accumulated from journal start to each period's end (usually including an opening balance txn). |
+| `balance --budget`        | "Actual and target balance changes": like --change, but also shows a goal in each period.                                         |
+
+Typically,
+`--change` is used when reviewing revenues/expenses,
+`--historical` is used when reviewing assets/liabilities/equity,
+`--budget` is used for comparing revenues/expenses with budget goals, and
+`--cumulative` is rarely used.
+
+Note `--row-total/-T` is disabled with `--cumulative` or `--historical`,
+since summing already-summed end balances usually does not make sense.
+
+<!--
+```shell
+$ hledger balance --quarterly income expenses -E --cumulative
+Ending balances (cumulative) in 2008:
+
+                   ||  2008/03/31  2008/06/30  2008/09/30  2008/12/31 
+===================++=================================================
+ expenses:food     ||           0          $1          $1          $1 
+ expenses:supplies ||           0          $1          $1          $1 
+ income:gifts      ||           0         $-1         $-1         $-1 
+ income:salary     ||         $-1         $-1         $-1         $-1 
+-------------------++-------------------------------------------------
+                   ||         $-1           0           0           0 
+
+```
+```shell
+$ hledger balance ^assets ^liabilities --quarterly --historical --begin 2008/4/1
+Ending balances (historical) in 2008/04/01-2008/12/31:
+
+                      ||  2008/06/30  2008/09/30  2008/12/31 
+======================++=====================================
+ assets:bank:checking ||          $1          $1           0 
+ assets:bank:saving   ||          $1          $1          $1 
+ assets:cash          ||         $-2         $-2         $-2 
+ liabilities:debts    ||           0           0          $1 
+----------------------++-------------------------------------
+                      ||           0           0           0 
+
+```
+-->
+
+### Balance report valuation
+
+When [valuation] is enabled (via `-V`, `-X`, or `--value`),
+here is what the [balance report types](#balance-report-types) show 
+for each [valuation type](hledger.html#value-flexible-valuation):
+
+[valuation]: hledger.html#valuation
+
+|                           | (no valuation)                          | `--value=then`                                                     | `--value=end`                                                                                                     | `--value=DATE/now`                                    |
+|---------------------------|-----------------------------------------|--------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------|
+| `balance [--change]`      | change in period                        | sum of posting-date market values in period                        | **1.20:** period-end value of change in period                        <br>**master:** change of period-end values | DATE-value of change in period                        |
+| `balance --cumulative`    | change from report start to period end  | sum of posting-date market values from report start to period end  | **1.20:** period-end value of change from report start to period end  <br>**master:** change of period-end values | DATE-value of change from report start to period end  |
+| `balance --historical/-H` | change from journal start to period end | sum of posting-date market values from journal start to period end | **1.20:** period-end value of change from journal start to period end <br>**master:** change of period-end values | DATE-value of change from journal start to period end |
+| `balance --budget`        | like --change, plus budget goals        | "                                                                  | "                                                                                                                 | "                                                     |
 
 ### Sorting by amount
 
-With `-S`/`--sort-amount`, accounts with the largest (most positive) balances are shown first.
+With `-S/--sort-amount`, accounts with the largest (most positive) balances are shown first.
 Eg: `hledger bal expenses -MAS` shows your biggest averaged monthly expenses first.
 
 Revenues and liability balances are typically negative, however, so `-S` shows these in reverse order.
@@ -399,31 +574,38 @@ which also support `-S`. Eg: `hledger is -MAS`.
 
 ### Percentages
 
-With `-%` or `--percent`, balance reports show each account's value expressed
-as a percentage of the column's total. This is useful to get an overview of
-the relative sizes of account balances. 
-<!--
-For example to obtain an overview of expenses:
+With `-%/--percent`, balance reports show each account's value
+expressed as a percentage of the (column) total:
 
 ```shell
-$ hledger balance expenses -%
-             100.0 %  expenses
-              50.0 %    food
-              50.0 %    supplies
---------------------
-             100.0 %
+$ hledger bal expenses -Q -%
+Balance changes in 2008:
+
+                   || 2008Q1   2008Q2  2008Q3  2008Q4 
+===================++=================================
+ expenses:food     ||      0   50.0 %       0       0 
+ expenses:supplies ||      0   50.0 %       0       0 
+-------------------++---------------------------------
+                   ||      0  100.0 %       0       0 
 ```
--->
 
-Tree mode does not change the percentages; they are always the
-percentage of the the column total (not of the parent account).
+Note it is not useful to calculate percentages if the amounts in a
+column have mixed signs. In this case, make a separate report for each
+sign, eg:
 
-It is not useful to calculate percentages if:
+```shell
+$ hledger bal -% amt:`>0`
+$ hledger bal -% amt:`<0`
+```
 
-- the column's amounts sum to zero
-- or the column's amounts have mixed signs
-- or the column's amounts have mixed commodities.
-  (You can use [valuation](hledger.html#valuation) to convert them to a single commodity.)
+Similarly, if the amounts in a column have mixed commodities, convert
+them to one commodity with `-B`, `-V`, `-X` or `--value`, or make a
+separate report for each commodity:
+
+```shell
+$ hledger bal -% cur:\\$
+$ hledger bal -% cur:€
+```
 
 ### Customising single-period balance reports
 
@@ -543,10 +725,10 @@ This is different from a normal balance report in several ways:
   budget goal amounts are shown, and the actual/goal percentage.
   (Note: budget goals should be in the same commodity as the actual amount.)
 
-- All parent accounts are always shown, even in flat mode. 
+- All parent accounts are always shown, even in list mode. 
   Eg assets, assets:bank, and expenses above.
 
-- Amounts always include all subaccounts, budgeted or unbudgeted, even in flat mode.
+- Amounts always include all subaccounts, budgeted or unbudgeted, even in list mode.
 
 This means that the numbers displayed will not always add up!
 Eg above, the `expenses`  actual amount includes the gifts and supplies transactions,
