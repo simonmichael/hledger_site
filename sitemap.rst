@@ -92,9 +92,10 @@ hledger
    :maxdepth: 3
 
    about-real-world-setup-docs
-   Full-fledged Hledger tutorial <https://github.com/adept/full-fledged-hledger>
-   Hledger Flow tutorial & slideshow <https://github.com/apauley/hledger-flow>
-   rotorkunstkultur's German setup <https://github.com/rotorkunstkultur/rtrledger>
+   Dmitry Astapov's Full-fledged Hledger tutorial <https://github.com/adept/full-fledged-hledger>
+   Andreas Pauley's Hledger Flow tutorial & slideshow <https://github.com/apauley/hledger-flow>
+   rotorkunstkultur's german setup <https://github.com/rotorkunstkultur/rtrledger>
+   Michael Walker's Personal Finance setup <https://memo.barrucadu.co.uk/personal-finance.html>
    simons-setup
 
 .. toctree::
