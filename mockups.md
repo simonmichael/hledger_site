@@ -245,12 +245,12 @@ As a quick overview, the balance command can show:
 
 - accounts as a flat list or a tree, optionally depth-limited (`-l`, `-t`, `-[1-9]`)
 - one time period, or multiple periods (`-D`, `-W`, `-M`, `-Q`, `-Y`, `-p INTERVAL`)
-- custom-formatted line items (in single-period reports) (`--format`)
 - balance changes in each period (`--change`)
 - actual and planned balance changes, and their relative percentage, in each period (`--budget`)
 - accumulated totals at the end of each period (counting from report start) (`--cumulative`)
 - historical end balances at the end of each period (assuming a suitable opening balances transaction) (`--historical`)
 - totals, averages, percentages, inverted sign (`-T`, `-A`, `-%`, `--invert`)
+- custom-formatted line items (in single-period reports) (`--format`)
 - transposed data - swapping the rows and columns (in multi-period reports) (`--transpose`)
 - pivoted data - using a different field as the "account name" (`--pivot FIELD`)
 
