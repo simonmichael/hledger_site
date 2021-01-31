@@ -386,8 +386,8 @@ sum of the top-level balances shown, not of all the balances shown.
 With a `depth:N` query, or `--depth N` option, or just `-N`, 
 balance reports will show accounts only to the specified depth,
 hiding the deeper subaccounts. 
-Account balances at the depth limit remain accurate, always including
-the balances from any hidden subaccounts (even in list mode).
+Account balances at the depth limit always include the balances from
+any hidden subaccounts (even in list mode). 
 This can be useful for getting an overview. Eg, limiting to depth 1:
 
 ```shell
