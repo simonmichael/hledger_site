@@ -925,3 +925,45 @@ Meaning of the cost/valuation short flags in master:
 | `-V`                  | `--value=then` (soon)      |
 | `-X/--exchange  COMM` | `--value=then,COMM` (soon) |
 
+## Valuation examples
+
+Minimal example for testing some valuation behaviours discussed in #1353.
+
+```journal
+; every ~15 days: one A is purchased, and A's market price in B increases.
+P 2020-01-01 A  1 B
+2020-01-01
+  (a)  1 A
+P 2020-01-15 A  2 B
+2020-01-15
+  (a)  1 A
+P 2020-02-01 A  3 B
+2020-02-01
+  (a)  1 A
+P 2020-02-15 A  4 B
+2020-02-15
+  (a)  1 A
+```
+Old `balance --change --value=end` behaviour: show period-end value of period's balance change:
+```shell
+$ hledger-1.20.4 bal -M --value=end  # --change is the default
+Balance changes in 2020-01-01..2020-02-29, valued at period ends:
+
+   || Jan  Feb 
+===++==========
+ a || 4 B  8 B 
+---++----------
+   || 4 B  8 B 
+```
+
+New `balance --change --value=end` behaviour in master: show change between period-end-valued period-end balances:
+```shell
+$ hledger bal -M --value=end
+Period-end value changes in 2020-01-01..2020-02-29:
+
+   || Jan   Feb 
+===++===========
+ a || 4 B  12 B 
+---++-----------
+   || 4 B  12 B 
+```
