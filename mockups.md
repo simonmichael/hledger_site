@@ -916,8 +916,6 @@ User-visible changes when going from 1.20.4 to master:
 | `--value=cost`             | Now an alias for `-B/--cost`, and deprecated.                                                                                                                |
 | `--value=cost,COMM`        | No longer supported, suggests `-B --value=X,COMM`.                                                                                                           |
 | `--value=end`              | With `--change`, shows change of end values instead of end value of change.<br>`--value=then` approximates and hopefully is preferable to the old behaviour. |
-|                            |                                                                                                                                                              |
-<br>
 
 Meaning of the cost/valuation short flags in master:
 
@@ -926,5 +924,4 @@ Meaning of the cost/valuation short flags in master:
 | `-B`                  | `--cost`                   |
 | `-V`                  | `--value=then` (soon)      |
 | `-X/--exchange  COMM` | `--value=then,COMM` (soon) |
-|                       |                            |
-<br>
+
