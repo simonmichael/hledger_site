@@ -482,8 +482,8 @@ When reports are still too wide for comfortable viewing, here are some tips:
 
 - Maximize terminal, reduce font size
 - View with a pager like less, eg: `hledger bal -D --color=yes | less -RS`
-- Output as CSV and view with visidata: `hledger bal -D -O csv | vd -f csv`
-  or with a spreadsheet: `hledger bal -D -o a.csv && open -a Numbers a.csv`
+- Output as CSV and view with [visidata]: `hledger bal -D -O csv | vd -f csv`\
+  or with a spreadsheet: `hledger bal -D -o a.csv && open a.csv`
 - Output as HTML and view with a browser: `hledger bal -D -o a.html && open a.html`
 
 [visidata]: https://www.visidata.org
@@ -500,7 +500,7 @@ report, is described below.
 The `balance` command can show any of these variants, selected by a
 flag, with `--change` being the default:
 
-| Report mode               | Shows, for each account and period:                                                                                               |
+| Balance report type       | Shows, for each account and period:                                                                                               |
 |---------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
 | `balance [--change]`      | "Balance changes": the change of balance in each period.                                                                          |
 | `balance --cumulative`    | "Cumulative balances": the change accumulated from report start to each period's end.                                             |
@@ -569,8 +569,7 @@ Eg: `hledger bal expenses -MAS` shows your biggest averaged monthly expenses fir
 
 Revenues and liability balances are typically negative, however, so `-S` shows these in reverse order.
 To work around this, you can add `--invert` to flip the signs.
-Or, use one of the sign-flipping reports like `balancesheet` or `incomestatement`, 
-which also support `-S`. Eg: `hledger is -MAS`.
+(Or, use one of the higher-level reports, which flip the sign automatically. Eg: `hledger incomestatement -MAS`).
 
 ### Percentages
 
