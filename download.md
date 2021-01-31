@@ -467,7 +467,7 @@ package manager first. See
 [hledger: Troubleshooting](hledger.html#troubleshooting) for more help.
 
 ## Building from source
-<img alt="Release source" src="https://img.shields.io/badge/Release_source-1.20.1-brightgreen.svg" />
+<img alt="Release source" src="https://img.shields.io/badge/Release_source-1.20.4-brightgreen.svg" />
 
 The [hledger-install script][hledger-install] requires only [bash] and
 builds the current release of the hledger tools and some [add-ons], in
