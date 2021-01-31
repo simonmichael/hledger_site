@@ -927,7 +927,9 @@ Meaning of the cost/valuation short flags in master:
 
 ## Valuation examples
 
-Minimal example for testing some valuation behaviours discussed in #1353.
+Minimal example for testing some valuation behaviours discussed in
+[#1353](https://github.com/simonmichael/hledger/issues/1353).
+See [Balance report valuation](#balance-report-valuation) above.
 
 ```journal
 ; every ~15 days: one A is purchased, and A's market price in B increases.
@@ -949,7 +951,9 @@ P 2020-01-15 A  2 B
 P 2020-02-01 A  3 B
 P 2020-02-15 A  4 B
 ```
-Old `balance --change --value=end` behaviour: show period-end value of period's balance change:
+
+Old `balance --change --value=end` behaviour: shows period-end value of period's balance change:
+
 ```shell
 $ hledger-1.20.4 bal -M --value=end  # --change is the default
 Balance changes in 2020-01-01..2020-02-29, valued at period ends:
@@ -961,7 +965,8 @@ Balance changes in 2020-01-01..2020-02-29, valued at period ends:
    || 4 B  8 B 
 ```
 
-New `balance --change --value=end` behaviour in master: show change between period-end-valued period-end balances:
+New `balance --change --value=end` behaviour in master: shows change between period-end-valued period-end balances:
+
 ```shell
 $ hledger-master bal -M --value=end
 Period-end value changes in 2020-01-01..2020-02-29:
@@ -971,4 +976,17 @@ Period-end value changes in 2020-01-01..2020-02-29:
  a || 4 B  12 B 
 ---++-----------
    || 4 B  12 B 
+```
+
+`balance --value=then` is also supported in master: shows sum of postings' then-values in each period:
+
+```shell
+$ hledger-master bal -M --value=then
+Balance changes in 2020-01-01..2020-02-29, valued at posting date:
+
+   || Jan  Feb 
+===++==========
+ a || 3 B  7 B 
+---++----------
+   || 3 B  7 B 
 ```
