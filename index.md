@@ -515,7 +515,7 @@ literacy and empowerment. Thank you!
 - Sponsor specific tasks with bounties:\
 [![all bounties](https://img.shields.io/badge/github-All_bountied_issues-30bae8 "all bountied issues, bountysource and otherwise")](https://github.com/simonmichael/hledger/issues?q=label:bounty)
 [![bountysource bounties](https://api.bountysource.com/badge/team?team_id=75979&style=bounties_received "issues bountied via bountysource")](https://www.bountysource.com/teams/hledger)\
-(For small amounts, feel free to just post a pledge on an issue. If you use bountysource, assign the bounty to a specific issue, and then announce it on the issue page. Thanks!)
+(For small amounts, feel free to just post a pledge on an [issue](CONTRIBUTING.html#open-issues). If you use Bountysource, contribute to a specific issue (not the hledger team), and then announce it on the issue page. Thanks!)
 
 <!---------------------------------------------------------------------------->
 <style>
