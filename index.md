@@ -384,7 +384,7 @@ See also [ROADMAP](ROADMAP.html).
   <tr>
     <td>Mail list:</td>
     <td>
-      <a href="http://list.hledger.org">list.hledger.org</a>, <a href="mailto:hledger@googlegroups.com">hledger@googlegroups.com</a> (<a href="mailto:hledger-subscribe@googlegroups.com">hledger-subscribe@googlegroups.com</a>)
+      <a href="http://list.hledger.org">list.hledger.org</a>, <a href="mailto:hledger@googlegroups.com">hledger@googlegroups.com</a> (<a href="mailto:hledger+subscribe@googlegroups.com">hledger+subscribe@googlegroups.com</a>)
     </td>
   </tr>
   <tr>
