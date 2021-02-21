@@ -1,38 +1,6 @@
 <!-- 
 The TL;DR intro to hledger.           -*- fill-column:78; -*-
-Maintained as a .md file but intended to be read as rendered HTML.
 -->
-<style>
-/* mimic old-school plain text docs a bit. */
-
-body, p, h1, h2, h3, h4, h5, h6, pre {
-    font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",Courier,monospace;
-    color: black;
-}
-/* workaround for some of those fonts causing numbered list labels to overflow */
-li::marker { font-size: small; }
-body { padding: 2%; }
-body, p {
-    line-height: normal;
-}
-p { margin-bottom: 1em; max-width:55em; }
-/* !important makes it easier to neutralise the complicated sphinx styles */
-pre, div[class^="highlight"] {
-    line-height: normal !important;
-    font-size: inherit !important;
-    border: none !important;
-    overflow:auto !important;
-}
-.highlight { background:none; }
-h1 { padding:0; font-size:2em; }
-h2 { margin-top:2em; font-size:1em; }
-a { text-decoration:underline; }
-ol ul { padding-bottom:1em; }
-a:visited { color:black; }
-/* a:hover { color:#9B59B6; } */
-a:active { color:red; }
-</style>
-
 
 # hledger Quick Start
 
