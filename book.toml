@@ -37,7 +37,7 @@ additional-js = [
   "src/js/site.js",
 ]
 no-section-label = true
-# git-repository-url = "https://github.com/rust-lang/mdBook"
+git-repository-url = "https://github.com/simonmichael/hledger_site"
 # git-repository-icon = "fa-github"
 # site-url = "/example-book/"
 # cname = "myproject.rs"
