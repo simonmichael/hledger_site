@@ -100,69 +100,69 @@ ie http://127.0.0.1:5000 (and [let us know](index.html#help)).
 ### A quick tour
 
 <!-- highslide zooming:
-<a href="/_static/images/hledger-web/Screen%20Shot%202020-03-22%20at%206.10.29%20PM.png" class="highslide" onclick="return hs.expand(this)"><img src="/_static/images/hledger-web/Screen%20Shot%202020-03-22%20at%206.10.29%20PM.png" /></a>
+<a href="/images/hledger-web/Screen%20Shot%202020-03-22%20at%206.10.29%20PM.png" class="highslide" onclick="return hs.expand(this)"><img src="/images/hledger-web/Screen%20Shot%202020-03-22%20at%206.10.29%20PM.png" /></a>
 -->
 
 Here's the "home" screen, showing the empty default journal.
 Or if your journal already contained transactions, you'll see them listed.
 "[General Journal](http://en.wikipedia.org/wiki/General_journal)" means the list of transactions, basically.
 
-[![](/_static/images/hledger-web/Screen%20Shot%202020-03-22%20at%206.10.29%20PM.png)](/_static/images/hledger-web/Screen%20Shot%202020-03-22%20at%206.10.29%20PM.png)
+[![](/images/hledger-web/Screen%20Shot%202020-03-22%20at%206.10.29%20PM.png)](/images/hledger-web/Screen%20Shot%202020-03-22%20at%206.10.29%20PM.png)
 
 Let's hide the sidebar, for a simpler UI. Pressing the `s` key should do it
 (if not, try again after clicking somewhere on the page, and [let us know](index.html#help)):
-[![](/_static/images/hledger-web/Screen%20Shot%202020-03-22%20at%206.11.52%20PM.png)](/_static/images/hledger-web/Screen%20Shot%202020-03-22%20at%206.11.52%20PM.png)
+[![](/images/hledger-web/Screen%20Shot%202020-03-22%20at%206.11.52%20PM.png)](/images/hledger-web/Screen%20Shot%202020-03-22%20at%206.11.52%20PM.png)
 
 Let's record some transactions. Press the `a` key, or click "Add a transaction", to bring up the add form.
 You may need to click or press `TAB` to focus the Date field:
-[![](/_static/images/hledger-web/Screen%20Shot%202020-03-23%20at%202.01.08%20PM.png)](/_static/images/hledger-web/Screen%20Shot%202020-03-22%20at%206.12.04%20PM.png)
+[![](/images/hledger-web/Screen%20Shot%202020-03-23%20at%202.01.08%20PM.png)](/images/hledger-web/Screen%20Shot%202020-03-22%20at%206.12.04%20PM.png)
 
 <!-- For dates, you can click the date picker or type the [date](hledger.html#smart-dates). -->
 We'll copy the sample transactions from the [quick start](index.html#quick-start). 
 Press `TAB` to advance to each next field. 
 Amount2 can be left blank, or you can fill in `$-1234` if you prefer:
-[![](/_static/images/hledger-web/Screen%20Shot%202020-03-22%20at%206.17.53%20PM.png)](/_static/images/hledger-web/Screen%20Shot%202020-03-22%20at%206.17.53%20PM.png)
+[![](/images/hledger-web/Screen%20Shot%202020-03-22%20at%206.17.53%20PM.png)](/images/hledger-web/Screen%20Shot%202020-03-22%20at%206.17.53%20PM.png)
 
 Press `RETURN` or click the add button to save the transaction:
-[![](/_static/images/hledger-web/Screen%20Shot%202020-03-22%20at%206.18.01%20PM.png)](/_static/images/hledger-web/Screen%20Shot%202020-03-22%20at%206.18.01%20PM.png)
+[![](/images/hledger-web/Screen%20Shot%202020-03-22%20at%206.18.01%20PM.png)](/images/hledger-web/Screen%20Shot%202020-03-22%20at%206.18.01%20PM.png)
 
 Press `a` again to add the next transaction.
 As you type "assets:checking", you'll see there's some autocompletion available, since we have used that account before:
-[![](/_static/images/hledger-web/Screen%20Shot%202020-03-22%20at%206.19.08%20PM.png)](/_static/images/hledger-web/Screen%20Shot%202020-03-22%20at%206.19.08%20PM.png)
+[![](/images/hledger-web/Screen%20Shot%202020-03-22%20at%206.19.08%20PM.png)](/images/hledger-web/Screen%20Shot%202020-03-22%20at%206.19.08%20PM.png)
 
 Finish the transaction, and press `RETURN`:
-[![](/_static/images/hledger-web/Screen%20Shot%202020-03-22%20at%206.19.26%20PM.png)](/_static/images/hledger-web/Screen%20Shot%202020-03-22%20at%206.19.26%20PM.png)
+[![](/images/hledger-web/Screen%20Shot%202020-03-22%20at%206.19.26%20PM.png)](/images/hledger-web/Screen%20Shot%202020-03-22%20at%206.19.26%20PM.png)
 
 Press `a` and enter the final transaction.
 This one has three postings (we spent $100 on groceries and also withdrew $40 as cash). 
 As before, you can optionally leave one of the amounts blank:
-[![](/_static/images/hledger-web/Screen%20Shot%202020-03-22%20at%206.20.17%20PM.png)](/_static/images/hledger-web/Screen%20Shot%202020-03-22%20at%206.20.17%20PM.png)
+[![](/images/hledger-web/Screen%20Shot%202020-03-22%20at%206.20.17%20PM.png)](/images/hledger-web/Screen%20Shot%202020-03-22%20at%206.20.17%20PM.png)
 
 After pressing `RETURN`. The journal now shows three transactions, with the most recent at the top:
-[![](/_static/images/hledger-web/Screen%20Shot%202020-03-22%20at%206.22.14%20PM.png)](/_static/images/hledger-web/Screen%20Shot%202020-03-22%20at%206.22.14%20PM.png)
+[![](/images/hledger-web/Screen%20Shot%202020-03-22%20at%206.22.14%20PM.png)](/images/hledger-web/Screen%20Shot%202020-03-22%20at%206.22.14%20PM.png)
 
 Now, press `s` to show the sidebar again.
 We can see it shows the account hierarchy, and each account's balance, based on the transactions entered so far:
-[![](/_static/images/hledger-web/Screen%20Shot%202020-03-22%20at%206.22.29%20PM.png)](/_static/images/hledger-web/Screen%20Shot%202020-03-22%20at%206.22.29%20PM.png)
+[![](/images/hledger-web/Screen%20Shot%202020-03-22%20at%206.22.29%20PM.png)](/images/hledger-web/Screen%20Shot%202020-03-22%20at%206.22.29%20PM.png)
 
 Clicking on, eg, `checking` shows the Register for that account - 
 a list of the transactions affecting this account, and their running total,
 and a chart of that total over time:
-[![](/_static/images/hledger-web/Screen%20Shot%202020-03-22%20at%206.22.40%20PM.png)](/_static/images/hledger-web/Screen%20Shot%202020-03-22%20at%206.22.40%20PM.png)
+[![](/images/hledger-web/Screen%20Shot%202020-03-22%20at%206.22.40%20PM.png)](/images/hledger-web/Screen%20Shot%202020-03-22%20at%206.22.40%20PM.png)
 
 Press `j`, or click `Journal`, to return to the General Journal page showing everything:
-[![](/_static/images/hledger-web/Screen%20Shot%202020-03-22%20at%206.22.53%20PM.png)](/_static/images/hledger-web/Screen%20Shot%202020-03-22%20at%206.22.53%20PM.png)
+[![](/images/hledger-web/Screen%20Shot%202020-03-22%20at%206.22.53%20PM.png)](/images/hledger-web/Screen%20Shot%202020-03-22%20at%206.22.53%20PM.png)
 
 Let's try filtering these transactions with a [query](hledger.html#queries).
 Type `food` in the search field and press `RETURN`. 
 Now we see just the transaction involving a `food` account:
-[![](/_static/images/hledger-web/Screen%20Shot%202020-03-22%20at%206.24.19%20PM.png)](/_static/images/hledger-web/Screen%20Shot%202020-03-22%20at%206.24.19%20PM.png)
+[![](/images/hledger-web/Screen%20Shot%202020-03-22%20at%206.24.19%20PM.png)](/images/hledger-web/Screen%20Shot%202020-03-22%20at%206.24.19%20PM.png)
 
 Click the `x` button or click `Journal` or press `j` to see all data again.
 
 You can see quick help by pressing `?`, or clicking the `?` button near the search field.
 More help is available in the [hledger-web](hledger-web.html) and other manuals, of course:
-[![](/_static/images/hledger-web/Screen%20Shot%202020-03-22%20at%206.23.44%20PM.png)](/_static/images/hledger-web/Screen%20Shot%202020-03-22%20at%206.23.44%20PM.png)
+[![](/images/hledger-web/Screen%20Shot%202020-03-22%20at%206.23.44%20PM.png)](/images/hledger-web/Screen%20Shot%202020-03-22%20at%206.23.44%20PM.png)
 
 That's mostly it!
 Although there are basically just two screens, 
