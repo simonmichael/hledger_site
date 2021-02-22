@@ -21,10 +21,10 @@ compatible with ledger(1).
 
 <div style="float:right; max-width:200px; text-align:right;">
 
-<a href="_static/images/hledger-web/normal/register.png" class="highslide" onclick="return hs.expand(this)"><img src="_static/images/hledger-web/normal/register.png" title="Account register view with accounts sidebar" /></a>
-<a href="_static/images/hledger-web/normal/journal.png" class="highslide" onclick="return hs.expand(this)"><img src="_static/images/hledger-web/normal/journal.png" title="Journal view" /></a>
-<a href="_static/images/hledger-web/normal/help.png" class="highslide" onclick="return hs.expand(this)"><img src="_static/images/hledger-web/normal/help.png" title="Help dialog" /></a>
-<a href="_static/images/hledger-web/normal/add.png" class="highslide" onclick="return hs.expand(this)"><img src="_static/images/hledger-web/normal/add.png" title="Add form" /></a>
+<a href="images/hledger-web/normal/register.png" class="highslide" onclick="return hs.expand(this)"><img src="images/hledger-web/normal/register.png" title="Account register view with accounts sidebar" /></a>
+<a href="images/hledger-web/normal/journal.png" class="highslide" onclick="return hs.expand(this)"><img src="images/hledger-web/normal/journal.png" title="Journal view" /></a>
+<a href="images/hledger-web/normal/help.png" class="highslide" onclick="return hs.expand(this)"><img src="images/hledger-web/normal/help.png" title="Help dialog" /></a>
+<a href="images/hledger-web/normal/add.png" class="highslide" onclick="return hs.expand(this)"><img src="images/hledger-web/normal/add.png" title="Add form" /></a>
 
 </div>
 
