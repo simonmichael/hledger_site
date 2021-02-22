@@ -48,7 +48,7 @@ Changes in hledger-install.sh are shown
   even when there is a depth limit, ensuring that the register's final total 
   matches the balance shown on the account screen.
 
-# 2021-01-29 hledger-web-1.20.4
+## 2021-01-29 hledger-web-1.20.4
 
 - Use hledger 1.20.4.
 
