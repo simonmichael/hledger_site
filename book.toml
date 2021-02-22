@@ -28,8 +28,14 @@ default-theme = "light"
 # mathjax-support = false
 # copy-fonts = true
 # google-analytics = "UA-123456-7"
-additional-css = ["src/css/site.css"]
-additional-js = []
+additional-css = [
+  "src/highslide/highslide.css",
+  "src/css/site.css",
+]
+additional-js = [
+  "src/highslide/highslide.js",
+  "src/js/site.js",
+]
 no-section-label = true
 # git-repository-url = "https://github.com/rust-lang/mdBook"
 # git-repository-icon = "fa-github"

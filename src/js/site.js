@@ -1,3 +1,6 @@
+// hs.graphicsDir = '../js/highslide/graphics/';
+// hs.outlineType = 'outer-glow';
+
 /*
 $(document).ready( function() {
   addDocVersions();
