@@ -21,7 +21,7 @@ max-level = 3
 
 [output.html]
 default-theme = "light"
-# theme = "theme"
+theme = "theme"
 # default-theme = "light"
 # preferred-dark-theme = "navy"
 # curly-quotes = true
