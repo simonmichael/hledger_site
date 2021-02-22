@@ -1,3 +1,5 @@
+<!-- toc -->
+
 # Track investments 2
 
 *0.1 (first draft), 2020-04*

@@ -1,3 +1,5 @@
+<!-- toc -->
+
 # Mockups
 
 Mockups, draft docs and notes exploring possible future features.

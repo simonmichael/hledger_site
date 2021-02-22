@@ -1,3 +1,5 @@
+<!-- toc -->
+
 # FAQ
 
 Welcome to the hledger FAQ!

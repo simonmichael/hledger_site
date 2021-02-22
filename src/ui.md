@@ -1,3 +1,5 @@
+<!-- toc -->
+
 # Easy workflow #3: hledger-ui
 
 [hledger-ui](hledger-ui.html) is hledger's "curses-style" UI, ie a full-window terminal app.

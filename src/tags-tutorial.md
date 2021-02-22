@@ -1,3 +1,5 @@
+<!-- toc -->
+
 # Tags tutorial
 
 Author: Robert Nielsen (YouTube: hledger fan) with invaluable input from Simon Michael

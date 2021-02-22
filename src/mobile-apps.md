@@ -1,3 +1,5 @@
+<!-- toc -->
+
 # Mobile apps
 
 Entering expenses on the spot using a mobile device can be convenient. 

@@ -1,3 +1,5 @@
+<!-- toc -->
+
 # Release notes
 
 <!-- 

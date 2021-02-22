@@ -1,3 +1,5 @@
+<!-- toc -->
+
 # Scripting
 
 Like most PTA tools, hledger's command line interface and plain text

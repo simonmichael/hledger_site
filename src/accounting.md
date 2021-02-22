@@ -1,3 +1,5 @@
+<!-- toc -->
+
 # Accounting concepts
 
 Here we'll give a quick hledger-oriented intro to some useful accounting concepts

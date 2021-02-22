@@ -1,3 +1,5 @@
+<!-- toc -->
+
 # Easy workflow #1: hledger add
 
 Here we'll walk you through a simple way of using hledger, using the

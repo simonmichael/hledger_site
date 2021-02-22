@@ -1,3 +1,5 @@
+<!-- toc -->
+
 <!-- 
 The TL;DR intro to hledger.           -*- fill-column:78; -*-
 -->

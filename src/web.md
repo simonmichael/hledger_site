@@ -1,3 +1,5 @@
+<!-- toc -->
+
 # Easy workflow #2: hledger-web
 
 [hledger-web](hledger-web.html) is hledger's web browser-based UI.

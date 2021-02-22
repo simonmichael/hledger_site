@@ -1,3 +1,5 @@
+<!-- toc -->
+
 # Text editors
 
 If you edit your journals (and other hledger data files) with a [text
