@@ -1,3 +1,11 @@
+build:
+	mdbook build
+
+serve:
+	mdbook serve
+
+clean:
+	mdbook clean
 
 # Auto-rebuild site when source files change, since mdbook watch/serve don't seem to.
 watch:
@@ -15,6 +23,3 @@ watch:
 # 	make watch &
 # 	(sleep 1; $(BROWSE) http://localhost:$(LIVERELOADPORT)/) &
 # 	$(LIVERELOAD) $(OUT)
-
-clean:
-	mdbook clean
