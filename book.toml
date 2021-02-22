@@ -20,10 +20,10 @@ use-default-preprocessors = true
 max-level = 3
 
 [output.html]
-default-theme = "light"
 theme = "theme"
-# default-theme = "light"
+default-theme = "light"
 # preferred-dark-theme = "navy"
+preferred-dark-theme = "light"
 # curly-quotes = true
 # mathjax-support = false
 # copy-fonts = true
