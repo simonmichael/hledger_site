@@ -15,3 +15,6 @@ watch:
 # 	make watch &
 # 	(sleep 1; $(BROWSE) http://localhost:$(LIVERELOADPORT)/) &
 # 	$(LIVERELOAD) $(OUT)
+
+clean:
+	mdbook clean
