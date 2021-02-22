@@ -1,0 +1,4 @@
+/* TOC */
+main > ul:first-child { float:right; width:20em; font-size:small; }
+main > ul:first-child ul { padding-left:1em; }
+main > ul:first-child li { list-style:none; text-indent:-0.5em; }
