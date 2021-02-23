@@ -74,6 +74,7 @@ hledger
    time-planning
    track-investments
    investments
+   return-on-investment
 
 .. toctree::
    :caption: Cookbook: Usage tips
