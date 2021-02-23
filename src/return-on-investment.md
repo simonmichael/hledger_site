@@ -168,3 +168,124 @@ $ hledger roi -Y --inv investment --pnl "unrealized"
 | 1 || 2019-01-01 | 2019-12-31 ||             0 |  $100.00 |     $101.00 | $1.00 || 9.32% | 10.00% |
 +---++------------+------------++---------------+----------+-------------+-------++-------+--------+
 ```
+
+## Using commodities and prices
+
+Let's redo the same Snake Oil example, but creating a special commodity to track amount of Snake Oil we have.
+
+We will use SNKOIL as a commodity name, and will assume that 1 SNKOIL = $1 at the beginning of 2019.
+
+As before, we start with a simple example where we invest in SNKOIL, and by the end of 2019 our investment growth by 10%.
+
+```hledger
+2019-01-01 Investing in Snake Oil
+  assets:cash
+  investment:snake oil   100 SNKOIL @@ $100
+
+; Recording the growth of Snake Oil
+P 2019-12-24  SNKOIL $1.1
+```
+
+We need to tell `roi` that we are interested in the growth of value of
+our investment with `--value=then` switch, which forces it to use
+prices that were in effect at each moment in time that `roi` inspects
+for its computations:
+
+```
+$ hledger roi -Y --inv investment --pnl "unrealized" --value=then
++---++------------+------------++---------------+----------+-------------+-------++--------+--------+
+|   ||      Begin |        End || Value (begin) | Cashflow | Value (end) |   PnL ||    IRR |    TWR |
++===++============+============++===============+==========+=============+=======++========+========+
+| 1 || 2019-01-01 | 2019-12-31 ||             0 |   $100.0 |      $110.0 | $10.0 || 10.00% | 10.00% |
++---++------------+------------++---------------+----------+-------------+-------++--------+--------+
+```
+
+Following the story from the previous example, lets say that shorty
+after investing in the Snake Oil we started to have second thoughts,
+so we prompty withdrew $90, leaving only $10 in. Before Christmas,
+though, we started to get the "fear of missing out", so we put the $90
+back in. So for most of the year, our investment was just $10 dollars (or, rather 10 SNKOIL):
+
+```hledger
+2019-01-01 Investing in Snake Oil
+  assets:cash
+  investment:snake oil   100 SNKOIL @@ $100
+
+2019-01-02 Buyers remorse
+  assets:cash
+  investment:snake oil   -90 SNKOIL @@ $90
+
+2019-12-23 Fear of missing out
+  assets:cash
+  investment:snake oil  90 SNKOIL @@ $90
+
+; Recording the growth of Snake Oil
+P 2019-12-24  SNKOIL $1.1
+```
+
+These numbers do not look correct:
+```
+$ hledger roi -Y --inv investment --pnl "unrealized" --value=then
++---++------------+------------++---------------+----------+-------------+-------++--------+--------+
+|   ||      Begin |        End || Value (begin) | Cashflow | Value (end) |   PnL ||    IRR |    TWR |
++===++============+============++===============+==========+=============+=======++========+========+
+| 1 || 2019-01-01 | 2019-12-31 ||             0 |   $100.0 |      $110.0 | $10.0 || 83.66% | 10.00% |
++---++------------+------------++---------------+----------+-------------+-------++--------+--------+
+```
+
+That is because the "Fear of missing out" buy-back transaction is
+likely incorrect: based on the price in that transaction, it look like
+we are buying back $90 worth of Snake Oil at the same price that it
+had at the beginning of the year, and then after that our investment
+gets sudden increase in value. This completely throws off IRR computations.
+
+Let's say that we kept a better record of SNKOIL prices and we can compute a more precise amount of SNKOIL we bough back at the end of the year:
+ ```hledger
+2019-01-01 Investing in Snake Oil
+  assets:cash
+  investment:snake oil   100 SNKOIL @@ $100
+
+2019-01-02 Buyers remorse
+  assets:cash
+  investment:snake oil   -90 SNKOIL @@ $90
+
+; Recording the price of Snake Oil
+P 2019-02-28 SNKOIL $1.025
+P 2019-06-30 SNKOIL $1.05
+P 2019-09-30 SNKOIL $1.075
+
+2019-12-23 Fear of missing out
+  assets:cash 
+  investment:snake oil   83.72 SNKOIL @@ $90 ; $90/$1.075 = 83.72
+
+; Recording the growth of Snake Oil
+P 2019-12-24  SNKOIL $1.1
+```
+
+Now our IRR looks better:
+```
+$ hledger roi -Y --inv investment --pnl "unrealized" --value=then
++---++------------+------------++---------------+----------+-------------+--------++--------+-------+
+|   ||      Begin |        End || Value (begin) | Cashflow | Value (end) |    PnL ||    IRR |   TWR |
++===++============+============++===============+==========+=============+========++========+=======+
+| 1 || 2019-01-01 | 2019-12-31 ||             0 | $100.000 |    $103.092 | $3.092 || 25.22% | 3.09% |
++---++------------+------------++---------------+----------+-------------+--------++--------+-------+
+```
+
+Though from IRR perspective it looks like we only had about $10 worth
+of SNKOIL for most of the year, and still managed to get a return of
+$3, which looks like about a quarter of $10 invested - hence 25.22% of
+return from IRR standpoint. Note that TWR gives us more sensive 3.09%
+of return, which is closer to what you would expect.
+
+## Investments that pay out (bonds, dividends)
+
+TODO
+
+## Including payouts in return computations (total rate of return)
+
+TODO, but see
+https://github.com/simonmichael/hledger/blob/master/examples/roi-unrealised.ledger
+for an (mostly undocumented) example.
+
+
