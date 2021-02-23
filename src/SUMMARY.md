@@ -52,6 +52,7 @@
 - [Time planning](time-planning.md)
 - [Track investments](track-investments.md)
 - [Track investments 2](investments.md)
+- [Using hledger roi to compute return on investment](return-on-investment.md)
 
 # COOKBOOK: USAGE TIPS
 
