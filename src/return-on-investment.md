@@ -1,3 +1,5 @@
+<!-- toc -->
+
 # Using `hledger roi` to compute return on investment
 
 ## Cash-only investments
