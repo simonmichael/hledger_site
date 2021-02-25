@@ -278,14 +278,86 @@ $3, which looks like about a quarter of $10 invested - hence 25.22% of
 return from IRR standpoint. Note that TWR gives us more sensive 3.09%
 of return, which is closer to what you would expect.
 
-## Investments that pay out (bonds, dividends)
+## Investments that pay interest out (loans, bonds, dividends)
 
-TODO
+Let's say that you have given someone a loan or put money in a savings
+account, or maybe bought bonds that pay out regular coupons, and now
+you have monthly/quarterly/annual payouts. What is the best way to
+record them so that we could compute ROI?
 
-## Including payouts in return computations (total rate of return)
+For the following example, we will assume that you put $100 into
+savings account that pays out $1 quarterly (so your interest is not
+added to your investment):
 
-TODO, but see
-https://github.com/simonmichael/hledger/blob/master/examples/roi-unrealised.ledger
-for an (mostly undocumented) example.
+```hledger
+2019-01-01 Investment
+  assets:cash
+  investment:saving  $100
+```
 
+We need to make sure that:
+
+- Payout transactions are included in the analysis, so they must match
+  the query given to `--inv`. This could be achieved if investment
+  account is mentioned in our transaction.
+
+- Payout transactions do not change the value of the investment
+
+These two bullet points are naturally translated to this transaction:
+
+```hledger
+2019-03-31 Interest
+  assets:cash         $1
+  investment:saving   $0
+```
+
+This transaction is not balanced, though. We need to balance it with the "profit and loss" account:
+```hledger
+2019-03-31 Interest
+  assets:cash         $1
+  investment:saving   $0
+  equity:profit and loss
+```
+
+So, at the end of the quarter your investment grew $1 in value and that $1 was immediately paid out to you, and this transaction lines with the description pretty well.
+
+Let's complete the journal with one year of payouts:
+
+```hledger
+2019-01-01 Investment
+  assets:cash
+  investment:saving  $100
+
+2019-03-31 Q1 Interest
+  assets:cash         $1
+  investment:saving   $0
+  equity:profit and loss
+
+2019-06-30 Q2 Interest
+  assets:cash         $1
+  investment:saving   $0
+  equity:profit and loss
+
+2019-09-30 Q3 Interest
+  assets:cash         $1
+  investment:saving   $0
+  equity:profit and loss
+
+2019-12-31 Q4 Interest
+  assets:cash         $1
+  investment:saving   $0
+  equity:profit and loss
+```
+
+We can now compute ROI:
+```
+$ hledger roi -Y --inv investment --pnl "profit and loss"
++---++------------+------------++---------------+----------+-------------+-----++-------+-------+
+|   ||      Begin |        End || Value (begin) | Cashflow | Value (end) | PnL ||   IRR |   TWR |
++===++============+============++===============+==========+=============+=====++=======+=======+
+| 1 || 2019-01-01 | 2019-12-31 ||             0 |      $96 |        $100 |  $4 || 4.06% | 4.06% |
++---++------------+------------++---------------+----------+-------------+-----++-------+-------+
+```
+
+Cashflow is $100 paid in minus $4 of interest received back.
 
