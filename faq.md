@@ -413,6 +413,11 @@ We do not yet support:
 
 - hledger does not support Ledger's --lots or --gain reports.
 
+- hledger [auto postings](hledger.html#auto-postings) allow only
+  minimal customisation of the amount (just multiplying the matched
+  amount by a constant), not a full embedded expression language like
+  Ledger.
+
 #### timeclock & timedot formats
 
 - hledger's journal, timeclock and timedot formats are separate; you can't 
