@@ -11,6 +11,9 @@ clean:
 watch:
 	find src | entr -d bash -c 'date; mdbook build'
 
+keepwatching:
+	while true; do make -s watch; done
+
 # Auto-rebuild site and auto-reload browser, since mdbook serve doesn't seem to yet.
 # XXX dies
 # LIVERELOADPORT=3001
