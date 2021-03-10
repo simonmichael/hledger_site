@@ -373,6 +373,7 @@ revenues
   consulting
 
 $ hledger balancesheet    # what do I own and owe ?
+$ hledger bs              # short form
 Balance Sheet 2021-03-20
 
                  || 2021-03-20 
@@ -398,6 +399,7 @@ Transactions in assets:checking and subaccounts:
 2021-03-20 Sprouts              ex:fo:groceries, a..         $-140         $2860
 
 $ hledger incomestatement --monthly --depth 2    # where is it coming from and going to ?
+$ hledger is -M -2                               # short form
 Income Statement 2021Q1
 
                      || Jan  Feb    Mar 
@@ -416,15 +418,21 @@ Income Statement 2021Q1
 =====================++=================
  Net:                ||   0    0  $1900 
 
+$ hledger                         # show commands
+
+$ hledger --help                  # show general options
+
+$ hledger is --help               # show incomestatement's options and docs
+
 $ hledger is --man                # show man page scrolled to incomestatement
 
 $ hledger is --info               # show incomestatement docs in Info manual
 
 $ hledger help incomestatement    # show incomestatement docs in best available viewer
 
-$ hledger-ui                      # show TUI
+$ hledger-ui                      # start TUI
 
-$ hledger-web                     # open web UI
+$ hledger-web                     # start WUI in default browser
 
 ```
 
