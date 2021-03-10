@@ -31,6 +31,226 @@ Major releases and user-visible changes, collected from the changelogs (
 Changes in hledger-install.sh are shown
 [here](https://github.com/simonmichael/hledger/commits/master/hledger-install/hledger-install.sh).
 
+## 2021-03-10 hledger-1.21
+
+**More speed; more cli-accessible docs; value change report; improvements to balance reports, valuation and more**
+
+### project-wide changes 1.21
+
+- roi has a new cookbook doc, and example files have been updated.
+  (Dmitry Astapov)
+
+- Example CSV rules for the Daedalus wallet have been added.
+
+- The default stackage resolver/GHC version has been bumped to
+  lts-17.4/ghc-8.10.4.
+
+- tools/generatejournal now includes more commodities and prices in
+  generated journals. (Stephen Morgan)
+
+- Our functional tests now also run on BSD. (#1434, Felix Van der Jeugt)
+
+- Addon scripts in bin/ have been updated for latest hledger API (Stephen Morgan).
+
+- Addon scripts are now compiled as part of our CI tests, and always
+  with the same version of hledger source they were shipped with. We
+  now require script users to check out the hledger source tree and
+  run the scripts (or, `bin/compile.sh`) from there. This keeps users
+  and tests in sync, making things more reliable for everyone. (#1453)
+
+- Last but not least, hledger's bash completions (provided in ./shell-completions/)
+  have been [thoroughly updated](https://github.com/simonmichael/hledger/blob/master/CHANGES.md#121-2021-03-10)
+  (#1404, #1410, Vladimir Zhelezov).
+
+### hledger cli 1.21
+
+#### general
+
+- hledger is now generally about 10% more memory- and time-efficient,
+  and significantly more so in certain cases, eg journals with many
+  total transaction prices. (Stephen Morgan)
+
+- The `--help/-h` and `--version` flags are no longer position-sensitive;
+  if there is a command argument, they now always refer to the command
+  (where applicable).
+
+- The new `--info` flag opens the hledger info manual, if "info" is in $PATH.
+  `hledger COMMAND --info` will open COMMAND's info node.
+
+- The `--man` flag opens the hledger man page, if "man" is in $PATH.
+  `hledger COMMAND --man` will scroll the page to CMD's section, if "less"
+  is in $PATH. (We force the use of "less" in this case, overriding any
+  $PAGER or $MAN_PAGER setting.)
+
+- Some command aliases, considered deprecated, have been removed:
+  `txns`, `equity`, and the single-letter command aliases `a`, `b`,
+  `p`, and `r`. This was discussed at
+  https://github.com/simonmichael/hledger/pull/1423 and on the hledger
+  mail list. It might annoy some folks; please read the issue and do
+  follow up there if needed.
+  
+- Notable documentation updates:
+  the separate file format manuals have been merged into the hledger manual,
+  the topic hierarchy has been simplified,
+  the `balance` command docs and "commands" section have been rewritten.
+
+#### valuation
+
+- Costing and valuation are now independent, and can be combined.
+  `--value=cost` and `--value=cost,COMM` are still supported
+  (equivalent to `--cost` and `--cost --value=then,COMM` respectively), 
+  but deprecated. (Stephen Morgan)
+
+- `-V` is now always equivalent to `--value=end`. (Stephen Morgan)
+
+- `--value=end` now includes market price directives as well as
+  transactions when choosing a valuation date for single-period
+  reports. (#1405, Stephen Morgan)
+
+- `--value=end` now picks a consistent valuation date for single- and
+  and multi-period reports. (#1424, Stephen Morgan)
+
+- `--value=then` is now supported with all reports, not just register. (Stephen Morgan)
+
+- The too-vague `--infer-value` flag has been renamed to `--infer-market-price`.
+  Tip: typing `--infer-market` or even `--infer` is sufficient.
+  The old spelling still works, but is now deprecated.
+
+#### commands
+
+- add: Infix matches are now scored higher. If the search pattern
+  occurs in full within the other description, that match gets a +0.5
+  score boost.
+
+- add: `--debug` now shows transaction matching results, useful when
+  troubleshooting.
+
+- balance: To accomodate new report types, the
+  `--change|--cumulative|--historical|--budget` flags have been split
+  into two groups: report type (`--sum|--budget|...`) and accumulation
+  type (`--change|--cumulative|--historical`). `--sum` and `--change`
+  are the defaults, and your balance commands should still work as
+  before. (Stephen Morgan et al, #1353)
+
+- balance: The `--valuechange` report type has been added, showing the
+  changes in period-end values. (Stephen Morgan, #1353)
+
+- balance: With `--budget`, the first and last subperiods are enlarged
+  to whole intervals for calculating the budget goals also. (Stephen
+  Morgan)
+
+- balance: In multi-period balance reports, specifying a report period
+  now also forces leading/trailing empty columns to be displayed,
+  without having to add `-E`. This is consistent with `balancesheet`
+  etc. (#1396, Stephen Morgan)
+
+- balancesheet, cashflow: declaring just a Cash account no longer
+  hides other Asset accounts.
+
+- check: Various improvements:
+
+  - check name arguments may be given as case-insensitive prefixes
+  - `accounts` and `commodities` may also be specified as arguments
+  - `ordereddates` now checks each file separately (#1493)
+  - `ordereddates` no longer supports the `--unique` flag or query arguments
+  - `payees` is a new check requiring payee declarations
+  - `uniqueleafnames` now gives a fancy error message like the others
+  - the old `checkdates`/`checkdupes` commands have been dropped
+
+- help: The `help` command now shows only the hledger (CLI) manual,
+  its `--info/--man/--pager` flags have been renamed to `-i/-m/-p`,
+  and `--cat` has been dropped.
+
+- help: With a TOPIC argument (any heading or heading prefix, case
+  insensitive), it will open the manual positioned at this topic if
+  possible. (Similar to the new `--man` and `--info` flags described above.)
+  <!-- `hledger help print` will show `print`'s doc with the best available viewer (usually info). -->
+  <!-- `hledger help print -m` is equivalent to `hledger print --man`.) -->
+
+- payees: Add `--used`/`--declared` flags, like the `accounts` command.
+
+- print: Now always shows amounts with all decimal places,
+  unconstrained by commodity display style. This ensures more
+  parseable and sensible-looking output in more cases, and behaves
+  more like Ledger's print. (There may be a cosmetic issue with
+  trailing zeroes.) (#931, #1465)
+
+- print: With `--match`, infix matches are now scored higher, as with
+  the add command.
+
+- print: `--match` now provides debug output useful for troubleshooting.
+
+  If you forget to give `--match` an argument, it can confusingly
+  consume a following flag. Eg if you write:
+
+      hledger print --match -x somebank   # should be: hledger print --match=somebank -x
+
+  it gets quietly parsed as:
+
+      hledger print --match="-x"
+
+  Now you can at least use --debug to figure it out:
+
+      hledger print --match -x somebank --debug
+      finding best match for description: "-x"
+      similar transactions:
+      ...
+
+- roi: Now supports the valuation options (#1417), and uses commodity display styles.
+  Also the manual has been simplified, with some content moved to the Cookbook.
+  (Dmitry Astapov):
+
+#### journal format
+
+- The `commodity` directive now properly sets the display style of the
+  no-symbol commodity. (#1461)
+
+#### csv format
+
+- More kinds of malformed signed numbers are now ignored, in
+  particular just a sign without a number, which simplifies sign
+  flipping with amount-in/amount-out.
+
+### hledger-ui 1.21
+
+- Register screen: also show transactions below the depth limit, as in
+  1.19, keeping the register balance in agreement with the balance
+  shown on the accounts screen. This regressed in 1.20. (#1468)
+
+- Transaction screen: all decimal places are now shown. On the
+  accounts screen and register screen we round amounts according to
+  commodity display styles, but when you drill down to a transaction
+  you probably want to see the unrounded amounts. (Like print, #cf
+  931.)
+
+- New flags `--man` and `--info` open the man page or info manual.
+  (See hledger)
+
+### hledger-web 1.21
+
+- Register: a date range can be selected by dragging over a region on
+  the chart. (Arnout Engelen, #1471)
+
+- Add form: the description field's autocompletions now also offer
+  declared and used payee names.
+
+- New flags `--man` and `--info` open the man page or info manual.
+  (See hledger)
+
+### credits 1.21
+
+This release was brought to you by
+Simon Michael,
+Vladimir Zhelezov,
+Stephen Morgan,
+Dmitry Astapov,
+Arnout Engelen,
+Damien Cassou,
+aragaer,
+Doug Goldstein,
+Caleb Maclennan,
+and
+Felix Van der Jeugt.
 
 ## 2021-01-29 hledger-1.20.4
 
