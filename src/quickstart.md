@@ -422,11 +422,17 @@ $ hledger                         # show commands
 
 $ hledger --help                  # show general options
 
+$ hledger --man                   # show hledger's man page
+
+$ hledger --info                  # show hledger's Info manual
+
 $ hledger is --help               # show incomestatement's options and docs
 
-$ hledger is --man                # show man page scrolled to incomestatement
+$ hledger is --man                # show incomestatement in man page
 
-$ hledger is --info               # show incomestatement docs in Info manual
+$ hledger is --info               # show incomestatement's Info page
+
+$ hledger help                    # show hledger docs in best available viewer
 
 $ hledger help incomestatement    # show incomestatement docs in best available viewer
 
