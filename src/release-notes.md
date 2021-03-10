@@ -34,6 +34,7 @@ Changes in hledger-install.sh are shown
 ## 2021-03-10 hledger-1.21
 
 **More speed; more cli-accessible docs; value change report; improvements to balance reports, valuation and more**
+([announcement](https://groups.google.com/g/hledger/c/xgO2ixBJcZc/m/FOxVeYGABAAJ))
 
 ### project-wide changes 1.21
 
