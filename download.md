@@ -75,7 +75,7 @@ div.badges {
 }
 </style>
 
-The current hledger release is **1.20.4** ([release notes](release-notes)). Below are lots of ways to install:\
+The current hledger release is **1.21** ([release notes](release-notes)). Below are lots of ways to install:\
 \- [Binary packages](#binary-packages) install quickly\
 \- [Building from source](#building-from-source) takes longer but ensures you get the latest release.\
 You may also need some [C libraries](#c-libraries) or a [UTF-8 locale](#utf-8-locale).\
@@ -170,11 +170,11 @@ cd pkgsrc && ./bootstrap/bootstrap --prefix=$HOME/pkg --unprivileged --make-jobs
     <tr valign="top">
       <td>
         <div class="badges">
-          <img alt="CI binaries" src="https://img.shields.io/badge/CI_binaries-1.20.4-brightgreen.svg" />
+          <img alt="CI binaries" src="https://img.shields.io/badge/CI_binaries-1.21-brightgreen.svg" />
         </div>
       </td>
       <td style="padding-top:10px;">
-        <div class="command" style="margin-bottom:4px;"><a href="https://github.com/simonmichael/hledger/releases/tag/1.20.4">hledger-windows.zip</a></div>
+        <div class="command" style="margin-bottom:4px;"><a href="https://github.com/simonmichael/hledger/releases/tag/1.21">hledger-windows.zip</a></div>
         <div class="notes">
         <!--   <span class="warnings"> -->
         <!--     <\!-- <a href="https://github.com/simonmichael/hledger/issues/1039">#1039</a> -\-> -->
@@ -196,11 +196,11 @@ cd pkgsrc && ./bootstrap/bootstrap --prefix=$HOME/pkg --unprivileged --make-jobs
     <tr valign="top">
       <td>
         <div class="badges">
-          <img alt="CI binaries" src="https://img.shields.io/badge/CI_binaries-1.20.4-brightgreen.svg" />
+          <img alt="CI binaries" src="https://img.shields.io/badge/CI_binaries-1.21-brightgreen.svg" />
         </div>
       </td>
       <td style="padding-top:10px;">
-        <div class="command" style="margin-bottom:4px;"><a href="https://github.com/simonmichael/hledger/releases/tag/1.20.4">hledger-macos.zip</a></div>
+        <div class="command" style="margin-bottom:4px;"><a href="https://github.com/simonmichael/hledger/releases/tag/1.21">hledger-macos.zip</a></div>
         <div class="notes"></div>
       </td>
     </tr>
@@ -214,11 +214,11 @@ cd pkgsrc && ./bootstrap/bootstrap --prefix=$HOME/pkg --unprivileged --make-jobs
     <tr valign="top">
       <td>
         <div class="badges">
-          <img alt="CI binaries" src="https://img.shields.io/badge/CI_binaries-1.20.4-brightgreen.svg" />
+          <img alt="CI binaries" src="https://img.shields.io/badge/CI_binaries-1.21-brightgreen.svg" />
         </div>
       </td>
       <td style="padding-top:10px;">
-        <div class="command" style="margin-bottom:4px;"><a href="https://github.com/simonmichael/hledger/releases/tag/1.20.4">hledger-ubuntu.zip</a></div>
+        <div class="command" style="margin-bottom:4px;"><a href="https://github.com/simonmichael/hledger/releases/tag/1.21">hledger-ubuntu.zip</a></div>
         <div class="notes"></div>
       </td>
     </tr>
@@ -467,7 +467,7 @@ package manager first. See
 [hledger: Troubleshooting](hledger.html#troubleshooting) for more help.
 
 ## Building from source
-<img alt="Release source" src="https://img.shields.io/badge/Release_source-1.20.4-brightgreen.svg" />
+<img alt="Release source" src="https://img.shields.io/badge/Release_source-1.21-brightgreen.svg" />
 
 The [hledger-install script][hledger-install] requires only [bash] and
 builds the current release of the hledger tools and some [add-ons], in
@@ -487,7 +487,7 @@ Or, if you prefer to run [stack] yourself:
 
 <div class="builder-command">
   stack update <br>
-  stack install --resolver=lts-16 hledger-lib-1.20.4 hledger-1.20.4 hledger-ui-1.20.4 hledger-web-1.20.4 pretty-simple-4.0.0.0 prettyprinter-1.7.0 --silent
+  stack install --resolver=lts-17 hledger-lib-1.21 hledger-1.21 hledger-ui-1.21 hledger-web-1.21 --silent
 </div>
 
 This installs the main hledger tools in ~/.local/bin.
@@ -501,7 +501,7 @@ Or, if you prefer to run [cabal] yourself:
 <div class="builder-command">
   cabal update <br>
   cabal install alex happy<br>
-  cabal install hledger-1.20.4 hledger-ui-1.20.4 hledger-web-1.20.4
+  cabal install hledger-1.21 hledger-ui-1.21 hledger-web-1.21
 </div>
 
 This installs the main hledger tools in ~/.cabal/bin.
@@ -637,11 +637,11 @@ Eg:
 
 <div class="command">
 $ hledger --version <br>
-hledger 1.20.4 <br>
+hledger 1.21 <br>
 $ hledger-ui --version <br>
-hledger-ui 1.20.4 <br>
+hledger-ui 1.21 <br>
 $ hledger web --version <br>
-hledger-web 1.20.4 <br>
+hledger-web 1.21 <br>
 </div>
 
 And you could see the unit tests pass (just for fun):
