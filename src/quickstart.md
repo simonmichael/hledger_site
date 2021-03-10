@@ -442,3 +442,8 @@ $ hledger-web                     # start WUI in default browser
 
 ```
 
+For more detail, see:
+
+- [hledger manual], web version
+
+- [hledger.org website][full website], including tutorials and cookbook docs
