@@ -47,7 +47,7 @@ Changes in hledger-install.sh are shown
 - tools/generatejournal now includes more commodities and prices in
   generated journals. (Stephen Morgan)
 
-- Our functional tests now also run on BSD. (#1434, Felix Van der Jeugt)
+- Our functional tests now also run on BSD. ([#1434], Felix Van der Jeugt)
 
 - Addon scripts in bin/ have been updated for latest hledger API (Stephen Morgan).
 
@@ -55,11 +55,11 @@ Changes in hledger-install.sh are shown
   with the same version of hledger source they were shipped with. We
   now require script users to check out the hledger source tree and
   run the scripts (or, `bin/compile.sh`) from there. This keeps users
-  and tests in sync, making things more reliable for everyone. (#1453)
+  and tests in sync, making things more reliable for everyone. ([#1453])
 
 - Last but not least, hledger's bash completions (provided in ./shell-completions/)
   have been [thoroughly updated](https://github.com/simonmichael/hledger/blob/master/CHANGES.md#121-2021-03-10)
-  (#1404, #1410, Vladimir Zhelezov).
+  ([#1404], [#1410], Vladimir Zhelezov).
 
 ### hledger cli 1.21
 
@@ -104,10 +104,10 @@ Changes in hledger-install.sh are shown
 
 - `--value=end` now includes market price directives as well as
   transactions when choosing a valuation date for single-period
-  reports. (#1405, Stephen Morgan)
+  reports. ([#1405], Stephen Morgan)
 
 - `--value=end` now picks a consistent valuation date for single- and
-  and multi-period reports. (#1424, Stephen Morgan)
+  and multi-period reports. ([#1424], Stephen Morgan)
 
 - `--value=then` is now supported with all reports, not just register. (Stephen Morgan)
 
@@ -129,10 +129,10 @@ Changes in hledger-install.sh are shown
   into two groups: report type (`--sum|--budget|...`) and accumulation
   type (`--change|--cumulative|--historical`). `--sum` and `--change`
   are the defaults, and your balance commands should still work as
-  before. (Stephen Morgan et al, #1353)
+  before. (Stephen Morgan et al, [#1353])
 
 - balance: The `--valuechange` report type has been added, showing the
-  changes in period-end values. (Stephen Morgan, #1353)
+  changes in period-end values. (Stephen Morgan, [#1353])
 
 - balance: With `--budget`, the first and last subperiods are enlarged
   to whole intervals for calculating the budget goals also. (Stephen
@@ -141,7 +141,7 @@ Changes in hledger-install.sh are shown
 - balance: In multi-period balance reports, specifying a report period
   now also forces leading/trailing empty columns to be displayed,
   without having to add `-E`. This is consistent with `balancesheet`
-  etc. (#1396, Stephen Morgan)
+  etc. ([#1396], Stephen Morgan)
 
 - balancesheet, cashflow: declaring just a Cash account no longer
   hides other Asset accounts.
@@ -150,7 +150,7 @@ Changes in hledger-install.sh are shown
 
   - check name arguments may be given as case-insensitive prefixes
   - `accounts` and `commodities` may also be specified as arguments
-  - `ordereddates` now checks each file separately (#1493)
+  - `ordereddates` now checks each file separately ([#1493])
   - `ordereddates` no longer supports the `--unique` flag or query arguments
   - `payees` is a new check requiring payee declarations
   - `uniqueleafnames` now gives a fancy error message like the others
@@ -172,7 +172,7 @@ Changes in hledger-install.sh are shown
   unconstrained by commodity display style. This ensures more
   parseable and sensible-looking output in more cases, and behaves
   more like Ledger's print. (There may be a cosmetic issue with
-  trailing zeroes.) (#931, #1465)
+  trailing zeroes.) ([#931], [#1465])
 
 - print: With `--match`, infix matches are now scored higher, as with
   the add command.
@@ -195,14 +195,14 @@ Changes in hledger-install.sh are shown
       similar transactions:
       ...
 
-- roi: Now supports the valuation options (#1417), and uses commodity display styles.
+- roi: Now supports the valuation options ([#1417]), and uses commodity display styles.
   Also the manual has been simplified, with some content moved to the Cookbook.
   (Dmitry Astapov):
 
 #### journal format
 
 - The `commodity` directive now properly sets the display style of the
-  no-symbol commodity. (#1461)
+  no-symbol commodity. ([#1461])
 
 #### csv format
 
@@ -214,13 +214,13 @@ Changes in hledger-install.sh are shown
 
 - Register screen: also show transactions below the depth limit, as in
   1.19, keeping the register balance in agreement with the balance
-  shown on the accounts screen. This regressed in 1.20. (#1468)
+  shown on the accounts screen. This regressed in 1.20. ([#1468])
 
 - Transaction screen: all decimal places are now shown. On the
   accounts screen and register screen we round amounts according to
   commodity display styles, but when you drill down to a transaction
   you probably want to see the unrounded amounts. (Like print, #cf
-  931.)
+  [#931].)
 
 - New flags `--man` and `--info` open the man page or info manual.
   (See hledger)
@@ -228,7 +228,7 @@ Changes in hledger-install.sh are shown
 ### hledger-web 1.21
 
 - Register: a date range can be selected by dragging over a region on
-  the chart. (Arnout Engelen, #1471)
+  the chart. (Arnout Engelen, [#1471])
 
 - Add form: the description field's autocompletions now also offer
   declared and used payee names.
@@ -250,6 +250,22 @@ Doug Goldstein,
 Caleb Maclennan,
 and
 Felix Van der Jeugt.
+
+[#931]:  https://github.com/simonmichael/hledger/issues/931
+[#1353]: https://github.com/simonmichael/hledger/issues/1353
+[#1396]: https://github.com/simonmichael/hledger/issues/1396
+[#1404]: https://github.com/simonmichael/hledger/issues/1404
+[#1405]: https://github.com/simonmichael/hledger/issues/1405
+[#1410]: https://github.com/simonmichael/hledger/issues/1410
+[#1417]: https://github.com/simonmichael/hledger/issues/1417
+[#1424]: https://github.com/simonmichael/hledger/issues/1424
+[#1434]: https://github.com/simonmichael/hledger/issues/1434
+[#1453]: https://github.com/simonmichael/hledger/issues/1453
+[#1461]: https://github.com/simonmichael/hledger/issues/1461
+[#1465]: https://github.com/simonmichael/hledger/issues/1465
+[#1468]: https://github.com/simonmichael/hledger/issues/1468
+[#1471]: https://github.com/simonmichael/hledger/issues/1471
+[#1493]: https://github.com/simonmichael/hledger/issues/1493
 
 ## 2021-01-29 hledger-1.20.4
 
