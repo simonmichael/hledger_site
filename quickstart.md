@@ -36,10 +36,10 @@ a:active { color:red; }
 
 # hledger Quick Start
 
-Welcome! You've found the newest intro to hledger. This one aims to
-distill just the most needed practical info to help you get productive
-as quickly as possible. When you want more detail, follow links to the
-[full website] (and particularly the [hledger manual]).
+Welcome! This hledger intro aims to distill just the most needed
+practical info to help you get productive as quickly as possible. 
+When you want more detail, follow links to the [full website] 
+(and particularly the [hledger manual]).
 
 [full website]:   https://hledger.org
 [hledger]:        hledger.html
@@ -128,11 +128,11 @@ Fastest: [download binaries](download.html), eg one of:
 ```
 $ apt install hledger hledger-ui hledger-web
 $ brew install hledger
-$ curl -LO https://github.com/simonmichael/hledger/releases/download/1.19.1/hledger-ubuntu.zip; unzip hledger-ubuntu.zip  # also macos, windows, etc.
+$ curl -LO https://github.com/simonmichael/hledger/releases/download/1.21/hledger-ubuntu.zip; unzip hledger-ubuntu.zip  # also macos, windows, etc.
 $ dnf install hledger
 $ docker pull dastapov/hledger
 $ make -C /usr/ports/openbsd-wip/productivity/hledger install
-$ nix-env -f https://github.com/NixOS/nixpkgs/archive/cacf9f44.tar.gz -iA hledger hledger-web hledger-ui 
+$ nix-env -f https://github.com/NixOS/nixpkgs/archive/915ef210.tar.gz -iA hledger hledger-ui hledger-web
 $ pacman -S hledger hledger-ui hledger-web
 $ sudo layman -a haskell && sudo emerge hledger hledger-ui hledger-web
 $ xbps-install -S hledger hledger-ui hledger-web
@@ -144,9 +144,9 @@ Freshest: [build from source](download.html#building-from-source):
 2. [check UTF-8 locale](download.html#ensure-your-system-locale-supports-utf-8)
 3. then one of:
    <pre>
-   $ curl -sO https://raw.githubusercontent.com/simonmichael/hledger/master/hledger-install/hledger-install.sh; less hledger-install.sh; bash hledger-install.sh
-   $ <a href="https://haskellstack.org">stack</a> update; stack install --resolver=lts hledger-lib-1.19.1 hledger-1.19.1 hledger-ui-1.19.1 hledger-web-1.19.1 --silent
-   $ <a href="https://www.haskell.org/cabal/#install-upgrade">cabal</a> update; cabal install hledger-1.19.1 hledger-web-1.19.1 hledger-ui-1.19.1
+   $ curl -sO https://raw.githubusercontent.com/simonmichael/hledger/master/hledger-install/hledger-install.sh; bash hledger-install.sh
+   $ <a href="https://haskellstack.org">stack</a> update; stack install --resolver=lts-17 hledger-lib-1.21 hledger-1.21 hledger-ui-1.21 hledger-web-1.21 --silent
+   $ <a href="https://www.haskell.org/cabal/#install-upgrade">cabal</a> update; cabal install alex happy; cabal install hledger-1.21 hledger-ui-1.21 hledger-web-1.21
    $ git clone https://github.com/simonmichael/hledger; cd hledger; stack install  # super fresh
    </pre>
 
@@ -173,26 +173,26 @@ But here are some common changes people make sooner or later, so why not now:
   compartmentalisation:
 
   ```shell
-  $ touch 2020.journal
+  $ touch 2021.journal
   ```
 
 - A [LEDGER_FILE](hledger.html#environment) environment variable, so you won't
-  have to type "-f ~/finance/2020.journal" with every command:
+  have to type "-f ~/finance/2021.journal" with every command:
 
   ```shell
-  $ echo "export LEDGER_FILE=~/finance/2020.journal" >> ~/.bashrc
+  $ echo "export LEDGER_FILE=~/finance/2021.journal" >> ~/.bashrc
   $ source ~/.bashrc
   ```
   Or if environment variables annoy you, symbolic-link the file to ~/.hledger.journal:
   ```shell
-  $ ln -s ~/finance/2020.journal ~/.hledger.journal
+  $ ln -s ~/finance/2021.journal ~/.hledger.journal
   ```
 
 - Some optional [directives](hledger.html#directives), useful especially with
   non-english account names:
 
   ```shell
-  $ cat > 2020.journal
+  $ cat > 2021.journal
 
   ; Declare top level accounts, setting their types and display order;
   ; Replace these account names with yours; it helps commands like bs and is detect them.
@@ -214,8 +214,8 @@ But here are some common changes people make sooner or later, so why not now:
 
   ```shell
   $ git init
-  $ git add 2020.journal
-  $ git commit 2020.journal -m 'start 2020 journal'
+  $ git add 2021.journal
+  $ git commit 2021.journal -m 'start 2021 journal'
   ```
 
 - Remember to also keep *backups*.
@@ -233,7 +233,7 @@ Run the add command for assisted data entry in the terminal ([tutorial](add.html
 ```shell
 $ hledger add
 ...
-Date [2020-07-19]: ...
+Date [2021-03-10]: ...
 ```
 
 Or run hledger-web and when the web browser opens, press a to add
@@ -249,17 +249,17 @@ Or using a [text editor](editors.html), add transactions to
 [your journal file](essentials.html#setup) like so:
 
 ```journal
-2020-01-01 opening balances on january 1st
+2021-01-01 opening balances on january 1st
     assets:checking         $1000  ; a posting, increasing assets:checking's balance by $1000
     assets:cash              $100
     liabilities                $0
     equity                 $-1100  ; each transaction must sum to zero
 
-2020-03-05 client payment
+2021-03-05 client payment
     assets:checking         $2000
     revenues:consulting    $-2000  ; revenues/liabilities/equity normally appear negative
 
-2020-03-20 Sprouts
+2021-03-20 Sprouts
     expenses:food:groceries  $100
     assets:cash               $40
     assets:checking                ; a missing amount will be inferred ($-140 here)
@@ -296,8 +296,8 @@ like:
 
 ```csv
 "Date","Note","Amount"
-"2020/3/22","DEPOSIT","50.00"
-"2020/3/23","ATM WITHDRAWAL","-10.00"
+"2021/3/22","DEPOSIT","50.00"
+"2021/3/23","ATM WITHDRAWAL","-10.00"
 ```
 
 Create SomeBank.csv.rules containing rules like:
@@ -318,11 +318,11 @@ Check the csv conversion looks ok:
 
 ```shell
 $ hledger -f SomeBank.csv print
-2020-03-22 DEPOSIT
+2021-03-22 DEPOSIT
     assets:checking          $50.00
     revenues:misc           $-50.00
 
-2020-03-23 ATM WITHDRAWAL
+2021-03-23 ATM WITHDRAWAL
     assets:checking         $-10.00
     assets:cash              $10.00
 ```
@@ -337,11 +337,11 @@ first:
 $ hledger import *.csv --dry-run
 ; would import 2 new transactions from SomeBank.csv:
 
-2020-03-22 DEPOSIT
+2021-03-22 DEPOSIT
     assets:checking          $50.00
     revenues:misc           $-50.00
 
-2020-03-23 ATM WITHDRAWAL
+2021-03-23 ATM WITHDRAWAL
     assets:checking         $-10.00
     assets:cash              $10.00
 
@@ -356,7 +356,7 @@ Now to commit the new rules file and changed journal file:
 ```shell
 $ git add SomeBank.csv.rules
 $ git commit -m 'SomeBank csv rules' SomeBank.csv.rules
-$ git commit -m 'txns' 2020.journal
+$ git commit -m 'txns' 2021.journal
 ```
 
 In the above workflow, the journal file is permanent and downloaded csv files
@@ -403,9 +403,9 @@ revenues
   consulting
 
 $ hledger balancesheet    # what do I own and owe ?
-Balance Sheet 2020-03-20
+Balance Sheet 2021-03-20
 
-                 || 2020-03-20 
+                 || 2021-03-20 
 =================++============
  Assets          ||            
 -----------------++------------
@@ -421,14 +421,14 @@ Balance Sheet 2020-03-20
 =================++============
  Net:            ||      $3000 
 
-$ hledger aregister checking   # or hledger register checking
+$ hledger aregister --forecast checking   # or: hledger register checking
 Transactions in assets:checking and subaccounts:
-2020-01-01 opening balances on january..  as:cash, equity                        $1000         $1000
-2020-03-05 client payment                 re:consulting                          $2000         $3000
-2020-03-20 Sprouts                        ex:fo:groceries, as:cash               $-140         $2860
+2021-01-01 opening balances ..  as:cash, liabiliti..         $1000         $1000
+2021-03-05 client payment       re:consulting                $2000         $3000
+2021-03-20 Sprouts              ex:fo:groceries, a..         $-140         $2860
 
 $ hledger incomestatement --monthly --depth 2    # where is it coming from and going to ?
-Income Statement 2020-01-01..2020-03-20
+Income Statement 2021Q1
 
                      || Jan  Feb    Mar 
 =====================++=================
@@ -446,21 +446,15 @@ Income Statement 2020-01-01..2020-03-20
 =====================++=================
  Net:                ||   0    0  $1900 
 
-$ hledger-ui
-...
+$ hledger is --man                # show man page scrolled to incomestatement
 
-$ hledger
--------------------------------------------------------------------------------
-hledger 1.19.1
-Usage: hledger COMMAND [OPTIONS] [-- ADDONCMDOPTIONS]
-Commands (+ addons found in $PATH):
-...
+$ hledger is --info               # show incomestatement docs in Info manual
 
-$ hledger help
-Please choose a manual by typing "hledger help MANUAL" (any substring is ok).
-A viewer (info, man, a pager, or stdout) will be auto-selected,
-or type "hledger help -h" to see options. Manuals available:
+$ hledger help incomestatement    # show incomestatement docs in best available viewer
 
- hledger hledger-ui hledger-web journal csv timeclock timedot
+$ hledger-ui                      # show TUI
+
+$ hledger-web                     # open web UI
+
 ```
 
