@@ -197,9 +197,9 @@ Changes in hledger-install.sh are shown
       similar transactions:
       ...
 
-- roi: Now supports the valuation options ([#1417]), and uses commodity display styles.
-  Also the manual has been simplified, with some content moved to the Cookbook.
-  (Dmitry Astapov):
+- roi: Now supports the valuation options ([#1417], [#1483]), and uses
+  commodity display styles. Also the manual has been simplified, with
+  some content moved to the Cookbook. (Dmitry Astapov):
 
 #### journal format
 
@@ -267,6 +267,7 @@ Felix Van der Jeugt.
 [#1465]: https://github.com/simonmichael/hledger/issues/1465
 [#1468]: https://github.com/simonmichael/hledger/issues/1468
 [#1471]: https://github.com/simonmichael/hledger/issues/1471
+[#1483]: https://github.com/simonmichael/hledger/issues/1483
 [#1493]: https://github.com/simonmichael/hledger/issues/1493
 
 ## 2021-01-29 hledger-1.20.4
