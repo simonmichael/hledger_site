@@ -27,8 +27,8 @@ keepwatching:
 # 	(sleep 1; $(BROWSE) http://localhost:$(LIVERELOADPORT)/) &
 # 	$(LIVERELOAD) $(OUT)
 
-# Copy website-ready manual source from hledger repo to default manual pages.
+# Copy current web manuals from hledger repo to website's default manual pages.
 copymanuals:
-	echo "<!-- toc -->" >src/hledger.md;     cat ../hledger/hledger.webmanual.md >>src/hledger.md
-	echo "<!-- toc -->" >src/hledger-ui.md;  cat ../hledger-ui/hledger-ui.webmanual.md >>src/hledger-ui.md
-	echo "<!-- toc -->" >src/hledger-web.md; cat ../hledger-web/hledger-web.webmanual.md >>src/hledger-web.md
+	echo "<!-- toc -->" >src/hledger.md;     cat ../hledger/hledger.md >>src/hledger.md
+	echo "<!-- toc -->" >src/hledger-ui.md;  cat ../hledger-ui/hledger-ui.md >>src/hledger-ui.md
+	echo "<!-- toc -->" >src/hledger-web.md; cat ../hledger-web/hledger-web.md >>src/hledger-web.md

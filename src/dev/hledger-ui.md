@@ -1,1 +1,1 @@
-../../../hledger-ui/hledger-ui.webmanual.md
+../../../hledger-ui/hledger-ui.md
