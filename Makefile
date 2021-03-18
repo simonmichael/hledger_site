@@ -27,8 +27,23 @@ keepwatching:
 # 	(sleep 1; $(BROWSE) http://localhost:$(LIVERELOADPORT)/) &
 # 	$(LIVERELOAD) $(OUT)
 
-# Copy current web manuals from hledger repo to website's default manual pages.
+# hledger 1.21 and up:
+WEBMANUALS=../hledger/hledger.md ../hledger-ui/hledger-ui.md ../hledger-web/hledger-web.md
+
+# hledger 1.x where x is 21 and up:
+# Copy the specified hledger version's web manuals to the proper subdirectory.
+# Leaves the hledger repo on master branch.
+1%:
+	git -C .. checkout $@ && \
+	mkdir -p src/$@ && \
+	cp $(WEBMANUALS) src/$@ && \
+	git -C .. checkout master
+
+# hledger 1.21 and up:
+# Copy the current hledger repo's web manuals to the website's default manual pages.
 copymanuals:
 	echo "<!-- toc -->" >src/hledger.md;     cat ../hledger/hledger.md >>src/hledger.md
 	echo "<!-- toc -->" >src/hledger-ui.md;  cat ../hledger-ui/hledger-ui.md >>src/hledger-ui.md
 	echo "<!-- toc -->" >src/hledger-web.md; cat ../hledger-web/hledger-web.md >>src/hledger-web.md
+#	for M in $(WEBMANUALS); do \
+
