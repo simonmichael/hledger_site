@@ -1,1 +1,1 @@
-../hledger/hledger.webmanual.md
+../hledger/hledger.md
