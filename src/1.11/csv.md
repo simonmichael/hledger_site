@@ -1,8 +1,8 @@
+<!-- toc -->
+
 # csv format
 
 This doc is for version **1.11**. 
-
-<!-- toc -->
 
 ## NAME
 

@@ -1,8 +1,8 @@
+<!-- toc -->
+
 # journal format
 
 This doc is for version **1.10**. 
-
-<!-- toc -->
 
 ## NAME
 

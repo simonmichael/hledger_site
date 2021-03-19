@@ -1,8 +1,8 @@
+<!-- toc -->
+
 # hledger
 
 This doc is for version **1.0**. 
-
-<!-- toc -->
 
 ## NAME
 

@@ -4,8 +4,6 @@
 
 This doc is for version **1.2**. 
 
-<!-- toc -->
-
 ## NAME
 
 Timedot - hledger's human-friendly time logging format

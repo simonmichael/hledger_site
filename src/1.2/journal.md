@@ -4,8 +4,6 @@
 
 This doc is for version **1.2**. 
 
-<!-- toc -->
-
 ## NAME
 
 Journal - hledger's default file format, representing a General Journal

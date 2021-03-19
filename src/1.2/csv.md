@@ -4,8 +4,6 @@
 
 This doc is for version **1.2**. 
 
-<!-- toc -->
-
 ## NAME
 
 CSV - how hledger reads CSV data, and the CSV rules file format

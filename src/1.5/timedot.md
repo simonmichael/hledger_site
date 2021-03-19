@@ -1,8 +1,8 @@
+<!-- toc -->
+
 # timedot format
 
 This doc is for version **1.5**. 
-
-<!-- toc -->
 
 ## NAME
 

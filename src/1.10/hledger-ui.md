@@ -1,8 +1,8 @@
+<!-- toc -->
+
 # hledger-ui
 
 This doc is for version **1.10**. 
-
-<!-- toc -->
 
 ## NAME
 

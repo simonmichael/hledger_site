@@ -4,8 +4,6 @@
 
 This doc is for version **1.2**. 
 
-<!-- toc -->
-
 ## NAME
 
 hledger-ui - curses-style interface for the hledger accounting tool

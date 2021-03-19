@@ -4,8 +4,6 @@
 
 This doc is for version **1.2**. 
 
-<!-- toc -->
-
 ## NAME
 
 Timeclock - the time logging format of timeclock.el, as read by hledger

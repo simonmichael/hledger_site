@@ -1,8 +1,8 @@
+<!-- toc -->
+
 # hledger-api
 
 This doc is for version **1.13**. 
-
-<!-- toc -->
 
 ## NAME
 
