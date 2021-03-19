@@ -1,6 +1,9 @@
 build:
 	mdbook build
 
+buildall:
+	make renderoldmanuals build
+
 serve:
 	mdbook serve
 
@@ -62,7 +65,7 @@ renderoldmanuals: \
 	renderolder-1.15 \
 	renderolder-1.16 \
 	renderolder-1.17 \
-	renderolder-1.17 \
+	renderolder-1.18 \
 	renderolder-1.19 \
 	renderolder-1.20 \
 #	renderold-1.21 \
