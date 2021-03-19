@@ -1,3 +1,5 @@
+<!-- toc -->
+
 # timedot format
 
 This doc is for version **1.16.1** .

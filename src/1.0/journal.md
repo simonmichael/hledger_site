@@ -1,8 +1,8 @@
 # journal format
 
-This doc is for version **1.0**. <span class="docversions"></span>
+This doc is for version **1.0**. 
 
-\$toc\$
+<!-- toc -->
 
 ## NAME
 

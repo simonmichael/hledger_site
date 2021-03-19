@@ -1,8 +1,8 @@
 # timeclock format
 
-This doc is for version **1.3**. []{.docversions}
+This doc is for version **1.3**. 
 
-\$toc\$
+<!-- toc -->
 
 ## NAME
 

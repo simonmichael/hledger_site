@@ -1,8 +1,8 @@
 # timedot format
 
-This doc is for version **1.9.1**. []{.docversions}
+This doc is for version **1.9.1**. 
 
-\$toc\$
+<!-- toc -->
 
 ## NAME
 

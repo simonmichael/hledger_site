@@ -1,8 +1,8 @@
 # hledger
 
-This doc is for version **1.11**. []{.docversions}
+This doc is for version **1.11**. 
 
-\$toc\$
+<!-- toc -->
 
 ## NAME
 

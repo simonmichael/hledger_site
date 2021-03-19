@@ -1,8 +1,8 @@
 # csv format
 
-This doc is for version **1.4**. <span class="docversions"></span>
+This doc is for version **1.4**. 
 
-\$toc\$
+<!-- toc -->
 
 ## NAME
 

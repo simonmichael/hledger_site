@@ -1,8 +1,8 @@
 # hledger-web
 
-This doc is for version **1.5**. []{.docversions}
+This doc is for version **1.5**. 
 
-\$toc\$
+<!-- toc -->
 
 ## NAME
 

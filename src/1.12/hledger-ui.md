@@ -1,8 +1,8 @@
 # hledger-ui
 
-This doc is for version **1.12**. []{.docversions}
+This doc is for version **1.12**. 
 
-\$toc\$
+<!-- toc -->
 
 ## NAME
 

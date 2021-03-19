@@ -1,8 +1,10 @@
+<!-- toc -->
+
 # journal format
 
-This doc is for version **1.2**. []{.docversions}
+This doc is for version **1.2**. 
 
-\$toc\$
+<!-- toc -->
 
 ## NAME
 
