@@ -69,7 +69,8 @@ renderoldmanuals: \
 	renderolder-1.18 \
 	renderolder-1.19 \
 	renderolder-1.20 \
-	renderold-1.21 \
+	render-1.21 \
+	render-dev \
 
 # Render the 7 manuals for the specified hledger version <= 1.21, and save them in out2.
 # The source files should exist in src/VER/.
@@ -82,7 +83,7 @@ renderolder-%:
 
 # Render the 3 manuals for the specified hledger version > 1.21, and save them in out2.
 # The source files should exist in src/VER/.
-renderold-%:
+render-%:
 	@perl -i -pe "s%\((hledger(|-ui|-web).md)\)%($*/\1)%" src/SUMMARY.md
 	@mdbook build
 	@mkdir -p out2
