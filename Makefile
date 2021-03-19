@@ -48,6 +48,7 @@ copy-%:
 	git -C .. checkout master
 
 # Render old manuals, by temporarily linking them in SUMMARY.md.
+# Slow, rerenders entire site for each version.
 # Temporary hack until mdbook can do this.
 renderoldmanuals: \
 	renderolder-1.0 \
@@ -68,7 +69,7 @@ renderoldmanuals: \
 	renderolder-1.18 \
 	renderolder-1.19 \
 	renderolder-1.20 \
-#	renderold-1.21 \
+	renderold-1.21 \
 
 # Render the 7 manuals for the specified hledger version <= 1.21, and save them in out2.
 # The source files should exist in src/VER/.
