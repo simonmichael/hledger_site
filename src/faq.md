@@ -662,6 +662,10 @@ revenue, liability and equity accounts normally appear as negative
 numbers. (And if they have a contra-balance, as with a temporarily
 overpaid credit card, this would appear as a positive number.)
 
+This is because we use negative and positive sign as an alternative 
+to traditional [Credit/Debit notation](https://en.wikipedia.org/wiki/Debits_and_credits).
+(Negative amounts are credits, positives are debits.)
+
 Think of each transaction as a movement of money from one place to
 another. The "from" amounts are negative (money removed from
 somewhere) and the "to" amounts are positive (money added to
@@ -676,8 +680,6 @@ somewhere):
 To ensure that no money is lost or created out of thin air, we simply
 require that a transaction's amounts add up to zero.
 
-This is an alternative to traditional [Credit/Debit notation](https://en.wikipedia.org/wiki/Debits_and_credits). 
-Negative amounts are credits, positives are debits.
 See also [Ledger's discussion of this](https://www.ledger-cli.org/3.0/doc/ledger3.html#Stating-where-money-goes).
 
 If you're new to plain text accounting, you'll get used to reading
