@@ -1,0 +1,72 @@
+[book]
+title = "hledger"
+authors = ["Simon Michael"]
+description = "plain text accounting, made easy"
+language = "en"
+multilingual = false
+#src = "src"
+
+[build]
+build-dir = "out"
+create-missing = false
+use-default-preprocessors = true
+
+[preprocessor.index]
+
+[preprocessor.links]
+
+[preprocessor.toc]
+# marker = "<!-- toc -->"
+max-level = 3
+
+[output.html]
+theme = "theme"
+default-theme = "light"
+# preferred-dark-theme = "navy"
+preferred-dark-theme = "light"
+# curly-quotes = true
+# mathjax-support = false
+# copy-fonts = true
+# google-analytics = "UA-123456-7"
+additional-css = [
+  "src/highslide/highslide.css",
+  "src/css/site.css",
+]
+additional-js = [
+  "src/highslide/highslide.js",
+  "src/js/site.js",
+]
+no-section-label = true
+git-repository-url = "https://github.com/simonmichael/hledger_site"
+# git-repository-icon = "fa-github"
+# site-url = "/example-book/"
+# cname = "myproject.rs"
+# input-404 = "not-found.md"
+
+# [output.html.print]
+# enable = true
+
+# [output.html.fold]
+# enable = false
+# level = 0
+
+# [output.html.playground]
+# editable = false
+# copy-js = true
+# line-numbers = false
+
+[output.html.search]
+# enable = true
+limit-results = 20
+# teaser-word-count = 30
+use-boolean-and = true
+# boost-title = 2
+# boost-hierarchy = 1
+# boost-paragraph = 1
+# expand = true
+heading-split-level = 4
+# copy-js = true
+
+# [output.html.redirect]
+# "/appendices/bibliography.html" = "https://rustc-dev-guide.rust-lang.org/appendix/bibliography.html"
+# "/other-installation-methods.html" = "../infra/other-installation-methods.html"
