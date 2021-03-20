@@ -1,3 +1,10 @@
+# These things are ignored by git, and also by mdbook watch/serve.
+# Beware mdbook's idiosyncratic parsing, eg this causes watch/serve to
+# ignore everything (https://github.com/rust-lang/mdBook/issues/1492):
+#.*
+
+_*
 /TAGS
 /out
-.*
+/out2
+/src/draft
