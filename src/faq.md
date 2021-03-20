@@ -662,9 +662,9 @@ revenue, liability and equity accounts normally appear as negative
 numbers. (And if they have a contra-balance, as with a temporarily
 overpaid credit card, this would appear as a positive number.)
 
-Think of each transaction as being a movement of money from one place
-to another. The "from" amounts are negative (money being removed from
-somewhere) and the "to" amounts are positive (money being added to
+Think of each transaction as a movement of money from one place to
+another. The "from" amounts are negative (money removed from
+somewhere) and the "to" amounts are positive (money added to
 somewhere):
 
 ```journal
@@ -673,13 +673,12 @@ somewhere):
     assets:checking     $1000
 ```
 
-To ensure that money is never lost or created out of thin air, we
-simply require that a transaction's amounts add up to zero.
+To ensure that no money is lost or created out of thin air, we simply
+require that a transaction's amounts add up to zero.
 
-This is an alternative to traditional Credit/Debit notation. 
+This is an alternative to traditional [Credit/Debit notation](https://en.wikipedia.org/wiki/Debits_and_credits). 
 Negative amounts are credits, positives are debits.
-
-See also: <https://www.ledger-cli.org/3.0/doc/ledger3.html#Stating-where-money-goes>
+See also [Ledger's discussion of this](https://www.ledger-cli.org/3.0/doc/ledger3.html#Stating-where-money-goes).
 
 If you're new to plain text accounting, you'll get used to reading
 these negative numbers pretty quickly. But when you want to see
