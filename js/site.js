@@ -18,7 +18,7 @@ function addDocVersions() {
   var newhash = (page=='manual' && topic!='manual') ? ('#'+topic) : '';
   var newpage = page=='manual' ? page : topic;
   // var relpath1 = parts.includes("doc") ? "../../" : "";
-  var relpath  = "";  //parts.includes("doc") ? "../" : "doc/";
+  var relpath  = "/";  //parts.includes("doc") ? "../" : "doc/";
   // <a href="'+relpath1+newpage+'.html'+(page=='manual' ? newhash : '')+'">dev</a> \
   $('.docversions').html('\
 <a href="'+relpath+'dev/'+newpage+'.html'+(page=='manual' ? newhash : '')+'">dev</a> · \
