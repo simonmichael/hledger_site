@@ -50,7 +50,7 @@ function highlightCurrentDocVersion() {
   $('.docversions').each( function() {
     var parts = window.location.pathname.split('/');
     var dir = parts.length > 1 ? parts[parts.length-2] : '';
-    var ver = $.isNumeric(dir) ? dir : currentrelease;
+    var ver = $.isNumeric(dir) ? dir : (dir ? "dev" : currentrelease);
     $(this).find('a').each( function() {
       if ($(this).html() == ver)
         $(this).addClass('displayed');
