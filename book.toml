@@ -34,6 +34,7 @@ additional-css = [
 ]
 additional-js = [
   "src/highslide/highslide.js",
+  "src/js/jquery-1.11.0.min.js",
   "src/js/site.js",
 ]
 no-section-label = true
