@@ -28,14 +28,16 @@ preferred-dark-theme = "light"
 # mathjax-support = false
 # copy-fonts = true
 # google-analytics = "UA-123456-7"
+
+# fs and uri paths must be the same here:
 additional-css = [
-  "src/highslide/highslide.css",
-  "src/css/site.css",
+  "highslide/highslide.css",
+  "css/site.css",
 ]
 additional-js = [
-  "src/highslide/highslide.js",
-  "src/js/jquery-1.11.0.min.js",
-  "src/js/site.js",
+  "highslide/highslide.js",
+  "js/jquery-1.11.0.min.js",
+  "js/site.js",
 ]
 no-section-label = true
 git-repository-url = "https://github.com/simonmichael/hledger_site"
