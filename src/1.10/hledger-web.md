@@ -1,4 +1,7 @@
+<div class="docversions"></div>
+<div class="pagetoc">
 <!-- toc -->
+</div>
 
 # hledger-web
 
