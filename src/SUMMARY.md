@@ -42,6 +42,7 @@
 # COOKBOOK: ACCOUNTING TASKS
 
 - [Budgeting](budgeting.md)
+- [Budgeting and Forecasting](budgeting-and-forecasting.md)
 - [Common journal entries](common-journal-entries.md)
 <!-- [Depreciation](http://rantsideasstuff.com/posts/2018/07/08-depreciation-in-personal-finance-with-hledger) -->
 - [Foreign trip expenses](foreign-trip-expenses.md)
