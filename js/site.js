@@ -2,6 +2,12 @@
 // hs.outlineType = 'outer-glow';
 
 /* show version links on user manual pages */
+// TODO render server side in handlebars template, or at least render sooner to avoid render flash
+// TODO drop jquery
+// TODO old journal/csv/timeclock/timedot manuals should link to hledger.html for 1.21+
+// hledger <1.0, which we no longer show docs for, had a single manual.html for all;
+// the code to handle that has not been removed yet.
+// hledger >=1.21 has a single hledger.html for hledger/journal/csv/timeclock/timedot.
 
 $(document).ready( function() {
   addDocVersions();
@@ -12,8 +18,6 @@ function addDocVersions() {
   var parts = window.location.pathname.split('/');
   var page = parts.length > 0 ? parts[parts.length-1].slice(0,-5) : '';
   var hash = window.location.hash.slice(1);
-  // hledger <1.0, which we no longer show docs for, had a single manual.html;
-  // the code to handle that has not been removed yet.
   var topic = (page=='manual' && hash) ? hash : page;
   var newhash = (page=='manual' && topic!='manual') ? ('#'+topic) : '';
   var newpage = page=='manual' ? page : topic;
