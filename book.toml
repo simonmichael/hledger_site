@@ -23,8 +23,8 @@ max-level = 3
 theme = "theme"
 default-theme = "light"
 # preferred-dark-theme = "navy"
-preferred-dark-theme = "light"
-# curly-quotes = true
+#preferred-dark-theme = "light"
+# curly-quotes = false
 # mathjax-support = false
 # copy-fonts = true
 # google-analytics = "UA-123456-7"
@@ -42,15 +42,15 @@ additional-js = [
 no-section-label = true
 git-repository-url = "https://github.com/simonmichael/hledger_site"
 # git-repository-icon = "fa-github"
-# site-url = "/example-book/"
-# cname = "myproject.rs"
+# site-url = "/"
+# cname = "hledger.org"
 # input-404 = "not-found.md"
 
 # [output.html.print]
 # enable = true
 
-# [output.html.fold]
-# enable = false
+[output.html.fold]
+enable = true
 # level = 0
 
 # [output.html.playground]
@@ -70,6 +70,13 @@ use-boolean-and = true
 heading-split-level = 4
 # copy-js = true
 
-# [output.html.redirect]
+[output.html.redirect]
 # "/appendices/bibliography.html" = "https://rustc-dev-guide.rust-lang.org/appendix/bibliography.html"
 # "/other-installation-methods.html" = "../infra/other-installation-methods.html"
+
+# [output.markdown]
+# The Markdown renderer will run preprocessors and then output the
+# resulting Markdown. This is mostly useful for debugging preprocessors,
+# especially in conjunction with mdbook test to see the Markdown that
+# mdbook is passing to rustdoc.
+
