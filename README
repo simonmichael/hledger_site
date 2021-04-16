@@ -10,13 +10,31 @@ It is intended to be cloned as the "site" subdirectory of the main
 hledger repo. Currently this is done manually, not via git submodule
 or subtree.
 
-Some hledger docs kept in the main hledger repo - user manuals,
-developer docs - are included in the website via symbolic links to the
-parent directory. README.md is one of these, and does not pertain to
-this directory, though Github shows it as if it did.
+In 2021, this site was converted from sphinx to mdbook.  
 
-Site building scripts are in the main hledger repo (mostly in
-Shake.hs), and should be run from there, not from here. Eg:
+Site configuration is in book.toml.  
 
-hledger$ make Shake      # compile Shake.hs before using it
-hledger$ ./Shake website # generate the website in site/_site/
+Some static assets are kept in css/, theme/, js/ and highslide/. 
+
+A few more assets and most of the site's content source is in src/. 
+
+Some hledger docs are kept in the main hledger repo, and included in
+the website via symbolic links in src/. These are:
+
+- developer docs like CONTRIBUTING.md and README.md. (The latter is
+  linked as src/dev-README.md so mdbook and github don't give it
+  special treatment.)
+
+- the hledger/hledger-ui/hledger-web user manuals (web versions).
+  These should be generated/updated before rendering the website, by
+  doing "make Shake && ./Shake" webmanuals in the main hledger repo.
+
+To render the latest site content (in out/): 
+
+    make
+
+To render the latest content (in out/), and the old versions of the
+user manuals (in out2/, built separately due to mdbook limitations):
+
+    make buildall
+
