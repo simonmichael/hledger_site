@@ -246,10 +246,10 @@ account.  Eg, buying food.
 
 ### History
 
-- <https://en.wikipedia.org/wiki/History_of_accounting>
+- [History of Accounting](https://en.wikipedia.org/wiki/History_of_accounting), Wikipedia
 - [From accounting to negative numbers: A signal contribution of medieval India to mathematics](https://egrove.olemiss.edu/cgi/viewcontent.cgi?article=1515&context=aah_journal), Accounting Historians Journal 1998
-- [The Vanished Grandeur of Accounting](http://www.bostonglobe.com/ideas/2014/06/07/the-vanished-grandeur-accounting/3zcbRBoPDNIryWyNYNMvbO/story.html) (Boston Globe) & [discussion](https://news.ycombinator.com/item?id=7933746)
-- <https://www.bbc.com/news/business-39870485>
-- <http://www.accountingin.com/accounting-historians-journal/volume-11-number-1/the-significance-of-ancient-mesopotamia-in-accounting-history/>
+- [The Vanished Grandeur of Accounting](http://www.bostonglobe.com/ideas/2014/06/07/the-vanished-grandeur-accounting/3zcbRBoPDNIryWyNYNMvbO/story.html) & [discussion](https://news.ycombinator.com/item?id=7933746), Boston Globe
+- [How the world's first accountants counted on cuneiform](https://www.bbc.com/news/business-39870485), BBC News
+- [The Significance of Ancient Mesopotamia in Accounting History](http://www.accountingin.com/accounting-historians-journal/volume-11-number-1/the-significance-of-ancient-mesopotamia-in-accounting-history/)
 - [Mesopotamian Tablet Collection](https://www.spurlock.illinois.edu/collections/notable-collections/profiles/mesopotamian-tablet.html), Spurlock Museum
 - [Ledger Art](https://www.mpm.edu/research-collections/anthropology/online-collections-research/ledger-art-collection)
