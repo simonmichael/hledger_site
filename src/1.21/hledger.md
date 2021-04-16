@@ -46,8 +46,6 @@ accounts, and are recorded with journal entries like this:
  assets:cash
 ```
 
-For more about this format, see hledger_journal(5).
-
 Most users use a text editor to edit the journal, usually with an editor
 mode such as ledger-mode for added convenience. hledger’s interactive
 add command is another way to record new transactions. hledger never
@@ -4808,7 +4806,8 @@ payee Whole Foods
 The `commodity` directive has several functions:
 
 1.  It declares commodities which may be used in the journal. This is
-    currently not enforced, but can serve as documentation.
+    enforced in [strict mode](#strict-mode), providing more
+    error-checking.
 
 2.  It declares what decimal mark character (period or comma) to expect
     when parsing input - useful to disambiguate international number
@@ -4823,8 +4822,9 @@ You are likely to run into one of the problems solved by commodity
 directives, sooner or later, so it's a good idea to just always use them
 to declare your commodities.
 
-A commodity directive is just the word `commodity` followed by an
-[amount](#amounts). It may be written on a single line, like this:
+A commodity directive is just the word `commodity`, followed by a sample
+[amount](#amounts) in some commodity. It may be written on a single
+line, like this:
 
 ``` journal
 ; commodity EXAMPLEAMOUNT
@@ -4849,9 +4849,13 @@ commodity INR
   format INR 1,00,00,000.00
 ```
 
-The quantity of the amount does not matter; only the format is
-significant. The number must include a decimal mark: either a period or
-a comma, followed by 0 or more decimal digits.
+Remember that if the commodity symbol contains spaces, numbers, or
+punctuation, it must be enclosed in double quotes (cf
+[Amounts](#amounts)).
+
+The amount's quantity does not matter; only the format is significant.
+It must include a decimal mark - either a period or a comma - followed
+by 0 or more decimal digits.
 
 Note hledger normally uses [banker's
 rounding](https://en.wikipedia.org/wiki/Bankers_rounding), so 0.5
@@ -4869,17 +4873,18 @@ details.
 
 ### Default commodity
 
-The `D` directive sets a default commodity, to be used for amounts
-without a commodity symbol (ie, plain numbers). This commodity will be
-applied to all subsequent commodity-less amounts, or until the next `D`
-directive. (Note, this is different from Ledger's `D`.)
+The `D` directive sets a default commodity, to be used for any
+subsequent commodityless amounts (ie, plain numbers) seen while parsing
+the journal. This effect lasts until the next `D` directive, or the end
+of the journal.
 
 For compatibility/historical reasons, `D` also acts like a [`commodity`
-directive](#declaring-commodities), setting the commodity's [display
-style](#amount-display-format) (for output) and decimal mark (for
-parsing input). As with `commodity`, the amount must always be written
-with a decimal mark (period or comma). If both directives are used,
-`commodity`'s style takes precedence.
+directive](#declaring-commodities) (setting the commodity's decimal mark
+for parsing and [display style](#amount-display-format) for output).
+
+As with `commodity`, the amount must include a decimal mark (either
+period or comma). If both `commodity` and `D` directives are used for
+the same commodity, the `commodity` style takes precedence.
 
 The syntax is `D AMOUNT`. Eg:
 
