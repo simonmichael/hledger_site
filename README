@@ -34,7 +34,8 @@ To render the latest site content (in out/):
     make
 
 To render the latest content (in out/), and the old versions of the
-user manuals (in out2/, built separately due to mdbook limitations):
+user manuals, and the latest dev version of the manual (in out2/,
+built separately due to mdbook limitations):
 
     make buildall
 
