@@ -452,7 +452,8 @@ literacy and empowerment. Thank you!
 - Sponsor Simon (project leader / broom pusher):\
 [![github](https://img.shields.io/badge/Sponsor_on-Github-limegreen "Sponsor the project leader via Github")](https://github.com/sponsors/simonmichael)
 [![liberapay](https://img.shields.io/badge/Sponsor_on-Liberapay-limegreen "Sponsor the project leader via Liberapay")](https://liberapay.com/simonmichael)
-[![paypal](https://www.paypal.com/en_US/i/btn/x-click-but04.gif "Give one time or recurringly via Paypal")](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5J33NLXYXCYAY)
+[![paypal](https://www.paypal.com/en_US/i/btn/x-click-but04.gif "Give one time or recurringly via Paypal")](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5J33NLXYXCYAY)\
+₳ ADA: addr1vyzlqfh6pmxuwxwnk6h2y6ww36jndslvqlpljqsumcqwyzq5r9aqw
 
 <!-- OC badges are flaky/confusing. hledger tiers are: Backers, Sponsors -->
 <!-- doesn't show correct count: -->
