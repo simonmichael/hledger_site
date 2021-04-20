@@ -160,6 +160,14 @@ Install pkgsrc & build hledger from source on non-netbsd:
 cd pkgsrc && ./bootstrap/bootstrap --prefix=$HOME/pkg --unprivileged --make-jobs 8 && cd finance/hledger && env PATH=$PATH:$HOME/pkg bmake install
 -->
 
+<!--
+Latest developer CI binaries:
+go to https://ci.hledger.org, click on one of the recent runs for your
+platform (linux/mac/windows), download the artifact at the bottom of
+the page. The instructions for running binaries, at
+https://github.com/simonmichael/hledger/releases, also apply here.
+-->
+
 ### Windows
 
 <table class="windows downloads">
