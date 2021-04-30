@@ -2,8 +2,12 @@
 
 hledger-related videos:
 
-- The [hledger fan Youtube channel](https://www.youtube.com/channel/UCZLxXTjOqLzq4z5Jy0AyWSQ) (2019-2021)
-  has a series of short beginner lessons, including:
+- Simon Michael @ HaskellerZ meetup (2021, 2h) (pending) <!-- apr 29 --> \
+  "Inside hledger: an architectural tour and how-to" (hledger intro and code dive) \
+  [slides](https://rawcdn.githack.com/simonmichael/hledger/4013a81af8dd2804c73ecac18fb3e7e4745a4275/doc/haskellerz/haskellerz.slidy.html)
+
+- [hledger fan @ youtube](https://www.youtube.com/channel/UCZLxXTjOqLzq4z5Jy0AyWSQ)
+  has an ongoing series of short beginner lessons (2019-2021). Most recent first:
   - [hledger iadd](https://www.youtube.com/watch?v=ZuCT9EzryaI)
   - [hledger add](https://www.youtube.com/watch?v=oel7fBv1frI)
   - [hledger: shortcuts part 3](https://www.youtube.com/watch?v=_3pHNICDgHc)
@@ -22,33 +26,24 @@ hledger-related videos:
   - [hledger Basics: 3 Must-Know Options for the Balance Command](https://www.youtube.com/watch?v=JZE5302SrtM)
   - [The Basics: An hledger Transaction](https://www.youtube.com/watch?v=SSz09ThShrs)
   
-- [Учет сделок с проводками в текстовом формате](https://www.youtube.com/watch?v=1qrFjSVav2Q) (2019, 34m)
+- [Intproject Mi: Учет сделок с проводками в текстовом формате](https://www.youtube.com/watch?v=1qrFjSVav2Q) (2019, 34m)
 
-- [Simon Michael - Hands-on with hledger](https://www.youtube.com/watch?v=H_CdGzLbc7A) (2h, 2016)  <!-- sep 2 -->\
-  Brainium Haskell meetup, Santa Monica.
-  *Simon will present a practical session where we'll learn and
-  experiment together in three parts. We'll install hledger,
-  demonstrating the stack tool. Next we'll work through converting and
-  importing some interesting data and exploring it a little with
-  hledger's standard reports. Then we'll choose some new kind of report
-  or other feature, and build and test it.*
+- [Simon Michael @ Brainium meetup](https://www.youtube.com/watch?v=H_CdGzLbc7A) (2016, 2h) <!-- sep 2 --> \
+  "Hands-on with hledger"
 
-- [hledger, an open source accounting tool](https://www.youtube.com/watch?v=-WahFvxhCRc&t=895s) (40m, 2016) <!-- apr 16 -->\
-  Chris Vollick talk, DevHouse Waterloo meetup
+- [Chris Vollick @ DevHouse Waterloo meetup](https://www.youtube.com/watch?v=-WahFvxhCRc&t=895s) (2016, 40m) <!-- apr 16 --> \
+  "hledger, an open source accounting tool"
 
-- [FLOSS Weekly 375: hledger](https://twit.tv/shows/floss-weekly/episodes/375) (2016) <!-- feb 16 -->
+- [FLOSS Weekly episode 375: hledger](https://twit.tv/shows/floss-weekly/episodes/375) (2016) <!-- feb 16 --> -
+  [overview](https://www.youtube.com/watch?v=qS2UcDV_lbs) (3m),
+  [full interview](https://www.youtube.com/watch?v=Xjl-wVJcYpE) (1h)
 
-  - [overview](https://www.youtube.com/watch?v=qS2UcDV_lbs) (3m)
-
-  - [full interview](https://www.youtube.com/watch?v=Xjl-wVJcYpE) (1h)
-
-- [Evolution of hledger](https://www.youtube.com/watch?v=dEADGr9dqow) (15m, 2015) <!-- jul 20 -->\
+- [<s>Evolution of hledger</s>](https://www.youtube.com/watch?v=dEADGr9dqow) (2015, 15m) <!-- jul 20 --> 
+  ([missing](https://www.reddit.com/r/haskell/comments/cr4dkm/evolution_of_ghc_glasgow_haskell_compiler_video/ex3k02j/)) \
   Gource visualization of hledger development activity up to 2015
-  [currently [missing](https://www.reddit.com/r/haskell/comments/cr4dkm/evolution_of_ghc_glasgow_haskell_compiler_video/ex3k02j/)]
-
-- [Search for "hledger" on Youtube](https://www.youtube.com/results?search_query=hledger)
-
 
 See also:
 
-- The [videos on plaintextaccounting.org](https://plaintextaccounting.org/#videos)
+- [All "hledger" results on Youtube](https://www.youtube.com/results?search_query=hledger)
+
+- [Videos on plaintextaccounting.org](https://plaintextaccounting.org/#videos)
