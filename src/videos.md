@@ -2,7 +2,7 @@
 
 hledger-related videos:
 
-- Simon Michael @ HaskellerZ meetup (2021, 2h) (pending) <!-- apr 29 --> \
+- [Simon Michael @ HaskellerZ meetup](https://www.youtube.com/watch?v=6PKmZSHxu0c) (2021, 2h) <!-- apr 29 --> \
   "Inside hledger: an architectural tour and how-to" (hledger intro and code dive) \
   [slides](https://rawcdn.githack.com/simonmichael/hledger/4013a81af8dd2804c73ecac18fb3e7e4745a4275/doc/haskellerz/haskellerz.slidy.html)
 
