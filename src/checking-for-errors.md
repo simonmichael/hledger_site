@@ -2,11 +2,13 @@
 
 <!-- toc -->
 
-hledger can check your data in various ways. See
-[strict mode](https://hledger.org/hledger.html#strict-mode)
-and the [check](https://hledger.org/hledger.html#check) command.
+hledger can check your data in various ways. 
 
-Below are some other ways to catch errors:
+## Built in checks
+
+In hledger 1.21+,
+see [strict mode](https://hledger.org/hledger.html#strict-mode)
+and the [check](https://hledger.org/hledger.html#check) command.
 
 ## Old way to check accounts
 
