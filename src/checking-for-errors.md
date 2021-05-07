@@ -2,31 +2,11 @@
 
 hledger can check your data in various ways. See
 [strict mode](https://hledger.org/hledger.html#strict-mode)
-and [check](https://hledger.org/hledger.html#check) command.
+and the [check](https://hledger.org/hledger.html#check) command.
 
-Here are some other ways to catch errors.
+Below are some other ways to catch errors:
 
-## Comparing report output
-
-Commit some hledger report output into your version control system.
-Then you can detect any changes, eg:
-
-```shell
-$ hledger COMMAND > report.txt; git diff -- report.txt
-```
-
-## Pre-commit hook
-
-Version control systems often support a "pre-commit hook", a script which
-is run and required to succeed before each commit. Eg:
-
-```bash
-#!/bin/bash
-set -e
-hledger stats -s
-```
-
-## Diffing
+## Old way to check accounts
 
 Here's another way to check for undeclared accounts, that works with older hledger versions,
 showing some diff tricks:
@@ -34,9 +14,39 @@ showing some diff tricks:
 $ diff -U0 --label "Unused Accounts" --label "Undeclared Accounts" <(hledger accounts --declared) <(hledger accounts --used)
 ```
 
+## Compare report output
+
+Save the output of a report, and later use `diff` to compare the
+output of the same report, revealing any changes.
+
+```shell
+$ hledger COMMAND > report.txt
+$ hledger COMMAND > report2.txt
+$ diff report.txt report2.txt
+```
+
+Or, periodically commit a report's output into your version control system.
+Then you can use the VCS to detect any changes since the last commit, eg:
+
+```shell
+$ hledger COMMAND > report.txt; git add report.txt; git commit -m 'report' report.txt
+$ hledger COMMAND > report.txt; git diff -- report.txt
+```
+
+## A pre-commit hook
+
+Version control systems often support a "pre-commit hook", a script which
+is required to succeed before each commit. Eg:
+
+```bash
+#!/bin/bash
+set -e
+hledger check -s
+```
+
 ## Todo / maybe
 
-Here are some checks we don't support, but possibly might add in future:
+Here are some checks we don't support, but could:
 
 - **accountsactive** - for each account used, if there is posting with an `open:` [tag](journal.html#tags), 
   it must have a corresponding posting with a `close:` tag, and all other postings 
