@@ -1,6 +1,6 @@
-<!-- toc -->
-
 # Checking for errors
+
+<!-- toc -->
 
 hledger can check your data in various ways. See
 [strict mode](https://hledger.org/hledger.html#strict-mode)
