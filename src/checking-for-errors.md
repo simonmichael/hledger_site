@@ -29,8 +29,8 @@ $ hledger COMMAND > report2.txt
 $ diff report.txt report2.txt
 ```
 
-Or, periodically commit a report's output into your version control system.
-Then you can use the VCS to detect any changes since the last commit, eg:
+Or, periodically commit a report's output into your version control system,
+then use the VCS to detect any changes since the last commit.
 
 ```shell
 $ hledger COMMAND > report.txt; git add report.txt; git commit -m 'report' report.txt
