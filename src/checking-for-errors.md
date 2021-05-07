@@ -1,3 +1,5 @@
+<!-- toc -->
+
 # Checking for errors
 
 hledger can check your data in various ways. See
