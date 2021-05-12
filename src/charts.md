@@ -1,7 +1,5 @@
 # Charts and Graphs
 
-<!-- toc -->
-
 Tips and techniques for producing graphical charts. 
 
 Generally we run a hledger report and select [CSV output](hledger.html#output-format)
@@ -12,6 +10,8 @@ hledger bal assets liabilities --no-total -o report.csv
 ```
 
 Then there are many ways to convert CSV to charts.
+
+<!-- toc -->
 
 ## Spreadsheet
 
