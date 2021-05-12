@@ -38,6 +38,7 @@
 - [Rewrite account names](rewrite-account-names.md)
 - [Rewrite commodity symbols](rewrite-commodity-symbols.md)
 - [Tags tutorial](tags-tutorial.md)
+- [Charts and Graphs](charts.md)
 
 # COOKBOOK: ACCOUNTING TASKS
 
