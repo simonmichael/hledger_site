@@ -14,8 +14,16 @@ https://www.stephendiehl.com/posts/marketing.html#persuasion-and-decision-makers
 <div id="tagline">
 plain text accounting,<br>made easy
 </div>
+
 <div style="text-align:center; margin:1em;">
-(Woah, too much to read ? Here's the <b><a href="quickstart.html">quick start</a></b>.)
+
+*Quick links:
+[download](download.html),
+[quick start](quickstart.html),
+[manual](hledger.html),
+[support](#help),
+[contributing](CONTRIBUTING.html)*
+
 </div>
 
 <div style="text-align:center; margin:1em;">
