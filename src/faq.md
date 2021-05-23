@@ -208,7 +208,7 @@ The Ledger project later revived and has attracted new active contributors.
 I have remained active in that community, sharing discoveries and
 design discussions, and we have seen many ideas travelling in both directions.
 hledger shared #ledger's IRC channel until 2014, when I added
-[#hledger](irc://irc.freenode.net/#hledger) to allow us more space.
+[#hledger](http://irc.hledger.org) to allow us more space.
 
 I think having independent but compatible implementations has been
 quite helpful for troubleshooting, exploring the design space, and

@@ -377,16 +377,18 @@ See also [ROADMAP](ROADMAP.html).
   <tr>
     <td>Chat:</td>
     <td>
-      <a href="http://irc.hledger.org">#hledger</a> on Freenode IRC
-      (or via Matrix: <a href="http://matrix.hledger.org">#freenode_#hledger:matrix.org</a>)
+      <a href="http://irc.hledger.org">#hledger</a> on Libera IRC (we moved from Freenode 2021-05)
+      or <a href="http://matrix.hledger.org">#hledger:matrix.org</a> on Matrix
+<!--
       <br>
-      To talk, <a href="https://freenode.net/kb/answer/registration">register your nick</a>:
+      To talk, <a href="https://libera.chat/guides/registration">register your nick</a>:
       <br>
       on IRC, type <code>/msg NickServ register newpassword youremailaddress</code>
       <br>
       on Matrix, 
       use <a href="https://github.com/matrix-org/matrix-appservice-irc/wiki/End-user-FAQ#how-do-i-registeridentify-to-nickserv">@freenode_NickServ:matrix.org</a>
       and <a href="https://github.com/matrix-org/matrix-appservice-irc/wiki/End-user-FAQ#and-do-it-automatically">@appservice-irc:matrix.org</a>
+-->
     </td>
   </tr>
   <tr>
@@ -430,8 +432,9 @@ See also [ROADMAP](ROADMAP.html).
     <td>
       <a href="https://plaintextaccounting.org">plaintextaccounting.org</a>
       <br>
-      <a href="https://webchat.freenode.net/#plaintextaccounting">#plaintextaccounting</a> chat
-      (or <a href="https://matrix.to/#/#freenode_#plaintextaccounting:matrix.org">#freenode_#plaintextaccounting:matrix.org</a>)
+      <a href="http://kiwiirc.com/nextclient/irc.libera.chat:+6697/#plaintextaccounting">#plaintextaccounting</a> IRC channel
+      <br>
+      <a href="https://matrix.to/#/#plaintextaccounting:matrix.org">#plaintextaccounting:matrix.org</a> Matrix room
       <br>
       <a href="https://www.ledger-cli.org/docs.html">Ledger CLI docs</a>
       <br>
