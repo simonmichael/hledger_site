@@ -378,7 +378,7 @@ See also [ROADMAP](ROADMAP.html).
     <td>Chat:</td>
     <td>
       <a href="http://irc.hledger.org">#hledger</a> on Libera IRC
-          ([moved from Freenode 2021-05](https://groups.google.com/g/hledger/c/9NQ_1_ng1XM/m/OeRFIMbxBQAJ))
+          (<a href="https://groups.google.com/g/hledger/c/9NQ_1_ng1XM/m/OeRFIMbxBQAJ">moved from Freenode 2021-05</a>)
       or <a href="http://matrix.hledger.org">#hledger:matrix.org</a> on Matrix
 <!--
       <br>
