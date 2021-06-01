@@ -78,7 +78,7 @@ The workflow is:
 3. adjust the invoice transaction which it added to the journal.
 
 This is based on 
-[Generate PDF invoices from Markdown using Pandoc](https://martinbetz.eu/articles/pandoc-invoices) 
+[Generate PDF invoices from Markdown using Pandoc](https://martinbetz.eu/article/pandoc-invoices) 
 by Martin Betz, see that page for more background.
 Some version of the files below can also be found in
 [examples/invoicing/](https://github.com/simonmichael/hledger/tree/master/examples/invoicing).
