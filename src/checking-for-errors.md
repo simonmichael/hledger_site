@@ -48,6 +48,15 @@ set -e
 hledger check -s
 ```
 
+## Flycheck mode
+
+If you use Emacs, you can configure flycheck to run your preferred checks when you edit a journal file.
+This integration is currently quite basic, but it still gives very useful real-time feedback.
+Setup tips:
+
+- in Emacs, install the `flycheck-hledger` package and customise the `flycheck-checkers` variable, adding `hledger` to the list
+- customise the `flycheck-hledger-strict` and `flycheck-hledger-checks` variables
+
 ## Todo / maybe
 
 Here are some checks we don't support, but could:
