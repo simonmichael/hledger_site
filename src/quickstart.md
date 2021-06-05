@@ -101,7 +101,7 @@ $ brew install hledger
 $ curl -LO https://github.com/simonmichael/hledger/releases/download/1.21/hledger-ubuntu.zip; unzip hledger-ubuntu.zip  # also macos, windows, etc.
 $ dnf install hledger
 $ docker pull dastapov/hledger
-$ make -C /usr/ports/openbsd-wip/productivity/hledger install
+$ pkg_add hledger  # openbsd
 $ nix-env -f https://github.com/NixOS/nixpkgs/archive/915ef210.tar.gz -iA hledger hledger-ui hledger-web
 $ pacman -S hledger hledger-ui hledger-web
 $ sudo layman -a haskell && sudo emerge hledger hledger-ui hledger-web

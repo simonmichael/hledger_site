@@ -360,18 +360,7 @@ https://github.com/simonmichael/hledger/releases, also apply here.
   <tbody>
     <tr>
       <td>
-        <div class="badges">
-          <a href="https://github.com/jasperla/openbsd-wip/tree/master/productivity/hledger"><img src="https://img.shields.io/badge/openbsd--wip_port-1.10-red.svg" alt="openbsd-wip port" /></a><br>
-          <a href="https://github.com/jasperla/openbsd-wip/tree/master/productivity">more..</a>
-        </div>
-        <div class="distro"></div>
-      </td>
-      <td>
-        <div class="command">make -C /usr/ports/openbsd-wip/productivity/hledger install</div>
-        <div class="notes">            
-            <a href="https://github.com/jasperla/openbsd-wip#how-to-use-this-tree">How to use OpenBSD WIP</a>,
-            <a href="https://github.com/commercialhaskell/stack/issues/3313#issuecomment-570353913">stack#3313</a>
-        </div>
+        <div class="command">pkg_add hledger</div>
       </td>
     </tr>
   </tbody>
