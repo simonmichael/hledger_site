@@ -2,7 +2,7 @@
 
 hledger has a powerful CSV converter built in. After saving a few
 declarations in a "CSV rules file", it can read transactions from
-almost any CSV file. This is described in detail in the [csv format] manual,
+almost any CSV file. This is described in detail in the [hledger manual][csv format],
 but here are some quick examples.
 
 Say you have downloaded this `checking.csv` file from a bank for the first time:
@@ -12,7 +12,7 @@ Say you have downloaded this `checking.csv` file from a bank for the first time:
 "2012/3/23","TRANSFER TO SAVINGS","-10.00"
 ```
 
-Create a [rules file][csv format] named `checking.csv.rules` in the same directory.
+Create a rules file named `checking.csv.rules` in the same directory.
 This tells hledger how to read this CSV file. Eg:
 ```rules
 # skip the headings line:
@@ -134,8 +134,8 @@ $ hledger -f checking.csv print | hledger -f- --alias income:unknown=Income:Misc
 ## See also
 
 Full documentation of CSV conversion, and more rules examples, can be
-found in the [csv format] manual and in [examples/csv/] in the hledger
-repo.
+found in the [hledger manual][csv format] and in [examples/csv/] in the 
+hledger source repository.
 
 There are many other CSV conversion tools (nine CSV->*ledger tools at last count), linked at
 [plaintextaccounting.org -> data import/conversion](https://plaintextaccounting.org/#data-importconversion).
