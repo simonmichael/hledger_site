@@ -142,7 +142,7 @@ There are many other CSV conversion tools (nine CSV->*ledger tools at last count
 
 
 [output formats]: hledger.html#output-format
-[csv format]: csv.html
+[csv format]: hledger.html#csv-format
 [print]: hledger.html#print
 [import]: hledger.html#import
 [examples/csv/]: https://github.com/simonmichael/hledger/tree/master/examples/csv
