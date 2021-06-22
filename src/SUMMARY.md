@@ -4,7 +4,7 @@
 
 - [Home](index.md)
 - [FAQ](faq.md)
-- [Videos](videos.md)
+- [Video/Audio](videos.md)
 - [Download/Install](download.md)
 - [Release notes](release-notes.md)
 

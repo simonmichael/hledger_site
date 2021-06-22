@@ -1,4 +1,4 @@
-# Videos
+# Video/Audio
 
 hledger-related videos:
 
@@ -41,6 +41,11 @@ hledger-related videos:
 - [<s>Evolution of hledger</s>](https://www.youtube.com/watch?v=dEADGr9dqow) (2015, 15m) <!-- jul 20 --> 
   ([missing](https://www.reddit.com/r/haskell/comments/cr4dkm/evolution_of_ghc_glasgow_haskell_compiler_video/ex3k02j/)) \
   Gource visualization of hledger development activity up to 2015
+
+Audio only:
+
+- [Conversations in Code, Episode 3: Introduction to Plain Text Accounting](https://www.reddit.com/r/plaintextaccounting/comments/ivrbdu/announcing_a_new_podcast_fossopensource_related/) <!-- 2020/9/19 --> [podcast]
+
 
 See also:
 
