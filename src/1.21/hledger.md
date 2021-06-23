@@ -5069,15 +5069,15 @@ using the following rules:
 
 | If name matches [regular expression](hledger.html#regular-expressions): | account type is: |
 |-------------------------------------------------------------------------|------------------|
-| `^assets?(:|$)`                                                         | `Asset`          |
-| `^(debts?|liabilit(y|ies))(:|$)`                                        | `Liability`      |
-| `^equity(:|$)`                                                          | `Equity`         |
-| `^(income|revenue)s?(:|$)`                                              | `Revenue`        |
-| `^expenses?(:|$)`                                                       | `Expense`        |
+| `^assets?(:\|$)`                                                        | `Asset`          |
+| `^(debts?\|liabilit(y\|ies))(:\|$)`                                     | `Liability`      |
+| `^equity(:\|$)`                                                         | `Equity`         |
+| `^(income\|revenue)s?(:\|$)`                                            | `Revenue`        |
+| `^expenses?(:\|$)`                                                      | `Expense`        |
 
 | If account type is `Asset` and name does not contain regular expression: | account type is: |
 |--------------------------------------------------------------------------|------------------|
-| `(investment|receivable|:A/R|:fixed)`                                    | `Cash`           |
+| `(investment\|receivable\|:A/R\|:fixed)`                                 | `Cash`           |
 
 Even so, explicit declarations may be a good idea, for clarity and
 predictability.
