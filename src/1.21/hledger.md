@@ -5067,17 +5067,18 @@ If you happen to use common english top-level account names, you may not
 need to declare account types, as they will be detected automatically
 using the following rules:
 
-| If name matches [regular expression](hledger.html#regular-expressions): | account type is: |
-|-------------------------------------------------------------------------|------------------|
-| `^assets?(:|$)`                                                         | `Asset`          |
-| `^(debts?|liabilit(y|ies))(:|$)`                                        | `Liability`      |
-| `^equity(:|$)`                                                          | `Equity`         |
-| `^(income|revenue)s?(:|$)`                                              | `Revenue`        |
-| `^expenses?(:|$)`                                                       | `Expense`        |
-
-| If account type is `Asset` and name does not contain regular expression: | account type is: |
-|--------------------------------------------------------------------------|------------------|
-| `(investment|receivable|:A/R|:fixed)`                                    | `Cash`           |
+<!-- monospace to work around https://github.com/simonmichael/hledger/issues/1573 -->
+```
+ If account's name matches this regular expression:                 | its type is:
+------------------------------------------------------------------- | ------------
+ ^assets?(:|$)                                                      | 
+   and does not contain regexp (investment|receivable|:A/R|:fixed)  | Cash
+   otherwise                                                        | Asset
+ ^(debts?|liabilit(y|ies))(:|$)                                     | Liability
+ ^equity(:|$)                                                       | Equity
+ ^(income|revenue)s?(:|$)                                           | Revenue
+ ^expenses?(:|$)                                                    | Expense
+```
 
 Even so, explicit declarations may be a good idea, for clarity and
 predictability.
