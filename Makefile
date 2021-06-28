@@ -1,16 +1,71 @@
+# Render the current site and current release manuals, saving them in out.
 build:
-	mdbook build
+	@echo "building site with current manuals in /"
+	@mdbook build
 
-buildall:
-	make renderoldmanuals build
+# Render all versions of manuals. Current release manual will be in out, all others in out2.
+# Slow, temporarily links old manuals in SUMMARY and renders the whole site, for each version.
+# Temporary hack until mdbook can render things not in SUMMARY.md.
+buildall: \
+	build7-1.0 \
+	build7-1.1 \
+	build7-1.2 \
+	build7-1.3 \
+	build7-1.4 \
+	build7-1.5 \
+	build7-1.9 \
+	build7-1.10 \
+	build7-1.11 \
+	build7-1.12 \
+	build7-1.13 \
+	build7-1.14 \
+	build7-1.15 \
+	build7-1.16 \
+	build7-1.17 \
+	build7-1.18 \
+	build7-1.19 \
+	build7-1.20 \
+	build3-1.21 \
+	build3-dev \
+	build
 
-serve:
-	mdbook serve
+# Like buildall but just a few recent versions.
+buildrecent: \
+	build3-1.21 \
+	build3-dev \
+	build
+
+# build7/build3 naming is to help avoid running the wrong rule for the version
+
+# Render the 7 manuals for this hledger version <= 1.21, saving them in out2.
+# The manuals source should exist in src/VER/.
+# After this you should "make build" to rebuild the site with current manuals.
+build7-%:
+	@echo "building site with the seven $* manuals in /$*"
+	@perl -i -p0e "s%- \[hledger\]\(hledger\.md\)\n- \[hledger-ui\]\(hledger-ui\.md\)\n- \[hledger-web\]\(hledger-web\.md\)\n%- [hledger]($*/hledger.md)\n- [hledger-ui]($*/hledger-ui.md)\n- [hledger-web]($*/hledger-web.md)\n- [journal]($*/journal.md)\n- [csv]($*/csv.md)\n- [timeclock]($*/timeclock.md)\n- [timedot]($*/timedot.md)\n%s" src/SUMMARY.md
+	@mdbook build
+	@mkdir -p out2
+	@cp -r out/$* out2
+	@git checkout -- src/SUMMARY.md
+
+# Render the 3 manuals for this hledger version > 1.21 (or "dev"), saving them in out2.
+# The manuals source should exist in src/VER/.
+# After this you should "make build" to rebuild the site with current manuals.
+build3-%:
+	@echo "building site with the three $* manuals in /$*"
+	@perl -i -pe "s%\((hledger(|-ui|-web).md)\)%($*/\1)%" src/SUMMARY.md
+	@mdbook build
+	@mkdir -p out2
+	@cp -r out/$* out2
+	@git checkout -- src/SUMMARY.md
 
 clean:
 	mdbook clean
 
-# Auto-rebuild site when source files change, since mdbook watch/serve don't seem to.
+serve:
+	mdbook serve
+
+# Auto-rebuild site when source files change, since mdbook watch/serve usually don't.
 watch:
 	find src | entr -d bash -c 'date; mdbook build'
 
@@ -30,12 +85,11 @@ keepwatching:
 # 	(sleep 1; $(BROWSE) http://localhost:$(LIVERELOADPORT)/) &
 # 	$(LIVERELOAD) $(OUT)
 
-# Copy the specified hledger version's web manuals to the proper subdirectory.
-# Version must be 1.22 or greater.
-# The hledger repo (..) should initially be a clean checkout of master.
-# May install deps for and rebuild that hledger version's Shake.hs.
-# Leaves the hledger repo on master branch.
-WEBMANUALS=\
+# After a release (>= 1.22), save a snapshot of the release manuals to
+# src/VER/, taken from the parent directory, which should be a clean
+# checkout of the main hledger repo's master branch.  
+# Shake.hs there may get rebuilt or have deps installed.
+MANUALS=\
 	../hledger/hledger.md \
 	../hledger-ui/hledger-ui.md \
 	../hledger-web/hledger-web.md \
@@ -44,49 +98,6 @@ copy-%:
 	git -C .. checkout $* && \
 	(cd ..; ./Shake.hs webmanuals; git reset --hard) && \
 	mkdir -p src/$* && \
-	for f in $(WEBMANUALS); do test -e $$f && cp $$f src/$*; done && \
+	for f in $(MANUALS); do test -e $$f && cp $$f src/$*; done && \
 	git -C .. checkout master
-
-# Render old manuals, by temporarily linking them in SUMMARY.md.
-# Slow, rerenders entire site for each version.
-# Temporary hack until mdbook can do this.
-renderoldmanuals: \
-	renderolder-1.0 \
-	renderolder-1.1 \
-	renderolder-1.2 \
-	renderolder-1.3 \
-	renderolder-1.4 \
-	renderolder-1.5 \
-	renderolder-1.9 \
-	renderolder-1.10 \
-	renderolder-1.11 \
-	renderolder-1.12 \
-	renderolder-1.13 \
-	renderolder-1.14 \
-	renderolder-1.15 \
-	renderolder-1.16 \
-	renderolder-1.17 \
-	renderolder-1.18 \
-	renderolder-1.19 \
-	renderolder-1.20 \
-	render-1.21 \
-	render-dev \
-
-# Render the 7 manuals for the specified hledger version <= 1.21, and save them in out2.
-# The source files should exist in src/VER/.
-renderolder-%:
-	@perl -i -p0e "s%- \[hledger\]\(hledger\.md\)\n- \[hledger-ui\]\(hledger-ui\.md\)\n- \[hledger-web\]\(hledger-web\.md\)\n%- [hledger]($*/hledger.md)\n- [hledger-ui]($*/hledger-ui.md)\n- [hledger-web]($*/hledger-web.md)\n- [journal]($*/journal.md)\n- [csv]($*/csv.md)\n- [timeclock]($*/timeclock.md)\n- [timedot]($*/timedot.md)\n%s" src/SUMMARY.md
-	@mdbook build
-	@mkdir -p out2
-	@cp -r out/$* out2
-	@git checkout -- src/SUMMARY.md
-
-# Render the 3 manuals for the specified hledger version > 1.21, and save them in out2.
-# The source files should exist in src/VER/.
-render-%:
-	@perl -i -pe "s%\((hledger(|-ui|-web).md)\)%($*/\1)%" src/SUMMARY.md
-	@mdbook build
-	@mkdir -p out2
-	@cp -r out/$* out2
-	@git checkout -- src/SUMMARY.md
 
