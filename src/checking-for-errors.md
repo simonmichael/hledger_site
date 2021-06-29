@@ -65,7 +65,5 @@ Here are some checks we don't support, but could:
   it must have a corresponding posting with a `close:` tag, and all other postings 
   must be chronologically between (and if on the same date, textually between)
   open and close postings. ("Accounts are posted to only within their declared active period.")
-- **pricebalanced** - transactions are balanced, possibly using explicit transaction prices but not auto-inferred ones
-- **fullybalanced** - transactions are balanced in each commodity, without needing any conversions
 - **explicitamounts** - all transaction amounts have been recorded explicitly
 
