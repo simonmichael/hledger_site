@@ -26,11 +26,13 @@ buildall: \
 	build7-1.19 \
 	build7-1.20 \
 	build3-1.21 \
+	build3-1.22 \
 	build3-dev \
 	build
 
 # Like buildall but just a few recent versions.
 buildrecent: \
+	build3-1.22 \
 	build3-1.21 \
 	build3-dev \
 	build
@@ -85,19 +87,20 @@ keepwatching:
 # 	(sleep 1; $(BROWSE) http://localhost:$(LIVERELOADPORT)/) &
 # 	$(LIVERELOAD) $(OUT)
 
-# After a release (>= 1.22), save a snapshot of the release manuals to
-# src/VER/, taken from the parent directory, which should be a clean
-# checkout of the main hledger repo's master branch.  
-# Shake.hs there may get rebuilt or have deps installed.
 MANUALS=\
 	../hledger/hledger.md \
 	../hledger-ui/hledger-ui.md \
 	../hledger-web/hledger-web.md \
 
-copy-%:
+# After a release (>= 1.22), commit a snapshot of the release manuals
+# as src/VER/, copied from the parent directory, which should be a
+# clean checkout of the main hledger repo's master branch. (Note
+# Shake.hs there might get rebuilt or have its deps installed.)
+snapshot-%:
 	git -C .. checkout $* && \
 	(cd ..; ./Shake.hs webmanuals; git reset --hard) && \
 	mkdir -p src/$* && \
 	for f in $(MANUALS); do test -e $$f && cp $$f src/$*; done && \
-	git -C .. checkout master
+	git -C .. checkout master && \
+	git add src/$* && git commit -m "snapshot of $* manuals" src/$*
 
