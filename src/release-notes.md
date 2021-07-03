@@ -1,3 +1,12 @@
+<!--
+          _             _            
+ _ __ ___| |_ __   ___ | |_ ___  ___ 
+| '__/ _ \ | '_ \ / _ \| __/ _ \/ __|
+| | |  __/ | | | | (_) | ||  __/\__ \
+|_|  \___|_|_| |_|\___/ \__\___||___/
+                                     
+-->
+
 <!-- toc -->
 
 # Release notes
@@ -17,6 +26,28 @@ dominating the site's sidebar.
 The older releases show changelog-level detail and should probably be
 thinned out.
 
+Template:
+
+## YYYY-MM-DD hledger-1.XX
+
+**HIGHLIGHTS**
+([announcement](https://groups.google.com/g/hledger/LINK))
+
+### project changes 1.XX
+
+
+### hledger 1.XX
+
+
+### hledger-ui 1.XX
+
+
+### hledger-web 1.XX
+
+
+### credits 1.XX
+
+
 -->
 <style>
 h2, h2:last-child > h3 { margin-top:4em; }
@@ -30,6 +61,200 @@ Major releases and user-visible changes, collected from the changelogs (
 ).
 Changes in hledger-install.sh are shown
 [here](https://github.com/simonmichael/hledger/commits/master/hledger-install/hledger-install.sh).
+
+## 2021-07-03 hledger-1.22
+
+**Optimisations, bugfixes.**
+([announcement](https://groups.google.com/g/hledger/LINK))
+
+### project changes 1.22
+
+Software:
+
+- We now provide static executables for GNU/Linux on x64 (amd64) and arm32v7
+  architectures. These are more portable and more likely to work on your linux
+  system than the dynamic Ubuntu executables we have been providing).
+  (And, will be useful to Nextcloud.com users.) (#1571) (Garret McGraw)
+
+- GHC 9.0 support has been added. 
+  We have dropped official support for GHC 8.0/8.2/8.4; building
+  hledger now requires GHC 8.6 or newer. 
+
+Docs:
+
+- The info manuals now have the proper metadata so you or your
+  packager can install them with `install-info` and they will appear
+  in info's Directory. We also provide a `dir` file making it easy
+  for developers to see the latest dev manuals in their info Directory.
+  (#1585) (Damien Cassou, Simon Michael)
+
+Chat:
+
+- The hledger IRC channels (in matrix syntax: #hledger:libera.chat,
+  #hledger-bots:libera.chat) moved to Libera.chat.
+    
+- The hledger Matrix room (#hledger:matrix.org), is now on at least
+  equal "official" footing with the IRC channel. 
+  
+- I upgraded the matrix room to a newer version of the Matrix
+  protocol. This effectively splits it into an old (read only) room
+  and a new room. If you are joined to the old room, you might not
+  have noticed; in your matrix client, please follow the link to the
+  new room, ie #hledger:matrix.org.
+
+- I briefly bridged the IRC and matrix rooms, because having two chats
+  (four if we consider #plaintextaccounting) is a pain. I hope to try
+  the experiment again at some point.
+
+### hledger 1.22
+
+Features
+
+- check: A new `balancednoautoconversion` check requires transactions
+  to balance without the use of inferred transaction prices. (Explicit
+  transaction prices are allowed.) This check is included in `--strict`
+  mode. The old `autobalanced` check has been renamed to
+  `balancedwithautoconversion`. (Stephen Morgan)
+
+Improvements
+
+- Many internal optimisations have been applied (cf hledger-lib
+  changelog). Overall, you can expect most reports to be about 20%
+  faster. The register report is more than 2x faster uses 4x less
+  memory. (Stephen Morgan)
+
+      ~/src/hledger$ quickbench -w hledger-1.21,hledger
+      Running 5 tests 1 times with 2 executables at 2021-06-29 13:13:26 HST:
+    
+      Best times:
+      +----------------------------------------------------++--------------+---------+
+      |                                                    || hledger-1.21 | hledger |
+      +====================================================++==============+=========+
+      | -f examples/10000x1000x10.journal print            ||         1.18 |    0.90 |
+      | -f examples/10000x1000x10.journal register         ||        12.82 |    5.95 |
+      | -f examples/10000x1000x10.journal balance          ||         1.38 |    0.86 |
+      | -f examples/1000x1000x10.journal balance --weekly  ||         0.96 |    0.78 |
+      | -f examples/10000x1000x10.journal balance --weekly ||        13.07 |   10.79 |
+      +----------------------------------------------------++--------------+---------+
+
+- ANSI color is now disabled automatically (on stdout) when the
+  `-o/--output-file` option is used (with a value other than `-`).
+  (#1533)
+
+- ANSI color is now also available in debug output, determined in the
+  usual way by `--color`, `NO_COLOR`, and whether the output (stderr)
+  is interactive.
+  
+- The --version flag shows more details of the build, when known: git
+  tag, number of commits since the tag, commit hash, platform and
+  architecture. (Stephen Morgan)
+
+- balance: Capitalisation of "account" and "total" (and lack of a
+  colon in the latter) in CSV output is now consistent for single- and
+  multi-period reports.
+
+- balance reports' CSV output now includes full account names. (#1566)
+  (Stephen Morgan)
+
+- csv: We now accept spaces when parsing amounts from CSV. (Eric
+  Mertens)
+
+- json: Avoid adding unnecessary decimal places in JSON output. (Don't
+  increase them all to 10 decimal places.) (Stephen Morgan)
+  
+- json: Simplify amount precision (asprecision) in JSON output.
+  It is now just the number of decimal places, rather than an object.
+  (Stephen Morgan)
+
+- GHC 9.0 is now officially supported. GHC 8.0, 8.2, 8.4 are no longer
+  supported; we now require GHC 8.6 or greater.
+
+- Added a now-required lower bound on containers. (#1514)
+
+Fixes
+
+- Auto posting rules now match postings more precisely, respecting
+  `cur:` and `amt:` queries. (#1582) (Stephen Morgan)
+
+- balance reports: Fix empty cells when amounts are too wide to fit
+  (broken since 1.20) (#1526). (Stephen Morgan)
+
+- csv: Fix the escaping of double quotes in CSV output (broken in
+  1.21). (Stephen Morgan)
+
+- register: Fix the running total when there is a report interval
+  (broken since 1.19) (#1568). (Stephen Morgan)
+
+- stats: No longer gets confused by posting dates. (#772) (Stephen Morgan)
+
+- timeclock: `hledger print` shows timeclock amounts with just 2
+  decimal places again (broken in 1.21). (#1527)
+
+- When all transaction amounts have the same sign, the error message
+  no longer adds an inferred price. (#1551) (Stephen Morgan)
+
+- Cleaned up some references to old man pages. (Felix Yan)
+
+### hledger-ui 1.22
+
+Improvements
+
+- Don't reset the `B`/`V` (cost, value) state when reloading with `g`
+  or `--watch`. (Stephen Morgan)
+
+- The accounts screen is a little smarter at allocating space to
+  columns. (Stephen Morgan)
+
+- Add support for the kakoune editor, and improve the invocations of
+  some other editors. (crocket)
+
+- The `--version` flag shows more detail (git tag/patchlevel/commit
+  hash, platform/architecture). (Stephen Morgan)
+
+- GHC 9.0 is now officially supported. GHC 8.0, 8.2, 8.4 are no longer
+  supported; we now require GHC 8.6 or greater.
+
+- Added a now-required lower bound on containers. (#1514)
+
+Fixes
+
+- Queries in the register screen work again (broken in 1.21). (#1523)
+  (Stephen Morgan)
+
+- Don't write to `./debug.log` when toggling value with `V`, or when
+  reloading with `g` or `--watch` in the Transaction screen. (#1556)
+  (Simon Michael, Stephen Morgan)
+
+### hledger-web 1.22
+
+Improvements
+
+- The --version flag shows more detail (git tag/patchlevel/commit
+  hash, platform/architecture). (Stephen Morgan)
+
+- Allow yesod-form 1.7 (Felix Yan)
+
+- Add now-required lower bound on containers. (#1514)
+
+- GHC 9.0 is now officially supported. GHC 8.0, 8.2, 8.4 are no longer
+  supported; we now require GHC 8.6 or greater.
+
+Fixes
+
+- In the add form, fix a bug where extra posting rows were not added
+  when needed in certain web browsers. (charukiewicz)
+
+### credits 1.22
+
+This release was brought to you by
+Simon Michael,
+Stephen Morgan,
+Felix Yan,
+crocket,
+Eric Mertens,
+Damien Cassou,
+charukiewicz,
+and Garret McGraw.
 
 ## 2021-03-10 hledger-1.21
 
