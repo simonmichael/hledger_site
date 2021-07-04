@@ -179,7 +179,10 @@ https://github.com/simonmichael/hledger/releases, also apply here.
         </div>
       </td>
       <td style="padding-top:10px;">
-        <div class="command" style="margin-bottom:4px;"><a href="https://github.com/simonmichael/hledger/releases/tag/1.22">hledger-windows.zip</a></div>
+        <div class="command" style="margin-bottom:4px;">
+          <a href="https://github.com/simonmichael/hledger/actions/runs/997403950">hledger-windows.zip</a>
+          <!-- <a href="https://github.com/simonmichael/hledger/releases/tag/1.22">hledger-windows.zip</a> -->
+        </div>
         <div class="notes">
         <!--   <span class="warnings"> -->
         <!--     <\!-- <a href="https://github.com/simonmichael/hledger/issues/1039">#1039</a> -\-> -->
@@ -205,7 +208,10 @@ https://github.com/simonmichael/hledger/releases, also apply here.
         </div>
       </td>
       <td style="padding-top:10px;">
-        <div class="command" style="margin-bottom:4px;"><a href="https://github.com/simonmichael/hledger/releases/tag/1.22">hledger-macos.zip</a></div>
+        <div class="command" style="margin-bottom:4px;">
+          <a href="https://github.com/simonmichael/hledger/actions/runs/997403597">hledger-macos.zip</a>
+          <!-- <a href="https://github.com/simonmichael/hledger/releases/tag/1.22">hledger-macos.zip</a> -->
+        </div>
         <div class="notes"></div>
       </td>
     </tr>
@@ -224,8 +230,9 @@ https://github.com/simonmichael/hledger/releases, also apply here.
       </td>
       <td style="padding-top:10px;">
         <div class="command" style="margin-bottom:4px;">
-        <a href="https://github.com/simonmichael/hledger/actions/runs/997402714">Static Binaries.zip</a><br>
-        <a href="https://github.com/simonmichael/hledger/releases/tag/1.22">hledger-ubuntu.zip</a>
+          <a href="https://github.com/simonmichael/hledger/actions/runs/997402714">Static Binaries.zip</a><br>
+          <a href="https://github.com/simonmichael/hledger/actions/runs/997438993">hledger-ubuntu.zip</a>
+          <!-- <a href="https://github.com/simonmichael/hledger/releases/tag/1.22">hledger-ubuntu.zip</a> -->
         </div>
         <div class="notes"></div>
       </td>
