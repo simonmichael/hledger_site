@@ -230,9 +230,9 @@ https://github.com/simonmichael/hledger/releases, also apply here.
       </td>
       <td style="padding-top:10px;">
         <div class="command" style="margin-bottom:4px;">
+          <a href="https://github.com/simonmichael/hledger/actions/runs/997438993">hledger-ubuntu.zip</a><br>
+          <!-- <a href="https://github.com/simonmichael/hledger/releases/tag/1.22">hledger-ubuntu.zip</a><br> -->
           <a href="https://github.com/simonmichael/hledger/actions/runs/997402714">Static Binaries.zip</a><br>
-          <a href="https://github.com/simonmichael/hledger/actions/runs/997438993">hledger-ubuntu.zip</a>
-          <!-- <a href="https://github.com/simonmichael/hledger/releases/tag/1.22">hledger-ubuntu.zip</a> -->
         </div>
         <div class="notes"></div>
       </td>
