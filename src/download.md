@@ -223,7 +223,10 @@ https://github.com/simonmichael/hledger/releases, also apply here.
         </div>
       </td>
       <td style="padding-top:10px;">
-        <div class="command" style="margin-bottom:4px;"><a href="https://github.com/simonmichael/hledger/releases/tag/1.22">hledger-ubuntu.zip</a></div>
+        <div class="command" style="margin-bottom:4px;">
+        <a href="https://github.com/simonmichael/hledger/actions/runs/997402714">Static Binaries.zip</a><br>
+        <a href="https://github.com/simonmichael/hledger/releases/tag/1.22">hledger-ubuntu.zip</a>
+        </div>
         <div class="notes"></div>
       </td>
     </tr>
@@ -650,12 +653,8 @@ Or if you have checked out the hledger source, also the functional tests:
 
 <div class="command">
 $ make functest <br>
-Excluding 2 test files<br>
-<br>
-         Test Cases    Total        <br>
- Passed  694           694          <br>
- Failed  0             0            <br>
- Total   694           694          <br>
+... <br>
+ Total   727 ...<br>
 functest PASSED
 </div>
 
