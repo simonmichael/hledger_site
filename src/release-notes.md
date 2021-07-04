@@ -90,11 +90,14 @@ Docs:
 
 Chat:
 
-- The hledger IRC channels (#hledger:libera.chat,
-  #hledger-bots:libera.chat) moved to Libera.chat.
+- The hledger IRC channels (
+  [#hledger:libera.chat](https://kiwiirc.com/nextclient/irc.libera.chat:+6697/#hledger),
+  [#hledger-bots:libera.chat](https://kiwiirc.com/nextclient/irc.libera.chat:+6697/#hledger-bots)
+  ) moved to Libera.chat.
     
-- The hledger Matrix room (#hledger:matrix.org), is now on at least
-  equal "official" footing with the IRC channel. 
+- The hledger Matrix room (
+  [#hledger:matrix.org](https://matrix.to/#/#hledger:matrix.org)
+  ), is now on at least equal "official" footing with the IRC channel.
   
 - I upgraded the matrix room to a newer version of the Matrix
   protocol. This effectively splits it into an old (read only) room
