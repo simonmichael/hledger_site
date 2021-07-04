@@ -65,7 +65,7 @@ Changes in hledger-install.sh are shown
 ## 2021-07-03 hledger-1.22
 
 **Optimisations, bugfixes.**
-([announcement](https://groups.google.com/g/hledger/LINK))
+([announcement](https://groups.google.com/g/hledger/c/t8-XbZBFtF0/m/tWCA8IQXAQAJ))
 
 ### project changes 1.22
 
@@ -74,7 +74,7 @@ Software:
 - We now provide static executables for GNU/Linux on x64 (amd64) and arm32v7
   architectures. These are more portable and more likely to work on your linux
   system than the dynamic Ubuntu executables we have been providing).
-  (And, will be useful to Nextcloud.com users.) (#1571) (Garret McGraw)
+  (And, will be useful to Nextcloud.com users.) ([#1571](https://github.com/simonmichael/hledger/issues/1571)) (Garret McGraw)
 
 - GHC 9.0 support has been added. 
   We have dropped official support for GHC 8.0/8.2/8.4; building
@@ -86,7 +86,7 @@ Docs:
   packager can install them with `install-info` and they will appear
   in info's Directory. We also provide a `dir` file making it easy
   for developers to see the latest dev manuals in their info Directory.
-  (#1585) (Damien Cassou, Simon Michael)
+  ([#1585](https://github.com/simonmichael/hledger/issues/1585)) (Damien Cassou, Simon Michael)
 
 Chat:
 
@@ -139,7 +139,7 @@ Improvements
 
 - ANSI color is now disabled automatically (on stdout) when the
   `-o/--output-file` option is used (with a value other than `-`).
-  (#1533)
+  ([#1533](https://github.com/simonmichael/hledger/issues/1533))
 
 - ANSI color is now also available in debug output, determined in the
   usual way by `--color`, `NO_COLOR`, and whether the output (stderr)
@@ -153,7 +153,7 @@ Improvements
   colon in the latter) in CSV output is now consistent for single- and
   multi-period reports.
 
-- balance reports' CSV output now includes full account names. (#1566)
+- balance reports' CSV output now includes full account names. ([#1566](https://github.com/simonmichael/hledger/issues/1566))
   (Stephen Morgan)
 
 - csv: We now accept spaces when parsing amounts from CSV. (Eric
@@ -169,29 +169,29 @@ Improvements
 - GHC 9.0 is now officially supported. GHC 8.0, 8.2, 8.4 are no longer
   supported; we now require GHC 8.6 or greater.
 
-- Added a now-required lower bound on containers. (#1514)
+- Added a now-required lower bound on containers. ([#1514](https://github.com/simonmichael/hledger/issues/1514))
 
 Fixes
 
 - Auto posting rules now match postings more precisely, respecting
-  `cur:` and `amt:` queries. (#1582) (Stephen Morgan)
+  `cur:` and `amt:` queries. ([#1582](https://github.com/simonmichael/hledger/issues/1582)) (Stephen Morgan)
 
 - balance reports: Fix empty cells when amounts are too wide to fit
-  (broken since 1.20) (#1526). (Stephen Morgan)
+  (broken since 1.20) ([#1526](https://github.com/simonmichael/hledger/issues/1526)). (Stephen Morgan)
 
 - csv: Fix the escaping of double quotes in CSV output (broken in
   1.21). (Stephen Morgan)
 
 - register: Fix the running total when there is a report interval
-  (broken since 1.19) (#1568). (Stephen Morgan)
+  (broken since 1.19) ([#1568](https://github.com/simonmichael/hledger/issues/1568)). (Stephen Morgan)
 
-- stats: No longer gets confused by posting dates. (#772) (Stephen Morgan)
+- stats: No longer gets confused by posting dates. ([#772](https://github.com/simonmichael/hledger/issues/772)) (Stephen Morgan)
 
 - timeclock: `hledger print` shows timeclock amounts with just 2
-  decimal places again (broken in 1.21). (#1527)
+  decimal places again (broken in 1.21). ([#1527](https://github.com/simonmichael/hledger/issues/1527))
 
 - When all transaction amounts have the same sign, the error message
-  no longer adds an inferred price. (#1551) (Stephen Morgan)
+  no longer adds an inferred price. ([#1551](https://github.com/simonmichael/hledger/issues/1551)) (Stephen Morgan)
 
 - Cleaned up some references to old man pages. (Felix Yan)
 
@@ -214,15 +214,15 @@ Improvements
 - GHC 9.0 is now officially supported. GHC 8.0, 8.2, 8.4 are no longer
   supported; we now require GHC 8.6 or greater.
 
-- Added a now-required lower bound on containers. (#1514)
+- Added a now-required lower bound on containers. ([#1514](https://github.com/simonmichael/hledger/issues/1514))
 
 Fixes
 
-- Queries in the register screen work again (broken in 1.21). (#1523)
+- Queries in the register screen work again (broken in 1.21). ([#1523](https://github.com/simonmichael/hledger/issues/1523))
   (Stephen Morgan)
 
 - Don't write to `./debug.log` when toggling value with `V`, or when
-  reloading with `g` or `--watch` in the Transaction screen. (#1556)
+  reloading with `g` or `--watch` in the Transaction screen. ([#1556](https://github.com/simonmichael/hledger/issues/1556))
   (Simon Michael, Stephen Morgan)
 
 ### hledger-web 1.22
@@ -234,7 +234,7 @@ Improvements
 
 - Allow yesod-form 1.7 (Felix Yan)
 
-- Add now-required lower bound on containers. (#1514)
+- Add now-required lower bound on containers. ([#1514](https://github.com/simonmichael/hledger/issues/1514))
 
 - GHC 9.0 is now officially supported. GHC 8.0, 8.2, 8.4 are no longer
   supported; we now require GHC 8.6 or greater.
@@ -255,7 +255,6 @@ Eric Mertens,
 Damien Cassou,
 charukiewicz,
 and Garret McGraw.
-
 ## 2021-03-10 hledger-1.21
 
 **More speed; more cli-accessible docs; value change report; improvements to balance reports, valuation and more**
