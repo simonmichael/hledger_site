@@ -12,7 +12,7 @@ https://www.stephendiehl.com/posts/marketing.html#persuasion-and-decision-makers
 # hledger
 
 <div id="tagline">
-plain text accounting,<br>made easy
+easy, dependable<br> plain text accounting
 </div>
 
 <div style="text-align:center; margin:1em;">
@@ -34,8 +34,7 @@ plain text accounting,<br>made easy
 <span id="leadingword">hledger</span> is cross-platform accounting software 
 for both power users and folks new to accounting.
 It's good for tracking money, time, investments, cryptocurrencies, inventory and more.
-It is a reimplementation of [Ledger CLI] 
-(*I liked Ledger so much, I rebuilt it in Haskell*)
+It is an actively maintained, largely compatible reimplementation of [Ledger CLI] 
 with a particular focus on **ease of use** and **robustness**.
 
 Here are some things it provides out of the box:
