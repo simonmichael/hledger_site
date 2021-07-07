@@ -238,7 +238,7 @@ https://github.com/simonmichael/hledger/releases, also apply here.
     <tr>
       <td>
         <div class="badges">
-          <a href="https://gentoo.zugaina.org/Search?search=hledger"><img alt="Gentoo" src="https://img.shields.io/badge/Gentoo_package-1.20.3-red.svg" /></a>
+          <a href="https://gentoo.zugaina.org/Search?search=hledger"><img alt="Gentoo" src="https://img.shields.io/badge/Gentoo_package-1.21-red.svg" /></a>
         </div>
         <div class="distro">Gentoo</div>
       </td>
@@ -285,13 +285,15 @@ https://github.com/simonmichael/hledger/releases, also apply here.
     <tr>
       <td>
         <div class="badges">
-          <a href="https://apps.fedoraproject.org/packages/hledger/"><img src="https://repology.org/badge/version-for-repo/fedora_rawhide/hledger.svg" alt="Fedora Rawhide" /></a><br>
-          <a href="https://apps.fedoraproject.org/packages/hledger/"><img src="https://img.shields.io/badge/Fedora_33_package-1.14.2-red.svg" alt="Fedora 33" /></a><br>
-          <!-- <a href="https://apps.fedoraproject.org/packages/hledger/"><img src="https://repology.org/badge/version-for-repo/fedora_33/hledger.svg" alt="Fedora 33" /></a><br> -->
-          <a href="https://apps.fedoraproject.org/packages/hledger/"><img src="https://repology.org/badge/version-for-repo/fedora_32/hledger.svg" alt="Fedora 32" /></a><br>
-          <a href="https://apps.fedoraproject.org/packages/hledger/"><img src="https://repology.org/badge/version-for-repo/fedora_31/hledger.svg" alt="Fedora 31" /></a><br>
-          <a href="https://apps.fedoraproject.org/packages/hledger/"><img src="https://repology.org/badge/version-for-repo/fedora_30/hledger.svg" alt="Fedora 30" /></a><br>
-          <a href="https://apps.fedoraproject.org/packages/hledger/"><img src="https://repology.org/badge/version-for-repo/fedora_29/hledger.svg" alt="Fedora 29" /></a><br>
+          <!-- this has been down for ages
+              <a href="https://apps.fedoraproject.org/packages/hledger/"><img src="https://repology.org/badge/version-for-repo/fedora_rawhide/hledger.svg" alt="Fedora Rawhide" /></a><br> -->
+          <a ><img src="https://repology.org/badge/version-for-repo/fedora_rawhide/hledger.svg" alt="Fedora Rawhide" /></a><br>
+          <a ><img src="https://img.shields.io/badge/Fedora_33_package-1.14.2-red.svg" alt="Fedora 33" /></a><br>
+          <!-- <a ><img src="https://repology.org/badge/version-for-repo/fedora_33/hledger.svg" alt="Fedora 33" /></a><br> -->
+          <a ><img src="https://repology.org/badge/version-for-repo/fedora_32/hledger.svg" alt="Fedora 32" /></a><br>
+          <a ><img src="https://repology.org/badge/version-for-repo/fedora_31/hledger.svg" alt="Fedora 31" /></a><br>
+          <a ><img src="https://repology.org/badge/version-for-repo/fedora_30/hledger.svg" alt="Fedora 30" /></a><br>
+          <a ><img src="https://repology.org/badge/version-for-repo/fedora_29/hledger.svg" alt="Fedora 29" /></a><br>
           <a href="https://apps.fedoraproject.org/packages/s/hledger">more..</a>
         </div>
         <div class="distro">Fedora</div>
@@ -303,9 +305,9 @@ https://github.com/simonmichael/hledger/releases, also apply here.
     <tr>
       <td>
         <div class="badges">
+          <a href="https://packages.ubuntu.com/hirsute/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_21_04/hledger.svg" alt="Ubuntu 21.04" /></a><br>
           <a href="https://packages.ubuntu.com/groovy/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_20_10/hledger.svg" alt="Ubuntu 20.10" /></a><br>
           <a href="https://packages.ubuntu.com/focal/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_20_04/hledger.svg" alt="Ubuntu 20.04" /></a><br>
-          <a href="https://packages.ubuntu.com/eoan/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_19_10/hledger.svg" alt="Ubuntu 19.10" /></a><br>
           <a href="https://packages.ubuntu.com/bionic/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_18_04/hledger.svg" alt="Ubuntu 18.04" /></a><br>
           <a href="https://packages.ubuntu.com/xenial/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_16_04/hledger.svg" alt="Ubuntu 16.04" /></a><br>
           <a href="https://packages.ubuntu.com/search?suite=all&amp;searchon=names&amp;keywords=hledger">more..</a>
