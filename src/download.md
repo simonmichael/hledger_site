@@ -288,8 +288,7 @@ https://github.com/simonmichael/hledger/releases, also apply here.
           <!-- this has been down for ages
               <a href="https://apps.fedoraproject.org/packages/hledger/"><img src="https://repology.org/badge/version-for-repo/fedora_rawhide/hledger.svg" alt="Fedora Rawhide" /></a><br> -->
           <a ><img src="https://repology.org/badge/version-for-repo/fedora_rawhide/hledger.svg" alt="Fedora Rawhide" /></a><br>
-          <a ><img src="https://img.shields.io/badge/Fedora_33_package-1.14.2-red.svg" alt="Fedora 33" /></a><br>
-          <!-- <a ><img src="https://repology.org/badge/version-for-repo/fedora_33/hledger.svg" alt="Fedora 33" /></a><br> -->
+          <a ><img src="https://repology.org/badge/version-for-repo/fedora_33/hledger.svg" alt="Fedora 33" /></a><br>
           <a ><img src="https://repology.org/badge/version-for-repo/fedora_32/hledger.svg" alt="Fedora 32" /></a><br>
           <a ><img src="https://repology.org/badge/version-for-repo/fedora_31/hledger.svg" alt="Fedora 31" /></a><br>
           <a ><img src="https://repology.org/badge/version-for-repo/fedora_30/hledger.svg" alt="Fedora 30" /></a><br>
