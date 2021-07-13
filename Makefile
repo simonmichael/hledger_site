@@ -1,5 +1,5 @@
 # Render the current site and current release manuals, saving them in out.
-build:
+build: build3-dev
 	@echo "building site with current manuals in /"
 	@mdbook build
 
