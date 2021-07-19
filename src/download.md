@@ -472,9 +472,8 @@ package manager first. See
 ## Building from source
 <img alt="Release source" src="https://img.shields.io/badge/Release_source-1.22-brightgreen.svg" />
 
-The [hledger-install script][hledger-install] requires only [bash] and
-builds the current release of the hledger tools and some [add-ons], in
-a reliable way:
+The [hledger-install script][hledger-install] requires only [bash] (and [make], and ...?). It builds the current release of the hledger tools and some [add-ons], in
+a relatively reliable way:
 
 <div class="builder-command">
   curl -sO https://raw.githubusercontent.com/simonmichael/hledger/master/hledger-install/hledger-install.sh <br>
@@ -675,6 +674,7 @@ where we'll gladly share tips or receive your feedback.
 
 [ghc]:             https://www.haskell.org/ghc
 [bash]:            https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29
+[make]:            https://www.gnu.org/software/make/
 [stack]:           https://www.fpcomplete.com/haskell/get-started
 [cabal]:           https://www.haskell.org/cabal
 [hledger-install]: https://github.com/simonmichael/hledger/blob/master/hledger-install/hledger-install.sh
