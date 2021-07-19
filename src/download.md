@@ -254,7 +254,7 @@ https://github.com/simonmichael/hledger/releases, also apply here.
         <div class="distro">Arch</div>
       </td>
       <td>
-        <div class="command">pacman -S hledger hledger-ui hledger-web</div>
+        <div class="command">pacman -Sy hledger hledger-ui hledger-web</div>
       </td>
     </tr>
     <tr>
