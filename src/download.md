@@ -472,8 +472,10 @@ package manager first. See
 ## Building from source
 <img alt="Release source" src="https://img.shields.io/badge/Release_source-1.22-brightgreen.svg" />
 
-The [hledger-install script][hledger-install] requires only [bash] (and [make], and ...?). It builds the current release of the hledger tools and some [add-ons], in
-a relatively reliable way:
+The [hledger-install script][hledger-install] 
+requires only [bash] (and sometimes `make`, and `gcc`, and ...?). 
+It builds the current release of the hledger tools and some [add-ons], 
+in a relatively reliable way:
 
 <div class="builder-command">
   curl -sO https://raw.githubusercontent.com/simonmichael/hledger/master/hledger-install/hledger-install.sh <br>
