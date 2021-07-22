@@ -65,8 +65,10 @@
 - [Mobile apps](mobile-apps.md)
 - [Save frequently used options](save-frequently-used-options.md)
 - [Scripting](scripting.md)
-- [hledger and Ledger](ledger.md)
 - [hledger and Beancount](beancount.md)
+- [hledger and GnuCash](gnucash.md)
+- [hledger and Ledger](ledger.md)
+- [hledger and Quicken/Quickbooks](quicken.md)
 
 # COOKBOOK: REAL WORLD SETUPS
 
