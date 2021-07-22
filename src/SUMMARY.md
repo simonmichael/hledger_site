@@ -66,6 +66,7 @@
 - [Save frequently used options](save-frequently-used-options.md)
 - [Scripting](scripting.md)
 - [hledger and Ledger](ledger.md)
+- [hledger and Beancount](beancount.md)
 
 # COOKBOOK: REAL WORLD SETUPS
 

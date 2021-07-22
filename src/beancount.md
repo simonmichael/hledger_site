@@ -1,16 +1,16 @@
-# hledger and Ledger
+# hledger and Beancount
 
-Tips for co-using/converting/switching Ledger and hledger.
+Tips for co-using/converting/switching Beancount and hledger.
 
-Ledger's and hledger's journal formats are the same at the core,
-so you can continue using both tools on the same files, 
-if you are careful to avoid syntax that is specific to one or the other.
-See [FAQ](faq.html) on differences.
+Beancount's journal format is different enough from hledger's
+that one tool can't directly read the other's files, currently.
 
-However if you are a long-time Ledger user, you will certainly have
-Ledger-specific syntax, so for most Ledger users the quickest way 
-to tap into hledger reports is some variant of
+To convert between the formats, use
+[beancount2ledger](https://github.com/beancount/beancount2ledger)
+and
+[ledger2beancount](https://github.com/beancount/ledger2beancount).
 
+<!--
 ```
 $ ledger print | hledger -f- CMD
 ```
@@ -26,4 +26,4 @@ $ ledger print | hledger -f- is -MAS -2  # summarise monthly revenues/expenses
 $ ledger print | hledger -f- web         # view journal in hledger-web WUI
 $ hledger-ui -f <(ledger print)          # view journal in hledger-ui TUI (works in bash)
 ```
-
+-->
