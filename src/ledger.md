@@ -21,10 +21,10 @@ and the output is usually hledger compatible journal entries.
 This is good enough for most reporting needs. Some examples:
 
 ```shell
-$ ledger print | hledger -f- check         # check for problems
-$ ledger print | hledger -f- stats         # show journal statistics
-$ ledger print | hledger -f- is -MAS -2    # show monthly revenues/expenses sorted by average amount
-$ ledger print | hledger -f- web           # view journal in hledger-web WUI
-$ hledger-ui -f <(ledger print)            # view journal in hledger-ui TUI (works in bash at least)
+$ ledger print | hledger -f- check       # check for problems
+$ ledger print | hledger -f- stats       # show journal statistics
+$ ledger print | hledger -f- is -MAS -2  # summarise monthly revenues/expenses
+$ ledger print | hledger -f- web         # view journal in hledger-web WUI
+$ hledger-ui -f <(ledger print)          # view journal in hledger-ui TUI (works in bash)
 ```
 
