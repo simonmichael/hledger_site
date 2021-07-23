@@ -29,29 +29,29 @@
 # MANAGING YOUR DATA
 
 - [Create a journal](create-a-journal.md)
-- [Change account name separator](change-account-name-separator.md)
 - [Track changes with version control](track-changes-with-version-control.md)
+- [Checking for errors](checking-for-errors.md)
 - [Importing CSV data](import-csv.md)
 - [Exporting from hledger](export.md)
-- [Checking for errors](checking-for-errors.md)
+- [Change account name separator](change-account-name-separator.md)
 
 # REPORTING
 
 - [Report examples](report-examples.md)
 - [Queries](queries.md)
-- [Rewrite account names](rewrite-account-names.md)
-- [Rewrite commodity symbols](rewrite-commodity-symbols.md)
 - [Tags tutorial](tags-tutorial.md)
 - [Charts and Graphs](charts.md)
+- [Rewrite account names](rewrite-account-names.md)
+- [Rewrite commodity symbols](rewrite-commodity-symbols.md)
 
 # ACCOUNTING TASKS
 
+- [Borrowing and lending](loans.md)
 - [Budgeting](budgeting.md)
 - [Budgeting and Forecasting](budgeting-and-forecasting.md)
 - [Common journal entries](common-journal-entries.md)
 <!-- [Depreciation](http://rantsideasstuff.com/posts/2018/07/08-depreciation-in-personal-finance-with-hledger) -->
 - [Foreign trip expenses](foreign-trip-expenses.md)
-- [Borrowing and lending](loans.md)
 - [Invoicing](invoicing.md)
 - [Multicurrency tutorial](multicurrency-tutorial.md)
 - [Project accounting](project-accounting.md)
@@ -60,24 +60,24 @@
 - [Track investments 2](investments.md)
 - [Using hledger roi to compute return on investment](return-on-investment.md)
 
-# GENERAL USAGE
+# GENERAL USAGE TIPS
 
 - [Addon commands](addons.md)
 - [Command line completion](command-line-completion.md)
 - [Editor configuration](editors.md)
-- [hledger-web tips](hledger-web-tips.md)
-- [Mobile apps](mobile-apps.md)
-- [Save frequently used options](save-frequently-used-options.md)
-- [Scripting](scripting.md)
 - [hledger and Beancount](beancount.md)
 - [hledger and GnuCash](gnucash.md)
 - [hledger and Ledger](ledger.md)
 - [hledger and Quicken/Quickbooks](quicken.md)
+- [hledger-web tips](hledger-web-tips.md)
+- [Mobile apps](mobile-apps.md)
+- [Save frequently used options](save-frequently-used-options.md)
+- [Scripting](scripting.md)
 
 # DEVELOPMENT
 
 - [README](dev-README.md)
 - [CONTRIBUTING](CONTRIBUTING.md)
-- [CREDITS](CREDITS.md)
 - [ROADMAP](ROADMAP.md)
 - [Mockups](mockups.md)
+- [CREDITS](CREDITS.md)
