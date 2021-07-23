@@ -3,6 +3,10 @@ build: build3-dev
 	@echo "building site with current manuals in /"
 	@mdbook build
 
+# Install some required tools.
+tools:
+	cargo install mdbook mdbook-toc
+
 # Render all versions of manuals. Current release manual will be in out, all others in out2.
 # Slow, temporarily links old manuals in SUMMARY and renders the whole site, for each version.
 # Temporary hack until mdbook can render things not in SUMMARY.md.
