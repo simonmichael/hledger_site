@@ -1,6 +1,6 @@
 <!-- toc -->
 
-# Download/Install
+# Install
 
 <style>
 h2 {

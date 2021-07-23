@@ -1,28 +1,26 @@
 # hledger.org
 
-# ABOUT
+# INTRODUCTION
 
 - [Home](index.md)
 - [FAQ](faq.md)
-- [Video/Audio](videos.md)
-- [Download/Install](download.md)
-- [Release notes](release-notes.md)
-
-# FIRST STEPS
-
+- [Videos, Talks](videos.md)
+- [Install](download.md)
 - [Quick Start](quickstart.md)
 - [Easy workflow #1: hledger add](add.md)
 - [Easy workflow #2: hledger-web](web.md)
 - [Easy workflow #3: hledger-ui](ui.md)
 - [Accounting concepts](accounting.md)
+- [Release notes](release-notes.md)
 
-# USER MANUALS
+# USER MANUAL
 
 - [hledger](hledger.md)
 - [hledger-ui](hledger-ui.md)
 - [hledger-web](hledger-web.md)
 
-# COOKBOOK: MANAGING DATA
+# HOW TOS:
+# MANAGING YOUR DATA
 
 - [Create a journal](create-a-journal.md)
 - [Change account name separator](change-account-name-separator.md)
@@ -31,7 +29,7 @@
 - [Exporting from hledger](export.md)
 - [Checking for errors](checking-for-errors.md)
 
-# COOKBOOK: REPORTING
+# REPORTING
 
 - [Report examples](report-examples.md)
 - [Queries](queries.md)
@@ -40,7 +38,7 @@
 - [Tags tutorial](tags-tutorial.md)
 - [Charts and Graphs](charts.md)
 
-# COOKBOOK: ACCOUNTING TASKS
+# ACCOUNTING TASKS
 
 - [Budgeting](budgeting.md)
 - [Budgeting and Forecasting](budgeting-and-forecasting.md)
@@ -56,7 +54,7 @@
 - [Track investments 2](investments.md)
 - [Using hledger roi to compute return on investment](return-on-investment.md)
 
-# COOKBOOK: USAGE TIPS
+# GENERAL USAGE
 
 - [Addon commands](addons.md)
 - [Command line completion](command-line-completion.md)
@@ -70,16 +68,12 @@
 - [hledger and Ledger](ledger.md)
 - [hledger and Quicken/Quickbooks](quicken.md)
 
-# COOKBOOK: REAL WORLD SETUPS
+# EXAMPLE SETUPS
 
-- [About real world setup docs](about-real-world-setup-docs.md)
-   <!-- Dmitry Astapov's Full-fledged Hledger tutorial <https://github.com/adept/full-fledged-hledger> -->
-   <!-- Andreas Pauley's Hledger Flow tutorial & slideshow <https://github.com/apauley/hledger-flow> -->
-   <!-- rotorkunstkultur's setup for chaotic German freelancers <https://github.com/rotorkunstkultur/rtrledger> -->
-   <!-- Michael Walker's Personal Finance setup <https://memo.barrucadu.co.uk/personal-finance.html> -->
+- [Example setups](setups.md)
 - [Simon's setup](simons-setup.md)
 
-# DEV
+# DEVELOPMENT
 
 - [README](dev-README.md)
 - [CONTRIBUTING](CONTRIBUTING.md)

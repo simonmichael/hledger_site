@@ -18,11 +18,11 @@ easy, dependable<br> plain text accounting
 <div style="text-align:center; margin:1em;">
 
 *Quick links:
-[download](download.html),
+[install](download.html),
 [quick start](quickstart.html),
 [manual](hledger.html),
 [support](#help),
-[contributing](CONTRIBUTING.html)*
+[development](CONTRIBUTING.html)*
 
 </div>
 
