@@ -19,14 +19,14 @@
 - [hledger-ui](hledger-ui.md)
 - [hledger-web](hledger-web.md)
 
-# 3. HOW TOS:
+# 3. HOW TOS
 
-# 3.1. EXAMPLE SETUPS
+# EXAMPLE SETUPS
 
 - [Example setups](setups.md)
 - [Simon's setup](simons-setup.md)
 
-# 3.2. MANAGING YOUR DATA
+# MANAGING YOUR DATA
 
 - [Create a journal](create-a-journal.md)
 - [Track changes with version control](track-changes-with-version-control.md)
@@ -35,7 +35,7 @@
 - [Exporting from hledger](export.md)
 - [Change account name separator](change-account-name-separator.md)
 
-# 3.3. REPORTING
+# REPORTING
 
 - [Report examples](report-examples.md)
 - [Queries](queries.md)
@@ -44,7 +44,7 @@
 - [Rewrite account names](rewrite-account-names.md)
 - [Rewrite commodity symbols](rewrite-commodity-symbols.md)
 
-# 3.4. ACCOUNTING TASKS
+# ACCOUNTING TASKS
 
 - [Borrowing and lending](loans.md)
 - [Budgeting](budgeting.md)
@@ -60,7 +60,7 @@
 - [Track investments 2](investments.md)
 - [Using hledger roi to compute return on investment](return-on-investment.md)
 
-# 3.5. GENERAL USAGE TIPS
+# GENERAL USAGE TIPS
 
 - [Addon commands](addons.md)
 - [Command line completion](command-line-completion.md)
