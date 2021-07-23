@@ -20,6 +20,12 @@
 - [hledger-web](hledger-web.md)
 
 # HOW TOS:
+
+# EXAMPLE SETUPS
+
+- [Example setups](setups.md)
+- [Simon's setup](simons-setup.md)
+
 # MANAGING YOUR DATA
 
 - [Create a journal](create-a-journal.md)
@@ -67,11 +73,6 @@
 - [hledger and GnuCash](gnucash.md)
 - [hledger and Ledger](ledger.md)
 - [hledger and Quicken/Quickbooks](quicken.md)
-
-# EXAMPLE SETUPS
-
-- [Example setups](setups.md)
-- [Simon's setup](simons-setup.md)
 
 # DEVELOPMENT
 

@@ -6,6 +6,10 @@ which sometimes makes it a bit hard to get started.
 Here are some examples of file layouts, account names, workflows and routines that other users have found useful. 
 You can try to follow one of these exactly, or simply read for ideas.
 
+- [Quick Start's setup](quickstart.html#set-up-a-journal)
+
+- [hledger manual's setup](hledger.html#starting-a-journal-file)
+
 - [Simon's setup](simons-setup.html)
 
 - Dmitry Astapov's Full-fledged Hledger tutorial:
@@ -17,7 +21,7 @@ You can try to follow one of these exactly, or simply read for ideas.
 - rotorkunstkultur's setup for chaotic German freelancers:
   <https://github.com/rotorkunstkultur/rtrledger>
 
-- Michael Walker's Personal Finance setup:
+- Michael Walker's personal finance setup:
   <https://memo.barrucadu.co.uk/personal-finance.html>
 
 ## Contribute yours!
