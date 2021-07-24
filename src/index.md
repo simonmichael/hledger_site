@@ -23,12 +23,11 @@ easy, dependable<br> plain text accounting
 [manual](hledger.html),
 [support](#help),
 [development](CONTRIBUTING.html)*
+<!-- </div> -->
+<!-- <div style="text-align:center; margin:1em;"> -->
+<!-- <a href="download.html"><button type="button" class="btn btn-primary" title="All the ways to install hledger. Get it now!">Download/Install</button></a> -->
+<a href="https://github.com/simonmichael/hledger"><button type="button" class="btn btn-neutral" style="padding:4px;" title="hledger code repo/issue tracker"><img width="142" src="https://img.shields.io/github/stars/simonmichael/hledger.svg?style=for-the-badge&logo=GitHub&label=Github&color=lightgrey"></button></a>
 
-</div>
-
-<div style="text-align:center; margin:1em;">
-<a href="download.html"><button type="button" class="btn btn-primary" title="All the ways to install hledger. Get it now!">Download/Install</button></a>
-<a href="https://github.com/simonmichael/hledger"><button type="button" class="btn btn-neutral" style="padding:4px;" title="hledger code and issue tracker on Github. Star us!"><img width="142" src="https://img.shields.io/github/stars/simonmichael/hledger.svg?style=for-the-badge&logo=GitHub&label=Github&color=lightgrey"></button></a>
 </div>
 
 <span id="leadingword">hledger</span> is cross-platform accounting software 
@@ -37,22 +36,19 @@ It's good for tracking money, time, investments, cryptocurrencies, inventory and
 It is an actively maintained, largely compatible reimplementation of [Ledger CLI] 
 with a particular focus on **ease of use** and **robustness**.
 
+<!-- <div class=pagetoc> -->
+<!-- <\!-- toc -\-> -->
+<!-- </div> -->
+
 Here are some things it provides out of the box:
 
 - Easy multi-currency double-entry accounting [using only a plain text file](#usage)
-
 - Easy [assisted data entry](add.html) or [CSV import][convert]
-
 - Easy zero-setup [command line], [terminal], and [web] user interfaces
-
 - Easy multi-period [balance sheet], [income statement], and [cashflow] reports
-
 - Easy summarising of account balances to a [desired depth][depth limiting]
-
 - Easy output to [text, HTML, CSV, JSON or SQL][output format]
-
 - Easy import/export/co-usage with Ledger CLI or Beancount
-
 - Easy to [download] or [build] on all major platforms
 
 [Ledger CLI]: https://ledger-cli.org
@@ -73,24 +69,15 @@ hledger is a **[Plain Text Accounting]** system.
 Some strengths of the PTA approach:
 
 - Runs on your local computer, keeping your financial data private and under your control
-  
 - Simple model of  operation: put a log of transactions in, get reports out
-
 - Simple, expressive, human-readable, future-proof plain text format
-
 - Can be version controlled, eg with [Git], to safeguard your data,
   track changes, or collaborate
-
 - Edit with your favourite text editor, or a data entry UI, or import
   from other formats
-
 - Easy to script, automate, and integrate into custom workflows
-
 - Lightweight, fast, non-distracting to use
-
 - Great for learning more of double-entry bookkeeping and accounting.
-
-
 
 Here are some ways in which hledger strives to provide robustness:
 
@@ -183,7 +170,7 @@ run hledger commands to see reports.
 
 **Text editor:**
 <table id="example">
-<tr>
+<tr style="vertical-align:top;">
 <td style="padding-right:1em;">
 
 Record transactions in a [plain text file](journal.html),
@@ -460,7 +447,7 @@ literacy and empowerment. Thank you!
 
 <!-- keep synced with README.md: -->
 
-- Sponsor Simon (project leader / broom pusher):\
+- Sponsor Simon (project leader):\
 [![github](https://img.shields.io/badge/Sponsor_on-Github-limegreen "Sponsor the project leader via Github")](https://github.com/sponsors/simonmichael)
 [![liberapay](https://img.shields.io/badge/Sponsor_on-Liberapay-limegreen "Sponsor the project leader via Liberapay")](https://liberapay.com/simonmichael)
 [![paypal](https://www.paypal.com/en_US/i/btn/x-click-but04.gif "Give one time or recurringly via Paypal")](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5J33NLXYXCYAY)\
