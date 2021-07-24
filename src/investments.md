@@ -1,6 +1,8 @@
-<!-- toc -->
+# Track investments
 
-# Track investments 2
+<div class=pagetoc>
+<!-- toc -->
+</div>
 
 *0.1 (first draft), 2020-04*
 

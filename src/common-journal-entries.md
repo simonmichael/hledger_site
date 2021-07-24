@@ -1,5 +1,9 @@
 # Common journal entries
 
+<div class=pagetoc>
+<!-- toc -->
+</div>
+
 Example hledger journal entries for various kinds of transaction.
  
 ## Shopping

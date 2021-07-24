@@ -1,6 +1,8 @@
-<!-- toc -->
-
 # Mockups
+
+<div class=pagetoc>
+<!-- toc -->
+</div>
 
 Mockups, draft docs and notes exploring possible future features.
 

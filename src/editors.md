@@ -1,6 +1,8 @@
-<!-- toc -->
-
 # Text editors
+
+<div class=pagetoc>
+<!-- toc -->
+</div>
 
 If you edit your journals (and other hledger data files) with a [text
 editor](https://en.wikipedia.org/wiki/Text_editor), you want that

@@ -1,6 +1,8 @@
-<!-- toc -->
+# Calculate return on investment
 
-# Using `hledger roi` to compute return on investment
+<div class=pagetoc>
+<!-- toc -->
+</div>
 
 ## Cash-only investments
 

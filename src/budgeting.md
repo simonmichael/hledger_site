@@ -1,5 +1,9 @@
 # Budgeting
 
+<div class=pagetoc>
+<!-- toc -->
+</div>
+
 Here is a start at gathering budgeting-related resources.
 
 - [hledger > balance > Budget report](hledger.html#budget-report), hledger's built-in periodic budget report

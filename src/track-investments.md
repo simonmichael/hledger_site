@@ -1,4 +1,8 @@
-# Track investments
+# Track investments (2017)
+
+<div class=pagetoc>
+<!-- toc -->
+</div>
 
 You can use hledger to track stock investments.
 In fact, the double-entry accounting is flexible enough to support most constellations you will come across.

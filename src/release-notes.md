@@ -7,9 +7,11 @@
                                      
 -->
 
-<!-- toc -->
-
 # Release notes
+
+<div class="pagetoc">
+<!-- toc -->
+</div>
 
 <!-- 
 In the release headings, dates appear first to keep them out of the

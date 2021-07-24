@@ -1,6 +1,8 @@
-<!-- toc -->
-
 # Tags tutorial
+
+<div class=pagetoc>
+<!-- toc -->
+</div>
 
 Author: Robert Nielsen (YouTube: hledger fan) with invaluable input from Simon Michael
 

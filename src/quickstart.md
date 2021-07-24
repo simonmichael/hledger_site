@@ -1,10 +1,12 @@
-<!-- toc -->
-
 <!-- 
 The TL;DR intro to hledger.           -*- fill-column:78; -*-
 -->
 
 # hledger Quick Start
+
+<div class=pagetoc>
+<!-- toc -->
+</div>
 
 Welcome! This hledger intro aims to distill just the most needed
 practical info to help you get productive as quickly as possible. 

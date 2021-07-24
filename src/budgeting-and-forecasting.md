@@ -1,4 +1,8 @@
-# Budgeting and forecasting
+# Budgeting and forecasting (2018)
+
+<div class=pagetoc>
+<!-- toc -->
+</div>
 
 *Note: this is a cookbook doc, written for hledger 1.5 in 2018; still useful but in need of update.
 For more and fresher docs, see also [Budgeting](budgeting.html).*

@@ -48,7 +48,7 @@
 
 - [Borrowing and lending](loans.md)
 - [Budgeting](budgeting.md)
-- [Budgeting and Forecasting](budgeting-and-forecasting.md)
+- [Budgeting and Forecasting (2018)](budgeting-and-forecasting.md)
 - [Common journal entries](common-journal-entries.md)
 <!-- [Depreciation](http://rantsideasstuff.com/posts/2018/07/08-depreciation-in-personal-finance-with-hledger) -->
 - [Foreign trip expenses](foreign-trip-expenses.md)
@@ -56,9 +56,9 @@
 - [Multicurrency tutorial](multicurrency-tutorial.md)
 - [Project accounting](project-accounting.md)
 - [Time planning](time-planning.md)
-- [Track investments](track-investments.md)
-- [Track investments 2](investments.md)
-- [Using hledger roi to compute return on investment](return-on-investment.md)
+- [Track investments (2017)](track-investments.md)
+- [Track investments](investments.md)
+- [Calculate return on investment](return-on-investment.md)
 
 # GENERAL USAGE TIPS
 

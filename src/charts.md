@@ -1,5 +1,9 @@
 # Charts and Graphs
 
+<div class=pagetoc>
+<!-- toc -->
+</div>
+
 Tips and techniques for producing graphical charts. 
 
 Generally we run a hledger report and select [CSV output](hledger.html#output-format)

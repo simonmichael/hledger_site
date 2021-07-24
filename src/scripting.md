@@ -1,6 +1,8 @@
-<!-- toc -->
-
 # Scripting
+
+<div class=pagetoc>
+<!-- toc -->
+</div>
 
 Like most PTA tools, hledger's command line interface and plain text
 data formats make it easy to integrate into custom scripts, eg for

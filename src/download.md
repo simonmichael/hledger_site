@@ -1,6 +1,8 @@
-<!-- toc -->
-
 # Install
+
+<div class=pagetoc>
+<!-- toc -->
+</div>
 
 <style>
 h2 {

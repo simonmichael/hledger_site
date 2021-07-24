@@ -1,6 +1,25 @@
-.pagetoc > ul    { float:right; width:20em; font-size:small; }
-.pagetoc > ul ul { padding-left:1em; }
-.pagetoc > ul li { list-style:none; text-indent:-0.5em; }
+div.pagetoc {
+	float:right; 
+	margin-left:2em;
+}
+div.pagetoc:before {
+  content: "Contents";
+	font-weight:bold;
+	padding-left:1em;
+}
+.pagetoc > ul    { 
+	margin-top: 0;
+	width:15em; 
+	/*font-size:small;*/ 
+}
+.pagetoc > ul ul { 
+	padding-left:1em; 
+}
+.pagetoc > ul li { 
+	/*list-style:none;*/ 
+	text-indent:-0.3em; 
+
+}
 
 .docversions a.displayed {
     font-weight:bold;

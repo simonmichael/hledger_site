@@ -1,5 +1,9 @@
 # Project accounting
 
+<div class=pagetoc>
+<!-- toc -->
+</div>
+
 Some ways to track small business/freelancer activity - orders, budgets, invoices, payments..
 
 ## Accrual method

@@ -1,6 +1,8 @@
-<!-- toc -->
-
 # Accounting concepts
+
+<div class=pagetoc>
+<!-- toc -->
+</div>
 
 Here we'll give a quick hledger-oriented intro to some useful accounting concepts
 (continuing with the journal file from [Easy workflow #1: hledger add](add.html)).

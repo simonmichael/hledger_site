@@ -1,5 +1,9 @@
 # Simon's setup
 
+<div class=pagetoc>
+<!-- toc -->
+</div>
+
 Author:       Simon Michael  
 Last updated: 201903  
 Tested on:    mac mojave  

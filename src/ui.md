@@ -1,13 +1,15 @@
-<!-- toc -->
-
 # Easy workflow #3: hledger-ui
+
+<div class=pagetoc>
+<!-- toc -->
+</div>
 
 [hledger-ui](hledger-ui.html) is hledger's "curses-style" UI, ie a full-window terminal app.
 It's fast, efficient, and slightly more powerful than the web UI.
 One limitation: on Microsoft Windows, it can only be installed inside [WSL](https://en.wikipedia.org/wiki/WSL).
 Screenshots below!
 
-### Check your installation
+## Check your installation
 
 Open a
 [terminal](https://itconnect.uw.edu/learn/workshops/online-tutorials/web-publishing/what-is-a-terminal/)
@@ -23,7 +25,7 @@ hledger-ui 1.17.1.1
 If this fails, check [download/install](download.html) for install and setup tips.
 
 <!--
-### Check usage
+## Check usage
 
 ```shell
 $ hledger-ui --help
@@ -46,7 +48,7 @@ General flags:
 ```
 -->
 
-### Start hledger-ui
+## Start hledger-ui
 
 Normally, you start hledger-ui by running `hledger-ui` in a terminal.
 Any standard terminal app will do, but not a command prompt that
@@ -61,7 +63,7 @@ $ echo > tmp.journal
 $ hledger-ui -f tmp.journal
 ```
 
-### A quick tour
+## A quick tour
 
 With an empty journal, there's not much to see. But we can see: the
 name of the journal file (`tmp.journal`) and the screen (`account balances`)

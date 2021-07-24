@@ -1,13 +1,15 @@
-<!-- toc -->
-
 # Easy workflow #2: hledger-web
+
+<div class=pagetoc>
+<!-- toc -->
+</div>
 
 [hledger-web](hledger-web.html) is hledger's web browser-based UI.
 It's probably the easiest way to get started with hledger.
 Eg on windows, you can download and unpack hledger.zip and double click on hledger-web.exe.
 Screenshots below!
 
-### Check your installation
+## Check your installation
 
 Open a
 [terminal](https://itconnect.uw.edu/learn/workshops/online-tutorials/web-publishing/what-is-a-terminal/)
@@ -23,7 +25,7 @@ hledger-web 1.17.1
 If this fails, check [download/install](download.html) for install and setup tips.
 
 <!--
-### Check usage
+## Check usage
 
 ```shell
 $ hledger-web --help
@@ -63,7 +65,7 @@ as well as all the general flags common to all hledger tools.
 For normal local use, we can ignore them all.
 -->
 
-### Start hledger-web
+## Start hledger-web
 
 Normally, you start hledger-web by running `hledger-web` in a
 terminal, with no arguments. Browsing to the executable file and
@@ -97,7 +99,7 @@ And, your web browser should open, showing the UI.
 If not, open it yourself and browse to the url shown,
 ie http://127.0.0.1:5000 (and [let us know](index.html#help)).
 
-### A quick tour
+## A quick tour
 
 <!-- highslide zooming:
 <a href="/images/hledger-web/Screen%20Shot%202020-03-22%20at%206.10.29%20PM.png" class="highslide" onclick="return hs.expand(this)"><img src="/images/hledger-web/Screen%20Shot%202020-03-22%20at%206.10.29%20PM.png" /></a>

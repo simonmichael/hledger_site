@@ -1,6 +1,8 @@
 # Checking for errors
 
+<div class=pagetoc>
 <!-- toc -->
+</div>
 
 hledger can check your data in various ways. 
 

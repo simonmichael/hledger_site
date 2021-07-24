@@ -1,5 +1,9 @@
 # Invoicing
 
+<div class=pagetoc>
+<!-- toc -->
+</div>
+
 Freelancers and businesses send invoices to clients to request payment.
 You can use hledger to track how much is due, and how much has been paid.
 

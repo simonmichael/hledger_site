@@ -1,6 +1,8 @@
-<!-- toc -->
-
 # FAQ
+
+<div class=pagetoc>
+<!-- toc -->
+</div>
 
 Welcome to the hledger FAQ!
 
@@ -18,9 +20,11 @@ It clarifies activity, priorities, obligations, opportunities.
 Accounting means keeping track of the flow of valuable commodities, such as money or time. 
 Double-entry bookkeeping is a method for keeping accounting records reliably. For every movement of value (a transaction), both the source and destination are recorded. Simple arithmetic invariants help prevent errors.
 
-## We already use Tally/other proprietary system
+## We use another system, we don't need this ?
 
-Every tool has strengths and weaknesses. hledger is lightweight, flexible and relatively easy to glue into other systems; it might be worth exploring as a complementary tool.
+Every tool has strengths and weaknesses. 
+hledger is lightweight, flexible and relatively easy to glue into other systems; 
+it might be worth exploring as a complementary tool.
 
 ## How do I convey the information in this to my accountant for tax work / to auditors for financial statements ?
 

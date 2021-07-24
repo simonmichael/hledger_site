@@ -1,5 +1,9 @@
 # Create a journal
 
+<div class=pagetoc>
+<!-- toc -->
+</div>
+
 There are lots of ways to start and update a journal file:
 
 ## with touch
