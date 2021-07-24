@@ -70,6 +70,14 @@ Can be combined with ledger-mode or hledger-mode.
 Ledger entries can be embedded in a org outline and manipulated using Babel. See eg
 [Using Ledger for Accounting in Org-mode with Babel](https://orgmode.org/worg/org-contrib/babel/languages/ob-doc-ledger.html)
 
+### calc
+
+Calc can help perform arithmetic on amounts in the buffer during data entry.
+Eg to split an amount by two: 
+
+- put point at the start of the amount, after the currency symbol
+- `C-x * w 2 / q`
+
 ### Misc
 
 A helper to browse TODO tags in the journal:
