@@ -1,29 +1,38 @@
 # Budgeting
 
-<div class=pagetoc>
+<!-- <div class=pagetoc>
 <!-- toc -->
-</div>
+</div> -->
 
-Here is a start at gathering budgeting-related resources.
+## All budgeting-related docs
 
 - [hledger > balance > Budget report](hledger.html#budget-report), hledger's built-in periodic budget report
-- [Budgeting and forecasting](budgeting-and-forecasting.html), a older introduction to these (written for hledger 1.5 in 2018)
-- <https://github.com/simonmichael/hledger/tree/master/examples/budgeting>, annotated examples of journals implementing budgets
-- [plaintextaccounting.org: Budgeting](https://plaintextaccounting.org/#budgeting), more budgeting-related docs, for all PTA tools
-- The YNAB (YouNeedABudget) way: [Age Your Money](https://www.youneedabudget.com/guides/age-your-money)
-- Some other budgeting tools for comparison: <https://github.com/Kickball/awesome-selfhosted#money-budgeting--management>
 
-## PTA budgeting notes
+- [Budgeting and forecasting (2018)](budgeting-and-forecasting.html), a older introduction
+
+- <https://github.com/simonmichael/hledger/tree/master/examples/budgeting>, annotated examples of journals implementing budgets
+
+- [plaintextaccounting.org: Budgeting](https://plaintextaccounting.org/#budgeting), more budgeting-related docs, for all PTA tools
+
+- [Age Your Money](https://www.youneedabudget.com/guides/age-your-money), the YNAB (YouNeedABudget) way
+
+- <https://github.com/Kickball/awesome-selfhosted#money-budgeting--management>, some other budgeting software for comparison
+
+- [Time planning](time-planning.html#how-to-set-up-a-time-budget) -> How to set up a time budget
+
+## Notes
 
 ```
  <sm> two commands that are roughly equivalent: ledger budget --add-budget expenses, hledger balance --budget -E expenses
  <sm> they show both budgeted and unbudgeted accounts            
 ```
+
 ```
 --budget has no effect on single-column reports, it requires a reporting interval
 --budget INTERVAL enables all periodic transactions with that interval; these can be date-limited
 --budget hides all non-budgeted subaccounts; can be depth-limited more
 ```
+
 ```
 <sm> there's different ways to do budgeting                     [16:46]
 <sm> let me try to count them                                   [16:50]
@@ -57,55 +66,5 @@ From <https://www.reddit.com/r/plaintextaccounting/comments/doq9p5/new_to_ledger
 > - end of period actions (roll over ? reset ?), 
 > - forecasting cash balances and managing cashflow, 
 > - forecasting income/expenses... 
-
-
-## How to set up a time budget
-
-* create a `time.journal` which includes your (timedot or timeclock) time log file (assuming you're not tracking time in journal format)
-    ```journal
-    # time.journal
-    include time.timedot
-    ```
-* choose a budget interval, eg daily, weekly or monthly
-* if you have some historical timelog data, review average spending on that interval to get a baseline
-    ```shell
-    $ hledger -f time.journal date:thisyear bal -WA
-    ```
-* in time.journal add a periodic transaction rule to allocate budget amounts, similar to baseline, on that interval
-    ```journal
-    ~ weekly
-        (adm:time)       1h
-        (ser:some:proj)  4h
-    ```
-* run a budget report, using the same interval:
-    ```shell
-    $ hledger -f time.journal bal --budget -W
-    Balance changes in 2017/11/27w48:
-
-                ||     2017/11/27w48 
-    ===============++===================
-    adm:time      || 0.25h [25% of 1h] 
-    ser:some:proj || 0.75h [19% of 4h] 
-    ---------------++-------------------
-                ||             1.00h 
-    ```               
-
-## A time budgeting workflow
-
-From <https://news.ycombinator.com/item?id=19203521>, summary of my 2018-2019 time budgeting workflow:
-
-> I keep a hledger timedot file[1] open in a hot-key drop-down iTerm window. Each 15-minute chunk is logged with a dot. I group dots into hours for > quick visual scanning.
-> 
-> 
->     2019-01-08
->     fos.hledger.sup  .
->     adm.email  ..
->     adm.finance  .... .... ..
->     fos.plaintextaccounting  .
->     fos.hledger.issues.941  .... .
->     has-res  ...
->     biz-res  ..
-> 
-> I've trained myself to update this often while at the computer, and before walking away. Delayed retroactive logging is also pretty easy. Working in quarter/half/whole hour chunks, and in rhythm with the clock, and having a pane showing recent sleep/wake/timelog-saved events, all help. Not every day is the same; this system has been quick and flexible enough to suit a range of conditions. I can set daily/weekly/monthly time budgets if I want. Some more details at [2].
 
 

@@ -1,10 +1,75 @@
 # Time planning
 
-## Simon's hledger time dashboard 2018/05
+<div class=pagetoc>
+<!-- toc -->
+</div>
 
-Here's how I have been logging time for a few years, and showing budget reports for a few weeks.
+## A time budgeting workflow
 
-I have four files:
+A [summary](https://news.ycombinator.com/item?id=19203521) of Simon's 2018-2019 time budgeting workflow:
+
+I keep a hledger [timedot](hledger.html#timedot-format) file open in a text-mode Emacs
+in a drop-down [iTerm hotkey window](https://iterm2.com/features.html#hotkey-window). 
+
+Each 15-minute chunk is logged with a dot. 
+I group the dots into hours for quick visual scanning.
+I use comments as temporary reminders, if needed.
+Sometimes I use `M-x align-regexp`, ` [.;]` to line up the dots (or comments)
+
+
+    2019-01-08
+    fos.hledger.sup          .
+    adm.email                ..
+    adm.finance              .... .... ..
+    fos.hledger.issues.941   .... .
+    fos.plaintextaccounting  ; 1045
+    biz.dev                  ; do such and such
+
+I've trained myself to update this often while at the computer, and before walking away. 
+If I forget, retroactive logging is also pretty easy. These help:
+
+- work in quarter/half/whole hour chunks, preferably synced with the clock
+- have a script or updating terminal pane showing today's sleep/wake/timelog-saved times, to jog the memory.
+
+Not every day is the same; this system has been quick and flexible enough to suit a range of conditions. 
+I can set daily/weekly/monthly time budgets if I want. 
+
+## How to set up a time budget
+
+Cf [Budgeting](budgeting.html).
+
+* create a `time.journal` which includes your (timedot or timeclock) time log file (assuming you're not tracking time in journal format)
+    ```journal
+    # time.journal
+    include time.timedot
+    ```
+* choose a budget interval, eg daily, weekly or monthly
+* if you have some historical timelog data, review average spending on that interval to get a baseline
+    ```shell
+    $ hledger -f time.journal date:thisyear bal -WA
+    ```
+* in time.journal add a periodic transaction rule to allocate budget amounts, similar to baseline, on that interval
+    ```journal
+    ~ weekly
+        (adm:time)       1h
+        (ser:some:proj)  4h
+    ```
+* run a budget report, using the same interval:
+    ```shell
+    $ hledger -f time.journal bal --budget -W
+    Balance changes in 2017/11/27w48:
+
+                ||     2017/11/27w48 
+    ===============++===================
+    adm:time      || 0.25h [25% of 1h] 
+    ser:some:proj || 0.75h [19% of 4h] 
+    ---------------++-------------------
+                ||             1.00h 
+    ```               
+
+## Simon's hledger time dashboard (2018)
+
+Here's how I have been logging time for a few years. I have four files:
 
 1. time-2018.timedot is the current year's time log. It contains daily entries in [timedot](timedot.html)-ish format, like:
 
@@ -104,3 +169,4 @@ I have an iTerm2 Hotkey Window (a terminal that drops down on ALT-space) with si
 6. an updating [hledger-ui](hledger-ui.html) for exploring time usage (shift-up/down to resize period, shift-left/right to step through time, t to return to today):
 
        hledger-ui --watch --change date:today -f time.journal
+
