@@ -11,7 +11,7 @@ Here is a start at gathering budgeting-related resources.
 - <https://github.com/simonmichael/hledger/tree/master/examples/budgeting>, annotated examples of journals implementing budgets
 - [plaintextaccounting.org: Budgeting](https://plaintextaccounting.org/#budgeting), more budgeting-related docs, for all PTA tools
 - The YNAB (YouNeedABudget) way: [Age Your Money](https://www.youneedabudget.com/guides/age-your-money)
-- Some other budgeting tools for comparison: <https://github.com/Kickball/awesome-selfhosted#money-budgeting-and-management>
+- Some other budgeting tools for comparison: <https://github.com/Kickball/awesome-selfhosted#money-budgeting--management>
 
 ## PTA budgeting notes
 
