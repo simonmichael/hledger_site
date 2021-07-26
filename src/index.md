@@ -25,8 +25,8 @@ easy, dependable<br> plain text accounting
 [development](CONTRIBUTING.html)*
 
 <a href="https://github.com/simonmichael/hledger">
-  <img src="https://img.shields.io/github/stars/simonmichael/hledger.svg?style=for-the-badge&logo=GitHub&label=Github&color=lightgrey" 
-    height="28" title="hledger code repo/issue tracker">
+  <img height="28" src="https://img.shields.io/github/stars/simonmichael/hledger.svg?style=for-the-badge&logo=GitHub&label=Github&color=lightgrey" 
+    alt="github" title="hledger code repo/issue tracker">
 </a>
 <!-- <a href="download.html"><button type="button" class="btn btn-primary" title="All the ways to install hledger. Get it now!">Download/Install</button></a> -->
 
