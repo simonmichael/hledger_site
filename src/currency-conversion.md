@@ -1,4 +1,4 @@
-# Currency/commodity conversion
+# Currency conversion
 
 <div class=pagetoc>
 <!-- toc -->
