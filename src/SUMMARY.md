@@ -50,6 +50,7 @@
 - [Budgeting](budgeting.md)
 - [Budgeting and Forecasting (2018)](budgeting-and-forecasting.md)
 - [Common journal entries](common-journal-entries.md)
+- [Currency/commodity conversion](currency-conversion.md)
 <!-- [Depreciation](http://rantsideasstuff.com/posts/2018/07/08-depreciation-in-personal-finance-with-hledger) -->
 - [Foreign trip expenses](foreign-trip-expenses.md)
 - [Invoicing](invoicing.md)
