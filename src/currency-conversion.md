@@ -20,15 +20,16 @@ hledger understands that 10 dollars were converted to 8.50 euros.
 The conversion rate is inferred so as to balance the transaction
 (and can be seen with `hledger print -x`).
 
-This is not a very correct double-entry-bookkeeping journal entry.
+This is easy to write and to understand; it's fine for getting started.
+However it is not a fully correct double-entry-bookkeeping journal entry,
+since USD has magically transformed into EUR "in flight".
 It is also somewhat error prone, since a typo in either amount may not be detected.
 For example, we might forget the decimal point and write `USD -1000`.
 Also, it is easy to create such entries accidentally.
 For example, in one posting within a transaction we might mistype or omit the currency symbol.
 
-For convenience and compatibility, 
-hledger's default behaviour is to accept these implicit conversions.
-You can disallow them by using 
+hledger accepts these implicit conversions by default, for convenience and compatibility.
+But you can disallow them by using 
 [strict mode](hledger.html#strict-mode) 
 or by running the [check](hledger.html#check) command
 (eg: `hledger check balancednoautoconversion`).
