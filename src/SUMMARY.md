@@ -53,7 +53,7 @@
 <!-- [Depreciation](http://rantsideasstuff.com/posts/2018/07/08-depreciation-in-personal-finance-with-hledger) -->
 - [Foreign trip expenses](foreign-trip-expenses.md)
 - [Invoicing](invoicing.md)
-- [Multicurrency tutorial](multicurrency-tutorial.md)
+- [Multicurrency tutorial (2018)](multicurrency-tutorial.md)
 - [Project accounting](project-accounting.md)
 - [Time planning](time-planning.md)
 - [Track investments (2017)](track-investments.md)
