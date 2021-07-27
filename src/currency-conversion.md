@@ -60,8 +60,7 @@ or the per-unit amount with `@`
 hledger calls these "[transaction prices](hledger.html#transaction-prices)".
 They can also be used [generate market prices](hledger.html#--infer-market-price-market-prices-from-transactions)
 for value reports.
-This is probably the most widely used style for conversion entries.
-
+This is probably the most frequently used style among hledger users.
 
 ## Fully balanced conversion
 
@@ -119,7 +118,7 @@ we might see journal entries like:
     equity:conversion                        $-16.88
 
 ```
-Ie: a revenue of canadian dollars, followed by two transactions converting to that balance to US dollars.
+Ie: some canadian dollars received, followed by two transactions converting that balance to US dollars.
 This is equivalent to the "Fully balanced conversion" above, 
 just with the conversion entry split into two.
 
