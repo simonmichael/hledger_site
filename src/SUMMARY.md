@@ -19,7 +19,7 @@
 - [hledger-ui](hledger-ui.md)
 - [hledger-web](hledger-web.md)
 
-# 3. HOW TOS
+# 3. HOW TOS / NOTES
 
 # EXAMPLE SETUPS
 
