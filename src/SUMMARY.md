@@ -38,7 +38,6 @@
 # REPORTING
 
 - [Report examples](report-examples.md)
-- [Queries](queries.md)
 - [Tags tutorial](tags-tutorial.md)
 - [Charts and Graphs](charts.md)
 - [Rewrite account names](rewrite-account-names.md)
