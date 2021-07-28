@@ -60,6 +60,7 @@ or the per-unit amount with `@`
 hledger calls these "[transaction prices](hledger.html#transaction-prices)".
 They can also be used [generate market prices](hledger.html#--infer-market-price-market-prices-from-transactions)
 for value reports.
+
 This is probably the most frequently used style among hledger users.
 
 ## Fully balanced conversion
