@@ -193,6 +193,7 @@
 #footer a {
     color: rgb(204, 204, 204);
     font-weight: bold;
+    white-space: nowrap;
 }
 </style>
                     <div id="footer">
@@ -204,6 +205,10 @@
                             paste this page's full URL, 
                             write your comment 
                             (and if you have time, watch for a reply).
+                            {{#if git_repository_url}}
+                            Or,
+                            <a href="{{git_repository_url}}/edit/master/src/{{path}}">edit this page</a>.
+                            {{/if}}
                         </div>
                     </div>
 
