@@ -13,7 +13,7 @@ We'll also introduce some basic hledger concepts. So even if you don't
 plan on using hledger add, it might be worth reading through this
 quickly.
 
-[Download/install](download.html) hledger and let's get started!
+[Install](download.html) hledger and let's get started!
 
 ## Check your installation
 

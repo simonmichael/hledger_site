@@ -28,7 +28,6 @@ easy, dependable<br> plain text accounting
   <img height="28" src="https://img.shields.io/github/stars/simonmichael/hledger.svg?style=for-the-badge&logo=GitHub&label=Github&color=lightgrey" 
     alt="github" title="hledger code repo/issue tracker">
 </a>
-<!-- <a href="download.html"><button type="button" class="btn btn-primary" title="All the ways to install hledger. Get it now!">Download/Install</button></a> -->
 
 </div>
 

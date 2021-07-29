@@ -22,7 +22,7 @@ $ hledger-web --version
 hledger-web 1.17.1
 ```
 
-If this fails, check [download/install](download.html) for install and setup tips.
+If this fails, check [Install](download.html) for install and setup tips.
 
 <!--
 ## Check usage
