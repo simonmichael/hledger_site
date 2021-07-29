@@ -28,3 +28,14 @@ div.pagetoc:before {
   /*list-style:none;*/
   text-indent:-0.3em;
 }
+
+.highslide img {
+  max-width:200px; 
+  margin:0 0 1em 1em; 
+  border:thin grey solid; 
+  /* border:0; */
+}
+.highslide-caption {
+  color:white; 
+  background-color:black;
+}
