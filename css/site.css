@@ -1,76 +1,30 @@
+.docversions a.displayed {
+  font-weight:bold;
+  background-color:red;
+  outline: thin solid red;
+  color:white;
+  text-shadow: 1px 1px black;
+}
+
 div.pagetoc {
-	float:right; 
-	margin-left:2em;
-	max-width: 200px;
+  float:right;
+  margin-left:2em;
+  max-width: 200px;
 }
 div.pagetoc:before {
   content: "Contents";
-	font-weight:bold;
-	padding-left:1em;
+  font-weight:bold;
+  padding-left:1em;
 }
-.pagetoc > ul    { 
-	margin-top: 0;
-	width:15em; 
-	/*font-size:small;*/ 
+.pagetoc > ul    {
+  margin-top: 0;
+  width:15em;
+  /*font-size:small;*/
 }
-.pagetoc > ul ul { 
-	padding-left:1em; 
+.pagetoc > ul ul {
+  padding-left:1em;
 }
-.pagetoc > ul li { 
-	/*list-style:none;*/ 
-	text-indent:-0.3em; 
-
+.pagetoc > ul li {
+  /*list-style:none;*/
+  text-indent:-0.3em;
 }
-
-.docversions a.displayed {
-    font-weight:bold;
-		background-color:red;
-		outline: thin solid red;
-		color:white;
-		text-shadow: 1px 1px black;
-}
-
-/* old sphinx rtd theme customisations */
-/* .wy-nav-top { */
-/*     background:#343131; */
-/* } */
-/* .rst-versions { */
-/*     position: static; */
-/*     width: auto; */
-/*     display: inline-block; */
-/*     margin-left: 50px; */
-/*     color: initial; */
-/*     background: initial; */
-/*     font-family: "Lato","proxima-nova","Helvetica Neue",Arial,sans-serif; */
-/*     white-space: nowrap; */
-/* } */
-/* .rst-versions.shift-up { */
-/*     overflow-y: initial; */
-/* } */
-/* .rst-versions .rst-current-version { */
-/*     background: initial; */
-/*     color: initial; */
-/* } */
-/* .wy-breadcrumbs li a { */
-/* 		padding:0; */
-/* } */
-/* .rst-versions .rst-other-versions { */
-/*     position:fixed; */
-/*     background:rgb(252, 252, 252); */
-/*     border-left: thin solid #343131; */
-/*     border-right: thin solid #343131; */
-/*     border-bottom: thin solid #343131; */
-/*     border-bottom-left-radius: 3px; */
-/*     border-bottom-right-radius:3px; */
-/*     z-index:100; */
-/* } */
-/* .fa-book, .fa-caret-down {  */
-/*     font-family: "FontAwesome"; */
-/* } */
-/* li.wy-breadcrumbs-aside { */
-/*     position:relative; */
-/*     top:8px; */
-/* } */
-/* footer { */
-/*   margin-top:3em; */
-/* } */
