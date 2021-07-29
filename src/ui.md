@@ -1,11 +1,11 @@
-# Easy workflow #3: hledger-ui
+# Tutorial: hledger-ui
 
 <div class=pagetoc>
 <!-- toc -->
 </div>
 
-[hledger-ui](hledger-ui.html) is hledger's "curses-style" UI, ie a full-window terminal app.
-It's fast, efficient, and slightly more powerful than the web UI.
+[hledger-ui](hledger-ui.html) is hledger's TUI (a full-window terminal interface).
+It's fast, efficient, and a bit more featureful than the web UI.
 One limitation: on Microsoft Windows, it can only be installed inside [WSL](https://en.wikipedia.org/wiki/WSL).
 Screenshots below!
 

@@ -1,4 +1,4 @@
-# Easy workflow #1: hledger add
+# Tutorial: hledger add
 
 <div class=pagetoc>
 <!-- toc -->

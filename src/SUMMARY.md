@@ -7,9 +7,9 @@
 - [Videos, Talks](videos.md)
 - [Install](download.md)
 - [Quick Start](quickstart.md)
-- [Easy workflow #1: hledger add](add.md)
-- [Easy workflow #2: hledger-web](web.md)
-- [Easy workflow #3: hledger-ui](ui.md)
+- [Tutorial: hledger add](add.md)
+- [Tutorial: hledger-web](web.md)
+- [Tutorial: hledger-ui](ui.md)
 - [Accounting concepts](accounting.md)
 - [Release notes](release-notes.md)
 
