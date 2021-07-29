@@ -29,6 +29,13 @@ div.pagetoc:before {
   text-indent:-0.3em;
 }
 
+/* .screenshot-right { 
+  float:right; 
+  clear:right;
+  max-width:200px; same as pagetoc
+  text-align:right;
+} */
+
 .highslide img {
   max-width:200px; 
   margin:0 0 1em 1em; 
