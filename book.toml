@@ -43,6 +43,7 @@ additional-js = [
 ]
 no-section-label = true
 git-repository-url = "https://github.com/simonmichael/hledger_site"
+edit-url-template  = "https://github.com/simonmichael/hledger_site/edit/master/src/{path}"
 # git-repository-icon = "fa-github"
 # site-url = "/"
 # cname = "hledger.org"
