@@ -1,6 +1,8 @@
 div.pagetoc {
 	float:right; 
+	margin-top:1em;
 	margin-left:2em;
+	max-width: 200px;
 }
 div.pagetoc:before {
   content: "Contents";
