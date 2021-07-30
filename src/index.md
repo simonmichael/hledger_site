@@ -514,10 +514,17 @@ literacy and empowerment. Thank you!
 <!-- doesn't show all: -->
 <!-- - <object type="image/svg+xml" data="https://opencollective.com/hledger/tiers/backers.svg?avatarHeight=36&width=600"></object> -->
 
-- Sponsor specific tasks with bounties:\
-[![all bounties](https://img.shields.io/badge/github-All_bountied_issues-30bae8 "all bountied issues, bountysource and otherwise")](https://github.com/simonmichael/hledger/issues?q=label:bounty)
-[![bountysource bounties](https://api.bountysource.com/badge/team?team_id=75979&style=bounties_received "issues bountied via bountysource")](https://www.bountysource.com/teams/hledger)\
-(For small amounts, feel free to just post a pledge on an [issue](CONTRIBUTING.html#open-issues). If you use Bountysource, contribute to a specific issue (not the hledger team), and then announce it on the issue page. Thanks!)
+- Sponsor particular [tasks with bounties](https://github.com/simonmichael/hledger/issues?q=label:bounty). Here are several ways:
+  - Post a bounty pledge on an [issue](CONTRIBUTING.html#open-issues);
+    pay when resolved (honour system, simplest).
+  - Post a bounty on 
+    [![bountysource bounties](https://api.bountysource.com/badge/team?team_id=75979&style=bounties_received "issues bountied via bountysource")](https://www.bountysource.com/teams/hledger)
+    for a specific issue (not the hledger team);
+    announce it on the issue page;
+    manage payment through Bountysource UI.
+  - Make an earmarked donation to our [collective](https://opencollective.com/hledger) describing the bounty;
+    maintainer will approve the claimant's expense request when bounty is satisfied
+    (similar to <https://hledger.org/regressionbounty>).
 
 <!---------------------------------------------------------------------------->
 <style>
