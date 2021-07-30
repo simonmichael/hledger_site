@@ -451,8 +451,8 @@ So may I ask you to consider:
 - Would you like hledger to be around for a long time ? To remain actively supported ? To improve faster ?
 - Would you like to help our core mission ?
 
-  > **Help people everywhere achieve financial literacy, discipline and freedom.\
-  > Help grow a shared culture of accountability and solvency in our world society.**
+  > **Help more people achieve financial literacy, discipline and freedom.\
+  > Help grow a shared world-wide culture of accountability and solvency.**
 
   (We also support the positive vision of [Solarpunk](http://www.re-des.org/a-solarpunk-manifesto).)
 
