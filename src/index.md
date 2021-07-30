@@ -442,17 +442,21 @@ See also [ROADMAP](ROADMAP.html).
 
 hledger comes from many thousands of skilled person-hours and sustained effort over 14+ years.
 (Building and supporting good software and documentation requires *a lot* of time and life energy.)
-It is given to you with our love. But may I ask you:
+We loved doing it and it is given to you with love. 
+And, just like you we have... *expenses*. 
+
+So may I ask you to consider:
 
 - Has this project been helpful to you or your organisation ?
 - Would you like hledger to be around for a long time ? To remain actively supported ? To improve faster ?
 - Would you like to help our core mission ?
 
-  > **Help more of us achieve financial literacy, discipline and freedom.\
-  > Promote a culture of accountability in our society.**
+  > **Help people everywhere achieve financial literacy, discipline and freedom.\
+  > Help grow a shared culture of accountability throughout our world society.**
 
-If so, please consider contributing financially at some level. 
-Thank you for your support!
+  (We also support the positive vision of [Solarpunk](http://www.re-des.org/a-solarpunk-manifesto).)
+
+If so, I invite you to join us by contributing financially at some level. Thank you !
 
 <!-- keep synced with README.md: -->
 
