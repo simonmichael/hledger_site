@@ -1,0 +1,4 @@
+Highslide image zooming resources.
+
+In /src/ so that HS can find its graphics resources at run time,
+also symlinked in / so that mdbook can find the js and css at build time.
