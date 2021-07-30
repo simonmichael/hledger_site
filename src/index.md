@@ -452,7 +452,7 @@ So may I ask you to consider:
 - Would you like to help our core mission ?
 
   > **Help people everywhere achieve financial literacy, discipline and freedom.\
-  > Help grow a shared culture of accountability throughout our world society.**
+  > Help grow a shared culture of accountability and solvency in our world society.**
 
   (We also support the positive vision of [Solarpunk](http://www.re-des.org/a-solarpunk-manifesto).)
 
