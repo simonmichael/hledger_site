@@ -358,7 +358,7 @@ See also [ROADMAP](ROADMAP.html).
 
 <a name="help"></a><a name="help-feedback"></a>
 
-## Getting help
+## Support, discussion
 
 <div>
 <table>
@@ -440,7 +440,7 @@ See also [ROADMAP](ROADMAP.html).
 
 ## Sponsorship
 
-hledger comes from many thousands of skilled person-hours and sustained effort over 14+ years.
+hledger comes from many thousands of skilled person-hours, and sustained effort over 14+ years.
 (Building and supporting good software and documentation requires *a lot* of time and life energy.)
 We loved doing it and it is given to you with love. 
 And, just like you we have... *expenses*. 
