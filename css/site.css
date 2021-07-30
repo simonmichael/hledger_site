@@ -38,6 +38,7 @@ div.pagetoc:before {
 
 .right { 
   float:right; 
+  clear:right;
   max-width:200px; 
   margin:0 0 1em 1em; 
 }
