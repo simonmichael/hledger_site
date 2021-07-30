@@ -440,14 +440,19 @@ See also [ROADMAP](ROADMAP.html).
 
 ## Sponsorship
 
-Building and supporting good software and documentation requires *a lot* of time and life energy.
-Maybe these thousands of person-hours have helped you or your organisation ?
-Support us financially at any level, to be a part of this project and advance our core mission: 
+hledger comes from many thousands of skilled person-hours and sustained effort over 14+ years.
+(Building and supporting good software and documentation requires *a lot* of time and life energy.)
+It is given to you with our love. But may I ask you:
 
-> Help more people achieve financial literacy, discipline and empowerment, and\
-> promote a culture of accountability in our society.
+- Has this project been helpful to you or your organisation ?
+- Would you like hledger to be around for a long time ? To remain actively supported ? To improve faster ?
+- Would you like to help our core mission ?
 
-Thank you!
+  > **Help more of us achieve financial literacy, discipline and freedom.\
+  > Promote a culture of accountability in our society.**
+
+If so, please consider contributing financially at some level. 
+Thank you for your support!
 
 <!-- keep synced with README.md: -->
 
@@ -472,7 +477,7 @@ Thank you!
 <!-- [![](https://opencollective.com/hledger/sponsor/8/avatar.svg)](https://opencollective.com/hledger/sponsor/8/website) -->
 <!-- [![](https://opencollective.com/hledger/sponsor/9/avatar.svg)](https://opencollective.com/hledger/sponsor/9/website) -->
 <!-- [![](https://opencollective.com/hledger/sponsor/10/avatar.svg)](https://opencollective.com/hledger/sponsor/10/website)\ -->
-- [Sponsor the hledger project](https://opencollective.com/hledger#category-CONTRIBUTE) publicly
+- [Sponsor the hledger project](https://opencollective.com/hledger#category-CONTRIBUTE) publicly,
   as an individual or with your organisation, through Open Collective. Thank you sponsors!
 
   <div class="sponsors">
