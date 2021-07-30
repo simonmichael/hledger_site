@@ -36,12 +36,12 @@ div.pagetoc:before {
   text-align:right;
 } */
 
-.highslide img {
+.right { 
+  float:right; 
   max-width:200px; 
   margin:0 0 1em 1em; 
-  border:thin grey solid; 
-  /* border:0; */
 }
+
 .highslide-caption {
   color:white; 
   background-color:black;

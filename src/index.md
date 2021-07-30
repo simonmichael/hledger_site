@@ -1,6 +1,9 @@
 <!-- stylesheet at bottom -->
 <img id="coins" src="/images/coins2-248.png" style="width:120px; margin:2em 1em; float:left;" />
 <img id="coins" src="/images/coins2-248.png" style="width:120px; margin:2em 1em; float:right;" />
+
+# hledger
+
 <!-- 
 https://www.stephendiehl.com/posts/marketing.html#persuasion-and-decision-makers
 1. It is memorable
@@ -8,9 +11,6 @@ https://www.stephendiehl.com/posts/marketing.html#persuasion-and-decision-makers
 3. It differentiates
 4. It imparts positivity
 -->
-
-# hledger
-
 <div id="tagline">
 easy, dependable<br> plain text accounting
 </div>
@@ -290,7 +290,7 @@ Read more about the [differences](faq.html#ledger).
 hledger strives to be usable, practical and to provide real-world value.
 Intuitive features, dependable bug-free operation and complete, accurate documentation are top goals.
 
-<a href="/images/balance-q-inc.png" class="highslide" onclick="return hs.expand(this)"><img src="/images/balance-q-inc.png" title="Balance report showing income/expense by quarter" /></a>
+<a href="/images/balance-q-inc.png" class="highslide right" onclick="return hs.expand(this)"><img src="/images/balance-q-inc.png" title="Balance report showing income/expense by quarter" /></a>
 hledger is first a command-line tool.
 Your data lives in a plain text journal file which you can edit
 any way you wish; hledger reads that file and produces reports of
@@ -298,13 +298,13 @@ various kinds, without changing your data. (It can help you add new
 transactions, but does not change existing ones.)
 <br clear="all">
 
-<a href="/images/hledger-ui/hledger-ui-bcexample-acc.png" class="highslide" onclick="return hs.expand(this)"><img src="/images/hledger-ui/hledger-ui-bcexample-acc.png" title="hledger-ui accounts screen" /></a>
+<a href="/images/hledger-ui/hledger-ui-bcexample-acc.png" class="highslide right" onclick="return hs.expand(this)"><img src="/images/hledger-ui/hledger-ui-bcexample-acc.png" title="hledger-ui accounts screen" /></a>
 hledger also provides a [terminal&nbsp;interface](hledger-ui.html)
 that lets you review account balances and transactions quickly and without fuss.
 ([screencast](https://asciinema.org/a/29665))
 <br clear="all">
 
-<a href="/images/hledger-web/normal/register.png" class="highslide" onclick="return hs.expand(this)"><img src="/images/hledger-web/normal/register.png" title="Account register view with accounts sidebar" /></a>
+<a href="/images/hledger-web/normal/register.png" class="highslide right" onclick="return hs.expand(this)"><img src="/images/hledger-web/normal/register.png" title="Account register view with accounts sidebar" /></a>
 And, a zero-setup
 [web&nbsp;app](hledger-web) for a more point-and-click experience
 ([demo](http://demo.hledger.org)).
@@ -316,7 +316,7 @@ or set it up with a few clicks on
 <!-- There's also a [UI running in the browser](https://hledger.alhur.es) (hledger compiled with GHCJS). -->
 <!-- This is a prototype, but it's nice sandbox for trying out hledger's journal syntax. -->
 
-<a href="/images/hledger-lib-api.png" class="highslide" onclick="return hs.expand(this)"><img src="/images/hledger-lib-api.png" title="Part of hledger-lib's haddock api documentation" /></a>
+<a href="/images/hledger-lib-api.png" class="highslide right" onclick="return hs.expand(this)"><img src="/images/hledger-lib-api.png" title="Part of hledger-lib's haddock api documentation" /></a>
 hledger is written in [Haskell], a modern, highly-regarded
 programming language which contributes to hledger's robustness,
 performance and long-term maintainability.  Most functionality is
@@ -537,7 +537,7 @@ If so, I invite you to join us by contributing financially at some level. Thank 
     maintainer will approve the claimant's expense request when bounty is satisfied
     (similar to <https://hledger.org/regressionbounty>).
 
-<!---------------------------------------------------------------------------->
+<!-- page styles -->
 <style>
 
 #grabber {
@@ -567,8 +567,6 @@ h2 {
   margin-top:2em; 
 }
 
-/* h3 { font-size:large; margin-bottom:.2em; } */
-
 #tagline {
   font-size:xx-large;
   font-style:italic; 
@@ -581,23 +579,6 @@ h2 {
   font-style:italic;
   font-size:x-large;
 }
-
-#help {
-  background-color:lavenderblush;
-}
-
-#help tr { 
-  border-top:   thin solid lightpink; 
-  border-bottom:thin solid lightpink; 
-  vertical-align:top; 
-}
-#help td:nth-child(1) { 
-  padding-right:1em; 
-  white-space:nowrap; 
-}
-
-.highslide img {max-width:200px; float:right; margin:0 0 1em 1em;}
-.highslide-caption {color:white; background-color:black;}
 
 /* major trouble resizing open collective logos */
 /* .rst-content img { height:inherit; } */
