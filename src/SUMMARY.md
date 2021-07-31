@@ -15,9 +15,9 @@
 
 # 2. USER MANUAL
 
-- [hledger](dev/hledger.md)
-- [hledger-ui](dev/hledger-ui.md)
-- [hledger-web](dev/hledger-web.md)
+- [hledger](hledger.md)
+- [hledger-ui](hledger-ui.md)
+- [hledger-web](hledger-web.md)
 
 # 3. HOW TOS / NOTES
 
