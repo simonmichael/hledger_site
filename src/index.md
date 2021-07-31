@@ -553,7 +553,7 @@ If so, I invite you to join us by contributing financially at some level. Thank 
   font-weight:bold;
 }
 
-h1 { 
+.content h1 { 
   font-size: 5em;
   font-style: italic;
   text-align:center;
@@ -561,7 +561,7 @@ h1 {
   display:block;
 }
 
-h2 { 
+.content h2 { 
   text-align:center;
   font-size: 2em;
   margin-top:2em; 

@@ -1,3 +1,7 @@
+#menu-bar {
+  font-style: italic;
+}
+
 .docversions a.displayed {
   font-weight:bold;
   background-color:red;
