@@ -117,7 +117,7 @@ Let's hide the sidebar, for a simpler UI. Pressing the `s` key should do it
 
 Let's record some transactions. Press the `a` key, or click "Add a transaction", to bring up the add form.
 You may need to click or press `TAB` to focus the Date field:
-[![](images/hledger-web/Screen%20Shot%202020-03-23%20at%202.01.08%20PM.png)](images/hledger-web/Screen%20Shot%202020-03-22%20at%206.12.04%20PM.png)
+[![](images/hledger-web/Screen%20Shot%202020-03-22%20at%206.12.04%20PM.png)](images/hledger-web/Screen%20Shot%202020-03-22%20at%206.12.04%20PM.png)
 
 <!-- For dates, you can click the date picker or type the [date](hledger.html#smart-dates). -->
 We'll copy the sample transactions from the [quick start](index.html#quick-start). 
