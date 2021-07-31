@@ -10,7 +10,7 @@ tools:
 # Render all versions of manuals. Current release manual will be in out, all others in out2.
 # Slow, temporarily links old manuals in SUMMARY and renders the whole site, for each version.
 # Temporary hack until mdbook can render things not in SUMMARY.md.
-buildall: \
+all buildall: \
 	build7-1.0 \
 	build7-1.1 \
 	build7-1.2 \
@@ -35,7 +35,7 @@ buildall: \
 	build
 
 # Like buildall but just a few recent versions.
-buildrecent: \
+recent buildrecent: \
 	build3-1.22 \
 	build3-1.21 \
 	build3-dev \
