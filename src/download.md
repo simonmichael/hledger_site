@@ -79,7 +79,7 @@ div.badges {
 }
 </style>
 
-The current hledger release is **1.22** ([release notes](release-notes)). Below are lots of ways to install:\
+The current hledger release is **1.22.1** ([release notes](release-notes)). Below are lots of ways to install:\
 \- [Binary packages](#binary-packages) install quickly\
 \- [Building from source](#building-from-source) takes longer but ensures you get the latest release.\
 You may also need some [C libraries](#c-libraries) or a [UTF-8 locale](#utf-8-locale).\
@@ -95,7 +95,7 @@ And, please [report any roadbumps](index.html#help) so we can fix them.
     <tr>
       <td>
         <div class="badges">
-          <a href="https://hub.docker.com/r/dastapov/hledger"><img alt="Docker" src="https://img.shields.io/badge/Docker_image-1.22-brightgreen.svg" /></a><br>
+          <a href="https://hub.docker.com/r/dastapov/hledger"><img alt="Docker" src="https://img.shields.io/badge/Docker_image-1.22-red.svg" /></a><br>
           <a href="https://hub.docker.com/search?q=hledger&amp;type=image&amp;sort=updated_at&amp;order=desc">more..</a>
         </div>
         <div class="distro"><a href="https://www.docker.com/products/docker-desktop">Docker</a></div>
@@ -177,12 +177,12 @@ https://github.com/simonmichael/hledger/releases, also apply here.
     <tr valign="top">
       <td>
         <div class="badges">
-          <img alt="CI binaries" src="https://img.shields.io/badge/CI_binaries-1.22-brightgreen.svg" />
+          <img alt="CI binaries" src="https://img.shields.io/badge/CI_binaries-1.22.1-brightgreen.svg" />
         </div>
       </td>
       <td style="padding-top:10px;">
         <div class="command" style="margin-bottom:4px;">
-          <a href="https://github.com/simonmichael/hledger/releases/tag/1.22">hledger-windows.zip</a>
+          <a href="https://github.com/simonmichael/hledger/releases/tag/1.22.1">hledger-windows.zip</a>
         </div>
         <div class="notes">
         <!--   <span class="warnings"> -->
@@ -205,12 +205,12 @@ https://github.com/simonmichael/hledger/releases, also apply here.
     <tr valign="top">
       <td>
         <div class="badges">
-          <img alt="CI binaries" src="https://img.shields.io/badge/CI_binaries-1.22-brightgreen.svg" />
+          <img alt="CI binaries" src="https://img.shields.io/badge/CI_binaries-1.22.1-brightgreen.svg" />
         </div>
       </td>
       <td style="padding-top:10px;">
         <div class="command" style="margin-bottom:4px;">
-          <a href="https://github.com/simonmichael/hledger/releases/tag/1.22">hledger-macos.zip</a>
+          <a href="https://github.com/simonmichael/hledger/releases/tag/1.22.1">hledger-macos.zip</a>
         </div>
         <div class="notes"></div>
       </td>
@@ -225,14 +225,14 @@ https://github.com/simonmichael/hledger/releases, also apply here.
     <tr valign="top">
       <td>
         <div class="badges">
-          <img alt="CI binaries" src="https://img.shields.io/badge/CI_binaries-1.22-brightgreen.svg" />
+          <img alt="CI binaries" src="https://img.shields.io/badge/CI_binaries-1.22.1-brightgreen.svg" />
         </div>
       </td>
       <td style="padding-top:10px;">
         <div class="command" style="margin-bottom:4px;">
           <!-- <a href="https://github.com/simonmichael/hledger/releases/tag/1.22">hledger-ubuntu.zip</a><br> -->
-          <a href="https://github.com/simonmichael/hledger/releases/tag/1.22">hledger-linux-static-x64.zip</a><br>
-          <a href="https://github.com/simonmichael/hledger/releases/tag/1.22">hledger-linux-static-arm32v7.zip</a><br>
+          <a href="https://github.com/simonmichael/hledger/releases/tag/1.22.1">hledger-linux-static-x64.zip</a><br>
+          <a href="https://github.com/simonmichael/hledger/releases/tag/1.22.1">hledger-linux-static-arm32v7.zip</a><br>
         </div>
         <div class="notes"></div>
       </td>
@@ -472,7 +472,7 @@ package manager first. See
 [hledger: Troubleshooting](hledger.html#troubleshooting) for more help.
 
 ## Building from source
-<img alt="Release source" src="https://img.shields.io/badge/Release_source-1.22-brightgreen.svg" />
+<img alt="Release source" src="https://img.shields.io/badge/Release_source-1.22.1-brightgreen.svg" />
 
 The [hledger-install script][hledger-install] 
 requires only [bash] (and sometimes `make`, and `gcc`, and ...?). 
@@ -493,7 +493,7 @@ Or, if you prefer to run [stack] yourself:
 
 <div class="builder-command">
   stack update <br>
-  stack install --resolver=lts-18 hledger-lib-1.22 hledger-1.22 hledger-ui-1.22 hledger-web-1.22 --silent
+  stack install --resolver=lts-18 hledger-lib-1.22.1 hledger-1.22.1 hledger-ui-1.22.1 hledger-web-1.22.1 --silent
 </div>
 
 This installs the main hledger tools in ~/.local/bin.
@@ -507,7 +507,7 @@ Or, if you prefer to run [cabal] yourself:
 <div class="builder-command">
   cabal update <br>
   cabal install alex happy<br>
-  cabal install hledger-1.22 hledger-ui-1.22 hledger-web-1.22
+  cabal install hledger-1.22.1 hledger-ui-1.22.1 hledger-web-1.22.1
 </div>
 
 This installs the main hledger tools in ~/.cabal/bin.
@@ -643,11 +643,14 @@ Eg:
 
 <div class="command">
 $ hledger --version <br>
-hledger 1.22-0-g8d237869d, mac-x86_64<br>
+hledger 1.22.1-0-g5895a46ec, mac-x86_64
+<br>
 $ hledger-ui --version <br>
-hledger-ui 1.22-0-g8d237869d, mac-x86_64<br>
+hledger-ui 1.22.1-0-g5895a46ec, mac-x86_64
+<br>
 $ hledger web --version <br>
-hledger-web 1.22-0-g8d237869d, mac-x86_64<br>
+hledger-web 1.22.1-0-g5895a46ec, mac-x86_64
+<br>
 </div>
 
 And you could see the unit tests pass (just for fun):
@@ -663,7 +666,7 @@ Or if you have checked out the hledger source, also the functional tests:
 <div class="command">
 $ make functest <br>
 ... <br>
- Total   727 ...<br>
+ Total   737 ...<br>
 functest PASSED
 </div>
 
