@@ -13,44 +13,45 @@
 <!-- toc -->
 </div>
 
-<!-- 
-In the release headings, dates appear first to keep them out of the
-permalink urls, though it's not ideal for readability. The text part
-("hledger") is needed for stable urls.
+<!-- Beware: multiple paragraphs within HTML comments breaks mdbook
+     rendering somehow, comment each line for now -->
 
-The subheadings for the hledger package are written as "hledger cli"
-to avoid clashing with the release headings and being assigned
-unstable urls.
+<!-- In the release headings, dates appear first to keep them out of the -->
+<!-- permalink urls, though it's not ideal for readability. The text part -->
+<!-- ("hledger") is needed for stable urls. -->
 
-Releases before 1.0 are grouped under a parent heading to avoid
-dominating the site's sidebar.
+<!-- The subheadings for the hledger package are written as "hledger cli" -->
+<!-- to avoid clashing with the release headings and being assigned -->
+<!-- unstable urls. -->
 
-The older releases show changelog-level detail and should probably be
-thinned out.
+<!-- Releases before 1.0 are grouped under a parent heading to avoid -->
+<!-- dominating the site's sidebar. -->
 
-Template:
+<!-- The older releases show changelog-level detail and should probably be -->
+<!-- thinned out. -->
 
-## YYYY-MM-DD hledger-1.XX
+<!-- Template: -->
 
-**HIGHLIGHTS**
-([announcement](https://groups.google.com/g/hledger/LINK))
+<!-- ## YYYY-MM-DD hledger-1.XX -->
 
-### project changes 1.XX
+<!-- **HIGHLIGHTS** -->
+<!-- ([announcement](https://groups.google.com/g/hledger/LINK)) -->
 
-
-### hledger 1.XX
-
-
-### hledger-ui 1.XX
+<!-- ### project changes 1.XX -->
 
 
-### hledger-web 1.XX
+<!-- ### hledger 1.XX -->
 
 
-### credits 1.XX
+<!-- ### hledger-ui 1.XX -->
 
 
--->
+<!-- ### hledger-web 1.XX -->
+
+
+<!-- ### credits 1.XX -->
+
+
 <style>
 h2, h2:last-child > h3 { margin-top:4em; }
 </style>
