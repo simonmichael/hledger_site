@@ -64,6 +64,72 @@ Major releases and user-visible changes, collected from the changelogs (
 Changes in hledger-install.sh are shown
 [here](https://github.com/simonmichael/hledger/commits/master/hledger-install/hledger-install.sh).
 
+## 2021-08-02 hledger-1.22.1
+
+### hledger 1.22.1
+
+Improvements
+
+- Bash shell completions (for hledger, hledger-ui, hledger-web) are
+  now included in the hledger package's release tarballs, making them
+  more likely to be installed by system packages. (Jakob Schöttl)
+
+- roi docs now discuss how to quote multi-word queries.
+  ([#1609](https://github.com/simonmichael/hledger/issues/1609),
+  Dmitry Astapov)
+
+- Allow megaparsec 9.1
+
+Fixes
+
+- Our info manuals now have more robust directory metadata (no
+  subdirectory path), making them more likely to be linked in your
+  top-level Info directory by system packages.
+  ([#1594](https://github.com/simonmichael/hledger/issues/1594))
+  (Simon Michael, Damien Cassou)
+
+- The error message for a non-existent input file no longer shows
+  excess double quotes.
+  ([#1601](https://github.com/simonmichael/hledger/issues/1601),
+  Stephen Morgan)
+
+- Journal format docs: The commodity directive's scope is now
+  correctly described (lasts until end of current file).
+
+### hledger-ui 1.22.1
+
+Improvements
+
+- Allow megaparsec 9.1.
+
+Fixes
+
+- Up/down keys work on the transaction screen again (broken since 1.22). 
+  ([#1607](https://github.com/simonmichael/hledger/issues/1607), Stephen Morgan)
+
+- Fix a possible off-by-one bug with valuation date when using `V` key on
+  the transaction screen. (If it ever needs to use the journal's last day
+  as valuation date, use that day, not the day after.)
+
+### hledger-web 1.22.1
+
+Improvements
+
+- deps: Allow megaparsec 9.1.
+
+Fixes
+
+- The register chart works again when there are multiple commodities and 
+  transaction prices (broken since 1.22). 
+  ([#1597](https://github.com/simonmichael/hledger/issues/1597), Stephen Morgan)
+
+### credits 1.22.1
+
+Simon Michael,
+Stephen Morgan,
+Jakob Schöttl,
+Dmitry Astapov.
+
 ## 2021-07-03 hledger-1.22
 
 **Optimisations, bugfixes.**
