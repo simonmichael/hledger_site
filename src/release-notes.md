@@ -83,6 +83,27 @@ Improvements
 
 Fixes
 
+- `cur:` and `amt:` queries now match the original amounts before
+  valuation and cost conversion, as they did before hledger 1.22. We
+  believe this is the more useful behaviour in practice. 
+  ([#1625](https://github.com/simonmichael/hledger/issues/1625), Stephen Morgan)
+
+- Queries now work better with `register --related`, no longer showing
+  duplicate postings when more than one posting in a transaction is
+  matched. 
+  ([#1629](https://github.com/simonmichael/hledger/issues/1629), Stephen Morgan)
+
+- Valuation now works with `register --related`. 
+  ([#1630](https://github.com/simonmichael/hledger/issues/1630), Stephen Morgan)
+
+- Auto posting rules now also see inferred amounts,
+  not just explicit amounts. 
+  ([#1412](https://github.com/simonmichael/hledger/issues/1412), Stephen Morgan)
+
+- The aregister command now properly ignores a `depth:` argument. 
+  It might now also behave more correctly with valuation or `--txn-dates`.
+  ([#1634](https://github.com/simonmichael/hledger/issues/1634), Stephen Morgan)
+
 - Our info manuals now have more robust directory metadata (no
   subdirectory path), making them more likely to be linked in your
   top-level Info directory by system packages.
@@ -100,6 +121,11 @@ Fixes
 ### hledger-ui 1.22.1
 
 Improvements
+
+- Document watch mode and its limitations. 
+  ([#1617](https://github.com/simonmichael/hledger/issues/1617), 
+  [#911](https://github.com/simonmichael/hledger/issues/911), 
+  [#836](https://github.com/simonmichael/hledger/issues/836))
 
 - Allow megaparsec 9.1.
 
