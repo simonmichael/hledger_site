@@ -78,6 +78,7 @@
 
 - [README](dev-README.md)
 - [CONTRIBUTING](CONTRIBUTING.md)
+- [RELEASING](RELEASING.md)
 - [ROADMAP](ROADMAP.md)
 - [Mockups](mockups.md)
 - [CREDITS](CREDITS.md)
