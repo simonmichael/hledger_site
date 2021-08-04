@@ -433,11 +433,13 @@ https://github.com/simonmichael/hledger/releases, also apply here.
 
 ## C libraries
 
-On some platforms, certain C library packages must be installed, or
-you'll see an error (eg: "*cannot find -ltinfo*") when you try to run
-prebuilt hledger binaries or build hledger from source. So if you're
-on one of the following platforms, please run the command shown (and
-please [send improvements for this list](#comment)):
+On some unix platforms, certain C library packages must be installed, 
+or you'll see an error (eg: "*cannot find -ltinfo*") when you try to run
+hledger binaries or build hledger from source. 
+This shouldn't affect the mac or linux-static binaries above,
+but it may affect you if you are building hledger from source.
+So if you're on one of the following platforms, please run the command shown
+(and please [send improvements for this list](#comment)):
 
 <table>
   <tr>
