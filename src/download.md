@@ -674,7 +674,7 @@ Or if you have checked out the hledger source, also the functional tests:
 <div class="command">
 $ make functest <br>
 ... <br>
- Total   737 ...<br>
+ Total   740 ...<br>
 functest PASSED
 </div>
 
