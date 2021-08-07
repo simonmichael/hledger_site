@@ -65,6 +65,51 @@ Major releases and user-visible changes, collected from the changelogs (
 Changes in hledger-install.sh are shown
 [here](https://github.com/simonmichael/hledger/commits/master/hledger-install/hledger-install.sh).
 
+
+## 2021-08-07 hledger-1.22.2
+
+### hledger 1.22.2
+
+Breaking changes
+
+- aregister no longer hides future transactions by default.
+  This is a consequence of the fix for 
+  [#1638](https://github.com/simonmichael/hledger/issues/1638). 
+  It makes aregister consistent, so we think it's a reasonable change.
+  So if you have future-dated transactions in your journal which you
+  don't want reported, you now must exclude them with `-e tomorrow` or
+  `date:-tomorrow` in the command, as with other reports.
+  (Stephen Morgan)
+
+Improvements
+
+- Timedot format's doc has been rewritten.
+
+Fixes
+
+- Make balance assignments in forecasted transactions work again
+  (broken in 1.22.1).
+  Forecast transactions are now generated early and processed
+  in the same way as other transactions.
+  ([#1638](https://github.com/simonmichael/hledger/issues/1638), Stephen Morgan)
+
+- aregister preserves the order of same-day transactions again
+  (broken in 1.22.1).
+  ([#1642](https://github.com/simonmichael/hledger/issues/1642), Stephen Morgan)
+
+### hledger-ui 1.22.2
+
+- Use hledger 1.22.2.
+
+### hledger-web 1.22.2
+
+- Use hledger 1.22.2.
+
+### credits 1.22.2
+
+Simon Michael, 
+Stephen Morgan.
+
 ## 2021-08-02 hledger-1.22.1
 
 ### hledger 1.22.1
