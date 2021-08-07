@@ -477,6 +477,7 @@ C.UTF-8
 In some cases the locale may need to be installed with your system
 package manager first. See
 [hledger: Troubleshooting](hledger.html#troubleshooting) for more help.
+<!-- XXX ^ improve -->
 
 ## Building from source
 <img alt="Release source" src="https://img.shields.io/badge/Release_source-1.22.2-brightgreen.svg" />
@@ -653,10 +654,10 @@ $ hledger --version <br>
 hledger 1.22.2-0-g488cf7082, mac-x86_64
 <br>
 $ hledger-ui --version <br>
-hledger-ui 1.22.2-0-g5895a46ec, mac-x86_64
+hledger-ui 1.22.2-0-g488cf7082, mac-x86_64
 <br>
 $ hledger web --version <br>
-hledger-web 1.22.2-0-g5895a46ec, mac-x86_64
+hledger-web 1.22.2-0-g488cf7082, mac-x86_64
 <br>
 </div>
 
