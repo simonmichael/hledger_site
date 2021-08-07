@@ -79,12 +79,16 @@ div.badges {
 }
 </style>
 
-The current hledger release is **1.22.2** ([release notes](release-notes)). Below are lots of ways to install:\
-\- [Binary packages](#binary-packages) install quickly\
-\- [Building from source](#building-from-source) takes longer but ensures you get the latest release.\
-You may also need some [C libraries](#c-libraries) or a [UTF-8 locale](#utf-8-locale).\
-Afterward, [check your PATH](#check-your-path) and [test your installation](#test-your-installation).\
-And, please [report any roadbumps](index.html#help) so we can fix them.
+The current hledger release is **1.22.2** ([release notes](release-notes)). 
+
+Below are lots of ways to install it.
+[Binary packages](#binary-packages) install quickly;
+[building from source](#building-from-source) is slower but ensures the latest release.
+You might need some [C libraries](#c-libraries) 
+or a [UTF-8 locale](#utf-8-locale).
+
+To finish, [check your PATH](#check-your-path) and [test your installation](#test-your-installation).
+And please [report any trouble](index.html#help) so we can make things better.
 
 ## Binary packages
 
@@ -433,13 +437,14 @@ https://github.com/simonmichael/hledger/releases, also apply here.
 
 ## C libraries
 
-On some unix platforms, certain C library packages must be installed, 
-or you'll see an error (eg: "*cannot find -ltinfo*") when you try to run
-hledger binaries or build hledger from source. 
-This shouldn't affect the mac or linux-static binaries above,
-but it may affect you if you are building hledger from source.
-So if you're on one of the following platforms, please run the command shown
-(and please [send improvements for this list](#comment)):
+On some unix platforms, certain C library packages (like terminfo)
+must be installed to prevent errors (like "*cannot find -ltinfo*")
+when building hledger. 
+<!-- or running hledger binaries. -->
+<!-- This shouldn't affect the mac or linux-static binaries above, -->
+So before building hledger on one of the following platforms, 
+please run the command shown
+(and [send improvements for this list](#footer)):
 
 <table>
   <tr>
@@ -567,7 +572,7 @@ already-cached binaries.)
 <a name="c"></a>
 
 ### Building the development version
-<img alt="Latest source" src="https://img.shields.io/badge/Latest_source-master-ddf542.svg" />
+<img alt="Latest source" src="https://img.shields.io/badge/Latest_source-master-brightgreen.svg" />
 
 If you want the very [latest improvements](https://github.com/simonmichael/hledger/commits/master),
 our master branch on github is suitable for daily use.
