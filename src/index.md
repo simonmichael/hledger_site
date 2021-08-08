@@ -365,9 +365,10 @@ See also [ROADMAP](ROADMAP.html).
   <tr>
     <td>Chat:</td>
     <td>
-      <a href="http://irc.hledger.org">#hledger</a> on Libera IRC
-          (<a href="https://groups.google.com/g/hledger/c/9NQ_1_ng1XM/m/OeRFIMbxBQAJ">moved from Freenode 2021-05</a>)
-      or <a href="http://matrix.hledger.org">#hledger:matrix.org</a> on Matrix
+      <a href="http://matrix.hledger.org">#hledger:matrix.org</a> on Matrix (~40 chatters, featureful) or<br>
+      <a href="http://irc.hledger.org">#hledger</a> on Libera IRC (~80 chatters,
+      also accessible <a href="https://matrix.to/#/#hledger:libera.chat">via Matrix</a>)
+          <!-- (<a href="https://groups.google.com/g/hledger/c/9NQ_1_ng1XM/m/OeRFIMbxBQAJ">moved from Freenode 2021-05</a>) -->
 <!--
       <br>
       To talk, <a href="https://libera.chat/guides/registration">register your nick</a>:
