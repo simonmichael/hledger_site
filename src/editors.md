@@ -65,6 +65,12 @@ An alternative to ledger-mode, written specifically for hledger. Has some differ
 Provides realtime indication of problems in your journal.
 Can be combined with ledger-mode or hledger-mode.
 
+``C-x ` `` steps to the next problem in the current file.\
+``C-u C-x ` `` restarts the scan from the top.\
+A description should appear in the  message area, 
+but Emacs may hide it behind "...locus..." messages;
+you can fix that by customising the `next-error-verbose` variable to off.
+
 ### org
 
 Ledger entries can be embedded in a org outline and manipulated using Babel. See eg
