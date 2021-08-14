@@ -88,7 +88,9 @@ A mixture of manual and cron-based automatic committing.
 
 ; Recurring (daily, weekly, monthly, yearly..) workflows
 
-### Data entry / reconciling
+### Data entry
+
+#### Downloaded transactions
 
 2021:
 
@@ -103,6 +105,30 @@ A mixture of manual and cron-based automatic committing.
   - add some portion of the new entry's description as a new pattern for this account. Or tweak the existing patterns so it will be matched next time (or to avoid over-matching by the wrong rule).
 - when all new entries are marked cleared, I git commit the journal and any updated rules file(s). Or if I don't, it will be auto-committed by a nightly cron job, in theory.
 - I do this daily-ish, so it's a small number of new txns each time.
+
+#### Manually-entered transactions
+
+For transactions which don't appear in downloaded data (cash transactions, loans, etc.):
+
+- Note it somewhere, anywhere, as quickly possible, or it will be forgotten
+  (and I'll have to add an unexplained cash adjustment transaction later).
+- If the laptop is out of reach, that will usually be a brief note on
+  today's page in a phone notes app (Obsidian, currently) or a paper notebook.
+  Later that gets copied to the laptop.
+- On the laptop, my usual routine is: 
+  - get to the place of data entry
+    - iterm3 app (or start it if not running), 
+    - FINANCE tab where a TUI emacs (client) is running (or create that tab/start that emacs client), 
+    - emacs window showing the journal (or `C-j l` if not showing), 
+    - end of buffer (`M->`).
+  - add the journal entry: either
+    - if short of time: just a commented line, or date and description (and expand it later)
+    - if a familiar transaction: search back for a similar one, copy, jump to the end again, paste, adjust as needed (especially the date)
+    - otherwise type it in, starting with the date, using ledger-mode's completion (`TAB`),
+      or hippie-expand's completion (`M-/`) if they help.
+      (ledger-mode required careful configuration for best behaviour with account names,
+      the main thing I recall is turn on `ledger-complete-in-steps`.)
+    - when the journal entry is finalised, mark it cleared (`C-c C-e`).
 
 ## Accounts
 
