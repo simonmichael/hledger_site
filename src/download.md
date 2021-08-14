@@ -246,7 +246,7 @@ https://github.com/simonmichael/hledger/releases, also apply here.
         <div class="badges">
           <a href="https://gentoo.zugaina.org/Search?search=hledger"><img alt="Gentoo" src="https://img.shields.io/badge/Gentoo_package-1.21-red.svg" /></a>
         </div>
-        <div class="distro">Gentoo</div>
+    <div class="distro">Gentoo</div>
       </td>
       <td>
         <div class="command">sudo layman -a haskell &amp;&amp; sudo emerge hledger hledger-ui hledger-web</div>
@@ -388,23 +388,30 @@ https://github.com/simonmichael/hledger/releases, also apply here.
     <tr valign="top">
       <td>
         <div class="badges">
-          <img alt="Contributed binaries" src="https://img.shields.io/badge/Contributed_binaries-1.18.1-red.svg" />
+          <img alt="CI binaries" src="https://img.shields.io/badge/CI_binaries-1.22.2-brightgreen.svg" />
         </div>
       </td>
       <td style="padding-top:10px;">
-        <div class="command" style="margin-bottom:4px;"><a href="https://github.com/simonmichael/hledger/releases/tag/1.18.1">hledger-aarch64-manjaro.gz</a></div>
+        <div class="command" style="margin-bottom:4px;">
+          <a href="#gnulinux">GNU/Linux -> static arm32v7 binary</a>
+        </div>
         <div class="notes"></div>
       </td>
     </tr>
     <tr valign="top">
       <td>
         <div class="badges">
-          <img alt="Contributed binaries" src="https://img.shields.io/badge/Contributed_binaries-1.18-red.svg" />
+          <img alt="Contributed binaries" src="https://img.shields.io/badge/Contributed_binaries-1.18.1-red.svg" />
         </div>
       </td>
       <td style="padding-top:10px;">
-        <div class="command" style="margin-bottom:4px;"><a href="https://github.com/simonmichael/hledger/releases/tag/1.18">hledger-armhf32-debian.gz</a></div>
-        <div class="notes"></div>
+        <div class="command" style="margin-bottom:4px;">
+          <a href="https://github.com/simonmichael/hledger/releases/tag/1.18.1">hledger-aarch64-manjaro.gz</a><br>
+          <a href="https://github.com/simonmichael/hledger/releases/tag/1.18">hledger-armhf32-debian.gz</a>
+        </div>
+        <div class="notes">
+          Contributed third party binaries, not audited
+        </div>
       </td>
     </tr>
   </tbody>
