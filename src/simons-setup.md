@@ -84,6 +84,26 @@ I fetch currency prices with barrucadu's market-prices.py script
 Journal file, included files, makefile and scripts in git.
 A mixture of manual and cron-based automatic committing.
 
+## Workflows / Routines
+
+; Recurring (daily, weekly, monthly, yearly..) workflows
+
+### Data entry / reconciling
+
+2021:
+
+- In an iterm3 tab titled FINANCE, I have a TUI emacs with two side-by-side windows.
+- In the first window is 2021.journal, with ledger-mode and auto-revert-mode enabled.
+- In the second window I switch to a shell and run make Import to download and import latest transactions.
+- These show up in the journal right away. I switch focus there, select all the new entries and hit M-q to realign them with ledger-mode (which is better at that).
+- I process them one at a time from the top, marking each one cleared (C-c C-e) when it looks good.
+- When there's an unknown posting, I:
+  - replace the unknown account with the appropriate account (assuming I know it)
+  - switch to common.rules in the second window, and search for that account or its parent (assuming it's in the rules somewhere)
+  - add some portion of the new entry's description as a new pattern for this account. Or tweak the existing patterns so it will be matched next time (or to avoid over-matching by the wrong rule).
+- when all new entries are marked cleared, I git commit the journal and any updated rules file(s). Or if I don't, it will be auto-committed by a nightly cron job, in theory.
+- I do this daily-ish, so it's a small number of new txns each time.
+
 ## Accounts
 
 ; Account hierarchy used, any organisational principles, how I maintain it..
@@ -98,6 +118,3 @@ More reports and file-generating scripts are defined in `~/notes/Makefile`.
 Increasingly, I am moving reports and scripts in a (more powerful and robust) Shake file, `~/notes/do.hs`
 ([details](https://gist.github.com/simonmichael/74f82343b1f625b2861fcf27c3ddeb2f)).
 
-## Workflows / Routines
-
-; Recurring (daily, weekly, monthly, yearly..) workflows
