@@ -58,7 +58,7 @@
 - [Time planning](time-planning.md)
 - [Track investments (2017)](track-investments.md)
 - [Track investments (2020)](investments.md)
-- [Calculate unrealized gain](gain-calculation.md)
+- [Calculate unrealized gain](gain.md)
 - [Calculate return on investment](return-on-investment.md)
 
 # GENERAL USAGE TIPS
