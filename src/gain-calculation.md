@@ -48,8 +48,9 @@ $2:
 ```
 
 This is because if we sell at the last known market price, that is
-what our loss will be. If we add `--infer-market-price` our purchase
-will also be a known market price, making the gain $0.
+what our loss will be. If we add `--infer-market-price` hledger will
+insert a `P 2021-01-19 ABC $4.40` during processing, making the gain
+$0.
 
 ## Price changes
 
