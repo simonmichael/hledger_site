@@ -38,10 +38,11 @@ P 2021-01-18 ABC $4
 Note that the stock was not bought at the exact market price we
 recorded.
 
-Executing `hledger bal --gain` at this point tells us that we've lost
-$2:
+Looking at the gain report at this point tells us that we've lost $2:
 
 ```
+$ hledger bal --gain
+
               $-2.00  assets:stocks:ABC:20210119
 --------------------
               $-2.00
@@ -64,14 +65,18 @@ P 2021-02-01 ABC $6
 We now see a profit of $8:
 
 ```
+$ hledger bal --gain
+
                   $8  assets:stocks:ABC:20210119
 --------------------
                   $8
 ```
 
-We can also track the gain over time with `hledger bal --gain -W`:
+We can also track the gain over time:
 
 ```
+$ hledger bal --gain -W
+
 Incremental gain in 2021-01-04..2021-02-07, valued at period ends:
 
                             || 2021-01-04W01  2021-01-11W02  2021-01-18W03  2021-01-25W04  2021-02-01W05 
@@ -97,6 +102,7 @@ At this point, you decide to buy some more shares:
 Let's see what this does to our gain calculation:
 
 ```
+$ heldger bal --gain
                   $8  assets:stocks:ABC:20210119
                  $-2  assets:stocks:ABC:20210202
 --------------------
@@ -116,6 +122,8 @@ P 2021-02-08 ABC $5
 Our gain report over time now looks like this:
 
 ```
+$ hledger bal --gain -W -b 2021-01-18
+
 Incremental gain in 2021-01-04..2021-02-14, valued at period ends:
 
                             || 2021-01-18W03  2021-01-25W04  2021-02-01W05  2021-02-08W06 
@@ -144,10 +152,11 @@ We'll start of by selling some of our first lot:
     income:capital gains
 ```
 
-This leaves us with the following gain report
-(`hledger bal -W --gain -b 2021-02-07`):
+This leaves us with the following gain report:
 
 ```
+$ hledger bal -W --gain -b 2021-02-07
+
 Incremental gain in 2021-02, valued at period ends:
 
                             || 2021-02-01W05  2021-02-08W06  2021-02-15W07  2021-02-22W08 
@@ -162,9 +171,11 @@ At first glance, the negative value in the last column might seem
 counterintuitive. Didn't we just make a profit on our sale? However,
 our *unrealized* gain decreased by the sale. The *realized* gain is
 recorded by the `income:capital gains` posting. Our income statement
-tells us our *realized gain* (`hledger is`):
+tells us our *realized gain*:
 
 ```
+$ hledger is
+
 Income Statement 2021-01-04..2021-02-23
 
                       || 2021-01-04..2021-02-23 
@@ -184,7 +195,8 @@ Income Statement 2021-01-04..2021-02-23
 ```
 
 The total value of the remaining 3 stocks we didn't sell increased by
-$3 that week, leaving us the $-0.20 figure we see in the column.
+$3 that week, leaving us the $-0.20 figure we see in the last column
+of the gain report.
 
 The next week, the price increases again, and we decide to sell all
 our remaining stock:
@@ -199,10 +211,11 @@ P 2021-03-01 ABC $8
     income:capital gains
 ```
 
-This decreases our remaining unrealized gain down to 0
-(`hledger bal -W --gain -b 2021-02-07 -H`):
+This decreases our remaining unrealized gain down to 0:
 
 ```
+$ hledger bal -W --gain -b 2021-02-07 -H
+
 Historical gain in 2021-02-01..2021-03-07, valued at period ends:
 
                             || 2021-02-07  2021-02-14  2021-02-21  2021-02-28  2021-03-07 
@@ -298,6 +311,6 @@ P 2021-03-01 ABC $8
 
 2021-03-02 sell stock
     assets:cash                $70.00
-    assets:stocks:ABC:20210119  -8 ABC @@ $48.00
+    assets:stocks:ABC:20210119  -9 ABC @@ $48.00
     income:capital gains
 ```
