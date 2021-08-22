@@ -4,12 +4,12 @@
 <!-- toc -->
 </div>
 
-This is a guide on calculating the unrealized gain using `--gain`
-while tracking investments in hledger. This guide assumes you've read
-[the investments guide](investments.md) and that you're using the
-"simple" version of recording investment transactions laid out in that
-document, using @ or @@. We'll also be using a FIFO system for
-sales. At the end we'll discuss how to adapt your strategy for
+This is a guide on calculating the unrealized gain using `balance
+--gain` while tracking investments in hledger. This guide assumes
+you've read [the investments guide](investments.md) and that you're
+using the "simple" version of recording investment transactions laid
+out in that document, using @ or @@. We'll also be using a FIFO system
+for sales. At the end we'll discuss how to adapt your strategy for
 different systems.
 
 ## Buying
