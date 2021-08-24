@@ -134,6 +134,9 @@ and considering that the unbalanced accounting equation often does not affect yo
 you might prefer to stick with the @ notation.
 <!-- and typos aren't a problem, because any kind of reconciliation quickly leads to finding and fixing the error. -->
 
+Or, use both equity postings and @ notation together,
+which might give the best of both worlds.
+
 ## What about lots ?
 
 If you know a little about investing, or have read Ledger or Beancount docs,
