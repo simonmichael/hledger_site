@@ -362,10 +362,11 @@ See also [ROADMAP](ROADMAP.html).
 
 <div>
 <table>
-  <tr>
+  <tr valign=top>
     <td>Chat:</td>
     <td>
-      <a href="http://matrix.hledger.org">#hledger:matrix.org</a>/<a href="http://irc.hledger.org">#hledger:libera.chat</a> (bridged, ~120 chatters)
+      <a href="http://matrix.hledger.org">#hledger:matrix.org</a> or
+      <a href="http://irc.hledger.org">#hledger:libera.chat</a> (bridged, ~120 chatters)
 <!--
       <br>
       To talk, <a href="https://libera.chat/guides/registration">register your nick</a>:
@@ -378,56 +379,57 @@ See also [ROADMAP](ROADMAP.html).
 -->
     </td>
   </tr>
-  <tr>
+  <tr valign=top>
     <td>Mail list:</td>
     <td>
-      <a href="http://list.hledger.org">list.hledger.org</a>, <a href="mailto:hledger@googlegroups.com">hledger@googlegroups.com</a> (<a href="mailto:hledger+subscribe@googlegroups.com">hledger+subscribe@googlegroups.com</a>)
+      view: <a href="http://list.hledger.org">list.hledger.org</a><br>
+      send: <a href="mailto:hledger@googlegroups.com">hledger@googlegroups.com</a><br>
+      subscribe: <a href="mailto:hledger+subscribe@googlegroups.com">hledger+subscribe@googlegroups.com</a>
     </td>
   </tr>
-  <tr>
+  <tr valign=top>
     <td>Twitter:</td>
     <td>
-      <a href="https://twitter.com/search?q=%23hledger&amp;src=typed_query&amp;f=live">#hledger</a>, <a href="https://twitter.com/search?q=%23plaintextaccounting&amp;src=typed_query&amp;f=live">#plaintextaccounting</a>
+      <a href="https://twitter.com/search?q=%23hledger&amp;src=typed_query&amp;f=live">#hledger</a> and
+      <a href="https://twitter.com/search?q=%23plaintextaccounting&amp;src=typed_query&amp;f=live">#plaintextaccounting</a><br>
+      <a href="https://twitter.com/LedgerTips">@LedgerTips</a> (2014-2018)
     </td>
   </tr>
-  <tr>
+  <tr valign=top>
     <td>Reddit:</td>
     <td>
       <a href="https://www.reddit.com/r/plaintextaccounting/">/r/plaintextaccounting</a>
     </td>
   </tr>
-  <tr>
+  <tr valign=top>
     <td>Hacker News:</td>
     <td>
-      <a href="https://hn.algolia.com/?query=hledger&amp;sort=byDate&amp;prefix&amp;page=0&amp;dateRange=all&amp;type=story">stories</a>, <a href="https://hn.algolia.com/?query=hledger&amp;sort=byDate&amp;prefix=false&amp;page=0&amp;dateRange=all&amp;type=comment">comments</a>
+      <a href="https://hn.algolia.com/?query=hledger&amp;sort=byDate&amp;prefix&amp;page=0&amp;dateRange=all&amp;type=story">stories</a> and <a href="https://hn.algolia.com/?query=hledger&amp;sort=byDate&amp;prefix=false&amp;page=0&amp;dateRange=all&amp;type=comment">comments</a>
     </td>
   </tr>
-  <tr>
+  <tr valign=top>
     <td>Issues:</td>
     <td>
-      <a href="http://bugs.hledger.org">bugs.hledger.org</a> (bugs), <a href="http://issues.hledger.org">issues.hledger.org</a> (all), <a href="CONTRIBUTING.html#open-issues">open issues overview</a>, <a href="https://github.com/simonmichael/hledger_site/issues?utf8=%E2%9C%93&amp;q=">website issues</a>
+      <a href="http://bugs.hledger.org">bugs.hledger.org</a> (bugs only)<br>
+      <a href="http://issues.hledger.org">issues.hledger.org</a> (all issues)<br>
+      <a href="CONTRIBUTING.html#open-issues">open issues by category</a><br>
+      <a href="https://github.com/simonmichael/hledger_site/issues?utf8=%E2%9C%93&amp;q=">website issues</a>
     </td>
   </tr>
-  <tr>
+  <tr valign=top>
     <td>Other:</td>
     <td>
-      <a href="mailto:simon@joyful.com">simon@joyful.com</a>
+      <a href="mailto:simon@joyful.com">simon@joyful.com</a> (contact Simon privately, eg for security issues)
     </td>
   </tr>
-  <tr>
+  <tr valign=top>
     <td>See also:</td>
     <td>
-      <a href="https://plaintextaccounting.org">plaintextaccounting.org</a>
-      <br>
-      <a href="http://kiwiirc.com/nextclient/irc.libera.chat:+6697/#plaintextaccounting">#plaintextaccounting</a> IRC channel
-      <br>
-      <a href="https://matrix.to/#/#plaintextaccounting:matrix.org">#plaintextaccounting:matrix.org</a> Matrix room
-      <br>
-      <a href="https://www.ledger-cli.org/docs.html">Ledger CLI docs</a>
-      <br>
+      <a href="https://plaintextaccounting.org">plaintextaccounting.org</a> (general PTA portal)<br>
+      <a href="https://web.libera.chat/#plaintextaccounting">#plaintextaccounting:libera.chat</a> (IRC channel, ~60 chatters)<br>
+      <a href="https://matrix.to/#/#plaintextaccounting:matrix.org">#plaintextaccounting:matrix.org</a> (Matrix room, ~40 chatters) <br>
+      <a href="https://www.ledger-cli.org/docs.html">Ledger CLI docs</a>,
       <a href="https://beancount.github.io/docs">Beancount docs</a>
-      <br>
-      <a href="https://twitter.com/LedgerTips">@LedgerTips (2014-2018)</a>
     </td>
   </tr>
 </table>
