@@ -432,8 +432,9 @@ See also [ROADMAP](ROADMAP.html).
     <td>See also:</td>
     <td>
       <a href="https://plaintextaccounting.org">plaintextaccounting.org</a> (general PTA portal)<br>
-      <a href="https://web.libera.chat/#plaintextaccounting">#plaintextaccounting:libera.chat</a> (IRC channel, ~60 chatters)<br>
-      <a href="https://matrix.to/#/#plaintextaccounting:matrix.org">#plaintextaccounting:matrix.org</a> (Matrix room, ~40 chatters) <br>
+      <a href="https://matrix.to/#/#plaintextaccounting:matrix.org">#plaintextaccounting:matrix.org</a>
+      or <a href="https://web.libera.chat/#plaintextaccounting">#plaintextaccounting:libera.chat</a>
+      (bridged, ~90 chatters) <br>
       <a href="https://www.ledger-cli.org/docs.html">Ledger CLI docs</a>,
       <a href="https://beancount.github.io/docs">Beancount docs</a>
     </td>
