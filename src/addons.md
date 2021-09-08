@@ -16,7 +16,7 @@ calculates the internal rate of return of an investment account.
 
 More tools:
 
-[hledger-check.hs](https://github.com/simonmichael/hledger/blob/master/bin/hledger-check.hs)
+[hledger-check-fancyassertions.hs](https://github.com/simonmichael/hledger/blob/master/bin/hledger-check-fancyassertions.hs)
 checks more powerful account balance assertions.
 
 [ledger-autosync](https://pypi.python.org/pypi/ledger-autosync)
