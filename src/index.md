@@ -402,6 +402,12 @@ See also [ROADMAP](ROADMAP.html).
     </td>
   </tr>
   <tr valign=top>
+    <td>Stack Exchange:</td>
+    <td>
+      <a href="https://money.stackexchange.com/questions/tagged/hledger?tab=newest">[hledger] on money.stackexchange.com</a>
+    </td>
+  </tr>
+  <tr valign=top>
     <td>Hacker News:</td>
     <td>
       <a href="https://hn.algolia.com/?query=hledger&amp;sort=byDate&amp;prefix&amp;page=0&amp;dateRange=all&amp;type=story">stories</a> and <a href="https://hn.algolia.com/?query=hledger&amp;sort=byDate&amp;prefix=false&amp;page=0&amp;dateRange=all&amp;type=comment">comments</a>
