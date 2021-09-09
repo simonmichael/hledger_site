@@ -262,10 +262,12 @@ a different system for converting CSV data, with rules files and
 new-transaction detection which simplify the task of importing new
 data from banks.
 
-Compared to hledger, Ledger has some additional power-user features
-such as the built in value expressions language, and basic
-lots/capital gains reporting. Also, Ledger generates reports up to 10x
-faster, and using less memory, when files get large.
+Compared to hledger, Ledger has some additional power-user features such as 
+the embedded value expressions language, 
+and some extra automation for tracking lots.
+Also, Ledger uses less memory and is faster
+(partly by providing fewer guarantees, eg date-aware balance assertions/assignments).
+This is most noticeable with larger-than-normal files, where it can run ~10x faster.
 
 We currently support Ledger's main features:
 
@@ -283,7 +285,8 @@ We currently support Ledger's main features:
 - automated postings
 - periodic transactions
 - budget reports
-- `-X`/`--exchange`
+- valuation
+- capital gains reporting
 
 We add some new commands, such as:
 
@@ -311,7 +314,6 @@ We do not yet support:
 
 - revaluation transactions (`--revalued`)
 - reporting lots (`--lots`)
-- reporting capital gain/loss (`--gain`)
 - value expressions
 
 ### Functional differences
