@@ -266,7 +266,7 @@ Compared to hledger, Ledger has some additional power-user features such as
 the embedded value expressions language, 
 and some extra automation for tracking lots.
 Also, Ledger uses less memory and is faster
-(partly by providing fewer guarantees, eg date-aware balance assertions/assignments).
+(partly by providing fewer guarantees, eg its balance assertions/assignments are not date-aware).
 This is most noticeable with larger-than-normal files, where it can run ~10x faster.
 
 We currently support Ledger's main features:
