@@ -619,7 +619,7 @@ instead of just `hledger is`.
 
 ## Related
 
-- [Trading With Ledger-cli And Lots](https://www.d10.dev/blog/ledger-cli-trade) and [lotter](https://src.d10.dev/lotter/doc/tip/README.md)
+- [Trading With Ledger-cli And Lots](https://www.d10.dev/blog/ledger-cli-trade) and [lotter](https://src.d10.dev/lotter/doc/tip/README.md) and [gader](https://github.com/leb4r/gader)
 - [Beancount: Command-line Accounting Cookbook][beancount_cookbook]: Account naming, basic trading transactions
   [Beancount: Trading with Beancount][beancount_trading]: More complicated trading transactions, discussion on tricky cost basis adjustments
 - [Issue #624 Tracking investments in hledger](https://github.com/simonmichael/hledger/issues/624)
