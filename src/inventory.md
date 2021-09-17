@@ -62,12 +62,24 @@ P 1-1 CHOC 1.40 USD
     assets:cash               -61.60 USD
 ```
 
-We can run a cumulative balance report to see the effect of the fundraiser
-after each day in the example. Each day the inventory decreases and the
-income account converts from borrowed product to cash income.
+With a daily balance change and historical balance reports we can see the
+effect of each transaction. Over time we'll be converting inventory into
+profits.
 
-```shell
-$ hledger bal -DH --pretty
+```
+$ hledger bal -D --pretty
+Balance changes in 2021-01-01..2021-01-04:
+
+                      ║                    2021-01-01                    2021-01-02                   2021-01-03  2021-01-04
+══════════════════════╬══════════════════════════════════════════════════════════════════════════════════════════════════════
+ assets:cash          ║                             0                     44.00 USD                    44.00 USD  -61.60 USD
+ assets:inventory     ║              32 CHOC, 24 MEAT            -12 CHOC, -20 MEAT            -20 CHOC, -4 MEAT           0
+ income:fundraiser    ║ -32 CHOC, -24 MEAT, 61.60 USD  12 CHOC, 20 MEAT, -44.00 USD  20 CHOC, 4 MEAT, -44.00 USD           0
+ liabilities:supplier ║                    -61.60 USD                             0                            0   61.60 USD
+──────────────────────╫──────────────────────────────────────────────────────────────────────────────────────────────────────
+                      ║                             0                             0                            0           0
+
+hledger bal -DH --pretty
 Ending balances (historical) in 2021-01-01..2021-01-04:
 
                       ║                    2021-01-01                    2021-01-02  2021-01-03  2021-01-04
@@ -77,7 +89,7 @@ Ending balances (historical) in 2021-01-01..2021-01-04:
  income:fundraiser    ║ -32 CHOC, -24 MEAT, 61.60 USD  -20 CHOC, -4 MEAT, 17.60 USD  -26.40 USD  -26.40 USD
  liabilities:supplier ║                    -61.60 USD                    -61.60 USD  -61.60 USD           0
 ──────────────────────╫─────────────────────────────────────────────────────────────────────────────────────
-                      ║                             0                             0           0           0
+                      ║                             0                             0           0           0                  
 ```
 
 To see the same information in terms of the cash-value of the inventory
@@ -86,6 +98,18 @@ income realized by the fundraiser as it progresses, and the cash value
 of our current inventory.
 
 ```shell
+hledger bal -DV --pretty
+Balance changes in 2021-01-01..2021-01-04, valued at period ends:
+
+                      ║ 2021-01-01  2021-01-02  2021-01-03  2021-01-04
+══════════════════════╬════════════════════════════════════════════════
+ assets:cash          ║          0   44.00 USD   44.00 USD  -61.60 USD
+ assets:inventory     ║  61.60 USD  -30.80 USD  -30.80 USD           0
+ income:fundraiser    ║          0  -13.20 USD  -13.20 USD           0
+ liabilities:supplier ║ -61.60 USD           0           0   61.60 USD
+──────────────────────╫────────────────────────────────────────────────
+                      ║          0           0           0           0
+
 $ hledger bal -DHV --pretty
 Ending balances (historical) in 2021-01-01..2021-01-04, valued at period ends:
 
