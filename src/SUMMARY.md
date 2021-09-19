@@ -83,4 +83,5 @@
 - [RELEASING](RELEASING.md)
 - [ROADMAP](ROADMAP.md)
 - [Mockups](mockups.md)
+- [ACHIEVEMENTS](ACHIEVEMENTS.md)
 - [CREDITS](CREDITS.md)
