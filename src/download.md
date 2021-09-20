@@ -310,8 +310,8 @@ https://github.com/simonmichael/hledger/releases, also apply here.
     <tr>
       <td>
         <div class="badges">
-          <a ><img src="https://repology.org/badge/version-for-repo/fedora_36/hledger.svg" alt="Fedora 36" /></a><br>
-          <a ><img src="https://repology.org/badge/version-for-repo/fedora_35/hledger.svg" alt="Fedora 35" /></a><br>
+          <a ><img src="https://img.shields.io/badge/Fedora_36_package-1.21-red.svg" alt="Fedora 36" /></a><br>
+          <a ><img src="https://img.shields.io/badge/Fedora_35_package-1.21-red.svg" alt="Fedora 35" /></a><br>
           <a ><img src="https://repology.org/badge/version-for-repo/fedora_34/hledger.svg" alt="Fedora 34" /></a><br>
           <a ><img src="https://repology.org/badge/version-for-repo/fedora_33/hledger.svg" alt="Fedora 33" /></a><br>
           <a href="https://src.fedoraproject.org/rpms/hledger">more..</a>
