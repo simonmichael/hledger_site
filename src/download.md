@@ -296,21 +296,6 @@ https://github.com/simonmichael/hledger/releases, also apply here.
     <tr>
       <td>
         <div class="badges">
-          <a href="https://packages.debian.org/unstable/hledger"><img src="https://repology.org/badge/version-for-repo/debian_unstable/hledger.svg" alt="Debian unstable" /></a><br>
-          <a href="https://packages.debian.org/stable/hledger"><img src="https://repology.org/badge/version-for-repo/debian_stable/hledger.svg" alt="Debian stable" /></a><br>
-          <a href="https://packages.debian.org/oldstable/hledger"><img src="https://img.shields.io/badge/Debian_oldstable_package-1.10-red.svg" alt="Debian oldstable" /></a><br>
-          <a href="https://packages.debian.org/oldstable/hledger"><img src="https://img.shields.io/badge/Debian_oldoldstable_package-1.0.1-red.svg" alt="Debian oldoldstable" /></a><br>
-          <a href="https://packages.debian.org/search?searchon=names&amp;keywords=hledger">more..</a>
-        </div>
-        <div class="distro">Debian</div>
-      </td>
-      <td>
-        <div class="command">sudo apt install hledger hledger-ui hledger-web</div>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div class="badges">
           <a ><img src="https://img.shields.io/badge/Fedora_36_package-1.21-red.svg" alt="Fedora 36" /></a><br>
           <a ><img src="https://img.shields.io/badge/Fedora_35_package-1.21-red.svg" alt="Fedora 35" /></a><br>
           <a ><img src="https://repology.org/badge/version-for-repo/fedora_34/hledger.svg" alt="Fedora 34" /></a><br>
@@ -321,6 +306,21 @@ https://github.com/simonmichael/hledger/releases, also apply here.
       </td>
       <td>
         <div class="command">sudo dnf install hledger</div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="badges">
+          <a href="https://packages.debian.org/unstable/hledger"><img src="https://repology.org/badge/version-for-repo/debian_unstable/hledger.svg" alt="Debian unstable" /></a><br>
+          <a href="https://packages.debian.org/stable/hledger"><img src="https://repology.org/badge/version-for-repo/debian_stable/hledger.svg" alt="Debian stable" /></a><br>
+          <a href="https://packages.debian.org/oldstable/hledger"><img src="https://img.shields.io/badge/Debian_oldstable_package-1.10-red.svg" alt="Debian oldstable" /></a><br>
+          <a href="https://packages.debian.org/oldstable/hledger"><img src="https://img.shields.io/badge/Debian_oldoldstable_package-1.0.1-red.svg" alt="Debian oldoldstable" /></a><br>
+          <a href="https://packages.debian.org/search?searchon=names&amp;keywords=hledger">more..</a>
+        </div>
+        <div class="distro">Debian</div>
+      </td>
+      <td>
+        <div class="command">sudo apt install hledger hledger-ui hledger-web</div>
       </td>
     </tr>
     <tr>
