@@ -131,7 +131,8 @@ And please [report any trouble](index.html#help) so we can make things better.
       </td>
       <td>
         <div class="command">
-            nix-env -f https://github.com/NixOS/nixpkgs/archive/8694e478.tar.gz -iA hledger hledger-ui hledger-web
+            <!-- nix-env -f https://github.com/NixOS/nixpkgs/archive/8694e478.tar.gz -iA hledger hledger-ui hledger-web -->
+            nix-env -f https://github.com/NixOS/nixpkgs/archive/48b1bb48.tar.gz -iA hledger_1_22_2 hledger-ui_1_22_2 hledger-web_1_22_2
         </div>
         <div class="notes">
             Binaries may not yet be fully cached for your platform, try with --dry-run to estimate how much building will be required.
