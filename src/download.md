@@ -124,7 +124,7 @@ And please [report any trouble](index.html#help) so we can make things better.
     <tr>
       <td>
         <div class="badges">
-          <a href="https://github.com/search?l=&o=desc&q=%22automatic+Haskell+package+set+update%22+repo%3ANixOS%2Fnixpkgs+filename%3Ahaskell-packages.nix&s=committer-date&type=Commits"><img alt="Nix" src="https://img.shields.io/badge/Nix_package-1.22-red.svg" /></a>
+          <a href="https://github.com/search?l=&o=desc&q=%22automatic+Haskell+package+set+update%22+repo%3ANixOS%2Fnixpkgs+filename%3Ahaskell-packages.nix&s=committer-date&type=Commits"><img alt="Nix" src="https://img.shields.io/badge/Nix_package-1.22.2-brightgreen.svg" /></a>
         </div>
         <divC class="distro"><a href="https://nixos.org/nix">Nix</a></div>
         <div class="notes">Linux, Mac</div>
