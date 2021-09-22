@@ -255,6 +255,19 @@ https://github.com/simonmichael/hledger/releases, also apply here.
         <div class="command" style="margin-bottom:4px;">
           <!-- <a href="https://github.com/simonmichael/hledger/releases/tag/1.22">hledger-ubuntu.zip</a><br> -->
           <a href="https://github.com/simonmichael/hledger/releases/tag/1.23">hledger-linux-static-x64.zip</a><br>
+        </div>
+        <div class="notes"></div>
+      </td>
+    </tr>
+    <tr valign="top">
+      <td>
+        <div class="badges">
+          <img alt="CI binaries" src="https://img.shields.io/badge/CI_binaries-1.22.1-red.svg" />
+        </div>
+      </td>
+      <td style="padding-top:10px;">
+        <div class="command" style="margin-bottom:4px;">
+          <!-- <a href="https://github.com/simonmichael/hledger/releases/tag/1.22">hledger-ubuntu.zip</a><br> -->
           <a href="https://github.com/simonmichael/hledger/releases/tag/1.22.1">hledger-linux-static-arm32v7.zip</a><br>
         </div>
         <div class="notes"></div>
