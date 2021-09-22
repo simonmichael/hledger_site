@@ -31,13 +31,14 @@ all buildall: \
 	build7-1.20 \
 	build3-1.21 \
 	build3-1.22 \
+	build3-1.23 \
 	build3-dev \
 	build
 
 # Like buildall but just a few recent versions.
 recent buildrecent: \
-	build3-1.21 \
 	build3-1.22 \
+	build3-1.23 \
 	build3-dev \
 	build
 
