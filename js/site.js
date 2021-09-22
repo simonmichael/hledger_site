@@ -26,6 +26,7 @@ function addDocVersions() {
   // <a href="'+relpath1+newpage+'.html'+(page=='manual' ? newhash : '')+'">dev</a> \
   $('.docversions').html('\
 <a href="'+relpath+'dev/'+newpage+'.html'+(page=='manual' ? newhash : '')+'">dev</a> · \
+<a href="'+relpath+'1.23/'+newpage+'.html'+(page=='manual' ? newhash : '')+'">1.23</a> · \
 <a href="'+relpath+'1.22/'+newpage+'.html'+(page=='manual' ? newhash : '')+'">1.22</a> · \
 <a href="'+relpath+'1.21/'+newpage+'.html'+(page=='manual' ? newhash : '')+'">1.21</a> · \
 <a href="'+relpath+'1.20/'+newpage+'.html'+(page=='manual' ? newhash : '')+'">1.20</a> · \
@@ -50,7 +51,7 @@ function addDocVersions() {
 // | <a href="'+relpath+'0.27/manual.html'+(topic=='manual' ? '' : ('#'+topic))+'">0.27</a> \
 }
 
-var currentrelease = '1.22';
+var currentrelease = '1.23';
 function highlightCurrentDocVersion() {
   $('.docversions').each( function() {
     var parts = window.location.pathname.split('/');
