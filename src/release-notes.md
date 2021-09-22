@@ -76,6 +76,59 @@ fixes.**
 
 ### project changes 1.23
 
+Software:
+
+- The bin/hledger-check-fancyassertions.hs addon script,
+  allowing more complex balance assertions, works again.
+  (#1464, Stephen Morgan)
+
+- Many code cleanups suggested by hlint (Stephen Morgan)
+
+Docs:
+
+- Added a public BACKLOG.org to the hledger repo and website.
+
+- Website updates:
+
+  - Reorganised site content.
+  - Improved page tables of contents.
+  - Content fixes.
+  - New docs:
+    Currency conversion.
+    hledger and Beancount/GnuCash/Ledger/Quicken.
+
+- New examples: systemd and nginx configs for hledger-web (Alan Young)
+
+Tools/process:
+
+- `make site-watch` works again
+
+- `make list-commits` and `make showauthors` show those things.
+
+- `Shake cabalfiles` now uses (and requires) hpack in $PATH, to avoid building.
+  It should be the version that's in the current stack release, to avoid commit conflicts.
+
+- shake: changelogs: A leading semicolon now means 
+  "skip most CI steps", not "omit from changelog".
+
+- ci: most steps are skipped if commit message begins with ;.
+
+- hledger developers now use GHC 9.0/stackage nightly by default. (#1503)
+
+- Our doctests are disabled with GHC 9 for now to work around an
+  upstream bug. 
+  ([#1503](https://github.com/simonmichael/hledger/issues/1503), 
+  [#1615](https://github.com/simonmichael/hledger/issues/1615))
+
+- bin/commitlint is a new tool for hledger developers which checks and
+  describes new commit conventions which simplify maintenance of
+  change docs and releasing. It can be run locally while developing,
+  manually or as a pre-commit hook
+  (`ln -sf ../../bin/commitling .git/hooks/commit-msg`), 
+  and is also run by our CI workflows to check pull requests.
+  <https://hledger.org/CONTRIBUTING.html#commit-messages>,
+  <https://github.com/simonmichael/hledger/blob/master/bin/commitlint>
+  (#1602)
 
 ### hledger 1.23
 
