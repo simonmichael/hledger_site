@@ -14,6 +14,19 @@ $(document).ready( function() {
   highlightCurrentDocVersion();
 });
 
+var currentrelease = '1.23';
+function highlightCurrentDocVersion() {
+  $('.docversions').each( function() {
+    var parts = window.location.pathname.split('/');
+    var dir = parts.length > 1 ? parts[parts.length-2] : '';
+    var ver = $.isNumeric(dir) ? dir : (dir ? "dev" : currentrelease);
+    $(this).find('a').each( function() {
+      if ($(this).html() == ver)
+        $(this).addClass('displayed');
+    });
+  });
+}
+
 function addDocVersions() {
   var parts = window.location.pathname.split('/');
   var page = parts.length > 0 ? parts[parts.length-1].slice(0,-5) : '';
@@ -49,17 +62,4 @@ function addDocVersions() {
 // <a href="'+relpath+'1.3/'+newpage+'.html'+(page=='manual' ? newhash : '')+'">1.3</a>   · \
 // <a href="'+relpath+'1.1/'+newpage+'.html'+(page=='manual' ? newhash : '')+'">1.1</a>   · \
 // | <a href="'+relpath+'0.27/manual.html'+(topic=='manual' ? '' : ('#'+topic))+'">0.27</a> \
-}
-
-var currentrelease = '1.23';
-function highlightCurrentDocVersion() {
-  $('.docversions').each( function() {
-    var parts = window.location.pathname.split('/');
-    var dir = parts.length > 1 ? parts[parts.length-2] : '';
-    var ver = $.isNumeric(dir) ? dir : (dir ? "dev" : currentrelease);
-    $(this).find('a').each( function() {
-      if ($(this).html() == ver)
-        $(this).addClass('displayed');
-    });
-  });
 }
