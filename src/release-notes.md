@@ -127,7 +127,7 @@ Tools/process:
   (`ln -sf ../../bin/commitling .git/hooks/commit-msg`), 
   and is also run by our CI workflows to check pull requests.
   <https://hledger.org/CONTRIBUTING.html#commit-messages>,
-  <https://github.com/simonmichael/hledger/blob/master/bin/commitlint>
+  [bin/commitlint](https://github.com/simonmichael/hledger/blob/master/bin/commitlint)
   (#1602)
 
 ### hledger 1.23
