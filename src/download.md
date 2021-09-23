@@ -79,16 +79,15 @@ div.badges {
 }
 </style>
 
-The current hledger release is **1.23** ([release notes](release-notes)). 
-
-Below are lots of ways to install it.
+Here are lots of ways to install hledger - choose one that suits your needs.
 [Binary packages](#binary-packages) install quickly;
 [building from source](#building-from-source) is slower but ensures the latest release.
-You might need some [C libraries](#c-libraries) 
-or a [UTF-8 locale](#utf-8-locale).
 
+You might need some [C libraries](#c-libraries) or a [UTF-8 locale](#utf-8-locale).
 To finish, [check your PATH](#check-your-path) and [test your installation](#test-your-installation).
-And please [report any trouble](index.html#help) so we can make things better.
+And please [report any trouble](index.html#help) so we can make this process smoother.
+
+The current hledger release is **1.23**. ([Release notes](release-notes))
 
 ## Binary packages
 

@@ -15,59 +15,83 @@ https://www.stephendiehl.com/posts/marketing.html#persuasion-and-decision-makers
 easy, dependable<br> plain text accounting
 </div>
 
-<div style="text-align:center; margin:1em;">
+<div class=pagetoc>
+<!-- toc -->
+</div>
 
-*Quick links:
+<span id="leadingword">hledger</span> is free cross-platform accounting software 
+for both power users and folks new to accounting.
+It's good for tracking money, time, investments, cryptocurrencies, inventory and more,
+with high accuracy, flexibility and privacy.
+It is a more actively maintained, largely compatible reimplementation of Ledger CLI,
+with a particular focus on ease of use and robustness.
+
+<!--
+*Quick links:\
 [install](download.html),
 [quick start](quickstart.html),
 [manual](hledger.html),
 [support/discussion](#help),
 [sponsors](#sponsorship),
-[development](CONTRIBUTING.html)*
+[development](CONTRIBUTING.html),
+<a href="https://github.com/simonmichael/hledger"><img height="20" 
+src="https://img.shields.io/github/stars/simonmichael/hledger.svg?style=for-the-badge&logo=GitHub&label=Github&color=lightgrey" 
+alt="github" title="hledger code repo/issue tracker"></a>*
+-->
 
-<a href="https://github.com/simonmichael/hledger">
-  <img height="28" src="https://img.shields.io/github/stars/simonmichael/hledger.svg?style=for-the-badge&logo=GitHub&label=Github&color=lightgrey" 
-    alt="github" title="hledger code repo/issue tracker">
-</a>
+## Show me...
 
-</div>
+hledger offers multiple user interfaces:
 
-<span id="leadingword">hledger</span> is cross-platform accounting software 
-for both power users and folks new to accounting.
-It's good for tracking money, time, investments, cryptocurrencies, inventory and more.
-It is an actively maintained, largely compatible reimplementation of [Ledger CLI] 
-with a particular focus on **ease of use** and **robustness**.
+<table id="screenshots">
+<tr valign="top">
+<td width="25%">
 
-<!-- <div class=pagetoc> -->
-<!-- <\!-- toc -\-> -->
-<!-- </div> -->
+<a href="/images/balance-q-inc.png" class="highslide" onclick="return hs.expand(this)"><img src="/images/balance-q-inc.png" title="Balance report showing income/expense by quarter" /></a>
 
-Here are some things it provides out of the box:
+A command-line tool (CLI).
+Transactions are stored in a journal file which you can edit with a text editor.
+From this hledger produces various reports, without changing your data.
 
-- Easy multi-currency double-entry accounting [using only a plain text file](#usage)
-- Easy [assisted data entry](add.html) or [CSV import][convert]
-- Easy zero-setup [command line], [terminal], and [web] user interfaces
-- Easy multi-period [balance sheet], [income statement], and [cashflow] reports
-- Easy summarising of account balances to a [desired depth][depth limiting]
-- Easy output to [text, HTML, CSV, JSON or SQL][output format]
-- Easy import/export/co-usage with Ledger CLI or Beancount
-- Easy to [download] or [build] on all major platforms
+</td>
+<td width="25%">
 
-[Ledger CLI]: https://ledger-cli.org
-[command line]: hledger.html
-[terminal]: ui.html
-[web]: web.html
-[balance sheet]: hledger.html#balancesheet
-[income statement]: hledger.html#incomestatement
-[cashflow]: hledger.html#cashflow
-[depth limiting]: hledger.html#depth-limiting
-[output format]: hledger.html#output-format
-[download]: download.html#binary-packages
-[build]: download.html#building-from-source
+<a href="/images/hledger-ui/hledger-ui-bcexample-acc.png" class="highslide" onclick="return hs.expand(this)"><img src="/images/hledger-ui/hledger-ui-bcexample-acc.png" title="hledger-ui accounts screen" /></a>
+
+A live-updating terminal interface (TUI), 
+that lets you review account balances and transactions quickly.
+([screencast](https://asciinema.org/a/29665))
+
+</td>
+<td width="25%">
+
+<a href="/images/hledger-web/normal/register.png" class="highslide" onclick="return hs.expand(this)"><img src="/images/hledger-web/normal/register.png" title="Account register view with accounts sidebar" /></a>
+
+A zero-setup web interface (WUI),
+allowing terminal-free, point-and-click usage.
+Run it privately on your local machine, or on a server to collaborate with others.
+([demo](http://demo.hledger.org)).
+
+<!-- (hledger can also run [in your web browser](https://hledger.alhur.es) (prototype).) -->
+
+</td>
+<td width="25%">
+
+<a href="/images/hledger-lib-api.png" class="highslide" onclick="return hs.expand(this)"><img src="/images/hledger-lib-api.png" title="Part of hledger-lib's haddock api documentation" /></a>
+
+A haskell library. You can write scripts, add-on commands, or financial applications 
+as powerful as hledger itself.
+<!-- [scripts](scripting.html), [addons](hledger.html#add-on-commands)  -->
+
+</td>
+</tr>
+</table>
 
 
+## Plain text what now ?
 
-hledger is a **[Plain Text Accounting]** system.
+hledger is a **[Plain Text Accounting]** system, 
+where your accounting data is stored in a readable plain text file, often version-controlled.
 Some strengths of the PTA approach:
 
 - Runs on your local computer, keeping your financial data private and under your control
@@ -81,16 +105,48 @@ Some strengths of the PTA approach:
 - Lightweight, fast, non-distracting to use
 - Great for learning more of double-entry bookkeeping and accounting.
 
-Here are some ways in which hledger strives to provide robustness:
+## Easy, you say ?
+
+Well - depending on your experience, hledger or Plain Text Accounting
+may or may not seem *easy* at first encounter.
+(It may just be that our intro docs aren't good enough yet;
+we're working on that.)
+
+But certainly within its scope of Plain Text Accounting,
+hledger aims to be intuitive, learnable and highly usable,
+taking only the best from other PTA tools and leaving the rest.
+Here are some things it provides out of the box:
+
+- Easy multi-currency double-entry accounting [using only a plain text file](#usage)
+- Easy [assisted data entry](add.html) or [CSV import][convert]
+- Easy zero-setup [command line], [terminal], and [web] user interfaces
+- Easy multi-period [balance sheet], [income statement], and [cashflow] reports
+- Easy summarising of account balances to a [desired depth][depth limiting]
+- Easy output to [text, HTML, CSV, JSON or SQL][output format]
+- Easy import/export/co-usage with Ledger CLI or Beancount
+- Easy to [download] or [build] on all major platforms
+- Fast. Reports normally take a fraction of a second, and hledger-ui
+  updates instantly as you edit.
+  <!-- (hledger parses and analyses ~2000 txns/s on a 2013 macbook.) -->
+
+## Dependable ?
+
+hledger strives to be comfortable to use, to be absolutely reliable,
+to provide real-world value, and to never waste your time. It provides:
 
 - Robust installation: multiple options are provided for binary and
   source installation. Building from source is reliable and consistent
   across platforms.
 
-- Robust execution: runtime crashes are minimised by Haskell's memory
-  management and strong compile-time type checking. 
-  The software is also heavily tested by automated test suites and CI.
+- Robust execution: 
+  hledger is written in [Haskell], a modern, highly-regarded
+  programming language.
+  Runtime failures are minimised by Haskell's memory management and
+  strong compile-time type checking.
   Failures caused by user input are reported clearly and promptly.
+
+- Robust testing:
+  The software is continually tested by extensive automated tests.
 
 - Robust features: built-in commands and options combine well with one
   another, and are expected to do something sensible in all cases,
@@ -115,23 +171,110 @@ Here are some ways in which hledger strives to provide robustness:
   General and command-specific command line help is provided. We
   favour documentation-driven development.
 
-hledger is **free software**, with no purchase price or monthly fees.
-It is licensed under **[GNU GPLv3][gpl]**, providing the strongest guarantee
-that you will always have the right to run, inspect, modify, or share it.
-It is [actively maintained], with regular [releases],
-a large [chat room](#help) and other [support resources](#help).
+## Compatible
 
-hledger is modelled after the pioneering [Ledger CLI], 
-and will read many Ledger files without change. 
-Ledger users will find the data formats and commands familiar.
-Though not yet as fast as Ledger, it is quite fast,
-parsing and analysing ([correctly](faq.html#journal-format)) ~2000 txns/s on a 2013 macbook.
-Reports normally take a fraction of a second, and hledger-ui updates instantly as you edit.
+hledger is a rewrite of the pioneering [Ledger CLI], aiming to
+build out the same core features to a higher level of quality,
+and to add new ones making it useful to more people.
+Ledger users will find the file formats and commands familiar,
+and with a little care can run both tools on the same data files.
+(You can read more about
+the [origins](faq.html#why-did-you-start-hledger--how-does-it-relate-to-ledger-)
+and [differences](faq.html#how-is-hledger-different-from-ledger-).)
+
+hledger can read [Beancount] files, or vice versa, by converting them
+with the [beancount2ledger] and [ledger2beancount] tools.
+
+Many [tools](https://plaintextaccounting.org/#data-importconversion)
+exist for importing from other applications.  Data can be exported as
+CSV, JSON or basic SQL.
+
+## Free Software
+
+hledger is [free software], with no purchase price or monthly fees.
+It is licensed under [GNU GPLv3][gpl], providing the strongest guarantee
+that you will always have the right to run, inspect, modify, or share it.
+It is [actively maintained], with regular [releases]
+and a [large chat room and other support resources](discuss.html).
 
 <!-- - The plain text format and fast command-line interface -->
 <!--   (plus a reusable [library] for building your own [commands][script]) -->
 <!--   facilitate scripting and customisation. -->
 
+## Limitations
+
+What are some current limitations of hledger and Plain Text Accounting ?
+
+- The "GUIs" are minimalist; there is no rich GUI competitive with Quicken or GNUCash.
+
+- As a beginner you might feel there's too much choice, too much to
+  read, yet not enough clear opinionated guidance.
+  (We're working on it. A request in the chat will produce quick help.)
+
+- hledger is fast, but not yet as fast as Ledger.
+
+
+<!--
+What is planned for hledger ?
+
+More support for investing,
+more support for correctness and accounting/business rules,
+more input/output formats,
+more speed,
+more GUI,
+charts,
+better getting started experience.
+See also [ROADMAP](ROADMAP.html).
+-->
+
+## Where to next ?
+
+Next, you could:
+
+- Scan through the docs listed in the sidebar to your left. If it's not visible, click the menu button at top left.
+- Check the [FAQ](faq.html).
+- Do a tutorial:
+  [Quick Start](quickstart.html),
+  [Accounting concepts](accounting.html), or
+  [Easy workflow #1](add.html),
+  [#2](web.html), or
+  [#3](ui.html).
+- Become an expert: read or skim the [hledger](hledger.html) user manual.
+- Or just the [COMMON TASKS](hledger.html#common-tasks).
+- Check out the [hledger-ui](hledger-ui.html) and [hledger-web](hledger-web.html) manuals.
+- Browse the [blog posts] on plaintextaccounting.org.
+- Watch [videos](videos.html), such as hledger fan's beginner lessons.
+- Look at lots of [example files].
+- Introduce yourself in our [chat room](#help), or browse the [mail list].
+
+## But wait...
+
+hledger is brought to you by 
+**[Simon Michael](http://joyful.com)**
+and 
+**[140+ contributors](CREDITS.html)**.
+I have been building and relying on this project continuously since 2007.
+I hope you too will find it useful in transforming your relationship with time and money.
+When you have achieved some success, please consider joining the 
+**[sponsors](sponsor.html)**
+to support the project. Thanks!
+
+
+
+[blog posts]:                 https://plaintextaccounting.org/#articles-blog-posts
+[example files]:              https://github.com/simonmichael/hledger/tree/master/examples
+[mail list]:                  https://groups.google.com/forum/#!forum/hledger
+[Ledger CLI]:                 https://ledger-cli.org
+[command line]:               hledger.html
+[terminal]:                   ui.html
+[web]:                        web.html
+[balance sheet]:              hledger.html#balancesheet
+[income statement]:           hledger.html#incomestatement
+[cashflow]:                   hledger.html#cashflow
+[depth limiting]:             hledger.html#depth-limiting
+[output format]:              hledger.html#output-format
+[download]:                   download.html#binary-packages
+[build]:                      download.html#building-from-source
 [command line]:               add.html
 [terminal]:                   ui.html
 [web]:                        web.html
@@ -144,406 +287,20 @@ Reports normally take a fraction of a second, and hledger-ui updates instantly a
 [haskell]:                    https://wiki.haskell.org/Haskell
 [double-entry accounting]:    https://en.wikipedia.org/wiki/Double-entry_bookkeeping
 [install]:                    download.html
-[sponsor]:                    #sponsorship
 [ledgerlikes]:                https://plaintextaccounting.org/#plain-text-accounting-apps
 [ledger]:                     https://www.ledger-cli.org
 [ledger features]:            https://www.ledger-cli.org/features.html
 [beancount]:                  http://furius.ca/beancount
+[beancount2ledger]:           https://github.com/beancount/beancount2ledger
+[ledger2beancount]:           https://github.com/beancount/ledger2beancount
 [gpl]:                        https://en.wikipedia.org/wiki/GNU_General_Public_License
 [library]:                    https://hackage.haskell.org/package/hledger-lib
 [script]:                     https://github.com/simonmichael/hledger/blob/master/bin/hledger-check-tag-files.hs
-[import]: hledger.html#import
-[convert]: convert-csv-files.html
+[import]:                     hledger.html#import
+[convert]:                    convert-csv-files.html
+[free software]:              https://en.wikipedia.org/wiki/Free_software
 
 
-## Usage
-
-You can start with hledger very simply, and get more sophisticated as
-you learn more about double-entry accounting.
-Here are some common ways of using it:
-
-**Web or terminal UI:**
-[Use hledger-web](web.html) or [use hledger-ui](ui.html) to enter
-transactions and see reports.
-
-**Command line:**
-[Use hledger add](add.html)'s interactive prompts to enter transactions,
-run hledger commands to see reports.
-
-**Text editor:**
-<table id="example">
-<tr style="vertical-align:top;">
-<td style="padding-right:1em;">
-
-Record transactions in a [plain text file](journal.html),
-perhaps assisted by an [editor mode](editors.html):
-```journal
-; $HOME/.hledger.journal (or $LEDGER_FILE)
-
-2020-01-01 opening balances
-    assets:checking         $1234
-    equity
-
-2020-03-15 client payment
-    assets:checking         $2000
-    income:consulting
-
-2020-03-20 Sprouts
-    expenses:food:groceries  $100
-    assets:cash               $40
-    assets:checking
-```
-
-</td>
-<td>
-
-Run hledger commands to report
-[balances](https://en.wikipedia.org/wiki/Balance_sheet#Personal), 
-[income and expenses](https://en.wikipedia.org/wiki/Income_statement), 
-and more:
-```shell
-$ hledger bs
-Balance Sheet 2020-03-20
-
-             || 2020-03-20 
-=============++============
- Assets      ||            
--------------++------------
- assets      ||      $3134 
-   cash      ||        $40 
-   checking  ||      $3094 
--------------++------------
-             ||      $3134 
-=============++============
- Liabilities ||            
--------------++------------
--------------++------------
-             ||            
-=============++============
- Net:        ||      $3134 
-
-$ hledger is -M
-Income Statement 2020-01-01-2020-03-20
-
-                         || Jan  Feb    Mar 
-=========================++=================
- Revenues                ||                 
--------------------------++-----------------
- income:consulting       ||   0    0  $2000 
--------------------------++-----------------
-                         ||   0    0  $2000 
-=========================++=================
- Expenses                ||                 
--------------------------++-----------------
- expenses:food:groceries ||   0    0   $100 
--------------------------++-----------------
-                         ||   0    0   $100 
-=========================++=================
- Net:                    ||   0    0  $1900 
-```
-
-</td>
-</tr>
-</table>
-
-**Automated import:**
-Download CSV files from financial institutions, perhaps using an API
-like Plaid or Tiller, use hledger's import command to [convert] and
-[import] the new transactions, and use any UI to see reports.
-
-## More details
-
-Next, you could:
-
-- Explore the sidebar to your left (or on small screens, the menu button at top left).
-  It scrolls and expands; all hledger docs can be found there.
-- Check the **[FAQ](faq.html)**.
-- Do a tutorial:
-  **[Quick Start](quickstart.html)**,
-  **[Accounting concepts](accounting.html)**, or
-  **[Easy workflow #1](add.html)**,
-  **[#2](web.html)**, or
-  **[#3](ui.html)**.
-- Become an expert: read or skim the **[hledger](hledger.html)** user manual.
-- Or just the **[COMMON TASKS](hledger.html#common-tasks)**.
-- Check out the **[hledger-ui](hledger-ui.html)** and **[hledger-web](hledger-web.html)** manuals.
-- Browse the **[blog posts]** on plaintextaccounting.org.
-- Watch **[videos](videos.html)**, such as hledger fan's beginner lessons.
-- Look at lots of **[example files]**.
-- Introduce yourself in our **[chat room](#help)**, or browse the **[mail list]**.
-- Read on...
-
-[blog posts]: https://plaintextaccounting.org/#articles-blog-posts
-[example files]: https://github.com/simonmichael/hledger/tree/master/examples
-[mail list]: https://groups.google.com/forum/#!forum/hledger
-
-hledger is brought to you by [Simon Michael](http://joyful.com) and 120+ contributors.
-I've been building and relying on it continuously since 2007;
-I hope you too will find it helpful in mastering your time and money!
-When your wealth allows, perhaps you'll feel inspired to become a
-[sponsor] and help us do more.
-
-hledger is a rewrite/reboot of the pioneering [Ledger].
-([Why?](faq.html#how-why-was-hledger-started))
-Read more about the [differences](faq.html#ledger).
-
-hledger strives to be usable, practical and to provide real-world value.
-Intuitive features, dependable bug-free operation and complete, accurate documentation are top goals.
-
-<a href="/images/balance-q-inc.png" class="highslide right" onclick="return hs.expand(this)"><img src="/images/balance-q-inc.png" title="Balance report showing income/expense by quarter" /></a>
-hledger is first a command-line tool.
-Your data lives in a plain text journal file which you can edit
-any way you wish; hledger reads that file and produces reports of
-various kinds, without changing your data. (It can help you add new
-transactions, but does not change existing ones.)
-<br clear="all">
-
-<a href="/images/hledger-ui/hledger-ui-bcexample-acc.png" class="highslide right" onclick="return hs.expand(this)"><img src="/images/hledger-ui/hledger-ui-bcexample-acc.png" title="hledger-ui accounts screen" /></a>
-hledger also provides a [terminal&nbsp;interface](hledger-ui.html)
-that lets you review account balances and transactions quickly and without fuss.
-([screencast](https://asciinema.org/a/29665))
-<br clear="all">
-
-<a href="/images/hledger-web/normal/register.png" class="highslide right" onclick="return hs.expand(this)"><img src="/images/hledger-web/normal/register.png" title="Account register view with accounts sidebar" /></a>
-And, a zero-setup
-[web&nbsp;app](hledger-web) for a more point-and-click experience
-([demo](http://demo.hledger.org)).
-Run it on your local machine, or on a server, 
-or set it up with a few clicks on
-[Sandstorm](https://apps.sandstorm.io/app/8x12h6p0x0nrzk73hfq6zh2jxtgyzzcty7qsatkg7jfg2mzw5n90).
-<br clear="all">
-
-<!-- There's also a [UI running in the browser](https://hledger.alhur.es) (hledger compiled with GHCJS). -->
-<!-- This is a prototype, but it's nice sandbox for trying out hledger's journal syntax. -->
-
-<a href="/images/hledger-lib-api.png" class="highslide right" onclick="return hs.expand(this)"><img src="/images/hledger-lib-api.png" title="Part of hledger-lib's haddock api documentation" /></a>
-hledger is written in [Haskell], a modern, highly-regarded
-programming language which contributes to hledger's robustness,
-performance and long-term maintainability.  Most functionality is
-exposed as [Haskell libraries](http://hackage.haskell.org/package/hledger-lib),
-making it easy to write your own hledger-compatible
-[scripts](scripting.html), [addons](hledger.html#add-on-commands) and applications.
-&nbsp;&nbsp;
-[![hledger CI](https://github.com/simonmichael/hledger/workflows/hledger%20CI/badge.svg)](https://github.com/simonmichael/hledger/actions)
-[![on hackage](https://img.shields.io/hackage/v/hledger.svg?label=hackage&colorB=green)](http://hackage.haskell.org/package/hledger)
-[![](https://repology.org/badge/version-for-repo/stackage_nighly/hledger.svg)](https://repology.org/metapackage/hledger)
-<br clear="all">
-
-
-What are some (current) limitations of PTA and hledger ?
-
-- The "GUIs" are minimalist; there is no rich GUI at the level of
-  Quicken or GNUCash.
-
-- As a beginner you might feel there's too much freedom, too much to
-  read, yet not enough clear guidance. Some common needs are not yet
-  satisfactorily documented.
-  (Tip: a request in chat often produces a quick result.)
-
-- hledger doesn't yet calculate capital gains automatically, as Ledger
-  and Beancount can; you must do that semi-manually.
-
-- hledger is not yet as fast as Ledger.
-
-What is planned for hledger ?
-
-More support for investing,
-more support for correctness and accounting/business rules,
-more input/output formats,
-more speed,
-more GUI,
-charts,
-better getting started experience.
-See also [ROADMAP](ROADMAP.html).
-
-<a name="help"></a><a name="help-feedback"></a>
-
-## Support, discussion
-
-<div>
-<table>
-  <tr valign=top>
-    <td>Chat:</td>
-    <td>
-      <a href="http://matrix.hledger.org">#hledger:matrix.org</a> or
-      <a href="http://irc.hledger.org">#hledger:libera.chat</a> (bridged, ~120 chatters)
-<!--
-      <br>
-      To talk, <a href="https://libera.chat/guides/registration">register your nick</a>:
-      <br>
-      on IRC, type <code>/msg NickServ register newpassword youremailaddress</code>
-      <br>
-      on Matrix, 
-      use <a href="https://github.com/matrix-org/matrix-appservice-irc/wiki/End-user-FAQ#how-do-i-registeridentify-to-nickserv">@freenode_NickServ:matrix.org</a>
-      and <a href="https://github.com/matrix-org/matrix-appservice-irc/wiki/End-user-FAQ#and-do-it-automatically">@appservice-irc:matrix.org</a>
--->
-    </td>
-  </tr>
-  <tr valign=top>
-    <td>Mail list:</td>
-    <td>
-      view: <a href="http://list.hledger.org">list.hledger.org</a><br>
-      send: <a href="mailto:hledger@googlegroups.com">hledger@googlegroups.com</a><br>
-      subscribe: <a href="mailto:hledger+subscribe@googlegroups.com">hledger+subscribe@googlegroups.com</a>
-    </td>
-  </tr>
-  <tr valign=top>
-    <td>Twitter:</td>
-    <td>
-      <a href="https://twitter.com/search?q=%23hledger&amp;src=typed_query&amp;f=live">#hledger</a> and
-      <a href="https://twitter.com/search?q=%23plaintextaccounting&amp;src=typed_query&amp;f=live">#plaintextaccounting</a><br>
-      <a href="https://twitter.com/LedgerTips">@LedgerTips</a> (2014-2018)
-    </td>
-  </tr>
-  <tr valign=top>
-    <td>Reddit:</td>
-    <td>
-      <a href="https://www.reddit.com/r/plaintextaccounting/">/r/plaintextaccounting</a>
-    </td>
-  </tr>
-  <tr valign=top>
-    <td>Stack Exchange:</td>
-    <td>
-      <a href="https://money.stackexchange.com/questions/tagged/hledger?tab=newest">[hledger] on money.stackexchange.com</a>
-    </td>
-  </tr>
-  <tr valign=top>
-    <td>Hacker News:</td>
-    <td>
-      <a href="https://hn.algolia.com/?query=hledger&amp;sort=byDate&amp;prefix&amp;page=0&amp;dateRange=all&amp;type=story">stories</a> and <a href="https://hn.algolia.com/?query=hledger&amp;sort=byDate&amp;prefix=false&amp;page=0&amp;dateRange=all&amp;type=comment">comments</a>
-    </td>
-  </tr>
-  <tr valign=top>
-    <td>Issues:</td>
-    <td>
-      <a href="http://bugs.hledger.org">bugs.hledger.org</a> (bugs only)<br>
-      <a href="http://issues.hledger.org">issues.hledger.org</a> (all issues)<br>
-      <a href="CONTRIBUTING.html#open-issues">open issues by category</a><br>
-      <a href="https://github.com/simonmichael/hledger_site/issues?utf8=%E2%9C%93&amp;q=">website issues</a>
-    </td>
-  </tr>
-  <tr valign=top>
-    <td>Other:</td>
-    <td>
-      <a href="mailto:simon@joyful.com">simon@joyful.com</a> (contact Simon privately, eg for security issues)
-    </td>
-  </tr>
-  <tr valign=top>
-    <td>See also:</td>
-    <td>
-      <a href="https://plaintextaccounting.org">plaintextaccounting.org</a> (general PTA portal)<br>
-      <a href="https://matrix.to/#/#plaintextaccounting:matrix.org">#plaintextaccounting:matrix.org</a>
-      or <a href="https://web.libera.chat/#plaintextaccounting">#plaintextaccounting:libera.chat</a>
-      (bridged, ~90 chatters) <br>
-      <a href="https://www.ledger-cli.org/docs.html">Ledger CLI docs</a>,
-      <a href="https://beancount.github.io/docs">Beancount docs</a>
-    </td>
-  </tr>
-</table>
-</div>
-
-
-<a name="sponsor"></a>
-
-## Sponsorship
-
-hledger comes from many thousands of skilled person-hours, and sustained effort over 14+ years.
-(Building and supporting good software and documentation requires *a lot* of time and life energy.)
-We loved doing it and it is given to you with love. 
-And, just like you we have... *expenses*. 
-
-So may I ask you to consider:
-
-- Has this project been helpful to you or your organisation ?
-- Would you like hledger to be around for a long time ? To remain actively supported ? To improve faster ?
-- Would you like to help our core mission ?
-
-  > **Help more people achieve financial literacy, discipline and freedom.\
-  > Help grow a shared world-wide culture of accountability and solvency.**
-
-  (We also support the positive vision of [Solarpunk](http://www.re-des.org/a-solarpunk-manifesto).)
-
-If so, I invite you to join us by contributing financially at some level. Thank you !
-
-<!-- keep synced with README.md: -->
-
-- Sponsor Simon (project leader):
-[![github](https://img.shields.io/badge/Sponsor_on-Github-limegreen "Sponsor the project leader via Github")](https://github.com/sponsors/simonmichael)
-[![liberapay](https://img.shields.io/badge/Sponsor_on-Liberapay-limegreen "Sponsor the project leader via Liberapay")](https://liberapay.com/simonmichael)
-[![paypal](https://www.paypal.com/en_US/i/btn/x-click-but04.gif "Give one time or recurringly via Paypal")](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5J33NLXYXCYAY)\
-
-<!-- OC badges are flaky/confusing. hledger tiers are: Backers, Sponsors -->
-<!-- doesn't show correct count: -->
-<!-- <img src="https://opencollective.com/hledger/tiers/sponsors/badge.svg?label=Sponsors&color=brightgreen" /> \ -->
-<!-- doesn't show all: -->
-<!-- [![](https://opencollective.com/hledger/sponsor/0/avatar.svg)](https://opencollective.com/hledger/sponsor/0/website) -->
-<!-- [![](https://opencollective.com/hledger/sponsor/1/avatar.svg)](https://opencollective.com/hledger/sponsor/1/website) -->
-<!-- [![](https://opencollective.com/hledger/sponsor/2/avatar.svg)](https://opencollective.com/hledger/sponsor/2/website) -->
-<!-- [![](https://opencollective.com/hledger/sponsor/3/avatar.svg)](https://opencollective.com/hledger/sponsor/3/website) -->
-<!-- [![](https://opencollective.com/hledger/sponsor/4/avatar.svg)](https://opencollective.com/hledger/sponsor/4/website) -->
-<!-- [![](https://opencollective.com/hledger/sponsor/5/avatar.svg)](https://opencollective.com/hledger/sponsor/5/website) -->
-<!-- [![](https://opencollective.com/hledger/sponsor/6/avatar.svg)](https://opencollective.com/hledger/sponsor/6/website) -->
-<!-- [![](https://opencollective.com/hledger/sponsor/7/avatar.svg)](https://opencollective.com/hledger/sponsor/7/website) -->
-<!-- [![](https://opencollective.com/hledger/sponsor/8/avatar.svg)](https://opencollective.com/hledger/sponsor/8/website) -->
-<!-- [![](https://opencollective.com/hledger/sponsor/9/avatar.svg)](https://opencollective.com/hledger/sponsor/9/website) -->
-<!-- [![](https://opencollective.com/hledger/sponsor/10/avatar.svg)](https://opencollective.com/hledger/sponsor/10/website)\ -->
-- [Sponsor the hledger project](https://opencollective.com/hledger#category-CONTRIBUTE) publicly,
-  as an individual or with your organisation, through Open Collective. Thank you sponsors!
-
-  <div class="sponsors">
-    <!-- major trouble resizing these -->
-    <a href="https://opencollective.com/hledger/organization/0/website"><img src="https://opencollective.com/hledger/organization/0/avatar.svg?avatarHeight=128"></a>
-    <a href="https://opencollective.com/hledger/organization/1/website"><img src="https://opencollective.com/hledger/organization/1/avatar.svg?avatarHeight=128"></a>
-    <a href="https://opencollective.com/hledger/organization/2/website"><img src="https://opencollective.com/hledger/organization/2/avatar.svg?avatarHeight=128"></a>
-    <a href="https://opencollective.com/hledger/organization/3/website"><img src="https://opencollective.com/hledger/organization/3/avatar.svg?avatarHeight=128"></a>
-    <a href="https://opencollective.com/hledger/organization/4/website"><img src="https://opencollective.com/hledger/organization/4/avatar.svg?avatarHeight=128"></a>
-    <a href="https://opencollective.com/hledger/organization/5/website"><img src="https://opencollective.com/hledger/organization/5/avatar.svg?avatarHeight=128"></a>
-    <a href="https://opencollective.com/hledger/organization/6/website"><img src="https://opencollective.com/hledger/organization/6/avatar.svg?avatarHeight=128"></a>
-    <a href="https://opencollective.com/hledger/organization/7/website"><img src="https://opencollective.com/hledger/organization/7/avatar.svg?avatarHeight=128"></a>
-    <a href="https://opencollective.com/hledger/organization/8/website"><img src="https://opencollective.com/hledger/organization/8/avatar.svg?avatarHeight=128"></a>
-    <a href="https://opencollective.com/hledger/organization/9/website"><img src="https://opencollective.com/hledger/organization/9/avatar.svg?avatarHeight=128"></a>
-    <p>
-    <a href="https://opencollective.com/hledger/individual/0/website"><img src="https://opencollective.com/hledger/individual/0/avatar.svg?avatarHeight=128"></a>
-    <a href="https://opencollective.com/hledger/individual/1/website"><img src="https://opencollective.com/hledger/individual/1/avatar.svg?avatarHeight=128"></a>
-    <a href="https://opencollective.com/hledger/individual/2/website"><img src="https://opencollective.com/hledger/individual/2/avatar.svg?avatarHeight=128"></a>
-    <a href="https://opencollective.com/hledger/individual/3/website"><img src="https://opencollective.com/hledger/individual/3/avatar.svg?avatarHeight=128"></a>
-    <a href="https://opencollective.com/hledger/individual/4/website"><img src="https://opencollective.com/hledger/individual/4/avatar.svg?avatarHeight=128"></a>
-    <a href="https://opencollective.com/hledger/individual/5/website"><img src="https://opencollective.com/hledger/individual/5/avatar.svg?avatarHeight=128"></a>
-    <a href="https://opencollective.com/hledger/individual/6/website"><img src="https://opencollective.com/hledger/individual/6/avatar.svg?avatarHeight=128"></a>
-    <a href="https://opencollective.com/hledger/individual/7/website"><img src="https://opencollective.com/hledger/individual/7/avatar.svg?avatarHeight=128"></a>
-    <a href="https://opencollective.com/hledger/individual/8/website"><img src="https://opencollective.com/hledger/individual/8/avatar.svg?avatarHeight=128"></a>
-    <a href="https://opencollective.com/hledger/individual/9/website"><img src="https://opencollective.com/hledger/individual/9/avatar.svg?avatarHeight=128"></a>
-    <a href="https://opencollective.com/hledger/individual/10/website"><img src="https://opencollective.com/hledger/individual/10/avatar.svg?avatarHeight=128"></a>
-    <a href="https://opencollective.com/hledger/individual/11/website"><img src="https://opencollective.com/hledger/individual/11/avatar.svg?avatarHeight=128"></a>
-    <a href="https://opencollective.com/hledger/individual/12/website"><img src="https://opencollective.com/hledger/individual/12/avatar.svg?avatarHeight=128"></a>
-    <a href="https://opencollective.com/hledger/individual/13/website"><img src="https://opencollective.com/hledger/individual/13/avatar.svg?avatarHeight=128"></a>
-    <a href="https://opencollective.com/hledger/individual/14/website"><img src="https://opencollective.com/hledger/individual/14/avatar.svg?avatarHeight=128"></a>
-    <a href="https://opencollective.com/hledger/individual/15/website"><img src="https://opencollective.com/hledger/individual/15/avatar.svg?avatarHeight=128"></a>
-    <a href="https://opencollective.com/hledger/individual/16/website"><img src="https://opencollective.com/hledger/individual/16/avatar.svg?avatarHeight=128"></a>
-    <a href="https://opencollective.com/hledger/individual/17/website"><img src="https://opencollective.com/hledger/individual/17/avatar.svg?avatarHeight=128"></a>
-    <a href="https://opencollective.com/hledger/individual/18/website"><img src="https://opencollective.com/hledger/individual/18/avatar.svg?avatarHeight=128"></a>
-    <a href="https://opencollective.com/hledger/individual/19/website"><img src="https://opencollective.com/hledger/individual/19/avatar.svg?avatarHeight=128"></a>
-  </div>
-
-<!-- doesn't show all: -->
-<!-- - <object type="image/svg+xml" data="https://opencollective.com/hledger/tiers/sponsors.svg?avatarHeight=36&width=600"></object> -->
-
-<!-- doesn't show all: -->
-<!-- - <object type="image/svg+xml" data="https://opencollective.com/hledger/tiers/backers.svg?avatarHeight=36&width=600"></object> -->
-
-- Sponsor particular [tasks with bounties](https://github.com/simonmichael/hledger/issues?q=label:bounty). Here are several ways:
-  - Post a bounty pledge on an [issue](CONTRIBUTING.html#open-issues);
-    pay when resolved (honour system, simplest).
-  - Post a bounty on 
-    [![bountysource bounties](https://api.bountysource.com/badge/team?team_id=75979&style=bounties_received "issues bountied via bountysource")](https://www.bountysource.com/teams/hledger)
-    for a specific issue (not the hledger team);
-    announce it on the issue page;
-    manage payment through Bountysource UI.
-  - Make an earmarked donation to our [collective](https://opencollective.com/hledger) describing the bounty;
-    maintainer will approve the claimant's expense request when bounty is satisfied
-    (similar to <https://hledger.org/regressionbounty>).
-
-<!-- page styles -->
 <style>
 
 #grabber {
@@ -586,8 +343,9 @@ If so, I invite you to join us by contributing financially at some level. Thank 
   font-size:x-large;
 }
 
-/* major trouble resizing open collective logos */
-/* .rst-content img { height:inherit; } */
-/* img.sponsor { height:128px; } */
+#screenshots td {
+  border: 0 !important;
+  padding: 0 2em 0 0;
+}
 
 </style>
