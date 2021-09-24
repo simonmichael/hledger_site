@@ -50,7 +50,6 @@
 - [Create a journal](create-a-journal.md)
 - [Currency conversion](currency-conversion.md)
 - [Editor configuration](editors.md)
-- [Example setups](setups.md)
 - [Exporting from hledger](export.md)
 - [Foreign trip expenses](foreign-trip-expenses.md)
 - [Home](index.md)
