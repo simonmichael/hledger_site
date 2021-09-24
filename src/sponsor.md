@@ -16,7 +16,7 @@ So may I ask you to consider:
   > **Help more people achieve financial literacy, discipline and freedom.\
   > Help grow a shared world-wide culture of accountability and solvency.**
 
-  (We also support the positive vision of [Solarpunk](http://www.re-des.org/a-solarpunk-manifesto).)
+  <!-- (We also support the positive vision of [Solarpunk](http://www.re-des.org/a-solarpunk-manifesto).) -->
 
 If so, I invite you to join us by contributing financially at some level. Thank you !
 

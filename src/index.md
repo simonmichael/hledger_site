@@ -26,22 +26,22 @@ with high accuracy, flexibility and privacy.
 It is a more actively maintained, largely compatible reimplementation of Ledger CLI,
 with a particular focus on ease of use and robustness.
 
-<!--
-*Quick links:\
+*Quick links:
 [install](download.html),
-[quick start](quickstart.html),
+[getting started](start.html),
 [manual](hledger.html),
-[support/discussion](#help),
-[sponsors](#sponsorship),
-[development](CONTRIBUTING.html),
-<a href="https://github.com/simonmichael/hledger"><img height="20" 
-src="https://img.shields.io/github/stars/simonmichael/hledger.svg?style=for-the-badge&logo=GitHub&label=Github&color=lightgrey" 
-alt="github" title="hledger code repo/issue tracker"></a>*
--->
+[support](discuss.html),
+[sponsors](sponsor.html),*
+[![github](https://img.shields.io/github/stars/simonmichael/hledger.svg?logo=GitHub&label=Github)](https://github.com/simonmichael/hledger)
 
-## Show me...
+<!-- [development](CONTRIBUTING.html),* -->
+<!-- [quick start](quickstart.html), -->
 
-hledger offers multiple user interfaces:
+<!-- <br clear=all> -->
+
+<!-- ## Show me... -->
+
+<!-- hledger offers multiple user interfaces: -->
 
 <table id="screenshots">
 <tr valign="top">
@@ -191,6 +191,11 @@ CSV, JSON or basic SQL.
 
 ## Free Software
 
+[![github](https://img.shields.io/github/stars/simonmichael/hledger.svg?logo=GitHub&label=Github)](https://github.com/simonmichael/hledger)
+[![hledger CI](https://github.com/simonmichael/hledger/workflows/hledger%20CI/badge.svg)](https://github.com/simonmichael/hledger/actions)
+[![on hackage](https://img.shields.io/hackage/v/hledger.svg?logo=Haskell&label=Hackage&colorB=green)](http://hackage.haskell.org/package/hledger)
+[![](https://repology.org/badge/version-for-repo/stackage_nighly/hledger.svg)](https://repology.org/metapackage/hledger)
+
 hledger is [free software], with no purchase price or monthly fees.
 It is licensed under [GNU GPLv3][gpl], providing the strongest guarantee
 that you will always have the right to run, inspect, modify, or share it.
@@ -296,8 +301,6 @@ to support the project. Thanks!
 [gpl]:                        https://en.wikipedia.org/wiki/GNU_General_Public_License
 [library]:                    https://hackage.haskell.org/package/hledger-lib
 [script]:                     https://github.com/simonmichael/hledger/blob/master/bin/hledger-check-tag-files.hs
-[import]:                     hledger.html#import
-[convert]:                    convert-csv-files.html
 [free software]:              https://en.wikipedia.org/wiki/Free_software
 
 
