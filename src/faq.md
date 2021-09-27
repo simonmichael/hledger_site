@@ -1,4 +1,4 @@
-# General FAQ
+# Newcomer FAQ
 
 <!-- toc -->
 
