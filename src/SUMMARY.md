@@ -23,13 +23,12 @@
 - [Contributor Guide](CONTRIBUTING.md)
 - [Developer docs](dev.md)
 - [CREDITS](CREDITS.md)
-<!-- - [Developer FAQ](devfaq.md) -->
+- [Developer FAQ](devfaq.md)
 
 # INDEX
 
 <!-- Every page is listed here (so mdbook will render it): -->
 
-- [Newcomer FAQ](faq.md)
 - [Accounting concepts](accounting.md)
 - [Addon commands](addons.md)
 - [Borrowing and lending](loans.md)
@@ -54,6 +53,7 @@
 - [Mobile apps](mobile-apps.md)
 - [Mockups](mockups.md)
 - [Multicurrency tutorial (2018)](multicurrency-tutorial.md)
+- [Newcomer FAQ](faq.md)
 - [Project accounting](project-accounting.md)
 - [Quick Start](quickstart.md)
 - [Release notes](release-notes.md)
