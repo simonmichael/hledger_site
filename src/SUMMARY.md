@@ -29,7 +29,7 @@
 
 <!-- Every page is listed here (so mdbook will render it): -->
 
-- [About FAQ](faq.md)
+- [Newcomer FAQ](faq.md)
 - [Accounting concepts](accounting.md)
 - [Addon commands](addons.md)
 - [Borrowing and lending](loans.md)
