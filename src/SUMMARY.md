@@ -20,15 +20,10 @@
 
 # DEVELOPERS
 
-- [README](dev-README.md)
-- [CONTRIBUTING](CONTRIBUTING.md)
-- [RELEASING](RELEASING.md)
-- [ROADMAP](ROADMAP.md)
-- [BACKLOG](BACKLOG.md)
-- [Mockups](mockups.md)
-- [ACHIEVEMENTS](ACHIEVEMENTS.md)
+- [Contributor Guide](CONTRIBUTING.md)
+- [Developer docs](dev.md)
 - [CREDITS](CREDITS.md)
-- [Developer FAQ](devfaq.md)
+<!-- - [Developer FAQ](devfaq.md) -->
 
 # INDEX
 
@@ -89,10 +84,17 @@
 - [hledger-web tips](hledger-web-tips.md)
 <!-- [Depreciation](http://rantsideasstuff.com/posts/2018/07/08-depreciation-in-personal-finance-with-hledger) -->
 
-- [ACHIEVEMENTS](ACHIEVEMENTS.md)
-- [BACKLOG](BACKLOG.md)
-- [CONTRIBUTING](CONTRIBUTING.md)
-- [CREDITS](CREDITS.md)
+- [Contributor Guide](CONTRIBUTING.md)
 - [README](dev-README.md)
-- [RELEASING](RELEASING.md)
 - [ROADMAP](ROADMAP.md)
+- [BACKLOG](BACKLOG.md)
+- [Mockups](mockups.md)
+- [COMMITS](COMMITS.md)
+- [PULLREQUESTS](PULLREQUESTS.md)
+- [CHANGELOGS](CHANGELOGS.md)
+- [ISSUES](ISSUES.md)
+- [RELEASING](RELEASING.md)
+- [WORKFLOWS](WORKFLOWS.md)
+- [ACHIEVEMENTS](ACHIEVEMENTS.md)
+- [CREDITS](CREDITS.md)
+- [Developer FAQ](devfaq.md)
