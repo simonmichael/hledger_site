@@ -1,4 +1,4 @@
-# About FAQ
+# General FAQ
 
 <!-- toc -->
 

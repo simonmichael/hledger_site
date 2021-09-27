@@ -8,7 +8,7 @@
 - [Videos, Talks](videos.md)
 - [Support/Discussion](discuss.md)
 - [Sponsor](sponsor.md)
-- [About FAQ](faq.md)
+- [General FAQ](faq.md)
 
 # USERS
 
