@@ -296,3 +296,9 @@ For example in Emacs with markdown-mode:
 - press TAB while in the table to realign it
 - to sum the Totals, select them from top left to bottom right, C-x * :
 - alternatively, you could probably make a nice yasnippet template for generating the markdown
+
+### A newer method
+
+https://gist.github.com/simonmichael/518148a9648661a55e13b8c0834c917a
+is a newer script, which makes a markdown or pdf invoice for hledger-reported time and expenses last month,
+from a pandoc markdown template and similarly-named .css file.
