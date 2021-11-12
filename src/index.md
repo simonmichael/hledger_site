@@ -118,7 +118,7 @@ taking only the best from other PTA tools and leaving the rest.
 Here are some things it provides out of the box:
 
 - Easy multi-currency double-entry accounting [using only a plain text file](#usage)
-- Easy [assisted data entry](add.html) or [CSV import][convert]
+- Easy [assisted data entry](add.html) or [CSV import][import-csv.html]
 - Easy zero-setup [command line], [terminal], and [web] user interfaces
 - Easy multi-period [balance sheet], [income statement], and [cashflow] reports
 - Easy summarising of account balances to a [desired depth][depth limiting]
