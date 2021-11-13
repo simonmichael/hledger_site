@@ -170,3 +170,6 @@ I have an iTerm2 Hotkey Window (a terminal that drops down on ALT-space) with si
 
        hledger-ui --watch --change date:today -f time.journal
 
+## Related
+
+https://github.com/linuxcaffe/task-timelog-hook for using hledger's time reporting with taskwarrior task start/stop times.
