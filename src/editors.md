@@ -102,6 +102,10 @@ A helper to browse TODO tags in the journal:
 
 <https://github.com/anekos/hledger-vim>
 
+### timedot-vim
+
+<https://github.com/linuxcaffe/timedot-vim>
+
 ## VS Code
 
 ### hledger-vscode
