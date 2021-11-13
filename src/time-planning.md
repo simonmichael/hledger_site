@@ -172,4 +172,4 @@ I have an iTerm2 Hotkey Window (a terminal that drops down on ALT-space) with si
 
 ## Related
 
-https://github.com/linuxcaffe/task-timelog-hook for using hledger's time reporting with taskwarrior task start/stop times.
+<https://github.com/linuxcaffe/task-timelog-hook> - use hledger for time reporting with Taskwarrior's task start/stop times.
