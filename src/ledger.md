@@ -1,5 +1,7 @@
 # hledger and Ledger
 
+<!-- toc -->
+
 ## How is hledger different from Ledger ?
 
 ### File format differences
