@@ -243,6 +243,7 @@ higher level reports like [`balancesheet`], [`cashflow`] and
 [`incomestatement`]: hledger.html#incomestatement
 
 ## hledger and other things
+
 ### Why did you start hledger ? How does it relate to Ledger ?
 
 I ([Simon Michael](http://joyful.com)) discovered John Wiegley's [Ledger](http://ledger-cli.org) in 2006,
@@ -291,15 +292,6 @@ the [ledger-cli.org](http://ledger-cli.org) site,
 [LedgerTips](http://twitter.com/LedgerTips),
 IRC support on #ledger,
 and now [plaintextaccounting.org](http://plaintextaccounting.org).
-
-### What is ledger4 ?
-
-In 2012 John Wiegley made a start at rewriting parts of Ledger 3, eg the parser, in Haskell:
-[ledger4](https://github.com/ledger/ledger4).
-I included this in hledger for a while as an additional file format,
-hoping to attract help to improve this "bridge" between the hledger and Ledger projects,
-and improving our compatibility with Ledger's files.
-This didn't happen, and would have required a ton of work, so I removed it.
 
 ### How is hledger different from Ledger ?
 
@@ -518,4 +510,24 @@ We do not yet support:
 
 - hledger always splits multi-day time sessions at midnight, showing accurate per-day amounts.
   Ledger does this only with the `--day-break` flag.
+
+### How else is hledger different from Ledger/Beancount/GnuCash/Quicken/... ?
+
+Look for:
+
+- The project stats at <https://plaintextaccounting.org/#plain-text-accounting-apps>
+
+- A "hledger and X" page on this site (you may need to open the sidebar), such as 
+  [hledger and Beancount](beancount.html)
+
+- Comparisons at <https://plaintextaccounting.org/#comparisons>
+
+### What is ledger4 ?
+
+In 2012 John Wiegley made a start at rewriting parts of Ledger 3, eg the parser, in Haskell:
+[ledger4](https://github.com/ledger/ledger4).
+I included this in hledger for a while as an additional file format,
+hoping to attract help to improve this "bridge" between the hledger and Ledger projects,
+and improving our compatibility with Ledger's files.
+This didn't happen, and would have required a ton of work, so I removed it.
 
