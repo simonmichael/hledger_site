@@ -15,7 +15,6 @@ This is for you if you are hearing about hledger or Plain Text Accounting for th
 or if you are comparing hledger with other PTA tools.
 If you're already using hledger, see the [User FAQ](userfaq.html),
 and if you're contributing see the [Developer FAQ](devfaq.html)).
-
 If you'd like to help improve these FAQs we'd sure appreciate it. 
 Click the "Edit/PR this page" link at the bottom, or [chat](index.html#help) with us.
 
