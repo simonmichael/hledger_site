@@ -294,20 +294,18 @@ and now [plaintextaccounting.org](http://plaintextaccounting.org).
 
 ### How is hledger different from / interoperable with... ?
 
-Look for:
+Look for a "hledger and X" page on this site (click the top-left icon to open the sidebar).
+Eg:
 
-- Project stats at <https://plaintextaccounting.org/#plain-text-accounting-apps>
+- **[hledger and Ledger](ledger.md)**
+- [hledger and Beancount](beancount.html)
+- [hledger and GnuCash](gnucash.md)
+- [hledger and Quicken/Quickbooks](quicken.md)
 
-- A "hledger and X" page on this site (click the top-left icon to open the sidebar).
-  Eg
-  [hledger and Beancount](beancount.html),
-  [hledger and GnuCash](gnucash.md),
-  [hledger and Ledger](ledger.md),
-  [hledger and Quicken/Quickbooks](quicken.md),
-  ...
+See also:
 
+- <https://plaintextaccounting.org/#plain-text-accounting-apps> project stats
 - The [Syntax Quick Reference for the Ledger-Likes](https://plaintextaccounting.org/quickref)
-
 - The out of date <https://plaintextaccounting.org/#comparisons>
 
 ### What is ledger4 ?
