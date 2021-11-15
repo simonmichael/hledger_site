@@ -33,15 +33,17 @@ It clarifies activity, priorities, obligations, opportunities.
 ### What's double-entry accounting ?
 
 Double-entry bookkeeping is the traditional method for keeping accounting records reliably. 
-For every movement of value (a transaction), both the source and destination are recorded
-(and labelled "Credit" and "Debit").
+For every movement of value (a transaction), both the source and destination are recorded.
+These are labelled "Credit" and "Debit", to minimise working with negative numbers.
 Simple arithmetic invariants help prevent errors.
 
 ### What's plain text accounting ?
 
 Plain Text Accounting, or PTA, is a modern way of doing double entry accounting on a computer:
 - It uses simple text files and "small" tools rather than databases and big applications.
-- It uses minus and plus signs instead of Credit and Debit notation (usually).
+- It substitutes minus and plus signs for Credit and Debit notation (usually), which many people find easier.
+- It makes financial data easy to version control, audit, and collaborate on.
+- It is flexible, programmable, portable, durable, and private.
 
 You can read more about it at https://plaintextaccounting.org .
 Currently this FAQ overlaps a bit with that one.
