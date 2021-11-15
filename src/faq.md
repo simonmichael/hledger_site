@@ -19,6 +19,7 @@ and if you're contributing see the [Developer FAQ](devfaq.html).
 Click the "edit this page" link at the bottom, or [chat](index.html#help) with us.)
 
 ## Plain Text Accounting
+
 ### What's accounting ?
 
 [Accounting](https://en.wikipedia.org/wiki/Accounting) means keeping track of the flow and whereabouts of things you value, 
@@ -48,6 +49,13 @@ Plain Text Accounting, or PTA, is a modern way of doing double entry accounting 
 
 You can read more about it at <https://plaintextaccounting.org>.
 Currently this FAQ overlaps a bit with that one.
+
+## hledger and PTA
+
+### What's hledger ?
+
+One of the best tools for doing Plain Text Accounting.
+It's free and you can read all about it at the <https://hledger.org> home page.
 
 ### We use another system, we don't need this ?
 
@@ -81,7 +89,6 @@ Any standard set of account names you're familiar with. Feel free to copy list f
 - we are not that large and organised yet
 - no-one has stepped up and worked on it.
 
-## hledger and PTA
 ### What can hledger do for me ?
 
 hledger is a suite of reporting tools which can provide clarity and
