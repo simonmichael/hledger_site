@@ -511,7 +511,7 @@ We do not yet support:
 - hledger always splits multi-day time sessions at midnight, showing accurate per-day amounts.
   Ledger does this only with the `--day-break` flag.
 
-### How else is hledger different from Ledger/Beancount/GnuCash/Quicken/... ?
+### How else is hledger different from Ledger/Beancount/GnuCash/Quicken/X... ?
 
 Look for:
 
@@ -520,9 +520,9 @@ Look for:
 - A "hledger and X" page on this site (you may need to open the sidebar), such as 
   [hledger and Beancount](beancount.html)
 
-- Comparisons at <https://plaintextaccounting.org/#comparisons>
-
 - The [Syntax Quick Reference for the Ledger-Likes](https://plaintextaccounting.org/quickref)
+
+- The out of date comparisons at <https://plaintextaccounting.org/#comparisons>
 
 ### What is ledger4 ?
 
