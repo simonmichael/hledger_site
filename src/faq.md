@@ -1,8 +1,12 @@
 # Newcomer FAQ
 
+<div align=center>
+
   Newcomer FAQ
 | [User FAQ](userfaq.html)
 | [Developer FAQ](devfaq.html)
+
+</div>
 
 <!-- toc -->
 
