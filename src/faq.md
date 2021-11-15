@@ -10,7 +10,7 @@
 
 <!-- toc -->
 
-This FAQ is for you if you are hearing about hledger or Plain Text Accounting for the first time,
+Welcome! This FAQ is for you if you are hearing about hledger or Plain Text Accounting for the first time,
 or if you are comparing hledger with other PTA tools.
 If you're already using hledger, see the [User FAQ](userfaq.html),
 and if you're contributing see the [Developer FAQ](devfaq.html).
