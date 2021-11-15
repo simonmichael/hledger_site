@@ -14,19 +14,36 @@ Welcome to the hledger Newcomer FAQ!
 This is for you if you are hearing about hledger or Plain Text Accounting for the first time,
 or if you are comparing hledger with other PTA tools.
 If you're already using hledger, see the [User FAQ](userfaq.html),
-and if you're contributing see the [Developer FAQ](devfaq.html)).
-If you'd like to help improve these FAQs we'd sure appreciate it. 
-Click the "Edit/PR this page" link at the bottom, or [chat](index.html#help) with us.
+and if you're contributing see the [Developer FAQ](devfaq.html).
 
-## Why would I need to keep accounts ?
+(If you'd like to help improve these FAQs we'd sure appreciate it. 
+Click the "Edit/PR this page" link at the bottom, or [chat](index.html#help) with us.)
+
+## What's accounting ?
+
+Accounting means keeping track of the flow and whereabouts of things you value, 
+such as money or time. 
+
+## Why might I want to do accounting ?
 
 For clarity, control, planning, accountability, compliance, tax reporting, tax audits. 
 It clarifies activity, priorities, obligations, opportunities.
 
 ## What's double-entry accounting ?
 
-Accounting means keeping track of the flow of valuable commodities, such as money or time. 
-Double-entry bookkeeping is a method for keeping accounting records reliably. For every movement of value (a transaction), both the source and destination are recorded. Simple arithmetic invariants help prevent errors.
+Double-entry bookkeeping is the traditional method for keeping accounting records reliably. 
+For every movement of value (a transaction), both the source and destination are recorded
+(and labelled "Credit" and "Debit").
+Simple arithmetic invariants help prevent errors.
+
+## What's plain text accounting ?
+
+Plain Text Accounting, or PTA, is a modern way of doing double entry accounting on a computer:
+- It uses simple text files and "small" tools rather than databases and big applications.
+- It uses minus and plus signs instead of Credit and Debit notation (usually).
+
+You can read more about it at https://plaintextaccounting.org .
+Currently this FAQ overlaps a bit with that one.
 
 ## We use another system, we don't need this ?
 
