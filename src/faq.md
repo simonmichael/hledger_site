@@ -519,7 +519,7 @@ Look for:
 
 - A "hledger and X" page on this site, such as 
   [hledger and Beancount](beancount.html)
-   (you may need to open the sidebar)
+   (click the top-left icon to open the sidebar)
 
 - The [Syntax Quick Reference for the Ledger-Likes](https://plaintextaccounting.org/quickref)
 
