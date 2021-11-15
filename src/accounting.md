@@ -9,6 +9,21 @@ Here we'll give a quick hledger-oriented intro to some useful accounting concept
 Also we'll discuss account hierarchy in hledger.
 At the end, there's a collection of useful links to learn more.
 
+
+## A note on debits and credits
+
+Conventional double-entry accounting uses a system of debits and credits to
+ensure that, in every transaction, total debits equal total credits.
+However, hledger and other ledger-likes instead use positive and negative
+numbers and ensure that, in every transaction, the sum of all amounts is zero.
+This has the same result, but in hledger equity, liabilities, and revenue are
+conventionally negative numbers.
+
+In what follows we use the general accounting system of debits and credits.
+Within hledger the accounting equations will be the same, except that equity,
+liabilities, and revenues will have the opposite sign.
+
+
 ## Assets, Liabilities and Equity
 
 Accounting describes the status of a business, person or other entity at any point in time in terms of three amounts:
