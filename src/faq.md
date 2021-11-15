@@ -1,5 +1,9 @@
 # Newcomer FAQ
 
+  Newcomer FAQ
+| [User FAQ](userfaq.html)
+| [Developer FAQ](devfaq.html)
+
 <!-- toc -->
 
 Welcome to the hledger "About" FAQ! (See also the [User FAQ](userfaq.html) and [Developer FAQ](devfaq.html)).

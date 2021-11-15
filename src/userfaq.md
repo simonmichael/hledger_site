@@ -1,5 +1,9 @@
 # User FAQ
 
+  [Newcomer FAQ](faq.html)
+| User FAQ
+| [Developer FAQ](devfaq.html)
+
 <!-- toc -->
 
 ## How do I report by financial year, not calendar year ?
