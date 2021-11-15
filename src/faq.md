@@ -287,12 +287,12 @@ and now [plaintextaccounting.org](http://plaintextaccounting.org).
 
 ## What is ledger4 ?
 
-[ledger4](https://github.com/ledger/ledger4) was John's 2012 start
-at rewriting parts of Ledger 3, eg the parser, in Haskell.
-We included this in hledger for a while, 
-hoping to attract contributions to improve this "bridge" between the projects,
-and improve our support for reading Ledger's files.
-After some time it was removed again.
+In 2012 John Wiegley made a start at rewriting parts of Ledger 3, eg the parser, in Haskell:
+[ledger4](https://github.com/ledger/ledger4).
+I included this in hledger for a while as an additional file format,
+hoping to attract help to improve this "bridge" between the hledger and Ledger projects,
+and improving our compatibility with Ledger's files.
+This didn't happen, and would have required a ton of work, so I removed it.
 
 ## How is hledger different from Ledger ?
 
