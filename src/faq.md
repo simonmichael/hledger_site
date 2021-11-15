@@ -511,7 +511,7 @@ We do not yet support:
 - hledger always splits multi-day time sessions at midnight, showing accurate per-day amounts.
   Ledger does this only with the `--day-break` flag.
 
-### How is hledger different from / interoperable with ... ?
+### How is hledger different from / interoperable with \<X> ?
 
 Look for:
 
