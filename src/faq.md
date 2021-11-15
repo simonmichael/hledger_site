@@ -19,24 +19,25 @@ and if you're contributing see the [Developer FAQ](devfaq.html).
 (If you'd like to help improve these FAQs we'd sure appreciate it. 
 Click the "Edit/PR this page" link at the bottom, or [chat](index.html#help) with us.)
 
-## What's accounting ?
+## Plain Text Accounting
+### What's accounting ?
 
 Accounting means keeping track of the flow and whereabouts of things you value, 
 such as money or time. 
 
-## Why might I want to do accounting ?
+### Why might I want to do accounting ?
 
 For clarity, control, planning, accountability, compliance, tax reporting, tax audits. 
 It clarifies activity, priorities, obligations, opportunities.
 
-## What's double-entry accounting ?
+### What's double-entry accounting ?
 
 Double-entry bookkeeping is the traditional method for keeping accounting records reliably. 
 For every movement of value (a transaction), both the source and destination are recorded
 (and labelled "Credit" and "Debit").
 Simple arithmetic invariants help prevent errors.
 
-## What's plain text accounting ?
+### What's plain text accounting ?
 
 Plain Text Accounting, or PTA, is a modern way of doing double entry accounting on a computer:
 - It uses simple text files and "small" tools rather than databases and big applications.
@@ -45,13 +46,13 @@ Plain Text Accounting, or PTA, is a modern way of doing double entry accounting 
 You can read more about it at https://plaintextaccounting.org .
 Currently this FAQ overlaps a bit with that one.
 
-## We use another system, we don't need this ?
+### We use another system, we don't need this ?
 
 Every tool has strengths and weaknesses. 
 hledger is lightweight, flexible and relatively easy to glue into other systems; 
 it might be worth exploring as a complementary tool.
 
-## How do I convey the information in this to my accountant for tax work / to auditors for financial statements ?
+### How do you collaborate with accountants and the non-PTA world ?
 
 Depending on their needs, you send them a few standard reports (balance sheet, income statement, itemized account registers or a full transaction journal)
 
@@ -60,7 +61,7 @@ Depending on their needs, you send them a few standard reports (balance sheet, i
 - or as PDF
 - or as CSV they can import into Excel and elsewhere
 
-## I have to enter data in a text editor ??
+### Must I enter data in a text editor ??
 
 No. A good text editor can be a very efficient way to work on your data, but there are other ways:
 
@@ -69,7 +70,7 @@ No. A good text editor can be a very efficient way to work on your data, but the
 - use a phone-based data entry app like MoLe
 - import CSV data, avoiding manual data entry.
 
-## What account names do I use? Why aren't there any default list of commonly used accounts the way other software provide ?
+### What account names do I use? Why isn't a default list provided ?
 
 Any standard set of account names you're familiar with. Feel free to copy list from any other software. A default list is a good idea, but right now we don't really provide one because
 
@@ -77,7 +78,8 @@ Any standard set of account names you're familiar with. Feel free to copy list f
 - we are not that large and organised yet
 - no-one has stepped up and worked on it.
 
-## What can hledger do for me ?
+## hledger and PTA
+### What can hledger do for me ?
 
 hledger is a suite of reporting tools which can provide clarity and
 insight into your personal or business finances, time logs, or other
@@ -127,7 +129,7 @@ Also, it can:
 - help you convert and import new transactions from external sources, eg banks
 - be used as a library in a quick Haskell script or compiled program
 
-## How could that help me ?
+### How could that help me ?
 
 - More clarity, transparency and accountability, for yourself or others
 - Know what you owe, or who owes you
@@ -138,7 +140,7 @@ Also, it can:
 - Less stress, fear or overwhelm
 - More satisfaction, empowerment, and prosperity!
 
-## Isn't manual data entry a pain ?
+### Isn't manual data entry a pain ?
 
 - Not if you spend a few minutes every day.
 - Not if the benefits are worth it to you.
@@ -146,7 +148,7 @@ Also, it can:
 - Not if you use tools to help (editor modes, hledger add, hledger-iadd, hledger-web..)
 - Not if you use rules to generate your recurring transactions.
 
-## Isn't importing from banks a pain ?
+### Isn't importing from banks a pain ?
 
 Not once you have set up a manual or automated routine for it.
 The possibilities vary by bank and country, but here are two simple
@@ -164,7 +166,7 @@ Automated CSV import:
 
 Ask us for help setting this up. See also [How could I import/migrate from...](#how-could-i-import-migrate-from).
 
-## Isn't plain text ugly and hard to use ?
+### Isn't plain text ugly and hard to use ?
 
 No way, it's great, honest.
 We love it.
@@ -193,13 +195,13 @@ changes, and revision-control it. We want to search and manipulate it
 efficiently. So, we store it as human-readable plain text.*
 --<http://plaintextaccounting.org>
 
-## Isn't this too weird for my family, business partners, tax accountant to use ?
+### Isn't this too weird for my family, business partners, tax accountant to use ?
 
 Maybe. You can ask them to enter data via hledger-web, 
 or import from their mobile expenses app or a shared spreadsheet.
 You can show them the hledger-web UI, or HTML reports, or give them CSV to open in a spreadsheet.
 
-## Why are revenues, liabilities, equity negative ?
+### Why are revenues, liabilities, equity negative ?
 
 It's characterisic of plain text accounting tools that balances of
 revenue, liability and equity accounts normally appear as negative
@@ -236,7 +238,8 @@ higher level reports like [`balancesheet`], [`cashflow`] and
 [`cashflow`]:        hledger.html#cashflow
 [`incomestatement`]: hledger.html#incomestatement
 
-## Why did you start hledger ? How does it relate to Ledger ?
+## hledger and other things
+### Why did you start hledger ? How does it relate to Ledger ?
 
 I ([Simon Michael](http://joyful.com)) discovered John Wiegley's [Ledger](http://ledger-cli.org) in 2006,
 and was very happy to find this efficient command-line reporting tool with a transparent data format.
@@ -285,7 +288,7 @@ the [ledger-cli.org](http://ledger-cli.org) site,
 IRC support on #ledger,
 and now [plaintextaccounting.org](http://plaintextaccounting.org).
 
-## What is ledger4 ?
+### What is ledger4 ?
 
 In 2012 John Wiegley made a start at rewriting parts of Ledger 3, eg the parser, in Haskell:
 [ledger4](https://github.com/ledger/ledger4).
@@ -294,9 +297,9 @@ hoping to attract help to improve this "bridge" between the hledger and Ledger p
 and improving our compatibility with Ledger's files.
 This didn't happen, and would have required a ton of work, so I removed it.
 
-## How is hledger different from Ledger ?
+### How is hledger different from Ledger ?
 
-### File format differences
+#### File format differences
 
 hledger's journal file format is very similar to Ledger's.
 Some syntactic forms can be interpreted in slightly different ways,
@@ -323,7 +326,7 @@ hledger's timeclock format is also very similar to Ledger's.
 hledger also provides a new timedot format, allowing a different style
 of time logging.
 
-### Feature differences
+#### Feature differences
 
 Compared to Ledger, hledger builds quickly and has a complete and
 accurate manual, an easier report query syntax, multi-column balance
@@ -387,9 +390,9 @@ We do not yet support:
 - reporting lots (`--lots`)
 - value expressions
 
-### Functional differences
+#### Functional differences
 
-#### Command line interface
+##### Command line interface
 
 - hledger does not require a space between command-line flags and their values,
   eg `-fFILE` works as well as `-f FILE`
@@ -448,7 +451,7 @@ We do not yet support:
 - hledger [period expressions](hledger.html#period-expressions) (up to 1.17) 
   don't understand `until`, use `to` instead.
 
-#### journal format
+##### journal format
 
 - hledger supports international number formats, auto-detecting the
   decimal mark (comma or period), digit group mark (period, comma, or
@@ -498,7 +501,7 @@ We do not yet support:
   amount by a constant), not a full embedded expression language like
   Ledger.
 
-#### timeclock & timedot formats
+##### timeclock & timedot formats
 
 - hledger's journal, timeclock and timedot formats are separate; you can't 
   mix them all in one file as in Ledger.
@@ -507,7 +510,7 @@ We do not yet support:
   
 - hledger always shows time balances (from the timeclock/timedot formats) in hours
 
-#### timeclock format
+##### timeclock format
 
 - hledger always splits multi-day time sessions at midnight, showing accurate per-day amounts.
   Ledger does this only with the `--day-break` flag.
