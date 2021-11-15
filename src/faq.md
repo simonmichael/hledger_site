@@ -16,8 +16,7 @@ or if you are comparing hledger with other PTA tools.
 If you're already using hledger, see the [User FAQ](userfaq.html),
 and if you're contributing see the [Developer FAQ](devfaq.html)).
 
-This FAQ has not yet received a lot of maintenance and is a bit limited/verbose/disorganised. 
-Sorry! If you'd like to help we'd sure appreciate it. 
+If you'd like to help improve these FAQs we'd sure appreciate it. 
 Click the "Edit/PR this page" link at the bottom, or [chat](index.html#help) with us.
 
 ## Why would I need to keep accounts ?
