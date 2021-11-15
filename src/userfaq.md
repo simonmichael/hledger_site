@@ -2,6 +2,22 @@
 
 <!-- toc -->
 
+## How do I report by financial year, not calendar year ?
+
+[`-Y/--yearly`](hledger.html#report-intervals), [`-p/--period 'every year'`](hledger.html##period-expressions), etc. 
+show Gregorian calendar years, starting on January 1st. 
+To show years starting with a different month, use `every 12 months from DATE`.
+Eg, to show years starting on April 1st (the register command is good for testing this):
+```
+hledger reg -p 'every 12 months from 2019-04-01'
+```
+
+To show years not starting on a month boundary, approximate it with `every 365 days from DATE`
+(this won't be exact for leap years):
+```
+hledger reg -p 'every 365 days from 2019-04-06'
+```
+
 ## Why does this entry give a "no amount" error even though I wrote an amount ?
 
 ```journal
