@@ -23,7 +23,7 @@ Click the "Edit/PR this page" link at the bottom, or [chat](index.html#help) wit
 ### What's accounting ?
 
 [Accounting](https://en.wikipedia.org/wiki/Accounting) means keeping track of the flow and whereabouts of things you value, 
-such as money or time. 
+such as money or time, and using this information for insight, planning and decision-making.
 Here's hledger's [Accounting concepts](accounting.html) page
 and [Accounting links](accounting.html#accounting-links).
 
