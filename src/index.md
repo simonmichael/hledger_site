@@ -27,6 +27,7 @@ It is a more actively maintained, largely compatible reimplementation of Ledger 
 with a particular focus on ease of use and robustness.
 
 *Quick links:
+[FAQ](faq.html),
 [install](download.html),
 [getting started](start.html),
 [manual](hledger.html),
