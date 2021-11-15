@@ -207,13 +207,19 @@ $ hledger print | sed 's/\./~/g; s/,/./g; s/~/,/g'
 ```
 ## How do I control the number of decimal places displayed ?
 
-Use a commodity directive <!-- ](journal.html#declaring-commodities) -->
-to  set the commodity's [display style](journal.html#commodity-display-style).
+With hledger < 1.23:
+use a [commodity directive](hledger.html#declaring-commodities)
+to set commodities' [display styles](journal.html#commodity-display-style).
 Eg:
 ```journal
 commodity $1000.00
 commodity EUR 1.000,
 commodity 1000.00000000 BTC
+```
+
+With hledger 1.23+, you can also use the `-c/--commodity-style` option. Eg:
+```shell
+hledger -c '$1000.00' -c 'EUR 1.000,' -c '1000.00000000 BTC' bal
 ```
 
 ## How could I import/migrate from...
