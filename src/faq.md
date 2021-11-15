@@ -10,7 +10,10 @@
 
 <!-- toc -->
 
-Welcome to the hledger "About" FAQ! (See also the [User FAQ](userfaq.html) and [Developer FAQ](devfaq.html)).
+Welcome to the hledger Newcomer FAQ!
+This is mainly for people hearing about hledger or Plain Text Accounting for the first time.
+If you're using hledger see also the [User FAQ](userfaq.html),
+and if you're contributing see the [Developer FAQ](devfaq.html)).
 
 This FAQ has not yet received a lot of maintenance and is a bit limited/verbose/disorganised. 
 Sorry! If you'd like to help we'd sure appreciate it. 
