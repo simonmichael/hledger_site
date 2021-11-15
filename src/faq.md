@@ -22,8 +22,10 @@ Click the "Edit/PR this page" link at the bottom, or [chat](index.html#help) wit
 ## Plain Text Accounting
 ### What's accounting ?
 
-Accounting means keeping track of the flow and whereabouts of things you value, 
+[Accounting](https://en.wikipedia.org/wiki/Accounting) means keeping track of the flow and whereabouts of things you value, 
 such as money or time. 
+Here's hledger's [Accounting concepts](accounting.html) page
+and [Accounting links](accounting.html#accounting-links).
 
 ### Why might I want to do accounting ?
 
@@ -32,7 +34,7 @@ It clarifies activity, priorities, obligations, opportunities.
 
 ### What's double-entry accounting ?
 
-Double-entry bookkeeping is the traditional method for keeping accounting records reliably. 
+[Double-entry bookkeeping](https://en.wikipedia.org/wiki/Double-entry_bookkeeping) is the traditional method for keeping accounting records reliably. 
 For every movement of value (a transaction), both the source and destination are recorded.
 These are labelled "Credit" and "Debit", to minimise working with negative numbers.
 Simple arithmetic invariants help prevent errors.
@@ -42,10 +44,10 @@ Simple arithmetic invariants help prevent errors.
 Plain Text Accounting, or PTA, is a modern way of doing double entry accounting on a computer:
 - It uses simple text files and "small" tools rather than databases and big applications.
 - It substitutes minus and plus signs for Credit and Debit notation (usually), which many people find easier.
-- It makes financial data easy to version control, audit, and collaborate on.
+- It makes financial data easy to [version-control](https://en.wikipedia.org/wiki/Version_control), audit, and collaborate on.
 - It is flexible, programmable, portable, durable, and private.
 
-You can read more about it at https://plaintextaccounting.org .
+You can read more about it at <https://plaintextaccounting.org>.
 Currently this FAQ overlaps a bit with that one.
 
 ### We use another system, we don't need this ?
