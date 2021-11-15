@@ -517,12 +517,13 @@ Look for:
 
 - Project stats at <https://plaintextaccounting.org/#plain-text-accounting-apps>
 
-- A "hledger and X" page on this site (you may need to open the sidebar), such as 
+- A "hledger and X" page on this site, such as 
   [hledger and Beancount](beancount.html)
+   (you may need to open the sidebar)
 
 - The [Syntax Quick Reference for the Ledger-Likes](https://plaintextaccounting.org/quickref)
 
-- The out of date comparisons at <https://plaintextaccounting.org/#comparisons>
+- The out of date <https://plaintextaccounting.org/#comparisons>
 
 ### What is ledger4 ?
 
