@@ -1,8 +1,8 @@
-# Newcomer FAQ
+# General FAQ
 
 <div align=center>
 
-  Newcomer FAQ
+  General FAQ
 | [User FAQ](userfaq.html)
 | [Developer FAQ](devfaq.html)
 
