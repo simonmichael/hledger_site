@@ -6,11 +6,14 @@
 
 Tips and techniques for producing graphical charts. 
 
-Generally we run a hledger report and select [CSV output](hledger.html#output-format)
-(and disable unwanted features like the Total row):
+Generally we run a hledger report and
+- select [CSV(/SSV/TSV) output](hledger.html#output-format) (-o foo.csv)
+- disable the Total row (-N/--no-total))
+- and show numbers apart from their commodity symbols (--commodity-column; or in hledger master, --layout=bare)
+
 Eg:
 ```
-hledger bal assets liabilities --no-total -o report.csv
+hledger bal assets liabilities --no-total --commodity-column -o report.csv
 ```
 
 Then there are many ways to convert CSV to charts.
