@@ -107,5 +107,6 @@ snapshot-%:
 	mkdir -p src/$* && \
 	for f in $(MANUALS); do test -e $$f && cp $$f src/$*; done && \
 	git -C .. checkout master && \
-	git add src/$* && git commit -m "snapshot of $* manuals" src/$*
+	git add src/$* && git commit -m "snapshot of $* manuals" src/$* && \
+	echo "remember to point the src/current symlink to the current release manuals"
 
