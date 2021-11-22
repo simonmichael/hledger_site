@@ -168,11 +168,11 @@ But here are some common changes people make sooner or later, so why not now:
 
   ; Declare top level accounts, setting their types and display order;
   ; Replace these account names with yours; it helps commands like bs and is detect them.
-  account assets      ; type:A, things I own
-  account liabilities ; type:L, things I owe
-  account equity      ; type:E, net worth or "total investment"; equal to A - L
-  account revenues    ; type:R, inflow categories; part of E, separated for reporting
-  account expenses    ; type:X, outflow categories; part of E, separated for reporting
+  account assets       ; type:A, things I own
+  account liabilities  ; type:L, things I owe
+  account equity       ; type:E, net worth or "total investment"; equal to A - L
+  account revenues     ; type:R, inflow categories; part of E, separated for reporting
+  account expenses     ; type:X, outflow categories; part of E, separated for reporting
 
   ; Declare commodities/currencies and their decimal mark, digit grouping,
   ; number of decimal places..
