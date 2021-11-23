@@ -62,7 +62,7 @@
 - [Rewrite commodity symbols](rewrite-commodity-symbols.md)
 - [Save frequently used options](save-frequently-used-options.md)
 - [Scripting](scripting.md)
-- [Simon's setup](simons-setup.md)
+- [Simon's setup notes](simons-setup.md)
 - [Sponsor](sponsor.md)
 - [Tags tutorial](tags-tutorial.md)
 - [Time planning](time-planning.md)
@@ -78,9 +78,9 @@
 - [hledger and GnuCash](gnucash.md)
 - [hledger and Ledger](ledger.md)
 - [hledger and Quicken/Quickbooks](quicken.md)
-- [hledger manual](hledger.md)
-- [hledger-ui manual](hledger-ui.md)
-- [hledger-web manual](hledger-web.md)
+- [hledger manual](dev/hledger.md)
+- [hledger-ui manual](dev/hledger-ui.md)
+- [hledger-web manual](dev/hledger-web.md)
 - [hledger-web tips](hledger-web-tips.md)
 <!-- [Depreciation](http://rantsideasstuff.com/posts/2018/07/08-depreciation-in-personal-finance-with-hledger) -->
 

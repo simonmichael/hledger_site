@@ -1,4 +1,4 @@
-# Simon's setup
+# Simon's setup notes
 
 <div class=pagetoc>
 <!-- toc -->
