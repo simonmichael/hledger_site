@@ -78,9 +78,9 @@
 - [hledger and GnuCash](gnucash.md)
 - [hledger and Ledger](ledger.md)
 - [hledger and Quicken/Quickbooks](quicken.md)
-- [hledger manual](dev/hledger.md)
-- [hledger-ui manual](dev/hledger-ui.md)
-- [hledger-web manual](dev/hledger-web.md)
+- [hledger manual](hledger.md)
+- [hledger-ui manual](hledger-ui.md)
+- [hledger-web manual](hledger-web.md)
 - [hledger-web tips](hledger-web-tips.md)
 <!-- [Depreciation](http://rantsideasstuff.com/posts/2018/07/08-depreciation-in-personal-finance-with-hledger) -->
 
