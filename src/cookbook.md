@@ -1,8 +1,8 @@
-# The hledger Cookbook
+# The hledger User Cookbook
 
-Additional docs, notes and practical tips for hledger users.
-These vary in age, quality and target audience.
-Follow any links to the official [manuals](manuals.html) for further explanations.
+A somewhat random pile of additional docs, notes and tips for hledger users,
+of various freshness and quality.
+Follow any links to the official [manuals](manuals.html) for more info.
 
 
 <div style="float:left;">
