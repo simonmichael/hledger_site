@@ -41,6 +41,16 @@ Follow any links to the official [manuals](manuals.html) for further explanation
 </div>
 <div style="float:right;">
 
+### Setups/workflows
+
+- [Quick Start's setup](quickstart.html#set-up-a-journal)
+- [hledger manual's setup](hledger.html#starting-a-journal-file)
+- [Simon's setup](simons-setup.html)
+- Dmitry Astapov's [Full-fledged Hledger](https://github.com/adept/full-fledged-hledger)
+- Andreas Pauley's [Hledger Flow](https://github.com/apauley/hledger-flow)
+- rotorkunstkultur's [rtrLEDGER](https://github.com/rotorkunstkultur/rtrledger)
+- [Michael Walker's setup](https://memo.barrucadu.co.uk/personal-finance.html)
+
 ### Accounting tasks
 
 - [Accounting concepts](accounting.md)
