@@ -17,8 +17,17 @@ For simplicity, let's assume we are just exchanging cash with a friend:
 ```
 
 hledger understands that 10 dollars were converted to 8.50 euros.
-The conversion rate is inferred so as to balance the transaction
-(and can be seen with `hledger print -x`).
+A conversion rate is inferred automatically so as to make the transaction balance.
+(This can be seen with `hledger print -x`.)
+
+<!--
+```shell
+$ hledger print -x
+2021-07-27 give dollars, get euros
+    assets:cash    USD -10.00 @@ EUR 8.50
+    assets:cash                  EUR 8.50
+```
+-->
 
 This is easy to write and to understand; it's fine for getting started.
 However it is not a fully correct double-entry-bookkeeping journal entry,

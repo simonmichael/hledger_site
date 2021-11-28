@@ -43,6 +43,7 @@
 - [Common journal entries](common-journal-entries.md)
 - [Create a journal](create-a-journal.md)
 - [Currency conversion](currency-conversion.md)
+- [Currency conversion 2](conversion2.md)
 - [Editor configuration](editors.md)
 - [Exporting from hledger](export.md)
 - [Foreign trip expenses](foreign-trip-expenses.md)
