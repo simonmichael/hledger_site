@@ -58,7 +58,8 @@ Follow any links to the official [manuals](manuals.html) for more info.
 - [Budgeting](budgeting.md)
 - [Budgeting and Forecasting (2018)](budgeting-and-forecasting.md)
 - [Common journal entries](common-journal-entries.md)
-- [Currency conversion](currency-conversion.md)
+- [Currency conversion](currency-conversion.md) and 
+  [Currency conversion 2](conversion2.md)
 <!-- [Depreciation](http://rantsideasstuff.com/posts/2018/07/08-depreciation-in-personal-finance-with-hledger) -->
 - [Foreign trip expenses](foreign-trip-expenses.md)
 - [Invoicing](invoicing.md)
