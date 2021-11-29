@@ -375,4 +375,6 @@ optional-argument option `--cost[=nocost|cost|conversion]`:
   `--cost` is unaffected, working as it normally would without the
   equity postings.
 
-
+- Should inferred postings be displayed by `print --infer-equity`, or
+  only by `print --infer-equity --explicit` ? (`-x/--explicit` is
+  required to see other infered things like amounts and prices)
