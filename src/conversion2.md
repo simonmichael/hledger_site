@@ -337,10 +337,11 @@ optional-argument option `--cost[=nocost|cost|conversion]`:
   it would probably be on by default and there would probably be a
   `--no-infer-equity` to disable it.
 
-- Generated equity postings will be of this form:
+- From a conversion from FROMCOMM to TOCOMM, 
+  generated equity postings will have the form:
   ```
-  EQUITYACCT:FROMCOMM:TOCOMM        TOCOMMAMT
-  EQUITYACCT:TOCOMM:FROMCOMM     -FROMCOMMAMT
+  EQUITYACCT:FROMCOMM:TOCOMM       -TOCOMMAMT
+  EQUITYACCT:TOCOMM:FROMCOMM      FROMCOMMAMT
   ```
   - FROMCOMMAMT is the negative amount, TOCOMMAMT is the positive one
   - FROMCOMM, TOCOMM are the corresponding commodity symbols
@@ -356,8 +357,8 @@ optional-argument option `--cost[=nocost|cost|conversion]`:
 
    Or, they might be of this simpler form, it's not yet decided:
   ```
-  EQUITYACCT:COMMPAIR        TOCOMMAMT
-  EQUITYACCT:COMMPAIR     -FROMCOMMAMT
+  EQUITYACCT:COMMPAIR       -TOCOMMAMT
+  EQUITYACCT:COMMPAIR      FROMCOMMAMT
   ```
   - COMMPAIR is the two commodity symbols concatenated in alphabetic order
 
