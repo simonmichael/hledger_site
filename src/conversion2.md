@@ -162,7 +162,7 @@ Here's an attempted summary:
    
 #### Current draft docs
 
-> # COSTING
+> \# COSTING
 >
 > The `--cost=TYPE` option and the `-B` flag control how hledger handles any
 > [transaction prices](#transaction-prices) which are specified.
