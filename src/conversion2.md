@@ -353,7 +353,14 @@ optional-argument option `--cost[=nocost|cost|conversion]`:
     account equity:opening balances
     etc..
     ```
-    
+
+   Or, they might be of this simpler form, it's not yet decided:
+  ```
+  EQUITYACCT:COMMPAIR        TOCOMMAMT
+  EQUITYACCT:COMMPAIR     -FROMCOMMAMT
+  ```
+  - COMMPAIR is the two commodity symbols concatenated in alphabetic order
+
 #### Interactions / impact / compatibility
 
 - There is no change to default behaviour at this stage.
@@ -366,6 +373,9 @@ optional-argument option `--cost[=nocost|cost|conversion]`:
 - What's a better way to specify the conversion account(s) ? Should
   there be a new Conversion or Trade account type, a subtype of
   Equity, and the first account declared with that type is used ?
+
+- How many equity subaccounts are needed ? Is `EQUITYACCT:COMMPAIR` sufficient ?
+  Can per-direction reports still be achieved by filtering on amount sign ?
 
 - I think equity postings and conversion prices must be allowed to
   coexist somehow. It should be possible to record both in a
