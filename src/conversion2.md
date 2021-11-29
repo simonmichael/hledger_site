@@ -13,6 +13,7 @@ In plain text accounting, there are two ways to record such conversions:
 
 Balance both commodities against an Equity account. Eg:
 
+<!-- 1a.j -->
 ```journal
 2021-01-01
   assets:usd                -1.20 USD
@@ -23,6 +24,7 @@ Balance both commodities against an Equity account. Eg:
 
 or, equivalently:
 
+<!-- 1b.j -->
 ```journal
 2021-01-01
   assets:usd                -1.20 USD
@@ -35,6 +37,7 @@ or, equivalently:
 PTA tools provide the @ (or @@) notation for specifying a conversion price
 (essentially; Ledger/Beancount also provide an alternate {} notation):
 
+<!-- 2a.j -->
 ```journal
 2021-01-01
   assets:usd                -1.20 USD
@@ -50,6 +53,7 @@ Note the redundancy in this entry; the two amounts and the @ price must agree.
 This provides some extra error checking, but you can also write it non-redundantly, 
 by omitting an amount:
 
+<!-- 2b.j -->
 ```journal
 2021-01-01
   assets:usd                           ; the -1.20 USD amount is inferred
@@ -58,6 +62,7 @@ by omitting an amount:
 
 or the conversion price:
 
+<!-- 2c.j -->
 ```journal
 2021-01-01
   assets:usd                -1.20 USD
@@ -115,7 +120,7 @@ $ hledger -f 2a.j bal
            -1.20 USD  
 ```
 
-With this method, the zero total can be seen only if all amounts are converted to cost:
+The zero total can be seen only if all amounts are converted to cost:
 
 ```shell
 $ hledger -f 2a.j bal --cost
@@ -125,3 +130,117 @@ $ hledger -f 2a.j bal --cost
                    0  
 ```
 
+### Summary
+
+The equity method: 
+
+- doesn't support cost reporting.
+
+The @ method:
+
+- doesn't support gain/loss reporting
+- doesn't maintain balanced accounts.
+
+---
+The rest of this page is about future versions of hledger.
+
+## Improvement proposals
+
+There was much discussion of this issue at <https://github.com/simonmichael/hledger/issues/1177>.
+
+### Xitian's #1554
+
+<https://github.com/simonmichael/hledger/pull/1554>.
+Here's an attempted summary:
+
+#### Goals / problems tackled
+
+1. Allow entries written with the @ style to be converted on the fly to equity
+   style when appropriate.
+2. Allow all three of cost reporting, gain/loss reporting, and balanced accounts.
+3. Reduce required data entry effort.
+   
+#### Current draft docs
+
+> # COSTING
+>
+> The `--cost=TYPE` option and the `-B` flag control how hledger handles any
+> [transaction prices](#transaction-prices) which are specified.
+>
+> `-B / --cost / --cost=cost`
+> : Convert amounts to their cost or sale amount at transaction time.
+>
+> `--cost=conversion`
+> : Generate conversion postings to balance the transactions.
+>   This is the default for all reports except the `print` report.
+>
+> `--cost=nocost`
+> : Do no conversion of transaction prices.
+>   This is the default for the `print` report.
+>
+> When performing cost conversion and price valuation, hledger will always
+> perform cost conversion first, and market price valuations afterwards.
+
+#### User-visible changes
+
+1. The `-B/--cost` flag becomes a flag `-B` which works as before, and an
+optional-argument option `--cost[=nocost|cost|conversion]`:
+
+  - `--cost` or `--cost=cost`: works like `-B` (@-priced amounts are converted to cost)
+  - `--cost=conversion`: in each @-style entries with no equity postings, 
+     adds two equity postings of the form:
+     ```
+     equity:conversion:FIRSTCOMM:SECONDCOMM    FIRSTCOMMAMT
+     equity:conversion:FIRSTCOMM:SECONDCOMM   -SECONDCOMMAMT
+     ```
+     They are added dynamically (transiently), at report time.
+     They are allowed to coexist with the @ price without unbalancing the transaction
+     (which they would do if added explicitly by the user).
+  - `--cost=nocost`: does neither of the above (ie, nothing)
+
+2. `--cost=conversion` will be the default behaviour of all commands except
+   `print`. 
+   
+#### Interactions / impact / compatibility
+
+1. Commands using `-B` or `--cost` (with no argument) should work as before.
+
+2. In `conversion` mode, all reports should work as they normally would with
+   equity style entries.
+
+3. To mimic previous hledger behaviour (don't add equity postings to commodity
+   conversions), users will need to add `--cost=nocost` to commands.
+
+4. Except with `print`. `print` will have different default behaviour from all
+   other commands.
+
+#### Open questions
+
+- Want to avoid hard-coded "equity:conversion"
+- Why the :FIRSTCOMM:SECONDCOMM subaccounts, are they worth it ?
+- What journal entry variations are handled ?
+
+  - a commodity conversion with other unrelated postings in the transactions
+  - one commodity conversion involving more than two postings ?
+  - more than one commodity conversions in a transaction ?
+
+- Why is the new feature (`conversion`) integrated with the existing `--cost`
+  option ? 
+  Because they are closely related, and the combination of cost reporting
+  and equity postings is not supported (and not expected in future ?)
+
+- What other names, or other changes, could make this more clear and mnemonic ?
+- When should the new mode be made default behaviour ?
+- Why is `print` different, and is it worth it ?
+
+<!--
+###
+
+#### Goals / problems tackled
+
+#### User-visible changes
+
+#### Interactions
+
+#### Impact / compatibility
+-->
