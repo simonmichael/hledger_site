@@ -371,4 +371,8 @@ optional-argument option `--cost[=nocost|cost|conversion]`:
   coexist somehow. It should be possible to record both in a
   transaction's entry, and not have it rejected for being unbalanced.
 
+- What if you combine `--cost` and `--infer-equity` ? I think ideally
+  `--cost` is unaffected, working as it normally would without the
+  equity postings.
+
 
