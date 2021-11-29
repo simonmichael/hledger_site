@@ -268,14 +268,106 @@ optional-argument option `--cost[=nocost|cost|conversion]`:
 - When should the new mode be made default behaviour ?
 - Why is `print` different, and is it worth it ?
 
-<!--
-###
+### 1554-sm-1
 
 #### Goals / problems tackled
 
+1. Meet the goals of #1554 in a clearer way and more compatible way.
+
+#### Differences from 1554
+
+`-B/--cost` and default behaviour are not changed; a new flag is added for the new feature.
+
+#### Current draft docs
+
+```
+     --conversions=TYPE      how should hledger support conversions between
+                             commodities within a transaction ?
+
+                             implicit (default): allow one commodity to convert
+                             into another using a transaction price.
+                             Equity is not updated, which causes an imbalance.
+                             -B/--cost can be used to report the cost.
+                             The traditional Ledger/hledger behaviour.
+                             
+                             assisted: don't allow implicit conversion;
+                             in commodity conversion transactions which do not
+                             have equity postings, generate those automatically, 
+                             Equity will be balanced, -B/--cost can't be used.
+
+                             manual: don't allow implicit conversion and don't
+                             generate equity postings; those will need to be
+                             present explicitly in every conversion entry.
+                             Equity will be balanced, -B/--cost can't be used.
+```
+
+<!-- #### Sample tests -->
+
+<!-- #### User-visible changes -->
+
+<!-- #### Interactions / impact / compatibility -->
+
+### 1554-sm-2
+
+#### Goals / problems tackled
+
+1. Meet the goals of #1554 in a clearer way and more compatible way.
+
+#### Differences from 1554
+
+- `-B/--cost` and default behaviour are not changed
+- A new flag is added
+- The equity conversion account is configurable
+- The subaccounts are :FROM:TO, not :FIRST:SECOND.
+
+#### Current draft docs
+
+```
+     --infer-equity          in commodity conversion transactions which lack
+                             equity postings and rely on @/@@ prices to balance,
+                             add the missing equity postings.
+```
+
+<!-- #### Sample tests -->
+
 #### User-visible changes
 
-#### Interactions
+- The `--infer-equity` flag is added (consistent with
+  `--infer-market-prices`). It is off by default. In a future release
+  it would probably be on by default and there would probably be a
+  `--no-infer-equity` to disable it.
 
-#### Impact / compatibility
--->
+- Generated equity postings will be of this form:
+  ```
+  EQUITYACCT:FROMCOMM:TOCOMM        TOCOMMAMT
+  EQUITYACCT:TOCOMM:FROMCOMM     -FROMCOMMAMT
+  ```
+  - FROMCOMMAMT is the negative amount, TOCOMMAMT is the positive one
+  - FROMCOMM, TOCOMM are the corresponding commodity symbols
+  - EQUITYACCT is the first declared subaccount of the first
+    highest-level account declared with type Equity, falling back to
+    `equity:conversion`. So account declarations might be:
+    ```journal
+    account equity         ; type:E
+    account equity:trades
+    account equity:opening balances
+    etc..
+    ```
+    
+#### Interactions / impact / compatibility
+
+- There is no change to default behaviour at this stage.
+- With `--infer-equity`, all reports should work as if equity postings
+  had been written manually. (Assuming both equity postings and 
+  conversion prices were allowed to coexist.)
+
+#### Open questions
+
+- I think equity postings and conversion prices must be allowed to
+  coexist somehow. It should be possible to use both in a
+  transaction's entry, and not have it rejected for being unbalanced.
+
+- What's a better way to specify the conversion account(s) ? Should
+  there be a new Conversion or Trade account type, a subtype of
+  Equity, and the first account declared with that type is used ?
+
