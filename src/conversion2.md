@@ -272,7 +272,7 @@ optional-argument option `--cost[=nocost|cost|conversion]`:
 
 #### Goals / problems tackled
 
-1. Meet the goals of #1554 in a clearer way and more compatible way.
+1. Meet the goals of #1554 in a clearer and more compatible way.
 
 #### Differences from 1554
 
@@ -311,7 +311,7 @@ optional-argument option `--cost[=nocost|cost|conversion]`:
 
 #### Goals / problems tackled
 
-1. Meet the goals of #1554 in a clearer way and more compatible way.
+1. Meet the goals of #1554 in a clearer and more compatible way.
 
 #### Differences from 1554
 
@@ -363,11 +363,12 @@ optional-argument option `--cost[=nocost|cost|conversion]`:
 
 #### Open questions
 
-- I think equity postings and conversion prices must be allowed to
-  coexist somehow. It should be possible to use both in a
-  transaction's entry, and not have it rejected for being unbalanced.
-
 - What's a better way to specify the conversion account(s) ? Should
   there be a new Conversion or Trade account type, a subtype of
   Equity, and the first account declared with that type is used ?
+
+- I think equity postings and conversion prices must be allowed to
+  coexist somehow. It should be possible to record both in a
+  transaction's entry, and not have it rejected for being unbalanced.
+
 
