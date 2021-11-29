@@ -148,7 +148,7 @@ The rest of this page is about future versions of hledger.
 
 There was much discussion of this issue at <https://github.com/simonmichael/hledger/issues/1177>.
 
-### Xitian's #1554
+### 1554
 
 <https://github.com/simonmichael/hledger/pull/1554>.
 Here's an attempted summary:
