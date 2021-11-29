@@ -181,6 +181,40 @@ Here's an attempted summary:
 > When performing cost conversion and price valuation, hledger will always
 > perform cost conversion first, and market price valuations afterwards.
 
+#### Sample tests
+
+```
+# 3. --cost=conversion generates conversion postings
+hledger -f- print --explicit --cost=conversion
+<<<
+2011/01/01
+    expenses:foreign currency       €100 @ $1.35
+    assets
+>>>
+2011-01-01
+    expenses:foreign currency            €100
+    equity:conversion:€:$               €-100  ; generated-posting:
+    equity:conversion:$:€             $135.00  ; generated-posting:
+    assets                           $-135.00
+
+>>>=0
+
+# 4. --cost=conversion with --show-costs continues to show transaction costs
+hledger -f- print --explicit --cost=conversion --show-costs
+<<<
+2011/01/01
+    expenses:foreign currency       €100 @ $1.35
+    assets
+>>>
+2011-01-01
+    expenses:foreign currency    €100 @ $1.35
+    equity:conversion:€:$               €-100  ; generated-posting:
+    equity:conversion:$:€             $135.00  ; generated-posting:
+    assets                           $-135.00
+
+>>>=0
+```
+
 #### User-visible changes
 
 1. The `-B/--cost` flag becomes a flag `-B` which works as before, and an
@@ -209,7 +243,8 @@ optional-argument option `--cost[=nocost|cost|conversion]`:
    equity style entries.
 
 3. To mimic previous hledger behaviour (don't add equity postings to commodity
-   conversions), users will need to add `--cost=nocost` to commands.
+   conversions), users will need to add `--cost=nocost` (or, `not:equity:conversion`)
+   to commands. This can be seen in the many changes required to hledger's tests.
 
 4. Except with `print`. `print` will have different default behaviour from all
    other commands.
