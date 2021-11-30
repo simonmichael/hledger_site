@@ -352,3 +352,10 @@ optional-argument option `--cost[=nocost|cost|conversion]`:
 - Should inferred postings be displayed by `print --infer-equity`, or
   only by `print --infer-equity --explicit` ? (`-x/--explicit` is
   required to see other infered things like amounts and prices)
+
+- How much of this applies equally well to currency exchanges, investment purchases, and investment sales, in principle ? 
+  How much of that commonality should we expose for best UX ?
+
+- How does this relate to the idea of lot identify, and generating lot subaccounts ?
+  Should lot subaccounts exist on the asset(/liability) side, on the equity side, or both ?
+
