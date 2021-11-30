@@ -356,6 +356,6 @@ optional-argument option `--cost[=nocost|cost|conversion]`:
 - How much of this applies equally well to currency exchanges, investment purchases, and investment sales, in principle ? 
   How much of that commonality should we expose for best UX ?
 
-- How does this relate to the idea of lot identify, and generating lot subaccounts ?
+- How does this relate to the idea of lot identity, and generating lot subaccounts ?
   Should lot subaccounts exist on the asset(/liability) side, on the equity side, or both ?
 
