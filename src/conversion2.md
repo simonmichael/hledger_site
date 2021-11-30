@@ -89,9 +89,12 @@ This kind of report is not possible with the equity method, currently.
 ### Gain/loss reporting
 
 The equity method keeps a trace of all commodity exchanges in the equity account,
-in effect properly recording the accumulated gain/loss from all commodity exchanges.
+in effect properly recording the accumulated gain/loss from all commodity exchanges
+(it can be seen by valuing the accumulated total of those equity balances in some commodity).
 
-The @ method does not record the gain/loss from commodity exchanges.
+The @ method does not record the gain/loss from commodity exchanges
+(at least, not so explicitly and not grouped by commodity pair.
+We can still calculate it using hledger valuation features like -V, --valuechange, --gain.)
 
 ### Balanced accounts
 
@@ -138,8 +141,8 @@ The equity method:
 
 The @ method:
 
-- doesn't support gain/loss reporting
-- doesn't maintain balanced accounts.
+- doesn't support easy gain/loss reporting by commodity pair.
+- doesn't maintain balanced accounts
 
 ---
 The rest of this page is about future versions of hledger.
@@ -362,12 +365,18 @@ optional-argument option `--cost[=nocost|cost|conversion]`:
   ```
   - COMMPAIR is the two commodity symbols concatenated in alphabetic order
 
+- In infer equity mode, conversion prices should be used only to infer
+  equity postings, and otherwise should not be used for transaction
+  balancing. This means that fully explicit entries with both equity
+  postings and conversion prices recorded are supported, whether
+  manually recorded or inferred.
+
 #### Interactions / impact / compatibility
 
 - There is no change to default behaviour at this stage.
-- With `--infer-equity`, all reports should work as if equity postings
-  had been written manually. (Assuming both equity postings and 
-  conversion prices were allowed to coexist.)
+
+- With `--infer-equity`, `--cost` reports should work as before, using @ conversion prices when they are present.
+  Other reports should work as if the equity postings had been recorded manually.
 
 #### Open questions
 
@@ -377,14 +386,6 @@ optional-argument option `--cost[=nocost|cost|conversion]`:
 
 - How many equity subaccounts are needed ? Is `EQUITYACCT:COMMPAIR` sufficient ?
   Can per-direction reports still be achieved by filtering on amount sign ?
-
-- I think equity postings and conversion prices must be allowed to
-  coexist somehow. It should be possible to record both in a
-  transaction's entry, and not have it rejected for being unbalanced.
-
-- What if you combine `--cost` and `--infer-equity` ? I think ideally
-  `--cost` is unaffected, working as it normally would without the
-  equity postings.
 
 - Should inferred postings be displayed by `print --infer-equity`, or
   only by `print --infer-equity --explicit` ? (`-x/--explicit` is
