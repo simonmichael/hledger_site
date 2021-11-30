@@ -149,11 +149,12 @@ The rest of this page is about future versions of hledger.
 
 ## Improvement proposals
 
-There was much discussion of this issue at <https://github.com/simonmichael/hledger/issues/1177>.
+The two methods of recording conversions were discussed mostly at
+<https://github.com/simonmichael/hledger/issues/1177> in 2020.
 
 ### 1554
 
-<https://github.com/simonmichael/hledger/pull/1554>.
+<https://github.com/simonmichael/hledger/pull/1554> was proposed in 2021.
 Here's an attempted summary:
 
 #### Goals / problems tackled
@@ -270,45 +271,6 @@ optional-argument option `--cost[=nocost|cost|conversion]`:
 - What other names, or other changes, could make this more clear and mnemonic ?
 - When should the new mode be made default behaviour ?
 - Why is `print` different, and is it worth it ?
-
-### 1554-sm-1
-
-#### Goals / problems tackled
-
-1. Meet the goals of #1554 in a clearer and more compatible way.
-
-#### Differences from 1554
-
-`-B/--cost` and default behaviour are not changed; a new flag is added for the new feature.
-
-#### Current draft docs
-
-```
-     --conversions=TYPE      how should hledger support conversions between
-                             commodities within a transaction ?
-
-                             implicit (default): allow one commodity to convert
-                             into another using a transaction price.
-                             Equity is not updated, which causes an imbalance.
-                             -B/--cost can be used to report the cost.
-                             The traditional Ledger/hledger behaviour.
-                             
-                             assisted: don't allow implicit conversion;
-                             in commodity conversion transactions which do not
-                             have equity postings, generate those automatically, 
-                             Equity will be balanced, -B/--cost can't be used.
-
-                             manual: don't allow implicit conversion and don't
-                             generate equity postings; those will need to be
-                             present explicitly in every conversion entry.
-                             Equity will be balanced, -B/--cost can't be used.
-```
-
-<!-- #### Sample tests -->
-
-<!-- #### User-visible changes -->
-
-<!-- #### Interactions / impact / compatibility -->
 
 ### 1554-sm-2
 
