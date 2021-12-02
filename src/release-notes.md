@@ -63,6 +63,206 @@ Changes in hledger-install.sh are shown
 [here](https://github.com/simonmichael/hledger/commits/master/hledger-install/hledger-install.sh).
 
 
+## 2021-12-01 hledger-1.24
+
+**New report layout options with less eliding,
+hledger-ui mouse support,
+misc fixes and improvements.
+**
+<!-- ([announcement](https://groups.google.com/g/hledger/LINK)) -->
+
+### project changes 1.24
+
+Software
+
+- bin/hledger-check-fancyassertions.hs: fix ugly assertion parse errors. 
+  (ShrykeWindgrace)
+
+- bin/hledger-check-tagfiles.hs: Update description, clarify wording.
+  (Pranesh Prakash)
+
+Docs
+
+- Account types: prioritise the short one-letter names, hide the deprecated
+  legacy syntax.
+
+- Directives: a more compact and accurate overview.
+
+- examples/templates/basic: A new starter file set, and a place to collect them.
+
+- Expose more developer docs as separate web pages:
+  CHANGELOGS, COMMITS, RELEASING, etc.
+
+- Fix a link to developer workflows. (Joaquin "Florius" Azcarate)
+
+Process
+
+- PR template: Fix our github PR template to use proper comment syntax,
+  and link to more relevant docs.
+  (toonn)
+
+- cabal.project: Drop obsolete compatibility comment. 
+  ([#1365](https://github.com/simonmichael/hledger/issues/1365), toonn)
+
+- Bump default stackage snapshot to one avoiding buggy happy version.
+
+- bin/changelog: a new helper making changelog edits more pleasant.
+
+- make throughput{,-dev,-EXE}: reports transactions per second for a range of
+  file sizes with the hledger in PATH, hledger dev build, or named hledger 
+  executable.
+
+- make install-as-FOO: build executables and save as bin/hledger*-FOO
+
+- perf: bench-ledger.sh for comparative benchmarking with Ledger.
+
+- CI: commitlint: be more forgiving when we can't figure out recent commits
+  (don't check any).
+
+- CI: commitlint: recognise any commit starting with ‘Merge’ as a merge commit
+  (and ignore it). (Stephen Morgan)
+
+### hledger 1.24
+
+Features
+
+- balance commands provide more control over how multicommodity amounts
+  are displayed. (And they no longer elide too-wide amounts by default.)
+  The --commodity-column flag has been deprecated and replaced by a new
+  --layout option, with three values:
+  
+  - wide (the default, shows amounts on one line unelided, like older hledger versions)
+  - tall (a new display mode, shows one amount per line)
+  - bare (like the old --commodity-columm, shows one commodity per line with symbols in their own column)
+  
+  (Stephen Morgan)
+
+- The balance commands have a new `--declared` flag, causing them to
+  include leaf (ie, non-parent) accounts declared by account directives,
+  even if they contain no transactions yet. Together with `-E`, this shows
+  a balance for both used and declared accounts.
+  The idea is to be able to see a useful "complete" balance report, even
+  when you don't have transactions in all of your declared accounts yet.
+  ([#1765](https://github.com/simonmichael/hledger/issues/1765))
+
+- journal files now support a `decimal-mark` directive as a more
+  principled way (than `commodity` directives) to specify the decimal character
+  in use in that file, to ensure accurate number parsing.
+  ([#1670](https://github.com/simonmichael/hledger/issues/1670), Lawrence Wu)
+
+Improvements
+
+- The stats command now shows rough but useful performance stats: run
+  time and processing speed in transactions per second.
+
+- balance: support the --related flag, like register, showing the
+  other postings from the transactions. ([#1469](https://github.com/simonmichael/hledger/issues/1469), Stephen Morgan)
+
+- roi now uses posting dates when available, and honors the --date2
+  flag. This will not change the results computed for the typical
+  use-case, it just makes "roi" more thorough/consistent.
+  (Dmitry Astapov)
+
+- aregister now shows transactions' secondary date if the --date2 flag is used.
+  ([#1731](https://github.com/simonmichael/hledger/issues/1731))
+
+- timedot: a D default commodity (and style) declared in a parent
+  journal file will now be applied to timedot amounts. This means they
+  can be priced and valued/converted.
+
+- cli: The --pretty and --forecast options can now be written after the
+  command name, like other general options.
+  (Stephen Morgan)
+
+- register -V -H with no interval now values at report end date, like balance.
+  ([#1718](https://github.com/simonmichael/hledger/issues/1718), Stephen Morgan)
+
+- Allow megaparsec 9.2.
+
+- Drop the base-compat-batteries dependency. (Stephen Morgan)
+
+Fixes
+
+- prices: Do not include zero amounts when calculating amounts for balance assignments. 
+  This is not usually a problem, but can get in the way of auto-inferring prices.
+  ([#1736](https://github.com/simonmichael/hledger/issues/1736), Stephen Morgan)
+
+- csv: Successfully parse an empty csv file. 
+  ([#1183](https://github.com/simonmichael/hledger/issues/1183), Stephen Morgan)
+
+- balance: Balance reports with --depth=0 properly report aggregated
+  values, not zero everywhere. 
+  ([#1761](https://github.com/simonmichael/hledger/issues/1761), Stephen Morgan)
+
+- prices: Do not try to generate prices when there would be a zero
+  denominator. Also correctly generate reverse prices for zero
+  amounts. (Stephen Morgan)
+
+- csv: Allow both amount-in and amount-out fields to contain a zero.
+  ([#1733](https://github.com/simonmichael/hledger/issues/1733), Stephen Morgan)
+
+- balance: Balance reports should consider date: queries when
+  calculating report span with --date2. 
+  ([#1745](https://github.com/simonmichael/hledger/issues/1745), Stephen Morgan)
+
+- print: auto: The print command should always display inferred
+  amounts for --auto generated postings. 
+  ([#1276](https://github.com/simonmichael/hledger/issues/1276), Stephen Morgan)
+  
+### hledger-ui 1.24
+
+Features
+
+- hledger-ui can now be controlled with mouse or touchpad.
+  Click to enter things, click left margin or bottom blank area to return to
+  previous screen, and use mouse wheel / swipe to scroll.
+
+- In addition to accounts with postings, hledger-ui now also shows
+  declared accounts, even if they are empty (just leaf accounts, not
+  parents). The idea is to show a useful list of accounts out of the
+  box, when all you have is a starter file with account declarations.
+
+Improvements
+
+- The `Z` key for toggling display of zeroes is now the easier lower-case `z`.
+
+- The `--watch` feature now has a convenient short flag flag, `-w`.
+
+- Drop the base-compat-batteries dependency. (Stephen Morgan)
+
+- Allow megaparsec 9.2
+
+Fixes
+
+- When an invalid regular expression is entered at the `/` (filter) prompt,
+  we now display an error instead of silently ignoring it.
+  ([#1394](https://github.com/simonmichael/hledger/issues/1394), Stephen Morgan)
+
+- Entering the register screen now always positions the selection mid-screen.
+  Previously it would be at bottom of screen on the first entry.
+
+- Report layout in the terminal is now robust with more kinds of wide
+  characters, such as emoji.
+  ([#895](https://github.com/simonmichael/hledger/issues/895), Stephen Morgan)
+  
+### hledger-web 1.24
+
+Improvements
+
+- Allow megaparsec 9.2
+
+### credits 1.24
+
+Simon Michael,
+Stephen Morgan
+toonn,
+Pranesh Prakash,
+Dmitry Astapov,
+ShrykeWindgrace,
+Joaquin Azcarate,
+Lawrence Wu.
+
+
 ## 2021-09-21 hledger-1.23
 
 **Capital gains report,
