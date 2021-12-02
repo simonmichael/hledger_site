@@ -225,7 +225,7 @@ Improvements
 
 - The `Z` key for toggling display of zeroes is now the easier lower-case `z`.
 
-- The `--watch` feature now has a convenient short flag flag, `-w`.
+- The `--watch` feature now has a convenient short flag, `-w`.
 
 - Drop the base-compat-batteries dependency. (Stephen Morgan)
 
