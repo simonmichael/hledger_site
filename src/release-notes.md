@@ -67,8 +67,7 @@ Changes in hledger-install.sh are shown
 
 **New report layout options with less eliding,
 hledger-ui mouse support,
-misc fixes and improvements.
-**
+misc fixes and improvements.**
 <!-- ([announcement](https://groups.google.com/g/hledger/LINK)) -->
 
 ### project changes 1.24
