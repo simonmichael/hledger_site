@@ -199,7 +199,7 @@ https://github.com/simonmichael/hledger/releases, also apply here.
     <tr valign="top">
       <td>
         <div class="badges">
-          <img alt="CI binaries" src="https://img.shields.io/badge/CI_binaries-1.24-red.svg" />
+          <img alt="CI binaries" src="https://img.shields.io/badge/CI_binaries-1.24-brightgreen.svg" />
         </div>
       </td>
       <td style="padding-top:10px;">
@@ -227,7 +227,7 @@ https://github.com/simonmichael/hledger/releases, also apply here.
     <tr valign="top">
       <td>
         <div class="badges">
-          <img alt="CI binaries" src="https://img.shields.io/badge/CI_binaries-1.24-red.svg" />
+          <img alt="CI binaries" src="https://img.shields.io/badge/CI_binaries-1.24-brightgreen.svg" />
         </div>
       </td>
       <td style="padding-top:10px;">
@@ -247,7 +247,7 @@ https://github.com/simonmichael/hledger/releases, also apply here.
     <tr valign="top">
       <td>
         <div class="badges">
-          <img alt="CI binaries" src="https://img.shields.io/badge/CI_binaries-1.24-red.svg" />
+          <img alt="CI binaries" src="https://img.shields.io/badge/CI_binaries-1.24-brightgreen.svg" />
         </div>
       </td>
       <td style="padding-top:10px;">
