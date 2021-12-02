@@ -236,7 +236,7 @@ Now `hledger stats` and `hledger bal` should show lots of data. That's your past
 
 Then, if you want to leave Mint, you'll need to replace their automatic
 import from banks with 
-[your own import process](#isn-t-importing-from-banks-a-pain).
+[your own import process](faq.html#isnt-importing-from-banks-a-pain-).
 
 Or if you want to keep using Mint for that, because you like how they
 aggregate and clean the data: just periodically re-export from Mint,
