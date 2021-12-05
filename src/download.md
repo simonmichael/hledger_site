@@ -275,7 +275,7 @@ https://github.com/simonmichael/hledger/releases, also apply here.
     <tr>
       <td>
         <div class="badges">
-          <a href="https://gentoo.zugaina.org/Search?search=hledger"><img alt="Gentoo" src="https://img.shields.io/badge/Gentoo_package-1.21-red.svg" /></a>
+          <a href="https://gentoo.zugaina.org/Search?search=hledger"><img alt="Gentoo" src="https://img.shields.io/badge/Gentoo_package-1.23-red.svg" /></a>
         </div>
     <div class="distro">Gentoo</div>
       </td>
@@ -324,7 +324,7 @@ https://github.com/simonmichael/hledger/releases, also apply here.
       <td>
         <div class="badges">
           <a href="https://packages.debian.org/unstable/hledger"><img src="https://repology.org/badge/version-for-repo/debian_unstable/hledger.svg" alt="Debian unstable" /></a><br>
-          <a href="https://packages.debian.org/stable/hledger"><img src="https://repology.org/badge/version-for-repo/debian_stable/hledger.svg" alt="Debian stable" /></a><br>
+          <a href="https://packages.debian.org/stable/hledger"><img src="https://img.shields.io/badge/Debian_stable_package-1.18.1-red.svg" alt="Debian stable" /></a><br>
           <a href="https://packages.debian.org/oldstable/hledger"><img src="https://img.shields.io/badge/Debian_oldstable_package-1.10-red.svg" alt="Debian oldstable" /></a><br>
           <a href="https://packages.debian.org/oldstable/hledger"><img src="https://img.shields.io/badge/Debian_oldoldstable_package-1.0.1-red.svg" alt="Debian oldoldstable" /></a><br>
           <a href="https://packages.debian.org/search?searchon=names&amp;keywords=hledger">more..</a>
