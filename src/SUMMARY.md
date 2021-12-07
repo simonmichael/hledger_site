@@ -5,11 +5,11 @@
 # ABOUT
 
 - [Home](index.md)
+- [General FAQ](faq.md)
 - [Why hledger ?](why.md)
 - [Videos, Talks](videos.md)
 - [Support/Discussion](discuss.md)
 - [Sponsor](sponsor.md)
-- [General FAQ](faq.md)
 
 # USERS
 

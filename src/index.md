@@ -21,16 +21,18 @@ easy, dependable<br> plain text accounting
 
 ## What is this ?
 
-***hledger*** is free cross-platform accounting software 
-for both power users and folks new to accounting.
+Welcome! I'm Simon Michael, maintainer of hledger.org and plaintextaccounting.org.
+
+***hledger*** is free cross-platform accounting software,
+for folks new to accounting and also for power users.
 It's good for tracking money, time, investments, cryptocurrencies, inventory and more,
 with high accuracy, flexibility and privacy.
-It is one of the best implementations of [plain text accounting].
+It is one of the best implementations of Plain Text Accounting.
 
-## Where are the most useful resources ?
+## Which docs are best to read ?
 
-[Why hledger ?](why.html),
 [FAQ](faq.html),
+[Why hledger ?](why.html),
 [install](download.html),
 [getting started](start.html),
 [manual](hledger.html),
@@ -39,6 +41,12 @@ It is one of the best implementations of [plain text accounting].
 [![github](https://img.shields.io/github/stars/simonmichael/hledger.svg?logo=GitHub&label=Github)](https://github.com/simonmichael/hledger)
 <!-- [development](CONTRIBUTING.html),* -->
 <!-- [quick start](quickstart.html), -->
+
+The sidebar lists everything else on this site. If you're not seeing it, click/tap the horizontal-lines icon at top left.
+You can also click the magnifying glass icon to search this site.
+
+The [plaintextaccounting.org](https://plaintextaccounting.org) site has a more general introduction to Plain Text Accounting,
+and links to other resources, some of them hledger-related.
 
 <!--
 What is planned for hledger ?
@@ -55,14 +63,10 @@ See also [ROADMAP](ROADMAP.html).
 
 ## How is this funded ?
 
-hledger is brought to you by 
-**[Simon Michael](http://joyful.com)**
-and 
-**[140+ contributors](CREDITS.html)**.
+hledger is brought to you by [Simon Michael](http://joyful.com) and [140+ contributors](CREDITS.html).
 I have been building and relying on this project continuously since 2007.
 I hope you too will find it useful in transforming your relationship with time and money.
-When you have achieved some success, please consider joining the 
-**[sponsors](sponsor.html)**
+When you have achieved some success, please consider joining the [sponsors](sponsor.html)
 to support the project. Thanks!
 
 ## Where should I go next ?
