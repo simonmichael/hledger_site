@@ -10,9 +10,14 @@
 // hledger >=1.21 has a single hledger.html for hledger/journal/csv/timeclock/timedot.
 
 $(document).ready( function() {
+  sidebarHideAllPages();
   addDocVersions();
   highlightCurrentDocVersion();
 });
+
+function sidebarHideAllPages() {
+  $('#sidebar li:contains("ALL PAGES") ~ li, #sidebar li:contains("ALL PAGES")').hide();
+}
 
 var currentrelease = '1.24';
 function highlightCurrentDocVersion() {
