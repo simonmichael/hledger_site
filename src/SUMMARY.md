@@ -5,6 +5,7 @@
 # ABOUT
 
 - [Home](index.md)
+- [Why hledger ?](why.md)
 - [Videos, Talks](videos.md)
 - [Support/Discussion](discuss.md)
 - [Sponsor](sponsor.md)
