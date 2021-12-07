@@ -42,7 +42,9 @@ I'm Simon Michael, hledger project leader and plaintextaccounting.org maintainer
 [Support/Discussion](support.html).
 
 The sidebar lists everything else on this site. If you're not seeing it, click/tap the horizontal-lines icon at top left.
-You can also click the magnifying glass icon to search this site.
+You can also click the magnifying glass icon to search this site.\
+([Access keys](https://en.wikipedia.org/wiki/Access_key#Access_in_different_browsers): 
+`s` sidebar, `t` theme, `/` search, `1` home, `<` previous page, `>` next page.)
 
 The [plaintextaccounting.org](https://plaintextaccounting.org) site has a more general introduction to Plain Text Accounting,
 and links to other resources, including hledger-related blog posts.
