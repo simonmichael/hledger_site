@@ -69,7 +69,7 @@ banks and vendors are doing funny business with rounding..)
 
 ## Common workflows
 
-After [installing](download.html) hledger,
+After [installing](install.html) hledger,
 here are some common ways of using it.
 (And of course you can mix and match these if you'd like.):
 

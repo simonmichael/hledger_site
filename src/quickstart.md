@@ -95,7 +95,7 @@ bookkeeping/accounting skills improve naturally (and [help] is available).
 <a name="install"></a>
 ## Install
 
-Fastest: [download binaries](download.html), eg one of:
+Fastest: [download binaries](install.html), eg one of:
 
 ```
 $ apt install hledger hledger-ui hledger-web
@@ -110,10 +110,10 @@ $ sudo layman -a haskell && sudo emerge hledger hledger-ui hledger-web
 $ xbps-install -S hledger hledger-ui hledger-web
 ```
 
-Freshest: [build from source](download.html#building-from-source):
+Freshest: [build from source](install.html#building-from-source):
  
-1. $ apt install libtinfo-dev [or equivalent](download.html#ensure-c-libraries-are-installed)
-2. [check UTF-8 locale](download.html#ensure-your-system-locale-supports-utf-8)
+1. $ apt install libtinfo-dev [or equivalent](install.html#ensure-c-libraries-are-installed)
+2. [check UTF-8 locale](install.html#ensure-your-system-locale-supports-utf-8)
 3. then one of:
    <pre>
    $ curl -sO https://raw.githubusercontent.com/simonmichael/hledger/master/hledger-install/hledger-install.sh; bash hledger-install.sh

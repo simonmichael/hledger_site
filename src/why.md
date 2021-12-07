@@ -216,8 +216,8 @@ See also [ROADMAP](ROADMAP.html).
 [cashflow]:                   hledger.html#cashflow
 [depth limiting]:             hledger.html#depth-limiting
 [output format]:              hledger.html#output-format
-[download]:                   download.html#binary-packages
-[build]:                      download.html#building-from-source
+[download]:                   install.html#binary-packages
+[build]:                      install.html#building-from-source
 [command line]:               add.html
 [terminal]:                   ui.html
 [web]:                        web.html
@@ -229,7 +229,7 @@ See also [ROADMAP](ROADMAP.html).
 [git]:                        https://en.wikipedia.org/wiki/Git
 [haskell]:                    https://wiki.haskell.org/Haskell
 [double-entry accounting]:    https://en.wikipedia.org/wiki/Double-entry_bookkeeping
-[install]:                    download.html
+[install]:                    install.html
 [ledgerlikes]:                https://plaintextaccounting.org/#plain-text-accounting-apps
 [ledger]:                     https://www.ledger-cli.org
 [ledger features]:            https://www.ledger-cli.org/features.html

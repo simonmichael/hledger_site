@@ -2490,7 +2490,7 @@ superseded now by the built-in [roi](#roi) command.
 ### Experimental add-ons
 
 These are available in source form in the hledger repo's bin/ directory;
-installing them is [pretty easy](/download.html#d). They may be less
+installing them is [pretty easy](/install.html#d). They may be less
 mature and documented than built-in commands. Reading and tweaking these
 is a good way to start making your own!
 

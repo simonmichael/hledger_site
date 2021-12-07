@@ -154,7 +154,7 @@ I have an iTerm2 Hotkey Window (a terminal that drops down on ALT-space) with si
 
        emacs -nw time-2018.timedot
 
-3. -5: updating (using [entr](https://eradman.com/entrproject/)) time [budget reports](hledger.html#budget-report) for the current day/week/month, using [hledger 1.9.1+](download.html):
+3. -5: updating (using [entr](https://eradman.com/entrproject/)) time [budget reports](hledger.html#budget-report) for the current day/week/month, using [hledger 1.9.1+](install.html):
 
        ls time.journal time-2018.timedot time-daily.budget  | entr sh -c 'clear; hledger -f time.journal -f time-daily.budget  bal --budget -1 -D date:today-tomorrow'
 

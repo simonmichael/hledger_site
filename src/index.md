@@ -36,7 +36,7 @@ I'm Simon Michael, hledger project leader and plaintextaccounting.org maintainer
 
 [General FAQ](faq.html),
 [Why hledger ?](why.html),
-[Install](download.html),
+[Install](install.html),
 [Getting Started Guide](start.html),
 [hledger manual](hledger.html),
 [Support/Discussion](support.html).
@@ -102,8 +102,8 @@ Next, you could:
 [cashflow]:                   hledger.html#cashflow
 [depth limiting]:             hledger.html#depth-limiting
 [output format]:              hledger.html#output-format
-[download]:                   download.html#binary-packages
-[build]:                      download.html#building-from-source
+[download]:                   install.html#binary-packages
+[build]:                      install.html#building-from-source
 [command line]:               add.html
 [terminal]:                   ui.html
 [web]:                        web.html
@@ -115,7 +115,7 @@ Next, you could:
 [git]:                        https://en.wikipedia.org/wiki/Git
 [haskell]:                    https://wiki.haskell.org/Haskell
 [double-entry accounting]:    https://en.wikipedia.org/wiki/Double-entry_bookkeeping
-[install]:                    download.html
+[install]:                    install.html
 [ledgerlikes]:                https://plaintextaccounting.org/#plain-text-accounting-apps
 [ledger]:                     https://www.ledger-cli.org
 [ledger features]:            https://www.ledger-cli.org/features.html

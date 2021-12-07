@@ -22,7 +22,7 @@ $ hledger-ui --version
 hledger-ui 1.17.1.1
 ```
 
-If this fails, check [Install](download.html) for install and setup tips.
+If this fails, check [Install](install.html) for install and setup tips.
 
 <!--
 ## Check usage
