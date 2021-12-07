@@ -26,7 +26,7 @@
 - [CREDITS](CREDITS.md)
 - [Developer FAQ](devfaq.md)
 
-# INDEX
+# ALL PAGES
 
 <!-- Every page is listed here (so mdbook will render it): -->
 
