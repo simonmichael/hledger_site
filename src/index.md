@@ -29,18 +29,16 @@ It's good for tracking money, time, investments, cryptocurrencies, inventory and
 with high accuracy, flexibility and privacy.
 It is one of the best implementations of Plain Text Accounting.
 
+[![github](https://img.shields.io/github/stars/simonmichael/hledger.svg?logo=GitHub&label=Github)](https://github.com/simonmichael/hledger)
+
 ## Which docs are best to read ?
 
 [General FAQ](faq.html),
 [Why hledger ?](why.html),
-[install](download.html),
-[getting started](start.html),
-[manual](hledger.html),
-[support](discuss.html),
-[sponsors](sponsor.html),
-[![github](https://img.shields.io/github/stars/simonmichael/hledger.svg?logo=GitHub&label=Github)](https://github.com/simonmichael/hledger)
-<!-- [development](CONTRIBUTING.html),* -->
-<!-- [quick start](quickstart.html), -->
+[Install](download.html),
+[Getting Started Guide](start.html),
+[hledger manual](hledger.html),
+[Support/Discussion](discuss.html).
 
 The sidebar lists everything else on this site. If you're not seeing it, click/tap the horizontal-lines icon at top left.
 You can also click the magnifying glass icon to search this site.
