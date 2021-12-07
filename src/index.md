@@ -45,7 +45,7 @@ The sidebar lists everything else on this site. If you're not seeing it, click/t
 You can also click the magnifying glass icon to search this site.
 
 The [plaintextaccounting.org](https://plaintextaccounting.org) site has a more general introduction to Plain Text Accounting,
-and links to other resources, some of them hledger-related.
+and links to other resources, including hledger-related blog posts.
 
 <!--
 What is planned for hledger ?
