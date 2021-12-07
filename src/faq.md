@@ -252,62 +252,17 @@ higher level reports like [`balancesheet`], [`cashflow`] and
 
 ### Why did you start hledger ? How does it relate to Ledger ?
 
-I ([Simon Michael](http://joyful.com)) discovered John Wiegley's [Ledger](http://ledger-cli.org) in 2006,
-and was very happy to find this efficient command-line reporting tool with a transparent data format.
-
-Initially, I used it to generate time reports for my job.
-Before long I wanted that to work differently - splitting sessions at day boundaries, reporting in hours, etc.
-John had got busy elsewhere and the Ledger project now stalled, with unfixed bugs, wrong documentation and a confusing release situation persisting for a long time.
-I did what I could to help build momentum, reporting bugs, supporting newcomers, and contributing a new domain and website.
-But, I didn't want to spend time learning C++.
-
-I was learning Haskell, which I did want to spend time in.
-I felt Ledger could be implemented well and, in the long run, more efficiently in that language,
-which has some compelling advantages such as lower maintenance costs.
-I urgently needed a reliable accounting tool that I enjoyed using.
-I also wanted to see what I could do to reduce roadbumps and confusion for newcomers.
-
-I couldn't expect John to start over - at that time he was not the Haskell fan he is now!
-So in 2007 I began experimenting.
-I built a toy parser in a few different languages, and it was easiest in Haskell.
-I kept tinkering.
-Goals included:
-
-- to get better at Haskell by building something useful to me,
-- to learn how well Haskell could work for real-world applications,
-- and eventually: to provide a new implementation focussing more on
-  ease of use, absence of user-visible bugs, and high-quality documentation and web presence.
-  Also to experiment with new user interfaces, APIs, etc.
-
-Before too long I had a tool that was useful to me. With Ledger still installed,
-and by maintaining high compatibility, I now had two tools  with different strengths,
-each providing a comparison for the other in case of confusion or suspected bugs,
-which was itself quite valuable.
-
-The Ledger project later revived and has attracted new active contributors.
-I have remained active in that community, sharing discoveries and
-design discussions, and we have seen many ideas travelling in both directions.
-hledger shared #ledger's IRC channel until 2014, when I added
-[#hledger](http://irc.hledger.org) to allow us more space.
-
-I think having independent but compatible implementations has been
-quite helpful for troubleshooting, exploring the design space, and
-growing the "Ledger-likes" community.
-My other projects in that direction include
-the [ledger-cli.org](http://ledger-cli.org) site,
-[LedgerTips](http://twitter.com/LedgerTips),
-IRC support on #ledger,
-and now [plaintextaccounting.org](http://plaintextaccounting.org).
+See [hledger and Ledger](ledger.html).
 
 ### How is hledger different from / interoperable with... ?
 
 Look for a "hledger and X" page on this site (click the top-left icon to open the sidebar).
 Eg:
 
-- **[hledger and Ledger](ledger.md)**
+- [hledger and Ledger](ledger.html)
 - [hledger and Beancount](beancount.html)
-- [hledger and GnuCash](gnucash.md)
-- [hledger and Quicken/Quickbooks](quicken.md)
+- [hledger and GnuCash](gnucash.html)
+- [hledger and Quicken/Quickbooks](quicken.html)
 
 See also:
 

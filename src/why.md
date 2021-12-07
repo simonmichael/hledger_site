@@ -202,6 +202,9 @@ better getting started experience.
 See also [ROADMAP](ROADMAP.html).
 -->
 
+## See also
+
+- [hledger and Ledger](ledger.html)
 
 
 [blog posts]:                 https://plaintextaccounting.org/#articles-blog-posts
