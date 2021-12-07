@@ -50,7 +50,7 @@ recent buildrecent: \
 # After this you should "make build" to rebuild the site with current manuals.
 build7-%:
 	@echo "building site with the seven $* manuals in /$*"
-	@perl -i -p0e "s%\(hledger\.md\)\n(.*?)\(hledger-ui\.md\)\n(.*?)\(hledger-web\.md\)\n%($*/hledger.md)\n\1($*/hledger-ui.md)\n\2($*/hledger-web.md)\n- [journal]($*/journal.md)\n- [csv]($*/csv.md)\n- [timeclock]($*/timeclock.md)\n- [timedot]($*/timedot.md)\n%s" src/SUMMARY.md
+	@perl -i -p0e "s%\(hledger\.md\)\n(.*?)\(hledger-ui\.md\)\n(.*?)\(hledger-web\.md\)\n%($*/hledger.md)\n\1($*/hledger-ui.md)\n\2($*/hledger-web.md)\n- [journal manual]($*/journal.md)\n- [csv manual]($*/csv.md)\n- [timeclock manual]($*/timeclock.md)\n- [timedot manual]($*/timedot.md)\n%s" src/SUMMARY.md
 	@mdbook build
 	@mkdir -p out2
 	@cp -r out/$* out2

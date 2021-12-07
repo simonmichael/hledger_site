@@ -15,7 +15,10 @@
 
 - [Install](install.md)
 - [Getting Started Guide](start.md)
-- [Manuals](manuals.md)
+<!-- - [Manuals](manuals.md) -->
+- [hledger manual](hledger.md)
+- [hledger-ui manual](hledger-ui.md)
+- [hledger-web manual](hledger-web.md)
 - [Cookbook](cookbook.md)
 - [User FAQ](userfaq.md)
 
