@@ -31,7 +31,7 @@ It is one of the best implementations of Plain Text Accounting.
 
 ## Which docs are best to read ?
 
-[FAQ](faq.html),
+[General FAQ](faq.html),
 [Why hledger ?](why.html),
 [install](download.html),
 [getting started](start.html),
