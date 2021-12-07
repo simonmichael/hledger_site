@@ -13,7 +13,7 @@
 
 # USERS
 
-- [Install](download.md)
+- [Install](install.md)
 - [Getting Started Guide](start.md)
 - [Manuals](manuals.md)
 - [Cookbook](cookbook.md)
@@ -50,7 +50,7 @@
 - [Foreign trip expenses](foreign-trip-expenses.md)
 - [Home](index.md)
 - [Importing CSV data](import-csv.md)
-- [Install](download.md)
+- [Install](install.md)
 - [Invoicing](invoicing.md)
 - [Mobile apps](mobile-apps.md)
 - [Mockups](mockups.md)
