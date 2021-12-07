@@ -13,7 +13,7 @@ It also touches on things which can be stressful.
 This page aims to help,
 eventually providing a number of opinionated guides to suit different needs.
 It is work in progress, and parts of it may be unclear right now; sorry about that.
-All feedback is welcome in [chat](discuss.html).
+All feedback is welcome in [chat](support.html).
 
 ## Little and often
 

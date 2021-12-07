@@ -39,7 +39,7 @@ I'm Simon Michael, hledger project leader and plaintextaccounting.org maintainer
 [Install](download.html),
 [Getting Started Guide](start.html),
 [hledger manual](hledger.html),
-[Support/Discussion](discuss.html).
+[Support/Discussion](support.html).
 
 The sidebar lists everything else on this site. If you're not seeing it, click/tap the horizontal-lines icon at top left.
 You can also click the magnifying glass icon to search this site.

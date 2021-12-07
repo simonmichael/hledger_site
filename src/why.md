@@ -172,7 +172,7 @@ hledger is [free software], with no purchase price or monthly fees.
 It is licensed under [GNU GPLv3][gpl], providing the strongest guarantee
 that you will always have the right to run, inspect, modify, or share it.
 It is [actively maintained], with regular [releases]
-and a [large chat room and other support resources](discuss.html).
+and a [large chat room and other support resources](support.html).
 
 <!-- - The plain text format and fast command-line interface -->
 <!--   (plus a reusable [library] for building your own [commands][script]) -->
