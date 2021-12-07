@@ -21,13 +21,14 @@ easy, dependable<br> plain text accounting
 
 ## What is this ?
 
-Welcome! I'm Simon Michael, maintainer of hledger.org and plaintextaccounting.org.
-
 ***hledger*** is free cross-platform accounting software,
 for folks new to accounting and also for power users.
 It's good for tracking money, time, investments, cryptocurrencies, inventory and more,
 with high accuracy, flexibility and privacy.
 It is one of the best implementations of ***Plain Text Accounting***.
+
+I'm Simon Michael, hledger project leader and plaintextaccounting.org maintainer. Welcome! 
+
 
 [![github](https://img.shields.io/github/stars/simonmichael/hledger.svg?logo=GitHub&label=Github)](https://github.com/simonmichael/hledger)
 
