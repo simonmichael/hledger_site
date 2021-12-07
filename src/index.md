@@ -27,7 +27,7 @@ Welcome! I'm Simon Michael, maintainer of hledger.org and plaintextaccounting.or
 for folks new to accounting and also for power users.
 It's good for tracking money, time, investments, cryptocurrencies, inventory and more,
 with high accuracy, flexibility and privacy.
-It is one of the best implementations of Plain Text Accounting.
+It is one of the best implementations of ***Plain Text Accounting***.
 
 [![github](https://img.shields.io/github/stars/simonmichael/hledger.svg?logo=GitHub&label=Github)](https://github.com/simonmichael/hledger)
 
@@ -62,7 +62,7 @@ See also [ROADMAP](ROADMAP.html).
 ## How is this funded ?
 
 hledger is brought to you by [Simon Michael](http://joyful.com) and [140+ contributors](CREDITS.html).
-I have been building and relying on this project continuously since 2007.
+I have been building and relying on this project continuously since 2007, funded mostly by unrelated consulting work.
 I hope you too will find it useful in transforming your relationship with time and money.
 When you have achieved some success, please consider joining the [sponsors](sponsor.html)
 to support the project. Thanks!
