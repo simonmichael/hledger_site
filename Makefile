@@ -111,3 +111,8 @@ snapshot-%:
 	git add src/$* && git commit -m "snapshot of $* manuals" src/$* && \
 	echo "remember to point the src/current symlink to the current release manuals"
 
+# Run this after mdbook build/serve to make old manuals visible via symlinks.
+# These will be wiped by the next mdbook build/serve.
+# (On production, webserver redirects are used instead.)
+manualsymlinks:
+	for d in out/1*; do (cd out; rm -rf `basename $$d`; ln -s ../out2/`basename $$d`); done
