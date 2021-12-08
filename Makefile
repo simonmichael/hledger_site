@@ -115,4 +115,4 @@ snapshot-%:
 # These will be wiped by the next mdbook build/serve.
 # (On production, webserver redirects are used instead.)
 manualsymlinks:
-	for d in out/1*; do (cd out; rm -rf `basename $$d`; ln -s ../out2/`basename $$d`); done
+	for d in out/1* out/dev; do (cd out; rm -rf `basename $$d`; ln -s ../out2/`basename $$d`); done
