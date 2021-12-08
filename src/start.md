@@ -12,8 +12,13 @@ It also touches on things which can be stressful.
 
 This page aims to help,
 eventually providing a number of opinionated guides to suit different needs.
-It is work in progress, and parts of it may be unclear right now; sorry about that.
-All feedback is welcome in [chat](support.html).
+It is work in progress; all feedback is welcome in [chat](support.html).
+
+See also these similar but slightly more technical pages:
+
+- [Quick Start](quickstart.html)
+- [hledger manual > COMMON TASKS](hledger.html#common-tasks)
+- [Cookbook > Setups/workflows](cookbook.html#setupsworkflows)
 
 ## Little and often
 
@@ -186,15 +191,6 @@ and use any of the hledger UIs to see reports.
 [Importing CSV data](import-csv.md) is a quick tutorial on the importing from CSV part.
 Some downloading helpers can be found at
 <https://plaintextaccounting.org/#data-importconversion> (search for "download").
-
-
-## Other getting-started docs
-
-These are both a little more detailed and a little more technical:
-
-- The [Quick Start](quickstart.html) guide
-
-- The [COMMON TASKS section in the hledger manual](hledger.html#common-tasks)
 
 
 ## Some more advanced workflows
