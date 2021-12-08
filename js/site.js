@@ -1,9 +1,5 @@
-// TODO drop jquery
-// TODO do more of this server side in index.hbs, or at least render sooner to avoid render flash
-
 // hs.graphicsDir = '../js/highslide/graphics/';
 // hs.outlineType = 'outer-glow';
-
 
 $(document).ready( function() {
   sidebarHideAllPages();
@@ -12,7 +8,7 @@ $(document).ready( function() {
 });
 
 function sidebarHideAllPages() {
-  $('#sidebar li:contains("ALL PAGES") ~ li, #sidebar li:contains("ALL PAGES")').hide();
+  $('#sidebar li:contains("ALL PAGES") ~ li, #sidebar li:contains("ALL PAGES")').hide();  // XXX requires jquery..
 }
 
 function addDocVersions() {
@@ -26,7 +22,8 @@ function addDocVersions() {
   var post121hashidx = post121hashes.indexOf(hash);
   var newdest7 = (post121hashidx > -1 ? pre121pages[post121hashidx] : page) + '.html';
   var newdest3 = (pre121pages.indexOf(page) > -1 ? 'hledger.html#' + page + '-format' : (page + '.html'));
-  $('.docversions').html('\
+  var docversions = document.getElementsByClassName('docversions')[0];
+  docversions.innerHTML = '\
     <a href="/dev/' +newdest3+'">dev</a>  · \
     <a href="/1.24/'+newdest3+'">1.24</a> · \
     <a href="/1.23/'+newdest3+'">1.23</a> · \
@@ -47,7 +44,7 @@ function addDocVersions() {
     <a href="/1.5/' +newdest7+'">1.5</a>  · \
     <a href="/1.2/' +newdest7+'">1.2</a>  · \
     <a href="/1.0/' +newdest7+'">1.0</a>    \
-  ');
+  ';
 }
 
 var currentrelease = '1.24';
