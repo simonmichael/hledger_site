@@ -1,13 +1,9 @@
+// TODO drop jquery
+// TODO do more of this server side in index.hbs, or at least render sooner to avoid render flash
+
 // hs.graphicsDir = '../js/highslide/graphics/';
 // hs.outlineType = 'outer-glow';
 
-/* show version links on user manual pages */
-// TODO render server side in handlebars template, or at least render sooner to avoid render flash
-// TODO drop jquery
-// TODO old journal/csv/timeclock/timedot manuals should link to hledger.html for 1.21+
-// hledger <1.0, which we no longer show docs for, had a single manual.html for all;
-// the code to handle that has not been removed yet.
-// hledger >=1.21 has a single hledger.html for hledger/journal/csv/timeclock/timedot.
 
 $(document).ready( function() {
   sidebarHideAllPages();
@@ -23,38 +19,35 @@ function addDocVersions() {
   var parts = window.location.pathname.split('/');
   var page = parts.length > 0 ? parts[parts.length-1].slice(0,-5) : '';
   var hash = window.location.hash.slice(1);
-  var topic = (page=='manual' && hash) ? hash : page;
-  var newhash = (page=='manual' && topic!='manual') ? ('#'+topic) : '';
-  var newpage = page=='manual' ? page : topic;
-  // var relpath1 = parts.includes("doc") ? "../../" : "";
-  var relpath  = "/";  //parts.includes("doc") ? "../" : "doc/";
-  // <a href="'+relpath1+newpage+'.html'+(page=='manual' ? newhash : '')+'">dev</a> \
+  // Before 1.21 there was 7 manual pages, after 1.21 there are 3.
+  // Link from pre-1.21 pages to post-1.21 hashes and vice versa.
+  var pre121pages   = ['csv',       'journal',       'timeclock',       'timedot'       ];
+  var post121hashes = ['csv-format','journal-format','timeclock-format','timedot-format'];
+  var post121hashidx = post121hashes.indexOf(hash);
+  var newdest7 = (post121hashidx > -1 ? pre121pages[post121hashidx] : page) + '.html';
+  var newdest3 = (pre121pages.indexOf(page) > -1 ? 'hledger.html#' + page + '-format' : (page + '.html'));
   $('.docversions').html('\
-<a href="'+relpath+'dev/'+newpage+'.html'+(page=='manual' ? newhash : '')+'">dev</a> · \
-<a href="'+relpath+'1.24/'+newpage+'.html'+(page=='manual' ? newhash : '')+'">1.24</a> · \
-<a href="'+relpath+'1.23/'+newpage+'.html'+(page=='manual' ? newhash : '')+'">1.23</a> · \
-<a href="'+relpath+'1.22/'+newpage+'.html'+(page=='manual' ? newhash : '')+'">1.22</a> · \
-<a href="'+relpath+'1.21/'+newpage+'.html'+(page=='manual' ? newhash : '')+'">1.21</a> · \
-<a href="'+relpath+'1.20/'+newpage+'.html'+(page=='manual' ? newhash : '')+'">1.20</a> · \
-<a href="'+relpath+'1.19/'+newpage+'.html'+(page=='manual' ? newhash : '')+'">1.19</a> · \
-<a href="'+relpath+'1.18/'+newpage+'.html'+(page=='manual' ? newhash : '')+'">1.18</a> · \
-<a href="'+relpath+'1.17/'+newpage+'.html'+(page=='manual' ? newhash : '')+'">1.17</a> · \
-<a href="'+relpath+'1.16/'+newpage+'.html'+(page=='manual' ? newhash : '')+'">1.16</a> · \
-<a href="'+relpath+'1.15/'+newpage+'.html'+(page=='manual' ? newhash : '')+'">1.15</a> · \
-<a href="'+relpath+'1.14/'+newpage+'.html'+(page=='manual' ? newhash : '')+'">1.14</a> · \
-<a href="'+relpath+'1.13/'+newpage+'.html'+(page=='manual' ? newhash : '')+'">1.13</a> · \
-<a href="'+relpath+'1.12/'+newpage+'.html'+(page=='manual' ? newhash : '')+'">1.12</a> · \
-<a href="'+relpath+'1.11/'+newpage+'.html'+(page=='manual' ? newhash : '')+'">1.11</a> · \
-<a href="'+relpath+'1.10/'+newpage+'.html'+(page=='manual' ? newhash : '')+'">1.10</a> · \
-<a href="'+relpath+'1.9/'+newpage+'.html'+(page=='manual' ? newhash : '')+'">1.9</a>   · \
-<a href="'+relpath+'1.5/'+newpage+'.html'+(page=='manual' ? newhash : '')+'">1.5</a>   · \
-<a href="'+relpath+'1.2/'+newpage+'.html'+(page=='manual' ? newhash : '')+'">1.2</a>   · \
-<a href="'+relpath+'1.0/'+newpage+'.html'+(page=='manual' ? newhash : '')+'">1.0</a>     \
-');
-// <a href="'+relpath+'1.4/'+newpage+'.html'+(page=='manual' ? newhash : '')+'">1.4</a>   · \
-// <a href="'+relpath+'1.3/'+newpage+'.html'+(page=='manual' ? newhash : '')+'">1.3</a>   · \
-// <a href="'+relpath+'1.1/'+newpage+'.html'+(page=='manual' ? newhash : '')+'">1.1</a>   · \
-// | <a href="'+relpath+'0.27/manual.html'+(topic=='manual' ? '' : ('#'+topic))+'">0.27</a> \
+    <a href="/dev/' +newdest3+'">dev</a>  · \
+    <a href="/1.24/'+newdest3+'">1.24</a> · \
+    <a href="/1.23/'+newdest3+'">1.23</a> · \
+    <a href="/1.22/'+newdest3+'">1.22</a> · \
+    <a href="/1.21/'+newdest3+'">1.21</a> · \
+    <a href="/1.20/'+newdest7+'">1.20</a> · \
+    <a href="/1.19/'+newdest7+'">1.19</a> · \
+    <a href="/1.18/'+newdest7+'">1.18</a> · \
+    <a href="/1.17/'+newdest7+'">1.17</a> · \
+    <a href="/1.16/'+newdest7+'">1.16</a> · \
+    <a href="/1.15/'+newdest7+'">1.15</a> · \
+    <a href="/1.14/'+newdest7+'">1.14</a> · \
+    <a href="/1.13/'+newdest7+'">1.13</a> · \
+    <a href="/1.12/'+newdest7+'">1.12</a> · \
+    <a href="/1.11/'+newdest7+'">1.11</a> · \
+    <a href="/1.10/'+newdest7+'">1.10</a> · \
+    <a href="/1.9/' +newdest7+'">1.9</a>  · \
+    <a href="/1.5/' +newdest7+'">1.5</a>  · \
+    <a href="/1.2/' +newdest7+'">1.2</a>  · \
+    <a href="/1.0/' +newdest7+'">1.0</a>    \
+  ');
 }
 
 var currentrelease = '1.24';
