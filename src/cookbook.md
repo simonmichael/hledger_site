@@ -43,8 +43,9 @@ Follow any links to the official [manuals](manuals.html) for more info.
 
 ### Setups/workflows
 
-- [Quick Start's setup](quickstart.html#set-up-a-journal)
-- [hledger manual's setup](hledger.html#starting-a-journal-file)
+- [Getting Started Guide](start.md)
+- [Quick Start](quickstart.html)
+- [hledger manual > COMMON TASKS](hledger.html#common-tasks)
 - [Simon's setup notes](simons-setup.html)
 - Dmitry Astapov's [Full-fledged Hledger](https://github.com/adept/full-fledged-hledger)
 - Andreas Pauley's [Hledger Flow](https://github.com/apauley/hledger-flow)
