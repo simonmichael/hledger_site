@@ -5,8 +5,7 @@
 </div>
 
 See also:
-
-- [hledger and Ledger](ledger.html)
+[hledger and Ledger](ledger.html)
 
 
 ## Plain text accounting
