@@ -20,58 +20,6 @@ See also these similar but slightly more technical pages:
 - [hledger manual > COMMON TASKS](hledger.html#common-tasks)
 - [Cookbook > Setups/workflows](cookbook.html#setupsworkflows)
 
-## Little and often
-
-Remember that accounting is an ongoing activity, best done in regular small doses.
-
-The more often you do it, the easier it is, because less has happened and you can remember it.
-Ten minutes daily can achieve a lot. (Or less, once you get a routine going.)
-
-## Small steps
-
-Good news: you can start using hledger in very simple ways, and get immediate benefit.
-A good way to prioritise is to think about your most pressing needs and what kind of report would help.
-For example,
-
-- Take inventory of your debts, loans and assets; write down the names and numbers.
-- Record these as journal transactions ("opening balances" transactions - see example below).
-- Make corrections until hledger shows your balances accurately.
-
-Or:
-
-- Start recording changes to the cash in your wallet, starting with today's balance.
-- Then start reconciling daily (comparing the reported and actual balance, and troubleshooting any disagreements).
-- Then start tracking the balance in your checking account.
-- Then start tracking your other bank accounts.
-- Then start categorising your incomes and expenses.
-- Then find your bank transaction history and manually enter the transactions from the previous week.
-- Then manually download your bank transactions as CSV and develop CSV rules so that you can print the CSV as journal entries.
-- Then try downloading and importing this CSV into your journal daily for a while.
-  (Only if you wish. Many people stick to manual data entry for the increased awareness it brings.)
-
-If the task feels unclear or overwhelming, I recommend this small steps, verifiable reports approach.
-
-If not, of course feel free to blaze away and do it all on day 1!
-But I would still recommend establishing a frequent reconciling routine.
-It is *surprising* how quickly small events can slip through the cracks and create chaos,
-and it takes a little time to develop the troubleshooting skills.
-Reconciling often will save you time.
-
-## Imperfect
-
-Your bookkeeping does not have to be perfect or even very accurate.
-As you practice, you will naturally learn more about the tools and
-about double-entry accounting,
-such as how to organise your account categories,
-and how to write effective journal entries for various real-world events (transactions).
-
-Later you can come back and improve your old journal entries if you wish.
-You can decide what level of accuracy you need.
-
-(Though in all honesty, if you catch the PTA bug, you may find that
-nothing less than perfection will do; you may want to know when your
-banks and vendors are doing funny business with rounding..)
-
 ## Common workflows
 
 After [installing](install.html) hledger,
@@ -214,3 +162,58 @@ Some downloading helpers can be found at
 [import]:            hledger.html#import
 [balance sheet]:     https://en.wikipedia.org/wiki/Balance_sheet#Personal
 [income statement]:  https://en.wikipedia.org/wiki/Income_statement
+
+## How to learn Accounting
+
+### Little and often
+
+Remember that accounting is an ongoing activity, best done in regular small doses.
+
+The more often you do it, the easier it is, because less has happened and you can remember it.
+Ten minutes daily can achieve a lot. (Or less, once you get a routine going.)
+
+### Small steps
+
+Good news: you can start using hledger in very simple ways, and get immediate benefit.
+A good way to prioritise is to think about your most pressing needs and what kind of report would help.
+For example,
+
+- Take inventory of your debts, loans and assets; write down the names and numbers.
+- Record these as journal transactions ("opening balances" transactions - see example below).
+- Make corrections until hledger shows your balances accurately.
+
+Or:
+
+- Start recording changes to the cash in your wallet, starting with today's balance.
+- Then start reconciling daily (comparing the reported and actual balance, and troubleshooting any disagreements).
+- Then start tracking the balance in your checking account.
+- Then start tracking your other bank accounts.
+- Then start categorising your incomes and expenses.
+- Then find your bank transaction history and manually enter the transactions from the previous week.
+- Then manually download your bank transactions as CSV and develop CSV rules so that you can print the CSV as journal entries.
+- Then try downloading and importing this CSV into your journal daily for a while.
+  (Only if you wish. Many people stick to manual data entry for the increased awareness it brings.)
+
+If the task feels unclear or overwhelming, I recommend this small steps, verifiable reports approach.
+
+If not, of course feel free to blaze away and do it all on day 1!
+But I would still recommend establishing a frequent reconciling routine.
+It is *surprising* how quickly small events can slip through the cracks and create chaos,
+and it takes a little time to develop the troubleshooting skills.
+Reconciling often will save you time.
+
+### Imperfect
+
+Your bookkeeping does not have to be perfect or even very accurate.
+As you practice, you will naturally learn more about the tools and
+about double-entry accounting,
+such as how to organise your account categories,
+and how to write effective journal entries for various real-world events (transactions).
+
+Later you can come back and improve your old journal entries if you wish.
+You can decide what level of accuracy you need.
+
+(Though in all honesty, if you catch the PTA bug, you may find that
+nothing less than perfection will do; you may want to know when your
+banks and vendors are doing funny business with rounding..)
+
