@@ -62,6 +62,13 @@ and now [plaintextaccounting.org](http://plaintextaccounting.org).
 
 **How is hledger different from Ledger ?**
 
+Here are the highest-order differences, which lead to the others: 
+
+- hledger is actively maintained (since 2008).
+- hledger has a strong focus on usability, real-world utility, reliability and complete documentation.
+- hledger tries to provide Ledger's (and others') best features at a higher level of quality (cleaner UX, more consistency, fewer bugs).
+- hledger is written in the Haskell programming language, which is well suited to long-term maintainability and correctness.
+
 Compared to Ledger, hledger builds quickly and has a complete and
 accurate manual, an easier report query syntax, multi-column balance
 reports, much better depth limiting, an interactive data entry
@@ -80,12 +87,12 @@ Here is an overview of the general differences (updates welcome):
  
 |                                                   | hledger | Ledger |
 |---------------------------------------------------|---------|--------|
-| **Common features**                               |         |        |
+| **hledger/Ledger common features**                |         |        |
 | journal format                                    | ✅      | ✅     |
 | csv format                                        | ✅      | ✅     |
 | timeclock format                                  | ✅      | ✅     |
 | multiple commodities                              | ✅      | ✅     |
-| transaction/conversion prices and cost reporting  | ✅      | ✅     |
+| conversion prices and cost reporting              | ✅      | ✅     |
 | market prices and value reporting                 | ✅      | ✅     |
 | virtual (unbalanced) postings                     | ✅      | ✅     |
 | automated postings                                | ✅      | ✅     |
@@ -95,11 +102,11 @@ Here is an overview of the general differences (updates welcome):
 | report filtering with flags and query arguments   | ✅      | ✅     |
 | basic output format customisation                 | ✅      | ✅     |
 | print, register, balance commands                 | ✅      | ✅     |
-| **Ledger only**                                   |         |        |
+| **Features in Ledger only**                       |         |        |
 | value expression language                         |         | ✅     |
 | automatic revaluation transactions (`--revalued`) |         | ✅     |
 | lot reporting (`--lots`)                          |         | ✅     |
-| **hledger only**                                  |         |        |
+| **Features in hledger only**                      |         |        |
 | timedot format                                    | ✅      |        |
 | multi-period reports                              | ✅      |        |
 | account types                                     | ✅      |        |
