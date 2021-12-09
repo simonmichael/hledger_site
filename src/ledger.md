@@ -1,8 +1,18 @@
 # hledger and Ledger
 
+<div class=pagetoc>
 <!-- toc -->
+</div>
 
-## Why did you start hledger ? How does it relate to Ledger ?
+This page needs updating, but it should still be pretty accurate.
+
+See also:
+
+- [Why hledger ?](why.html)
+
+## History
+
+**Why did you start hledger ? How does it relate to Ledger ?**
 
 I discovered John Wiegley's [Ledger](http://ledger-cli.org) in 2006,
 and was very happy to find this efficient command-line reporting tool with a transparent data format.
@@ -51,36 +61,9 @@ the [ledger-cli.org](http://ledger-cli.org) site,
 IRC support on #ledger,
 and now [plaintextaccounting.org](http://plaintextaccounting.org).
 
-## How is hledger different from Ledger ?
+## Differences
 
-### File format differences
-
-hledger's journal file format is very similar to Ledger's.
-Some syntactic forms can be interpreted in slightly different ways,
-eg [hledger comments](journal.html#comments) 
-vs [Ledger comments](https://www.ledger-cli.org/3.0/doc/ledger3.html#Commenting-on-your-Journal),
-or [balance assertions](journal.html#assertions-and-ordering).
-
-A small number of Ledger's syntactic forms are ignored (`{ }` prices)
-or rejected (value expressions). If you avoid these, it's quite easy
-to keep a journal file that works with both hledger and Ledger.
-
-Or, you can keep the hledger- and Ledger-specific bits in separate files,
-both [including](journal.html#including-other-files) a common file. Eg:
-```shell
-$ ls *.journal
-common.journal   # included by hledger.journal and ledger.journal
-hledger.journal
-ledger.journal
-$ hledger -f hledger.journal CMD
-$ ledger -f ledger.journal CMD
-```
-
-hledger's timeclock format is also very similar to Ledger's.
-hledger also provides a new timedot format, allowing a different style
-of time logging.
-
-### Feature differences
+**How is hledger different from Ledger ?**
 
 Compared to Ledger, hledger builds quickly and has a complete and
 accurate manual, an easier report query syntax, multi-column balance
@@ -93,58 +76,90 @@ data from banks.
 Compared to hledger, Ledger has some additional power-user features such as 
 the embedded value expressions language, 
 and some extra automation for tracking lots.
-Also, Ledger uses less memory and is faster
-(partly by providing fewer guarantees, eg its balance assertions/assignments are not date-aware).
-This is most noticeable with larger-than-normal files, where it can run ~10x faster.
 
-We currently support Ledger's main features:
+### Features
 
-- Ledger's journal format, mostly
-- csv format
-- timeclock format
-- regular journal transactions
-- multiple commodities
-- fixed transaction prices
-- varying market prices
-- virtual postings
-- some basic output formatting
-- the print, register & balance commands
-- report filtering, using flags and query arguments
-- automated postings
-- periodic transactions
-- budget reports
-- valuation
-- capital gains reporting
+Here is an overview of the general differences (updates welcome):
+ 
+|                                                   | hledger | Ledger |
+|---------------------------------------------------|---------|--------|
+| **Common features**                               |         |        |
+| journal format                                    | ✅      | ✅     |
+| csv format                                        | ✅      | ✅     |
+| timeclock format                                  | ✅      | ✅     |
+| multiple commodities                              | ✅      | ✅     |
+| transaction/conversion prices and cost reporting  | ✅      | ✅     |
+| market prices and value reporting                 | ✅      | ✅     |
+| virtual (unbalanced) postings                     | ✅      | ✅     |
+| automated postings                                | ✅      | ✅     |
+| periodic transactions                             | ✅      | ✅     |
+| budget reporting                                  | ✅      | ✅     |
+| capital gains reporting                           | ✅      | ✅     |
+| report filtering with flags and query arguments   | ✅      | ✅     |
+| basic output format customisation                 | ✅      | ✅     |
+| print, register, balance commands                 | ✅      | ✅     |
+| **Ledger only**                                   |         |        |
+| value expression language                         |         | ✅     |
+| automatic revaluation transactions (`--revalued`) |         | ✅     |
+| lot reporting (`--lots`)                          |         | ✅     |
+| **hledger only**                                  |         |        |
+| timedot format                                    | ✅      |        |
+| multi-period reports                              | ✅      |        |
+| account types                                     | ✅      |        |
+| activity command                                  | ✅      |        |
+| add command                                       | ✅      |        |
+| balancesheet command                              | ✅      |        |
+| cashflow command                                  | ✅      |        |
+| check command                                     | ✅      |        |
+| close command                                     | ✅      |        |
+| descriptions command                              | ✅      |        |
+| diff command                                      | ✅      |        |
+| files command                                     | ✅      |        |
+| iadd command                                      | ✅      |        |
+| import command                                    | ✅      |        |
+| incomestatement command                           | ✅      |        |
+| irr command                                       | ✅      |        |
+| interest command                                  | ✅      |        |
+| notes command                                     | ✅      |        |
+| prices command                                    | ✅      |        |
+| rewrite command                                   | ✅      |        |
+| ui command                                        | ✅      |        |
+| web command                                       | ✅      |        |
 
-We add some new commands, such as:
+### Performance
 
-- activity
-- add
-- balancesheet
-- cashflow
-- check-dates
-- check-dupes
-- close
-- descriptions
-- diff
-- files
-- import
-- incomestatement
-- irr
-- interest
-- notes
-- prices
-- rewrite
-- ui
-- web
+Traditionally, Ledger and hledger performance felt about the same on small files,
+but Ledger used less memory and was faster with large files - with very large files,
+up to ~10x faster. That extra speed came partly from providing fewer guarantees, 
+eg Ledger's balance assertions/assignments are not date-aware.
 
-We do not yet support:
+Lately (2021) the performance gap seems to have closed, with hledger outperforming 
+Ledger in some cases - more formal benchmarking needed, please see if you can reproduce.
 
-- revaluation transactions (`--revalued`)
-- reporting lots (`--lots`)
-- value expressions
+### Data formats
+
+hledger's journal file format is very similar to Ledger's.
+Some syntactic forms can be interpreted in slightly different ways,
+eg [hledger comments](journal.html#comments) 
+vs [Ledger comments](https://www.ledger-cli.org/3.0/doc/ledger3.html#Commenting-on-your-Journal),
+or [balance assertions](journal.html#assertions-and-ordering).
+
+A small number of Ledger's syntactic forms are ignored (`{ }` prices)
+or rejected (value expressions). If you avoid these, it's quite easy
+to keep a journal file that works with both hledger and Ledger (see below).
+
+hledger's timeclock format is also very similar to Ledger's.
+hledger also provides a new timedot format, allowing a different style
+of time logging.
+
+Both hledger and Ledger can read CSV files; they each have their own system for 
+defining conversion rules.
 
 ### Functional differences
+
+Here is a more detailed list of differences in behaviour.
+Related:
+<https://github.com/simonmichael/hledger/issues/1752>
 
 #### Command line interface
 
@@ -269,11 +284,6 @@ We do not yet support:
 - hledger always splits multi-day time sessions at midnight, showing accurate per-day amounts.
   Ledger does this only with the `--day-break` flag.
 
-### See also
-
-- [Why hledger ?](why.html)
-- <https://github.com/simonmichael/hledger/issues/1752>
-
 ## Interoperating
 
 Tips for co-using/converting/switching Ledger and hledger.
@@ -281,7 +291,6 @@ Tips for co-using/converting/switching Ledger and hledger.
 Ledger's and hledger's journal formats are the same at the core,
 so you can continue using both tools on the same files, 
 if you are careful to avoid syntax that is specific to one or the other.
-See [FAQ](faq.html) on differences.
 
 However if you are a long-time Ledger user, you will certainly have
 Ledger-specific syntax, so for most Ledger users the quickest way 
@@ -303,3 +312,16 @@ $ ledger print | hledger -f- web         # view journal in hledger-web WUI
 $ hledger-ui -f <(ledger print)          # view journal in hledger-ui TUI (works in bash)
 ```
 
+Unfortunately, `ledger print` does not evaluate Ledger's value expressions.
+
+A more powerful approach is to keep hledger- and Ledger-specific data in separate files,
+which [include](journal.html#including-other-files) a shared common file containing all the
+compatible data. Eg:
+```shell
+$ ls *.journal
+common.journal   # included by hledger.journal and ledger.journal
+hledger.journal
+ledger.journal
+$ hledger -f hledger.journal CMD
+$ ledger -f ledger.journal CMD
+```
