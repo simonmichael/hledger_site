@@ -172,6 +172,10 @@ Best times:
 | -f examples/100000x1000x10.journal balance    ||  29.14 |         6.78 |
 | -f examples/100000x1000x10.journal balance ff ||   1.13 |         5.89 |
 +-----------------------------------------------++--------+--------------+
+
+$ file /opt/homebrew/bin/ledger /Users/simon/src/hledger/bin/hledger-1.24
+/opt/homebrew/bin/ledger:                  Mach-O 64-bit executable arm64
+/Users/simon/src/hledger/bin/hledger-1.24: Mach-O 64-bit executable x86_64
 ```
 
 ### Data formats
