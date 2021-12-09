@@ -140,6 +140,40 @@ eg Ledger's balance assertions/assignments are not date-aware.
 Lately (2021) the performance gap seems to have closed, with hledger outperforming 
 Ledger in some cases - more formal benchmarking needed, please see if you can reproduce.
 
+```shell
+$ uname -a
+Darwin SMs-slate-mac.local 20.6.0 Darwin Kernel Version 20.6.0: Tue Oct 12 18:33:38 PDT 2021; root:xnu-7195.141.8~1/RELEASE_ARM64_T8101 arm64
+$ brew info ledger
+...
+/opt/homebrew/Cellar/ledger/3.2.1_7 (126 files, 4.7MB) *
+  Poured from bottle on 2021-11-18 at 16:04:23
+...
+$ ledger --version
+Ledger 3.2.1-20200518, the command-line accounting tool
+...
+$ hledger-1.24 --version
+hledger 1.24-0-gf0f830e06, mac-x86_64
+$ cat bench-ledger.sh 
+hledger -f examples/10000x1000x10.journal print
+hledger -f examples/10000x1000x10.journal register
+hledger -f examples/10000x1000x10.journal balance
+hledger -f examples/100000x1000x10.journal balance
+hledger -f examples/100000x1000x10.journal balance ff
+$ quickbench -f bench-ledger.sh -w ledger,hledger-1.24
+Running 5 tests 1 times with 2 executables at 2021-12-09 08:50:10 HST:
+
+Best times:
++-----------------------------------------------++--------+--------------+
+|                                               || ledger | hledger-1.24 |
++===============================================++========+==============+
+| -f examples/10000x1000x10.journal print       ||   7.08 |         0.84 |
+| -f examples/10000x1000x10.journal register    ||  18.16 |        16.65 |
+| -f examples/10000x1000x10.journal balance     ||   0.38 |         0.80 |
+| -f examples/100000x1000x10.journal balance    ||  29.14 |         6.78 |
+| -f examples/100000x1000x10.journal balance ff ||   1.13 |         5.89 |
++-----------------------------------------------++--------+--------------+
+```
+
 ### Data formats
 
 hledger's journal file format is very similar to Ledger's.
