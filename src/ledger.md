@@ -143,22 +143,27 @@ Ledger in some cases - more formal benchmarking needed, please see if you can re
 ```shell
 $ uname -a
 Darwin SMs-slate-mac.local 20.6.0 Darwin Kernel Version 20.6.0: Tue Oct 12 18:33:38 PDT 2021; root:xnu-7195.141.8~1/RELEASE_ARM64_T8101 arm64
+
 $ brew info ledger
 ...
 /opt/homebrew/Cellar/ledger/3.2.1_7 (126 files, 4.7MB) *
   Poured from bottle on 2021-11-18 at 16:04:23
 ...
+
 $ ledger --version
 Ledger 3.2.1-20200518, the command-line accounting tool
 ...
+
 $ hledger-1.24 --version
 hledger 1.24-0-gf0f830e06, mac-x86_64
+
 $ cat bench-ledger.sh 
 hledger -f examples/10000x1000x10.journal print
 hledger -f examples/10000x1000x10.journal register
 hledger -f examples/10000x1000x10.journal balance
 hledger -f examples/100000x1000x10.journal balance
 hledger -f examples/100000x1000x10.journal balance ff
+
 $ quickbench -f bench-ledger.sh -w ledger,hledger-1.24
 Running 5 tests 1 times with 2 executables at 2021-12-09 08:50:10 HST:
 
@@ -176,6 +181,27 @@ Best times:
 $ file /opt/homebrew/bin/ledger /Users/simon/src/hledger/bin/hledger-1.24
 /opt/homebrew/bin/ledger:                  Mach-O 64-bit executable arm64
 /Users/simon/src/hledger/bin/hledger-1.24: Mach-O 64-bit executable x86_64
+```
+
+hledger processes about 14k transactions per second on a macbook air m1:
+```
+$ make throughput 
+date: Thu Dec 9 09:05:55 HST 2021
+system: Darwin SMs-slate-mac.local 20.6.0 Darwin Kernel Version 20.6.0: Tue Oct 12 18:33:38 PDT 2021; root:xnu-7195.141.8~1/RELEASE_ARM64_T8101 arm64
+executable: hledger
+version: hledger 1.24-37-g76b5c5f2a, mac-x86_64
+  1000: Run time (throughput)    : 0.10s (10406 txns/s)
+  2000: Run time (throughput)    : 0.16s (12224 txns/s)
+  3000: Run time (throughput)    : 0.23s (13141 txns/s)
+  4000: Run time (throughput)    : 0.30s (13453 txns/s)
+  5000: Run time (throughput)    : 0.39s (12805 txns/s)
+  6000: Run time (throughput)    : 0.43s (14106 txns/s)
+  7000: Run time (throughput)    : 0.54s (12953 txns/s)
+  8000: Run time (throughput)    : 0.57s (14085 txns/s)
+  9000: Run time (throughput)    : 0.68s (13316 txns/s)
+ 10000: Run time (throughput)    : 0.75s (13318 txns/s)
+100000: Run time (throughput)    : 6.98s (14333 txns/s)
+Thu Dec  9 09:06:07 HST 2021
 ```
 
 ### Data formats
