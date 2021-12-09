@@ -4,11 +4,8 @@
 <!-- toc -->
 </div>
 
-This page needs updating, but it should still be pretty accurate.
-
-See also:
-
-- [Why hledger ?](why.html)
+See also: 
+[Why hledger ?](why.html)
 
 ## History
 
@@ -157,9 +154,10 @@ defining conversion rules.
 
 ### Functional differences
 
-Here is a more detailed list of differences in behaviour.
-Related:
-<https://github.com/simonmichael/hledger/issues/1752>
+Here is a more detailed list of differences in behaviour
+(see also:
+[#1752](https://github.com/simonmichael/hledger/issues/1752)
+):
 
 #### Command line interface
 
