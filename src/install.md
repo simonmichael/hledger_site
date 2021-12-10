@@ -180,24 +180,6 @@ https://github.com/simonmichael/hledger/releases, also apply here.
     <tr valign="top">
       <td>
         <div class="badges">
-          <a href="https://community.chocolatey.org/packages/hledger">
-            <img alt="Chocolatey package" src="https://repology.org/badge/version-for-repo/chocolatey/hledger.svg" />
-          </a>
-        </div>
-      </td>
-      <td style="padding-top:10px;">
-        <div class="command" style="margin-bottom:4px;">
-          choco install hledger -y
-        </div>
-        <div class="notes">
-        <!--   <span class="warnings"> -->
-        <!--   </span> -->
-        </div>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td>
-        <div class="badges">
           <img alt="CI binaries" src="https://img.shields.io/badge/CI_binaries-1.24.1-brightgreen.svg" />
         </div>
       </td>
@@ -212,6 +194,24 @@ https://github.com/simonmichael/hledger/releases, also apply here.
         <!--     <\!-- [doesn't work on old windows ?](https://github.com/simonmichael/hledger/issues/774), -\-> -->
         <!--     <\!-- [many files in PATH causing hangs](https://github.com/simonmichael/hledger/issues/791), -\-> -->
         <!--     <\!-- [appveyor builds failing](https://github.com/simonmichael/hledger/issues/832) -\-> -->
+        <!--   </span> -->
+        </div>
+      </td>
+    </tr>
+    <tr valign="top">
+      <td>
+        <div class="badges">
+          <a href="https://community.chocolatey.org/packages/hledger">
+            <img alt="Chocolatey package" src="https://repology.org/badge/version-for-repo/chocolatey/hledger.svg" />
+          </a>
+        </div>
+      </td>
+      <td style="padding-top:10px;">
+        <div class="command" style="margin-bottom:4px;">
+          choco install hledger -y
+        </div>
+        <div class="notes">
+        <!--   <span class="warnings"> -->
         <!--   </span> -->
         </div>
       </td>
