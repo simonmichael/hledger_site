@@ -87,7 +87,7 @@ You might need some [C libraries](#c-libraries) or a [UTF-8 locale](#utf-8-local
 To finish, [check your PATH](#check-your-path) and [test your installation](#test-your-installation).
 And please [report any trouble](index.html#help) so we can make this process smoother.
 
-The current hledger release is **1.24**. ([Release notes](release-notes))
+The current hledger release is **1.24.1**. ([Release notes](release-notes))
 
 ## Binary packages
 
@@ -98,7 +98,7 @@ The current hledger release is **1.24**. ([Release notes](release-notes))
     <tr>
       <td>
         <div class="badges">
-          <a href="https://hub.docker.com/r/dastapov/hledger"><img alt="Docker" src="https://img.shields.io/badge/Docker_image-1.24-brightgreen.svg" /></a><br>
+          <a href="https://hub.docker.com/r/dastapov/hledger"><img alt="Docker" src="https://img.shields.io/badge/Docker_image-1.24-red.svg" /></a><br>
           <a href="https://hub.docker.com/search?q=hledger&amp;type=image&amp;sort=updated_at&amp;order=desc">more..</a>
         </div>
         <div class="distro"><a href="https://www.docker.com/products/docker-desktop">Docker</a></div>
@@ -123,7 +123,7 @@ The current hledger release is **1.24**. ([Release notes](release-notes))
     <tr>
       <td>
         <div class="badges">
-          <a href="https://github.com/search?l=&o=desc&q=%22automatic+Haskell+package+set+update%22+repo%3ANixOS%2Fnixpkgs+filename%3Ahaskell-packages.nix&s=committer-date&type=Commits"><img alt="Nix" src="https://img.shields.io/badge/Nix_package-1.24-brightgreen.svg" /></a>
+          <a href="https://github.com/search?l=&o=desc&q=%22automatic+Haskell+package+set+update%22+repo%3ANixOS%2Fnixpkgs+filename%3Ahaskell-packages.nix&s=committer-date&type=Commits"><img alt="Nix" src="https://img.shields.io/badge/Nix_package-1.24-red.svg" /></a>
         </div>
         <divC class="distro"><a href="https://nixos.org/nix">Nix</a></div>
         <div class="notes">Linux, Mac</div>
@@ -198,12 +198,12 @@ https://github.com/simonmichael/hledger/releases, also apply here.
     <tr valign="top">
       <td>
         <div class="badges">
-          <img alt="CI binaries" src="https://img.shields.io/badge/CI_binaries-1.24-brightgreen.svg" />
+          <img alt="CI binaries" src="https://img.shields.io/badge/CI_binaries-1.24.1-brightgreen.svg" />
         </div>
       </td>
       <td style="padding-top:10px;">
         <div class="command" style="margin-bottom:4px;">
-          <a href="https://github.com/simonmichael/hledger/releases/tag/1.24">hledger-windows.zip</a>
+          <a href="https://github.com/simonmichael/hledger/releases/tag/1.24.1">hledger-windows.zip</a>
         </div>
         <div class="notes">
         <!--   <span class="warnings"> -->
@@ -226,12 +226,12 @@ https://github.com/simonmichael/hledger/releases, also apply here.
     <tr valign="top">
       <td>
         <div class="badges">
-          <img alt="CI binaries" src="https://img.shields.io/badge/CI_binaries-1.24-brightgreen.svg" />
+          <img alt="CI binaries" src="https://img.shields.io/badge/CI_binaries-1.24.1-brightgreen.svg" />
         </div>
       </td>
       <td style="padding-top:10px;">
         <div class="command" style="margin-bottom:4px;">
-          <a href="https://github.com/simonmichael/hledger/releases/tag/1.24">hledger-macos.zip</a>
+          <a href="https://github.com/simonmichael/hledger/releases/tag/1.24.1">hledger-macos.zip</a>
         </div>
         <div class="notes"></div>
       </td>
@@ -246,13 +246,12 @@ https://github.com/simonmichael/hledger/releases, also apply here.
     <tr valign="top">
       <td>
         <div class="badges">
-          <img alt="CI binaries" src="https://img.shields.io/badge/CI_binaries-1.24-brightgreen.svg" />
+          <img alt="CI binaries" src="https://img.shields.io/badge/CI_binaries-1.24.1-brightgreen.svg" />
         </div>
       </td>
       <td style="padding-top:10px;">
         <div class="command" style="margin-bottom:4px;">
-          <!-- <a href="https://github.com/simonmichael/hledger/releases/tag/1.22">hledger-ubuntu.zip</a><br> -->
-          <a href="https://github.com/simonmichael/hledger/releases/tag/1.24">hledger-linux-static-x64.zip</a><br>
+          <a href="https://github.com/simonmichael/hledger/releases/tag/1.24.1">hledger-linux-x64.zip</a><br>
         </div>
         <div class="notes"></div>
       </td>
@@ -265,7 +264,6 @@ https://github.com/simonmichael/hledger/releases, also apply here.
       </td>
       <td style="padding-top:10px;">
         <div class="command" style="margin-bottom:4px;">
-          <!-- <a href="https://github.com/simonmichael/hledger/releases/tag/1.22">hledger-ubuntu.zip</a><br> -->
           <a href="https://github.com/simonmichael/hledger/releases/tag/1.22.1">hledger-linux-static-arm32v7.zip</a><br>
         </div>
         <div class="notes"></div>
@@ -514,7 +512,7 @@ package manager first. See
 <!-- XXX ^ improve -->
 
 ## Building from source
-<img alt="Release source" src="https://img.shields.io/badge/Release_source-1.24-brightgreen.svg" />
+<img alt="Release source" src="https://img.shields.io/badge/Release_source-1.24.1-brightgreen.svg" />
 
 The [hledger-install script][hledger-install] 
 requires only [bash] (and sometimes `make`, and `gcc`, and ...?). 
@@ -535,7 +533,7 @@ Or, if you prefer to run [stack] yourself:
 
 <div class="builder-command">
   stack update <br>
-  stack install --resolver=lts-18 hledger-lib-1.24 hledger-1.24 hledger-ui-1.24 hledger-web-1.24 --silent
+  stack install --resolver=lts-18 hledger-lib-1.24.1 hledger-1.24.1 hledger-ui-1.24.1 hledger-web-1.24.1 --silent
 </div>
 
 This installs the main hledger tools in ~/.local/bin.
@@ -549,7 +547,7 @@ Or, if you prefer to run [cabal] yourself:
 <div class="builder-command">
   cabal update <br>
   cabal install alex happy<br>
-  cabal install hledger-1.24 hledger-ui-1.24 hledger-web-1.24
+  cabal install hledger-1.24.1 hledger-ui-1.24.1 hledger-web-1.24.1
 </div>
 
 This installs the main hledger tools in ~/.cabal/bin.
@@ -685,13 +683,13 @@ Eg:
 
 <div class="command">
 $ hledger --version <br>
-hledger 1.24-0-gf0f830e06, mac-x86_64
+hledger 1.24.1-g7799d526b-20211210, mac-x86_64
 <br>
 $ hledger-ui --version <br>
-hledger-ui 1.24-0-gf0f830e06, mac-x86_64
+hledger-ui 1.24.1-g7799d526b-20211210, mac-x86_64
 <br>
 $ hledger web --version <br>
-hledger-web 1.24-0-gf0f830e06, mac-x86_64
+hledger-web 1.24.1-g7799d526b-20211210, mac-x86_64
 <br>
 </div>
 
@@ -708,7 +706,7 @@ Or if you have checked out the hledger source, also the functional tests:
 <div class="command">
 $ make functest <br>
 ... <br>
- Total   812 ...<br>
+ Total   813 ...<br>
 functest PASSED
 </div>
 
