@@ -203,7 +203,7 @@ https://github.com/simonmichael/hledger/releases, also apply here.
       </td>
       <td style="padding-top:10px;">
         <div class="command" style="margin-bottom:4px;">
-          <a href="https://github.com/simonmichael/hledger/releases/tag/1.24.1">hledger-windows.zip</a>
+          <a href="https://github.com/simonmichael/hledger/releases/tag/hledger-1.24.1">hledger-windows.zip</a>
         </div>
         <div class="notes">
         <!--   <span class="warnings"> -->
@@ -231,7 +231,7 @@ https://github.com/simonmichael/hledger/releases, also apply here.
       </td>
       <td style="padding-top:10px;">
         <div class="command" style="margin-bottom:4px;">
-          <a href="https://github.com/simonmichael/hledger/releases/tag/1.24.1">hledger-macos.zip</a>
+          <a href="https://github.com/simonmichael/hledger/releases/tag/hledger-1.24.1">hledger-macos.zip</a>
         </div>
         <div class="notes"></div>
       </td>
@@ -251,7 +251,7 @@ https://github.com/simonmichael/hledger/releases, also apply here.
       </td>
       <td style="padding-top:10px;">
         <div class="command" style="margin-bottom:4px;">
-          <a href="https://github.com/simonmichael/hledger/releases/tag/1.24.1">hledger-linux-x64.zip</a><br>
+          <a href="https://github.com/simonmichael/hledger/releases/tag/hledger-1.24.1">hledger-linux-x64.zip</a><br>
         </div>
         <div class="notes"></div>
       </td>
