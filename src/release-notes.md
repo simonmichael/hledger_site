@@ -63,63 +63,42 @@ Changes in hledger-install.sh are shown
 [here](https://github.com/simonmichael/hledger/commits/master/hledger-install/hledger-install.sh).
 
 
+## 2021-12-10 hledger-1.24.1
+
+### hledger 1.24.1
+
+Fixes
+
+- `balance --declared` is now filtered correctly by a `not:ACCT` query.
+  (#1783)
+
+- More reliable --version output, with commit date and without patch level.
+
+### hledger-ui 1.24.1
+
+Fixes
+
+- An extra "root" account is no longer shown (a regression in 1.24).
+  (#1782)
+
+- Declared accounts are now filtered correctly by a not:ACCT query.
+  (#1783)
+
+- More reliable --version output, with commit date and without patch level.
+
+### hledger-web 1.24.1
+
+Fixes
+
+- More reliable --version output, with commit date and without patch level.
+
+
 ## 2021-12-01 hledger-1.24
 
 **New report layout options with less eliding,
 hledger-ui mouse support,
 misc fixes and improvements.**
 <!-- ([announcement](https://groups.google.com/g/hledger/LINK)) -->
-
-### project changes 1.24
-
-Software
-
-- bin/hledger-check-fancyassertions.hs: fix ugly assertion parse errors. 
-  (ShrykeWindgrace)
-
-- bin/hledger-check-tagfiles.hs: Update description, clarify wording.
-  (Pranesh Prakash)
-
-Docs
-
-- Account types: prioritise the short one-letter names, hide the deprecated
-  legacy syntax.
-
-- Directives: a more compact and accurate overview.
-
-- examples/templates/basic: A new starter file set, and a place to collect them.
-
-- Expose more developer docs as separate web pages:
-  CHANGELOGS, COMMITS, RELEASING, etc.
-
-- Fix a link to developer workflows. (Joaquin "Florius" Azcarate)
-
-Process
-
-- PR template: Fix our github PR template to use proper comment syntax,
-  and link to more relevant docs.
-  (toonn)
-
-- cabal.project: Drop obsolete compatibility comment. 
-  ([#1365](https://github.com/simonmichael/hledger/issues/1365), toonn)
-
-- Bump default stackage snapshot to one avoiding buggy happy version.
-
-- bin/changelog: a new helper making changelog edits more pleasant.
-
-- make throughput{,-dev,-EXE}: reports transactions per second for a range of
-  file sizes with the hledger in PATH, hledger dev build, or named hledger 
-  executable.
-
-- make install-as-FOO: build executables and save as bin/hledger*-FOO
-
-- perf: bench-ledger.sh for comparative benchmarking with Ledger.
-
-- CI: commitlint: be more forgiving when we can't figure out recent commits
-  (don't check any).
-
-- CI: commitlint: recognise any commit starting with ‘Merge’ as a merge commit
-  (and ignore it). (Stephen Morgan)
 
 ### hledger 1.24
 
@@ -249,6 +228,57 @@ Fixes
 Improvements
 
 - Allow megaparsec 9.2
+
+### project changes 1.24
+
+Software
+
+- bin/hledger-check-fancyassertions.hs: fix ugly assertion parse errors. 
+  (ShrykeWindgrace)
+
+- bin/hledger-check-tagfiles.hs: Update description, clarify wording.
+  (Pranesh Prakash)
+
+Docs
+
+- Account types: prioritise the short one-letter names, hide the deprecated
+  legacy syntax.
+
+- Directives: a more compact and accurate overview.
+
+- examples/templates/basic: A new starter file set, and a place to collect them.
+
+- Expose more developer docs as separate web pages:
+  CHANGELOGS, COMMITS, RELEASING, etc.
+
+- Fix a link to developer workflows. (Joaquin "Florius" Azcarate)
+
+Process
+
+- PR template: Fix our github PR template to use proper comment syntax,
+  and link to more relevant docs.
+  (toonn)
+
+- cabal.project: Drop obsolete compatibility comment. 
+  ([#1365](https://github.com/simonmichael/hledger/issues/1365), toonn)
+
+- Bump default stackage snapshot to one avoiding buggy happy version.
+
+- bin/changelog: a new helper making changelog edits more pleasant.
+
+- make throughput{,-dev,-EXE}: reports transactions per second for a range of
+  file sizes with the hledger in PATH, hledger dev build, or named hledger 
+  executable.
+
+- make install-as-FOO: build executables and save as bin/hledger*-FOO
+
+- perf: bench-ledger.sh for comparative benchmarking with Ledger.
+
+- CI: commitlint: be more forgiving when we can't figure out recent commits
+  (don't check any).
+
+- CI: commitlint: recognise any commit starting with ‘Merge’ as a merge commit
+  (and ignore it). (Stephen Morgan)
 
 ### credits 1.24
 
