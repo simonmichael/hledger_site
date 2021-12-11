@@ -54,10 +54,10 @@ h2, h2:last-child > h3 { margin-top:4em; }
 </style>
 
 Major releases and user-visible changes, collected from the changelogs (
-[hledger-lib](http://hackage.haskell.org/package/hledger-lib/changelog),
-[hledger](http://hackage.haskell.org/package/hledger/changelog),
-[hledger-ui](http://hackage.haskell.org/package/hledger-ui/changelog),
-[hledger-web](http://hackage.haskell.org/package/hledger-web/changelog)
+[hledger-lib](http://hackage.haskell.org/package/hledger-lib-1.24.1/changelog),
+[hledger](http://hackage.haskell.org/package/hledger-1.24.1/changelog),
+[hledger-ui](http://hackage.haskell.org/package/hledger-ui-1.24.1/changelog),
+[hledger-web](http://hackage.haskell.org/package/hledger-web-1.24.1/changelog)
 ).
 Changes in hledger-install.sh are shown
 [here](https://github.com/simonmichael/hledger/commits/master/hledger-install/hledger-install.sh).
@@ -349,14 +349,14 @@ Tools/process:
   ([#1503](https://github.com/simonmichael/hledger/issues/1503), 
   [#1615](https://github.com/simonmichael/hledger/issues/1615))
 
-- bin/commitlint is a new tool for hledger developers which checks and
+- tools/commitlint is a new tool for hledger developers which checks and
   describes new commit conventions which simplify maintenance of
   change docs and releasing. It can be run locally while developing,
   manually or as a pre-commit hook
   (`ln -sf ../../bin/commitling .git/hooks/commit-msg`), 
   and is also run by our CI workflows to check pull requests.
   <https://hledger.org/CONTRIBUTING.html#commit-messages>,
-  [bin/commitlint](https://github.com/simonmichael/hledger/blob/master/bin/commitlint)
+  [tools/commitlint](https://github.com/simonmichael/hledger/blob/master/tools/commitlint)
   (#1602)
 
 ### hledger 1.23
