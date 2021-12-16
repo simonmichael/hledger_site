@@ -16,6 +16,8 @@
 
 - [Age Your Money](https://www.youneedabudget.com/guides/age-your-money), the YNAB (YouNeedABudget) way
 
+- <https://github.com/zombor/hledger-envelope-budget>
+
 - <https://github.com/Kickball/awesome-selfhosted#money-budgeting--management>, some other budgeting software for comparison
 
 - [Time planning](time-planning.html#how-to-set-up-a-time-budget) -> How to set up a time budget
