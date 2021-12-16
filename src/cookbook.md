@@ -56,7 +56,8 @@ Follow any links to the official [manuals](manuals.html) for more info.
 
 - [Accounting concepts](accounting.md)
 - [Borrowing and lending](loans.md)
-- [Budgeting and forecasting](budgeting.md)
+- [Budgeting](budgeting.md)
+- [Forecasting](forecasting.md)
 - [Common journal entries](common-journal-entries.md)
 - [Currency conversion](currency-conversion.md) and 
   [Currency conversion 2](conversion2.md)

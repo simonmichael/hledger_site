@@ -49,6 +49,7 @@
 - [Currency conversion 2](conversion2.md)
 - [Editor configuration](editors.md)
 - [Exporting from hledger](export.md)
+- [Forecasting](forecasting.md)
 - [Foreign trip expenses](foreign-trip-expenses.md)
 - [Home](index.md)
 - [Importing CSV data](import-csv.md)
