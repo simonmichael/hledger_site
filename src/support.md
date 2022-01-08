@@ -8,7 +8,8 @@
     <td>Chat:</td>
     <td>
       <a href="http://matrix.hledger.org">#hledger:matrix.org</a> or
-      <a href="http://irc.hledger.org">#hledger:libera.chat</a> (bridged, ~120 chatters)
+      <a href="http://irc.hledger.org">#hledger:libera.chat</a><br>
+      Active bridged Matrix/IRC room with ~130 chatters.
 <!--
       <br>
       To talk, <a href="https://libera.chat/guides/registration">register your nick</a>:
@@ -26,7 +27,8 @@
     <td>
       view: <a href="http://list.hledger.org">list.hledger.org</a><br>
       send: <a href="mailto:hledger@googlegroups.com">hledger@googlegroups.com</a><br>
-      subscribe: <a href="mailto:hledger+subscribe@googlegroups.com">hledger+subscribe@googlegroups.com</a>
+      subscribe: <a href="mailto:hledger+subscribe@googlegroups.com">hledger+subscribe@googlegroups.com</a><br>
+      Low traffic mail list with ~200 subscribers.
     </td>
   </tr>
   <tr valign=top>
