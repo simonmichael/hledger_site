@@ -79,15 +79,17 @@ div.badges {
 }
 </style>
 
-Here are lots of ways to install hledger - choose one that suits your needs.
-[Binary packages](#binary-packages) install quickly;
-[building from source](#building-from-source) is slower but ensures the latest release.
-
-You might need some [C libraries](#c-libraries) or a [UTF-8 locale](#utf-8-locale).
-To finish, [check your PATH](#check-your-path) and [test your installation](#test-your-installation).
-And please [report any trouble](index.html#help) so we can make this process smoother.
-
 The current hledger release is **1.24.1**. ([Release notes](release-notes))
+
+Here are lots of ways to install hledger - choose one that suits your needs.
+Binary packages install quickly but are not always up to date (look for green badges).
+Building from source is slower and requires at least 4G of ram.
+
+You might also need some [C libraries](#c-libraries) or a [UTF-8 locale](#utf-8-locale).
+
+To finish, [check your PATH](#check-your-path), 
+[test your installation](#test-your-installation),
+and please [share any feedback](support.html) so we can make this process smoother.
 
 ## Binary packages
 
@@ -101,7 +103,7 @@ The current hledger release is **1.24.1**. ([Release notes](release-notes))
           <a href="https://hub.docker.com/r/dastapov/hledger"><img alt="Docker" src="https://img.shields.io/badge/Docker_image-1.24.1-brightgreen.svg" /></a><br>
           <a href="https://hub.docker.com/search?q=hledger&amp;type=image&amp;sort=updated_at&amp;order=desc">more..</a>
         </div>
-        <div class="distro"><a href="https://www.docker.com/products/docker-desktop">Docker</a></div>
+        <!-- <div class="distro"><a href="https://www.docker.com/products/docker-desktop">Docker</a></div> -->
         <div class="notes">Linux, Mac, Windows</div>
       </td>
       <td>
@@ -113,7 +115,7 @@ The current hledger release is **1.24.1**. ([Release notes](release-notes))
         <div class="badges">
           <a href="https://formulae.brew.sh/formula/hledger"><img alt="Homebrew" src="https://repology.org/badge/version-for-repo/homebrew/hledger.svg" /></a>
         </div>
-        <div class="distro"><a href="https://brew.sh">Homebrew</a></div>
+        <!-- <div class="distro"><a href="https://brew.sh">Homebrew</a></div> -->
         <div class="notes">Linux, Mac, WSL</div>
       </td>
       <td>
@@ -123,14 +125,14 @@ The current hledger release is **1.24.1**. ([Release notes](release-notes))
     <tr>
       <td>
         <div class="badges">
-          <a href="https://github.com/search?l=&o=desc&q=%22automatic+Haskell+package+set+update%22+repo%3ANixOS%2Fnixpkgs+filename%3Ahaskell-packages.nix&s=committer-date&type=Commits"><img alt="Nix" src="https://img.shields.io/badge/Nix_package-1.24-red.svg" /></a>
+          <a href="https://github.com/search?l=&o=desc&q=%22automatic+Haskell+package+set+update%22+repo%3ANixOS%2Fnixpkgs+filename%3Ahaskell-packages.nix&s=committer-date&type=Commits"><img alt="Nix" src="https://img.shields.io/badge/Nix_package-1.24.1-brightgreen.svg" /></a>
         </div>
-        <divC class="distro"><a href="https://nixos.org/nix">Nix</a></div>
+        <!-- <div class="distro"><a href="https://nixos.org/nix">Nix</a></div> -->
         <div class="notes">Linux, Mac</div>
       </td>
       <td>
         <div class="command">
-            nix-env -f https://github.com/NixOS/nixpkgs/archive/53cd2570.tar.gz -iA hledger_1_24 hledger-ui_1_24 hledger-web_1_24
+            nix-env -f https://github.com/NixOS/nixpkgs/archive/e1225076.tar.gz -iA hledger_1_24_1 hledger-ui_1_24_1 hledger-web_1_24_1
         </div>
         <div class="notes">
             Binaries may not yet be fully cached for your platform, try with --dry-run to estimate how much building will be required.
@@ -141,11 +143,14 @@ The current hledger release is **1.24.1**. ([Release notes](release-notes))
     </tr>
     <tr>
       <td>
-        <div class="distro"><a href="https://www.winehq.org">Wine</a></div>
+        <div class="badges">
+          <a href="https://www.winehq.org"><img alt="Wine" src="https://img.shields.io/badge/Wine-1.24.1-brightgreen.svg" /></a>
+        </div>
+        <!-- <div class="distro"><a href="https://www.winehq.org">Wine</a></div> -->
         <div class="notes">Linux, Mac, *BSD, ...</div>
       </td>
       <td>
-        <div class="notes">Install Wine and use the Windows binary below</div>
+        <div class="notes">Install Wine and use it to run the Windows binary below.</div>
       </td>
     </tr>
   </tbody>
@@ -272,7 +277,7 @@ https://github.com/simonmichael/hledger/releases, also apply here.
     <tr>
       <td>
         <div class="badges">
-          <a href="https://gentoo.zugaina.org/Search?search=hledger"><img alt="Gentoo" src="https://img.shields.io/badge/Gentoo_package-1.23-red.svg" /></a>
+          <a href="https://gentoo.zugaina.org/Search?search=hledger"><img alt="Gentoo" src="https://img.shields.io/badge/Gentoo_package-1.24.1-brightgreen.svg" /></a>
         </div>
     <div class="distro">Gentoo</div>
       </td>
@@ -336,7 +341,7 @@ https://github.com/simonmichael/hledger/releases, also apply here.
       <td>
         <div class="badges">
           <a href="https://packages.ubuntu.com/hirsute/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_21_04/hledger.svg" alt="Ubuntu 21.04" /></a><br>
-          <a href="https://packages.ubuntu.com/groovy/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_20_10/hledger.svg" alt="Ubuntu 20.10" /></a><br>
+          <!-- <a href="https://packages.ubuntu.com/groovy/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_20_10/hledger.svg" alt="Ubuntu 20.10" /></a><br> -->
           <a href="https://packages.ubuntu.com/focal/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_20_04/hledger.svg" alt="Ubuntu 20.04" /></a><br>
           <a href="https://packages.ubuntu.com/bionic/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_18_04/hledger.svg" alt="Ubuntu 18.04" /></a><br>
           <a href="https://packages.ubuntu.com/xenial/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_16_04/hledger.svg" alt="Ubuntu 16.04" /></a><br>
@@ -351,37 +356,37 @@ https://github.com/simonmichael/hledger/releases, also apply here.
   </tbody>
 </table>
 
+### BSD
 
-<!-- ### NetBSD -->
-
-<!-- <table class="netbsd bsd downloads"> -->
-<!--   <tbody> -->
-<!--     <tr> -->
-<!--       <td> -->
-<!--         <div class="badges"> -->
-<!--           <a href=""><img src="https://img.shields.io/badge/netbsd-1.17.1.1-red.svg" alt="netbsd package" /></a><br> -->
-<!--           <a href="">more..</a> -->
-<!--         </div> -->
-<!--         <div class="distro"><a href="https://www.netbsd.org/">NetBSD</a></div> -->
-<!--       </td> -->
-<!--       <td> -->
-<!--         <div class="command">pkg_add hledger</div> -->
-<!--         <div class="notes"> -->
-<!--         </div> -->
-<!--       </td> -->
-<!--     </tr> -->
-<!--   </tbody> -->
-<!-- </table> -->
-
-
-### FreeBSD
-
-<table class="freebsd bsd downloads">
+<table class="bsd downloads">
   <tbody>
     <tr>
       <td>
         <div class="badges">
-          <a href="https://www.freshports.org/search.php?query=hledger"><img src="https://img.shields.io/badge/freebsd--ports-1.19-red.svg" alt="freebsd ports" /></a><br>
+          <a href="https://openports.se/productivity/hledger"><img src="https://repology.org/badge/version-for-repo/openbsd/hledger.svg" alt="openbsd ports" /></a><br>
+        </div>
+        <div class="distro"></div>
+      </td>
+      <td>
+        <div class="command">pkg_add hledger</div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="badges">
+          <a href="https://cdn.netbsd.org/pub/pkgsrc/current/pkgsrc/finance/hledger/index.html"><img src="https://img.shields.io/badge/NetBSD-1.21-red.svg" alt="netbsd package" /></a><br>
+        </div>
+      </td>
+      <td>
+        <div class="command">pkg_add hledger</div>
+        <div class="notes">
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="badges">
+          <a href="https://www.freshports.org/search.php?query=hledger"><img src="https://repology.org/badge/version-for-repo/freebsd/hledger.svg" alt="freebsd ports" /></a><br>
         </div>
         <div class="distro"></div>
       </td>
@@ -394,17 +399,6 @@ https://github.com/simonmichael/hledger/releases, also apply here.
   </tbody>
 </table>
 
-### OpenBSD
-
-<table class="openbsd bsd downloads">
-  <tbody>
-    <tr>
-      <td>
-        <div class="command">pkg_add hledger</div>
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ### Raspberry Pi
 
@@ -435,7 +429,7 @@ https://github.com/simonmichael/hledger/releases, also apply here.
           <a href="https://github.com/simonmichael/hledger/releases/tag/1.18">hledger-armhf32-debian.gz</a>
         </div>
         <div class="notes">
-          Contributed third party binaries, not audited
+          Note: unaudited third party binaries
         </div>
       </td>
     </tr>
