@@ -155,7 +155,7 @@ and please [share any feedback](support.html) so we can make this process smooth
           <a href="https://github.com/simonmichael/hledger/releases/tag/hledger-1.24.1">hledger-macos.zip</a><br>
           <a href="https://github.com/simonmichael/hledger/releases/tag/hledger-1.24.1">hledger-windows.zip</a>
           <span style="font-weight:normal; font-style:italic; font-size:small;">
-            (this can run anywhere that has <a href="https://www.winehq.org">Wine</a>)
+            (This one can run on other platforms with <a href="https://www.winehq.org">Wine</a>.)
           </span><br>
         </div>
         <div class="notes"></div>
@@ -470,12 +470,22 @@ package manager first. See
 <!-- XXX ^ improve -->
 
 ## Building from source
-<img alt="Release source" src="https://img.shields.io/badge/Release_source-1.24.1-brightgreen.svg" />
+<!-- <img alt="Release source" src="https://img.shields.io/badge/Release_source-1.24.1-brightgreen.svg" /> -->
 
-The [hledger-install script][hledger-install] 
-requires only [bash] (and sometimes `make`, and `gcc`, and ...?). 
-It builds the current release of the hledger tools and some [add-ons], 
-in a relatively reliable way:
+You can build hledger from its source code on any machine with [GHC] and sufficient RAM
+(4Gb recommended) and disk space (up to 2G for a first build).
+Including all dependencies, 
+this could take anywhere from [a minute to an hour](https://ro-che.info/articles/2020-12-22-haskell-compilation-laptop-desktop#results).
+
+### With hledger-install
+
+This is a good choice if you are new to Haskell and its build tools.
+On any machine with [bash] (and possibly make, gcc...), 
+download and run the [hledger-install.sh][hledger-install] script
+to build the current release of the hledger tools, plus some [add-ons], in a relatively reliable way.
+It will use either stack or cabal if you have them,
+or will install stack in ~/.local/bin if you have neither,
+and it installs the hledger tools in ~/.local/bin or ~/.cabal/bin respectively.
 
 <div class="builder-command">
   curl -sO https://raw.githubusercontent.com/simonmichael/hledger/master/hledger-install/hledger-install.sh <br>
@@ -483,24 +493,25 @@ in a relatively reliable way:
   bash hledger-install.sh
 </div>
 
-This uses the stack or cabal build tools
-(installing stack in ~/.local/bin if needed),
-and installs the hledger tools in ~/.local/bin or ~/.cabal/bin.
+### With stack
 
-Or, if you prefer to run [stack] yourself:
+If you have [stack], you can run it yourself
+to install the main hledger tools in ~/.local/bin:
 
 <div class="builder-command">
   stack update <br>
   stack install --resolver=lts-18 hledger-lib-1.24.1 hledger-1.24.1 hledger-ui-1.24.1 hledger-web-1.24.1 --silent
 </div>
 
-This installs the main hledger tools in ~/.local/bin.
-Your <code>stack --version</code> should be not too ancient; use a recent release (2.5.1+) for best results.
-You can usually upgrade stack quickly with <code>stack upgrade</code>.
-Windows users: the 64-bit version of stack is preferable;
-and you should omit hledger-ui from this command, unless you are in [WSL].
+Your `stack --version` should be modern (at least 2.7) for best results.
+(You can usually upgrade stack quickly with `stack upgrade`.)
+On Windows, prefer the 64-bit version of stack, 
+and omit hledger-ui from this command (unless you are in [WSL]).
 
-Or, if you prefer to run [cabal] yourself:
+### With cabal
+
+If you have [GHC] and [cabal], you can run cabal yourself
+to install the main hledger tools in ~/.cabal/bin:
 
 <div class="builder-command">
   cabal update <br>
@@ -508,37 +519,32 @@ Or, if you prefer to run [cabal] yourself:
   cabal install hledger-1.24.1 hledger-ui-1.24.1 hledger-web-1.24.1
 </div>
 
-This installs the main hledger tools in ~/.cabal/bin.
-Your <code>cabal --version</code> should be not too ancient; use a recent release (eg 3.2+) for best results.
-Windows users: omit hledger-ui from this command, unless you are in [WSL].
+Your `cabal --version` should be modern (at least 3.2) for best results.
+On Windows, omit hledger-ui from this command (unless you are in [WSL]).
 
-Or, [nix] users can use nix-env to build hledger from source (but we
-try to [provide](#multiplatform) a nix command that installs
-already-cached binaries.)
+### With nix
+
+If you have [nix], you can use nix-env to build hledger from source 
+(but we try to provide a [nix command](#multiple-platforms) that installs
+already-cached binaries, see above).
 
 
 ### Build tips
 
-- You can build hledger from source wherever [GHC] is supported.
-  It's normally routine, requiring no babysitting.
-
-- A build can require up to 2G of free RAM and disk space, and could take 
-  [between a minute and an hour](https://ro-che.info/articles/2020-12-22-haskell-compilation-laptop-desktop#specs).
-
-- You can use less resources by omitting the hledger-ui and hledger-web
-  packages from the commands above.
+- You can use less resources by omitting hledger-ui and hledger-web
+  from the commands above.
 
 - It's ok to kill a build and rerun the command later; you won't lose progress.
 
 - You can add `--dry-run` to the stack/cabal/nix install commands
   to see how much building remains.
 
-- If you already have hledger tools installed, 
+- If you have previously installed the hledger tools, 
   they will usually be overwritten by the new version.
   If you have them installed in multiple places in your PATH, 
   you may see a warning, reminding you to remove or rename the old executables.
 
-- If you try to build with insufficient free RAM,
+- If you try to build with insufficient RAM,
   it may use swap space and take a very long time (overnight).
   Or it may fail with an error; in this case try adding `-j1`
   to the stack/cabal install command and retry a few times, 
@@ -563,7 +569,7 @@ already-cached binaries.)
 <a name="c"></a>
 
 ### Building the development version
-<img alt="Latest source" src="https://img.shields.io/badge/Latest_source-master-brightgreen.svg" />
+<!-- <img alt="Latest source" src="https://img.shields.io/badge/Latest_source-master-brightgreen.svg" /> -->
 
 If you want the very [latest improvements](https://github.com/simonmichael/hledger/commits/master),
 our master branch on github is suitable for daily use.
