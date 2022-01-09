@@ -94,7 +94,7 @@ and please [share any feedback](support.html) so we can make this process smooth
 
 ## Binary packages
 
-### Multiplatform (Linux, Mac, Windows, ...)
+### Multiple platforms
 
 <table class="multiplatform downloads">
   <tbody>
@@ -136,7 +136,7 @@ and please [share any feedback](support.html) so we can make this process smooth
             nix-env -f https://github.com/NixOS/nixpkgs/archive/e1225076.tar.gz -iA hledger_1_24_1 hledger-ui_1_24_1 hledger-web_1_24_1
         </div>
         <div class="notes">
-            Binaries may not yet be fully cached for your platform, try with --dry-run to estimate how much building will be required.
+            Nix binaries may not yet be fully cached for your platform, try with --dry-run to estimate how much building will be required.
             On Linux, note <span class="warnings"><a href="https://github.com/simonmichael/hledger/issues/1030">#1030</a>, 
             <a href="https://github.com/simonmichael/hledger/issues/1033">#1033</a>.
         </div>
