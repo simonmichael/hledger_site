@@ -18,6 +18,7 @@ table.downloads {
 table.downloads > tbody > tr { 
   border-top:thin solid #ddd; 
   border-bottom:thin solid #ddd; 
+  vertical-align: top;
 }
 table.downloads > tbody > tr > td { 
   padding-top:0.5em;
@@ -93,7 +94,7 @@ and please [share any feedback](support.html) so we can make this process smooth
 
 ## Binary packages
 
-### Multiplatform
+### Multiplatform (Linux, Mac, Windows, ...)
 
 <table class="multiplatform downloads">
   <tbody>
@@ -104,7 +105,7 @@ and please [share any feedback](support.html) so we can make this process smooth
           <a href="https://hub.docker.com/search?q=hledger&amp;type=image&amp;sort=updated_at&amp;order=desc">more..</a>
         </div>
         <!-- <div class="distro"><a href="https://www.docker.com/products/docker-desktop">Docker</a></div> -->
-        <div class="notes">Linux, Mac, Windows</div>
+        <!-- <div class="notes">Linux, Mac, Windows</div> -->
       </td>
       <td>
         <div class="command">docker pull dastapov/hledger</div>
@@ -116,7 +117,7 @@ and please [share any feedback](support.html) so we can make this process smooth
           <a href="https://formulae.brew.sh/formula/hledger"><img alt="Homebrew" src="https://repology.org/badge/version-for-repo/homebrew/hledger.svg" /></a>
         </div>
         <!-- <div class="distro"><a href="https://brew.sh">Homebrew</a></div> -->
-        <div class="notes">Linux, Mac, WSL</div>
+        <!-- <div class="notes">Linux, Mac, WSL</div> -->
       </td>
       <td>
         <div class="command">brew install hledger</div>
@@ -128,7 +129,7 @@ and please [share any feedback](support.html) so we can make this process smooth
           <a href="https://github.com/search?l=&o=desc&q=%22automatic+Haskell+package+set+update%22+repo%3ANixOS%2Fnixpkgs+filename%3Ahaskell-packages.nix&s=committer-date&type=Commits"><img alt="Nix" src="https://img.shields.io/badge/Nix_package-1.24.1-brightgreen.svg" /></a>
         </div>
         <!-- <div class="distro"><a href="https://nixos.org/nix">Nix</a></div> -->
-        <div class="notes">Linux, Mac</div>
+        <!-- <div class="notes">Linux, Mac</div> -->
       </td>
       <td>
         <div class="command">
@@ -144,40 +145,18 @@ and please [share any feedback](support.html) so we can make this process smooth
     <tr>
       <td>
         <div class="badges">
-          <a href="https://www.winehq.org"><img alt="Wine" src="https://img.shields.io/badge/Wine-1.24.1-brightgreen.svg" /></a>
-        </div>
-        <!-- <div class="distro"><a href="https://www.winehq.org">Wine</a></div> -->
-        <div class="notes">Linux, Mac, *BSD, ...</div>
-      </td>
-      <td>
-        <div class="notes">Install Wine and use it to run the Windows binary below.</div>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div class="badges">
           <a href=""><img alt="hledger CI binaries" src="https://img.shields.io/badge/hledger_CI_binaries-1.24.1-brightgreen.svg" /></a><br>
         </div>
-        <div class="notes">Linux, Mac, Windows</div>
+        <!-- <div class="notes">Linux, Mac, Windows</div> -->
       </td>
       <td>
         <div class="command">
-          <a href="https://github.com/simonmichael/hledger/releases/tag/hledger-1.24.1">hledger-windows.zip</a><br>
-          <a href="https://github.com/simonmichael/hledger/releases/tag/hledger-1.24.1">hledger-macos.zip</a><br>
           <a href="https://github.com/simonmichael/hledger/releases/tag/hledger-1.24.1">hledger-linux-x64.zip</a><br>
-        </div>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td>
-        <div class="badges">
-          <img alt="hledger CI binaries" src="https://img.shields.io/badge/hledger_CI_binaries-1.22.1-red.svg" />
-        </div>
-        <div class="notes">Linux</div>
-      </td>
-      <td style="padding-top:10px;">
-        <div class="command" style="margin-bottom:4px;">
-          <a href="https://github.com/simonmichael/hledger/releases/tag/1.22.1">hledger-linux-arm32v7.zip</a><br>
+          <a href="https://github.com/simonmichael/hledger/releases/tag/hledger-1.24.1">hledger-macos.zip</a><br>
+          <a href="https://github.com/simonmichael/hledger/releases/tag/hledger-1.24.1">hledger-windows.zip</a>
+          <span style="font-weight:normal; font-style:italic; font-size:small;">
+            (this can run anywhere that has <a href="https://www.winehq.org">Wine</a>)
+          </span><br>
         </div>
         <div class="notes"></div>
       </td>
@@ -187,14 +166,14 @@ and please [share any feedback](support.html) so we can make this process smooth
         <div class="badges">
           <img alt="hledger CI binaries" src="https://img.shields.io/badge/hledger_CI_binaries-Preview-yellow.svg" />
         </div>
-        <div class="notes">Linux</div>
+        <!-- <div class="notes">Linux, Mac, Windows</div> -->
       </td>
       <td style="padding-top:10px;">
         <div class="command" style="margin-bottom:4px;">
           <a href="https://github.com/simonmichael/hledger/releases">https://github.com/simonmichael/hledger/releases</a><br>
         </div>
         <div class="notes">
-          Testers & early adopters: previews of the next release can be found here.
+          Previews of the next major release, for testers & early adopters.
         </div>
       </td>
     </tr>
