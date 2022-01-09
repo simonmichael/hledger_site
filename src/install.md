@@ -182,6 +182,22 @@ and please [share any feedback](support.html) so we can make this process smooth
         <div class="notes"></div>
       </td>
     </tr>
+    <tr valign="top">
+      <td>
+        <div class="badges">
+          <img alt="hledger CI binaries" src="https://img.shields.io/badge/hledger_CI_binaries-Preview-yellow.svg" />
+        </div>
+        <div class="notes">Linux</div>
+      </td>
+      <td style="padding-top:10px;">
+        <div class="command" style="margin-bottom:4px;">
+          <a href="https://github.com/simonmichael/hledger/releases">https://github.com/simonmichael/hledger/releases</a><br>
+        </div>
+        <div class="notes">
+          Testers & early adopters: previews of the next release can be found here.
+        </div>
+      </td>
+    </tr>
   </tbody>
 </table>
 
