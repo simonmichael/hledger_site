@@ -469,7 +469,7 @@ package manager first. See
 [hledger: Troubleshooting](hledger.html#troubleshooting) for more help.
 <!-- XXX ^ improve -->
 
-## Building from source
+## Building current release from source
 <!-- <img alt="Release source" src="https://img.shields.io/badge/Release_source-1.24.1-brightgreen.svg" /> -->
 
 You can build hledger from its source code on any machine with [GHC] and sufficient RAM
@@ -568,7 +568,7 @@ already-cached binaries, see above).
 
 <a name="c"></a>
 
-### Building the development version
+## Building the development version
 <!-- <img alt="Latest source" src="https://img.shields.io/badge/Latest_source-master-brightgreen.svg" /> -->
 
 If you want the very [latest improvements](https://github.com/simonmichael/hledger/commits/master),
@@ -592,14 +592,7 @@ cabal install alex happy<br>
 cabal install all:exes
 </div>
 
-hledger development builds show a ".99" suffix in their `--version` output, 
-so eg "1.17.99" means the in-development version of 1.18.
-
-### Building the development version with Docker
-
-You can also build the development version in a Docker container which
-will take care of pulling all the necessary tools and dependencies:
-
+or you can build in a Docker container which includes the necessary tools and dependencies:
 <div class="builder-command">
 git clone https://github.com/simonmichael/hledger <br>
 cd hledger/docker <br>
