@@ -86,11 +86,11 @@ Here are lots of ways to install hledger - choose one that suits your needs.
 Binary packages install quickly but are not always up to date (look for green badges).
 Building from source is slower and requires at least 4G of ram.
 
-You might also need some [C libraries](#c-libraries) or a [UTF-8 locale](#utf-8-locale).
-
-To finish, [check your PATH](#check-your-path), 
-[test your installation](#test-your-installation),
-and please [share any feedback](support.html) so we can make this process smoother.
+After installing, please check
+your [PATH](#check-your-path),
+your [locale](#check-your-locale),
+and your [installation](#test-your-installation),
+and [share any feedback](support.html) so we can make this process smoother!
 
 ## Binary packages
 
@@ -423,53 +423,7 @@ https://github.com/simonmichael/hledger/releases, also apply here.
   </tbody>
 </table>
 
-<a name="b"></a>
-
-## C libraries
-
-On some unix platforms, certain C library packages (like terminfo)
-must be installed to prevent errors (like "*cannot find -ltinfo*")
-when building hledger. 
-<!-- or running hledger binaries. -->
-<!-- This shouldn't affect the mac or linux-static binaries above, -->
-So before building hledger on one of the following platforms, 
-please run the command shown
-(and [send improvements for this list](#footer)):
-
-<table>
-  <tr>
-    <td width="1%" style="white-space:nowrap;"><div class="distro">Debian, Ubuntu:</div></td>
-    <td><div class="command" style="margin:0;"> sudo apt install libtinfo-dev libtinfo5 </div></td>
-  </tr>
-  <tr>
-    <td><div class="distro">Fedora, RHEL:</div></td>
-    <td><div class="command"> sudo dnf install gmp-devel ncurses-devel </div></td>
-  </tr>
-</table>
-
-## UTF-8 locale
-
-On unix systems, when building or running hledger (and GHC haskell
-programs in general), the `LANG` environment variable must be set to a
-UTF-8-aware locale, or you'll see errors (eg: "*invalid byte
-sequence*" or "*mkTextEncoding: invalid argument*") when processing
-non-ascii text. Check that LANG's value mentions UTF-8, and if not,
-change it:
-
-```shell
-$ echo $LANG
-C
-$ export LANG=C.UTF-8    # or en_US.UTF-8, fr_FR.utf8, etc.
-$ echo $LANG
-C.UTF-8
-```
-
-In some cases the locale may need to be installed with your system
-package manager first. See
-[hledger: Troubleshooting](hledger.html#troubleshooting) for more help.
-<!-- XXX ^ improve -->
-
-## Building current release from source
+## Building the current release
 <!-- <img alt="Release source" src="https://img.shields.io/badge/Release_source-1.24.1-brightgreen.svg" /> -->
 
 You can build hledger from its source code on any machine with [GHC] and sufficient RAM
@@ -528,8 +482,32 @@ If you have [nix], you can use nix-env to build hledger from source
 (but we try to provide a [nix command](#multiple-platforms) that installs
 already-cached binaries, see above).
 
+### C libraries required
 
-### Build tips
+On some unix systems, certain C libraries required to build hledger are not
+installed by default. So if you see errors like "*cannot find
+-ltinfo*" when building hledger, install them with a command like the
+below and try the build again:
+
+<table>
+  <tr>
+    <td width="1%" style="white-space:nowrap;"><div class="distro">Debian, Ubuntu:</div></td>
+    <td><div class="command" style="margin:0;"> sudo apt install libtinfo-dev libtinfo5 </div></td>
+  </tr>
+  <tr>
+    <td><div class="distro">Fedora, RHEL:</div></td>
+    <td><div class="command"> sudo dnf install gmp-devel ncurses-devel </div></td>
+  </tr>
+</table>
+
+(Please [send updates](#footer) for this list.)
+
+### UTF-8 locale required
+
+On unix systems, when building hledger the `LANG` environment variable
+must be set to a UTF-8-aware locale. See [Check your locale](#check-your-locale).
+
+### Other build tips
 
 - You can use less resources by omitting hledger-ui and hledger-web
   from the commands above.
@@ -565,8 +543,6 @@ already-cached binaries, see above).
     <a href="https://github.com/simonmichael/hledger/issues/1030">nix: nix install on linux can fail with “cloning builder process: Operation not permitted”</a><br>
     <a href="https://github.com/simonmichael/hledger/issues/1033">nix: on Linux, nix-installed hledger won’t handle non-ascii data</a><br>
   </blockquote>
-
-<a name="c"></a>
 
 ## Building the development version
 <!-- <img alt="Latest source" src="https://img.shields.io/badge/Latest_source-master-brightgreen.svg" /> -->
@@ -630,6 +606,29 @@ and here's a way to add the stack and cabal install dirs permanently:
 </div>
 
 Here's [how to set environment variables on Windows](https://www.devdungeon.com/content/set-environment-variables-windows).
+
+## Check your locale
+
+On unix systems, when running hledger 
+(and other GHC-compiled programs, like GHC, cabal & stack), 
+the `LANG` environment variable must be set to a UTF-8-aware locale
+to avoid errors like "*invalid byte sequence*" or "*mkTextEncoding: invalid argument*"
+when processing non-ascii text. 
+
+Check that LANG's value mentions UTF-8, and if not, change it:
+
+```shell
+$ echo $LANG
+C
+$ export LANG=C.UTF-8    # or en_US.UTF-8, fr_FR.utf8, etc.
+$ echo $LANG
+C.UTF-8
+```
+
+In some cases the locale may need to be installed with your system
+package manager first. See
+[hledger: Troubleshooting](hledger.html#troubleshooting) for more help.
+<!-- XXX ^ improve -->
 
 ## Test your installation
 
