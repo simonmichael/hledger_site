@@ -428,8 +428,7 @@ https://github.com/simonmichael/hledger/releases, also apply here.
 
 You can build hledger from its source code on any machine with [GHC] and sufficient RAM
 (4Gb recommended) and disk space (up to 2G for a first build).
-Including all dependencies, 
-this could take anywhere from [a minute to an hour](https://ro-che.info/articles/2020-12-22-haskell-compilation-laptop-desktop#results).
+Including all dependencies, this could take anywhere from a minute to an hour.
 
 ### With hledger-install
 
