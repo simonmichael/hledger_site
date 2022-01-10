@@ -86,10 +86,7 @@ Here are lots of ways to install hledger - choose one that suits your needs.
 Binary packages install quickly but are not always up to date (look for green badges).
 Building from source is slower and requires at least 4G of ram.
 
-After installing, please check
-your [PATH](#check-your-path),
-your [locale](#check-your-locale),
-and your [installation](#test-your-installation),
+After installing, please [check](#pre-flight-checks) your PATH, locale, and installation,
 and [share any feedback](support.html) so we can make this process smoother!
 
 ## Binary packages
