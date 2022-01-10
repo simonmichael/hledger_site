@@ -427,7 +427,7 @@ https://github.com/simonmichael/hledger/releases, also apply here.
 <!-- <img alt="Release source" src="https://img.shields.io/badge/Release_source-1.24.1-brightgreen.svg" /> -->
 
 You can build hledger from its source code on any machine with [GHC] and sufficient RAM
-(4Gb recommended) and disk space (up to 2G for a first build).
+(4G recommended) and disk space (up to 2G for a first build).
 Including all dependencies, this could take anywhere from a minute to an hour.
 
 ### With hledger-install
@@ -510,6 +510,10 @@ must be set to a UTF-8-aware locale. See [Check your locale](#check-your-locale)
 - You can use less resources by omitting hledger-ui and hledger-web
   from the commands above.
 
+- On machines with less than 4G of RAM, the build may use swap space and 
+  take a very long time (overnight), or it may die. 
+  Try adding `-j1` to the stack/cabal install command, and retry a few times, or ask for [help].
+
 - It's ok to kill a build and rerun the command later; you won't lose progress.
 
 - You can add `--dry-run` to the stack/cabal/nix install commands
@@ -519,12 +523,6 @@ must be set to a UTF-8-aware locale. See [Check your locale](#check-your-locale)
   they will usually be overwritten by the new version.
   If you have them installed in multiple places in your PATH, 
   you may see a warning, reminding you to remove or rename the old executables.
-
-- If you try to build with insufficient RAM,
-  it may use swap space and take a very long time (overnight).
-  Or it may fail with an error; in this case try adding `-j1`
-  to the stack/cabal install command and retry a few times, 
-  or ask for [help].
 
 - Here are some known platform-specific build issues and workarounds:
 
