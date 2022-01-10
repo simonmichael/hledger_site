@@ -626,7 +626,7 @@ package manager first. See
 [hledger: Troubleshooting](hledger.html#troubleshooting) for more help.
 <!-- XXX ^ improve -->
 
-### Test your installation
+### Check your installation
 
 After a successful installation, you should be able to run the hledger
 tools and see the expected versions (the ones you just installed, and
