@@ -594,7 +594,8 @@ If you are using bash, this will show it:
   echo $PATH
 </div>
 
-and here's a way to add the stack and cabal install dirs permanently:
+and here's a way to add the stack and cabal install dirs permanently
+, if you are a bash user:
 
 <div class="command">
   echo "export PATH=~/.local/bin:~/.cabal/bin:$PATH" >> ~/.bashrc <br>
