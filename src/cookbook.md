@@ -54,6 +54,9 @@ Follow any links to the official [manuals](manuals.html) for more info.
 
 ### Accounting tasks
 
+See also <https://wiki.plaintextaccounting.org>
+(some of this content is gradually moving there).
+
 - [Accounting concepts](accounting.md)
 - [Borrowing and lending](loans.md)
 - [Budgeting](budgeting.md)

@@ -20,10 +20,10 @@ Check other pages, or https://wiki.plaintextaccounting.org for more detailed exa
 ```journal
 2018-04-16 * (2018-001) SuperCompany invoice
     Revenue:Software Development                        $ -2420.00
-    Assets:Accounts Receivable:SuperCompany              $ 2420.00
+    Assets:Receivable:SuperCompany                       $ 2420.00
 
 2018-04-26 * (2018-001) SuperCompany payment
-    Assets:Accounts Receivable:SuperCompany             $ -2420.00 = $0
+    Assets:Receivable:SuperCompany                      $ -2420.00 = $0
     Assets:Checking                                      $ 2420.00
 ```
 
@@ -33,10 +33,10 @@ Check other pages, or https://wiki.plaintextaccounting.org for more detailed exa
 ; Invoices aren't tracked in cash basis, use unbalanced postings to track them anyway.
 
 2018-04-16 * (2018-001) SuperCompany invoice
-    (Assets:Accounts Receivable:SuperCompany)             $2420
+    (Assets:Receivable:SuperCompany)                      $2420
 
 2018-04-26 * (2018-001) SuperCompany payment
-    (Assets:Accounts Receivable:SuperCompany)            $-2420 = $0
+    (Assets:Receivable:SuperCompany)                     $-2420 = $0
     Revenue:Software Development                         $-2420
     (Liabilities:Tax:2018)                                $-420
     Assets:Checking:Estimated Tax Savings:2018             $420
@@ -47,7 +47,7 @@ The above plus postings to track and save estimated income tax:
 
 ```journal
 2018-04-26 * (2018-001) SuperCompany payment
-    (Assets:Accounts Receivable:SuperCompany)            $-2420 = $0
+    (Assets:Receivable:SuperCompany)                     $-2420 = $0
     Revenue:Software Development                         $-2420
     (Liabilities:Tax:US:2018)                             $-420
     Assets:Checking:Tax:US:2018                            $420
