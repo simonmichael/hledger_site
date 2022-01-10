@@ -571,11 +571,13 @@ cd hledger/docker <br>
 ./build.sh
 </div>
 
-This will build the image tagged `hledger` with just the latest binaries inside.
+(This will build the image tagged `hledger` with just the latest binaries inside.
 If you want to keep all the build artifacts and use the resulting
-image for hledger development, run `./build-dev.sh` instead.
+image for hledger development, run `./build-dev.sh` instead.)
 
-## Check your PATH
+## Pre-flight checks
+
+### Check your PATH
 
 After building/installing, you may see a message about where the executables were installed.
 Eg:
@@ -604,7 +606,7 @@ and here's a way to add the stack and cabal install dirs permanently
 
 Here's [how to set environment variables on Windows](https://www.devdungeon.com/content/set-environment-variables-windows).
 
-## Check your locale
+### Check your locale
 
 On unix systems, when running hledger 
 (and other GHC-compiled programs, like GHC, cabal & stack), 
@@ -627,7 +629,7 @@ package manager first. See
 [hledger: Troubleshooting](hledger.html#troubleshooting) for more help.
 <!-- XXX ^ improve -->
 
-## Test your installation
+### Test your installation
 
 After a successful installation, you should be able to run the hledger
 tools and see the expected versions (the ones you just installed, and
