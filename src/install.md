@@ -433,11 +433,11 @@ Including all dependencies, this could take anywhere from a minute to an hour.
 ### With hledger-install
 
 This is a good choice if you are new to Haskell and its build tools.
-On any machine with [bash] (and possibly make, gcc...), 
+On any machine with [bash] (and possibly make, gcc...):
 download and run the [hledger-install.sh][hledger-install] script
 to build the current release of the hledger tools, plus some [add-ons], in a relatively reliable way.
 It will use either stack or cabal if you have them,
-or will install stack in ~/.local/bin if you have neither,
+or will install stack in ~/.local/bin if needed,
 and it installs the hledger tools in ~/.local/bin or ~/.cabal/bin respectively.
 
 <div class="builder-command">
@@ -483,10 +483,9 @@ already-cached binaries, see above).
 
 ### C libraries required
 
-On some unix systems, certain C libraries required to build hledger are not
-installed by default. So if you see errors like "*cannot find
--ltinfo*" when building hledger, install them with a command like the
-below and try the build again:
+On some unix systems, certain required C libraries may not be installed. 
+So if you see errors like "*cannot find -ltinfo*" when building hledger, 
+install them with a command like the below and try again:
 
 <table>
   <tr>
@@ -527,7 +526,7 @@ must be set to a UTF-8-aware locale. See [Check your locale](#check-your-locale)
   to the stack/cabal install command and retry a few times, 
   or ask for [help].
 
-- Here are some known build issues and workarounds on certain platforms:
+- Here are some known platform-specific build issues and workarounds:
 
   <blockquote class="warnings">
     <a href="https://github.com/jtdaugherty/vty/pull/1#issuecomment-297143444">windows: hledger-ui is not available</a><br>
