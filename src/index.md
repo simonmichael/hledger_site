@@ -70,6 +70,9 @@ I hope you too will find it useful in transforming your relationship with time a
 When you have achieved some success, please consider joining the [sponsors](sponsor.html)
 to support the project. Thanks!
 
+<a name="help"></a>
+<a name="help-feedback"></a>
+
 ## Where should I go next ?
 
 Next, you could:
@@ -88,7 +91,9 @@ Next, you could:
 - Browse the [blog posts] on plaintextaccounting.org.
 - Watch [videos](videos.html), such as hledger fan's beginner lessons.
 - Look at lots of [example files].
-- Introduce yourself in our [chat room](#help), or browse the [mail list].
+- Ask questions/introduce yourself in #hledger chat via [matrix](http://matrix.hledger.org) or [IRC](http://irc.hledger.org);
+  browse the [mail list](http://list.hledger.org);
+  explore the other [Support/Discussion](support.html) options.
 
 
 

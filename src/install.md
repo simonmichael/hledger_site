@@ -509,7 +509,8 @@ must be set to a UTF-8-aware locale. See [Check your locale](#check-your-locale)
 
 - On machines with less than 4G of RAM, the build may use swap space and 
   take a very long time (overnight), or it may die. 
-  Try adding `-j1` to the stack/cabal install command, and retry a few times, or ask for [help].
+  Try adding `-j1` to the stack/cabal install command, and retry a few times, 
+  or ask for [help](support.html).
 
 - It's ok to kill a build and rerun the command later; you won't lose progress.
 
@@ -665,7 +666,7 @@ functest PASSED
 <br>
 
 Nicely done! Now check the **[Quick Start](index.html#quick-start)**
-for next steps, or come to the **[#hledger chat](index.html#help)**
+for next steps, or come to the **[#hledger chat](support.html)**
 where we'll gladly share tips or receive your feedback.
 
 <br>
@@ -680,4 +681,3 @@ where we'll gladly share tips or receive your feedback.
 [add-ons]:         hledger.html#add-on-commands
 [WSL]:             https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux
 [nix]:             https://nixos.org
-[help]:            index.html#help

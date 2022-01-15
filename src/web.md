@@ -97,7 +97,7 @@ quit it (unless you want the web app to quit).
 
 And, your web browser should open, showing the UI.
 If not, open it yourself and browse to the url shown,
-ie http://127.0.0.1:5000 (and [let us know](index.html#help)).
+ie http://127.0.0.1:5000 (and [let us know](support.html)).
 
 ## A quick tour
 
@@ -112,7 +112,7 @@ Or if your journal already contained transactions, you'll see them listed.
 [![](images/hledger-web/Screen%20Shot%202020-03-22%20at%206.10.29%20PM.png)](images/hledger-web/Screen%20Shot%202020-03-22%20at%206.10.29%20PM.png)
 
 Let's hide the sidebar, for a simpler UI. Pressing the `s` key should do it
-(if not, try again after clicking somewhere on the page, and [let us know](index.html#help)):
+(if not, try again after clicking somewhere on the page, and [let us know](support.html)):
 [![](images/hledger-web/Screen%20Shot%202020-03-22%20at%206.11.52%20PM.png)](images/hledger-web/Screen%20Shot%202020-03-22%20at%206.11.52%20PM.png)
 
 Let's record some transactions. Press the `a` key, or click "Add a transaction", to bring up the add form.

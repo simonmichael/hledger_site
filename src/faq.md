@@ -16,7 +16,7 @@ If you're already using hledger, see the [User FAQ](userfaq.html),
 and if you're contributing see the [Developer FAQ](devfaq.html).
 
 (If you'd like to help improve these FAQs we'd sure appreciate it. 
-Click the "edit this page" link at the bottom, or [chat](index.html#help) with us.)
+Click the "edit this page" link at the bottom, or [chat](support) with us.)
 
 ## Plain Text Accounting
 

@@ -89,7 +89,7 @@ but you can do fine just by following the examples below. You'll find your
 bookkeeping/accounting skills improve naturally (and [help] is available).
 
 [double entry accounting]: https://hledger.org/accounting.html#accounting-links
-[help]: https://hledger.org/#help-feedback
+[help]: https://hledger.org/support.html
 
 
 <a name="install"></a>
