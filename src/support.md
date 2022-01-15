@@ -9,7 +9,7 @@
     <td>
       <a href="http://matrix.hledger.org">#hledger:matrix.org</a> or
       <a href="http://irc.hledger.org">#hledger:libera.chat</a><br>
-      Active bridged Matrix/IRC room with ~130 chatters.
+      Active Matrix/IRC hledger chat room with ~140 chatters.
 <!--
       <br>
       To talk, <a href="https://libera.chat/guides/registration">register your nick</a>:
@@ -20,6 +20,11 @@
       use <a href="https://github.com/matrix-org/matrix-appservice-irc/wiki/End-user-FAQ#how-do-i-registeridentify-to-nickserv">@freenode_NickServ:matrix.org</a>
       and <a href="https://github.com/matrix-org/matrix-appservice-irc/wiki/End-user-FAQ#and-do-it-automatically">@appservice-irc:matrix.org</a>
 -->
+      <br>
+      Also:<br>
+      <a href="https://matrix.to/#/#plaintextaccounting:matrix.org">#plaintextaccounting:matrix.org</a>
+      or <a href="https://web.libera.chat/#plaintextaccounting">#plaintextaccounting:libera.chat</a><br>
+      General discussion of all PTA tools, ~100 chatters. <br>
     </td>
   </tr>
   <tr valign=top>
@@ -67,20 +72,16 @@
     </td>
   </tr>
   <tr valign=top>
-    <td>Other:</td>
+    <td>Private email:</td>
     <td>
-      <a href="mailto:simon@joyful.com">simon@joyful.com</a> (contact Simon privately, eg for security issues)
+      <a href="mailto:simon@joyful.com">simon@joyful.com</a> (for security issues, eg)
     </td>
   </tr>
   <tr valign=top>
-    <td>See also:</td>
+    <td>plaintextaccounting site:</td>
     <td>
-      <a href="https://plaintextaccounting.org">plaintextaccounting.org</a> (general PTA portal)<br>
-      <a href="https://matrix.to/#/#plaintextaccounting:matrix.org">#plaintextaccounting:matrix.org</a>
-      or <a href="https://web.libera.chat/#plaintextaccounting">#plaintextaccounting:libera.chat</a>
-      (bridged, ~90 chatters) <br>
-      <a href="https://www.ledger-cli.org/docs.html">Ledger CLI docs</a>,
-      <a href="https://beancount.github.io/docs">Beancount docs</a>
+      <a href="https://plaintextaccounting.org">plaintextaccounting.org</a><br>
+      Portal website and wiki covering all PTA tools and topics.<br>
     </td>
   </tr>
 </table>
