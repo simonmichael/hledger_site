@@ -37,7 +37,7 @@
 - [Borrowing and lending](loans.md)
 - [Budgeting and Forecasting (2018)](budgeting-and-forecasting.md)
 - [Budgeting](budgeting.md)
-- [Calculate return on investment](return-on-investment.md)
+- [Calculate return on investment](roi.md)
 - [Calculate unrealized gain](gain.md)
 - [Change account name separator](change-account-name-separator.md)
 - [Charts and Graphs](charts.md)
