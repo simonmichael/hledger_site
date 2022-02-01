@@ -78,4 +78,4 @@ from your hledger reports, using the powerful [vega-lite](https://vega.github.io
 It works best with hledger 1.24.99+. 
 <https://nest.pijul.com/simonmichael/hledger-vega> is another variant.
 
-![hledger-vega example](images/hledger-vega-2022-02-01.png)
+![hledger-vega example](images/hledger-vega.png)
