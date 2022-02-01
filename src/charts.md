@@ -69,3 +69,13 @@ hledger -f examples/bcexample.hledger bal -O csv -N expenses -3 cur:USD \
 
 Check out the tools at <https://plaintextaccounting.org/#reports>
 (hreports, ledger-plot, ledger-plots, ludget, r-ledger..)
+
+## hledger-vega
+
+New in 2022:
+https://github.com/xitian9/hledger-vega is a set of scripts for producing custom charts
+from your hledger reports, using the powerful [vega-lite](https://vega.github.io/vega-lite/).
+It works best with hledger 1.24.99+. 
+https://nest.pijul.com/simonmichael/hledger-vega is another variant.
+
+![hledger-vega example](images/hledger-vega-2022-02-01.png)
