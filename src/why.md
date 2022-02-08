@@ -87,7 +87,7 @@ as powerful as hledger itself.
 
 - Reports normally take a fraction of a second.
 - `hledger-ui --watch` normally updates instantly as you edit.
-- On a 2021 macbook air, hledger parses and analyses about 12000 transactions per second.
+- On a 2021 macbook air m1, hledger parses and analyses about 25000 transactions per second.
 
 ## Easy
 
