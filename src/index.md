@@ -3,16 +3,26 @@
 <img id="coins" src="/images/coins2-248.png" style="width:120px; margin:2em 1em; float:right;" />
 
 # hledger
+<!-- 
+This page's verbosity continually oscillates. General plan:
+brief blurbs with links to more detail:
+- what (& examples)
+- why (& why not)
+- who (for)
+- how
+-->
 
 <!-- 
-https://www.stephendiehl.com/posts/marketing.html#persuasion-and-decision-makers
+Tagline
+https://www.stephendiehl.com/posts/marketing.html#persuasion-and-decision-makers :
 1. It is memorable
 2. It includes a key benefit
 3. It differentiates
 4. It imparts positivity
 -->
 <div id="tagline">
-easy, dependable<br> plain text accounting
+Fast, robust, intuitive<br>
+plain text accounting.
 </div>
 
 <div class=pagetoc>
@@ -21,33 +31,52 @@ easy, dependable<br> plain text accounting
 
 ## What is this ?
 
-***hledger*** is free cross-platform accounting software,
-for folks new to accounting and also for power users.
-It's good for tracking money, time, investments, cryptocurrencies, inventory and more,
-with high accuracy, flexibility and privacy.
-It is one of the best implementations of ***Plain Text Accounting***.
+***hledger*** is free, cross-platform, high quality ***Plain Text Accounting*** software:
+a fast and light multicurrency accounting system 
+that uses human-readable, version-controllable plain text files.
 
-I'm Simon Michael, hledger project leader and plaintextaccounting.org maintainer. Welcome! 
+With it you can track your money, investments, cryptocurrencies, time, inventory, or any other commodity, 
+dependably and privately without needing any cloud service or vendor.
 
+I'm Simon Michael, hledger project founder and PTA fan. Welcome! 
+
+## Why use hledger ?
+The [General FAQ](faq.html) or the [plaintextaccounting.org](https://plaintextaccounting.org) site introduce Plain Text Accounting.
+
+Compared to [other PTA apps](https://plaintextaccounting.org/#software) like Ledger and Beancount,
+hledger has a particular focus on intuitive UX and practicality for day-to-day accounting.
+Accurate documentation and "just works" are prioritised, and it is actively maintained.
+It supports most of Ledger's and Beancount's features but omits
+some of the more programmer-oriented ones (value expressions, lot-matching notations).
+
+We hope non-programmers will appreciate hledger's 
+built-in financial statements, 
+multi-period reports, 
+choice of user interfaces, 
+easy CSV import system
+and general robustness.
+And that programmers will enjoy its
+speed (25k txns/s on a macbook air m1), 
+accuracy (up to 255 decimal places), 
+reliability ($100 bounty for regressions), 
+and easy extensibility/embeddability via Haskell scripts/apps.
+Here's more about [Why hledger ?](why.html)
 
 [![github](https://img.shields.io/github/stars/simonmichael/hledger.svg?logo=GitHub&label=Github)](https://github.com/simonmichael/hledger)
 
-## Which docs are best to read ?
-
+## How do I get started ?
+Here are some of the most useful docs:
 [General FAQ](faq.html),
-[Why hledger ?](why.html),
 [Install](install.html),
 [Getting Started Guide](start.html),
 [hledger manual](hledger.html),
-[Support/Discussion](support.html).
+[Support/Discussion](support.html),
+[Accounting concepts](accounting.html).
 
-The sidebar lists everything else on this site. If you're not seeing it, click/tap the horizontal-lines icon at top left.
-You can also click the magnifying glass icon to search this site.\
-([Access keys](https://en.wikipedia.org/wiki/Access_key#Access_in_different_browsers): 
-`s` sidebar, `t` theme, `/` search, `1` home, `2` changes, `<` previous page, `>` next page.)
-
-The [plaintextaccounting.org](https://plaintextaccounting.org) site has a more general introduction to Plain Text Accounting,
-and links to other resources, including hledger-related blog posts.
+For more, see the site's sidebar; click/tap the horizontal-lines icon at top left to open it.
+You can also use the magnifying-glass icon to search this site,
+and there are [access keys](https://en.wikipedia.org/wiki/Access_key#Access_in_different_browsers):\
+`s` sidebar, `t` theme, `/` search, `1` home, `2` changes, `<` previous page, `>` next page.
 
 <!--
 What is planned for hledger ?
@@ -62,7 +91,7 @@ better getting started experience.
 See also [ROADMAP](ROADMAP.html).
 -->
 
-## How is this funded ?
+## How is it funded ?
 
 hledger is brought to you by [Simon Michael](http://joyful.com) and [140+ contributors](CREDITS.html).
 I have been building and relying on this project continuously since 2007, funded mostly by unrelated consulting work.
