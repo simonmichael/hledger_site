@@ -108,7 +108,7 @@ Here is an overview of the general differences (updates welcome):
 | lot reporting (`--lots`)                          |         | ✅     |
 | **Features in hledger only**                      |         |        |
 | timedot format                                    | ✅      |        |
-| multi-period reports                              | ✅      |        |
+| multi-period balance reports                      | ✅      |        |
 | account types                                     | ✅      |        |
 | activity command                                  | ✅      |        |
 | add command                                       | ✅      |        |
@@ -183,25 +183,27 @@ $ file /opt/homebrew/bin/ledger /Users/simon/src/hledger/bin/hledger-1.24
 /Users/simon/src/hledger/bin/hledger-1.24: Mach-O 64-bit executable x86_64
 ```
 
-hledger processes about 14k transactions per second on a macbook air m1:
+The above was hledger running via Rosetta translation. As of 2022 hledger processes 25k transactions per second on a macbook air m1 when compiled natively:
 ```
-$ make throughput 
-date: Thu Dec 9 09:05:55 HST 2021
-system: Darwin SMs-slate-mac.local 20.6.0 Darwin Kernel Version 20.6.0: Tue Oct 12 18:33:38 PDT 2021; root:xnu-7195.141.8~1/RELEASE_ARM64_T8101 arm64
+$ hledger --version
+hledger 1.24.99.2-gba5b0e93f-20220205, mac-aarch64
+$ make throughput
+date: Tue Feb 8 11:03:50 HST 2022
+system: Darwin slate.local 21.3.0 Darwin Kernel Version 21.3.0: Wed Jan 5 21:37:58 PST 2022; root:xnu-8019.80.24~20/RELEASE_ARM64_T8101 arm64
 executable: hledger
-version: hledger 1.24-37-g76b5c5f2a, mac-x86_64
-  1000: Run time (throughput)    : 0.10s (10406 txns/s)
-  2000: Run time (throughput)    : 0.16s (12224 txns/s)
-  3000: Run time (throughput)    : 0.23s (13141 txns/s)
-  4000: Run time (throughput)    : 0.30s (13453 txns/s)
-  5000: Run time (throughput)    : 0.39s (12805 txns/s)
-  6000: Run time (throughput)    : 0.43s (14106 txns/s)
-  7000: Run time (throughput)    : 0.54s (12953 txns/s)
-  8000: Run time (throughput)    : 0.57s (14085 txns/s)
-  9000: Run time (throughput)    : 0.68s (13316 txns/s)
- 10000: Run time (throughput)    : 0.75s (13318 txns/s)
-100000: Run time (throughput)    : 6.98s (14333 txns/s)
-Thu Dec  9 09:06:07 HST 2021
+version: hledger 1.24.99.2-gba5b0e93f-20220205, mac-aarch64
+  1000 txns: Run time (throughput)    : 0.07s (15308 txns/s)
+  2000 txns: Run time (throughput)    : 0.09s (21121 txns/s)
+  3000 txns: Run time (throughput)    : 0.13s (23648 txns/s)
+  4000 txns: Run time (throughput)    : 0.17s (23226 txns/s)
+  5000 txns: Run time (throughput)    : 0.21s (23647 txns/s)
+  6000 txns: Run time (throughput)    : 0.24s (24784 txns/s)
+  7000 txns: Run time (throughput)    : 0.29s (24166 txns/s)
+  8000 txns: Run time (throughput)    : 0.33s (24450 txns/s)
+  9000 txns: Run time (throughput)    : 0.35s (25516 txns/s)
+ 10000 txns: Run time (throughput)    : 0.41s (24226 txns/s)
+100000 txns: Run time (throughput)    : 4.32s (23158 txns/s)
+Tue Feb  8 11:03:57 HST 2022
 ```
 
 ### Data formats
