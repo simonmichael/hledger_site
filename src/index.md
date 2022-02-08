@@ -36,7 +36,9 @@ a fast and light multicurrency accounting system
 that uses human-readable, version-controllable plain text files.
 
 With it you can track your money, investments, cryptocurrencies, time, inventory, or any other commodity, 
-dependably and privately without needing any cloud service or vendor.
+with a complete history of changes, 
+a documented future-proof data format,  
+and without needing any cloud service or vendor.
 
 I'm Simon Michael, hledger project founder and PTA fan. Welcome! 
 
@@ -49,14 +51,14 @@ Accurate documentation and "just works" are prioritised, and it is actively main
 It supports most of Ledger's and Beancount's features but omits
 some of the more programmer-oriented ones (value expressions, lot-matching notations).
 
-We hope non-programmers will appreciate hledger's 
+We hope non-programmers will enjoy hledger's 
 built-in financial statements, 
 multi-period reports, 
 choice of user interfaces, 
 easy CSV import system
 and general robustness.
-And that programmers will enjoy its
-speed (25k txns/s on a macbook air m1), 
+And that programmers will appreciate its
+speed (25k txn/s on a macbook air m1), 
 accuracy (up to 255 decimal places), 
 reliability ($100 bounty for regressions), 
 and easy extensibility/embeddability via Haskell scripts/apps.
