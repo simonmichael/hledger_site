@@ -1,6 +1,6 @@
 <!-- stylesheet at bottom -->
-<img id="coins" src="/images/coins2-248.png" style="width:120px; margin:2em 1em; float:left;" />
-<img id="coins" src="/images/coins2-248.png" style="width:120px; margin:2em 1em; float:right;" />
+<img id="coins" src="images/coins2-248.png" style="width:120px; margin:2em 1em; float:left;" />
+<img id="coins" src="images/coins2-248.png" style="width:120px; margin:2em 1em; float:right;" />
 
 # hledger
 <!-- 
