@@ -31,13 +31,14 @@ plain text accounting.
 
 ## What is this ?
 
-***hledger*** is free, cross-platform, high quality ***Plain Text Accounting*** software:
-a fast and light multicurrency accounting system 
-that uses human-readable, version-controllable plain text files.
+***hledger*** is free, high quality ***Plain Text Accounting*** software:
+a fast and light multicurrency double-entry accounting system 
+that uses human-readable, version-controllable plain text files,
+and runs well on unix, mac and windows.
 
 With it you can track your money, investments, cryptocurrencies, time, inventory, or any other commodity, 
 with a complete history of changes, 
-a documented future-proof data format,  
+a documented future-proof data format,
 and without needing any cloud service or vendor.
 
 I'm Simon Michael, hledger project founder and PTA fan. Welcome! 
@@ -47,38 +48,40 @@ The [General FAQ](faq.html) or the [plaintextaccounting.org](https://plaintextac
 
 Compared to [other PTA apps](https://plaintextaccounting.org/#software) like Ledger and Beancount,
 hledger has a particular focus on intuitive UX and practicality for day-to-day accounting.
-Accurate documentation and "just works" are prioritised, and it is actively maintained.
-It supports most of Ledger's and Beancount's features but omits
-some of the more programmer-oriented ones (value expressions, lot-matching notations).
+It supports most of their features but omits some of the more programmer-oriented ones (value expressions, lot-matching notations).
+hledger prioritises "just works" and accessible documentation,
+and is actively maintained, with a lively [chat](support.html).
 
-We hope non-programmers will enjoy hledger's 
+Non-programmers will enjoy hledger's 
 built-in financial statements, 
 multi-period reports, 
 choice of user interfaces, 
 easy CSV import system
 and general robustness.
-And that programmers will appreciate its
+Programmers can appreciate its
 speed (25k txn/s on a macbook air m1), 
 accuracy (up to 255 decimal places), 
-reliability ($100 bounty for regressions), 
+reliability (1100+ tests, $100 bounty for regressions), 
 and easy extensibility/embeddability via Haskell scripts/apps.
-Here's more about [Why hledger ?](why.html)
+
+Read more: [Why hledger ?](why.html)
 
 [![github](https://img.shields.io/github/stars/simonmichael/hledger.svg?logo=GitHub&label=Github)](https://github.com/simonmichael/hledger)
 
 ## How do I get started ?
-Here are some of the most useful docs:
+Use any of these docs from the sidebar:
 [General FAQ](faq.html),
 [Install](install.html),
 [Getting Started Guide](start.html),
 [hledger manual](hledger.html),
-[Support/Discussion](support.html),
-[Accounting concepts](accounting.html).
+[Accounting concepts](accounting.html),
+[Cookbook](cookbook.html),
+or jump on the chat: [Support/Discussion](support.html).
 
-For more, see the site's sidebar; click/tap the horizontal-lines icon at top left to open it.
+(If you don't see the sidebar, click/tap the horizontal-lines icon at top left.
 You can also use the magnifying-glass icon to search this site,
 and there are [access keys](https://en.wikipedia.org/wiki/Access_key#Access_in_different_browsers):\
-`s` sidebar, `t` theme, `/` search, `1` home, `2` changes, `<` previous page, `>` next page.
+`s` sidebar, `t` theme, `/` search, `1` home, `2` changes, `<` previous page, `>` next page.)
 
 <!--
 What is planned for hledger ?
@@ -93,13 +96,15 @@ better getting started experience.
 See also [ROADMAP](ROADMAP.html).
 -->
 
-## How is it funded ?
+## Who made this ?
 
 hledger is brought to you by [Simon Michael](http://joyful.com) and [140+ contributors](CREDITS.html).
 I have been building and relying on this project continuously since 2007, funded mostly by unrelated consulting work.
 I hope you too will find it useful in transforming your relationship with time and money.
-When you have achieved some success, please consider joining the [sponsors](sponsor.html)
-to support the project. Thanks!
+
+hledger is a gift, but once you have achieved some success with it,
+you might wish to join the [sponsors](sponsor.html),
+to help sustain the project and my or other devs' work on it. Thank you!
 
 <a name="help"></a>
 <a name="help-feedback"></a>
