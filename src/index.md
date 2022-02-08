@@ -70,18 +70,166 @@ Read more: [Why hledger ?](why.html)
 
 ## How do I get started ?
 Use any of these docs from the sidebar:
-[General FAQ](faq.html),
 [Install](install.html),
+[General FAQ](faq.html),
 [Getting Started Guide](start.html),
 [hledger manual](hledger.html),
 [Accounting concepts](accounting.html),
 [Cookbook](cookbook.html),
-or jump on the chat: [Support/Discussion](support.html).
+or jump on the [chat](support.html).
+But in case you click no further, here's some (command line) hledger usage:
+```shell
+$ brew install hledger    # or apt, choco, etc. but check Install page for freshness
+```
+```shell
+$ cat >main.journal    # record some transactions manually
+2022-01-01 * opening balances
+    assets:bank:checking                $1000
+    assets:bank:savings                 $2000
+    assets:cash                          $100
+    liabilities:creditcard               $-50
+    equity:opening/closing balances
+
+2022-02-15
+    expenses:food                         $50
+    assets:cash
+
+<Ctrl-d>
+```
+```shell
+$ export LEDGER_FILE=main.journal
+$ hledger stats    # show what is parsed
+Main file                : main.journal
+Included files           : 
+Transactions span        : 2022-01-01 to 2022-02-16 (46 days)
+Last transaction         : 2022-02-15 (7 days from now)
+Transactions             : 2 (0.0 per day)
+Transactions last 30 days: 0 (0.0 per day)
+Transactions last 7 days : 0 (0.0 per day)
+Payees/descriptions      : 1
+Accounts                 : 6 (depth 3)
+Commodities              : 1 ($)
+Market prices            : 0 ()
+
+Run time (throughput)    : 0.04s (47 txns/s)
+```
+```shell
+$ hledger bal --monthly    # show account balance changes each month
+Balance changes in 2022-01-01..2022-02-28:
+
+                                 ||    Jan   Feb 
+=================================++==============
+ assets:bank:checking            ||  $1000     0 
+ assets:bank:savings             ||  $2000     0 
+ assets:cash                     ||   $100  $-50 
+ equity:opening/closing balances || $-3050     0 
+ expenses:food                   ||      0   $50 
+ liabilities:creditcard          ||   $-50     0 
+---------------------------------++--------------
+                                 ||      0     0 
+```
+```shell
+$ cat >checking.csv    # make some CSV data, as if downloaded from a bank
+"Date","Note","Amount"
+"2022/2/01","GOODWORKS CORP","-1000.00"
+"2022/2/22","PROPERTY MGMT CO","500.00"
+"2022/2/23","ATM WITHDRAWAL","-50.00"
+<Ctrl-d>
+```
+```shell
+$ cat >checking.csv.rules    # and a rules file to help hledger read it
+skip 1
+fields date, description, amount
+account1 assets:bank:checking
+currency $
+amount   -%amount
+
+if GOODWORKS
+ account2 income:salary
+
+if PROPERTY
+ account2 expenses:rent
+
+if ATM WITHDRAWAL
+ account2 assets:cash
+<Ctrl-d>
+```
+```shell
+$ hledger import checking.csv    # import CSV records as new journal entries
+imported 2 new transactions from checking.csv
+$ hledger import checking.csv    # records already seen are ignored
+no new transactions found in checking.csv
+```
+```shell
+$ hledger print -b 202202   # show the transactions since feb 1
+2022-02-01 GOODWORKS CORP
+    assets:bank:checking           $1000
+    income:salary                 $-1000
+
+2022-02-15
+    expenses:food             $50
+    assets:cash
+
+2022-02-22 PROPERTY MGMT CO
+    assets:bank:checking           $-500
+    expenses:rent                   $500
+
+2022-02-23 ATM WITHDRAWAL
+    assets:bank:checking             $50
+    assets:cash                     $-50
+
+```
+```shell
+$ hledger is -M    # show a monthly income statement (profit & loss report)
+Income Statement 2022-01-01..2022-02-28
+
+               || Jan    Feb 
+===============++============
+ Revenues      ||            
+---------------++------------
+ income:salary ||   0  $1000 
+---------------++------------
+               ||   0  $1000 
+===============++============
+ Expenses      ||            
+---------------++------------
+ expenses:food ||   0    $50 
+ expenses:rent ||   0   $500 
+---------------++------------
+               ||   0   $550 
+===============++============
+ Net:          ||   0   $450 
+```
+```shell
+$ hledger bs -M --tree    # show monthly asset and liability balances
+Balance Sheet 2022-01-31..2022-02-28
+
+                        || 2022-01-31  2022-02-28 
+========================++========================
+ Assets                 ||                        
+------------------------++------------------------
+ assets                 ||      $3100       $3550 
+   bank                 ||      $3000       $3550 
+     checking           ||      $1000       $1550 
+     savings            ||      $2000       $2000 
+   cash                 ||       $100           0 
+------------------------++------------------------
+                        ||      $3100       $3550 
+========================++========================
+ Liabilities            ||                        
+------------------------++------------------------
+ liabilities:creditcard ||        $50         $50 
+------------------------++------------------------
+                        ||        $50         $50 
+========================++========================
+ Net:                   ||      $3050       $3500 
+```
 
 (If you don't see the sidebar, click/tap the horizontal-lines icon at top left.
 You can also use the magnifying-glass icon to search this site,
 and there are [access keys](https://en.wikipedia.org/wiki/Access_key#Access_in_different_browsers):\
 `s` sidebar, `t` theme, `/` search, `1` home, `2` changes, `<` previous page, `>` next page.)
+
 
 <!--
 What is planned for hledger ?
