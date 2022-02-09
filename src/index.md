@@ -58,7 +58,7 @@ multi-period reports,
 choice of user interfaces, 
 easy CSV import system
 and general robustness.
-Programmers can appreciate its
+Programmers may appreciate its
 speed (25k txn/s on a macbook air m1), 
 accuracy (up to 255 decimal places), 
 reliability (1100+ tests, $100 bounty for regressions), 
@@ -82,19 +82,21 @@ You can also use the magnifying-glass icon to search this site,
 and there are [access keys](https://en.wikipedia.org/wiki/Access_key#Access_in_different_browsers):
 `s` sidebar, `t` theme, `/` search, `1` home, `2` changes, `<` previous page, `>` next page.)
 
-But in case you click no further, here's some (command line) hledger usage:
+But in case you click no further, here are some small examples:
 ```shell
 $ brew install hledger    # or apt, choco, etc. but check Install page for freshness
 ```
 ```shell
-$ cat >main.journal    # record a transaction manually
-2022-01-01 * opening balances
+$ cat >main.journal    # record a transaction manually from command line
+2022-01-01 opening balances as of this date
     assets:bank:checking                $1000
     assets:bank:savings                 $2000
     assets:cash                          $100
     liabilities:creditcard               $-50
     equity:opening/closing balances
 ^D
+```
+```shell
 $ export LEDGER_FILE=main.journal    # use this file by default
 $ echo 'export LEDGER_FILE=main.journal' >>~/.bashrc    # and in future sessions
 ```
@@ -160,7 +162,7 @@ $ cat >checking.csv    # make some CSV data, as if downloaded from a bank
 "Date","Note","Amount"
 "2022/2/01","GOODWORKS CORP","-1000.00"
 "2022/2/22","PROPERTY MGMT CO","500.00"
-"2022/2/23","ATM WITHDRAWAL","-50.00"
+"2022/2/23","ATM WITHDRAWAL","-100.00"
 ^D
 ```
 ```shell
@@ -202,8 +204,8 @@ $ hledger print date:202202   # show transactions in february
     expenses:rent                   $500
 
 2022-02-23 ATM WITHDRAWAL
-    assets:bank:checking             $50
-    assets:cash                     $-50
+    assets:bank:checking           $-100
+    assets:cash                     $100
 
 ```
 ```shell
@@ -236,10 +238,10 @@ Balance Sheet 2022-01-31..2022-02-28
  Assets                 ||                        
 ------------------------++------------------------
  assets                 ||      $3100       $3550 
-   bank                 ||      $3000       $3550 
-     checking           ||      $1000       $1550 
+   bank                 ||      $3000       $3400 
+     checking           ||      $1000       $1400 
      savings            ||      $2000       $2000 
-   cash                 ||       $100           0 
+   cash                 ||       $100        $150 
 ------------------------++------------------------
                         ||      $3100       $3550 
 ========================++========================
@@ -254,11 +256,23 @@ Balance Sheet 2022-01-31..2022-02-28
 ```shell
 $ hledger areg checking    # show checking's transactions and running balance
 Transactions in assets:bank:checking and subaccounts:
-2022-01-01 opening balances     as:ba:savings, as:..         $1000         $1000
-2022-02-01 GOODWORKS CORP       in:salary                    $1000         $2000
-2022-02-22 PROPERTY MGMT CO     ex:rent                      $-500         $1500
-2022-02-23 ATM WITHDRAWAL       as:cash                        $50         $1550
+2022-01-01 opening balances    as:ba:savings, as..         $1000         $1000
+2022-02-01 GOODWORKS CORP      in:salary                   $1000         $2000
+2022-02-22 PROPERTY MGMT CO    ex:rent                     $-500         $1500
+2022-02-23 ATM WITHDRAWAL      as:cash                     $-100         $1400
 ```
+```shell
+$ hledger-ui --forecast   # start the terminal UI (except on Windows), show future txns
+```
+![](images/home-ui-1.png)
+![](images/home-ui-2.png)
+
+```shell
+$ hledger-web    # start the web UI
+```
+![](images/home-web-1.png)
+![](images/home-web-2.png)
+
 
 <!--
 What is planned for hledger ?
