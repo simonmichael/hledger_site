@@ -31,6 +31,9 @@ hledger-related videos:
 - [Simon Michael @ Brainium meetup](https://www.youtube.com/watch?v=H_CdGzLbc7A) (2016, 2h) <!-- sep 2 --> \
   "Hands-on with hledger"
 
+- [hledger add](https://www.vincecima.com/2016/06/12/the-surprising-ease-of-plain-text-accounting.html) (2016, 30s) <!-- jun 12 --> \
+  in The Surprising Ease of Plain Text Accounting 
+
 - [Chris Vollick @ DevHouse Waterloo meetup](https://www.youtube.com/watch?v=-WahFvxhCRc&t=895s) (2016, 40m) <!-- apr 16 --> \
   "hledger, an open source accounting tool"
 
