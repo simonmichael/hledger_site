@@ -77,28 +77,55 @@ Use any of these docs from the sidebar:
 [Accounting concepts](accounting.html),
 [Cookbook](cookbook.html),
 or jump on the [chat](support.html).
+(If you don't see the sidebar, click/tap the horizontal-lines icon at top left.
+You can also use the magnifying-glass icon to search this site,
+and there are [access keys](https://en.wikipedia.org/wiki/Access_key#Access_in_different_browsers):
+`s` sidebar, `t` theme, `/` search, `1` home, `2` changes, `<` previous page, `>` next page.)
+
 But in case you click no further, here's some (command line) hledger usage:
 ```shell
 $ brew install hledger    # or apt, choco, etc. but check Install page for freshness
 ```
 ```shell
-$ cat >main.journal    # record some transactions manually
+$ cat >main.journal    # record a transaction manually
 2022-01-01 * opening balances
     assets:bank:checking                $1000
     assets:bank:savings                 $2000
     assets:cash                          $100
     liabilities:creditcard               $-50
     equity:opening/closing balances
-
-2022-02-15
-    expenses:food                         $50
-    assets:cash
-
-<Ctrl-d>
+^D
+$ export LEDGER_FILE=main.journal    # use this file by default
+$ echo 'export LEDGER_FILE=main.journal' >>~/.bashrc    # and in future sessions
 ```
 ```shell
-$ export LEDGER_FILE=main.journal
-$ hledger stats    # show what is parsed
+$ hledger add    # record a transaction interactively
+Adding transactions to journal file main.journal
+Any command line arguments will be used as defaults.
+Use tab key to complete, readline keys to edit, enter to accept defaults.
+An optional (CODE) may follow transaction dates.
+An optional ; COMMENT may follow descriptions or amounts.
+If you make a mistake, enter < at any prompt to go one step backward.
+To end a transaction, enter . when prompted.
+To quit, enter . at a date prompt or press control-d or control-c.
+Date [2022-02-08]: 2/15
+Description: market
+Account 1: expenses:food
+Amount  1: $50
+Account 2: assets:cash
+Amount  2 [$-50]: 
+Account 3 (or . or enter to finish this transaction): 
+2022-02-15 market
+    expenses:food             $50
+    assets:cash              $-50
+
+Save this transaction to the journal ? [y]: 
+Saved.
+Starting the next transaction (. or ctrl-D/ctrl-C to quit)
+Date [2022-02-15]: 
+```
+```shell
+$ hledger stats    # show journal statistics
 Main file                : main.journal
 Included files           : 
 Transactions span        : 2022-01-01 to 2022-02-16 (46 days)
@@ -134,7 +161,7 @@ $ cat >checking.csv    # make some CSV data, as if downloaded from a bank
 "2022/2/01","GOODWORKS CORP","-1000.00"
 "2022/2/22","PROPERTY MGMT CO","500.00"
 "2022/2/23","ATM WITHDRAWAL","-50.00"
-<Ctrl-d>
+^D
 ```
 ```shell
 $ cat >checking.csv.rules    # and a rules file to help hledger read it
@@ -152,23 +179,23 @@ if PROPERTY
 
 if ATM WITHDRAWAL
  account2 assets:cash
-<Ctrl-d>
+^D
 ```
 ```shell
 $ hledger import checking.csv    # import CSV records as new journal entries
 imported 2 new transactions from checking.csv
-$ hledger import checking.csv    # records already seen are ignored
+$ hledger import checking.csv    # records already seen are ignored; cf --dry-run
 no new transactions found in checking.csv
 ```
 ```shell
-$ hledger print -b 202202   # show the transactions since feb 1
+$ hledger print date:202202   # show transactions in february
 2022-02-01 GOODWORKS CORP
     assets:bank:checking           $1000
     income:salary                 $-1000
 
-2022-02-15
+2022-02-15 market
     expenses:food             $50
-    assets:cash
+    assets:cash              $-50
 
 2022-02-22 PROPERTY MGMT CO
     assets:bank:checking           $-500
@@ -224,12 +251,14 @@ Balance Sheet 2022-01-31..2022-02-28
 ========================++========================
  Net:                   ||      $3050       $3500 
 ```
-
-(If you don't see the sidebar, click/tap the horizontal-lines icon at top left.
-You can also use the magnifying-glass icon to search this site,
-and there are [access keys](https://en.wikipedia.org/wiki/Access_key#Access_in_different_browsers):\
-`s` sidebar, `t` theme, `/` search, `1` home, `2` changes, `<` previous page, `>` next page.)
-
+```shell
+$ hledger areg checking    # show checking's transactions and running balance
+Transactions in assets:bank:checking and subaccounts:
+2022-01-01 opening balances     as:ba:savings, as:..         $1000         $1000
+2022-02-01 GOODWORKS CORP       in:salary                    $1000         $2000
+2022-02-22 PROPERTY MGMT CO     ex:rent                      $-500         $1500
+2022-02-23 ATM WITHDRAWAL       as:cash                        $50         $1550
+```
 
 <!--
 What is planned for hledger ?
@@ -251,8 +280,9 @@ I have been building and relying on this project continuously since 2007, funded
 I hope you too will find it useful in transforming your relationship with time and money.
 
 hledger is a gift, but once you have achieved some success with it,
-you might wish to join the [sponsors](sponsor.html),
-to help sustain the project and my or other devs' work on it. Thank you!
+you may wish to become one of the generous **[sponsors](sponsor.html)**
+helping to sustain this project and my or other devs' work on it. 
+My family thanks you!
 
 <a name="help"></a>
 <a name="help-feedback"></a>
