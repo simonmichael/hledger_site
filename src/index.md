@@ -84,7 +84,7 @@ and there are [access keys](https://en.wikipedia.org/wiki/Access_key#Access_in_d
 
 But in case you click no further, here are some small examples:
 ```shell
-$ brew install hledger    # or apt, choco, etc. but check Install page for freshness
+$ brew install hledger    # or apt, choco, but check Install for freshness
 ```
 ```shell
 $ cat >main.journal    # record a transaction manually from command line
@@ -262,7 +262,7 @@ Transactions in assets:bank:checking and subaccounts:
 2022-02-23 ATM WITHDRAWAL      as:cash                     $-100         $1400
 ```
 ```shell
-$ hledger-ui --forecast   # start the terminal UI (except on Windows), showing future
+$ hledger-ui --forecast   # start the terminal UI (except on Windows)
 ```
 ![](images/home-ui-1.png)
 ![](images/home-ui-2.png)
