@@ -279,7 +279,7 @@ $ hledger-web    # start the web UI
 ![](images/home-web-2.png)
 
 ```shell
-$ hledger-web -f examples/bcexample.hledger    # from data created by Martin Blais
+$ hledger-web -f examples/bcexample.hledger    # from data by Martin Blais
 ```
 ![](images/home-web-3.png)
 
