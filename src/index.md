@@ -29,7 +29,7 @@ plain text accounting.
 <!-- toc -->
 </div>
 
-## What is this ?
+## What is this?
 
 ***hledger*** is free, high quality ***Plain Text Accounting*** software:
 a fast and light multicurrency double-entry accounting system 
@@ -46,7 +46,7 @@ I'm Simon Michael, hledger project founder and PTA fan. Welcome!
 
 [![github](https://img.shields.io/github/stars/simonmichael/hledger.svg?logo=GitHub&label=Github)](https://github.com/simonmichael/hledger)
 
-## Why use hledger ?
+## Why use hledger?
 The [General FAQ](faq.html) or the [plaintextaccounting.org](https://plaintextaccounting.org) site introduce Plain Text Accounting.
 
 Compared to [other PTA apps](https://plaintextaccounting.org/#software),
@@ -82,7 +82,7 @@ Read more: [Why hledger ?](why.html)
 - If you don't need version control or privacy, but do need friction-free collaboration with financial professionals and institutions,
 you might prefer a commercial web-based system.)
 
-## How do I get started ?
+## How to get started?
 
 - **[Install](install.html)** lists the easy ways to install hledger on your system.
 - [Getting Started Guide](start.html) is a good starting point/overview for our (many..) introductory docs.
@@ -90,7 +90,7 @@ you might prefer a commercial web-based system.)
 - [hledger manual](hledger.html) is where to go for the authoritative reference docs.
 - [Cookbook](cookbook.html) and [Accounting concepts](accounting.html) give additional practical tips and background.
 - The [#hledger chat room](support.html) is open 24/7. (At quiet times you might need to wait.)
-- (See also [Where should I go next?](#where-should-i-go-next-) below.)
+- (See also [Where to go next?](#where-to-go-next) below.)
 
 But in case you click no further, here is a series of (CLI-focussed) examples.
 If you follow these you have all the essentials,
@@ -310,7 +310,7 @@ better getting started experience.
 See also [ROADMAP](ROADMAP.html).
 -->
 
-## Who made this ?
+## Who made this?
 
 hledger is brought to you by [Simon Michael](http://joyful.com) and [140+ contributors](CREDITS.html).
 I have been building and relying on this project continuously since 2007, funded mostly by unrelated consulting work.
@@ -324,7 +324,7 @@ My family thanks you!
 <a name="help"></a>
 <a name="help-feedback"></a>
 
-## Where should I go next ?
+## Where to go next?
 
 Next, you could:
 
