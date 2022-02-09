@@ -262,16 +262,26 @@ Transactions in assets:bank:checking and subaccounts:
 2022-02-23 ATM WITHDRAWAL      as:cash                     $-100         $1400
 ```
 ```shell
-$ hledger-ui --forecast   # start the terminal UI (except on Windows), show future txns
+$ hledger-ui --forecast   # start the terminal UI (except on Windows), showing future
 ```
 ![](images/home-ui-1.png)
 ![](images/home-ui-2.png)
+
+```shell
+$ hledger-ui --tree -f examples/bcexample.hledger   # a multicurrency journal
+```
+![](images/home-ui-3.png)
 
 ```shell
 $ hledger-web    # start the web UI
 ```
 ![](images/home-web-1.png)
 ![](images/home-web-2.png)
+
+```shell
+$ hledger-web -f examples/bcexample.hledger    # from data created by Martin Blais
+```
+![](images/home-web-3.png)
 
 
 <!--
@@ -293,9 +303,9 @@ hledger is brought to you by [Simon Michael](http://joyful.com) and [140+ contri
 I have been building and relying on this project continuously since 2007, funded mostly by unrelated consulting work.
 I hope you too will find it useful in transforming your relationship with time and money.
 
-hledger is a gift, but once you have achieved some success with it,
-you may wish to become one of the generous **[sponsors](sponsor.html)**
-helping to sustain this project and my or other devs' work on it. 
+hledger is a gift. Once you have achieved some success with it,
+you might want to become one of the generous **[sponsors](sponsor.html)**
+helping to sustain this project and my (or other devs') work on it. 
 My family thanks you!
 
 <a name="help"></a>
