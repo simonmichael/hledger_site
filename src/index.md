@@ -83,20 +83,19 @@ Read more: [Why hledger ?](why.html)
 you might prefer a commercial web-based system.)
 
 ## How do I get started ?
-Use any of these docs from the sidebar:
-[Install](install.html),
-[General FAQ](faq.html),
-[Getting Started Guide](start.html),
-[hledger manual](hledger.html),
-[Accounting concepts](accounting.html),
-[Cookbook](cookbook.html),
-or jump on the [chat](support.html).
-(If you don't see the sidebar, click/tap the horizontal-lines icon at top left.
-You can also use the magnifying-glass icon to search this site,
-and there are [access keys](https://en.wikipedia.org/wiki/Access_key#Access_in_different_browsers):
-`s` sidebar, `t` theme, `/` search, `1` home, `2` changes, `<` previous page, `>` next page.)
 
-But in case you click no further, here are some small examples:
+- **[Install](install.html)** lists the easy ways to install hledger on your system.
+- [Getting Started Guide](start.html) is a good starting point/overview for our (many..) introductory docs.
+  [hledger fan's beginner videos](https://www.youtube.com/channel/UCZLxXTjOqLzq4z5Jy0AyWSQ/videos) might be complementary.
+- [hledger manual](hledger.html) is where to go for the authoritative reference docs.
+- [Cookbook](cookbook.html) and [Accounting concepts](accounting.html) give additional practical tips and background.
+- The [#hledger chat room](support.html) is open 24/7. (At quiet times you might need to wait.)
+- (See also [Where should I go next?](#where-should-i-go-next-) below.)
+
+But in case you click no further, here is a series of (CLI-focussed) examples.
+If you follow these you have all the essentials,
+and you can consult the docs for more details and features when needed.
+
 ```shell
 $ brew install hledger    # or apt, choco, but check Install for freshness
 ```
@@ -329,7 +328,11 @@ My family thanks you!
 
 Next, you could:
 
-- Scan through the docs listed in the sidebar to your left. If it's not visible, click the menu button at top left.
+- Scan through the docs listed in the sidebar to your left. 
+  (If it's not visible, click/tap the horizontal-lines icon at top left, or press the `s` [access key].)
+- You can also search this site quickly by using the magnifying-glass icon at top left, or 
+  the `/` access key.
+  (Other access keys on this site: `t` change theme, `1` home page, `2` recent changes, `<` previous page, `>` next page.)
 - Check the [FAQ](faq.html).
 - Do a tutorial:
   [Quick Start](quickstart.html),
@@ -343,12 +346,12 @@ Next, you could:
 - Browse the [blog posts] on plaintextaccounting.org.
 - Watch [videos](videos.html), such as hledger fan's beginner lessons.
 - Look at lots of [example files].
-- Ask questions/introduce yourself in #hledger chat via [matrix](http://matrix.hledger.org) or [IRC](http://irc.hledger.org);
-  browse the [mail list](http://list.hledger.org);
-  explore the other [Support/Discussion](support.html) options.
+- Ask questions/introduce yourself in #hledger chat via [matrix](http://matrix.hledger.org) or [IRC](http://irc.hledger.org).
+- Browse the [mail list](http://list.hledger.org).
+- Explore the other [Support/Discussion](support.html) fora.
 
 
-
+[access key]:                 https://en.wikipedia.org/wiki/Access_key#Access_in_different_browsers
 [blog posts]:                 https://plaintextaccounting.org/#articles-blog-posts
 [example files]:              https://github.com/simonmichael/hledger/tree/master/examples
 [mail list]:                  https://groups.google.com/forum/#!forum/hledger

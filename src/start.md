@@ -16,9 +16,15 @@ It is work in progress; all feedback is welcome in [chat](support.html).
 
 See also these similar but slightly more technical pages:
 
+- [Home > How do I get started?](index.html#how-do-i-get-started)
 - [Quick Start](quickstart.html)
 - [hledger manual > COMMON TASKS](hledger.html#common-tasks)
 - [Cookbook > Setups/workflows](cookbook.html#setupsworkflows)
+
+and 
+
+- [hledger fan's beginner videos](https://www.youtube.com/channel/UCZLxXTjOqLzq4z5Jy0AyWSQ/videos).
+
 
 ## Common workflows
 
