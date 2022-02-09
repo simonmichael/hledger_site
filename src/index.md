@@ -40,17 +40,19 @@ With it you can track your money, investments, cryptocurrencies, time, inventory
 with a complete history of changes, 
 a documented future-proof data format,
 and without needing any cloud service or vendor.
+<!-- In other words, with privacy and peace of mind. -->
 
 I'm Simon Michael, hledger project founder and PTA fan. Welcome! 
 
 ## Why use hledger ?
 The [General FAQ](faq.html) or the [plaintextaccounting.org](https://plaintextaccounting.org) site introduce Plain Text Accounting.
 
-Compared to [other PTA apps](https://plaintextaccounting.org/#software) like Ledger and Beancount,
-hledger has a particular focus on intuitive UX and practicality for day-to-day accounting.
-It supports most of their features but omits some of the more programmer-oriented ones (value expressions, lot-matching notations).
-hledger prioritises "just works" and accessible documentation,
+Compared to [other PTA apps](https://plaintextaccounting.org/#software),
+hledger has a strong focus on ease of use and practicality for day-to-day accounting.
+It prioritises "just works" and accessible documentation,
 and is actively maintained, with a lively [chat](support.html).
+It supports most Ledger and Beancount features but omits some of the more complex ones
+(value expression language, implicit lot matching).
 
 Non-programmers will enjoy hledger's 
 built-in financial statements, 
@@ -58,13 +60,24 @@ multi-period reports,
 choice of user interfaces, 
 easy CSV import system
 and general robustness.
+
 Programmers may appreciate its
 speed (25k txn/s on a macbook air m1), 
 accuracy (up to 255 decimal places), 
 reliability (1100+ tests, $100 bounty for regressions), 
-and easy extensibility/embeddability via Haskell scripts/apps.
+and powerful extensibility/embeddability via Haskell scripts/apps.
 
 Read more: [Why hledger ?](why.html)
+
+(And why *not* use hledger ?
+- If you need a rich GUI above all, you might prefer GnuCash, KMyMoney, or Quickbooks.
+- If you like spreadsheets and don't need double entry, you might find those quicker.
+- If you do a lot of advanced trading, or want to hack a lot with Python, consider Beancount.
+- If you want to mix more code in your financial data, or hack on C++, evaluate Ledger.
+- If you like minimalist unix tools and think all the above are bloat, see [pta](https://mandoc.bsd.lv/pta).
+- If you are mobile-only and don't need version control or flexibility, maybe a phone app will do.
+- If you don't need version control or privacy, but do need friction-free collaboration with financial professionals and institutions,
+you'll prefer a commercial web-based system.)
 
 [![github](https://img.shields.io/github/stars/simonmichael/hledger.svg?logo=GitHub&label=Github)](https://github.com/simonmichael/hledger)
 
