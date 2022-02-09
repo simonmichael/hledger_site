@@ -312,11 +312,15 @@ See also [ROADMAP](ROADMAP.html).
 
 ## Who made this?
 
-hledger is brought to you by [Simon Michael](http://joyful.com) and [140+ contributors](CREDITS.html).
-I have been building and relying on this project continuously since 2007, funded mostly by unrelated consulting work.
-I hope you too will find it useful in transforming your relationship with time and money.
+hledger is offered to you by [Simon Michael](http://joyful.com) and [140+ contributors](CREDITS.html).
+I have been building and relying on this project (in "spare time") since 2007, 
+funded mostly by unrelated consulting work.
+I did it because I had great need to transform my financial life, 
+I had the right tools and [inspirations](ledger.html) and visions,
+and I continue because I enjoy it and it seems to be a way I can be of service.
+I hope you too will find hledger/PTA useful in transforming your relationship with money and time.
 
-hledger is a gift. Once you have achieved some success with it,
+After enjoying some personal or organisational success with it,
 you might want to become one of the generous **[sponsors](sponsor.html)**
 helping to sustain this project and my (or other devs') work on it. 
 My family thanks you!
