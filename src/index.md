@@ -420,4 +420,7 @@ Next, you could:
   padding: 0 2em 0 0;
 }
 
+code::first-line {
+  font-weight:bold;
+}
 </style>
