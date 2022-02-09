@@ -65,14 +65,15 @@ Programmers may appreciate its
 speed (25k txn/s on a macbook air m1), 
 accuracy (up to 255 decimal places), 
 reliability (1100+ tests, $100 bounty for regressions), 
-and powerful extensibility/embeddability via Haskell scripts/apps.
+powerful scriptability/embeddability
+and clean statically-typed Haskell implementation.
 
 Read more: [Why hledger ?](why.html)
 
-(And why *not* use hledger ?
+(And why might you *not* use hledger ?
 - If you need a rich GUI above all, you might prefer GnuCash, KMyMoney, or Quickbooks.
-- If you like spreadsheets and don't need double entry, you might find those quicker.
-- If you do a lot of advanced trading, or want to hack a lot with Python, consider Beancount.
+- If you like spreadsheets and don't have a ton of data, you might find those quicker.
+- If you do a lot of advanced trading, or want to hack a lot with Python, also look at Beancount.
 - If you want to mix more code in your financial data, or hack on C++, evaluate Ledger.
 - If you like minimalist unix tools and think all the above are bloat, see [pta](https://mandoc.bsd.lv/pta).
 - If you are mobile-only and don't need version control or flexibility, maybe a phone app will do.
