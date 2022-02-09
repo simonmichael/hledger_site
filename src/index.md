@@ -44,6 +44,8 @@ and without needing any cloud service or vendor.
 
 I'm Simon Michael, hledger project founder and PTA fan. Welcome! 
 
+[![github](https://img.shields.io/github/stars/simonmichael/hledger.svg?logo=GitHub&label=Github)](https://github.com/simonmichael/hledger)
+
 ## Why use hledger ?
 The [General FAQ](faq.html) or the [plaintextaccounting.org](https://plaintextaccounting.org) site introduce Plain Text Accounting.
 
@@ -78,9 +80,7 @@ Read more: [Why hledger ?](why.html)
 - If you like minimalist unix tools and think all the above are bloat, see [pta](https://mandoc.bsd.lv/pta).
 - If you are mobile-only and don't need version control or flexibility, maybe a phone app will do.
 - If you don't need version control or privacy, but do need friction-free collaboration with financial professionals and institutions,
-you'll prefer a commercial web-based system.)
-
-[![github](https://img.shields.io/github/stars/simonmichael/hledger.svg?logo=GitHub&label=Github)](https://github.com/simonmichael/hledger)
+you might prefer a commercial web-based system.)
 
 ## How do I get started ?
 Use any of these docs from the sidebar:
