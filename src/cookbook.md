@@ -1,11 +1,14 @@
 # The hledger User Cookbook
 
+2022-01 status:
 A somewhat random pile of additional docs, notes and tips for hledger users,
-of various freshness and quality.
-Follow any links to the official [manuals](manuals.html) for more info.
+of various freshness and quality. Follow any links to the official [manuals](manuals.html) for more info.
 
+2022 goal:
+**Become the comprehensive list of concrete, practical, actionable advice for hledger users on how to do all common tasks.  Use hledger where possible, point to other tools where more effective, and include all tasks we don't yet have a good answer for.**
 
-<div style="float:left;">
+See also:
+https://wiki.plaintextaccounting.org collects similar but more generic advice, using any and all PTA tools.
 
 ### Managing your data
 
@@ -37,9 +40,6 @@ Follow any links to the official [manuals](manuals.html) for more info.
 - [Mobile apps](mobile-apps.md)
 - [Save frequently used options](save-frequently-used-options.md)
 - [Scripting](scripting.md)
-
-</div>
-<div style="float:right;">
 
 ### Setups/workflows
 
@@ -76,5 +76,16 @@ See also <https://wiki.plaintextaccounting.org>\
 - [Calculate unrealized gain](gain.md)
 - [Calculate return on investment](roi.md)
 
+### Documentor tips
+
+Structure:
+Big pages with many headings where practical. Additional subpages as needed.
+Small answers/examples shown inline where possible, followed by links to longer answers & related resources.
+
+<!-- two column layout, skip for now >
+<div style="float:left;">
+</div>
+<div style="float:right;">
 </div>
 <br clear=all>
+-->
