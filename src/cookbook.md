@@ -1,14 +1,10 @@
 # The hledger User Cookbook
 
-2022-01 status:
-A somewhat random pile of additional docs, notes and tips for hledger users,
-of various freshness and quality. Follow any links to the official [manuals](manuals.html) for more info.
-
 2022 goal:
 **Become the comprehensive list of concrete, practical, actionable advice for hledger users on how to do all common tasks.  Use hledger where possible, point to other tools where more effective, and include all tasks we don't yet have a good answer for.**
 
 See also:
-https://wiki.plaintextaccounting.org collects similar but more generic advice, using any and all PTA tools.
+<https://wiki.plaintextaccounting.org> collects similar but more generic advice for any and all PTA tools.
 
 ### Managing your data
 
