@@ -4,7 +4,7 @@
 <!-- toc -->
 </div>
 
-**Goal for 2022:** This page aims to become the comprehensive list of concrete, actionable, task-oriented advice for hledger users on how to tackle all common real-world problems, using hledger where possible, but pointing to other tools if more effective, and including placeholders when we don't yet have a good answer.
+**Goal for 2022:** This page aims to become the comprehensive list of concrete, actionable, task-oriented advice for hledger users on how to tackle common real-world problems, using hledger where possible, but pointing to other tools if more effective, and including placeholders where we don't yet have a good answer.
 
 **See also:**
 - <https://plaintextaccounting.org> and <https://wiki.plaintextaccounting.org> collect similar but more generic advice for any and all PTA tools.
