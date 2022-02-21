@@ -26,6 +26,10 @@ Check plaintextaccounting.org's and wiki.plaintextaccounting.org's categories.
 <br clear=all>
 -->
 
+The cookbook falls into two parts: 
+the [General usage](#general-usage) of hledger,
+and [Accounting and bookkeeping](#accounting-and-bookkeeping) examples.
+
 ## General usage
 <!-- sections ordered roughly by need -->
 
