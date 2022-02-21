@@ -48,13 +48,6 @@ Check plaintextaccounting.org's and wiki.plaintextaccounting.org's categories.
 ### Making charts
 - [Charts and Graphs](charts.md)
 
-### Interoperating with other software
-- [Exporting from hledger](export.md)
-- [hledger and Beancount](beancount.md)
-- [hledger and GnuCash](gnucash.md)
-- [hledger and Ledger](ledger.md)
-- [hledger and Quicken/Quickbooks](quicken.md)
-
 ### Using other interfaces
 - [hledger-web tips](hledger-web-tips.md)
 - [Mobile apps](mobile-apps.md)
@@ -77,6 +70,13 @@ Check plaintextaccounting.org's and wiki.plaintextaccounting.org's categories.
 - Andreas Pauley's [Hledger Flow](https://github.com/apauley/hledger-flow)
 - rotorkunstkultur's [rtrLEDGER](https://github.com/rotorkunstkultur/rtrledger)
 - [Michael Walker's setup](https://memo.barrucadu.co.uk/personal-finance.html)
+
+### Interoperating with other software
+- [Exporting from hledger](export.md)
+- [hledger and Beancount](beancount.md)
+- [hledger and GnuCash](gnucash.md)
+- [hledger and Ledger](ledger.md)
+- [hledger and Quicken/Quickbooks](quicken.md)
 
 ## Accounting and bookkeeping
 <!-- sections ordered mostly alphabetically -->
