@@ -9,7 +9,7 @@
 **See also:**
 - <https://plaintextaccounting.org> and <https://wiki.plaintextaccounting.org> collect similar but more generic advice for any and all PTA tools.
 - If you don't yet know the basics of hledger, see the [home page](index.md), eg [How to get started](index.md#how-to-get-started).
-- When you find something that's not covered here, or you have a suggestion to improve this cookbook, please [send a chat message](support.md) (or email).
+- When you find something that's not covered here, or you have a suggestion, we'd appreciate [a chat message](support.md) (or email).
 
 <!--
 Documentor tips:
