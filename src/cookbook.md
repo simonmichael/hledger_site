@@ -1,5 +1,9 @@
 # hledger User Cookbook
 
+<div class=pagetoc>
+<!-- toc -->
+</div>
+
 **Goal for 2022:** This page aims to become the comprehensive list of concrete, practical, actionable advice for hledger users on how to do all common tasks, using hledger where possible, but pointing to other tools if more effective, and including placeholders when we don't yet have a good answer.
 
 **Documentor tips:** Big pages while practical, additional subpages when needed. Include minimal answers/inline examples when feasible, followed by links to longer answers/related resources. Check plaintextaccounting.org's and wiki.plaintextaccounting.org's categories.
