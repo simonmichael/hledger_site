@@ -10,7 +10,12 @@
 - <https://plaintextaccounting.org> and <https://wiki.plaintextaccounting.org> collect similar but more generic advice for any and all PTA tools.
 - If you don't yet know the basics of hledger, see the [home page](index.md), eg [How to get started](index.md#how-to-get-started).
 
-**Documentor tips:** Big pages while practical, additional subpages when needed. Include minimal answers/inline examples when feasible, followed by links to longer answers/related resources. Check plaintextaccounting.org's and wiki.plaintextaccounting.org's categories.
+<!--
+Documentor tips:
+Big pages while practical, additional subpages when needed. 
+Include minimal answers/inline examples when feasible, followed by links to longer answers/related resources. 
+Check plaintextaccounting.org's and wiki.plaintextaccounting.org's categories.
+-->
 
 <!-- two column layout, interferes with editing in Obsidian, skip for now
 <div style="float:left;">
