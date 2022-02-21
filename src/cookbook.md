@@ -6,6 +6,10 @@
 
 **Goal for 2022:** This page aims to become the comprehensive list of concrete, practical, actionable advice for hledger users on how to do all common tasks, using hledger where possible, but pointing to other tools if more effective, and including placeholders when we don't yet have a good answer.
 
+**See also:**
+- <https://wiki.plaintextaccounting.org> collects similar but more generic advice for any and all PTA tools.
+- If you don't yet know the basics of hledger, see the [home page](index.md), eg [How to get started](index.md#how-to-get-started).
+
 **Documentor tips:** Big pages while practical, additional subpages when needed. Include minimal answers/inline examples when feasible, followed by links to longer answers/related resources. Check plaintextaccounting.org's and wiki.plaintextaccounting.org's categories.
 
 <!-- two column layout, interferes with editing in Obsidian, skip for now
@@ -15,10 +19,6 @@
 </div>
 <br clear=all>
 -->
-
-**See also:**
-- <https://wiki.plaintextaccounting.org> collects similar but more generic advice for any and all PTA tools.
-- If you don't yet know the basics of hledger, see the [home page](index.md), eg [How to get started](index.md#how-to-get-started).
 
 ## General usage
 <!-- sections ordered roughly by need -->
