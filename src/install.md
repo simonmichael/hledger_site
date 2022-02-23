@@ -148,9 +148,9 @@ and [share any feedback](support.html) so we can make this process smoother!
       </td>
       <td>
         <div class="command">
-          <a href="https://github.com/simonmichael/hledger/releases/tag/hledger-1.24.1">hledger-linux-x64.zip</a><br>
-          <a href="https://github.com/simonmichael/hledger/releases/tag/hledger-1.24.1">hledger-macos.zip</a><br>
-          <a href="https://github.com/simonmichael/hledger/releases/tag/hledger-1.24.1">hledger-windows.zip</a>
+          <a href="https://github.com/simonmichael/hledger/releases/tag/1.24.1">hledger-linux-x64.zip</a><br>
+          <a href="https://github.com/simonmichael/hledger/releases/tag/1.24.1">hledger-macos.zip</a><br>
+          <a href="https://github.com/simonmichael/hledger/releases/tag/1.24.1">hledger-windows.zip</a>
           <span style="font-weight:normal; font-style:italic; font-size:small;">
             (This one can run on other platforms with <a href="https://www.winehq.org">Wine</a>.)
           </span><br>
