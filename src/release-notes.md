@@ -63,6 +63,213 @@ Changes in hledger-install.sh are shown
 [here](https://github.com/simonmichael/hledger/commits/master/hledger-install/hledger-install.sh).
 
 
+## 2022-03-04 hledger 1.25
+
+**Account type and tag querying,
+infer equity postings from @ notation,
+easily-consumed "tidy" CSV output**
+<!-- ([announcement](https://groups.google.com/g/hledger/LINK)) -->
+
+### hledger 1.25
+
+Breaking changes
+
+- Journal format's `account NAME  TYPECODE` syntax, deprecated in 1.13, has been dropped.
+  Please use `account NAME  ; type:TYPECODE` instead.
+  (Stephen Morgan)
+
+- The rule for auto-detecting "cash" (liquid asset) accounts from account names
+  for the `cashflow` report has been simplified. 
+  If you have been using the cashflow report, without explicitly declaring Cash accounts,
+  you might notice a change, and might need to declare your Cash accounts explicitly
+  (by adding `type:C` tags to top-level cash account directives).
+
+Features
+
+- The new `type:TYPECODES` query matches accounts by their accounting type.
+  Account types are declared with a `type:` tag in account directives,
+  or inferred from common english account names, or inherited from parent accounts,
+  as described at [Declaring accounts > Account types].
+  This generalises the account type detection of `balancesheet`, `incomestatement` etc.,
+  so you can now select accounts by type without needing fragile account name regexps.
+  Also, the `accounts` command has a new `--types` flag to show account types.
+  Eg:
+
+      hledger bal type:AL  # balance report showing assets and liabilities
+      hledger reg type:x   # register of all expenses
+      hledger acc --types  # list accounts and their types
+
+  ([#1820](https://github.com/simonmichael/hledger/issues/1820), 
+  [#1822](https://github.com/simonmichael/hledger/issues/1822)) 
+  (Simon Michael, Stephen Morgan)
+
+- The `tag:` query can now also match account tags, as defined in account directives.
+  Subaccounts inherit tags from their parents.
+  Accounts, postings and transactions can be filtered by account tag.
+  ([#1817](https://github.com/simonmichael/hledger/issues/1817))
+
+- The new `--infer-equity` flag replaces the `@`/`@@` price notation in commodity
+  conversion transactions with more correct equity postings (when not using `-B/--cost`).
+  This makes these transactions fully balanced, and preserves the accounting equation.
+  For example:
+
+      2000-01-01
+        a             1 AAA @@ 2 BBB
+        b            -2 BBB
+
+      $ hledger print --infer-equity
+      2000-01-01
+        a                               1 AAA
+        equity:conversion:AAA-BBB:AAA  -1 AAA
+        equity:conversion:AAA-BBB:BBB   2 BBB
+        b                              -2 BBB
+
+  
+  `equity:conversion` is the account used by default. To use a different account,
+  declare it with an account directive and the new `V` (`Conversion`) account type.
+  Eg:
+  
+      account Equity:Trading    ; type:V
+
+  ([#1554](https://github.com/simonmichael/hledger/issues/1554)) (Stephen Morgan, Simon Michael)
+
+- Normalised, easy-to-process "tidy" CSV data can now be generated with `--layout tidy -O csv`.
+  In tidy data, every variable is a column and each row represents a single data point 
+  (cf <https://vita.had.co.nz/papers/tidy-data.html>).
+  ([#1768](https://github.com/simonmichael/hledger/issues/1768), 
+  [#1773](https://github.com/simonmichael/hledger/issues/1773), 
+  [#1775](https://github.com/simonmichael/hledger/issues/1775)) 
+  (Stephen Morgan)
+
+Improvements
+
+- Strict mode (`-s/--strict`) now also checks periodic transactions (`--forecast`) 
+  and auto postings (`--auto`). 
+  ([#1810](https://github.com/simonmichael/hledger/issues/1810)) (Stephen Morgan)
+
+- `hledger check commodities` now always accepts zero amounts which have no commodity symbol. 
+  ([#1767](https://github.com/simonmichael/hledger/issues/1767)) (Stephen Morgan)
+
+- Relative [smart dates](hledger.html#smart-dates) may now specify an arbitrary number of some period into the future or past).
+  Some examples:
+  - `in 5 days`
+  - `in -6 months`
+  - `5 weeks ahead`
+  - `2 quarters ago`
+  
+  (Stephen Morgan)
+
+- CSV output now always disables digit group marks (eg, thousands separators),
+  making it more machine readable by default. 
+  ([#1771](https://github.com/simonmichael/hledger/issues/1771)) (Stephen Morgan)
+
+- Unicode may now be used in field names/references in CSV rules files.
+  ([#1809](https://github.com/simonmichael/hledger/issues/1809)) (Stephen Morgan)
+
+- Error messages improved:
+  - Balance assignments
+  - aregister
+  - Command line parsing (less "user error")
+
+Fixes
+
+- `--layout=bare` no longer shows a commodity symbol for zero amounts. 
+  ([#1789](https://github.com/simonmichael/hledger/issues/1789)) (Stephen Morgan)
+
+- `balance --budget` no longer elides boring parents of unbudgeted accounts 
+  if they have a budget. 
+  ([#1800](https://github.com/simonmichael/hledger/issues/1800)) (Stephen Morgan)
+
+- `roi` now reports TWR correctly
+
+  - when there are several PnL changes occurring on a single day
+  - and also when investment is fully sold/withdrawn/discounted at the end of a particular reporting period.
+
+  ([#1791](https://github.com/simonmichael/hledger/issues/1791)) (Dmitry Astapov)
+
+Documentation
+
+- There is a new CONVERSION & COST section, replacing COSTING. 
+  ([#1554](https://github.com/simonmichael/hledger/issues/1554))
+
+- Some problematic interactions of account aliases with other features have been noted. 
+  ([#1788](https://github.com/simonmichael/hledger/issues/1788))
+
+[Declaring accounts > Account types]: (https://hledger.org/hledger.html#account-types
+
+### hledger-ui 1.25
+
+- Uses hledger 1.25.
+
+### hledger-web 1.25
+
+- Uses hledger 1.25.
+
+### hledger-lib 1.25
+
+- hledger-lib now builds with GHC 9.2 and latest deps. 
+  ([#1774](https://github.com/simonmichael/hledger/issues/1774)
+
+- Journal has a new jaccounttypes map.
+  The journalAccountType lookup function makes it easy to check an account's type.
+  The journalTags and journalInheritedTags functions look up an account's tags.
+  Functions like journalFilterPostings and journalFilterTransactions,
+  and new matching functions matchesAccountExtra, matchesPostingExtra
+  and matchesTransactionExtra, use these to allow more powerful matching
+  that is aware of account types and tags.
+
+- Journal has a new jdeclaredaccounttags field
+  for easy lookup of account tags.
+  Query.matchesTaggedAccount is a tag-aware version of matchesAccount.
+
+- Some account name functions have moved from Hledger.Data.Posting
+  to Hledger.Data.AccountName:
+  accountNamePostingType, accountNameWithPostingType, accountNameWithoutPostingType,
+  joinAccountNames, concatAccountNames, accountNameApplyAliases, accountNameApplyAliasesMemo.
+
+- Renamed: CommodityLayout to Layout.
+
+### project changes 1.25
+
+Scripts/addons
+
+- hledger-install.sh now also installs Pavan Rikhi's hledger-stockquotes tool.
+
+- The bin/hledger-number addon was added.
+
+- The bin/hledger-check-fancyassertions addon now shows docs in --help.
+
+- A new invoice-making script was added: examples/invoicing/invoice-script/invoice
+
+Process/tools
+
+- The RELEASING doc and release process has been updated, 
+  and a new helper script added: tools/releaseprep.
+  `make hackageupload` now only works from a branch named
+  VERSION-branch or VERSION-release. Ie, making releases from master
+  is no longer allowed, a release branch is always required,
+
+- CI: The commitlint check is more robust, and now runs only in
+  the push to master and pull request workflows, and not eg when 
+  building release binaries. linux-x64 binaries are now built
+  with ghc 9.0, not 8.10. Workflow, branch, and binary names
+  have been improved.
+
+- `make ghci-ui`/`make ghcid-ui` now use older ghc 8.10 to avoid 
+  ghc 9.0-triggered failures.
+
+- hls support: The hie.yaml added to help hls work on mac m1 
+  has been moved out of the way, since it probably makes things worse
+  on other architectures.
+
+### credits 1.25
+
+Simon Michael,
+Stephen Morgan,
+Dmitry Astapov,
+Patrik Keller.
+
+
 ## 2021-12-10 hledger-1.24.1
 
 ### hledger 1.24.1
@@ -283,7 +490,7 @@ Process
 ### credits 1.24
 
 Simon Michael,
-Stephen Morgan
+Stephen Morgan,
 toonn,
 Pranesh Prakash,
 Dmitry Astapov,
