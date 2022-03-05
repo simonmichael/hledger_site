@@ -133,7 +133,8 @@ Features
 
   ([#1554](https://github.com/simonmichael/hledger/issues/1554)) (Stephen Morgan, Simon Michael)
 
-- Normalised, easy-to-process "tidy" CSV data can now be generated with `--layout tidy -O csv`.
+- Balance commands (`bal`, `bs` etc.) can now generate easy-to-process "tidy" CSV data 
+  with `-O csv --layout tidy`.
   In tidy data, every variable is a column and each row represents a single data point 
   (cf <https://vita.had.co.nz/papers/tidy-data.html>).
   ([#1768](https://github.com/simonmichael/hledger/issues/1768), 
@@ -195,7 +196,7 @@ Documentation
 - Some problematic interactions of account aliases with other features have been noted. 
   ([#1788](https://github.com/simonmichael/hledger/issues/1788))
 
-[Declaring accounts > Account types]: (https://hledger.org/hledger.html#account-types
+- Updated: [Declaring accounts > Account types](https://hledger.org/hledger.html#account-types)
 
 ### hledger-ui 1.25
 
@@ -204,30 +205,6 @@ Documentation
 ### hledger-web 1.25
 
 - Uses hledger 1.25.
-
-### hledger-lib 1.25
-
-- hledger-lib now builds with GHC 9.2 and latest deps. 
-  ([#1774](https://github.com/simonmichael/hledger/issues/1774)
-
-- Journal has a new jaccounttypes map.
-  The journalAccountType lookup function makes it easy to check an account's type.
-  The journalTags and journalInheritedTags functions look up an account's tags.
-  Functions like journalFilterPostings and journalFilterTransactions,
-  and new matching functions matchesAccountExtra, matchesPostingExtra
-  and matchesTransactionExtra, use these to allow more powerful matching
-  that is aware of account types and tags.
-
-- Journal has a new jdeclaredaccounttags field
-  for easy lookup of account tags.
-  Query.matchesTaggedAccount is a tag-aware version of matchesAccount.
-
-- Some account name functions have moved from Hledger.Data.Posting
-  to Hledger.Data.AccountName:
-  accountNamePostingType, accountNameWithPostingType, accountNameWithoutPostingType,
-  joinAccountNames, concatAccountNames, accountNameApplyAliases, accountNameApplyAliasesMemo.
-
-- Renamed: CommodityLayout to Layout.
 
 ### project changes 1.25
 
