@@ -80,7 +80,7 @@ div.badges {
 }
 </style>
 
-The current hledger release is **1.24.1**. ([Release notes](release-notes))
+The current hledger release is **1.25**. ([Release notes](release-notes))
 
 Here are lots of ways to install hledger - choose one that suits your needs.
 Binary packages install quickly but are not always up to date (look for green badges).
@@ -98,7 +98,7 @@ and [share any feedback](support.html) so we can make this process smoother!
     <tr>
       <td>
         <div class="badges">
-          <a href="https://hub.docker.com/r/dastapov/hledger"><img alt="Docker" src="https://img.shields.io/badge/Docker_image-1.24.1-brightgreen.svg" /></a><br>
+          <a href="https://hub.docker.com/r/dastapov/hledger"><img alt="Docker" src="https://img.shields.io/badge/Docker_image-1.24.1-red.svg" /></a><br>
           <a href="https://hub.docker.com/search?q=hledger&amp;type=image&amp;sort=updated_at&amp;order=desc">more..</a>
         </div>
         <!-- <div class="distro"><a href="https://www.docker.com/products/docker-desktop">Docker</a></div> -->
@@ -123,7 +123,7 @@ and [share any feedback](support.html) so we can make this process smoother!
     <tr>
       <td>
         <div class="badges">
-          <a href="https://github.com/search?l=&o=desc&q=%22automatic+Haskell+package+set+update%22+repo%3ANixOS%2Fnixpkgs+filename%3Ahaskell-packages.nix&s=committer-date&type=Commits"><img alt="Nix" src="https://img.shields.io/badge/Nix_package-1.24.1-brightgreen.svg" /></a>
+          <a href="https://github.com/search?l=&o=desc&q=%22automatic+Haskell+package+set+update%22+repo%3ANixOS%2Fnixpkgs+filename%3Ahaskell-packages.nix&s=committer-date&type=Commits"><img alt="Nix" src="https://img.shields.io/badge/Nix_package-1.24.1-red.svg" /></a>
         </div>
         <!-- <div class="distro"><a href="https://nixos.org/nix">Nix</a></div> -->
         <!-- <div class="notes">Linux, Mac</div> -->
@@ -142,15 +142,15 @@ and [share any feedback](support.html) so we can make this process smoother!
     <tr>
       <td>
         <div class="badges">
-          <a href=""><img alt="hledger CI binaries" src="https://img.shields.io/badge/hledger_CI_binaries-1.24.1-brightgreen.svg" /></a><br>
+          <a href=""><img alt="hledger CI binaries" src="https://img.shields.io/badge/hledger_CI_binaries-1.25-brightgreen.svg" /></a><br>
         </div>
         <!-- <div class="notes">Linux, Mac, Windows</div> -->
       </td>
       <td>
         <div class="command">
-          <a href="https://github.com/simonmichael/hledger/releases/tag/1.24.1">hledger-linux-x64.zip</a><br>
-          <a href="https://github.com/simonmichael/hledger/releases/tag/1.24.1">hledger-macos.zip</a><br>
-          <a href="https://github.com/simonmichael/hledger/releases/tag/1.24.1">hledger-windows.zip</a>
+          <a href="https://github.com/simonmichael/hledger/releases/tag/1.25">hledger-linux-x64.zip</a><br>
+          <a href="https://github.com/simonmichael/hledger/releases/tag/1.25">hledger-macos.zip</a><br>
+          <a href="https://github.com/simonmichael/hledger/releases/tag/1.25">hledger-windows.zip</a>
           <span style="font-weight:normal; font-style:italic; font-size:small;">
             (This one can run on other platforms with <a href="https://www.winehq.org">Wine</a>.)
           </span><br>
@@ -238,7 +238,7 @@ https://github.com/simonmichael/hledger/releases, also apply here.
     <tr>
       <td>
         <div class="badges">
-          <a href="https://gentoo.zugaina.org/Search?search=hledger"><img alt="Gentoo" src="https://img.shields.io/badge/Gentoo_package-1.24.1-brightgreen.svg" /></a>
+          <a href="https://gentoo.zugaina.org/Search?search=hledger"><img alt="Gentoo" src="https://img.shields.io/badge/Gentoo_package-1.24.1-red.svg" /></a>
         </div>
     <div class="distro">Gentoo</div>
       </td>
@@ -421,7 +421,7 @@ https://github.com/simonmichael/hledger/releases, also apply here.
 </table>
 
 ## Building the current release
-<!-- <img alt="Release source" src="https://img.shields.io/badge/Release_source-1.24.1-brightgreen.svg" /> -->
+<!-- <img alt="Release source" src="https://img.shields.io/badge/Release_source-1.25-brightgreen.svg" /> -->
 
 You can build hledger from its source code on any machine with [GHC] and sufficient RAM
 (4G recommended) and disk space (up to 2G for a first build).
@@ -450,7 +450,7 @@ to install the main hledger tools in ~/.local/bin:
 
 <div class="builder-command">
   stack update <br>
-  stack install --resolver=lts-18 hledger-lib-1.24.1 hledger-1.24.1 hledger-ui-1.24.1 hledger-web-1.24.1 --silent
+  stack install --resolver=lts-18 hledger-lib-1.25 hledger-1.25 hledger-ui-1.25 hledger-web-1.25 --silent
 </div>
 
 Your `stack --version` should be modern (at least 2.7) for best results.
@@ -466,7 +466,7 @@ to install the main hledger tools in ~/.cabal/bin:
 <div class="builder-command">
   cabal update <br>
   cabal install alex happy<br>
-  cabal install hledger-1.24.1 hledger-ui-1.24.1 hledger-web-1.24.1
+  cabal install hledger-1.25 hledger-ui-1.25 hledger-web-1.25
 </div>
 
 Your `cabal --version` should be modern (at least 3.2) for best results.
@@ -637,13 +637,13 @@ Eg:
 
 <div class="command">
 $ hledger --version <br>
-hledger 1.24.1-g7799d526b-20211210, mac-x86_64
+hledger 1.25-gd60ebcbd6-20220304, mac-x86_64
 <br>
 $ hledger-ui --version <br>
-hledger-ui 1.24.1-g7799d526b-20211210, mac-x86_64
+hledger-ui 1.25-gd60ebcbd6-20220304, mac-x86_64
 <br>
 $ hledger web --version <br>
-hledger-web 1.24.1-g7799d526b-20211210, mac-x86_64
+hledger-web 1.25-gd60ebcbd6-20220304, mac-x86_64
 <br>
 </div>
 
@@ -652,7 +652,7 @@ And you could see the unit tests pass (just for fun):
 <div class="command">
 $ hledger test <br>
 ... <br>
-All 221 tests passed (0.05s)
+All 223 tests passed (0.13s)
 </div>
 
 Or if you have checked out the hledger source, also the functional tests:
@@ -660,7 +660,7 @@ Or if you have checked out the hledger source, also the functional tests:
 <div class="command">
 $ make functest <br>
 ... <br>
- Total   813 ...<br>
+ Total   872 ...<br>
 functest PASSED
 </div>
 
