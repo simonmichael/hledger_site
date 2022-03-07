@@ -9,7 +9,7 @@ h2 {
     margin-top:2em;
 }
 h3 {
-    /* margin-top:1em; */
+    margin-top:1em;
     margin-bottom:0;
 }
 table.downloads { 
