@@ -89,6 +89,8 @@ Building from source is slower and requires at least 4G of ram.
 After installing, please [check](#pre-flight-checks) your PATH, locale, and installation,
 and [share any feedback](support.html) so we can make this process smoother!
 
+<br clear=all>
+
 ## Binary packages
 
 ### Mac
