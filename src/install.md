@@ -33,20 +33,6 @@ table.downloads > tbody > tr > td:nth-child(2) {
 div.section > table td:nth-child(1) {
   padding-right:1em;
 }
-/*
-div.platform {
-  margin-top:1em;
-  font-size:big;
-  font-weight:bold;
-  white-space:nowrap;
-}
-div.distro {
-  margin-right:1em;
-}
-.linux .distro {
-  display:none;
-}
-*/
 div.command {
   font-weight:bold;
   white-space:nowrap;
@@ -108,7 +94,6 @@ and [share any feedback](support.html) so we can make this process smoother!
       <div class="badges">
         <a href="https://formulae.brew.sh/formula/hledger"><img alt="Homebrew" src="https://repology.org/badge/version-for-repo/homebrew/hledger.svg" /></a>
       </div>
-      <!-- <div class="distro"><a href="https://brew.sh">Homebrew</a></div> -->
       <!-- <div class="notes">Linux, Mac, WSL</div> -->
     </td>
     <td>
@@ -185,7 +170,6 @@ and [share any feedback](support.html) so we can make this process smoother!
       <div class="badges">
         <a href="https://gentoo.zugaina.org/Search?search=hledger"><img alt="Gentoo" src="https://img.shields.io/badge/Gentoo_package-1.25-brightgreen.svg" /></a>
       </div>
-  <div class="distro">Gentoo</div>
     </td>
     <td>
       <div class="command">sudo layman -a haskell &amp;&amp; sudo emerge hledger hledger-ui hledger-web</div>
@@ -197,7 +181,6 @@ and [share any feedback](support.html) so we can make this process smoother!
       <div class="badges">
         <a href="https://archlinux.org/packages/community/x86_64/hledger/"><img alt="Arch" src="https://repology.org/badge/version-for-repo/arch/hledger.svg" /></a>
       </div>
-      <div class="distro">Arch</div>
     </td>
     <td>
       <div class="command">pacman -Sy hledger hledger-ui hledger-web</div>
@@ -209,7 +192,6 @@ and [share any feedback](support.html) so we can make this process smoother!
       <div class="badges">
         <a href="https://voidlinux.org/packages/?q=hledger"><img src="https://repology.org/badge/version-for-repo/void_x86_64/hledger.svg" alt="Void Linux x86_64" /></a>
       </div>
-      <div class="distro">Void</div>
     </td>
     <td>
       <div class="command">xbps-install -S hledger hledger-ui hledger-web</div>
@@ -226,7 +208,6 @@ and [share any feedback](support.html) so we can make this process smoother!
         <a ><img src="https://repology.org/badge/version-for-repo/fedora_33/hledger.svg" /></a><br>
         <a href="https://src.fedoraproject.org/rpms/hledger">more..</a>
       </div>
-      <div class="distro">Fedora</div>
     </td>
     <td>
       <div class="command">sudo dnf install hledger</div>
@@ -242,7 +223,6 @@ and [share any feedback](support.html) so we can make this process smoother!
         <a href="https://packages.debian.org/oldstable/hledger"><img src="https://img.shields.io/badge/Debian_oldoldstable_package-1.0.1-red.svg" alt="Debian oldoldstable" /></a><br>
         <a href="https://packages.debian.org/search?searchon=names&amp;keywords=hledger">more..</a>
       </div>
-      <div class="distro">Debian</div>
     </td>
     <td>
       <div class="command">sudo apt install hledger hledger-ui hledger-web</div>
@@ -260,7 +240,6 @@ and [share any feedback](support.html) so we can make this process smoother!
         <a href="https://packages.ubuntu.com/xenial/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_16_04/hledger.svg" /></a><br>
         <a href="https://packages.ubuntu.com/search?suite=all&amp;searchon=names&amp;keywords=hledger">more..</a>
       </div>
-      <div class="distro">Ubuntu</div>
     </td>
     <td>
       <div class="command">sudo apt install hledger hledger-ui hledger-web</div>
@@ -315,7 +294,6 @@ and [share any feedback](support.html) so we can make this process smoother!
       <div class="badges">
         <a href="https://openports.se/productivity/hledger"><img src="https://repology.org/badge/version-for-repo/openbsd/hledger.svg" alt="openbsd ports" /></a><br>
       </div>
-      <div class="distro"></div>
     </td>
     <td>
       <div class="command">pkg_add hledger</div>
@@ -340,7 +318,6 @@ and [share any feedback](support.html) so we can make this process smoother!
       <div class="badges">
         <a href="https://www.freshports.org/search.php?query=hledger"><img src="https://repology.org/badge/version-for-repo/freebsd/hledger.svg" alt="freebsd ports" /></a><br>
       </div>
-      <div class="distro"></div>
     </td>
     <td>
       <div class="command">pkg install hs-hledger hs-hledger-ui hs-hledger-web</div>
@@ -361,7 +338,6 @@ and [share any feedback](support.html) so we can make this process smoother!
         <a href="https://hub.docker.com/r/dastapov/hledger"><img alt="Docker" src="https://img.shields.io/badge/Docker_image-1.25-brightgreen.svg" /></a><br>
         <a href="https://hub.docker.com/search?q=hledger&amp;type=image&amp;sort=updated_at&amp;order=desc">more..</a>
       </div>
-      <!-- <div class="distro"><a href="https://www.docker.com/products/docker-desktop">Docker</a></div> -->
       <!-- <div class="notes">Linux, Mac, Windows</div> -->
     </td>
     <td>
@@ -374,7 +350,6 @@ and [share any feedback](support.html) so we can make this process smoother!
       <div class="badges">
         <a href="https://github.com/search?l=&o=desc&q=%22automatic+Haskell+package+set+update%22+repo%3ANixOS%2Fnixpkgs+filename%3Ahaskell-packages.nix&s=committer-date&type=Commits"><img alt="Nix" src="https://img.shields.io/badge/Nix_package-1.24.1-red.svg" /></a>
       </div>
-      <!-- <div class="distro"><a href="https://nixos.org/nix">Nix</a></div> -->
       <!-- <div class="notes">Linux, Mac</div> -->
     </td>
     <td>
@@ -394,7 +369,6 @@ and [share any feedback](support.html) so we can make this process smoother!
       <div class="badges">
           <a href="https://apps.sandstorm.io/search?term=hledger"><img alt="Sandstorm" src="https://img.shields.io/badge/Sandstorm_app-1.9.2-red.svg" /></a>
       </div>
-      <div class="distro"></div>
     </td>
     <td>
       <div class="command"><a href="https://apps.sandstorm.io/app/8x12h6p0x0nrzk73hfq6zh2jxtgyzzcty7qsatkg7jfg2mzw5n90">HLedger Web app</a></div>
