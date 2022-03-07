@@ -9,7 +9,7 @@ h2 {
     margin-top:2em;
 }
 h3 {
-    margin-top:1em;
+    /* margin-top:1em; */
     margin-bottom:0;
 }
 table.downloads { 
@@ -20,10 +20,10 @@ table.downloads > tbody > tr {
   border-bottom:thin solid #ddd; 
   vertical-align: top;
 }
-table.downloads > tbody > tr > td { 
+/* table.downloads > tbody > tr > td { 
   padding-top:0.5em;
   padding-bottom:0.5em;
-}
+} */
 table.downloads > tbody > tr > td:nth-child(1) { 
   min-width:10em;
 }
@@ -33,6 +33,7 @@ table.downloads > tbody > tr > td:nth-child(2) {
 div.section > table td:nth-child(1) {
   padding-right:1em;
 }
+/*
 div.platform {
   margin-top:1em;
   font-size:big;
@@ -45,21 +46,11 @@ div.distro {
 .linux .distro {
   display:none;
 }
+*/
 div.command {
   font-weight:bold;
   white-space:nowrap;
-  margin-bottom:1em;
-}
-div.builder {
-  /*border-top:thin solid #ddd; */
-  padding-top:0.5em;
-  font-size:big;
-  font-weight:bold;
-  white-space:nowrap;
-  margin-top:1em;
-}
-div.builder-text {
-  margin-top:1em;
+  /* margin-bottom:1em; */
 }
 div.builder-command {
   margin:1em 0.5em 1em;
