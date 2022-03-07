@@ -238,7 +238,7 @@ https://github.com/simonmichael/hledger/releases, also apply here.
     <tr>
       <td>
         <div class="badges">
-          <a href="https://gentoo.zugaina.org/Search?search=hledger"><img alt="Gentoo" src="https://img.shields.io/badge/Gentoo_package-1.24.1-red.svg" /></a>
+          <a href="https://gentoo.zugaina.org/Search?search=hledger"><img alt="Gentoo" src="https://img.shields.io/badge/Gentoo_package-1.25-brightgreen.svg" /></a>
         </div>
     <div class="distro">Gentoo</div>
       </td>
@@ -271,10 +271,11 @@ https://github.com/simonmichael/hledger/releases, also apply here.
     <tr>
       <td>
         <div class="badges">
-          <a ><img src="https://img.shields.io/badge/Fedora_36_package-1.21-red.svg" alt="Fedora 36" /></a><br>
-          <a ><img src="https://img.shields.io/badge/Fedora_35_package-1.21-red.svg" alt="Fedora 35" /></a><br>
-          <a ><img src="https://repology.org/badge/version-for-repo/fedora_34/hledger.svg" alt="Fedora 34" /></a><br>
-          <a ><img src="https://repology.org/badge/version-for-repo/fedora_33/hledger.svg" alt="Fedora 33" /></a><br>
+          <a ><img src="https://img.shields.io/badge/Fedora_37_package-1.21-red.svg" /></a><br>
+          <a ><img src="https://repology.org/badge/version-for-repo/fedora_36/hledger.svg" /></a><br>
+          <a ><img src="https://repology.org/badge/version-for-repo/fedora_35/hledger.svg" /></a><br>
+          <a ><img src="https://repology.org/badge/version-for-repo/fedora_34/hledger.svg" /></a><br>
+          <a ><img src="https://repology.org/badge/version-for-repo/fedora_33/hledger.svg" /></a><br>
           <a href="https://src.fedoraproject.org/rpms/hledger">more..</a>
         </div>
         <div class="distro">Fedora</div>
@@ -301,11 +302,12 @@ https://github.com/simonmichael/hledger/releases, also apply here.
     <tr>
       <td>
         <div class="badges">
-          <a href="https://packages.ubuntu.com/hirsute/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_21_04/hledger.svg" alt="Ubuntu 21.04" /></a><br>
-          <!-- <a href="https://packages.ubuntu.com/groovy/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_20_10/hledger.svg" alt="Ubuntu 20.10" /></a><br> -->
-          <a href="https://packages.ubuntu.com/focal/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_20_04/hledger.svg" alt="Ubuntu 20.04" /></a><br>
-          <a href="https://packages.ubuntu.com/bionic/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_18_04/hledger.svg" alt="Ubuntu 18.04" /></a><br>
-          <a href="https://packages.ubuntu.com/xenial/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_16_04/hledger.svg" alt="Ubuntu 16.04" /></a><br>
+          <a href="https://packages.ubuntu.com/impish/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_21_10/hledger.svg" /></a><br>
+          <a href="https://packages.ubuntu.com/hirsute/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_21_04/hledger.svg" /></a><br>
+          <!-- <a href="https://packages.ubuntu.com/groovy/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_20_10/hledger.svg" /></a><br> badge broken -->
+          <a href="https://packages.ubuntu.com/focal/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_20_04/hledger.svg" /></a><br>
+          <a href="https://packages.ubuntu.com/bionic/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_18_04/hledger.svg" /></a><br>
+          <a href="https://packages.ubuntu.com/xenial/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_16_04/hledger.svg" /></a><br>
           <a href="https://packages.ubuntu.com/search?suite=all&amp;searchon=names&amp;keywords=hledger">more..</a>
         </div>
         <div class="distro">Ubuntu</div>
@@ -335,7 +337,7 @@ https://github.com/simonmichael/hledger/releases, also apply here.
     <tr>
       <td>
         <div class="badges">
-          <a href="https://cdn.netbsd.org/pub/pkgsrc/current/pkgsrc/finance/hledger/index.html"><img src="https://img.shields.io/badge/NetBSD-1.21-red.svg" alt="netbsd package" /></a><br>
+          <a href="https://cdn.netbsd.org/pub/pkgsrc/current/pkgsrc/finance/hledger/index.html"><img src="https://img.shields.io/badge/NetBSD-1.24.1-red.svg" alt="netbsd package" /></a><br>
         </div>
       </td>
       <td>
