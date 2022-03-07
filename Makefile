@@ -33,6 +33,7 @@ all buildall: \
 	build3-1.22 \
 	build3-1.23 \
 	build3-1.24 \
+	build3-1.25 \
 	build3-dev \
 	build
 
@@ -40,6 +41,7 @@ all buildall: \
 recent buildrecent: \
 	build3-1.23 \
 	build3-1.24 \
+	build3-1.25 \
 	build3-dev \
 	build
 

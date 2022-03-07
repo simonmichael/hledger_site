@@ -26,6 +26,7 @@ function addDocVersions() {
   if (docversions)
     docversions.innerHTML = '\
       <a href="/dev/' +newdest3+'">dev</a>  · \
+      <a href="/1.25/'+newdest3+'">1.25</a> · \
       <a href="/1.24/'+newdest3+'">1.24</a> · \
       <a href="/1.23/'+newdest3+'">1.23</a> · \
       <a href="/1.22/'+newdest3+'">1.22</a> · \
@@ -48,7 +49,7 @@ function addDocVersions() {
     ';
 }
 
-var currentrelease = '1.24';
+var currentrelease = '1.25';
 
 function highlightCurrentDocVersion() {
   $('.docversions').each( function() {
