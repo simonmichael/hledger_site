@@ -314,8 +314,7 @@ See also [ROADMAP](ROADMAP.html).
 
 hledger is brought to you by [Simon Michael](http://joyful.com),
 who has been building and relying on this project since 2007, 
-funded mostly by unrelated consulting work.
-And by [140+ contributors](CREDITS.html).
+and by [140+ contributors](CREDITS.html).
 
 We hope you too will find hledger/PTA useful in transforming your relationship with money and time.
 After enjoying some personal or organisational success with it,
