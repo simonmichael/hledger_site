@@ -190,6 +190,22 @@ and [share any feedback](support.html) so we can make this process smoother!
     </td>
   </tr>
 
+  <tr> <!-- ALPINE -->
+    <td>
+      <div class="badges">
+        <a href="https://pkgs.alpinelinux.org/packages?name=hledger*&branch=edge"><img alt="Alpine edge" src="https://img.shields.io/badge/Alpine_edge_package-1.25-green.svg" /></a>
+      </div>
+    </td>
+    <td>
+      <div class="command">
+          sudo apk add hledger hledger-ui hledger-web
+      </div>
+      <div class="notes">
+          After <a href="https://wiki.alpinelinux.org/wiki/Enable_Community_Repository#Using_testing_repositories">enabling the testing repository</a>
+      </div>
+    </td>
+  </tr>
+
   <tr> <!-- VOID -->
     <td>
       <div class="badges">
