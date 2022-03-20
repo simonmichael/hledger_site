@@ -51,6 +51,9 @@ div.badges {
   font-size:small;
   font-style:italic;
 }
+div.badges > a > img {
+  width: 10em;
+}
 .warnings > a:before {
     content: " ⚠ ";
     color:red;
