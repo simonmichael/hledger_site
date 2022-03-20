@@ -590,6 +590,8 @@ and here's a way to add the stack and cabal install dirs permanently
 
 Here's [how to set environment variables on Windows](https://www.devdungeon.com/content/set-environment-variables-windows).
 
+<a name="locale"></a> <!-- required permalink, used in error messages -->
+
 ### Check your locale
 
 On unix systems, when running hledger 
