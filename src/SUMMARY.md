@@ -100,7 +100,7 @@
 - [DOCS](DOCS.md)
 - [Developer FAQ](devfaq.md)
 - [EXAMPLES](EXAMPLES.md)
-- [FUNDING](FUNDING.md)
+- [FINANCE](FINANCE.md)
 - [ISSUES](ISSUES.md)
 - [MAKE](MAKE.md)
 - [Mockups](mockups.md)
