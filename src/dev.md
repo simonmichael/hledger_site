@@ -19,7 +19,7 @@ and symlinked (or rendered by Shake.hs) into the site repo to make them appear a
 - [CREDITS](CREDITS.md)
 - [DOCS](DOCS.md)
 - [EXAMPLES](EXAMPLES.md)
-- [FUNDING](FUNDING.md)
+- [FINANCE](FINANCE.md)
 - [ISSUES](ISSUES.md)
 - [MAKE](MAKE.md)
 - [PULLREQUESTS](PULLREQUESTS.md)
