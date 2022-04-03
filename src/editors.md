@@ -71,9 +71,35 @@ A description should appear in the  message area,
 but Emacs may hide it behind "...locus..." messages;
 you can fix that by customising the `next-error-verbose` variable to off.
 
-### org
+### org babel
 
-Ledger entries can be embedded in a org outline and manipulated using Babel. See eg
+org babel (ob) is the system for evaluating code blocks embedded in org outlines.
+hledger commands can be embedded in this way, and easily evaluated to generate/update inline reports.
+
+In 2021 this functionality was moved to an optional package, org-contrib. To enable it:
+
+- `M-x list-packages`, install org-contrib
+- In your emacs config, add: `(require 'ob-hledger)`\
+  (and evaluate it with `C-M-x`, or a restart)
+- In any org file, add hledger commands like this:
+
+    ```
+    #+begin_src hledger :cmdline -f ~/finance/2022.journal balance
+    #+end_src
+    ```
+- To evaluate the command inline, press `C-c C-c` with point (cursor) inside the above line
+- To update all such reports in the file, press `C-c C-v b`
+- To export all reports:
+  - as html, and open in browser:   `C-c C-e h o`
+  - as html:                        `C-c C-e h h`
+  - as UTF-8 text:                  `C-c C-e t U` 
+  - as markdown (if configured):    `C-c C-e m o`
+  - etc.
+- To export only the reports in the current subtree:
+  - configure it at top of org file: `# -*- org-export-initial-scope:subtree; -*-`)
+  - put point in the desired subtree before exporting as above
+
+See also
 [Using Ledger for Accounting in Org-mode with Babel](https://orgmode.org/worg/org-contrib/babel/languages/ob-doc-ledger.html)
 
 ### calc
