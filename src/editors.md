@@ -74,7 +74,9 @@ you can fix that by customising the `next-error-verbose` variable to off.
 ### org babel
 
 org babel (ob) is the system for evaluating code blocks embedded in org outlines.
-hledger commands can be embedded in this way, and easily evaluated to generate/update inline reports.
+hledger reports can be embedded within an org outline in this way, 
+and easily evaluated inline or exported in various formats.
+This is a nice way to save and organise and interactively update reports.
 
 In 2021 this functionality was moved to an optional package, org-contrib. To enable it:
 
