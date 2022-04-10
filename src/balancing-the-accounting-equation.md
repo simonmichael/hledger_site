@@ -1,5 +1,9 @@
 ## Balancing the accounting equation, showing a zero total
 
+<div class=pagetoc>
+<!-- toc -->
+</div>
+
 The Account Equation states that Assets and Liabilities always match Equity. Eg: `A - L = E`. 
 
 With hledger, this suggests that a balance report showing all Asset,
