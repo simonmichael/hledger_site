@@ -43,6 +43,7 @@ and [Accounting and bookkeeping](#accounting-and-bookkeeping) examples.
 
 ### Checking for errors
 - [Checking for errors](checking-for-errors.md)
+- [Balancing the accounting equation](balancing-the-accounting-equation.md)
 
 ### Reporting techniques
 - [Report examples](report-examples.md)
