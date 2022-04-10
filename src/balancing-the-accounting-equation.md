@@ -1,4 +1,4 @@
-## Balancing the accounting equation, showing a zero total
+# Balancing the accounting equation, showing a zero total
 
 <div class=pagetoc>
 <!-- toc -->
@@ -20,7 +20,7 @@ or more easily with the `balancesheetequity` report, which is designed for this:
 $ hledger bse
 ```
 
-### Common problems
+## Common problems
 In practice, you will find quite a number of things in real-life
 journals can disrupt the accounting equation and cause a non-zero
 balance. Note, this does not interfere with most day-to-day reporting,
@@ -29,7 +29,7 @@ correct zero total gives added confidence in your bookkeeping, for
 yourself and others you might be sharing reports with.  Here are some
 things that disturb the zero total, and their solutions:
 
-#### 1. Unclosed revenue/expenses
+### 1. Unclosed revenue/expenses
 Revenues (income) and expenses are technically part of
 equity. In traditional accounting, they should be transferred to an account like
 `equity:retained earnings` at the end of each reporting period. 
@@ -42,7 +42,7 @@ But many PTA users don't bother with this.
 Instead, you can rewrite account names for a similar effect. Eg:
 `--alias '/^(revenues|income|expenses)\b/=equity'`
 
-#### 2. Unbalanced commodity conversions with @/@@
+### 2. Unbalanced commodity conversions with @/@@
 Currency/commodity conversions using @/@@ notation are unbalanced. You
 can rewrite them in balanced form by commenting out the @/@@ price and
 adding a pair of equity postings - see
@@ -52,13 +52,13 @@ Or, use `--infer-equity` to do this temporarily at report time.
 
 Or, converting all amounts to cost may be another solution - try adding `-B`.
 
-#### 3. Rounding difference between recorded @ cost and calculated --infer-equity postings
+### 3. Rounding difference between recorded @ cost and calculated --infer-equity postings
 `--infer-equity` is convenient but it tends to expose inaccuracies in
 the recorded @ prices, causing small non-zero values in the total. You
 can ignore this, or try to fix it by making @ prices more accurate, or
 replace your uses of @ with @@ (?) or equity postings.
 
-#### 4. Posting dates
+### 4. Posting dates
 Postings dates different from their transaction's date (`; date:DATE`
 or `; [DATE]` notation) cause an imbalance in the accounting equation
 between the transaction and posting date. Usually these unbalanced
@@ -69,19 +69,19 @@ If they do cross a file boundary, fix that by splitting the
 transaction into two transactions using a pending account, as in
 <https://hledger.org/hledger.html#close-and-balance-assertions>.
 
-#### 5. Unbalanced postings
+### 5. Unbalanced postings
 Unbalanced virtual postings (with parenthesised account name)
 unbalance things by definition; just exclude them from the report with
 `-R/--real`. This also excludes balanced virtual postings (with
 bracketed account name), but that will probably be harmless.
 
-#### 6. Partial reports
+### 6. Partial reports
 Many kinds of report query could exclude some data and disturb the accounting equation.
 When testing this, avoid most queries. And if you specify a report start date, be sure to include
 balances from previous transactions, by adding `-H/--historical`. (Or use the `bse` command, 
 which does this automatically.)
 
-### An improved zero total report
+## An improved zero total report
 Combining these, here is a better command to test the accounting
 equation for a journal:
 
