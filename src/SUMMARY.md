@@ -34,6 +34,7 @@
 
 - [Accounting concepts](accounting.md)
 - [Addon commands](addons.md)
+- [Balancing the accounting equation](balancing-the-accounting-equation.md)
 - [Borrowing and lending](loans.md)
 - [Budgeting and Forecasting (2018)](budgeting-and-forecasting.md)
 - [Budgeting](budgeting.md)
