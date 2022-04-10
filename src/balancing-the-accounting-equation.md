@@ -46,6 +46,8 @@ adding a pair of equity postings - see
 
 Or, use `--infer-equity` to do this temporarily at report time. 
 
+Or, converting all amounts to cost may be another solution - try adding `-B`.
+
 #### 3. Rounding difference between recorded @ cost and calculated --infer-equity postings
 `--infer-equity` is convenient but it tends to expose inaccuracies in
 the recorded @ prices, causing small non-zero values in the total. You
@@ -68,6 +70,12 @@ Unbalanced virtual postings (with parenthesised account name)
 unbalance things by definition; just exclude them from the report with
 `-R/--real`. This also excludes balanced virtual postings (with
 bracketed account name), but that will probably be harmless.
+
+#### 6. Partial reports
+Many kinds of report query could exclude some data and disturb the accounting equation.
+When testing this, avoid most queries. And if you specify a report start date, be sure to include
+balances from previous transactions, by adding `-H/--historical`. (Or use the `bse` command, 
+which does this automatically.)
 
 ### An improved zero total report
 Combining these, here is a better command to test the accounting
