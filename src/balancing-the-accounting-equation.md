@@ -4,7 +4,8 @@
 <!-- toc -->
 </div>
 
-The Account Equation states that Assets and Liabilities always match Equity. Eg: `A - L = E`. 
+The [Accounting Equation](https://en.wikipedia.org/wiki/Accounting_equation) 
+states that Assets and Liabilities always match Equity. Eg: `A - L = E`. 
 
 This suggests that a balance report showing all Asset,
 Liability and Equity account balances should show a zero grand
