@@ -20,10 +20,11 @@ or more easily with the `balancesheetequity` command, which is designed for this
 $ hledger bse
 ```
 
-(Note this is different from checking a 
-[trial balance](https://en.wikipedia.org/wiki/Trial_balance),
-which simply sums the debits and credits of all accounts.
-This can be checked by `hledger balance`.)
+Note, checking the accounting equation is different from checking a
+[trial balance](https://en.wikipedia.org/wiki/Trial_balance).
+The latter just checks that the inflows and outflows over all accounts are equal,
+which hledger normally ensures by enforcing the same invariant for each individual transaction.
+It can be seen by a zero grand total for `hledger balance`.)
 
 ## Common problems
 In practice, you will find quite a number of things in real-life
