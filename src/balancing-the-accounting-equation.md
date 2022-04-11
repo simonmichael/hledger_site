@@ -20,14 +20,20 @@ or more easily with the `balancesheetequity` command, which is designed for this
 $ hledger bse
 ```
 
+(Note this is different from checking a 
+[trial balance](https://en.wikipedia.org/wiki/Trial_balance),
+which simply sums the debits and credits of all accounts.
+This can be checked by `hledger balance`.)
+
 ## Common problems
 In practice, you will find quite a number of things in real-life
 journals can disrupt the accounting equation and cause a non-zero
 total. Note, this does not interfere with most day-to-day reporting,
 and many PTA users won't notice it as a problem. But, seeing the
 correct zero total gives added confidence in your bookkeeping, for
-yourself and others you might be sharing reports with.  Here are some
-things that disturb the zero total, and their solutions:
+yourself and others you might be sharing reports with.  
+
+Here are some things that disturb the accounting equation, and their solutions:
 
 ### 1. Unclosed revenue/expenses
 Revenues (income) and expenses are technically part of
