@@ -52,7 +52,7 @@ Or, use `--infer-equity` to do this temporarily at report time.
 
 Or, converting all amounts to cost may be another solution - try adding `-B`.
 
-### 3. Rounding difference between recorded @ cost and calculated --infer-equity postings
+### 3. Rounding error with @ costs and --infer-equity
 `--infer-equity` is convenient but it tends to expose inaccuracies in
 the recorded @ prices, causing small non-zero values in the total. You
 can ignore this, or try to fix it by making @ prices more accurate, or
