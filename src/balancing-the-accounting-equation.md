@@ -20,12 +20,12 @@ or more easily with the `balancesheetequity` command, which is designed for this
 $ hledger bse
 ```
 
-(Note, this is different from checking a
+Note, checking the account equation is different from checking a
 [trial balance](https://en.wikipedia.org/wiki/Trial_balance).
-A trial balance just checks that the total inflows and outflows over all accounts are equal.
+A trial balance just checks that the total inflows and outflows over all accounts are equal,
 which can be seen by a zero grand total for `hledger balance`.
-This is normally ensured by hledger's requiring the same of each individual transaction,
-but it too can be disturbed by some of the problems noted below.)
+Normally this is ensured by hledger's requirement that each individual transaction is balanced,
+but some of the same problems noted below apply to this also.
 
 ## Common problems
 In practice, you will find quite a number of things in real-life
@@ -45,9 +45,10 @@ equity. In traditional accounting, they should be transferred to an account like
 You could record such transfers in your journal, either manually or
 using the close command
 (<https://hledger.org/hledger.html#example-close-revenueexpense-accounts-to-retained-earnings>).
-But many PTA users don't bother with this.
+Most PTA users don't bother with this.
 
-Instead, you can rewrite account names for a similar effect. Eg:
+More conveniently, you can use an account alias to convert revenue/expense accounts to equity temporarily. 
+Eg:\
 `--alias '/^(revenues|income|expenses)\b/=equity'`
 
 ### 2. Unbalanced commodity conversions with @/@@
@@ -73,8 +74,9 @@ between the transaction date and posting date. Usually these unbalanced
 periods are short and do not cross a file boundary, so you can just
 avoid them when testing the accounting equation.
 
-If they do cross a file boundary, fix that by splitting the
-transaction into two transactions using a pending account, as in
+If they do cross a file boundary, or are inconveniently long, 
+fix that by splitting the transaction into two transactions 
+which use a pending account, as in
 <https://hledger.org/hledger.html#close-and-balance-assertions>.
 
 ### 5. Unbalanced postings
@@ -84,7 +86,7 @@ create an imbalance by definition; just exclude them from the report with
 bracketed account names), but that will probably be harmless.
 
 ### 6. Partial reports
-Many kinds of report query could exclude some data and disturb the accounting equation.
+Many kinds of report [query](#queries) could exclude some data and disturb the accounting equation.
 So, avoid most queries when testing this. If you specify a report start date, be sure to include
 balances from previous transactions by adding `-H/--historical`. (Or use the `bse` command, 
 which does this automatically.)
