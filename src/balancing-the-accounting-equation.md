@@ -61,7 +61,7 @@ replace your uses of @ with @@ (?) or equity postings.
 ### 4. Posting dates
 Postings dates different from their transaction's date (`; date:DATE`
 or `; [DATE]` notation) cause an imbalance in the accounting equation
-between the transaction and posting date. Usually these unbalanced
+between the transaction date and posting date. Usually these unbalanced
 periods are short and do not cross a file boundary, so you can just
 avoid them when testing the accounting equation.
 
@@ -70,23 +70,22 @@ transaction into two transactions using a pending account, as in
 <https://hledger.org/hledger.html#close-and-balance-assertions>.
 
 ### 5. Unbalanced postings
-Unbalanced virtual postings (with parenthesised account name)
-unbalance things by definition; just exclude them from the report with
+Unbalanced virtual postings (with parenthesised account names)
+create an imbalance by definition; just exclude them from the report with
 `-R/--real`. This also excludes balanced virtual postings (with
-bracketed account name), but that will probably be harmless.
+bracketed account names), but that will probably be harmless.
 
 ### 6. Partial reports
 Many kinds of report query could exclude some data and disturb the accounting equation.
-When testing this, avoid most queries. And if you specify a report start date, be sure to include
-balances from previous transactions, by adding `-H/--historical`. (Or use the `bse` command, 
+So, avoid most queries when testing this. If you specify a report start date, be sure to include
+balances from previous transactions by adding `-H/--historical`. (Or use the `bse` command, 
 which does this automatically.)
 
 ## An improved zero total report
-Combining these, here is a better command to test the accounting
-equation for a journal:
+Combining these, here is a better command to test the accounting equation for a journal:
 
 ```cli
-$ hledger -f YYYY.journal bse -R --alias '/^(revenues|income|expenses)\b/=equity' --infer-equity not:desc:'closing balances' --layout tall
+$ hledger bse -R --infer-equity --alias '/^(revenues|income|expenses)\b/=equity' not:desc:'closing balances' --layout tall -f YYYY.journal
 ```
 
 - `-R` - excludes any unbalanced virtual postings
