@@ -1,4 +1,4 @@
-# Balancing the accounting equation, showing a zero total
+# Balancing the accounting equation
 
 <div class=pagetoc>
 <!-- toc -->
