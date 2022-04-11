@@ -23,7 +23,7 @@ $ hledger bse
 ## Common problems
 In practice, you will find quite a number of things in real-life
 journals can disrupt the accounting equation and cause a non-zero
-balance. Note, this does not interfere with most day-to-day reporting,
+total. Note, this does not interfere with most day-to-day reporting,
 and many PTA users won't notice it as a problem. But, seeing the
 correct zero total gives added confidence in your bookkeeping, for
 yourself and others you might be sharing reports with.  Here are some
