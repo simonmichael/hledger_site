@@ -6,15 +6,15 @@
 
 The Account Equation states that Assets and Liabilities always match Equity. Eg: `A - L = E`. 
 
-With hledger, this suggests that a balance report showing all Asset,
+This suggests that a balance report showing all Asset,
 Liability and Equity account balances should show a zero grand
-total. You can check this with a `balance` report like:
+total. With hledger you can check this with a `balance` report like:
 
 ```cli
 $ hledger balance ^assets ^liabilities ^equity
 ```
 
-or more easily with the `balancesheetequity` report, which is designed for this:
+or more easily with the `balancesheetequity` command, which is designed for this:
 
 ```cli
 $ hledger bse
