@@ -99,7 +99,8 @@ $ hledger bse -R --infer-equity --alias '/^(revenues|income|expenses)\b/=equity'
 ```
 
 - `-R` - excludes any unbalanced virtual postings
-- `--alias ...` - moves all revenues/expenses under equity
 - `--infer-equity` - replaces @/@@ notation with equity postings
+- `--alias ...` - moves all revenues/expenses under equity
 - `not:desc:...` - excludes any final closing balance transactions that would hide ending balances
-
+- `--layout tall` - improves readability when there are many commodities
+- `-f ...` - optional, specifies a file other than the default $LEDGER_FILE
