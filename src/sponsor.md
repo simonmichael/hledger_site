@@ -21,10 +21,15 @@ Is it the right time for you to help ? Consider:
 ## How to sponsor
 <!-- keep synced with README.md: -->
 It's easy, even if not yet as efficient as we'd like.
-Note neither the hledger project nor our [fiscal host](https://www.oscollective.org) 
-is a registered charity, so your donations may not be tax-deductible,
+Neither hledger project nor our fiscal host is a registered charity, 
+so your donations may not be tax-deductible,
 and the CFO (Simon) pays US and state income tax on all donations,
 in addition to the fees below.
+
+Our fiscal host on Open Collective is 
+[The Open Source Collective](https://www.oscollective.org),
+"a non-profit umbrella organisation providing financial and legal infrastructure 
+for thousands of open source projects".
 
 ### Sponsor the lead developer (Simon)
 
