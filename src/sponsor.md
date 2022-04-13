@@ -53,7 +53,7 @@ and one [social good](https://www.investopedia.com/terms/s/social_good.asp) dona
 - [![liberapay](https://img.shields.io/badge/Sponsor_hledger_via-Liberapay-limegreen "Sponsor the hledger project via Liberapay")](https://liberapay.com/hledger)
   (Fees: ~3%)
 - [![opencollective](https://img.shields.io/badge/Sponsor_hledger_via-Open_Collective-limegreen "Sponsor the hledger project via Liberapay")](https://opencollective.com/hledger#category-CONTRIBUTE)
-  (Fees: 10% fiscal sponsor + ~3% payment processor)
+  (Fees: 10% [fiscal host](https://www.oscollective.org)  + ~3% payment processor)
 
 ### Sponsor specific tasks
 
@@ -94,7 +94,7 @@ and one [social good](https://www.investopedia.com/terms/s/social_good.asp) dona
 
 ## Sponsors
 
-If your logo/avatar needs to be added, let me know!
+If your logo/avatar needs to be added, [let me know](mailto:webmaster@hledger.org)!
 
 ### Organisational sponsors on Open Collective
 
