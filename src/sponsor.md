@@ -20,7 +20,11 @@ Is it the right time for you to help ? Consider:
 
 ## How to sponsor
 <!-- keep synced with README.md: -->
-It's easy! Here are lots of ways:
+It's easy, even if not yet as efficient as we'd like.
+Note neither the hledger project nor our [fiscal host](https://www.oscollective.org) 
+is a registered charity, so your donations may not be tax-deductible,
+and the CFO (Simon) pays US and state income tax on all donations,
+in addition to the fees below.
 
 ### Sponsor the lead developer (Simon)
 
@@ -36,7 +40,7 @@ These donations are private and help support Simon.
 
 ### Sponsor other developers
 
-- You can find them names at [CREDITS](CREDITS.html), 
+- You can find their names at [CREDITS](CREDITS.html), 
   check their website/Github profile, and offer donations, bounties or paid work.
 
 ### Sponsor the hledger project
