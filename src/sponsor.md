@@ -22,7 +22,7 @@ Is it the right time for you to help ? Consider:
 <!-- keep synced with README.md: -->
 It's easy! Here are lots of ways:
 
-### Sponsor the lead developer/project leader (Simon)
+### Sponsor the lead developer (Simon)
 
 These donations are private and help support Simon.
 
