@@ -2,8 +2,6 @@
 
 # Sponsoring hledger
 
-## Why might I want to sponsor ?
-
 Building and supporting good software and documentation is very costly;
 hledger comes from many thousands of skilled person-hours, sustained over 15+ years.
 Your support is invaluable and greatly appreciated!
@@ -16,7 +14,7 @@ Is it the right time for you to help ? Consider:
 - Would you like to support our core mission ? Which is:
   > **To help more people achieve financial literacy, discipline and freedom,
   > and to help grow a shared global culture of accountability and solvency.**\
-  *(See also: the [Solarpunk manifesto](http://www.re-des.org/a-solarpunk-manifesto))*
+  *(See also: the [Solarpunk manifesto](http://www.re-des.org/a-solarpunk-manifesto)!)*
 
 ## How to sponsor
 <!-- keep synced with README.md: -->
