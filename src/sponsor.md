@@ -1,6 +1,8 @@
-<a name="sponsor"></a>
-
 # Sponsoring hledger
+
+<div class=pagetoc>
+<!-- toc -->
+</div>
 
 Building and supporting good software and documentation is very costly;
 hledger comes from many thousands of skilled person-hours, sustained over 15+ years.
@@ -149,4 +151,3 @@ and one [social good](https://www.investopedia.com/terms/s/social_good.asp) dona
   - make an earmarked donation, describing the bounty
   - when bounty is completed, the claimant submits a payment request for approval by the CFO
     (similar to our [regression bounty process](https://hledger.org/regressionbounty)).
-
