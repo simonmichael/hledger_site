@@ -100,6 +100,8 @@ and one [social good](https://www.investopedia.com/terms/s/social_good.asp) dona
 
 ## Sponsors
 
+We thank the following generous sponsors for their support:
+
 ### Organisational sponsors
 
 <a href="https://opencollective.com/hledger/organization/0/website"><img src="https://opencollective.com/hledger/organization/0/avatar.svg?avatarHeight=200"></a>
