@@ -100,9 +100,7 @@ and one [social good](https://www.investopedia.com/terms/s/social_good.asp) dona
 
 ## Sponsors
 
-If your logo/avatar needs to be added, [let me know](mailto:webmaster@hledger.org)!
-
-### Organisational sponsors on Open Collective
+### Organisational sponsors
 
 <a href="https://opencollective.com/hledger/organization/0/website"><img src="https://opencollective.com/hledger/organization/0/avatar.svg?avatarHeight=200"></a>
 <a href="https://opencollective.com/hledger/organization/1/website"><img src="https://opencollective.com/hledger/organization/1/avatar.svg?avatarHeight=200"></a>
@@ -125,7 +123,7 @@ If your logo/avatar needs to be added, [let me know](mailto:webmaster@hledger.or
 <a href="https://opencollective.com/hledger/organization/18/website"><img src="https://opencollective.com/hledger/organization/18/avatar.svg?avatarHeight=200"></a>
 <a href="https://opencollective.com/hledger/organization/19/website"><img src="https://opencollective.com/hledger/organization/19/avatar.svg?avatarHeight=200"></a>
 
-### Individual sponsors on Open Collective
+### Individual sponsors
 
 <a href="https://opencollective.com/hledger/individual/0/website"><img src="https://opencollective.com/hledger/individual/0/avatar.svg?avatarHeight=100"></a>
 <a href="https://opencollective.com/hledger/individual/1/website"><img src="https://opencollective.com/hledger/individual/1/avatar.svg?avatarHeight=100"></a>
@@ -167,3 +165,5 @@ If your logo/avatar needs to be added, [let me know](mailto:webmaster@hledger.or
 <a href="https://opencollective.com/hledger/individual/37/website"><img src="https://opencollective.com/hledger/individual/37/avatar.svg?avatarHeight=100"></a>
 <a href="https://opencollective.com/hledger/individual/38/website"><img src="https://opencollective.com/hledger/individual/38/avatar.svg?avatarHeight=100"></a>
 <a href="https://opencollective.com/hledger/individual/39/website"><img src="https://opencollective.com/hledger/individual/39/avatar.svg?avatarHeight=100"></a>
+
+If your logo/avatar needs to be added, [let me know](mailto:webmaster@hledger.org)!
