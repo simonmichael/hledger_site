@@ -59,17 +59,18 @@ and one [social good](https://www.investopedia.com/terms/s/social_good.asp) dona
 
 - [![issue bounty](https://img.shields.io/badge/Sponsor_a_task_via-the_issue_tracker-limegreen "Sponsor a task via the issue tracker")](https://github.com/simonmichael/hledger/issues?q=label:bounty) (simplest)
   - post a bounty pledge on an [open issue](CONTRIBUTING.html#open-issues)
-  - pay when resolved (honour system).
+  - when resolved, pay the claimant directly (honour system).
 - [![bountysource bounty](https://img.shields.io/badge/Sponsor_a_task_via-Bountysource-limegreen "Sponsor a task via Bountysource")](https://app.bountysource.com/teams/hledger/issues)
   <!-- - [![bountysource](https://api.bountysource.com/badge/team?team_id=75979&style=bounties_received "issues bountied via bountysource")](https://www.bountysource.com/teams/hledger) -->
   - search for the issue you want to sponsor
   - add some bounty to it
   - post a comment on the issue announcing the bounty
-  - manage payment through Bountysource.
+  - when resolved, pay through Bountysource.
 - [![opencollective bounty](https://img.shields.io/badge/Sponsor_a_task_via-Open_Collective-limegreen "Sponsor a task via Open Collective")](https://opencollective.com/hledger#category-CONTRIBUTE)
-  - make an earmarked donation, describing the bounty
-  - when bounty is completed, the claimant submits a payment request for approval by the CFO
-    (similar to our [regression bounty process](https://hledger.org/regressionbounty)).
+  - make a one-time donation via [Open Collective](#sponsor-the-hledger-project),
+    describing the bounty
+  - when resolved, the claimant submits a payment request for approval by the CFO
+    (see our [regression bounty process](https://hledger.org/regressionbounty)).
 
 <!-- hledger OC tiers are: Backers, Sponsors -->
 <!-- Old: warning, OC badges are flaky/confusing, eg major trouble resizing the images below. -->
