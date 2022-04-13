@@ -30,6 +30,7 @@ Our fiscal host on Open Collective is
 [The Open Source Collective](https://www.oscollective.org),
 "a non-profit umbrella organisation providing financial and legal infrastructure 
 for thousands of open source projects".
+So their fee is at least a sort of donation to support free/open-source software.
 
 ### Sponsor the lead developer (Simon)
 
