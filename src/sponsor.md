@@ -35,6 +35,7 @@ So their fee is at least a sort of donation to support free/open-source software
 ### Sponsor the lead developer (Simon)
 
 These donations are private and help support Simon.
+You can also support by offering me bounties or consulting gigs.
 
 - [![github](https://img.shields.io/badge/Sponsor_Simon_via-Github-limegreen "Sponsor the project leader via Github")](https://github.com/sponsors/simonmichael)
   (Fees: 0%)
