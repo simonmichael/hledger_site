@@ -194,7 +194,7 @@ When a reporting option appears more than once in the command line, the
 last one takes precedence.
 
 Some reporting options can also be written as [query
-arguments](#queries).
+arguments](hledger.html#queries).
 
 hledger help options:
 

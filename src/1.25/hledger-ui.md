@@ -131,7 +131,7 @@ hledger reporting options:
 
 `-p --period=PERIODEXP`
 :   set start date, end date, and/or reporting interval all at once
-    using [period expressions](#period-expressions) syntax
+    using [period expressions](hledger.html#period-expressions) syntax
 
 `--date2`
 :   match the secondary date instead (see command help for other
@@ -212,7 +212,7 @@ When a reporting option appears more than once in the command line, the
 last one takes precedence.
 
 Some reporting options can also be written as [query
-arguments](#queries).
+arguments](hledger.html#queries).
 
 hledger help options:
 
@@ -346,7 +346,7 @@ This is normally the first screen displayed. It lists accounts and their
 balances, like hledger\'s balance command. By default, it shows all
 accounts and their latest ending balances (including the balances of
 subaccounts). Accounts which have been declared with an [account
-directive](#declaring-accounts) are also listed, even if not yet used
+directive](hledger.html#declaring-accounts) are also listed, even if not yet used
 (except for empty parent accounts). If you specify a query on the
 command line, it shows just the matched accounts and the balances from
 matched transactions.
