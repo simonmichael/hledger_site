@@ -25,8 +25,8 @@ distribution. Refer to the last paragraph of this section for how to test that.
 
 To install the completions manually, follow this steps:
 
-- [Download](https://raw.githubusercontent.com/simonmichael/hledger/master/shell-completion/hledger-completion.bash)
-  or copy the file `shell-completion/hledger-completion.bash` and save
+- [Download](https://raw.githubusercontent.com/simonmichael/hledger/master/hledger/shell-completion/hledger-completion.bash)
+  or copy the file `hledger/shell-completion/hledger-completion.bash` and save
   it as `~/.hledger-completion.bash`.
 
 - Add the command `source ~/.hledger-completion.bash` to the end of your `~/.bashrc` file.
@@ -37,7 +37,7 @@ To install the completions manually, follow this steps:
 Example installation script:
 
 ```
-curl https://raw.githubusercontent.com/simonmichael/hledger/master/shell-completion/hledger-completion.bash > ~/.hledger-completion.bash
+curl https://raw.githubusercontent.com/simonmichael/hledger/master/hledger/shell-completion/hledger-completion.bash > ~/.hledger-completion.bash
 echo 'source ~/.hledger-completion.bash' >> ~/.bashrc
 bash  # open a new bash to try it
 ```
@@ -54,4 +54,4 @@ You're welcome to add completion scripts for other shells (e.g. Fish or Zsh)!
 It should not be too hard. All available hledger options and commands
 are already there. Only the shell hooks and logic is missing.
 
-Please refer to the README in the [shell-completion](https://github.com/simonmichael/hledger/tree/master/shell-completion) folder.
+Please refer to the README in the [shell-completion](https://github.com/simonmichael/hledger/tree/master/hledger/shell-completion) folder.
