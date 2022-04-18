@@ -28,6 +28,11 @@ To install the completions manually, follow this steps:
 - [Download](https://raw.githubusercontent.com/simonmichael/hledger/master/hledger/shell-completion/hledger-completion.bash)
   or copy the file `hledger/shell-completion/hledger-completion.bash` and save
   it as `~/.hledger-completion.bash`.
+  
+  _**Note:** Prior to version 1.25, the `shell-completion` directory was at the
+  repository root (not `hledger/shell-completion`). Update the URLs, taking
+  this into account, if you are trying to download the completion script for an
+  older version of hledger such as [1.21](https://raw.githubusercontent.com/simonmichael/hledger/1.21/shell-completion/hledger-completion.bash)._
 
 - Add the command `source ~/.hledger-completion.bash` to the end of your `~/.bashrc` file.
 
