@@ -32,11 +32,10 @@ If I forget, retroactive logging is also pretty easy. These help:
 - have a script or updating terminal pane showing today's sleep/wake/timelog-saved times, to jog the memory.
 
 Not every day is the same; this system has been quick and flexible enough to suit a range of conditions. 
-I can set daily/weekly/monthly time budgets if I want. 
 
 ## How to set up a time budget
 
-Cf [Budgeting](budgeting.html).
+I can set daily/weekly/monthly time [budgets](budgeting.html) if I want:
 
 * create a `time.journal` which includes your (timedot or timeclock) time log file (assuming you're not tracking time in journal format)
     ```journal
