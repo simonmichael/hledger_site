@@ -106,7 +106,7 @@ Our mummy in question likes to have a variety of changes of wrappings, and so it
 2022/05/28 AcmeWrappings.com
     Expenses:Clothing                         $39.00  
     Liabilities:MonsterCard
-    ```
+```
  
 ## The Mechanics
  
