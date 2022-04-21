@@ -12,12 +12,32 @@ These are several common types:
 - scripts or compiled programs which don't use hledger directly, but perform useful related tasks
 - haskell scripts or programs which call hledger as a library, to do more advanced tasks.
 
+Scripts or programs which are named `hledger-something` and found in `$PATH` are known as
+*add-on commands*, and will show up in hledger's commands list.
 To learn more about scripts and how to make your own, see [Scripting](scripting.html).
 
-## hledger/bin
+## Add-on commands
+
+`hledger-ui` and `hledger-web` are two add-on commands which are usually installed together with `hledger`.
+
+Other add-ons are maintained as separate packages, and can be installed separately with stack or cabal
+or the [hledger-install script](https://hledger.org/install.html#with-hledger-install).
+If you have trouble, check their READMEs or ask for help in chat. They include:
+
+[`hledger-iadd`](http://hackage.haskell.org/package/hledger-iadd)
+is a terminal UI alternative to hledger's `add` command. 
+
+[`hledger-interest`](http://hackage.haskell.org/package/hledger-interest)
+generates interest transactions for an account according to various schemes. 
+
+[`hledger-irr`](http://hackage.haskell.org/package/hledger-irr)
+calculates the internal rate of return of an investment account.
+
+
+## hledger/bin scripts
 
 Some scripts are collected in the [bin/](https://github.com/simonmichael/hledger/tree/master/bin) directory
-in the main hledger repo. To install them:
+in the main hledger repo. To install these:
 
 ```cli
 $ cd ~/finance   # wherever you keep financial files
@@ -49,12 +69,10 @@ $ source bin/bashrc
 $ fin        # list the scripts available
 ```
 
-### Shell script files
+### Non-Haskell scripts
 
 [`hledger-simplebal.sh`](https://github.com/simonmichael/hledger/blob/master/bin/hledger-simplebal.sh)
 is a standalone bash script. 
-Being named `hledger-something`, and an executable in $PATH, it is also an *add-on command*,
-ie it will appear as in `hledger`'s commands list.
 It calls hledger with lots of options (read it to see what it does).
 
 ```cli
@@ -77,11 +95,9 @@ $ hledger pijul status
 $ hledger pijul record [MSG]
 ```
 
-
-
 ### Haskell scripts
 
-Other add-on commands in the bin directory are Haskell scripts (`hledger-*.hs`).
+Also in the bin directory are some add-on commands written in Haskell (`hledger-*.hs`).
 These call hledger as a library to process command line arguments, read data, 
 run reports etc., so they can be as powerful as built-in commands.
 You can run them interpreted, for easy customisation (you will need the
@@ -122,22 +138,6 @@ is an incomplete attempt at automatically splitting infrequent/irregular transac
 
 [`hledger-check-fancyassertions.hs`](https://github.com/simonmichael/hledger/blob/master/bin/hledger-check-fancyassertions.hs)
 is a more complex command that checks account balances in ways that the built-in balance assertions can't.
-
-## More add-on commands
-
-`hledger-ui` and `hledger-web` are two add-on commands which are usually installed together with `hledger`.
-
-Other add-ons are maintained as separate packages, and can be installed separately with stack or cabal. 
-If you have trouble, check their READMEs or ask for help in chat. They include:
-
-[`hledger-iadd`](http://hackage.haskell.org/package/hledger-iadd)
-is a terminal UI alternative to hledger's `add` command. 
-
-[`hledger-interest`](http://hackage.haskell.org/package/hledger-interest)
-generates interest transactions for an account according to various schemes. 
-
-[`hledger-irr`](http://hackage.haskell.org/package/hledger-irr)
-calculates the internal rate of return of an investment account.
 
 ## More tools
 
