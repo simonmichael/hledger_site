@@ -71,8 +71,8 @@ You can run them interpreted, for easy customisation (you will need the
 compile them for faster startup. They include:
 
 [`hledger-print-location.hs`](https://github.com/simonmichael/hledger/blob/master/bin/hledger-print-location.hs)
-is not very useful, but is a simple example of a haskell script with hledger-style command-line help.
-It is a customised version of the built-in `print` command, 
+is a simple example of a haskell script with hledger-style command-line help.
+It is a custom version of the built-in `print` command, 
 that adds the file and line number to every transaction, as a tag:
 
 ```cli
@@ -84,11 +84,26 @@ $ hledger print-location -f hledger/examples/sample.journal desc:eat
   assets:cash
 ```
 
+[`hledger-check-tagfiles.hs`](https://github.com/simonmichael/hledger/blob/master/bin/hledger-check-tagfiles.hs)
+interprets all tag values containing a `/` (forward slash) as file paths, and checks that those files exist.
+
+[`hledger-check-tagfiles.cabal.hs`](https://github.com/simonmichael/hledger/blob/master/bin/hledger-check-tagfiles.cabal.hs)
+is the above as a cabal script.
+
+[`hledger-swap-dates.hs`](https://github.com/simonmichael/hledger/blob/master/bin/hledger-swap-dates.hs)
+prints transactions with their date and date2 fields swapped.
+
+[`hledger-balance-as-budget.hs`](https://github.com/simonmichael/hledger/blob/master/bin/hledger-balance-as-budget.hs)
+uses one balance report to set budget goals for another balance report.
+
+[`hledger-combine-balances.hs`](https://github.com/simonmichael/hledger/blob/master/bin/hledger-combine-balances.hs)
+shows balance reports for two different periods side by side.
+
+[`hledger-smooth.hs`](https://github.com/simonmichael/hledger/blob/master/bin/hledger-smooth.hs)
+is an incomplete attempt at automatically splitting infrequent/irregular transactions.
+
 [`hledger-check-fancyassertions.hs`](https://github.com/simonmichael/hledger/blob/master/bin/hledger-check-fancyassertions.hs)
 is a more complex command that checks account balances in ways that the built-in balance assertions can't.
-
-See [`bin/README`](https://github.com/simonmichael/hledger/tree/master/bin#readme)
-and the other scripts for details of what they do.
 
 ## More add-on commands
 
