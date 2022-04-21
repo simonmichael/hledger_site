@@ -59,7 +59,6 @@ and [Accounting and bookkeeping](#accounting-and-bookkeeping) examples.
 - [Mobile apps](mobile-apps.md)
 
 ### Customising
-- [Addon commands](addons.md)
 - [Change account name separator](change-account-name-separator.md)
 - [Command line completion](command-line-completion.md)
 - [Editor configuration](editors.md)

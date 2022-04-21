@@ -4,16 +4,29 @@
 <!-- toc -->
 </div>
 
-Like most PTA tools, hledger's command line interface and plain text
-data formats make it easy to integrate into custom scripts, eg for
-automating your workflows. Suitably-named scripts can appear in the
-commands list as new hledger subcommands. Scripts/programs written in
-haskell can integrate more deeply, and be as powerful as hledger
-itself. Here are some examples.
+As a command line program, with plain text data formats, hledger is
+easy to extend and customise with scripts and add-on commands.
+This page describes some different kinds of scripting you can do around hledger.
+
+For an overview of ready-made scripts you can install, see [Add-ons & scripts](addons.html).
+
+Scripts are programs which call other programs to get things done.
+They are often (though not always):
+- small
+- ready to run immediately with no compilation step
+- quick to write and modify
+- written by you to make your particular tasks easier.
+
+They could be as simple a shell alias remembering the options for a
+common report, or a small program automating a more complex operation
+such as invoicing.
 
 ## Shell aliases
 
-Shell aliases can be useful to save typing (bash examples, translate for your shell):
+Shell aliases are the simplest type of script.
+Their most common use is to save typing, as in the examples below.
+(These and most shell examples in these docs are for the popular Bash shell;
+translate appropriately if you use a different shell.)
 
 ```bash
 # ~/finance/bashrc

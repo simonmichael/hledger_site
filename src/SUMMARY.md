@@ -19,6 +19,7 @@
 - [hledger manual](hledger.md)
 - [hledger-ui manual](hledger-ui.md)
 - [hledger-web manual](hledger-web.md)
+- [Add-ons & scripts](addons.md)
 - [Cookbook](cookbook.md)
 - [User FAQ](userfaq.md)
 
@@ -30,10 +31,10 @@
 
 # ALL PAGES
 
-<!-- Every page is listed here (so mdbook will render it): -->
+<!-- This section is hidden by CSS, but lists every site page so mdbook will render it: -->
 
 - [Accounting concepts](accounting.md)
-- [Addon commands](addons.md)
+- [Add-ons & scripts](addons.md)
 - [Balancing the accounting equation](balancing-the-accounting-equation.md)
 - [Borrowing and lending](loans.md)
 - [Budgeting and Forecasting (2018)](budgeting-and-forecasting.md)
