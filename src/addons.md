@@ -17,11 +17,17 @@ To learn more about scripts and how to make your own, see [Scripting](scripting.
 ## hledger/bin
 
 Some scripts are collected in the [bin/](https://github.com/simonmichael/hledger/tree/master/bin) directory
-in the main hledger repo. Here's one (slow) way to install them:
+in the main hledger repo. To install them:
 
 ```cli
 $ cd ~/finance   # wherever you keep financial files
-$ git clone https://github.com/simonmichael/hledger.git
+
+# (the fast way, no version control:)
+$ curl -LOJ https://github.com/simonmichael/hledger/archive/refs/heads/master.zip && unzip hledger-master.zip && mv hledger-master hledger
+
+# (or the slow way, with version control:)
+# git clone https://github.com/simonmichael/hledger.git
+
 $ ln -s hledger/bin
 ```
 Now do the PATH dance, eg as a bash user:
