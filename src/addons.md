@@ -31,7 +31,7 @@ $ echo "export PATH=$PATH:$PWD/bin" >>~/.bash_profile"
 $ export PATH=$PATH:$PWD/bin
 ```
 
-### Bash aliases and functions
+### Shell aliases / functions
 
 [`bin/bashrc`](https://github.com/simonmichael/hledger/blob/master/bin/bashrc)
 defines some example bash aliases and functions.
@@ -43,7 +43,7 @@ $ source bin/bashrc
 $ fin        # list the scripts available
 ```
 
-### Bash script files
+### Shell script files
 
 [`hledger-simplebal.sh`](https://github.com/simonmichael/hledger/blob/master/bin/hledger-simplebal.sh)
 is a standalone bash script. 
@@ -58,7 +58,7 @@ $ hledger simplebal
 ### Haskell scripts
 
 Other add-on commands in the bin directory are Haskell scripts (`hledger-*.hs`).
-These call hledger to process command line arguments, show help, read data, 
+These call hledger as a library to process command line arguments, read data, 
 run reports etc., so they can be as powerful as built-in commands.
 You can run them interpreted, for easy customisation (you will need the
 [`stack`](https://haskellstack.org) tool).  Or you can
@@ -79,7 +79,7 @@ $ hledger print-location -f hledger/examples/sample.journal desc:eat
 ```
 
 [`hledger-check-fancyassertions.hs`](https://github.com/simonmichael/hledger/blob/master/bin/hledger-check-fancyassertions.hs)
-checks account balances in more complex ways than the built-in balance assertions.
+is a more complex command that checks account balances in ways that the built-in balance assertions can't.
 
 See [`bin/README`](https://github.com/simonmichael/hledger/tree/master/bin#readme)
 and the other scripts for details of what they do.
