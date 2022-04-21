@@ -25,8 +25,8 @@ Other add-ons are maintained as separate packages, and can be installed separate
 or the [hledger-install script](https://hledger.org/install.html#with-hledger-install).
 If you have trouble, check their READMEs or ask for help in chat. They include:
 
-[`hledger-iadd`](http://hackage.haskell.org/package/hledger-iadd)
-is a terminal UI alternative to hledger's `add` command. 
+[`hledger-iadd`](http://hackage.haskell.org/package/hledger-iadd),
+a terminal UI alternative to hledger's `add` command. 
 
 [`hledger-interest`](http://hackage.haskell.org/package/hledger-interest)
 generates interest transactions for an account according to various schemes. 
