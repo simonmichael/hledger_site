@@ -30,8 +30,8 @@ is a terminal UI alternative to hledger's `add` command.
 [`hledger-interest`](http://hackage.haskell.org/package/hledger-interest)
 generates interest transactions for an account according to various schemes. 
 
-[`hledger-irr`](http://hackage.haskell.org/package/hledger-irr)
-calculates the internal rate of return of an investment account.
+[`hledger-stockquotes`](http://hackage.haskell.org/package/hledger-stockquotes)
+downloads market prices for the commodities in your journal.
 
 
 ## hledger/bin scripts
