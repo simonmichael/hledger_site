@@ -53,13 +53,31 @@ $ fin        # list the scripts available
 
 [`hledger-simplebal.sh`](https://github.com/simonmichael/hledger/blob/master/bin/hledger-simplebal.sh)
 is a standalone bash script. 
-Because it is named `hledger-something`, it is also an *add-on command*:
-it will appear as a new command named `something` in `hledger`'s commands list.
+Being named `hledger-something`, and an executable in $PATH, it is also an *add-on command*,
+ie it will appear as in `hledger`'s commands list.
 It calls hledger with lots of options (read it to see what it does).
 
 ```cli
 $ hledger simplebal
 ```
+
+[`hledger-git`](https://github.com/simonmichael/hledger/blob/master/bin/hledger-git)
+provides easy version control for your journal files, using git. Run it with no arguments for help.
+```cli
+$ hledger git log
+$ hledger git status
+$ hledger git record [MSG]
+```
+
+[`hledger-pijul`](https://github.com/simonmichael/hledger/blob/master/bin/hledger-pijul)
+provides the same thing using the [pijul](https://pijul.org) version control system..
+```cli
+$ hledger pijul log
+$ hledger pijul status
+$ hledger pijul record [MSG]
+```
+
+
 
 ### Haskell scripts
 
