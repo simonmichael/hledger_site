@@ -8,9 +8,9 @@ This page lists some extra tools and scripts you can install to augment the core
 
 These are several common types:
 
-- small shell scripts - aliases, functions, or script files - which run the `hledger` program in useful ways, saving work
-- scripts or compiled programs which don't use hledger directly, but perform useful related tasks
-- haskell scripts or programs which call hledger as a library, to do more advanced tasks.
+- small shell scripts - aliases, functions, or script files - which run the `hledger` command line program in useful ways, saving work
+- haskell scripts or programs which call hledger as a library, to do more advanced things
+- scripts or programs which don't use hledger directly, but perform useful related tasks.
 
 Scripts or programs which are named `hledger-something` and found in `$PATH` are known as
 *add-on commands*, and will show up in hledger's commands list.
@@ -71,7 +71,7 @@ $ fin        # list the scripts available
 
 ### Non-Haskell scripts
 
-[`hledger-simplebal.sh`](https://github.com/simonmichael/hledger/blob/master/bin/hledger-simplebal.sh)
+[`hledger-simplebal`](https://github.com/simonmichael/hledger/blob/master/bin/hledger-simplebal)
 is a standalone bash script. 
 It calls hledger with lots of options (read it to see what it does).
 
