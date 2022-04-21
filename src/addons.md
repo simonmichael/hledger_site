@@ -18,7 +18,8 @@ To learn more about scripts and how to make your own, see [Scripting](scripting.
 
 ## Add-on commands
 
-`hledger-ui` and `hledger-web` are two add-on commands which are usually installed together with `hledger`.
+[`hledger-ui`](hledger-ui.html) and [`hledger-web`](hledger-web.html)
+are two add-on commands which are usually installed together with `hledger`.
 
 Other add-ons are maintained as separate packages, and can be installed separately with stack or cabal
 or the [hledger-install script](https://hledger.org/install.html#with-hledger-install).
