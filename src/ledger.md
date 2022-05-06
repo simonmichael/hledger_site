@@ -7,87 +7,39 @@
 See also: 
 [Why hledger ?](why.html)
 
-## History
-
-**Why did you start hledger ? How does it relate to Ledger ?**
-
-I discovered John Wiegley's [Ledger](http://ledger-cli.org) in 2006,
-and was very happy to find this efficient command-line reporting tool with a transparent data format.
-
-Initially, I used it to generate time reports for my job.
-Before long I wanted that to work differently - splitting sessions at day boundaries, reporting in hours, etc.
-John had got busy elsewhere and the Ledger project now stalled, with unfixed bugs, wrong documentation and a confusing release situation persisting for a long time.
-I did what I could to help build momentum, reporting bugs, supporting newcomers, and contributing a new domain and website.
-But, I didn't want to spend time learning C++.
-
-I was learning Haskell, which I did want to spend time in.
-I felt Ledger could be implemented well and, in the long run, more efficiently in that language,
-which has some compelling advantages such as lower maintenance costs.
-I urgently needed a reliable accounting tool that I enjoyed using.
-I also wanted to see what I could do to reduce roadbumps and confusion for newcomers.
-
-I couldn't expect John to start over - at that time he was not the Haskell fan he is now!
-So in 2007 I began experimenting.
-I built a toy parser in a few different languages, and it was easiest in Haskell.
-I kept tinkering.
-Goals included:
-
-- to get better at Haskell by building something useful to me,
-- to learn how well Haskell could work for real-world applications,
-- and eventually: to provide a new implementation focussing more on
-  ease of use, absence of user-visible bugs, and high-quality documentation and web presence.
-  Also to experiment with new user interfaces, APIs, etc.
-
-Before too long I had a tool that was useful to me. With Ledger still installed,
-and by maintaining high compatibility, I now had two tools  with different strengths,
-each providing a comparison for the other in case of confusion or suspected bugs,
-which was itself quite valuable.
-
-The Ledger project later revived and has attracted new active contributors.
-I have remained active in that community, sharing discoveries and
-design discussions, and we have seen many ideas travelling in both directions.
-hledger shared #ledger's IRC channel until 2014, when I added
-[#hledger](http://irc.hledger.org) to allow us more space.
-
-I think having independent but compatible implementations has been
-quite helpful for troubleshooting, exploring the design space, and
-growing the "Ledger-likes" community.
-My other projects in that direction include
-the [ledger-cli.org](http://ledger-cli.org) site,
-[LedgerTips](http://twitter.com/LedgerTips),
-IRC support on #ledger,
-and now [plaintextaccounting.org](http://plaintextaccounting.org).
-
 ## Differences
 
 **How is hledger different from Ledger ?**
 
-Here are the highest-order differences, which lead to the others: 
+First, the high-order differences:
 
-- hledger is actively maintained (since 2008).
-- hledger has a strong focus on usability, real-world utility, reliability and complete documentation.
-- hledger tries to provide Ledger's (and others') best features at a higher level of quality (cleaner UX, more consistency, fewer bugs).
-- hledger is written in the Haskell programming language, which is well suited to long-term maintainability and correctness.
+- hledger is actively maintained (since 2008)
+- hledger focusses strongly on UX, reliability, and real-world practicality
+- hledger is written in Haskell, which helps with correctness and maintainability
+- hledger has learned from Ledger and tries to reimplement its best parts with improved quality, consistency and robustness.
 
-Compared to Ledger, hledger builds quickly and has a complete and
-accurate manual, an easier report query syntax, multi-column balance
-reports, much better depth limiting, an interactive data entry
-assistant, and optional web and terminal interfaces. hledger provides
-a different system for converting CSV data, with rules files and
-new-transaction detection which simplify the task of importing new
-data from banks.
+Compared to Ledger, hledger has
 
-Compared to hledger, Ledger has some additional power-user features such as 
-the embedded value expressions language, 
-and some extra automation for tracking lots.
+- a complete and accurate manual, 
+- multi-column reports, 
+- an easier query syntax, 
+- better depth limiting,
+- optional just-works data entry, terminal, and web interfaces,
+- and a battle-tested CSV/SSV/TSV system designed for easy import of bank data.
 
-### Features
+Compared to hledger, Ledger has
 
-Here is an overview of the general differences (updates welcome):
+- more automation for investment transactions (lot tracking)
+- more support for embedding small programs in your data to get custom behaviour 
+  (value expressions, maybe python ?)
+- ... ?
+
+Over time, features have propagated both ways. Here is an overview of current status
+(updates welcome):
  
 |                                                   | hledger | Ledger |
 |---------------------------------------------------|---------|--------|
-| **hledger/Ledger common features**                |         |        |
+| **Common features:**                              |         |        |
 | journal format                                    | ✅      | ✅     |
 | csv format                                        | ✅      | ✅     |
 | timeclock format                                  | ✅      | ✅     |
@@ -102,11 +54,11 @@ Here is an overview of the general differences (updates welcome):
 | report filtering with flags and query arguments   | ✅      | ✅     |
 | basic output format customisation                 | ✅      | ✅     |
 | print, register, balance commands                 | ✅      | ✅     |
-| **Features in Ledger only**                       |         |        |
+| **Features in Ledger only:**                      |         |        |
 | value expression language                         |         | ✅     |
 | automatic revaluation transactions (`--revalued`) |         | ✅     |
 | lot reporting (`--lots`)                          |         | ✅     |
-| **Features in hledger only**                      |         |        |
+| **Features in hledger only:**                     |         |        |
 | timedot format                                    | ✅      |        |
 | multi-period balance reports                      | ✅      |        |
 | account types                                     | ✅      |        |
@@ -351,6 +303,57 @@ Here is a more detailed list of differences in behaviour
 
 - hledger always splits multi-day time sessions at midnight, showing accurate per-day amounts.
   Ledger does this only with the `--day-break` flag.
+
+## History
+
+**Why did you start hledger ? How does it relate to Ledger ?**
+
+I discovered John Wiegley's [Ledger](http://ledger-cli.org) in 2006,
+and was very happy to find this efficient command-line reporting tool with a transparent data format.
+
+Initially, I used it to generate time reports for my job.
+Before long I wanted that to work differently - splitting sessions at day boundaries, reporting in hours, etc.
+John had got busy elsewhere and the Ledger project now stalled, with unfixed bugs, wrong documentation and a confusing release situation persisting for a long time.
+I did what I could to help build momentum, reporting bugs, supporting newcomers, and contributing a new domain and website.
+But, I didn't want to spend time learning C++.
+
+I was learning Haskell, which I did want to spend time in.
+I felt Ledger could be implemented well and, in the long run, more efficiently in that language,
+which has some compelling advantages such as lower maintenance costs.
+I urgently needed a reliable accounting tool that I enjoyed using.
+I also wanted to see what I could do to reduce roadbumps and confusion for newcomers.
+
+I couldn't expect John to start over - at that time he was not the Haskell fan he is now!
+So in 2007 I began experimenting.
+I built a toy parser in a few different languages, and it was easiest in Haskell.
+I kept tinkering.
+Goals included:
+
+- to get better at Haskell by building something useful to me,
+- to learn how well Haskell could work for real-world applications,
+- and eventually: to provide a new implementation focussing more on
+  ease of use, absence of user-visible bugs, and high-quality documentation and web presence.
+  Also to experiment with new user interfaces, APIs, etc.
+
+Before too long I had a tool that was useful to me. With Ledger still installed,
+and by maintaining high compatibility, I now had two tools  with different strengths,
+each providing a comparison for the other in case of confusion or suspected bugs,
+which was itself quite valuable.
+
+The Ledger project later revived and has attracted new active contributors.
+I have remained active in that community, sharing discoveries and
+design discussions, and we have seen many ideas travelling in both directions.
+hledger shared #ledger's IRC channel until 2014, when I added
+[#hledger](http://irc.hledger.org) to allow us more space.
+
+I think having independent but compatible implementations has been
+quite helpful for troubleshooting, exploring the design space, and
+growing the "Ledger-likes" community.
+My other projects in that direction include
+the [ledger-cli.org](http://ledger-cli.org) site,
+[LedgerTips](http://twitter.com/LedgerTips),
+IRC support on #ledger,
+and now [plaintextaccounting.org](http://plaintextaccounting.org).
 
 ## Interoperating
 
