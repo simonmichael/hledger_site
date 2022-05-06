@@ -32,19 +32,11 @@ function addDocVersions() {
       <a href="/1.23/'+newdest3+'">1.23</a> · \
       <a href="/1.22/'+newdest3+'">1.22</a> · \
       <a href="/1.21/'+newdest3+'">1.21</a> · \
-      // <a href="/1.20/'+newdest7+'">1.20</a> · \
       <a href="/1.19/'+newdest7+'">1.19</a> · \
       <a href="/1.18/'+newdest7+'">1.18</a> · \
-      // <a href="/1.17/'+newdest7+'">1.17</a> · \
-      // <a href="/1.16/'+newdest7+'">1.16</a> · \
-      // <a href="/1.15/'+newdest7+'">1.15</a> · \
-      // <a href="/1.14/'+newdest7+'">1.14</a> · \
-      // <a href="/1.13/'+newdest7+'">1.13</a> · \
       <a href="/1.12/'+newdest7+'">1.12</a> · \
-      // <a href="/1.11/'+newdest7+'">1.11</a> · \
       <a href="/1.10/'+newdest7+'">1.10</a> · \
       <a href="/1.9/' +newdest7+'">1.9</a>  · \
-      // <a href="/1.5/' +newdest7+'">1.5</a>  · \
       <a href="/1.2/' +newdest7+'">1.2</a>  · \
       <a href="/1.0/' +newdest7+'">1.0</a>    \
     ';
