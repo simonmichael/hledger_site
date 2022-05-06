@@ -8,38 +8,25 @@ build:
 tools:
 	cargo install mdbook mdbook-toc
 
-# Render all versions of manuals. Current release manual will be in out, all others in out2.
-# Slow, temporarily links old manuals in SUMMARY and renders the whole site, for each version.
-# Temporary hack until mdbook can render things not in SUMMARY.md.
+# Render "all" versions of manuals (excluding old versions not packaged anywhere). 
+# We want to link only one version in the sidebar, but mdbook won't render (and will remove) unlinked versions.
+# We work around this by, for each version,
+# temporarily linking that version of the manuals in SUMMARY, rendering the whole site,
+# and saving the rendered manuals in out2/VERSION/.
+# Re-rendering the whole site is of course wasteful and slow, but ensures all manual versions
+# include the up-to-date site sidebar.
+# The current release should be the last version rendered. Keep synced with site.js:
 all buildall: \
 	build7-1.0 \
-	build7-1.1 \
 	build7-1.2 \
-	build7-1.3 \
-	build7-1.4 \
-	build7-1.5 \
 	build7-1.9 \
 	build7-1.10 \
-	build7-1.11 \
 	build7-1.12 \
-	build7-1.13 \
-	build7-1.14 \
-	build7-1.15 \
-	build7-1.16 \
-	build7-1.17 \
 	build7-1.18 \
 	build7-1.19 \
-	build7-1.20 \
 	build3-1.21 \
 	build3-dev \
 	build3-1.22 \
-	build3-1.23 \
-	build3-1.24 \
-	build3-1.25 \
-
-# Like buildall but just a few recent versions.
-recent buildrecent: \
-	build3-dev \
 	build3-1.23 \
 	build3-1.24 \
 	build3-1.25 \
