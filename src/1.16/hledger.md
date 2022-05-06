@@ -270,7 +270,7 @@ You can save a set of command line options/arguments in a file, one per
 line, and then reuse them by writing `@FILENAME` in a command line. To
 prevent this expansion of `@`-arguments, precede them with a `--`
 argument. For more, see [Save frequently used
-options](save-frequently-used-options.html).
+options](/save-frequently-used-options.html).
 
 ### Special characters in arguments and queries
 

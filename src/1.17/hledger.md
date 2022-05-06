@@ -630,7 +630,7 @@ Good:
     -X$
 
 See also: [Save frequently used
-options](save-frequently-used-options.html).
+options](/save-frequently-used-options.html).
 
 ### Queries
 
