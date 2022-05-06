@@ -1,3 +1,5 @@
+CURRENT_RELEASE=1.25
+
 # Render the current site and current release and dev manuals, saving them in out.
 build:
 	@echo "building site with current manuals in /"
@@ -36,24 +38,30 @@ all buildall: \
 # Render the 7 manuals for this hledger version <= 1.21, saving them in out2.
 # The manuals source should exist in src/VER/.
 # After this you should "make build" to rebuild the site with current manuals.
+# The noindex meta tag will be added.
 build7-%:
 	@echo "building site with the seven $* manuals in /$*"
 	@perl -i -p0e "s/- +(.*?)]\(hledger\.md\)\n- +(.*?)]\(hledger-ui\.md\)\n- +(.*?)]\(hledger-web\.md\)/- \1 ($*)]($*\/hledger.md)\n- \2 ($*)]($*\/hledger-ui.md)\n- \3 ($*)]($*\/hledger-web.md)\n- [journal manual ($*)]($*\/journal.md)\n- [csv manual ($*)]($*\/csv.md)\n- [timeclock manual ($*)]($*\/timeclock.md)\n- [timedot manual ($*)]($*\/timedot.md)/m" src/SUMMARY.md
+	@sed -i -e "s/<\/title>/<\/title>\n<meta name='robots' content='noindex' \/>/" theme/index.hbs
 	@mdbook build
 	@mkdir -p out2
 	@cp -r out/$* out2
-	@git checkout -- src/SUMMARY.md
+	@git checkout -- src/SUMMARY.md theme/index.hbs
 
 # Render the 3 manuals for this hledger version > 1.21 (or "dev"), saving them in out2.
 # The manuals source should exist in src/VER/.
 # After this you should "make build" to rebuild the site with current manuals.
+# The noindex meta tag will be added to all but the current release.
 build3-%:
 	@echo "building site with the three $* manuals in /$*"
 	@perl -i -pe "s/^- +(.*?)]\((hledger(|-ui|-web)\.md)\)/- \1 ($*)]($*\/\2)/" src/SUMMARY.md
+	@if [ ! x"$*" = x"$(CURRENT_RELEASE)" ] ; then \
+		sed -i -e "s/<\/title>/<\/title>\n<meta name='robots' content='noindex' \/>/" theme/index.hbs; \
+	fi
 	@mdbook build
 	@mkdir -p out2
 	@cp -r out/$* out2
-	@git checkout -- src/SUMMARY.md
+	@git checkout -- src/SUMMARY.md theme/index.hbs
 
 clean:
 	mdbook clean
