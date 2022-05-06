@@ -12,7 +12,6 @@ tools:
 # Slow, temporarily links old manuals in SUMMARY and renders the whole site, for each version.
 # Temporary hack until mdbook can render things not in SUMMARY.md.
 all buildall: \
-	build3-dev \
 	build7-1.0 \
 	build7-1.1 \
 	build7-1.2 \
@@ -32,6 +31,7 @@ all buildall: \
 	build7-1.19 \
 	build7-1.20 \
 	build3-1.21 \
+	build3-dev \
 	build3-1.22 \
 	build3-1.23 \
 	build3-1.24 \
@@ -51,7 +51,7 @@ recent buildrecent: \
 # After this you should "make build" to rebuild the site with current manuals.
 build7-%:
 	@echo "building site with the seven $* manuals in /$*"
-	@perl -i -p0e "s/- +(.*?)]\(hledger\.md\)\n- +\(.*?)]\(hledger-ui\.md\)\n- +\(.*?)]\(hledger-web\.md\)/- \1 ($*)]($*\/hledger.md)\n- \2 ($*)]($*\/hledger-ui.md)\n- \3 ($*)]($*\/hledger-web.md)\n- [journal manual ($*)]($*\/journal.md)\n- [csv manual ($*)]($*\/csv.md)\n- [timeclock manual ($*)]($*\/timeclock.md)\n- [timedot manual ($*)]($*\/timedot.md)/m" src/SUMMARY.md
+	@perl -i -p0e "s/- +(.*?)]\(hledger\.md\)\n- +(.*?)]\(hledger-ui\.md\)\n- +(.*?)]\(hledger-web\.md\)/- \1 ($*)]($*\/hledger.md)\n- \2 ($*)]($*\/hledger-ui.md)\n- \3 ($*)]($*\/hledger-web.md)\n- [journal manual ($*)]($*\/journal.md)\n- [csv manual ($*)]($*\/csv.md)\n- [timeclock manual ($*)]($*\/timeclock.md)\n- [timedot manual ($*)]($*\/timedot.md)/m" src/SUMMARY.md
 	@mdbook build
 	@mkdir -p out2
 	@cp -r out/$* out2
