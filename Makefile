@@ -1,7 +1,8 @@
-# Render the current site and current release manuals, saving them in out.
-build: build3-dev
+# Render the current site and current release and dev manuals, saving them in out.
+build:
 	@echo "building site with current manuals in /"
-	@mdbook build
+	@make -s build3-dev
+	@make -s build3-1.25
 
 # Install some required tools.
 tools:
@@ -11,6 +12,7 @@ tools:
 # Slow, temporarily links old manuals in SUMMARY and renders the whole site, for each version.
 # Temporary hack until mdbook can render things not in SUMMARY.md.
 all buildall: \
+	build3-dev \
 	build7-1.0 \
 	build7-1.1 \
 	build7-1.2 \
@@ -34,16 +36,13 @@ all buildall: \
 	build3-1.23 \
 	build3-1.24 \
 	build3-1.25 \
-	build3-dev \
-	build
 
 # Like buildall but just a few recent versions.
 recent buildrecent: \
+	build3-dev \
 	build3-1.23 \
 	build3-1.24 \
 	build3-1.25 \
-	build3-dev \
-	build
 
 # build7/build3 naming is to help avoid running the wrong rule for the version
 
@@ -72,6 +71,8 @@ build3-%:
 clean:
 	mdbook clean
 
+# This does a vanilla `mdbook build`, which renders sidebar manual links without versions.
+# Can manually run `make build` after it starts to fix.
 serve:
 	mdbook serve
 
