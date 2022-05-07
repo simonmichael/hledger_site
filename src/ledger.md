@@ -1,5 +1,4 @@
 # hledger and Ledger
-
 <div class=pagetoc>
 <!-- toc -->
 </div>
@@ -9,23 +8,22 @@ See also:
 
 ## Differences
 
-**How is hledger different from Ledger ?**
-
-First, the high-order differences:
+How is hledger different from Ledger ? First, the high-order differences:
 
 - hledger is actively maintained (since 2008)
 - hledger focusses strongly on UX, reliability, and real-world practicality
 - hledger is written in Haskell, which helps with correctness and maintainability
-- hledger has learned from Ledger and tries to reimplement its best parts with improved quality, consistency and robustness.
+- hledger has learned from Ledger and tries to reimplement and its best parts in a more systematic way, with improved quality and robustness.
 
 Compared to Ledger, hledger has
 
-- a complete and accurate manual, 
-- multi-column reports, 
-- an easier query syntax, 
-- better depth limiting,
-- optional just-works data entry, terminal, and web interfaces,
-- and a battle-tested CSV/SSV/TSV system designed for easy import of bank data.
+- a complete and accurate manual
+- standard "financial statement" reports
+- multi-column reports
+- an easier query syntax 
+- better depth limiting
+- a battle-tested CSV/SSV/TSV system designed for easy bank data import
+- and multiple officially-supported user interfaces (CLI, data entry, terminal, web).
 
 Compared to hledger, Ledger has
 
@@ -34,8 +32,10 @@ Compared to hledger, Ledger has
   (value expressions, maybe python ?)
 - ... ?
 
-Over time, features have propagated both ways. Here is an overview of current status
-(updates welcome):
+### Features
+
+Over time, features have propagated both ways.
+Here is a more detailed list (2022, updates welcome):
  
 |                                                   | hledger | Ledger |
 |---------------------------------------------------|---------|--------|
@@ -158,67 +158,20 @@ version: hledger 1.24.99.2-gba5b0e93f-20220205, mac-aarch64
 Tue Feb  8 11:03:57 HST 2022
 ```
 
-### Data formats
+### Functionality
 
-hledger's journal file format is very similar to Ledger's.
-Some syntactic forms can be interpreted in slightly different ways,
-eg [hledger comments](journal.html#comments) 
-vs [Ledger comments](https://www.ledger-cli.org/3.0/doc/ledger3.html#Commenting-on-your-Journal),
-or [balance assertions](journal.html#assertions-and-ordering).
-
-A small number of Ledger's syntactic forms are ignored (`{ }` prices)
-or rejected (value expressions). If you avoid these, it's quite easy
-to keep a journal file that works with both hledger and Ledger (see below).
-
-hledger's timeclock format is also very similar to Ledger's.
-hledger also provides a new timedot format, allowing a different style
-of time logging.
-
-Both hledger and Ledger can read CSV files; they each have their own system for 
-defining conversion rules.
-
-### Functional differences
-
-Here is a more detailed list of differences in behaviour
-(see also:
-[#1752](https://github.com/simonmichael/hledger/issues/1752)
-):
-
-#### Command line interface
+Here is a more detailed list of differences in behaviour:
 
 - hledger does not require a space between command-line flags and their values,
   eg `-fFILE` works as well as `-f FILE`
 
-- hledger's `-b`, `-e`, `-D`, `-W`, `-M`, `-Q`, `-Y` and `-p` options combine nicely.
-  You can also specify start and/or end dates with a query argument,
-  eg `date:START-` or `date:START-END`.
-
-- hledger's [query language](hledger.html#queries) is a little less
-  powerful than Ledger's, simpler, and easier to remember.
-  It uses google-like prefixes, eg `desc:`, `payee:`, `amt:`, `not:`.
-  Multiple patterns are combined using fixed AND/OR rules.
-  We don't yet support full boolean expressions, so some more advanced
-  queries require two invocations of hledger in a pipe, eg: 
-  `hledger print QUERY1 | hledger -f- reg QUERY2`
-
 - hledger uses `--ignore-assertions`/`-I` to disable balance assertions. 
   Ledger uses `--permissive` for that, and uses `-I` as the short form of `--prices`.
 
-- hledger cleans up some semantic confusion with status matching (#564):
+- hledger's `-x`/`--explicit` flag makes print show all amounts;
+  Ledger's `--explicit` flag does something else.
 
-  - hledger uses `-P` as the short form of `--pending`. Ledger uses it for grouping by payee. 
-  - hledger renames Ledger's "uncleared" status (ie, when the status field
-    is empty) to "unmarked", and the `--uncleared`/`-U` flag to `--unmarked`/`-U`
-  - each of hledger's `--unmarked`/`-U`, `--pending`/`-P`, `--cleared`/`-C` flags match only that single status.
-    To match more than one status, the flags can be combined.
-    So the hledger equivalent of `ledger print -U` (ie: match all but
-    cleared transactions) is `hledger print -UP`.
-
-- hledger print shows both the primary date and the secondary date if any, always.
-  ledger print shows both by default, but with `--aux-date` it hides the primary date.
-
-- hledger's and Ledger's `-H`/`--historical` flags are unrelated:
-
+- hledger's and Ledger's `-H`/`--historical` flags are unrelated.
   hledger's `-H` makes register and balance-like commands include
   balances from before the report start date, instead of starting at
   zero:
@@ -231,17 +184,58 @@ Here is a more detailed list of differences in behaviour
       -H --historical           show historical ending balance in each period
                                 (includes postings before report start date)
 
-  Ledger's `-H` changes the valuation date used by `-V`/`-X`:
+  Whereas Ledger's `-H` changes the valuation date used by `-V`/`-X`:
 
       ledger --help:
       --historical (-H)
                                 Value commodities at the time of their acquisition.
 
-- hledger's `-x`/`--explicit` flag (makes print show all amounts) 
-  and Ledger's `--explicit` flag (does something else) are unrelated.
+- hledger's `-b`, `-e`, `-D`, `-W`, `-M`, `-Q`, `-Y` and `-p` options combine nicely.
+  You can also specify start and/or end dates with a query argument,
+  eg `date:START-` or `date:START-END`.
 
-#### journal format
+- hledger's [query language](hledger.html#queries) is a little less
+  powerful than Ledger's, simpler, and easier to remember.
+  It uses google-like prefixes, such as `desc:`, `payee:`, `amt:`, and `not:`.
+  Multiple query terms are combined using fixed AND/OR rules.
+  We don't yet support full boolean expressions, so some more advanced
+  queries require two invocations of hledger in a pipe, eg: 
+  `hledger print QUERY1 | hledger -f- reg QUERY2`
 
+- hledger cleans up some semantic confusion with matching transactions/postings by status (#564):
+
+  - hledger renames Ledger's "uncleared" status (ie, when the status field
+    is empty) to "unmarked", and the `--uncleared`/`-U` flag to `--unmarked`/`-U`
+  - hledger uses `-P` as the short form of `--pending`. Ledger uses it for grouping by payee. 
+  - each of hledger's `--unmarked`/`-U`, `--pending`/`-P`, `--cleared`/`-C` flags match only that single status.
+    To match more than one status, the flags can be combined.
+    So the hledger equivalent of `ledger print -U` (ie: match all but
+    cleared transactions) is `hledger print -UP`.
+
+- hledger's print command shows both the primary date and the secondary date if any, always.
+  Ledger's print shows both by default, but with `--aux-date` it hides the primary date.
+
+
+### Data formats
+
+#### journal
+
+hledger's journal file format is very similar to Ledger's.
+Some syntactic forms 
+(eg [hledger comments](journal.html#comments) 
+vs [Ledger comments](https://www.ledger-cli.org/3.0/doc/ledger3.html#Commenting-on-your-Journal),
+or [balance assertions](journal.html#assertions-and-ordering))
+can be interpreted in slightly different ways.
+A small number of Ledger's syntactic forms are ignored (`{ }` prices)
+or rejected (value expressions). With some care, it's quite easy
+to keep a journal file that works with both hledger and Ledger.
+See also [#1752](https://github.com/simonmichael/hledger/issues/1752).
+
+- hledger's input data formats (journal, timeclock, timedot, ...) are separate; you can't 
+  mix them all in one file as in Ledger.
+  (You can still combine them in one report, by reading from multiple files.)
+  This simplifies implementation and helps ensure useful error messages.
+  
 - hledger supports international number formats, auto-detecting the
   decimal mark (comma or period), digit group mark (period, comma, or
   space) and digit group sizes to use for each commodity. Or, these can
@@ -262,15 +256,13 @@ Here is a more detailed list of differences in behaviour
   seen. Ledger uses D only for commodity display settings and for the
   entry command.
 
-- hledger up to 1.17.1 does not accept Ledger's virtual posting cost syntax (`(@)`, `(@@)`).
-  hledger 1.17.99+ accepts it, and ignores the parentheses.
+- hledger accepts Ledger's virtual posting cost syntax  (`(@)`, `(@@)`), but ignores the parentheses.
 
-- hledger up to 1.17.1 does not accept Ledger's lot price or lot date syntax except
-  in very limited circumstances (`{= }` at the end of the posting line).
-  hledger 1.17.99+ accepts, but ignores, Ledger-style lot prices
-  (`{PRICE}`, `{{PRICE}}`, `{=PRICE}`, `{{=PRICE}}`) and/or lot dates
-  (`[DATE]`), after the posting amount and before the balance assertion if any.
+- hledger accepts but ignores Ledger-style lot prices and lot dates
+  (`{PRICE}`, `{{PRICE}}`, `{=PRICE}`, `{{=PRICE}}` and/or `[DATE]`,
+  after the posting amount and before any balance assertion). 
   ([#1084](https://github.com/simonmichael/hledger/issues/1084))
+  
   Relatedly, hledger will not automatically calculate capital gains
   when balancing a transaction selling a lot at a different price from
   its cost basis, as Ledger does. Eg:
@@ -283,26 +275,26 @@ Here is a more detailed list of differences in behaviour
     Income:Capital Gains   ;-5 EUR
   ```
 
-- hledger does not support Ledger's --lots reporting.
+- hledger does not currently support Ledger's `--lots` reporting.
 
 - hledger [auto postings](hledger.html#auto-postings) allow only
   minimal customisation of the amount (just multiplying the matched
   amount by a constant), not a full embedded expression language like
-  Ledger.
+  Ledger. (And are called "auto" to avoid "automatic" vs "automated" confusion.)
 
-#### timeclock & timedot formats
+#### timeclock
 
-- hledger's journal, timeclock and timedot formats are separate; you can't 
-  mix them all in one file as in Ledger.
-  (Though you can specify all files on the command line, or have a parent journal file include them all.)
-  This simplifies the implementation and helps ensure useful parse error messages.
-  
-- hledger always shows time balances (from the timeclock/timedot formats) in hours
+hledger's timeclock format is very similar to Ledger's.
+(hledger also provides `timedot`, an alternate time logging format.)
 
-#### timeclock format
+- hledger always shows balances from timeclock or timedot data in hours.
 
 - hledger always splits multi-day time sessions at midnight, showing accurate per-day amounts.
   Ledger does this only with the `--day-break` flag.
+
+#### csv
+
+hledger's CSV/TSV/SSV-reading and import system is more mature and flexible than Ledger's [`convert` command](https://www.ledger-cli.org/3.0/doc/ledger3.html#The-convert-command).
 
 ## History
 
