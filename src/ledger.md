@@ -13,7 +13,7 @@ How is hledger different from Ledger ? First, the high-order differences:
 - hledger is actively maintained (since 2008)
 - hledger focusses strongly on UX, reliability, and real-world practicality
 - hledger is written in Haskell, which helps with correctness and maintainability
-- hledger has learned from Ledger and tries to reimplement and its best parts in a more systematic way, with improved quality and robustness.
+- hledger tries to reimplement Ledger's best parts in a more systematic way, with improved quality and robustness.
 
 Compared to Ledger, hledger has
 
@@ -23,14 +23,16 @@ Compared to Ledger, hledger has
 - an easier query syntax 
 - better depth limiting
 - a battle-tested CSV/SSV/TSV system designed for easy bank data import
-- and multiple officially-supported user interfaces (CLI, data entry, terminal, web).
+- and comes with multiple officially-supported user interfaces (CLI, data entry, terminal, web).
 
 Compared to hledger, Ledger has
 
-- more automation for investment transactions (lot tracking)
+- assisted lot tracking for investment transactions
 - more support for embedding small programs in your data to get custom behaviour 
   (value expressions, maybe python ?)
 - ... ?
+
+In the sections below we'll cover some of the known differences in more detail.
 
 ### Features
 
@@ -91,8 +93,9 @@ eg Ledger's balance assertions/assignments are not date-aware.
 
 Lately (2021) the performance gap seems to have closed, with hledger outperforming 
 Ledger in some cases - more formal benchmarking needed, please see if you can reproduce.
+\[This was an intel hledger binary running translated on a macbook m1 via Rosetta translation, ie slower than normal]:
 
-```shell
+```cli
 $ uname -a
 Darwin SMs-slate-mac.local 20.6.0 Darwin Kernel Version 20.6.0: Tue Oct 12 18:33:38 PDT 2021; root:xnu-7195.141.8~1/RELEASE_ARM64_T8101 arm64
 
@@ -135,8 +138,9 @@ $ file /opt/homebrew/bin/ledger /Users/simon/src/hledger/bin/hledger-1.24
 /Users/simon/src/hledger/bin/hledger-1.24: Mach-O 64-bit executable x86_64
 ```
 
-The above was hledger running via Rosetta translation. As of 2022 hledger processes 25k transactions per second on a macbook air m1 when compiled natively:
-```
+In 2022, hledger compiled natively on a macbook air m1 processes 25k transactions per second (which means reporting on a normal year's worth of transactions takes less than a tenth of a second):
+
+```cli
 $ hledger --version
 hledger 1.24.99.2-gba5b0e93f-20220205, mac-aarch64
 $ make throughput
@@ -158,9 +162,7 @@ version: hledger 1.24.99.2-gba5b0e93f-20220205, mac-aarch64
 Tue Feb  8 11:03:57 HST 2022
 ```
 
-### Functionality
-
-Here is a more detailed list of differences in behaviour:
+### Command line interface
 
 - hledger does not require a space between command-line flags and their values,
   eg `-fFILE` works as well as `-f FILE`
@@ -190,10 +192,6 @@ Here is a more detailed list of differences in behaviour:
       --historical (-H)
                                 Value commodities at the time of their acquisition.
 
-- hledger's `-b`, `-e`, `-D`, `-W`, `-M`, `-Q`, `-Y` and `-p` options combine nicely.
-  You can also specify start and/or end dates with a query argument,
-  eg `date:START-` or `date:START-END`.
-
 - hledger's [query language](hledger.html#queries) is a little less
   powerful than Ledger's, simpler, and easier to remember.
   It uses google-like prefixes, such as `desc:`, `payee:`, `amt:`, and `not:`.
@@ -202,23 +200,25 @@ Here is a more detailed list of differences in behaviour:
   queries require two invocations of hledger in a pipe, eg: 
   `hledger print QUERY1 | hledger -f- reg QUERY2`
 
-- hledger cleans up some semantic confusion with matching transactions/postings by status (#564):
+- hledger provides more short flags (`-b`, `-e`, `-p`, `-D`, `-W`, `-M`, `-Q`, `-Y`) and the `date:` query argument for setting report period and interval, and all of these combine nicely.
+
+- hledger cleans up some old [semantic confusion](https://github.com/simonmichael/hledger/issues/564) around what "uncleared" means:
 
   - hledger renames Ledger's "uncleared" status (ie, when the status field
     is empty) to "unmarked", and the `--uncleared`/`-U` flag to `--unmarked`/`-U`
-  - hledger uses `-P` as the short form of `--pending`. Ledger uses it for grouping by payee. 
-  - each of hledger's `--unmarked`/`-U`, `--pending`/`-P`, `--cleared`/`-C` flags match only that single status.
-    To match more than one status, the flags can be combined.
-    So the hledger equivalent of `ledger print -U` (ie: match all but
-    cleared transactions) is `hledger print -UP`.
+  - hledger uses `-P` as the short form of `--pending`. Ledger uses `-P` for grouping by payee. 
+  - each of hledger's `--unmarked`/`-U`, `--pending`/`-P`, `--cleared`/`-C` flags match only that single status. To match more than one status, the flags can be combined.
+     
+   So the hledger equivalent of Ledger's `-U` flag ("match uncleared") is `-UP` ("match unmarked or pending").
 
-- hledger's print command shows both the primary date and the secondary date if any, always.
-  Ledger's print shows both by default, but with `--aux-date` it hides the primary date.
+### Commands
 
+- hledger's print command always shows both the primary transaction date and any secondary date, in their usual positions.
+  Ledger's print command with `--aux-date` replaces the primary date with any secondary date.
 
-### Data formats
+- hledger's [CSV/TSV/SSV-reading](hledger.html#csv-format) and [import](hledger.html#import) system is more mature and flexible than Ledger's [`convert` command](https://www.ledger-cli.org/3.0/doc/ledger3.html#The-convert-command).
 
-#### journal
+### Journal format
 
 hledger's journal file format is very similar to Ledger's.
 Some syntactic forms 
@@ -248,7 +248,7 @@ See also [#1752](https://github.com/simonmichael/hledger/issues/1752).
   journal entries and files. 
   Ledger checks assertions in the order they are parsed (ignoring dates), which is fragile.
 
-  Also, hledger correctly handles multiple balance assignments/assertions in a single transaction.
+- hledger correctly handles multiple balance assignments/assertions within a single transaction.
 
 - hledger's default commodity directive (D) sets the commodity to be
   used for subsequent commodityless amounts, and also sets that
@@ -263,7 +263,7 @@ See also [#1752](https://github.com/simonmichael/hledger/issues/1752).
   after the posting amount and before any balance assertion). 
   ([#1084](https://github.com/simonmichael/hledger/issues/1084))
   
-  Relatedly, hledger will not automatically calculate capital gains
+- hledger does not automatically calculate capital gains
   when balancing a transaction selling a lot at a different price from
   its cost basis, as Ledger does. Eg:
   ```journal
@@ -280,72 +280,56 @@ See also [#1752](https://github.com/simonmichael/hledger/issues/1752).
 - hledger [auto postings](hledger.html#auto-postings) allow only
   minimal customisation of the amount (just multiplying the matched
   amount by a constant), not a full embedded expression language like
-  Ledger. (And are called "auto" to avoid "automatic" vs "automated" confusion.)
+  Ledger. (And we call them "auto" to avoid "automatic" vs "automated" confusion.)
 
-#### timeclock
+### Timeclock format
 
-hledger's timeclock format is very similar to Ledger's.
-(hledger also provides `timedot`, an alternate time logging format.)
+- hledger always shows time balances (from timeclock or timedot data) in hours.
 
-- hledger always shows balances from timeclock or timedot data in hours.
-
-- hledger always splits multi-day time sessions at midnight, showing accurate per-day amounts.
+- hledger always splits multi-day time sessions at midnight, to show the per-day amounts.
   Ledger does this only with the `--day-break` flag.
-
-#### csv
-
-hledger's CSV/TSV/SSV-reading and import system is more mature and flexible than Ledger's [`convert` command](https://www.ledger-cli.org/3.0/doc/ledger3.html#The-convert-command).
 
 ## History
 
-**Why did you start hledger ? How does it relate to Ledger ?**
+I (Simon) discovered John Wiegley's [Ledger](http://ledger-cli.org) in 2006,
+and was very happy to find this efficient command-line reporting tool with a transparent data format. Initially, I used it to generate time reports for my job. Before long I wanted some improvements - splitting sessions at day boundaries, reporting in hours, etc.
 
-I discovered John Wiegley's [Ledger](http://ledger-cli.org) in 2006,
-and was very happy to find this efficient command-line reporting tool with a transparent data format.
+Meanwhile, John was now busy elsewhere. For a long time the Ledger project remained stalled, with unfixed functionality/documentation bugs and an ever-looming v3 release making life hard for new users and creating friction for community growth.
+I did what I could to help - reporting bugs, providing support, contributing a [domain and website](https://ledger-cli.org) - but I didn't want to invest in learning C++.
 
-Initially, I used it to generate time reports for my job.
-Before long I wanted that to work differently - splitting sessions at day boundaries, reporting in hours, etc.
-John had got busy elsewhere and the Ledger project now stalled, with unfixed bugs, wrong documentation and a confusing release situation persisting for a long time.
-I did what I could to help build momentum, reporting bugs, supporting newcomers, and contributing a new domain and website.
-But, I didn't want to spend time learning C++.
+I was learning and investing time in [Haskell](https://haskell.org), and I felt Ledger could be perhaps implemented well, and perhaps more effectively in the long run, in this language.
+I urgently needed a rock solid, hassle-free and enjoyable accounting tool.
+Also, I wanted a more active project and some way to make progress on the roadbumps and confusion facing other newcomers.
 
-I was learning Haskell, which I did want to spend time in.
-I felt Ledger could be implemented well and, in the long run, more efficiently in that language,
-which has some compelling advantages such as lower maintenance costs.
-I urgently needed a reliable accounting tool that I enjoyed using.
-I also wanted to see what I could do to reduce roadbumps and confusion for newcomers.
+Of course I tried a little shiny-tech salesmanship on John, but couldn't expect him to start over. (At that time he was deeply in the C++ world; nowadays he is a Haskell expert!)
 
-I couldn't expect John to start over - at that time he was not the Haskell fan he is now!
 So in 2007 I began experimenting.
 I built a toy parser in a few different languages, and it was easiest in Haskell.
 I kept tinkering.
 Goals included:
 
-- to get better at Haskell by building something useful to me,
-- to learn how well Haskell could work for real-world applications,
-- and eventually: to provide a new implementation focussing more on
-  ease of use, absence of user-visible bugs, and high-quality documentation and web presence.
-  Also to experiment with new user interfaces, APIs, etc.
+1. to get better at Haskell by building something useful to me
+2. to implement at least the basic core of Ledger, adapted for my needs
+3. to learn how well Haskell could work for real-world applications
+
+And later:
+
+4. to provide a new highly-compatible implementation of at least the basics of Ledger, useful to others, with a greater focus on ease of use, reliability, documentation and web presence
+5. to experiment with new user interfaces, APIs, etc.
 
 Before too long I had a tool that was useful to me. With Ledger still installed,
-and by maintaining high compatibility, I now had two tools  with different strengths,
-each providing a comparison for the other in case of confusion or suspected bugs,
-which was itself quite valuable.
+and by maintaining high compatibility, I now had two implementations which could be compared at times of confusion about functionality or suspected bugs/bookkeeping errors, which was quite valuable.
 
-The Ledger project later revived and has attracted new active contributors.
-I have remained active in that community, sharing discoveries and
-design discussions, and we have seen many ideas travelling in both directions.
-hledger shared #ledger's IRC channel until 2014, when I added
-[#hledger](http://irc.hledger.org) to allow us more space.
+Later, John returned for a while and finished Ledger version 3, the Ledger project attracted new contributors and maintainers, and incremental improvements resumed. I continued sharing discoveries and design discussions, and we have seen many ideas propagating in both directions. I think having independent but compatible implementations has been
+quite helpful for troubleshooting, exploring the design space, and growing the community.
+For a while I ran [LedgerTips](http://twitter.com/LedgerTips) on twitter.
 
-I think having independent but compatible implementations has been
-quite helpful for troubleshooting, exploring the design space, and
-growing the "Ledger-likes" community.
-My other projects in that direction include
-the [ledger-cli.org](http://ledger-cli.org) site,
-[LedgerTips](http://twitter.com/LedgerTips),
-IRC support on #ledger,
-and now [plaintextaccounting.org](http://plaintextaccounting.org).
+hledger shared #ledger's IRC channel until 2014, when I created 
+the [#hledger](http://irc.hledger.org) channel (now accessible on Libera IRC and Matrix).
+
+In 2016 I set up https://plaintextaccounting.org as a common entry point and information hub.
+
+The further adventures in hledger's development are not yet told, other than in the commit log, issue tracker and mail list, but other contributors joined the project and [CREDITS](CREDITS.html) notes some of their work.
 
 ## Interoperating
 
