@@ -1,14 +1,17 @@
 CURRENT_RELEASE=1.25
 
-# Render the current site and current release and dev manuals, saving them in out.
+# Render the current site and current release and dev manuals, saving them in out (and restoring the sitemap files).
 build:
 	@echo "building site with current manuals in /"
 	@make -s build3-dev
 	@make -s build3-1.25
+	@git checkout -- out/sitemap.xml out/sitemap.txt
 
 sitemap: copy-old-manuals
-	sscli -b https://hledger.org -r out/ -v
+	@echo "building sitemap.xml"
+	@sscli -b https://hledger.org -r out/ -v
 
+# copy the old manuals under out, for long enough to build sitemap.xml
 copy-old-manuals:
 	for d in out2/*; do cp $$d/* out/`basename $$d`; done
 
