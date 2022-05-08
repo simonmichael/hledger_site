@@ -6,6 +6,9 @@ build:
 	@make -s build3-dev
 	@make -s build3-1.25
 
+sitemap:
+	sscli -b https://hledger.org -r out/ -v
+
 # Install some required tools.
 tools:
 	cargo install mdbook mdbook-toc
