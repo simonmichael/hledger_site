@@ -6,8 +6,11 @@ build:
 	@make -s build3-dev
 	@make -s build3-1.25
 
-sitemap:
+sitemap: copy-old-manuals
 	sscli -b https://hledger.org -r out/ -v
+
+copy-old-manuals:
+	for d in out2/*; do cp $$d/* out/`basename $$d`; done
 
 # Install some required tools.
 tools:
