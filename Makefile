@@ -1,31 +1,22 @@
 CURRENT_RELEASE=1.25
 
-# Render the current site and current release and dev manuals, saving them in out (and restoring the sitemap files).
+# Render the current site and current dev and release manuals, saving them in out.
+# The sitemap files are restored afterward (mdbook removes them).
+# The current release should be the last version rendered.
 build:
 	@echo "building site with current manuals in /"
 	@make -s build3-dev
 	@make -s build3-1.25
 	@git checkout -- out/sitemap.xml out/sitemap.txt
 
-sitemap: copy-old-manuals
-	@echo "building sitemap.xml"
-	@sscli -b https://hledger.org -r out/ -v
-
-# copy the old manuals under out, for long enough to build sitemap.xml
-copy-old-manuals:
-	for d in out2/*; do cp $$d/* out/`basename $$d`; done
-
-# Install some required tools.
-tools:
-	cargo install mdbook mdbook-toc
-
-# Render "all" versions of manuals (excluding old versions not packaged anywhere). 
+# Render most versions of manuals (excluding old versions not packaged anywhere). 
 # We want to link only one version in the sidebar, but mdbook won't render (and will remove) unlinked versions.
 # We work around this by, for each version,
 # temporarily linking that version of the manuals in SUMMARY, rendering the whole site,
 # and saving the rendered manuals in out2/VERSION/.
 # Re-rendering the whole site is of course wasteful and slow, but ensures all manual versions
 # include the up-to-date site sidebar.
+# The sitemap files are restored afterward (mdbook removes them).
 # The current release should be the last version rendered. Keep synced with site.js:
 all buildall: \
 	build7-1.0 \
@@ -40,7 +31,21 @@ all buildall: \
 	build3-1.22 \
 	build3-1.23 \
 	build3-1.24 \
-	build3-1.25 \
+	build3-1.25
+	@git checkout -- out/sitemap.xml out/sitemap.txt
+
+sitemap: copy-old-manuals
+	@echo "building sitemap.xml"
+	@sscli -b https://hledger.org -r out/ -v
+
+# copy the old manuals under out, for long enough to build sitemap.xml
+copy-old-manuals:
+	for d in out2/*; do cp $$d/* out/`basename $$d`; done
+
+# Install some required tools.
+tools:
+	cargo install mdbook mdbook-toc
+
 
 # build7/build3 naming is to help avoid running the wrong rule for the version
 
