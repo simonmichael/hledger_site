@@ -333,7 +333,7 @@ The further adventures in hledger's development are not yet told, other than in 
 
 ## Interoperating
 
-Tips for co-using/converting/switching Ledger and hledger.
+Tips for co-using/converting/migrating between Ledger and hledger.
 
 Ledger's and hledger's journal formats are the same at the core,
 so you can continue using both tools on the same files, 
