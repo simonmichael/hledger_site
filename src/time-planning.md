@@ -155,15 +155,15 @@ I have an iTerm2 Hotkey Window (a terminal that drops down on ALT-space) with si
 
 3. -5: updating (using [entr](https://eradman.com/entrproject/)) time [budget reports](hledger.html#budget-report) for the current day/week/month, using [hledger 1.9.1+](install.html):
 
-       ls time.journal time-2018.timedot time-daily.budget  | entr sh -c 'clear; hledger -f time.journal -f time-daily.budget  bal --budget -1 -D date:today-tomorrow'
-
-   <!-- -->
-
-       ls time.journal time-2018.timedot time-weekly.budget | entr sh -c 'clear; hledger -f time.journal -f time-weekly.budget bal --budget -1 -W date:thisweek-nextweek'
-
-   <!-- -->
-
-       ls time.journal time-2018.timedot time-weekly.budget | entr sh -c 'clear; hledger -f time.journal -f time-weekly.budget bal --budget -1 -M date:thismonth-nextmonth'
+    ```
+    ls time.journal time-2018.timedot time-daily.budget  | entr sh -c 'clear; hledger -f time.journal -f time-daily.budget  bal --budget -1 -D date:today-tomorrow'
+    ```
+    ```
+    ls time.journal time-2018.timedot time-weekly.budget | entr sh -c 'clear; hledger -f time.journal -f time-weekly.budget bal --budget -1 -W date:thisweek-nextweek'
+    ```
+    ```
+    ls time.journal time-2018.timedot time-weekly.budget | entr sh -c 'clear; hledger -f time.journal -f time-weekly.budget bal --budget -1 -M date:thismonth-nextmonth'
+    ```
 
 6. an updating [hledger-ui](hledger-ui.html) for exploring time usage (shift-up/down to resize period, shift-left/right to step through time, t to return to today):
 
