@@ -4,6 +4,14 @@
 <!-- toc -->
 </div>
 
+Some notes relating to time tracking and budgeting.
+
+## See also
+
+- [hledger manual > Timedot format](hledger.html#timedot-format)
+- [hledger manual > Timeclock format](hledger.html#timeclock-format)
+- <https://github.com/linuxcaffe/task-timelog-hook> - use hledger for time reporting with Taskwarrior's task start/stop times.
+
 ## A time budgeting workflow
 
 A [summary](https://news.ycombinator.com/item?id=19203521) of Simon's 2018-2019 time budgeting workflow:
@@ -169,8 +177,3 @@ I have an iTerm2 Hotkey Window (a terminal that drops down on ALT-space) with si
 
        hledger-ui --watch --change date:today -f time.journal
 
-## See also
-
-- [hledger manual > Timedot format](hledger.html#timedot-format)
-- [hledger manual > Timeclock format](hledger.html#timeclock-format)
-- <https://github.com/linuxcaffe/task-timelog-hook> - use hledger for time reporting with Taskwarrior's task start/stop times.
