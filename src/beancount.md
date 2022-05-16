@@ -2,6 +2,10 @@
 
 Tips for co-using/converting/switching Beancount and hledger.
 
+See also:
+- - https://www.libhunt.com/compare-hledger-vs-beancount
+
+
 Beancount's journal format is different enough from hledger's
 that one tool can't directly read the other's files, currently.
 
