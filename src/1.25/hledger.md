@@ -3821,13 +3821,13 @@ Eg, to see any importable transactions which CSV rules have not
 categorised:
 
 ``` shell
-$ hledger import --dry bank.csv | hledger -f- -I print unknown
+$ hledger import --dry-run bank.csv | hledger -f- -I print unknown
 ```
 
 or (live updating):
 
 ``` shell
-$ ls bank.csv* | entr bash -c 'echo ====; hledger import --dry bank.csv | hledger -f- -I print unknown'
+$ ls bank.csv* | entr bash -c 'echo ====; hledger import --dry-run bank.csv | hledger -f- -I print unknown'
 ```
 
 #### Importing balance assignments
@@ -7579,7 +7579,7 @@ Eg:
 ``` shell
 # download the latest CSV files, then run this command.
 # Note, no -f flags needed here.
-$ hledger import *.csv [--dry]
+$ hledger import *.csv [--dry-run]
 ```
 
 This method works for most CSV files. (Where records have a stable
