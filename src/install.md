@@ -482,6 +482,11 @@ If you have [nix], you can use nix-env to build hledger from source
 (but we try to provide a [nix command](#multiple-platforms) that installs
 already-cached binaries, see above).
 
+### On Android
+
+Here's <a href="https://libera.ems.host/_matrix/media/r0/download/libera.chat/51835530d2b9eed094096d8a2c79e03dda2c35fb">how to build hledger on Android with Termux</a> 
+(if your phone has plenty of memory).
+
 ### C libraries required
 
 On some unix systems, certain required C libraries may not be installed. 
