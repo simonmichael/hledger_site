@@ -21,7 +21,7 @@ https://www.stephendiehl.com/posts/marketing.html#persuasion-and-decision-makers
 4. It imparts positivity
 -->
 <div id="tagline">
-Fast, robust, intuitive<br>
+Correct, fast, intuitive<br>
 plain text accounting.
 </div>
 
