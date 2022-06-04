@@ -115,6 +115,7 @@ MANUALS=\
 # as src/VER/, copied from the parent directory, which should be a
 # clean checkout of the main hledger repo's master branch. (Note
 # Shake.hs there might get rebuilt or have its deps installed.)
+# Also updates the "current" symlink.
 snapshot-%:
 	git -C .. checkout $* && \
 	(cd ..; ./Shake.hs webmanuals; git reset --hard) && \
@@ -122,7 +123,7 @@ snapshot-%:
 	for f in $(MANUALS); do test -e $$f && cp $$f src/$*; done && \
 	git -C .. checkout master && \
 	git add src/$* && git commit -m "snapshot of $* manuals" src/$* && \
-	echo "remember to point the src/current symlink to the current release manuals"
+	(cd src; rm current; ln -s $* current)
 
 # Run this after mdbook build/serve to make old manuals visible via symlinks.
 # These will be wiped by the next mdbook build/serve.
