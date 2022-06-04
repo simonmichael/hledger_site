@@ -86,7 +86,7 @@ and [share any feedback](support.html) so we can make this process smoother!
     </td>
     <td>
       <div class="command">
-        <a href="https://github.com/simonmichael/hledger/releases/tag/1.26">hledger-macos.zip</a>
+        <a href="https://github.com/simonmichael/hledger/releases/tag/1.26">hledger-mac-x64.zip</a>
       </div>
       <div class="notes"></div>
     </td>
@@ -119,7 +119,7 @@ and [share any feedback](support.html) so we can make this process smoother!
     </td>
     <td>
       <div class="command">
-        <a href="https://github.com/simonmichael/hledger/releases/tag/1.26">hledger-windows.zip</a>
+        <a href="https://github.com/simonmichael/hledger/releases/tag/1.26">hledger-windows-x64.zip</a>
         <!-- <span style="font-weight:normal; font-style:italic; font-size:small;">
           (Also runs on other platforms with <a href="https://www.winehq.org">Wine</a>)
         </span> -->
