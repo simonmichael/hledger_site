@@ -38,13 +38,13 @@
 <!-- **HIGHLIGHTS** -->
 <!-- ([announcement](https://groups.google.com/g/hledger/LINK)) -->
 
-<!-- ### project changes 1.XX -->
-
 <!-- ### hledger 1.XX -->
 
 <!-- ### hledger-ui 1.XX -->
 
 <!-- ### hledger-web 1.XX -->
+
+<!-- ### project changes 1.XX -->
 
 <!-- ### credits 1.XX -->
 
@@ -62,6 +62,127 @@ Major releases and user-visible changes, collected from the changelogs (
 Changes in hledger-install.sh are shown
 [here](https://github.com/simonmichael/hledger/commits/master/hledger-install/hledger-install.sh).
 
+
+## 2022-06-04 hledger-1.26
+
+**Miscellaneous improvements.**
+<!-- ([announcement](https://groups.google.com/g/hledger/LINK)) -->
+
+### hledger 1.26
+
+Improvements
+
+- `register` and `aregister` have been made faster, by 
+
+  - considering only the first 1000 items for choosing column
+    widths. You can restore the old behaviour (guaranteed alignment
+    across all items) with the new `--align-all` flag.
+    ([#1839](https://github.com/simonmichael/hledger/issues/1839), Stephen Morgan)
+
+  - discarding cost data more aggressively, giving big speedups for
+    large journals with many costs.
+  	([#1828](https://github.com/simonmichael/hledger/issues/1828), Stephen Morgan)
+
+- Most error messages from the journal reader and the `check` command now use
+  a consistent layout, with an "Error:" prefix, line and column numbers,
+  and an excerpt highlighting the problem. Work in progress.
+  ([#1436](https://github.com/simonmichael/hledger/issues/1436)) (Simon Michael, Stephen Morgan)
+
+- `hledger check ordereddates` now always checks all transactions
+  (previously it could be restricted by query arguments).
+
+- The `--pivot` options now supports a `status` argument, to pivot on transaction status.
+
+- Update bash completions (Jakob Schöttl)
+
+Fixes
+
+- Value reports with `--date2` and a report interval (like `hledger bal -VM --date2`)
+  were failing with a "expected all spans to have an end date" error since 1.22;
+  this is now fixed.
+  ([#1851](https://github.com/simonmichael/hledger/issues/1851), Stephen Morgan)
+
+- In CSV rules, interpolation of a non-existent field like `%999` or `%nosuchfield`
+  is now ignored (previously it inserted that literal text).
+  Note this means such an error will not be reported; 
+  Simon chose this as the more convenient behaviour when converting CSV.
+  Experimental.
+  ([#1803](https://github.com/simonmichael/hledger/issues/1803), [#1814](https://github.com/simonmichael/hledger/issues/1814)) (Stephen Morgan)
+
+- `--infer-market-price` was inferring a negative price when selling.
+  ([#1813](https://github.com/simonmichael/hledger/issues/1813), Stephen Morgan)
+
+- Allow an escaped forward slash in regular expression account aliases.
+  ([#982](https://github.com/simonmichael/hledger/issues/982), Stephen Morgan)
+
+- The `tags` command now also lists tags from unused account declarations.
+  It also has improved command-line help layout.
+  ([#1857](https://github.com/simonmichael/hledger/issues/1857))
+
+- `hledger accounts` now shows its debug output at a more appropriate level (4).
+
+### hledger-ui 1.26
+
+- Uses hledger 1.26.
+
+### hledger-web 1.26
+
+Fixes
+
+- Don't add link URLs when printing.
+
+Improvements
+
+- Now builds with GHC 9.2.
+
+- Uses hledger 1.26.
+
+### project changes 1.26
+
+Scripts/addons
+
+- renamed hledger-number.sh to hledger-simplebal
+
+- added hledger-git, hledger-pijul
+
+- fin (and bin) scripts show available scripts and their help
+
+- renamed aliases.sh to bashrc
+
+- Get hledger-print-location working. (Stephen Morgan)
+
+Docs
+
+- README cleanup, inspired by feedback from README reviewer Lars Wirzenius.
+
+- Clearer sponsoring info and more complete sponsor lists on website and README.
+
+- The new <https://github.com/simonmichael/hledger_finance> repo
+  keeps track of our public finances (on Open Collective, Liberapay etc.)
+
+Examples
+
+- invoice: calculate dates accurately on last days of month
+
+Process
+
+- Stackage nightly and GHC 9.2 are now the default for dev builds.
+
+- CI workflows: 
+
+  - Workflows and binaries have more consistent naming, mentioning platform and architecture.
+  - The main test workflow is now `linux-x64-test`, replacing `push` and `pull`.
+    It runs for both pushes and pull requests, and generates binaries on every run.
+  - Pushes/merges to master, including Simon's, are required to have passed
+    `linux-x64-test` on another github branch first.
+  - Mac and Windows binaries are now stripped also (if applicable).
+
+- `make buildtimes`, `make buildtimes-cabal` show GHC codegen times.
+
+### credits 1.26
+
+Simon Michael,
+Stephen Morgan.
 
 ## 2022-03-04 hledger 1.25
 
@@ -254,7 +375,7 @@ Patrik Keller.
 Fixes
 
 - `balance --declared` is now filtered correctly by a `not:ACCT` query.
-  (#1783)
+  ([#1783](https://github.com/simonmichael/hledger/issues/1783))
 
 - More reliable --version output, with commit date and without patch level.
 
@@ -263,10 +384,10 @@ Fixes
 Fixes
 
 - An extra "root" account is no longer shown (a regression in 1.24).
-  (#1782)
+  ([#1782](https://github.com/simonmichael/hledger/issues/1782))
 
 - Declared accounts are now filtered correctly by a not:ACCT query.
-  (#1783)
+  ([#1783](https://github.com/simonmichael/hledger/issues/1783))
 
 - More reliable --version output, with commit date and without patch level.
 
