@@ -193,7 +193,7 @@ and [share any feedback](support.html) so we can make this process smoother!
   <tr> <!-- ALPINE -->
     <td>
       <div class="badges">
-        <a href="https://pkgs.alpinelinux.org/packages?name=hledger*&branch=edge"><img alt="Alpine edge" src="https://img.shields.io/badge/Alpine_edge_package-1.25-green.svg" /></a>
+        <a href="https://pkgs.alpinelinux.org/packages?name=hledger*&branch=edge"><img alt="Alpine edge" src="https://img.shields.io/badge/Alpine_edge_package-1.25-red.svg" /></a>
       </div>
     </td>
     <td>
