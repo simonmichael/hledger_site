@@ -11,6 +11,8 @@ function sidebarHideAllPages() {
   $('#sidebar li:contains("ALL PAGES") ~ li, #sidebar li:contains("ALL PAGES")').hide();  // XXX requires jquery..
 }
 
+var currentrelease = '1.26';
+
 function addDocVersions() {
   var parts = window.location.pathname.split('/');
   var page = parts.length > 0 ? parts[parts.length-1].slice(0,-5) : '';
@@ -27,6 +29,7 @@ function addDocVersions() {
     // include just packaged versions to save space (keep synced with site/Makefile)
     docversions.innerHTML = '\
       <a href="/dev/' +newdest3+'">dev</a>  · \
+      <a href="/1.26/'+newdest3+'">1.26</a> · \
       <a href="/1.25/'+newdest3+'">1.25</a> · \
       <a href="/1.24/'+newdest3+'">1.24</a> · \
       <a href="/1.23/'+newdest3+'">1.23</a> · \
@@ -41,8 +44,6 @@ function addDocVersions() {
       <a href="/1.0/' +newdest7+'">1.0</a>    \
     ';
 }
-
-var currentrelease = '1.25';
 
 function highlightCurrentDocVersion() {
   $('.docversions').each( function() {
