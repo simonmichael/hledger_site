@@ -80,7 +80,7 @@ and [share any feedback](support.html) so we can make this process smoother!
   <tr> <!-- CI BINARIES -->
     <td>
       <div class="badges">
-        <a href=""><img alt="hledger CI binaries" src="https://img.shields.io/badge/hledger_CI_binaries-1.26-brightgreen.svg" /></a><br>
+        <a><img alt="hledger CI binaries" src="https://img.shields.io/badge/hledger_CI_binaries-1.26-brightgreen.svg" /></a><br>
       </div>
       <!-- <div class="notes">Linux, Mac, Windows</div> -->
     </td>
@@ -113,7 +113,7 @@ and [share any feedback](support.html) so we can make this process smoother!
   <tr> <!-- CI BINARIES -->
     <td>
       <div class="badges">
-        <a href=""><img alt="hledger CI binaries" src="https://img.shields.io/badge/hledger_CI_binaries-1.26-brightgreen.svg" /></a><br>
+        <a><img alt="hledger CI binaries" src="https://img.shields.io/badge/hledger_CI_binaries-1.26-brightgreen.svg" /></a><br>
       </div>
       <!-- <div class="notes">Linux, Mac, Windows</div> -->
     </td>
@@ -156,7 +156,7 @@ and [share any feedback](support.html) so we can make this process smoother!
   <tr> <!-- CI BINARIES -->
     <td>
       <div class="badges">
-        <a href=""><img alt="hledger CI binaries" src="https://img.shields.io/badge/hledger_CI_binaries-1.26-brightgreen.svg" /></a><br>
+        <a><img alt="hledger CI binaries" src="https://img.shields.io/badge/hledger_CI_binaries-1.26-brightgreen.svg" /></a><br>
       </div>
       <!-- <div class="notes">Linux, Mac, Windows</div> -->
     </td>
