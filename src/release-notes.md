@@ -91,7 +91,7 @@ Improvements
 - `hledger check ordereddates` now always checks all transactions
   (previously it could be restricted by query arguments).
 
-- The `--pivot` options now supports a `status` argument, to pivot on transaction status.
+- The `--pivot` option now supports a `status` argument, to pivot on transaction status.
 
 - Update bash completions (Jakob Schöttl)
 
@@ -182,7 +182,10 @@ Process
 ### credits 1.26
 
 Simon Michael,
-Stephen Morgan.
+Stephen Morgan,
+Jakob Schöttl,
+Patrik Keller.
+
 
 ## 2022-03-04 hledger 1.25
 
