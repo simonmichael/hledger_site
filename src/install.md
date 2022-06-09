@@ -354,7 +354,7 @@ and [share any feedback](support.html) so we can make this process smoother!
   <tr> <!-- DOCKER -->
     <td>
       <div class="badges">
-        <a href="https://hub.docker.com/r/dastapov/hledger"><img alt="Docker" src="https://img.shields.io/badge/Docker_image-1.25-red.svg" /></a><br>
+        <a href="https://hub.docker.com/r/dastapov/hledger"><img alt="Docker" src="https://img.shields.io/badge/Docker_image-1.26-brightgreen.svg" /></a><br>
         <a href="https://hub.docker.com/search?q=hledger&amp;type=image&amp;sort=updated_at&amp;order=desc">more..</a>
       </div>
       <!-- <div class="notes">Linux, Mac, Windows</div> -->
