@@ -60,41 +60,45 @@ $ export PATH=$PATH:$PWD/bin
 
 ### Shell aliases / functions
 
-[`bin/bashrc`](https://github.com/simonmichael/hledger/blob/master/bin/bashrc)
-defines some example bash aliases and functions.
-After the above steps, as a bash user,
-
-```cli
-# customise FINDIR and LEDGER_FILE at the top of bin/bashrc
-$ source bin/bashrc
-$ fin        # list the scripts available
-```
+- [`bin/bashrc`](https://github.com/simonmichael/hledger/blob/master/bin/bashrc)
+  defines some example bash aliases and functions.
+  After the above steps, as a bash user,
+  ```cli
+  # customise FINDIR and LEDGER_FILE at the top of bin/bashrc
+  $ source bin/bashrc
+  $ fin        # list the scripts available
+  ```
 
 ### Non-Haskell scripts
 
-[`hledger-simplebal`](https://github.com/simonmichael/hledger/blob/master/bin/hledger-simplebal)
-is a standalone bash script. 
-It calls hledger with lots of options (read it to see what it does).
+- [`paypaljson`](https://github.com/simonmichael/hledger/blob/master/bin/paypaljson)
+  downloads the last 30 days of Paypal transactions (requires a free developer account & API key).
 
-```cli
-$ hledger simplebal
-```
+- [`paypaljson2csv`](https://github.com/simonmichael/hledger/blob/master/bin/paypal2csv)
+  converts the above to CSV, with format similar to the CSV you could download manually.
 
-[`hledger-git`](https://github.com/simonmichael/hledger/blob/master/bin/hledger-git)
-provides easy version control for your journal files, using git. Run it with no arguments for help.
-```cli
-$ hledger git log
-$ hledger git status
-$ hledger git record [MSG]
-```
+- [`hledger-simplebal`](https://github.com/simonmichael/hledger/blob/master/bin/hledger-simplebal)
+  is a standalone bash script. 
+  It calls hledger with lots of options (read it to see what it does).
+  ```cli
+  $ hledger simplebal
+  ```
 
-[`hledger-pijul`](https://github.com/simonmichael/hledger/blob/master/bin/hledger-pijul)
-provides the same thing using the [pijul](https://pijul.org) version control system..
-```cli
-$ hledger pijul log
-$ hledger pijul status
-$ hledger pijul record [MSG]
-```
+- [`hledger-git`](https://github.com/simonmichael/hledger/blob/master/bin/hledger-git)
+  provides easy version control for your journal files, using git. Run it with no arguments for help.
+  ```cli
+  $ hledger git log
+  $ hledger git status
+  $ hledger git record [MSG]
+  ```
+
+- [`hledger-pijul`](https://github.com/simonmichael/hledger/blob/master/bin/hledger-pijul)
+  provides the same thing using the [pijul](https://pijul.org) version control system..
+  ```cli
+  $ hledger pijul log
+  $ hledger pijul status
+  $ hledger pijul record [MSG]
+  ```
 
 ### Haskell scripts
 
@@ -105,48 +109,47 @@ You can run them interpreted, for easy customisation (you will need the
 [`stack`](https://haskellstack.org) tool).  Or you can
 compile them for faster startup. They include:
 
-[`hledger-print-location.hs`](https://github.com/simonmichael/hledger/blob/master/bin/hledger-print-location.hs)
-is a simple example of a haskell script with hledger-style command-line help.
-It is a custom version of the built-in `print` command, 
-that adds the file and line number to every transaction, as a tag:
+- [`hledger-print-location.hs`](https://github.com/simonmichael/hledger/blob/master/bin/hledger-print-location.hs)
+  is a simple example of a haskell script with hledger-style command-line help.
+  It is a custom version of the built-in `print` command, 
+  that adds the file and line number to every transaction, as a tag:
+  ```cli
+  $ hledger print-location -f hledger/examples/sample.journal desc:eat
+  2008/06/03 * eat & shop
+    ; location: /Users/simon/src/hledger/examples/sample.journal:30
+    expenses:food                  $1
+    expenses:supplies              $1
+    assets:cash
+  ```
 
-```cli
-$ hledger print-location -f hledger/examples/sample.journal desc:eat
-2008/06/03 * eat & shop
-  ; location: /Users/simon/src/hledger/examples/sample.journal:30
-  expenses:food                  $1
-  expenses:supplies              $1
-  assets:cash
-```
+- [`hledger-check-tagfiles.hs`](https://github.com/simonmichael/hledger/blob/master/bin/hledger-check-tagfiles.hs)
+  interprets all tag values containing a `/` (forward slash) as file paths, and checks that those files exist.
 
-[`hledger-check-tagfiles.hs`](https://github.com/simonmichael/hledger/blob/master/bin/hledger-check-tagfiles.hs)
-interprets all tag values containing a `/` (forward slash) as file paths, and checks that those files exist.
+- [`hledger-check-tagfiles.cabal.hs`](https://github.com/simonmichael/hledger/blob/master/bin/hledger-check-tagfiles.cabal.hs)
+  is the above as a cabal script.
 
-[`hledger-check-tagfiles.cabal.hs`](https://github.com/simonmichael/hledger/blob/master/bin/hledger-check-tagfiles.cabal.hs)
-is the above as a cabal script.
+- [`hledger-swap-dates.hs`](https://github.com/simonmichael/hledger/blob/master/bin/hledger-swap-dates.hs)
+  prints transactions with their date and date2 fields swapped.
 
-[`hledger-swap-dates.hs`](https://github.com/simonmichael/hledger/blob/master/bin/hledger-swap-dates.hs)
-prints transactions with their date and date2 fields swapped.
+- [`hledger-balance-as-budget.hs`](https://github.com/simonmichael/hledger/blob/master/bin/hledger-balance-as-budget.hs)
+  uses one balance report to set budget goals for another balance report.
 
-[`hledger-balance-as-budget.hs`](https://github.com/simonmichael/hledger/blob/master/bin/hledger-balance-as-budget.hs)
-uses one balance report to set budget goals for another balance report.
+- [`hledger-combine-balances.hs`](https://github.com/simonmichael/hledger/blob/master/bin/hledger-combine-balances.hs)
+  shows balance reports for two different periods side by side.
 
-[`hledger-combine-balances.hs`](https://github.com/simonmichael/hledger/blob/master/bin/hledger-combine-balances.hs)
-shows balance reports for two different periods side by side.
+- [`hledger-smooth.hs`](https://github.com/simonmichael/hledger/blob/master/bin/hledger-smooth.hs)
+  is an incomplete attempt at automatically splitting infrequent/irregular transactions.
 
-[`hledger-smooth.hs`](https://github.com/simonmichael/hledger/blob/master/bin/hledger-smooth.hs)
-is an incomplete attempt at automatically splitting infrequent/irregular transactions.
-
-[`hledger-check-fancyassertions.hs`](https://github.com/simonmichael/hledger/blob/master/bin/hledger-check-fancyassertions.hs)
-is a more complex command that checks account balances in ways that the built-in balance assertions can't.
+- [`hledger-check-fancyassertions.hs`](https://github.com/simonmichael/hledger/blob/master/bin/hledger-check-fancyassertions.hs)
+  is a more complex command that checks account balances in ways that the built-in balance assertions can't.
 
 ## More tools
 
-[`ledger-autosync`](https://pypi.python.org/pypi/ledger-autosync)
-can download, deduplicate and/or convert OFX data (includes hledger support;
+- [`ledger-autosync`](https://pypi.python.org/pypi/ledger-autosync)
+  can download, deduplicate and/or convert OFX data (includes hledger support;
 rename it to hledger-autosync to see it in commands list).
 
-[plaintextaccounting: related tools](http://plaintextaccounting.org/#related-tools)
-lists more plain text accounting helper tools.
+- [plaintextaccounting: related tools](http://plaintextaccounting.org/#related-tools)
+  lists more plain text accounting helper tools.
 
 
