@@ -1,6 +1,7 @@
 # Accounting concepts
 
 <div class=pagetoc>
+
 <!-- toc -->
 </div>
 

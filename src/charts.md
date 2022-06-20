@@ -1,6 +1,7 @@
 # Charts and Graphs
 
 <div class=pagetoc>
+
 <!-- toc -->
 </div>
 

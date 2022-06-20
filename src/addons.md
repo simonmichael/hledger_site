@@ -1,6 +1,7 @@
 # Add-ons & scripts
 
 <div class=pagetoc>
+
 <!-- toc -->
 </div>
 

@@ -5,6 +5,7 @@ The TL;DR intro to hledger.           -*- fill-column:78; -*-
 # hledger Quick Start
 
 <div class=pagetoc>
+
 <!-- toc -->
 </div>
 

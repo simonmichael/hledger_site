@@ -1,6 +1,7 @@
 # Create a journal
 
 <div class=pagetoc>
+
 <!-- toc -->
 </div>
 

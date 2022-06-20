@@ -1,6 +1,7 @@
 # Simon's setup notes
 
 <div class=pagetoc>
+
 <!-- toc -->
 </div>
 

@@ -1,6 +1,7 @@
 # Tutorial: hledger-web
 
 <div class=pagetoc>
+
 <!-- toc -->
 </div>
 

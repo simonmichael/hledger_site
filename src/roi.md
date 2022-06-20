@@ -1,6 +1,7 @@
 # Calculate return on investment
 
 <div class=pagetoc>
+
 <!-- toc -->
 </div>
 

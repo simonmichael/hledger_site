@@ -1,6 +1,7 @@
 # Common journal entries
 
 <div class=pagetoc>
+
 <!-- toc -->
 </div>
 

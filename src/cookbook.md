@@ -1,6 +1,7 @@
 # hledger User Cookbook
 
 <div class=pagetoc>
+
 <!-- toc -->
 </div>
 

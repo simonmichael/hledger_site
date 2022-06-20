@@ -4,6 +4,7 @@
 # hledger
 
 <div class="pagetoc manual">
+
 <!-- toc -->
 </div>
 

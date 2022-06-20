@@ -1,6 +1,7 @@
 # Balancing the accounting equation
 
 <div class=pagetoc>
+
 <!-- toc -->
 </div>
 

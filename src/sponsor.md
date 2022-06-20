@@ -1,6 +1,7 @@
 # Sponsoring hledger
 
 <div class=pagetoc>
+
 <!-- toc -->
 </div>
 
