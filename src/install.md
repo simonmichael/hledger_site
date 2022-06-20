@@ -1,6 +1,7 @@
 # Install
 
 <div class=pagetoc>
+
 <!-- toc -->
 </div>
 
@@ -63,10 +64,10 @@ div.badges > a > img {
 The current hledger release is **1.26**. ([Release notes](release-notes))
 
 Here are lots of ways to install hledger - choose one that suits your needs.
-Binary packages install quickly but are not always up to date (look for green badges).
-Building from source is slower and requires at least 4G of ram.
-
-After installing, please [check](#pre-flight-checks) your PATH, locale, and installation,
+[Binary packages](#binary-packages) install quickly but are not always up to date (look for green badges below).
+[Building the current release](#build-the-current-release) (or [development version](#build-the-development-version))
+is slower and requires at least 4G of ram.
+After installing, please [check your installation](#check-your-installation),
 and [share any feedback](support.html) so we can make this process smoother!
 
 <br clear=all>
@@ -171,7 +172,7 @@ and [share any feedback](support.html) so we can make this process smoother!
   <tr> <!-- GENTOO -->
     <td>
       <div class="badges">
-        <a href="https://gentoo.zugaina.org/Search?search=hledger"><img alt="Gentoo" src="https://img.shields.io/badge/Gentoo_package-1.25-red.svg" /></a>
+        <a href="https://gentoo.zugaina.org/Search?search=hledger"><img alt="Gentoo" src="https://img.shields.io/badge/Gentoo_package-1.26-brightgreen.svg" /></a>
       </div>
     </td>
     <td>
@@ -193,7 +194,7 @@ and [share any feedback](support.html) so we can make this process smoother!
   <tr> <!-- ALPINE -->
     <td>
       <div class="badges">
-        <a href="https://pkgs.alpinelinux.org/packages?name=hledger*&branch=edge"><img alt="Alpine edge" src="https://img.shields.io/badge/Alpine_edge_package-1.25-red.svg" /></a>
+        <a href="https://pkgs.alpinelinux.org/packages?name=hledger*&branch=edge"><img alt="Alpine edge" src="https://img.shields.io/badge/Alpine_edge_package-1.26-brightgreen.svg" /></a>
       </div>
     </td>
     <td>
@@ -251,6 +252,7 @@ and [share any feedback](support.html) so we can make this process smoother!
   <tr> <!-- UBUNTU -->
     <td>
       <div class="badges">
+        <a href="https://packages.ubuntu.com/jammy/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_22_04/hledger.svg" /></a><br>
         <a href="https://packages.ubuntu.com/impish/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_21_10/hledger.svg" /></a><br>
         <a href="https://packages.ubuntu.com/hirsute/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_21_04/hledger.svg" /></a><br>
         <!-- <a href="https://packages.ubuntu.com/groovy/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_20_10/hledger.svg" /></a><br> badge broken -->
@@ -408,7 +410,7 @@ and [share any feedback](support.html) so we can make this process smoother!
   <tr> <!-- PREVIEWS -->
     <td>
       <div class="badges">
-        <img alt="hledger CI binaries" src="https://img.shields.io/badge/hledger_CI_binaries-Preview-yellow.svg" />
+        <img alt="hledger CI binaries" src="https://img.shields.io/badge/hledger_CI_binaries-Preview-green.svg" />
       </div>
       <!-- <div class="notes">Linux, Mac, Windows</div> -->
     </td>
@@ -424,74 +426,24 @@ and [share any feedback](support.html) so we can make this process smoother!
 
 </table>
 
-## Building the current release
-<!-- <img alt="Release source" src="https://img.shields.io/badge/Release_source-1.26-brightgreen.svg" /> -->
+
+## Build the current release
+
+<img alt="Release source" src="https://img.shields.io/badge/Release_source-1.26-brightgreen.svg" />
 
 You can build hledger from its source code on any machine with [GHC] and sufficient RAM
-(4G recommended) and disk space (up to 2G for a first build).
-Including all dependencies, this could take anywhere from a minute to an hour.
+(4G recommended) and free disk space (up to 2G for a first-time Haskell build).
 
-### With hledger-install
+1. Check [build requirements](#build-requirements)
+2. Build using one of the [build methods](#build-methods)
 
-This is a good choice if you are new to Haskell and its build tools.
-On any machine with [bash] (and possibly make, gcc...):
-download and run the [hledger-install.sh][hledger-install] script
-to build the current release of the hledger tools, plus some [add-ons], in a relatively reliable way.
-It will use either stack or cabal if you have them,
-or will install stack in ~/.local/bin if needed,
-and it installs the hledger tools in ~/.local/bin or ~/.cabal/bin respectively.
+### Build requirements
 
-<div class="builder-command">
-  curl -sO https://raw.githubusercontent.com/simonmichael/hledger/master/hledger-install/hledger-install.sh <br>
-  less hledger-install.sh <em style="margin-left:1em; font-weight:normal;"># <- good practice: inspect downloaded scripts before running</em><br>
-  bash hledger-install.sh
-</div>
+#### C libraries
 
-### With stack
-
-If you have [stack], you can run it yourself
-to install the main hledger tools in ~/.local/bin:
-
-<div class="builder-command">
-  stack update <br>
-  stack install --resolver=lts-18 hledger-lib-1.26 hledger-1.26 hledger-ui-1.26 hledger-web-1.26 --silent
-</div>
-
-Your `stack --version` should be modern (at least 2.7) for best results.
-(You can usually upgrade stack quickly with `stack upgrade`.)
-On Windows, prefer the 64-bit version of stack, 
-and omit hledger-ui from this command (unless you are in [WSL]).
-
-### With cabal
-
-If you have [GHC] and [cabal], you can run cabal yourself
-to install the main hledger tools in ~/.cabal/bin:
-
-<div class="builder-command">
-  cabal update <br>
-  cabal install alex happy<br>
-  cabal install hledger-1.26 hledger-ui-1.26 hledger-web-1.26
-</div>
-
-Your `cabal --version` should be modern (at least 3.2) for best results.
-On Windows, omit hledger-ui from this command (unless you are in [WSL]).
-
-### With nix
-
-If you have [nix], you can use nix-env to build hledger from source 
-(but we try to provide a [nix command](#multiple-platforms) that installs
-already-cached binaries, see above).
-
-### On Android
-
-Here's <a href="https://libera.ems.host/_matrix/media/r0/download/libera.chat/51835530d2b9eed094096d8a2c79e03dda2c35fb">how to build hledger on Android with Termux</a> 
-(if your phone has plenty of memory).
-
-### C libraries required
-
-On some unix systems, certain required C libraries may not be installed. 
-So if you see errors like "*cannot find -ltinfo*" when building hledger, 
-install them with a command like the below and try again:
+On unix systems, you may need to install additional C libraries 
+to avoid errors like "*cannot find -ltinfo*" when building hledger.
+Install them with a command like the below:
 
 <table>
   <tr>
@@ -507,30 +459,12 @@ install them with a command like the below and try again:
 
 (Please [send updates](#footer) for this list.)
 
-### UTF-8 locale required
+#### UTF-8 locale
 
 On unix systems, when building hledger the `LANG` environment variable
 must be set to a UTF-8-aware locale. See [Check your locale](#check-your-locale).
 
-### Other build tips
-
-- You can use less resources by omitting hledger-ui and hledger-web
-  from the commands above.
-
-- On machines with less than 4G of RAM, the build may use swap space and 
-  take a very long time (overnight), or it may die. 
-  Try adding `-j1` to the stack/cabal install command, and retry a few times, 
-  or ask for [help](support.html).
-
-- It's ok to kill a build and rerun the command later; you won't lose progress.
-
-- You can add `--dry-run` to the stack/cabal/nix install commands
-  to see how much building remains.
-
-- If you have previously installed the hledger tools, 
-  they will usually be overwritten by the new version.
-  If you have them installed in multiple places in your PATH, 
-  you may see a warning, reminding you to remove or rename the old executables.
+#### Known build issues
 
 - Here are some known platform-specific build issues and workarounds:
 
@@ -549,42 +483,169 @@ must be set to a UTF-8-aware locale. See [Check your locale](#check-your-locale)
     <a href="https://github.com/simonmichael/hledger/issues/1033">nix: on Linux, nix-installed hledger won’t handle non-ascii data</a><br>
   </blockquote>
 
-## Building the development version
-<!-- <img alt="Latest source" src="https://img.shields.io/badge/Latest_source-master-brightgreen.svg" /> -->
+#### More build tips
+
+- Building the hledger tools and possibly all their dependencies could take anywhere from a minute to an hour.
+
+- On machines with less than 4G of RAM, the build may use swap space and 
+  take much longer (overnight), or die part-way through. 
+  In such low memory situations, try adding `-j1` to the stack/cabal install command, 
+  and retry a few times, or [ask](support.html) for more tips.
+
+- You could build just hledger CLI to use less time and space, 
+  by omitting hledger-ui and hledger-web from the commands below.
+
+- It's ok to kill a build and rerun the command later; you won't lose progress.
+
+- You can add `--dry-run` to the stack/cabal/nix install commands
+  to see how much building remains.
+
+- If you have previously installed the hledger tools, 
+  they will usually be overwritten by the new version.
+  If you have them installed in multiple places in your PATH, 
+  you may see a warning, reminding you to remove or rename the old executables.
+
+### Build methods
+
+Use any of the following methods:
+
+#### Build with hledger-install
+
+The [hledger-install.sh][hledger-install] script builds the current release of the hledger tools, 
+plus some [add-ons], in a relatively reliable way.
+This is a good choice if you are new to Haskell and its build tools.
+It runs on any machine with [bash] (and possibly make, gcc...) installed.
+It uses stack or cabal if you have them (installing stack in ~/.local/bin otherwise), 
+and installs the hledger tools in ~/.local/bin or ~/.cabal/bin respectively.
+
+<div class="builder-command">
+  curl -sO https://raw.githubusercontent.com/simonmichael/hledger/master/hledger-install/hledger-install.sh <br>
+  less hledger-install.sh <em style="margin-left:1em; font-weight:normal;"># <- good security practice: inspect downloaded scripts before running</em><br>
+  bash hledger-install.sh
+</div>
+
+#### Build with stack
+
+If you have [stack], here is the stack command install the main hledger tools in ~/.local/bin:
+
+<div class="builder-command">
+  stack update <br>
+  stack install --resolver=lts-19 hledger-lib-1.26 hledger-1.26 hledger-ui-1.26 hledger-web-1.26 --silent
+</div>
+
+Your `stack --version` should be modern (at least 2.7) for best results.
+(You can usually upgrade stack quickly with `stack upgrade`.)
+On Windows, prefer the 64-bit version of stack, 
+and omit hledger-ui from this command (unless you are in [WSL]).
+
+#### Build with cabal
+
+If you have [GHC] and [cabal], you can run cabal to install the main hledger tools in ~/.cabal/bin:
+
+<div class="builder-command">
+  cabal update <br>
+  cabal install alex happy<br>
+  cabal install hledger-1.26 hledger-ui-1.26 hledger-web-1.26
+</div>
+
+Your `cabal --version` should be modern (at least 3.2) for best results.
+On Windows, omit hledger-ui from this command (unless you are in [WSL]).
+
+#### Build with nix
+
+If you have [nix], you can use nix-env to build hledger from source 
+(but we try to provide a [nix command](#multiple-platforms) that installs
+already-cached binaries, see above).
+
+#### Build on Android
+
+Here's <a href="https://libera.ems.host/_matrix/media/r0/download/libera.chat/51835530d2b9eed094096d8a2c79e03dda2c35fb">how to build hledger on Android with Termux</a> 
+(if your phone has plenty of memory).
+
+
+## Build the development version
+
+<img alt="Latest source" src="https://img.shields.io/badge/Latest_source-master-green.svg" />
 
 If you want the very [latest improvements](https://github.com/simonmichael/hledger/commits/master),
 our master branch on github is suitable for daily use.
-Get the source with [git](https://en.wikipedia.org/wiki/Git):
-<div class="builder-command">
-git clone https://github.com/simonmichael/hledger <br>
-cd hledger
-</div>
 
-and build and install executables to ~/.local/bin with [stack]:
-<div class="builder-command">
-stack update<br>
-stack install
-</div>
+1. Check [build requirements](#build-requirements) above
 
-or to ~/.cabal/bin with [cabal]:
-<div class="builder-command">
-cabal update<br>
-cabal install alex happy<br>
-cabal install all:exes
-</div>
+2. Get the source with [git](https://en.wikipedia.org/wiki/Git) and enter the source directory:
+    <div class="builder-command">
+    git clone https://github.com/simonmichael/hledger <br>
+    cd hledger
+    </div>
 
-or you can build in a Docker container which includes the necessary tools and dependencies:
-<div class="builder-command">
-git clone https://github.com/simonmichael/hledger <br>
-cd hledger/docker <br>
-./build.sh
-</div>
+3. Build and install executables (to ~/.local/bin) with [stack]:
+
+    <div class="builder-command">
+    stack update<br>
+    stack install
+    </div>
+
+    or (to ~/.cabal/bin) with [cabal]:
+
+    <div class="builder-command">
+    cabal update<br>
+    cabal install alex happy<br>
+    cabal install all:exes
+    </div>
+
+    or you can build in a Docker container which includes the necessary tools and dependencies:
+
+    <div class="builder-command">
+    git clone https://github.com/simonmichael/hledger <br>
+    cd hledger/docker <br>
+    ./build.sh
+    </div>
 
 (This will build the image tagged `hledger` with just the latest binaries inside.
 If you want to keep all the build artifacts and use the resulting
 image for hledger development, run `./build-dev.sh` instead.)
 
-## Pre-flight checks
+## Check your installation
+
+After installing by any of the methods above, run the hledger tools
+and verify that their versions are what you just installed
+(and not older versions from a previous install). Eg:
+
+<div class="command">
+$ hledger --version <br>
+hledger 1.26-ged1d08dc2-20220604, mac-aarch64
+<br>
+<br>
+$ hledger-ui --version <br>
+hledger-ui 1.26-ged1d08dc2-20220604, mac-aarch64
+<br>
+<br>
+$ hledger web --version <br>
+hledger-web 1.26-ged1d08dc2-20220604, mac-aarch64
+<br>
+</div>
+<br>
+
+You can also run the unit tests, just for fun:
+
+<div class="command">
+$ hledger test <br>
+... <br>
+All 223 tests passed (0.13s)
+</div>
+<br>
+
+Or if you are in the hledger source directory, you can run the more extensive functional tests:
+
+<div class="command">
+$ make functest <br>
+... <br>
+ Total   892 ...<br>
+functest PASSED
+</div>
+<br>
+
+If things are not yet working, then:
 
 ### Check your PATH
 
@@ -596,17 +657,15 @@ Eg:
 - with nix:   `$HOME/.nix-profile/bin`
 
 Make sure that this install directory is included in your shell's `$PATH`
-(preferably near the start, to preempt any old hledger binaries you might have lying around),
-so that you can run the hledger tools easily.
+(preferably near the start, to preempt any old hledger binaries you might have lying around).
 How to configure this depends on your platform and shell.
-If you are using bash, this will show it:
+Eg if you are using bash, this will show $PATH:
 
 <div class="command">
   echo $PATH
 </div>
 
-and here's a way to add the stack and cabal install dirs permanently
-, if you are a bash user:
+and this will add the stack and cabal install dirs to it permanently:
 
 <div class="command">
   echo "export PATH=~/.local/bin:~/.cabal/bin:$PATH" >> ~/.bashrc <br>
@@ -640,46 +699,10 @@ package manager first. See
 [hledger: Troubleshooting](hledger.html#troubleshooting) for more help.
 <!-- XXX ^ improve -->
 
-### Check your installation
+## Next steps
 
-After a successful installation, you should be able to run the hledger
-tools and see the expected versions (the ones you just installed, and
-not any older versions that may exist somewhere else in your PATH).
-Eg:
-
-<div class="command">
-$ hledger --version <br>
-hledger 1.26-ged1d08dc2-20220604, mac-aarch64
-<br>
-$ hledger-ui --version <br>
-hledger-ui 1.26-ged1d08dc2-20220604, mac-aarch64
-<br>
-$ hledger web --version <br>
-hledger-web 1.26-ged1d08dc2-20220604, mac-aarch64
-<br>
-</div>
-
-And you could see the unit tests pass (just for fun):
-
-<div class="command">
-$ hledger test <br>
-... <br>
-All 223 tests passed (0.13s)
-</div>
-
-Or if you have checked out the hledger source, also the functional tests:
-
-<div class="command">
-$ make functest <br>
-... <br>
- Total   892 ...<br>
-functest PASSED
-</div>
-
-<br>
-
-Nicely done! Now check the **[Quick Start](index.html#quick-start)**
-for next steps, or come to the **[#hledger chat](support.html)**
+Nicely done! Now see **[How to get started](index.html#how-to-get-started)**,
+or come to the **[#hledger chat](support.html)**
 where we'll gladly share tips or receive your feedback.
 
 <br>
