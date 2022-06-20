@@ -433,10 +433,10 @@ and [share any feedback](support.html) so we can make this process smoother!
 <img alt="Release source" src="https://img.shields.io/badge/Release_source-1.26-brightgreen.svg" />
 
 You can build hledger from its source code on any machine with [GHC] and sufficient RAM
-(4G recommended) and free disk space (up to 2G for a first-time Haskell build).
+(4G recommended) and free disk space (up to 2G for a first-time Haskell build):
 
 1. Check [build requirements](#build-requirements)
-2. Build using one of the [build methods](#build-methods)
+2. Use one of the [build methods](#build-methods)
 
 ### Build requirements
 
@@ -527,7 +527,7 @@ and installs the hledger tools in ~/.local/bin or ~/.cabal/bin respectively.
 
 #### Build with stack
 
-If you have [stack], here is the stack command install the main hledger tools in ~/.local/bin:
+If you have [stack] installed, you can run it to install the main hledger tools in ~/.local/bin:
 
 <div class="builder-command">
   stack update <br>
@@ -602,9 +602,9 @@ our master branch on github is suitable for daily use.
     ./build.sh
     </div>
 
-(This will build the image tagged `hledger` with just the latest binaries inside.
-If you want to keep all the build artifacts and use the resulting
-image for hledger development, run `./build-dev.sh` instead.)
+    (This will build the image tagged `hledger` with just the latest binaries inside.
+    If you want to keep all the build artifacts and use the resulting
+    image for hledger development, run `./build-dev.sh` instead.)
 
 ## Check your installation
 
@@ -625,18 +625,16 @@ $ hledger web --version <br>
 hledger-web 1.26-ged1d08dc2-20220604, mac-aarch64
 <br>
 </div>
-<br>
 
-You can also run the unit tests, just for fun:
+If you like, you can also run the unit tests:
 
 <div class="command">
 $ hledger test <br>
 ... <br>
 All 223 tests passed (0.13s)
 </div>
-<br>
 
-Or if you are in the hledger source directory, you can run the more extensive functional tests:
+or the more extensive functional tests, if you are in hledger's source directory:
 
 <div class="command">
 $ make functest <br>
@@ -644,7 +642,6 @@ $ make functest <br>
  Total   892 ...<br>
 functest PASSED
 </div>
-<br>
 
 If things are not yet working, then:
 
