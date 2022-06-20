@@ -81,12 +81,16 @@ build3-%:
 clean:
 	mdbook clean
 
-# This does a vanilla `mdbook build`, which renders sidebar manual links without versions.
-# Can manually run `make build` after it starts to fix.
+# The following rules run `mdbook build` in a loop, which does not render the site completely:
+# - sidebar manual links will be without versions
+# - page TOCs will not be hyperlinked
+# Manually running `make build` after it starts will fix these.
+
+# Run `mdbook serve` which renders the pages and serves them on http port 3000.
 serve:
 	mdbook serve
 
-# Auto-rebuild site when source files change, since mdbook watch/serve usually don't.
+# Auto-rebuild site when source files change (mdbook watch/serve should but usually don't).
 watch:
 	find src | entr -d bash -c 'date; mdbook build'
 
