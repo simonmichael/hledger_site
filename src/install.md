@@ -64,10 +64,11 @@ div.badges > a > img {
 
 The current hledger release is **1.26**. ([Release notes](release-notes))
 
-Here are lots of ways to install hledger - choose one that suits your needs.
-[Binary packages](#binary-packages) install quickly but are not always up to date (look for green badges below).
-[Building the current release](#build-the-current-release) (or [development version](#build-the-development-version))
-is slower and requires at least 4G of ram.
+Here are lots of ways to install hledger.
+- [Binary packages](#binary-packages) install quickly but are not always up to date (look for green badges below).
+- [Building the current release](#build-the-current-release) (or [development version](#build-the-development-version))
+  is slower and requires at least 4G of ram.
+
 After installing, please [check your installation](#check-your-installation),
 and [share any feedback](support.html) so we can make this process smoother!
 
