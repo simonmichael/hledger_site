@@ -370,16 +370,17 @@ and [share any feedback](support.html) so we can make this process smoother!
   <tr> <!-- NIX -->
     <td>
       <div class="badges">
-        <a href="https://github.com/search?l=&o=desc&q=%22automatic+Haskell+package+set+update%22+repo%3ANixOS%2Fnixpkgs+filename%3Ahaskell-packages.nix&s=committer-date&type=Commits"><img alt="Nix" src="https://img.shields.io/badge/Nix_package-1.24.1-red.svg" /></a>
+        <a href="https://github.com/search?l=&o=desc&q=%22automatic+Haskell+package+set+update%22+repo%3ANixOS%2Fnixpkgs+filename%3Ahaskell-packages.nix&s=committer-date&type=Commits"><img alt="Nix" src="https://img.shields.io/badge/Nix_package-1.26-brightgreen.svg" /></a>
       </div>
       <!-- <div class="notes">Linux, Mac</div> -->
     </td>
     <td>
       <div class="command">
-          nix-env -f https://github.com/NixOS/nixpkgs/archive/e1225076.tar.gz -iA hledger_1_24_1 hledger-ui_1_24_1 hledger-web_1_24_1
+          nix-env -f https://github.com/NixOS/nixpkgs/archive/86378514.tar.gz -iA hledger_1_26 hledger-ui_1_26 hledger-web_1_26
       </div>
       <div class="notes">
-          Nix binaries may not yet be fully cached for your platform, try with --dry-run to estimate how much building will be required.
+          Install command untested, success/failure reports welcome.<br>
+          Nix binaries may not yet be fully cached for your platform, try with --dry-run to estimate how much building will be required.<br>
           On Linux, note <span class="warnings"><a href="https://github.com/simonmichael/hledger/issues/1030">#1030</a>, 
           <a href="https://github.com/simonmichael/hledger/issues/1033">#1033</a>.
       </div>
