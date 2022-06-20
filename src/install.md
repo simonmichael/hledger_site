@@ -590,8 +590,7 @@ On Windows, omit hledger-ui from this command (unless you are in [WSL]).
 #### Build with nix
 
 If you have [nix], you can use nix-env to build hledger from source 
-(but we try to provide a [nix command](#multiple-platforms) that installs
-already-cached binaries, see above).
+(but we try to provide a [nix command](#other) that installs already-cached binaries, see above).
 
 #### Build on Android
 
@@ -747,6 +746,6 @@ where we'll gladly share tips or receive your feedback.
 [stack]:           https://www.fpcomplete.com/haskell/get-started
 [cabal]:           https://www.haskell.org/cabal
 [hledger-install]: https://github.com/simonmichael/hledger/blob/master/hledger-install/hledger-install.sh
-[add-ons]:         hledger.html#add-on-commands
+[add-ons]:         addons.html#add-on-commands
 [WSL]:             https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux
 [nix]:             https://nixos.org
