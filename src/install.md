@@ -440,6 +440,38 @@ You can build hledger from its source code on any machine with [GHC] and suffici
 
 ### Build requirements
 
+#### GHC, stack, cabal
+
+If you choose the "Build with cabal" method below, you will need [GHC] and [cabal].
+If you choose the "Build with stack" method, you will need [stack] (which installs GHC automatically on most platforms).
+
+You can probably install these tools with your local packaging system.
+They need not be the latest versions (but later versions are better):
+- GHC should be >=8.8.
+  On Arch GNU/Linux, the packaged GHC is non-standard and may be troublesome.
+- cabal (ie cabal-install) should be >=3.2.
+- stack should be >=2.7. 
+  You can often upgrade an existing stack installation quickly with `stack upgrade`.
+  On Windows, prefer the 64-bit version of stack.
+
+Or, you can install them with [ghcup](https://haskell.org/ghcup).
+
+If you don't have any preference, I recommend this setup, 
+which is the most reliable and platform-independent as of 2022:
+
+1. Install ghcup
+2. Install a recent version of ghc and stack
+    <div class="builder-command">
+      ghcup install ghc <br>
+      ghcup install stack
+    </div>
+3. Configure stack to use ghcup's GHCs, saving disk space:
+    ```yaml
+    # add to ~/.stack/config.yaml:
+    system-ghc: true
+    install-ghc: false
+    ```
+
 #### C libraries
 
 On unix systems, you may need to install additional C libraries 
@@ -527,21 +559,18 @@ and installs the hledger tools in ~/.local/bin or ~/.cabal/bin respectively.
 
 #### Build with stack
 
-If you have [stack] installed, you can run it to install the main hledger tools in ~/.local/bin:
+If you have stack installed, you can run it to install the main hledger tools in ~/.local/bin:
 
 <div class="builder-command">
   stack update <br>
   stack install --resolver=lts-19 hledger-lib-1.26 hledger-1.26 hledger-ui-1.26 hledger-web-1.26 --silent
 </div>
 
-Your `stack --version` should be modern (at least 2.7) for best results.
-(You can usually upgrade stack quickly with `stack upgrade`.)
-On Windows, prefer the 64-bit version of stack, 
-and omit hledger-ui from this command (unless you are in [WSL]).
+On Windows, omit hledger-ui from this command (unless you are in [WSL]).
 
 #### Build with cabal
 
-If you have [GHC] and [cabal], you can run cabal to install the main hledger tools in ~/.cabal/bin:
+If you have GHC and cabal, you can run cabal to install the main hledger tools in ~/.cabal/bin:
 
 <div class="builder-command">
   cabal update <br>
