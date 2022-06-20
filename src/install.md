@@ -443,8 +443,10 @@ You can build hledger from its source code on any machine with [GHC] and suffici
 
 #### GHC, stack, cabal
 
-If you choose the "Build with cabal" method below, you will need [GHC] and [cabal].
-If you choose the "Build with stack" method, you will need [stack] (which installs GHC automatically on most platforms).
+These are the Haskell build tools.
+If you choose the "Build with hledger-install" method below, they will be installed automatically.
+If you choose the "Build with stack" method, you will need to have [stack] installed.
+If you choose the "Build with cabal" method, you will need to have [cabal] and [GHC] installed.
 
 You can probably install these tools with your local packaging system.
 They need not be the latest versions (but later versions are better):
@@ -546,11 +548,11 @@ Use any of the following methods:
 #### Build with hledger-install
 
 The [hledger-install.sh][hledger-install] script builds the current release of the hledger tools, 
-plus some [add-ons], in a relatively reliable way.
-This is a good choice if you are new to Haskell and its build tools.
-It runs on any machine with [bash] (and possibly make, gcc...) installed.
+plus some [add-ons], in a relatively reliable way,
+requiring [bash] but not any Haskell build tools.
 It uses stack or cabal if you have them (installing stack in ~/.local/bin otherwise), 
 and installs the hledger tools in ~/.local/bin or ~/.cabal/bin respectively.
+This can be a good choice if you are new to Haskell.
 
 <div class="builder-command">
   curl -sO https://raw.githubusercontent.com/simonmichael/hledger/master/hledger-install/hledger-install.sh <br>
@@ -579,7 +581,6 @@ If you have GHC and cabal, you can run cabal to install the main hledger tools i
   cabal install hledger-1.26 hledger-ui-1.26 hledger-web-1.26
 </div>
 
-Your `cabal --version` should be modern (at least 3.2) for best results.
 On Windows, omit hledger-ui from this command (unless you are in [WSL]).
 
 #### Build with nix
