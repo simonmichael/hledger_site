@@ -85,7 +85,7 @@ you might prefer a commercial web-based system.)
 
 ## How to get started?
 
-- **[Install](install.html)** lists the easy ways to install hledger on your system.
+- **[Install Guide](install.html)** lists the easy ways to install hledger on your system.
 - [Getting Started Guide](start.html) is a good starting point/overview for our (many..) introductory docs.
   [hledger fan's beginner videos](https://www.youtube.com/channel/UCZLxXTjOqLzq4z5Jy0AyWSQ/videos) might be complementary.
 - [hledger manual](hledger.html) is where to go for the authoritative reference docs.
