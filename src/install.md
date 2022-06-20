@@ -496,7 +496,7 @@ install them with a command like the below and try again:
 <table>
   <tr>
     <td width="1%" style="white-space:nowrap;"><div class="distro">Debian, Ubuntu & co.:</div></td>
-    <td><div class="command" style="margin:0;"> sudo apt install libtinfo-dev libgmp-dev zlib1g-dev</div></td>
+    <td><div class="command" style="margin:0;"> sudo apt install libgmp-dev libtinfo-dev zlib1g-dev</div></td>
   </tr>
 
   <tr>
