@@ -67,7 +67,7 @@ The current hledger release is **1.26**. ([Release notes](release-notes))
 Here are lots of ways to install hledger.
 - [Binary packages](#binary-packages) install quickly but are not always up to date (look for green badges below).
 - [Building the current release](#build-the-current-release) (or [development version](#build-the-development-version))
-  takes longer.
+  from source code takes longer.
 
 After installing, please [check your installation](#check-your-installation),
 and [share any feedback](support.html) so we can make this process smoother!
@@ -434,13 +434,16 @@ and [share any feedback](support.html) so we can make this process smoother!
 
 <img alt="Release source" src="https://img.shields.io/badge/Release_source-1.26-brightgreen.svg" />
 
-You can build hledger from its source code on any machine with [GHC] and sufficient RAM
-(4G recommended) and free disk space (up to 2G for a first-time Haskell build):
-
 1. Check [build requirements](#build-requirements)
 2. Use one of the [build methods](#build-methods)
 
 ### Build requirements
+
+#### Hardware
+
+- A machine where the Haskell build tools are available.
+- 4G of RAM is [recommended](#more-build-tips).
+- 2G of free disk space will be needed if this is your first Haskell build.
 
 #### GHC, stack, cabal
 
