@@ -16,6 +16,7 @@ use-default-preprocessors = true
 [preprocessor.links]
 
 [preprocessor.toc]
+# why does uncommenting this disable the TOC ?
 # marker = "<!-- toc -->"
 max-level = 3
 
