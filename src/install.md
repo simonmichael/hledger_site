@@ -501,7 +501,7 @@ install them with a command like the below and try again:
 
   <tr>
     <td><div class="distro">Fedora, RHEL:</div></td>
-    <td><div class="command"> sudo dnf install gmp-devel ncurses-devel </div></td>
+    <td><div class="command"> sudo dnf install gmp-devel ncurses-devel zlib-devel </div></td>
   </tr>
 </table>
 
