@@ -256,7 +256,7 @@ See [hledger and Ledger](ledger.html).
 
 ### How is hledger different from / interoperable with... ?
 
-Look for a "hledger and X" page on this site (click the top-left icon to open the sidebar).
+See <https://hledger.org/cookbook.html#interoperating-with-other-software>.
 Eg:
 
 - [hledger and Ledger](ledger.html)
