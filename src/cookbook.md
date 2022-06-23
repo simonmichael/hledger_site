@@ -55,10 +55,6 @@ and [Accounting and bookkeeping](#accounting-and-bookkeeping) examples.
 ### Making charts
 - [Charts and Graphs](charts.md)
 
-### Using other interfaces
-- [hledger-web tips](hledger-web-tips.md)
-- [Mobile apps](mobile-apps.md)
-
 ### Customising
 - [Change account name separator](change-account-name-separator.md)
 - [Command line completion](command-line-completion.md)
@@ -77,12 +73,17 @@ and [Accounting and bookkeeping](#accounting-and-bookkeeping) examples.
 - rotorkunstkultur's [rtrLEDGER](https://github.com/rotorkunstkultur/rtrledger)
 - [Michael Walker's setup](https://memo.barrucadu.co.uk/personal-finance.html)
 
+### Other user interfaces
+- [hledger-web tips](hledger-web-tips.md)
+- [Mobile apps](mobile-apps.md)
+
 ### Interoperating with other software
 - [Exporting from hledger](export.md)
 - [hledger and Beancount](beancount.md)
 - [hledger and GnuCash](gnucash.md)
 - [hledger and Ledger](ledger.md)
 - [hledger and Quicken/Quickbooks](quicken.md)
+- [hledger and dsq / DataStation](dsq.md)
 
 ## Accounting and bookkeeping
 <!-- sections ordered mostly alphabetically -->
