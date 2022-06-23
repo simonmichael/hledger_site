@@ -1,6 +1,7 @@
 # hledger and dsq / DataStation
 
-https://github.com/multiprocessio/datastation and command line spinoff https://github.com/multiprocessio/dsq look pretty cool.
+<https://github.com/multiprocessio/datastation> GUI for reporting on CSV and other tabular file formats
+<https://github.com/multiprocessio/dsq> command line spinoff 
 
 `dsq` makes CSV and some other things queryable with SQL, as if it was an sqlite database. (It is powered by sqlite, with additional functions from the go sqlite lib). So combined with CSV output from `hledger print` or `hledger register` it's an instant new sqlite-like query language. Some examples with dsq 0.20.1:
 

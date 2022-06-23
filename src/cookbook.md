@@ -80,10 +80,10 @@ and [Accounting and bookkeeping](#accounting-and-bookkeeping) examples.
 ### Interoperating with other software
 - [Exporting from hledger](export.md)
 - [hledger and Beancount](beancount.md)
+- [hledger and dsq / DataStation](dsq.md)
 - [hledger and GnuCash](gnucash.md)
 - [hledger and Ledger](ledger.md)
 - [hledger and Quicken/Quickbooks](quicken.md)
-- [hledger and dsq / DataStation](dsq.md)
 
 ## Accounting and bookkeeping
 <!-- sections ordered mostly alphabetically -->
