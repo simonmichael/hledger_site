@@ -83,6 +83,7 @@ and [Accounting and bookkeeping](#accounting-and-bookkeeping) examples.
 - [hledger and dsq / DataStation](dsq.md)
 - [hledger and GnuCash](gnucash.md)
 - [hledger and Ledger](ledger.md)
+- [hledger and SQLite](sqlite.md)
 - [hledger and Quicken/Quickbooks](quicken.md)
 
 ## Accounting and bookkeeping

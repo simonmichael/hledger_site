@@ -85,6 +85,7 @@
 - [hledger and GnuCash](gnucash.md)
 - [hledger and Ledger](ledger.md)
 - [hledger and Quicken / Quickbooks](quicken.md)
+- [hledger and SQLite](sqlite.md)
 - [hledger manual](hledger.md)
 - [hledger-ui manual](hledger-ui.md)
 - [hledger-web manual](hledger-web.md)
