@@ -7,7 +7,7 @@ SQLite directly on our CSV:
 
 or JSON output:
 
-- https://stackoverflow.com/a/41406852/84401
+- <https://stackoverflow.com/a/41406852/84401>
 
 But see also:
 
