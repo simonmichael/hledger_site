@@ -1,8 +1,8 @@
 # Converting time to money
 
-Perhaps you're a freelancer with an hourly rate.
-
-If you log time in
+Perhaps you're a freelancer with an hourly rate,
+and you'd like to see those hours as money.
+The method depends on where you store time records:
 
 ## Journal files
 
@@ -18,7 +18,7 @@ and run a [value report](hledger.html#valuation) with `-V`/`-X`.
 ## Timeclock files
 
 You can't write P directives here, so include the timeclock file(s)
-within a parent journal file, as below.
+within a parent journal file. See below.
 
 ## Timedot files
 
