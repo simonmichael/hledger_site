@@ -27,7 +27,7 @@ Timedot files can't hold P directives, so [include](hledger.html#including-other
 them from a journal file, which can.
 
 Also, timedot amounts have no currency symbol which can be priced,
-so set a default one with the `D` directive. 
+but you can set a default one with the [`D` directive](hledger.html#default-commodity).
 
 An example:
 
