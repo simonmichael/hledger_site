@@ -1,6 +1,6 @@
 # Converting time to money
 
-Perhaps you're a freelancer with an hourly rate,
+Perhaps you track billable hours with hledger,
 and you'd like to see those hours as money.
 The method depends on where you store time records:
 
