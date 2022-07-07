@@ -23,8 +23,8 @@ and write the directives there. (See below.)
 
 ## Timedot files
 
-Timedot files can't hold P directives, so include them within a
-journal file, which can.
+Timedot files can't hold P directives, so [include](hledger.html#including-other-files)
+them from a journal file, which can.
 
 Also, timedot amounts have no currency symbol which can be priced,
 so set a default one with the `D` directive. 
