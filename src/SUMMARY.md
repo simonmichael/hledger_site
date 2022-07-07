@@ -71,6 +71,7 @@
 - [Simon's setup notes](simons-setup.md)
 - [Sponsor](sponsor.md)
 - [Tags tutorial](tags-tutorial.md)
+- [Converting time to money](time-to-money.md)
 - [Time planning](time-planning.md)
 - [Track changes with version control](track-changes-with-version-control.md)
 - [Track investments (2017)](track-investments.md)

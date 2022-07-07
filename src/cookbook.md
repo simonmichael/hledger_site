@@ -128,6 +128,7 @@ and [Accounting and bookkeeping](#accounting-and-bookkeeping) examples.
 ### Taxes
 
 ### Time tracking
+- [Converting time to money](time-to-money.md)
 - [Time planning](time-planning.md)
 
 ### Trip expenses
