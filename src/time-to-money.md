@@ -35,13 +35,13 @@ An example:
     P 2022-01-01 h $100
     include 2022.timedot
 
-...
+<!-- -->
 
     # 2022.timedot
     2022-01-01
     a   ....
 
-...
+<!-- -->
 
     $ hledger -f 2022-time.journal bal 
                    1.0 h  a
@@ -53,16 +53,18 @@ An example:
     --------------------
                     $100  
 
-If your rate changes, use a new timedot file:
+If your rate changes, start a new timedot file:
 
     # 2022-time.journal
     D 1.0 h
+
     P 2022-01-01 h $100
     include 2022.timedot
+
     P 2022-03-01 h $120
     include 2022b.timedot
 
-...
+<!-- -->
 
     $ hledger -f 2022-time.journal bal -MVTA
     Balance changes in 2022Q1, valued at period ends:
