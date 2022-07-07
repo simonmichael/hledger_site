@@ -26,9 +26,7 @@ and write the directives there. (See below.)
 Timedot files can't hold P directives, so [include](hledger.html#including-other-files)
 them from a journal file, which can.
 Also timedot amounts normally have no commodity symbol, making them hard to price;
-but you can give them one with the [`D` directive](hledger.html#default-commodity).
-
-An example:
+but you can give them one with the [`D` directive](hledger.html#default-commodity):
 
     # 2022-time.journal
     D 1.0 h
