@@ -18,12 +18,17 @@ and run a [value report](hledger.html#valuation) with `-V`/`-X`.
 ## Timeclock files
 
 You can't write P directives here, so include the timeclock file(s)
-within a parent journal file, as follows...
+within a parent journal file, as below.
 
 ## Timedot files
 
-As above, and also timedot amounts have no currency symbol which can be priced,
-so set a default one with the `D` directive. An example:
+Timedot files can't hold P directives, so include them within a
+journal file, which can.
+
+Also, timedot amounts have no currency symbol which can be priced,
+so set a default one with the `D` directive. 
+
+An example:
 
     # 2022-time.journal
     D 1.0 h
