@@ -17,8 +17,9 @@ and run a [value report](hledger.html#valuation) with `-V`/`-X`.
 
 ## Timeclock files
 
-You can't write P directives here, so include the timeclock file(s)
-within a parent journal file. See below.
+You can't write P directives in timeclock format, 
+but you can include the timeclock file(s) from a journal file,
+and write the directives there. (See below.)
 
 ## Timedot files
 
