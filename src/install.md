@@ -62,15 +62,17 @@ div.badges > a > img {
 }
 </style>
 
-The current hledger release is **1.26**. ([Release notes](release-notes))
+The current hledger release is **1.26.1**. ([Release notes](release-notes))
 
-Here are lots of ways to install hledger.
+Here are lots of ways to install hledger:
 - [Binary packages](#binary-packages) install quickly but are not always up to date (look for green badges below).
 - [Building the current release](#build-the-current-release) (or [development version](#build-the-development-version))
-  from source code takes longer.
+  from source code takes longer and has some [build requirements](#build-requirements).
 
-After installing, please [check your installation](#check-your-installation),
-and [share any feedback](support.html) so we can make this process smoother!
+After downloading binaries or building from source, 
+please check that the [run requirements](#run-requirements) (PATH and locale) are satisfied.
+
+And finally please [share any feedback](support.html) so we can make this process smoother!
 
 <br clear=all>
 
@@ -432,7 +434,7 @@ and [share any feedback](support.html) so we can make this process smoother!
 
 ## Build the current release
 
-<img alt="Release source" src="https://img.shields.io/badge/Release_source-1.26-brightgreen.svg" />
+<img alt="Release source" src="https://img.shields.io/badge/Release_source-1.26.1-brightgreen.svg" />
 
 1. Check [build requirements](#build-requirements)
 2. Use one of the [build methods](#build-methods)
@@ -570,7 +572,7 @@ If you have stack installed, you can run it to install the main hledger tools in
 
 <div class="builder-command">
   stack update <br>
-  stack install --resolver=lts-19 hledger-lib-1.26 hledger-1.26 hledger-ui-1.26 hledger-web-1.26 --silent
+  stack install --resolver=lts-19 hledger-lib-1.26.1 hledger-1.26.1 hledger-ui-1.26.1 hledger-web-1.26.1 --silent
 </div>
 
 On Windows, omit hledger-ui from this command (unless you are in [WSL]).
@@ -582,7 +584,7 @@ If you have GHC and cabal, you can run cabal to install the main hledger tools i
 <div class="builder-command">
   cabal update <br>
   cabal install alex happy<br>
-  cabal install hledger-1.26 hledger-ui-1.26 hledger-web-1.26
+  cabal install hledger-1.26.1 hledger-ui-1.26.1 hledger-web-1.26.1
 </div>
 
 On Windows, omit hledger-ui from this command (unless you are in [WSL]).
@@ -640,23 +642,28 @@ our master branch on github is suitable for daily use.
     If you want to keep all the build artifacts and use the resulting
     image for hledger development, run `./build-dev.sh` instead.)
 
-## Check your installation
+## Run requirements
 
-After installing by any of the methods above, run the hledger tools
+After installing whether from binaries or from source, 
+
+by downloading binaries or by building from source, 
+please check that the [run requirements](#run-requirements) (PATH and locale) are satisfied.
+
+ by any of the methods above, run the hledger tools
 and verify that their versions are what you just installed
 (and not older versions from a previous install). Eg:
 
 <div class="command">
 $ hledger --version <br>
-hledger 1.26-ged1d08dc2-20220604, mac-aarch64
+hledger 1.26.1-g5d767f66f-20220711, mac-aarch64
 <br>
 <br>
 $ hledger-ui --version <br>
-hledger-ui 1.26-ged1d08dc2-20220604, mac-aarch64
+hledger-ui 1.26.1-g5d767f66f-20220711, mac-aarch64
 <br>
 <br>
 $ hledger web --version <br>
-hledger-web 1.26-ged1d08dc2-20220604, mac-aarch64
+hledger-web 1.26.1-g5d767f66f-20220711, mac-aarch64
 <br>
 </div>
 
@@ -730,6 +737,10 @@ In some cases the locale may need to be installed with your system
 package manager first. See
 [hledger: Troubleshooting](hledger.html#troubleshooting) for more help.
 <!-- XXX ^ improve -->
+
+If you see similar problems on Microsoft Windows, 
+perhaps [this doc](https://techtrix.co/how-do-i-change-the-default-encoding-in-windows-10/#How_do_I_change_my_Windows_locale)
+can help with configuring it.
 
 ## Next steps
 
