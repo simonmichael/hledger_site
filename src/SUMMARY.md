@@ -67,7 +67,7 @@
 - [Rewrite account names](rewrite-account-names.md)
 - [Rewrite commodity symbols](rewrite-commodity-symbols.md)
 - [Save frequently used options](save-frequently-used-options.md)
-- [Scripting](scripting.md)
+- [Scripting hledger](scripting.md)
 - [Simon's setup notes](simons-setup.md)
 - [Sponsor](sponsor.md)
 - [Tags tutorial](tags-tutorial.md)

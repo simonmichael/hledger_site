@@ -1,4 +1,4 @@
-# Scripting
+# Scripting hledger
 
 <div class=pagetoc>
 

@@ -60,7 +60,7 @@ and [Accounting and bookkeeping](#accounting-and-bookkeeping) examples.
 - [Command line completion](command-line-completion.md)
 - [Editor configuration](editors.md)
 - [Save frequently used options](save-frequently-used-options.md)
-- [Scripting](scripting.md)
+- [Scripting hledger](scripting.md)
 
 ### Setups and workflows
 - [Getting Started Guide](start.md)
