@@ -757,6 +757,6 @@ where we'll gladly share tips or receive your feedback.
 [stack]:           https://www.fpcomplete.com/haskell/get-started
 [cabal]:           https://www.haskell.org/cabal
 [hledger-install]: https://github.com/simonmichael/hledger/blob/master/hledger-install/hledger-install.sh
-[add-ons]:         addons.html#add-on-commands
+[add-ons]:         hledger.html#about-add-on-commands
 [WSL]:             https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux
 [nix]:             https://nixos.org
