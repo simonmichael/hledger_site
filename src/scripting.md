@@ -9,7 +9,7 @@ As a command line program, with plain text data formats, hledger is
 easy to extend and customise with scripts and add-on commands.
 This page describes some different kinds of scripting you can do around hledger.
 
-For an overview of ready-made scripts you can install, see [Add-ons & scripts](addons.html).
+For an overview of ready-made scripts you can install, see [Scripts](scripts.html).
 
 Scripts are programs which call other programs to get things done.
 They are often (though not always):
