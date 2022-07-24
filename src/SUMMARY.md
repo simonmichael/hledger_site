@@ -103,6 +103,7 @@
 - [Contributor Guide](CONTRIBUTING.md)
 - [DOCS](DOCS.md)
 - [Developer FAQ](devfaq.md)
+- [ERRORS](ERRORS.md)
 - [EXAMPLES](EXAMPLES.md)
 - [FINANCE](FINANCE.md)
 - [ISSUES](ISSUES.md)

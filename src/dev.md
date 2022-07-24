@@ -18,6 +18,7 @@ and symlinked (or rendered by Shake.hs) into the site repo to make them appear a
 - [COMMITS](COMMITS.md)
 - [CREDITS](CREDITS.md)
 - [DOCS](DOCS.md)
+- [ERRORS](ERRORS.md)
 - [EXAMPLES](EXAMPLES.md)
 - [FINANCE](FINANCE.md)
 - [ISSUES](ISSUES.md)
