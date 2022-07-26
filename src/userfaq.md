@@ -161,13 +161,12 @@ $ hledger -f t.j balance --drop 1
 One way to fix: in iTerm2 do Preferences -> Profiles -> your current profile -> Keys -> Load Preset -> xterm Defaults 
 (not Terminal.app Compatibility). And perhaps open a new tab with this profile. 
 
-<!-- 
-
 ## How do I set the LEDGER_FILE environment variable on Windows?
 
-https://www.reddit.com/r/plaintextaccounting/comments/cr5jjk/help_set_ledger_file_environment_variable_in/
+Maybe using SETX: https://hledger.org/1.26/hledger.html#environment
 
--->
+or in settings: https://www.java.com/en/download/help/path.html
+
 ## How do I display a decimal separator different from the one in the input file ?
 
 It's not yet easy to do this with hledger:\
