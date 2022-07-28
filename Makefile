@@ -44,6 +44,7 @@ copy-old-manuals:
 	for d in out2/*; do cp $$d/* out/`basename $$d`; done
 
 # Install some required tools.
+# --force rebuilds mdbook-toc even if only mdbook changed, avoiding a warning.
 tools:
 	cargo install mdbook mdbook-toc --force
 
