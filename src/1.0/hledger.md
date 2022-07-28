@@ -1951,7 +1951,7 @@ hledger executable, must be written after `--`, like this:
 **Differences from Ledger**
 
 Not all of Ledger's journal file syntax is supported. See [file format
-differences](faq#file-format-differences).
+differences](ledger.html#journal-format).
 
 hledger is slower than Ledger, and uses more memory, on large data
 files.

@@ -156,8 +156,8 @@ and to add new ones making it useful to more people.
 Ledger users will find the file formats and commands familiar,
 and with a little care can run both tools on the same data files.
 (You can read more about
-the [origins](faq.html#why-did-you-start-hledger--how-does-it-relate-to-ledger-)
-and [differences](faq.html#how-is-hledger-different-from-ledger-).)
+the [origins](ledger.html)
+and [differences](ledger.html#differences).)
 
 hledger can read [Beancount] files, or vice versa, by converting them
 with the [beancount2ledger] and [ledger2beancount] tools.
