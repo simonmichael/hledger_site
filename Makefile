@@ -45,7 +45,7 @@ copy-old-manuals:
 
 # Install some required tools.
 tools:
-	cargo install mdbook mdbook-toc
+	cargo install mdbook mdbook-toc --force
 
 
 # build7/build3 naming is to help avoid running the wrong rule for the version
