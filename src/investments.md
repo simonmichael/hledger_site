@@ -157,7 +157,7 @@ or *lot*. This information is needed:
      basis*) of those lots.
   
 Ledger and Beancount provide a special syntax and some builtin reports for tracking lots and calculating capital gains.
-Currently, hledger does not (aside from [a little support for lot syntax][hledger lot support]).
+Currently, hledger does not (aside from [a little support for lot syntax](hledger.html#lot-prices-lot-dates)).
 So for now, how can we track lots in hledger ?
 
 We can use the obvious categorisation feature: accounts.
@@ -630,7 +630,6 @@ instead of just `hledger is`.
 
 [transaction price]:     journal.html#transaction-prices
 [market price]:          journal.html#market-prices
-[hledger lot support]:   faq.html#journal-format
 [valuation]:             hledger.html#valuation
 [end dates]:             hledger.html#report-start-end-date
 [balance assertion]:     journal.html#balance-assertions
