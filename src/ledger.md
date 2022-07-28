@@ -15,7 +15,7 @@ How is hledger different from Ledger ? First, the high-order differences:
 - hledger is actively maintained (since 2008)
 - hledger focusses strongly on UX, reliability, and real-world practicality
 - hledger is written in Haskell, which helps with correctness and maintainability
-- hledger tries to reimplement Ledger's best parts in a more systematic way, with improved quality and robustness.
+- hledger tries to reimplement Ledger's best parts in more depth, with improved functionality and robustness.
 
 Compared to Ledger, hledger has
 
