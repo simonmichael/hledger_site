@@ -6,7 +6,7 @@
 
 See also: 
 - [Why hledger ?](why.html)
-- https://www.libhunt.com/compare-hledger-vs-ledger
+- <https://www.libhunt.com/compare-hledger-vs-ledger>
 
 ## Differences
 
