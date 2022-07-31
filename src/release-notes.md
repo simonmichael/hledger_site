@@ -66,11 +66,11 @@ Changes in hledger-install.sh are shown
 
 ## 2022-07-11 hledger-1.26.1
 
-# hledger 1.26.1
+### hledger 1.26.1
 
 - require safe 0.3.19+ to avoid deprecation warning
 
-# hledger-ui 1.26.1
+### hledger-ui 1.26.1
 
 - support doclayout 0.4, brick 0.72+
 
