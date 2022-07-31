@@ -176,7 +176,7 @@ And finally please [share any feedback](support.html) so we can make this proces
   <tr> <!-- GENTOO -->
     <td>
       <div class="badges">
-        <a href="https://gentoo.zugaina.org/Search?search=hledger"><img alt="Gentoo" src="https://img.shields.io/badge/Gentoo_package-1.26-brightgreen.svg" /></a>
+        <a href="https://gentoo.zugaina.org/Search?search=hledger"><img alt="Gentoo" src="https://img.shields.io/badge/Gentoo_package-1.26.1-brightgreen.svg" /></a>
       </div>
     </td>
     <td>
@@ -198,7 +198,7 @@ And finally please [share any feedback](support.html) so we can make this proces
   <tr> <!-- ALPINE -->
     <td>
       <div class="badges">
-        <a href="https://pkgs.alpinelinux.org/packages?name=hledger*&branch=edge"><img alt="Alpine edge" src="https://img.shields.io/badge/Alpine_edge_package-1.26-brightgreen.svg" /></a>
+        <a href="https://pkgs.alpinelinux.org/packages?name=hledger*&branch=edge"><img alt="Alpine edge" src="https://img.shields.io/badge/Alpine_edge_package-1.26.1-brightgreen.svg" /></a>
       </div>
     </td>
     <td>
@@ -257,8 +257,8 @@ And finally please [share any feedback](support.html) so we can make this proces
     <td>
       <div class="badges">
         <a href="https://packages.ubuntu.com/jammy/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_22_04/hledger.svg" /></a><br>
-        <a href="https://packages.ubuntu.com/impish/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_21_10/hledger.svg" /></a><br>
-        <a href="https://packages.ubuntu.com/hirsute/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_21_04/hledger.svg" /></a><br>
+        <!-- <a href="https://packages.ubuntu.com/impish/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_21_10/hledger.svg" /></a><br> -->
+        <!-- <a href="https://packages.ubuntu.com/hirsute/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_21_04/hledger.svg" /></a><br> -->
         <!-- <a href="https://packages.ubuntu.com/groovy/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_20_10/hledger.svg" /></a><br> badge broken -->
         <a href="https://packages.ubuntu.com/focal/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_20_04/hledger.svg" /></a><br>
         <a href="https://packages.ubuntu.com/bionic/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_18_04/hledger.svg" /></a><br>
