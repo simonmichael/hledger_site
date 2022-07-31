@@ -151,6 +151,25 @@ And finally please [share any feedback](support.html) so we can make this proces
       </div>
     </td>
   </tr>
+  
+  <tr valign="top"> <!-- SCOOP -->
+    <td>
+      <div class="badges">
+        <a href="https://github.com/ScoopInstaller/Main/blob/master/bucket/hledger.json">
+          <img alt="Scoop package" src="https://repology.org/badge/version-for-repo/scoop/hledger.svg" />
+        </a>
+      </div>
+    </td>
+    <td style="padding-top:10px;">
+      <div class="command" style="margin-bottom:4px;">
+        scoop install hledger
+      </div>
+      <div class="notes">
+      <!--   <span class="warnings"> -->
+      <!--   </span> -->
+      </div>
+    </td>
+  </tr>
 
 </table>
 
