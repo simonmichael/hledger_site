@@ -85,13 +85,13 @@ And finally please [share any feedback](support.html) so we can make this proces
   <tr> <!-- CI BINARIES -->
     <td>
       <div class="badges">
-        <a><img alt="hledger CI binaries" src="https://img.shields.io/badge/hledger_CI_binaries-1.26-brightgreen.svg" /></a><br>
+        <a><img alt="hledger CI binaries" src="https://img.shields.io/badge/hledger_CI_binaries-1.26.1-brightgreen.svg" /></a><br>
       </div>
       <!-- <div class="notes">Linux, Mac, Windows</div> -->
     </td>
     <td>
       <div class="command">
-        <a href="https://github.com/simonmichael/hledger/releases/tag/1.26">hledger-mac-x64.zip</a>
+        <a href="https://github.com/simonmichael/hledger/releases/tag/1.26.1">hledger-mac-x64.zip</a>
       </div>
       <div class="notes"></div>
     </td>
@@ -118,13 +118,13 @@ And finally please [share any feedback](support.html) so we can make this proces
   <tr> <!-- CI BINARIES -->
     <td>
       <div class="badges">
-        <a><img alt="hledger CI binaries" src="https://img.shields.io/badge/hledger_CI_binaries-1.26-brightgreen.svg" /></a><br>
+        <a><img alt="hledger CI binaries" src="https://img.shields.io/badge/hledger_CI_binaries-1.26.1-brightgreen.svg" /></a><br>
       </div>
       <!-- <div class="notes">Linux, Mac, Windows</div> -->
     </td>
     <td>
       <div class="command">
-        <a href="https://github.com/simonmichael/hledger/releases/tag/1.26">hledger-windows-x64.zip</a>
+        <a href="https://github.com/simonmichael/hledger/releases/tag/1.26.1">hledger-windows-x64.zip</a>
         <!-- <span style="font-weight:normal; font-style:italic; font-size:small;">
           (Also runs on other platforms with <a href="https://www.winehq.org">Wine</a>)
         </span> -->
@@ -161,13 +161,13 @@ And finally please [share any feedback](support.html) so we can make this proces
   <tr> <!-- CI BINARIES -->
     <td>
       <div class="badges">
-        <a><img alt="hledger CI binaries" src="https://img.shields.io/badge/hledger_CI_binaries-1.26-brightgreen.svg" /></a><br>
+        <a><img alt="hledger CI binaries" src="https://img.shields.io/badge/hledger_CI_binaries-1.26.1-brightgreen.svg" /></a><br>
       </div>
       <!-- <div class="notes">Linux, Mac, Windows</div> -->
     </td>
     <td>
       <div class="command">
-        <a href="https://github.com/simonmichael/hledger/releases/tag/1.26">hledger-linux-x64.zip</a>
+        <a href="https://github.com/simonmichael/hledger/releases/tag/1.26.1">hledger-linux-x64.zip</a>
       </div>
       <div class="notes"></div>
     </td>
