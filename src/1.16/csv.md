@@ -46,7 +46,7 @@ after the examples:
 | [**`newest-first`**](#newest-first)       | disambiguate record order when there's only one date    |
 | [**`include`**](#include)                 | inline another CSV rules file                           |
 
-There's also a [Convert CSV files](convert-csv-files.html) tutorial on
+There's also a [Convert CSV files](/convert-csv-files.html) tutorial on
 hledger.org.
 
 ## EXAMPLES

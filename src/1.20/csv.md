@@ -52,7 +52,7 @@ Note, for best error messages when reading CSV files, use a `.csv`,
 `.tsv` or `.ssv` file extension or file prefix - see [File
 Extension](#file-extension) below.
 
-There's an introductory [Convert CSV files](convert-csv-files.html)
+There's an introductory [Convert CSV files](/convert-csv-files.html)
 tutorial on hledger.org.
 
 ## EXAMPLES
