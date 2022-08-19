@@ -102,6 +102,9 @@ and [Accounting and bookkeeping](#accounting-and-bookkeeping) examples.
 <!-- ### Depreciation -->
 <!-- [Depreciation](http://rantsideasstuff.com/posts/2018/07/08-depreciation-in-personal-finance-with-hledger) -->
 
+### Eco accounting
+- [PTA wiki: Eco accounting](https://wiki.plaintextaccounting.org/Eco-accounting)
+
 ### Forecasting
 - [Forecasting](forecasting.md)
 
