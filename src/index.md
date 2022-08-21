@@ -41,8 +41,6 @@ Developed continuously since 2007, hledger is licensed under GNU GPLv3+, written
 
 [![github](https://img.shields.io/github/stars/simonmichael/hledger.svg?logo=GitHub&label=Github)](https://github.com/simonmichael/hledger)
 
-Welcome! The rest of this page is a quick tour and introduction. You can also navigate via the site contents on the left (if you don't see it, click the lines icon at top left or press access key s).
-
 ## What does it look like?
 
 Currently, three user interfaces are provided out of the box:
