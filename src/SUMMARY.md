@@ -24,8 +24,8 @@
 
 # DEVELOPERS
 
-- [Contributor Guide](CONTRIBUTING.md)
 - [Developer docs](dev.md)
+- [Contributor Guide](CONTRIBUTING.md)
 - [Developer FAQ](devfaq.md)
 - [CREDITS](CREDITS.md)
 
