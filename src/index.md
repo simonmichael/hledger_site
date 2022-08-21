@@ -108,7 +108,7 @@ Here's an example of the main `journal` format. This represents an accounting Ge
 
 ### Tracking time
 
-Support for two time logging formats is built in: `timeclock` format, for precise time tracking:
+Support for two time logging formats is built in: `timeclock` format, for clockin/clockout time tracking:
 
 ```timeclock
 # 2009.timeclock
@@ -121,7 +121,7 @@ i 2009/04/02 09:00:00 projects:b
 o 2009/04/02 17:00:34
 ```
 
-And `timedot` format, for convenient approximate time tracking:
+And `timedot` format, for approximate/retroactive time tracking:
 
 ```timedot
 # 2016.timedot
@@ -150,12 +150,12 @@ Some other ideas:
 
 hledger's [General FAQ](faq.html) or the [plaintextaccounting.org](https://plaintextaccounting.org) site discuss the benefits of Plain Text Accounting.
 
-Among the [PTA apps](https://plaintextaccounting.org/#pta-apps), why choose hledger ?
+Among the [PTA apps](https://plaintextaccounting.org/#pta-apps),
 hledger has a strong focus on ease of use and practicality for day-to-day accounting.
-It prioritises "just works" and accessible documentation,
-and is actively maintained, with a lively [chat](support.html).
 It supports most Ledger and Beancount features but omits some of the more complex ones
 (value expression language, implicit lot matching).
+It prioritises "just works", accessible documentation,
+and is actively maintained, with a lively [chat](support.html).
 
 Non-programmers will enjoy hledger's 
 built-in financial statements, 
