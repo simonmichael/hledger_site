@@ -14,7 +14,7 @@
 # USERS
 
 - [Install Guide](install.md)
-- [Getting Started Guide](start.md)
+- [Getting Started](start.md)
 - [hledger manual](hledger.md)
 - [hledger-ui manual](hledger-ui.md)
 - [hledger-web manual](hledger-web.md)
@@ -32,7 +32,7 @@
 
 <!-- This section is hidden by CSS, but lists every site page so mdbook will render it: -->
 
-- [Accounting concepts](accounting.md)
+- [Accounting](accounting.md)
 - [Balancing the accounting equation](balancing-the-accounting-equation.md)
 - [Borrowing and lending](loans.md)
 - [Budgeting and Forecasting (2018)](budgeting-and-forecasting.md)
@@ -44,6 +44,7 @@
 - [Checking for errors](checking-for-errors.md)
 - [Command line completion](command-line-completion.md)
 - [Common journal entries](common-journal-entries.md)
+- [Common workflows](common-workflows.md)
 - [Create a journal](create-a-journal.md)
 - [Currency conversion](currency-conversion.md)
 - [Currency conversion 2](conversion2.md)
@@ -60,6 +61,7 @@
 - [Multicurrency tutorial (2018)](multicurrency-tutorial.md)
 - [Newcomer FAQ](faq.md)
 - [Project accounting](project-accounting.md)
+- [Quick Intro](quickintro.md)
 - [Quick Start](quickstart.md)
 - [Release notes](release-notes.md)
 - [Report examples](report-examples.md)

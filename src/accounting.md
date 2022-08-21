@@ -1,4 +1,4 @@
-# Accounting concepts
+# Accounting
 
 <div class=pagetoc>
 
