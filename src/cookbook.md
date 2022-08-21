@@ -63,15 +63,8 @@ and [Accounting and bookkeeping](#accounting-and-bookkeeping) examples.
 - [Scripting hledger](scripting.md)
 
 ### Setups and workflows
-- [Getting Started Guide](start.md)
-- [Home > How to get started](index.md#how-to-get-started)
-- [Quick Start](quickstart.md)
-- [hledger manual > COMMON TASKS](hledger.md#common-tasks)
-- [Simon's setup notes](simons-setup.md)
-- Dmitry Astapov's [Full-fledged Hledger](https://github.com/adept/full-fledged-hledger)
-- Andreas Pauley's [Hledger Flow](https://github.com/apauley/hledger-flow)
-- rotorkunstkultur's [rtrLEDGER](https://github.com/rotorkunstkultur/rtrledger)
-- [Michael Walker's setup](https://memo.barrucadu.co.uk/personal-finance.html)
+- [Getting Started](start.md)
+- [Common workflows](common-workflows.md)
 
 ### Other user interfaces
 - [hledger-web tips](hledger-web-tips.md)
