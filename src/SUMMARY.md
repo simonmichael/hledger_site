@@ -26,6 +26,7 @@
 
 - [Contributor Guide](CONTRIBUTING.md)
 - [Developer docs](dev.md)
+- [Developer FAQ](devfaq.md)
 - [CREDITS](CREDITS.md)
 
 # ALL PAGES
