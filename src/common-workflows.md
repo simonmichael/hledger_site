@@ -1,5 +1,10 @@
 # Common workflows
 
+<div class=pagetoc>
+
+<!-- toc -->
+</div>
+
 There are lots of ways to use hledger; here is an overview.
 Of course you can mix and match these if you'd like.
 
