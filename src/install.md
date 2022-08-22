@@ -763,7 +763,7 @@ can help with configuring it.
 
 ## Next steps
 
-Nicely done! Now see **[How to get started](index.html#how-to-get-started)**,
+Nicely done! Now see **[Getting started](start.html)**,
 or come to the **[#hledger chat](support.html)**
 where we'll gladly share tips or receive your feedback.
 
