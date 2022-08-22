@@ -6,36 +6,35 @@
 </div>
 
 Starting out with hledger or Plain Text Accounting, not to mention setting up a new accounting system, can be overwhelming.
-This page aims to help! It is work in progress, all help and feedback is welcome in [chat](support.html).
+This page aims to help!
+It is work in progress, all help and feedback is welcome in [chat](support.html).
 
-First, here is a list of practical getting started docs. 
+Here is a list of practical getting started docs. 
 After [installing](install.html) hledger, reading one or more of these should be helpful:
 
 - [Quick Intro](quickintro.html)
 - [Quick Start](quickstart.html)
-- [hledger manual > COMMON TASKS](hledger.html#common-tasks)
 - [Common workflows](common-workflows.html)
+- [Tutorial: hledger's add command](add.html)
+- [Tutorial: hledger-web](web.html)
+- [Tutorial: hledger-ui](ui.html)
+- [hledger manual > Common tasks](hledger.html#common-tasks)
 
-Or, here are some videos you could watch:
+Or, you could watch these gentle beginner videos:
 
-- [hledger fan's beginner videos](https://www.youtube.com/channel/UCZLxXTjOqLzq4z5Jy0AyWSQ/videos), a series of gentle beginner videos
-- More [videos](videos.html)
+- [hledger fan's beginner videos](https://www.youtube.com/channel/UCZLxXTjOqLzq4z5Jy0AyWSQ/videos)
 
 To learn accounting basics and more, see:
 
 - [Accounting](accounting.html)
 
-Here are some tutorials for starting out with:
-
-- [hledger's add command](add.html)
-- [hledger-web](web.html)
-- [hledger-ui](ui.html)
-
-When you want to know exactly what's in hledger and what it does, go to the official reference docs: the hledger manual. You should at least read its table of contents to get an idea of what's in there:
+When you want to know exactly what's in hledger and what it does, go to the official reference docs, the hledger manual:
 
 - [hledger manual](hledger.html)
 
-If you're using hledger-ui or hledger-web, their manuals may also be interesting:
+Do at least read its table of contents to get an idea of what's in there.
+You can also view it by running [`hledger help`](hledger.html#help).
+If you're using hledger-ui or hledger-web, see also:
 
 - [hledger-ui manual](hledger-ui.html)
 - [hledger-web manual](hledger-web.html)
