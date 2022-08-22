@@ -1,4 +1,4 @@
-# hledger Install Guide
+# Installing
 
 <div class=pagetoc>
 

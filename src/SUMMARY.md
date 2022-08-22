@@ -13,7 +13,7 @@
 
 # USERS
 
-- [Install Guide](install.md)
+- [Installing](install.md)
 - [Getting Started](start.md)
 - [hledger manual](hledger.md)
 - [hledger-ui manual](hledger-ui.md)
@@ -55,7 +55,7 @@
 - [Foreign trip expenses](foreign-trip-expenses.md)
 - [Home](index.md)
 - [Importing CSV data](import-csv.md)
-- [Install Guide](install.md)
+- [Installing](install.md)
 - [Invoicing](invoicing.md)
 - [Mobile apps](mobile-apps.md)
 - [Mockups](mockups.md)
