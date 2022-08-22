@@ -9,7 +9,8 @@
     <td>
       <a href="http://matrix.hledger.org">#hledger:matrix.org</a> or
       <a href="http://irc.hledger.org">#hledger:libera.chat</a><br>
-      Active Matrix/IRC hledger chat room with ~140 chatters.
+      <!-- (<a href="https://view.matrix.org/room/!GYlETOAdUBSCcvnEMY:matrix.org">Chat log</a>) <br> -->
+      Active hledger chat, via Matrix or IRC, ~140 chatters.<br>
 <!--
       <br>
       To talk, <a href="https://libera.chat/guides/registration">register your nick</a>:
@@ -20,19 +21,18 @@
       use <a href="https://github.com/matrix-org/matrix-appservice-irc/wiki/End-user-FAQ#how-do-i-registeridentify-to-nickserv">@freenode_NickServ:matrix.org</a>
       and <a href="https://github.com/matrix-org/matrix-appservice-irc/wiki/End-user-FAQ#and-do-it-automatically">@appservice-irc:matrix.org</a>
 -->
-      <br>
-      Also:<br>
+      See also:<br>
       <a href="https://matrix.to/#/#plaintextaccounting:matrix.org">#plaintextaccounting:matrix.org</a>
       or <a href="https://web.libera.chat/#plaintextaccounting">#plaintextaccounting:libera.chat</a><br>
-      General discussion of all PTA tools, ~100 chatters. <br>
+      General PTA chat, ~100 chatters. <br>
     </td>
   </tr>
   <tr valign=top>
     <td>Mail list:</td>
     <td>
-      view: <a href="http://list.hledger.org">list.hledger.org</a><br>
-      send: <a href="mailto:hledger@googlegroups.com">hledger@googlegroups.com</a><br>
-      subscribe: <a href="mailto:hledger+subscribe@googlegroups.com">hledger+subscribe@googlegroups.com</a><br>
+      Archives: <a href="http://list.hledger.org">list.hledger.org</a><br>
+      Send: <a href="mailto:hledger@googlegroups.com">hledger@googlegroups.com</a><br>
+      Subscribe: <a href="mailto:hledger+subscribe@googlegroups.com">hledger+subscribe@googlegroups.com</a><br>
       Low traffic mail list with ~200 subscribers.
     </td>
   </tr>
