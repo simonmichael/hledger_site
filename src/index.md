@@ -39,18 +39,25 @@ With it you can track money, investments, cryptocurrencies, time, or any other q
 
 Developed continuously since 2007, hledger is licensed under GNU GPLv3+, written in Haskell, and thoroughly tested, with $100 bounties for regressions reported.
 
+This page gives a general introduction, before moving on to 
+[Installing](install.html) and [Getting started](start.html).
+There is also a [FAQ](faq.html),
+some [videos](videos.html),
+various [support/discussion](support.html) fora,
+and [Developer docs](dev.html).
+
 [![github](https://img.shields.io/github/stars/simonmichael/hledger.svg?logo=GitHub&label=Github)](https://github.com/simonmichael/hledger)
 
 ## What does it look like?
 
 Currently, three user interfaces are provided out of the box:
-a powerful command line interface, a quick terminal UI, and a simple web UI.
+a powerful command line UI (hledger), a quick terminal UI (hledger-ui), and a simple web UI (hledger-web).
 
 <a href="/images/cli-green-bs-reg.png" class="highslide" onclick="return hs.expand(this, { captionText:'The hledger command line interface.' })"><img src="images/cli-green-bs-reg.png" height="190"></a>
 <a href="/images/home-ui-3.png"        class="highslide" onclick="return hs.expand(this, { captionText:'The hledger-ui text user interface.' })"><img src="images/home-ui-3.png"        height="190"></a>
 <a href="/images/web-bcexample.png"    class="highslide" onclick="return hs.expand(this, { captionText:'The hledger-web web user interface.' })"><img src="images/web-bcexample.png"    height="190"></a>
 
-## Plain text accounting
+## Plain text accounting?
 
 Plain Text Accounting ([plaintextaccounting.org](https://plaintextaccounting.org)) means:
 
@@ -61,6 +68,7 @@ Plain Text Accounting ([plaintextaccounting.org](https://plaintextaccounting.org
 - There is a fast command-line interface, which makes the tool flexible and easy to integrate into custom workflows.
 
 hledger is a robust, largely compatible reimplementation of the original PTA app, Ledger CLI.
+See also: [hledger for Ledger users](ledger.html),
 
 <!-- Why not Gnucash, Quicken, or Xero ? -->
 <!-- Why not another PTA app ? -->
@@ -200,7 +208,7 @@ to help sustain this work.
 
 ## How to get started?
 
-See [Getting Started](start.html).
+[Install](install.html), then see [Getting Started](start.html).
 
 ## Site tips
 
