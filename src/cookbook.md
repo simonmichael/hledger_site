@@ -103,6 +103,7 @@ and [Accounting and bookkeeping](#accounting-and-bookkeeping) examples.
 
 ### Inventory tracking
 - [Tracking and selling inventory](inventory.md)
+- [PTA wiki: Inventory](https://github.com/plaintextaccounting/plaintextaccounting/wiki/Inventory)
 
 ### Investing and trading
 - [Track investments (2017)](track-investments.md)
