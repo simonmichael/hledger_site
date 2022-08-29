@@ -41,4 +41,29 @@ dsq>
 
 Fields are sorted alphabetically, for now.
 
-The CLI has a few issues you might run into - combining flags, multiple files, cache initialisation etc.
+The CLI has a few issues you might run into - combining flags, multiple files, cache initialisation, crashing on empty results...
+
+With no query, dsq outputs JSON (and piping through jq will prettify it).
+So here's a way to export transactions as human-readable JSON
+that is simpler than hledger's `-O json` output:
+```shell
+$ hledger print -O csv | dsq -s csv -n | jq
+[
+  {
+    "date2": "",
+    "amount": -1,
+    "txnidx": 1,
+    "credit": 1,
+    "description": "income",
+    "status": "",
+    "code": "",
+    "account": "income:salary",
+    "date": "2008-01-01",
+    "commodity": "$",
+    "debit": "",
+    "posting-status": "",
+    "posting-comment": "",
+    "comment": ""
+  },
+...
+```
