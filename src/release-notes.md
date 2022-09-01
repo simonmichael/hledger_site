@@ -31,24 +31,59 @@
 <!-- The older releases show changelog-level detail and should probably be -->
 <!-- thinned out. -->
 
-<!-- Template: -->
+<!-- TEMPLATE:
 
 
-<!-- ## YYYY-MM-DD hledger-1.XX -->
+## YYYY-MM-DD hledger-1.XX
 
-<!-- **HIGHLIGHTS** -->
-<!-- ([announcement](https://groups.google.com/g/hledger/LINK)) -->
+**HIGHLIGHTS**
+([announcement](https://groups.google.com/g/hledger/LINK))
 
-<!-- ### hledger 1.XX -->
+### hledger 1.XX
 
-<!-- ### hledger-ui 1.XX -->
+Breaking changes
 
-<!-- ### hledger-web 1.XX -->
+Features
 
-<!-- ### project changes 1.XX -->
+Improvements
 
-<!-- ### credits 1.XX -->
+Fixes
 
+Scripts/addons
+
+### hledger-ui 1.XX
+
+Breaking changes
+
+Features
+
+Improvements
+
+Fixes
+
+### hledger-web 1.XX
+
+Breaking changes
+
+Features
+
+Improvements
+
+Fixes
+
+### project changes 1.XX
+
+Docs
+
+Examples
+
+Process
+
+### credits 1.XX
+
+
+
+-->
 
 <style>
 h2, h2:last-child > h3 { margin-top:4em; }
