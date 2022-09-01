@@ -9,7 +9,7 @@ The method depends on where you store time records:
 If you might have a different rate for each job, 
 and there aren't too many transactions per job:
 you could record the rate as a cost (`2h @ $100`),
-and run a [cost report](hledger.html#conversion--cost) with `-B/--cost`.
+and run a [cost report](hledger.html#cost) with `-B/--cost`.
 
 When the rate doesn't change much and there are many transactions,
 it's more convenient to declare it with a P directive,
