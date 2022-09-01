@@ -99,6 +99,176 @@ Changes in hledger-install.sh are shown
 [here](https://github.com/simonmichael/hledger/commits/master/hledger-install/hledger-install.sh).
 
 
+## 2022-09-01 hledger-1.27
+
+**Infer costs from equity postings, new error checks, improved error messages, fixes.**
+<!-- ([announcement](https://groups.google.com/g/hledger/LINK)) -->
+
+### hledger 1.27
+
+Features
+
+- `hledger check recentassertions` (and flycheck-hledger in Emacs if
+  you enable this check) requires that all balance-asserted accounts
+  have a balance assertion within 7 days before their latest posting.
+
+  This helps remind you to not only record transactions, but also to
+  regularly check account balances against the real world, to catch
+  errors sooner and avoid a time-consuming hunt.
+
+- The --infer-costs general flag has been added, as the inverse
+  operation to --infer-equity.  --infer-costs detects commodity
+  conversion transactions which have been written with equity
+  conversion postings (the traditional accounting notation) and adds
+  PTA cost notation (@@) to them (allowing cost reporting).
+  See https://hledger.org/hledger.html#equity-conversion-postings .
+  (Stephen Morgan)
+
+Improvements
+
+- Many error messages have been improved. Most error messages now use
+  a consistent, more informative format. 
+  (#1436)
+
+- The accounts command has a new --directives flag which makes it
+  show valid account directives which you can paste into a journal.
+
+- The accounts command has a new --positions flag which shows where
+  accounts were declared, useful for troubleshooting.
+  (#1909)
+
+- Bump lower bounds for Diff and githash. (Andrew Lelechenko)
+
+- GHC 8.6 and 8.8 are no longer supported. Building hledger now
+  requires GHC 8.10 or greater.
+
+Fixes
+
+- Account display order is now calculated correctly even when accounts
+  are declared in multiple files.
+  (#1909)
+
+- At --debug 5 and up, account declarations info is logged.
+  (#1909)
+
+- hledger aregister and hledger-ui now show transactions correctly
+  when there is a type: query.
+  (#1905)
+
+- bal: Allow cumulative gain and valuechange reports.
+  Previously, --cumulative with --gain or --valuechange would produce an
+  empty report. This fixes this issue to produce a reasonable report.
+  (Stephen Morgan)
+
+- bal: budget goal amounts now respect -c styles (fixes #1907)
+
+- bal: budget goals now respect -H (#1879)
+
+- bal: budget goals were ignoring rule-specified start date
+
+- bal: Allow cumulative gain and valuechange reports (Stephen Morgan)
+  Previously, --cumulative with --gain or --valuechange would produce an
+  empty report. This fixes this issue to produce a reasonable report.
+
+- cs/bs/is: Fixed non-display of child accounts when there is an
+  intervening account of another type.
+  (#1921) (Stephen Morgan)
+
+- roi: make sure empty cashflows are skipped when determining first cashflow (Charlotte Van Petegem)
+  Empty cashflows are added when the begin date of the report is before the first
+  transaction.
+
+Scripts/addons
+
+- https://hledger.org/scripts.html - an overview of scripts and addons in bin/.
+
+- paypaljson, paypaljson2csv - download txns from paypal API
+
+- hledger-check-postable.hs - check that no postings are made to accounts with a postable:(n|no) tag
+
+- hledger-addon-example.hs - script template
+
+### hledger-ui 1.27
+
+Improvements
+
+- At --debug=2 and up, log debug output to ./debug.log.
+
+- Use/require brick 1.0+. (#1889)
+
+- Use hledger 1.27
+
+### hledger-web 1.27
+
+Improvements
+
+- Improve the add form's layout and space usage.
+
+- Pre-fill the add form's date field.
+
+- Highlight today in the add form's date picker.
+
+- Focus the add form's description field by default.
+
+- Allow an empty description in the add form.
+
+- Use hledger 1.27
+
+Fixes
+
+- Respect the add form's file selector again.
+  (Simon Michael, Kerstin, #1229)
+
+### project changes 1.27
+
+Docs
+
+- https://hledger.org/ERRORS.html - an overview of hledger's error messages.
+
+- Rewrite/consolidate cost and conversion docs.
+
+- New template for github releases, with improved install instructions for binaries.
+
+- Add modern windows binary install instructions. (Lazar Lazarov, Simon Michael)
+
+- Fix tables of contents in developer documentation. (Alex Hirzel)
+
+- Update ACHIEVEMENTS. (Alex Hirzel)
+
+- Corrected the extension for the CREDITS file.  (Pranesh Prakash)
+
+- Fix broken link in bin/README.md. (David D Lowe)
+
+Examples
+
+- Add example for capital one credit cards CSV. (max thomas)
+
+Process
+
+- Revive github projects, set up http://projects.hledger.org shortcut url
+
+- Many cleanups and improvements to the CI test and binary-generating
+  github actions.  The CI tests for master now also include
+  hledger-lib's doctests.
+
+- All packages now disallow name shadowing in their code.
+
+- make scc gives a modern report of code line counts.
+
+- make ghci-unit-test loads hledger-lib unit tests in GHCI.
+
+### credits 1.27
+
+Simon Michael,
+Stephen Morgan,
+Alex Hirzel,
+Pranesh Prakash,
+David D Lowe,
+Charlotte Van Petegem,
+Max Thomas,
+Andrew Lelechenko.
+
+
 ## 2022-07-11 hledger-1.26.1
 
 ### hledger 1.26.1
