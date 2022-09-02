@@ -195,7 +195,7 @@ And finally please [share any feedback](support.html) so we can make this proces
   <tr> <!-- GENTOO -->
     <td>
       <div class="badges">
-        <a href="https://gentoo.zugaina.org/Search?search=hledger"><img alt="Gentoo" src="https://img.shields.io/badge/Gentoo_package-1.26.1-brightgreen.svg" /></a>
+        <a href="https://gentoo.zugaina.org/Search?search=hledger"><img alt="Gentoo" src="https://img.shields.io/badge/Gentoo_package-1.26.1-red.svg" /></a>
       </div>
     </td>
     <td>
@@ -379,7 +379,7 @@ And finally please [share any feedback](support.html) so we can make this proces
   <tr> <!-- DOCKER -->
     <td>
       <div class="badges">
-        <a href="https://hub.docker.com/r/dastapov/hledger"><img alt="Docker" src="https://img.shields.io/badge/Docker_image-1.26-brightgreen.svg" /></a><br>
+        <a href="https://hub.docker.com/r/dastapov/hledger"><img alt="Docker" src="https://img.shields.io/badge/Docker_image-1.26-red.svg" /></a><br>
         <a href="https://hub.docker.com/search?q=hledger&amp;type=image&amp;sort=updated_at&amp;order=desc">more..</a>
       </div>
       <!-- <div class="notes">Linux, Mac, Windows</div> -->
@@ -392,7 +392,7 @@ And finally please [share any feedback](support.html) so we can make this proces
   <tr> <!-- NIX -->
     <td>
       <div class="badges">
-        <a href="https://github.com/search?l=&o=desc&q=%22automatic+Haskell+package+set+update%22+repo%3ANixOS%2Fnixpkgs+filename%3Ahaskell-packages.nix&s=committer-date&type=Commits"><img alt="Nix" src="https://img.shields.io/badge/Nix_package-1.26-brightgreen.svg" /></a>
+        <a href="https://github.com/search?l=&o=desc&q=%22automatic+Haskell+package+set+update%22+repo%3ANixOS%2Fnixpkgs+filename%3Ahaskell-packages.nix&s=committer-date&type=Commits"><img alt="Nix" src="https://img.shields.io/badge/Nix_package-1.26-red.svg" /></a>
       </div>
       <!-- <div class="notes">Linux, Mac</div> -->
     </td>
