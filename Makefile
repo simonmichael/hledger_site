@@ -1,4 +1,4 @@
-CURRENT_RELEASE=1.26
+CURRENT_RELEASE=1.27
 
 # Render the current site and current dev and release manuals, saving them in out.
 # The sitemap files are restored afterward (mdbook removes them).
@@ -6,7 +6,7 @@ CURRENT_RELEASE=1.26
 build:
 	@echo "building site with current manuals in /"
 	@make -s build3-dev
-	@make -s build3-1.26
+	@make -s build3-1.27
 	@git checkout -- out/sitemap.xml out/sitemap.txt
 
 # Render most versions of manuals (excluding old versions not packaged anywhere). 
@@ -32,7 +32,8 @@ all buildall: \
 	build3-1.23 \
 	build3-1.24 \
 	build3-1.25 \
-	build3-1.26
+	build3-1.26 \
+	build3-1.27
 	@git checkout -- out/sitemap.xml out/sitemap.txt
 
 sitemap: copy-old-manuals
