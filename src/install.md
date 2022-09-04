@@ -133,25 +133,6 @@ And finally please [share any feedback](support.html) so we can make this proces
     </td>
   </tr>
 
-  <tr valign="top"> <!-- CHOCOLATEY -->
-    <td>
-      <div class="badges">
-        <a href="https://community.chocolatey.org/packages/hledger">
-          <img alt="Chocolatey package" src="https://repology.org/badge/version-for-repo/chocolatey/hledger.svg" />
-        </a>
-      </div>
-    </td>
-    <td style="padding-top:10px;">
-      <div class="command" style="margin-bottom:4px;">
-        choco install hledger -y
-      </div>
-      <div class="notes">
-      <!--   <span class="warnings"> -->
-      <!--   </span> -->
-      </div>
-    </td>
-  </tr>
-  
   <tr valign="top"> <!-- SCOOP -->
     <td>
       <div class="badges">
@@ -171,6 +152,25 @@ And finally please [share any feedback](support.html) so we can make this proces
     </td>
   </tr>
 
+  <tr valign="top"> <!-- CHOCOLATEY -->
+    <td>
+      <div class="badges">
+        <a href="https://community.chocolatey.org/packages/hledger">
+          <img alt="Chocolatey package" src="https://repology.org/badge/version-for-repo/chocolatey/hledger.svg" />
+        </a>
+      </div>
+    </td>
+    <td style="padding-top:10px;">
+      <div class="command" style="margin-bottom:4px;">
+        choco install hledger -y
+      </div>
+      <div class="notes">
+      <!--   <span class="warnings"> -->
+      <!--   </span> -->
+      </div>
+    </td>
+  </tr>
+  
 </table>
 
 ### GNU/Linux
@@ -244,11 +244,11 @@ And finally please [share any feedback](support.html) so we can make this proces
   <tr> <!-- FEDORA -->
     <td>
       <div class="badges">
+        <a ><img src="https://img.shields.io/badge/Fedora_38_package-1.21-red.svg" /></a><br>
         <a ><img src="https://img.shields.io/badge/Fedora_37_package-1.21-red.svg" /></a><br>
         <a ><img src="https://repology.org/badge/version-for-repo/fedora_36/hledger.svg" /></a><br>
         <a ><img src="https://repology.org/badge/version-for-repo/fedora_35/hledger.svg" /></a><br>
         <a ><img src="https://repology.org/badge/version-for-repo/fedora_34/hledger.svg" /></a><br>
-        <a ><img src="https://repology.org/badge/version-for-repo/fedora_33/hledger.svg" /></a><br>
         <a href="https://src.fedoraproject.org/rpms/hledger">more..</a>
       </div>
     </td>
