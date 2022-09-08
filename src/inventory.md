@@ -93,7 +93,7 @@ Ending balances (historical) in 2021-01-01..2021-01-04:
 ```
 
 To see the same information in terms of the cash-value of the inventory
-that we're holding we can use the `-V` flag.  From this view we can the
+that we're holding we can use the `-V` flag.  From this view we can see the
 income realized by the fundraiser as it progresses, and the cash value
 of our current inventory.
 
