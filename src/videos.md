@@ -25,17 +25,20 @@ hledger-related videos:
   - [The Basics: The hledger Register Command](https://www.youtube.com/watch?v=C75nM7lQzJY)
   - [hledger Basics: 3 Must-Know Options for the Balance Command](https://www.youtube.com/watch?v=JZE5302SrtM)
   - [The Basics: An hledger Transaction](https://www.youtube.com/watch?v=SSz09ThShrs)
-  
+
+- [Glenn Ramsey @ Kiwi Pycon XI](https://youtube.com/watch?v=lazZwTmAEHs)  (2022, 30m)\
+  Plain text accounting for fun and profit
+
 - [Intproject Mi: Учет сделок с проводками в текстовом формате](https://www.youtube.com/watch?v=1qrFjSVav2Q) (2019, 34m)
 
 - [Simon Michael @ Brainium meetup](https://www.youtube.com/watch?v=H_CdGzLbc7A) (2016, 2h) <!-- sep 2 --> \
-  "Hands-on with hledger"
+  Hands-on with hledger
 
 - [hledger add](https://www.vincecima.com/2016/06/12/the-surprising-ease-of-plain-text-accounting.html) (2016, 30s) <!-- jun 12 --> \
   in The Surprising Ease of Plain Text Accounting 
 
 - [Chris Vollick @ DevHouse Waterloo meetup](https://www.youtube.com/watch?v=-WahFvxhCRc&t=895s) (2016, 40m) <!-- apr 16 --> \
-  "hledger, an open source accounting tool"
+  hledger, an open source accounting tool
 
 - [FLOSS Weekly episode 375: hledger](https://twit.tv/shows/floss-weekly/episodes/375) (2016) <!-- feb 16 --> -
   [overview](https://www.youtube.com/watch?v=qS2UcDV_lbs) (3m),
