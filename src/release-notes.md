@@ -99,6 +99,30 @@ Changes in hledger-install.sh are shown
 [here](https://github.com/simonmichael/hledger/commits/master/hledger-install/hledger-install.sh).
 
 
+## 2022-09-18 hledger-1.27.1
+
+### hledger 1.27.1
+
+Fixes
+
+- Balance commands using `-T -O html` no longer fail with an error
+  when there is no data to report.
+  (#1933)
+
+### hledger-ui 1.27.1
+
+- Uses hledger-1.27.1
+
+### hledger-web 1.27.1
+
+Fixes
+
+- The add form no longer gives an error when there is just a single file and no file field showing.
+  (#1932)
+
+- Uses hledger-1.27.1
+
+
 ## 2022-09-01 hledger-1.27
 
 **Infer costs from equity postings, new error checks, improved error messages, fixes.**
