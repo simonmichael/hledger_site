@@ -172,8 +172,8 @@ But here are some common changes people make sooner or later, so why not now:
   account assets       ; type:A, money you own
   account liabilities  ; type:L, money you owe to others
   account equity       ; type:E, equal to A - L (not used much in personal accounting)
-  account revenues     ; type:R, inflow categories (part of E, separated for reporting)
-  account expenses     ; type:X, outflow categories (part of E, separated for reporting)
+  account revenues     ; type:R, revenue/income categories
+  account expenses     ; type:X, expense categories
 
   ; Declare commodities/currencies and their decimal mark, digit grouping,
   ; number of decimal places..
