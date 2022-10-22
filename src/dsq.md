@@ -47,7 +47,7 @@ With no query, dsq outputs JSON (and piping through jq will prettify it).
 So here's a way to export transactions as human-readable JSON
 that is simpler than hledger's `-O json` output:
 ```shell
-$ hledger print -O csv | dsq -s csv -n | jq
+$ hledger print -O csv | dsq -s csv -n | jq -S
 [
   {
     "date2": "",
