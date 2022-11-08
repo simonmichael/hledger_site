@@ -12,8 +12,8 @@
 
 # USING HLEDGER
 
-- [Installing](install.md)
-- [Getting Started](start.md)
+- [Install](install.md)
+- [Get Started](start.md)
 - [hledger manual](1.27/hledger.md)
 - [hledger-ui manual](1.27/hledger-ui.md)
 - [hledger-web manual](1.27/hledger-web.md)
@@ -53,9 +53,10 @@
 - [Exporting from hledger](export.md)
 - [Forecasting](forecasting.md)
 - [Foreign trip expenses](foreign-trip-expenses.md)
+- [Get Started](start.md)
 - [Home](index.md)
 - [Importing CSV data](import-csv.md)
-- [Installing](install.md)
+- [Install](install.md)
 - [Invoicing](invoicing.md)
 - [Mobile apps](mobile-apps.md)
 - [Mockups](mockups.md)

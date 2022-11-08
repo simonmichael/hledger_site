@@ -1,4 +1,4 @@
-# Installing
+# Install
 
 <div class=pagetoc>
 
