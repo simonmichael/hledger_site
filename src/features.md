@@ -1,4 +1,4 @@
-# Why hledger ?
+# hledger features
 
 <div class=pagetoc>
 

@@ -5,7 +5,7 @@
 # ABOUT
 
 - [Home](index.md)
-- [Why hledger ?](why.md)
+- [Features](features.md)
 - [General FAQ](faq.md)
 - [Videos, Talks](videos.md)
 - [Discussion/Support](support.md)
