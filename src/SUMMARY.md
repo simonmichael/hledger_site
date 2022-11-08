@@ -6,8 +6,8 @@
 
 - [Home](index.md)
 - [Features](features.md)
-- [General FAQ](faq.md)
 - [Videos, Talks](videos.md)
+- [General FAQ](faq.md)
 - [Discussion/Support](support.md)
 
 # USING HLEDGER
