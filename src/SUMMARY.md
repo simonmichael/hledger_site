@@ -15,9 +15,9 @@
 
 - [Installing](install.md)
 - [Getting Started](start.md)
-- [hledger manual](hledger.md)
-- [hledger-ui manual](hledger-ui.md)
-- [hledger-web manual](hledger-web.md)
+- [hledger manual](1.27/hledger.md)
+- [hledger-ui manual](1.27/hledger-ui.md)
+- [hledger-web manual](1.27/hledger-web.md)
 - [Scripts](scripts.md)
 - [Cookbook](cookbook.md)
 - [User FAQ](userfaq.md)
@@ -90,9 +90,100 @@
 - [hledger and Ledger](ledger.md)
 - [hledger and Quicken / Quickbooks](quicken.md)
 - [hledger and SQLite](sqlite.md)
-- [hledger manual](hledger.md)
-- [hledger-ui manual](hledger-ui.md)
-- [hledger-web manual](hledger-web.md)
+
+<!--
+Other manual versions.
+Listing these here would cause mdbook to render them,
+but also clutters the site TOC and search results too much.
+Instead we build each one with a separate mdbook run, in out2/ (see Makefile), 
+pthen splice those into the site with caddy rewrites.
+But when previewing docs locally, it's useful to uncomment
+at least the dev manuals here.
+-->
+<!-- - [hledger manual (dev)](dev/hledger.md) -->
+<!-- - [hledger-ui manual (dev)](dev/hledger-ui.md) -->
+<!-- - [hledger-web manual (dev)](dev/hledger-web.md) -->
+
+<!-- - [hledger manual (1.26)](1.26/hledger.md) -->
+<!-- - [hledger-ui manual (1.26)](1.26/hledger-ui.md) -->
+<!-- - [hledger-web manual (1.26)](1.26/hledger-web.md) -->
+
+<!-- - [hledger manual (1.25)](1.25/hledger.md) -->
+<!-- - [hledger-ui manual (1.25)](1.25/hledger-ui.md) -->
+<!-- - [hledger-web manual (1.25)](1.25/hledger-web.md) -->
+
+<!-- - [hledger manual (1.24)](1.24/hledger.md) -->
+<!-- - [hledger-ui manual (1.24)](1.24/hledger-ui.md) -->
+<!-- - [hledger-web manual (1.24)](1.24/hledger-web.md) -->
+
+<!-- - [hledger manual (1.23)](1.23/hledger.md) -->
+<!-- - [hledger-ui manual (1.23)](1.23/hledger-ui.md) -->
+<!-- - [hledger-web manual (1.23)](1.23/hledger-web.md) -->
+
+<!-- - [hledger manual (1.22)](1.22/hledger.md) -->
+<!-- - [hledger-ui manual (1.22)](1.22/hledger-ui.md) -->
+<!-- - [hledger-web manual (1.22)](1.22/hledger-web.md) -->
+
+<!-- - [hledger manual (1.21)](1.21/hledger.md) -->
+<!-- - [hledger-ui manual (1.21)](1.21/hledger-ui.md) -->
+<!-- - [hledger-web manual (1.21)](1.21/hledger-web.md) -->
+
+<!-- - [hledger manual (1.19)](1.19/hledger.md) -->
+<!-- - [hledger-ui manual (1.19)](1.19/hledger-ui.md) -->
+<!-- - [hledger-web manual (1.19)](1.19/hledger-web.md) -->
+<!-- - [journal format manual (1.19)](1.19/journal.md) -->
+<!-- - [csv format manual (1.19)](1.19/csv.md) -->
+<!-- - [timeclock format manual (1.19)](1.19/timeclock.md) -->
+<!-- - [timedot format manual (1.19)](1.19/timedot.md) -->
+
+<!-- - [hledger manual (1.18)](1.18/hledger.md) -->
+<!-- - [hledger-ui manual (1.18)](1.18/hledger-ui.md) -->
+<!-- - [hledger-web manual (1.18)](1.18/hledger-web.md) -->
+<!-- - [journal format manual (1.18)](1.18/journal.md) -->
+<!-- - [csv format manual (1.18)](1.18/csv.md) -->
+<!-- - [timeclock format manual (1.18)](1.18/timeclock.md) -->
+<!-- - [timedot format manual (1.18)](1.18/timedot.md) -->
+
+<!-- - [hledger manual (1.12)](1.12/hledger.md) -->
+<!-- - [hledger-ui manual (1.12)](1.12/hledger-ui.md) -->
+<!-- - [hledger-web manual (1.12)](1.12/hledger-web.md) -->
+<!-- - [journal format manual (1.12)](1.12/journal.md) -->
+<!-- - [csv format manual (1.12)](1.12/csv.md) -->
+<!-- - [timeclock format manual (1.12)](1.12/timeclock.md) -->
+<!-- - [timedot format manual (1.12)](1.12/timedot.md) -->
+
+<!-- - [hledger manual (1.10)](1.10/hledger.md) -->
+<!-- - [hledger-ui manual (1.10)](1.10/hledger-ui.md) -->
+<!-- - [hledger-web manual (1.10)](1.10/hledger-web.md) -->
+<!-- - [journal format manual (1.10)](1.10/journal.md) -->
+<!-- - [csv format manual (1.10)](1.10/csv.md) -->
+<!-- - [timeclock format manual (1.10)](1.10/timeclock.md) -->
+<!-- - [timedot format manual (1.10)](1.10/timedot.md) -->
+
+<!-- - [hledger manual (1.9)](1.9/hledger.md) -->
+<!-- - [hledger-ui manual (1.9)](1.9/hledger-ui.md) -->
+<!-- - [hledger-web manual (1.9)](1.9/hledger-web.md) -->
+<!-- - [journal format manual (1.9)](1.9/journal.md) -->
+<!-- - [csv format manual (1.9)](1.9/csv.md) -->
+<!-- - [timeclock format manual (1.9)](1.9/timeclock.md) -->
+<!-- - [timedot format manual (1.9)](1.9/timedot.md) -->
+
+<!-- - [hledger manual (1.2)](1.2/hledger.md) -->
+<!-- - [hledger-ui manual (1.2)](1.2/hledger-ui.md) -->
+<!-- - [hledger-web manual (1.2)](1.2/hledger-web.md) -->
+<!-- - [journal format manual (1.2)](1.2/journal.md) -->
+<!-- - [csv format manual (1.2)](1.2/csv.md) -->
+<!-- - [timeclock format manual (1.2)](1.2/timeclock.md) -->
+<!-- - [timedot format manual (1.2)](1.2/timedot.md) -->
+
+<!-- - [hledger manual (1.0)](1.0/hledger.md) -->
+<!-- - [hledger-ui manual (1.0)](1.0/hledger-ui.md) -->
+<!-- - [hledger-web manual (1.0)](1.0/hledger-web.md) -->
+<!-- - [journal format manual (1.0)](1.0/journal.md) -->
+<!-- - [csv format manual (1.0)](1.0/csv.md) -->
+<!-- - [timeclock format manual (1.0)](1.0/timeclock.md) -->
+<!-- - [timedot format manual (1.0)](1.0/timedot.md) -->
+
 - [hledger-web tips](hledger-web-tips.md)
 <!-- [Depreciation](http://rantsideasstuff.com/posts/2018/07/08-depreciation-in-personal-finance-with-hledger) -->
 
