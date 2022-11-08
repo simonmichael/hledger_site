@@ -8,7 +8,7 @@
 There are lots of ways to use hledger; here is an overview.
 Of course you can mix and match these if you'd like.
 
-## GUI workflow
+## GUI
 
 Download and run `hledger-web`, eg by double-clicking on it.
 It should open in your web browser.
@@ -21,7 +21,7 @@ It will store data in its default location.
 In all of these workflows, remember to back up your computer
 periodically to safeguard your hledger data.
 
-## Command line workflow
+## Command line
 
 At a terminal prompt, run `hledger add` and follow the interactive prompts to enter transactions.
 It will store data in its default location.
@@ -33,7 +33,7 @@ Eg, run
 [Tutorial: hledger add](add.md) describes this process, and hledger's basic concepts and file format, step by step.
 You might want to skim through this one even if you don't plan to use `hledger add`.
 
-## Text editor workflow
+## Text editor
 
 Open your preferred text editor and create a journal file, `.hledger.journal` in your home directory.
 (Or elsewhere, and set its path in the `LEDGER_FILE` environment variable.)
@@ -102,7 +102,7 @@ Income Statement 2020-01-01-2020-03-20
  Net:                    ||   0    0  $1900 
 ```
 
-## TUI workflow
+## TUI
 
 Use `hledger add` once (see above) to create a journal file.
 Now run `hledger-ui` to view account balances.
@@ -111,7 +111,7 @@ Eg, press `a` to add a transaction, and follow the prompts (it uses `hledger add
 
 [Tutorial: hledger-ui](ui.md) describes this setup in more detail.
 
-## CSV import workflow
+## CSV import
 
 Download CSV files from banks and financial institutions, manually or
 using tools/services that automate this (ledger_autosync, Plaid, plaid2qif, Tiller etc.)
