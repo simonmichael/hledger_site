@@ -26,7 +26,7 @@ function addDocVersions() {
   var newdest3 = (pre121pages.indexOf(page) > -1 ? 'hledger.html#' + page + '-format' : (page + '.html'));
   var docversions = document.getElementsByClassName('docversions')[0];
   if (docversions)
-    // include just packaged versions to save space (keep synced with site/Makefile)
+    // include just packaged versions to save screen space (keep synced with site/Makefile)
     docversions.innerHTML = '\
       <a href="/dev/' +newdest3+'">dev</a>  · \
       <a href="/1.27/'+newdest3+'">1.27</a> · \
