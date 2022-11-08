@@ -5,13 +5,12 @@
 # ABOUT
 
 - [Home](index.md)
-- [General FAQ](faq.md)
 - [Why hledger ?](why.md)
+- [General FAQ](faq.md)
 - [Videos, Talks](videos.md)
-- [Support/Discussion](support.md)
-- [Sponsor](sponsor.md)
+- [Discussion/Support](support.md)
 
-# USERS
+# USING HLEDGER
 
 - [Installing](install.md)
 - [Getting Started](start.md)
@@ -22,16 +21,17 @@
 - [Cookbook](cookbook.md)
 - [User FAQ](userfaq.md)
 
-# DEVELOPERS
+# CONTRIBUTE
 
-- [Developer docs](dev.md)
+- [Sponsor](sponsor.md)
 - [Contributor Guide](CONTRIBUTING.md)
+- [Developer docs](dev.md)
 - [Developer FAQ](devfaq.md)
 - [CREDITS](CREDITS.md)
 
 # ALL PAGES
 
-<!-- This section is hidden by CSS, but lists every site page so mdbook will render it: -->
+<!-- This section is hidden by CSS, but lists all site pages so that mdbook will render them: -->
 
 - [Accounting](accounting.md)
 - [Balancing the accounting equation](balancing-the-accounting-equation.md)
