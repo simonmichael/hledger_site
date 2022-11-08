@@ -58,7 +58,7 @@ tools:
 # The noindex meta tag will be added.
 build7-%:
 	@echo "building site with the seven $* manuals in /$*"
-	@perl -i -p0e "s/- +(.*?)]\(hledger\.md\)\n- +(.*?)]\(hledger-ui\.md\)\n- +(.*?)]\(hledger-web\.md\)/- \1 ($*)]($*\/hledger.md)\n- \2 ($*)]($*\/hledger-ui.md)\n- \3 ($*)]($*\/hledger-web.md)\n- [journal manual ($*)]($*\/journal.md)\n- [csv manual ($*)]($*\/csv.md)\n- [timeclock manual ($*)]($*\/timeclock.md)\n- [timedot manual ($*)]($*\/timedot.md)/m" src/SUMMARY.md
+	@perl -i -p0e "s/- +(.*?)]\(.*?hledger\.md\)\n- +(.*?)]\(.*?hledger-ui\.md\)\n- +(.*?)]\(.*?hledger-web\.md\)/- \1 ($*)]($*\/hledger.md)\n- \2 ($*)]($*\/hledger-ui.md)\n- \3 ($*)]($*\/hledger-web.md)\n- [journal manual ($*)]($*\/journal.md)\n- [csv manual ($*)]($*\/csv.md)\n- [timeclock manual ($*)]($*\/timeclock.md)\n- [timedot manual ($*)]($*\/timedot.md)/m" src/SUMMARY.md
 	@sed -i -e 's/<\/title>/<\/title>\n<meta name="robots" content="noindex" \/>/' theme/index.hbs
 	@mdbook build
 	@mkdir -p out2
@@ -71,7 +71,7 @@ build7-%:
 # The noindex meta tag will be added to all but the current release.
 build3-%:
 	@echo "building site with the three $* manuals in /$*"
-	@perl -i -pe "s/^- +(.*?)]\((hledger(|-ui|-web)\.md)\)/- \1 ($*)]($*\/\2)/" src/SUMMARY.md
+	@perl -i -pe "s/^- +(.*?)]\(.*?(hledger(|-ui|-web)\.md)\)/- \1 ($*)]($*\/\2)/" src/SUMMARY.md
 	@if [ ! x"$*" = x"$(CURRENT_RELEASE)" ] ; then \
 		sed -i -e 's/<\/title>/<\/title>\n<meta name="robots" content="noindex" \/>/' theme/index.hbs; \
 	fi
