@@ -94,16 +94,16 @@
 
 <!--
 Other manual versions.
-Listing these here would cause mdbook to render them,
-but also clutters the site TOC and search results too much.
-Instead we build each one with a separate mdbook run, in out2/ (see Makefile), 
-pthen splice those into the site with caddy rewrites.
-But when previewing docs locally, it's useful to uncomment
-at least the dev manuals here.
+Uncommenting these causes mdbook to render them as part of the main site,
+including them in search results (and in the site TOC, though we try to hide these links with CSS).
+So mostly we instead build each one with a separate mdbook run, in out2/ (see Makefile), 
+and splice those into the site with caddy rewrites.
+It's useful to uncomment the dev manuals though, allowing searching for new features
+and previewing them when working on docs locally.
 -->
-<!-- - [hledger manual (dev)](dev/hledger.md) -->
-<!-- - [hledger-ui manual (dev)](dev/hledger-ui.md) -->
-<!-- - [hledger-web manual (dev)](dev/hledger-web.md) -->
+- [hledger manual (dev)](dev/hledger.md)
+- [hledger-ui manual (dev)](dev/hledger-ui.md)
+- [hledger-web manual (dev)](dev/hledger-web.md)
 
 <!-- - [hledger manual (1.26)](1.26/hledger.md) -->
 <!-- - [hledger-ui manual (1.26)](1.26/hledger-ui.md) -->
