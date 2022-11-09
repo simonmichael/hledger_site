@@ -56,9 +56,10 @@ tools:
 # The manuals source should exist in src/VER/.
 # After this you should "make build" to rebuild the site with current manuals.
 # The noindex meta tag will be added.
+# The perl rewrites links to numeric manual versions but not to dev manuals.
 build7-%:
 	@echo "building site with the seven $* manuals in /$*"
-	@perl -i -p0e "s/- +(.*?)]\(.*?hledger\.md\)\n- +(.*?)]\(.*?hledger-ui\.md\)\n- +(.*?)]\(.*?hledger-web\.md\)/- \1 ($*)]($*\/hledger.md)\n- \2 ($*)]($*\/hledger-ui.md)\n- \3 ($*)]($*\/hledger-web.md)\n- [journal manual ($*)]($*\/journal.md)\n- [csv manual ($*)]($*\/csv.md)\n- [timeclock manual ($*)]($*\/timeclock.md)\n- [timedot manual ($*)]($*\/timedot.md)/m" src/SUMMARY.md
+	@perl -i -p0e "s/- +(.*?)]\([0-9].*?hledger\.md\)\n- +(.*?)]\([0-9].*?hledger-ui\.md\)\n- +(.*?)]\([0-9].*?hledger-web\.md\)/- \1 ($*)]($*\/hledger.md)\n- \2 ($*)]($*\/hledger-ui.md)\n- \3 ($*)]($*\/hledger-web.md)\n- [journal manual ($*)]($*\/journal.md)\n- [csv manual ($*)]($*\/csv.md)\n- [timeclock manual ($*)]($*\/timeclock.md)\n- [timedot manual ($*)]($*\/timedot.md)/m" src/SUMMARY.md
 	@sed -i -e 's/<\/title>/<\/title>\n<meta name="robots" content="noindex" \/>/' theme/index.hbs
 	@mdbook build
 	@mkdir -p out2
@@ -69,9 +70,10 @@ build7-%:
 # The manuals source should exist in src/VER/.
 # After this you should "make build" to rebuild the site with current manuals.
 # The noindex meta tag will be added to all but the current release.
+# The perl rewrites links to numeric manual versions but not to dev manuals.
 build3-%:
 	@echo "building site with the three $* manuals in /$*"
-	@perl -i -pe "s/^- +(.*?)]\(.*?(hledger(|-ui|-web)\.md)\)/- \1 ($*)]($*\/\2)/" src/SUMMARY.md
+	@perl -i -pe "s/^- +(.*?)]\([0-9].*?(hledger(|-ui|-web)\.md)\)/- \1 ($*)]($*\/\2)/" src/SUMMARY.md
 	@if [ ! x"$*" = x"$(CURRENT_RELEASE)" ] ; then \
 		sed -i -e 's/<\/title>/<\/title>\n<meta name="robots" content="noindex" \/>/' theme/index.hbs; \
 	fi
