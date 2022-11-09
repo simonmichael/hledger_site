@@ -1,4 +1,4 @@
-# hledger features
+# Features
 
 <div class=pagetoc>
 
