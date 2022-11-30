@@ -77,7 +77,7 @@ Docs
 
 Examples
 
-Process
+Infrastructure
 
 ### credits 1.XX
 
@@ -90,7 +90,6 @@ h2, h2:last-child > h3 { margin-top:4em; }
 </style>
 
 Major releases and user-visible changes, collected from the changelogs (
-[hledger-lib](http://hackage.haskell.org/package/hledger-lib-1.24.1/changelog),
 [hledger](http://hackage.haskell.org/package/hledger-1.24.1/changelog),
 [hledger-ui](http://hackage.haskell.org/package/hledger-ui-1.24.1/changelog),
 [hledger-web](http://hackage.haskell.org/package/hledger-web-1.24.1/changelog)
@@ -98,6 +97,148 @@ Major releases and user-visible changes, collected from the changelogs (
 Changes in hledger-install.sh are shown
 [here](https://github.com/simonmichael/hledger/commits/master/hledger-install/hledger-install.sh).
 
+
+## 2022-12-01 hledger-1.28
+
+**new hledger-ui screens, better debug output;
+accounts, print, csv-reading improvements;
+new hledger-move, watchaccounts scripts**
+<!-- ([announcement](https://groups.google.com/g/hledger/LINK)) -->
+
+### hledger 1.28
+
+Features
+
+- The `accounts` command has new flags: `--undeclared` (show accounts used but not declared),
+  `--unused` (show accounts declared but not used),  and `--find` (find the first account
+  matched by the first command argument, a convenience for scripts). 
+  Also `-u` and `-d` short flags have been added for `--used` and `--declared`.
+
+- A new CSV rule `intra-day-reversed` helps generate transactions in correct order
+  with CSVs where records are reversed within each day.
+
+- CSV rules can now correctly convert CSV date-times with a implicit or explicit timezone
+  to dates in your local timezone. Previously, CSV date-times with a different time zone
+  from yours could convert to off-by-one dates, because the CSV's timezone was ignored.
+  Now,
+
+  1. When a CSV has date-times with an implicit timezone different from yours,
+     you can use the `timezone` rule to declare it.
+
+  2. CSV date-times with a known timezone (either declared by `timezone`
+     or parsed with `%Z`) will be localised to the system timezone
+     (or to the timezone set with the `TZ` environment variable).
+
+  (#1936)
+  
+Improvements
+
+- print --match now respects -o and -O.
+
+- print --match now returns a non-zero exit code when there is no acceptable match.
+
+- Support megaparsec 9.3. (Felix Yan)
+
+- Support GHC 9.4.
+
+Fixes
+
+- In CSV rules, when assigning a parenthesised account name to   `accountN`, 
+  extra whitespace is now ignored, allowing unbalanced postings to be detected correctly.
+
+Scripts/addons
+
+- bin/hledger-move helps record transfers involving subaccounts and costs,
+  eg when withdrawing some or all of an investment balance containing many lots and costs.
+
+- bin/hledger-git no longer uses the non-existent git record command.
+  (#1942) (Patrick Fiaux)
+
+- bin/watchaccounts is a small shell script for watching the account tree as you make changes.
+
+### hledger-ui 1.28
+
+Features
+
+- New "Balance sheet accounts" and "Income statement accounts" screens have been added,
+  along with a new top-level "Menu" screen for navigating between these and the
+  "All accounts" screen.
+
+- hledger-ui now starts in the "Balance sheet accounts" screen by default
+  (unless no asset/liability/equity accounts can be detected,
+  or command line account query arguments are provided).
+  This provides a more useful default view than the giant "All accounts" list.
+  Or, you can force a particular starting screen with the new --menu/--all/--bs/--is flags
+  (eg, `hledger-ui --all` to replicate the old behaviour).
+
+Improvements
+
+- The ENTER key is equivalent to RIGHT for navigation.
+
+- hledger-ui debug output is now always logged to ./hledger-ui.log rather than the console,
+  --debug with no argument is equivalent to --debug=1,
+  and debug output is much more informative.
+
+- Support GHC 9.4.
+
+- Support megaparsec 9.3 (Felix Yan)
+
+- Support (and require) brick 1.5, fsnotify 0.4.x.
+
+Fixes
+
+- Mouse-clicking in empty space below the last list item no longer navigates
+  back. It was too obtrusive, eg when you just want to focus the window. 
+  You can still navigate back with the mouse by clicking the left edge of the window.
+
+- A possible bug with detecting change of date while in --watch mode has been fixed.
+
+API
+
+- hledger-ui's internal types have been changed to allow fewer invalid states\
+  and make it easier  to develop and debug.
+  (#1889, #1919).
+
+- Debug logging helpers have been added and cleaned up in Hledger.Ui.UIUtils:
+  dbgui
+  dbguiIO
+  dbguiEv
+  dbguiScreensEv
+  mapScreens
+  screenId
+  screenRegisterDescriptions
+
+### hledger-web 1.28
+
+Improvements
+
+- --debug with no argument is now equivalent to --debug=1.
+
+- Allow megaparsec 9.3 (Felix Yan)
+
+- Support GHC 9.4
+
+### project changes 1.28
+
+Docs
+
+- Miscellaneous improvements.
+
+Examples
+
+- Indian National Pension Service CSV rules (Pranesh Prakash)
+
+Infrastructure
+
+- make site-watch: switch from entr to watchexec.
+
+- make hoogle-setup, hoogle-serve: run a local hoogle on hledger code.
+
+- make man-watch-PROG: watch a hledger program's man page as source files change.
+
+### credits 1.28
+
+Simon Michael, Felix Yan, Patrick Fiaux.
 
 ## 2022-09-18 hledger-1.27.1
 
