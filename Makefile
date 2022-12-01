@@ -125,13 +125,13 @@ MANUALS=\
 # Shake.hs there might get rebuilt or have its deps installed.)
 # Also updates the "current" symlink.
 snapshot-%:
-	git -C .. checkout $* && \
+	git -C .. checkout $*-branch && \
 	(cd ..; ./Shake.hs webmanuals; git reset --hard) && \
 	mkdir -p src/$* && \
 	for f in $(MANUALS); do test -e $$f && cp $$f src/$*; done && \
 	git -C .. checkout master && \
 	git add src/$* && git commit -m "snapshot of $* manuals" src/$* && \
-	(cd src; rm current; ln -s $* current)
+	(cd src; rm -f current; ln -s $* current)
 
 # Run this after mdbook build/serve to make old manuals visible via symlinks.
 # These will be wiped by the next mdbook build/serve.
