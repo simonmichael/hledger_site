@@ -7,7 +7,7 @@ build:
 	@echo "building site with current manuals in /"
 	@make -s build3-dev
 	@make -s build3-1.28
-	@git checkout -- out/sitemap.xml out/sitemap.txt
+	@make -s sitemap
 
 # Render most versions of manuals (excluding old versions not packaged anywhere). 
 # We want to link only one version in the sidebar, but mdbook won't render (and will remove) unlinked versions.
@@ -35,7 +35,7 @@ all buildall: \
 	build3-1.26 \
 	build3-1.27 \
 	build3-1.28
-	@git checkout -- out/sitemap.xml out/sitemap.txt
+	@make -s sitemap
 
 sitemap: copy-old-manuals
 	@echo "building sitemap.xml"
@@ -49,6 +49,7 @@ copy-old-manuals:
 # --force rebuilds mdbook-toc even if only mdbook changed, avoiding a warning.
 tools:
 	cargo install mdbook mdbook-toc --force
+	sudo apt install -y npm && npm install -g static-sitemap-cli   # sscli
 
 
 # build7/build3 naming is to help avoid running the wrong rule for the version
