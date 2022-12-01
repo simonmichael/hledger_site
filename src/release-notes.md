@@ -41,47 +41,23 @@
 
 ### hledger 1.XX
 
-Breaking changes
-
-Features
-
-Improvements
-
-Fixes
-
-Scripts/addons
+hledger/CHANGES.md
 
 ### hledger-ui 1.XX
 
-Breaking changes
-
-Features
-
-Improvements
-
-Fixes
+hledger-ui/CHANGES.md
 
 ### hledger-web 1.XX
 
-Breaking changes
-
-Features
-
-Improvements
-
-Fixes
+hledger-web/CHANGES.md
 
 ### project changes 1.XX
 
-Docs
-
-Examples
-
-Infrastructure
+CHANGES.md
 
 ### credits 1.XX
 
-
+git shortlog -sn LASTRELEASETAG..
 
 -->
 
