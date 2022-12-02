@@ -379,7 +379,7 @@ And finally please [share any feedback](support.html) so we can make this proces
   <tr> <!-- DOCKER -->
     <td>
       <div class="badges">
-        <a href="https://hub.docker.com/r/dastapov/hledger"><img alt="Docker" src="https://img.shields.io/badge/Docker_image-1.27.1-red.svg" /></a><br>
+        <a href="https://hub.docker.com/r/dastapov/hledger"><img alt="Docker" src="https://img.shields.io/badge/Docker_image-1.28-brightgreen.svg" /></a><br>
         <a href="https://hub.docker.com/search?q=hledger&amp;type=image&amp;sort=updated_at&amp;order=desc">more..</a>
       </div>
       <!-- <div class="notes">Linux, Mac, Windows</div> -->
