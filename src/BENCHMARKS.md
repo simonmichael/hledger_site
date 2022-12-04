@@ -1,1 +1,1 @@
-../../BENCHMARKS.md
+../../doc/BENCHMARKS.md

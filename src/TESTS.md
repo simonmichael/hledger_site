@@ -1,1 +1,1 @@
-../../TESTS.md
+../../doc/TESTS.md

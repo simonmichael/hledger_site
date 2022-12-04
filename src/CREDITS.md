@@ -1,1 +1,1 @@
-../../CREDITS.md
+../../doc/CREDITS.md

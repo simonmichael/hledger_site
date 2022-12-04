@@ -1,1 +1,1 @@
-../../DOCS.md
+../../doc/DOCS.md

@@ -1,1 +1,1 @@
-../../RELEASING.md
+../../doc/RELEASING.md

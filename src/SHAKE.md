@@ -1,1 +1,1 @@
-../../SHAKE.md
+../../doc/SHAKE.md

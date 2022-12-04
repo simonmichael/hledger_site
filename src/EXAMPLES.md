@@ -1,1 +1,1 @@
-../../EXAMPLES.md
+../../doc/EXAMPLES.md

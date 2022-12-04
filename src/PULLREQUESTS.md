@@ -1,1 +1,1 @@
-../../PULLREQUESTS.md
+../../doc/PULLREQUESTS.md

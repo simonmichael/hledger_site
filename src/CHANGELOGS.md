@@ -1,1 +1,1 @@
-../../CHANGELOGS.md
+../../doc/CHANGELOGS.md

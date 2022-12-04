@@ -1,1 +1,1 @@
-../../CODE.md
+../../doc/CODE.md

@@ -1,1 +1,1 @@
-../../WORKFLOWS.md
+../../doc/WORKFLOWS.md

@@ -1,1 +1,1 @@
-../../MAKE.md
+../../doc/MAKE.md

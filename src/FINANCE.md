@@ -1,1 +1,1 @@
-../../FINANCE.md
+../../doc/FINANCE.md

@@ -1,1 +1,1 @@
-../../LINKS.md
+../../doc/LINKS.md

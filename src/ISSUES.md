@@ -1,1 +1,1 @@
-../../ISSUES.md
+../../doc/ISSUES.md
