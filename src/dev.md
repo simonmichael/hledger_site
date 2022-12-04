@@ -22,6 +22,7 @@ and symlinked (or rendered by Shake.hs) into the site repo to make them appear a
 - [EXAMPLES](EXAMPLES.md)
 - [FINANCE](FINANCE.md)
 - [ISSUES](ISSUES.md)
+- [LINKS](LINKS.md)
 - [MAKE](MAKE.md)
 - [PULLREQUESTS](PULLREQUESTS.md)
 - [RELEASING](RELEASING.md)

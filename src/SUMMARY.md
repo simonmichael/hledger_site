@@ -21,13 +21,19 @@
 - [Cookbook](cookbook.md)
 - [User FAQ](userfaq.md)
 
-# CONTRIBUTE
+# DEVELOPERS
 
-- [Sponsor](sponsor.md)
-- [Contributor Guide](CONTRIBUTING.md)
+- [Contributor Quick Start](CONTRIBUTING.md)
+- [Developer links](LINKS.md)
 - [Developer docs](dev.md)
 - [Developer FAQ](devfaq.md)
 - [CREDITS](CREDITS.md)
+
+# FINANCE
+
+- [Sponsor hledger](sponsor.md)
+- [Financial reports](financerepo.md)
+- [FINANCE notes](FINANCE.md)
 
 # ALL PAGES
 
@@ -196,8 +202,10 @@ and previewing them when working on docs locally.
 - [COMMITS](COMMITS.md)
 - [CREDITS](CREDITS.md)
 - [Contributor Guide](CONTRIBUTING.md)
-- [DOCS](DOCS.md)
+- [Developer links](LINKS.md)
+- [Developer docs](dev.md)
 - [Developer FAQ](devfaq.md)
+- [DOCS](DOCS.md)
 - [ERRORS](ERRORS.md)
 - [EXAMPLES](EXAMPLES.md)
 - [FINANCE](FINANCE.md)
