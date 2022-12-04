@@ -7,7 +7,7 @@
 - [Home](index.md)
 - [Features](features.md)
 - [Videos, Talks](videos.md)
-- [General FAQ](faq.md)
+- [About FAQ](faq.md)
 - [Discussion/Support](support.md)
 
 # USING HLEDGER
@@ -67,7 +67,7 @@
 - [Mobile apps](mobile-apps.md)
 - [Mockups](mockups.md)
 - [Multicurrency tutorial (2018)](multicurrency-tutorial.md)
-- [Newcomer FAQ](faq.md)
+- [About FAQ](faq.md)
 - [Project accounting](project-accounting.md)
 - [Quick Intro](quickintro.md)
 - [Quick Start](quickstart.md)
@@ -90,6 +90,7 @@
 - [Tutorial: hledger add](add.md)
 - [Tutorial: hledger-ui](ui.md)
 - [Tutorial: hledger-web](web.md)
+- [User FAQ](userfaq.md)
 - [Videos, Talks](videos.md)
 - [hledger and Beancount](beancount.md)
 - [hledger and dsq / DataStation](dsq.md)

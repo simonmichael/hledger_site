@@ -2,7 +2,7 @@
 
 <div align=center>
 
-  [General FAQ](faq.html)
+  [About FAQ](faq.html)
 | [User FAQ](userfaq.html)
 | Developer FAQ
 
@@ -10,3 +10,4 @@
 
 <!-- toc -->
 
+You're in the right place, but there's nothing here yet.

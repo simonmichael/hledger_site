@@ -1,8 +1,8 @@
-# General FAQ
+# About FAQ
 
 <div align=center>
 
-  General FAQ
+  About FAQ
 | [User FAQ](userfaq.html)
 | [Developer FAQ](devfaq.html)
 
