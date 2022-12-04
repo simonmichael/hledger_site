@@ -34,6 +34,7 @@
 - [Sponsor hledger](sponsor.md)
 - [Financial reports](financerepo.md)
 - [FINANCE notes](FINANCE.md)
+- [Finance FAQ](finfaq.md)
 
 # ALL PAGES
 
@@ -210,6 +211,7 @@ and previewing them when working on docs locally.
 - [ERRORS](ERRORS.md)
 - [EXAMPLES](EXAMPLES.md)
 - [FINANCE](FINANCE.md)
+- [Finance FAQ](finfaq.md)
 - [ISSUES](ISSUES.md)
 - [MAKE](MAKE.md)
 - [Mockups](mockups.md)

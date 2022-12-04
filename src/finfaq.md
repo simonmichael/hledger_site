@@ -1,11 +1,11 @@
-# Developer FAQ
+# Finance FAQ
 
 <div align=center>
 
   [About FAQ](faq.html)
 | [User FAQ](userfaq.html)
-| Developer FAQ
-| [Finance FAQ](finfaq.html)
+| [Developer FAQ](devfaq.html)
+| Finance FAQ
 
 </div>
 

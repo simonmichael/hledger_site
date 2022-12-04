@@ -5,6 +5,7 @@
   About FAQ
 | [User FAQ](userfaq.html)
 | [Developer FAQ](devfaq.html)
+| [Finance FAQ](finfaq.html)
 
 </div>
 
