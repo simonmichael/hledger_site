@@ -14,9 +14,9 @@
 
 - [Install](install.md)
 - [Get Started](start.md)
-- [hledger manual](1.27/hledger.md)
-- [hledger-ui manual](1.27/hledger-ui.md)
-- [hledger-web manual](1.27/hledger-web.md)
+- [hledger manual](1.28/hledger.md)
+- [hledger-ui manual](1.28/hledger-ui.md)
+- [hledger-web manual](1.28/hledger-web.md)
 - [Scripts](scripts.md)
 - [Cookbook](cookbook.md)
 - [User FAQ](userfaq.md)
