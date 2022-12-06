@@ -57,8 +57,8 @@ tools:
 # Render the 7 manuals for this hledger version <= 1.21, saving them in out2.
 # The manuals source should exist in src/VER/.
 # After this you should "make build" to rebuild the site with current manuals.
+# The perl command rewrites links to numeric manual versions but not links to the dev version.
 # The noindex meta tag will be added.
-# The perl rewrites links to numeric manual versions but not to dev manuals.
 build7-%:
 	@echo "building site with the seven $* manuals in /$*"
 	@perl -i -p0e "s/- +(.*?)]\([0-9].*?hledger\.md\)\n- +(.*?)]\([0-9].*?hledger-ui\.md\)\n- +(.*?)]\([0-9].*?hledger-web\.md\)/- \1 ($*)]($*\/hledger.md)\n- \2 ($*)]($*\/hledger-ui.md)\n- \3 ($*)]($*\/hledger-web.md)\n- [journal manual ($*)]($*\/journal.md)\n- [csv manual ($*)]($*\/csv.md)\n- [timeclock manual ($*)]($*\/timeclock.md)\n- [timedot manual ($*)]($*\/timedot.md)/m" src/SUMMARY.md
@@ -71,8 +71,10 @@ build7-%:
 # Render the 3 manuals for this hledger version > 1.21 (or "dev"), saving them in out2.
 # The manuals source should exist in src/VER/.
 # After this you should "make build" to rebuild the site with current manuals.
+# The perl command rewrites links to numeric manual versions, but not links to the dev version.
+# The default manual links should be to a numeric version for this reason,
+# the exact number doesn't matter, though we typically keep it updated.
 # The noindex meta tag will be added to all but the current release.
-# The perl rewrites links to numeric manual versions but not to dev manuals.
 build3-%:
 	@echo "building site with the three $* manuals in /$*"
 	@perl -i -pe "s/^- +(.*?)]\([0-9].*?(hledger(|-ui|-web)\.md)\)/- \1 ($*)]($*\/\2)/" src/SUMMARY.md
@@ -125,15 +127,13 @@ MANUALS=\
 # as src/VER/, copied from the parent directory, which should be a
 # clean checkout of the main hledger repo's master branch. (Note
 # Shake.hs there might get rebuilt or have its deps installed.)
-# Also updates the "current" symlink.
 snapshot-%:
 	git -C .. checkout $*-branch && \
 	(cd ..; ./Shake.hs webmanuals; git reset --hard) && \
 	mkdir -p src/$* && \
 	for f in $(MANUALS); do test -e $$f && cp $$f src/$*; done && \
 	git -C .. checkout master && \
-	git add src/$* && git commit -m "snapshot of $* manuals" src/$* && \
-	(cd src; rm -f current; ln -s $* current)
+	git add src/$* && git commit -m "snapshot of $* manuals" src/$*
 
 # Run this after mdbook build/serve to make old manuals visible via symlinks.
 # These will be wiped by the next mdbook build/serve.
