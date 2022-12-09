@@ -203,7 +203,7 @@ and previewing them when working on docs locally.
 - [CODE](CODE.md)
 - [COMMITS](COMMITS.md)
 - [CREDITS](CREDITS.md)
-- [Contributor Guide](CONTRIBUTING.md)
+- [Contributor Quick Start](CONTRIBUTING.md)
 - [Developer links](LINKS.md)
 - [Developer docs](dev.md)
 - [Developer FAQ](devfaq.md)

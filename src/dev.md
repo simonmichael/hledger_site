@@ -7,7 +7,7 @@ Mostly they are UPPERCASE files kept in the main hledger repo,
 and symlinked (or rendered by Shake.hs) into the site repo to make them appear as web pages.
 
 - [README](dev-README.md)
-- [Contributor Guide](CONTRIBUTING.md)
+- [Contributor Quick Start](CONTRIBUTING.md)
 - [ROADMAP](ROADMAP.md)
 - [BACKLOG](BACKLOG.md)
 - [Mockups](mockups.md)
