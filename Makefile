@@ -6,7 +6,6 @@ CURRENT_RELEASE=1.28
 build:
 	@echo "building site with current manuals in /"
 	@make -s build3-dev
-	@make -s build3-1.28
 	@make -s sitemap
 
 # Render most versions of manuals (excluding old versions not packaged anywhere). 
@@ -37,14 +36,6 @@ all buildall: \
 	build3-1.28
 	@make -s sitemap
 
-sitemap: copy-old-manuals
-	@echo "building sitemap.xml"
-	@sscli -b https://hledger.org -r out/ -v
-
-# copy the old manuals under out, for long enough to build sitemap.xml
-copy-old-manuals:
-	for d in out2/*; do cp $$d/* out/`basename $$d`; done
-
 # Install some required tools.
 # --force rebuilds mdbook-toc even if only mdbook changed, avoiding a warning.
 tools:
@@ -52,9 +43,7 @@ tools:
 	sudo apt install -y npm && npm install -g static-sitemap-cli   # sscli
 
 
-# build7/build3 naming is to help avoid running the wrong rule for the version
-
-# Render the 7 manuals for this hledger version <= 1.21, saving them in out2.
+# Render the seven manuals for this hledger version <= 1.21, saving them in out2.
 # The manuals source should exist in src/VER/.
 # After this you should "make build" to rebuild the site with current manuals.
 # The perl command rewrites links to numeric manual versions but not links to the dev version.
@@ -68,7 +57,7 @@ build7-%:
 	@cp -r out/$* out2
 	@git checkout -- src/SUMMARY.md theme/index.hbs
 
-# Render the 3 manuals for this hledger version > 1.21 (or "dev"), saving them in out2.
+# Render the three manuals for this hledger version > 1.21 (or "dev"), saving them in out2.
 # The manuals source should exist in src/VER/.
 # After this you should "make build" to rebuild the site with current manuals.
 # The perl command rewrites links to numeric manual versions, but not links to the dev version.
@@ -85,6 +74,12 @@ build3-%:
 	@mkdir -p out2
 	@cp -r out/$* out2
 	@git checkout -- src/SUMMARY.md theme/index.hbs
+
+# Generate sitemap.xml, after copying the old manuals under out/ temporarily.
+sitemap:
+	@echo "building sitemap.xml"
+	@for d in out2/*; do cp $$d/* out/`basename $$d`; done
+	@sscli -b https://hledger.org -r out/
 
 clean:
 	mdbook clean
