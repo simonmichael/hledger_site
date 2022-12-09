@@ -1,5 +1,6 @@
-// hs.graphicsDir = '../js/highslide/graphics/';
-// hs.outlineType = 'outer-glow';
+// http://www.highslide.com/ref
+hs.graphicsDir = '/highslide/graphics/';
+hs.outlineType = 'rounded-white';
 
 $(document).ready( function() {
   sidebarHideAllPages();
