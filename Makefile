@@ -76,8 +76,8 @@ build3-%:
 	@git checkout -- src/SUMMARY.md theme/index.hbs
 
 # Generate sitemap.xml, after copying the old manuals under out/ temporarily.
+#	@echo "building sitemap.xml"
 sitemap:
-	@echo "building sitemap.xml"
 	@for d in out2/*; do cp $$d/* out/`basename $$d`; done
 	@sscli -b https://hledger.org -r out/
 
