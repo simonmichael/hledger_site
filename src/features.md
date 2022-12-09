@@ -5,10 +5,6 @@
 <!-- toc -->
 </div>
 
-See also:
-[hledger and Ledger](ledger.html)
-
-
 ## Plain text accounting
 
 hledger is a **[Plain Text Accounting]** system, 

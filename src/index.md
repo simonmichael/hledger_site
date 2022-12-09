@@ -179,7 +179,8 @@ reliability (1100+ tests, $100 bounty for regressions),
 powerful scriptability/embeddability
 and clean statically-typed Haskell implementation.
 
-Read more: [Why hledger ?](why.html)
+- More about [Features](features.html)
+- Differences between [hledger and Ledger](ledger.html)
 
 And why might you not choose hledger ?
 - If you need a rich GUI above all, you might prefer GnuCash, KMyMoney, or Quickbooks.
