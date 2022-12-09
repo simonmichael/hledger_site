@@ -7,24 +7,27 @@
   <tr valign=top>
     <td>Chat:</td>
     <td>
-      <a href="http://matrix.hledger.org">#hledger:matrix.org</a> or
-      <a href="http://irc.hledger.org">#hledger:libera.chat</a><br>
-      <!-- (<a href="https://view.matrix.org/room/!GYlETOAdUBSCcvnEMY:matrix.org">Chat log</a>) <br> -->
-      Active hledger chat, via Matrix or IRC, ~140 chatters.<br>
-<!--
+      The #hledger chat (~140 chatters) is the best place for quick help and feedback.
+      Join Matrix and the #hledger:matrix.org room
+      in <a href="http://matrix.hledger.org">your web browser</a>,
+      the <a href=https://element.io">Element client</a>,
+      or <a href="https://matrix.org/clients">another matrix client</a>.
+      This gives a persistent chat log and the richest experience (especially with Element).
       <br>
-      To talk, <a href="https://libera.chat/guides/registration">register your nick</a>:
       <br>
-      on IRC, type <code>/msg NickServ register newpassword youremailaddress</code>
+      <!-- (<a href="https://view.matrix.org/room/ !GYlETOAdUBSCcvnEMY:matrix.org">Public chat log</a>) <br> -->
+      Or (same chat, older tech):
+      join the #hledger Libera IRC channel
+      in <a href="http://irc.hledger.org">your web browser</a>
+      or <a href="https://libera.chat/guides/clients">an IRC client</a>.
+      You may need to <a href="https://libera.chat/guides/registration">register</a> to speak.<br>
+      <!-- (Shortcuts: <a href="http://matrix.hledger.org">http://matrix.hledger.org</a>, <a href="http://irc.hledger.org">http://irc.hledger.org</a>.)<br> -->
       <br>
-      on Matrix, 
-      use <a href="https://github.com/matrix-org/matrix-appservice-irc/wiki/End-user-FAQ#how-do-i-registeridentify-to-nickserv">@freenode_NickServ:matrix.org</a>
-      and <a href="https://github.com/matrix-org/matrix-appservice-irc/wiki/End-user-FAQ#and-do-it-automatically">@appservice-irc:matrix.org</a>
--->
-      See also:<br>
+      There is also a general #plaintextaccounting chat (~100 chatters):
       <a href="https://matrix.to/#/#plaintextaccounting:matrix.org">#plaintextaccounting:matrix.org</a>
-      or <a href="https://web.libera.chat/#plaintextaccounting">#plaintextaccounting:libera.chat</a><br>
-      General PTA chat, ~100 chatters. <br>
+      or <a href="https://web.libera.chat/#plaintextaccounting">#plaintextaccounting on Libera</a>.
+      <br>
+      <br>
     </td>
   </tr>
   <tr valign=top>
@@ -84,7 +87,7 @@
     </td>
   </tr>
   <tr valign=top>
-    <td>plaintextaccounting site:</td>
+    <td>PTA site:</td>
     <td>
       <a href="https://plaintextaccounting.org">plaintextaccounting.org</a><br>
       Portal website and wiki covering all PTA tools and topics.<br>
