@@ -58,6 +58,23 @@ Currently this FAQ overlaps a bit with that one.
 One of the best tools for doing Plain Text Accounting.
 It's free and you can read all about it at the <https://hledger.org> home page.
 
+### Why was hledger created ?
+
+- to provide a more usable, robust, documented, cross-platform-installable version of the Ledger accounting tool for users
+- to provide a more maintainable and hackable version of Ledger for developers 
+- to provide a useful library and toolbox for finance-minded haskell programmers
+- to explore the suitability of Haskell for such applications
+- to experiment with building a successful time-and-money-solvent project in a thriving ecosystem of financial software projects
+
+### What is the hledger project's current mission ?
+
+1. Bring relief and peace of mind to people managing money, 
+   especially the overwhelmed, stressed and confused,
+   by providing highly dependable, usable accounting tools, learning materials, and community.
+
+2. Help people and communities in all countries
+   increase their financial clarity, accountability, and mastery.
+
 ### We use another system, we don't need this ?
 
 Every tool has strengths and weaknesses. 
@@ -251,7 +268,7 @@ higher level reports like [`balancesheet`], [`cashflow`] and
 
 ## hledger and other things
 
-### Why did you start hledger ? How does it relate to Ledger ?
+### How does hledger relate to Ledger ? What's the history ?
 
 See [hledger and Ledger](ledger.html).
 
