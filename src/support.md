@@ -76,7 +76,7 @@
     <td>
       <a href="http://bugs.hledger.org">bugs.hledger.org</a> (bugs only)<br>
       <a href="http://issues.hledger.org">issues.hledger.org</a> (all issues)<br>
-      <a href="CONTRIBUTING.html#open-issues">open issues by category</a><br>
+      <a href="ISSUES.html">open issues by category</a><br>
       <a href="https://github.com/simonmichael/hledger_site/issues?utf8=%E2%9C%93&amp;q=">website issues</a>
     </td>
   </tr>
