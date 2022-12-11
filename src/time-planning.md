@@ -88,7 +88,7 @@ Here's how I have been logging time for a few years. I have four files:
        inc.client1.enh.1335  ..
        fos.hledger.support
     
-2. time.journal is in [journal](hledger.html) format so it can [include](hledger.html#including-other-files) multiple timedot file(s) and provide an [account alias](hledger.html#rewriting-accounts) allowing period instead of colon in account names:
+2. time.journal is in [journal](hledger.html) format so it can [include](hledger.html#including-files) multiple timedot file(s) and provide an [account alias](hledger.html#account-aliases) allowing period instead of colon in account names:
 
        ; allow . as subaccount separator in timedot files
        alias /\./=:

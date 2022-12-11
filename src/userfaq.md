@@ -208,7 +208,7 @@ $ hledger print | sed 's/\./~/g; s/,/./g; s/~/,/g'
 ## How do I control the number of decimal places displayed ?
 
 With hledger < 1.23:
-use a [commodity directive](hledger.html#declaring-commodities)
+use a [commodity directive](hledger.html#commodities)
 to set commodities' [display style](hledger.html#commodity-display-style).
 Eg:
 ```journal

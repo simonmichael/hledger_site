@@ -363,7 +363,7 @@ $ hledger-ui -f <(ledger print)          # view journal in hledger-ui TUI (works
 Unfortunately, `ledger print` does not evaluate Ledger's value expressions.
 
 A more powerful approach is to keep hledger- and Ledger-specific data in separate files,
-which [include](hledger.html#including-other-files) a shared common file containing all the
+which [include](hledger.html#including-files) a shared common file containing all the
 compatible data. Eg:
 ```shell
 $ ls *.journal

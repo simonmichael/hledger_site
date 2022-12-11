@@ -52,10 +52,10 @@ hledger: free GPLv3+ accounting software for linux, mac, windows, web, etc.
 [time]:                hledger.html#timedot-format
 [forecast]:            hledger.html#periodic-transactions
 [multiperiod]:         hledger.html#multicolumn-balance-report
-[multiple currencies]: hledger.html#declaring-commodities
+[multiple currencies]: hledger.html#commodities
 [valuation]:           hledger.html#valuation
 [summarising]:         hledger.html#depth-limiting
-[aliasing]:            hledger.html#rewriting-accounts
+[aliasing]:            hledger.html#account-aliases
 [pivoting]:            hledger.html#pivoting
 [CLI]:                 hledger.html
 [TUI]:                 ui.html

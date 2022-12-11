@@ -1,7 +1,7 @@
 # Rewrite account names
 
 Here's an example of using
-[account aliases](hledger.html#rewriting-accounts).
+[account aliases](hledger.html#account-aliases).
 
 Say a sole proprietor has a `personal.journal`:
 ```journal
