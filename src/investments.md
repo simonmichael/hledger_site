@@ -73,8 +73,8 @@ $ hledger print -x
 ```
 
 This @ notation has two forms: `@@ TOTALPRICE` or `@ UNITPRICE`. In
-hledger we call it the "[transaction price]", because it records the
-price/conversion rate that was used in this specific transaction:
+hledger we call it "[cost]" (generically for both purchases and sales);
+it records the price/conversion rate that was used in this specific transaction.
 
 Note this more explicit journal entry has some redundancy, but that's
 no harm - it makes things clearer to the human reader, it provides an
@@ -628,8 +628,8 @@ instead of just `hledger is`.
 <!-- - ["Unconfirmed" podcast episode on cryptocurrency taxes](https://unchainedpodcast.com/the-irs-is-cracking-down-on-crypto-taxes-what-you-need-to-know/) -->
 
 
-[transaction price]:     journal.html#transaction-prices
 [market price]:          journal.html#market-prices
+[cost]:                  hledger.html#costs
 [valuation]:             hledger.html#valuation
 [end dates]:             hledger.html#report-start-end-date
 [balance assertion]:     journal.html#balance-assertions

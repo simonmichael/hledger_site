@@ -170,7 +170,7 @@ Here's an attempted summary:
 > \# COSTING
 >
 > The `--cost=TYPE` option and the `-B` flag control how hledger handles any
-> [transaction prices](#transaction-prices) which are specified.
+> [costs](#costs) which are specified.
 >
 > `-B / --cost / --cost=cost`
 > : Convert amounts to their cost or sale amount at transaction time.
@@ -180,7 +180,7 @@ Here's an attempted summary:
 >   This is the default for all reports except the `print` report.
 >
 > `--cost=nocost`
-> : Do no conversion of transaction prices.
+> : Do no conversion of costs.
 >   This is the default for the `print` report.
 >
 > When performing cost conversion and price valuation, hledger will always

@@ -67,7 +67,7 @@ or the per-unit amount with `@`
     assets:cash      EUR   8.50
 ```
 
-hledger calls these "[transaction prices](hledger.html#transaction-prices)".
+hledger calls these "[costs](hledger.html#costs)".
 They can also be used [generate market prices](hledger.html#--infer-market-price-market-prices-from-transactions)
 for value reports.
 

@@ -208,7 +208,7 @@ Anya requests a withdrawal of the Liberapay funds to her bank. Her bank holds ru
 
 This is her first multicurrency transaction. She hasn't written the
 exchange rate explicitly, but the manual
-[says](journal.html#transaction-prices) hledger can figure it out. It
+[says](journal.html#costs) hledger can figure it out. It
 seems to work:
 
 ```shell
@@ -278,7 +278,7 @@ $ hledger print -x date:20181104
 ```
 
 The manual makes this a bit clearer. Anya wrote the entry in
-[transaction prices](journal.html#transaction-prices) style 3 (*"let
+[costs](journal.html#costs) style 3 (*"let
 hledger infer the price that balances the transaction"*). hledger has
 converted this to style 2 (*"@@ TOTALPRICE after the amount"*),
 recording that the 10 euro were priced at 750 rubles in this

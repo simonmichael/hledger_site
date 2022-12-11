@@ -16,7 +16,7 @@ Caveats are:
 ## Example
 ### Buying a stock
 
-Let's go over a simple example using [transaction prices](journal.html#transaction-prices):
+Let's go over a simple example using [costs](journal.html#costs):
 
 ```journal
 2017/1/1 opening balance
