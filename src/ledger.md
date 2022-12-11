@@ -223,7 +223,7 @@ Tue Feb  8 11:03:57 HST 2022
 
 hledger's journal file format is very similar to Ledger's.
 Some syntactic forms 
-(eg [hledger comments](hledger.html#comments) 
+(eg [hledger comments](hledger.html#file-comments) 
 vs [Ledger comments](https://www.ledger-cli.org/3.0/doc/ledger3.html#Commenting-on-your-Journal),
 or [balance assertions](hledger.html#assertions-and-ordering))
 can be interpreted in slightly different ways.
