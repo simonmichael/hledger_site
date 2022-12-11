@@ -79,7 +79,7 @@ I can set daily/weekly/monthly time [budgets](budgeting.html) if I want:
 
 Here's how I have been logging time for a few years. I have four files:
 
-1. time-2018.timedot is the current year's time log. It contains daily entries in [timedot](timedot.html)-ish format, like:
+1. time-2018.timedot is the current year's time log. It contains daily entries in [timedot](hledger.html#timedot)-ish format, like:
 
        2018/5/7
        adm.email             20m
@@ -88,7 +88,7 @@ Here's how I have been logging time for a few years. I have four files:
        inc.client1.enh.1335  ..
        fos.hledger.support
     
-2. time.journal is in [journal](journal.html) format so it can [include](journal.html#including-other-files) multiple timedot file(s) and provide an [account alias](journal.html#rewriting-accounts) allowing period instead of colon in account names:
+2. time.journal is in [journal](hledger.html) format so it can [include](hledger.html#including-other-files) multiple timedot file(s) and provide an [account alias](hledger.html#rewriting-accounts) allowing period instead of colon in account names:
 
        ; allow . as subaccount separator in timedot files
        alias /\./=:
@@ -97,7 +97,7 @@ Here's how I have been logging time for a few years. I have four files:
        ;include time-2017.timedot
        include time-2018.timedot
 
-3. time-daily.budget defines some daily goals, optionally date-bounded, using [periodic transaction(s)](journal.html#periodic-transactions):
+3. time-daily.budget defines some daily goals, optionally date-bounded, using [periodic transaction(s)](hledger.html#periodic-transactions):
 
        ~ daily  ; [from Y/M/D] [to Y/M/D]
            (adm)    1  ; your goals here

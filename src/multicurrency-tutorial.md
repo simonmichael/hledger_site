@@ -9,7 +9,7 @@ code mark {
 </style>
 
 Anya begins using hledger without any currency symbols. She adds some
-[journal entries](journal.html) like this (not bothering with
+[journal entries](hledger.html) like this (not bothering with
 descriptions, either):
 
 <!-- emphasize=1-7 -->
@@ -208,7 +208,7 @@ Anya requests a withdrawal of the Liberapay funds to her bank. Her bank holds ru
 
 This is her first multicurrency transaction. She hasn't written the
 exchange rate explicitly, but the manual
-[says](journal.html#costs) hledger can figure it out. It
+[says](hledger.html#costs) hledger can figure it out. It
 seems to work:
 
 ```shell
@@ -278,7 +278,7 @@ $ hledger print -x date:20181104
 ```
 
 The manual makes this a bit clearer. Anya wrote the entry in
-[costs](journal.html#costs) style 3 (*"let
+[costs](hledger.html#costs) style 3 (*"let
 hledger infer the price that balances the transaction"*). hledger has
 converted this to style 2 (*"@@ TOTALPRICE after the amount"*),
 recording that the 10 euro were priced at 750 rubles in this
@@ -318,7 +318,7 @@ $ hledger reg liberapay -B
 In summary, it seems that the balance report must sum either the primary posting amounts (`bal`), or the cost amounts (`bal -B`), consistently for both the account balances above the line, and the total below the line. Otherwise the total would be incorrect. Which means that one or the other of these will be displayed as an unconverted multicurrency amount.
 
 Anya decides to find out more about the other currency-related flag:
-[-V](journal.html#v-market-value).
+[-V](hledger.html#v-market-value).
 
 TBD:
 

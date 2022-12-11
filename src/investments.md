@@ -628,12 +628,12 @@ instead of just `hledger is`.
 <!-- - ["Unconfirmed" podcast episode on cryptocurrency taxes](https://unchainedpodcast.com/the-irs-is-cracking-down-on-crypto-taxes-what-you-need-to-know/) -->
 
 
-[market price]:          journal.html#market-prices
 [cost]:                  hledger.html#costs
+[market price]:          hledger.html#market-prices
 [valuation]:             hledger.html#valuation
 [end dates]:             hledger.html#report-start-end-date
-[balance assertion]:     journal.html#balance-assertions
-[unbalanced posting]:    journal.html#virtual-postings
+[balance assertion]:     hledger.html#balance-assertions
+[unbalanced posting]:    hledger.html#virtual-postings
 
 [#1177]:                 https://github.com/simonmichael/hledger/issues/1177
 [accounting equation]:   https://en.wikipedia.org/wiki/Accounting_equation

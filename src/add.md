@@ -376,7 +376,7 @@ To show the real-world account balance, edit your journal file and add this tran
 ```
 
 The other account name doesn't matter too much; `equity:opening balances` is conventional.
-(You could also use an [unbalanced transaction](journal.html#virtual-postings) for this if you prefer.)
+(You could also use an [unbalanced transaction](hledger.html#virtual-postings) for this if you prefer.)
 Now the report looks like this, with an accurate running balance on each date (hledger calls this a *historical balance*):
 
 ```shell

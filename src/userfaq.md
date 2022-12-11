@@ -41,7 +41,7 @@ There must be at least two spaces between account name and amount.
 
 ## Why do some directives not affect other files ? Why can't I put account aliases in an included file ?
 
-This is documented at [journal format: directives](journal.html#directives).
+This is documented at [journal format: directives](hledger.html#directives).
 (Also mentioned at [hledger: Input files](hledger.html#input-files).)
 These docs could be improved.
 
@@ -209,7 +209,7 @@ $ hledger print | sed 's/\./~/g; s/,/./g; s/~/,/g'
 
 With hledger < 1.23:
 use a [commodity directive](hledger.html#declaring-commodities)
-to set commodities' [display style](journal.html#commodity-display-style).
+to set commodities' [display style](hledger.html#commodity-display-style).
 Eg:
 ```journal
 commodity $1000.00

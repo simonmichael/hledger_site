@@ -223,9 +223,9 @@ Tue Feb  8 11:03:57 HST 2022
 
 hledger's journal file format is very similar to Ledger's.
 Some syntactic forms 
-(eg [hledger comments](journal.html#comments) 
+(eg [hledger comments](hledger.html#comments) 
 vs [Ledger comments](https://www.ledger-cli.org/3.0/doc/ledger3.html#Commenting-on-your-Journal),
-or [balance assertions](journal.html#assertions-and-ordering))
+or [balance assertions](hledger.html#assertions-and-ordering))
 can be interpreted in slightly different ways.
 A small number of Ledger's syntactic forms are ignored (`{ }` prices)
 or rejected (value expressions). With some care, it's quite easy
@@ -242,8 +242,8 @@ See also [#1752](https://github.com/simonmichael/hledger/issues/1752).
   space) and digit group sizes to use for each commodity. Or, these can
   be declared explicitly with commodity directives.
 
-- hledger applies [balance assignments](journal.html#balance-assignments) 
-  and checks [balance assertions](journal.html#balance-assertions)
+- hledger applies [balance assignments](hledger.html#balance-assignments) 
+  and checks [balance assertions](hledger.html#balance-assertions)
   in date order (and then by parse order, for postings on the same date).
   This ensures correct, deterministic behaviour, independent of the ordering of
   journal entries and files. 
@@ -363,7 +363,7 @@ $ hledger-ui -f <(ledger print)          # view journal in hledger-ui TUI (works
 Unfortunately, `ledger print` does not evaluate Ledger's value expressions.
 
 A more powerful approach is to keep hledger- and Ledger-specific data in separate files,
-which [include](journal.html#including-other-files) a shared common file containing all the
+which [include](hledger.html#including-other-files) a shared common file containing all the
 compatible data. Eg:
 ```shell
 $ ls *.journal

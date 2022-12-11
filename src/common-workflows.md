@@ -39,7 +39,7 @@ You might want to skim through this one even if you don't plan to use `hledger a
 
 Open your preferred text editor and create a journal file, `.hledger.journal` in your home directory.
 (Or elsewhere, and set its path in the `LEDGER_FILE` environment variable.)
-Create transactions by hand using [journal file](journal.html) format.
+Create transactions by hand using [journal file](hledger.html) format.
 Once you have a few, you can copy/paste them to make more.
 When you want more assistance, set up an [editor mode](editors.html).
 Here's an example:

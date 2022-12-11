@@ -27,7 +27,7 @@ and so is a `.journal` or `.hledger` extension.
       assets:cash
     <CTRL-D>
 
-[Account names](journal.html#account-names) can be anything 
+[Account names](hledger.html#account-names) can be anything 
 and you can change them later by search and replace. 
 If you don't know what to [choose](http://plaintextaccounting.org/#choosing-accounts), 
 start with these five:\
