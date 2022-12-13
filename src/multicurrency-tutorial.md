@@ -285,7 +285,7 @@ recording that the 10 euro were priced at 750 rubles in this
 transaction.
 
 With -B added, the 10 euro is converted to its
-[cost](hledger.html#b-cost) in rubles:
+[cost](hledger.html#cost-reporting) in rubles:
 
 <!-- emphasize=3:30-3:36 -->
 ```shell
