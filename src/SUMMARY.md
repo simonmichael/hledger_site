@@ -1,4 +1,6 @@
-# hledger.org
+
+# HLEDGER.ORG  <!-- the first one gets eaten somehow -->
+# HLEDGER.ORG
 
 <!-- Key pages are listed here: -->
 
