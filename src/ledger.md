@@ -352,8 +352,6 @@ In this journal, $'s precision is 2 in txn1, 4 in txn2, and 4 globally:
     checking
 ```
 
-#### hledger can't read it (without extra steps)
-
 Ledger checks transaction balancedness using local precisions only.
 So it accepts txn1's $-0.00045312 imbalance:
 
@@ -363,8 +361,7 @@ ok
 ```
 
 hledger checks transaction balancedness using global precisions.
-So it rejects txn1 (unless you adjust the global precision by adding 
-`commodity $0.00` or `-c '\$0.00'`):
+So it rejects txn1:
 
 ```journal
 $ hledger print 
@@ -377,40 +374,9 @@ This multi-commodity transaction is unbalanced.
 The real postings' sum should be 0 but is: $0.000453
 ```
 
-#### ledger print doesn't help
-
-I used to tell people that `ledger print | hledger -f- ...` is likely to work,
-because we think `print` output is always readable (value expressions excluded).
-But actually it's not, because `ledger print` pads all amounts up to the global precision. 
-This alters txn1, making it now unreadable even by Ledger:
-
-```shell
-$ ledger print
-2022/01/01 txn1
-    expenses                              AAA 989.02 @ $1.123456
-    checking                            $-1111.1200
-
-2022/01/02 txn2
-    expenses                                $0.1234
-    checking
-```
-
-```shell
-$ ledger print | ledger -f - print
-While parsing file "", line 3:
-While balancing transaction from streamed input:
-Unbalanced remainder is:
-             $0.0005
-Amount to balance against:
-      $1111.12045312
-Error: Transaction does not balance
-```
-
-#### Recommendations ?
-
-`ledger print | hledger -f- -I CMD` is still a useful technique for reading Ledger files
-that don't have value expressions or other unsupported syntax -
-but be prepared to add `-c` options to reduce commodity precisions if needed.
+To work around this, you have to limit \$'s global precision:
+eg add `-c '\$0.00'` to the command (easiest when piping)
+or `commodity $0.00` to the file (more permanent, when creating a new file).
 
 ## History
 
