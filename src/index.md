@@ -68,7 +68,7 @@ Plain Text Accounting ([plaintextaccounting.org](https://plaintextaccounting.org
 - There is a fast command-line interface, which makes the tool flexible and easy to integrate into custom workflows.
 
 hledger is a robust, largely compatible reimplementation of the original PTA app, Ledger CLI.
-See also: [hledger for Ledger users](ledger.html),
+See also: [hledger and Ledger](ledger.html),
 
 <!-- Why not Gnucash, Quicken, or Xero ? -->
 <!-- Why not another PTA app ? -->
