@@ -293,48 +293,6 @@ See also [#1752](https://github.com/simonmichael/hledger/issues/1752).
 - hledger always splits multi-day time sessions at midnight, to show the per-day amounts.
   Ledger does this only with the `--day-break` flag.
 
-## History
-
-I (Simon) discovered John Wiegley's [Ledger](http://ledger-cli.org) in 2006,
-and was very happy to find this efficient command-line reporting tool with a transparent data format. Initially, I used it to generate time reports for my job. Before long I wanted some improvements - splitting sessions at day boundaries, reporting in hours, etc.
-
-Meanwhile, John was now busy elsewhere. For a long time the Ledger project remained stalled, with unfixed functionality/documentation bugs and an ever-looming v3 release making life hard for new users and creating friction for community growth.
-I did what I could to help - reporting bugs, providing support, contributing a [domain and website](https://ledger-cli.org) - but I didn't want to invest in learning C++.
-
-I was learning and investing time in [Haskell](https://haskell.org), and I felt Ledger could be perhaps implemented well, and perhaps more effectively in the long run, in this language.
-I urgently needed a rock solid, hassle-free and enjoyable accounting tool.
-Also, I wanted a more active project and some way to make progress on the roadbumps and confusion facing other newcomers.
-
-Of course I tried a little shiny-tech salesmanship on John, but couldn't expect him to start over. (At that time he was deeply in the C++ world; nowadays he is a Haskell expert!)
-
-So in 2007 I began experimenting.
-I built a toy parser in a few different languages, and it was easiest in Haskell.
-I kept tinkering.
-Goals included:
-
-1. to get better at Haskell by building something useful to me
-2. to implement at least the basic core of Ledger, adapted for my needs
-3. to learn how well Haskell could work for real-world applications
-
-And later:
-
-4. to provide a new highly-compatible implementation of at least the basics of Ledger, useful to others, with a greater focus on ease of use, reliability, documentation and web presence
-5. to experiment with new user interfaces, APIs, etc.
-
-Before too long I had a tool that was useful to me. With Ledger still installed,
-and by maintaining high compatibility, I now had two implementations which could be compared at times of confusion about functionality or suspected bugs/bookkeeping errors, which was quite valuable.
-
-Later, John returned for a while and finished Ledger version 3, the Ledger project attracted new contributors and maintainers, and incremental improvements resumed. I continued sharing discoveries and design discussions, and we have seen many ideas propagating in both directions. I think having independent but compatible implementations has been
-quite helpful for troubleshooting, exploring the design space, and growing the community.
-For a while I ran [LedgerTips](http://twitter.com/LedgerTips) on twitter.
-
-hledger shared #ledger's IRC channel until 2014, when I created 
-the [#hledger](http://irc.hledger.org) channel (now accessible on Libera IRC and Matrix).
-
-In 2016 I set up https://plaintextaccounting.org as a common entry point and information hub.
-
-The further adventures in hledger's development are not yet told, other than in the commit log, issue tracker and mail list, but other contributors joined the project and [CREDITS](CREDITS.html) notes some of their work.
-
 ## Interoperating
 
 Tips for co-using/converting/migrating between Ledger and hledger.
@@ -453,3 +411,46 @@ Error: Transaction does not balance
 `ledger print | hledger -f- -I CMD` is still a useful technique for reading Ledger files
 that don't have value expressions or other unsupported syntax -
 but be prepared to add `-c` options to reduce commodity precisions if needed.
+
+## History
+
+I (Simon) discovered John Wiegley's [Ledger](http://ledger-cli.org) in 2006,
+and was very happy to find this efficient command-line reporting tool with a transparent data format. Initially, I used it to generate time reports for my job. Before long I wanted some improvements - splitting sessions at day boundaries, reporting in hours, etc.
+
+Meanwhile, John was now busy elsewhere. For a long time the Ledger project remained stalled, with unfixed functionality/documentation bugs and an ever-looming v3 release making life hard for new users and creating friction for community growth.
+I did what I could to help - reporting bugs, providing support, contributing a [domain and website](https://ledger-cli.org) - but I didn't want to invest in learning C++.
+
+I was learning and investing time in [Haskell](https://haskell.org), and I felt Ledger could be perhaps implemented well, and perhaps more effectively in the long run, in this language.
+I urgently needed a rock solid, hassle-free and enjoyable accounting tool.
+Also, I wanted a more active project and some way to make progress on the roadbumps and confusion facing other newcomers.
+
+Of course I tried a little shiny-tech salesmanship on John, but couldn't expect him to start over. (At that time he was deeply in the C++ world; nowadays he is a Haskell expert!)
+
+So in 2007 I began experimenting.
+I built a toy parser in a few different languages, and it was easiest in Haskell.
+I kept tinkering.
+Goals included:
+
+1. to get better at Haskell by building something useful to me
+2. to implement at least the basic core of Ledger, adapted for my needs
+3. to learn how well Haskell could work for real-world applications
+
+And later:
+
+4. to provide a new highly-compatible implementation of at least the basics of Ledger, useful to others, with a greater focus on ease of use, reliability, documentation and web presence
+5. to experiment with new user interfaces, APIs, etc.
+
+Before too long I had a tool that was useful to me. With Ledger still installed,
+and by maintaining high compatibility, I now had two implementations which could be compared at times of confusion about functionality or suspected bugs/bookkeeping errors, which was quite valuable.
+
+Later, John returned for a while and finished Ledger version 3, the Ledger project attracted new contributors and maintainers, and incremental improvements resumed. I continued sharing discoveries and design discussions, and we have seen many ideas propagating in both directions. I think having independent but compatible implementations has been
+quite helpful for troubleshooting, exploring the design space, and growing the community.
+For a while I ran [LedgerTips](http://twitter.com/LedgerTips) on twitter.
+
+hledger shared #ledger's IRC channel until 2014, when I created 
+the [#hledger](http://irc.hledger.org) channel (now accessible on Libera IRC and Matrix).
+
+In 2016 I set up https://plaintextaccounting.org as a common entry point and information hub.
+
+The further adventures in hledger's development are not yet told, other than in the commit log, issue tracker and mail list, but other contributors joined the project and [CREDITS](CREDITS.html) notes some of their work.
+
