@@ -221,6 +221,9 @@ Tue Feb  8 11:03:57 HST 2022
 
 ### Journal format
 
+(2022) This section is in need of update but still pretty accurate.
+See also [A ledger/hledger file incompatibility](#a-ledgerhledger-file-incompatibility) below.
+
 hledger's journal file format is very similar to Ledger's.
 Some syntactic forms 
 (eg [hledger comments](hledger.html#file-comments) 
@@ -373,3 +376,80 @@ ledger.journal
 $ hledger -f hledger.journal CMD
 $ ledger -f ledger.journal CMD
 ```
+
+### Incompatible balancing
+
+(2022)
+
+This one is not about syntax, but the handling of precision (decimal places).
+In this journal, $'s precision is 2 in txn1, 4 in txn2, and 4 globally:
+
+```journal
+2022-01-01 txn1
+    expenses                                 AAA 989.02 @ $1.123456  ; $1111.12045312
+    checking                                  $-1111.12
+
+2022-01-02 txn2
+    expenses                                      $0.1234
+    checking
+```
+
+#### hledger can't read it (without extra steps)
+
+Ledger checks transaction balancedness using local precisions only.
+So it accepts txn1's $-0.00045312 imbalance:
+
+```shell
+$ ledger -f 4.j print >/dev/null && echo ok
+ok
+```
+
+hledger checks transaction balancedness using global precisions.
+So it rejects txn1 (unless you adjust the global precision by adding 
+`commodity $0.00` or `-c '\$0.00'`):
+
+```journal
+$ hledger print 
+hledger: Error:...
+7 | 2022-01-01 txn1
+  |     expenses     AAA 989.02 @ $1.123456
+  |     checking                $-1111.1200
+
+This multi-commodity transaction is unbalanced.
+The real postings' sum should be 0 but is: $0.000453
+```
+
+#### ledger print doesn't help
+
+I used to tell people that `ledger print | hledger -f- ...` is likely to work,
+because we think `print` output is always readable (value expressions excluded).
+But actually it's not, because `ledger print` pads all amounts up to the global precision. 
+This alters txn1, making it now unreadable even by Ledger:
+
+```shell
+$ ledger print
+2022/01/01 txn1
+    expenses                              AAA 989.02 @ $1.123456
+    checking                            $-1111.1200
+
+2022/01/02 txn2
+    expenses                                $0.1234
+    checking
+```
+
+```shell
+$ ledger print | ledger -f - print
+While parsing file "", line 3:
+While balancing transaction from streamed input:
+Unbalanced remainder is:
+             $0.0005
+Amount to balance against:
+      $1111.12045312
+Error: Transaction does not balance
+```
+
+#### Recommendations ?
+
+`ledger print | hledger -f- -I CMD` is still a useful technique for reading Ledger files
+that don't have value expressions or other unsupported syntax -
+but be prepared to add `-c` options to reduce commodity precisions if needed.
