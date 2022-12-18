@@ -306,22 +306,24 @@ Ledger-specific syntax, so for most Ledger users the quickest way
 to tap into hledger reports is some variant of
 
 ```
-$ ledger print | hledger -f- CMD
+$ ledger print --raw | hledger -f- CMD
 ```
 
 The print command discards most of the Ledger-specific syntax,
-and the output is usually hledger compatible journal entries. 
+--raw avoids decimal zeroes being added to amounts,
+and the output is usually hledger compatible journal entries.
 This is good enough for most reporting needs. Some examples:
 
 ```shell
-$ ledger print | hledger -f- check       # check for problems
-$ ledger print | hledger -f- stats       # show journal statistics
-$ ledger print | hledger -f- is -MAS -2  # summarise monthly revenues/expenses
-$ ledger print | hledger -f- web         # view journal in hledger-web WUI
-$ hledger-ui -f <(ledger print)          # view journal in hledger-ui TUI (works in bash)
+$ ledger print --raw | hledger -f- check       # check for problems
+$ ledger print --raw | hledger -f- stats       # show journal statistics
+$ ledger print --raw | hledger -f- is -MAS -2  # summarise monthly revenues/expenses
+$ ledger print --raw | hledger -f- web         # view journal in hledger-web WUI
+$ hledger-ui -f <(ledger print --raw)          # view journal in hledger-ui TUI (works in bash)
 ```
 
 Unfortunately, `ledger print` does not evaluate Ledger's value expressions.
+For those, the only known workaround is to replace them with explicit values.
 
 A more powerful approach is to keep hledger- and Ledger-specific data in separate files,
 which [include](hledger.html#including-files) a shared common file containing all the
