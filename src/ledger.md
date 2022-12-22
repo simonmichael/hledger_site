@@ -9,6 +9,11 @@ See also:
 
 ## Differences
 
+*2022-12: If you are a Ledger user trying to use hledger with your data,
+I'd love to chat with you to learn about your experience and make this page more helpful.
+Please contact me (sm) in the #ledger, #hledger, or #plaintextaccounting chats.
+<https://hledger.org/support>, [#1962](https://github.com/simonmichael/hledger/issues/1962)*
+
 ### Summary
 
 How is hledger different from Ledger ? First, the high-order differences:
@@ -233,82 +238,82 @@ Here is a detailed list of Ledger's file format features,
 from the [Ledger manual](https://www.ledger-cli.org/3.0/doc/ledger3.html) as of 2022-12,
 and their status in hledger 1.28.
 
-| Supported in hledger ?                                                                                                                                | Y | N                                                                        |
-|-------------------------------------------------------------------------------------------------------------------------------------------------------|---|:-------------------------------------------------------------------------|
-| **Transactions**                                                                                                                                      |   |                                                                          |
-| [5.1 Basic format](https://www.ledger-cli.org/3.0/doc/ledger3.html#Basic-format)                                                                      | Y |                                                                          |
-| [5.2 Eliding amounts](https://www.ledger-cli.org/3.0/doc/ledger3.html#Eliding-amounts)                                                                | Y |                                                                          |
-| [5.3 Auxiliary dates](https://www.ledger-cli.org/3.0/doc/ledger3.html#Auxiliary-dates)                                                                | Y |                                                                          |
-| [5.4 Codes](https://www.ledger-cli.org/3.0/doc/ledger3.html#Codes)                                                                                    | Y |                                                                          |
-| [5.5 Transaction state](https://www.ledger-cli.org/3.0/doc/ledger3.html#Transaction-state)                                                            | Y |                                                                          |
-| [5.6 Transaction notes](https://www.ledger-cli.org/3.0/doc/ledger3.html#Transaction-notes)                                                            | Y |                                                                          |
-| [5.7 Metadata](https://www.ledger-cli.org/3.0/doc/ledger3.html#Metadata)                                                                              | Y |                                                                          |
-| [5.7.1 Metadata tags](https://www.ledger-cli.org/3.0/doc/ledger3.html#Metadata-tags)                                                                  |   | format is `TAG1:, TAG2:` not `:TAG1:TAG2:`                               |
-| [5.7.1.1 Payee metadata tag](https://www.ledger-cli.org/3.0/doc/ledger3.html#Payee-metadata-tag)                                                      |   | N                                                                        |
-| [5.7.2 Metadata values](https://www.ledger-cli.org/3.0/doc/ledger3.html#Metadata-values)                                                              |   | values are terminated by comma, can have multiple tag/values on one line |
-| [5.7.3 Typed metadata](https://www.ledger-cli.org/3.0/doc/ledger3.html#Typed-metadata)                                                                |   | N                                                                        |
-| [5.8 Virtual postings](https://www.ledger-cli.org/3.0/doc/ledger3.html#Virtual-postings)                                                              | Y |                                                                          |
-| [5.9 Expression amounts](https://www.ledger-cli.org/3.0/doc/ledger3.html#Expression-amounts)                                                          |   | N                                                                        |
-| [5.10 Balance verification](https://www.ledger-cli.org/3.0/doc/ledger3.html#Balance-verification)                                                     | Y |                                                                          |
-| [5.10.1 Balance assertions](https://www.ledger-cli.org/3.0/doc/ledger3.html#Balance-assertions)                                                       | Y |                                                                          |
-| [5.10.1.1 Special assertion value 0](https://www.ledger-cli.org/3.0/doc/ledger3.html#Special-assertion-value-0)                                       | Y |                                                                          |
-| [5.10.2 Balance assignments](https://www.ledger-cli.org/3.0/doc/ledger3.html#Balance-assignments)                                                     | Y |                                                                          |
-| [5.10.3 Resetting a balance](https://www.ledger-cli.org/3.0/doc/ledger3.html#Resetting-a-balance)                                                     | Y |                                                                          |
-| [5.10.4 Balancing transactions](https://www.ledger-cli.org/3.0/doc/ledger3.html#Balancing-transactions)                                               | Y |                                                                          |
-| [5.11 Posting cost](https://www.ledger-cli.org/3.0/doc/ledger3.html#Posting-cost)                                                                     | Y |                                                                          |
-| [5.12 Explicit posting costs](https://www.ledger-cli.org/3.0/doc/ledger3.html#Explicit-posting-costs)                                                 | Y |                                                                          |
-| [5.12.1 Primary and secondary commodities](https://www.ledger-cli.org/3.0/doc/ledger3.html#Primary-and-secondary-commodities)                         |   | N                                                                        |
-| [5.13 Posting cost expressions](https://www.ledger-cli.org/3.0/doc/ledger3.html#Posting-cost-expressions)                                             |   | N                                                                        |
-| [5.14 Total posting costs](https://www.ledger-cli.org/3.0/doc/ledger3.html#Total-posting-costs)                                                       | Y |                                                                          |
-| [5.15 Virtual posting costs](https://www.ledger-cli.org/3.0/doc/ledger3.html#Virtual-posting-costs)                                                   |   | the parentheses are ignored                                              |
-| [5.16 Commodity prices](https://www.ledger-cli.org/3.0/doc/ledger3.html#Commodity-prices)                                                             |   | N                                                                        |
-| [5.16.1 Total commodity prices](https://www.ledger-cli.org/3.0/doc/ledger3.html#Total-commodity-prices)                                               |   | N                                                                        |
-| [5.17 Prices versus costs](https://www.ledger-cli.org/3.0/doc/ledger3.html#Prices-versus-costs)                                                       |   | N                                                                        |
-| [5.18 Fixated prices and costs](https://www.ledger-cli.org/3.0/doc/ledger3.html#Fixated-prices-and-costs)                                             |   | N                                                                        |
-| [5.19 Lot dates](https://www.ledger-cli.org/3.0/doc/ledger3.html#Lot-dates)                                                                           |   | N                                                                        |
-| [5.20 Lot notes](https://www.ledger-cli.org/3.0/doc/ledger3.html#Lot-notes)                                                                           |   | N                                                                        |
-| [5.21 Lot value expressions](https://www.ledger-cli.org/3.0/doc/ledger3.html#Lot-value-expressions)                                                   |   | N                                                                        |
-| [5.22 Automated Transactions](https://www.ledger-cli.org/3.0/doc/ledger3.html#Automated-Transactions)                                                 | Y |                                                                          |
-| [5.22.1 Amount multipliers](https://www.ledger-cli.org/3.0/doc/ledger3.html#Amount-multipliers)                                                       |   | different syntax                                                         |
-| [5.22.2 Accessing the matching posting’s amount](https://www.ledger-cli.org/3.0/doc/ledger3.html#Accessing-the-matching-posting_0027s-amount)         |   | N                                                                        |
-| [5.22.3 Referring to the matching posting’s account](https://www.ledger-cli.org/3.0/doc/ledger3.html#Referring-to-the-matching-posting_0027s-account) |   | N                                                                        |
-| [5.22.4 Applying metadata to every matched posting](https://www.ledger-cli.org/3.0/doc/ledger3.html#Applying-metadata-to-every-matched-posting)       | Y |                                                                          |
-| [5.22.5 Applying metadata to the generated posting](https://www.ledger-cli.org/3.0/doc/ledger3.html#Applying-metadata-to-the-generated-posting)       | Y |                                                                          |
-| [5.22.6 State flags](https://www.ledger-cli.org/3.0/doc/ledger3.html#State-flags)                                                                     | Y |                                                                          |
-| [5.22.7 Effective Dates](https://www.ledger-cli.org/3.0/doc/ledger3.html#Effective-Dates)                                                             | Y | same as Auxiliary Dates                                                  |
-| [5.22.8 Periodic Transactions](https://www.ledger-cli.org/3.0/doc/ledger3.html#Periodic-Transactions)                                                 | Y |                                                                          |
-| **Directives** [link](https://www.ledger-cli.org/3.0/doc/ledger3.html#Command-Directives)                                                             |   |                                                                          |
-| `P` historical (market) prices                                                                                                                        | Y |                                                                          |
-| `=` An automated transaction.                                                                                                                         | Y |                                                                          |
-| `~` A periodic transaction.                                                                                                                           | Y |                                                                          |
-| `;` `#` `%` `*` &#124; comment lines                                                                                                                  |   | `%` and &#124; are not supported                                         |
-| `!` or `@` as a directive prefix                                                                                                                      |   | `@` is not supported                                                     |
-| `account` pre-declare account names                                                                                                                   | Y |                                                                          |
-| `account` subdirectives                                                                                                                               |   | ignored                                                                  |
-| `apply account` set a default parent account                                                                                                          | Y |                                                                          |
-| `apply fixed` set fixated prices                                                                                                                      |   | N                                                                        |
-| `alias` rewrite account names                                                                                                                         | Y |                                                                          |
-| `assert` test a value expression                                                                                                                      |   | N                                                                        |
-| `bucket`/`A` set a default balancing account                                                                                                          |   | N                                                                        |
-| `capture` replace accounts matched by regex with another                                                                                              |   | can be emulated with regex `alias`                                       |
-| `check` test a value expression                                                                                                                       |   | N                                                                        |
-| `comment` start multi-line comments                                                                                                                   | Y |                                                                          |
-| `commodity` pre-declare commodities                                                                                                                   | Y |                                                                          |
-| `commodity` subdirectives                                                                                                                             |   | only `format`                                                            |
-| `define` define value expressions for future use                                                                                                      |   | N                                                                        |
-| `end` close block commands like `apply` or `comment`                                                                                                  |   | hledger uses `end comment` and `end apply account`                       |
-| `expr` ?                                                                                                                                              |   | N                                                                        |
-| `include` include another file                                                                                                                        | Y |                                                                          |
-| `payee` pre-declare payee names                                                                                                                       | Y |                                                                          |
-| `payee` subdirectives                                                                                                                                 |   | N                                                                        |
-| `apply tag` assign a tag to transactions                                                                                                              |   | N                                                                        |
-| `tag` pre-declare tag names                                                                                                                           |   | ignored                                                                  |
-| `test`, a synonym for `comment`                                                                                                                       |   | N                                                                        |
-| `year`/`Y` set the year for year-less dates                                                                                                           |   | only `Y`                                                                 |
-| `N COMM` ignore pricing information for a commodity                                                                                                   |   | ignored                                                                  |
-| `D AMT` set a default commodity and its format                                                                                                        | Y |                                                                          |
-| `C AMT1 = AMT2` declare a commodity equivalency                                                                                                       |   | N                                                                        |
-| `I, i, O, o, b, h` timeclock entries                                                                                                                  |   | timeclock data must be in a separate file (can be `include`d)            |
+| Supported in hledger ?                                                                                                                                | Y | N                                                                              |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------|---|:-------------------------------------------------------------------------------|
+| **Transactions**                                                                                                                                      |   |                                                                                |
+| [5.1 Basic format](https://www.ledger-cli.org/3.0/doc/ledger3.html#Basic-format)                                                                      | Y |                                                                                |
+| [5.2 Eliding amounts](https://www.ledger-cli.org/3.0/doc/ledger3.html#Eliding-amounts)                                                                | Y |                                                                                |
+| [5.3 Auxiliary dates](https://www.ledger-cli.org/3.0/doc/ledger3.html#Auxiliary-dates)                                                                | Y |                                                                                |
+| [5.4 Codes](https://www.ledger-cli.org/3.0/doc/ledger3.html#Codes)                                                                                    | Y |                                                                                |
+| [5.5 Transaction state](https://www.ledger-cli.org/3.0/doc/ledger3.html#Transaction-state)                                                            | Y |                                                                                |
+| [5.6 Transaction notes](https://www.ledger-cli.org/3.0/doc/ledger3.html#Transaction-notes)                                                            | Y |                                                                                |
+| [5.7 Metadata](https://www.ledger-cli.org/3.0/doc/ledger3.html#Metadata)                                                                              | Y |                                                                                |
+| [5.7.1 Metadata tags](https://www.ledger-cli.org/3.0/doc/ledger3.html#Metadata-tags)                                                                  |   | format is `TAG1:, TAG2:` not `:TAG1:TAG2:`                                     |
+| [5.7.1.1 Payee metadata tag](https://www.ledger-cli.org/3.0/doc/ledger3.html#Payee-metadata-tag)                                                      |   | N                                                                              |
+| [5.7.2 Metadata values](https://www.ledger-cli.org/3.0/doc/ledger3.html#Metadata-values)                                                              |   | values are terminated by comma, can have multiple tag/values on one line       |
+| [5.7.3 Typed metadata](https://www.ledger-cli.org/3.0/doc/ledger3.html#Typed-metadata)                                                                |   | `date:`/`date2:` values are checked as dates, all other tag values are strings |
+| [5.8 Virtual postings](https://www.ledger-cli.org/3.0/doc/ledger3.html#Virtual-postings)                                                              | Y |                                                                                |
+| [5.9 Expression amounts](https://www.ledger-cli.org/3.0/doc/ledger3.html#Expression-amounts)                                                          |   | N                                                                              |
+| [5.10 Balance verification](https://www.ledger-cli.org/3.0/doc/ledger3.html#Balance-verification)                                                     | Y |                                                                                |
+| [5.10.1 Balance assertions](https://www.ledger-cli.org/3.0/doc/ledger3.html#Balance-assertions)                                                       | Y |                                                                                |
+| [5.10.1.1 Special assertion value 0](https://www.ledger-cli.org/3.0/doc/ledger3.html#Special-assertion-value-0)                                       | Y |                                                                                |
+| [5.10.2 Balance assignments](https://www.ledger-cli.org/3.0/doc/ledger3.html#Balance-assignments)                                                     | Y |                                                                                |
+| [5.10.3 Resetting a balance](https://www.ledger-cli.org/3.0/doc/ledger3.html#Resetting-a-balance)                                                     | Y |                                                                                |
+| [5.10.4 Balancing transactions](https://www.ledger-cli.org/3.0/doc/ledger3.html#Balancing-transactions)                                               | Y |                                                                                |
+| [5.11 Posting cost](https://www.ledger-cli.org/3.0/doc/ledger3.html#Posting-cost)                                                                     | Y |                                                                                |
+| [5.12 Explicit posting costs](https://www.ledger-cli.org/3.0/doc/ledger3.html#Explicit-posting-costs)                                                 | Y |                                                                                |
+| [5.12.1 Primary and secondary commodities](https://www.ledger-cli.org/3.0/doc/ledger3.html#Primary-and-secondary-commodities)                         |   | N                                                                              |
+| [5.13 Posting cost expressions](https://www.ledger-cli.org/3.0/doc/ledger3.html#Posting-cost-expressions)                                             |   | N                                                                              |
+| [5.14 Total posting costs](https://www.ledger-cli.org/3.0/doc/ledger3.html#Total-posting-costs)                                                       | Y |                                                                                |
+| [5.15 Virtual posting costs](https://www.ledger-cli.org/3.0/doc/ledger3.html#Virtual-posting-costs)                                                   |   | the parentheses are ignored                                                    |
+| [5.16 Commodity prices](https://www.ledger-cli.org/3.0/doc/ledger3.html#Commodity-prices)                                                             |   | cost basis is not tracked separately from cost                                 |
+| [5.16.1 Total commodity prices](https://www.ledger-cli.org/3.0/doc/ledger3.html#Total-commodity-prices)                                               |   | some lot notation is ignored, but transactions may fail to balance             |
+| [5.17 Prices versus costs](https://www.ledger-cli.org/3.0/doc/ledger3.html#Prices-versus-costs)                                                       |   | N                                                                              |
+| [5.18 Fixated prices and costs](https://www.ledger-cli.org/3.0/doc/ledger3.html#Fixated-prices-and-costs)                                             |   | N                                                                              |
+| [5.19 Lot dates](https://www.ledger-cli.org/3.0/doc/ledger3.html#Lot-dates)                                                                           |   | N                                                                              |
+| [5.20 Lot notes](https://www.ledger-cli.org/3.0/doc/ledger3.html#Lot-notes)                                                                           |   | N                                                                              |
+| [5.21 Lot value expressions](https://www.ledger-cli.org/3.0/doc/ledger3.html#Lot-value-expressions)                                                   |   | N                                                                              |
+| [5.22 Automated Transactions](https://www.ledger-cli.org/3.0/doc/ledger3.html#Automated-Transactions)                                                 | Y |                                                                                |
+| [5.22.1 Amount multipliers](https://www.ledger-cli.org/3.0/doc/ledger3.html#Amount-multipliers)                                                       |   | different syntax                                                               |
+| [5.22.2 Accessing the matching posting’s amount](https://www.ledger-cli.org/3.0/doc/ledger3.html#Accessing-the-matching-posting_0027s-amount)         |   | N                                                                              |
+| [5.22.3 Referring to the matching posting’s account](https://www.ledger-cli.org/3.0/doc/ledger3.html#Referring-to-the-matching-posting_0027s-account) |   | N                                                                              |
+| [5.22.4 Applying metadata to every matched posting](https://www.ledger-cli.org/3.0/doc/ledger3.html#Applying-metadata-to-every-matched-posting)       | Y |                                                                                |
+| [5.22.5 Applying metadata to the generated posting](https://www.ledger-cli.org/3.0/doc/ledger3.html#Applying-metadata-to-the-generated-posting)       | Y |                                                                                |
+| [5.22.6 State flags](https://www.ledger-cli.org/3.0/doc/ledger3.html#State-flags)                                                                     | Y |                                                                                |
+| [5.22.7 Effective Dates](https://www.ledger-cli.org/3.0/doc/ledger3.html#Effective-Dates)                                                             | Y | same as Auxiliary Dates                                                        |
+| [5.22.8 Periodic Transactions](https://www.ledger-cli.org/3.0/doc/ledger3.html#Periodic-Transactions)                                                 | Y |                                                                                |
+| **Directives** [link](https://www.ledger-cli.org/3.0/doc/ledger3.html#Command-Directives)                                                             |   |                                                                                |
+| `P` historical (market) prices                                                                                                                        | Y |                                                                                |
+| `=` An automated transaction.                                                                                                                         | Y |                                                                                |
+| `~` A periodic transaction.                                                                                                                           | Y |                                                                                |
+| `;` `#` `%` `*` &#124; comment lines                                                                                                                  |   | `%` and &#124; are not supported                                               |
+| `!` or `@` as a directive prefix                                                                                                                      |   | `@` is not supported                                                           |
+| `account` pre-declare account names                                                                                                                   | Y |                                                                                |
+| `account` subdirectives                                                                                                                               |   | ignored                                                                        |
+| `apply account` set a default parent account                                                                                                          | Y |                                                                                |
+| `apply fixed` set fixated prices                                                                                                                      |   | N                                                                              |
+| `alias` rewrite account names                                                                                                                         | Y |                                                                                |
+| `assert` test a value expression                                                                                                                      |   | N                                                                              |
+| `bucket`/`A` set a default balancing account                                                                                                          |   | N                                                                              |
+| `capture` replace accounts matched by regex with another                                                                                              |   | can be emulated with regex `alias`                                             |
+| `check` test a value expression                                                                                                                       |   | N                                                                              |
+| `comment` start multi-line comments                                                                                                                   | Y |                                                                                |
+| `commodity` pre-declare commodities                                                                                                                   | Y |                                                                                |
+| `commodity` subdirectives                                                                                                                             |   | only `format`                                                                  |
+| `define` define value expressions for future use                                                                                                      |   | N                                                                              |
+| `end` close block commands like `apply` or `comment`                                                                                                  |   | hledger uses `end comment` and `end apply account`                             |
+| `expr` ?                                                                                                                                              |   | N                                                                              |
+| `include` include another file                                                                                                                        | Y |                                                                                |
+| `payee` pre-declare payee names                                                                                                                       | Y |                                                                                |
+| `payee` subdirectives                                                                                                                                 |   | N                                                                              |
+| `apply tag` assign a tag to transactions                                                                                                              |   | N                                                                              |
+| `tag` pre-declare tag names                                                                                                                           |   | ignored                                                                        |
+| `test`, a synonym for `comment`                                                                                                                       |   | N                                                                              |
+| `year`/`Y` set the year for year-less dates                                                                                                           |   | only `Y`                                                                       |
+| `N COMM` ignore pricing information for a commodity                                                                                                   |   | ignored                                                                        |
+| `D AMT` set a default commodity and its format                                                                                                        | Y |                                                                                |
+| `C AMT1 = AMT2` declare a commodity equivalency                                                                                                       |   | N                                                                              |
+| `I, i, O, o, b, h` timeclock entries                                                                                                                  |   | timeclock data must be in a separate file (can be `include`d)                  |
 
 ### Balancing precision
 
@@ -405,11 +410,9 @@ More: [#1964](https://github.com/simonmichael/hledger/issues/1964)
 
 ## Interoperating tips
 
-Tips for co-using/converting/migrating between Ledger and hledger.
-
-Ledger's and hledger's journal formats are the same at the core,
-so you can continue using both tools on the same files, 
-if you are careful to avoid syntax that is specific to one or the other.
+The core of hledger's and Ledger's journal formats is the same,
+so you can use both tools on the same files, 
+if you avoid syntax that is specific to one or the other.
 
 However if you are a long-time Ledger user, you will certainly have
 Ledger-specific syntax, so for most Ledger users the quickest way 
@@ -419,10 +422,10 @@ to tap into hledger reports is some variant of
 $ ledger print --raw | hledger -f- CMD
 ```
 
-The print command discards most of the Ledger-specific syntax,
---raw avoids decimal zeroes being added to amounts,
-and the output is usually hledger compatible journal entries.
-This is good enough for most reporting needs. Some examples:
+The print command omits directives.
+--raw prevents decimal zeroes being added to amounts and disrupting transaction balancing.
+The output may be journal entries readable by hledger.
+If so you can do quick reporting like so:
 
 ```shell
 $ ledger print --raw | hledger -f- check       # check for problems
@@ -432,20 +435,25 @@ $ ledger print --raw | hledger -f- web         # view journal in hledger-web WUI
 $ hledger-ui -f <(ledger print --raw)          # view journal in hledger-ui TUI (works in bash)
 ```
 
-Unfortunately, `ledger print` does not evaluate Ledger's value expressions.
-For those, the only known workaround is to replace them with explicit values.
+Unfortunately, there are two common notations this does not help with:
 
-A more powerful approach is to keep hledger- and Ledger-specific data in separate files,
-which [include](hledger.html#including-files) a shared common file containing all the
-compatible data. Eg:
-```shell
-$ ls *.journal
-common.journal   # included by hledger.journal and ledger.journal
-hledger.journal
-ledger.journal
-$ hledger -f hledger.journal CMD
-$ ledger -f ledger.journal CMD
-```
+1. Lot notation, like `-5 AAPL {$50.00} [2012/04/10] (Oh my!) @@ $375.00`.
+   hledger will ignore some of this, but that tends to break transaction balancing.
+   We want to improve hledger's support for this.
+
+2. Amount expressions, like `(10 / 3)`.
+   Currently the only known workaround is to replace these with explicit values.
+
+A looser kind of setup is to segregate all tool-specific data into
+separate tool-specific files, while keeping compatible data in a
+shared common file.  Then appropriate files can be selected for a tool
+by using multiple `-f` options, or
+[include](hledger.html#including-files) directives.
+
+Another way is to do a one-way conversion to hledger format, perhaps periodically,
+doing whatever edits and transformations are necessary and feasible.
+sed, perl and/or a powerful editor with macros, like Emacs, can be a big help.
+Try to automate the steps as a script so you can easily redo the conversion when needed.
 
 ## History
 
