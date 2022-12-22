@@ -461,6 +461,8 @@ To work around this, you have to limit \$'s global precision:
 eg add `-c '\$0.00'` to the command (easiest when piping)
 or `commodity $0.00` to the file (more permanent, when creating a new file).
 
+More: [#1964](https://github.com/simonmichael/hledger/issues/1964)
+
 ## History
 
 I (Simon) discovered John Wiegley's [Ledger](http://ledger-cli.org) in 2006,
