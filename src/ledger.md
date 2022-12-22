@@ -221,9 +221,6 @@ Tue Feb  8 11:03:57 HST 2022
 
 ### Journal format
 
-(2022) This section is in need of update but still pretty accurate.
-See also [A ledger/hledger file incompatibility](#a-ledgerhledger-file-incompatibility) below.
-
 hledger's journal file format is very similar to Ledger's.
 Some syntactic forms 
 (eg [hledger comments](hledger.html#file-comments) 
@@ -231,8 +228,9 @@ vs [Ledger comments](https://www.ledger-cli.org/3.0/doc/ledger3.html#Commenting-
 or [balance assertions](hledger.html#assertions-and-ordering))
 can be interpreted in slightly different ways.
 A small number of Ledger's syntactic forms are ignored (`{ }` prices)
-or rejected (value expressions). With some care, it's quite easy
-to keep a journal file that works with both hledger and Ledger.
+or rejected (value expressions). With some care to restrict yourself to compatible features,
+or to keep non-compatible features in separate files,
+it's possible to keep a journal file that works with both hledger and Ledger simultaneously.
 See also [#1752](https://github.com/simonmichael/hledger/issues/1752).
 
 - hledger's input data formats (journal, timeclock, timedot, ...) are separate; you can't 
@@ -285,6 +283,8 @@ See also [#1752](https://github.com/simonmichael/hledger/issues/1752).
   minimal customisation of the amount (just multiplying the matched
   amount by a constant), not a full embedded expression language like
   Ledger. (And we call them "auto" to avoid "automatic" vs "automated" confusion.)
+
+See also [Interoperating](#interoperating) below.
 
 ### Timeclock format
 
@@ -345,7 +345,7 @@ and their status in hledger 1.28.
 
 | Supported in hledger ?                                                                                                                                | Y | N                                                                        |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------|---|:-------------------------------------------------------------------------|
-| **Transaction features**                                                                                                                              |   |                                                                          |
+| **Transactions**                                                                                                                                      |   |                                                                          |
 | [5.1 Basic format](https://www.ledger-cli.org/3.0/doc/ledger3.html#Basic-format)                                                                      | Y |                                                                          |
 | [5.2 Eliding amounts](https://www.ledger-cli.org/3.0/doc/ledger3.html#Eliding-amounts)                                                                | Y |                                                                          |
 | [5.3 Auxiliary dates](https://www.ledger-cli.org/3.0/doc/ledger3.html#Auxiliary-dates)                                                                | Y |                                                                          |
@@ -388,35 +388,35 @@ and their status in hledger 1.28.
 | [5.22.7 Effective Dates](https://www.ledger-cli.org/3.0/doc/ledger3.html#Effective-Dates)                                                             | Y | same as Auxiliary Dates                                                  |
 | [5.22.8 Periodic Transactions](https://www.ledger-cli.org/3.0/doc/ledger3.html#Periodic-Transactions)                                                 | Y |                                                                          |
 | **Directives**                                                                                                                                        |   |                                                                          |
-| `P` specifies a historical price for a commodity                                                                                                      | Y |                                                                          |
+| `P` historical (market) prices                                                                                                                        | Y |                                                                          |
 | `=` An automated transaction.                                                                                                                         | Y |                                                                          |
 | `~` A periodic transaction.                                                                                                                           | Y |                                                                          |
 | `;` `#` `%` `*` &#124; comment lines                                                                                                                  |   | `%` and &#124; are not supported                                         |
-| `!` or `@` may be used as a directive prefix                                                                                                          |   | `@` is not supported                                                     |
-| `account` pre-declare valid account names                                                                                                             | Y |                                                                          |
+| `!` or `@` as a directive prefix                                                                                                                      |   | `@` is not supported                                                     |
+| `account` pre-declare account names                                                                                                                   | Y |                                                                          |
 | `account` subdirectives                                                                                                                               |   | N                                                                        |
 | `apply account` set a default parent account                                                                                                          | Y |                                                                          |
 | `apply fixed` set fixated prices                                                                                                                      |   | N                                                                        |
 | `alias` rewrite account names                                                                                                                         | Y |                                                                          |
-| `assert` test a value expression condition                                                                                                            |   | N                                                                        |
+| `assert` test a value expression                                                                                                                      |   | N                                                                        |
 | `bucket`/`A` set a default balancing account                                                                                                          |   | N                                                                        |
-| `capture` replace accounts matching a regex another                                                                                                   |   | can be emulated with regex `alias`                                       |
-| `check` test a value expression condition                                                                                                             |   | N                                                                        |
-| `comment` start a multi-line comment                                                                                                                  | Y |                                                                          |
-| `commodity` pre-declare commodity names                                                                                                               | Y |                                                                          |
+| `capture` replace accounts matched by regex with another                                                                                              |   | can be emulated with regex `alias`                                       |
+| `check` test a value expression                                                                                                                       |   | N                                                                        |
+| `comment` start multi-line comments                                                                                                                   | Y |                                                                          |
+| `commodity` pre-declare commodities                                                                                                                   | Y |                                                                          |
 | `commodity` subdirectives                                                                                                                             |   | only `format`                                                            |
 | `define` define value expressions for future use                                                                                                      |   | N                                                                        |
 | `end` close block commands like `apply` or `comment`                                                                                                  |   | hledger uses `end comment` and `end apply account`                       |
 | `expr` ?                                                                                                                                              |   | N                                                                        |
-| `include` include another file as part of this one                                                                                                    | Y |                                                                          |
+| `include` include another file                                                                                                                        | Y |                                                                          |
 | `payee` pre-declare payee names                                                                                                                       | Y |                                                                          |
 | `payee` subdirectives                                                                                                                                 |   | N                                                                        |
-| `apply tag` assign a tag to multiple transactions                                                                                                     |   | N                                                                        |
+| `apply tag` assign a tag to transactions                                                                                                              |   | N                                                                        |
 | `tag` pre-declare tag names                                                                                                                           |   | N                                                                        |
-| `test` synonym for `comment`                                                                                                                          |   | N                                                                        |
+| `test`, a synonym for `comment`                                                                                                                       |   | N                                                                        |
 | `year`/`Y` set the year for year-less dates                                                                                                           |   | only `Y`                                                                 |
 | `N COMM` ignore pricing information for a commodity                                                                                                   |   | N                                                                        |
-| `D AMT` set a default commodity and its format                                                                                                        |   | N                                                                        |
+| `D AMT` set a default commodity and its format                                                                                                        | Y |                                                                          |
 | `C AMT1 = AMT2` declare a commodity equivalency                                                                                                       |   | N                                                                        |
 | `I, i, O, o, b, h` timeclock entries                                                                                                                  |   | timeclock data must be in a separate file (can be `include`d)            |
 
