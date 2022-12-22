@@ -64,6 +64,7 @@ Here is a feature comparison as of 2022 (updates welcome):
 | embedded python snippets / python API             |         | Y      |
 | probably miscellaneous other things...            |         | Y      |
 | **Features in hledger only:**                     |         |        |
+| international number formats                      |         |        |
 | timedot format                                    | Y       |        |
 | multi-period balance reports                      | Y       |        |
 | account types                                     | Y       |        |
@@ -276,14 +277,14 @@ and their status in hledger 1.28.
 | [5.22.6 State flags](https://www.ledger-cli.org/3.0/doc/ledger3.html#State-flags)                                                                     | Y |                                                                          |
 | [5.22.7 Effective Dates](https://www.ledger-cli.org/3.0/doc/ledger3.html#Effective-Dates)                                                             | Y | same as Auxiliary Dates                                                  |
 | [5.22.8 Periodic Transactions](https://www.ledger-cli.org/3.0/doc/ledger3.html#Periodic-Transactions)                                                 | Y |                                                                          |
-| **Directives**                                                                                                                                        |   |                                                                          |
+| **Directives** [link](https://www.ledger-cli.org/3.0/doc/ledger3.html#Command-Directives)                                                             |   |                                                                          |
 | `P` historical (market) prices                                                                                                                        | Y |                                                                          |
 | `=` An automated transaction.                                                                                                                         | Y |                                                                          |
 | `~` A periodic transaction.                                                                                                                           | Y |                                                                          |
 | `;` `#` `%` `*` &#124; comment lines                                                                                                                  |   | `%` and &#124; are not supported                                         |
 | `!` or `@` as a directive prefix                                                                                                                      |   | `@` is not supported                                                     |
 | `account` pre-declare account names                                                                                                                   | Y |                                                                          |
-| `account` subdirectives                                                                                                                               |   | N                                                                        |
+| `account` subdirectives                                                                                                                               |   | ignored                                                                  |
 | `apply account` set a default parent account                                                                                                          | Y |                                                                          |
 | `apply fixed` set fixated prices                                                                                                                      |   | N                                                                        |
 | `alias` rewrite account names                                                                                                                         | Y |                                                                          |
@@ -301,18 +302,18 @@ and their status in hledger 1.28.
 | `payee` pre-declare payee names                                                                                                                       | Y |                                                                          |
 | `payee` subdirectives                                                                                                                                 |   | N                                                                        |
 | `apply tag` assign a tag to transactions                                                                                                              |   | N                                                                        |
-| `tag` pre-declare tag names                                                                                                                           |   | N                                                                        |
+| `tag` pre-declare tag names                                                                                                                           |   | ignored                                                                  |
 | `test`, a synonym for `comment`                                                                                                                       |   | N                                                                        |
 | `year`/`Y` set the year for year-less dates                                                                                                           |   | only `Y`                                                                 |
-| `N COMM` ignore pricing information for a commodity                                                                                                   |   | N                                                                        |
+| `N COMM` ignore pricing information for a commodity                                                                                                   |   | ignored                                                                  |
 | `D AMT` set a default commodity and its format                                                                                                        | Y |                                                                          |
 | `C AMT1 = AMT2` declare a commodity equivalency                                                                                                       |   | N                                                                        |
 | `I, i, O, o, b, h` timeclock entries                                                                                                                  |   | timeclock data must be in a separate file (can be `include`d)            |
 
 ### Balancing precision
 
-This one is not about syntax, but the handling of precision (decimal places) when checking that transactions are balanced.
-In this journal, $'s precision is 2 in txn1, 4 in txn2, and 4 globally:
+Ledger and hledger can occasionally disagree on whether a transaction is balanced.
+In this journal, $'s precision (number of decimal places) is 2 in txn1, 4 in txn2, and 4 globally:
 
 ```journal
 2022-01-01 txn1
@@ -324,35 +325,22 @@ In this journal, $'s precision is 2 in txn1, 4 in txn2, and 4 globally:
     checking
 ```
 
-Ledger checks transaction balancedness using local precisions only.
-So it accepts txn1's $-0.00045312 imbalance:
+Ledger checks transaction balancedness using local precisions only,
+so it balances with precision 2, and accepts txn1's $-0.00045312 imbalance.
 
-```shell
-$ ledger print >/dev/null && echo ok
-ok
-```
-
-hledger checks transaction balancedness using global precisions.
-So it rejects txn1:
-
-```journal
-$ hledger print 
-hledger: Error:...
-7 | 2022-01-01 txn1
-  |     expenses     AAA 989.02 @ $1.123456
-  |     checking                $-1111.1200
-
-This multi-commodity transaction is unbalanced.
-The real postings' sum should be 0 but is: $0.000453
-```
-
-To work around this, you have to limit \$'s global precision:
-eg add `-c '\$0.00'` to the command (easiest when piping)
+hledger checks transaction balancedness using global precisions,
+so it balances with precision 4, and rejects txn1's imbalance.
+To read these entries with hledger, you have to limit \$'s global precision,
+by adding `-c '\$0.00'` to the command (easiest when piping)
 or `commodity $0.00` to the file (more permanent, when creating a new file).
 
 More: [#1964](https://github.com/simonmichael/hledger/issues/1964)
 
 ### More differences
+
+- The region affected by directives, with possibly multiple sibling or included files, might be different.
+  Here are hledger's [Directive effects](/hledger.html#directive-effects) and 
+  [Directives and multiple files](/hledger.html#directives-and-multiple-files) semantics.
 
 - hledger supports international number formats, auto-detecting the
   decimal mark (comma or period), digit group mark (period, comma, or
