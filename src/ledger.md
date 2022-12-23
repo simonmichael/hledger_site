@@ -236,7 +236,7 @@ See also [#1752](https://github.com/simonmichael/hledger/issues/1752).
 
 Here is a detailed list of Ledger's file format features,
 from the [Ledger manual](https://www.ledger-cli.org/3.0/doc/ledger3.html) as of 2022-12,
-and their status in hledger 1.28, hledger dev, and the current dev goal: Yes / Ignored / No.
+and their status in hledger 1.28, hledger dev, and intended (Yes / Ignored / No).
 
 | Supported in hledger ?                                                                                                                                | 1.28     | dev | Notes                                                                            | Goal |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------|----------|-----|:---------------------------------------------------------------------------------|------|
@@ -309,8 +309,7 @@ and their status in hledger 1.28, hledger dev, and the current dev goal: Yes / I
 | `end apply tag`                                                                                                                                       | N        | I   |                                                                                  |      |
 | `end apply year`                                                                                                                                      | N        | I   |                                                                                  | Y    |
 | `end tag`                                                                                                                                             | N        | I   |                                                                                  |      |
-| `eval` evaluate some (python?) expression                                                                                                             | N        | I   |                                                                                  |      |
-| `expr` evaluate some value expression                                                                                                                 | N        | I   |                                                                                  |      |
+| `eval`/`expr` evaluate a value expression                                                                                                             | N        | I   |                                                                                  |      |
 | `include` include another file                                                                                                                        | Y        | Y   |                                                                                  |      |
 | `payee` pre-declare payee names                                                                                                                       | Y        | Y   |                                                                                  |      |
 | `payee` subdirectives                                                                                                                                 | N        | I   |                                                                                  | I/Y  |
@@ -460,6 +459,8 @@ Unfortunately, there are two common notations this does not help with:
 
 2. Amount expressions, like `(10 / 3)`.
    Currently the only known workaround is to replace these with explicit values.
+   Here is one way: in emacs, select the parenthesised expression and enter `C-u M-| xargs ledger eval`
+   (and remove the newline).
 
 A looser kind of setup is to segregate all tool-specific data into
 separate tool-specific files, while keeping compatible data in a
