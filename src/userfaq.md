@@ -222,6 +222,10 @@ With hledger 1.23+, you can also use the `-c/--commodity-style` option. Eg:
 hledger -c '$1000.00' -c 'EUR 1.000,' -c '1000.00000000 BTC' bal
 ```
 
+## How can I match transactions from one account to another account ?
+
+https://money.stackexchange.com/questions/154316/how-can-i-identify-all-transfers-from-account-a-to-account-b-in-ledger-cli/154322#154322
+
 ## How could I import/migrate from...
 
 ### Mint.com ?
