@@ -231,7 +231,7 @@ Some syntactic forms
 vs [Ledger comments](https://www.ledger-cli.org/3.0/doc/ledger3.html#Commenting-on-your-Journal),
 or [balance assertions](hledger.html#assertions-and-ordering))
 can be interpreted in slightly different ways.
-A small number of Ledger's syntactic forms are ignored (`{ }` prices)
+A small number of Ledger's syntactic forms are ignored (lot notation)
 or rejected (value expressions). With some care to restrict yourself to compatible features,
 or to keep non-compatible features in separate files,
 it's possible to keep a journal file that works with both hledger and Ledger simultaneously.
@@ -326,7 +326,7 @@ and their status in hledger 1.28, hledger dev, and intended (Yes / Ignored / No)
 | `D AMT` set a default commodity and its format                                                                                                        | Y        | Y   |                                                                                  |      |
 | `C AMT1 = AMT2` declare a commodity equivalency                                                                                                       | N        | I   |                                                                                  | I/Y  |
 | `I, i, O, o, b, h` timeclock entries in journal                                                                                                       | N        | N   | timeclock data must be in a separate file (can be `include`d)                    |      |
-| `--flag` command-line flags in journal                                                                                                                | N        | I   |                                                                                  |      |
+| `--command-line-flags` in journal                                                                                                                     | N        | I   |                                                                                  |      |
 
 ### Balancing precision
 
@@ -354,31 +354,79 @@ or `commodity $0.00` to the file (more permanent, when creating a new file).
 
 More: [#1964](https://github.com/simonmichael/hledger/issues/1964)
 
-### More differences
+### Balance assertions / assignments
 
-- The region affected by directives, with possibly multiple sibling or included files, might be different.
-  Here are hledger's [Directive effects](dev/hledger.html#directive-effects) and 
-  [Directives and multiple files](hledger.html#directives-and-multiple-files) semantics.
+Ledger calculates balance assignments and checks balance assertions simply in the order they were parsed.
+hledger calculates balance assignments and checks balance assertions in date order
+and then (for postings on the same date) parse order.
+This ensures correct, reliable behaviour independent of the ordering of journal entries and files. 
 
+hledger correctly handles multiple balance assignments/assertions within a single transaction.
+
+hledger adds a restriction on balance assignments:
+it does not allow balance assignments on accounts affected by auto posting rules
+(since in general this can make balancing the journal impossible).
+
+### Directive scope
+
+The region affected by directives, and their behaviour with included files or sibling files,
+is sometimes different in hledger. This is to ensure robust, predictable behaviour.
+Here are hledger's [Directive effects](dev/hledger.html#directive-effects) and 
+[Directives and multiple files](hledger.html#directives-and-multiple-files) behaviour.
+You might need to move directives and/or rearrange your files.
+
+### Lot handling
+
+hledger accepts but ignores Ledger-style lot notation
+(any of `{LOTUNITCOST}`, `{{LOTTOTALCOST}}`, `{=FIXEDLOTUNITCOST}`, `{{=FIXEDLOTTOTALCOST}}`, `[LOTDATE]`, `(LOTNOTE)` after a posting amount).
+This notation currently does not participate in transaction balancing, which prevents reading some Ledger files.
+([#1084](https://github.com/simonmichael/hledger/issues/1084))
+
+hledger currently does not track lots automatically, or provide a `--lots` report; 
+instead you must track them manually, 
+recording cost basis with `@`
+and using explicit per-lot subaccounts and gain/loss postings
+(see <https://hledger.org/investments.html>).
+
+<!--
+hledger does not automatically calculate capital gains when selling
+a lot at a different price from its cost basis, as Ledger does.
+```journal
+; Ledger expects the 5 EUR capital gain income here because selling a 10 EUR lot at 15 EUR.
+; hledger does not. Must leave that amount implicit to allow both to parse this.
+2019-03-01 Sell
+  Assets:Shares           -1 ETF {10 EUR} @ 15 EUR
+  Assets:Cash             15 EUR
+  Income:Capital Gains   ;-5 EUR
+```
+-->
+
+### Period expressions
+
+hledger understands most Ledger period expressions, but you might find some
+variants that are not supported (if so, please report).
+
+hledger tends to require period expressions to start on a natural period boundary.
+So for example, most monthly-recurring expressions must begin on the first of a month.
+(There are some variants which avoid this restriction.)
+
+### Value expressions
+
+hledger does not support value expressions, Ledger's embedded programming language.
+In particular, parenthesised amount expressions like `($10 / 3)` are not supported;
+these must be converted to explicit amounts (see ledger eval tip below).
+
+### Other differences
+
+- hledger's input data formats (journal, timeclock, timedot, ...) are separate;
+  you can't mix timeclock entries and journal entries in one file as in Ledger.
+  (Though a journal file can `include` a timeclock file.)
+  This helps implement more useful error messages.
+  
 - hledger supports international number formats, auto-detecting the
   decimal mark (comma or period), digit group mark (period, comma, or
   space) and digit group sizes to use for each commodity. Or, these can
   be declared explicitly with commodity directives.
-
-- hledger applies [balance assignments](hledger.html#balance-assignments) 
-  and checks [balance assertions](hledger.html#balance-assertions)
-  in date order (and then by parse order, for postings on the same date).
-  This ensures correct, deterministic behaviour, independent of the ordering of
-  journal entries and files. 
-  Ledger checks assertions in the order they are parsed (ignoring dates), which is fragile.
-
-- hledger correctly handles multiple balance assignments/assertions within a single transaction.
-
-- hledger does not allow balance assignments on accounts affected by auto posting rules,
-  since this combination can make balancing the journal impossible.
-
-- hledger requires period expressions in periodic transaction rules to
-  start on a period boundary (eg the first of the month for `~ monthly`).
 
 - hledger's default commodity directive (D) sets the commodity to be
   used for subsequent commodityless amounts, and also sets that
@@ -386,40 +434,17 @@ More: [#1964](https://github.com/simonmichael/hledger/issues/1964)
   seen. Ledger uses D only for commodity display settings and for the
   entry command.
 
-- hledger accepts but ignores Ledger-style lot prices and lot dates
-  (`{PRICE}`, `{{PRICE}}`, `{=PRICE}`, `{{=PRICE}}` and/or `[DATE]`,
-  after the posting amount and before any balance assertion). 
-  This can prevent transaction balancing.
-  ([#1084](https://github.com/simonmichael/hledger/issues/1084))
-  
-- hledger does not automatically calculate capital gains when selling
-  a lot at a different price from its cost basis, as Ledger does.
-  <!--
-  ```journal
-  ; Ledger expects the 5 EUR capital gain income here because selling a 10 EUR lot at 15 EUR.
-  ; hledger does not. Must leave that amount implicit to allow both to parse this.
-  2019-03-01 Sell
-    Assets:Shares           -1 ETF {10 EUR} @ 15 EUR
-    Assets:Cash             15 EUR
-    Income:Capital Gains   ;-5 EUR
-  ```
-  -->
-
-- hledger does not currently support Ledger's `--lots` reporting.
-
 - hledger [auto postings](hledger.html#auto-postings) allow only
   minimal customisation of the amount (just multiplying the matched
   amount by a constant), not a full embedded expression language like
   Ledger. (And we call them "auto" to avoid "automatic" vs "automated" confusion.)
 
+- In multi-period reports, hledger expands the report start/end dates
+  to span whole periods.
+
 - hledger's print command always shows both the primary transaction date and any secondary date, in their usual positions.
   Ledger's print command with `--aux-date` replaces the primary date with any secondary date.
 
-- hledger's input data formats (journal, timeclock, timedot, ...) are separate; you can't 
-  mix them all in one file as in Ledger.
-  (You can still combine them in one report, by reading from multiple files.)
-  This simplifies implementation and helps ensure useful error messages.
-  
 - hledger always shows time balances (from timeclock or timedot data) in hours.
 
 - hledger always splits multi-day time sessions at midnight, to show the per-day amounts.
@@ -457,10 +482,10 @@ $ hledger-ui -f <(ledger print --raw)          # view journal in hledger-ui TUI 
 Unfortunately, there are two common notations this does not help with:
 
 1. Lot notation, like `-5 AAPL {$50.00} [2012/04/10] (Oh my!) @@ $375.00`.
-   hledger will ignore some of this, but that tends to break transaction balancing.
+   hledger will ignore this, but that tends to break transaction balancing.
    We want to improve hledger's support for this.
 
-2. Amount expressions, like `(10 / 3)`.
+2. Amount expressions, like `($10 / 3)`.
    Currently the only known workaround is to replace these with explicit values.
    Here is one way: in emacs, select the parenthesised expression and enter `C-u M-| xargs ledger eval`
    (and remove the newline).
