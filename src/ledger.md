@@ -10,9 +10,9 @@ See also:
 ## Differences
 
 *2022-12: If you are a Ledger user trying to use hledger with your data,
-I'd love to chat with you to learn about your experience and make this page more helpful.
-Please contact me (sm) in the #ledger, #hledger, or #plaintextaccounting chats.
-<https://hledger.org/support>, [#1962](https://github.com/simonmichael/hledger/issues/1962)*
+I'd love to hear about your experience and make this page more helpful.
+Please contact me (sm) in the #ledger, #hledger, or #plaintextaccounting chats,
+<https://hledger.org/support>. ([#1962](https://github.com/simonmichael/hledger/issues/1962))*
 
 ### Summary
 
@@ -43,7 +43,9 @@ Compared to hledger, Ledger has
 ### Features
 
 Over time, features have propagated both ways.
-Here is a feature comparison as of 2022 (updates welcome):
+Here is 
+[a presentation of hledger features](features.html)
+and here is a feature comparison as of 2022 (updates welcome):
  
 |                                                   | hledger | Ledger |
 |---------------------------------------------------|---------|--------|
@@ -65,7 +67,7 @@ Here is a feature comparison as of 2022 (updates welcome):
 | **Features in Ledger only:**                      |         |        |
 | automatic revaluation transactions (`--revalued`) |         | Y      |
 | lot reporting (`--lots`)                          |         | Y      |
-| embedded value expression language                |         | Y      |
+| embedded programming language (value expressions) |         | Y      |
 | embedded python snippets / python API             |         | Y      |
 | probably miscellaneous other things...            |         | Y      |
 | **Features in hledger only:**                     |         |        |
