@@ -6,6 +6,7 @@
 
 See also: 
 - <https://www.libhunt.com/compare-hledger-vs-ledger>
+- <https://www.reddit.com/r/plaintextaccounting/comments/ztdk0o/ledger_vs_hledger/>
 
 ## Differences
 
