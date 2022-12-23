@@ -357,8 +357,8 @@ More: [#1964](https://github.com/simonmichael/hledger/issues/1964)
 ### More differences
 
 - The region affected by directives, with possibly multiple sibling or included files, might be different.
-  Here are hledger's [Directive effects](/hledger.html#directive-effects) and 
-  [Directives and multiple files](/hledger.html#directives-and-multiple-files) semantics.
+  Here are hledger's [Directive effects](hledger.html#directive-effects) and 
+  [Directives and multiple files](hledger.html#directives-and-multiple-files) semantics.
 
 - hledger supports international number formats, auto-detecting the
   decimal mark (comma or period), digit group mark (period, comma, or
