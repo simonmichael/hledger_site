@@ -32,6 +32,8 @@ etc.
 
 <a href="images/ultorg-1.png" class="highslide" onclick="return hs.expand(this)"><img src="images/ultorg-1.png" title="ultorg example 1" /></a>
 
+<a href="images/ultorg-2.png" class="highslide" onclick="return hs.expand(this)"><img src="images/ultorg-2.png" title="ultorg example 2" /></a>
+
 Ultorg goes farther than spreadsheets, with more powerful joins and layout.
 <https://www.ultorg.com/resources> > 1st video demonstrates its key features,
 and the 3rd video is a fascinating demo of analysing Quickbooks data.
