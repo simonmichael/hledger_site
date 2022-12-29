@@ -30,7 +30,7 @@ $ hledger -f examples/bcexample.hledger print -o examples/bcexample.csv
 
 etc.
 
-![images/ultorg-1.png]
+![ultorg example 1](images/ultorg-1.png)
 
 Ultorg goes farther than spreadsheets, with more powerful joins and layout.
 https://www.ultorg.com/resources > 1st video demonstrates its key features,
