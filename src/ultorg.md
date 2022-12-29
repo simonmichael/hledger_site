@@ -30,7 +30,7 @@ $ hledger -f examples/bcexample.hledger print -o examples/bcexample.csv
 
 etc.
 
-![ultorg example 1](images/ultorg-1.png)
+<a href="images/ultorg-1.png" class="highslide" onclick="return hs.expand(this)"><img src="images/ultorg-1.png" title="ultorg example 1" /></a>
 
 Ultorg goes farther than spreadsheets, with more powerful joins and layout.
 <https://www.ultorg.com/resources> > 1st video demonstrates its key features,
