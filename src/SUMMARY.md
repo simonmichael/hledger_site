@@ -101,6 +101,7 @@
 - [hledger and Ledger](ledger.md)
 - [hledger and Quicken / Quickbooks](quicken.md)
 - [hledger and SQLite](sqlite.md)
+- [hledger and Ultorg](ultorg.md)
 
 <!--
 Other manual versions.

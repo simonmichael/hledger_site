@@ -1,6 +1,6 @@
 # hledger and SQLite
 
-SQLite is the easiest way to achieve full relational queries on your hledger data.
+With SQLite you can do full relational queries on your hledger data.
 
 Here we export all transactions to a database and run some queries:
 ```shell
