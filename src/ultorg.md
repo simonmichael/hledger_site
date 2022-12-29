@@ -33,5 +33,5 @@ etc.
 ![ultorg example 1](images/ultorg-1.png)
 
 Ultorg goes farther than spreadsheets, with more powerful joins and layout.
-https://www.ultorg.com/resources > 1st video demonstrates its key features,
+<https://www.ultorg.com/resources> > 1st video demonstrates its key features,
 and the 3rd video is a fascinating demo of analysing Quickbooks data.
