@@ -328,13 +328,14 @@ and their status in hledger 1.28, hledger dev, and intended (Yes / Ignored / No)
 | `I, i, O, o, b, h` timeclock entries in journal                                                                                                       | N        | N   | timeclock data must be in a separate file (can be `include`d)                    |      |
 | `--command-line-flags` in journal                                                                                                                     | N        | I   |                                                                                  |      |
 
-### Decimal marks
+### Decimal mark
 
 In many countries, comma is used as decimal mark.
 hledger tries to auto-detect this, to make things just work for everyone without configuration.
 The downside is that numbers containing a single digit group mark and no decimal mark
 (like `1,000`) can be misparsed.
-This is especially a proble when amounts are left blank, as the misparsing will not raise an error.
+This is especially problematic where amounts are left blank, 
+as misparsing in those transactions will not raise an error.
 If you have such numbers in your data, or if you simply want to be
 safe, you should declare the decimal mark being used.
 The best way is to add a `decimal-mark .` or `decimal-mark ,` directive to each file.
