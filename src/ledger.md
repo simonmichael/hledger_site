@@ -328,6 +328,13 @@ and their status in hledger 1.28, hledger dev, and intended (Yes / Ignored / No)
 | `I, i, O, o, b, h` timeclock entries in journal                                                                                                       | N        | N   | timeclock data must be in a separate file (can be `include`d)                    |      |
 | `--command-line-flags` in journal                                                                                                                     | N        | I   |                                                                                  |      |
 
+### Tabs and spaces
+
+In places requiring more than a single space separator, eg between account name and amount,
+ledger will accept just one tab character. hledger always requires two or more whitespace 
+characters in those places - whether tabs or spaces, there must be at least two.
+(This ensures a visually distinct gap.)
+
 ### Decimal mark
 
 In many countries, comma is used as decimal mark.
