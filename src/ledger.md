@@ -331,14 +331,11 @@ and their status in hledger 1.28, hledger dev, and intended (Yes / Ignored / No)
 ### Decimal mark
 
 In many countries, comma is used as decimal mark.
-hledger tries to auto-detect this, to make things just work for everyone without configuration.
-The downside is that numbers containing a single digit group mark and no decimal mark
-(like `1,000`) can be misparsed.
-This is especially problematic where amounts are left blank, 
-as misparsing in those transactions will not raise an error.
-If you have such numbers in your data, or if you simply want to be
-safe, you should declare the decimal mark being used.
-The best way is to add a `decimal-mark .` or `decimal-mark ,` directive to each file.
+Without configuration, hledger tries to auto-detect this, to make things just work for everyone.
+However, it can misparse numbers containing a single digit group mark and no decimal mark, 
+eg parsing `1,000` as 1 when it should be 1000.
+If you have such numbers in your data, or if you just want to be certain, you should declare the decimal mark being used.
+The best way is to add a `decimal-mark .` or `decimal-mark ,` directive in each data file.
 See [Decimal marks, digit group marks](/hledger.html#decimal-marks-digit-group-marks) for more on this.
 
 ### Balancing precision
