@@ -330,10 +330,11 @@ and their status in hledger 1.28, hledger dev, and intended (Yes / Ignored / No)
 
 ### Tabs and spaces
 
-In places requiring more than a single space separator, eg between account name and amount,
-ledger will accept just one tab character. hledger always requires two or more whitespace 
-characters in those places - whether tabs or spaces, there must be at least two.
-(This ensures a visually distinct gap.)
+In places which normally require two or more spaces (or tabs),
+eg between account name and amount,
+ledger will also accept a single tab character. 
+But hledger always requires two or more spaces or tabs (ensuring a visually distinct gap).
+So you might need to add a space in such cases.
 
 ### Decimal mark
 
