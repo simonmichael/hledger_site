@@ -470,6 +470,10 @@ these must be converted to explicit amounts (see ledger eval tip below).
 
 - hledger's [CSV/TSV/SSV-reading](hledger.html#csv-format) and [import](hledger.html#import) system is more mature and flexible than Ledger's [`convert` command](https://www.ledger-cli.org/3.0/doc/ledger3.html#The-convert-command).
 
+- Ledger can report multiple errors at once; hledger reports only one error at a time.
+
+- Ledger can also output warnings. hledger does not print warnings; it either succeeds or fails.
+
 ## Interoperating tips
 
 The core of hledger's and Ledger's journal formats is the same,
