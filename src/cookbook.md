@@ -70,14 +70,16 @@ and [Accounting and bookkeeping](#accounting-and-bookkeeping) examples.
 - [hledger-web tips](hledger-web-tips.md)
 - [Mobile apps](mobile-apps.md)
 
-### Interoperating with other software
+### Other software
 - [Exporting from hledger](export.md)
 - [hledger and Beancount](beancount.md)
 - [hledger and dsq / DataStation](dsq.md)
 - [hledger and GnuCash](gnucash.md)
 - [hledger and Ledger](ledger.md)
-- [hledger and SQLite](sqlite.md)
+- [hledger and Obsidian](obsidian.md)
 - [hledger and Quicken/Quickbooks](quicken.md)
+- [hledger and SQLite](sqlite.md)
+- [hledger and Ultorg](ultorg.md)
 
 ## Accounting and bookkeeping
 <!-- sections ordered mostly alphabetically -->

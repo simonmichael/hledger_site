@@ -99,6 +99,7 @@
 - [hledger and dsq / DataStation](dsq.md)
 - [hledger and GnuCash](gnucash.md)
 - [hledger and Ledger](ledger.md)
+- [hledger and Obsidian](obsidian.md)
 - [hledger and Quicken / Quickbooks](quicken.md)
 - [hledger and SQLite](sqlite.md)
 - [hledger and Ultorg](ultorg.md)
