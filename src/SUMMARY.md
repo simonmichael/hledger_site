@@ -103,6 +103,7 @@
 - [hledger and Quicken / Quickbooks](quicken.md)
 - [hledger and SQLite](sqlite.md)
 - [hledger and Ultorg](ultorg.md)
+- [hledger and YNAB](ynab.md)
 
 <!--
 Other manual versions.

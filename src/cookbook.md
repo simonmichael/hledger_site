@@ -80,6 +80,7 @@ and [Accounting and bookkeeping](#accounting-and-bookkeeping) examples.
 - [hledger and Quicken/Quickbooks](quicken.md)
 - [hledger and SQLite](sqlite.md)
 - [hledger and Ultorg](ultorg.md)
+- [hledger and YNAB](ynab.md)
 
 ## Accounting and bookkeeping
 <!-- sections ordered mostly alphabetically -->
