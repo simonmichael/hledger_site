@@ -474,6 +474,9 @@ these must be converted to explicit amounts (see ledger eval tip below).
 
 - Ledger can also output warnings. hledger does not print warnings; it either succeeds or fails.
 
+- hledger will complain if transaction or posting comments contain `date:` or `date2:`
+  not followed by a valid [date tag value](/hledger.html#posting-dates).
+
 ## Interoperating tips
 
 The core of hledger's and Ledger's journal formats is the same,
