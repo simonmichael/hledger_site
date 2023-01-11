@@ -1364,7 +1364,7 @@ Balance changes in 2017/11/01-2017/12/31:
 ```
 
 For more examples and details, see [Budgeting and
-Forecasting](budgeting-and-forecasting.html).
+Forecasting](/budgeting-and-forecasting.html).
 
 #### Custom balance output
 

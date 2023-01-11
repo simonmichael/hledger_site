@@ -2283,7 +2283,7 @@ Budget performance in 2017/11/01-2017/12/31:
 ```
 
 For more examples, see [Budgeting and
-Forecasting](budgeting-and-forecasting.html).
+Forecasting](/budgeting-and-forecasting.html).
 
 ##### Nested budgets
 

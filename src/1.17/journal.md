@@ -1396,7 +1396,7 @@ in [budget reports](hledger.html#budget-report).
 
 For more details, see: [balance: Budget
 report](hledger.html#budget-report) and [Budgeting and
-Forecasting](budgeting-and-forecasting.html).
+Forecasting](/budgeting-and-forecasting.html).
 
 <a name="automated-postings"></a> <a name="auto-postings"></a>
 

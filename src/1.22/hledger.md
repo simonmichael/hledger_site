@@ -2344,7 +2344,7 @@ Budget performance in 2017/11/01-2017/12/31:
                       ||      0 [              0]       0 [              0] 
 ```
 
-For more examples and notes, see [Budgeting](budgeting.html).
+For more examples and notes, see [Budgeting](/budgeting.html).
 
 ##### Budget report start date
 
@@ -5552,7 +5552,7 @@ spending \$2000 on rent (and also, a goal of depositing \$2000 into
 checking) every month. Goals and actual performance can then be compared
 in [budget reports](#budget-report).
 
-See also: [Budgeting and Forecasting](budgeting-and-forecasting.html).
+See also: [Budgeting and Forecasting](/budgeting-and-forecasting.html).
 
 <a name="automated-postings"></a> <a name="auto-postings"></a>
 

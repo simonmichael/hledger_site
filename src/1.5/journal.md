@@ -970,7 +970,7 @@ the last recorded journal transaction and ending 6 months from today, or
 at the specified report end date. With `balance --budget`, each periodic
 transaction declares recurring budget goals for one or more accounts.\
 For more details, see: [balance \> Budgeting](manual.html#budgeting),
-[Budgeting and Forecasting](budgeting-and-forecasting.html).
+[Budgeting and Forecasting](/budgeting-and-forecasting.html).
 
 ## Automated posting rules
 

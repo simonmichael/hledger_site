@@ -1581,7 +1581,7 @@ spending \$2000 on rent (and also, a goal of depositing \$2000 into
 checking) every month. Goals and actual performance can then be compared
 in [budget reports](hledger.html#budget-report).
 
-See also: [Budgeting and Forecasting](budgeting-and-forecasting.html).
+See also: [Budgeting and Forecasting](/budgeting-and-forecasting.html).
 
 <a name="automated-postings"></a> <a name="auto-postings"></a>
 
