@@ -289,7 +289,7 @@ and their status in hledger 1.28, hledger dev, and intended (Yes / Ignored / No)
 | **Directives** [link](https://www.ledger-cli.org/3.0/doc/ledger3.html#Command-Directives)                                                             |          |     |                                                                                  |      |
 | `P` historical (market) prices                                                                                                                        | Y        | Y   |                                                                                  |      |
 | `=` An automated transaction.                                                                                                                         | Y        | Y   |                                                                                  |      |
-| `~` A periodic transaction.                                                                                                                           | Y        | Y   | some period expressions not supported                                            |      |
+| `~` A periodic transaction.                                                                                                                           | Y        | Y   | certain period expressions can only start on an interval boundary (fixed in dev) |      |
 | `;` `#` `%` `*` &#124; comment lines                                                                                                                  | Y        | Y   | but not `%` or &#124;                                                            |      |
 | `!` or `@` as a directive prefix                                                                                                                      | not `@`  | Y   |                                                                                  |      |
 | `account` pre-declare account names                                                                                                                   | Y        | Y   |                                                                                  |      |
@@ -419,20 +419,23 @@ a lot at a different price from its cost basis, as Ledger does.
 ```
 -->
 
-### Period expressions
-
-hledger understands most Ledger period expressions, but you might find some
-variants that are not supported (if so, please report).
-
-hledger tends to require period expressions to start on a natural period boundary.
-So for example, most monthly-recurring expressions must begin on the first of a month.
-(There are some variants which avoid this restriction.)
-
 ### Value expressions
 
 hledger does not support value expressions, Ledger's embedded programming language.
 In particular, parenthesised amount expressions like `($10 / 3)` are not supported;
 these must be converted to explicit amounts (see ledger eval tip below).
+
+### Periodic transactions
+
+hledger understands most Ledger periodic transactions,
+but if you find some variants that are not supported, please report.
+
+hledger 1.28 tends to require periodic transactions to start on a natural period boundary,
+unless you use one of [these syntaxes](/1.28/hledger.html#intervals-with-custom-start-date).
+This will be fixed in 1.29.
+
+When you do specify a custom start date, hledger will start the transactions on that date.
+Ledger seems to always generate them on the period boundaries.
 
 ### Other differences
 
