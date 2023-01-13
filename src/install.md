@@ -761,6 +761,8 @@ If you see similar problems on Microsoft Windows,
 perhaps [this doc](https://techtrix.co/how-do-i-change-the-default-encoding-in-windows-10/#How_do_I_change_my_Windows_locale)
 can help with configuring it.
 
+With Nix or GUIX, the procedures are [different](https://github.com/simonmichael/hledger/issues/1033#issuecomment-1062506027).
+
 ## Next steps
 
 Nicely done! Now see **[Getting started](start.html)**,
