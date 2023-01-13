@@ -328,6 +328,15 @@ and their status in hledger 1.28, hledger dev, and intended (Yes / Ignored / No)
 | `I, i, O, o, b, h` timeclock entries in journal                                                                                                       | N        | N   | timeclock data must be in a separate file (can be `include`d)                    |      |
 | `--command-line-flags` in journal                                                                                                                     | N        | I   |                                                                                  |      |
 
+### Decoding errors
+
+hledger, like most Haskell programs, exits with a confusing error message
+if it sees non-ascii data
+and the system locale is not configured to decode UTF-8.
+If your data contains non-ascii characters and hledger gives an error
+such as "invalid byte sequence", "mkTextEncoding: invalid argument" or similar,
+you must [configure your locale](https://hledger.org/install.html#check-your-locale).
+
 ### Tabs and spaces
 
 In places which normally require two or more spaces (or tabs),
