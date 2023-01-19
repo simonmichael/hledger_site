@@ -30,11 +30,12 @@ This method is perhaps the easiest.
 
 4. The CSV file appears in the left panel, containing one table. Double-click on the table to open it in the main pane.
 
-5. Group the txnidx, date, and fescription columns: cmd/ctrl-click their headings, and from from the headings' drop-down/right-click menu, choose Custom Group (CMD-I).
+5. Group all the per-transaction columns: CMD/CTRL-click the headings of txnidx, date, status, and description, right-click the headings and choose Custom Group (CMD-I).
 
-6. Sort by date: in date column heading, right-click > Sort Ascending.
+6. Now hide uninteresting columns, eg perhaps Row Number, status: CMD/CTRL-click the headings, right-click -> Hide (CMD-SHIFT-K).
+   (Don't hide txnidx, it seems to help date sorting.)
 
-7. Hide uninteresting columns such as txnidx and Row Number: select by clicking headings, right-click -> Hide (CMD-SHIFT-K).
+7. And sort by date: right-click date heading, Sort Ascending.
 
 ## Exporting to Ultorg via SQlite
 
@@ -56,11 +57,13 @@ This method requires Ultorg >=1.26. Note also [ultorg#53](https://github.com/ult
 
 4. The db file appears in the left panel, containing one table. Double-click on the table (Postings) to open it in the main pane.
 
-5. Group the Txnidx, Date 1, and Description columns: cmd/ctrl-click their headings, and from from the headings' drop-down/right-click menu, choose Custom Group (CMD-I).
+5. Group all the per-transaction columns: CMD/CTRL-click the headings of Txnidx, Date 1, Date 2, Status, Code, Description and Comment, right-click the headings and choose Custom Group (CMD-I).
 
-6. Sort by date: in Date 1 column heading, right-click > Sort Ascending.
+6. Now hide uninteresting columns, eg perhaps Date2, Status, Code, ID, Posting Status: CMD/CTRL-click their headings, right-click -> Hide (CMD-SHIFT-K).
+   (Don't hide Txnidx, it seems to help date sorting.)
 
-7. Hide uninteresting columns such as Txnidx, ID, Date2, Code, Posting Status: select by clicking headings, right-click -> Hide (CMD-SHIFT-K).
+7. And sort by date: right-click Date 1 heading, Sort Ascending.
+
 
 ## Things to try
 
