@@ -4,19 +4,14 @@
 <!-- toc -->
 </div>
 
-See also: 
-- <https://www.libhunt.com/compare-hledger-vs-ledger>
-- <https://www.reddit.com/r/plaintextaccounting/comments/ztdk0o/ledger_vs_hledger/>
+*2023-01: If you are a Ledger user trying to use hledger with your data,
+I'd love to hear about your experience and make this easier.
+Please contact me (sm) in the #ledger, #hledger, or #plaintextaccounting chats
+(see <https://hledger.org/support>, also [#1962](https://github.com/simonmichael/hledger/issues/1962)).*
+You may want to skip ahead to [Interoperating tips](#interoperating-tips),
+or any other topic that seems relevant.
 
 ## Differences
-
-2023-01: If you are a Ledger user trying to use hledger with your data,
-I'd love to hear about your experience and make this page more helpful.
-Please contact me (sm) in the #ledger, #hledger, or #plaintextaccounting chats,
-<https://hledger.org/support>. ([#1962](https://github.com/simonmichael/hledger/issues/1962))
-
-If you are most interested in trying out hledger on your Ledger data, 
-you may want to skip ahead to [Interoperating tips](#interoperating-tips).
 
 ### 10000 foot view
 
@@ -43,6 +38,10 @@ Compared to hledger, Ledger has
 - more support for embedding small programs in your data to get custom behaviour 
   (value expressions, maybe python expressions ?)
 - a lighter memory footprint and smaller executables
+
+See also: 
+- <https://www.libhunt.com/compare-hledger-vs-ledger>
+- <https://www.reddit.com/r/plaintextaccounting/comments/ztdk0o/ledger_vs_hledger/>
 
 ### Features
 
