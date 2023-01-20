@@ -407,16 +407,41 @@ Here are hledger's [Directive effects](dev/hledger.html#directive-effects) and
 [Directives and multiple files](hledger.html#directives-and-multiple-files) behaviour.
 You might need to move directives and/or rearrange your files.
 
-### Lot handling
+### Periodic transactions
 
-hledger accepts but ignores Ledger-style lot notation
-(any of `{LOTUNITCOST}`, `{{LOTTOTALCOST}}`, `{=FIXEDLOTUNITCOST}`, `{{=FIXEDLOTTOTALCOST}}`, `[LOTDATE]`, `(LOTNOTE)` after a posting amount).
-This notation currently does not participate in transaction balancing, which prevents reading some Ledger files.
-([#1084](https://github.com/simonmichael/hledger/issues/1084))
+hledger understands most Ledger periodic transactions,
+but if you find some variants that are not supported, please report.
 
-hledger currently does not track lots automatically, or provide a `--lots` report; 
-instead you must track them manually, 
-recording cost basis with `@`
+hledger 1.28 tends to require periodic transactions to start on a natural period boundary,
+unless you use one of [these syntaxes](/1.28/hledger.html#intervals-with-custom-start-date).
+This will be fixed in 1.29.
+
+When you do specify a custom start date, hledger will start the transactions on that date.
+Ledger seems to always generate them on the period boundaries.
+
+### Amount expressions
+
+hledger does not support value expressions, Ledger's embedded programming language.
+In particular, parenthesised amount expressions like `($10 / 3)` are not supported;
+these must be converted to explicit amounts. Here are the known ways:
+
+- Convert each expression manually, eg replace `($10 / 3)` with `$3.333`.
+
+- Convert each expression with ledger.
+  Eg in emacs, select the parenthesised expression and enter `C-u M-| xargs ledger eval` (and remove the newline).
+  This might not work in all cases.
+
+- Convert all expressions with beancount.
+  After installing ledger2beancount, beancount, and beancount2ledger, try something like (using bash syntax here to avoid dealing with temporary files):
+  ```shell
+  $ beancount2ledger <(ledger2beancount file.ledger) > file.journal
+  ```
+  This is a lossy conversion, but it might be good enough.
+
+### Lot notation
+
+hledger currently does not provide automatic lot selection or a `--lots` report; 
+instead you must track them manually, recording cost basis with `@`
 and using explicit per-lot subaccounts and gain/loss postings
 (see <https://hledger.org/investments.html>).
 
@@ -433,23 +458,10 @@ a lot at a different price from its cost basis, as Ledger does.
 ```
 -->
 
-### Value expressions
-
-hledger does not support value expressions, Ledger's embedded programming language.
-In particular, parenthesised amount expressions like `($10 / 3)` are not supported;
-these must be converted to explicit amounts (see ledger eval tip below).
-
-### Periodic transactions
-
-hledger understands most Ledger periodic transactions,
-but if you find some variants that are not supported, please report.
-
-hledger 1.28 tends to require periodic transactions to start on a natural period boundary,
-unless you use one of [these syntaxes](/1.28/hledger.html#intervals-with-custom-start-date).
-This will be fixed in 1.29.
-
-When you do specify a custom start date, hledger will start the transactions on that date.
-Ledger seems to always generate them on the period boundaries.
+More importantly, hledger ignores Ledger's lot notation
+(any of `{LOTUNITCOST}`, `{{LOTTOTALCOST}}`, `{=FIXEDLOTUNITCOST}`, `{{=FIXEDLOTTOTALCOST}}`, `[LOTDATE]`, `(LOTNOTE)` after a posting amount).
+This can disrupt transaction balancing, making files unreadable.
+([#1084](https://github.com/simonmichael/hledger/issues/1084))
 
 ### Other differences
 
@@ -521,22 +533,18 @@ $ ledger print --raw | hledger -f- web         # view journal in hledger-web WUI
 $ hledger-ui -f <(ledger print --raw)          # view journal in hledger-ui TUI (works in bash)
 ```
 
-Unfortunately, there are two common notations this does not help with:
+This does not help with amount expressions, like `($10 / 3)`.
+If you have those, see [Amount expressions](#amount-expressions) above for workarounds.
 
-1. Lot notation, like `-5 AAPL {$50.00} [2012/04/10] (Oh my!) @@ $375.00`.
-   hledger will ignore this, but that tends to break transaction balancing.
-   We want to improve hledger's support for this.
+Nor does it help help with lot notation, like `-5 AAPL {$50.00} [2012/04/10] (Oh my!) @@ $375.00`.
+hledger will ignore this notation, but that tends to break transaction balancing.
+This is the most difficult Ledger-hledger interop issue.
+We want to improve hledger's support for it, one way or another.
+For now the only true workaround is to rewrite such entries to use hledger-style explicit lot notation.
 
-2. Amount expressions, like `($10 / 3)`.
-   Currently the only known workaround is to replace these with explicit values.
-   Here is one way: in emacs, select the parenthesised expression and enter `C-u M-| xargs ledger eval`
-   (and remove the newline).
-
-A looser kind of setup is to segregate all tool-specific data into
-separate tool-specific files, while keeping compatible data in a
-shared common file.  Then appropriate files can be selected for a tool
-by using multiple `-f` options, or
-[include](hledger.html#including-files) directives.
+An alternative is to segregate problematic or tool-specific data into separate tool-specific files,
+keeping as much data as possible in a shared common file.  Then select the appropriate files for each tool,
+using multiple `-f` options, or [include directives](hledger.html#including-files).
 
 Another way is to do a one-way conversion to hledger format, perhaps periodically,
 doing whatever edits and transformations are necessary and feasible.
