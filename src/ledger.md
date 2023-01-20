@@ -41,6 +41,11 @@ Compared to hledger, Ledger has
   (value expressions, maybe python ?)
 - ... ?
 
+If you are most interested in trying out hledger on your Ledger data, 
+you may want to skip ahead to [Interoperating tips](#interoperating-tips).
+TLDR: if you rely heavily on lot notation, or amount expressions like ($10 / 3),
+it may be difficult.
+
 ### Features
 
 Over time, features have propagated both ways.
