@@ -10,12 +10,15 @@ See also:
 
 ## Differences
 
-*2022-12: If you are a Ledger user trying to use hledger with your data,
+2023-01: If you are a Ledger user trying to use hledger with your data,
 I'd love to hear about your experience and make this page more helpful.
 Please contact me (sm) in the #ledger, #hledger, or #plaintextaccounting chats,
-<https://hledger.org/support>. ([#1962](https://github.com/simonmichael/hledger/issues/1962))*
+<https://hledger.org/support>. ([#1962](https://github.com/simonmichael/hledger/issues/1962))
 
-### Summary
+If you are most interested in trying out hledger on your Ledger data, 
+you may want to skip ahead to [Interoperating tips](#interoperating-tips).
+
+### 10000 foot view
 
 How is hledger different from Ledger ? First, the high-order differences:
 
@@ -38,13 +41,8 @@ Compared to hledger, Ledger has
 
 - assisted lot tracking for investment transactions
 - more support for embedding small programs in your data to get custom behaviour 
-  (value expressions, maybe python ?)
-- ... ?
-
-If you are most interested in trying out hledger on your Ledger data, 
-you may want to skip ahead to [Interoperating tips](#interoperating-tips).
-TLDR: if you rely heavily on lot notation, or amount expressions like ($10 / 3),
-it may be difficult.
+  (value expressions, maybe python expressions ?)
+- a lighter memory footprint and smaller executables
 
 ### Features
 
@@ -463,10 +461,11 @@ a lot at a different price from its cost basis, as Ledger does.
 ```
 -->
 
-More importantly, hledger ignores Ledger's lot notation
-(any of `{LOTUNITCOST}`, `{{LOTTOTALCOST}}`, `{=FIXEDLOTUNITCOST}`, `{{=FIXEDLOTTOTALCOST}}`, `[LOTDATE]`, `(LOTNOTE)` after a posting amount).
+More importantly, hledger ignores Ledger's lot notation, like `-5 AAPL {$50.00} [2012/04/10] (Oh my!) @@ $375.00`.
+(Any of `{LOTUNITCOST}`, `{{LOTTOTALCOST}}`, `{=FIXEDLOTUNITCOST}`, `{{=FIXEDLOTTOTALCOST}}`, `[LOTDATE]`, `(LOTNOTE)` after a posting amount).
 This can disrupt transaction balancing, making files unreadable.
 ([#1084](https://github.com/simonmichael/hledger/issues/1084))
+For now the only true workaround is to rewrite such entries to use hledger-style explicit lot notation.
 
 ### Other differences
 
@@ -538,14 +537,12 @@ $ ledger print --raw | hledger -f- web         # view journal in hledger-web WUI
 $ hledger-ui -f <(ledger print --raw)          # view journal in hledger-ui TUI (works in bash)
 ```
 
-This does not help with amount expressions, like `($10 / 3)`.
-If you have those, see [Amount expressions](#amount-expressions) above for workarounds.
+This does not help with [amount expressions](#amount-expressions), like `($10 / 3)`.
+If you have those, see the workarounds above.
 
-Nor does it help help with lot notation, like `-5 AAPL {$50.00} [2012/04/10] (Oh my!) @@ $375.00`.
-hledger will ignore this notation, but that tends to break transaction balancing.
+Nor does it help with [lot notation](#lot-notation), like `-5 AAPL {$50.00} [2012/04/10] (Oh my!) @@ $375.00`.
 This is the most difficult Ledger-hledger interop issue.
-We want to improve hledger's support for it, one way or another.
-For now the only true workaround is to rewrite such entries to use hledger-style explicit lot notation.
+For now the only true workaround is to rewrite such entries to use hledger-style lot notation (see link above).
 
 An alternative is to segregate problematic or tool-specific data into separate tool-specific files,
 keeping as much data as possible in a shared common file.  Then select the appropriate files for each tool,
