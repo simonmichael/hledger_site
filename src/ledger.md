@@ -432,11 +432,16 @@ these must be converted to explicit amounts. Here are the known ways:
   This might not work in all cases.
 
 - Convert all expressions with beancount.
-  After installing ledger2beancount, beancount, and beancount2ledger, try something like (using bash syntax here to avoid dealing with temporary files):
-  ```shell
-  $ beancount2ledger <(ledger2beancount file.ledger) > file.journal
-  ```
   This is a lossy conversion, but it might be good enough.
+  After installing 
+  ledger2beancount,
+  beancount,
+  and beancount2ledger (see #[33](https://github.com/beancount/beancount2ledger/issues/33)),
+  try:
+  ```shell
+  $ ledger2beancount file.ledger > file.beancount
+  $ beancount2ledger file.beancount > file.journal
+  ```
 
 ### Lot notation
 
