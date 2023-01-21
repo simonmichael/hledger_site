@@ -212,6 +212,7 @@ and previewing them when working on docs locally.
 - [Developer links](LINKS.md)
 - [Developer docs](dev.md)
 - [Developer FAQ](devfaq.md)
+- [DECISIONS](DECISIONS.md)
 - [DOCS](DOCS.md)
 - [ERRORS](ERRORS.md)
 - [EXAMPLES](EXAMPLES.md)
