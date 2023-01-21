@@ -79,8 +79,10 @@ Finally when all the red is gone and all checks are passing - enforced by adding
 hledger check -s ordereddates recentassertions
 ```
 ...I commit the changes to git.
+
 I have a nightly cron job which would do this automatically, 
 but by habit and for clean commits I usually do them manually, with separate "txns", "rules" and "scripts" commits.
+(If you try using cron like this, note failing checks can reveal account names and balances in the error message and cron might email those in plain text over the internet.)
 
 For troubleshooting: when downloading a CSV the previous copy is saved as FILE.csv.old.
 
