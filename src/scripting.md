@@ -222,41 +222,47 @@ stack scripts are currently best for reliability, performance, and sharing, beca
 [stack scripts]: https://docs.haskellstack.org/en/stable/GUIDE/#writing-independent-and-reliable-scripts
 [cabal scripts]: https://cabal.readthedocs.io/en/latest/cabal-commands.html#cabal-v2-run
 
-## Plugin types
+## Plugins
 
-In general we would like to be able to quickly customise hledger's
-behaviour and features with small code "plugins",
+In general we would like for hledger users to be able to quickly customise
+its behaviour and features with small code "plugins",
 without having to change and recompile hledger itself.
-Here are several distinct types of plugin we wish for.
-Currently the best way to implement these is with pre-processing scripts, post-processing scripts, or hledger-lib scripts.
+Haskell is not a very "dynamically pluggable" language,
+so currently the best way to build "plugins" is pre-processing scripts, post-processing scripts, or hledger-lib-using haskell scripts.
 
-| Plugin&nbsp;type | Purpose, current status                                                                                                                                                                 |
-|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+We identify several desirable plugin types:
+
+| Plugin&nbsp;type | Purpose,<br>Current status                                                                                                                                                              |
+|------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | reader           | Parse/ingest new data formats/sources to hledger journal data.                        <br>Can be done by generating journal or csv format.                                              |
 | processor        | Process/transform hledger journal data, after parsing (ideally) and before reporting. <br>Not well supported, somewhat possible in a haskell script, or by transforming journal format. |
 | writer           | Render/export hledger journal data to new data formats/destinations.                  <br>Can be done (lossily) by transforming print's txt/csv/json/sql output.                        |
 | formatter        | Render a hledger report's output to a new output format.                              <br>Can be done by transforming the report's txt/csv/json/html output.                            |
-| command          | Provide new `hledger` subcommands implementing new reports or actions.                <br>Can be done by putting `hledger-foo` addon scripts/programs in PATH.                          |
+| command          | Provide new `hledger` subcommands implementing new reports or actions.                <br>Can be done by putting `hledger-foo` add-on scripts/programs in PATH.                         |
 
-Here are some examples to give ideas.
+Below are some examples of each type to give you ideas.
 More like these can be found at <https://hledger.org/scripts.html> or <https://plaintextaccounting.org/#data-importconversion>.
 
 ### reader
 
-Examples: the builtin journal, csv, timeclock, timedot readers; beancount2ledger, pricehist, reckon, qb2ledger, ynab-to-ledger..
+- the builtin journal, csv, timeclock, timedot readers
+- beancount2ledger, pricehist, reckon, qb2ledger, ynab-to-ledger..
 
 ### processor
 
-Examples: the builtin balancing, inferring, auto postings, checks; hledger-print-location..
+- the builtin amount/cost/equity inferring; amount style normalisation; auto postings; periodic transactions; normal and strict checks..
+- hledger-print-location..
 
 ### writer
 
-Examples: the print command's builtin output formats; ledger2beancount..
+- the `print` command's builtin output formats
+- ledger2beancount..
 
 ### formatter
 
-Examples: the reports' builtin output formats; hreports, hledger-plot..
+- the report commands' builtin output formats
+- hreports, hledger-plot..
 
 ### command
 
-Examples: hledger-ui, hledger-web, hledger-iadd, hledger-git, hledger-move..
+- hledger-ui, hledger-web, hledger-iadd, hledger-git, hledger-move..
