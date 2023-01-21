@@ -222,3 +222,19 @@ involves a bit of tedious rework, which we'd like to improve.
 
 [stack scripts]: https://docs.haskellstack.org/en/stable/GUIDE/#writing-independent-and-reliable-scripts
 [cabal scripts]: https://cabal.readthedocs.io/en/latest/cabal-commands.html#cabal-v2-run
+
+## Plugin types
+
+We would like to be able to customise hledger's behaviour and features with small code additions, without having to change and recompile hledger itself.
+Pre-processing/post-processing/addon scripts are the best available way to implement such "plugins".
+We identify several distinct types:
+
+
+| Plugin type | Description                                                                       | Current status                                                                                                                    |
+|-------------|-----------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
+| reader      | Parse/ingest new data formats/sources to hledger journal data.                    | Can be done by generating journal or csv format. Examples: the builtin journal, csv, timeclock, timedot readers.                  |
+| processor   | Process/transform hledger journal data after parsing (ideally), before reporting. | Not well supported, somewhat possible by transforming journal format, or in a haskell script. Examples: hledger-print-location, the builtin balancing, inferring, auto postings, checks etc.
+| writer      | Render/export hledger journal data to new data formats/destinations.              | Can be done (lossily) by transforming print's txt/csv/json/sql output. Examples: those builtin output formats.                    |
+| formatter   | Render a hledger report's output to a new output format.                          | Can be done by transforming report's builtin txt/csv/json/html output. Examples: those builtin output formats.                    |
+| command     | Provide new `hledger` subcommands implementing new reports or actions.            | Can be done with addon scripts/programs in PATH. Examples: hledger-ui, hledger-web, hledger-iadd, hledger-git, hledger-move..     |
+|             |                                                                                   |                                                                                                                                   |
