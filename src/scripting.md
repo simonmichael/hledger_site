@@ -116,9 +116,9 @@ export LEDGER_FILE=/Users/simon/finance/2018.journal
 
 ## Make
 
-[Makefiles](https://www.gnu.org/software/make/) work well for
-collections of simple scripts, especially if related to a particular
-directory:
+[Makefiles](https://www.gnu.org/software/make/) can work well for
+collections of simple scripts, especially if they are local to a
+particular directory.
 
 ```make
 # ~/finance/Makefile
@@ -150,6 +150,9 @@ todo:
 	@grep TODO $(YEAR)* | wc -l
 	@echo
 ```
+
+If you are not comfortable with Make's syntax, or when scripts get more complex,
+dedicated or multi-function shell scripts will be less hassle.
 
 ## Add-on commands
 
@@ -190,51 +193,70 @@ main = do
     taxableincome fedtax statetax totaltax posttaxincome
 ```
 
-## Haskell scripts
+## hledger-lib scripts
 
-Haskell scripts are the most powerful, as they can call the same
+These are scripts written in haskell, which use the same
 [hledger-lib](https://hackage.haskell.org/package/hledger-lib) and
-[hledger](https://hackage.haskell.org/package/hledger) APIs used
-internally by hledger.
+[hledger](https://hackage.haskell.org/package/hledger) APIs that hledger uses.
+They can be simple interpreted scripts, or can grow as large and powerful as you need,
+and can be optionally compiled for more speed and durability.
+Example scripts and more tips can be found at
+<https://github.com/simonmichael/hledger/tree/master/bin/>.
 
-If you want others (or future-you) to be able to run your scripts
-reliably, make them [cabal scripts] or [stack scripts]. stack scripts
-are currently best for reliability, performance, and sharing, because they:
+hledger-lib scripts installed as add-ons (`hledger-newcmd.hs` in PATH) 
+are a good way to prototype new commands, perhaps to become builtin commands later.
+(Though, converting a haskell script command to a builtin command currently requires
+rearranging its code; we'd like to improve this.)
+
+## Haskell scripting tips
+
+If you want others, or future-you, to be able to run your haskell scripts reliably,
+make them [stack scripts] or [cabal scripts].
+stack scripts are currently best for reliability, performance, and sharing, because they:
 
 - ensure the required GHC version is installed
 - ensure the required haskell packages are installed, based on the script's imports
 - specify all package versions for more reliable builds
-- automatically recompile themselves when changed.
-
-You can run haskell scripts interpreted for easy tweaking and
-portability, or compiled for speed and durability. stack scripts
-compile themselves when needed and run the compiled version otherwise,
-giving the benefits of both.
-
-Example scripts and more tips can be found at:\
-<https://github.com/simonmichael/hledger/tree/master/bin/>
-
-Such "scripts" can grow as large and powerful as you need. They are
-often a good way to prototype a new command, perhaps to become a
-builtin command later on. Currently the code for a script and the code
-for a builtin command are laid out differently, so that transition
-involves a bit of tedious rework, which we'd like to improve.
+- automatically recompile themselves when changed, only when needed.
 
 [stack scripts]: https://docs.haskellstack.org/en/stable/GUIDE/#writing-independent-and-reliable-scripts
 [cabal scripts]: https://cabal.readthedocs.io/en/latest/cabal-commands.html#cabal-v2-run
 
 ## Plugin types
 
-We would like to be able to customise hledger's behaviour and features with small code additions, without having to change and recompile hledger itself.
-Pre-processing/post-processing/addon scripts are the best available way to implement such "plugins".
-We identify several distinct types:
+In general we would like to be able to quickly customise hledger's
+behaviour and features with small code "plugins",
+without having to change and recompile hledger itself.
+Here are several distinct types of plugin we wish for.
+Currently the best way to implement these is with pre-processing scripts, post-processing scripts, or hledger-lib scripts.
 
+| Plugin&nbsp;type | Purpose, current status                                                                                                                                                                 |
+|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| reader           | Parse/ingest new data formats/sources to hledger journal data.                        <br>Can be done by generating journal or csv format.                                              |
+| processor        | Process/transform hledger journal data, after parsing (ideally) and before reporting. <br>Not well supported, somewhat possible in a haskell script, or by transforming journal format. |
+| writer           | Render/export hledger journal data to new data formats/destinations.                  <br>Can be done (lossily) by transforming print's txt/csv/json/sql output.                        |
+| formatter        | Render a hledger report's output to a new output format.                              <br>Can be done by transforming the report's txt/csv/json/html output.                            |
+| command          | Provide new `hledger` subcommands implementing new reports or actions.                <br>Can be done by putting `hledger-foo` addon scripts/programs in PATH.                          |
 
-| Plugin type | Description                                                                       | Current status                                                                                                                    |
-|-------------|-----------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
-| reader      | Parse/ingest new data formats/sources to hledger journal data.                    | Can be done by generating journal or csv format. Examples: the builtin journal, csv, timeclock, timedot readers.                  |
-| processor   | Process/transform hledger journal data after parsing (ideally), before reporting. | Not well supported, somewhat possible by transforming journal format, or in a haskell script. Examples: hledger-print-location, the builtin balancing, inferring, auto postings, checks etc.
-| writer      | Render/export hledger journal data to new data formats/destinations.              | Can be done (lossily) by transforming print's txt/csv/json/sql output. Examples: those builtin output formats.                    |
-| formatter   | Render a hledger report's output to a new output format.                          | Can be done by transforming report's builtin txt/csv/json/html output. Examples: those builtin output formats.                    |
-| command     | Provide new `hledger` subcommands implementing new reports or actions.            | Can be done with addon scripts/programs in PATH. Examples: hledger-ui, hledger-web, hledger-iadd, hledger-git, hledger-move..     |
-|             |                                                                                   |                                                                                                                                   |
+Here are some examples to give ideas.
+More like these can be found at <https://hledger.org/scripts.html> or <https://plaintextaccounting.org/#data-importconversion>.
+
+### reader
+
+Examples: the builtin journal, csv, timeclock, timedot readers; beancount2ledger, pricehist, reckon, qb2ledger, ynab-to-ledger..
+
+### processor
+
+Examples: the builtin balancing, inferring, auto postings, checks; hledger-print-location..
+
+### writer
+
+Examples: the print command's builtin output formats; ledger2beancount..
+
+### formatter
+
+Examples: the reports' builtin output formats; hreports, hledger-plot..
+
+### command
+
+Examples: hledger-ui, hledger-web, hledger-iadd, hledger-git, hledger-move..
