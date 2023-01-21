@@ -57,17 +57,32 @@ Symbolic links are a mixed blessing, causing file path confusion in emacs, eg.
 
 Most journal entries are generated from downloaded CSV:
 
+<s>
 - Transactions from three banks are aggregated and cleaned in a Google sheet by Tiller ($5/mo).
   A command line tool downloads this sheet as CSV (via cron ? currently disabled).
 
 - Paypal CSV is downloaded manually, then moved into place by a make rule.
   I use Paypal's CSV because Tiller doesn't handle multiple currencies and Paypal's extra metadata fields.
+</s>
+
+2023:
+
+for me, CSV rules are never finished; they get one or two small tweaks most times I import. They don't cover 100% of my possible entries; a few that are too hard to generate just get generated partially, with a ; TODO: tag for me to fix them up manually. There aren't many of those at this point
+
+To make it more concrete: I run make Import (equivalent to make csv which fetches latest bank & paypal csvs plus make import which runs in essence hledger import *.csv). Then I review in emacs+ledger-mode+flycheck-mode. All the imported transactions are uncleared, showing up red. Flycheck also highlights problems like "expenses:unknown" or failing assertions or out of order dates. I clear each one, fixing (and maybe tweaking CSV rules) where needed. The recentassertions check may force me to add a transaction with newer balance assertions for the main accounts; I describe that "reconcile", I fill in the balances hledger expects, and at the same time I check they match the real-world balances. 
+
+Finally when all the red is gone and all checks are passing - enforced by adding this command to `.git/hooks/precommit`:
+```
+#!/bin/sh
+...
+# check main hledger journal
+hledger check -s ordereddates recentassertions
+```
+...I commit the changes to git.
+I have a nightly cron job which would do this automatically, 
+but by habit and for clean commits I usually do them manually, with separate "txns", "rules" and "scripts" commits.
 
 For troubleshooting: when downloading a CSV the previous copy is saved as FILE.csv.old.
-
-```
-$ make csv
-```
 
 Cash transactions are entered in emacs, using ledger-mode. 
 Mostly by copying and pasting similar past transactions.
