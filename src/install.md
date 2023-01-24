@@ -573,14 +573,14 @@ Use any of the following methods:
 #### Build with hledger-install
 
 The [hledger-install.sh][hledger-install] script builds the current release of the hledger tools, 
-plus some [add-ons], in a relatively reliable way,
+plus some [add-on tools], in a relatively reliable way,
 requiring [bash] but not any Haskell build tools.
 It uses stack or cabal if you have them (installing stack in ~/.local/bin otherwise), 
 and installs the hledger tools in ~/.local/bin or ~/.cabal/bin respectively.
 This can be a good choice if you are new to Haskell.
 
 <div class="builder-command">
-  curl -sO https://raw.githubusercontent.com/simonmichael/hledger/master/hledger-install/hledger-install.sh <br>
+  curl -O https://raw.githubusercontent.com/simonmichael/hledger/master/hledger-install/hledger-install.sh <br>
   less hledger-install.sh <em style="margin-left:1em; font-weight:normal;"># <- good security practice: inspect downloaded scripts before running</em><br>
   bash hledger-install.sh
 </div>
@@ -778,6 +778,6 @@ where we'll gladly share tips or receive your feedback.
 [stack]:           https://www.fpcomplete.com/haskell/get-started
 [cabal]:           https://www.haskell.org/cabal
 [hledger-install]: https://github.com/simonmichael/hledger/blob/master/hledger-install/hledger-install.sh
-[add-ons]:         hledger.html#addons
+[add-on tools]:    hledger.html#addons
 [WSL]:             https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux
 [nix]:             https://nixos.org
