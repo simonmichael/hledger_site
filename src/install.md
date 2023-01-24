@@ -195,22 +195,11 @@ And finally please [share any feedback](support.html) so we can make this proces
   <tr> <!-- GENTOO -->
     <td>
       <div class="badges">
-        <a href="https://gentoo.zugaina.org/Search?search=hledger"><img alt="Gentoo" src="https://img.shields.io/badge/Gentoo_package-1.26.1-red.svg" /></a>
+        <a href="https://gentoo.zugaina.org/Search?search=hledger"><img alt="Gentoo" src="https://img.shields.io/badge/Gentoo_package-1.28-brightgreen.svg" /></a>
       </div>
     </td>
     <td>
       <div class="command">sudo layman -a haskell &amp;&amp; sudo emerge hledger hledger-ui hledger-web</div>
-    </td>
-  </tr>
-
-  <tr> <!-- ARCH -->
-    <td>
-      <div class="badges">
-        <a href="https://archlinux.org/packages/community/x86_64/hledger/"><img alt="Arch" src="https://repology.org/badge/version-for-repo/arch/hledger.svg" /></a>
-      </div>
-    </td>
-    <td>
-      <div class="command">pacman -Sy hledger hledger-ui hledger-web</div>
     </td>
   </tr>
 
@@ -230,6 +219,17 @@ And finally please [share any feedback](support.html) so we can make this proces
     </td>
   </tr>
 
+  <tr> <!-- ARCH -->
+    <td>
+      <div class="badges">
+        <a href="https://archlinux.org/packages/community/x86_64/hledger/"><img alt="Arch" src="https://repology.org/badge/version-for-repo/arch/hledger.svg" /></a>
+      </div>
+    </td>
+    <td>
+      <div class="command">pacman -Sy hledger hledger-ui hledger-web</div>
+    </td>
+  </tr>
+
   <tr> <!-- VOID -->
     <td>
       <div class="badges">
@@ -238,22 +238,6 @@ And finally please [share any feedback](support.html) so we can make this proces
     </td>
     <td>
       <div class="command">xbps-install -S hledger hledger-ui hledger-web</div>
-    </td>
-  </tr>
-
-  <tr> <!-- FEDORA -->
-    <td>
-      <div class="badges">
-        <a ><img src="https://img.shields.io/badge/Fedora_38_package-1.21-red.svg" /></a><br>
-        <a ><img src="https://img.shields.io/badge/Fedora_37_package-1.21-red.svg" /></a><br>
-        <a ><img src="https://repology.org/badge/version-for-repo/fedora_36/hledger.svg" /></a><br>
-        <a ><img src="https://repology.org/badge/version-for-repo/fedora_35/hledger.svg" /></a><br>
-        <a ><img src="https://repology.org/badge/version-for-repo/fedora_34/hledger.svg" /></a><br>
-        <a href="https://src.fedoraproject.org/rpms/hledger">more..</a>
-      </div>
-    </td>
-    <td>
-      <div class="command">sudo dnf install hledger</div>
     </td>
   </tr>
 
@@ -275,6 +259,7 @@ And finally please [share any feedback](support.html) so we can make this proces
   <tr> <!-- UBUNTU -->
     <td>
       <div class="badges">
+        <a href="https://packages.ubuntu.com/kinetic/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_22_10/hledger.svg" /></a><br>
         <a href="https://packages.ubuntu.com/jammy/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_22_04/hledger.svg" /></a><br>
         <!-- <a href="https://packages.ubuntu.com/impish/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_21_10/hledger.svg" /></a><br> -->
         <!-- <a href="https://packages.ubuntu.com/hirsute/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_21_04/hledger.svg" /></a><br> -->
@@ -287,6 +272,22 @@ And finally please [share any feedback](support.html) so we can make this proces
     </td>
     <td>
       <div class="command">sudo apt install hledger hledger-ui hledger-web</div>
+    </td>
+  </tr>
+
+  <tr> <!-- FEDORA -->
+    <td>
+      <div class="badges">
+        <a ><img src="https://img.shields.io/badge/Fedora_38_package-1.21-red.svg" /></a><br>
+        <a ><img src="https://img.shields.io/badge/Fedora_37_package-1.21-red.svg" /></a><br>
+        <a ><img src="https://repology.org/badge/version-for-repo/fedora_36/hledger.svg" /></a><br>
+        <a ><img src="https://repology.org/badge/version-for-repo/fedora_35/hledger.svg" /></a><br>
+        <a ><img src="https://repology.org/badge/version-for-repo/fedora_34/hledger.svg" /></a><br>
+        <a href="https://src.fedoraproject.org/rpms/hledger">more..</a>
+      </div>
+    </td>
+    <td>
+      <div class="command">sudo dnf install hledger</div>
     </td>
   </tr>
 
