@@ -8,49 +8,154 @@
 Mockups, draft docs and notes exploring possible future features.
 See also <https://github.com/simonmichael/hledger/tree/master/doc/mockups>
 
-## Lots
+## Lot syntax ideas
 
 2023-01
 
-I believe one could emulate most of ledger/beancount's lot tracking/selection with simpler syntax, just @.
+I believe one could emulate most of ledger/beancount's lot tracking/selection with simpler syntax -
+just @, with less or no need for {}.
 
-Eg, with today's explicit lot subaccounts:
+Eg, with explicit lot subaccounts:
 
 ```journal
 2022-01-01 buy at 10
   assets:aaa:_20220101     10 AAA @ $10
-  assets:cash           -$100
+  assets:cash           $-100
     
 2022-02-01 buy at 12
   assets:aaa:_20220201     10 AAA @ $12
-  assets:cash           -$120
+  assets:cash           $-120
     
-2022-03-01 sell at 15
+2022-03-01 sell at 20
   assets:aaa:_20220101    -10 AAA @ $10  ; original cost basis
   assets:aaa:_20220201     -5 AAA @ $12
-  assets:cash            $225
-  revenues:gains         $-65
+  assets:cash            $300
+  revenues:gains        $-140
 ```
 
-Or with support for automatic or no lot subaccounts:
+Assuming each lot subaccount holds only one lot, the cost basis could be recalled automatically when selling, though it's less clear:
 
 ```journal
 2022-01-01 buy at 10
-  assets:aaa     10 AAA @ $10  ; creates a new lot subaccount automatically, perhaps hidden by default
-  assets:cash           -$100
+  assets:aaa:_20220101     10 AAA @ $10
+  assets:cash           $-100
     
 2022-02-01 buy at 12
-  assets:aaa     10 AAA @ $12  ; or just a new lot internally, with special commands to show it, like ledger/beancount
-  assets:cash           -$120
+  assets:aaa:_20220201     10 AAA @ $12
+  assets:cash           $-120
     
-2022-03-01 sell at 15
-  assets:aaa    -10 AAA @ $10  ; cost selects the lot withdrawn from
-  assets:aaa     -5 AAA @ $12  ; other selectors like date/note would be possible
-  assets:cash            $225
-  revenues:gains         $-65
+2022-03-01 sell at 20
+  assets:aaa:_20220101    -10 AAA  ; @ $10 implied
+  assets:aaa:_20220201     -5 AAA  ; @ $12 implied
+  assets:cash            $300
+  revenues:gains        $-140
 ```
 
-I don't see much need for {}.
+Cost basis could also be indicated in the subaccount name:
+
+```journal
+2022-01-01 buy at 10
+  assets:aaa:_20220101_$10     10 AAA @ $10
+  assets:cash               $-100
+    
+2022-02-01 buy at 12
+  assets:aaa:_20220201_$12     10 AAA @ $12
+  assets:cash               $-120
+    
+2022-03-01 sell at 20
+  assets:aaa:_20220101_$10    -10 AAA  ; @ $10 implied, now more clear
+  assets:aaa:_20220201_$12     -5 AAA
+  assets:cash                $300
+  revenues:gains            $-140
+```
+
+Lot subaccounts could be created automatically, without having to write them; and could be used to select lots when withdrawing:
+
+```journal
+2022-01-01 buy at 10
+  assets:aaa                 10 AAA @ $10  ; creates _20220101_$10 subaccount
+  assets:cash             $-100
+    
+2022-02-01 buy at 12
+  assets:aaa                 10 AAA @ $12  ; creates _20220201_$12
+  assets:cash             $-120
+    
+2022-03-01 sell at 20
+  assets:aaa:_20220201_$12  -10 AAA  ; select lot by subaccount
+  assets:aaa:_20220101_$10   -5 AAA  ; LIFO order here
+  assets:cash              $300
+  revenues:gains          $-130
+```
+
+Or there could be no lot subaccounts, just lots tracked implictly by the tool, with special commands to view them, as in ledger/beancount:
+
+```journal
+2022-01-01 buy at 10
+  assets:aaa                 10 AAA @ $10  ; creates an implicit lot
+  assets:cash             $-100
+    
+2022-02-01 buy at 12
+  assets:aaa                 10 AAA @ $12  ; view lots with bal --lots
+  assets:cash             $-120
+```
+
+Whether explicit, automatic or implicit, lots could be selected automatically by disposal strategy, chosen eg with a tag:
+
+```journal
+2022-03-01 sell at 20, FIFO
+  assets:aaa                -15 AAA  ; reduce lots FIFO by default
+  assets:cash              $300
+  revenue:gains                      ; $-140 calculated
+```
+
+```journal
+2022-03-01 sell at 20, LIFO
+  assets:aaa                -15 AAA  ; reduce:LIFO
+  assets:cash              $300
+  revenue:gains                      ; $-130 calculated
+```
+
+The above are easy to enter but less informative and hard to calculate by eye; you could use the tool to convert to a more explicit entry:
+
+```journal
+2022-03-01 sell at 20, FIFO
+  assets:aaa                -10 AAA @ $10
+  assets:aaa                 -5 AAA @ $12
+  assets:cash              $300
+  revenue:gains           $-140
+```
+
+```journal
+2022-03-01 sell at 20, LIFO
+  assets:aaa                -10 AAA @ $12
+  assets:aaa                 -5 AAA @ $10
+  assets:cash              $300
+  revenue:gains           $-130
+```
+
+If lots are implicit, not using subaccounts, selecting them in specific order
+(by cost, date, and/or note, or by naming a strategy) requires some kind of syntax,
+whether {}, [], tags, or something new. Eg:
+
+```journal
+2022-03-01 sell at 20, taking 3 alternately from each lot
+  assets:aaa                 -3 AAA {@ $10}                         ; lot 1
+  assets:aaa                 -3 AAA {2022-02-01}                    ; lot 2
+  assets:aaa                 -3 AAA {buy at 10}                     ; lot 1
+  assets:aaa                 -3 AAA {@ $10, 2022-02-01, buy at 12}  ; lot 2
+  assets:aaa                 -3 AAA                                 ; lot-date:2022-01-01, lot-cost:$10, lot-note:buy at 10, (lot 1)
+  assets:cash              $300
+  revenue:gains           $-138
+```
+
+I don't see the need to use {} as much as Ledger/Beancount do;
+just perhaps as a place to write those "other selectors",
+and as needed to read Ledger journals.
+
+In particular, Ledger/Beancount's {} syntax allows creating a lot with a cost basis
+different from what it cost you in the transaction acquiring it.
+What is the real need for this, and how often is it needed ?
+
 
 ## Price syntax
 
