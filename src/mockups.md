@@ -148,14 +148,41 @@ whether {}, [], tags, or something new. Eg:
   revenue:gains           $-138
 ```
 
-I don't see the need to use {} as much as Ledger/Beancount do;
-just perhaps as a place to write those "other selectors",
-and as needed to read Ledger journals.
-
+I don't see the need to use {} as much as Ledger/Beancount do.
 In particular, Ledger/Beancount's {} syntax allows creating a lot with a cost basis
 different from what it cost you in the transaction acquiring it.
 What is the real need for this, and how often is it needed ?
 
+However, not yet mentioned: some commodities/balances fluctuate in value while
+you hold them (eg an investment) and others are a one-time conversion
+(eg buying foreign currency at the airport). 
+
+@ can be used for both of these, it's essentially a matter of which cost you calculate with when disposing:
+
+```journal
+2022-01-01 buy at 10, hold with fluctuating value
+  assets:aaa                 10 AAA @ $10     ; today's acquisition cost
+  assets:cash             $-100
+
+2022-03-01 sell at 20, with capital gain/loss
+  assets:aaa                -10 AAA @ $10     ; original acquisition cost
+  assets:cash              $200
+  revenue:gains           $-100
+```
+
+```journal
+2022-01-01 exchange SEK for USD, one-time conversion
+  assets:cash              -100 SEK
+  assets:cash                10 USD @ 10 SEK  ; today's conversion cost
+
+2022-03-01 exchange back to SEK, one-time conversion
+  assets:cash               -10 USD @ 11 SEK  ; today's conversion cost
+  assets:cash               110 SEK
+```
+
+I believe @ and {} were intended to/can/do distinguish between these.
+If using only @ there needs to be some other mechanism to indicate fluctuating value vs one-time conversion, or so it seems -
+eg an annotation on the transaction, the account, or the commodity.
 
 ## Price syntax
 
