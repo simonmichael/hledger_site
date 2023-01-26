@@ -153,7 +153,19 @@ In particular, Ledger/Beancount's {} syntax allows creating a lot with a cost ba
 different from what it cost you in the transaction acquiring it.
 What is the real need for this, and how often is it needed ?
 
-However, not yet mentioned: some commodities/balances fluctuate in value while
+It's not needed eg when buying a commodity at a rate different from the market rate; you can do:
+
+```journal
+2022-01-01 receive AAA, currently worth $10, with effective cost to us of ~$11 because of fees
+  revenues:usd              -10 AAA @ $10
+  expenses:fees               1 AAA
+  equity:basis adjustment    -1 AAA
+  assets:cash                 9 AAA @ $11.111
+
+commodity $0.00  ; help hledger balance the above
+```
+
+Not yet mentioned: some commodities/balances fluctuate in value while
 you hold them (eg an investment) and others are a one-time conversion
 (eg buying foreign currency at the airport). 
 
