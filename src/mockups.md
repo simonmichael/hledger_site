@@ -8,14 +8,50 @@
 Mockups, draft docs and notes exploring possible future features.
 See also <https://github.com/simonmichael/hledger/tree/master/doc/mockups>
 
-## Lot syntax ideas
+## Lot terminology
 
-2023-01
+Some investment-related terminology, as we use it here and in the PTA world:
+
+- "Investment" - something whose value fluctuates while you hold it.
+
+- Acquiring, disposing - receiving and getting rid of investments, whether by purchase,
+  exchange, gift, stock options..
+
+- Augmenting, reducing - the same thing; terminology used in Beancount docs.
+  Most often the investment is an asset and acquiring/augmenting increases a positive balance,
+  but with other kinds of investments (options..) it might decrease a negative balance.
+  Acquiring/augmenting increases your exposure (risk), disposing/reducing reduces it.
+
+- Lot - a quantity of an investment purchased at a specific time and cost.
+  It may also have descriptive note attached.
+  With many investments, lots must be tracked individually for tax reporting.
+
+- Cost basis - a lot's acquisition cost. More generally, the combination of acquisition
+  time, cost, and note if any.
+
+- Capital gain/loss - your net profit or loss arising from the change in value of an investment
+  since you acquired it. Some times abbreviated as "gains" in these docs.
+  While you are holding the investment, you have unrealised gains, which fluctuate along with the market value.
+  Once you dispose of it, you have realised gains.
+  Capital gain/loss has tax consequences.
+
+- Reduction strategy, lot selection - the order in which lots are reduced, eg when you are selling a stock
+  or gifting some cryptocurrency, which ones do you reduce first ?
+  Common strategies: FIFO (first in first out), LIFO (last in first out),
+  and Specific Order (a custom order, which should be recorded). 
+  The reduction strategy affects capital gains now and later, and has tax consequences.
+  Sometimes you can choose it, at other times it is mandated by the tax authorities.
+
+## Lot ideas
+
+2023-01 Some examples/brainstorming of lot notations and functionality.
 
 I believe one could emulate most of ledger/beancount's lot tracking/selection with simpler syntax -
-just @, with less or no need for {}.
+just @, with less or no need for {} (curly brace syntax).
 
-Eg, with explicit lot subaccounts:
+### Explicit lot accounts
+
+Eg here, using explicit subaccounts to track lots, no {} is needed.:
 
 ```journal
 2022-01-01 buy at 10
@@ -33,7 +69,9 @@ Eg, with explicit lot subaccounts:
   revenues:gains        $-140
 ```
 
-Assuming each lot subaccount holds only one lot, the cost basis could be recalled automatically when selling, though it's less clear:
+### Inferring cost from lot account
+
+Assuming each lot subaccount holds only one lot, the cost basis could be recalled automatically when selling, though it's less readable:
 
 ```journal
 2022-01-01 buy at 10
@@ -50,6 +88,8 @@ Assuming each lot subaccount holds only one lot, the cost basis could be recalle
   assets:cash            $300
   revenues:gains        $-140
 ```
+
+### Cost in lot account name
 
 Cost basis could also be indicated in the subaccount name:
 
@@ -69,6 +109,8 @@ Cost basis could also be indicated in the subaccount name:
   revenues:gains            $-140
 ```
 
+### Automatic lot accounts
+
 Lot subaccounts could be created automatically, without having to write them; and could be used to select lots when withdrawing:
 
 ```journal
@@ -87,6 +129,8 @@ Lot subaccounts could be created automatically, without having to write them; an
   revenues:gains          $-130
 ```
 
+### Implicit lots
+
 Or there could be no lot subaccounts, just lots tracked implictly by the tool, with special commands to view them, as in ledger/beancount:
 
 ```journal
@@ -99,7 +143,10 @@ Or there could be no lot subaccounts, just lots tracked implictly by the tool, w
   assets:cash             $-120
 ```
 
-Whether explicit, automatic or implicit, lots could be selected automatically by disposal strategy, chosen eg with a tag:
+### Reduction strategy
+
+Whether explicit, automatic or implicit, lots could be selected automatically according to some reduction strategy,
+specified eg with a tag:
 
 ```journal
 2022-03-01 sell at 20, FIFO
@@ -133,9 +180,11 @@ The above are easy to enter but less informative and hard to calculate by eye; y
   revenue:gains           $-130
 ```
 
-If lots are implicit, not using subaccounts, selecting them in specific order
-(by cost, date, and/or note, or by naming a strategy) requires some kind of syntax,
-whether {}, [], tags, or something new. Eg:
+### Lot selection syntax
+
+If lots are implicit, ie there are no subaccounts by which to select them,
+some special syntax is needed to allow identifying them individually by cost, date, and/or note.
+This could be {}, [], tags, or something new. Eg:
 
 ```journal
 2022-03-01 sell at 20, taking 3 alternately from each lot
@@ -147,6 +196,8 @@ whether {}, [], tags, or something new. Eg:
   assets:cash              $300
   revenue:gains           $-138
 ```
+
+### Use of curly braces
 
 I don't see the need to use {} as much as Ledger/Beancount do.
 In particular, Ledger/Beancount's {} syntax allows creating a lot with a cost basis
@@ -164,6 +215,8 @@ It's not needed eg when buying a commodity at a rate different from the market r
 
 commodity $0.00  ; help hledger balance the above
 ```
+
+### Investments vs one-time transactions
 
 Not yet mentioned: some commodities/balances fluctuate in value while
 you hold them (eg an investment) and others are a one-time conversion
@@ -195,6 +248,8 @@ you hold them (eg an investment) and others are a one-time conversion
 I believe @ and {} were intended to/can/do distinguish between these.
 If using only @ there needs to be some other mechanism to indicate fluctuating value vs one-time conversion, or so it seems -
 eg an annotation on the transaction, the account, or the commodity.
+
+
 
 ## Price syntax
 
