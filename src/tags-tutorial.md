@@ -188,7 +188,7 @@ The above command, lists the following:
  
 ## Watch Out for the Spaces
  
-Now, let’s look for every wrapping colored “ancient white.” If we try:
+Now, let’s look for every wrapping colored “ancient white”. If we try:
  
 ```shell
 $ hledger register tag:color=ancient white
@@ -199,7 +199,7 @@ We get exactly nothing. What happened? As you most likely guessed from the title
 Therefore, you will need something like the following, to find all the wrappings colored “ancient white”:
  
 ```shell
-$ hledger register tag:color=”ancient white”
+$ hledger register tag:color="ancient white"
 ```
 
 ## Combining Tags and Comments
@@ -339,7 +339,7 @@ The result is:
              $207.39
 ```
 
-Aha, we see a lot of spending on “ancient white.” 
+Aha, we see a lot of spending on “ancient white”.
 
 Similarly, if we want to see the expenses by type of fabric, we type:
 
@@ -409,7 +409,7 @@ To add a value to a tag, add one or more words to the tag:
 ### Limit a command to tags with specified values
  
 ```shell
-$ hledger register tag:color=”ancient white”
+$ hledger register tag:color="ancient white"
 ```
  
 Note that if your tag value has a space in it, you must do something such as put quotation marks around the entire tag value. If there are no spaces in your tag value, the quotation marks are optional.
