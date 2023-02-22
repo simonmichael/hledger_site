@@ -5,8 +5,12 @@
 <!-- toc -->
 </div>
 
-*Note: this is a cookbook doc, written for hledger 1.5 in 2018; still useful but in need of update.
-For more and fresher docs, see also [Budgeting](budgeting.html).*
+This is an old but still useful intro to budgeting with hledger.
+For more about budgeting, see also:
+
+- [hledger.org > Budgeting](budgeting.html)
+- [wiki.plaintextaccounting.org/budgeting](https://github.com/plaintextaccounting/plaintextaccounting/wiki/budgeting)
+
 
 Budgeting and forecasting allows you to keep better track of your expenses and future financial situation.
 If you write down your expectations of what your income/expenses/investment yields/etc should be, you can use them to:
@@ -15,7 +19,8 @@ If you write down your expectations of what your income/expenses/investment yiel
 
 (This section uses examples/bcexample.hledger from hledger source repository).
 
-## Periodic budget
+## Goal-based budgeting
+
 To start budgeting, you need to know what your average yearly or weekly expenditures are. Hledger could help you with that.
 Usually the interval for which you compute budget figures will be the same as the interval between
 your paychecks -- monthly or weekly.
@@ -47,7 +52,7 @@ monthly expenses for each category. Expenses in Food, Health, Home and
 Transport categories seem to roughly similar month to month, so lets
 create a budget for them.
 
-Budgets are described with periodic transactions. Periodic transaction
+Budgets are described with periodic (ie, recurring) transaction rules. Periodic transaction
 has `~` instead of date and period expression instead of description. In this case
 we want to create a monthly budget that will come into effect starting from January 2013,
 which will include income of 10000 USD that is partially spent on Food, Health, Home and Transport
@@ -165,7 +170,7 @@ Balance changes in 2013q1:
 Now unbudgeted amounts are much smaller and some of them could be dismissed as noise, and we can see that budget created is actually
 close enough to the real numbers, meaning that they are usually close to average that we put in our budget.
 
-## Envelope budget
+## Roll=over
 
 Budget report that we have used so far assumes that any unused budget amount for a given (monthly) period will not contribute to the
 budget of the next period. Alternative popular "envelope budget" strategy assumes that you put a certain amount of money into an envelope
@@ -194,6 +199,31 @@ Ending balances (cumulative) in 2013q1:
 If you look at Expenses:Food category, you will see that every month budget is increased by 500 USD, and by March total amount budgeted
 is 1500 USD, of which 1481.26 USD is spent. If you look back at the previous non-cumulative monthly budget report, you will see that in March food expenses
 were 121% of the budgeted amount, but cumulative report shows that taking into account budget carry-over from Jan and Feb we are well within planned numbers.
+
+## Envelope budgeting
+
+Real envelope budgeting involves actually setting aside money for each category and spending only from there.
+In physical envelope budgeting, there are actual envelopes of cash.
+When doing envelope budgeting with hledger, the envelopes are represented by subaccounts,
+into which you transfer money and from which you spend it.
+
+Note with this style of budgeting, you don't use periodic transactions or the `--budget` report -
+just regular transfers and regular balance reports.
+At the end of each period you can decide to remove or reallocate any surpluses, or let them roll over.b
+
+A good place to keep the envelope accounts is under your regular checking or cash account,
+since it keeps the overall balance correct.
+Eg `assets:checking:rent`,  `assets:checking:food` etc.
+Some people use virtual (imaginary) accounts instead.
+
+The advantage of envelope budgeting is that it models your available funds precisely, which can be important in tight cashflow situations.
+hledger doesn't prevent overspending from your budget envelopes - you should watch their balances and make sure they never go negative.
+(The hledger-check-fancyassertions script could help, <https://hledger.org/scripts.html>.)
+
+The downside is that it requires more bookkeeping work from you.
+Some people use auto posting rules to try to reduce that, but this can add complexity.
+
+For more about envelope budgeting, see the links at [wiki.plaintextaccounting.org/budgeting](https://github.com/plaintextaccounting/plaintextaccounting/wiki/budgeting).
 
 ## Forecasting
 
