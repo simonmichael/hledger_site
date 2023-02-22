@@ -170,8 +170,6 @@ Balance changes in 2013q1:
 Now unbudgeted amounts are much smaller and some of them could be dismissed as noise, and we can see that budget created is actually
 close enough to the real numbers, meaning that they are usually close to average that we put in our budget.
 
-## Roll=over
-
 Budget report that we have used so far assumes that any unused budget amount for a given (monthly) period will not contribute to the
 budget of the next period. Alternative popular "envelope budget" strategy assumes that you put a certain amount of money into an envelope
 each month, and any unused amount stays there for future expenses. This is easy to simulate by adding --cumulative switch. Lets redo
@@ -199,6 +197,7 @@ Ending balances (cumulative) in 2013q1:
 If you look at Expenses:Food category, you will see that every month budget is increased by 500 USD, and by March total amount budgeted
 is 1500 USD, of which 1481.26 USD is spent. If you look back at the previous non-cumulative monthly budget report, you will see that in March food expenses
 were 121% of the budgeted amount, but cumulative report shows that taking into account budget carry-over from Jan and Feb we are well within planned numbers.
+
 
 ## Envelope budgeting
 
