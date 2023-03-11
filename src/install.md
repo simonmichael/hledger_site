@@ -62,7 +62,7 @@ div.badges > a > img {
 }
 </style>
 
-The current hledger release is **1.28**. ([Release notes](release-notes.html))
+The current hledger release is **1.29**. ([Release notes](release-notes.html))
 
 Here are lots of ways to install hledger:
 - [Binary packages](#binary-packages) install quickly but are not always up to date (look for green badges below).
@@ -85,13 +85,13 @@ And finally please [share any feedback](support.html) so we can make this proces
   <tr> <!-- CI BINARIES -->
     <td>
       <div class="badges">
-        <a><img alt="hledger CI binaries" src="https://img.shields.io/badge/hledger_CI_binaries-1.28-brightgreen.svg" /></a><br>
+        <a><img alt="hledger CI binaries" src="https://img.shields.io/badge/hledger_CI_binaries-1.29-brightgreen.svg" /></a><br>
       </div>
       <!-- <div class="notes">Linux, Mac, Windows</div> -->
     </td>
     <td>
       <div class="command">
-        <a href="https://github.com/simonmichael/hledger/releases/tag/1.28#mac-x64">hledger-mac-x64.zip</a>
+        <a href="https://github.com/simonmichael/hledger/releases/tag/1.29#mac-x64">hledger-mac-x64.zip</a>
       </div>
       <div class="notes"></div>
     </td>
@@ -118,13 +118,13 @@ And finally please [share any feedback](support.html) so we can make this proces
   <tr> <!-- CI BINARIES -->
     <td>
       <div class="badges">
-        <a><img alt="hledger CI binaries" src="https://img.shields.io/badge/hledger_CI_binaries-1.28-brightgreen.svg" /></a><br>
+        <a><img alt="hledger CI binaries" src="https://img.shields.io/badge/hledger_CI_binaries-1.29-brightgreen.svg" /></a><br>
       </div>
       <!-- <div class="notes">Linux, Mac, Windows</div> -->
     </td>
     <td>
       <div class="command">
-        <a href="https://github.com/simonmichael/hledger/releases/tag/1.28#windows-x64">hledger-windows-x64.zip</a>
+        <a href="https://github.com/simonmichael/hledger/releases/tag/1.29#windows-x64">hledger-windows-x64.zip</a>
         <!-- <span style="font-weight:normal; font-style:italic; font-size:small;">
           (Also runs on other platforms with <a href="https://www.winehq.org">Wine</a>)
         </span> -->
@@ -180,13 +180,13 @@ And finally please [share any feedback](support.html) so we can make this proces
   <tr> <!-- CI BINARIES -->
     <td>
       <div class="badges">
-        <a><img alt="hledger CI binaries" src="https://img.shields.io/badge/hledger_CI_binaries-1.28-brightgreen.svg" /></a><br>
+        <a><img alt="hledger CI binaries" src="https://img.shields.io/badge/hledger_CI_binaries-1.29-brightgreen.svg" /></a><br>
       </div>
       <!-- <div class="notes">Linux, Mac, Windows</div> -->
     </td>
     <td>
       <div class="command">
-        <a href="https://github.com/simonmichael/hledger/releases/tag/1.28#linux-x64">hledger-linux-x64.zip</a>
+        <a href="https://github.com/simonmichael/hledger/releases/tag/1.29#linux-x64">hledger-linux-x64.zip</a>
       </div>
       <div class="notes"></div>
     </td>
@@ -195,7 +195,7 @@ And finally please [share any feedback](support.html) so we can make this proces
   <tr> <!-- GENTOO -->
     <td>
       <div class="badges">
-        <a href="https://gentoo.zugaina.org/Search?search=hledger"><img alt="Gentoo" src="https://img.shields.io/badge/Gentoo_package-1.28-brightgreen.svg" /></a>
+        <a href="https://gentoo.zugaina.org/Search?search=hledger"><img alt="Gentoo" src="https://img.shields.io/badge/Gentoo_package-1.28-red.svg" /></a>
       </div>
     </td>
     <td>
@@ -380,7 +380,7 @@ And finally please [share any feedback](support.html) so we can make this proces
   <tr> <!-- DOCKER -->
     <td>
       <div class="badges">
-        <a href="https://hub.docker.com/r/dastapov/hledger"><img alt="Docker" src="https://img.shields.io/badge/Docker_image-1.28-brightgreen.svg" /></a><br>
+        <a href="https://hub.docker.com/r/dastapov/hledger"><img alt="Docker" src="https://img.shields.io/badge/Docker_image-1.28-red.svg" /></a><br>
         <a href="https://hub.docker.com/search?q=hledger&amp;type=image&amp;sort=updated_at&amp;order=desc">more..</a>
       </div>
       <!-- <div class="notes">Linux, Mac, Windows</div> -->
@@ -454,7 +454,7 @@ And finally please [share any feedback](support.html) so we can make this proces
 
 ## Build the current release
 
-<img alt="Release source" src="https://img.shields.io/badge/Release_source-1.28-brightgreen.svg" />
+<img alt="Release source" src="https://img.shields.io/badge/Release_source-1.29-brightgreen.svg" />
 
 1. Check [build requirements](#build-requirements)
 2. Use one of the [build methods](#build-methods)
@@ -592,7 +592,7 @@ If you have stack installed, you can run it to install the main hledger tools in
 
 <div class="builder-command">
   stack update <br>
-  stack install --resolver=lts-19 hledger-lib-1.28 hledger-1.28 hledger-ui-1.28 hledger-web-1.28 --silent
+  stack install --resolver=lts-19 hledger-lib-1.29 hledger-1.29 hledger-ui-1.29 hledger-web-1.29 --silent
 </div>
 
 On Windows, omit hledger-ui from this command (unless you are in [WSL]).
@@ -604,7 +604,7 @@ If you have GHC and cabal, you can run cabal to install the main hledger tools i
 <div class="builder-command">
   cabal update <br>
   cabal install alex happy<br>
-  cabal install hledger-1.28 hledger-ui-1.28 hledger-web-1.28
+  cabal install hledger-1.29 hledger-ui-1.29 hledger-web-1.29
 </div>
 
 On Windows, omit hledger-ui from this command (unless you are in [WSL]).
@@ -675,15 +675,15 @@ and verify that their versions are what you just installed
 
 <div class="command">
 $ hledger --version <br>
-hledger 1.28-g6e130a4b6-20221201, mac-aarch64
+hledger 1.29-g7c77c42bb-20230311, mac-aarch64
 <br>
 <br>
 $ hledger-ui --version <br>
-hledger-ui 1.28-g6e130a4b6-20221201, mac-aarch64
+hledger-ui 1.29-g7c77c42bb-20230311, mac-aarch64
 <br>
 <br>
 $ hledger web --version <br>
-hledger-web 1.28-g6e130a4b6-20221201, mac-aarch64
+hledger-web 1.29-g7c77c42bb-20230311, mac-aarch64
 <br>
 </div>
 
@@ -692,7 +692,7 @@ If you like, you can also run the unit tests:
 <div class="command">
 $ hledger test <br>
 ... <br>
-All 217 tests passed (0.10s)
+All 220 tests passed (0.10s)
 </div>
 
 or the more extensive functional tests, if you are in hledger's source directory:
@@ -700,7 +700,7 @@ or the more extensive functional tests, if you are in hledger's source directory
 <div class="command">
 $ make functest <br>
 ... <br>
- Total   934 ...<br>
+ Total   974 ...<br>
 functest PASSED
 </div>
 
