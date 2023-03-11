@@ -62,7 +62,7 @@ div.badges > a > img {
 }
 </style>
 
-The current hledger release is **1.28**. ([Release notes](release-notes))
+The current hledger release is **1.28**. ([Release notes](release-notes.html))
 
 Here are lots of ways to install hledger:
 - [Binary packages](#binary-packages) install quickly but are not always up to date (look for green badges below).
