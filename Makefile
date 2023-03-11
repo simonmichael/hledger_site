@@ -1,4 +1,4 @@
-CURRENT_RELEASE=1.28
+CURRENT_RELEASE=1.29
 
 # Render the current site and current dev and release manuals, saving them in out.
 # The sitemap files are restored afterward (mdbook removes them).
@@ -33,7 +33,8 @@ all buildall: \
 	build3-1.25 \
 	build3-1.26 \
 	build3-1.27 \
-	build3-1.28
+	build3-1.28 \
+	build3-1.29
 	@make -s sitemap
 
 # Install some required tools.
