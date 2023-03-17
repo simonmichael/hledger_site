@@ -278,11 +278,10 @@ And finally please [share any feedback](support.html) so we can make this proces
   <tr> <!-- FEDORA -->
     <td>
       <div class="badges">
-        <a ><img src="https://img.shields.io/badge/Fedora_38_package-1.21-red.svg" /></a><br>
-        <a ><img src="https://img.shields.io/badge/Fedora_37_package-1.21-red.svg" /></a><br>
+        <a ><img src="https://img.shields.io/badge/Fedora_39_package-1.27.1-red.svg" /></a><br>
+        <a ><img src="https://img.shields.io/badge/Fedora_38_package-1.27.1-red.svg" /></a><br>
+        <a ><img src="https://repology.org/badge/version-for-repo/fedora_37/hledger.svg" /></a><br>
         <a ><img src="https://repology.org/badge/version-for-repo/fedora_36/hledger.svg" /></a><br>
-        <a ><img src="https://repology.org/badge/version-for-repo/fedora_35/hledger.svg" /></a><br>
-        <a ><img src="https://repology.org/badge/version-for-repo/fedora_34/hledger.svg" /></a><br>
         <a href="https://src.fedoraproject.org/rpms/hledger">more..</a>
       </div>
     </td>
@@ -337,7 +336,7 @@ And finally please [share any feedback](support.html) so we can make this proces
   <tr> <!-- OPENBSD -->
     <td>
       <div class="badges">
-        <a href="https://openports.se/productivity/hledger"><img src="https://repology.org/badge/version-for-repo/openbsd/hledger.svg" alt="openbsd ports" /></a><br>
+        <img src="https://repology.org/badge/version-for-repo/openbsd/hledger.svg" alt="openbsd ports" /><br>
       </div>
     </td>
     <td>
@@ -348,7 +347,7 @@ And finally please [share any feedback](support.html) so we can make this proces
   <tr> <!-- NETBSD -->
     <td>
       <div class="badges">
-        <a href="https://cdn.netbsd.org/pub/pkgsrc/current/pkgsrc/finance/hledger/index.html"><img src="https://img.shields.io/badge/NetBSD-1.24.1-red.svg" alt="netbsd package" /></a><br>
+        <a href="https://cdn.netbsd.org/pub/pkgsrc/current/pkgsrc/finance/hledger/index.html"><img src="https://img.shields.io/badge/NetBSD-1.28-red.svg" alt="netbsd package" /></a><br>
       </div>
     </td>
     <td>
@@ -393,16 +392,17 @@ And finally please [share any feedback](support.html) so we can make this proces
   <tr> <!-- NIX -->
     <td>
       <div class="badges">
-        <a href="https://github.com/search?l=&o=desc&q=%22automatic+Haskell+package+set+update%22+repo%3ANixOS%2Fnixpkgs+filename%3Ahaskell-packages.nix&s=committer-date&type=Commits"><img alt="Nix" src="https://img.shields.io/badge/Nix_package-1.26-red.svg" /></a>
+        <a href="https://github.com/search?l=&o=desc&q=%22automatic+Haskell+package+set+update%22+repo%3ANixOS%2Fnixpkgs+filename%3Ahaskell-packages.nix&s=committer-date&type=Commits"><img alt="Nix" src="https://img.shields.io/badge/Nix_package-1.28-red.svg" /></a>
       </div>
       <!-- <div class="notes">Linux, Mac</div> -->
     </td>
     <td>
       <div class="command">
-          nix-env -f https://github.com/NixOS/nixpkgs/archive/86378514.tar.gz -iA hledger_1_26 hledger-ui_1_26 hledger-web_1_26
+          nix-env -f https://github.com/NixOS/nixpkgs/archive/fcfc9171.tar.gz -iA hledger_1_28 hledger-ui_1_28 hledger-web_1_28
+		  <!-- fcfc9171794b4306e14dd31664900f6bd8bc55ca -->
       </div>
       <div class="notes">
-          Install command untested, success/failure reports welcome.<br>
+          Nix install command not recently tested, reports/help welcome.<br>
           Nix binaries may not yet be fully cached for your platform, try with --dry-run to estimate how much building will be required.<br>
           On Linux, note <span class="warnings"><a href="https://github.com/simonmichael/hledger/issues/1030">#1030</a>, 
           <a href="https://github.com/simonmichael/hledger/issues/1033">#1033</a>.
