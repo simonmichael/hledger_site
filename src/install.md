@@ -62,7 +62,7 @@ div.badges > a > img {
 }
 </style>
 
-The current hledger release is **1.29**. ([Release notes](release-notes.html))
+The current hledger release is **1.29.1**. ([Release notes](release-notes.html))
 
 Here are lots of ways to install hledger:
 - [Binary packages](#binary-packages) install quickly but are not always up to date (look for green badges below).
@@ -85,13 +85,13 @@ And finally please [share any feedback](support.html) so we can make this proces
   <tr> <!-- CI BINARIES -->
     <td>
       <div class="badges">
-        <a><img alt="hledger CI binaries" src="https://img.shields.io/badge/hledger_CI_binaries-1.29-brightgreen.svg" /></a><br>
+        <a><img alt="hledger CI binaries" src="https://img.shields.io/badge/hledger_CI_binaries-1.29.1-brightgreen.svg" /></a><br>
       </div>
       <!-- <div class="notes">Linux, Mac, Windows</div> -->
     </td>
     <td>
       <div class="command">
-        <a href="https://github.com/simonmichael/hledger/releases/tag/1.29#mac-x64">hledger-mac-x64.zip</a>
+        <a href="https://github.com/simonmichael/hledger/releases/tag/1.29.1#mac-x64">hledger-mac-x64.zip</a>
       </div>
       <div class="notes"></div>
     </td>
@@ -118,13 +118,13 @@ And finally please [share any feedback](support.html) so we can make this proces
   <tr> <!-- CI BINARIES -->
     <td>
       <div class="badges">
-        <a><img alt="hledger CI binaries" src="https://img.shields.io/badge/hledger_CI_binaries-1.29-brightgreen.svg" /></a><br>
+        <a><img alt="hledger CI binaries" src="https://img.shields.io/badge/hledger_CI_binaries-1.29.1-brightgreen.svg" /></a><br>
       </div>
       <!-- <div class="notes">Linux, Mac, Windows</div> -->
     </td>
     <td>
       <div class="command">
-        <a href="https://github.com/simonmichael/hledger/releases/tag/1.29#windows-x64">hledger-windows-x64.zip</a>
+        <a href="https://github.com/simonmichael/hledger/releases/tag/1.29.1#windows-x64">hledger-windows-x64.zip</a>
         <!-- <span style="font-weight:normal; font-style:italic; font-size:small;">
           (Also runs on other platforms with <a href="https://www.winehq.org">Wine</a>)
         </span> -->
@@ -180,13 +180,13 @@ And finally please [share any feedback](support.html) so we can make this proces
   <tr> <!-- CI BINARIES -->
     <td>
       <div class="badges">
-        <a><img alt="hledger CI binaries" src="https://img.shields.io/badge/hledger_CI_binaries-1.29-brightgreen.svg" /></a><br>
+        <a><img alt="hledger CI binaries" src="https://img.shields.io/badge/hledger_CI_binaries-1.29.1-brightgreen.svg" /></a><br>
       </div>
       <!-- <div class="notes">Linux, Mac, Windows</div> -->
     </td>
     <td>
       <div class="command">
-        <a href="https://github.com/simonmichael/hledger/releases/tag/1.29#linux-x64">hledger-linux-x64.zip</a>
+        <a href="https://github.com/simonmichael/hledger/releases/tag/1.29.1#linux-x64">hledger-linux-x64.zip</a>
       </div>
       <div class="notes"></div>
     </td>
@@ -454,7 +454,7 @@ And finally please [share any feedback](support.html) so we can make this proces
 
 ## Build the current release
 
-<img alt="Release source" src="https://img.shields.io/badge/Release_source-1.29-brightgreen.svg" />
+<img alt="Release source" src="https://img.shields.io/badge/Release_source-1.29.1-brightgreen.svg" />
 
 1. Check [build requirements](#build-requirements)
 2. Use one of the [build methods](#build-methods)
@@ -592,7 +592,7 @@ If you have stack installed, you can run it to install the main hledger tools in
 
 <div class="builder-command">
   stack update <br>
-  stack install --resolver=lts-19 hledger-lib-1.29 hledger-1.29 hledger-ui-1.29 hledger-web-1.29 --silent
+  stack install --resolver=lts-19 hledger-lib-1.29.1 hledger-1.29.1 hledger-ui-1.29.1 hledger-web-1.29.1 --silent
 </div>
 
 On Windows, omit hledger-ui from this command (unless you are in [WSL]).
@@ -604,7 +604,7 @@ If you have GHC and cabal, you can run cabal to install the main hledger tools i
 <div class="builder-command">
   cabal update <br>
   cabal install alex happy<br>
-  cabal install hledger-1.29 hledger-ui-1.29 hledger-web-1.29
+  cabal install hledger-1.29.1 hledger-ui-1.29.1 hledger-web-1.29.1
 </div>
 
 On Windows, omit hledger-ui from this command (unless you are in [WSL]).
@@ -675,15 +675,15 @@ and verify that their versions are what you just installed
 
 <div class="command">
 $ hledger --version <br>
-hledger 1.29-g7c77c42bb-20230311, mac-aarch64
+hledger 1.29.1-gc77cd8786-20230316, mac-aarch64
 <br>
 <br>
 $ hledger-ui --version <br>
-hledger-ui 1.29-g7c77c42bb-20230311, mac-aarch64
+hledger-ui 1.29.1-gc77cd8786-20230316, mac-aarch64
 <br>
 <br>
 $ hledger web --version <br>
-hledger-web 1.29-g7c77c42bb-20230311, mac-aarch64
+hledger-web 1.29.1-gc77cd8786-20230316, mac-aarch64
 <br>
 </div>
 
