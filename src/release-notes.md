@@ -72,6 +72,46 @@ Changes in hledger-install.sh are shown
 [here](https://github.com/simonmichael/hledger/commits/master/hledger-install/hledger-install.sh).
 
 
+## 2023-03-16 hledger-1.29.1
+
+### hledger 1.29.1
+
+Improvements
+
+- Hledger.Cli.Script now also exports
+
+       Control.Applicative
+       Control.Concurrent
+       Data.Char
+       Data.Functor
+       System.IO
+       System.IO.Error
+
+   and new string helpers
+
+       strip1Char
+       stripBy
+       strip1By
+
+- Allow building with GHC 9.6.1 (#2011)
+
+Fixes
+
+- The stats report no longer displays "Exact" in front of dates. (#2012)
+
+Docs
+
+- remove duplicate in `hledger close` docs (Yehoshua Pesach Wallach)
+
+### hledger-ui 1.28.1
+
+- Allow building with GHC 9.6.1 (#2011)
+
+### hledger-web 1.29.1
+
+- Allow building with GHC 9.6.1 (#2011)
+
+
 ## 2023-03-11 hledger-1.29
 
 **Tag checking, 
