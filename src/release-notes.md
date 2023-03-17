@@ -103,7 +103,7 @@ Docs
 
 - remove duplicate in `hledger close` docs (Yehoshua Pesach Wallach)
 
-### hledger-ui 1.28.1
+### hledger-ui 1.29.1
 
 - Allow building with GHC 9.6.1 (#2011)
 
