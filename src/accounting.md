@@ -254,6 +254,14 @@ account.  Eg, buying food.
 - [Accounting for Computer Scientists](http://martin.kleppmann.com/2011/03/07/accounting-for-computer-scientists.html)
 - [Tutorial on multiple currency accounting](http://www.mscs.dal.ca/~selinger/accounting/tutorial.html) by Peter Selinger
 - [Financial Statements: A Beginner's Guide](https://www.causal.app/blog/whats-a-financial-statement)
+- [Finances 2: Guide](https://hochgatterer.me/finances/guide/introduction/) nice PTA-applicable intro from this mac/iphone app. Recommended.
+
+### Video
+
+- Tea Leaves' [Double-Entry Bookkeeping](https://www.youtube.com/playlist?list=PLu6SHDdOToSdlAqYhy11hTrkhMc8VfCs3) and [Counting Like It's 1479](https://www.youtube.com/playlist?list=PLu6SHDdOToSe1kXR0t6Bt57vFsmIWo49b) playlists. Warning, these are not in good didactic order, so pick and choose. Eg  :
+  - [Double Entry Bookkeeping for Personal Finance](https://www.youtube.com/watch?v=lIGJzQw79hg) - excellent intro
+  - [Stock Transactions for Double-Entry Bookkeeping](https://www.youtube.com/watch?v=WRNoabz1WSo)
+  - [(More) Stock Transactions for Double-Entry Accounting](https://www.youtube.com/watch?v=f-cE1ks-Aq4)
 
 ### Theory
 
