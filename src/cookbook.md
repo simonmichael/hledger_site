@@ -77,6 +77,7 @@ and [Accounting and bookkeeping](#accounting-and-bookkeeping) examples.
 - [hledger and GnuCash](gnucash.md)
 - [hledger and Ledger](ledger.md)
 - [hledger and Obsidian](obsidian.md)
+- [hledger and Postgres](postgres.md)
 - [hledger and Quicken/Quickbooks](quicken.md)
 - [hledger and SQLite](sqlite.md)
 - [hledger and Ultorg](ultorg.md)

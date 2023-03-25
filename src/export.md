@@ -50,6 +50,8 @@ insert into postings(txnidx,date1,date2,status,code,description,comment,account,
 ;
 ```
 
+[hledger2psql](https://github.com/edkedk99/hledger2psql) is a tool that exports a hledger journal to a postgres database.
+
 [register]: hledger.html#register
 [aregister]: hledger.html#aregister
 [output formats]: hledger.html#output-format
