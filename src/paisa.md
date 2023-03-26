@@ -60,3 +60,4 @@ Perhaps a "ledger" script could transform our CSV into Ledger's.
 ### Adding hledger support to Paisa
 
 This would be ideal. <https://github.com/ananthakumaran/paisa/blob/master/internal/ledger/ledger.go> is the place if you would like to work on it.
+<https://github.com/ananthakumaran/paisa/discussions/12>
