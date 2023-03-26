@@ -20,5 +20,43 @@ Paisa doesn't use any Ledger-specific features however,
 so it's relatively easy to ensure either 
 that Ledger can read your hledger journal,
 or (more likely) that it can read a copy made with `hledger print`.
+
+## Tips
+
 If you have trouble making your journal readable by Ledger,
-look for ideas at [Ledger](ledger.md).
+look for ideas at [Ledger](ledger.md). Eg
+- some transactions that balance in hledger will not balance in Ledger and vice versa. You might need to add more decimal places in cost amounts, or you might need to preserve hledger's commodity declarations
+- costs in balance assertion/assignment amounts can not be read by Ledger and will need to be removed or commented
+- some hledger balance assertions can not be read by Ledger and will need to be modified or commented out.
+
+### Installing hledger as a fake Ledger
+
+Paisa runs Ledger like this:
+
+```
+ledger -f FILE csv --csv-format "%(quoted(date)),%(quoted(payee)),%(quoted(display_account)),%(quoted(commodity(scrub(display_amount)))),%(quoted(quantity(scrub(display_amount)))),%(quoted(to_int(scrub(market(amount,date) * 100000)))),%(quoted(xact.id))\n"
+```
+which prints
+```
+2014/01/01 Home purchase
+    Assets:House                                1 APT @ 4000000 INR
+    Liabilities:Homeloan
+```
+as
+```
+"2014/01/01","Home purchase","Assets:House","APT","1","400000000000","1"
+"2014/01/01","Home purchase","Liabilities:Homeloan","INR","-4000000","-400000000000","1"
+```
+
+`hledger print -O csv` prints that entry as
+```
+"txnidx","date","date2","status","code","description","comment","account","amount","commodity","credit","debit","posting-status","posting-comment"
+"1","2014-01-01","","","","Home purchase","","Assets:House","1","APT","","1","",""
+"1","2014-01-01","","","","Home purchase","","Liabilities:Homeloan","-4000000.0000","INR","4000000.0000","","",""
+```
+
+Perhaps a "ledger" script could transform our CSV into Ledger's.
+
+### Adding hledger support to Paisa
+
+This would be ideal. <https://github.com/ananthakumaran/paisa/blob/master/internal/ledger/ledger.go> is the place if you would like to work on it.
