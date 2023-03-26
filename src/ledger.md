@@ -397,6 +397,9 @@ hledger adds a restriction on balance assignments:
 it does not allow balance assignments on accounts affected by auto posting rules
 (since in general this can make balancing the journal impossible).
 
+hledger allows @/@@ cost notation in balance assertion/assignment amounts,
+ie to the right of the equals sign, but Ledger does not.
+
 ### Directive scope
 
 The region affected by directives, and their behaviour with included files or sibling files,
