@@ -393,12 +393,24 @@ This ensures correct, reliable behaviour independent of the ordering of journal 
 
 hledger correctly handles multiple balance assignments/assertions within a single transaction.
 
+Ledger rejects the following balance assertion, as if `(a)` and `a` were different accounts; hledger does not.
+```journal
+2023-01-01
+  (a)  1
+
+2023-01-02
+  a    1 = 2
+  b
+```
+
+In addition to `=`, hledger supports several other kinds of balance assertion, with syntax `==`, `=*` and `==*`. Ledger rejects these.
+
+hledger allows `@`/`@@` cost notation in balance assertion/assignment amounts,
+ie to the right of the equals sign; Ledger does not.
+
 hledger adds a restriction on balance assignments:
 it does not allow balance assignments on accounts affected by auto posting rules
 (since in general this can make balancing the journal impossible).
-
-hledger allows @/@@ cost notation in balance assertion/assignment amounts,
-ie to the right of the equals sign, but Ledger does not.
 
 ### Directive scope
 
