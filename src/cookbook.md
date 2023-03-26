@@ -114,6 +114,7 @@ and [Accounting and bookkeeping](#accounting-and-bookkeeping) examples.
 - [Track investments (2020)](investments.md)
 - [Calculate unrealized gain](gain.md)
 - [Calculate return on investment](roi.md)
+- [hledger-fifo](scripts.md#hledger-fifo)
 
 ### Invoicing
 - [Invoicing](invoicing.md)
