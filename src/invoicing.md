@@ -57,5 +57,5 @@ directory, such as
 ## See also
 
 - [examples/invoicing/](https://github.com/simonmichael/hledger/tree/master/examples/invoicing)
-- <https://plaintextaccounting.org/#invoicing>
+- <https://wiki.plaintextaccounting.org/invoicing>
 
