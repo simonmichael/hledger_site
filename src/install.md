@@ -170,7 +170,24 @@ And finally please [share any feedback](support.html) so we can make this proces
       </div>
     </td>
   </tr>
-  
+
+  <tr valign="top"> <!-- WINGET -->
+    <td>
+      <div class="badges">
+        <a href="https://github.com/microsoft/winget-pkgs/tree/master/manifests/s/simonmichael/hledger">
+          <img alt="Winget package" src="https://repology.org/badge/version-for-repo/winget/hledger.svg" />
+        </a>
+      </div>
+    </td>
+    <td style="padding-top:10px;">
+      <div class="command" style="margin-bottom:4px;">
+        winget install simonmichael.hledger
+      </div>
+      <div class="notes">
+      </div>
+    </td>
+  </tr>
+
 </table>
 
 ### GNU/Linux
