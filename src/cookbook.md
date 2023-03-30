@@ -5,12 +5,7 @@
 <!-- toc -->
 </div>
 
-**Goal for 2022:** This page aims to become the comprehensive list of concrete, actionable, task-oriented advice for hledger users on how to tackle common real-world problems, using hledger where possible, but pointing to other tools if more effective, and including placeholders where we don't yet have a good answer.
-
-**See also:**
-- <https://plaintextaccounting.org> and <https://wiki.plaintextaccounting.org> collect similar but more generic advice for any and all PTA tools.
-- If you don't yet know the basics of hledger, see the [home page](index.md), eg [How to get started](index.md#how-to-get-started).
-- When you find something that's not covered here, or you have a suggestion, we'd appreciate [a chat message](support.md) (or email).
+This page aims to become the comprehensive list of concrete, actionable, task-oriented advice for hledger users on how to tackle common real-world problems. It is also where we collect random user docs and notes that have no better home. (Docs here will vary in age and quality.)
 
 <!--
 Documentor tips:
@@ -26,10 +21,6 @@ Check plaintextaccounting.org's and wiki.plaintextaccounting.org's categories.
 </div>
 <br clear=all>
 -->
-
-The cookbook falls into two parts: 
-the [General usage](#general-usage) of hledger,
-and [Accounting and bookkeeping](#accounting-and-bookkeeping) examples.
 
 ## General usage
 <!-- sections ordered roughly by need -->
@@ -54,6 +45,7 @@ and [Accounting and bookkeeping](#accounting-and-bookkeeping) examples.
 
 ### Making charts
 - [Charts and Graphs](charts.md)
+- [Visualising discussion 2023](visualising2023.md)
 
 ### Customising
 - [Change account name separator](change-account-name-separator.md)
@@ -77,13 +69,14 @@ and [Accounting and bookkeeping](#accounting-and-bookkeeping) examples.
 - [hledger and GnuCash](gnucash.md)
 - [hledger and Ledger](ledger.md)
 - [hledger and Obsidian](obsidian.md)
+- [hledger and Paisa](paisa.md)
 - [hledger and Postgres](postgres.md)
 - [hledger and Quicken/Quickbooks](quicken.md)
 - [hledger and SQLite](sqlite.md)
 - [hledger and Ultorg](ultorg.md)
 - [hledger and YNAB](ynab.md)
 
-## Accounting and bookkeeping
+## Accounting tasks
 <!-- sections ordered mostly alphabetically -->
 
 ### Learning accounting and bookkeeping
@@ -138,3 +131,6 @@ and [Accounting and bookkeeping](#accounting-and-bookkeeping) examples.
 
 ### Shared expenses
 
+## See also
+
+<https://plaintextaccounting.org> and <https://wiki.plaintextaccounting.org> collect similar but more generic advice for any and all PTA tools.
