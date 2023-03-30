@@ -25,9 +25,7 @@ It works pretty well for me, there's just a one-time setup of customizing the re
 ### sm
 I have exactly this problem (and I have been doing this since 2006!). Thanks for describing it so well. Hopefully I am paraphrasing it correctly: 
 
-<big>
-**How to achieve more big-picture clarity and actionable insight from our hledger(/PTA) data with less effort ?**
-</big>
+***How to achieve more big-picture clarity and actionable insight from our hledger(/PTA) data with less effort ?***
 
 I would really love if we collectively can make some progress on this. 
 
@@ -49,19 +47,19 @@ Speaking for myself:
 - built in financial statements: bs, is
 - hledger activity command: hledger CLI's only built in chart
 - hledger-web's built-in account balance chart 
-- hledger-plot addon https://hledger.org/scripts.html#hledger-plot
-- hledger-vega scripts https://hledger.org/charts.html#hledger-vega
-- other notes at https://hledger.org/charts.html
-- exporting to CSV (with --layout=tidy, https://hledger.org/dev/hledger.html?highlight=tidy#data-layout) and using spreadsheet charts
-- other software https://hledger.org/cookbook.html#other-software , such as
-  - exporting to Beancount and using Fava https://hledger.org/beancount.html
-  - SQlite https://hledger.org/sqlite.html
-  - Ultorg https://hledger.org/ultorg.html
-  - Obsidian https://hledger.org/obsidian.html
-  - Finances 2 https://hochgatterer.me/finances/
-  - Prudent https://prudent.me
-  - mobile apps with reports/charts, https://hledger.org/mobile-apps.html
-  - Paisa! https://hledger.org/paisa.html
+- hledger-plot addon <https://hledger.org/scripts.html#hledger-plot>
+- hledger-vega scripts <https://hledger.org/charts.html#hledger-vega>
+- other notes at <https://hledger.org/charts.html>
+- exporting to CSV (with --layout=tidy, <https://hledger.org/dev/hledger.html?highlight=tidy#data-layout>) and using spreadsheet charts
+- other software <https://hledger.org/cookbook.html#other-software>, such as>
+  - exporting to Beancount and using Fava <https://hledger.org/beancount.html>
+  - SQlite <https://hledger.org/sqlite.html>
+  - Ultorg <https://hledger.org/ultorg.html>
+  - Obsidian <https://hledger.org/obsidian.html>
+  - Finances 2 <https://hochgatterer.me/finances>
+  - Prudent <https://prudent.me>
+  - mobile apps with reports/charts, <https://hledger.org/mobile-apps.html>
+  - Paisa! <https://hledger.org/paisa.html>
 
 #### Other things that might help
 - built in easy charts that display in the CLI, TUI, or WUI without extra setup
