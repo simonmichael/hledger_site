@@ -64,6 +64,7 @@
 - [Foreign trip expenses](foreign-trip-expenses.md)
 - [Get Started](start.md)
 - [Home](index.md)
+- [Home2](index2.md)
 - [Importing CSV data](import-csv.md)
 - [Install](install.md)
 - [Invoicing](invoicing.md)
