@@ -80,3 +80,9 @@ It works best with hledger 1.24.99+.
 <https://nest.pijul.com/simonmichael/hledger-vega> is another variant.
 
 ![hledger-vega example](images/hledger-vega.png)
+
+## hledger-plot
+
+New in 2023:
+[Scripts > hledger-plot](scripts.md#hledger-plot)
+
