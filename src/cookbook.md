@@ -39,9 +39,9 @@ Check plaintextaccounting.org's and wiki.plaintextaccounting.org's categories.
 
 ### Reporting techniques
 - [Report examples](report-examples.md)
-- [Tags tutorial](tags-tutorial.md)
 - [Rewrite account names](rewrite-account-names.md)
 - [Rewrite commodity symbols](rewrite-commodity-symbols.md)
+- [Tags tutorial](tags-tutorial.md)
 
 ### Making charts
 - [Charts and Graphs](charts.md)
