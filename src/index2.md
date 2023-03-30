@@ -71,11 +71,12 @@ Here's some more complex data in the CLI, terminal, and web interfaces:
 
 [Install](install.html), then see [Getting Started](start.html).
 
-All available docs are listed in the sidebar to your left.
-(If no sidebar is visible, click/tap the horizontal-lines icon at top left, or press the `s` [access key].)
-Search by using the magnifying-glass icon or the `/` access key.
-Other access keys: `t` change theme, `1` home page, `2` recent changes, `<` previous page, `>` next page.
+This home page is purposely brief, but extensive documentation is  ready when you need it. All hledger docs are linked in the sidebar to your left.
+If no sidebar is visible, click/tap the horizontal-lines icon at top left. To search, use the magnifying-glass icon.
 
+Some documentation and demos are also available at the command line: run `hledger` for details.
+
+[Access keys](https://en.wikipedia.org/wiki/Access_key#Access_in_different_browsers) are available on this site: `s` toggle sidebar, `/` search, `t` theme, `1` home page, `2` recent changes, `<` previous page, `>` next page. 
 <style>
 
 #grabber {
