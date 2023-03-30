@@ -96,6 +96,7 @@
 - [Tutorial: hledger-web](web.md)
 - [User FAQ](userfaq.md)
 - [Videos, Talks](videos.md)
+- [Visualising discussion 2023](visualising2023.md)
 - [hledger and Beancount](beancount.md)
 - [hledger and dsq / DataStation](dsq.md)
 - [hledger and GnuCash](gnucash.md)
