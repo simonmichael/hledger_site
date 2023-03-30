@@ -10,20 +10,20 @@ Fast, robust, user-friendly<br>plain text accounting.
 ## hledger is...
 - free GPLv3+ accounting software based on [plain text files](https://plaintextaccounting.org)
 - actively developed and supported by [Simon Michael](http://joyful.com) and [contributors](CREDITS.html) since 2007
-- runs on unix, mac, windows, and the web
-- tracks money, investments, time, or any commodity
-- provides [web](web.md), [terminal](ui.md), [command line](add.md) and [programmatic](https://hackage.haskell.org/package/hledger-lib) interfaces
-- uses [double entry accounting](accounting.md), and is a great way to learn that
-- the plain text format is safe, readable, easy to version control and audit, and future-proof
+- runnable on unix, mac, windows, and the web
+- good for tracking money, investments, time, or any numeric commodity
+- shipped with [web](web.md), [terminal](ui.md), [command line](add.md), [JSON](https://hledger.org/dev/hledger-web.html#json-api) and [Haskell](https://hackage.haskell.org/package/hledger-lib) interfaces
+- based on [double entry accounting](accounting.md), and great for learning that
+- built on plain text formats: safe, readable, easy to version control and audit, and future-proof
 - fast, lightweight, extremely reliable, pays $100 bounties for [regression reports](http://hledger.org/regressionbounty)
-- [scriptable](scripting.md) and automatable
 - the most user friendly plain text accounting app
 - comparable to [Ledger](ledger.md) and [Beancount](beancount.md)
 - built with Haskell
-- no vendor lock in
-- no cloud requirement; your private financial data remains yours
+- free from vendor lock-in
+- local, not cloud-based; your private financial data remains under your control
+- [scripting-friendly](scripting.md) and automatable
 - comfortable for technical users; knowing about command lines, text editing and version control is helpful, though not required
-- strengthened by your kind [work](CONTRIBUTING.md) or [money contributions](sponsor.html)
+- strengthened by your [work](CONTRIBUTING.md) or [money contributions](sponsor.html)
   [![github](https://img.shields.io/github/stars/simonmichael/hledger.svg?logo=GitHub&label=Github&color=brightgreen)](https://github.com/simonmichael/hledger)
 
 ## Examples
