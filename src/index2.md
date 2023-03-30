@@ -16,14 +16,15 @@ Fast, robust, user-friendly<br>plain text accounting.
 - uses [double entry accounting](accounting.md), and is a great way to learn that
 - the plain text format is safe, readable, easy to version control and audit, and future-proof
 - fast, lightweight, extremely reliable, pays $100 bounties for [regression reports](http://hledger.org/regressionbounty)
-- highly flexible, [scriptable](scripting.md), integratable and automatable
+- [scriptable](scripting.md) and automatable
 - the most user friendly plain text accounting app
 - comparable to [Ledger](ledger.md) and [Beancount](beancount.md)
 - built with Haskell
 - no vendor lock in
 - no cloud requirement; your private financial data remains yours
-- appeals most to technical folks; knowing about command lines and text editing is helpful, though not required
-- sustained by your kind [work](CONTRIBUTING.md) or [money contributions](sponsor.html)
+- comfortable for technical users; knowing about command lines, text editing and version control is helpful, though not required
+- strengthened by your kind [work](CONTRIBUTING.md) or [money contributions](sponsor.html)
+  [![github](https://img.shields.io/github/stars/simonmichael/hledger.svg?logo=GitHub&label=Github&color=brightgreen)](https://github.com/simonmichael/hledger)
 
 ## Examples
 The only setup needed is to record some transactions in [`journal` format](hledger.md#journal-format). Here are three; note that each transaction must balance, that is, its amounts must sum to zero. One amount in each transaction can be omitted for convenience. Accounts and currencies can be anything you like.
