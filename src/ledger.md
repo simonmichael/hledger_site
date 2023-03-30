@@ -16,7 +16,7 @@ See also [#1962](https://github.com/simonmichael/hledger/issues/1962).*
 
 ### 10000 foot view
 
-How is hledger different from Ledger ? First, the high-order differences:
+How is hledger different from [Ledger](https://ledger-cli.org) ? First, the high-order differences:
 
 - hledger is actively maintained (since 2008)
 - hledger focusses strongly on UX, reliability, and real-world practicality

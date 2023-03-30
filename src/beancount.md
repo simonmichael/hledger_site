@@ -1,6 +1,6 @@
 # hledger and Beancount
 
-Tips for co-using/converting/switching Beancount and hledger.
+Tips for co-using/converting/switching [Beancount](https://beancount.github.io) and hledger.
 
 See also:
 - <https://www.libhunt.com/compare-hledger-vs-beancount>
