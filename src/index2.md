@@ -72,7 +72,8 @@ Here's some more complex data in the CLI, terminal, and web interfaces:
 
 [Install](install.html), then see [Getting Started](start.html).
 
-This home page is purposely brief, but extensive documentation is  ready when you need it. All hledger docs are linked in the sidebar to your left.
+This home page is purposely brief, but extensive documentation is  ready when you need it. All hledger docs are linked in the sidebar to your left, such as
+the manuals ([CLI](hledger.md), [TUI](hledger-ui.md), [WUI](hledger-web.md)), [Scripts and add-ons](scripts.md), [Cookbook](cookbook.md), [FAQ](faq.md), [Videos](videos.md) and [Discussion/Support](support.md).
 If no sidebar is visible, click/tap the horizontal-lines icon at top left. To search, use the magnifying-glass icon.
 
 Some documentation and demos are also available at the command line: run `hledger` for details.
