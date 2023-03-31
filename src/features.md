@@ -164,9 +164,12 @@ CSV, JSON or basic SQL.
 ## Free Software
 
 [![github](https://img.shields.io/github/stars/simonmichael/hledger.svg?logo=GitHub&label=Github)](https://github.com/simonmichael/hledger)
-[![hledger CI](https://github.com/simonmichael/hledger/workflows/hledger%20CI/badge.svg)](https://github.com/simonmichael/hledger/actions)
 [![on hackage](https://img.shields.io/hackage/v/hledger.svg?logo=Haskell&label=Hackage&colorB=green)](http://hackage.haskell.org/package/hledger)
 [![](https://repology.org/badge/version-for-repo/stackage_nighly/hledger.svg)](https://repology.org/metapackage/hledger)
+<br>
+[![hledger CI](https://github.com/simonmichael/hledger/workflows/binaries-mac-x64/badge.svg)](https://github.com/simonmichael/hledger/actions)
+[![hledger CI](https://github.com/simonmichael/hledger/workflows/binaries-windows-x64/badge.svg)](https://github.com/simonmichael/hledger/actions)
+[![hledger CI](https://github.com/simonmichael/hledger/workflows/binaries-linux-x64-static/badge.svg)](https://github.com/simonmichael/hledger/actions)
 
 hledger is [free software], with no purchase price or monthly fees.
 It is licensed under [GNU GPLv3][gpl], providing the strongest guarantee
