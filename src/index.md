@@ -6,11 +6,6 @@
 Fast, robust, user-friendly<br>plain text accounting
 </div>
 
-<div class=pagetoc>
-
-<!-- toc -->
-</div>
-
 ## hledger is...
 - free GPLv3+ accounting software that runs on unix, mac, windows, and the web
 - using [double entry accounting](accounting.md) (and great for learning that)
