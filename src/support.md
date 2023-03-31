@@ -7,12 +7,12 @@
   <tr valign=top>
     <td>Chat:</td>
     <td>
-      The #hledger chat (~140 chatters) is the best place for quick help and feedback.
+      The #hledger chat room is the best place for quick help and feedback.
       Join Matrix and the #hledger:matrix.org room
       in <a href="http://matrix.hledger.org">your web browser</a>,
       the <a href=https://element.io">Element client</a>,
       or <a href="https://matrix.org/clients">another matrix client</a>.
-      This gives a persistent chat log and the richest experience (especially with Element).
+      This gives a persistent chat log and the richest experience, especially with Element.
       <br>
       <br>
       <!-- (<a href="https://view.matrix.org/room/ !GYlETOAdUBSCcvnEMY:matrix.org">Public chat log</a>) <br> -->
@@ -23,7 +23,7 @@
       You may need to <a href="https://libera.chat/guides/registration">register</a> to speak.<br>
       <!-- (Shortcuts: <a href="http://matrix.hledger.org">http://matrix.hledger.org</a>, <a href="http://irc.hledger.org">http://irc.hledger.org</a>.)<br> -->
       <br>
-      There is also a general #plaintextaccounting chat (~100 chatters):
+      There is also a general #plaintextaccounting chat:
       <a href="https://matrix.to/#/#plaintextaccounting:matrix.org">#plaintextaccounting:matrix.org</a>
       or <a href="https://web.libera.chat/#plaintextaccounting">#plaintextaccounting on Libera</a>.
       <br>
@@ -37,6 +37,14 @@
       Send: <a href="mailto:hledger@googlegroups.com">hledger@googlegroups.com</a><br>
       Subscribe: <a href="mailto:hledger+subscribe@googlegroups.com">hledger+subscribe@googlegroups.com</a><br>
       Low traffic mail list with ~200 subscribers.
+    </td>
+  </tr>
+  <tr valign=top>
+    <td>Mastodon:</td>
+    <td>
+      <a href="https://fosstodon.org/@simonmic">@simonmic@fosstodon.org</a>
+	  <br>
+	  Tags: #hledger, #plaintextaccounting, #ledgercli, #beancount
     </td>
   </tr>
   <tr valign=top>
@@ -81,16 +89,16 @@
     </td>
   </tr>
   <tr valign=top>
-    <td>Private email:</td>
+    <td>Maintainer email:</td>
     <td>
-      <a href="mailto:simon@joyful.com">simon@joyful.com</a> (for security issues, eg)
+      <a href="mailto:simon@joyful.com">simon@joyful.com</a>
     </td>
   </tr>
   <tr valign=top>
     <td>PTA site:</td>
     <td>
       <a href="https://plaintextaccounting.org">plaintextaccounting.org</a><br>
-      Portal website and wiki covering all PTA tools and topics.<br>
+      Website and wiki covering plain text accounting in general.<br>
     </td>
   </tr>
 </table>
