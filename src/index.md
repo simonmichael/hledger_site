@@ -70,7 +70,7 @@ Cashflow Statement 2022-01-01..2022-02-28
                       || $3100   $950    $4050    $2025 
 ```
 
-Though, it's useful to declare [account types](hledger.md#account-types) if you use non-english account names:
+Though it's useful to declare [account types](hledger.md#account-types) if you use non-english account names:
 ```journal
 # ~/.hledger.journal
 account actifs             ; type:Asset
@@ -81,6 +81,7 @@ account dépenses           ; type:Expense
 
 account actifs:banque:compte courant    ; type:Cash
 account actifs:banque:compte d'épargne  ; type:Cash
+account actifs:portefeuille             ; type:Cash
 ```
 
 Here's more complex data in the command line, terminal, and web interfaces:
