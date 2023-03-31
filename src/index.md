@@ -10,16 +10,17 @@ Fast, robust, user-friendly<br>plain text accounting
 - free GPL-licensed accounting software that runs on unix, mac, windows, and the web
 - using [double entry accounting](accounting.md) (and great for learning that)
 - based on readable, version-controllable, future-proof plain text files
-- good for tracking money, investments, time, or any numeric commodity
+- good for tracking money, investments, time, or any countable commodity
 - shipped with [web](web.md), [terminal](ui.md), [command line](add.md), [JSON](https://hledger.org/dev/hledger-web.html#json-api) and [Haskell](https://hackage.haskell.org/package/hledger-lib) interfaces
 - the most user friendly [plain text accounting app](https://plaintextaccounting.org)
 - comparable to [Ledger](ledger.md) and [Beancount](beancount.md)
 - built with Haskell
-- fast, lightweight, extremely reliable; pays [$100 regression bounties](http://hledger.org/regressionbounty)
+- fast, lightweight, extremely reliable (we pay $100 for [regression reports](http://hledger.org/regressionbounty))
 - free from vendor lock-in
 - local, not cloud-based; your private financial data remains under your control
 - [scripting-friendly](scripting.md) and automatable
-- comfortable for technical users; knowing about command lines, text editing and version control is helpful, though not required
+- comfortable for technical users. Knowing about command lines, text editing and version control is helpful, though not required
+- good at importing CSV from banks and other financial institutions
 - actively developed and supported by [Simon Michael](http://joyful.com) and [contributors](CREDITS.html) since 2007
 - strengthened by your [work](CONTRIBUTING.md) or [money contributions](sponsor.html)
   [![github](https://img.shields.io/github/stars/simonmichael/hledger.svg?logo=GitHub&label=Github&color=brightgreen)](https://github.com/simonmichael/hledger)
@@ -27,8 +28,8 @@ Fast, robust, user-friendly<br>plain text accounting
 [Features](features.md) tells more, or you can ask questions in [Discussion/Support](support.md).
 
 Would you like to give it a try ?
-[Install](install.html), then see 
-[Get Started](start.html)... or the examples below... or run `hledger` to see help and demos.
+[Install](install.html), then see [Get Started](start.html), or the examples below,
+or just run `hledger` to see help and demos.
 
 More documentation is ready when you need it, linked in the sidebar to the left; such as the\
 [hledger](hledger.md), [hledger-ui](hledger-ui.md), [hledger-web](hledger-web.md) manuals,
@@ -40,7 +41,9 @@ To search, use the magnifying-glass icon.
 `s` toggle sidebar, `/` search, `t` theme, `1` home page, `2` recent changes, `<` previous page, `>` next page. 
 
 ## Examples
-Here are three transactions in [journal format](hledger.md#journal-format). 
+
+Here are three transactions in [journal format](hledger.md#journal-format),
+saved in the default [journal file](hledger.html#input).
 Note that each transaction must balance, that is, its amounts must sum to zero.
 One amount in each transaction can be omitted for convenience.
 Accounts and currencies can be anything you like:
