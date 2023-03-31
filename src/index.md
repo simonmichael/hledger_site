@@ -1,19 +1,9 @@
-<!-- stylesheet at bottom -->
 <img id="coins" src="images/coins2-248.png" style="width:120px; margin:2em 1em; float:left;" />
 <img id="coins" src="images/coins2-248.png" style="width:120px; margin:2em 1em; float:right;" />
 
-# hledger
-<!-- 
-Tagline
-https://www.stephendiehl.com/posts/marketing.html#persuasion-and-decision-makers :
-1. It is memorable
-2. It includes a key benefit
-3. It differentiates
-4. It imparts positivity
--->
+# hledger!
 <div id="tagline">
-Fast, accurate, robust<br>
-plain text accounting.
+Fast, robust, user-friendly<br>plain text accounting
 </div>
 
 <div class=pagetoc>
@@ -21,244 +11,148 @@ plain text accounting.
 <!-- toc -->
 </div>
 
-<!-- 
-This page's verbosity oscillates. General goal: brief blurbs with links to more detail.
-202208 version:
--->
+## hledger is...
+- free GPLv3+ accounting software that runs on unix, mac, windows, and the web
+- using [double entry accounting](accounting.md) (and great for learning that)
+- based on readable, version-controllable, future-proof plain text files
+- good for tracking money, investments, time, or any numeric commodity
+- shipped with [web](web.md), [terminal](ui.md), [command line](add.md), [JSON](https://hledger.org/dev/hledger-web.html#json-api) and [Haskell](https://hackage.haskell.org/package/hledger-lib) interfaces
+- the most user friendly [plain text accounting app](https://plaintextaccounting.org)
+- comparable to [Ledger](ledger.md) and [Beancount](beancount.md)
+- built with Haskell
+- fast, lightweight, extremely reliable; pays [$100 regression bounties](http://hledger.org/regressionbounty)
+- free from vendor lock-in
+- local, not cloud-based; your private financial data remains under your control
+- [scripting-friendly](scripting.md) and automatable
+- comfortable for technical users; knowing about command lines, text editing and version control is helpful, though not required
+- actively developed and supported by [Simon Michael](http://joyful.com) and [contributors](CREDITS.html) since 2007
+- strengthened by your [work](CONTRIBUTING.md) or [money contributions](sponsor.html)
+  [![github](https://img.shields.io/github/stars/simonmichael/hledger.svg?logo=GitHub&label=Github&color=brightgreen)](https://github.com/simonmichael/hledger)
 
-## What is hledger?
+Here's more about its [Features](features.md) and strengths.
 <!--
-- Fast, reliable, multicurrency double-entry accounting software that runs on unix, mac, windows, and the web.
-- Free software, licensed under GNU GPLv3+.
-- Developed and updated regularly since 2007
-- Written in Haskell, with an extensive test suite and $100 bounties for regression reports.
+[Plain text accounting for fun and profit](https://youtube.com/watch?v=lazZwTmAEHs) (30m, Glenn Ramsey @ Kiwi Pycon XI, 2022)  
 -->
 
-hledger is fast, reliable, free, multicurrency double-entry accounting software that runs on unix, mac, windows, and the web.
-With it you can track money, investments, cryptocurrencies, time, or any other quantifiable commodity; with a future-proof plain text file format, version control for your changes, and without needing any cloud service or vendor.
+## Examples
+Here are three transactions in [journal format](hledger.md#journal-format). 
+Note that each transaction must balance, that is, its amounts must sum to zero.
+One amount in each transaction can be omitted for convenience.
+Accounts and currencies can be anything you like:
 
-Developed continuously since 2007, hledger is licensed under GNU GPLv3+, written in Haskell, and thoroughly tested, with $100 bounties for regressions reported.
+```journal
+# ~/.hledger.journal
 
-This page gives a general introduction, before moving on to 
-[Installing](install.html) and [Getting started](start.html).
-There is also a [FAQ](faq.html),
-some [videos](videos.html),
-various [support/discussion](support.html) fora,
-and [Developer docs](dev.html).
+2023-01-01 opening balances
+    assets:bank:checking                $1000
+    assets:bank:savings                 $2000
+    assets:cash                          $100
+    liabilities:creditcard               $-50
+    equity:opening/closing             $-3050
 
-[![github](https://img.shields.io/github/stars/simonmichael/hledger.svg?logo=GitHub&label=Github)](https://github.com/simonmichael/hledger)
+2023-02-01 GOODWORKS CORP
+    assets:bank:checking           $1000
+    income:salary                 $-1000
 
-## What does it look like?
+2023-02-15 market
+    expenses:food             $50
+    assets:cash
+```
 
-Currently, three user interfaces are provided out of the box:
-a powerful command line UI (hledger), a quick terminal UI (hledger-ui), and a simple web UI (hledger-web).
+With no further setup, you can now run reports:
+```shell
+$ hledger cashflow -MTA
+Cashflow Statement 2022-01-01..2022-02-28
+
+                      ||   Jan    Feb    Total  Average 
+======================++================================
+ Cash flows           ||                                
+----------------------++--------------------------------
+ assets:bank:checking || $1000  $1000    $2000    $1000 
+ assets:bank:savings  || $2000      0    $2000    $1000 
+ assets:cash          ||  $100   $-50      $50      $25 
+----------------------++--------------------------------
+                      || $3100   $950    $4050    $2025 
+```
+
+Though, it's useful to declare [account types](hledger.md#account-types) if you use non-english account names:
+```journal
+# ~/.hledger.journal
+account actifs             ; type:Asset
+account passifs            ; type:Liability
+account capitaux propres   ; type:Equity
+account revenus            ; type:Revenue
+account dépenses           ; type:Expense
+
+account actifs:banque:compte courant    ; type:Cash
+account actifs:banque:compte d'épargne  ; type:Cash
+```
+
+Here's more complex data in the command line, terminal, and web interfaces:
 
 <a href="/images/cli-green-bs-reg.png" class="highslide" onclick="return hs.expand(this, { captionText:'The hledger command line interface.' })"><img src="images/cli-green-bs-reg.png" height="190"></a>
 <a href="/images/home-ui-3.png"        class="highslide" onclick="return hs.expand(this, { captionText:'The hledger-ui text user interface.' })"><img src="images/home-ui-3.png"        height="190"></a>
 <a href="/images/web-bcexample.png"    class="highslide" onclick="return hs.expand(this, { captionText:'The hledger-web web user interface.' })"><img src="images/web-bcexample.png"    height="190"></a>
 
-## Plain text accounting?
-
-Plain Text Accounting ([plaintextaccounting.org](https://plaintextaccounting.org)) means:
-
-- Data is stored in plain text files, which can be easily read by humans, tracked with version control software such as Git, and maintained with text processing tools. This facilitates portability, longevity and privacy for your valuable accounting data.
-
-- The data format is flexible and easy to write or generate, but hledger can check it and prevent many kinds of error. This, plus the auditability provided by version control, provides confidence in your data and reports.
-
-- There is a fast command-line interface, which makes the tool flexible and easy to integrate into custom workflows.
-
-hledger is a robust, largely compatible reimplementation of the original PTA app, Ledger CLI.
-See also: [hledger and Ledger](ledger.html),
-
-<!-- Why not Gnucash, Quicken, or Xero ? -->
-<!-- Why not another PTA app ? -->
-
-## What can you use it for?
-
-### Tracking finances
-
-For yourself, your business, or other organisations, track and report on:
-
-- Assets and liabilities
-- Billables, receivables and payables
-- Revenues and expenses
-- Cashflow
-- Budgets
-- Forecasts
-- Investments
-- Cryptocurrencies or NFTs
-
-### Learning accounting
-
-With the readable data format and lightweight software, hledger and PTA users tend to rapidly improve their understanding of double-entry bookkeeping and accounting.
-
-Here's an example of the main `journal` format. This represents an accounting General Journal. Positive amounts are debits, negatives are credits, but all you need to remember is that each transaction is balanced, summing to zero. (One amount may optionally be omitted to save typing.)
-
-```journal
-# 2022.journal
-
-2022-01-01 opening balances as of this date
-    assets:bank:checking                $1000
-    assets:bank:savings                 $2000
-    assets:cash                          $100
-    liabilities:creditcard               $-50
-    equity:opening/closing balances
-
-2022-02-01 GOODWORKS CORP
-    assets:bank:checking           $1000
-    income:salary                 $-1000
-
-2022-02-15 market
-    expenses:food             $50
-    assets:cash
-
-```
-
-### Tracking time
-
-Support for two time logging formats is built in: `timeclock` format, for clockin/clockout time tracking:
+Here's a time log in  [timeclock format](hledger.md#timeclock-format):
 
 ```timeclock
-# 2009.timeclock
-
-i 2009/03/27 09:00:00 projects:a
-o 2009/03/27 17:00:34
-i 2009/03/31 22:21:45 personal:reading:online
-o 2009/04/01 02:00:34
-i 2009/04/02 09:00:00 projects:b
-o 2009/04/02 17:00:34
+# 2023.timeclock
+i 2023/03/27 09:00:00 projects:a
+o 2023/03/27 17:00:34
+i 2023/03/31 22:21:45 personal:reading:online
+o 2023/04/01 02:00:34
+```
+```
+$ hledger -f 2023.timeclock register -D
+2023-03-27   projects:a                         8.01h         8.01h
+2023-03-31   personal:reading:online            1.64h         9.65h
+2023-04-01   personal:reading:online            2.01h        11.66h
 ```
 
-And `timedot` format, for approximate/retroactive time tracking:
+And one in [timedot format](hledger.md#timedot-format):
 
 ```timedot
-# 2016.timedot
-
-2016/2/1
-fos:haskell   ....
-biz:research  .
-inc:client1   .... .... .... .... .... ....
-
-2016/2/2
+# 2023.timedot
+2023/2/1
 biz:research  .... ..
 fos:hledger   .... .... ....
+2023/2/2
 fos:ledger    0.25
 fos:haskell   .5
-inc:client1   2
+biz:client1   2
+```
+```
+$ hledger -f 2023.timedot balance -DTAS  # daily, total, average, sorted
+Balance changes in 2023-02-01..2023-02-02:
 
+              || 2023-02-01  2023-02-02    Total  Average 
+==============++==========================================
+ fos:hledger  ||       3.00           0     3.00     1.50 
+ biz:client1  ||          0        2.00     2.00     1.00 
+ biz:research ||       1.50           0     1.50     0.75 
+ fos:haskell  ||          0        0.50     0.50     0.25 
+ fos:ledger   ||          0        0.25     0.25     0.12 
+--------------++------------------------------------------
+              ||       4.50        2.75     7.25     3.62 
 ```
 
-<!--
-Some other ideas:
+## Get started
 
-- Eco accounting: tracking carbon footprint, tracking energy & resource usage
--->
+[Install](install.html), then see [Get Started](start.html) ... or just run `hledger`, to see help and demos.
 
-## Why use hledger?
+This home page is purposely brief, but extensive documentation is  ready when you need it, 
+linked in the sidebar to the left; such as the\
+[hledger](hledger.md), [hledger-ui](hledger-ui.md), [hledger-web](hledger-web.md) manuals,
+[Cookbook](cookbook.md), [FAQ](faq.md), [Videos](videos.md) and [Discussion/Support](support.md).
 
-hledger's [General FAQ](faq.html) or the [plaintextaccounting.org](https://plaintextaccounting.org) site discuss the benefits of Plain Text Accounting.
-
-Among the [PTA apps](https://plaintextaccounting.org/#pta-apps),
-hledger has a strong focus on ease of use and practicality for day-to-day accounting.
-It supports most Ledger and Beancount features but omits some of the more complex ones
-(value expression language, implicit lot matching).
-It prioritises "just works", accessible documentation,
-and is actively maintained, with a lively [chat](support.html).
-
-Non-programmers will enjoy hledger's 
-built-in financial statements, 
-multi-period reports, 
-choice of user interfaces, 
-easy CSV import system
-and general robustness.
-
-Programmers may appreciate its
-speed (25k txn/s on a macbook air m1), 
-accuracy (up to 255 decimal places), 
-reliability (1100+ tests, $100 bounty for regressions), 
-powerful scriptability/embeddability
-and clean statically-typed Haskell implementation.
-
-- More about [Features](features.html)
-- Differences between [hledger and Ledger](ledger.html)
-
-And why might you not choose hledger ?
-- If you need a rich GUI above all, you might prefer GnuCash, KMyMoney, or Quickbooks.
-- If you like spreadsheets and don't have a ton of data, you might find those quicker.
-- If you do a lot of advanced trading, or want to hack a lot with Python, also look at Beancount.
-- If you want to mix more code in your financial data, or hack on C++, evaluate Ledger.
-- If you like minimalist unix tools and think all the above are bloat, see [pta](https://mandoc.bsd.lv/pta).
-- If you are mobile-only and don't need version control or flexibility, maybe a phone app will do.
-- If you don't need version control or privacy, but do need friction-free collaboration with financial professionals and institutions,
-you might prefer a commercial web-based system.
-
-## How is the project organised and funded ?
-
-I'm [Simon Michael](http://joyful.com), hledger project founder and PTA fan. Welcome! 
-
-I have been building and relying on this project since 2007, 
-together with [140+ contributors](CREDITS.html).
-
-We hope you too will find hledger/PTA useful in transforming your relationship with money and time.
-After enjoying some personal or organisational success with it,
-you might want to become one of the generous [sponsors](sponsor.html)
-to help sustain this work. 
-
-<a name="help"></a>
-<a name="help-feedback"></a>
-
-## How to get started?
-
-[Install](install.html), then see [Getting Started](start.html).
-
-## Site tips
-
-The main site contents are listed in the sidebar to your left. If it's not visible, click/tap the horizontal-lines icon at top left, or press the `s` [access key].
-
-You can search this site quickly for any topic by using the magnifying-glass icon at top left, or the `/` access key.
-
-Other access keys are: `t` change theme, `1` home page, `2` recent changes, `<` previous page, `>` next page.
-
-
-[access key]:                 https://en.wikipedia.org/wiki/Access_key#Access_in_different_browsers
-[mail list]:                  https://groups.google.com/forum/#!forum/hledger
-[Ledger CLI]:                 https://ledger-cli.org
-[command line]:               hledger.html
-[terminal]:                   ui.html
-[web]:                        web.html
-[balance sheet]:              hledger.html#balancesheet
-[income statement]:           hledger.html#incomestatement
-[cashflow]:                   hledger.html#cashflow
-[depth limiting]:             hledger.html#depth-limiting
-[output format]:              hledger.html#output-format
-[download]:                   install.html#binary-packages
-[build]:                      install.html#building-from-source
-[command line]:               add.html
-[terminal]:                   ui.html
-[web]:                        web.html
-[actively maintained]:        https://github.com/simonmichael/hledger/graphs/contributors
-[releases]:                   https://hledger.org/release-notes
-[plain text accounting]:      http://plaintextaccounting.org
-[plain text accounting apps]: https://plaintextaccounting.org/#plain-text-accounting-apps
-[version control system]:     https://en.wikipedia.org/wiki/Version_control
-[git]:                        https://en.wikipedia.org/wiki/Git
-[haskell]:                    https://wiki.haskell.org/Haskell
-[double-entry accounting]:    https://en.wikipedia.org/wiki/Double-entry_bookkeeping
-[install]:                    install.html
-[ledgerlikes]:                https://plaintextaccounting.org/#plain-text-accounting-apps
-[ledger]:                     https://www.ledger-cli.org
-[ledger features]:            https://www.ledger-cli.org/features.html
-[beancount]:                  http://furius.ca/beancount
-[beancount2ledger]:           https://github.com/beancount/beancount2ledger
-[ledger2beancount]:           https://github.com/beancount/ledger2beancount
-[gpl]:                        https://en.wikipedia.org/wiki/GNU_General_Public_License
-[library]:                    https://hackage.haskell.org/package/hledger-lib
-[script]:                     https://github.com/simonmichael/hledger/blob/master/bin/hledger-check-tag-files.hs
-[free software]:              https://en.wikipedia.org/wiki/Free_software
+Website tips: if the sidebar is not visible, click/tap the horizontal-lines icon at top left. 
+To search, use the magnifying-glass icon. 
+[Access keys](https://en.wikipedia.org/wiki/Access_key#Access_in_different_browsers) are available:
+`s` toggle sidebar, `/` search, `t` theme, `1` home page, `2` recent changes, `<` previous page, `>` next page. 
 
 
 <style>
-
 #grabber {
   text-align:center;
   padding:1em 1em 0 1em;
