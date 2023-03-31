@@ -2,18 +2,9 @@
 # HLEDGER.ORG  <!-- the first one gets eaten somehow -->
 # HLEDGER.ORG
 
-<!-- Key pages are listed here: -->
-
-# ABOUT
-
 - [Home](index.md)
-- [Features](features.md)
-- [Videos, Talks](videos.md)
 - [FAQ](faq.md)
-- [Discussion/Support](support.md)
-
-# USING HLEDGER
-
+- [Videos/Talks](videos.md)
 - [Install](install.md)
 - [Get Started](start.md)
 - [hledger manual](1.28/hledger.md)
@@ -21,6 +12,7 @@
 - [hledger-web manual](1.28/hledger-web.md)
 - [Cookbook](cookbook.md)
 - [Scripts and add-ons](scripts.md)
+- [Discussion/Support](support.md)
 
 # DEVELOPERS
 
@@ -30,7 +22,7 @@
 <!-- - [Developer FAQ](devfaq.md) -->
 - [CREDITS](CREDITS.md)
 
-# FINANCE
+# SPONSORS
 
 - [Sponsor hledger](sponsor.md)
 - [Financial reports](financerepo.md)
@@ -59,6 +51,7 @@
 - [Editor configuration](editors.md)
 - [Exporting from hledger](export.md)
 - [FAQ](faq.md)
+- [Features](features.md)
 - [Forecasting](forecasting.md)
 - [Foreign trip expenses](foreign-trip-expenses.md)
 - [Get Started](start.md)
@@ -92,10 +85,10 @@
 - [Tutorial: hledger add](add.md)
 - [Tutorial: hledger-ui](ui.md)
 - [Tutorial: hledger-web](web.md)
-- [Videos, Talks](videos.md)
+- [Videos/Talks](videos.md)
 - [Visualising discussion 2023](visualising2023.md)
 - [hledger and Beancount](beancount.md)
-- [hledger and dsq / DataStation](dsq.md)
+- [hledger and dsq/DataStation](dsq.md)
 - [hledger and GnuCash](gnucash.md)
 - [hledger and Ledger](ledger.md)
 - [hledger and Obsidian](obsidian.md)
