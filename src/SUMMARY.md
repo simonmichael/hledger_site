@@ -19,8 +19,8 @@
 - [hledger manual](1.28/hledger.md)
 - [hledger-ui manual](1.28/hledger-ui.md)
 - [hledger-web manual](1.28/hledger-web.md)
-- [Scripts](scripts.md)
 - [Cookbook](cookbook.md)
+- [Scripts and add-ons](scripts.md)
 - [User FAQ](userfaq.md)
 
 # DEVELOPERS
@@ -80,7 +80,7 @@
 - [Rewrite account names](rewrite-account-names.md)
 - [Rewrite commodity symbols](rewrite-commodity-symbols.md)
 - [Save frequently used options](save-frequently-used-options.md)
-- [Scripts](scripts.md)
+- [Scripts and add-ons](scripts.md)
 - [Scripting hledger](scripting.md)
 - [Simon's setup notes](simons-setup.md)
 - [Sponsor](sponsor.md)

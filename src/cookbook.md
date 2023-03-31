@@ -62,6 +62,9 @@ Check plaintextaccounting.org's and wiki.plaintextaccounting.org's categories.
 - [hledger-web tips](hledger-web-tips.md)
 - [Mobile apps](mobile-apps.md)
 
+### Scripts and add-ons
+- [Scripts and add-ons](scripts.md)
+
 ### Other software
 - [Exporting from hledger](export.md)
 - [hledger and Beancount](beancount.md)
