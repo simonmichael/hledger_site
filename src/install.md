@@ -783,7 +783,7 @@ With Nix or GUIX, the procedures are [different](https://github.com/simonmichael
 
 ## Next steps
 
-Nicely done! Now see **[Getting started](start.html)**,
+Nicely done! Now see **[Get started](start.html)**,
 or come to the **[#hledger chat](support.html)**
 where we'll gladly share tips or receive your feedback.
 

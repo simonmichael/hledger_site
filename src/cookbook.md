@@ -55,7 +55,7 @@ Check plaintextaccounting.org's and wiki.plaintextaccounting.org's categories.
 - [Scripting hledger](scripting.md)
 
 ### Setups and workflows
-- [Getting Started](start.md)
+- [Get Started](start.md)
 - [Common workflows](common-workflows.md)
 
 ### Other user interfaces
