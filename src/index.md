@@ -7,7 +7,7 @@ Fast, robust, user-friendly<br>plain text accounting
 </div>
 
 ## hledger is...
-- free GPLv3+ accounting software that runs on unix, mac, windows, and the web
+- free GPL-licensed accounting software that runs on unix, mac, windows, and the web
 - using [double entry accounting](accounting.md) (and great for learning that)
 - based on readable, version-controllable, future-proof plain text files
 - good for tracking money, investments, time, or any numeric commodity
@@ -24,10 +24,20 @@ Fast, robust, user-friendly<br>plain text accounting
 - strengthened by your [work](CONTRIBUTING.md) or [money contributions](sponsor.html)
   [![github](https://img.shields.io/github/stars/simonmichael/hledger.svg?logo=GitHub&label=Github&color=brightgreen)](https://github.com/simonmichael/hledger)
 
-Here's more about its [Features](features.md) and strengths.
-<!--
-[Plain text accounting for fun and profit](https://youtube.com/watch?v=lazZwTmAEHs) (30m, Glenn Ramsey @ Kiwi Pycon XI, 2022)  
--->
+[Features](features.md) tells more, or you can ask questions in [Discussion/Support](support.md).
+
+Would you like to give it a try ?
+[Install](install.html), then see 
+[Get Started](start.html)... or the examples below... or run `hledger` to see help and demos.
+
+More documentation is ready when you need it, linked in the sidebar to the left; such as the\
+[hledger](hledger.md), [hledger-ui](hledger-ui.md), [hledger-web](hledger-web.md) manuals,
+[Cookbook](cookbook.md), [FAQ](faq.md) and [Videos](videos.md).
+
+Website tips: if the sidebar is not visible, scroll up and click/tap the horizontal-lines icon at top left. 
+To search, use the magnifying-glass icon. 
+[Access keys](https://en.wikipedia.org/wiki/Access_key#Access_in_different_browsers) are available:
+`s` toggle sidebar, `/` search, `t` theme, `1` home page, `2` recent changes, `<` previous page, `>` next page. 
 
 ## Examples
 Here are three transactions in [journal format](hledger.md#journal-format). 
@@ -70,7 +80,7 @@ Cashflow Statement 2022-01-01..2022-02-28
                       || $3100   $950    $4050    $2025 
 ```
 
-Though it's useful to declare [account types](hledger.md#account-types) if you use non-english account names:
+Though it's useful to declare [account types](hledger.md#account-types) if using non-english account names:
 ```journal
 # ~/.hledger.journal
 account actifs             ; type:Asset
@@ -119,33 +129,31 @@ fos:haskell   .5
 biz:client1   2
 ```
 ```
-$ hledger -f 2023.timedot balance -DTAS  # daily, total, average, sorted
+$ hledger -f 2023.timedot balance -tDTA  # tree, Daily, Total, Average
 Balance changes in 2023-02-01..2023-02-02:
 
-              || 2023-02-01  2023-02-02    Total  Average 
-==============++==========================================
- fos:hledger  ||       3.00           0     3.00     1.50 
- biz:client1  ||          0        2.00     2.00     1.00 
- biz:research ||       1.50           0     1.50     0.75 
- fos:haskell  ||          0        0.50     0.50     0.25 
- fos:ledger   ||          0        0.25     0.25     0.12 
---------------++------------------------------------------
-              ||       4.50        2.75     7.25     3.62 
+            || 2023-02-01  2023-02-02    Total  Average 
+============++==========================================
+ biz        ||       1.50        2.00     3.50     1.75 
+   client1  ||          0        2.00     2.00     1.00 
+   research ||       1.50           0     1.50     0.75 
+ fos        ||       3.00        0.75     3.75     1.88 
+   haskell  ||          0        0.50     0.50     0.25 
+   hledger  ||       3.00           0     3.00     1.50 
+   ledger   ||          0        0.25     0.25     0.12 
+------------++------------------------------------------
+            ||       4.50        2.75     7.25     3.62 
 ```
 
-## Get started
+Here are examples of:
+- [HTML reports](report-examples.md#income-statement-2012-01-012014-10-11)
+- [Charts and Graphs](charts.md)
+- [Common workflows](common-workflows.md)
+- [Scripting](scripting.md)
+- [Mobile apps](mobile-apps.md)
+- [Importing CSV data](import-csv.md)
+- [Import/export/interop with other software](cookbook.md#other-software)
 
-[Install](install.html), then see [Get Started](start.html) ... or just run `hledger`, to see help and demos.
-
-This home page is purposely brief, but extensive documentation is  ready when you need it, 
-linked in the sidebar to the left; such as the\
-[hledger](hledger.md), [hledger-ui](hledger-ui.md), [hledger-web](hledger-web.md) manuals,
-[Cookbook](cookbook.md), [FAQ](faq.md), [Videos](videos.md) and [Discussion/Support](support.md).
-
-Website tips: if the sidebar is not visible, scroll up and click/tap the horizontal-lines icon at top left. 
-To search, use the magnifying-glass icon. 
-[Access keys](https://en.wikipedia.org/wiki/Access_key#Access_in_different_browsers) are available:
-`s` toggle sidebar, `/` search, `t` theme, `1` home page, `2` recent changes, `<` previous page, `>` next page. 
 
 
 <style>
