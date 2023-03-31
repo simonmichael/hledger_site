@@ -141,7 +141,7 @@ linked in the sidebar to the left; such as the\
 [hledger](hledger.md), [hledger-ui](hledger-ui.md), [hledger-web](hledger-web.md) manuals,
 [Cookbook](cookbook.md), [FAQ](faq.md), [Videos](videos.md) and [Discussion/Support](support.md).
 
-Website tips: if the sidebar is not visible, click/tap the horizontal-lines icon at top left. 
+Website tips: if the sidebar is not visible, scroll up and click/tap the horizontal-lines icon at top left. 
 To search, use the magnifying-glass icon. 
 [Access keys](https://en.wikipedia.org/wiki/Access_key#Access_in_different_browsers) are available:
 `s` toggle sidebar, `/` search, `t` theme, `1` home page, `2` recent changes, `<` previous page, `>` next page. 
