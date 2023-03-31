@@ -5,7 +5,7 @@
 <!-- toc -->
 </div>
 
-This page aims to become the comprehensive list of concrete, actionable, task-oriented advice for hledger users on how to tackle common real-world problems. It is also where we collect random user docs and notes that have no better home. (Docs here will vary in age and quality.)
+Here you'll find task-oriented advice and additional user notes that didn't fit in the manual. These docs will vary in age and quality.
 
 <!--
 Documentor tips:

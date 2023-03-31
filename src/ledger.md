@@ -12,11 +12,13 @@ And you may want to skip ahead to [Interoperating tips](#interoperating-tips)
 or any other topic that seems relevant.
 See also [#1962](https://github.com/simonmichael/hledger/issues/1962).*
 
+hledger was inspired by the app that pioneered plain text accounting: Ledger (<https://ledger-cli.org>).
+
 ## Differences
 
 ### 10000 foot view
 
-How is hledger different from [Ledger](https://ledger-cli.org) ? First, the high-order differences:
+How is hledger different from Ledger ? First, the high-order differences:
 
 - hledger is actively maintained (since 2008)
 - hledger focusses strongly on UX, reliability, and real-world practicality

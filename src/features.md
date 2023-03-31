@@ -7,22 +7,21 @@
 
 ## Plain text accounting
 
-hledger is a **[Plain Text Accounting]** system, 
-where your accounting data is stored in a readable plain text file, often version-controlled.
-Some strengths of the PTA approach:
+hledger is a **[Plain Text Accounting]** system, which means:
 
-- Runs on your local computer, keeping your financial data private and under your control
-- Simple model of  operation: put a log of transactions in, get reports out
-- Simple, expressive, human-readable, future-proof plain text format
-- Can be version controlled, eg with [Git], to safeguard your data,
-  track changes, or collaborate
-- Edit with your favourite text editor, or a data entry UI, or import
-  from other formats
-- Easy to script, automate, and integrate into custom workflows
-- Lightweight, fast, non-distracting to use
-- Great for learning more of double-entry bookkeeping and accounting.
+- Data is stored in simple plain text files, which can be easily read by humans, tracked with version control software such as Git, and maintained with text processing tools. This facilitates auditing, portability, and longevity of your valuable accounting data.
 
-<br clear=all>
+- The data format is flexible and easy to write or generate, but hledger can check it and prevent many kinds of error. This, plus the transparency and version control, provides confidence in your data and reports.
+
+- Data and software is kept on your local computer, keeping your financial data private and under your control. But if you should want to collaborate, version control makes that easy.
+
+- You can edit data with your favourite text editor or IDE, or a data entry UI, or convert and import data from other formats (eg CSV from your banks).
+  
+- There is a fast command-line interface, which makes the tool easy to script, automate, and integrate into custom workflows.
+
+- The model of  operation is simple: put a log of transactions in, get reports out.
+
+- It is fast, lightweight, non-distracting, and great for learning more of double-entry bookkeeping and accounting.
 
 ## Batteries included
 

@@ -1,4 +1,4 @@
-# hledger and dsq / DataStation
+# hledger and dsq/DataStation
 
 <https://github.com/multiprocessio/datastation> GUI for reporting on CSV and other tabular file formats \
 <https://github.com/multiprocessio/dsq> command line spinoff 
