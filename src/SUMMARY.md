@@ -9,7 +9,7 @@
 - [Home](index.md)
 - [Features](features.md)
 - [Videos, Talks](videos.md)
-- [About FAQ](faq.md)
+- [FAQ](faq.md)
 - [Discussion/Support](support.md)
 
 # USING HLEDGER
@@ -21,14 +21,13 @@
 - [hledger-web manual](1.28/hledger-web.md)
 - [Cookbook](cookbook.md)
 - [Scripts and add-ons](scripts.md)
-- [User FAQ](userfaq.md)
 
 # DEVELOPERS
 
 - [Contributor Quick Start](CONTRIBUTING.md)
 - [Developer links](LINKS.md)
 - [Developer docs](dev.md)
-- [Developer FAQ](devfaq.md)
+<!-- - [Developer FAQ](devfaq.md) -->
 - [CREDITS](CREDITS.md)
 
 # FINANCE
@@ -36,7 +35,6 @@
 - [Sponsor hledger](sponsor.md)
 - [Financial reports](financerepo.md)
 - [FINANCE notes](FINANCE.md)
-- [Finance FAQ](finfaq.md)
 
 # ALL PAGES
 
@@ -60,6 +58,7 @@
 - [Currency conversion 2](conversion2.md)
 - [Editor configuration](editors.md)
 - [Exporting from hledger](export.md)
+- [FAQ](faq.md)
 - [Forecasting](forecasting.md)
 - [Foreign trip expenses](foreign-trip-expenses.md)
 - [Get Started](start.md)
@@ -71,7 +70,6 @@
 - [Mobile apps](mobile-apps.md)
 - [Mockups](mockups.md)
 - [Multicurrency tutorial (2018)](multicurrency-tutorial.md)
-- [About FAQ](faq.md)
 - [Project accounting](project-accounting.md)
 - [Quick Intro](quickintro.md)
 - [Quick Start](quickstart.md)
@@ -94,7 +92,6 @@
 - [Tutorial: hledger add](add.md)
 - [Tutorial: hledger-ui](ui.md)
 - [Tutorial: hledger-web](web.md)
-- [User FAQ](userfaq.md)
 - [Videos, Talks](videos.md)
 - [Visualising discussion 2023](visualising2023.md)
 - [hledger and Beancount](beancount.md)
@@ -215,14 +212,13 @@ and previewing them when working on docs locally.
 - [Contributor Quick Start](CONTRIBUTING.md)
 - [Developer links](LINKS.md)
 - [Developer docs](dev.md)
-- [Developer FAQ](devfaq.md)
+<!-- - [Developer FAQ](devfaq.md) -->
 - [DECISIONS](DECISIONS.md)
 - [DOCS](DOCS.md)
 - [ERRORS](ERRORS.md)
 - [EXAMPLES](EXAMPLES.md)
 - [FILES](FILES.md)
 - [FINANCE](FINANCE.md)
-- [Finance FAQ](finfaq.md)
 - [ISSUES](ISSUES.md)
 - [MAKE](MAKE.md)
 - [Mockups](mockups.md)

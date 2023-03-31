@@ -8,6 +8,7 @@ and symlinked (or rendered by Shake.hs) into the site repo to make them appear a
 
 - [README](dev-README.md)
 - [Contributor Quick Start](CONTRIBUTING.md)
+<!-- - [Developer FAQ](devfaq.md) -->
 - [ROADMAP](ROADMAP.md)
 - [BACKLOG](BACKLOG.md)
 - [Mockups](mockups.md)
@@ -33,4 +34,3 @@ and symlinked (or rendered by Shake.hs) into the site repo to make them appear a
 - [TESTS](TESTS.md)
 - [VERSIONNUMBERS](VERSIONNUMBERS.md)
 - [WORKFLOWS](WORKFLOWS.md)
-- [Developer FAQ](devfaq.md)
