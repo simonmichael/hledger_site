@@ -60,7 +60,7 @@ Check plaintextaccounting.org's and wiki.plaintextaccounting.org's categories.
 
 ### Other user interfaces
 - [hledger-web tips](hledger-web-tips.md)
-- [Mobile apps](mobile-apps.md)
+- [Mobile apps](mobile.md)
 
 ### Scripts and add-ons
 - [Scripts and add-ons](scripts.md)

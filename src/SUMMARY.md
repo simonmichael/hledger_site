@@ -59,7 +59,7 @@
 - [Importing CSV data](import-csv.md)
 - [Install](install.md)
 - [Invoicing](invoicing.md)
-- [Mobile apps](mobile-apps.md)
+- [Mobile apps](mobile.md)
 - [Mockups](mockups.md)
 - [Multicurrency tutorial (2018)](multicurrency-tutorial.md)
 - [Project accounting](project-accounting.md)

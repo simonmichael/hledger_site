@@ -58,7 +58,7 @@ Speaking for myself:
   - Obsidian <https://hledger.org/obsidian.html>
   - Finances 2 <https://hochgatterer.me/finances>
   - Prudent <https://prudent.me>
-  - mobile apps with reports/charts, <https://hledger.org/mobile-apps.html>
+  - mobile apps with reports/charts, <https://hledger.org/mobile.html>
   - Paisa! <https://hledger.org/paisa.html>
 
 #### Other things that might help

@@ -226,7 +226,7 @@ Here are examples of:
 - [Charts and Graphs](charts.md)
 - [Common workflows](common-workflows.md)
 - [Scripting](scripting.md)
-- [Mobile apps](mobile-apps.md)
+- [Mobile apps](mobile.md)
 - [Importing CSV data](import-csv.md)
 - [Import/export/interop with other software](cookbook.md#other-software)
 
