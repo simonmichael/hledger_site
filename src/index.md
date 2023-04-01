@@ -3,7 +3,7 @@
 
 # hledger!
 <div id="tagline">
-Fast, robust, user-friendly<br>plain text accounting
+Fast, robust, user-friendly<br>plain text accounting<br>⚡️💪🏼❤️
 </div>
 
 ## hledger is...
@@ -26,23 +26,24 @@ Fast, robust, user-friendly<br>plain text accounting
   is helpful, but not required (much)
 - good at importing CSV from banks and other financial institutions
 - actively developed and supported by [Simon Michael](http://joyful.com) and [contributors](CREDITS.md) since 2007
-- strengthened by your [work](CONTRIBUTING.md) or [money contributions](sponsor.md)
-  [![github](https://img.shields.io/github/stars/simonmichael/hledger.svg?logo=GitHub&label=Github&color=brightgreen)](https://github.com/simonmichael/hledger)
+- strengthened by your [feedback](support.md), [work](CONTRIBUTING.md) and [funding](sponsor.md). 🙏🏻
+  <a href="https://github.com/simonmichael/hledger" title="github repo" style="position:relative; top:4px;"><img src="https://img.shields.io/github/stars/simonmichael/hledger.svg?logo=GitHub&label=Github&color=brightgreen" title="github badge"></a>
 
 [Features](features.md) tells more, or you can ask questions in [Discussion/Support](support.md).
 
-Would you like to give it a try ?
+Welcome. This stuff is actually lots more fun than it sounds. Care to give it a try ?
+
 [Install](install.md), then see [Get Started](start.md), or the examples below,
 or just run `hledger` to see help and demos.
 
-More documentation is ready when you need it, linked in the sidebar to the left; such as the\
+More documentation is ready when you need it, in the sidebar to the left; such as the\
 [hledger](hledger.md), [hledger-ui](hledger-ui.md), [hledger-web](hledger-web.md) manuals,
-[Cookbook](cookbook.md), [FAQ](faq.md) and [Videos](videos.md).
+[Cookbook](cookbook.md), [FAQ](faq.md) and [Videos/Talks](videos.md).
 
-Website tips: if the sidebar is not visible, scroll up and click/tap the horizontal-lines icon at top left. 
+(Website tips: if the sidebar is not visible, scroll up and click/tap the horizontal-lines icon at top left. 
 To search, use the magnifying-glass icon. 
 [Access keys](https://en.wikipedia.org/wiki/Access_key#Access_in_different_browsers) are available:
-`s` toggle sidebar, `/` search, `t` theme, `1` home page, `2` recent changes, `<` previous page, `>` next page. 
+`s` toggle sidebar, `/` search, `t` theme, `1` home page, `2` recent changes, `<` previous page, `>` next page.)
 
 ## Examples
 
