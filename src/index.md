@@ -19,7 +19,11 @@ Fast, robust, user-friendly<br>plain text accounting
 - free from vendor lock-in
 - local, not cloud-based; your private financial data remains under your control
 - [scripting-friendly](scripting.md) and automatable
-- comfortable for technical users. Knowing about command lines, text editing and version control is helpful, though not required
+- comfortable for technical users. Knowing about 
+  [command lines](https://tutorial.djangogirls.org/en/intro_to_command_line/), 
+  [text editors](https://www.codementor.io/@kmcgillivray/introduction-to-text-editors-and-the-command-line-j0upqatas) and 
+  [version control](https://betterexplained.com/articles/a-visual-guide-to-version-control/) 
+  is helpful, though not required
 - good at importing CSV from banks and other financial institutions
 - actively developed and supported by [Simon Michael](http://joyful.com) and [contributors](CREDITS.md) since 2007
 - strengthened by your [work](CONTRIBUTING.md) or [money contributions](sponsor.md)
@@ -127,7 +131,7 @@ $ hledger check --strict
 $ 
 ```
 
-Declaring accounts also lets you set a more meaningful [display order](hledger.md#account-display-order):
+Declaring accounts also helps set a meaningful [display order](hledger.md#account-display-order) (not just alphabetical):
 
 ```shell
 $ hledger accounts -t
