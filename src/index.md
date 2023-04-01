@@ -19,11 +19,11 @@ Fast, robust, user-friendly<br>plain text accounting
 - free from vendor lock-in
 - local, not cloud-based; your private financial data remains under your control
 - [scripting-friendly](scripting.md) and automatable
-- comfortable for technical users. Knowing about 
+- comfortable for technical users, but also usable by others. Knowing about 
   [command lines](https://tutorial.djangogirls.org/en/intro_to_command_line/), 
   [text editors](https://www.codementor.io/@kmcgillivray/introduction-to-text-editors-and-the-command-line-j0upqatas) and 
   [version control](https://betterexplained.com/articles/a-visual-guide-to-version-control/) 
-  is helpful, though not required
+  is helpful, but not required (much)
 - good at importing CSV from banks and other financial institutions
 - actively developed and supported by [Simon Michael](http://joyful.com) and [contributors](CREDITS.md) since 2007
 - strengthened by your [work](CONTRIBUTING.md) or [money contributions](sponsor.md)
@@ -103,7 +103,7 @@ account revenus                         ; type:Revenue
 account dépenses                        ; type:Expense
 ```
 
-Or all the valid account and currency names, if you want [full error checking](hledger.md#strict-mode):
+Or all the valid accounts and currencies, if you want [full error checking](hledger.md#strict-mode):
 ```journal
 # ~/.hledger.journal
 
@@ -153,7 +153,7 @@ expenses
   gifts
 ```
 
-You can optionally declare [account aliases](hledger.md#account-aliases) to save typing:
+You can optionally declare [account aliases](hledger.md#alias-directive) to save typing:
 ```journal
 # ~/.hledger.journal
 
