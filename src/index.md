@@ -11,7 +11,7 @@ Fast, robust, user-friendly<br>plain text accounting
 - using [double entry accounting](accounting.md) (and great for learning that)
 - based on readable, version-controllable, future-proof plain text files
 - good for tracking money, investments, time, or any countable commodity
-- shipped with [web](web.md), [terminal](ui.md), [command line](add.md), [JSON](https://hledger.org/dev/hledger-web.html#json-api) and [Haskell](https://hackage.haskell.org/package/hledger-lib) interfaces
+- shipped with [web](web.md), [terminal](ui.md), [command line](add.md), [JSON](https://hledger.org/hledger-web.md#json-api) and [Haskell](https://hackage.haskell.org/package/hledger-lib) interfaces
 - the most user friendly [plain text accounting app](https://plaintextaccounting.org)
 - comparable to [Ledger](ledger.md) and [Beancount](beancount.md)
 - built with Haskell
@@ -21,14 +21,14 @@ Fast, robust, user-friendly<br>plain text accounting
 - [scripting-friendly](scripting.md) and automatable
 - comfortable for technical users. Knowing about command lines, text editing and version control is helpful, though not required
 - good at importing CSV from banks and other financial institutions
-- actively developed and supported by [Simon Michael](http://joyful.com) and [contributors](CREDITS.html) since 2007
-- strengthened by your [work](CONTRIBUTING.md) or [money contributions](sponsor.html)
+- actively developed and supported by [Simon Michael](http://joyful.com) and [contributors](CREDITS.md) since 2007
+- strengthened by your [work](CONTRIBUTING.md) or [money contributions](sponsor.md)
   [![github](https://img.shields.io/github/stars/simonmichael/hledger.svg?logo=GitHub&label=Github&color=brightgreen)](https://github.com/simonmichael/hledger)
 
 [Features](features.md) tells more, or you can ask questions in [Discussion/Support](support.md).
 
 Would you like to give it a try ?
-[Install](install.html), then see [Get Started](start.html), or the examples below,
+[Install](install.md), then see [Get Started](start.md), or the examples below,
 or just run `hledger` to see help and demos.
 
 More documentation is ready when you need it, linked in the sidebar to the left; such as the\
@@ -43,10 +43,8 @@ To search, use the magnifying-glass icon.
 ## Examples
 
 Here are three transactions in [journal format](hledger.md#journal-format),
-saved in the default [journal file](hledger.html#input).
-Note that each transaction must balance, that is, its amounts must sum to zero.
-One amount in each transaction can be omitted for convenience.
-Accounts and currencies can be anything you like:
+recorded in the default [journal file](hledger.md#input)
+by [`hledger add`](hledger.md#add) or [other means](create-a-journal.md):
 
 ```journal
 # ~/.hledger.journal
@@ -55,17 +53,21 @@ Accounts and currencies can be anything you like:
     assets:bank:checking                $1000
     assets:bank:savings                 $2000
     assets:cash                          $100
-    liabilities:creditcard               $-50
+    liabilities:credit card              $-50
     equity:opening/closing             $-3050
 
 2023-02-01 GOODWORKS CORP
     assets:bank:checking           $1000
-    income:salary                 $-1000
+    income:salary
 
 2023-02-15 market
     expenses:food             $50
     assets:cash
 ```
+
+Each transaction's amounts must sum to zero.
+One amount in each transaction can be omitted for convenience.
+Accounts and currencies can be anything you like.
 
 With no further setup, you can now run reports:
 ```shell
@@ -83,21 +85,88 @@ Cashflow Statement 2022-01-01..2022-02-28
                       || $3100   $950    $4050    $2025 
 ```
 
-Though it's useful to declare [account types](hledger.md#account-types) if using non-english account names:
+However, it's useful to declare [account types](hledger.md#account-types) if you use non-english account names:
 ```journal
 # ~/.hledger.journal
-account actifs             ; type:Asset
-account passifs            ; type:Liability
-account capitaux propres   ; type:Equity
-account revenus            ; type:Revenue
-account dépenses           ; type:Expense
 
+account actifs                          ; type:Asset
 account actifs:banque:compte courant    ; type:Cash
 account actifs:banque:compte d'épargne  ; type:Cash
-account actifs:portefeuille             ; type:Cash
+account actifs:espèces                  ; type:Cash
+account passifs                         ; type:Liability
+account capitaux propres                ; type:Equity
+account revenus                         ; type:Revenue
+account dépenses                        ; type:Expense
 ```
 
-Here's more complex data in the command line, terminal, and web interfaces:
+Or all the valid account and currency names, if you want [full error checking](hledger.md#strict-mode):
+```journal
+# ~/.hledger.journal
+
+commodity $1000.00
+
+account assets                   ; type:A
+account assets:bank              ; type:C
+account assets:bank:checking
+account assets:bank:savings
+account assets:cash              ; type:C
+account liabilities              ; type:L
+account liabilities:credit card
+account equity                   ; type:E
+account equity:opening/closing
+account income                   ; type:R
+account income:salary
+account income:gifts
+account expenses                 ; type:X
+account expenses:rent
+account expenses:food
+account expenses:gifts
+```
+```shell
+$ hledger check --strict
+$ 
+```
+
+Declaring accounts also lets you set a more meaningful [display order](hledger.md#account-display-order):
+
+```shell
+$ hledger accounts -t
+assets
+  bank
+    checking
+    savings
+  cash
+liabilities
+  credit card
+equity
+  opening/closing
+income
+  salary
+  gifts
+expenses
+  rent
+  food
+  gifts
+```
+
+You can optionally declare [account aliases](hledger.md#account-aliases) to save typing:
+```journal
+# ~/.hledger.journal
+
+alias chk  = assets:bank:checking
+alias cash = assets:cash
+alias card = liabilities:creditcard
+alias food = expenses:food
+
+...
+
+2023-02-15 market
+    food  $50
+    cash
+```
+
+Instead of using the command line, you could run [`hledger-ui`](ui.md) or [`hledger-web`](web.md).
+Here are the command line, terminal, and web interfaces, showing more complex data:
 
 <a href="/images/cli-green-bs-reg.png" class="highslide" onclick="return hs.expand(this, { captionText:'The hledger command line interface.' })"><img src="images/cli-green-bs-reg.png" height="190"></a>
 <a href="/images/home-ui-3.png"        class="highslide" onclick="return hs.expand(this, { captionText:'The hledger-ui text user interface.' })"><img src="images/home-ui-3.png"        height="190"></a>
