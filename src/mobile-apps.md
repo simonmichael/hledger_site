@@ -14,7 +14,19 @@ Here are some options. See also:
 <https://plaintextaccounting.org/#ui-mobile>
 
 
-## Apps that use a plaintext accounting format
+## Apps that talk to hledger
+
+### MoLe (Android, GNU GPL v3+)
+
+<https://mole.ktnx.net>\
+<https://git.ktnx.net/?p=mobile-ledger.git>\
+A data entry app that talks to a hledger-web (1.14+) server.
+
+<img src="https://camo.githubusercontent.com/7b3e91a4eca44a63091fb4dd3c969aa66bff9ded/68747470733a2f2f692e696d6775722e636f6d2f4455556c7632482e706e67" alt="MoLe-1" data-canonical-src="https://i.imgur.com/DUUlv2H.png" width="30%">
+<img src="https://camo.githubusercontent.com/e38a7d08970fd0c024b52b28b26454761c705a9b/68747470733a2f2f692e696d6775722e636f6d2f514e363678704a2e706e67" alt="MoLe-2" data-canonical-src="https://i.imgur.com/QN66xpJ.png" width="30%">
+
+
+## Apps with journal file export
 
 
 ### Cashier (PWA, GNU GPL v3)
@@ -44,16 +56,6 @@ which can be synced with a server via Syncthing.
 <https://github.com/jduepmeier/ledger-app>\
 [google play](https://play.google.com/store/apps/details?id=com.mpease.ledger)\
 Expense tracking app with *ledger export.
-
-
-### MoLe (Android, GNU GPL v3+)
-
-<https://mole.ktnx.net>\
-<https://git.ktnx.net/?p=mobile-ledger.git>\
-A data entry app that talks to a hledger-web (1.14+) server.
-
-<img src="https://camo.githubusercontent.com/7b3e91a4eca44a63091fb4dd3c969aa66bff9ded/68747470733a2f2f692e696d6775722e636f6d2f4455556c7632482e706e67" alt="MoLe-1" data-canonical-src="https://i.imgur.com/DUUlv2H.png" width="30%">
-<img src="https://camo.githubusercontent.com/e38a7d08970fd0c024b52b28b26454761c705a9b/68747470733a2f2f692e696d6775722e636f6d2f514e363678704a2e706e67" alt="MoLe-2" data-canonical-src="https://i.imgur.com/QN66xpJ.png" width="30%">
 
 
 
