@@ -124,6 +124,7 @@ Check plaintextaccounting.org's and wiki.plaintextaccounting.org's categories.
 ### Non-profit accounting
 
 ### Taxes
+- [[tax-reporting-setup|A tax reporting setup]]
 
 ### Time tracking
 - [Converting time to money](time-to-money.md)
