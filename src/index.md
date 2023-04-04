@@ -8,9 +8,9 @@ Fast, robust, user-friendly<br>plain text accounting<br>⚡️💪🏼❤️
 
 ## hledger is...
 - free GPL-licensed accounting software that runs on unix, mac, windows, and the web
-- using [double entry accounting](accounting.md) (and great for learning that)
 - based on readable, version-controllable, future-proof plain text files
 - good for tracking money, investments, time, or any countable commodity
+- good for learning  more about [double entry accounting](accounting.md)
 - shipped with [web](web.md), [terminal](ui.md), [command line](add.md), [JSON](https://hledger.org/hledger-web.md#json-api) and [Haskell](https://hackage.haskell.org/package/hledger-lib) interfaces
 - the most user friendly [plain text accounting app](https://plaintextaccounting.org)
 - comparable to [Ledger](ledger.md) and [Beancount](beancount.md)
@@ -31,8 +31,7 @@ Fast, robust, user-friendly<br>plain text accounting<br>⚡️💪🏼❤️
 
 [Features](features.md) tells more, or you can ask questions in [Discussion/Support](support.md).
 
-Welcome. This stuff is actually lots more fun than it sounds. Care to give it a try ?
-
+Welcome. This stuff is actually lots more fun than it sounds. Care to give it a try ?\
 [Install](install.md), then see [Get Started](start.md), or the examples below,
 or just run `hledger` to see help and demos.
 
