@@ -51,3 +51,8 @@ div.pagetoc:before {
   color:white; 
   background-color:black;
 }
+
+
+pre {
+    z-index:-1;
+}
