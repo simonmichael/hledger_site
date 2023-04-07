@@ -56,3 +56,7 @@ div.pagetoc:before {
 pre {
     z-index:-1;
 }
+
+.clip-button {
+    display:none;
+}
