@@ -15,7 +15,7 @@ Fast, robust, user-friendly<br>plain text accounting<br>⚡️💪🏼❤️
 - the most user friendly [plain text accounting app](https://plaintextaccounting.org)
 - comparable to [Ledger](ledger.md) and [Beancount](beancount.md)
 - built with Haskell
-- fast, lightweight, extremely reliable (we pay $100 for [regression reports](http://hledger.org/regressionbounty))
+- fast, lightweight, highly reliable (we pay $100 for [regression reports](http://hledger.org/regressionbounty))
 - free from vendor lock-in
 - local, not cloud-based; your private financial data remains under your control
 - [scripting-friendly](scripting.md) and automatable
