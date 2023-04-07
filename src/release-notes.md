@@ -72,6 +72,84 @@ Changes in hledger-install.sh are shown
 [here](https://github.com/simonmichael/hledger/commits/master/hledger-install/hledger-install.sh).
 
 
+## 2023-04-07 hledger-1.29.2
+
+### hledger 1.29.2
+
+Breaking changes
+
+- 1.29's cleanup of the `close` command has been continued.
+  Here are all the changes to `close` since hledger 1.28:
+
+  - The default behaviour is now to print only one transaction: a closing transaction.
+
+  - To print both closing and opening transactions as before,
+    use the new `--migrate` flag.
+
+  - The accounts closed by default are now just the ALE accounts
+    (accounts declared or inferred as type `Asset`, `Liability`, or `Equity`).
+    If you don't have account types configured, or
+	  to close some other set of accounts, provide query arguments that match them.
+    To close all accounts as before, use a `.` argument to match them all.
+
+  - To print a retain earnings transaction for RX accounts (accounts
+    of type `Revenue` or `Expense`), use the new `--retain` flag.
+
+  - The `equity` command alias, removed in 1.29, has been restored.
+
+  - The `--open-acct` option, removed in 1.29, has been restored.
+
+  - The `--closing` and `--opening` flags have been renamed to `--close` and `--open`.
+    (`--close` had been removed in 1.29 and is now restored.)
+
+  - The docs have been rewritten. Also the 1.29 release notes now mention
+    the breaking change.
+
+  - The command is marked experimental again.
+
+  (#2020)
+
+Fixes
+
+- The 1.29 release notes for periodic reports'/periodic transactions' start dates
+  have been improved. Also the hledger manual's "Date adjustment" section
+  has been corrected and clarified.
+
+- `type:` queries now "see through" account aliases and pivots,
+  as they did in hledger <1.27, and as `acct:` queries do.
+  (#2018)
+
+### hledger-ui 1.29.2
+
+Improvements
+
+- A pager is used to show --help output when needed, as in `hledger`.
+
+Fixes
+
+- The corruption in 1.29's info manual is fixed. (#2023)
+
+### hledger-web 1.29.2
+
+Improvements
+
+- A pager is used to show --help output when needed, as in `hledger`.
+
+Fixes
+
+- The corruption in 1.29's info manual is fixed. (#2023)
+
+### project changes 1.29.2
+
+Scripts/addons
+
+- hledger-install: re-enable hledger-interest, hledger-iadd
+
+### credits 1.29.2
+
+Simon Michael
+
+
 ## 2023-03-16 hledger-1.29.1
 
 ### hledger 1.29.1
