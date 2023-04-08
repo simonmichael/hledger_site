@@ -111,13 +111,15 @@ Breaking changes
 
 Fixes
 
-- The 1.29 release notes for periodic reports'/periodic transactions' start dates
-  have been improved. Also the hledger manual's "Date adjustment" section
-  has been corrected and clarified.
-
 - `type:` queries now "see through" account aliases and pivots,
   as they did in hledger <1.27, and as `acct:` queries do.
   (#2018)
+
+- The corruption in 1.29's info manual is fixed. (#2023)
+
+- The 1.29 release notes for periodic reports'/periodic transactions' start dates
+  have been improved. Also the hledger manual's "Date adjustment" section
+  has been corrected and clarified.
 
 ### hledger-ui 1.29.2
 
@@ -143,7 +145,7 @@ Fixes
 
 Scripts/addons
 
-- hledger-install: re-enable hledger-interest, hledger-iadd
+- hledger-install: re-enable hledger-interest, hledger-iadd; add hledger-lots
 
 ### credits 1.29.2
 
