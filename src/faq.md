@@ -1,20 +1,15 @@
 # Frequently Asked Questions
 
-<!--
-<div align=center>
-
-  FAQ
-| [Developer FAQ](devfaq.html)
-
-</div>
--->
+Welcome! This FAQ is for all hledger-related topics, for now.
+If you have additions or improvements,
+please click the "edit this page" link at the bottom,
+or [chat](support) with us.
+We aim to keep answers brief and to the point, ideally one sentence or paragraph,
+linking to more detail when needed.
 
 <!-- toc -->
 
-Welcome! If you'd like to help improve these FAQs we'd sure appreciate it. 
-Click the "edit this page" link at the bottom, or [chat](support) with us.
-
-## Plain Text Accounting
+## Accounting
 
 ### What's accounting ?
 
@@ -37,16 +32,13 @@ Simple arithmetic invariants help prevent errors.
 
 ### What's plain text accounting ?
 
-Plain Text Accounting, or PTA, is a modern way of doing double entry accounting on a computer:
-- It uses simple text files and "small" tools rather than databases and big applications.
-- It substitutes minus and plus signs for Credit and Debit notation (usually), which many people find easier.
-- It makes financial data easy to [version-control](https://en.wikipedia.org/wiki/Version_control), audit, and collaborate on.
-- It is flexible, programmable, portable, durable, and private.
+You can read more about Plain Text Accounting (PTA) at <https://plaintextaccounting.org>.
+In short, it is a way of doing Double Entry Bookkeeping (DEB) and accounting on a computer,
+using simple text files and small flexible tools, rather than databases and big applications.
+Minus and plus signs are usually used instead of Credit and Debit notation, making it easier to learn than traditional DEB.
+The text files are human-readable and easy to convert or to manage with [version-control](https://en.wikipedia.org/wiki/Version_control) tools.
 
-You can read more about it at <https://plaintextaccounting.org>.
-Currently this FAQ overlaps a bit with that one.
-
-## hledger and PTA
+## The hledger project
 
 ### What's hledger ?
 
@@ -66,9 +58,12 @@ It's free and you can read all about it at the <https://hledger.org> home page.
 1. Bring relief and peace of mind to people managing money, 
    especially the overwhelmed, stressed and confused,
    by providing highly dependable, usable accounting tools, learning materials, and community.
+   <!-- see also Sponsor.md -->
 
 2. Help people and communities in all countries
    increase their financial clarity, accountability, and mastery.
+
+## hledger and Plain Text Accounting
 
 ### We use another system, we don't need this ?
 
@@ -104,53 +99,13 @@ Any standard set of account names you're familiar with. Feel free to copy list f
 
 ### What can hledger do for me ?
 
-hledger is a suite of reporting tools which can provide clarity and
-insight into your personal or business finances, time logs, or other
-dated quantitative data, with relatively little effort on your part.
-
-You need only provide a list of transactions, as a plain text file in
-a simple human-readable format. (Or a time log, or a CSV file with
-conversion rules.) From this hledger can generate a variety of useful
-reports and interactive views:
-
-- list your transactions, payees, currencies/commodities, accounts, statistics
-- show the hierarchy of accounts and subaccounts
-- show the transactions affecting any account, and calculate its running balance
-- make a balance sheet, showing your asset and liability account balances
-- make a cashflow report, showing changes in your cash assets
-- make an income statement, showing your revenues and expenses
-- show a bar chart of transaction activity by period
-- show purchase costs/selling prices
-- show market values in any currency at any valuation date
-- calculate the rate of return of a savings account or investment
-- make reports from timeclock or timedot time logs
-- make reports from any CSV file
-
-It can slice, dice, and present your data in different ways:
-
-- filter out just the items or time period you're interested in
-- show multiple periods side by side
-- summarise accounts to give the big picture
-- rewrite or pivot account names to give different views
-- output reports as plain text, HTML, or CSV
-- run as a live-updating terminal UI, for fast interactive exploration
-- run as a web app, allowing remote/multi-user browsing and data entry
-- run as a JSON web API, for integrating with custom apps
-
-If you add a few directives to the file, hledger can:
-
-- include multiple data sets
-- generate recurring transactions by rule
-- add extra postings (splits) to transactions by rule
-- show a forecast of future activity, eg to help with cashflow planning
-- make a budget report, showing your budget goals and status by account and period
-
-Also, it can:
-
-- generate interest transactions by rule
-- help you enter new transactions with prompts or a terminal UI
-- help you convert and import new transactions from external sources, eg banks
-- be used as a library in a quick Haskell script or compiled program
+hledger can provide clarity and insight into your personal or business
+finances, time logs, or other dated quantitative data, with relatively
+little effort on your part.  You need only provide a list of
+transactions, as a plain text file in a simple human-readable
+format. (Or a CSV file plus some conversion rules.) From this hledger
+can generate a variety of useful reports and interactive views.  See
+[Features](features.md).
 
 ### How could that help me ?
 
@@ -174,20 +129,12 @@ Also, it can:
 ### Isn't importing from banks a pain ?
 
 Not once you have set up a manual or automated routine for it.
-The possibilities vary by bank and country, but here are two simple
-workflows that are almost always possible:
+The possibilities for automation vary by bank and country, 
+but the following semi-manual workflow is almost always possible and quick:
 
-Manual CSV import:
-
-1. Manually download CSV from your bank's website.
-2. hledger import BANK.csv
-3. Review/clean up the new journal entries.
-
-Automated CSV import:
-
-1. Review/clean up the new journal entries. (CSV was downloaded and imported overnight by a cron job.)
-
-Ask us for help setting this up. See also [How could I import/migrate from...](#how-could-i-import-migrate-from).
+1. Manually download recent CSVs from your bank's website
+2. `hledger import ACCT1.csv ACCT2.csv ...`
+3. review/clean up the new entries in your journal.
 
 ### Isn't plain text ugly and hard to use ?
 
@@ -211,12 +158,10 @@ It works well over remote/slow connections.
 It's future-proof.
 It will be just as usable in 15 or 50 years.
 You can still read it even without the right software or (if you print it) a working computer.
-
-*Accounting data is valuable; we want to know that it will be
+*"Accounting data is valuable; we want to know that it will be
 accessible for ever - even without software. We want to know when it
 changes, and revision-control it. We want to search and manipulate it
-efficiently. So, we store it as human-readable plain text.*
---<http://plaintextaccounting.org>
+efficiently. So, we store it as human-readable plain text."*
 
 ### Isn't this too weird for my family, business partners, tax accountant to use ?
 
@@ -224,44 +169,16 @@ Maybe. You can ask them to enter data via hledger-web,
 or import from their mobile expenses app or a shared spreadsheet.
 You can show them the hledger-web UI, or HTML reports, or give them CSV to open in a spreadsheet.
 
-### Why are revenues, liabilities, equity negative ?
+### Why are my revenue (income), liability, and equity balances negative ?
 
-It's characterisic of plain text accounting tools that balances of
-revenue, liability and equity accounts normally appear as negative
-numbers. (And if they have a contra-balance, as with a temporarily
-overpaid credit card, this would appear as a positive number.)
+It's normal; it's because hledger and most other plain text accounting tools
+use negative and positive numbers instead of credit and debit terminology.
+Certain hledger reports (`balancesheet`, `incomestatement`, `cashflow`)
+and flags (`--invert`) can show them as positive when needed.
+See [Accounting > Debits and credits](accounting.md#debits-and-credits).
 
-This is because we use negative and positive sign as an alternative 
-to traditional [Credit/Debit notation](https://en.wikipedia.org/wiki/Debits_and_credits).
-(Negative amounts are credits, positives are debits.)
 
-Think of each transaction as a movement of money from one place to
-another. The "from" amounts are negative (money removed from
-somewhere) and the "to" amounts are positive (money added to
-somewhere):
-
-```journal
-2021-01-01 receive salary
-    revenues:salary    $-1000
-    assets:checking     $1000
-```
-
-To ensure that no money is lost or created out of thin air, we simply
-require that a transaction's amounts add up to zero.
-
-See also [Ledger's discussion of this](https://www.ledger-cli.org/3.0/doc/ledger3.html#Stating-where-money-goes).
-
-If you're new to plain text accounting, you'll get used to reading
-these negative numbers pretty quickly. But when you want to see
-revenues/liabilities/equity as positive numbers, you can use the
-higher level reports like [`balancesheet`], [`cashflow`] and
-[`incomestatement`]. Or, use `--invert` to flip all signs.
-
-[`balancesheet`]:    hledger.html#balancesheet
-[`cashflow`]:        hledger.html#cashflow
-[`incomestatement`]: hledger.html#incomestatement
-
-## hledger and other things
+## hledger and other software
 
 ### How does hledger relate to Ledger ? What's the history ?
 
@@ -529,3 +446,27 @@ hledger -c '$1000.00' -c 'EUR 1.000,' -c '1000.00000000 BTC' bal
 
 https://money.stackexchange.com/questions/154316/how-can-i-identify-all-transfers-from-account-a-to-account-b-in-ledger-cli/154322#154322
 
+
+### How do I install hledger CSV rules for my financial institutions ?
+
+git clone the main hledger repo, and look in examples/csv/ for a rules file you can copy to your financial working directory.
+If your financial institution is not there yet, please use these for inspiration,
+ask the #hledger chat for help, and send a pull request contributing your working rules to the repo.
+
+### How do I install more hledger scripts and add-on commands ?
+
+git clone the hledger repo, and add the bin/ directory to your shell's PATH.
+See [Scripts and add-ons](scripts.md).
+
+## Developing hledger
+### How do I make my own hledger CSV rules ?
+
+See the [Importing CSV](csv.md) tutorial and the [hledger manual > CSV format](hledger.md#csv-format).
+(After checking for a pre-existing rules file in examples/csv/ in the hledger repo.)
+If possible, add your new rules file to that directory and send a pull request.
+
+### How do I make my own hledger scripts ?
+
+Install the example [Scripts and add-ons](scripts.md) and find a suitable one to copy and modify.
+Also see [Scripting](scripting.md).
+If your new script can be useful to others, consider contributing it with a pull request.

@@ -26,10 +26,16 @@ Fast, robust, user-friendly<br>plain text accounting<br>⚡️💪🏼❤️
   is helpful, but not required (much)
 - good at importing CSV from banks and other financial institutions
 - actively developed and supported by [Simon Michael](http://joyful.com) and [contributors](CREDITS.md) since 2007
-- strengthened by your [feedback](support.md), [work](CONTRIBUTING.md) and [funding](sponsor.md). 🙏🏻
-  <a href="https://github.com/simonmichael/hledger" title="github repo" style="position:relative; top:4px;"><img src="https://img.shields.io/github/stars/simonmichael/hledger.svg?logo=GitHub&label=Github&color=brightgreen" title="github badge"></a>
+- strengthened by your [feedback](support.md), [work](CONTRIBUTING.md) and [funding](sponsor.md). 🙏🏻\
 
-[Features](features.md) tells more, or you can ask questions in [Discussion/Support](support.md).
+[Features](features.md) tells more, or you can ask questions in [Discussion/Support](support.md).\
+\
+[![github repo](https://img.shields.io/github/stars/simonmichael/hledger.svg?logo=GitHub&label=Github&color=brightgreen)](https://github.com/simonmichael/hledger)
+[![on hackage](https://img.shields.io/hackage/v/hledger.svg?logo=Haskell&label=Hackage&colorB=brightgreen)](http://hackage.haskell.org/package/hledger)
+[![](https://repology.org/badge/version-for-repo/stackage_nighly/hledger.svg)](https://repology.org/metapackage/hledger)\
+[![hledger CI](https://github.com/simonmichael/hledger/workflows/binaries-mac-x64/badge.svg)](https://github.com/simonmichael/hledger/actions)
+[![hledger CI](https://github.com/simonmichael/hledger/workflows/binaries-windows-x64/badge.svg)](https://github.com/simonmichael/hledger/actions)
+[![hledger CI](https://github.com/simonmichael/hledger/workflows/binaries-linux-x64-static/badge.svg)](https://github.com/simonmichael/hledger/actions)
 
 Welcome. This stuff is actually lots more fun than it sounds. Care to give it a try ?\
 [Install](install.md), then see [Get Started](start.md), or the examples below,

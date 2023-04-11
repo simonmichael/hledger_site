@@ -11,19 +11,26 @@ Also we'll discuss account hierarchy in hledger.
 At the end, there's a collection of useful links to learn more.
 
 
-## A note on debits and credits
+## Debits and Credits
 
-Conventional double-entry accounting uses a system of debits and credits to
-ensure that, in every transaction, total debits equal total credits.
-However, hledger and other ledger-likes instead use positive and negative
-numbers and ensure that, in every transaction, the sum of all amounts is zero.
-This has the same result, but in hledger equity, liabilities, and revenue are
-conventionally negative numbers.
+Double-entry bookkeeping traditionally names movements of money as
+["debits" or "credits"](https://en.wikipedia.org/wiki/Debits_and_credits).
+As an error-checking mechanism, the debits must exactly balance the credits,
+both within each individual transaction and over all transactions.
 
-In what follows we use the general accounting system of debits and credits.
-Within hledger the accounting equations will be the same, except that equity,
-liabilities, and revenues will have the opposite sign.
+## Signed numbers
 
+hledger and most other plain text accounting tools use positive and negative sign
+instead of the debit and credit labels.
+This is essentially the same system, but most people find it easier to learn than the debit/credit terminology.
+Positive numbers are debits, negative numbers are credits,
+and within each transaction (and over all transactions) the sum of amounts must be zero.
+
+As a consequence in hledger and similar PTA tools, it's common for reports to show
+equity, liability, and revenue (income) balances as negative numbers.
+(Some hledger reports/options can show them as positive for readability.)
+
+Here is [Ledger's discussion of this](https://www.ledger-cli.org/3.0/doc/ledger3.html#Stating-where-money-goes).
 
 ## Assets, Liabilities and Equity
 
