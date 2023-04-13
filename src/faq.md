@@ -54,16 +54,14 @@ It's free and you can read all about it at the <https://hledger.org> home page.
 - to experiment with building a successful time-and-money-solvent project in a thriving ecosystem of financial software projects
 
 ### What is the hledger project's current mission and plans ?
-<!-- see also: sponsor.md, ROADMAP.md -->
 
 1. Help make plain text accounting more usable and useful for all.
-
-2. Bring relief to people experiencing financial and technological stress,
-   by providing dependable, usable, empowering accounting tools, learning materials, and community.
-
+2. Bring relief to people experiencing financial and financial technology stress,
+   by providing dependable, empowering accounting tools, learning materials, and community.
 3. Help people and communities in all countries increase their financial mastery and freedom.
-
-4. Help grow a shared global culture of accountability and sustainability
+4. Help grow a shared global culture of accountability and sustainability.
+5. Starting with this project and ourselves.
+<!-- see also: sponsor.md, ROADMAP.md -->
 
 Here is the [ROADMAP](ROADMAP.md).
 

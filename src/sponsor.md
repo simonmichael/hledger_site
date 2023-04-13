@@ -16,8 +16,9 @@ Is it the right time for you to help ? Consider:
 - Would you like hledger to be around for a long time ? To remain actively supported ? To improve faster ?
 - Would you like to support our core mission ? Which is:
   > **To help more people achieve financial literacy, discipline and freedom,
-  > and to help grow a shared global culture of accountability and solvency.**\
-  *(See also: [Solarpunk](http://www.re-des.org/a-solarpunk-manifesto)!)*
+  > and to help grow a shared global culture of accountability and sustainability.**\
+  (See also: [FAQ](faq.md#what-is-the-hledger-projects-current-mission-and-plans-))
+
   <!-- see also: faq.md, ROADMAP.md -->
 
 ## How to sponsor
