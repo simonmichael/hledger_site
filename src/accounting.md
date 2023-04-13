@@ -262,6 +262,7 @@ account.  Eg, buying food.
 - [Tutorial on multiple currency accounting](http://www.mscs.dal.ca/~selinger/accounting/tutorial.html) by Peter Selinger
 - [Financial Statements: A Beginner's Guide](https://www.causal.app/blog/whats-a-financial-statement)
 - [Finances 2: Guide](https://hochgatterer.me/finances/guide/introduction/) nice PTA-applicable intro from this mac/iphone app. Recommended.
+- [Solarpunk](http://www.re-des.org/a-solarpunk-manifesto)
 
 ### Video
 
