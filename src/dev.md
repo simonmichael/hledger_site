@@ -32,5 +32,6 @@ and symlinked (or rendered by Shake.hs) into the site repo to make them appear a
 - [REPOS](REPOS.md)
 - [SHAKE](SHAKE.md)
 - [TESTS](TESTS.md)
+- [TODO](TODO.md)
 - [VERSIONNUMBERS](VERSIONNUMBERS.md)
 - [WORKFLOWS](WORKFLOWS.md)

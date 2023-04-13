@@ -221,5 +221,6 @@ and previewing them when working on docs locally.
 - [ROADMAP](ROADMAP.md)
 - [SHAKE](SHAKE.md)
 - [TESTS](TESTS.md)
+- [TODO](TODO.md)
 - [VERSIONNUMBERS](VERSIONNUMBERS.md)
 - [WORKFLOWS](WORKFLOWS.md)
