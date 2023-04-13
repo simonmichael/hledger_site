@@ -17,7 +17,8 @@ Is it the right time for you to help ? Consider:
 - Would you like to support our core mission ? Which is:
   > **To help more people achieve financial literacy, discipline and freedom,
   > and to help grow a shared global culture of accountability and solvency.**\
-  *(See also: the [Solarpunk manifesto](http://www.re-des.org/a-solarpunk-manifesto)!)*
+  *(See also: [Solarpunk](http://www.re-des.org/a-solarpunk-manifesto)!)*
+  <!-- see also: faq.md, ROADMAP.md -->
 
 ## How to sponsor
 <!-- keep synced with README.md: -->

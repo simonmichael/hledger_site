@@ -53,15 +53,19 @@ It's free and you can read all about it at the <https://hledger.org> home page.
 - to explore the suitability of Haskell for such applications
 - to experiment with building a successful time-and-money-solvent project in a thriving ecosystem of financial software projects
 
-### What is the hledger project's current mission ?
+### What is the hledger project's current mission and plans ?
+<!-- see also: sponsor.md, ROADMAP.md -->
 
-1. Bring relief and peace of mind to people managing money, 
-   especially the overwhelmed, stressed and confused,
-   by providing highly dependable, usable accounting tools, learning materials, and community.
-   <!-- see also Sponsor.md -->
+1. Help make plain text accounting more usable and useful for all.
 
-2. Help people and communities in all countries
-   increase their financial clarity, accountability, and mastery.
+2. Bring relief to people experiencing financial and technological stress,
+   by providing dependable, usable, empowering accounting tools, learning materials, and community.
+
+3. Help people and communities in all countries increase their financial mastery and freedom.
+
+4. Help grow a shared global culture of accountability and sustainability
+
+Here is the [ROADMAP](ROADMAP.md).
 
 ## hledger and Plain Text Accounting
 
@@ -179,6 +183,8 @@ See [Accounting > Debits and credits](accounting.md#debits-and-credits).
 
 
 ## hledger and other software
+
+<!-- TODO condense/update below -->
 
 ### How does hledger relate to Ledger ? What's the history ?
 
