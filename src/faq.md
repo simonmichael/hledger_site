@@ -224,24 +224,35 @@ Also:
 
 ## Using hledger
 
-### How do I report by financial year, not calendar year ?
+### How do I set environment variables like LEDGER_FILE (persistently) ?
 
-Use hledger 1.29+, and just specify the desired start date, eg `hledger is -Y -b 2020/4/15`
-or `hledger is -p 'yearly from 2020/4/15'`.
-With older hledger versions, you can approximate it with `-p 'every 12 months from 2020/4`
-or `-p 'every 365 days from 2020/4/15'`.
+See [hledger manual > ENVIRONMENT](hledger.md#environment).
 
 ### Why does this entry give a "no amount" error even though I wrote an amount ?
 
 ```journal
 2019-01-01
-  a 1
+  a $1
   b
 ```
 Because there's only a single space between `a` and `1`,
 so this is parsed as an account named <span style="white-space:nowrap;">"a 1"</span>, with no amount.
 There must be at least two spaces between account name and amount.
 
+### Why does this journal fail strict account checking even though I declared all accounts ?
+
+```journal
+account assets:bank:checking ; my bank account
+account equity               ; equity
+
+2023-01-01
+    equity
+    assets:bank:checking   $1000
+```
+
+Because there's only a single space between `assets:bank:checking` and the `;` comment,
+so the comment is parsed as part of the account name. (`hledger accounts` shows this.)
+There must be at least two spaces between an account name and anything that follows it.
 
 ### Why do some directives not affect other files ? Why can't I include account aliases ?
 
@@ -258,22 +269,6 @@ When an account has a multi-commodity balance, hledger's default `balance`, `pri
 Another reason you might see amounts without an account name: dropping too many account name parts with [`--drop`](hledger.md#balance).
 
 
-### With hledger-ui in iTerm2 on mac, why does Shift-Up/Shift-Down move the selection instead of adjusting the report period ?
-
-iTerm2 by default doesn't recognise SHIFT-UP/SHIFT-DOWN keys correctly. (If this has changed in recent releases, please let us know.)
-Here's one way to fix it: iTerm2 > CMD-i > Keys > Key Mappings > Presets -> select "xterm Defaults" (not "Terminal.app Compatibility").
-
-### How do I set environment variables like LEDGER_FILE (persistently) ?
-
-It depends on your machine's operating system and which command line shell you use.
-See [hledger manual > ENVIRONMENT](hledger.md#environment).
-
-### How do I display a decimal separator different from the one in the input file ?
-
-Use `-c/--commodity-style` options (one for each commodity) to override the display style(s).
-Eg `hledger bal -c '$1,00'` displays dollar amounts with comma decimal marks,
-even if they use period decimal marks in the journal.
-
 ### How do I control the number of decimal places displayed ?
 
 To set that temporarily, use the `-c/--commodity-style` option (one for each commodity, as needed).
@@ -283,6 +278,19 @@ hledger -c '$1000.00' -c '1000.000000 ADA' -c 'EUR 1000.' bal
 ```
 
 To make it permanent, use [commodity directives](hledger.md#commodity-directive).
+
+### How do I display a decimal mark different from the one in the input file ?
+
+Use `-c/--commodity-style` options (one for each commodity) to override the display style(s).
+Eg `hledger bal -c '$1,00'` displays dollar amounts with comma decimal marks,
+even if they use period decimal marks in the journal.
+
+### How do I report by financial year, not calendar year ?
+
+Use hledger 1.29+, and just specify the desired start date, eg `hledger is -Y -b 2020/4/15`
+or `hledger is -p 'yearly from 2020/4/15'`.
+With older hledger versions, you can approximate it with `-p 'every 12 months from 2020/4`
+or `-p 'every 365 days from 2020/4/15'`.
 
 ### How can I show transactions from one account to another account ?
 
@@ -308,6 +316,11 @@ hledger areg checking expenses:tax
 
 To filter by direction, add `amt:'>0'` or  `amt:'<0'` to one of the register reports.
 
+
+### With hledger-ui in iTerm2 on mac, why does Shift-Up/Shift-Down move the selection instead of adjusting the report period ?
+
+iTerm2 by default doesn't recognise SHIFT-UP/SHIFT-DOWN keys correctly. (If this has changed in recent releases, please let us know.)
+Here's one way to fix it: iTerm2 > CMD-i > Keys > Key Mappings > Presets -> select "xterm Defaults" (not "Terminal.app Compatibility").
 
 ## Customising hledger
 
