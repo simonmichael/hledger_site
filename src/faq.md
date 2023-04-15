@@ -4,10 +4,12 @@ Welcome! This FAQ is for all hledger-related topics, for now.
 If you have additions or improvements,
 please click the "edit this page" link at the bottom,
 or [chat](support) with us.
-We aim to keep answers brief and to the point, ideally one sentence or paragraph,
-linking to more detail when needed.
 
 <!-- toc -->
+
+<!--
+FAQ answers should be useful and brief, linking to more detail if needed.
+-->
 
 ## Accounting
 
@@ -15,8 +17,8 @@ linking to more detail when needed.
 
 [Accounting](https://en.wikipedia.org/wiki/Accounting) means keeping track of the flow and whereabouts of things you value, 
 such as money or time, and using this information for insight, planning and decision-making.
-Here's hledger's [Accounting concepts](accounting.html) page
-and [Accounting links](accounting.html#accounting-links).
+Here's hledger's [Accounting concepts](accounting.md) page
+and [Accounting links](accounting.md#accounting-links).
 
 ### Why might I want to do accounting ?
 
@@ -182,74 +184,52 @@ See [Accounting > Debits and credits](accounting.md#debits-and-credits).
 
 ## hledger and other software
 
-<!-- TODO condense/update below -->
+### How does hledger relate to Ledger ?
 
-### How does hledger relate to Ledger ? What's the history ?
+hledger (begun 2006) is inspired by, and a friendly coopetitor of, John Wiegley's Ledger (begun 2003). 
+It is an attempt to rewrite Ledger in a more expressive programming language
+and take it to the next level in usability and practicality.
+See [hledger and Ledger](ledger.md).
 
-See [hledger and Ledger](ledger.html).
+### What is/was ledger4 ?
 
-### What is ledger4 ?
-
-In 2012 John Wiegley made a start at rewriting parts of Ledger 3, eg the parser, in Haskell:
-[ledger4](https://github.com/ledger/ledger4).
-I included this in hledger for a while as an additional file format,
-hoping to attract help to improve this "bridge" between the hledger and Ledger projects,
-and improving our compatibility with Ledger's files.
-This didn't happen, and would have required a ton of work, so I removed it.
+hledger has its own parser for a file format close to Ledger's.
+In 2012 John Wiegley prototyped a more exact conversion of Ledger 3's parser to Haskell,
+calling it [ledger4](https://github.com/ledger/ledger4). 
+For a while I integrated this as an alternate file format within hledger,
+hoping to improve our ability to read original Ledger files,
+but the parser needed lots more work to become useful, so later I removed it again.
 
 ### How is hledger different from / interoperable with... ?
 
-See <https://hledger.org/cookbook.html#interoperating-with-other-software>.
-Eg:
+See [Cookbook > Other software](cookbook.md#other-software) for notes on 
+Ledger, Beancount, GnuCash, Quickbooks, etc.
+Also:
 
-- [hledger and Ledger](ledger.html)
-- [hledger and Beancount](beancount.html)
-- [hledger and GnuCash](gnucash.html)
-- [hledger and Quicken/Quickbooks](quicken.html)
-
-See also:
-
-- <https://plaintextaccounting.org/#plain-text-accounting-apps> project stats
-- The [Syntax Quick Reference for the Ledger-Likes](https://plaintextaccounting.org/quickref)
-- The out of date <https://plaintextaccounting.org/#comparisons>
+- [PTA apps](https://plaintextaccounting.org/#pta-apps), showing project stats
+- [Syntax Quick Reference for the Ledger-Likes](https://plaintextaccounting.org/quickref), showing several file formats
+- [PTA app comparisons](https://plaintextaccounting.org/#pta-app-comparisons), though mostly very out of date
 
 ### How could I import/migrate from...
 
-#### Mint.com ?
+- Look for a relevant page at [Cookbook > Other software](cookbook.md#other-software)
+- Otherwise, try to export CSV representing transactions - one record per transaction - and then use [hledger's CSV reader](import-csv.md).
+  Also look for [pre-existing CSV rules](https://github.com/simonmichael/hledger/tree/master/examples/csv) you can use.
+- Or, make a custom script or workflow to convert the old data to hledger's simple [journal format](hledger.md#journal-format).
 
-1. download [examples/csv/mint.csv.rules](https://github.com/simonmichael/hledger/blob/master/examples/csv/mint.csv.rules), and adjust the `account1` & `account2` rules
-2. `touch ~/.hledger.journal`
-3. log in to Mint, go to TRANSACTIONS, scroll to the bottom of the page, click on the "Export all N transactions" link, save it as `mint.csv` on your computer
-4. `cd ~/Downloads` (or wherever you saved it)
-5. `hledger import mint.csv`
+### How could I export/migrate to...
 
-Now `hledger stats` and `hledger bal` should show lots of data. That's your past data migrated. 
-
-Then, if you want to leave Mint, you'll need to replace their automatic
-import from banks with 
-[your own import process](faq.html#isnt-importing-from-banks-a-pain-).
-
-Or if you want to keep using Mint for that, because you like how they
-aggregate and clean the data: just periodically re-export from Mint,
-repeating steps 3-5 above.
-
+- Look for a relevant page at [Cookbook > Other software](cookbook.md#other-software)
+- See also [Exporting from hledger](export.md).
 
 ## Using hledger
+
 ### How do I report by financial year, not calendar year ?
 
-[`-Y/--yearly`](hledger.html#report-intervals), [`-p/--period 'every year'`](hledger.html##period-expressions), etc. 
-show Gregorian calendar years, starting on January 1st. 
-To show years starting with a different month, use `every 12 months from DATE`.
-Eg, to show years starting on April 1st (the register command is good for testing this):
-```
-hledger reg -p 'every 12 months from 2019-04-01'
-```
-
-To show years not starting on a month boundary, approximate it with `every 365 days from DATE`
-(this won't be exact for leap years):
-```
-hledger reg -p 'every 365 days from 2019-04-06'
-```
+Use hledger 1.29+, and just specify the desired start date, eg `hledger is -Y -b 2020/4/15`
+or `hledger is -p 'yearly from 2020/4/15'`.
+With older hledger versions, you can approximate it with `-p 'every 12 months from 2020/4`
+or `-p 'every 365 days from 2020/4/15'`.
 
 ### Why does this entry give a "no amount" error even though I wrote an amount ?
 
@@ -263,193 +243,73 @@ so this is parsed as an account named <span style="white-space:nowrap;">"a 1"</s
 There must be at least two spaces between account name and amount.
 
 
-### Why do some directives not affect other files ? Why can't I put account aliases in an included file ?
+### Why do some directives not affect other files ? Why can't I include account aliases ?
 
-This is documented at [journal format: directives](hledger.html#directives).
-(Also mentioned at [hledger: Input files](hledger.html#input-files).)
-These docs could be improved.
-
-Directives which affect parsing of data vary in their scope, 
-ie the area of input data they affect. Eg, should they affect: 
-
-- entries after the directive, in this file only ? 
-  - Eg: 
-    `alias`, 
-    `apply account`, 
-    `comment`, 
-    `Y`
-- entries before and after the directive, in this file only ?
-- entries and included files after the directive, until this file's end ?
-- all entries after the directive, in this and all included or subsequent files, including parent files ?
-  - Eg: 
-    the number notation specified by `D`
-    or `commodity`
-- all entries in all files ?
-  - Eg: 
-    the default commodity specified by `D`,
-    and `account`
-
-The differences are partly due to historical accident, and partly by design.
-We would like to preserve these properties:
-
-- Reordering files does not change their meaning.
-- Adding a file does not change the meaning of the other files.
-
-This is why some directives are designed to last only until the end of the current file.
-This can be annoying, but it seems worthwhile to ensure reports are
-robust, and not changed by simply moving `include` directives or `-f`
-options around.
-
-For `alias` directives, when you have multiple files, the workaround
-is to put them inline in a top-level file, before including the other
-files that the aliases should affect.
-See [#1007](https://github.com/simonmichael/hledger/issues/1007).
-
-See also:
+Directives vary in their scope, ie which journal entries and which input files they affect. The differences are partly due to historical accident, and partly by design, so that reordering files, or adding another file, does not change their meaning. See [journal format > Directives and multiple files](hledger.md#directives-and-multiple-files).
+Related discussion:
+[#217](https://github.com/simonmichael/hledger/issues/217),
 [#510](https://github.com/simonmichael/hledger/issues/510),
-[#217](https://github.com/simonmichael/hledger/issues/217)
+[#1007](https://github.com/simonmichael/hledger/issues/1007).
 
 ### Why am I seeing some amounts without an account name in reports ?
 
-Some of hledger's older commands (balance, print, register) show a
-multi-commodity amount with each commodity on its own line, by default
-(like Ledger).
+When an account has a multi-commodity balance, hledger's default `balance`, `print`, and `register` reports, like Ledger's, will show the balance on multiple lines, with each commodity on its own line, but with the account name appearing only once (either top- or bottom-aligned, depending on report). For a clearer report, try `balancesheet`, `incomestatement` or `cashflow`, and/or `--layout=bare`, or restrict the report to a single currency with `cur:SYMBOL`.
 
-Here are some examples. 
-In the following journal entry, the implicit balancing amount drawn from the `b` account will be a multicommodity amount (a euro and a dollar):
-```journal
-2015/1/1
-    a         EUR 1
-    a         USD 1
-    b
-```
-the `print` command shows the `b` posting's amount on two lines, bottom-aligned:
-```shell
-$ hledger -f t.j print
-2015/01/01
-    a         USD 1
-    a         EUR 1
-             EUR -1  ; <-
-    b        USD -1  ; <- a euro and a dollar is drawn from b
-```
-the `balance` command shows that both `a` and `b` have a multi-commodity balance (again, bottom-aligned):
-```shell
-$ hledger -f t.j balance
-               EUR 1     ; <-
-               USD 1  a  ; <- a's balance is a euro and a dollar
-              EUR -1     ; <-
-              USD -1  b  ; <- b's balance is a negative euro and dollar
---------------------
-                   0
-```
-while the `register` command shows (top-aligned, this time!) a multi-commodity running total after the second posting,
-and a multi-commodity amount in the third posting:
-```shell
-$ hledger -f t.j register --width 50
-2015/01/01       a             EUR 1         EUR 1
-                 a             USD 1         EUR 1  ; <- the running total is now a euro and a dollar        
-                                             USD 1  ;                                                        
-                 b            EUR -1                ; <- the amount posted to b is a negative euro and dollar
-                              USD -1             0  ;
-```
-
-Newer reports like [multi-column balance reports](hledger.html#multicolumn-balance-report) show multi-commodity amounts on one line instead, comma-separated.
-Although wider, this seems clearer and we should probably use it more:
-```shell
-$ hledger -f t.j balance --yearly
-Balance changes in 2015:
-
-   ||           2015 
-===++================
- a ||   EUR 1, USD 1 
- b || EUR -1, USD -1 
----++----------------
-   ||              0 
-```
-
-You will also see amounts without a corresponding account name if you
-remove too many account name segments with [`--drop`](hledger.html#balance)
-(a bug, which we'd like to see fixed):
-```shell
-$ hledger -f t.j balance --drop 1
-               EUR 1  
-               USD 1  
-              EUR -1  
-              USD -1  
---------------------
-                   0
-```
+Another reason you might see amounts without an account name: dropping too many account name parts with [`--drop`](hledger.md#balance).
 
 
-### With hledger-ui in iTerm2/3, why does Shift-Up/Shift-Down move the cursor instead of adjusting the period ?
+### With hledger-ui in iTerm2 on mac, why does Shift-Up/Shift-Down move the selection instead of adjusting the report period ?
 
-One way to fix: in iTerm2 do Preferences -> Profiles -> your current profile -> Keys -> Load Preset -> xterm Defaults 
-(not Terminal.app Compatibility). And perhaps open a new tab with this profile. 
+iTerm2 by default doesn't recognise SHIFT-UP/SHIFT-DOWN keys correctly. (If this has changed in recent releases, please let us know.)
+Here's one way to fix it: iTerm2 > CMD-i > Keys > Key Mappings > Presets -> select "xterm Defaults" (not "Terminal.app Compatibility").
 
-### How do I set the LEDGER_FILE environment variable on Windows?
+### How do I set environment variables like LEDGER_FILE (persistently) ?
 
-Maybe using SETX: https://hledger.org/1.26/hledger.html#environment
-
-or in settings: https://www.java.com/en/download/help/path.html
+It depends on your machine's operating system and which command line shell you use.
+See [hledger manual > ENVIRONMENT](hledger.md#environment).
 
 ### How do I display a decimal separator different from the one in the input file ?
 
-It's not yet easy to do this with hledger:\
-<https://github.com/simonmichael/hledger/issues/793#issuecomment-603994809>
+Use `-c/--commodity-style` options (one for each commodity) to override the display style(s).
+Eg `hledger bal -c '$1,00'` displays dollar amounts with comma decimal marks,
+even if they use period decimal marks in the journal.
 
-There's just one special case where it works, by a quirk of the implementation: 
-if in the journal you use space as thousands separator, comma as decimal separator, 
-and no commodity directive, hledger will print numbers with period as decimal separator:
-```journal
-; journal
-2020-01-01
-    (a)       $1 234,56
-```
-```shell
-$ hledger print
-2020-01-01
-    (a)       $1 234.56
-
-```
-
-Here's a more general workaround, post-processing the output with sed.
-Adjust if needed:
-```journal
-; journal
-2020-01-01
-    (a)       $1.234,56
-```
-```shell
-$ hledger print
-2020-01-01
-    (a)       $1.234,56
-
-$ hledger print | sed 's/\./~/g; s/,/./g; s/~/,/g'
-2020-01-01
-    (a)       $1,234.56
-
-```
 ### How do I control the number of decimal places displayed ?
 
-With hledger < 1.23:
-use a [commodity directive](hledger.html#commodities)
-to set commodities' [display style](hledger.html#commodity-display-style).
-Eg:
-```journal
-commodity $1000.00
-commodity EUR 1.000,
-commodity 1000.00000000 BTC
-```
-
-With hledger 1.23+, you can also use the `-c/--commodity-style` option. Eg:
+To set that temporarily, use the `-c/--commodity-style` option (one for each commodity, as needed).
+Eg, this shows dollars with two decimal places, ADA with six, and EUR with none:
 ```shell
-hledger -c '$1000.00' -c 'EUR 1.000,' -c '1000.00000000 BTC' bal
+hledger -c '$1000.00' -c '1000.000000 ADA' -c 'EUR 1000.' bal
 ```
 
-### How can I match transactions from one account to another account ?
+To make it permanent, use [commodity directives](hledger.md#commodity-directive).
 
-https://money.stackexchange.com/questions/154316/how-can-i-identify-all-transfers-from-account-a-to-account-b-in-ledger-cli/154322#154322
+### How can I show transactions from one account to another account ?
 
+With hledger versions before 1.29, you can print the transactions with this trick:
+```shell
+hledger print checking not:not:expenses:tax
+```
+
+To get a register report, you can chain two hledger commands
+(or [use an RDBMS](https://money.stackexchange.com/questions/154316/how-can-i-identify-all-transfers-from-account-a-to-account-b-in-ledger-cli/154322#154322>)):
+```shell
+hledger print checking | hledger -I -f- register expenses:tax
+```
+
+With hledger 1.29+, you can use print with a boolean query:
+```shell
+hledger print expr:'checking AND expenses:tax'
+```
+or aregister with two account name arguments:
+```shell
+hledger areg checking expenses:tax
+```
+
+To filter by direction, add `amt:'>0'` or  `amt:'<0'` to one of the register reports.
+
+
+## Customising hledger
 
 ### How do I install hledger CSV rules for my financial institutions ?
 
@@ -457,19 +317,18 @@ git clone the main hledger repo, and look in examples/csv/ for a rules file you 
 If your financial institution is not there yet, please use these for inspiration,
 ask the #hledger chat for help, and send a pull request contributing your working rules to the repo.
 
-### How do I install more hledger scripts and add-on commands ?
-
-git clone the hledger repo, and add the bin/ directory to your shell's PATH.
-See [Scripts and add-ons](scripts.md).
-
-## Developing hledger
-### How do I make my own hledger CSV rules ?
+### How do I make new hledger CSV rules ?
 
 See the [Importing CSV](csv.md) tutorial and the [hledger manual > CSV format](hledger.md#csv-format).
 (After checking for a pre-existing rules file in examples/csv/ in the hledger repo.)
 If possible, add your new rules file to that directory and send a pull request.
 
-### How do I make my own hledger scripts ?
+### How do I install more hledger scripts and add-on commands ?
+
+git clone the hledger repo, and add the bin/ directory to your shell's PATH.
+See [Scripts and add-ons](scripts.md).
+
+### How do I make new hledger scripts ?
 
 Install the example [Scripts and add-ons](scripts.md) and find a suitable one to copy and modify.
 Also see [Scripting](scripting.md).
