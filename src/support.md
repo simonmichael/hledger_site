@@ -16,7 +16,7 @@
       <br>
       <br>
       <!-- (<a href="https://view.matrix.org/room/ !GYlETOAdUBSCcvnEMY:matrix.org">Public chat log</a>) <br> -->
-      Or (same chat, older tech):
+      Or (same chat room, older technology):
       join the #hledger Libera IRC channel
       in <a href="http://irc.hledger.org">your web browser</a>
       or <a href="https://libera.chat/guides/clients">an IRC client</a>.
