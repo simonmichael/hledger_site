@@ -83,11 +83,11 @@ It works best with hledger 1.24.99+.
 
 ## hledger-plot
 
-[Scripts > hledger-plot](scripts.md#hledger-plot) (2023)
+[hledger-plot](scripts.md#hledger-plot) (2023)
 is a powerful graphical chart-making tool written in python.
 
 ## hledger-bar
 
-[Scripts > hledger-bar](scripts.md#hledger-plot) (2023)
+[hledger-bar](scripts.md#hledger-bar) (2023)
 is an easy add-on for making quick bar charts in the terminal.
 
