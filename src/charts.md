@@ -5,27 +5,57 @@
 <!-- toc -->
 </div>
 
-Tips and techniques for producing graphical charts. 
+Tips and techniques for producing graphical charts from hledger data.
 
-Generally we run a hledger report and
-- select [CSV(/SSV/TSV) output](hledger.html#output-format) (-o foo.csv)
-- disable the Total row (-N/--no-total))
-- and show numbers apart from their commodity symbols (--commodity-column; or in hledger master, --layout=bare)
-
-Eg:
+The most common general approach is to produce simple [CSV output](hledger.md#output-format) from a report - usually the balance report with -N/--no-total and --layout=bare:
 ```
-hledger bal assets liabilities --no-total --commodity-column -o report.csv
+hledger bal expenses -N --layout bare -o report.csv
 ```
+and then use one of the many ways to make charts from CSV data.
 
-Then there are many ways to convert CSV to charts.
+## Charting tools built for hledger
 
-<!-- toc -->
+Simplest first:
 
-## Spreadsheet
+### hledger-bar
 
-Drag the CSV file into your favourite spreadsheet app and use its charting tools.
+[hledger-bar](scripts.md#hledger-bar) (2023)
+is an easy add-on for making quick bar charts in the terminal.
 
-## ploterific
+### hledger-plot
+
+[hledger-plot](https://pypi.org/project/hledger-utils) (2023)
+is a powerful graphical chart-making tool written in python.
+
+### hledger-vega
+
+[hledger-vega](https://github.com/xitian9/hledger-vega) (2022) is a set of scripts for producing custom charts
+from your hledger reports, using the powerful [vega-lite](https://vega.github.io/vega-lite/).
+It works best with hledger 1.25+. 
+<!-- <https://nest.pijul.com/simonmichael/hledger-vega> is another variant -->
+
+![hledger-vega example](images/hledger-vega.png)
+
+
+### r-ledger
+
+[r-ledger](https://github.com/trevorld/r-ledger) is an R package for making reports and charts from hledger, Ledger or Beancount.
+
+## Other tools
+
+### Spreadsheets
+
+Drag the CSV file into your favourite spreadsheet app and use its interactive charting tools.
+
+### Ledger chart tools
+
+Tools built for Ledger or other PTA apps can sometimes be adapted to work with hledger also; or, hledger data can be exported to be read by Ledger. 
+
+- [These simple bash scripts](https://www.sundialdreams.com/report-scripts-for-ledger-cli-with-gnuplot/) (2016) generate GNUplot charts from Ledger.
+- [ledger-plots](https://github.com/esovetkin/ledger-plots) (2018) is an R package for making charts from Ledger.
+- [ledger-plot](https://github.com/Tagirijus/ledger-plot) (2019) is a python script for making GNUplot charts from Ledger.
+
+### ploterific
 
 [ploterific](https://github.com/GregorySchwartz/ploterific) (`stack install hvega-theme ploterific`) produces simple charts,
 in a HTML file that uses the [Vega-Lite](https://vega.github.io/vega-lite/) javascript library.
@@ -64,30 +94,4 @@ hledger -f examples/bcexample.hledger bal -O csv -N expenses -3 cur:USD \
     | ploterific -m Bar -f account:N -f balance:Q -c balance:Q -o a.html
 ```
 ![ploterific example 2](images/ploterific2.svg)
-
-
-## gnuplot, R, other
-
-Check out the tools at <https://plaintextaccounting.org/#reports>
-(hreports, ledger-plot, ledger-plots, ludget, r-ledger..)
-
-## hledger-vega
-
-New in 2022:
-<https://github.com/xitian9/hledger-vega> is a set of scripts for producing custom charts
-from your hledger reports, using the powerful [vega-lite](https://vega.github.io/vega-lite/).
-It works best with hledger 1.24.99+. 
-<https://nest.pijul.com/simonmichael/hledger-vega> is another variant.
-
-![hledger-vega example](images/hledger-vega.png)
-
-## hledger-plot
-
-[hledger-plot](scripts.md#hledger-plot) (2023)
-is a powerful graphical chart-making tool written in python.
-
-## hledger-bar
-
-[hledger-bar](scripts.md#hledger-bar) (2023)
-is an easy add-on for making quick bar charts in the terminal.
 
