@@ -34,7 +34,7 @@ Speaking for myself:
 #### Things tried
 - hledger-chart, bitrotted old charting prototype
 - various third party charting tools on hledger CSV output
-- a big org babel outline with many embedded reports, updatable/viewable in emacs or exportable as markdown/HTML
+- a big org babel outline with many embedded reports, updatable/viewable in emacs or exportable as markdown/HTML (notebook  interface for reports, AKA "reporter's notebook")
 - nightly/weekly reports generated and emailed by cron 
 
 #### Things I currently do
@@ -60,6 +60,7 @@ Speaking for myself:
   - Prudent <https://prudent.me>
   - mobile apps with reports/charts, <https://hledger.org/mobile.html>
   - Paisa! <https://hledger.org/paisa.html>
+  - Jupyter or other general notebook interfaces
 
 #### Other things that might help
 - built in easy charts that display in the CLI, TUI, or WUI without extra setup
