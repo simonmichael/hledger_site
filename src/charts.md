@@ -20,7 +20,31 @@ Simplest first:
 ### hledger-bar
 
 [hledger-bar](scripts.md#hledger-bar) (2023)
-is an easy add-on for making quick bar charts in the terminal.
+is a bash script for making quick bar charts in the terminal.
+
+```
+$ hledger bar someacct
+2023-01	+++++
+2023-02	++++
+2023-03	++++
+2023-04	+
+```
+
+```
+$ hledger bar -- -v 1 -f $TIMELOG biz
+2023-01	        15 +++++++++++++++
+2023-02	        10 ++++++++++
+2023-03	        20 ++++++++++++++++++++
+2023-04	        12 ++++++++++++
+```
+
+```
+$ hledger bar -- -v 1 -f $TIMELOG biz -p weeklyfrom3weeksago
+2023-03-27W13	         8 ++++++++
+2023-04-03W14	         2 ++
+2023-04-10W15	         4 ++++
+2023-04-17W16	         5 +++++
+```
 
 ### hledger-plot
 
