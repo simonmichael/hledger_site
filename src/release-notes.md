@@ -237,7 +237,7 @@ Features
   exactly on a monday, eg `-p 'weekly from 2022-12-26 to 2023-02'`.
   (#1982)
 
-- You can now freely combine @/@@ costs and conversion postings
+- You can now freely combine @/@@ notation and conversion postings
   in a single transaction. This can help readability, and also allows
   more flexibility when recording cost.  hledger will check that the
   two notations are in agreement, and ignore the redundancy if they are.
