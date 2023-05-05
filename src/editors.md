@@ -72,6 +72,22 @@ A description should appear in the  message area,
 but Emacs may hide it behind "...locus..." messages;
 you can fix that by customising the `next-error-verbose` variable to off.
 
+Sample config:
+```elisp
+(use-package flycheck-hledger
+  :after (flycheck ledger-mode)  ; or hledger-mode
+  :ensure t
+  :demand t
+  :custom
+  (flycheck-hledger-strict t) 
+  (flycheck-hledger-checks '("ordereddates" "recentassertions"))   ; extra checks from https://hledger.org/hledger.html#check: ordereddates, uniqueleafnames, payees, recentassertions, tags..
+  ;(flycheck-hledger-executable "hledger")
+  )
+```
+
+Currently flycheck-hledger always runs hledger with the `--auto` flag,
+so be aware that any auto posting rules will be active.
+
 ### org babel
 
 org babel (ob) is the system for evaluating code blocks embedded in org outlines.
