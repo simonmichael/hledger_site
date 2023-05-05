@@ -149,7 +149,7 @@ Here are some things it provides out of the box:
 
 ## Dependable
 
-hledger strives to be comfortable to use, to be absolutely reliable,
+hledger strives to be comfortable to use, to be absolutely dependable,
 to provide real-world value, and to never waste your time. It provides:
 
 - Robust installation: multiple options are provided for binary and
