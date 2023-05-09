@@ -10,8 +10,8 @@
 - [hledger manual](1.28/hledger.md)
 - [hledger-ui manual](1.28/hledger-ui.md)
 - [hledger-web manual](1.28/hledger-web.md)
-- [Cookbook](cookbook.md)
 - [Scripts and add-ons](scripts.md)
+- [Cookbook](cookbook.md)
 - [Discussion/Support](support.md)
 
 # DEVELOPERS
