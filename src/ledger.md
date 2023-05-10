@@ -4,6 +4,9 @@
 <!-- toc -->
 </div>
 
+hledger was inspired by the app that pioneered plain text accounting: Ledger (<https://ledger-cli.org>).
+This page describes differences between them, and a little history.
+
 *2023-01: If you are a Ledger user trying to use hledger with your data,
 I'd love to hear about your experience and make this easier;
 please contact me (sm) in the 
@@ -11,8 +14,6 @@ please contact me (sm) in the
 And you may want to skip ahead to [Interoperating tips](#interoperating-tips)
 or any other topic that seems relevant.
 See also [#1962](https://github.com/simonmichael/hledger/issues/1962).*
-
-hledger was inspired by the app that pioneered plain text accounting: Ledger (<https://ledger-cli.org>).
 
 ## Differences
 
