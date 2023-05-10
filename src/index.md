@@ -33,9 +33,9 @@ Fast, robust, user-friendly<br>plain text accounting<br>⚡️💪🏼❤️
 [![github repo](https://img.shields.io/github/stars/simonmichael/hledger.svg?logo=GitHub&label=Github&color=brightgreen)](https://github.com/simonmichael/hledger)
 [![on hackage](https://img.shields.io/hackage/v/hledger.svg?logo=Haskell&label=Hackage&colorB=brightgreen)](http://hackage.haskell.org/package/hledger)
 [![](https://repology.org/badge/version-for-repo/stackage_nighly/hledger.svg)](https://repology.org/metapackage/hledger)\
-[![hledger CI](https://github.com/simonmichael/hledger/workflows/binaries-mac-x64/badge.svg)](https://github.com/simonmichael/hledger/actions)
-[![hledger CI](https://github.com/simonmichael/hledger/workflows/binaries-windows-x64/badge.svg)](https://github.com/simonmichael/hledger/actions)
-[![hledger CI](https://github.com/simonmichael/hledger/workflows/binaries-linux-x64-static/badge.svg)](https://github.com/simonmichael/hledger/actions)
+[![hledger CI](https://github.com/simonmichael/hledger/workflows/binaries-mac-x64/badge.svg?branch=binaries)](https://github.com/simonmichael/hledger/actions)
+[![hledger CI](https://github.com/simonmichael/hledger/workflows/binaries-windows-x64/badge.svg?branch=binaries)](https://github.com/simonmichael/hledger/actions)
+[![hledger CI](https://github.com/simonmichael/hledger/workflows/binaries-linux-x64-static/badge.svg?branch=binaries)](https://github.com/simonmichael/hledger/actions)
 
 Welcome. This stuff is actually lots more fun than it sounds. Care to give it a try ?\
 [Install](install.md), then see [Get Started](start.md), or the examples below,
