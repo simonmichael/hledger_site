@@ -54,6 +54,8 @@ To toggle just a posting's status: move point to it, C-c C-c.
 
 [#367 ledger-mode setup for hledger needs documenting](https://github.com/simonmichael/hledger/issues/367) has more tips to be collected here.
 
+Here are ledger-mode's [hledger-related issues](https://github.com/ledger/ledger-mode/issues?q=label:hledger).
+
 
 ### hledger-mode
 
