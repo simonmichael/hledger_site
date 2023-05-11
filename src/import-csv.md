@@ -139,8 +139,15 @@ $ hledger -f checking.csv print | hledger -f- --alias income:unknown=Income:Misc
 ## See also
 
 Full documentation of CSV conversion, and more rules examples, can be
-found in the [hledger manual][csv format] and in [examples/csv/] in the 
-hledger source repository.
+found in the [hledger manual][csv format].
+
+A collection of CSV rules can be found in [examples/csv/] in the main hledger repository.
+There is also a [Makefile](https://github.com/simonmichael/hledger/blob/master/examples/csv/Makefile)
+to help manage and import multiple CSV files. I keep journals, csv files and csv rules in one finance directory;
+the makefile moves downloaded csv files there and imports them. The procedure could be:
+
+- In browser: download one or more CSVs manually
+- In terminal: `make -C ~/finance Import`
 
 There are many other CSV conversion tools (nine CSV->*ledger tools at last count), linked at
 [plaintextaccounting.org -> data import/conversion](https://plaintextaccounting.org/#data-importconversion).
