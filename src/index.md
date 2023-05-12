@@ -226,7 +226,7 @@ alias food = expenses:food
 ### Other UIs
 
 Instead of using the command line, you could run [`hledger-ui`](ui.md) or [`hledger-web`](web.md).
-Here are the command line, terminal, and web interfaces, showing more complex data:
+Here are the command line, terminal, and web interfaces, with more complex data:
 
 <a href="/images/cli-green-bs-reg.png" class="highslide" onclick="return hs.expand(this, { captionText:'The hledger command line interface.' })"><img src="images/cli-green-bs-reg.png" height="190"></a>
 <a href="/images/home-ui-3.png"        class="highslide" onclick="return hs.expand(this, { captionText:'The hledger-ui text user interface.' })"><img src="images/home-ui-3.png"        height="190"></a>
@@ -334,7 +334,7 @@ $ hledger aregister checking
 2023-02-23 TRANSFER TO SAVINGS  as:ba:savings              $-10.00      $2040.00
 ```
 
-More examples:
+### More examples
 
 - [HTML reports](report-examples.md#income-statement-2012-01-012014-10-11)
 - [Charts and Graphs](charts.md)
@@ -344,7 +344,9 @@ More examples:
 - [Mobile apps](mobile.md)
 - [Scripts](scripts.md) and [Scripting](scripting.md)
 
-
+\
+\
+\
 hledger.org site tips: 
 
 - Use the horizontal lines icon at top left to toggle the sidebar.
