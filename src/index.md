@@ -334,15 +334,19 @@ $ hledger aregister checking
 2023-02-23 TRANSFER TO SAVINGS  as:ba:savings              $-10.00      $2040.00
 ```
 
-### More examples
+### More examples...
 
-- [HTML reports](report-examples.md#income-statement-2012-01-012014-10-11)
 - [Charts and Graphs](charts.md)
 - [Common workflows](common-workflows.md)
+- [HTML reports](report-examples.md#income-statement-2012-01-012014-10-11)
 - [Importing CSV data](import-csv.md)
-- [Import/export/interop with other software](cookbook.md#other-software)
+- [Interop with other software](cookbook.md#other-software)
 - [Mobile apps](mobile.md)
 - [Scripts](scripts.md) and [Scripting](scripting.md)
+- [Track investments, 2017](track-investments.md) and [2020](investments.md)
+
+<!-- -->
+- and the full [Cookbook](cookbook.md)
 
 \
 \
@@ -351,7 +355,7 @@ hledger.org site tips:
 
 - Use the horizontal lines icon at top left to toggle the sidebar.
 - Use the paintbrush icon to change theme.
-- Use the magnifying-glass icon to search this site.
+- Use the magnifying-glass icon to search.
 - [Access keys](https://en.wikipedia.org/wiki/Access_key#Access_in_different_browsers) are also available:\
   `s` toggle sidebar, `t` theme, `/` search,\
   `1` home page, `2` recent changes, `<` previous page, `>` next page.
