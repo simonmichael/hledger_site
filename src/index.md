@@ -28,11 +28,7 @@ Fast, robust, user-friendly<br>plain text accounting<br>⚡️💪🏼❤️
 - actively developed and supported by [Simon Michael](http://joyful.com) and [contributors](CREDITS.md) since 2007
 - strengthened by your [feedback](support.md), [work](CONTRIBUTING.md) and [funding](sponsor.md). 🙏🏻\
 
-[Features](features.md) tells more, or you can ask questions in [Discussion/Support](support.md).\
-\
-Welcome. This stuff is actually lots more fun than it sounds. Care to give it a try ?\
-[Install](install.md), then see [Get Started](start.md), or the examples below,
-or just run `hledger` to see help and demos.
+[Features](features.md) tells more, or don't hesitate to join [Discussion/Support](support.md) chat and ask questions.
 
 [![Github repo](https://img.shields.io/github/stars/simonmichael/hledger.svg?logo=GitHub&label=Github&color=brightgreen)](https://github.com/simonmichael/hledger)
 [![GitHub downloads](https://img.shields.io/github/downloads/simonmichael/hledger/total?label=Github+downloads)](https://github.com/simonmichael/hledger/releases)
@@ -59,15 +55,14 @@ or just run `hledger` to see help and demos.
 ![GitHub downloads, latest](https://img.shields.io/github/downloads/simonmichael/hledger/latest/hledger-windows-x64.zip?label=Github_downloads,_latest,_windows-x64)\
 -->
 
+Welcome! This plain text accounting stuff is lots more fun than it sounds - care to give it a try ?
+[Install](install.md), then see [Get Started](start.md), or the examples below,
+or run `hledger` to see help and demos.
+
 More documentation is ready when you need it, in the sidebar to the left; such as the\
 [hledger](hledger.md), [hledger-ui](hledger-ui.md), [hledger-web](hledger-web.md) manuals,
 [Cookbook](cookbook.md), [FAQ](faq.md) and [Videos/Talks](videos.md).
-
-(Website tips: if the sidebar is not visible, scroll up and click/tap the horizontal-lines icon at top left. 
-To search, use the magnifying-glass icon. 
-[Access keys](https://en.wikipedia.org/wiki/Access_key#Access_in_different_browsers) are available:
-`s` toggle sidebar, `/` search, `t` theme, `1` home page, `2` recent changes, `<` previous page, `>` next page.)
-
+(If the sidebar is not visible, scroll up and click/tap the horizontal-lines icon at top left.)
 
 ## Examples
 
@@ -255,6 +250,15 @@ Here are examples of:
 - [Importing CSV data](import-csv.md)
 - [Import/export/interop with other software](cookbook.md#other-software)
 
+
+hledger.org site tips: 
+
+- Use the horizontal lines icon at top left to toggle the sidebar.
+- Use the paintbrush icon to change theme.
+- Use the magnifying-glass icon to search this site.
+- [Access keys](https://en.wikipedia.org/wiki/Access_key#Access_in_different_browsers) are also available:\
+  `s` toggle sidebar, `t` theme, `/` search,\
+  `1` home page, `2` recent changes, `<` previous page, `>` next page.
 
 
 <style>
