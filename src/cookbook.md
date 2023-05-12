@@ -1,11 +1,11 @@
-# hledger User Cookbook
+# User Cookbook
 
 <div class=pagetoc>
 
 <!-- toc -->
 </div>
 
-Here you'll find task-oriented advice and additional user notes that didn't fit in the manual. These docs will vary in age and quality.
+Here you'll find task-oriented advice and additional user notes that didn't fit in the manual. Unlike the manual, these docs vary in age and quality.
 
 <!--
 Documentor tips:
@@ -124,7 +124,7 @@ Check plaintextaccounting.org's and wiki.plaintextaccounting.org's categories.
 ### Non-profit accounting
 
 ### Taxes
-- [[tax-reporting-setup|A tax reporting setup]]
+- [A tax reporting setup](tax-reporting-setup.md)
 
 ### Time tracking
 - [Converting time to money](time-to-money.md)
