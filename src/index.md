@@ -142,6 +142,8 @@ Transactions in assets:bank:checking and subaccounts:
 2023-02-01 GOODWORKS CORP       in:salary                    $1000         $2000
 ```
 
+### Declarations
+
 If you use other account names, it's useful to declare [account types](hledger.md#account-types):
 ```journal
 
@@ -157,8 +159,6 @@ account dépenses                        ; type:Expense
 
 Or all accounts, currencies and tags, if you want [strict error checking](hledger.md#strict-mode):
 ```journal
-
-commodity $1000.00
 
 account assets                   ; type:A
 account assets:bank              ; type:C
@@ -176,6 +176,8 @@ account expenses                 ; type:X
 account expenses:rent
 account expenses:food
 account expenses:gifts
+
+commodity $1000.00
 
 tag type
 ```
@@ -221,6 +223,8 @@ alias food = expenses:food
     cash
 ```
 
+### Other UIs
+
 Instead of using the command line, you could run [`hledger-ui`](ui.md) or [`hledger-web`](web.md).
 Here are the command line, terminal, and web interfaces, showing more complex data:
 
@@ -228,10 +232,12 @@ Here are the command line, terminal, and web interfaces, showing more complex da
 <a href="/images/home-ui-3.png"        class="highslide" onclick="return hs.expand(this, { captionText:'The hledger-ui text user interface.' })"><img src="images/home-ui-3.png"        height="190"></a>
 <a href="/images/web-bcexample.png"    class="highslide" onclick="return hs.expand(this, { captionText:'The hledger-web web user interface.' })"><img src="images/web-bcexample.png"    height="190"></a>
 
-Here's a time log in  [timeclock format](hledger.md#timeclock-format):
+### Time tracking
+
+hledger can also read time logs in [timeclock](hledger.md#timeclock) format:
 
 ```timeclock
-# 2023.timeclock
+
 i 2023/03/27 09:00:00 projects:a
 o 2023/03/27 17:00:34
 i 2023/03/31 22:21:45 personal:reading:online
@@ -244,17 +250,18 @@ $ hledger -f 2023.timeclock register -D
 2023-04-01   personal:reading:online            2.01h        11.66h
 ```
 
-And one in [timedot format](hledger.md#timedot-format):
+Or in [timedot](hledger.md#timedot) format:
 
 ```timedot
-# 2023.timedot
+
 2023/2/1
 biz:research  .... ..
 fos:hledger   .... .... ....
+
 2023/2/2
 fos:ledger    0.25
 fos:haskell   .5
-biz:client1   2
+biz:client1   .... ....
 ```
 ```
 $ hledger -f 2023.timedot balance -tDTA  # tree, Daily, Total, Average
@@ -273,14 +280,69 @@ Balance changes in 2023-02-01..2023-02-02:
             ||       4.50        2.75     7.25     3.62 
 ```
 
-Here are examples of:
+### CSV/SSV/TSV import
+
+hledger can read [CSV](hledger.md#csv) (or SSV, TSV) files representing transactions:
+
+```csv
+
+"Date","Notes","Amount"
+"2023/2/22","DEPOSIT","50.00"
+"2023/2/23","TRANSFER TO SAVINGS","-10.00"
+```
+```rules
+
+# bank.csv.rules  # how to read bank.csv
+skip 1
+fields date, description, amount
+currency $
+account1 assets:bank:checking
+
+if WHOLE FOODS
+ account2 expenses:food
+
+if (TO|FROM) SAVINGS
+ account2 assets:bank:savings
+```
+
+```shell
+$ hledger -f bank.csv print
+2023-02-22 DEPOSIT
+    assets:bank:checking          $50.00
+    income:unknown               $-50.00
+
+2023-02-23 TRANSFER TO SAVINGS
+    assets:bank:checking         $-10.00
+    assets:bank:savings           $10.00
+
+```
+
+The [import](hledger.md#import) command detects and adds just new transactions to the journal (works with most CSVs):
+```shell
+$ hledger import bank.csv
+imported 2 new transactions from bank.csv
+```
+```shell
+$ hledger import bank.csv
+no new transactions found in bank.csv
+```
+```shell
+$ hledger aregister checking
+2023-01-01 opening balances     as:ba:savings, as:..      $1000.00      $1000.00
+2023-02-01 GOODWORKS CORP       in:salary                 $1000.00      $2000.00
+2023-02-22 DEPOSIT              in:unknown                  $50.00      $2050.00
+2023-02-23 TRANSFER TO SAVINGS  as:ba:savings              $-10.00      $2040.00
+```
+
+More examples:
+
 - [HTML reports](report-examples.md#income-statement-2012-01-012014-10-11)
 - [Charts and Graphs](charts.md)
 - [Common workflows](common-workflows.md)
-- [Scripting](scripting.md)
-- [Mobile apps](mobile.md)
 - [Importing CSV data](import-csv.md)
 - [Import/export/interop with other software](cookbook.md#other-software)
+- [Mobile apps](mobile.md)
+- [Scripts](scripts.md) and [Scripting](scripting.md)
 
 
 hledger.org site tips: 
