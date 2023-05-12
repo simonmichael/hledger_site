@@ -67,11 +67,14 @@ More documentation is ready when you need it, in the sidebar to the left; such a
 ## Examples
 
 Here are three transactions in [journal format](hledger.md#journal-format),
-recorded in the default [journal file](hledger.md#input)
-by [`hledger add`](hledger.md#add) or [other means](create-a-journal.md):
+recorded in the [journal file](hledger.md#input) (`~/.hledger.journal` or `$LEDGER_FILE`),
+using [`hledger add`](hledger.md#add) or [other method](create-a-journal.md).
+Account and currency names can be anything you like.
+Accounts and amounts are separated by at least two spaces;
+a positive amount means "added to this account", negative means "removed from this account".
+Each transaction's amounts must sum to zero; one of them may be omitted for convenience.
 
 ```journal
-# ~/.hledger.journal
 
 2023-01-01 opening balances
     assets:bank:checking                $1000
@@ -89,29 +92,58 @@ by [`hledger add`](hledger.md#add) or [other means](create-a-journal.md):
     assets:cash
 ```
 
-Each transaction's amounts must sum to zero.
-One amount in each transaction can be omitted for convenience.
-Accounts and currencies can be anything you like.
-
-With no further setup, you can now run reports:
+You can now run reports:
 ```shell
-$ hledger cashflow -MTA
-Cashflow Statement 2022-01-01..2022-02-28
+$ hledger bs
+Balance Sheet 2023-02-15
 
-                      ||   Jan    Feb    Total  Average 
-======================++================================
- Cash flows           ||                                
-----------------------++--------------------------------
- assets:bank:checking || $1000  $1000    $2000    $1000 
- assets:bank:savings  || $2000      0    $2000    $1000 
- assets:cash          ||  $100   $-50      $50      $25 
-----------------------++--------------------------------
-                      || $3100   $950    $4050    $2025 
+                         || 2023-02-15 
+=========================++============
+ Assets                  ||            
+-------------------------++------------
+ assets:bank:checking    ||      $2000 
+ assets:bank:savings     ||      $2000 
+ assets:cash             ||        $50 
+-------------------------++------------
+                         ||      $4050 
+=========================++============
+ Liabilities             ||            
+-------------------------++------------
+ liabilities:credit card ||        $50 
+-------------------------++------------
+                         ||        $50 
+=========================++============
+ Net:                    ||      $4000 
+```
+```shell
+$ hledger is -MTA
+Income Statement 2023-01-01..2023-02-28
+
+               || Jan    Feb    Total  Average 
+===============++==============================
+ Revenues      ||                              
+---------------++------------------------------
+ income:salary ||   0  $1000    $1000     $500 
+---------------++------------------------------
+               ||   0  $1000    $1000     $500 
+===============++==============================
+ Expenses      ||                              
+---------------++------------------------------
+ expenses:food ||   0    $50      $50      $25 
+---------------++------------------------------
+               ||   0    $50      $50      $25 
+===============++==============================
+ Net:          ||   0   $950     $950     $475 
+```
+```shell
+$ hledger aregister checking
+Transactions in assets:bank:checking and subaccounts:
+2023-01-01 opening balances     as:ba:savings, as:..         $1000         $1000
+2023-02-01 GOODWORKS CORP       in:salary                    $1000         $2000
 ```
 
-However, it's useful to declare [account types](hledger.md#account-types) if you use non-english account names:
+If you use other account names, it's useful to declare [account types](hledger.md#account-types):
 ```journal
-# ~/.hledger.journal
 
 account actifs                          ; type:Asset
 account actifs:banque:compte courant    ; type:Cash
@@ -123,9 +155,8 @@ account revenus                         ; type:Revenue
 account dépenses                        ; type:Expense
 ```
 
-Or all the valid accounts and currencies, if you want [full error checking](hledger.md#strict-mode):
+Or all accounts, currencies and tags, if you want [strict error checking](hledger.md#strict-mode):
 ```journal
-# ~/.hledger.journal
 
 commodity $1000.00
 
@@ -145,13 +176,15 @@ account expenses                 ; type:X
 account expenses:rent
 account expenses:food
 account expenses:gifts
+
+tag type
 ```
 ```shell
 $ hledger check --strict
 $ 
 ```
 
-Declaring accounts also helps set a meaningful [display order](hledger.md#account-display-order) (not just alphabetical):
+Declaring accounts also helps set your preferred [display order](hledger.md#account-display-order):
 
 ```shell
 $ hledger accounts -t
@@ -173,9 +206,8 @@ expenses
   gifts
 ```
 
-You can optionally declare [account aliases](hledger.md#alias-directive) to save typing:
+You can declare [account aliases](hledger.md#alias-directive) to save typing:
 ```journal
-# ~/.hledger.journal
 
 alias chk  = assets:bank:checking
 alias cash = assets:cash
