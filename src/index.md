@@ -34,7 +34,7 @@ Fast, robust, user-friendly<br>plain text accounting<br>⚡️💪🏼❤️
 [![GitHub downloads](https://img.shields.io/github/downloads/simonmichael/hledger/total?label=Github+downloads)](https://github.com/simonmichael/hledger/releases)
 [![GitHub downloads, latest](https://img.shields.io/github/downloads/simonmichael/hledger/latest/total?label=Github+downloads,+latest)](https://github.com/simonmichael/hledger/releases/latest)
 [![Hackage](https://img.shields.io/hackage/v/hledger.svg?logo=Haskell&label=Hackage&colorB=brightgreen)](http://hackage.haskell.org/package/hledger)
-[![Stackage nightly](https://repology.org/badge/version-for-repo/stackage_nighly/hledger.svg?header=Stackage+nightly)](https://www.stackage.org/nightly/package/hledger)
+[![Stackage](https://repology.org/badge/version-for-repo/stackage_nighly/hledger.svg?header=Stackage)](https://www.stackage.org/nightly/package/hledger)
 \
 [![CI binaries-linux-x64-static](https://github.com/simonmichael/hledger/workflows/binaries-linux-x64-static/badge.svg?branch=binaries)](https://github.com/simonmichael/hledger/actions/workflows/binaries-linux-x64-static.yml)
 [![CI binaries-mac-x64](https://github.com/simonmichael/hledger/workflows/binaries-mac-x64/badge.svg?branch=binaries)](https://github.com/simonmichael/hledger/actions/workflows/binaries-mac-x64.yml)
@@ -55,24 +55,27 @@ Fast, robust, user-friendly<br>plain text accounting<br>⚡️💪🏼❤️
 ![GitHub downloads, latest](https://img.shields.io/github/downloads/simonmichael/hledger/latest/hledger-windows-x64.zip?label=Github_downloads,_latest,_windows-x64)\
 -->
 
-Welcome! This plain text accounting stuff is lots more fun than it sounds - care to give it a try ?
-[Install](install.md), then see [Get Started](start.md), or the examples below,
-or run `hledger` to see help and demos.
+## Quick start
 
-More documentation is ready when you need it, in the sidebar to the left; such as the\
+Welcome! This plain text accounting stuff is useful and more fun than it sounds - care to give it a try ?
+
+[Install](install.md), then see [Get Started](start.md), or the Examples below,
+or run `hledger` to see help and demos.
+Full documentation is ready when you need it, in the sidebar to the left.
+(If not visible, click/tap the horizontal-lines icon at top left.)
+<!--
 [hledger](hledger.md), [hledger-ui](hledger-ui.md), [hledger-web](hledger-web.md) manuals,
-[Cookbook](cookbook.md), [FAQ](faq.md) and [Videos/Talks](videos.md).
-(If the sidebar is not visible, scroll up and click/tap the horizontal-lines icon at top left.)
+[Cookbook](cookbook.md), [FAQ](faq.md) and [Videos/Talks](videos.md),
+-->
 
 ## Examples
 
 Here are three transactions in [journal format](hledger.md#journal-format),
-recorded in the [journal file](hledger.md#input) (`~/.hledger.journal` or `$LEDGER_FILE`),
-using [`hledger add`](hledger.md#add) or [other method](create-a-journal.md).
-Account and currency names can be anything you like.
-Accounts and amounts are separated by at least two spaces;
+recorded in the [journal file](hledger.md#input) (`~/.hledger.journal` or `$LEDGER_FILE`)
+by [`hledger add`](hledger.md#add) or [other method](create-a-journal.md).
+The [account names](hledger.md#account-names) and [amounts](hledger.md#amounts) are separated by at least two spaces;
 a positive amount means "added to this account", negative means "removed from this account".
-Each transaction's amounts must sum to zero; one of them may be omitted for convenience.
+hledger will check that each transaction's amounts sum to zero; one of them may be omitted for convenience.
 
 ```journal
 
@@ -92,7 +95,7 @@ Each transaction's amounts must sum to zero; one of them may be omitted for conv
     assets:cash
 ```
 
-You can now run reports:
+You can run reports like so:
 ```shell
 $ hledger bs
 Balance Sheet 2023-02-15
@@ -144,7 +147,7 @@ Transactions in assets:bank:checking and subaccounts:
 
 ### Declarations
 
-If you use other account names, it's useful to declare [account types](hledger.md#account-types):
+If you use other account names, it's useful to declare their [account types](hledger.md#account-types):
 ```journal
 
 account actifs                          ; type:Asset
@@ -157,7 +160,7 @@ account revenus                         ; type:Revenue
 account dépenses                        ; type:Expense
 ```
 
-Or all accounts, currencies and tags, if you want [strict error checking](hledger.md#strict-mode):
+Or declare all accounts, currencies and tags, if you want [strict error checking](hledger.md#strict-mode):
 ```journal
 
 account assets                   ; type:A
@@ -186,7 +189,7 @@ $ hledger check --strict
 $ 
 ```
 
-Declaring accounts also helps set your preferred [display order](hledger.md#account-display-order):
+Declaring accounts also helps set their preferred [display order](hledger.md#account-display-order):
 
 ```shell
 $ hledger accounts -t
@@ -280,9 +283,9 @@ Balance changes in 2023-02-01..2023-02-02:
             ||       4.50        2.75     7.25     3.62 
 ```
 
-### CSV/SSV/TSV import
+### CSV import
 
-hledger can read [CSV](hledger.md#csv) (or SSV, TSV) files representing transactions:
+hledger can read [CSV](hledger.md#csv) (or SSV, TSV, or other character-separated) files representing transactions:
 
 ```csv
 
@@ -292,7 +295,7 @@ hledger can read [CSV](hledger.md#csv) (or SSV, TSV) files representing transact
 ```
 ```rules
 
-# bank.csv.rules  # how to read bank.csv
+# bank.csv.rules  # this rules file tells hledger how to read bank.csv
 skip 1
 fields date, description, amount
 currency $
@@ -343,10 +346,13 @@ $ hledger aregister checking
 - [Interop with other software](cookbook.md#other-software)
 - [Mobile apps](mobile.md)
 - [Scripts](scripts.md) and [Scripting](scripting.md)
-- [Track investments, 2017](track-investments.md) and [2020](investments.md)
-
+- [Track investments (2017)](track-investments.md) and [Track investments (2020)](investments.md)
 <!-- -->
-- and the full [Cookbook](cookbook.md)
+- The full hledger [Cookbook](cookbook.md)
+- The Plain Text Accounting wiki, [wiki.plaintextaccounting.org](https://wiki.plaintextaccounting.org)
+- [![Github topic: #plaintext-accounting](https://img.shields.io/badge/Github_topic-%23plaintext--accounting-green)](https://github.com/topics/plaintext-accounting?o=desc&s=updated)
+- [![Github topics search: accounting](https://img.shields.io/badge/Github_topics_search-accounting-green)](https://github.com/search?type=topics&q=accounting)
+
 
 \
 \
