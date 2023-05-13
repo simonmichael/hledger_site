@@ -349,12 +349,15 @@ $ hledger aregister checking
 - [Track investments (2017)](track-investments.md) and [Track investments (2020)](investments.md)
 <!-- -->
 - The full hledger [Cookbook](cookbook.md)
-- [awesome-hledger list](https://github.com/edkedk99/awesome-hledger#readme)
 - [wiki.plaintextaccounting.org](https://wiki.plaintextaccounting.org)
+
+### See also
+
+- [awesome-hledger list](https://github.com/edkedk99/awesome-hledger#readme)
 - [![Github topic: #hledger](https://img.shields.io/badge/Github_topic-%23hledger-green)](https://github.com/topics/hledger?o=desc&s=updated)
 - [![Github topic: #plaintext-accounting](https://img.shields.io/badge/Github_topic-%23plaintext--accounting-green)](https://github.com/topics/plaintext-accounting?o=desc&s=updated)
 - [![Github topics search: accounting](https://img.shields.io/badge/Github_topics_search-accounting-green)](https://github.com/search?type=topics&q=accounting)
-
+- [Discussion/Support](support.md)
 
 \
 \
