@@ -79,20 +79,22 @@ hledger will check that each transaction's amounts sum to zero; one of them may 
 
 ```journal
 
-2023-01-01 opening balances
-    assets:bank:checking                $1000
-    assets:bank:savings                 $2000
-    assets:cash                          $100
-    liabilities:credit card              $-50
-    equity:opening/closing             $-3050
+2023-01-01 opening balances                    ; <- first, record balances on some date
+    assets:bank:checking                $1000  ; <- account names can be anything
+    assets:bank:savings                 $2000  ; <- colons indicate subaccounts
+    assets:cash                          $100  ; <- at least 2 spaces before the amount
+    liabilities:credit card              $-50  ; <- debt balances are negative
+    equity:opening/closing             $-3050  ; <- starting balances come from equity
 
 2023-02-01 GOODWORKS CORP
     assets:bank:checking           $1000
-    income:salary
+    income:salary                              ; <- $-1000 inferred here
+                                               ; income amounts are negative
+                                               ; (some reports show them as positive)
 
 2023-02-15 market
     expenses:food             $50
-    assets:cash
+    assets:cash                                ; <- $-50 inferred here
 ```
 
 You can run reports like so:
