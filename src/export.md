@@ -55,3 +55,6 @@ insert into postings(txnidx,date1,date2,status,code,description,comment,account,
 [register]: hledger.html#register
 [aregister]: hledger.html#aregister
 [output formats]: hledger.html#output-format
+
+
+Related discussion: https://groups.google.com/g/hledger/c/HS1Wd2iUSgA/m/oqVhSEf4AgAJ
