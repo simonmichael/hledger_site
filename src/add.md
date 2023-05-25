@@ -1,4 +1,4 @@
-# Tutorial: hledger add
+# Tutorial: hledger basics
 
 <div class=pagetoc>
 

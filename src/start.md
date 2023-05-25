@@ -13,7 +13,7 @@ After [installing](install.md) hledger, reading one or more of the docs below sh
 
 **Quick starts**
 
-Quick introductions; may assume a bit of command-line know-how:
+Quick introductions (may assume a bit of command line know-how):
 
 - [Home page quick start](index.md#quick-start)
 - [2 minute quick start](2-minute-quick-start.md)
@@ -25,7 +25,7 @@ Quick introductions; may assume a bit of command-line know-how:
 
 Step by step tutorials, with screenshots:
 
-- [Tutorial: hledger's add command](add.md)
+- [Tutorial: hledger basics](add.md)
 - [Tutorial: hledger-web](web.md)
 - [Tutorial: hledger-ui](ui.md)
 - [Tutorial: Accounting basics and further study](accounting.md)

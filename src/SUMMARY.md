@@ -82,7 +82,7 @@
 - [Track investments (2017)](track-investments.md)
 - [Track investments (2020)](investments.md)
 - [Tracking and selling inventory](inventory.md)
-- [Tutorial: hledger add](add.md)
+- [Tutorial: hledger basics](add.md)
 - [Tutorial: hledger-ui](ui.md)
 - [Tutorial: hledger-web](web.md)
 - [Videos/Talks](videos.md)
