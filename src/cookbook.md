@@ -110,7 +110,7 @@ Check plaintextaccounting.org's and wiki.plaintextaccounting.org's categories.
 - [Track investments (2020)](investments.md)
 - [Calculate unrealized gain](gain.md)
 - [Calculate return on investment](roi.md)
-- [hledger-fifo](scripts.md#hledger-fifo)
+- [hledger-lots](scripts.md#hledger-lots)
 
 ### Invoicing
 - [Invoicing](invoicing.md)
