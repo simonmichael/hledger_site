@@ -7,21 +7,7 @@
 
 There are lots of ways to use hledger; here is an overview.
 Of course you can mix and match these.
-
-In all of these workflows, remember to back up your files
-periodically to safeguard your financial data.
-
-## Web UI
-
-Probably the easiest hledger workflow, if it works:
-
-Download and run `hledger-web`, eg by double-clicking on it.
-It should open in your web browser.
-Use the add form to add transactions.
-It will store data in its default location.
-(So you'll see your transactions next time you run it.)
-
-[Tutorial: hledger-web](web.html) describes this in more detail.
+Also remember always to back up your files periodically to safeguard your data.
 
 ## Command line
 
@@ -32,8 +18,29 @@ Eg, run
 `hledger bs` to see your account balances (a [balance sheet]), and
 `hledger is` to see your income and expenses (an [income statement]).
 
-[Tutorial: hledger add](add.md) describes this process, and hledger's basic concepts and file format, step by step.
+[Tutorial: hledger basics](add.md) describes this process, and hledger's basic concepts and file format, step by step.
 You might want to skim through this one even if you don't plan to use `hledger add`.
+
+## Web UI
+
+This is the easiest hledger workflow, if it works for you:
+
+Download and run `hledger-web`, eg by double-clicking on it.
+It should open in your web browser.
+Use the add form to add transactions.
+It will store data in its default location.
+(So you'll see your transactions next time you run it.)
+
+[Tutorial: hledger-web](web.html) describes this in more detail.
+
+## Terminal UI
+
+Use `hledger add` once to create a journal file with an opening balances transaction.
+Now run `hledger-ui` to view account balances.
+Use the onscreen help to get around and discover the controls.
+Eg, press `a` to add new transactions.
+
+[Tutorial: hledger-ui](ui.md) describes this setup in more detail.
 
 ## Text editor
 
@@ -103,15 +110,6 @@ Income Statement 2020-01-01-2020-03-20
 =========================++=================
  Net:                    ||   0    0  $1900 
 ```
-
-## Text UI
-
-Use `hledger add` once (see above) to create a journal file.
-Now run `hledger-ui` to view account balances.
-Use the onscreen help to get around.
-Eg, press `a` to add a transaction, and follow the prompts (it uses `hledger add`).
-
-[Tutorial: hledger-ui](ui.md) describes this setup in more detail.
 
 ## CSV import
 
