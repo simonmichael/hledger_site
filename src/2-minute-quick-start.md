@@ -1,8 +1,8 @@
-# Quick Intro
+# 2 minute quick start
 
-Here is a sequence of (CLI-focussed) examples.
-If you follow these you have all the essentials,
-and you can consult the docs for more details and features when needed.
+One of the introductions to hledger; for others, see [Get Started](start.md).
+
+Here is a sequence of examples, focussed on command-line usage:
 
 ```shell
 $ brew install hledger    # or apt, choco, but check Install for freshness

@@ -5,53 +5,60 @@
 <!-- toc -->
 </div>
 
-Starting out with hledger or Plain Text Accounting, not to mention setting up a new accounting system, can be overwhelming.
+Starting out with hledger or Plain Text Accounting,
+not to mention setting up a new accounting system, 
+can seem overwhelming.
 This page aims to help!
-It is work in progress, all help and feedback is welcome in [chat](support.html).
+After [installing](install.md) hledger, reading one or more of the docs below should be helpful.
 
-Here is a list of practical getting started docs. 
-After [installing](install.html) hledger, reading one or more of these should be helpful:
+**Quick starts**
 
-- [Quick Intro](quickintro.html)
-- [Quick Start](quickstart.html)
-- [Common workflows](common-workflows.html)
-- [Tutorial: hledger's add command](add.html)
-- [Tutorial: hledger-web](web.html)
-- [Tutorial: hledger-ui](ui.html)
-- [hledger manual > Common tasks](hledger.html#common-tasks)
+Quick introductions; may assume a bit of command-line know-how:
 
-Or, you could watch these gentle beginner videos:
+- [Home page quick start](index.md#quick-start)
+- [2 minute quick start](2-minute-quick-start.md)
+- [5 minute quick start](5-minute-quick-start.md)
+- [hledger manual: Common tasks](hledger.md#common-tasks)
+- [Common workflows](common-workflows.md)
 
-- [hledger fan's beginner videos](https://www.youtube.com/channel/UCZLxXTjOqLzq4z5Jy0AyWSQ/videos)
+**Tutorials**
 
-To learn accounting basics and more, see:
+Step by step tutorials, with screenshots:
 
-- [Accounting](accounting.html)
+- [Tutorial: hledger's add command](add.md)
+- [Tutorial: hledger-web](web.md)
+- [Tutorial: hledger-ui](ui.md)
+- [Tutorial: Accounting basics and further study](accounting.md)
 
-When you want to know exactly what's in hledger and what it does, go to the official reference docs, the hledger manual:
+**Videos**
 
-- [hledger manual](hledger.html)
+- [hledger fan's beginner videos](https://www.youtube.com/channel/UCZLxXTjOqLzq4z5Jy0AyWSQ/videos) cover some hledger basics
+- [Videos](videos.md) has some talks and presentations of varied freshness
 
-Do at least read its table of contents to get an idea of what's in there.
-You can also view it by running [`hledger help`](hledger.html#help).
-If you're using hledger-ui or hledger-web, see also:
+**Manuals**
 
-- [hledger-ui manual](hledger-ui.html)
-- [hledger-web manual](hledger-web.html)
+hledger's manual is the authoritative documentation. 
+For full, version-specific details, go straight here
+(or view it in the terminal with [`hledger help`](hledger.md#help)):
 
-Practical advice and examples for real-world tasks are gathered at:
+- [hledger manual](hledger.md)
+- [hledger-ui manual](hledger-ui.md)
+- [hledger-web manual](hledger-web.md)
 
-- [Cookbook](cookbook.html)
-- and also at [wiki.plaintextaccounting.org](https://wiki.plaintextaccounting.org)
-- and there are some [hledger example files]
+**How-tos**
 
-There is also:
+Practical advice and examples for real-world tasks are collected at:
 
-- [Frequently Asked Questions](faq.html)
-- [Support](support.html), especially the #hledger chat room and hledger mail list, open 24/7
+- [FAQ](faq.md)
+- [Cookbook](cookbook.md)
+- [wiki.plaintextaccounting.org](https://wiki.plaintextaccounting.org) (not hledger-specific)
+- [plaintextaccounting reddit](https://www.reddit.com/r/plaintextaccounting/)
+- [blog posts](https://plaintextaccounting.org/#articles-blog-posts) (usually out of date)
+- [hledger's examples/ directory](https://github.com/simonmichael/hledger/tree/master/examples) (possibly)
 
-[blog posts]:                 https://plaintextaccounting.org/#articles-blog-posts
-[hledger example files]:      https://github.com/simonmichael/hledger/tree/master/examples
+**See also**
+
+- [Support](support.md), especially the #hledger chat and hledger mail list, open 24/7
 
 
 ## How to approach hledger and accounting

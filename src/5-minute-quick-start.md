@@ -1,18 +1,11 @@
-<!-- 
-The TL;DR intro to hledger.           -*- fill-column:78; -*-
--->
-
-# hledger Quick Start
+# 5 minute quick start
 
 <div class=pagetoc>
 
 <!-- toc -->
 </div>
 
-Welcome! This hledger intro aims to distill just the most needed
-practical info to help you get productive as quickly as possible. 
-When you want more detail, follow links to the [full website] 
-(and particularly the [hledger manual]).
+One of the introductions to hledger; for others, see [Get Started](start.md).
 
 [full website]:   https://hledger.org
 [hledger]:        hledger.html
