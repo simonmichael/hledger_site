@@ -5,14 +5,12 @@
 <!-- toc -->
 </div>
 
-Here we'll walk you through a simple way of using hledger, using the
-built-in [add](hledger.md#add) command. This requires only
-command-line hledger, and works on all platforms with no further
-setup. 
+Here we'll walk you through a simple way of using hledger,
+using the command line interface and built-in [add](hledger.md#add) command.
+This requires works on all platforms with no further setup. 
 
 We'll also introduce some basic hledger concepts. So even if you don't
-plan on using hledger add, it might be worth reading through this
-quickly.
+plan on using hledger CLI or add command, it might be worth skimming this.
 
 [Install](install.md) hledger and let's get started!
 
