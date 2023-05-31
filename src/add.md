@@ -338,11 +338,11 @@ $ hledger print
 
 ## What's in a Transaction ?
 
-Here's a basic hledger transaction with the parts named:
+Here's a hledger journal entry for a simple transaction, with the parts named:
 
 [![hledger basic transaction, showing names of parts](https://raw.githubusercontent.com/RobertNielsen1/hledger/master/hledger%20basic%20transaction%20--%20terms.png)](https://github.com/RobertNielsen1/hledger/blob/master/hledger%20basic%20transaction%20--%20terms.png)
 
-And here's a more complicated hledger transaction:
+And here's a more complicated journal entry:
 
 [![hledger complicated transaction with names of parts](https://raw.githubusercontent.com/RobertNielsen1/hledger/master/hledger%20complicated%20transaction%20%26%20terms.png)](https://github.com/RobertNielsen1/hledger/blob/master/hledger%20complicated%20transaction%20%26%20terms.png)
 
@@ -511,8 +511,11 @@ $ hledger register date:2015-05-26 assets
 
 ## Use -H to show historical end balances
 
-Adding the `-H/--historical` flag to the balance report above makes it show *historical balances*
-instead of balance changes:
+Adding the `-H/--historical` flag to the balance report above makes it show *historical balances*,
+instead of balance changes. 
+Historical balances include the effect of postings before the report start date
+(which otherwise would be excluded here by `date:2015-05-26`):
+
 ```shell
 $ hledger balance date:2015-05-26 -H
                 $485  assets
@@ -522,17 +525,14 @@ $ hledger balance date:2015-05-26 -H
                    0  
 ```
 
-Historical balances always include the postings that came before the report start date
-(which otherwise would be excluded here by `date:2015-05-26`).
-
-`-H` works with register reports too:
+`-H` works with register reports too (note the running total is now a running historical balance):
 
 ```shell
 $ hledger register date:2015-05-26 assets -H
 2015-05-26 forgot the bread     assets                         $-5          $485
 ```
 
-`-H` is useful when you have specified a report start date, to show only recent activity,
+`-H` is useful when you have specified a report start date to limit the report size,
 but you still want to see real world balances.
 
 ## Easier reports with "hledger bs" and "hledger is"
@@ -540,9 +540,9 @@ but you still want to see real world balances.
 hledger's `bs/balancesheet` and `is/incomestatement` reports are easier alternatives
 to the balance command. They correspond to a standard Balance Sheet and an Income Statement
 (Profit and Loss report) respectively. They will automatically select the proper accounts
-(though you may need to declare [account types](hledger.md#account-types) to enable this).
-`bs` uses `-H` by default.
-And they show normal liability, equity and revenue amounts as positive numbers,
+(though you may need to declare [account types](hledger.md#account-types) to enable this),
+and `bs` uses `-H` by default.
+Also, they show normal liability, equity and revenue amounts as positive numbers,
 unlike `balance` which shows those as negative numbers.
 
 Eg:
@@ -598,11 +598,11 @@ You have learned:
 - how to record transactions by editing the journal file
 - what the journal entry for a purchase looks like
 - how to detect some common errors, by eye or with hledger
-- how hledger selects data to report on, and how to select by account, description, or date
+- how hledger selects data with queries, and how to select by account, description, or date
 - how to list transactions with `hledger print`
 - how to list postings and see an account's balance over time with `hledger register`
-- how to list accounts and their current balance, or the sum of their postings in some period, with `hledger balance`
-- how to report either balance changes or historical end balances
+- how to list accounts and their balance change or real-world balance, with `hledger balance`
+- how to produce standard reports more easily with `hledger bs` and `hledger is`
 
 <!--
 
