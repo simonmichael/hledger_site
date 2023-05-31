@@ -10,7 +10,7 @@ using the command line interface and built-in [add](hledger.md#add) command.
 This works on all platforms with no further setup. 
 
 We'll also introduce some basic hledger concepts. So even if you don't
-plan on using hledger CLI or add command, it might be worth skimming this.
+plan on using the hledger CLI or add command, it might be worth reading through this once.
 
 [Install](install.md) hledger and let's get started!
 
