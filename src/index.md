@@ -165,19 +165,19 @@ account dépenses                        ; type:Expense
 Or declare all accounts, currencies and tags, if you want [strict error checking](hledger.md#strict-mode):
 ```journal
 
-account assets                          ; type:A
-account assets:bank                     ; type:C
+account assets                   ; type:A
+account assets:bank              ; type:C
 account assets:bank:checking
 account assets:bank:savings
-account assets:cash                     ; type:C
-account liabilities                     ; type:L
+account assets:cash              ; type:C
+account liabilities              ; type:L
 account liabilities:credit card
-account equity                          ; type:E
+account equity                   ; type:E
 account equity:opening/closing
-account income                          ; type:R
+account income                   ; type:R
 account income:salary
 account income:gifts
-account expenses                        ; type:X
+account expenses                 ; type:X
 account expenses:rent
 account expenses:food
 account expenses:gifts
@@ -191,7 +191,7 @@ $ hledger check --strict
 $ 
 ```
 
-Declaring accounts also sets their preferred [display order](hledger.md#account-display-order):
+Declaring accounts also helps set their preferred [display order](hledger.md#account-display-order):
 
 ```shell
 $ hledger accounts -t
@@ -213,7 +213,7 @@ expenses
   gifts
 ```
 
-You could declare [account aliases](hledger.md#alias-directive) to save typing:
+You can declare [account aliases](hledger.md#alias-directive) to save typing:
 ```journal
 
 alias chk  = assets:bank:checking
@@ -369,7 +369,7 @@ hledger.org site tips:
 - Use the horizontal lines icon at top left to toggle the sidebar.
 - Use the paintbrush icon to change theme.
 - Use the magnifying-glass icon to search.
-- [Access keys](https://en.wikipedia.org/wiki/Access_key#Access_in_different_browsers) are available:\
+- [Access keys](https://en.wikipedia.org/wiki/Access_key#Access_in_different_browsers) are also available:\
   `s` toggle sidebar, `t` theme, `/` search,\
   `1` home page, `2` recent changes, `<` previous page, `>` next page.
 
