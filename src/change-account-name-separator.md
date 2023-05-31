@@ -1,8 +1,8 @@
 # Change account name separator
 
-[Timedot format](hledger.html#timedot) makes me want to use dots (`.`) for separating account components, instead of colon (`:`). 
+[Timedot format](hledger.md#timedot) makes me want to use dots (`.`) for separating account components, instead of colon (`:`). 
 For example, instead of `fos:hledger:timedot` I'd like to write `fos.hledger.timedot`.
-We can use the powerful [account aliases](hledger.html#account-aliases) feature 
+We can use the powerful [account aliases](hledger.md#account-aliases) feature 
 to rewrite account names before hledger's account name parser sees them.
 
 In journal files, we can use an alias directive.

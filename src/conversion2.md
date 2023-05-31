@@ -5,7 +5,7 @@
 <!-- toc -->
 </div>
 
-More notes related to [currency conversion](currency-conversion.html).
+More notes related to [currency conversion](currency-conversion.md).
 
 In a currency conversion or a stock purchase/sale, one commodity is exchanged for another.
 In plain text accounting, there are two ways to record such conversions:

@@ -1,7 +1,7 @@
 # Rewrite account names
 
 Here's an example of using
-[account aliases](hledger.html#account-aliases).
+[account aliases](hledger.md#account-aliases).
 
 Say a sole proprietor has a `personal.journal`:
 ```journal
@@ -49,4 +49,4 @@ your accountant:
 $ hledger --alias 'my earning=income:business' ...
 ```
 
-See also [Change account name separator](change-account-name-separator.html).
+See also [Change account name separator](change-account-name-separator.md).

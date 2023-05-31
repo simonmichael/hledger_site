@@ -6,7 +6,7 @@
 </div>
 
 Here's a tutorial on tracking "investments" - stocks, cryptocurrencies, and similar - in hledger.
-This is a more in-depth version of [Tracking investments](tracking-investments.html),
+This is a more in-depth version of [Tracking investments](tracking-investments.md),
 using hledger 1.17; older hledger versions may not match this doc.
 I hope to teach you a little basic investment accounting, 
 or a little about doing it with hledger (and other PTA tools), 
@@ -157,7 +157,7 @@ or *lot*. This information is needed:
      basis*) of those lots.
   
 Ledger and Beancount provide a special syntax and some builtin reports for tracking lots and calculating capital gains.
-Currently, hledger does not (aside from [a little support for lot syntax](hledger.html#lot-prices-lot-dates)).
+Currently, hledger does not (aside from [a little support for lot syntax](hledger.md#lot-prices-lot-dates)).
 So for now, how can we track lots in hledger ?
 
 We can use the obvious categorisation feature: accounts.

@@ -20,5 +20,5 @@ Some ways:
 - Enter periodic transaction rules describing future transactions 
   (recurring or non-recurring), and activate the forecast with `--auto`.
 
-- [Budgeting and forecasting (2018) > Forecasting](budgeting-and-forecasting.html) -
+- [Budgeting and forecasting (2018) > Forecasting](budgeting-and-forecasting.md) -
   reusing a budget's periodic transactions to generate a forecast.

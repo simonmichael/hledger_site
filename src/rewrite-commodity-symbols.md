@@ -23,8 +23,8 @@ $ cat $LEDGER_FILE | sed 's/\$/USD /g' | hledger -f- bal
 ## Value conversion
 
 Most portable, requires only hledger.
-We create a dummy one-to-one [market price](hledger.html#market-prices) between the old and new commodity symbols,
-and use [market value reports](hledger.html#v-value) to convert.
+We create a dummy one-to-one [market price](hledger.md#market-prices) between the old and new commodity symbols,
+and use [market value reports](hledger.md#v-value) to convert.
 This assumes your other market prices, if any, don't interfere.
 
 You can add the market price in the main journal:

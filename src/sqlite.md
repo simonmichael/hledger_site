@@ -104,7 +104,7 @@ or on hledger's JSON output:
 
 - <https://stackoverflow.com/a/41406852/84401>
 
-See also [hledger and dsq / DataStation](dsq.html).
+See also [hledger and dsq / DataStation](dsq.md).
 
 And [Michael Peter: My plain text accounting workflow with hledger](https://rootknecht.net/blog/accounting/#visualizing-and-analyzing2). This recommends the following export command to create a useful primary key:
 

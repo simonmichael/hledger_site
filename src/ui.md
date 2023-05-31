@@ -5,7 +5,7 @@
 <!-- toc -->
 </div>
 
-[hledger-ui](hledger-ui.html) is hledger's TUI (a full-window terminal interface).
+[hledger-ui](hledger-ui.md) is hledger's TUI (a full-window terminal interface).
 It's fast, efficient, and a bit more featureful than the web UI.
 One limitation: on Microsoft Windows, it can only be installed inside [WSL](https://en.wikipedia.org/wiki/WSL).
 Screenshots below!
@@ -16,14 +16,14 @@ Open a
 [terminal](https://itconnect.uw.edu/learn/workshops/online-tutorials/web-publishing/what-is-a-terminal/)
 or command prompt
 and check your hledger-ui version.
-It should be reasonably [up to date](release-notes.html). 
+It should be reasonably [up to date](release-notes.md). 
 This doc was last tested with:
 ```shell
 $ hledger-ui --version
 hledger-ui 1.17.1.1
 ```
 
-If this fails, check [Installing](install.html) for install and setup tips.
+If this fails, check [Installing](install.md) for install and setup tips.
 
 <!--
 ## Check usage
@@ -77,11 +77,11 @@ and pressing `a` is a way to add transactions.
 Press `a`:
 [![](images/hledger-ui/Screen%20Shot%202020-03-24%20at%202.31.31%20PM.png)](images/hledger-ui/Screen%20Shot%202020-03-24%20at%202.31.31%20PM.png)
 
-This bare-bones data entry UI is hledger's [add](hledger.html#add) command,
-also introduced in [Easy workflow #1: hledger add](add.html).
+This bare-bones data entry UI is hledger's [add](hledger.md#add) command,
+also introduced in [Easy workflow #1: hledger add](add.md).
 
 Here, we'll use it to enter a few transactions, 
-similar to the [quick start](index.html#quick-start) example.
+similar to the [quick start](index.md#quick-start) example.
 After each prompt, type the value shown in white and press `RETURN`.
 
 Note when we get to `Amount 2`, hledger guesses that this is a two-posting transaction
@@ -233,7 +233,7 @@ To close it, press `?` again, or `ESC`.
 [![](images/hledger-ui/Screen%20Shot%202020-03-24%20at%203.20.27%20PM.png)](images/hledger-ui/Screen%20Shot%202020-03-24%20at%203.20.27%20PM.png)
 
 While the help dialog is open, you can press `p`, `m` or `i`
-to see the [hledger-ui](hledger-ui.html) user manual in several offline formats
+to see the [hledger-ui](hledger-ui.md) user manual in several offline formats
 (useful if you can't access the web version).
 
 The formats are: plain text (`p`), using your $PAGER for scrolling if possible:

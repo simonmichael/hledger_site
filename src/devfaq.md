@@ -2,7 +2,7 @@
 
 <div align=center>
 
-  [FAQ](faq.html)
+  [FAQ](faq.md)
 | Developer FAQ
 
 </div>

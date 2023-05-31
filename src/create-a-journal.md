@@ -8,7 +8,7 @@
 See also:
 [Input](hledger.md#input) and
 [Setting LEDGER_FILE](hledger.md#setting-ledger_file) and
-[Starting a journal file](hledger.html#starting-a-journal-file)
+[Starting a journal file](hledger.md#starting-a-journal-file)
 in the hledger manual.
 
 There are lots of ways to start and update a journal file:
@@ -35,7 +35,7 @@ $ cat >>2023.journal
 <CTRL-D>
 ```
 
-[Account names](hledger.html#account-names) can be anything 
+[Account names](hledger.md#account-names) can be anything 
 and you can change them later by search and replace. 
 If you don't know what to [choose](http://plaintextaccounting.org/#choosing-accounts), 
 start with these five:\
@@ -45,12 +45,12 @@ perhaps with one extra subcategory as above.
 ## with a text editor
 
 Write transactions in a text editor, optionally using an
-[editor mode](editors.html), 
+[editor mode](editors.md), 
 and save the file.
 
 ## with hledger add
 
-Use the interactive [add](hledger.html#add) command and follow the prompts:
+Use the interactive [add](hledger.md#add) command and follow the prompts:
 
 ```shell
 $ hledger add

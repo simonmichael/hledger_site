@@ -8,7 +8,7 @@
 This is an old but still useful intro to budgeting with hledger.
 For more about budgeting, see also:
 
-- [hledger.org > Budgeting](budgeting.html)
+- [hledger.org > Budgeting](budgeting.md)
 - [wiki.plaintextaccounting.org/budgeting](https://github.com/plaintextaccounting/plaintextaccounting/wiki/budgeting)
 
 

@@ -7,9 +7,9 @@
 
 ## All budgeting-related docs
 
-- [hledger > balance > Budget report](hledger.html#budget-report), hledger's built-in periodic budget report
+- [hledger > balance > Budget report](hledger.md#budget-report), hledger's built-in periodic budget report
 
-- [Budgeting and forecasting (2018)](budgeting-and-forecasting.html), a older introduction
+- [Budgeting and forecasting (2018)](budgeting-and-forecasting.md), a older introduction
 
 - <https://github.com/simonmichael/hledger/tree/master/examples/budgeting>, annotated examples of journals implementing budgets
 
@@ -21,7 +21,7 @@
 
 - <https://github.com/Kickball/awesome-selfhosted#money-budgeting--management>, some other budgeting software for comparison
 
-- [Time planning](time-planning.html#how-to-set-up-a-time-budget) -> How to set up a time budget
+- [Time planning](time-planning.md#how-to-set-up-a-time-budget) -> How to set up a time budget
 
 ## Notes
 

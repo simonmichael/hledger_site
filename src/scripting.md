@@ -9,7 +9,7 @@ As a command line program, with plain text data formats, hledger is
 easy to extend and customise with scripts and add-on commands.
 This page describes some different kinds of scripting you can do around hledger.
 
-For an overview of ready-made scripts you can install, see [Scripts](scripts.html).
+For an overview of ready-made scripts you can install, see [Scripts](scripts.md).
 
 Scripts are programs which call other programs to get things done.
 They are often (though not always):
@@ -157,7 +157,7 @@ dedicated or multi-function shell scripts will be less hassle.
 ## Add-on commands
 
 If you name scripts hledger-something and make them executable in PATH,
-they'll be recognised as [add-on commands](hledger.html#add-on-commands).
+they'll be recognised as [add-on commands](hledger.md#add-on-commands).
 
 Eg here's a simple script which adds `estimatedtax` as a hledger command.
 This one is in haskell, but it could be written in any language:
@@ -271,7 +271,7 @@ An add-on script can provide all three of these.
 
 ### renderer
 
-- the report commands' builtin output formats (usually txt, csv, json, html..)
+- the report commands' builtin output formats (usually txt, csv, json,.md..)
 
 This can be done with an add-on script, or by transforming the report's txt/csv/json/html output.
 

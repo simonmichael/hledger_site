@@ -1,6 +1,6 @@
 # Report examples
 
-Some [simple reports on the essentials page](essentials.html#run-reports).
+Some [simple reports on the essentials page](essentials.md#run-reports).
 
 Some example reports with an adapted copy of this [example journal][bcexample] from beancount:
 

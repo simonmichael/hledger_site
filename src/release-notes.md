@@ -1023,7 +1023,7 @@ Improvements
 - `hledger check commodities` now always accepts zero amounts which have no commodity symbol. 
   ([#1767](https://github.com/simonmichael/hledger/issues/1767)) (Stephen Morgan)
 
-- Relative [smart dates](hledger.html#smart-dates) may now specify an arbitrary number of some period into the future or past).
+- Relative [smart dates](hledger.md#smart-dates) may now specify an arbitrary number of some period into the future or past).
   Some examples:
   - `in 5 days`
   - `in -6 months`
@@ -2593,10 +2593,10 @@ more speed.**
 #### csv format
 
 - Conditional rule patterns can now be
-  [grouped](csv.html#combining-matchers) with the `&` (AND) operator,
+  [grouped](csv.md#combining-matchers) with the `&` (AND) operator,
   allowing more powerful matching. (Michael Sanders)
 
-- "[If tables](csv.html#if-table)", a compact bulk format for
+- "[If tables](csv.md#if-table)", a compact bulk format for
   conditional rules, have been added. (Dmitry Astapov)
 
 - csv conversion with a lot of conditional rules is now faster (Dmitry Astapov)
@@ -5697,7 +5697,7 @@ register:
 
 **hledger-ui 0.27:**
 
-- [hledger-ui](ui.html) is a new curses-style UI, intended to be a standard part
+- [hledger-ui](ui.md) is a new curses-style UI, intended to be a standard part
   of the hledger toolset for all users (except on native MS Windows,
   where the vty lib is not [yet](https://github.com/coreyoconnor/vty/pull/1) supported).
 
@@ -6396,7 +6396,7 @@ Improved:
 New:
 
 - balance: with a reporting interval (monthly, yearly etc.), the
-  [balance command](hledger.html#balance) will now show a multi-column report, showing either
+  [balance command](hledger.md#balance) will now show a multi-column report, showing either
   the per-period changes in balance (by default),
   the period ending balances starting from zero (`--cumulative`),
   or the actual period ending balances (`--historical`).
@@ -6521,7 +6521,7 @@ Journal reading:
 
 CSV reading:
 
-  - CSV conversion rules have a simpler, more flexible [syntax](csv.html).
+  - CSV conversion rules have a simpler, more flexible [syntax](csv.md).
     Existing rules files will need to be updated manually:
     - the filename is now `FILE.csv.rules` instead of `FILE.rules`
     - `FIELD-field N` is now `FIELD %N+1` (or set them all at once with a `fields` rule)
@@ -6657,9 +6657,9 @@ Release contributors:
   * web: hledger-web is now based on yesod 1.0
   * web: fix js error breaking second use of add form ([#72](http://bugs.hledger.org/72))
   * web: make `yesod devel` work
-  * the command-line now supports a more powerful [query language](hledger.html#queries), consistent with the web UI
-  * hledger now fully supports [tags](journal.html#tags) (aka metadata) on both transactions and postings, and querying by tag or tag value
-  * new [commands](hledger.html#incomestatement) `incomestatement`, `balancesheet`, and `cashflow` provide basic financial statements under certain conditions
+  * the command-line now supports a more powerful [query language](hledger.md#queries), consistent with the web UI
+  * hledger now fully supports [tags](journal.md#tags) (aka metadata) on both transactions and postings, and querying by tag or tag value
+  * new [commands](hledger.md#incomestatement) `incomestatement`, `balancesheet`, and `cashflow` provide basic financial statements under certain conditions
   * format conversion is now done on demand, and the convert command has been dropped. So instead of
     `hledger convert FILE.csv` just do `hledger -f FILE.csv print` or any other command.
     You can also pipe any supported format into `hledger -f- CMD` and hledger will try to do the right thing.

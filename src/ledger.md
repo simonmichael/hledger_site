@@ -51,7 +51,7 @@ See also:
 
 Over time, features have propagated both ways.
 Here is 
-[a presentation of hledger features](features.html)
+[a presentation of hledger features](features.md)
 and here is a feature comparison as of 2022 (updates welcome):
  
 |                                                   | hledger | Ledger |
@@ -210,7 +210,7 @@ Tue Feb  8 11:03:57 HST 2022
       --historical (-H)
                                 Value commodities at the time of their acquisition.
 
-- hledger's [query language](hledger.html#queries) is a little less
+- hledger's [query language](hledger.md#queries) is a little less
   powerful than Ledger's, simpler, and easier to remember.
   It uses google-like prefixes, such as `desc:`, `payee:`, `amt:`, and `not:`.
   Multiple query terms are combined using fixed AND/OR rules.
@@ -233,9 +233,9 @@ Tue Feb  8 11:03:57 HST 2022
 
 hledger's journal file format is very similar to Ledger's.
 Some syntactic forms 
-(eg [hledger comments](hledger.html#file-comments) 
+(eg [hledger comments](hledger.md#file-comments) 
 vs [Ledger comments](https://www.ledger-cli.org/3.0/doc/ledger3.html#Commenting-on-your-Journal),
-or [balance assertions](hledger.html#assertions-and-ordering))
+or [balance assertions](hledger.md#assertions-and-ordering))
 can be interpreted in slightly different ways.
 A small number of Ledger's syntactic forms are ignored (lot notation)
 or rejected (value expressions). With some care to restrict yourself to compatible features,
@@ -420,7 +420,7 @@ it does not allow balance assignments on accounts affected by auto posting rules
 The region affected by directives, and their behaviour with included files or sibling files,
 is sometimes different in hledger. This is to ensure robust, predictable behaviour.
 Here are hledger's [Directive effects](dev/hledger.html#directive-effects) and 
-[Directives and multiple files](hledger.html#directives-and-multiple-files) behaviour.
+[Directives and multiple files](hledger.md#directives-and-multiple-files) behaviour.
 You might need to move directives and/or rearrange your files.
 
 ### Periodic transactions
@@ -503,7 +503,7 @@ For now the only true workaround is to rewrite such entries to use hledger-style
   seen. Ledger uses D only for commodity display settings and for the
   entry command.
 
-- hledger [auto postings](hledger.html#auto-postings) allow only
+- hledger [auto postings](hledger.md#auto-postings) allow only
   minimal customisation of the amount (just multiplying the matched
   amount by a constant), not a full embedded expression language like
   Ledger. (And we call them "auto" to avoid "automatic" vs "automated" confusion.)
@@ -519,7 +519,7 @@ For now the only true workaround is to rewrite such entries to use hledger-style
 - hledger always splits multi-day time sessions at midnight, to show the per-day amounts.
   Ledger does this only with the `--day-break` flag.
 
-- hledger's [CSV/TSV/SSV-reading](hledger.html#csv-format) and [import](hledger.html#import) system is more mature and flexible than Ledger's [`convert` command](https://www.ledger-cli.org/3.0/doc/ledger3.html#The-convert-command).
+- hledger's [CSV/TSV/SSV-reading](hledger.md#csv-format) and [import](hledger.md#import) system is more mature and flexible than Ledger's [`convert` command](https://www.ledger-cli.org/3.0/doc/ledger3.html#The-convert-command).
 
 - Ledger can report multiple errors at once; hledger reports only one error at a time.
 
@@ -564,7 +564,7 @@ For now the only true workaround is to rewrite such entries to use hledger-style
 
 An alternative is to segregate problematic or tool-specific data into separate tool-specific files,
 keeping as much data as possible in a shared common file.  Then select the appropriate files for each tool,
-using multiple `-f` options, or [include directives](hledger.html#including-files).
+using multiple `-f` options, or [include directives](hledger.md#including-files).
 
 Another way is to do a one-way conversion to hledger format, perhaps periodically,
 doing whatever edits and transformations are necessary and feasible.
@@ -611,5 +611,5 @@ the [#hledger](http://irc.hledger.org) channel (now accessible on Libera IRC and
 
 In 2016 I set up https://plaintextaccounting.org as a common entry point and information hub.
 
-The further adventures in hledger's development are not yet told, other than in the commit log, issue tracker and mail list, but other contributors joined the project and [CREDITS](CREDITS.html) notes some of their work.
+The further adventures in hledger's development are not yet told, other than in the commit log, issue tracker and mail list, but other contributors joined the project and [CREDITS](CREDITS.md) notes some of their work.
 

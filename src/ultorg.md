@@ -39,7 +39,7 @@ This method is perhaps the easiest.
 
 ## Exporting to Ultorg via SQlite
 
-The results are much the same as the above, though you will also have an SQLite database to play with (see [hledger and SQLite](sqlite.html)).
+The results are much the same as the above, though you will also have an SQLite database to play with (see [hledger and SQLite](sqlite.md)).
 This method requires Ultorg >=1.26. Note also [ultorg#53](https://github.com/ultorg/public_issues/issues/53).
 
 1. Export a hledger journal as an Sqlite database. Eg:

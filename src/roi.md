@@ -5,7 +5,7 @@
 <!-- toc -->
 </div>
 
-A tutorial for the [roi](hledger.html#roi) (Return On Investment) command.
+A tutorial for the [roi](hledger.md#roi) (Return On Investment) command.
 
 ## Cash-only investments
 

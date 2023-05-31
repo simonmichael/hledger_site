@@ -96,11 +96,11 @@ hledger -f examples/bcexample.hledger bal -O csv -N expenses -3 cur:USD \
 Let's break down that command line:
 
 - `-f examples/bcexample.hledger` - use this example file in the hledger repo. Omit this to use your default journal.
-- `bal` - run a [balance report](hledger.html#balance)
-- `-O csv` - show it as [CSV](hledger.html#output-format) on stdout
+- `bal` - run a [balance report](hledger.md#balance)
+- `-O csv` - show it as [CSV](hledger.md#output-format) on stdout
 - `-N` - disable the final Total row
-- `expenses` - [limit](hledger.html#queries) to accounts whose name contains `expenses`
-- `-3` - summarise accounts to [depth](hledger.html#depth) 3 and above
+- `expenses` - [limit](hledger.md#queries) to accounts whose name contains `expenses`
+- `-3` - summarise accounts to [depth](hledger.md#depth) 3 and above
 - `cur:USD` - limit to balances in `USD` currency. If you use the `$` symbol, it would be `cur:\\$`.
 - `sed 's/ USD//g'` - process the output with [sed](https://www.gnu.org/software/sed/), stripping the ` USD` symbols to leave bare numbers for ploterific. With `$` it would be `sed 's/\$//g'`.
 - `-m Bar` - use `Bar` as the Vega-Lite [mark type](https://hackage.haskell.org/package/hvega-0.11.0.1/docs/Graphics-Vega-VegaLite.html#t:Mark)

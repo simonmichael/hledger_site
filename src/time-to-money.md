@@ -9,11 +9,11 @@ The method depends on where you store time records:
 If you might have a different rate for each job, 
 and there aren't too many transactions per job:
 you could record the rate as a cost (`2h @ $100`),
-and run a [cost report](hledger.html#cost-reporting) with `-B/--cost`.
+and run a [cost report](hledger.md#cost-reporting) with `-B/--cost`.
 
 When the rate doesn't change much and there are many transactions,
 it's more convenient to declare it with a P directive,
-and run a [value report](hledger.html#valuation) with `-V`/`-X`.
+and run a [value report](hledger.md#valuation) with `-V`/`-X`.
 
 ## Timeclock files
 
@@ -23,10 +23,10 @@ and write the directives there. (See below.)
 
 ## Timedot files
 
-Timedot files can't hold P directives, so [include](hledger.html#including-files)
+Timedot files can't hold P directives, so [include](hledger.md#including-files)
 them from a journal file, which can.
 Also timedot amounts normally have no commodity symbol, making them hard to price;
-but you can give them one with the [`D` directive](hledger.html#default-commodity):
+but you can give them one with the [`D` directive](hledger.md#default-commodity):
 
     # 2022-time.journal
     D 1.0 h

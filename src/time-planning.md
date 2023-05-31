@@ -9,15 +9,15 @@ Some notes relating to time tracking and budgeting.
 
 ## See also
 
-- [hledger manual > Timedot format](hledger.html#timedot-format)
-- [hledger manual > Timeclock format](hledger.html#timeclock-format)
+- [hledger manual > Timedot format](hledger.md#timedot-format)
+- [hledger manual > Timeclock format](hledger.md#timeclock-format)
 - <https://github.com/linuxcaffe/task-timelog-hook> - use hledger for time reporting with Taskwarrior's task start/stop times.
 
 ## A time budgeting workflow
 
 A [summary](https://news.ycombinator.com/item?id=19203521) of Simon's 2018-2019 time budgeting workflow:
 
-I keep a hledger [timedot](hledger.html#timedot-format) file open in a text-mode Emacs
+I keep a hledger [timedot](hledger.md#timedot-format) file open in a text-mode Emacs
 in a drop-down [iTerm hotkey window](https://iterm2.com/features.html#hotkey-window). 
 
 Each 15-minute chunk is logged with a dot. 
@@ -44,7 +44,7 @@ Not every day is the same; this system has been quick and flexible enough to sui
 
 ## How to set up a time budget
 
-I can set daily/weekly/monthly time [budgets](budgeting.html) if I want:
+I can set daily/weekly/monthly time [budgets](budgeting.md) if I want:
 
 * create a `time.journal` which includes your (timedot or timeclock) time log file (assuming you're not tracking time in journal format)
     ```journal
@@ -79,7 +79,7 @@ I can set daily/weekly/monthly time [budgets](budgeting.html) if I want:
 
 Here's how I have been logging time for a few years. I have four files:
 
-1. time-2018.timedot is the current year's time log. It contains daily entries in [timedot](hledger.html#timedot)-ish format, like:
+1. time-2018.timedot is the current year's time log. It contains daily entries in [timedot](hledger.md#timedot)-ish format, like:
 
        2018/5/7
        adm.email             20m
@@ -88,7 +88,7 @@ Here's how I have been logging time for a few years. I have four files:
        inc.client1.enh.1335  ..
        fos.hledger.support
     
-2. time.journal is in [journal](hledger.html) format so it can [include](hledger.html#including-files) multiple timedot file(s) and provide an [account alias](hledger.html#account-aliases) allowing period instead of colon in account names:
+2. time.journal is in [journal](hledger.md) format so it can [include](hledger.md#including-files) multiple timedot file(s) and provide an [account alias](hledger.md#account-aliases) allowing period instead of colon in account names:
 
        ; allow . as subaccount separator in timedot files
        alias /\./=:
@@ -97,7 +97,7 @@ Here's how I have been logging time for a few years. I have four files:
        ;include time-2017.timedot
        include time-2018.timedot
 
-3. time-daily.budget defines some daily goals, optionally date-bounded, using [periodic transaction(s)](hledger.html#periodic-transactions):
+3. time-daily.budget defines some daily goals, optionally date-bounded, using [periodic transaction(s)](hledger.md#periodic-transactions):
 
        ~ daily  ; [from Y/M/D] [to Y/M/D]
            (adm)    1  ; your goals here
@@ -162,7 +162,7 @@ I have an iTerm2 Hotkey Window (a terminal that drops down on ALT-space) with si
 
        emacs -nw time-2018.timedot
 
-3. -5: updating (using [entr](https://eradman.com/entrproject/)) time [budget reports](hledger.html#budget-report) for the current day/week/month, using [hledger 1.9.1+](install.html):
+3. -5: updating (using [entr](https://eradman.com/entrproject/)) time [budget reports](hledger.md#budget-report) for the current day/week/month, using [hledger 1.9.1+](install.md):
 
     ```
     ls time.journal time-2018.timedot time-daily.budget  | entr sh -c 'clear; hledger -f time.journal -f time-daily.budget  bal --budget -1 -D date:today-tomorrow'
@@ -174,7 +174,7 @@ I have an iTerm2 Hotkey Window (a terminal that drops down on ALT-space) with si
     ls time.journal time-2018.timedot time-weekly.budget | entr sh -c 'clear; hledger -f time.journal -f time-weekly.budget bal --budget -1 -M date:thismonth-nextmonth'
     ```
 
-6. an updating [hledger-ui](hledger-ui.html) for exploring time usage (shift-up/down to resize period, shift-left/right to step through time, t to return to today):
+6. an updating [hledger-ui](hledger-ui.md) for exploring time usage (shift-up/down to resize period, shift-left/right to step through time, t to return to today):
 
        hledger-ui --watch --change date:today -f time.journal
 

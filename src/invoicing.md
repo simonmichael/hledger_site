@@ -7,7 +7,7 @@
 
 Freelancers and businesses send invoices to clients to request payment.
 
-See [common journal entries](common-journal-entries.html) and
+See [common journal entries](common-journal-entries.md) and
 <https://wiki.plaintextaccounting.org/Invoicing>
 
 ## Reports

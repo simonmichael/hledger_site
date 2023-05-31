@@ -1,7 +1,7 @@
 # Save frequently used options
 
 You can save frequently used options and arguments in an 
-[argument file](hledger.html#argument-files), one per
+[argument file](hledger.md#argument-files), one per
 line, then reuse them via a @FILE argument on the command line.
 
 Here's an example.
@@ -27,9 +27,9 @@ by all of the above options/flags.
 
 (In case you're wondering about this example: it removes some detail, giving simplified reports which were easier for me to read at a glance):
 
-- the [aliases](hledger.html#account-aliases) simplify the chart of accounts, hiding some distinctions (eg business vs. personal) and flattening some bank account names
-- the `-2` [depth flag](hledger.html#depth-limiting) limits account depth to 2, hiding deeper subaccounts
-- the `cur:.` [query argument](hledger.html#queries) shows only single-character currencies, hiding a bunch of cluttersome commodities I don't want to see
+- the [aliases](hledger.md#account-aliases) simplify the chart of accounts, hiding some distinctions (eg business vs. personal) and flattening some bank account names
+- the `-2` [depth flag](hledger.md#depth-limiting) limits account depth to 2, hiding deeper subaccounts
+- the `cur:.` [query argument](hledger.md#queries) shows only single-character currencies, hiding a bunch of cluttersome commodities I don't want to see
 
 ## Usage
 
@@ -43,7 +43,7 @@ $ hledger-ui --watch @simple.args assets
 ```
 
 Options in the arguments file can be overridden by similar options later on
-the command line, in the [usual way](hledger.html#options). 
+the command line, in the [usual way](hledger.md#options). 
 Eg, to show just a little more account detail:
 ```shell
 $ hledger bal @simple.args -3

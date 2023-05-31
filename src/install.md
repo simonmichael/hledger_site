@@ -62,7 +62,7 @@ div.badges > a > img {
 }
 </style>
 
-The current hledger release is **1.29.2**. ([Release notes](release-notes.html))
+The current hledger release is **1.29.2**. ([Release notes](release-notes.md))
 
 Here are lots of ways to install hledger:
 - [Binary packages](#binary-packages) install quickly but are not always up to date (look for green badges below).
@@ -72,7 +72,7 @@ Here are lots of ways to install hledger:
 After downloading binaries or building from source, 
 please check that the [run requirements](#run-requirements) (PATH and locale) are satisfied.
 
-And finally please [share any feedback](support.html) so we can make this process smoother!
+And finally please [share any feedback](support.md) so we can make this process smoother!
 
 <br clear=all>
 
@@ -569,7 +569,7 @@ must be set to a UTF-8-aware locale. See [Check your locale](#check-your-locale)
 - On machines with less than 4G of RAM, the build may use swap space and 
   take much longer (overnight), or die part-way through. 
   In such low memory situations, try adding `-j1` to the stack/cabal install command, 
-  and retry a few times, or [ask](support.html) for more tips.
+  and retry a few times, or [ask](support.md) for more tips.
 
 - You could build just hledger CLI to use less time and space, 
   by omitting hledger-ui and hledger-web from the commands below.
@@ -772,7 +772,7 @@ C.UTF-8
 
 In some cases the locale may need to be installed with your system
 package manager first. See
-[hledger: Troubleshooting](hledger.html#troubleshooting) for more help.
+[hledger: Troubleshooting](hledger.md#troubleshooting) for more help.
 <!-- XXX ^ improve -->
 
 If you see similar problems on Microsoft Windows, 
@@ -783,8 +783,8 @@ With Nix or GUIX, the procedures are [different](https://github.com/simonmichael
 
 ## Next steps
 
-Nicely done! Now see **[Get started](start.html)**,
-or come to the **[#hledger chat](support.html)**
+Nicely done! Now see **[Get started](start.md)**,
+or come to the **[#hledger chat](support.md)**
 where we'll gladly share tips or receive your feedback.
 
 <br>

@@ -5,7 +5,7 @@
 <!-- toc -->
 </div>
 
-[hledger-web](hledger-web.html) is hledger's web browser-based UI.
+[hledger-web](hledger-web.md) is hledger's web browser-based UI.
 It's probably the easiest way to get started with hledger.
 Eg on windows, you can download and unpack hledger.zip and double click on hledger-web.exe.
 Screenshots below!
@@ -16,14 +16,14 @@ Open a
 [terminal](https://itconnect.uw.edu/learn/workshops/online-tutorials/web-publishing/what-is-a-terminal/)
 or command prompt
 and check your hledger-web version.
-It should be reasonably [up to date](release-notes.html). 
+It should be reasonably [up to date](release-notes.md). 
 This doc was last tested with:
 ```shell
 $ hledger-web --version
 hledger-web 1.17.1
 ```
 
-If this fails, check [Installing](install.html) for install and setup tips.
+If this fails, check [Installing](install.md) for install and setup tips.
 
 <!--
 ## Check usage
@@ -98,7 +98,7 @@ quit it (unless you want the web app to quit).
 
 And, your web browser should open, showing the UI.
 If not, open it yourself and browse to the url shown,
-ie http://127.0.0.1:5000 (and [let us know](support.html)).
+ie http://127.0.0.1:5000 (and [let us know](support.md)).
 
 ## A quick tour
 
@@ -113,15 +113,15 @@ Or if your journal already contained transactions, you'll see them listed.
 [![](images/hledger-web/Screen%20Shot%202020-03-22%20at%206.10.29%20PM.png)](images/hledger-web/Screen%20Shot%202020-03-22%20at%206.10.29%20PM.png)
 
 Let's hide the sidebar, for a simpler UI. Pressing the `s` key should do it
-(if not, try again after clicking somewhere on the page, and [let us know](support.html)):
+(if not, try again after clicking somewhere on the page, and [let us know](support.md)):
 [![](images/hledger-web/Screen%20Shot%202020-03-22%20at%206.11.52%20PM.png)](images/hledger-web/Screen%20Shot%202020-03-22%20at%206.11.52%20PM.png)
 
 Let's record some transactions. Press the `a` key, or click "Add a transaction", to bring up the add form.
 You may need to click or press `TAB` to focus the Date field:
 [![](images/hledger-web/Screen%20Shot%202020-03-22%20at%206.12.04%20PM.png)](images/hledger-web/Screen%20Shot%202020-03-22%20at%206.12.04%20PM.png)
 
-<!-- For dates, you can click the date picker or type the [date](hledger.html#smart-dates). -->
-We'll copy the sample transactions from the [quick start](index.html#quick-start). 
+<!-- For dates, you can click the date picker or type the [date](hledger.md#smart-dates). -->
+We'll copy the sample transactions from the [quick start](index.md#quick-start). 
 Press `TAB` to advance to each next field. 
 Amount2 can be left blank, or you can fill in `$-1234` if you prefer:
 [![](images/hledger-web/Screen%20Shot%202020-03-22%20at%206.17.53%20PM.png)](images/hledger-web/Screen%20Shot%202020-03-22%20at%206.17.53%20PM.png)
@@ -156,7 +156,7 @@ and a chart of that total over time:
 Press `j`, or click `Journal`, to return to the General Journal page showing everything:
 [![](images/hledger-web/Screen%20Shot%202020-03-22%20at%206.22.53%20PM.png)](images/hledger-web/Screen%20Shot%202020-03-22%20at%206.22.53%20PM.png)
 
-Let's try filtering these transactions with a [query](hledger.html#queries).
+Let's try filtering these transactions with a [query](hledger.md#queries).
 Type `food` in the search field and press `RETURN`. 
 Now we see just the transaction involving a `food` account:
 [![](images/hledger-web/Screen%20Shot%202020-03-22%20at%206.24.19%20PM.png)](images/hledger-web/Screen%20Shot%202020-03-22%20at%206.24.19%20PM.png)
@@ -164,14 +164,14 @@ Now we see just the transaction involving a `food` account:
 Click the `x` button or click `Journal` or press `j` to see all data again.
 
 You can see quick help by pressing `?`, or clicking the `?` button near the search field.
-More help is available in the [hledger-web](hledger-web.html) and other manuals, of course:
+More help is available in the [hledger-web](hledger-web.md) and other manuals, of course:
 [![](images/hledger-web/Screen%20Shot%202020-03-22%20at%206.23.44%20PM.png)](images/hledger-web/Screen%20Shot%202020-03-22%20at%206.23.44%20PM.png)
 
 That's mostly it!
 Although there are basically just two screens, 
-with hledger's full [query language](hledger.html#queries) available
-(and with the [general flags](hledger.html#general-options) available on the command line),
+with hledger's full [query language](hledger.md#queries) available
+(and with the [general flags](hledger.md#general-options) available on the command line),
 you can do a surprising amount with hledger-web.
 You can also change
-[permissions](hledger-web.html#permissions) to enable
-[edit/upload/download access](hledger-web.html#editing-uploading-downloading).
+[permissions](hledger-web.md#permissions) to enable
+[edit/upload/download access](hledger-web.md#editing-uploading-downloading).

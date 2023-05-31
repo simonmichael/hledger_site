@@ -50,7 +50,7 @@ You can also support by offering me bounties or consulting gigs.
 
 ### Sponsor other developers
 
-- You can find their names at [CREDITS](CREDITS.html), 
+- You can find their names at [CREDITS](CREDITS.md), 
   check their website/Github profile, and offer donations, bounties or paid work.
 
 ### Sponsor the hledger project
@@ -68,7 +68,7 @@ and one [social good](https://www.investopedia.com/terms/s/social_good.asp) dona
 ### Sponsor specific tasks
 
 - [![issue bounty](https://img.shields.io/badge/Sponsor_a_task_via-the_issue_tracker-limegreen "Sponsor a task via the issue tracker")](https://github.com/simonmichael/hledger/issues?q=label:bounty) (simplest)
-  - post a bounty pledge on an [open issue](CONTRIBUTING.html#open-issues)
+  - post a bounty pledge on an [open issue](CONTRIBUTING.md#open-issues)
   - when resolved, pay the claimant directly (honour system).
 - [![bountysource bounty](https://img.shields.io/badge/Sponsor_a_task_via-Bountysource-limegreen "Sponsor a task via Bountysource")](https://app.bountysource.com/teams/hledger/issues)
   <!-- - [![bountysource](https://api.bountysource.com/badge/team?team_id=75979&style=bounties_received "issues bountied via bountysource")](https://www.bountysource.com/teams/hledger) -->

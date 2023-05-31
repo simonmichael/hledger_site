@@ -40,8 +40,8 @@ For example, in one posting within a transaction we might mistype or omit the cu
 
 hledger accepts these implicit conversions by default, for convenience and compatibility.
 But you can disallow them by using 
-[strict mode](hledger.html#strict-mode) 
-or by running the [check](hledger.html#check) command
+[strict mode](hledger.md#strict-mode) 
+or by running the [check](hledger.md#check) command
 (eg: `hledger check balancednoautoconversion`).
 
 ## Declared conversion rate
@@ -67,8 +67,8 @@ or the per-unit amount with `@`
     assets:cash      EUR   8.50
 ```
 
-hledger calls these "[costs](hledger.html#costs)".
-They can also be used [generate market prices](hledger.html#--infer-market-price-market-prices-from-transactions)
+hledger calls these "[costs](hledger.md#costs)".
+They can also be used [generate market prices](hledger.md#--infer-market-price-market-prices-from-transactions)
 for value reports.
 
 This is probably the most frequently used style among hledger users.
@@ -96,11 +96,11 @@ or, letting hledger infer the above:
     equity:conversion
 ```
 
-This is discussed more [here](investments.html#a-more-correct-entry).
+This is discussed more [here](investments.md#a-more-correct-entry).
 
 ## Two entries
 
-This comes up eg when [converting](import-csv.html) Paypal CSV, 
+This comes up eg when [converting](import-csv.md) Paypal CSV, 
 which provides two records for a currency conversion, one for each side.
 For example, given some paypal CSV rules like:
 
@@ -136,7 +136,7 @@ just with the conversion entry split into two.
 ## Balancing the books
 
 If you are a fan of the accounting equation and like to check it by seeing
-a zero total in the [`balancesheetequity`](hledger.html#balancesheetequity) report,
+a zero total in the [`balancesheetequity`](hledger.md#balancesheetequity) report,
 you will need to do something with these `equity:conversion` balances.
 Such as, converting them to retained revenues/expenses in your local currency.
 This can perhaps be done at transaction time,

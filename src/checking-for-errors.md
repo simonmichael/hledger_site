@@ -64,7 +64,7 @@ Setup tips:
 
 Here are some checks we don't support, but could:
 
-- **accountsactive** - for each account used, if there is posting with an `open:` [tag](hledger.html#tags), 
+- **accountsactive** - for each account used, if there is posting with an `open:` [tag](hledger.md#tags), 
   it must have a corresponding posting with a `close:` tag, and all other postings 
   must be chronologically between (and if on the same date, textually between)
   open and close postings. ("Accounts are posted to only within their declared active period.")

@@ -16,7 +16,7 @@ Caveats are:
 ## Example
 ### Buying a stock
 
-Let's go over a simple example using [costs](hledger.html#costs):
+Let's go over a simple example using [costs](hledger.md#costs):
 
 ```journal
 2017/1/1 opening balance
@@ -44,7 +44,7 @@ Ending balances (historical) in 2017/01/01-2017/01/02:
                ||       $3000 $1000, 10 TSLA
 ```
 
-Show the shares' value at cost, with [`-B/--cost`](hledger.html#b-cost):
+Show the shares' value at cost, with [`-B/--cost`](hledger.md#b-cost):
 ```shell
 $ hledger -f t.j bal --flat -HD -B
 Ending balances (historical) in 2017/01/01-2017/01/02:
@@ -65,7 +65,7 @@ P 2017/1/3 TSLA $250
 ```
 
 Show the shares's value using the latest applicable market price,
-with [`-V/--value`](hledger.html#v-market-value).
+with [`-V/--value`](hledger.md#v-market-value).
 A $500 capital gain is apparent in the totals:
 ```shell
 $ hledger -f t.j bal --flat -HD -V
