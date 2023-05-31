@@ -70,8 +70,8 @@ Full documentation is ready when you need it, in the sidebar to the left.
 
 ## Examples
 
-Here are three transactions in [journal format](hledger.md#journal-format),
-recorded in the [journal file](hledger.md#input) (`~/.hledger.journal` or `$LEDGER_FILE`)
+Here are three transactions in [journal format](hledger.md#journal),
+recorded in the [journal file](hledger.md#input) (`$LEDGER_FILE` or `~/.hledger.journal`)
 by [`hledger add`](hledger.md#add) or [other method](create-a-journal.md).
 The [account names](hledger.md#account-names) and [amounts](hledger.md#amounts) are separated by at least two spaces;
 a positive amount means "added to this account", negative means "removed from this account".

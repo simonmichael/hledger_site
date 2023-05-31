@@ -31,7 +31,7 @@ Use the add form to add transactions.
 It will store data in its default location.
 (So you'll see your transactions next time you run it.)
 
-[Tutorial: hledger-web](web.html) describes this in more detail.
+[Tutorial: hledger-web](web.md) describes this in more detail.
 
 ## Terminal UI
 
@@ -48,7 +48,7 @@ Open your preferred text editor and create a journal file, `.hledger.journal` in
 (Or elsewhere, and set its path in the `LEDGER_FILE` environment variable.)
 Create transactions by hand using [journal file](hledger.html) format.
 Once you have a few, you can copy/paste them to make more.
-When you want more assistance, set up an [editor mode](editors.html).
+When you want more assistance, set up an [editor mode](editors.md).
 Here's an example:
 
 ```journal
@@ -125,7 +125,7 @@ Some downloading helpers can be found at
 
 ## Some more advanced workflows
 
-- Notes on [Simon's setup](simons-setup.html)
+- Notes on [Simon's setup](simons-setup.md)
 
 - Dmitry Astapov's Full-fledged Hledger workflow (tutorial):\
   <https://github.com/adept/full-fledged-hledger>
@@ -140,8 +140,8 @@ Some downloading helpers can be found at
   <https://memo.barrucadu.co.uk/personal-finance.html>
 
 
-[convert]:           convert-csv-files.html
-[import]:            hledger.html#import
+[convert]:           convert-csv-files.md
+[import]:            hledger.md#import
 [balance sheet]:     https://en.wikipedia.org/wiki/Balance_sheet#Personal
 [income statement]:  https://en.wikipedia.org/wiki/Income_statement
 

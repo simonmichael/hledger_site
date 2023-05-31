@@ -215,5 +215,5 @@ more speed,
 more GUI,
 charts,
 better getting started experience.
-See also [ROADMAP](ROADMAP.html).
+See also [ROADMAP](ROADMAP.md).
 -->

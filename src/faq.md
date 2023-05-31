@@ -226,7 +226,7 @@ Also:
 
 ### How do I set environment variables like LEDGER_FILE (persistently) ?
 
-See [hledger manual > ENVIRONMENT](hledger.md#environment).
+See [hledger manual > Setting LEDGER_FILE](hledger.md#setting-ledger_file).
 
 ### Why does this entry give a "no amount" error even though I wrote an amount ?
 

@@ -8,14 +8,14 @@
 One of the introductions to hledger; for others, see [Get Started](start.md).
 
 [full website]:   https://hledger.org
-[hledger]:        hledger.html
-[hledger manual]: hledger.html
-[hledger-ui]:     hledger-ui.html
-[hledger-web]:    hledger-web.html
-[journal]:        hledger.html#journal-format
-[csv]:            hledger.html#csv-format
-[timeclock]:      hledger.html#timeclock-format
-[timedot]:        hledger.html#timedot-format
+[hledger]:        hledger.md
+[hledger manual]: hledger.md
+[hledger-ui]:     hledger-ui.md
+[hledger-web]:    hledger-web.md
+[journal]:        hledger.md#journal
+[csv]:            hledger.md#csv
+[timeclock]:      hledger.md#timeclock
+[timedot]:        hledger.md#timedot
 
 
 <a name="about"></a>
@@ -35,27 +35,27 @@ hledger: free GPLv3+ accounting software for linux, mac, windows, web, etc.
 - user-friendly, well documented, robust
 - scales smoothly from simple, easy accounting needs to complex ones.
 
-[output-format]:       hledger.html#output-format
-[balance sheet]:       hledger.html#balancesheet
-[income statement]:    hledger.html#incomestatement
-[cashflow]:            hledger.html#cashflow
-[budget]:              hledger.html#budget-report
-[roi]:                 hledger.html#roi
-[transactions]:        hledger.html#aregister
-[time]:                hledger.html#timedot-format
-[forecast]:            hledger.html#periodic-transactions
-[multiperiod]:         hledger.html#multicolumn-balance-report
-[multiple currencies]: hledger.html#commodities
-[valuation]:           hledger.html#valuation
-[summarising]:         hledger.html#depth-limiting
-[aliasing]:            hledger.html#account-aliases
-[pivoting]:            hledger.html#pivoting
-[CLI]:                 hledger.html
-[TUI]:                 ui.html
-[WUI]:                 web.html
-[JSON API]:            hledger-web.html#json-api
+[output-format]:       hledger.md#output-format
+[balance sheet]:       hledger.md#balancesheet
+[income statement]:    hledger.md#incomestatement
+[cashflow]:            hledger.md#cashflow
+[budget]:              hledger.md#budget-report
+[roi]:                 hledger.md#roi
+[transactions]:        hledger.md#aregister
+[time]:                hledger.md#timedot
+[forecast]:            hledger.md#periodic-transactions
+[multiperiod]:         hledger.md#multicolumn-balance-report
+[multiple currencies]: hledger.md#commodities
+[valuation]:           hledger.md#valuation
+[summarising]:         hledger.md#depth-limiting
+[aliasing]:            hledger.md#account-aliases
+[pivoting]:            hledger.md#pivoting
+[CLI]:                 hledger.md
+[TUI]:                 ui.md
+[WUI]:                 web.md
+[JSON API]:            hledger-web.md#json-api
 [Haskell library]:     https://hackage.haskell.org/package/hledger-lib
-[script and extend]:   scripting.html
+[script and extend]:   scripting.md
 
 
 <a name="workflow"></a>
@@ -82,14 +82,14 @@ Knowing some [double entry accounting] will help you get the most from hledger,
 but you can do fine just by following the examples below. You'll find your
 bookkeeping/accounting skills improve naturally (and [help] is available).
 
-[double entry accounting]: https://hledger.org/accounting.html#accounting-links
-[help]: https://hledger.org/support.html
+[double entry accounting]: https://hledger.org/accounting.md#accounting-links
+[help]: https://hledger.org/support.md
 
 
 <a name="install"></a>
 ## Install
 
-Fastest: [download binaries](install.html), eg one of:
+Fastest: [download binaries](install.md), eg one of:
 
 ```
 $ apt install hledger hledger-ui hledger-web
@@ -104,10 +104,10 @@ $ sudo layman -a haskell && sudo emerge hledger hledger-ui hledger-web
 $ xbps-install -S hledger hledger-ui hledger-web
 ```
 
-Freshest: [build from source](install.html#building-from-source):
+Freshest: [build from source](install.md#building-from-source):
  
-1. $ apt install libtinfo-dev [or equivalent](install.html#ensure-c-libraries-are-installed)
-2. [check UTF-8 locale](install.html#ensure-your-system-locale-supports-utf-8)
+1. $ apt install libtinfo-dev [or equivalent](install.md#ensure-c-libraries-are-installed)
+2. [check UTF-8 locale](install.md#ensure-your-system-locale-supports-utf-8)
 3. then one of:
    <pre>
    $ curl -sO https://raw.githubusercontent.com/simonmichael/hledger/master/hledger-install/hledger-install.sh; bash hledger-install.sh
@@ -120,7 +120,7 @@ Freshest: [build from source](install.html#building-from-source):
 <a name="setup"></a>
 ## Set up a journal
 
-The [journal file][journal] is a plain text file where transactions are
+The [journal file](hledger.md#input) is a plain text file where transactions are
 recorded. By default it is ~/.hledger.journal, and the add command or web add
 form described below will create it automatically, so actually you don't need
 to do anything here.
@@ -139,26 +139,26 @@ But here are some common changes people make sooner or later, so why not now:
   compartmentalisation:
 
   ```shell
-  $ touch 2021.journal
+  $ touch 2023.journal
   ```
 
-- A [LEDGER_FILE](hledger.html#environment) environment variable, so you won't
-  have to type "-f ~/finance/2021.journal" with every command:
+- A [LEDGER_FILE](hledger.md#setting-ledger_file) environment variable, so you won't
+  have to type "-f ~/finance/2023.journal" with every command:
 
   ```shell
-  $ echo "export LEDGER_FILE=~/finance/2021.journal" >> ~/.bashrc
+  $ echo "export LEDGER_FILE=~/finance/2023.journal" >> ~/.bashrc
   $ source ~/.bashrc
   ```
   Or if environment variables annoy you, symbolic-link the file to ~/.hledger.journal:
   ```shell
-  $ ln -s ~/finance/2021.journal ~/.hledger.journal
+  $ ln -s ~/finance/2023.journal ~/.hledger.journal
   ```
 
-- Some optional [directives](hledger.html#directives), useful especially with
+- Some optional [directives](hledger.md#directives), useful especially with
   non-english account names:
 
   ```shell
-  $ cat > 2021.journal
+  $ cat > 2023.journal
 
   ; Declare top level accounts, setting their types and display order;
   ; Replace these account names with yours; it helps commands like bs and is detect them.
@@ -180,8 +180,8 @@ But here are some common changes people make sooner or later, so why not now:
 
   ```shell
   $ git init
-  $ git add 2021.journal
-  $ git commit 2021.journal -m 'start 2021 journal'
+  $ git add 2023.journal
+  $ git commit 2023.journal -m 'start 2023 journal'
   ```
 
 - Remember to also keep *backups*.
@@ -194,16 +194,16 @@ Recording transactions manually may sound tedious, but with a good text editor
 or other data entry tool it can be fast. It also provides greatest financial
 awareness. Some people enter everything by hand for this reason.
 
-Run the add command for assisted data entry in the terminal ([tutorial](add.html)):
+Run the add command for assisted data entry in the terminal ([tutorial](add.md)):
 
 ```shell
 $ hledger add
 ...
-Date [2021-03-10]: ...
+Date [2023-03-10]: ...
 ```
 
 Or run hledger-web and when the web browser opens, press a to add
-([tutorial](web.html)):
+([tutorial](web.md)):
 
 ```shell
 $ hledger-web
@@ -211,21 +211,21 @@ $ hledger-web
 Opening web browser...
 ```
 
-Or using a [text editor](editors.html), add transactions to
-[your journal file](essentials.html#setup) like so:
+Or using a [text editor](editors.md), add transactions to
+[your journal file](hledger.md#input) like so:
 
 ```journal
-2021-01-01 opening balances on january 1st
+2023-01-01 opening balances on january 1st
     assets:checking         $1000  ; a posting, increasing assets:checking's balance by $1000
     assets:cash              $100
     liabilities                $0
     equity                 $-1100  ; each transaction must sum to zero
 
-2021-03-05 client payment
+2023-03-05 client payment
     assets:checking         $2000
     revenues:consulting    $-2000  ; revenues/liabilities/equity normally appear negative
 
-2021-03-20 Sprouts
+2023-03-20 Sprouts
     expenses:food:groceries  $100
     assets:cash               $40
     assets:checking                ; a missing amount will be inferred ($-140 here)
@@ -257,13 +257,13 @@ cron job and no manual data entry at all. This is convenient but costs some
 financial awareness.
 
 Download one or more CSV files containing transaction info, then create a 
-[csv rules file](convert-csv-files.html) for each. Eg if SomeBank.csv looks
+[csv rules file](convert-csv-files.md) for each. Eg if SomeBank.csv looks
 like:
 
 ```csv
 "Date","Note","Amount"
-"2021/3/22","DEPOSIT","50.00"
-"2021/3/23","ATM WITHDRAWAL","-10.00"
+"2023/3/22","DEPOSIT","50.00"
+"2023/3/23","ATM WITHDRAWAL","-10.00"
 ```
 
 Create SomeBank.csv.rules containing rules like:
@@ -284,11 +284,11 @@ Check the csv conversion looks ok:
 
 ```shell
 $ hledger -f SomeBank.csv print
-2021-03-22 DEPOSIT
+2023-03-22 DEPOSIT
     assets:checking          $50.00
     revenues:misc           $-50.00
 
-2021-03-23 ATM WITHDRAWAL
+2023-03-23 ATM WITHDRAWAL
     assets:checking         $-10.00
     assets:cash              $10.00
 ```
@@ -303,11 +303,11 @@ first:
 $ hledger import *.csv --dry-run
 ; would import 2 new transactions from SomeBank.csv:
 
-2021-03-22 DEPOSIT
+2023-03-22 DEPOSIT
     assets:checking          $50.00
     revenues:misc           $-50.00
 
-2021-03-23 ATM WITHDRAWAL
+2023-03-23 ATM WITHDRAWAL
     assets:checking         $-10.00
     assets:cash              $10.00
 
@@ -322,7 +322,7 @@ Now to commit the new rules file and changed journal file:
 ```shell
 $ git add SomeBank.csv.rules
 $ git commit -m 'SomeBank csv rules' SomeBank.csv.rules
-$ git commit -m 'txns' 2021.journal
+$ git commit -m 'txns' 2023.journal
 ```
 
 In the above workflow, the journal file is permanent and downloaded csv files
@@ -339,7 +339,7 @@ instead commit all csv files and regenerate the journal file.
 After entering or importing transactions, it's important to check for mistakes
 (yours or others'), by comparing your reports with reality - your wallet,
 statements, online balances etc.
-See [Reconciling](hledger.html#reconciling).
+See [Reconciling](hledger.md#reconciling).
 
 <a name="reports"></a>
 ## Run reports
@@ -370,9 +370,9 @@ revenues
 
 $ hledger balancesheet    # what do I own and owe ?
 $ hledger bs              # short form
-Balance Sheet 2021-03-20
+Balance Sheet 2023-03-20
 
-                 || 2021-03-20 
+                 || 2023-03-20 
 =================++============
  Assets          ||            
 -----------------++------------
@@ -390,13 +390,13 @@ Balance Sheet 2021-03-20
 
 $ hledger aregister --forecast checking   # or: hledger register checking
 Transactions in assets:checking and subaccounts:
-2021-01-01 opening balances ..  as:cash, liabiliti..         $1000         $1000
-2021-03-05 client payment       re:consulting                $2000         $3000
-2021-03-20 Sprouts              ex:fo:groceries, a..         $-140         $2860
+2023-01-01 opening balances ..  as:cash, liabiliti..         $1000         $1000
+2023-03-05 client payment       re:consulting                $2000         $3000
+2023-03-20 Sprouts              ex:fo:groceries, a..         $-140         $2860
 
 $ hledger incomestatement --monthly --depth 2    # where is it coming from and going to ?
 $ hledger is -M -2                               # short form
-Income Statement 2021Q1
+Income Statement 2023Q1
 
                      || Jan  Feb    Mar 
 =====================++=================
