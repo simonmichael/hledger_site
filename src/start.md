@@ -23,7 +23,7 @@ Quick introductions (may assume a bit of command line know-how):
 
 **Tutorials**
 
-Step by step tutorials, with screenshots:
+Detailed step by step tutorials, with screenshots:
 
 - [Tutorial: hledger basics](basics.md)
 - [Tutorial: hledger-web](web.md)
