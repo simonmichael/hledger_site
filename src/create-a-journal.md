@@ -5,14 +5,21 @@
 <!-- toc -->
 </div>
 
+See also:
+[Input](hledger.md#input) and
+[Setting LEDGER_FILE](hledger.md#setting-ledger_file) and
+[Starting a journal file](hledger.html#starting-a-journal-file)
+in the hledger manual.
+
 There are lots of ways to start and update a journal file:
 
 ## with touch
 
 The simplest possible journal is just an empty file:
 
-    touch 2018.journal
-
+```shell
+$ touch 2023.journal
+```
 
 The name doesn't matter much and can be changed later. 
 One file per year is common, 
@@ -20,12 +27,13 @@ and so is a `.journal` or `.hledger` extension.
 
 ## with cat
 
-
-    $ cat >>2018.journal
-    2018/1/26
-      expenses:food     $10
-      assets:cash
-    <CTRL-D>
+```shell
+$ cat >>2023.journal
+2018/1/26
+    expenses:food     $10
+    assets:cash
+<CTRL-D>
+```
 
 [Account names](hledger.html#account-names) can be anything 
 and you can change them later by search and replace. 
@@ -42,20 +50,11 @@ and save the file.
 
 ## with hledger add
 
-Use the interactive [add](hledger.html#add) command to enter one or more transactions:
+Use the interactive [add](hledger.html#add) command and follow the prompts:
 
-    hledger add -f 2018.journal
-
-
-To avoid typing `-f FILE` every time, set the 
-[`LEDGER_FILE` environment variable](hledger.html#input-files). 
-Eg:
-
-    echo "export LEDGER_FILE=~/finance/2018.journal" >> ~/.bash_profile && source ~/.bash_profile
-
-Then it's just
-
-    hledger add
+```shell
+$ hledger add
+```
 
 ## with hledger-iadd
 

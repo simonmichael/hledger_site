@@ -19,7 +19,7 @@ $ cat >main.journal    # record a transaction manually from command line
 ```
 ```shell
 $ export LEDGER_FILE=main.journal    # use this file by default
-$ echo 'export LEDGER_FILE=main.journal' >>~/.bashrc    # and in future sessions
+$ echo 'export LEDGER_FILE=main.journal' >>~/.profile    # and in future sessions
 ```
 ```shell
 $ hledger add    # record a transaction interactively

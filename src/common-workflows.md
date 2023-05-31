@@ -44,9 +44,9 @@ Eg, press `a` to add new transactions.
 
 ## Text editor
 
-Open your preferred text editor and create a journal file, `.hledger.journal` in your home directory.
-(Or elsewhere, and set its path in the `LEDGER_FILE` environment variable.)
-Create transactions by hand using [journal file](hledger.html) format.
+Open your preferred text editor and create a journal file, either `.hledger.journal` in your home directory,
+or somewhere else like `~/finance/2023.journal` (and [set the `LEDGER_FILE` environment variable](hledger.md#setting-ledger_file)).
+Create transactions by hand using [journal file](hledger.md) format.
 Once you have a few, you can copy/paste them to make more.
 When you want more assistance, set up an [editor mode](editors.md).
 Here's an example:

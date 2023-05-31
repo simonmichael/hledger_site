@@ -54,8 +54,8 @@ General flags:
 Normally, you start hledger-ui by running `hledger-ui` in a terminal.
 Any standard terminal app will do, but not a command prompt that
 doesn't allow cursor positioning (such as an emacs shell buffer).
-(In that case you'd see garbage output, like `^[(B^[(B──────────── tmp.journal account balances...`, 
-and would have to press `q`, `RETURN` to exit.)
+(In that case you would see garbage output like `^[(B^[(B──────────── tmp.journal account balances...`, 
+and you would have to press `q`, `RETURN` to exit.)
 
 For this tutorial, we'll specify a new temporary journal file,
 to suit the steps below and avoid disturbing any existing data:
