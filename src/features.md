@@ -139,7 +139,7 @@ learning from other PTA tools and taking PTA to a higher level of usability and 
 Here are some things it provides out of the box:
 
 - Easy multi-currency double-entry accounting [using only a plain text file](#usage)
-- Easy [assisted data entry](add.md) or [CSV import](import-csv.md)
+- Easy [assisted data entry](basics.md) or [CSV import](import-csv.md)
 - Easy zero-setup [command line], [terminal], and [web] user interfaces
 - Easy multi-period [balance sheet], [income statement], and [cashflow] reports
 - Easy summarising of account balances to a [desired depth][depth limiting]
@@ -272,7 +272,7 @@ See also [ROADMAP](ROADMAP.md).
 [output format]:              hledger.md#output-format
 [download]:                   install.md#binary-packages
 [build]:                      install.md#building-from-source
-[command line]:               add.md
+[command line]:               basics.md
 [terminal]:                   ui.md
 [web]:                        web.md
 [actively maintained]:        https://github.com/simonmichael/hledger/graphs/contributors

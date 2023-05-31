@@ -6,7 +6,7 @@
 </div>
 
 Here we'll give a quick hledger-oriented intro to some useful accounting concepts,
-using the journal file created in [Tutorial: hledger add](add.md).
+using the journal file created in [Tutorial: hledger add](basics.md).
 Also we'll discuss account hierarchy in hledger.
 At the end, there's a collection of useful links to learn more.
 

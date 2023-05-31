@@ -25,7 +25,7 @@ Quick introductions (may assume a bit of command line know-how):
 
 Step by step tutorials, with screenshots:
 
-- [Tutorial: hledger basics](add.md)
+- [Tutorial: hledger basics](basics.md)
 - [Tutorial: hledger-web](web.md)
 - [Tutorial: hledger-ui](ui.md)
 - [Tutorial: Accounting basics and further study](accounting.md)
