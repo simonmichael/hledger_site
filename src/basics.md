@@ -6,11 +6,13 @@
 </div>
 
 Here we'll walk you through a simple way of using hledger,
-using the command line interface and built-in [add](hledger.md#add) command.
-This works on all platforms with no further setup. 
+the command line interface and built-in [add](hledger.md#add) command.
+This works on all platforms with no further setup.
+We'll describe every step in detail.
 
-We'll also introduce some basic hledger concepts. So even if you don't
-plan on using the hledger CLI or add command, it might be worth reading through this once.
+We'll also introduce some basic hledger concepts.
+So even if you don't plan on using the hledger CLI or add command,
+it might be worth skimming this tutorial.
 
 [Install](install.md) hledger and let's get started!
 
