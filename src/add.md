@@ -68,7 +68,7 @@ An optional ; COMMENT may follow descriptions or amounts.
 If you make a mistake, enter < at any prompt to restart the transaction.
 To end a transaction, enter . when prompted.
 To quit, enter . at a date prompt or press control-d or control-c.
-Date [2015-05-25]:
+Date [2023-05-25]:
 ```
 
 `add` prompts for each transaction field. The first is the date.
@@ -124,7 +124,7 @@ Account 3 (or . or enter to finish this transaction): .
 Press enter to finish entering this transaction.
 
 ```shell
-2015-05-25 trip to the supermarket
+2023-05-25 trip to the supermarket
     expenses             $10
     assets              $-10
 
@@ -142,7 +142,7 @@ Press enter to save the journal entry.
 ```shell
 Saved.
 Starting the next transaction (. or ctrl-D/ctrl-C to quit)
-Date [2015-05-25]: <CTRL-D>
+Date [2023-05-25]: <CTRL-D>
 ```
 
 hledger has saved it to the journal file and is ready for the next
@@ -154,8 +154,8 @@ entry.  Hold down the control key and press d once to exit.
 $ hledger stats
 Main journal file        : /home/YOU/.hledger.journal
 Included journal files   : 
-Transactions span        : 2015-05-25 to 2015-05-26 (1 days)
-Last transaction         : 2015-05-25 (0 days ago)
+Transactions span        : 2023-05-25 to 2023-05-26 (1 days)
+Last transaction         : 2023-05-25 (0 days ago)
 Transactions             : 1 (1.0 per day)
 Transactions last 30 days: 1 (0.0 per day)
 Transactions last 7 days : 1 (0.1 per day)
@@ -174,7 +174,7 @@ Since there's just one so far, you should see:
 
 ```shell
 $ hledger print
-2015-05-25 trip to the supermarket
+2023-05-25 trip to the supermarket
     expenses             $10
     assets              $-10
 
@@ -188,9 +188,9 @@ List and print the journal file (on Windows, use `dir` and `type` and the file p
 $ ls -l ~/.hledger.journal
 -rw-r--r--  1 YOU  YOU  114 May 25 16:55 /home/YOU/.hledger.journal
 $ cat ~/.hledger.journal
-; journal created 2015-05-25 by hledger
+; journal created 2023-05-25 by hledger
 
-2015-05-25 trip to the supermarket
+2023-05-25 trip to the supermarket
     expenses             $10
     assets              $-10
 ```
@@ -208,7 +208,7 @@ $ emacs ~/.hledger.journal
 
 First, remove one of the amounts, and save the file. Eg:
 ```journal
-2015-05-25 trip to the supermarket
+2023-05-25 trip to the supermarket
     expenses             $10
     assets
 ```
@@ -221,7 +221,7 @@ To make such inferred amounts explicit, you can use `hledger print -x`.
 
 Now try removing both amounts, and save the file. This is an invalid entry:
 ```journal
-2015-05-25 trip to the supermarket
+2023-05-25 trip to the supermarket
     expenses
     assets
 ```
@@ -231,7 +231,7 @@ Now try removing both amounts, and save the file. This is an invalid entry:
 ```shell
 $ hledger print
 hledger: Error: /Users/simon/.hledger.journal:3-5:
-3 | 2015-05-25 trip to the supermarket
+3 | 2023-05-25 trip to the supermarket
   |     expenses
   |     assets
 
@@ -248,7 +248,7 @@ Notice the last part of that error message: "Remember to put two or more spaces 
 Another cause of this error is forgetting to put two spaces before the amount, like this:
 
 ```journal
-2015-05-25 trip to the supermarket
+2023-05-25 trip to the supermarket
     expenses $10  ; <- problem: only one space between expenses and $10
     assets
 ```
@@ -273,7 +273,7 @@ anything following them (like an amount, or a comment) by two or more spaces.
 Edit the file to look like this:
 
 ```journal
-2015-05-25 trip to the supermarket
+2023-05-25 trip to the supermarket
     expenses           $10
     assets             $10  ; <- another problem: both amounts are positive
 ```
@@ -299,7 +299,7 @@ Correct the mistake by adding the minus sign, or just removing the assets amount
 that `print` works again:
 ```shell
 $ hledger print
-2015-05-25 trip to the supermarket
+2023-05-25 trip to the supermarket
     expenses             $10
     assets              $-10
 
@@ -312,11 +312,11 @@ It's often quickest to copy & paste a similar entry, then change it.
 Make the file look like this:
 
 ```journal
-2015-05-25 trip to the supermarket
+2023-05-25 trip to the supermarket
     expenses           $10
     assets            $-10
 
-2015-05-26 forgot the bread
+2023-05-26 forgot the bread
     expenses            $5
     assets
 ```
@@ -326,11 +326,11 @@ Test your work with `print`. You should see:
 
 ```shell
 $ hledger print
-2015-05-25 trip to the supermarket
+2023-05-25 trip to the supermarket
     expenses             $10
     assets              $-10
 
-2015-05-26 forgot the bread
+2023-05-26 forgot the bread
     expenses              $5
     assets
 
@@ -354,9 +354,9 @@ Run `register` and compare with the output of `print` above. You should see (mor
 
 ```shell
 $ hledger register
-2015-05-25 trip to the super..  expenses                       $10           $10
+2023-05-25 trip to the super..  expenses                       $10           $10
                                 assets                        $-10             0
-2015-05-26 forgot the bread     expenses                        $5            $5
+2023-05-26 forgot the bread     expenses                        $5            $5
                                 assets                         $-5             0
 ```
 
@@ -379,8 +379,8 @@ You can force it to look like the below by running `export COLUMNS=80` first:
 
 ```shell
 $ hledger register expenses
-2015-05-25 trip to the super..  expenses                       $10           $10
-2015-05-26 forgot the bread     expenses                        $5           $15
+2023-05-25 trip to the super..  expenses                       $10           $10
+2023-05-26 forgot the bread     expenses                        $5           $15
 ```
 
 Now it's clear that your `expenses` balance - ie, the total amount spent - has increased to $15.
@@ -389,19 +389,19 @@ Your `assets` balance should have dropped accordingly. Check it:
 
 ```shell
 $ hledger register assets
-2015-05-25 trip to the super..  assets                        $-10          $-10
-2015-05-26 forgot the bread     assets                         $-5          $-15
+2023-05-25 trip to the super..  assets                        $-10          $-10
+2023-05-26 forgot the bread     assets                         $-5          $-15
 ```
 
 ## Set initial account balances
 
 hledger assumes every account starts with a zero balance,
 so in the previous example, we see the withdrawals producing a negative running balance.
-Let's assume `assets` represents a real-world asset, like your bank checking account, and you want to start tracking it from 2015-05-01 onward, and on that day it contained exactly $500.
+Let's assume `assets` represents a real-world asset, like your bank checking account, and you want to start tracking it from 2023-05-01 onward, and on that day it contained exactly $500.
 To show the real-world account balance, edit your journal file and add this transaction at the top:
 
 ```journal
-2015-05-01 set initial assets balance
+2023-05-01 set initial assets balance
     assets                              $500
     equity:opening balances
 ```
@@ -412,9 +412,9 @@ Now the report looks like this, with an accurate running balance on each date (h
 
 ```shell
 $ hledger register assets
-2015-05-01 set initial asset..  assets                        $500          $500
-2015-05-25 trip to the super..  assets                        $-10          $490
-2015-05-26 forgot the bread     assets                         $-5          $485
+2023-05-01 set initial asset..  assets                        $500          $500
+2023-05-25 trip to the super..  assets                        $-10          $490
+2023-05-26 forgot the bread     assets                         $-5          $485
 ```
 
 ## Queries
@@ -440,7 +440,7 @@ Run the following examples and make sure they make sense, consulting the manual 
 Show only transactions whose description contains "bread":
 ```shell
 $ hledger print desc:bread
-2015-05-26 forgot the bread
+2023-05-26 forgot the bread
     expenses              $5
     assets
 
@@ -451,8 +451,8 @@ $ hledger print desc:bread
 
 Show only postings on or after a certain date to an account whose name contains "exp":
 ```shell
-$ hledger register date:2015-05-26.. exp
-2015-05-26 forgot the bread     expenses                        $5            $5
+$ hledger register date:2023-05-26.. exp
+2023-05-26 forgot the bread     expenses                        $5            $5
 ```
 
 ## Show accounts and their balances with "hledger balance"
@@ -482,9 +482,9 @@ $ hledger balance assets
 
 ## balance shows balance changes by default
 
-Here's a balance report based only on the postings dated 2015-05-26:
+Here's a balance report based only on the postings dated 2023-05-26:
 ```shell
-$ hledger balance date:2015-05-26
+$ hledger balance date:2023-05-26
                  $-5  assets
                   $5  expenses
 --------------------
@@ -505,8 +505,8 @@ Eg for assets above, we can see that the date: query caused the earlier
 postings to be excluded:
 
 ```shell
-$ hledger register date:2015-05-26 assets
-2015-05-26 forgot the bread     assets                         $-5           $-5
+$ hledger register date:2023-05-26 assets
+2023-05-26 forgot the bread     assets                         $-5           $-5
 ```
 
 ## Use -H to show historical end balances
@@ -514,10 +514,10 @@ $ hledger register date:2015-05-26 assets
 Adding the `-H/--historical` flag to the balance report above makes it show *historical balances*,
 instead of balance changes. 
 Historical balances include the effect of postings before the report start date
-(which otherwise would be excluded here by `date:2015-05-26`):
+(which otherwise would be excluded here by `date:2023-05-26`):
 
 ```shell
-$ hledger balance date:2015-05-26 -H
+$ hledger balance date:2023-05-26 -H
                 $485  assets
                $-500  equity:opening balances
                  $15  expenses
@@ -528,8 +528,8 @@ $ hledger balance date:2015-05-26 -H
 `-H` works with register reports too (note the running total is now a running historical balance):
 
 ```shell
-$ hledger register date:2015-05-26 assets -H
-2015-05-26 forgot the bread     assets                         $-5          $485
+$ hledger register date:2023-05-26 assets -H
+2023-05-26 forgot the bread     assets                         $-5          $485
 ```
 
 `-H` is useful when you have specified a report start date to limit the report size,
@@ -549,9 +549,9 @@ Eg:
 
 ```shell
 $ hledger bs
-Balance Sheet 2015-05-26
+Balance Sheet 2023-05-26
 
-             || 2015-05-26 
+             || 2023-05-26 
 =============++============
  Assets      ||            
 -------------++------------
@@ -569,9 +569,9 @@ Balance Sheet 2015-05-26
 
 ```shell
 $ hledger is
-Income Statement 2015-05-01..2015-05-26
+Income Statement 2023-05-01..2023-05-26
 
-          || 2015-05-01..2015-05-26 
+          || 2023-05-01..2023-05-26 
 ==========++========================
  Revenues ||                        
 ----------++------------------------
