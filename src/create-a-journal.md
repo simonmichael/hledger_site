@@ -29,7 +29,7 @@ and so is a `.journal` or `.hledger` extension.
 
 ```shell
 $ cat >>2023.journal
-2018/1/26
+2023-01-26
     expenses:food     $10
     assets:cash
 <CTRL-D>
