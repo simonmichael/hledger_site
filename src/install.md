@@ -62,7 +62,9 @@ div.badges > a > img {
 }
 </style>
 
-The current hledger release is **1.30**. ([Release notes](release-notes.md))
+The current hledger release is **1.30**. 
+(The [hledger package](https://hackage.haskell.org/package/hledger) is at 1.30.1; they work the same, it's just a packaging fix.
+[Release notes](release-notes.md))
 
 Here are lots of ways to install hledger:
 - [Binary packages](#binary-packages) install quickly but are not always up to date (look for green badges below).
@@ -471,7 +473,7 @@ And finally please [share any feedback](support.md) so we can make this process 
 
 ## Build the current release
 
-<img alt="Release source" src="https://img.shields.io/badge/Release_source-1.30-brightgreen.svg" />
+<img alt="Release source" src="https://img.shields.io/badge/Release_source-1.30.1-brightgreen.svg" />
 
 1. Check [build requirements](#build-requirements)
 2. Use one of the [build methods](#build-methods)
@@ -609,7 +611,7 @@ If you have stack installed, you can run it to install the main hledger tools in
 
 <div class="builder-command">
   stack update <br>
-  stack install --resolver=lts-19 hledger-lib-1.30 hledger-1.30 hledger-ui-1.30 hledger-web-1.30 --silent
+  stack install --resolver=lts-20 hledger-lib-1.30 hledger-1.30.1 hledger-ui-1.30 hledger-web-1.30 --silent
 </div>
 
 On Windows, omit hledger-ui from this command (unless you are in [WSL]).
@@ -621,7 +623,7 @@ If you have GHC and cabal, you can run cabal to install the main hledger tools i
 <div class="builder-command">
   cabal update <br>
   cabal install alex happy<br>
-  cabal install hledger-1.30 hledger-ui-1.30 hledger-web-1.30
+  cabal install hledger-1.30.1 hledger-ui-1.30 hledger-web-1.30
 </div>
 
 On Windows, omit hledger-ui from this command (unless you are in [WSL]).
@@ -681,18 +683,12 @@ our master branch on github is suitable for daily use.
 
 ## Run requirements
 
-After installing whether from binaries or from source, 
-
-by downloading binaries or by building from source, 
-please check that the [run requirements](#run-requirements) (PATH and locale) are satisfied.
-
- by any of the methods above, run the hledger tools
-and verify that their versions are what you just installed
+After installing, run the hledger tools and verify that their versions are what you just installed
 (and not older versions from a previous install). Eg:
 
 <div class="command">
 $ hledger --version <br>
-hledger 1.30-g94fe8b21c-20230601, mac-aarch64
+hledger 1.30-g94fe8b21c-20230601, mac-aarch64   # or hledger 1.30.1-g715f4b3d9-20230602
 <br>
 <br>
 $ hledger-ui --version <br>
