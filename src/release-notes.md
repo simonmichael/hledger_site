@@ -72,6 +72,18 @@ Changes in hledger-install.sh are shown
 [here](https://github.com/simonmichael/hledger/commits/master/hledger-install/hledger-install.sh).
 
 
+## 2023-06-02 hledger-1.30.1
+
+### hledger 1.30.1
+
+Fixes
+
+- Add missing files to Hackage release, making it buildable.
+
+Docs
+
+- Replace note about repeated options.
+
 ## 2023-06-01 hledger-1.30
 
 **Boolean queries, easier CSV file management, built-in demos, hledger-ui cash accounts screen, fixes.**
