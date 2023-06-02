@@ -37,7 +37,7 @@ Detailed step by step tutorials, with screenshots:
 **Manuals**
 
 hledger's manual is the authoritative documentation. 
-For full, version-specific details, go straight here
+For complete details, go straight here
 (or view it in the terminal with [`hledger help`](hledger.md#help)):
 
 - [hledger manual](hledger.md)
@@ -51,8 +51,8 @@ Practical advice and examples for real-world tasks are collected at:
 - [FAQ](faq.md)
 - [Cookbook](cookbook.md)
 - [wiki.plaintextaccounting.org](https://wiki.plaintextaccounting.org) (not hledger-specific)
-- [plaintextaccounting reddit](https://www.reddit.com/r/plaintextaccounting/)
-- [blog posts](https://plaintextaccounting.org/#articles-blog-posts) (usually out of date)
+- [plaintextaccounting reddit](https://www.reddit.com/r/plaintextaccounting/new/)
+- [old blog posts](https://plaintextaccounting.org/#articles-blog-posts) (needs update)
 - [hledger's examples/ directory](https://github.com/simonmichael/hledger/tree/master/examples) (possibly)
 
 **See also**
