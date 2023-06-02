@@ -5,10 +5,8 @@
 <!-- toc -->
 </div>
 
-Starting out with hledger or Plain Text Accounting,
-not to mention setting up a new accounting system, 
-can seem overwhelming.
-This page aims to help!
+Starting out with hledger or Plain Text Accounting, not to mention setting up a new accounting system,
+can be a lot. This page aims to help!
 After [installing](install.md) hledger, reading one or more of the docs below should be helpful.
 
 **Quick starts**
