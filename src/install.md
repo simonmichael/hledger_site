@@ -692,15 +692,15 @@ and verify that their versions are what you just installed
 
 <div class="command">
 $ hledger --version <br>
-hledger 1.30-gVERSION-DATE, mac-aarch64
+hledger 1.30-g94fe8b21c-20230601, mac-aarch64
 <br>
 <br>
 $ hledger-ui --version <br>
-hledger-ui 1.30-gVERSION-DATE, mac-aarch64
+hledger-ui 1.30-g94fe8b21c-20230601, mac-aarch64
 <br>
 <br>
 $ hledger web --version <br>
-hledger-web 1.30-gVERSION-DATE, mac-aarch64
+hledger-web 1.30-g94fe8b21c-20230601, mac-aarch64
 <br>
 </div>
 
