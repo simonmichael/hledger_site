@@ -7,7 +7,7 @@ Relevant [data conversion tools](https://plaintextaccounting.org/#data-importcon
 - Old 2.x versions of Ledger had some ability to read one of GnuCash's data formats
 - [gnucash2ledger.py](https://github.com/MatzeB/pygnucash/blob/master/gnucash2ledger.py) (2014, python, reads SQLite)
 - [piecash](https://github.com/sdementen/piecash) (2015, python, reads SQLite/MySQL/Postgres)
-- [gnucash-to-beancount](https://github.com/henriquebastos/gnucash-to-beancount) (2017, python, reads SQLite) (and then use [beancount2ledger](https://github.com/beancount/beancount2ledger))
+- [gnucash-to-beancount](https://github.com/henriquebastos/gnucash-to-beancount) (2017, python, reads SQLite) (then use [beancount2ledger](https://github.com/beancount/beancount2ledger))
 - [gcash2ledger.py](https://gist.github.com/nonducor/ddc97e787810d52d067206a592a35ea7/) (2018, python, reads uncompressed XML)
 - [gnucash2ledger](https://github.com/lodenrogue/gnucash2ledger) (2023, python, reads compressed/uncompressed XML)
 
