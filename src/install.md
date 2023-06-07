@@ -84,7 +84,7 @@ And finally please [share any feedback](support.md) so we can make this process 
 
 <table class="mac downloads">
 
-  <tr> <!-- CI BINARIES -->
+  <tr> <!-- CI BINARIES (SM) -->
     <td>
       <div class="badges">
         <a><img alt="hledger CI binaries" src="https://img.shields.io/badge/hledger_CI_binaries-1.30-brightgreen.svg" /></a><br>
@@ -99,7 +99,7 @@ And finally please [share any feedback](support.md) so we can make this process 
     </td>
   </tr>
 
-  <tr> <!-- HOMEBREW -->
+  <tr> <!-- HOMEBREW (homebrew packagers, chenrui ?) -->
     <td>
       <div class="badges">
         <a href="https://formulae.brew.sh/formula/hledger"><img alt="Homebrew" src="https://repology.org/badge/version-for-repo/homebrew/hledger.svg" /></a>
@@ -117,7 +117,7 @@ And finally please [share any feedback](support.md) so we can make this process 
 
 <table class="windows downloads">
 
-  <tr> <!-- CI BINARIES -->
+  <tr> <!-- CI BINARIES (SM) -->
     <td>
       <div class="badges">
         <a><img alt="hledger CI binaries" src="https://img.shields.io/badge/hledger_CI_binaries-1.30-brightgreen.svg" /></a><br>
@@ -135,7 +135,7 @@ And finally please [share any feedback](support.md) so we can make this process 
     </td>
   </tr>
 
-  <tr valign="top"> <!-- SCOOP -->
+  <tr valign="top"> <!-- SCOOP (?) -->
     <td>
       <div class="badges">
         <a href="https://github.com/ScoopInstaller/Main/blob/master/bucket/hledger.json">
@@ -154,7 +154,7 @@ And finally please [share any feedback](support.md) so we can make this process 
     </td>
   </tr>
 
-  <tr valign="top"> <!-- CHOCOLATEY -->
+  <tr valign="top"> <!-- CHOCOLATEY (?) -->
     <td>
       <div class="badges">
         <a href="https://community.chocolatey.org/packages/hledger">
@@ -173,7 +173,7 @@ And finally please [share any feedback](support.md) so we can make this process 
     </td>
   </tr>
 
-  <tr valign="top"> <!-- WINGET -->
+  <tr valign="top"> <!-- WINGET (?) -->
     <td>
       <div class="badges">
         <a href="https://github.com/microsoft/winget-pkgs/tree/master/manifests/s/simonmichael/hledger">
@@ -196,7 +196,7 @@ And finally please [share any feedback](support.md) so we can make this process 
 
 <table class="linux downloads">
 
-  <tr> <!-- CI BINARIES -->
+  <tr> <!-- CI BINARIES (SM) -->
     <td>
       <div class="badges">
         <a><img alt="hledger CI binaries" src="https://img.shields.io/badge/hledger_CI_binaries-1.30-brightgreen.svg" /></a><br>
@@ -211,7 +211,7 @@ And finally please [share any feedback](support.md) so we can make this process 
     </td>
   </tr>
 
-  <tr> <!-- GENTOO -->
+  <tr> <!-- GENTOO (ezzie) -->
     <td>
       <div class="badges">
         <a href="https://gentoo.zugaina.org/Search?search=hledger"><img alt="Gentoo" src="https://img.shields.io/badge/Gentoo_package-1.29.2-red.svg" /></a>
@@ -222,7 +222,7 @@ And finally please [share any feedback](support.md) so we can make this process 
     </td>
   </tr>
 
-  <tr> <!-- ALPINE -->
+  <tr> <!-- ALPINE (dhruvin) -->
     <td>
       <div class="badges">
         <a href="https://pkgs.alpinelinux.org/packages?name=hledger*&branch=edge"><img alt="Alpine edge" src="https://repology.org/badge/version-for-repo/alpine_edge/hledger.svg" /></a>
@@ -238,7 +238,7 @@ And finally please [share any feedback](support.md) so we can make this process 
     </td>
   </tr>
 
-  <tr> <!-- ARCH -->
+  <tr> <!-- ARCH (?) -->
     <td>
       <div class="badges">
         <a href="https://archlinux.org/packages/community/x86_64/hledger/"><img alt="Arch" src="https://repology.org/badge/version-for-repo/arch/hledger.svg" /></a>
@@ -249,7 +249,7 @@ And finally please [share any feedback](support.md) so we can make this process 
     </td>
   </tr>
 
-  <tr> <!-- VOID -->
+  <tr> <!-- VOID (?) -->
     <td>
       <div class="badges">
         <a href="https://voidlinux.org/packages/?q=hledger"><img src="https://repology.org/badge/version-for-repo/void_x86_64/hledger.svg" alt="Void Linux x86_64" /></a>
@@ -260,7 +260,7 @@ And finally please [share any feedback](support.md) so we can make this process 
     </td>
   </tr>
 
-  <tr> <!-- DEBIAN -->
+  <tr> <!-- DEBIAN (Clint) -->
     <td>
       <div class="badges">
         <a href="https://packages.debian.org/unstable/hledger"><img src="https://repology.org/badge/version-for-repo/debian_unstable/hledger.svg" alt="Debian unstable" /></a><br>
@@ -275,7 +275,7 @@ And finally please [share any feedback](support.md) so we can make this process 
     </td>
   </tr>
 
-  <tr> <!-- UBUNTU -->
+  <tr> <!-- UBUNTU (?) -->
     <td>
       <div class="badges">
         <a href="https://packages.ubuntu.com/kinetic/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_22_10/hledger.svg" /></a><br>
@@ -294,7 +294,7 @@ And finally please [share any feedback](support.md) so we can make this process 
     </td>
   </tr>
 
-  <tr> <!-- FEDORA -->
+  <tr> <!-- FEDORA (?) -->
     <td>
       <div class="badges">
         <a ><img src="https://img.shields.io/badge/Fedora_39_package-1.27.1-red.svg" /></a><br>
@@ -315,7 +315,7 @@ And finally please [share any feedback](support.md) so we can make this process 
 
 <table class="pi downloads">
 
-  <tr valign="top"> <!-- CI BINARIES -->
+  <tr valign="top"> <!-- CI BINARIES (SM) -->
     <td>
       <div class="badges">
         <img alt="hledger CI binaries" src="https://img.shields.io/badge/hledger_CI_binaries-1.22.2-red.svg" />
@@ -329,7 +329,7 @@ And finally please [share any feedback](support.md) so we can make this process 
     </td>
   </tr>
 
-  <tr valign="top"> <!-- THIRD PARTY -->
+  <tr valign="top"> <!-- THIRD PARTY (nobodyinperson?) -->
     <td>
       <div class="badges">
         <img alt="Contributed binaries" src="https://img.shields.io/badge/Contributed_binaries-1.18.1-red.svg" />
@@ -352,7 +352,7 @@ And finally please [share any feedback](support.md) so we can make this process 
 
 <table class="bsd downloads">
 
-  <tr> <!-- OPENBSD -->
+  <tr> <!-- OPENBSD (?) -->
     <td>
       <div class="badges">
         <img src="https://repology.org/badge/version-for-repo/openbsd/hledger.svg" alt="openbsd ports" /><br>
@@ -363,7 +363,7 @@ And finally please [share any feedback](support.md) so we can make this process 
     </td>
   </tr>
 
-  <tr> <!-- NETBSD -->
+  <tr> <!-- NETBSD (?) -->
     <td>
       <div class="badges">
         <a href="https://cdn.netbsd.org/pub/pkgsrc/current/pkgsrc/finance/hledger/index.html"><img src="https://img.shields.io/badge/NetBSD-1.28-red.svg" alt="netbsd package" /></a><br>
@@ -376,7 +376,7 @@ And finally please [share any feedback](support.md) so we can make this process 
     </td>
   </tr>
 
-  <tr> <!-- FREEBSD -->
+  <tr> <!-- FREEBSD (?) -->
     <td>
       <div class="badges">
         <a href="https://www.freshports.org/search.php?query=hledger"><img src="https://repology.org/badge/version-for-repo/freebsd/hledger.svg" alt="freebsd ports" /></a><br>
@@ -395,7 +395,7 @@ And finally please [share any feedback](support.md) so we can make this process 
 
 <table class="multiplatform downloads">
 
-  <tr> <!-- DOCKER -->
+  <tr> <!-- DOCKER (adept) -->
     <td>
       <div class="badges">
         <a href="https://hub.docker.com/r/dastapov/hledger"><img alt="Docker" src="https://img.shields.io/badge/Docker_image-1.29.2-red.svg" /></a><br>
@@ -408,7 +408,7 @@ And finally please [share any feedback](support.md) so we can make this process 
     </td>
   </tr>
 
-  <tr> <!-- NIX -->
+  <tr> <!-- NIX (chvp) -->
     <td>
       <div class="badges">
         <a href="https://github.com/search?l=&o=desc&q=%22automatic+Haskell+package+set+update%22+repo%3ANixOS%2Fnixpkgs+filename%3Ahaskell-packages.nix&s=committer-date&type=Commits"><img alt="Nix" src="https://img.shields.io/badge/Nix_package-1.28-red.svg" /></a>
@@ -429,7 +429,7 @@ And finally please [share any feedback](support.md) so we can make this process 
     </td>
   </tr>
 
-  <tr> <!-- SANDSTORM -->
+  <tr> <!-- SANDSTORM (?) -->
     <td>
       <div class="badges">
           <a href="https://apps.sandstorm.io/search?term=hledger"><img alt="Sandstorm" src="https://img.shields.io/badge/Sandstorm_app-1.9.2-red.svg" /></a>
@@ -451,7 +451,7 @@ And finally please [share any feedback](support.md) so we can make this process 
 
 <table class="pi downloads">
 
-  <tr> <!-- PREVIEWS -->
+  <tr> <!-- PREVIEWS (SM) -->
     <td>
       <div class="badges">
         <img alt="hledger CI binaries" src="https://img.shields.io/badge/hledger_CI_binaries-Preview-green.svg" />
