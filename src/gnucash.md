@@ -9,3 +9,7 @@ Relevant [data conversion tools](https://plaintextaccounting.org/#data-importcon
 - [gnucash2ledger.py](https://github.com/MatzeB/pygnucash/blob/master/gnucash2ledger.py)
 - [piecash](https://github.com/sdementen/piecash)
 - Older 2.x versions of Ledger have some ability to read one of GnuCash's data formats
+
+Related discussion:
+
+- [Import Gnucash Files #332](https://github.com/simonmichael/hledger/issues/332)
