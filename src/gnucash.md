@@ -13,3 +13,4 @@ Relevant [data conversion tools](https://plaintextaccounting.org/#data-importcon
 Related discussion:
 
 - [Import Gnucash Files #332](https://github.com/simonmichael/hledger/issues/332)
+- [GnuCash and ledger combination](GnuCash and ledger combination)
