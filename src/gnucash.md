@@ -13,4 +13,5 @@ Relevant [data conversion tools](https://plaintextaccounting.org/#data-importcon
 Related discussion:
 
 - [Import Gnucash Files #332](https://github.com/simonmichael/hledger/issues/332)
-- [GnuCash and ledger combination](GnuCash and ledger combination)
+- [GnuCash and ledger combination](https://www.reddit.com/r/plaintextaccounting/comments/m721d7/gnucash_and_ledger_combination/)
+- [Current working gnucash exporter?](https://www.reddit.com/r/plaintextaccounting/comments/r64oye/current_working_gnucash_exporter/)
