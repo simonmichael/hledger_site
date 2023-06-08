@@ -292,30 +292,67 @@ or `hledger is -p 'yearly from 2020/4/15'`.
 With older hledger versions, you can approximate it with `-p 'every 12 months from 2020/4`
 or `-p 'every 365 days from 2020/4/15'`.
 
-### How can I show transactions from one account to another account ?
+### How can I report inflows and outflows separately ?
 
-With hledger versions before 1.29, you can print the transactions with this trick:
+Use two `register` reports with an `amt:` query. Eg:
+
+```shell
+hledger register 'amt:<0'
+hledger register 'amt:>0'
+```
+
+### How can I print transactions where money left an account ?
+
+You can use `register` with an account and amount query:
+```shell
+hledger register cash 'amt:<0'
+```
+
+If you prefer `aregister`, write it this way (because of aregister's special first argument):
+
+```shell
+hledger aregister cash cash 'amt:<0'
+```
+
+Printing the full transactions with `print` is difficult, since `print` is a
+transaction-based report that [matches transactions with any matched postings](#combining-query-terms).
+
+You can do it in Emacs ledger-mode with `C-c C-f` (or `M-x ledger-occur`) and regular expression.
+Eg to show just the transactions where `cash` was decreased:
+
+`C-c C-f :cash.*- *[1-9]`
+
+For now, this seems to be the best approach at the command line too:
+filter the output of `hledger print ACCT`, keeping only transactions 
+where ACCT and a negative (or positive) amount appear on the same line.
+This means using awk or some other unix tool that can treat transactions as multi-line records. (Example welcome)
+
+### How can I show transactions between one account and another account ?
+
+Use aregister with the other account as the query:
+```shell
+hledger aregister checking expenses:tax
+```
+
+To filter by direction, add `'amt:>0'` or  `'amt:<0'` to the above:
+```shell
+hledger aregister checking expenses:tax 'amt:>0'
+```
+
+To see full transactions, use print with a boolean query (requires hledger 1.30+):
+```shell
+hledger print expr:'checking AND expenses:tax'
+```
+
+or with hledger <1.30, emulate that with `not:not:`:
 ```shell
 hledger print checking not:not:expenses:tax
 ```
 
-To get a register report, you can chain two hledger commands
-(or [use an RDBMS](https://money.stackexchange.com/questions/154316/how-can-i-identify-all-transfers-from-account-a-to-account-b-in-ledger-cli/154322#154322>)):
+If you need a posting-based `register` report instead:
 ```shell
 hledger print checking | hledger -I -f- register expenses:tax
 ```
-
-With hledger 1.29+, you can use print with a boolean query:
-```shell
-hledger print expr:'checking AND expenses:tax'
-```
-or aregister with two account name arguments:
-```shell
-hledger areg checking expenses:tax
-```
-
-To filter by direction, add `amt:'>0'` or  `amt:'<0'` to one of the register reports.
-
 
 ### With hledger-ui in iTerm2 on mac, why does Shift-Up/Shift-Down move the selection instead of adjusting the report period ?
 
