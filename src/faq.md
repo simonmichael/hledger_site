@@ -292,7 +292,7 @@ or `hledger is -p 'yearly from 2020/4/15'`.
 With older hledger versions, you can approximate it with `-p 'every 12 months from 2020/4`
 or `-p 'every 365 days from 2020/4/15'`.
 
-### How can I report inflows and outflows separately ?
+### How do I report inflows and outflows separately ?
 
 Use two `register` reports with an `amt:` query. Eg:
 
@@ -301,7 +301,7 @@ hledger register 'amt:<0'
 hledger register 'amt:>0'
 ```
 
-### How can I show transactions where money left an account ?
+### How do I show transactions where money left an account ?
 
 You can use `register` with an account and amount query:
 ```shell
@@ -327,7 +327,7 @@ filter the output of `hledger print ACCT`, keeping only transactions
 where ACCT and a negative (or positive) amount appear on the same line.
 This means using awk or some other unix tool that can treat transactions as multi-line records. (Example welcome)
 
-### How can I show transactions between one account and another account ?
+### How do I show transactions between one account and another account ?
 
 Use aregister with the other account as the query:
 ```shell
