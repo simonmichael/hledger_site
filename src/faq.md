@@ -301,7 +301,7 @@ hledger register 'amt:<0'
 hledger register 'amt:>0'
 ```
 
-### How can I print transactions where money left an account ?
+### How can I show transactions where money left an account ?
 
 You can use `register` with an account and amount query:
 ```shell
@@ -317,8 +317,8 @@ hledger aregister cash cash 'amt:<0'
 Printing the full transactions with `print` is difficult, since `print` is a
 transaction-based report that [matches transactions with any matched postings](#combining-query-terms).
 
-You can do it in Emacs ledger-mode with `C-c C-f` (or `M-x ledger-occur`) and regular expression.
-Eg to show just the transactions where `cash` was decreased:
+You can do it in Emacs ledger-mode with `C-c C-f` (or `M-x ledger-occur`) and a regular expression.
+Eg, to show just the transactions where `cash` was decreased:
 
 `C-c C-f :cash.*- *[1-9]`
 
