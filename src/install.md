@@ -408,7 +408,7 @@ And finally please [share any feedback](support.md) so we can make this process 
     </td>
   </tr>
 
-  <tr> <!-- NIX (chvp) -->
+  <tr> <!-- NIX (maralorn, chvp) -->
     <td>
       <div class="badges">
         <a href="https://github.com/search?l=&o=desc&q=%22automatic+Haskell+package+set+update%22+repo%3ANixOS%2Fnixpkgs+filename%3Ahaskell-packages.nix&s=committer-date&type=Commits"><img alt="Nix" src="https://img.shields.io/badge/Nix_package-1.28-red.svg" /></a>
