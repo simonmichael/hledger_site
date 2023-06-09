@@ -564,7 +564,7 @@ For now the only true workaround is to rewrite such entries to use hledger-style
 
 An alternative is to segregate problematic or tool-specific data into separate tool-specific files,
 keeping as much data as possible in a shared common file.  Then select the appropriate files for each tool,
-using multiple `-f` options, or [include directives](hledger.md#including-files).
+using multiple `-f` options, or [include directives](hledger.md#include-directive).
 
 Another way is to do a one-way conversion to hledger format, perhaps periodically,
 doing whatever edits and transformations are necessary and feasible.

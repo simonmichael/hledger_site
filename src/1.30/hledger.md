@@ -172,7 +172,7 @@ will be affected:
     subsequent files.
 
 If needed, you can work around these by using a single parent file which
-[includes](#including-files) the others, or concatenating the files into
+[includes](#include-directive) the others, or concatenating the files into
 one, eg: `cat a.journal b.journal | hledger -f- CMD`.
 
 ### Strict mode
@@ -1560,7 +1560,7 @@ assert intra-day balances.
 
 #### Assertions and multiple included files
 
-Multiple files included with the [`include` directive](#including-files)
+Multiple files included with the [`include` directive](#include-directive)
 are processed as if concatenated into one file, preserving their order
 and the posting order within each file. It means that balance assertions
 in later files will see balance from earlier files.
@@ -1907,7 +1907,7 @@ notes:
     The position of account directives within the file does not matter,
     though it\'s usual to put them at the top.
 -   Accounts can only be declared in `journal` files, but will affect
-    [included](#including-files) files of all types.
+    [included](#include-directive) files of all types.
 -   It\'s currently not possible to declare \"all possible subaccounts\"
     with a wildcard; every account posted to must be declared.
 
@@ -2071,7 +2071,7 @@ See also [Rewrite account names](/rewrite-account-names.html).
 
 To set an account alias, use the `alias` directive in your journal file.
 This affects all subsequent journal entries in the current file or its
-[included files](#including-files) (but note: [not sibling or parent
+[included files](#include-directive) (but note: [not sibling or parent
 files](#aliases-and-multiple-files)). The spaces around the = are
 optional:
 
