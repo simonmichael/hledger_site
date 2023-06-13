@@ -1,8 +1,11 @@
 # Climate impact
 
-In current times most human endeavours should maintain and publish an environmental cost/benefit report. No matter how approximate, any such report is better than nothing; it builds awareness and know-how, it allows comparison and trend analysis, and it can be continually improved. See also: https://ecoaccounting.org.
+*In current times, most human endeavours should maintain and publish an environmental cost/benefit report. ...
+"Cost" means some environmental impact such as resources used (energy, water, land..)  
+or undesirable waste generated (carbon dioxide, toxins, heat, noise, harm..).*
+--<https://ecoaccounting.org>
 
-Here is the beginnings of one for the hledger project, with a catchier name to encourage clicks. "Costs" means some environmental impact such as resources used (energy, water, land..) or waste emitted (carbon dioxide, toxins, heat, noise..)
+Here is the beginnings of one for the hledger project, with a catchier name to encourage clicks.
 
 ## Development
 Costs related to developing hledger come from:
