@@ -5,7 +5,7 @@
 or undesirable waste generated (carbon dioxide, toxins, heat, noise, harm..).*
 --<https://ecoaccounting.org>
 
-Here is the beginnings of one for the hledger project, with a catchier name to encourage clicks.
+Here is the beginnings of one for the hledger project, with a catchier name.
 
 ## Development
 Costs related to developing hledger come from:
@@ -52,9 +52,9 @@ Benefits:
 ## Stats
 Some useful statistics to guestimate:
 
-- Average cost per year
+- Yearly cost
+- Yearly cost trend
 - Cumulative cost
 - Predicted lifetime cost
-- Yearly cost's trend
 - Comparison with alternate solutions
   
