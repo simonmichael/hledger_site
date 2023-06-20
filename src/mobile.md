@@ -111,5 +111,7 @@ The [MoneyManagerExLib](https://gitlab.com/alensiljak/moneymanagerexlib) python 
 <http://www.myexpenses.mobi>,
 <https://github.com/mtotschnig/MyExpenses>\
 GPL personal finance manager for Android.
-The <https://github.com/ony/ledger-myexpenses> tool converts its exported sqlite db to *ledger format.
 
+Export to *ledger format: <https://github.com/ony/ledger-myexpenses> (2017)
+
+Sync to/from Ledger: <https://gitlab.com/IanTwenty/ledgermyexpenses> (2023)
