@@ -134,7 +134,7 @@ Here are some early configuration notes, using use-package:
   )
 ```
 
-Here's how to add extra checks within a specific journal file:
+To extra checks for a specific journal file, add a line like this near the top:
 ```elisp
 ; -*- eval:(add-to-list 'flymake-hledger-checks "recentassertions" t); -*-
 ```
