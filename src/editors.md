@@ -93,7 +93,10 @@ so be aware that any auto posting rules will be active.
 ### flymake-hledger
 
 <https://github.com/DamienCassou/flymake-hledger/> (2023)
-is a successor to flycheck-hledger. Some early configuration notes:
+is a more recent alternative to flycheck-hledger, using the built-in Flymake
+rather than the third-party Flycheck feature.
+
+Here are some early configuration notes, using use-package:
 
 ```elisp
 ;; Enable verbose use-package debug info when starting with --debug-init
@@ -114,7 +117,7 @@ is a successor to flycheck-hledger. Some early configuration notes:
 
 (use-package flymake-hledger
   :load-path "~/src/flymake-hledger"
-  :after (ledger-mode)
+  :after (ledger-mode flymake)
 
   :hook (
   (ledger-mode . flymake-hledger-enable)
@@ -129,6 +132,11 @@ is a successor to flycheck-hledger. Some early configuration notes:
   (flymake-suppress-zero-counters t)
   (flymake-hledger-checks '("accounts" "commodities" "balancednoautoconversion" "ordereddates")) ; "recentassertions" "payees" "tags" "uniqueleafnames" https://hledger.org/hledger.html#check
   )
+```
+
+Here's how to add extra checks within a specific journal file:
+```elisp
+; -*- eval:(add-to-list 'flymake-hledger-checks "recentassertions" t); -*-
 ```
 
 ### org babel
