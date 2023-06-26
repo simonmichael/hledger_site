@@ -64,9 +64,9 @@ An alternative to ledger-mode, written specifically for hledger. Has some differ
 
 ### flycheck-hledger
 
-<https://github.com/DamienCassou/flycheck-hledger>\
-Provides realtime indication of problems in your journal.
-Can be combined with ledger-mode or hledger-mode.
+<https://github.com/DamienCassou/flycheck-hledger> (2021)
+provides realtime indication of problems in your journal.
+It can be used with ledger-mode or hledger-mode.
 
 ``C-x ` `` steps to the next problem in the current file.\
 ``C-u C-x ` `` restarts the scan from the top.\
@@ -89,6 +89,47 @@ Sample config:
 
 Currently flycheck-hledger always runs hledger with the `--auto` flag,
 so be aware that any auto posting rules will be active.
+
+### flymake-hledger
+
+<https://github.com/DamienCassou/flymake-hledger/> (2023)
+is a successor to flycheck-hledger. Some early configuration notes:
+
+```elisp
+;; Enable verbose use-package debug info when starting with --debug-init
+;; (when init-file-debug
+;;   (setq use-package-verbose t
+;;         use-package-expand-minimally nil
+;;         use-package-compute-statistics t
+;;         debug-on-error t))
+
+;; Configure flycheck-like keybindings for flymake:
+(use-package flymake
+  :bind (
+         :map flymake-mode-map
+         ("C-c ! n" . flymake-goto-next-error)
+         ("C-c ! p" . flymake-goto-prev-error)
+         ("C-c ! l" . flymake-show-buffer-diagnostics)  ; a new list for each buffer, unlike flycheck
+         ("C-c ! v" . flymake-switch-to-log-buffer)))
+
+(use-package flymake-hledger
+  :load-path "~/src/flymake-hledger"
+  :after (ledger-mode)
+
+  :hook (
+  (ledger-mode . flymake-hledger-enable)
+  ;; Make C-x ` work ?
+  ;; XXX Both of these work only in the first file opened; debugging needed.
+  ;; (ledger-mode . (lambda () (setq next-error-function 'flymake-goto-next-error)))
+  ;; (ledger-mode . (lambda () (setq next-error-function (lambda (num reset) (when reset (goto-char (point-min))) (flymake-goto-next-error num)))))
+  )
+
+  :custom
+  (flymake-show-diagnostics-at-end-of-line t)  ; might require Emacs 30
+  (flymake-suppress-zero-counters t)
+  (flymake-hledger-checks '("accounts" "commodities" "balancednoautoconversion" "ordereddates")) ; "recentassertions" "payees" "tags" "uniqueleafnames" https://hledger.org/hledger.html#check
+  )
+```
 
 ### org babel
 
