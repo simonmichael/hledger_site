@@ -349,7 +349,9 @@ or with hledger <1.30, emulate that with `not:not:`:
 hledger print checking not:not:expenses:tax
 ```
 
-If you need a posting-based `register` report instead:
+The above won't work with the register command because it reports postings,
+not transactions - each report item has only a single account.
+If you want a register report, combine it with `print` like so:
 ```shell
 hledger print checking | hledger -I -f- register expenses:tax
 ```
