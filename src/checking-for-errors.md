@@ -51,6 +51,16 @@ set -e
 hledger check -s
 ```
 
+## Flymake mode
+
+If you use Emacs, you can configure Flymake to run your preferred
+checks when you edit a journal file.  This integration gives very
+useful real-time feedback.  Setup tips:
+
+- in Emacs, install the `flymake-hledger` package
+- customize the `flycheck-hledger-checkers` variable to include the
+  checks you want ("strict" checks are enabled by default)
+
 ## Flycheck mode
 
 If you use Emacs, you can configure flycheck to run your preferred checks when you edit a journal file.

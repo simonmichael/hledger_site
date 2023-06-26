@@ -62,6 +62,30 @@ Here are ledger-mode's [hledger-related issues](https://github.com/ledger/ledger
 <https://github.com/narendraj9/hledger-mode>\
 An alternative to ledger-mode, written specifically for hledger. Has some different features. Less actively maintained.
 
+### flymake-hledger
+
+<https://github.com/DamienCassou/flymake-hledger>\
+Provides real-time indication of problems in your journal.
+Can be combined with either [ledger-mode](https://github.com/ledger/ledger-mode) or [hledger-mode](https://github.com/narendraj9/hledger-mode).
+
+`M-x flymake-goto-next-error` steps to the next problem in the current file.\
+A description of the problem at point will show in the message area.
+
+Sample config:
+```elisp
+(use-package flymake-hledger
+  :config
+  (progn
+    ;; Enable 4 optional checks (strict checks are enabled by
+    ;; default). See URL https://hledger.org/1.30/hledger.html#check
+    ;; for the meaning of each check and a list of all of them.
+    (dolist (check '("ordereddates" "payees" "recentassertions" "tags"))
+      (add-to-list 'flymake-hledger-checks check))))
+```
+
+This package is similar to flycheck-hledger but requires the built-in
+Flymake instead of the external Flycheck.
+
 ### flycheck-hledger
 
 <https://github.com/DamienCassou/flycheck-hledger>\
@@ -89,6 +113,9 @@ Sample config:
 
 Currently flycheck-hledger always runs hledger with the `--auto` flag,
 so be aware that any auto posting rules will be active.
+
+This package is similar to flymake-hledger but requires the external
+Flycheck instead of the built-in Flymake.
 
 ### org babel
 

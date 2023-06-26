@@ -7765,8 +7765,9 @@ hledger check -s   # basic + strict checks
 hledger check ordereddates payees  # basic + two other checks
 ```
 
-If you are an Emacs user, you can also configure flycheck-hledger to run
-these checks, providing instant feedback as you edit the journal.
+If you are an Emacs user, you can also configure flymake-hledger or
+flycheck-hledger to run these checks, providing instant feedback as
+you edit the journal.
 
 Here are the checks currently available:
 
