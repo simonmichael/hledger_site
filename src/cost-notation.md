@@ -6,7 +6,7 @@
 </div>
 
 Here is a little more background on cost notations, 
-moved here from [hledger manual > Cost reporting](https://hledger.org/hledger.html#cost-reporting).
+moved here from [hledger manual > Cost reporting](https://hledger.org/dev/hledger.html#cost-reporting).
 
 Essentially there are four ways to record a commodity conversion in hledger (as of 2023):
 
