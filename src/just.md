@@ -57,3 +57,25 @@ you can cache these outputs, making slow reports display instantly
 $ export JUST_CHOOSER="fzf --preview='bkt --ttl=15m --stale=15s -- just {}'"
 $ just --choose
 ```
+
+## just view
+
+The example justfile has a `view` command with the above configuration built in.
+(So you don't need to set JUST_CHOOSER; but you should install `fzf` and `bkt`).
+
+It also demonstrates a hack for excluding "unsafe" commands from the chooser:
+add a dummy required argument if they don't already have one
+(and provide `-` for that argument when running the command).
+The chooser omits commands with required arguments.
+
+Eg:
+
+```cli
+$ just view -
+```
+
+This command also accepts fzf arguments:
+
+```cli
+$ just view - --black
+```
