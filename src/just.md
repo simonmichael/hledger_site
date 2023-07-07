@@ -36,13 +36,13 @@ $ export JUST_CHOOSER=choose
 $ just --choose
 ```
 
-## Showing report output in the preview
+## Showing report output in the preview pane
 
-This makes fzf show the command output in the preview pane.
 This is great for selecting and viewing reports.
-
 Careful - it will run every command you select! 
-So be sure your commands are safe to run often (eg hledger reports):
+So be sure your commands are safe to run often (eg hledger reports).
+If you have less safe commands, you might want to move them to a separate just file.
+Then:
 
 ```cli
 $ export JUST_CHOOSER="fzf --preview='just {}'"
