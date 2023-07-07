@@ -23,7 +23,7 @@ So `just x -p '1/1 to tomorrow'` won't work (you could write `just x -p1/1totomo
 
 ## Interactive choosing
 
-`just --choose` will let you choose a command (AKA "recipe") interactively,
+`just --choose` will let you choose a command interactively,
 by default using `fzf` and showing a preview of the commands that will be run.
 
 You can configure a different chooser with --chooser or JUST_CHOOSER
