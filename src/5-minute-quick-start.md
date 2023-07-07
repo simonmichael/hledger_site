@@ -89,33 +89,9 @@ bookkeeping/accounting skills improve naturally (and [help] is available).
 <a name="install"></a>
 ## Install
 
-Fastest: [download binaries](install.md), eg one of:
+Quickly: [install hledger binaries](install.md), using your system package manager or our Github binaries.
 
-```
-$ apt install hledger hledger-ui hledger-web
-$ brew install hledger
-$ curl -LO https://github.com/simonmichael/hledger/releases/download/1.21/hledger-ubuntu.zip; unzip hledger-ubuntu.zip  # also macos, windows, etc.
-$ dnf install hledger
-$ docker pull dastapov/hledger
-$ pkg_add hledger  # openbsd
-$ nix-env -f https://github.com/NixOS/nixpkgs/archive/915ef210.tar.gz -iA hledger hledger-ui hledger-web
-$ pacman -S hledger hledger-ui hledger-web
-$ sudo layman -a haskell && sudo emerge hledger hledger-ui hledger-web
-$ xbps-install -S hledger hledger-ui hledger-web
-```
-
-Freshest: [build from source](install.md#building-from-source):
- 
-1. $ apt install libtinfo-dev [or equivalent](install.md#ensure-c-libraries-are-installed)
-2. [check UTF-8 locale](install.md#ensure-your-system-locale-supports-utf-8)
-3. then one of:
-   <pre>
-   $ curl -sO https://raw.githubusercontent.com/simonmichael/hledger/master/hledger-install/hledger-install.sh; bash hledger-install.sh
-   $ <a href="https://haskellstack.org">stack</a> update; stack install --resolver=lts-17 hledger-lib-1.21 hledger-1.21 hledger-ui-1.21 hledger-web-1.21 --silent
-   $ <a href="https://www.haskell.org/cabal/#install-upgrade">cabal</a> update; cabal install alex happy; cabal install hledger-1.21 hledger-ui-1.21 hledger-web-1.21
-   $ git clone https://github.com/simonmichael/hledger; cd hledger; stack install  # super fresh
-   </pre>
-
+Or slowly: [build hledger from source](install.md#building-from-source), using hledger-install.sh or stack or cabal.
 
 <a name="setup"></a>
 ## Set up a journal
@@ -160,11 +136,12 @@ But here are some common changes people make sooner or later, so why not now:
   ```shell
   $ cat > 2023.journal
 
-  ; Declare top level accounts, setting their types and display order;
-  ; Replace these account names with yours; it helps commands like bs and is detect them.
-  account assets       ; type:A, money you own
+  ; Declare the five top level accounts in your preferred language/capitalisation;
+  ; their types (to make reports like bs and is work); and their display order.
+  ; Write at least 2 spaces before the ; comments.
+  account assets       ; type:A, money you own. 2+ spaces are required before the ;.
   account liabilities  ; type:L, money you owe to others
-  account equity       ; type:E, equal to A - L (not used much in personal accounting)
+  account equity       ; type:E, equal to A - L (not used much in personal finance)
   account revenues     ; type:R, revenue/income categories
   account expenses     ; type:X, expense categories
 
@@ -217,7 +194,7 @@ Or using a [text editor](editors.md), add transactions to
 ```journal
 2023-01-01 opening balances on january 1st
     assets:checking         $1000  ; a posting, increasing assets:checking's balance by $1000
-    assets:cash              $100
+    assets:cash              $100  ; write at least 2 spaces between account name and amount
     liabilities                $0
     equity                 $-1100  ; each transaction must sum to zero
 

@@ -79,22 +79,23 @@ hledger will check that each transaction's amounts sum to zero; one of them may 
 
 ```journal
 
-2023-01-01 opening balances                    ; <- first, record balances on some date
-    assets:bank:checking                $1000  ; <- account names can be anything
-    assets:bank:savings                 $2000  ; <- colons indicate subaccounts
-    assets:cash                          $100  ; <- at least 2 spaces before the amount
-    liabilities:credit card              $-50  ; <- debt balances are negative
-    equity:opening/closing             $-3050  ; <- starting balances come from equity
+2023-01-01 opening balances            ; <- First transaction sets starting balances.
+    assets:bank:checking        $1000  ; <- Account names can be anything.
+    assets:bank:savings         $2000  ; <- Colons indicate subaccounts.
+    assets:cash                  $100  ; <- 2+ spaces are required before the amount.
+    liabilities:credit card      $-50  ; <- A debt; these are negative.
+    equity:opening/closing     $-3050  ; <- Starting balances come from equity.
+                                       ;    Equity is also usually negative.
+                                       ;    (Reports can show as positive when needed.)
 
-2023-02-01 GOODWORKS CORP
-    assets:bank:checking           $1000
-    income:salary                              ; <- $-1000 inferred here
-                                               ; income amounts are negative
-                                               ; (some reports show them as positive)
+2023-02-01 GOODWORKS CORP              ; <- Date order is recommended but optional.
+    assets:bank:checking       $1000
+    income:salary                      ; <- $-1000 is inferred here to balance the txn.
+                                       ;    Income amounts are negative.
 
 2023-02-15 market
     expenses:food             $50
-    assets:cash                                ; <- $-50 inferred here
+    assets:cash                        ; <- $-50 is inferred here.
 ```
 
 You can run reports like so:
@@ -152,7 +153,7 @@ Transactions in assets:bank:checking and subaccounts:
 If you use other account names, it's useful to declare their [account types](hledger.md#account-types):
 ```journal
 
-account actifs                          ; type:Asset
+account actifs                          ; type:Asset, 2+ spaces required before the ;
 account actifs:banque:compte courant    ; type:Cash
 account actifs:banque:compte d'épargne  ; type:Cash
 account actifs:espèces                  ; type:Cash
@@ -165,7 +166,7 @@ account dépenses                        ; type:Expense
 Or declare all accounts, currencies and tags, if you want [strict error checking](hledger.md#strict-mode):
 ```journal
 
-account assets                   ; type:A
+account assets                   ; type:A, 2+ spaces required before the ;
 account assets:bank              ; type:C
 account assets:bank:checking
 account assets:bank:savings
@@ -224,7 +225,7 @@ alias food = expenses:food
 ...
 
 2023-02-15 market
-    food  $50
+    food          $50
     cash
 ```
 
