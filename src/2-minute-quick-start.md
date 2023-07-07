@@ -10,10 +10,10 @@ $ brew install hledger    # or apt, choco, but check Install for freshness
 ```shell
 $ cat >main.journal    # record a transaction manually from command line
 2022-01-01 opening balances as of this date
-    assets:bank:checking                $1000  ; 2+ spaces required before the amount.
-    assets:bank:savings                 $2000
-    assets:cash                          $100
-    liabilities:creditcard               $-50
+    assets:bank:checking           $1000  ; This is a comment.
+    assets:bank:savings            $2000  ; 2+ spaces are required before each amount.
+    assets:cash                     $100
+    liabilities:creditcard          $-50
     equity:opening/closing balances
 ^D
 ```
