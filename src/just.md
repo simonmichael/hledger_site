@@ -40,8 +40,7 @@ $ just --choose
 
 This is great for selecting and viewing reports.
 Careful - it will run every command you select! 
-So be sure your commands are safe and reasonably quick to run (eg hledger reports.
-If you have other commands which should not be run so often, you could move them to a separate just file.)
+So be sure your commands are safe and reasonably quick to run (eg hledger reports).
 Then:
 
 ```cli
@@ -61,21 +60,31 @@ $ just --choose
 ## just view
 
 The example justfile has a `view` command with the above configuration built in.
-(So you don't need to set JUST_CHOOSER; but you should install `fzf` and `bkt`).
-
-It also demonstrates a hack for excluding "unsafe" commands from the chooser:
-add a dummy required argument if they don't already have one
-(and provide `-` for that argument when running the command).
-The chooser omits commands with required arguments.
-
-Eg:
+It uses `fzf` and `bkt` (and ignores JUST_CHOOSER).
+It takes one dummy argument, and optional additional fzf arguments:
 
 ```cli
 $ just view -
-```
-
-This command also accepts fzf arguments:
-
-```cli
 $ just view - --black
 ```
+
+There is also a `pick` command which does not run commands while selecting.
+It uses JUST_CHOOSER, or `fzf` with the command source as preview.
+`view` uses fzf's --reverse flag; you could make `pick` do the same like so:
+
+```cli
+$ export JUST_CHOOSER="fzf --preview='-- just --show {}' --reverse"
+```
+
+## Excluding commands from the chooser
+
+If you want preview the output of some commands but not of others
+(eg, because they have side effects),
+you could move those commands to a separate just file.
+
+Or, you can make sure they are declared with a required argument,
+adding a dummy argument if necessary (as in the example file).
+Commands with required arguments are always excluded from the chooser.
+(Note this excludes them from the chooser entirely, not just from previewing,
+but they can be run from the command line, writing `-` for the dummy argument.)
+
