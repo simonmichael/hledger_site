@@ -17,6 +17,10 @@ $ just CMD [ARGS]  # run a command, optionally with extra arguments
 $ alias j=just     # use a shorter j alias, etc.
 ```
 
+Note the example justfile will pass any additional command options/arguments to hledger,
+but currently you must avoid arguments containing spaces.
+So `just x -p '1/1 to tomorrow'` won't work (you could write `just x -p1/1totomorrow` instead).
+
 ## Interactive choosing
 
 `just --choose` will let you choose a command (AKA "recipe") interactively,
