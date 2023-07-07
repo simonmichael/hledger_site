@@ -35,19 +35,22 @@ $ just --choose
 ## Showing report output in the preview
 
 This makes fzf show the command output in the preview pane.
-Careful, it will run every command you select! 
-So be sure your commands are safe and reasonably quick to run, eg hledger reports.
 This is great for selecting and viewing reports.
+
+Careful - it will run every command you select! 
+So be sure your commands are safe to run often (eg hledger reports):
 
 ```cli
 $ export JUST_CHOOSER="fzf --preview='just {}'"
 $ just --choose
 ```
 
-You can cache these outputs, making slow reports display instantly,
-with the [bkt](https://github.com/dimo414/bkt) tool:
+With [bkt](https://github.com/dimo414/bkt),
+you can cache these outputs, making slow reports display instantly:
 
 ```cli
 $ export JUST_CHOOSER="fzf --preview='bkt --ttl=15m --stale=15s -- just {}'"
 $ just --choose --chooser "fzf --preview 'just {}'"
 ```
+
+Here's more on [--ttl and --stale](https://github.com/dimo414/bkt#cache-lifespan) and on [using bkt with fzf](https://github.com/dimo414/bkt/discussions/29).
