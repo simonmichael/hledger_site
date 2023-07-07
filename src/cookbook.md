@@ -70,6 +70,7 @@ Check plaintextaccounting.org's and wiki.plaintextaccounting.org's categories.
 - [Exporting from hledger](export.md)
 - [hledger and Beancount](beancount.md)
 - [hledger and dsq / DataStation](dsq.md)
+- [hledger and just](just.md)
 - [hledger and GnuCash](gnucash.md)
 - [hledger and Ledger](ledger.md)
 - [hledger and Obsidian](obsidian.md)
