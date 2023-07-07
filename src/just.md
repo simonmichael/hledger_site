@@ -40,8 +40,8 @@ $ just --choose
 
 This is great for selecting and viewing reports.
 Careful - it will run every command you select! 
-So be sure your commands are safe to run often (eg hledger reports).
-If you have less safe commands, you might want to move them to a separate just file.
+So be sure your commands are safe and reasonably quick to run (eg hledger reports.
+If you have other commands which should not be run so often, you could move them to a separate just file.)
 Then:
 
 ```cli
@@ -50,11 +50,10 @@ $ just --choose
 ```
 
 With [bkt](https://github.com/dimo414/bkt),
-you can cache these outputs, making slow reports display instantly:
+you can cache these outputs, making slow reports display instantly
+(here's more on [--ttl and --stale](https://github.com/dimo414/bkt#cache-lifespan) and [using bkt with fzf](https://github.com/dimo414/bkt/discussions/29)):
 
 ```cli
 $ export JUST_CHOOSER="fzf --preview='bkt --ttl=15m --stale=15s -- just {}'"
-$ just --choose --chooser "fzf --preview 'just {}'"
+$ just --choose
 ```
-
-Here's more on [--ttl and --stale](https://github.com/dimo414/bkt#cache-lifespan) and on [using bkt with fzf](https://github.com/dimo414/bkt/discussions/29).
