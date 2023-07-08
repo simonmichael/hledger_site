@@ -380,7 +380,7 @@ The output will normally be a valid journal, but it can have a different meaning
 3. Loss of `account` directives declaring accounts' types, which could alter reports.
 4. Balance assertions which break because you have excluded transactions they depend on.
 
-Work arounds:
+Workarounds:
 
 - Whenever you use `-f -` to read `hledger print` output, also add `-I` to ignore balance assertions.
   And write these flags separately (`-If-` [does not work](https://github.com/simonmichael/hledger/issues/2059)). So:
@@ -401,7 +401,7 @@ Work arounds:
   - Or find another way to pass the required directives along. Eg:
     ```shell
     $ (hledger print ...; grep '^[acd]' $LEDGER_FILE) | hledger -I f- ...
-    $ (hledger print ...; grep --no-filename '^[acd]' `hledger files` | hledger -f- -I ...)
+    $ (hledger print ...; grep '^[acd]' `hledger files` --no-filename | hledger -f- -I ...)
     ```
 
 ### With hledger-ui in iTerm2 on mac, why does Shift-Up/Shift-Down move the selection instead of adjusting the report period ?
