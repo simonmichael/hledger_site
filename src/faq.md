@@ -356,7 +356,10 @@ If you want a register report, combine it with `print` like so:
 hledger print checking | hledger -f- -I register expenses:tax
 ```
 
-### How do I show an income statement, restricted to (eg) just my credit card ?
+<!-- temporary anchor after url change -->
+<a name="how-do-i-show-an-income-statement-restricted-to-eg-just-my-credit-card-"></a>
+
+### How do I show an income statement restricted to just my credit card (eg) ?
 
 First extract just the credit card transactions, then run the income statement report from those:
 
