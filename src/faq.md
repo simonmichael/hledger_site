@@ -382,25 +382,26 @@ The output will normally be a valid journal, but it can have a different meaning
 
 Work arounds:
 
-- Whenever you use `-f -` to read `hledger print` output, also add `-I` to ignore balance assertions:
+- Whenever you use `-f -` to read `hledger print` output, also add `-I` to ignore balance assertions.
+  And write these flags separately (`-If-` [does not work](https://github.com/simonmichael/hledger/issues/2059)). So:
   ```shell
-  $ hledger print ... | hledger -f - -I ...
+  $ hledger print ... | hledger -f- -I ...
   ```
 
-- Also recreate any required directives in the input stream.
-  This is often not needed, but it depends on your data.
+- Also recreate any required directives in the input stream. This is often not needed, but it depends on your data.
   If needed:
   
   - Keep those directives in their own file if possible
     (if [directive scope rules](hledger.md#directives-and-multiple-files) allow it),
     which you can use as another input:
     ```shell
-    $ hledger print ... | hledger -If- -f2023accounts.journal ...
+    $ hledger print ... | hledger -f- -I -f2023accounts.journal ...
     ```
 
   - Or find another way to pass the required directives along. Eg:
     ```shell
-    $ (hledger print ...; grep '^[a-z]' $LEDGER_FILE) | hledger -If- ...
+    $ (hledger print ...; grep '^[acd]' $LEDGER_FILE) | hledger -I f- ...
+    $ (hledger print ...; grep --no-filename '^[acd]' `hledger files` | hledger -f- -I ...)
     ```
 
 ### With hledger-ui in iTerm2 on mac, why does Shift-Up/Shift-Down move the selection instead of adjusting the report period ?
