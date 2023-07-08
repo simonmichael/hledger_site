@@ -353,8 +353,51 @@ The above won't work with the register command because it reports postings,
 not transactions - each report item has only a single account.
 If you want a register report, combine it with `print` like so:
 ```shell
-hledger print checking | hledger -I -f- register expenses:tax
+hledger print checking | hledger -f- -I register expenses:tax
 ```
+
+### How do I show an income statement, restricted to (eg) just my credit card ?
+
+First extract just the credit card transactions, then run the income statement report from those:
+
+```shell
+hledger print liabilities:mastercard | hledger -f- -I incomestatement
+```
+
+You might also need to exclude (or split up) transactions which mix the credit card, other assets/liabilities, and expenses/revenues.
+
+
+### What are some gotchas with piping `hledger print` into another hledger command ?
+
+`hledger print` reproduces transactions, but it discards directives.
+The output will normally be a valid journal, but it can have a different meaning or even be unparseable due to:
+
+1. Loss of decimal-mark directives which declare files' decimal mark, which could disrupt number parsing.
+2. Loss of commodity directives which declare commodities' display precision, which could disrupt transaction balancing.
+3. Loss of account directives which declare accounts' types. 
+4. Balance assertions which break because you have excluded transactions they depend on.
+
+Work arounds:
+
+- Whenever you use `-f -` to read `hledger print` output, also add `-I` to ignore balance assertions:
+  ```shell
+  $ hledger print ... | hledger -f - -I ...
+  ```
+
+- Also recreate any required directives in the input stream.
+  This is often not needed, but it depends on your data. 
+  
+  - If you can keep those directives in their own file
+    (if [directive scope rules](hledger.md#directives-and-multiple-files) allow it),
+    you can use that as another input:
+    ```shell
+    $ hledger print ... | hledger -If- -f2023accounts.journal ...
+    ```
+
+  - Otherwise, find a way to add the required directives. Eg:
+    ```shell
+    $ (hledger print ...; grep '^[a-z]' $LEDGER_FILE) | hledger -If- ...
+    ```
 
 ### With hledger-ui in iTerm2 on mac, why does Shift-Up/Shift-Down move the selection instead of adjusting the report period ?
 
