@@ -400,8 +400,8 @@ Workarounds:
 
   - Or find another way to pass the required directives along. Eg:
     ```shell
-    $ (hledger print ...; grep '^[acd]' $LEDGER_FILE) | hledger -I f- ...
-    $ (hledger print ...; grep '^[acd]' `hledger files` --no-filename | hledger -f- -I ...)
+    $ { hledger print ...; grep '^[acd]' $LEDGER_FILE; } | hledger -I f- ...
+    $ { hledger print ...; grep '^[acd]' `hledger files` --no-filename; } | hledger -f- -I ...
     ```
 
 ### With hledger-ui in iTerm2 on mac, why does Shift-Up/Shift-Down move the selection instead of adjusting the report period ?
