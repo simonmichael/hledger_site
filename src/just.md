@@ -6,25 +6,32 @@ but easier and more suitable for running commands (and more cross platform).
 It is a nice tool for creating (and remembering!) financial reports and scripts.
 
 Define commands (AKA "recipes") in a `justfile` in your finance directory.
-[Scripts > justfile](scripts.md#justfile) is an example.
-Of course you don't have to use these particular scripts; customise this
-with your own reports, or start fresh with `just --init`.
+Each recipe can be a single command line, a shell script, or any other kind of shebang script.
+Here's [just's manual](https://just.systems/man/en).
+
+We provide an example [Scripts > justfile](scripts.md#justfile),
+but of course you can customise this with your own reports
+or start fresh with `just --init`.
 Then you can
 
 ```cli
 $ just -lu         # list your commands, with descriptions, in original order
 $ just CMD [ARGS]  # run a command, optionally with extra arguments
-$ alias j=just     # use a shorter j alias, etc.
+$ just --choose    # pick a command interactively
+$ alias j=just     # use an easier-to-type alias
 ```
 
-Note the example justfile will pass any additional command options/arguments to hledger,
-but currently you must avoid arguments containing spaces.
-So `just x -p '1/1 to tomorrow'` won't work (you could write `just x -p1/1totomorrow` instead).
+Our justfile's commands pass additional options/arguments to hledger,
+but this does not work for arguments containing spaces, so avoid those:
+```cli
+$ just x food -p 'last month'   # bad
+$ just x food -plastmonth       # good
+```
 
 ## Interactive choosing
 
 `just --choose` will let you choose a command interactively,
-by default using `fzf` and showing a preview of the commands that will be run.
+by default using `fzf` and showing a preview of the system command(s) that will be run.
 
 You can configure a different chooser with --chooser or JUST_CHOOSER
 ([Just > Selecting Recipes to Run With an Interactive Chooser](https://just.systems/man/en/chapter_51.html)).
