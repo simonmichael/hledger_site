@@ -372,9 +372,9 @@ You might also need to exclude (or split up) transactions which mix the credit c
 `hledger print` reproduces transactions, but it discards directives.
 The output will normally be a valid journal, but it can have a different meaning or even be unparseable due to:
 
-1. Loss of decimal-mark directives which declare files' decimal mark, which could disrupt number parsing.
-2. Loss of commodity directives which declare commodities' display precision, which could disrupt transaction balancing.
-3. Loss of account directives which declare accounts' types. 
+1. Loss of `decimal-mark` directives, which could disrupt number parsing.
+2. Loss of `commodity` directives declaring display precisions, which could disrupt transaction balancing.
+3. Loss of `account` directives declaring accounts' types, which could alter reports.
 4. Balance assertions which break because you have excluded transactions they depend on.
 
 Work arounds:
@@ -385,16 +385,17 @@ Work arounds:
   ```
 
 - Also recreate any required directives in the input stream.
-  This is often not needed, but it depends on your data. 
+  This is often not needed, but it depends on your data.
+  If needed:
   
-  - If you can keep those directives in their own file
+  - Keep those directives in their own file if possible
     (if [directive scope rules](hledger.md#directives-and-multiple-files) allow it),
-    you can use that as another input:
+    which you can use as another input:
     ```shell
     $ hledger print ... | hledger -If- -f2023accounts.journal ...
     ```
 
-  - Otherwise, find a way to add the required directives. Eg:
+  - Or find another way to pass the required directives along. Eg:
     ```shell
     $ (hledger print ...; grep '^[a-z]' $LEDGER_FILE) | hledger -If- ...
     ```
