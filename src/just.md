@@ -21,7 +21,7 @@ $ just --choose    # pick a command interactively
 $ alias j=just     # use an easier-to-type alias
 ```
 
-Our justfile's commands pass additional options/arguments to hledger,
+Our justfile's commands pass any extra arguments to hledger,
 but this does not work for arguments containing spaces, so avoid those:
 ```cli
 $ just x food -p 'last month'   # bad
