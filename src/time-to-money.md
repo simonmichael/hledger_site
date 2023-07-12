@@ -13,7 +13,7 @@ and run a [cost report](hledger.md#cost-reporting) with `-B/--cost`.
 
 When the rate doesn't change much and there are many transactions,
 it's more convenient to declare it with a P directive,
-and run a [value report](hledger.md#valuation) with `-V`/`-X`.
+and run a [value report](hledger.md#value-reporting) with `-V`/`-X`.
 
 ## Timeclock files
 
