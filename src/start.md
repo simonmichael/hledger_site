@@ -76,7 +76,7 @@ A good way to prioritise is to think about your most pressing needs and what kin
 For example,
 
 - Take inventory of your debts, loans and assets; write down the names and numbers.
-- Record these as journal transactions ("opening balances" transactions - see example below).
+- Record these as "opening balances" transactions (as in the quick start docs).
 - Make corrections until hledger shows your balances accurately.
 
 Or:
