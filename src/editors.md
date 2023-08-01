@@ -202,6 +202,10 @@ A helper to browse TODO tags in the journal:
 
 <https://github.com/linuxcaffe/timedot-vim>
 
+## Neovim
+
+Run `:TSInstall ledger` to enable [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter#language-parsers) for hledger.
+
 ## VS Code
 
 ### hledger-vscode
