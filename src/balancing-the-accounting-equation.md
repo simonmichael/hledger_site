@@ -53,15 +53,16 @@ Eg:\
 `--alias '/^(revenues|income|expenses)\b/=equity'`
 
 ### 2. Unbalanced commodity conversions with @/@@
-Currency/commodity conversions using @/@@ notation are unbalanced. You
-can rewrite them in balanced form by commenting out the @/@@ price and
-adding a pair of equity postings - see [Currency conversion 2](conversion2.html).
+Currency/commodity conversions using @/@@ notation and no
+[equity conversion postings](hledger.md#equity-conversion-postings) are unbalanced.
+You can rewrite them in balanced form, eg
+[combining costs and equity conversion postings](hledger.md#combining-costs-and-equity-conversion-postings).
 
 Or, use `--infer-equity` to do this temporarily at report time. 
 
-Or, converting all amounts to cost may be another solution - try adding `-B`.
+Or, converting amounts to cost may be another solution - try adding `-B`.
 
-### 3. Rounding error with @ costs and --infer-equity
+### 3. Rounding error with unit costs (@) and --infer-equity
 `--infer-equity` is convenient but it tends to expose inaccuracies in
 the recorded @ prices, causing small non-zero values in the total. You
 can ignore this, or try to fix it by making @ prices more accurate, or
@@ -75,7 +76,7 @@ periods are short and do not cross a file boundary, so you can just
 avoid them when testing the accounting equation.
 
 If they do cross a file boundary, or are inconveniently long, 
-fix that by splitting the transaction into two transactions 
+you can fix that by splitting the transaction into two transactions 
 which use a pending account, as in
 [close and balance assertions](hledger.md#close-and-balance-assertions).
 
@@ -86,21 +87,22 @@ create an imbalance by definition; just exclude them from the report with
 bracketed account names), but that will probably be harmless.
 
 ### 6. Partial reports
-Many kinds of report [query](#queries) could exclude some data and disturb the accounting equation.
-So, avoid most queries when testing this. If you specify a report start date, be sure to include
-balances from previous transactions by adding `-H/--historical`. (Or use the `bse` command, 
-which does this automatically.)
+Many kinds of report [query](#queries) exclude some data, which can disturb the accounting equation.
+So, it's best to avoid queries when checking the accounting equation. 
+If you specify a report start date, be sure to include
+balances from previous transactions by adding `-H/--historical`.
+(Or use the `bse` command, which does this automatically.)
 
-## An improved zero total report
-Combining these, here is a better command to test the accounting equation for a journal:
+## An improved accounting equation report
+Combining these, here is a more robust command for checking the accounting equation:
 
 ```cli
 $ hledger bse -R --infer-equity --alias '/^(revenues|income|expenses)\b/=equity' not:desc:'closing balances' --layout tall -f YYYY.journal
 ```
 
-- `-R` - excludes any unbalanced virtual postings
-- `--infer-equity` - balances @/@@ transactions by adding equity postings
-- `--alias ...` - moves all revenues/expenses under equity
-- `not:desc:...` - excludes any final closing balance transactions that would hide ending balances
+- `-R` - (--real) excludes any unbalanced virtual postings
+- `--infer-equity` - adds equity postings where needed to balance transactions using @/@@ cost notation
+- `--alias ...` - recategorises all revenues/expenses as equity
+- `not:desc:...` - excludes any final closing balance transactions that would hide ending balances (suitable for checking a single journal file)
 - `--layout tall` - improves readability when there are many commodities
-- `-f ...` - optional, specifies a file other than the default $LEDGER_FILE
+- `-f ...` - optional, specifies a file other than the default $LEDGER_FILE.
