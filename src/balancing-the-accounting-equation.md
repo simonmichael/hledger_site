@@ -52,7 +52,7 @@ More conveniently, you can use an account alias to convert revenue/expense accou
 Eg:\
 `--alias '/^(revenues|income|expenses)\b/=equity'`
 
-### 2. Unbalanced commodity conversions with @/@@
+### 2. Unbalanced conversions with cost notation (@/@@)
 Currency/commodity conversions using @/@@ notation and no
 [equity conversion postings](hledger.md#equity-conversion-postings) are unbalanced.
 You can rewrite them in balanced form, eg
