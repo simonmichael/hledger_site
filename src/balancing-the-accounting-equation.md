@@ -22,7 +22,7 @@ or more easily with the `balancesheetequity` command, which is designed for this
 $ hledger bse
 ```
 
-Note, checking the account equation is different from checking a
+Note, checking the accounting equation is different from checking a
 [trial balance](https://en.wikipedia.org/wiki/Trial_balance).
 A trial balance just checks that the total inflows and outflows over all accounts are equal,
 which can be seen by a zero grand total for `hledger balance`.
@@ -45,8 +45,7 @@ equity. In traditional accounting, they should be transferred to an account like
 `equity:retained earnings` at the end of each reporting period. 
 
 You could record such transfers in your journal, either manually or
-using the close command
-(<https://hledger.org/hledger.html#example-close-revenueexpense-accounts-to-retained-earnings>).
+[using the close command](hledger.md#example-retain-earnings>).
 Most PTA users don't bother with this.
 
 More conveniently, you can use an account alias to convert revenue/expense accounts to equity temporarily. 
@@ -56,8 +55,7 @@ Eg:\
 ### 2. Unbalanced commodity conversions with @/@@
 Currency/commodity conversions using @/@@ notation are unbalanced. You
 can rewrite them in balanced form by commenting out the @/@@ price and
-adding a pair of equity postings - see
-<https://hledger.org/conversion2.html>.
+adding a pair of equity postings - see [Currency conversion 2](conversion2.html).
 
 Or, use `--infer-equity` to do this temporarily at report time. 
 
@@ -79,7 +77,7 @@ avoid them when testing the accounting equation.
 If they do cross a file boundary, or are inconveniently long, 
 fix that by splitting the transaction into two transactions 
 which use a pending account, as in
-<https://hledger.org/hledger.html#close-and-balance-assertions>.
+[close and balance assertions](hledger.md#close-and-balance-assertions).
 
 ### 5. Unbalanced postings
 Unbalanced virtual postings (with parenthesised account names)
