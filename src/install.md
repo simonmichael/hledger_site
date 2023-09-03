@@ -62,8 +62,7 @@ div.badges > a > img {
 }
 </style>
 
-The current hledger release is **1.30**. 
-(The [hledger package](https://hackage.haskell.org/package/hledger) is at 1.30.1; they work the same, it's just a packaging fix.
+The current hledger release is **1.31**. 
 [Release notes](release-notes.md))
 
 Here are lots of ways to install hledger:
@@ -87,13 +86,13 @@ And finally please [share any feedback](support.md) so we can make this process 
   <tr> <!-- CI BINARIES (SM) -->
     <td>
       <div class="badges">
-        <a><img alt="hledger CI binaries" src="https://img.shields.io/badge/hledger_CI_binaries-1.30-brightgreen.svg" /></a><br>
+        <a><img alt="hledger CI binaries" src="https://img.shields.io/badge/hledger_CI_binaries-1.31-brightgreen.svg" /></a><br>
       </div>
       <!-- <div class="notes">Linux, Mac, Windows</div> -->
     </td>
     <td>
       <div class="command">
-        <a href="https://github.com/simonmichael/hledger/releases/tag/1.30#mac-x64">hledger-mac-x64.zip</a>
+        <a href="https://github.com/simonmichael/hledger/releases/tag/1.31#mac-x64">hledger-mac-x64.zip</a>
       </div>
       <div class="notes"></div>
     </td>
@@ -120,13 +119,13 @@ And finally please [share any feedback](support.md) so we can make this process 
   <tr> <!-- CI BINARIES (SM) -->
     <td>
       <div class="badges">
-        <a><img alt="hledger CI binaries" src="https://img.shields.io/badge/hledger_CI_binaries-1.30-brightgreen.svg" /></a><br>
+        <a><img alt="hledger CI binaries" src="https://img.shields.io/badge/hledger_CI_binaries-1.31-brightgreen.svg" /></a><br>
       </div>
       <!-- <div class="notes">Linux, Mac, Windows</div> -->
     </td>
     <td>
       <div class="command">
-        <a href="https://github.com/simonmichael/hledger/releases/tag/1.30#windows-x64">hledger-windows-x64.zip</a>
+        <a href="https://github.com/simonmichael/hledger/releases/tag/1.31#windows-x64">hledger-windows-x64.zip</a>
         <!-- <span style="font-weight:normal; font-style:italic; font-size:small;">
           (Also runs on other platforms with <a href="https://www.winehq.org">Wine</a>)
         </span> -->
@@ -199,13 +198,13 @@ And finally please [share any feedback](support.md) so we can make this process 
   <tr> <!-- CI BINARIES (SM) -->
     <td>
       <div class="badges">
-        <a><img alt="hledger CI binaries" src="https://img.shields.io/badge/hledger_CI_binaries-1.30-brightgreen.svg" /></a><br>
+        <a><img alt="hledger CI binaries" src="https://img.shields.io/badge/hledger_CI_binaries-1.31-brightgreen.svg" /></a><br>
       </div>
       <!-- <div class="notes">Linux, Mac, Windows</div> -->
     </td>
     <td>
       <div class="command">
-        <a href="https://github.com/simonmichael/hledger/releases/tag/1.30#linux-x64">hledger-linux-x64.zip</a>
+        <a href="https://github.com/simonmichael/hledger/releases/tag/1.31#linux-x64">hledger-linux-x64.zip</a>
       </div>
       <div class="notes"></div>
     </td>
@@ -398,7 +397,7 @@ And finally please [share any feedback](support.md) so we can make this process 
   <tr> <!-- DOCKER (adept) -->
     <td>
       <div class="badges">
-        <a href="https://hub.docker.com/r/dastapov/hledger"><img alt="Docker" src="https://img.shields.io/badge/Docker_image-1.30.1-brightgreen.svg" /></a><br>
+        <a href="https://hub.docker.com/r/dastapov/hledger"><img alt="Docker" src="https://img.shields.io/badge/Docker_image-1.30.1-red.svg" /></a><br>
         <a href="https://hub.docker.com/search?q=hledger&amp;type=image&amp;sort=updated_at&amp;order=desc">more..</a>
       </div>
       <!-- <div class="notes">Linux, Mac, Windows</div> -->
@@ -473,7 +472,7 @@ And finally please [share any feedback](support.md) so we can make this process 
 
 ## Build the current release
 
-<img alt="Release source" src="https://img.shields.io/badge/Release_source-1.30.1-brightgreen.svg" />
+<img alt="Release source" src="https://img.shields.io/badge/Release_source-1.31-brightgreen.svg" />
 
 1. Check [build requirements](#build-requirements)
 2. Use one of the [build methods](#build-methods)
@@ -611,7 +610,7 @@ If you have stack installed, you can run it to install the main hledger tools in
 
 <div class="builder-command">
   stack update <br>
-  stack install --resolver=lts-20 hledger-lib-1.30 hledger-1.30.1 hledger-ui-1.30 hledger-web-1.30 --silent
+  stack install --resolver=lts-21 hledger-lib-1.31 hledger-1.31 hledger-ui-1.31 hledger-web-1.31 --silent
 </div>
 
 On Windows, omit hledger-ui from this command (unless you are in [WSL]).
@@ -623,7 +622,7 @@ If you have GHC and cabal, you can run cabal to install the main hledger tools i
 <div class="builder-command">
   cabal update <br>
   cabal install alex happy<br>
-  cabal install hledger-1.30.1 hledger-ui-1.30 hledger-web-1.30
+  cabal install hledger-1.31 hledger-ui-1.31 hledger-web-1.31
 </div>
 
 On Windows, omit hledger-ui from this command (unless you are in [WSL]).
@@ -688,15 +687,15 @@ After installing, run the hledger tools and verify that their versions are what 
 
 <div class="command">
 $ hledger --version <br>
-hledger 1.30-g94fe8b21c-20230601, mac-aarch64   # or hledger 1.30.1-g715f4b3d9-20230602
+hledger 1.31-g7fbe76970-20230903, mac-aarch64
 <br>
 <br>
 $ hledger-ui --version <br>
-hledger-ui 1.30-g94fe8b21c-20230601, mac-aarch64
+hledger-ui 1.31-g7fbe76970-20230903, mac-aarch64
 <br>
 <br>
 $ hledger web --version <br>
-hledger-web 1.30-g94fe8b21c-20230601, mac-aarch64
+hledger-web 1.31-g7fbe76970-20230903, mac-aarch64
 <br>
 </div>
 
@@ -705,7 +704,7 @@ If you like, you can also run the unit tests:
 <div class="command">
 $ hledger test <br>
 ... <br>
-All 220 tests passed (0.10s)
+All 221 tests passed (0.10s)
 </div>
 
 or the more extensive functional tests, if you are in hledger's source directory:
@@ -713,7 +712,7 @@ or the more extensive functional tests, if you are in hledger's source directory
 <div class="command">
 $ make functest <br>
 ... <br>
- Total   992 ...<br>
+ Total   998 ...<br>
 functest PASSED
 </div>
 
