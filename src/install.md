@@ -213,7 +213,7 @@ And finally please [share any feedback](support.md) so we can make this process 
   <tr> <!-- GENTOO (ezzie) -->
     <td>
       <div class="badges">
-        <a href="https://gentoo.zugaina.org/Search?search=hledger"><img alt="Gentoo" src="https://img.shields.io/badge/Gentoo_package-1.29.2-red.svg" /></a>
+        <a href="https://gentoo.zugaina.org/Search?search=hledger"><img alt="Gentoo" src="https://img.shields.io/badge/Gentoo_package-1.30.1-red.svg" /></a>
       </div>
     </td>
     <td>
@@ -240,7 +240,7 @@ And finally please [share any feedback](support.md) so we can make this process 
   <tr> <!-- ARCH (?) -->
     <td>
       <div class="badges">
-        <a href="https://archlinux.org/packages/community/x86_64/hledger/"><img alt="Arch" src="https://repology.org/badge/version-for-repo/arch/hledger.svg" /></a>
+        <a href="https://archlinux.org/packages/extra/x86_64/hledger/"><img alt="Arch" src="https://repology.org/badge/version-for-repo/arch/hledger.svg" /></a>
       </div>
     </td>
     <td>
@@ -296,7 +296,8 @@ And finally please [share any feedback](support.md) so we can make this process 
   <tr> <!-- FEDORA (?) -->
     <td>
       <div class="badges">
-        <a ><img src="https://img.shields.io/badge/Fedora_39_package-1.27.1-red.svg" /></a><br>
+        <a ><img src="https://img.shields.io/badge/Fedora_40_package-1.30.1-red.svg" /></a><br>
+        <a ><img src="https://img.shields.io/badge/Fedora_39_package-1.30.1-red.svg" /></a><br>
         <a ><img src="https://img.shields.io/badge/Fedora_38_package-1.27.1-red.svg" /></a><br>
         <a ><img src="https://repology.org/badge/version-for-repo/fedora_37/hledger.svg" /></a><br>
         <a ><img src="https://repology.org/badge/version-for-repo/fedora_36/hledger.svg" /></a><br>
@@ -410,18 +411,17 @@ And finally please [share any feedback](support.md) so we can make this process 
   <tr> <!-- NIX (maralorn, chvp) -->
     <td>
       <div class="badges">
-        <a href="https://github.com/search?l=&o=desc&q=%22automatic+Haskell+package+set+update%22+repo%3ANixOS%2Fnixpkgs+filename%3Ahaskell-packages.nix&s=committer-date&type=Commits"><img alt="Nix" src="https://img.shields.io/badge/Nix_package-1.28-red.svg" /></a>
+        <a href="https://search.nixos.org/packages?channel=unstable&from=0&size=50&sort=relevance&type=packages&query=hledger"
+        ><img alt="Nix" src="https://repology.org/badge/version-for-repo/nix_unstable/hledger.svg" /></a>
       </div>
       <!-- <div class="notes">Linux, Mac</div> -->
     </td>
     <td>
       <div class="command">
-          nix-env -f https://github.com/NixOS/nixpkgs/archive/fcfc9171.tar.gz -iA hledger_1_28 hledger-ui_1_28 hledger-web_1_28
-		  <!-- fcfc9171794b4306e14dd31664900f6bd8bc55ca -->
+          nix-shell -p hledger hledger-ui hledger-web
+          <!-- nix-env -f https://github.com/NixOS/nixpkgs/archive/nixpkgs-unstable.tar.gz -iA hledger hledger-ui hledger-web -->
       </div>
       <div class="notes">
-          Nix install command not recently tested, reports/help welcome.<br>
-          Nix binaries may not yet be fully cached for your platform, try with --dry-run to estimate how much building will be required.<br>
           On Linux, note <span class="warnings"><a href="https://github.com/simonmichael/hledger/issues/1030">#1030</a>, 
           <a href="https://github.com/simonmichael/hledger/issues/1033">#1033</a>.
       </div>
@@ -502,22 +502,16 @@ They need not be the latest versions (but later versions are better):
   On Windows, prefer the 64-bit version of stack.
 
 Or, you can install them with [ghcup](https://haskell.org/ghcup).
-
-If you don't have any preference, I recommend this setup, 
-which is the most reliable and platform-independent as of 2022:
+Since 2022, this is most reliable, platform-independent and recommended method.
 
 1. Install ghcup
 2. Install a recent version of ghc and stack
     <div class="builder-command">
       ghcup install ghc <br>
-      ghcup install stack
+      ghcup install stack<br>
+      # or interactively: ghcup tui
     </div>
-3. Configure stack to use ghcup's GHCs, saving disk space:
-    ```yaml
-    # add to ~/.stack/config.yaml:
-    system-ghc: true
-    install-ghc: false
-    ```
+3. When ghcup asks if stack should use ghcup-managed GHC, say yes.
 
 #### C libraries
 
@@ -707,7 +701,7 @@ $ hledger test <br>
 All 221 tests passed (0.10s)
 </div>
 
-or the more extensive functional tests, if you are in hledger's source directory:
+or the more thorough functional tests, if you are in hledger's source directory:
 
 <div class="command">
 $ make functest <br>
