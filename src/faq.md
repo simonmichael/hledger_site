@@ -355,10 +355,9 @@ hledger print checking not:not:expenses:tax
 
 ### How do I show a register or balance report between one account and another ?
 
-The above won't work with the `register` or `balance` commands because
-these filter individual postings to one account, not the multi-account transactions.
-Instead, you can approximate it by using two commands
-(complex multi-account transactions could throw it off a little). Eg:
+The above won't work with the `register` or balance commands because
+these process individual single-account postings, not the multi-account transactions.
+Instead, use two commands, eg:
 
 ```shell
 hledger print checking | hledger -f- -I register expenses:tax
@@ -368,19 +367,12 @@ hledger print checking | hledger -f- -I register expenses:tax
 hledger print checking | hledger -f- -I balance expenses:tax
 ```
 
-<!-- temporary anchor after url change -->
-<a name="how-do-i-show-an-income-statement-restricted-to-eg-just-my-credit-card-"></a>
-
-### How do I show an income statement restricted to just my credit card (eg) ?
-
-First extract just the credit card transactions, then run the income statement report from those:
-
 ```shell
 hledger print liabilities:mastercard | hledger -f- -I incomestatement
 ```
 
-You might also need to exclude (or split up) transactions which mix the credit card, other assets/liabilities, and expenses/revenues.
-
+Complex multi-account transactions could muddle these reports a little;
+if that's a problem you might need to exclude those transactions or split them up.
 
 ### What are some gotchas with piping `hledger print` into another hledger command ?
 
