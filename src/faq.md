@@ -329,31 +329,43 @@ This means using awk or some other unix tool that can treat transactions as mult
 
 ### How do I show transactions between one account and another account ?
 
-Use aregister with the other account as the query:
+To show one transaction per line:
+
+Use `aregister ACCT1`, with the other account as the query:
 ```shell
 hledger aregister checking expenses:tax
 ```
 
-To filter by direction, add `'amt:>0'` or  `'amt:<0'` to the above:
+To filter by direction, add `'amt:>0'` or  `'amt:<0'`:
 ```shell
 hledger aregister checking expenses:tax 'amt:>0'
 ```
 
-To see full transactions, use print with a boolean query (requires hledger 1.30+):
+To see transactions in full:
+
+Use `print` with an `expr:` query (requires hledger >=1.30):
 ```shell
 hledger print expr:'checking AND expenses:tax'
 ```
 
-or with hledger <1.30, emulate that with `not:not:`:
+Or with hledger <1.30, you can emulate that with `not:not:`:
 ```shell
 hledger print checking not:not:expenses:tax
 ```
 
-The above won't work with the register command because it reports postings,
-not transactions - each report item has only a single account.
-If you want a register report, combine it with `print` like so:
+### How do I show a register or balance report between one account and another ?
+
+The above won't work with the `register` or `balance` commands because
+these filter individual postings to one account, not the multi-account transactions.
+Instead, you can approximate it by using two commands
+(complex multi-account transactions could throw it off a little). Eg:
+
 ```shell
 hledger print checking | hledger -f- -I register expenses:tax
+```
+
+```shell
+hledger print checking | hledger -f- -I balance expenses:tax
 ```
 
 <!-- temporary anchor after url change -->
