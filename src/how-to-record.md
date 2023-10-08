@@ -43,6 +43,21 @@ Here are some options:
 
 ## At the command line
 
+### From scratch
+- Write the entry using journal format, eg
+  ```shell
+  $ cat >>$LEDGER_FILE
+  2023-01-01
+      expenses:food   $10
+      assets:cash
+  
+  <CTRL-D>
+  ```
+  or
+  ```shell
+  printf >>$LEDGER_FILE '2023-01-01\n  expenses:food  $10\n  assets:cash\n\n'
+  ```
+
 ### From past entries
 - Install Ledger and use [`ledger xact DESC`](https://ledger-cli.org/doc/ledger3.html#xact), with arguments to adjust amounts
 
@@ -56,13 +71,13 @@ Here are some options:
 
 ## By converting data
 
+### From bank CSV (or other character-separated values)
+- [`hledger import`](hledger.md#import) plus [CSV conversion rules](hledger.md#csv) (and a pre-cleaning script if needed)
+
 ### From timeclock, timedot or other journal files
-- [`hledger import`](hledger.md#import)
+- `hledger import`
 
-### From CSV (or other character-separated values)
-- `hledger import` plus [CSV conversion rules](hledger.md#csv) (and a pre-cleaning script if needed)
-
-### From other apps and data formats
+### From other apps or data formats
 - Look for conversion tools and tips at <https://hledger.org/cookbook.html#other-software>
 - Or at <https://plaintextaccounting.org/#data-importconversion>
 - Or write a conversion script that prints hledger journal entries (or other supported format)
