@@ -5,14 +5,15 @@
 <!-- toc -->
 </div>
 
-There are many ways to create hledger journal entries. Here are some:
+There are many ways to create hledger journal entries.
+Here are some options:
 
 ## Interactively
 
 ### With a text UI
 
-- [hledger add](hledger.md#add)
-- [hledger-iadd](https://hackage.haskell.org/package/hledger-iadd)
+- [hledger add](hledger.md#add) (or `a` in hledger-ui)
+- [hledger-iadd](https://hackage.haskell.org/package/hledger-iadd) (or `A` in hledger-ui)
 
 ### With a web UI
 
@@ -43,7 +44,7 @@ There are many ways to create hledger journal entries. Here are some:
 ### From past entries
 - Using Ledger, [`ledger xact DESC`](https://ledger-cli.org/doc/ledger3.html#xact) with arguments to adjust amounts
 
-### From partial entries/rules
+### From transaction/posting rules
 - Convert a periodic transaction rule (eg in future.journal) to an entry with --forecast
 - The above, plus generate extra postings from auto posting rules with --auto
 
