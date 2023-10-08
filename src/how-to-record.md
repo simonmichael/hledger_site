@@ -27,14 +27,16 @@ Here are some options:
 ## In a text editor
 
 ### From scratch
-- Write the entry in full
+- Write the entry in full, using [journal format](hledger.md#journal).
+  Some [editors](editors.md) have addons that will assist
+  (like TAB account completion and M-q alignment in Emacs ledger-mode).
 
 ### From templates
-- In emacs with [yasnippet](https://www.emacswiki.org/emacs/Yasnippet) (or similar) configured, enter the name of a snippet and complete with TAB
+- In Emacs with [yasnippet](https://www.emacswiki.org/emacs/Yasnippet) (or similar) configured, enter the name of a snippet and complete with TAB
 
 ### From past entries
 - Find, copy and modify a past entry in the journal
-- Or in emacs [ledger-mode](https://ledger-cli.org/doc/ledger-mode.html), enter a date and partial description and complete with C-c TAB
+- Or in Emacs [ledger-mode](https://ledger-cli.org/doc/ledger-mode.html), enter a date and partial description and complete with C-c TAB
 
 ### From future entries
 - Move the entry from a separate file where you prepared it ahead of time (eg future.journal) 
@@ -55,7 +57,7 @@ Here are some options:
 - `hledger print` or `import` plus hledger's [CSV conversion rules](hledger.md#csv) (and a pre-cleaning script if needed)
 
 ### From unsupported data formats
-- Write a conversion script that outputs hledger journal entries
+- Write a conversion script that prints hledger journal entries
 
 ### From other apps
 - Look for conversion tools and tips at <https://hledger.org/cookbook.html#other-software>
