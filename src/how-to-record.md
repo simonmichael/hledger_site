@@ -1,5 +1,10 @@
 # How to record journal entries
 
+<div class=pagetoc>
+
+<!-- toc -->
+</div>
+
 There are many ways to create hledger journal entries. Here are some:
 
 ## Interactively
@@ -38,7 +43,7 @@ There are many ways to create hledger journal entries. Here are some:
 - hledger print or import, using hledger's CSV conversion rules (and a pre-cleaning script if needed)
 
 ### From other accounting apps
-- Look for conversion tools and tips at https://hledger.org/cookbook.html#other-software
+- Look for conversion tools and tips at <https://hledger.org/cookbook.html#other-software>
 
 ### From unsupported data formats
 - Write a custom conversion script that outputs hledger journal entries
