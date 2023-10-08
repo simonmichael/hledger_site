@@ -59,6 +59,7 @@
 - [Foreign trip expenses](foreign-trip-expenses.md)
 - [Get Started](start.md)
 - [Home](index.md)
+- [How to record journal entries](how-to-record.md)
 - [Importing CSV data](import-csv.md)
 - [Install](install.md)
 - [Invoicing](invoicing.md)

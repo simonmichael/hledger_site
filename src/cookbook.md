@@ -27,6 +27,7 @@ Check plaintextaccounting.org's and wiki.plaintextaccounting.org's categories.
 
 ### Data entry
 - [Create a journal](create-a-journal.md)
+- [How to record journal entries](how-to-record.md)
 - [Importing CSV data](import-csv.md)
 - [Cost notation](cost-notation.md)
 
