@@ -7,13 +7,10 @@
 hledger was inspired by the app that pioneered plain text accounting: Ledger (<https://ledger-cli.org>).
 This page describes differences between them, and a little history.
 
-*2023-01: If you are a Ledger user trying to use hledger with your data,
-I'd love to hear about your experience and make this easier;
-please contact me (sm) in the 
-[#ledger, #hledger, or #plaintextaccounting chats](https://hledger.org/support).
-And you may want to skip ahead to [Interoperating tips](#interoperating-tips)
-or any other topic that seems relevant.
-See also [#1962](https://github.com/simonmichael/hledger/issues/1962).*
+If you are a Ledger user trying to use hledger with your data,
+feel free to skip ahead to [Interoperating tips](#interoperating-tips).
+And please let me know your experience in the [#hledger or #plaintextaccounting chats](support.md).
+Related: [#1962](https://github.com/simonmichael/hledger/issues/1962).*
 
 ## Differences
 
