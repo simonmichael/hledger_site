@@ -16,7 +16,8 @@ There are many ways to create hledger journal entries. Here are some:
 
 ### With a web UI
 
-- [hledger-web](https://hledger.org/hledger-web.html) add form
+- [hledger-web](https://hledger.org/hledger-web.html) add or edit form
+- [Paisa](https://paisa.fyi) edit form
 
 ### On a phone or tablet
 
