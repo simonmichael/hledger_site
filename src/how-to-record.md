@@ -17,7 +17,7 @@ Here are some options:
 
 ### With a web UI
 
-- [hledger-web](https://hledger.org/hledger-web.html) add or edit form
+- [hledger-web](https://hledger.org/hledger-web.html) add form or edit form
 - [Paisa](https://paisa.fyi) edit form
 
 ### On a phone or tablet
@@ -34,7 +34,7 @@ Here are some options:
 
 ### From past entries
 - Find, copy and modify a past entry in the journal
-- In emacs [ledger-mode](https://ledger-cli.org/doc/ledger-mode.html), enter a date and partial description and complete with C-c TAB
+- Or in emacs [ledger-mode](https://ledger-cli.org/doc/ledger-mode.html), enter a date and partial description and complete with C-c TAB
 
 ### From future entries
 - Move the entry from a separate file where you prepared it ahead of time (eg future.journal) 
@@ -49,13 +49,18 @@ Here are some options:
 - The above, plus generate extra postings from auto posting rules with --auto
 
 ### From timeclock, timedot or journal files
-- `hledger print` or `hledger import`
+- [`hledger print`](hledger.md#print) or [`hledger import`](hledger.md#import)
 
 ### From CSV (or other character-separated data)
-- `hledger print` or `import`, using hledger's CSV conversion rules (and a pre-cleaning script if needed)
+- `hledger print` or `import` plus hledger's [CSV conversion rules](hledger.md#csv) (and a pre-cleaning script if needed)
+
+### From unsupported data formats
+- Write a conversion script that outputs hledger journal entries
 
 ### From other apps
 - Look for conversion tools and tips at <https://hledger.org/cookbook.html#other-software>
 
-### From unsupported data formats
-- Write a custom conversion script that outputs hledger journal entries
+### From custom scripts
+- If you have custom scripts to help with tasks, make them print or append journal entries when appropriate.
+  Eg have your [invoicing script](https://github.com/simonmichael/hledger/tree/master/examples/invoicing/invoice-script) add an invoice transaction to the journal.
+  
