@@ -8,9 +8,19 @@
 There are many ways to create hledger journal entries. Here are some:
 
 ## Interactively
+
+### With a text UI
+
 - [hledger add](hledger.md#add)
 - [hledger-iadd](https://hackage.haskell.org/package/hledger-iadd)
+
+### With a web UI
+
 - [hledger-web](https://hledger.org/hledger-web.html) add form
+
+### On a phone or tablet
+
+- With one of the [mobile apps](mobile.md)
 
 ## In a text editor
 
