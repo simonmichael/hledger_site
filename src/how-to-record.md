@@ -46,23 +46,24 @@ Here are some options:
 ### From past entries
 - Using Ledger, [`ledger xact DESC`](https://ledger-cli.org/doc/ledger3.html#xact) with arguments to adjust amounts
 
-### From transaction/posting rules
+### From periodic transaction / auto posting rules
 - Convert a periodic transaction rule (eg in future.journal) to an entry with --forecast
 - The above, plus generate extra postings from auto posting rules with --auto
-
-### From timeclock, timedot or journal files
-- [`hledger print`](hledger.md#print) or [`hledger import`](hledger.md#import)
-
-### From CSV (or other character-separated data)
-- `hledger print` or `import` plus hledger's [CSV conversion rules](hledger.md#csv) (and a pre-cleaning script if needed)
-
-### From unsupported data formats
-- Write a conversion script that prints hledger journal entries
-
-### From other apps
-- Look for conversion tools and tips at <https://hledger.org/cookbook.html#other-software>
 
 ### From custom scripts
 - If you have custom scripts to help with tasks, make them print or append journal entries when appropriate.
   Eg have your [invoicing script](https://github.com/simonmichael/hledger/tree/master/examples/invoicing/invoice-script) add an invoice transaction to the journal.
-  
+
+## By converting data
+
+### From timeclock, timedot or other journal files
+- [`hledger import`](hledger.md#import)
+
+### From CSV (or other character-separated values)
+- `hledger import` plus hledger's [CSV conversion rules](hledger.md#csv) (and a pre-cleaning script if needed)
+
+### From other apps and data formats
+- Look for conversion tools and tips at <https://hledger.org/cookbook.html#other-software>
+- Or at <https://plaintextaccounting.org/#data-importconversion>
+- Or write a conversion script that prints hledger journal entries (or other supported format)
+- As above, but save it to a file and `import` that to get only new entries
