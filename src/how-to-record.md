@@ -59,11 +59,11 @@ Here are some options:
   ```
 
 ### From past entries
-- Install Ledger and use [`ledger xact DESC`](https://ledger-cli.org/doc/ledger3.html#xact), with arguments to adjust amounts
+- Install Ledger and use [ledger xact DESC](https://ledger-cli.org/doc/ledger3.html#xact)
 
 ### From periodic transaction / auto posting rules
 - Convert a periodic transaction rule (eg in future.journal) to an entry with `--forecast[=DATEORPERIOD]`
-- The above, plus generate extra postings from auto posting rules with `--auto`
+- As above, plus generate extra postings from auto posting rules with `--auto`
 
 ### From custom scripts
 - If you have custom scripts to help with tasks, make them print or append journal entries when appropriate.
@@ -72,10 +72,14 @@ Here are some options:
 ## By converting data
 
 ### From bank CSV (or other character-separated values)
-- [`hledger import`](hledger.md#import) plus [CSV conversion rules](hledger.md#csv) (and a pre-cleaning script if needed)
+- [hledger import](hledger.md#import) plus [CSV conversion rules](hledger.md#csv) (and a pre-cleaning script if needed)
+- Or keep the CSV files forever and read them with `-f`
+- Or regenerate journals from them with [Full-fledged hledger](https://github.com/adept/full-fledged-hledger) or
+  [hledger-flow](https://github.com/apauley/hledger-flow)
 
 ### From timeclock, timedot or other journal files
-- `hledger import`
+- Just read them directly with `-f`
+- Or, hledger import them to main journal
 
 ### From other apps or data formats
 - Look for conversion tools and tips at <https://hledger.org/cookbook.html#other-software>
