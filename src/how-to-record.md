@@ -62,8 +62,8 @@ Here are some options:
 - Install Ledger and use [ledger xact DESC](https://ledger-cli.org/doc/ledger3.html#xact)
 
 ### From periodic transaction / auto posting rules
-- Convert a periodic transaction rule (eg in future.journal) to an entry with `--forecast[=DATEORPERIOD]`
-- As above, plus generate extra postings from auto posting rules with `--auto`
+- Convert a [periodic transaction rule](hledger.md#periodic-transactions) (eg in future.journal) to an entry with `--forecast[=DATEORPERIOD]`
+- As above, plus generate extra postings from [auto posting rules](hledger.md#auto-postings) with `--auto`
 
 ### From custom scripts
 - If you have custom scripts to help with tasks, make them print or append journal entries when appropriate.
