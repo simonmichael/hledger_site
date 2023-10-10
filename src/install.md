@@ -422,8 +422,11 @@ And finally please [share any feedback](support.md) so we can make this process 
           <!-- nix-env -f https://github.com/NixOS/nixpkgs/archive/nixpkgs-unstable.tar.gz -iA hledger hledger-ui hledger-web -->
       </div>
       <div class="notes">
-          On Linux, note <span class="warnings"><a href="https://github.com/simonmichael/hledger/issues/1030">#1030</a>, 
-          <a href="https://github.com/simonmichael/hledger/issues/1033">#1033</a>.
+          On Linux, note <span class="warnings">
+          <a href="https://github.com/simonmichael/hledger/issues/1030">#1030</a>,
+          <a href="https://github.com/simonmichael/hledger/issues/1033">#1033</a>,
+          <a href="https://github.com/simonmichael/hledger/issues/2089">#2089</a>,
+          <a href="https://hledger.org/hledger.html#troubleshooting">hledger manual > Troubleshooting</a>.
       </div>
     </td>
   </tr>
