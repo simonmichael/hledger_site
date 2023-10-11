@@ -130,7 +130,7 @@ Some downloading helpers can be found at
 - Notes on [Simon's setup](simons-setup.md) (old)
 
 ### hledgermatic
-- Simon's [[hledgermatic]] setup (2023)
+- Simon's [hledgermatic](hledgermatic.md) setup (2023)
 
 ### Full-fledged hledger
 - Dmitry Astapov's Full-fledged Hledger workflow (tutorial):\
