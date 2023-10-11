@@ -1,29 +1,18 @@
-# Simon's setup notes
+# Simon's old setup
 
 <div class=pagetoc>
 
 <!-- toc -->
 </div>
 
-Author:       Simon Michael
-Tested on:    mac mojave+
-Tested with:  hledger 1.14+
-Tools used:   hledger, hledger-ui, ledger-mode, GNU make, ...
-...
-
 Some notes on my setup circa 2019 and later.
 
-## Environment
+- Author:       Simon Michael
+- Tested with:  mac mojave, hledger 1.14
 
-The `LEDGER_FILE` environment variable is set to `/Users/simon/notes/CURRENTYEAR.journal`.
-This is done in some super secret way that I'll have to track down, or more likely several ways,
-to ensure that it is consistent for:
+## Tools
 
-- programs started from command line in iTerm/Terminal windows
-- programs started from emacs shell buffers
-- emacs modes such as ledger-mode
-- for both text-mode and graphical emacs, whether started from command line or mac GUI (Dock/Finder/Spotlight)
-- etc.
+hledger, hledger-ui, ledger-mode, GNU make, ...
 
 ## Files
 
@@ -51,11 +40,6 @@ It provides all historical data, but is slow, and my old journals are inconsiste
 current.journal is a symlink for scripts which don't know the year.
 Symbolic links are a mixed blessing, causing file path confusion in emacs, eg.
 
-## Version control
-
-Journal file, included files, makefile and scripts in git.
-A mixture of manual and cron-based automatic committing.
-
 ## Scripts
 
 I have convenience aliases for hledger commands and reports in `~/notes/bashrc`,
@@ -65,6 +49,23 @@ Data fetching and report scripts are defined in `~/notes/Makefile`.
 
 ~~Increasingly, I am moving reports and scripts in a (more powerful and robust) Shake file, `~/notes/do.hs`
 ([details](https://gist.github.com/simonmichael/74f82343b1f625b2861fcf27c3ddeb2f)).~~
+
+## Version control
+
+Journal file, included files, makefile and scripts in git.
+A mixture of manual and cron-based automatic committing.
+
+## Environment
+
+The `LEDGER_FILE` environment variable is set to `/Users/simon/notes/CURRENTYEAR.journal`.
+This is done in some super secret way that I'll have to track down, or more likely several ways,
+to ensure that it is consistent for:
+
+- programs started from command line in iTerm/Terminal windows
+- programs started from emacs shell buffers
+- emacs modes such as ledger-mode
+- for both text-mode and graphical emacs, whether started from command line or mac GUI (Dock/Finder/Spotlight)
+- etc.
 
 ## Accounts
 
