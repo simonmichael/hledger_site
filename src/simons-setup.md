@@ -8,10 +8,7 @@
 Author:       Simon Michael
 Tested on:    mac mojave+
 Tested with:  hledger 1.14+
-Tools used:
-hledger,
-hledger-ui,
-GNU make,
+Tools used:   hledger, hledger-ui, ledger-mode, GNU make, ...
 ...
 
 Some notes on my setup circa 2019 and later.
@@ -94,7 +91,7 @@ account sm:expenses             ; type:X
 
 Most journal entries are generated from downloaded CSV:
 
-- ~~I fetch OFX from one back with ledger-autosync (discontinued due to high fees)~~
+- ~~I fetch OFX from one bank with ledger-autosync (discontinued due to high fees)~~
 
 - ~~Transactions from three banks are aggregated and cleaned in a Google sheet by Tiller ($5/mo).
   I download this as CSV with a `gsheet-csv` script (via cron ?). (discontinued for security)~~
@@ -108,7 +105,11 @@ Most journal entries are generated from downloaded CSV:
 
 - I fetch CSV from Paypal's API using `paypaljson` and `paypaljson2csv` scripts.
 
-CSV rules are never finished; they get one or two small tweaks most times I import. They don't cover 100% of my possible entries; a few that are too hard to generate just get generated partially, with a ; TODO: tag for me to fix them up manually. There aren't many of those at this point
+CSV rules are never finished; they get one or two small tweaks most
+times I import.  They don't cover 100% of my possible entries; a few
+that are too hard to generate just get generated partially, with a ';
+TODO:` tag for me to fix them up manually. There aren't many of those
+at this point
 
 I fetch currency prices with barrucadu's market-prices.py script
 ([details](https://gist.github.com/simonmichael/9ca4d74b30567dcc3b93763ffe88abf9)).
