@@ -5,19 +5,20 @@
 <!-- toc -->
 </div>
 
-Author:       Simon Michael  
-Last updated: 201903  
-Tested on:    mac mojave  
-Tested with:  hledger 1.14  
-Tools used: 
-hledger, 
+Author:       Simon Michael
+Tested on:    mac mojave+
+Tested with:  hledger 1.14+
+Tools used:
+hledger,
 hledger-ui,
 GNU make,
 ...
 
+Some notes on my setup circa 2019 and later.
+
 ## Environment
 
-The `LEDGER_FILE` environment variable is currently set to `/Users/simon/notes/2019.journal`.
+The `LEDGER_FILE` environment variable is set to `/Users/simon/notes/CURRENTYEAR.journal`.
 This is done in some super secret way that I'll have to track down, or more likely several ways,
 to ensure that it is consistent for:
 
@@ -47,70 +48,74 @@ It includes:
 - YEAR.prices containing P records for the year
 - forecast.journal containing periodic transaction rules
 
-all.journal includes all the year journals. 
+all.journal includes all the year journals.
 It provides all historical data, but is slow, and my old journals are inconsistent/broken, so it's currently rarely used.
 
 current.journal is a symlink for scripts which don't know the year.
 Symbolic links are a mixed blessing, causing file path confusion in emacs, eg.
-
-## Data entry
-
-Most journal entries are generated from downloaded CSV:
-
-<s>
-- Transactions from three banks are aggregated and cleaned in a Google sheet by Tiller ($5/mo).
-  A command line tool downloads this sheet as CSV (via cron ? currently disabled).
-
-- Paypal CSV is downloaded manually, then moved into place by a make rule.
-  I use Paypal's CSV because Tiller doesn't handle multiple currencies and Paypal's extra metadata fields.
-</s>
-
-2023:
-
-for me, CSV rules are never finished; they get one or two small tweaks most times I import. They don't cover 100% of my possible entries; a few that are too hard to generate just get generated partially, with a ; TODO: tag for me to fix them up manually. There aren't many of those at this point
-
-To make it more concrete: I run make Import (equivalent to make csv which fetches latest bank & paypal csvs plus make import which runs in essence hledger import *.csv). Then I review in emacs+ledger-mode+flycheck-mode. All the imported transactions are uncleared, showing up red. Flycheck also highlights problems like "expenses:unknown" or failing assertions or out of order dates. I clear each one, fixing (and maybe tweaking CSV rules) where needed. The recentassertions check may force me to add a transaction with newer balance assertions for the main accounts; I describe that "reconcile", I fill in the balances hledger expects, and at the same time I check they match the real-world balances. 
-
-Finally when all the red is gone and all checks are passing - enforced by adding this command to `.git/hooks/precommit`:
-```
-#!/bin/sh
-...
-# check main hledger journal
-hledger check -s ordereddates recentassertions
-```
-...I commit the changes to git.
-
-I have a nightly cron job which would do this automatically, 
-but by habit and for clean commits I usually do them manually, with separate "txns", "rules" and "scripts" commits.
-(If you try using cron like this, note failing checks can reveal account names and balances in the error message and cron might email those in plain text over the internet.)
-
-For troubleshooting: when downloading a CSV the previous copy is saved as FILE.csv.old.
-
-Cash transactions are entered in emacs, using ledger-mode. 
-Mostly by copying and pasting similar past transactions.
-
-When rewriting account names, I use either 
-ledger-mode completion (`TAB`) or dabbrev-expand completion (`M-/`),
-which have different strengths. 
-
-I fetch currency prices with barrucadu's market-prices.py script
-([details](https://gist.github.com/simonmichael/9ca4d74b30567dcc3b93763ffe88abf9)).
-
 
 ## Version control
 
 Journal file, included files, makefile and scripts in git.
 A mixture of manual and cron-based automatic committing.
 
-## Workflows / Routines
+## Scripts
 
-; Recurring (daily, weekly, monthly, yearly..) workflows
+I have convenience aliases for hledger commands and reports in `~/notes/bashrc`,
+which is automatically sourced by my bash profile.
 
-### Data entry
+Data fetching and report scripts are defined in `~/notes/Makefile`.
 
-#### Downloaded transactions
+~~Increasingly, I am moving reports and scripts in a (more powerful and robust) Shake file, `~/notes/do.hs`
+([details](https://gist.github.com/simonmichael/74f82343b1f625b2861fcf27c3ddeb2f)).~~
 
-2021:
+## Accounts
+
+I track both sole proprietor business accounts, with `JS:` prefix,
+and personal accounts, with `sm:` prefix, in one journal for convenience.
+These declarations ensure hledger knows the account types:
+
+```journal
+account JS:assets               ; type:A
+account JS:liabilities          ; type:L
+account JS:equity               ; type:E
+account JS:revenues             ; type:R
+account JS:expenses             ; type:X
+
+account sm:assets               ; type:A
+account sm:liabilities          ; type:L
+account sm:equity               ; type:E
+account sm:revenues             ; type:R, taxable personal revenues
+account sm:income               ; type:R, already-taxed "salary" from JS, non-taxable income
+account sm:expenses             ; type:X
+```
+
+## Getting data
+
+Most journal entries are generated from downloaded CSV:
+
+- ~~I fetch OFX from one back with ledger-autosync (discontinued due to high fees)~~
+
+- ~~Transactions from three banks are aggregated and cleaned in a Google sheet by Tiller ($5/mo).
+  I download this as CSV with a `gsheet-csv` script (via cron ?). (discontinued for security)~~
+
+- ~~Transactions are downloaded from banks by Plaid (free developer account). (discontinued for security)~~
+
+- ~~Paypal CSV is downloaded manually, then moved into place by a make rule.
+  I use Paypal's CSV because Tiller doesn't handle multiple currencies and Paypal's extra metadata fields.~~
+
+- I download CSV manually from each bank, weeklyish.
+
+- I fetch CSV from Paypal's API using `paypaljson` and `paypaljson2csv` scripts.
+
+CSV rules are never finished; they get one or two small tweaks most times I import. They don't cover 100% of my possible entries; a few that are too hard to generate just get generated partially, with a ; TODO: tag for me to fix them up manually. There aren't many of those at this point
+
+I fetch currency prices with barrucadu's market-prices.py script
+([details](https://gist.github.com/simonmichael/9ca4d74b30567dcc3b93763ffe88abf9)).
+
+## Entering data (2021)
+
+For transactions downloaded from banks:
 
 - In an iterm3 tab titled FINANCE, I have a TUI emacs with two side-by-side windows.
 - In the first window is 2021.journal, with ledger-mode and auto-revert-mode enabled.
@@ -124,20 +129,18 @@ A mixture of manual and cron-based automatic committing.
 - when all new entries are marked cleared, I git commit the journal and any updated rules file(s). Or if I don't, it will be auto-committed by a nightly cron job, in theory.
 - I do this daily-ish, so it's a small number of new txns each time.
 
-#### Manually-entered transactions
-
-For transactions which don't appear in downloaded data (cash transactions, loans, etc.):
+For transactions which don't appear in downloaded data (cash transactions, etc.):
 
 - Note it somewhere, anywhere, as quickly possible, or it will be forgotten
   (and I'll have to add an unexplained cash adjustment transaction later).
 - If the laptop is out of reach, that will usually be a brief note on
   today's page in a phone notes app (Obsidian, currently) or a paper notebook.
   Later that gets copied to the laptop.
-- On the laptop, my usual routine is: 
+- On the laptop, my usual routine is:
   - get to the place of data entry
-    - iterm3 app (or start it if not running), 
-    - FINANCE tab where a TUI emacs (client) is running (or create that tab/start that emacs client), 
-    - emacs window showing the journal (or `C-j l` if not showing), 
+    - iterm3 app (or start it if not running),
+    - FINANCE tab where a TUI emacs (client) is running (or create that tab/start that emacs client),
+    - emacs window showing the journal (or `C-j l` if not showing),
     - end of buffer (`M->`).
   - add the journal entry: either
     - if short of time: just a commented line, or date and description (and expand it later)
@@ -148,17 +151,32 @@ For transactions which don't appear in downloaded data (cash transactions, loans
       the main thing I recall is turn on `ledger-complete-in-steps`.)
     - when the journal entry is finalised, mark it cleared (`C-c C-e`).
 
-## Accounts
+## Workflow (2023)
 
-; Account hierarchy used, any organisational principles, how I maintain it..
+I run `make Import` (equivalent to: `make csv` which fetches latest bank & paypal csvs, plus `make import` which essentially runs `hledger import *.csv`).
 
-## Reports
+Then I review in emacs+ledger-mode+flycheck-mode. All the imported transactions are uncleared, showing up red. Flycheck also highlights problems like "expenses:unknown" or failing assertions or out of order dates. I clear each one, fixing (and maybe tweaking CSV rules) where needed.
 
-I have convenience aliases for hledger commands and reports in `~/notes/bashrc`,
-which is automatically sourced by my bash profile.
+The recentassertions check may force me to add a transaction with newer balance assertions for the main accounts; I describe that "reconcile", I fill in the balances hledger expects, and at the same time I check they match the real-world balances.
 
-More reports and file-generating scripts are defined in `~/notes/Makefile`.
+Finally when all the red is gone and all checks are passing - enforced by adding this command to `.git/hooks/precommit`:
+```
+#!/bin/sh
+...
+# check main hledger journal
+hledger check -s ordereddates recentassertions
+```
+...I commit the changes to git.
 
-Increasingly, I am moving reports and scripts in a (more powerful and robust) Shake file, `~/notes/do.hs`
-([details](https://gist.github.com/simonmichael/74f82343b1f625b2861fcf27c3ddeb2f)).
+I have a nightly cron job which would do this automatically,
+but by habit and for clean commits I usually do them manually, with separate "txns", "rules" and "scripts" commits.
+(If you try using cron like this, note failing checks can reveal account names and balances in the error message and cron might email those in plain text over the internet.)
 
+For troubleshooting: when downloading a CSV the previous copy is saved as FILE.csv.old.
+
+Cash transactions are entered in emacs, using ledger-mode.
+Mostly by copying and pasting similar past transactions.
+
+When rewriting account names, I use either
+ledger-mode completion (`TAB`) or dabbrev-expand completion (`M-/`),
+which have different strengths.
