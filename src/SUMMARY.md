@@ -104,6 +104,7 @@
 - [hledger and SQLite](sqlite.md)
 - [hledger and Ultorg](ultorg.md)
 - [hledger and YNAB](ynab.md)
+- [hledgermatic](hledgermatic.md)
 
 <!--
 Other manual versions.
