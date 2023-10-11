@@ -1,3 +1,10 @@
+# hledgermatic
+
+<div class=pagetoc>
+
+<!-- toc -->
+</div>
+
 This is my recommendation for a relatively simple, automated workflow using current hledger features. It is the kind of setup I use myself. It's described here, but not yet packaged for easy setup; use it for inspiration. Related scripts can be found at [Scripts and add-ons](scripts.md).
 
 Here are the main files (grouped for clarity). Yours might be slightly different:
