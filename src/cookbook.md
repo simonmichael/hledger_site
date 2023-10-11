@@ -25,6 +25,10 @@ Check plaintextaccounting.org's and wiki.plaintextaccounting.org's categories.
 ## General usage
 <!-- sections ordered roughly by need -->
 
+### Setups and workflows
+- [Get Started](start.md)
+- [Common workflows](common-workflows.md)
+
 ### Data entry
 - [Create a journal](create-a-journal.md)
 - [How to record journal entries](how-to-record.md)
@@ -40,7 +44,7 @@ Check plaintextaccounting.org's and wiki.plaintextaccounting.org's categories.
 - [Checking for errors](checking-for-errors.md)
 - [Balancing the accounting equation](balancing-the-accounting-equation.md)
 
-### Reporting techniques
+### Reporting
 - [Report examples](report-examples.md)
 - [Rewrite account names](rewrite-account-names.md)
 - [Rewrite commodity symbols](rewrite-commodity-symbols.md)
@@ -56,10 +60,6 @@ Check plaintextaccounting.org's and wiki.plaintextaccounting.org's categories.
 - [Editor configuration](editors.md)
 - [Save frequently used options](save-frequently-used-options.md)
 - [Scripting hledger](scripting.md)
-
-### Setups and workflows
-- [Get Started](start.md)
-- [Common workflows](common-workflows.md)
 
 ### Other user interfaces
 - [hledger-web tips](hledger-web-tips.md)
