@@ -5,13 +5,12 @@
 <!-- toc -->
 </div>
 
-Starting out with hledger or Plain Text Accounting, not to mention setting up a new accounting system,
-can be a lot. This page aims to help!
-After [installing](install.md) hledger, reading one or more of the docs below should be helpful.
+Starting out with hledger and Plain Text Accounting, not to mention setting up a new accounting system, can be a lot to take in. This page aims to help!
+After [installing](install.md) hledger, reading some of the docs below should be helpful.
 
-**Quick starts**
+## Quick starts
 
-Quick introductions (may assume a bit of command line know-how):
+We have (too many) quick introductions. These assume a little bit of command line know-how:
 
 - [Home page quick start](index.md#quick-start)
 - [2 minute quick start](2-minute-quick-start.md)
@@ -19,7 +18,7 @@ Quick introductions (may assume a bit of command line know-how):
 - [hledger manual: Common tasks](hledger.md#common-tasks)
 - [Common workflows](common-workflows.md)
 
-**Tutorials**
+## Tutorials
 
 Detailed step by step tutorials, with screenshots:
 
@@ -29,50 +28,53 @@ Detailed step by step tutorials, with screenshots:
 - [Tutorial: Accounting basics and further study](accounting.md)
 - [Importing CSV data](import-csv.md)
 
-**Videos**
+## Videos
 
 - [hledger fan's beginner videos](https://www.youtube.com/channel/UCZLxXTjOqLzq4z5Jy0AyWSQ/videos) cover some hledger basics
-- [Videos](videos.md) has some talks and presentations of varied freshness
+- [Videos](videos.md) has some old talks and presentations
 
-**Manuals**
+## Manuals
 
-hledger's manual is the authoritative documentation. 
-For complete details, go straight here
-(or view it in the terminal with [`hledger help`](hledger.md#help)):
+The manuals are hledger's authoritative documentation, and the most maintained and accurate of the docs. Read them to know exactly what hledger does.
+
+You can also view the hledger manual in the terminal with [`hledger help`](hledger.md#help).
 
 - [hledger manual](hledger.md)
 - [hledger-ui manual](hledger-ui.md)
 - [hledger-web manual](hledger-web.md)
 
-**How-tos**
+## How-tos
 
-Practical advice and examples for real-world tasks are collected at:
+Practical advice and examples for real-world tasks:
 
 - [FAQ](faq.md)
 - [Cookbook](cookbook.md)
-- [wiki.plaintextaccounting.org](https://wiki.plaintextaccounting.org) (not hledger-specific)
-- [plaintextaccounting reddit](https://www.reddit.com/r/plaintextaccounting/new/)
-- [old blog posts](https://plaintextaccounting.org/#articles-blog-posts) (needs update)
-- [hledger's examples/ directory](https://github.com/simonmichael/hledger/tree/master/examples) (possibly)
 
-**See also**
+See also:
 
-- [Support](support.md), especially the #hledger chat and hledger mail list, open 24/7
+- [hledger's examples/ directory](https://github.com/simonmichael/hledger/tree/master/examples)
+- [wiki.plaintextaccounting.org](https://wiki.plaintextaccounting.org)  general PTA tips, not hledger-specific
+- [plaintextaccounting reddit](https://www.reddit.com/r/plaintextaccounting/new/) discussion of various PTA topics
+- [PTA blog posts](https://plaintextaccounting.org/#articles-blog-posts) (old)
 
+## Support
 
-## How to approach hledger and accounting
+- See the [Support](support.md) page, especially the #hledger chat and hledger mail list
+
+## Advice
+
+Here are some thoughts on how to approach hledger and accounting.
 
 ### Little and often
 
-Remember that accounting is an ongoing activity, best done in regular small doses.
-
+Accounting is an ongoing activity, best done in regular small doses.
 The more often you do it, the easier it is, because less has happened and you can remember it.
 Ten minutes daily can achieve a lot. (Or less, once you get a routine going.)
 
 ### Small steps
 
-Good news: you can start using hledger in very simple ways, and get immediate benefit.
-A good way to prioritise is to think about your most pressing needs and what kind of report would help.
+You can start using hledger in very simple ways, and get immediate benefit.
+Prioritise your work: a good way is to think about your most pressing needs and what kind of report would help.
 For example,
 
 - Take inventory of your debts, loans and assets; write down the names and numbers.
