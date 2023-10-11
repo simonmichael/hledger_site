@@ -7,9 +7,10 @@
 
 There are lots of ways to use hledger; here is an overview.
 Of course you can mix and match these.
-Also remember always to back up your files periodically to safeguard your data.
+Also remember always to back up your files regularly to safeguard your data.
 
-## Command line
+## Basic workflows
+### Command line
 
 At a terminal prompt, run `hledger add` and follow the interactive prompts to enter transactions.
 It will store data in its default location.
@@ -21,7 +22,7 @@ Eg, run
 [Tutorial: hledger basics](basics.md) describes this process, and hledger's basic concepts and file format, step by step.
 You might want to skim through this one even if you don't plan to use `hledger add`.
 
-## Web UI
+### Web UI
 
 This is the easiest hledger workflow, if it works for you:
 
@@ -33,7 +34,7 @@ It will store data in its default location.
 
 [Tutorial: hledger-web](web.md) describes this in more detail.
 
-## Terminal UI
+### Terminal UI
 
 Use `hledger add` once to create a journal file with an opening balances transaction.
 Now run `hledger-ui` to view account balances.
@@ -42,7 +43,7 @@ Eg, press `a` to add new transactions.
 
 [Tutorial: hledger-ui](ui.md) describes this setup in more detail.
 
-## Text editor
+### Text editor
 
 Open your preferred text editor and create a journal file, either `.hledger.journal` in your home directory,
 or somewhere else like `~/finance/2023.journal` (and [set the `LEDGER_FILE` environment variable](hledger.md#setting-ledger_file)).
@@ -111,7 +112,7 @@ Income Statement 2020-01-01-2020-03-20
  Net:                    ||   0    0  $1900 
 ```
 
-## CSV import
+### CSV import
 
 Download CSV files from banks and financial institutions, manually or
 using tools/services that automate this (ledger_autosync, Plaid, plaid2qif, Tiller etc.)
@@ -123,19 +124,24 @@ Some downloading helpers can be found at
 <https://plaintextaccounting.org/#data-importconversion> (search for "download").
 
 
-## Some more advanced workflows
+## More advanced workflows
 
-- Notes on [Simon's setup](simons-setup.md)
+### Simon's old setup
+- Notes on [Simon's setup](simons-setup.md) (old)
 
+### Full-fledged hledger
 - Dmitry Astapov's Full-fledged Hledger workflow (tutorial):\
   <https://github.com/adept/full-fledged-hledger>
 
+### hledger-flow
 - Andreas Pauley's hledger-flow workflow (tutorial & slideshow):\
   <https://github.com/apauley/hledger-flow>
 
+### rtrledger
 - rotorkunstkultur's setup for chaotic German freelancers:\
   <https://github.com/rotorkunstkultur/rtrledger>
 
+### barrucadu's setup
 - Michael Walker's personal finance setup:\
   <https://memo.barrucadu.co.uk/personal-finance.html>
 
