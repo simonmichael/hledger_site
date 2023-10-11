@@ -129,6 +129,9 @@ Some downloading helpers can be found at
 ### Simon's old setup
 - Notes on [Simon's setup](simons-setup.md) (old)
 
+### hledgermatic
+- Simon's [[hledgermatic]] setup (2023)
+
 ### Full-fledged hledger
 - Dmitry Astapov's Full-fledged Hledger workflow (tutorial):\
   <https://github.com/adept/full-fledged-hledger>
