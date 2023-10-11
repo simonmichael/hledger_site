@@ -127,7 +127,7 @@ Some downloading helpers can be found at
 ## More advanced workflows
 
 ### Simon's old setup
-- Notes on [Simon's old setup](simons-setup.md)
+- [Simon's old setup](simons-setup.md) (2019)
 
 ### hledgermatic
 - Simon's [hledgermatic](hledgermatic.md) setup (2023)
