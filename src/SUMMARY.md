@@ -60,6 +60,7 @@
 - [Get Started](start.md)
 - [Home](index.md)
 - [How to record journal entries](how-to-record.md)
+- [How to figure out journal entries](how-to-figure-out.md)
 - [Importing CSV data](import-csv.md)
 - [Install](install.md)
 - [Invoicing](invoicing.md)
