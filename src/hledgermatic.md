@@ -162,11 +162,11 @@ Some rules files are common rules included by the others, eg `wf.rules` and `com
 
 ## Downloads
 
-`~/Downloads` is where my mac web browsers save downloaded CSV files, and it's where hledger's `source` rule looks for data files by default. If you don't have this folder on your system, you can make one, or use a symbolic link; or you can specify a different folder in your `source` rules.
+`~/Downloads` is where my mac web browsers save downloaded CSV files, and it's where hledger's `source` rule looks for data files by default. If you don't have this folder on your system, you can make it, or use a symbolic link; or you can specify a different folder in your `source` rules.
 
-When downloading bank CSV files, you don't need to care much about which dates you download; hledger's [`import`](hledger.md#import) system will usually do the right thing. Just be sure to download enough data to cover the period since your last import (eg the last 30 days, last year, or all transactions).
+When downloading bank CSV files, you don't need to care much about which dates you download; hledger's [`import`](hledger.md#import) system will usually do the right thing. Just make sure to download enough data to cover the period since your last import (eg the last 30 days, last year, or all transactions).
 
-You also don't need to care much about managing the downloaded CSV files; hledger will automatically choose the latest ones, After a successful import, you can either delete them, keep them around for a while for troubleshooting, or archive each one permanently.
+You also don't need to care much about managing downloaded CSV files; your browser will give them unique filenames, and hledger will automatically choose the latest ones. After successful import you can either delete the CSV files, keep them around for a while for troubleshooting, or archive each one permanently.
 
 ## Workflow
 In the justfile I have a `foo-import` script for each data source foo, and the `import` script runs all of them. So it's
@@ -182,4 +182,6 @@ In the justfile I have a `foo-import` script for each data source foo, and the `
 - When the journal is again error-free, I check each account's real-world balance against the "reconcile" transaction's asserted balance (or in a balance report or hledger-ui accounts screen), and resolve any disagreements.
 - Finally I commit the changes to journal, rules and scripts. Git's `pre-commit` hook runs my checks one more time, catching any last-minute errors.
 
+
+---
 [^1]:  [`just`](just.md) is Like `make`, but better for this purpose. I recommend trying it, even though it doesn't come with your OS; I say this after years of costly battle with make, shell, and other scripting setups.
