@@ -61,7 +61,7 @@ Here are the main files, grouped for clarity. These are unix-style file paths; o
 ```
 
 ## Scripts
-`justfile` contains common reporting commands and task scripts, which can be listed and invoked by [`just`](just.md) (like `make`, but better for this purpose). I alias `just` to `j`.
+`justfile` contains common reporting commands and task scripts, which can be listed and invoked by `just`[^1]. I alias `just` to `j`.
 
 The `bin` directory is a place to keep additional scripts and tools; it should be added to your shell's PATH.
 
@@ -181,3 +181,5 @@ In the justfile I have a `foo-import` script for each data source foo, and the `
 - I also run the `recentassertions` check, which periodically forces me to add more recent balance assertions for my main accounts. I do this by adding a "reconcile" transaction (using `yasnippet`, by typing "reconcile" and TAB); filling in the balances hledger expects, to make the errors go away
 - When the journal is again error-free, I check each account's real-world balance against the "reconcile" transaction's asserted balance (or in a balance report or hledger-ui accounts screen), and resolve any disagreements.
 - Finally I commit the changes to journal, rules and scripts. Git's `pre-commit` hook runs my checks one more time, catching any last-minute errors.
+
+[^1]:  [`just`](just.md) is Like `make`, but better for this purpose. I recommend trying it, even though it doesn't come with your OS; I say this after years of costly battle with make, shell, and other scripting setups.
