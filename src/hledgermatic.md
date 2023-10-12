@@ -5,17 +5,17 @@
 <!-- toc -->
 </div>
 
-A relatively simple, automated workflow using current hledger features. This is the kind of setup I use myself. 
+A relatively simple, automated workflow using current hledger features. This is the kind of setup I use myself. The Files layout will give you the gist of it. It is a journal first setup (ie, journal files are primary, CSV files are disposable).
 
 ## Tools
 
-`hledger`, 
-`just`, 
+`hledger` 1.30+ ,
+`just`,
 `git` (or other version control system),
 ...
 
 ## Files
-Here are the main files, grouped for clarity. These are unix-style file paths; on Windows, they may be a little different.
+Here are the main files, grouped for clarity. These are unix-style file paths; on Windows, they may be a little different. These filenames are reasonably good for typing, autocompleting, visual grouping, editor configuration, etc. But you might find better ones.
 
 ```
 /home/USER/
@@ -57,11 +57,11 @@ Here are the main files, grouped for clarity. These are unix-style file paths; o
   Checking1-1.csv         newer copies saved by web browser
   Checking1-2.csv         the newest; hledger will read this one
   Savings1.csv
-  Transactions-2342.csv   
+  Transactions-2342.csv
 ```
 
 ## Scripts
-`justfile` contains common reporting commands and task scripts, which can be listed and invoked by [`just`](just.md) (similar `make`, but better for this purpose). I alias `just` to `j`.
+`justfile` contains common reporting commands and task scripts, which can be listed and invoked by [`just`](just.md) (like `make`, but better for this purpose). I alias `just` to `j`.
 
 The `bin` directory is a place to keep additional scripts and tools; it should be added to your shell's PATH.
 
@@ -78,43 +78,78 @@ Over time, scripts can proliferate and become a maintenance and memory problem. 
 
 The main journal file is `YEAR.journal`. The `LEDGER_FILE` environment variable should be set to this.
 
-It contains
+It contains these sections, one after another:
 
-- commodity declarations - for error checking and to set display styles/precision
-- tag declarations - for error checking
-- [`include`](hledger.md#include-directive) directives - to include other files. I try to keep these to a minimum, to minimise complexity, but certain things are convenient to keep in separate files, like `YEARaccounts.journal` and `YEARprices.journal`.
-- account aliases - I avoid permanent aliases, they just add complexity. But if used, declare them here, so they can affect everything. 
-- transactions - from all accounts (usually), in date order. New transactions can simply be appended at the end.
-## Accounts file
-Account declarations are kept in a separate `YEARaccounts.journal`, included by the main journal, for more convenient reviewing and updating. These provide error checking and declare account types, display order, tags and comments. New account declarations can be appended at the end, or inserted into the correct place in the list.
+- commodity declarations - for error checking and to set display styles/precision - recommended
+- tag declarations - if you use tags, for error checking
+- [`include`](hledger.md#include-directive) directives - to include other files. I try to keep files to a minimum, to reduce headaches, but certain things are convenient to keep in separate files, like `YEARaccounts.journal` and `YEARprices.journal`.
+- (account aliases - I avoid permanently defined aliases, since they add complexity. But if you need them, define them here so they can affect everything.)
+- transactions - from all accounts, in date order. New transactions can simply be appended at the end.
 
-Declare the account types of your top-level accounts here. Eg:
+## Accounts
+[Account declarations](hledger.md#account-directive) are kept in a separate `YEARaccounts.journal`, included by the main journal, for more convenient reviewing and updating. These provide error checking and declare account types, account display order, account tags and/or comments. New account declarations can be inserted in the correct place, or appended at the end.
 
-I track both sole proprietor business accounts, with `JS:` prefix,
-and personal accounts, with `sm:` prefix, in one journal for convenience.
-These declarations ensure hledger knows the account types:
+Eg:
+```journal
+account assets                   ; type:A
+account liabilities              ; type:L
+account equity                   ; type:E
+account revenues                 ; type:R
+account expenses                 ; type:X
+
+account assets:bank              ; type:C
+account assets:cash              ; type:C
+account equity:conversion        ; type:V
+
+account assets:bank:checking
+account assets:bank:savings
+# etc...
+```
+
+### Business accounts
+As a sole proprietor, I like to track my business and my personal life as two separate entities. Legally we are one entity, and there are frequent transactions between them, so it's convenient to keep them in the same journal. But I use a two letter entity prefix to keep the accounts clearly separated. So my account declarations look like this:
 
 ```journal
+; business 1
 account JS:assets               ; type:A
 account JS:liabilities          ; type:L
 account JS:equity               ; type:E
 account JS:revenues             ; type:R
 account JS:expenses             ; type:X
+account JS:assets:bank          ; type:C
+account JS:assets:cash          ; type:C
+account JS:equity:conversion    ; type:V
+account JS:assets:bank:checking
+account JS:assets:bank:savings
+# etc...
 
+; personal
 account sm:assets               ; type:A
 account sm:liabilities          ; type:L
 account sm:equity               ; type:E
 account sm:revenues             ; type:R, taxable personal revenues
 account sm:income               ; type:R, already-taxed "salary" from JS, non-taxable income
 account sm:expenses             ; type:X
+account sm:assets:bank          ; type:C
+account sm:assets:cash          ; type:C
+account sm:equity:conversion    ; type:V
+account sm:assets:bank:checking
+account sm:assets:bank:savings
+# etc...
 ```
-
-
-
-## Prices file
-Market price declarations are also kept in a separate, included file, `YEARprices.journal`, in date order. New prices can be appended at the end.
-
-These filenames are chosen for easy sorting, typing, autocompletion, and editor configuration. (But you might find a better scheme.)
+## Prices
+[Market price declarations](#p-directive) are also kept in a separate, included file, `YEARprices.journal`, in date order. New prices can be appended at the end. Eg:
+```journal
+# ...
+P 2023-06-08 00:00:00 £ $1.25161
+P 2023-06-08 00:00:00 ¥ $0.00719
+P 2023-06-08 00:00:00 € $1.07676
+P 2023-06-09 00:00:00 £ $1.25777
+P 2023-06-09 00:00:00 ¥ $0.00717
+P 2023-06-09 00:00:00 € $1.07713
+P 2023-09-04 00:00:00 € $1.08021
+# ...
+```
 ## Future journal
 `future.journal` is a place to note expected future transactions, one-time or recurring. I tend to use it as a scratchpad, and I don't track it in version control. I `include` it in the main journal, and I put only periodic transaction rules (and a few auto posting rules) in it. This means it has no effect until I run reports with the `--forecast` option.
 
@@ -125,18 +160,18 @@ Each CSV (or TSV, SSV, ...) data source has a [CSV rules file](hledger.md#csv) d
 
 Some rules files are common rules included by the others, eg `wf.rules` and `common.rules`.
 
-## Downloads folder
+## Downloads
 
-`~/Downloads` is where my mac web browsers save downloaded CSV files by default, and it's where hledger's `source` rule looks for data files by default. If you don't have this folder on your system, you can make one, or use a symbolic link; or you can specify a different folder in your `source` rules.
+`~/Downloads` is where my mac web browsers save downloaded CSV files, and it's where hledger's `source` rule looks for data files by default. If you don't have this folder on your system, you can make one, or use a symbolic link; or you can specify a different folder in your `source` rules.
 
-When downloading bank CSV files, you don't need to care much about which dates you download; hledger's [`import`](hledger.md#import) system will usually do the right thing. Just be sure to download enough data to cover the period since your last import (eg the last 30 days, last year, or all transactions). 
+When downloading bank CSV files, you don't need to care much about which dates you download; hledger's [`import`](hledger.md#import) system will usually do the right thing. Just be sure to download enough data to cover the period since your last import (eg the last 30 days, last year, or all transactions).
 
-You also don't need to care much about managing the downloaded CSV files; after a successful import, you can delete them. Or, you can keep them for a while for backup/troubleshooting; or you can archive them all permanently.
+You also don't need to care much about managing the downloaded CSV files; hledger will automatically choose the latest ones, After a successful import, you can either delete them, keep them around for a while for troubleshooting, or archive each one permanently.
 
 ## Workflow
 In the justfile I have a `foo-import` script for each data source foo, and the `import` script runs all of them. So it's
 
-- download CSVs manually in web browser
+- download one or more CSVs manually in web browser
 - `j import --dry`
 - `j import`
 - load journal in emacs + ledger-mode + flycheck-hledger
