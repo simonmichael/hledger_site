@@ -5,7 +5,7 @@
 <!-- toc -->
 </div>
 
-A relatively simple, automated workflow using current hledger features. This is the kind of setup I use myself. The Files layout will give you the gist of it. It is a journal first setup (ie, journal files are primary, CSV files are disposable).
+A relatively simple, automated workflow using current hledger features. This is the kind of setup I use myself as of 2023. The Files layout will give you the gist of it. It is a journal first setup (journal files are primary, CSV files are disposable).
 
 ## Tools
 
@@ -156,17 +156,17 @@ P 2023-09-04 00:00:00 € $1.08021
 Or you could put ordinary transaction entries here; in that case you may want to not include it, to keep future events out of reports by default.
 
 ## CSV rules
-Each CSV (or TSV, SSV, ...) data source has a [CSV rules file](hledger.md#csv) declaring how to convert it to meaningful journal entries. Each rules file declares its characteristic downloaded data file names with a [`source`](hledger.md#source) rule, so that (eg) `hledger import wf-pchecking.csv.rules` will automatically look for the latest-numbered `Checking1*.csv` file in the `~/Downloads` folder.
+Each CSV (or TSV, SSV, ...) data source has a [CSV rules file](hledger.md#csv) declaring how to convert it to meaningful journal entries. Each rules file declares its corresponding data file's name, so that (eg) `hledger import wf-pchecking.csv.rules` will automatically look for the latest-numbered `Checking1*.csv` file in the `~/Downloads` folder.
 
 Some rules files are common rules included by the others, eg `wf.rules` and `common.rules`.
 
 ## Downloads
 
-`~/Downloads` is where my mac web browsers save downloaded CSV files, and it's where hledger's `source` rule looks for data files by default. If you don't have this folder on your system, you can make it, or use a symbolic link; or you can specify a different folder in your `source` rules.
+`~/Downloads` is where my mac web browsers save downloaded CSV files, and it's where the [`source`](hledger.md#source)  rule looks for data files by default. If you don't have this folder on your system, you can make it, or use a symbolic link; or you can specify a different folder in your `source` rules.
 
 When downloading bank CSV files, you don't need to care much about which dates you download; hledger's [`import`](hledger.md#import) system will usually do the right thing. Just make sure to download enough data to cover the period since your last import (eg the last 30 days, last year, or all transactions).
 
-You also don't need to care much about managing downloaded CSV files; your browser will give them unique filenames, and hledger will automatically choose the latest ones. After successful import you can either delete the CSV files, keep them around for a while for troubleshooting, or archive each one permanently.
+You also don't need to care much about managing downloaded CSV files; your browser will give them unique filenames, and hledger will automatically choose the latest ones. After successful import you can either delete the CSV files, keep them around for a while for troubleshooting, or archive them permanently.
 
 ## Workflow
 In the justfile I have a `foo-import` script for each data source foo, and the `import` script runs all of them. So it's
