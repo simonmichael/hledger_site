@@ -64,6 +64,7 @@
 - [How to figure out journal entries](how-to-figure-out.md)
 - [Importing CSV data](import-csv.md)
 - [Install](install.md)
+- [Investment Accounting Feature Ladder](investment-accounting-features.md)
 - [Invoicing](invoicing.md)
 - [Mobile apps](mobile.md)
 - [Mockups](mockups.md)
