@@ -144,3 +144,6 @@ manualsymlinks:
 # Show which urls have been indexed for site search
 searchurls:
 	cat out/searchindex.json | jq .doc_urls
+
+caddy-validate:
+	caddy validate --config hledger.org.caddy --adapter caddyfile && echo ok || echo FAILED
