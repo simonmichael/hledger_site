@@ -23,9 +23,10 @@
 <!-- - [Developer FAQ](devfaq.md) -->
 - [CREDITS](CREDITS.md)
 
-# SPONSORS
+# FINANCE
 
 - [Sponsor hledger](sponsor.md)
+- [Regression bounty](REGRESSIONS.md)
 - [Financial reports](financerepo.md)
 - [FINANCE notes](FINANCE.md)
 
@@ -224,6 +225,7 @@ and previewing them when working on docs locally.
 - [Mockups](mockups.md)
 - [PULLREQUESTS](PULLREQUESTS.md)
 - [README](dev-README.md)
+- [REGRESSIONS](REGRESSIONS.md)
 - [RELEASING](RELEASING.md)
 - [REPOS](REPOS.md)
 - [ROADMAP](ROADMAP.md)
