@@ -22,10 +22,10 @@ and symlinked <!-- (or rendered by Shake.hs) --> into the site repo to make them
 - [EXAMPLES](EXAMPLES.md)
 - [FILES](FILES.md)
 - [FINANCE](FINANCE.md)
-- [Investment Accounting Feature Ladder](investment-accounting-features.md)
 - [LINKS](LINKS.md)
-- [Mockups](mockups.md)
 - [REPOS](REPOS.md)
+- [Investment Accounting Feature Ladder](investment-accounting-features.md)
+- [Mockups](mockups.md)
 
 ## Things to do
 
