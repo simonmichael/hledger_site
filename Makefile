@@ -145,5 +145,9 @@ manualsymlinks:
 searchurls:
 	cat out/searchindex.json | jq .doc_urls
 
-caddy-validate:
+caddy-validate caddy-check:
 	caddy validate --config hledger.org.caddy --adapter caddyfile && echo ok || echo FAILED
+
+# caddy reload has stopped working some time in 2023
+caddy-restart: caddy-validate
+	systemctl stop caddy; systemctl start caddy
