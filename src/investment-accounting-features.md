@@ -26,8 +26,8 @@ This is a start, suggestions welcome in #hledger or #plaintextaccounting matrix 
 ## Assets
 Track asset transactions and balances.
 Initial assumptions/constraints: 
-- assets are cash (in a single base currency) or simple investment commodities.
-In this doc we'll call these "cash" and "commodities".
+assets are cash (in a single base currency) or simple investment commodities.
+(In this doc we'll call those "cash" and "commodities" respectively.)
 
 ## Asset costs
 Track purchase costs, in the base currency, of assets. An asset balance can have more than one cost. Allow reporting total cost of assets.
