@@ -23,7 +23,7 @@
 <!-- - [Developer FAQ](devfaq.md) -->
 - [CREDITS](CREDITS.md)
 
-# FINANCE
+# PROJECT FINANCE
 
 - [Sponsor hledger](sponsor.md)
 - [Regression bounty](REGRESSIONS.md)
