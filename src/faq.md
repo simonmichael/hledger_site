@@ -413,6 +413,20 @@ Workarounds:
 iTerm2 by default doesn't recognise SHIFT-UP/SHIFT-DOWN keys correctly. (If this has changed in recent releases, please let us know.)
 Here's one way to fix it: iTerm2 > CMD-i > Keys > Key Mappings > Presets -> select "xterm Defaults" (not "Terminal.app Compatibility").
 
+### When importing CSV from two bank accounts, how do I avoid duplicate entries for a transfer between them ?
+
+You can have one of the rules files skip that transaction.
+Eg if you have checking and savings CSVs, in savings.csv.rules you might have a rule like
+```rules
+# already imported from checking
+if TRANSFER FROM .*CHECKING
+ skip
+```
+
+Other options: you could remove one of the entries manually.
+Or you could import both entries, but have them transfer to and from an imaginary third account
+(but this creates extra noise in your journal and reports).
+
 ## Customising hledger
 
 ### How do I install hledger CSV rules for my financial institutions ?
