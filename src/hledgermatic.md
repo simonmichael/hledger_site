@@ -42,7 +42,7 @@ Here are the main files, grouped for clarity. These are unix-style file paths; o
   2022accounts.journal
   2022prices.journal
 
-  future.journal          future transactions; not version-controlled
+  forecast.journal        future transactions / periodic transaction rules
 
   bi-ichecking.csv.rules  CSV conversion rules for each bank account
   paypal.csv.rules
@@ -150,8 +150,10 @@ P 2023-06-09 00:00:00 € $1.07713
 P 2023-09-04 00:00:00 € $1.08021
 # ...
 ```
-## Future journal
-`future.journal` is a place to note expected future transactions, one-time or recurring. I tend to use it as a scratchpad, and I don't track it in version control. I `include` it in the main journal, and I put only periodic transaction rules (and a few auto posting rules) in it. This means it has no effect until I run reports with the `--forecast` option.
+## forecast journal
+`forecast.journal` is a place to note expected future transactions, one-time or recurring. 
+I `include` it in the main journal, and I put only periodic transaction rules (and a few auto posting rules) in it. 
+This means it has no effect until I run reports with the `--forecast` option.
 
 Or you could put ordinary transaction entries here; in that case you may want to not include it, to keep future events out of reports by default.
 
