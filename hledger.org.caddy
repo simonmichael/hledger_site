@@ -462,6 +462,10 @@ etherpad.hledger.org {
 # redir https://oasis.sandstorm.io/shared/252YL6ZzO11as1qxEZGLHw3ViO-UjEIaU8Btov9V68C
  redir https://scalar.vector.im/etherpad/p/!IxhnXkEYINuyPlarpx_matrix.org
 }
+# The hledger-web (Hledger Web) app in the Sandstorm app marketplace.
+sandstorm.hledger.org {
+ redir https://apps.sandstorm.io/app/8x12h6p0x0nrzk73hfq6zh2jxtgyzzcty7qsatkg7jfg2mzw5n90
+}
 paste.hledger.org {
  # The other redirect hosts support http only; this one has a dns record
  # so cloudflare rewrites it to https.
