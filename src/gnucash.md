@@ -17,3 +17,4 @@ Related discussion:
 - [GnuCash and ledger combination](https://www.reddit.com/r/plaintextaccounting/comments/m721d7/gnucash_and_ledger_combination/)
 - [Current working gnucash exporter?](https://www.reddit.com/r/plaintextaccounting/comments/r64oye/current_working_gnucash_exporter/)
 - <https://www.reddit.com/r/plaintextaccounting/comments/16xhjm5/command_line_vs_gui> how to export from hledger to gnucash
+- <https://news.ycombinator.com/item?id=37954925> using gnucash and hledger
