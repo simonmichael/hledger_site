@@ -152,5 +152,6 @@ caddy-check caddy-validate:
 caddy-reload: caddy-validate
 	systemctl reload caddy
 
+# XXX invalid config doesn't stop it stopping the service
 caddy-restart: caddy-validate
 	systemctl stop caddy; systemctl start caddy
