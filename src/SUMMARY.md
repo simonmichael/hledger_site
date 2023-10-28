@@ -3,6 +3,7 @@
 # HLEDGER.ORG
 
 - [Home](index.md)
+- [News](news.md)
 - [FAQ](faq.md)
 - [Videos/Talks](videos.md)
 - [Install](install.md)
@@ -69,6 +70,7 @@
 - [Mobile apps](mobile.md)
 - [Mockups](mockups.md)
 - [Multicurrency tutorial (2018)](multicurrency-tutorial.md)
+- [News](news.md)
 - [Project accounting](project-accounting.md)
 - [2 minute quick start](2-minute-quick-start.md)
 - [5 minute quick start](5-minute-quick-start.md)
