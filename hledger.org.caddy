@@ -463,8 +463,29 @@ etherpad.hledger.org {
  redir https://scalar.vector.im/etherpad/p/!IxhnXkEYINuyPlarpx_matrix.org
 }
 # The hledger-web (Hledger Web) app in the Sandstorm app marketplace.
-sandstorm.hledger.org {
- redir https://apps.sandstorm.io/app/8x12h6p0x0nrzk73hfq6zh2jxtgyzzcty7qsatkg7jfg2mzw5n90
+# sandstorm-app.hledger.org {
+#  redir https://apps.sandstorm.io/app/8x12h6p0x0nrzk73hfq6zh2jxtgyzzcty7qsatkg7jfg2mzw5n90
+# }
+
+# This serves:
+# 1. sandstorm.hledger.org: my sandstorm instance, for admin.
+# 2. sandbox.hledger.org: the public hledger-web grain, with no sandstorm ui
+# (record added in mongodb, see https://github.com/sandstorm-io/sandstorm/wiki/Standalone-Grains)
+# $ sandstorm mongo, db.standaloneDomains.insert({_id:"sandbox.hledger.org",token:"SHAREURLTOKEN"});
+sandstorm.hledger.org *.sandstorm.hledger.org sandbox.hledger.org {
+ reverse_proxy localhost:6080
+ # enable cloudflare dns challenge in order to acquire wildcard certificates
+ tls {
+  # https://dash.cloudflare.com/profile/api-tokens
+  # general token used for *.hledger.org (perms: Zone.DNS)
+  #dns cloudflare {env.CLOUDFLARE_API_TOKEN}
+  # new token successfully used (needed ?) for *.sandstorm.hledger.org (perms: Zone.Zone, Zone.DNS)
+  dns cloudflare {env.SANDSTORM_CLOUDFLARE_API_TOKEN}
+ }
+}
+# Private temporary day journal short url
+day.hledger.org {
+ redir https://sandstorm.hledger.org/grain/BDXz2gZDJ9hwfyhP5DyuH9
 }
 paste.hledger.org {
  # The other redirect hosts support http only; this one has a dns record
