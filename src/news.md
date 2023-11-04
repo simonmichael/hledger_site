@@ -5,6 +5,29 @@
 <!-- toc -->
 </div>
 
+## This Week In Hledger 2023-11-03
+
+### sm
+#### Dev
+- tests: add outshine headings for folding/readability (in Emacs),
+  readme updates, include .test files in TAGS, clean up ledger-compat tests
+- tools: bake dbgstrs - print a bunch of hledger debug messages for review
+- tools: ghci :rmain - like :main, but reloads first, useful eg when changing --debug level
+- WIP: imp: prices: fixes, clarify/improve semantics
+- WIP: precisiongeddon: precision/rounding cleanups/fixes/tests/docs, too intricate to describe
+
+Continuing heavy work on consistent and optimal precision handling,
+and all the related yaks which keep showing up.
+
+#### Seen
+- https://www.chvp.be/blog/nanoledger/ nice blog post introducing nanoledger android app
+
+### Robert Nielsen
+
+- Beginner's corner: What are the parts of a basic hledger transaction? Two resources for learners:
+  https://hledgerfan.com/beginners-corner-a-basic-hledger-transaction
+
+
 ## This Week In Hledger 2023-10-27
 
 ### sm
