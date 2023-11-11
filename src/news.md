@@ -5,6 +5,73 @@
 <!-- toc -->
 </div>
 
+## This Week In Hledger 2023-11-10
+
+It's time for This Week In Hledger!
+Every Friday morning (or any time, tagged with "TWIH"), share your hledger/PTA user notes, 
+dev news, achievements or experiences in the hledger matrix chat.
+
+### sm
+#### Dev
+
+This week I completed the months-long yak shave that became Precisiongeddon, and it has landed in master;
+see <https://github.com/simonmichael/hledger/pull/2111> for details.
+Heads up: this can change default precisions shown especially by cost and value reports - 
+all for the better hopefully, but any pre-release testing is welcome. 
+There's a linux binary at <https://github.com/simonmichael/hledger/actions/runs/6804488282>.
+
+CI (continuous integration) workflows on github have been optimised a bit:
+- Scheduled weekly builds have been disabled, as they were propagating
+  to forks and running wastefully there in some cases.
+- Some repeated rebuilding of the hledger-lib and hledger packages
+  that seems unnecessary has been stopped.
+- hledger-ui no longer builds its modules twice.
+- Haddock testing has been moved to the release workflows to save time.
+
+Fixed:
+- amounts in value reports can sometimes be shown unstyled / with zero decimal digits,
+  <https://github.com/simonmichael/hledger/issues/2105>
+- auto postings break redundant equity/cost detection and transaction balancing,
+  <https://github.com/simonmichael/hledger/issues/2110>
+  
+My time log for the week shows 69% enhancement, 27% cleanup, 5% support.
+
+#### Docs
+
+As part of Precisiongeddon, I started expanding hledger's "code docs", in the Hledger module's haddock.
+I spent time learning how to navigate Haddock and producing a fast-feedback authoring workflow (`make haddock-watch`).
+And documented a bunch of "jargon" terms, and how we handle precision and display styles.
+
+The "Regular expressions" manual section has been rewritten and now has examples:
+<https://hledger.org/dev/hledger.html#regular-expressions>.
+
+Unmentioned last week: I added a News page on hledger.org as a stable home
+for This Week In Hledger and other news updates.
+
+#### Misc
+
+Some notable commits:
+- feat: cli: Add tsv output (#869) (Peter Sagerson)
+- feat: import: interpolate regex matches in field templates (#2009) (Jonathan Dowland)
+
+There's new interest and design discussion for referencing the matched account name
+in auto postings, and I have added to lukasbestle's $20 bounty to make it $100:
+<https://github.com/simonmichael/hledger/issues/1975>
+
+### Robert Nielsen
+
+For more advanced hledger aficionados, here is a diagram showing just
+about every possible part of an hledger transaction:
+<https://hledgerfan.com/almost-everything-you-wanted-to-know-about-hledger-transactions>.
+
+### Quotes of the week
+
+*Overall very happy with hledger so far btw!*
+
+*And thanks for the amazing tool. Migrating to hledger has been one of the most satisfying bits of digital homesteading I’ve done.*
+
+
+
 ## This Week In Hledger 2023-11-03
 
 ### sm
@@ -126,6 +193,8 @@ Changes merged this week include:
 
 ## This Week In Hledger 2023-10-13
 
+[hey there @room - I'd like to get a regular This Week In Hledger started, along the lines of This Week in Matrix (TWIM) ... Having a regular news heartbeat like this, even a small one, will help build our community and momentum.]
+
 Welcome to This Week In Hledger ! Every Friday morning, if you have
 any user or dev news or experiences you'd like to share, post them in
 the hledger matrix chat room as a message prefixed by
@@ -174,16 +243,17 @@ Week In Matrix).
 
 
 <!--
-## About
-Schedule:
-Every Friday..
-Use each post  news as template for next.
+Snippets
+
+## TWIH
+
+Schedule: Every Friday. Use each post  news as template for next.
 Post to:
 <https://hledger.org/news.html>
 <https://mail.hledger.org>
 <https://fosstodon.org/@simonmic> tags `#hledger #PlainTextAccounting`
 
-## Template
+Old template:
 
 hledger news, posted most Fridays. Share content submissions in the #hledger chat.
 
@@ -195,8 +265,6 @@ User tips, contributor tips.
 
 ### Jobs
 Five ways you could help the project !
-If a bounty will help justify the time, we encourage that; just say "bounty ?" when responding.
-
 1. ...
 2. ...
 3. ...
