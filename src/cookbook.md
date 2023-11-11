@@ -118,6 +118,8 @@ Check plaintextaccounting.org's and wiki.plaintextaccounting.org's categories.
 - [Calculate unrealized gain](gain.md)
 - [Calculate return on investment](roi.md)
 - [hledger-lots](scripts.md#hledger-lots)
+- [Average cost capital gains with hledger](https://curiousbicycle.com/post/hledger-capital-gains) 2023
+- [Track foreign stock capital gains using hledger](https://curiousbicycle.com/post/hledger-foreign-stock) 2023
 
 ### Invoicing
 - [Invoicing](invoicing.md)
