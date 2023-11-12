@@ -145,9 +145,6 @@ manualsymlinks:
 searchurls:
 	cat out/searchindex.json | jq .doc_urls
 
-caddy-check caddy-validate:
-	caddy validate --config hledger.org.caddy --adapter caddyfile && echo ok || echo FAILED
-
 # caddy reload has stopped working some time in 2023
 caddy-reload: caddy-validate
 	systemctl reload caddy
@@ -155,3 +152,29 @@ caddy-reload: caddy-validate
 # XXX invalid config doesn't stop it stopping the service
 caddy-restart: caddy-validate
 	systemctl stop caddy; systemctl start caddy
+
+caddy-check caddy-validate:
+	caddy validate --config hledger.org.caddy --adapter caddyfile && echo ok || echo FAILED
+	@echo "Please also check recent caddy log for successful tls certificate renewals."
+#
+# Example of failing tls renewal:
+#
+# Nov 12 06:37:45 localhost caddy[919721]: {"level":"info","ts":1699807065.9162648,"logger":"tls.renew","msg":"renewing certificate","identifier":"hledger.org","remaining":1854818.083736637}
+#
+# Nov 12 06:37:46 localhost caddy[919721]: {"level":"info","ts":1699807066.05752,"logger":"http.acme_client","msg":"trying to solve challenge","identifier":"hledger.org","challenge_type":"dns-01","ca":"https://acme-staging-v02.api.letsencrypt.org/directory"}
+#
+# Nov 12 06:37:46 localhost caddy[919721]: {"level":"error","ts":1699807066.128025,"logger":"http.acme_client","msg":"cleaning up solver","identifier":"hledger.org","challenge_type":"dns-01","error":"no memory of presenting a DNS record for \"_acme-challenge.hledger.org\" (usually OK if presenting also failed)"}
+#
+# Nov 12 06:37:46 localhost caddy[919721]: {"level":"error","ts":1699807066.1968174,"logger":"tls.renew","msg":"could not get certificate from issuer","identifier":"hledger.org","issuer":"acme-v02.api.letsencrypt.org-directory","error":"[hledger.org] solving challenges: presenting for challenge: adding temporary record for zone \"hledger.org.\": got error status: HTTP 400: [{Code:6003 Message:Invalid request headers}] (order=https://acme-staging-v02.api.letsencrypt.org/acme/order/122973774/12216261964) (ca=https://acme-staging-v02.api.letsencrypt.org/directory)"}
+#
+# Nov 12 06:37:47 localhost caddy[919721]: {"level":"info","ts":1699807067.8907216,"logger":"http.acme_client","msg":"trying to solve challenge","identifier":"hledger.org","challenge_type":"dns-01","ca":"https://acme.zerossl.com/v2/DV90"}
+#
+# Nov 12 06:37:47 localhost caddy[919721]: {"level":"error","ts":1699807067.9423175,"logger":"http.acme_client","msg":"cleaning up solver","identifier":"hledger.org","challenge_type":"dns-01","error":"no memory of presenting a DNS record for \"_acme-challenge.hledger.org\" (usually OK if presenting also failed)"}
+#
+# Nov 12 06:37:48 localhost caddy[919721]: {"level":"error","ts":1699807068.3094556,"logger":"tls.renew","msg":"could not get certificate from issuer","identifier":"hledger.org","issuer":"acme.zerossl.com-v2-DV90","error":"[hledger.org] solving challenges: presenting for challenge: adding temporary record for zone \"hledger.org.\": got error status: HTTP 400: [{Code:6003 Message:Invalid request headers}] (order=https://acme.zerossl.com/v2/DV90/order/QpS9X34NIJlYngioKkRKhw) (ca=https://acme.zerossl.com/v2/DV90)"}
+#
+# Nov 12 06:37:48 localhost caddy[919721]: {"level":"error","ts":1699807068.3095212,"logger":"tls.renew","msg":"will retry","error":"[hledger.org] Renew: [hledger.org] solving challenges: presenting for challenge: adding temporary record for zone \"hledger.org.\": got error status: HTTP 400: [{Code:6003 Message:Invalid request headers}] (order=https://acme.zerossl.com/v2/DV90/order/QpS9X34NIJlYngioKkRKhw) (ca=https://acme.zerossl.com/v2/DV90)","attempt":4,"retrying_in":300,"elapsed":313.10931297,"max_duration":2592000}
+
+caddy-fmt:
+	caddy fmt hledger.org.caddy
+
