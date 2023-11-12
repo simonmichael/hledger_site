@@ -23,9 +23,8 @@ file_server
 # use cloudflare dns for letsencrypt validation
 # tls simon@joyful.com
 tls {
-    # token: hledger.org-zone-dns-edit, no expiry, expire/rotate manually ?
-    # CLOUDFLARE_API_TOKEN set in caddy.service or shell config
-    dns cloudflare {env.CLOUDFLARE_API_TOKEN}
+  # set in caddy.service
+  dns cloudflare {env.CLOUDFLARE_API_TOKEN}
 }
 
 handle_errors {
@@ -476,11 +475,10 @@ sandstorm.hledger.org *.sandstorm.hledger.org sandbox.hledger.org {
  reverse_proxy localhost:6080
  # enable cloudflare dns challenge in order to acquire wildcard certificates
  tls {
-  # https://dash.cloudflare.com/profile/api-tokens
-  # general token used for *.hledger.org (perms: Zone.DNS)
-  #dns cloudflare {env.CLOUDFLARE_API_TOKEN}
-  # new token successfully used (needed ?) for *.sandstorm.hledger.org (perms: Zone.Zone, Zone.DNS)
-  dns cloudflare {env.SANDSTORM_CLOUDFLARE_API_TOKEN}
+  # set in caddy.service
+  dns cloudflare {env.CLOUDFLARE_API_TOKEN}
+  # alternate token successfully used (and needed ?) for *.sandstorm.hledger.org
+  # dns cloudflare {env.SANDSTORM_CLOUDFLARE_API_TOKEN}
  }
 }
 # Private temporary day journal short url
