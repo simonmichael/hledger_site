@@ -1,4 +1,4 @@
-# -*- conf -*-
+# -*- mode:conf; indent-tabs-mode:t; -*-
 # caddy validate --adapter caddyfile --config hledger.org.caddy
 #  "Without an --adapter flag, Caddy assumes you are using the native JSON config,
 #  unless your file is named Caddyfile (or starts with Caddyfile)."
