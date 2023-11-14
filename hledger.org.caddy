@@ -368,11 +368,11 @@ hledger.org {
 # These are all non-ssl http: for now
 
 # code repo
-http://code.hledger.org {
+code.hledger.org {
 	redir https://github.com/simonmichael/hledger
 }
 # site repo
-http://site.hledger.org {
+site.hledger.org {
 	redir https://github.com/simonmichael/hledger_site
 }
 # finance repo
