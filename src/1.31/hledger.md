@@ -3635,7 +3635,7 @@ There\'s not yet an easy syntax to negate a matcher.
 
 ### `if` table
 
-\"if tables\" are an alternative to [if blocks](#if-blocks); they can
+\"if tables\" are an alternative to [if blocks](#if-block); they can
 express many matchers and field assignments in a more compact tabular
 format, like this:
 
