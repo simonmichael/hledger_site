@@ -51,7 +51,7 @@ thinking about adding a user guide.
 
 Time breakdown this week: 52% enhancement, 35% cleanup, 13% support.
 
-### Robert Nielsen˜
+### Robert Nielsen
 
 On the hledger fan website, I discuss using the aregister and print
 commands to get narrow and wider views of your data:
