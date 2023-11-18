@@ -5,6 +5,89 @@
 <!-- toc -->
 </div>
 
+## This Week In Hledger 2023-11-17
+
+Every Friday morning (or any time, tagged with "TWIH"):
+share your hledger/plain text accounting user notes, dev news,
+achievements or experiences in the hledger matrix chat.
+
+### sm
+#### Dev
+
+A new hledger user in the chat pointed out that -s/--strict mode
+didn't work with the import command. This exposed a bug (#2113) and
+led to some reworking of the API in Hledger.Read. Until now, when
+reading multiple files, -s/--strict checks were performed for each
+individual file, causing spurious failures, with import and other
+commands.  Now strict checks are done only once, for the overall
+journal.  Also, the import command now only updates .latest files at
+the end of a successful run (after successfully passing strict checks
+and after updating the journal file).
+
+Post-"Precisiongeddon" followup: updating hledger-ui and hledger-web
+to show amounts with correct display precision.
+
+#### Ops
+
+Fixed a problem with cloudflare authentication that was preventing
+automatic TLS certificate renewal on hledger.org.
+
+Clarified and documented my cloudflare tokens, and moved them to env
+vars so the latest caddy config could be committed.
+
+Fixed the hledger.org webhook that was not updating the site on git push.
+
+Enabled https for "code.hledger.org" and "site.hledger.org" short urls.
+
+Fixed some caddy warnings, formatted the config file, added some
+caddy/webhook management scripts to the site makefile.
+
+#### Docs
+
+Spent some time drafting alternate hledger manual structures and
+thinking about adding a user guide.
+
+#### Misc
+
+Time breakdown this week: 52% enhancement, 35% cleanup, 13% support.
+
+### Robert Nielsen˜
+
+On the hledger fan website, I discuss using the aregister and print
+commands to get narrow and wider views of your data:
+<https://hledgerfan.com/zooming-out-and-in>
+
+### Quotes of the week
+
+*Great software btw, I appreciate your work! Been poking around with
+PTA and hledger since I was laid off, and it's been incredible for
+managing/extending my runway 😁 I was a Mint/Personal Capital power
+user before, but this takes it to the next level. Got a new job and
+I've already forecasted out the whole next year, very handy and
+something I could never do before"*
+
+*I spent some time trying to set up hledger so that I’d actually use
+it.  With multiple accounts it really got tedious but I loved the
+actual double entry accounting and level of detail.  My wife was blown
+away by the year end summary I made with it. You can see early how
+much went to taxes, fica etc etc.*
+
+*I'm really happy how my hledger edit addon helps me quickly reconcile
+transactions. After CSV-importing from all different sources (phone
+notes, bank websites, etc.), I pile up the ridiculous amount of
+invoices and receipts next to me, grab one after the other and execute
+hledger edit amt:35.11 or hledger edit Checking desc:ALDI for example
+to find and edit the transaction in my $EDITOR, no matter where that
+txn was located originally.  The other way round (going through the
+journal, then finding the physical invoice/receipt) turned out to be
+much slower.*
+
+*I learned one thing: `if %FIELDBAME REGEX` matches against FIELDNAME
+in the CSV. I didn't know that! I always match against the whole line
+and am annoyed if the order of columns makes this weird*
+
+
+
 ## This Week In Hledger 2023-11-10
 
 It's time for This Week In Hledger!
