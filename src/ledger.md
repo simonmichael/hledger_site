@@ -350,13 +350,15 @@ So you might need to add a space in such cases.
 
 ### Decimal mark
 
-In many countries, comma is used as decimal mark.
-Without configuration, hledger tries to auto-detect this, to make things just work for everyone.
-However, it can misparse numbers containing a single digit group mark and no decimal mark, 
-eg parsing `1,000` as 1 when it should be 1000.
-If you have such numbers in your data, or if you just want to be certain, you should declare the decimal mark being used.
-The best way is to add a `decimal-mark .` or `decimal-mark ,` directive in each data file.
-See [Decimal marks, digit group marks](/hledger.html#decimal-marks-digit-group-marks) for more on this.
+The world is roughly split between countries that use period as decimal mark and countries that use comma.
+hledger is not biased toward either, and by default it will parse a single period or a single comma as a decimal mark.
+(See also [hledger > Decimal marks, digit group marks](hledger.md#decimal-marks-digit-group-marks).)
+
+This means numbers containing just one digit group mark and no decimal mark are ambiguous,
+eg if you wrote `1,000` meaning 1000 it will be parsed as 1.
+To prevent this, declare the decimal mark character
+by adding a [decimal-mark](hledger.md#decimal-mark-directive) directive (in each data file)
+or by using [commodity directives](#commodity-directives).
 
 ### Balancing precision
 
@@ -420,36 +422,38 @@ Here are hledger's [Directive effects](dev/hledger.html#directive-effects) and
 [Directives and multiple files](hledger.md#directives-and-multiple-files) behaviour.
 You might need to move directives and/or rearrange your files.
 
-### Commodity directive
+### Commodity directives
 
 hledger allows `commodity` directives with a `format` subdirective to
 be written as one line, eg it accepts either:
 
 ```journal
 commodity JPY
-  format 1,000 JPY
+  format 1.00 JPY
 ```
 
 or:
 
 ```journal
-commodity 1,000 JPY
+commodity 1.00 JPY
 ```
 
-It also requires a [decimal mark](#decimal-mark) in the number, and it
-treats a single period or comma (as in the example above) as a decimal mark,
-not a thousands mark. If you want to display no decimal digits,
-just write the decimal mark at the end, like:
+hledger's commodity directive always requires a decimal mark in the amount.
+If you want to display no decimal digits, just write it at the end of the number:
+
+```journal
+commodity 1000. JPY
+```
+
+And as [mentioned above](#decimal-mark), 
+a single period or comma is assumed to be a decimal mark by default.
+So if you are specifying digit group marks in a commodity's display format,
+write a decimal mark as well. Eg:
 
 ```journal
 commodity 1,000. JPY
 ```
 
-or:
-
-```journal
-commodity 1000. JPY
-```
 
 ### Periodic transactions
 
