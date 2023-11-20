@@ -350,15 +350,12 @@ So you might need to add a space in such cases.
 
 ### Decimal mark
 
-The world is roughly split between countries that use period as decimal mark and countries that use comma.
-hledger is not biased toward either, and by default it will parse a single period or a single comma as a decimal mark.
-(See also [hledger > Decimal marks, digit group marks](hledger.md#decimal-marks-digit-group-marks).)
+Ledger parses `1,000` as 1000, but hledger parses it as 1, by default
+(see [hledger > Decimal marks, digit group marks](hledger.md#decimal-marks-digit-group-marks)).
 
-This means numbers containing just one digit group mark and no decimal mark are ambiguous,
-eg if you wrote `1,000` meaning 1000 it will be parsed as 1.
-To prevent this, declare the decimal mark character
-by adding a [decimal-mark](hledger.md#decimal-mark-directive) directive (in each data file)
-or by using [commodity directives](#commodity-directives).
+To prevent any undetected disagreements, 
+use [commodity directives](#commodity-directives) or [decimal-mark directives](hledger.md#decimal-mark-directive)
+to disambiguate the decimal mark character during parsing.
 
 ### Balancing precision
 
@@ -451,7 +448,7 @@ Eg:
 commodity 1,000. JPY
 ```
 
-More: [hledger > `commodity` directive](hledger.md#commodity-directive).
+See also: [hledger > `commodity` directive](hledger.md#commodity-directive).
 
 ### Periodic transactions
 
