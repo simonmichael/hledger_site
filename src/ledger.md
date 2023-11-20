@@ -455,10 +455,6 @@ See also: [hledger > `commodity` directive](hledger.md#commodity-directive).
 hledger understands most Ledger periodic transactions,
 but if you find some variants that are not supported, please report.
 
-hledger 1.28 tends to require periodic transactions to start on a natural period boundary,
-unless you use one of [these syntaxes](/1.28/hledger.html#intervals-with-custom-start-date).
-This will be fixed in 1.29.
-
 When you do specify a custom start date, hledger will start the transactions on that date.
 Ledger seems to always generate them on the period boundaries.
 
