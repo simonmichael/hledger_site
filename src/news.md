@@ -5,6 +5,8 @@
 <!-- toc -->
 </div>
 
+See also: [Install > Release notes](https://hledger.org/release-notes.html)
+
 ## This Week In Hledger 2023-11-17
 
 Every Friday morning (or any time, tagged with "TWIH"):
