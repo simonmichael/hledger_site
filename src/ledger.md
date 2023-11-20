@@ -420,6 +420,37 @@ Here are hledger's [Directive effects](dev/hledger.html#directive-effects) and
 [Directives and multiple files](hledger.md#directives-and-multiple-files) behaviour.
 You might need to move directives and/or rearrange your files.
 
+### Commodity directive
+
+hledger allows `commodity` directives with a `format` subdirective to
+be written as one line, eg it accepts either:
+
+```journal
+commodity JPY
+  format 1,000 JPY
+```
+
+or:
+
+```journal
+commodity 1,000 JPY
+```
+
+It also requires a [decimal mark](#decimal-mark) in the number, and it
+treats a single period or comma (as in the example above) as a decimal mark,
+not a thousands mark. If you want to display no decimal digits,
+just write the decimal mark at the end, like:
+
+```journal
+commodity 1,000. JPY
+```
+
+or:
+
+```journal
+commodity 1000. JPY
+```
+
 ### Periodic transactions
 
 hledger understands most Ledger periodic transactions,
