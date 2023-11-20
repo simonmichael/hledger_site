@@ -424,22 +424,20 @@ You might need to move directives and/or rearrange your files.
 
 ### Commodity directives
 
-hledger allows `commodity` directives with a `format` subdirective to
-be written as one line, eg it accepts either:
+hledger allows `commodity` directives with a `format` subdirective to be written as one line,
+eg these are equivalent:
 
 ```journal
 commodity JPY
   format 1.00 JPY
-```
 
-or:
-
-```journal
 commodity 1.00 JPY
 ```
 
+hledger's commodity directive currently ignores other subdirectives (eg `alias`).
+
 hledger's commodity directive always requires a decimal mark in the amount.
-If you want to display no decimal digits, write it at the end of the number:
+To display no decimal digits, write the decimal mark at the end:
 
 ```journal
 commodity 1000. JPY
@@ -452,6 +450,8 @@ Eg:
 ```journal
 commodity 1,000. JPY
 ```
+
+More: [hledger > `commodity` directive](hledger.md#commodity-directive).
 
 ### Periodic transactions
 
