@@ -439,21 +439,19 @@ commodity 1.00 JPY
 ```
 
 hledger's commodity directive always requires a decimal mark in the amount.
-If you want to display no decimal digits, just write it at the end of the number:
+If you want to display no decimal digits, write it at the end of the number:
 
 ```journal
 commodity 1000. JPY
 ```
 
-And as [mentioned above](#decimal-mark), 
-a single period or comma is assumed to be a decimal mark by default.
-So if you are specifying digit group marks in a commodity's display format,
-write a decimal mark as well. Eg:
+And as [mentioned above](#decimal-mark), hledger assumes a single period or comma is a decimal mark,
+so when specifying digit group marks, write a decimal mark as well:
+Eg:
 
 ```journal
 commodity 1,000. JPY
 ```
-
 
 ### Periodic transactions
 
