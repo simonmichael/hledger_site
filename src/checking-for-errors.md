@@ -5,7 +5,7 @@
 <!-- toc -->
 </div>
 
-hledger can check your data in various ways. 
+hledger can check your data in various ways.
 
 ## Built in checks
 
@@ -64,8 +64,8 @@ Setup tips:
 
 Here are some checks we don't support, but could:
 
-- **accountsactive** - for each account used, if there is posting with an `open:` [tag](hledger.md#tags), 
-  it must have a corresponding posting with a `close:` tag, and all other postings 
+- **accountsactive** - for each account used, if there is posting with an `open:` [tag](hledger.md#tags),
+  it must have a corresponding posting with a `close:` tag, and all other postings
   must be chronologically between (and if on the same date, textually between)
   open and close postings. ("Accounts are posted to only within their declared active period.")
 - **explicitamounts** - all transaction amounts have been recorded explicitly
@@ -83,7 +83,7 @@ Some options (from <https://www.reddit.com/r/plaintextaccounting/comments/180a11
       12000-01-01 * This balance shall remain zero for ten thousand years
           assets:foo2022      0 ==* 0
 
-3. (If yearly granularity is ok:) Use a new journal file and new account declarations, and drop the obsolete accounts, each year. 
+3. (If yearly granularity is ok:) Use a new journal file and new account declarations, and drop the obsolete accounts, each year.
    Strict mode or `hledger check accounts` will warn of any new references to the old account.
 
 4. (If you are comfortable with unix tools:) Make a custom check script, eg grep the output of `hledger reg OLDACCT` for inappropriate dates.
