@@ -40,6 +40,33 @@ $ hledger COMMAND > report.txt; git add report.txt; git commit -m 'report' repor
 $ hledger COMMAND > report.txt; git diff -- report.txt
 ```
 
+Sometimes new data can cause noisy diffs, especially in tabular reports.
+To minimise diffs, here are some things to try:
+
+When comparing [balancesheetequity] diffs, do any of these help:
+
+- --layout wide,MAXWIDTH, --layout bare, --layout tidy
+
+- not using tree mode if you're using that
+
+- not showing multiple periods if you're using that
+
+- overriding commodity styles with -c, eg limiting precision
+
+- limiting --depth
+
+- -MA --summary
+
+- excluding particular problem accounts/commodities
+
+- generating one report per commodity with cur: ?
+
+- generating csv/tsv/json output ?
+
+- using the balance command instead, and eg --transpose, or a single --period and --format
+
+- using the [a]register command
+
 ## A pre-commit hook
 
 Version control systems often support a "pre-commit hook", a script which
