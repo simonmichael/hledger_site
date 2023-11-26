@@ -553,15 +553,23 @@ For now the only true workaround is to rewrite such entries to use hledger-style
 
 ## Interoperating tips
 
-The core of hledger's and Ledger's journal formats is the same,
-so you can use both tools on the same files, 
-if you avoid syntax that is specific to one or the other.
+The core of hledger's and Ledger's journal formats is the same, so you
+can use both tools on the same files, if you are careful to avoid
+tool-specific features.
+
+When you can't avoid tool-specific syntax, you can put it in separate tool-specific files,
+and have both of these [include](hledger.md#include-directive) a shared common file.
+(Eg 2023.ledger and 2023.hledger, both including 2023.journal).
+
+A third approach is to do a one-way conversion to a new file,
+using whatever edits and transformations are necessary,
+and automate it as much as possible (with sed, perl, Emacs macros, or similar),
+so you can redo the conversion when needed, perhaps incrementally.
 
 ### Ledger to hledger
 
-However if you are a long-time Ledger user, you will certainly have
-Ledger-specific syntax, so for most Ledger users the quickest way 
-to tap into hledger reports is some variant of
+Most Ledger users will have at least some Ledger-specific syntax,
+so the quickest way  to tap into hledger reports may be:
 
 ```
 $ ledger print --raw | hledger -f- CMD
@@ -587,15 +595,6 @@ Nor does it help with [lot notation](#lot-notation), like `-5 AAPL {$50.00} [201
 This is the most difficult Ledger-hledger interop issue.
 For now the only true workaround is to rewrite such entries to use hledger-style lot notation (see link above).
 
-An alternative is to segregate problematic or tool-specific data into separate tool-specific files,
-keeping as much data as possible in a shared common file.  Then select the appropriate files for each tool,
-using multiple `-f` options, or [include directives](hledger.md#include-directive).
-
-Another way is to do a one-way conversion to hledger format, perhaps periodically,
-doing whatever edits and transformations are necessary and feasible.
-sed, perl and/or a powerful editor with macros, like Emacs, can be a big help.
-Try to automate the steps as a script so you can easily redo the conversion when needed.
-
 ### hledger to Ledger
 
 ```
@@ -606,9 +605,9 @@ $ hledger print | ledger -f - CMD
 hledger's `print` output should generally be readable by Ledger.
 Here are some known exceptions:
 
-hledger print will sometimes add a trailing decimal mark to amounts with digit group
+hledger print will add a trailing decimal mark to amounts with digit group
 marks and no decimal digits, to disambiguate them (since 1.31),
-but Ledger currently does not parse such numbers.
+but Ledger [currently](https://github.com/ledger/ledger/issues/2301) does not parse such numbers.
 You can avoid them by suppressing digit group marks (eg with `-c`)
 or by ensuring some decimal digits (eg with `--round`);
 see [hledger > Amount formatting, parseability](hledger.md#amount-formatting-parseability).
