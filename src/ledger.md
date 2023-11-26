@@ -588,7 +588,7 @@ $ ledger print --raw | hledger -f- web         # view journal in hledger-web WUI
 $ hledger-ui -f <(ledger print --raw)          # view journal in hledger-ui TUI (works in bash)
 ```
 
-Some known problems:
+Some common problems:
 
 - hledger does not support Ledger's amount expressions, like `($10 / 3)`.
   If you have those, see [Amount expressions](#amount-expressions) above.
@@ -599,7 +599,11 @@ Some known problems:
   For now the only true workaround is to rewrite such entries to use hledger-style lot notation.
   See [Lot notation](#lot-notation) above.
 
+See also the other [Differences](#) mentioned above.
+
 ### hledger to Ledger
+
+Currently there's no specific output format for Ledger; use `print`'s standard `txt` output format.
 
 ```cli
 $ hledger print | ledger --permissive -f - CMD
@@ -607,8 +611,7 @@ $ hledger print | ledger --permissive -f - CMD
 Ledger requires a space between `-f` and `-`.
 `--permissive` disables checking of balance assertions (if needed).
 
-Currently there's no specific output format for Ledger; use `print`'s standard `txt` output format.
-Here are some known cases where this is not readable by Ledger:
+Some common problems:
 
 - hledger's extended balance assertions (`=*`, `==`, `==*`) are not supported
   by Ledger and must be avoided or commented out (eg with `sed -E -e 's/(==|=\*)/; \1/'`).
@@ -626,7 +629,7 @@ Here are some known cases where this is not readable by Ledger:
   marks (eg with `-c`) or by ensuring some decimal digits (eg with
   `--round`); see [hledger > Amount formatting, parseability](hledger.md#amount-formatting-parseability).
 
-- And see the other [Differences](#) above if needed.
+See also the other [Differences](#) mentioned above.
 
 ## History
 
