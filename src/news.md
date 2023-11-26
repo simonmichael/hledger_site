@@ -7,6 +7,70 @@
 
 See also: [Install > Release notes](https://hledger.org/release-notes.html)
 
+
+## This Week In Hledger 2023-11-24
+*Share your hledger/PTA user notes, dev news, achievements or experiences 
+in the hledger matrix chat, every Friday morning (or any time, tagged with "TWIH").*
+
+### sm
+#### Dev
+
+Fixes:
+
+- Non-print-like reports no longer add trailing decimal marks (a regression in 1.31).
+  Clarified the policy on number formatting adjustments made in certain reports/output formats. (#2115)
+- `tag:` queries now work when reading CSV files. (#2114)
+- `-o`/`--outputfile` with a .json or .sql extension now properly selects those formats.
+
+Improvements/features:
+
+- The `print` command has a new `beancount` output format for exporting to Beancount.
+- Timedot format supports a new letters syntax for easier tagged time logging. (#2116)
+- Journal format now accepts lot costs with spaces after `{`, improving Ledger compatibility.
+
+#### Docs
+
+hledger manual:
+
+- Updated:
+  - Decimal marks, digit group marks
+  - commodity directive
+  - CSV > if table (#2107)
+  - Timedot
+- Added:
+  - Amount formatting, parseability: an explanation of trailing decimal marks
+    and number formatting differences between reports. (#2115)
+
+Ledger: more notes on commodity directives, from chat.
+
+Checking for errors: tips on enforcing account lifetimes, from reddit,
+and on minimising diffs in reports, from mail list.
+
+Over at https://plaintextaccounting.org/#articles-blog-posts I started
+adding blog links for 2021-2023, including ten hledger-related posts
+from Jonathan Dowland, Arsen Arsenović, and Zoran Zaric.
+
+#### Misc
+
+Updated project finance scripts, regenerated the project ledger with
+consistent precisions in assertions, updated it with the last few
+months of data from Open Collective.
+
+### Robert Nielsen
+
+On the theme of the recent Thanksgiving Day, here are three ways you
+can use hledger to be thankful:
+https://hledgerfan.com/using-hledger-for-thanksgiving/.
+
+### Quotes of the week
+
+*Have been taking care of my (new) records for almost two years now
+and this data is really valuable for me. Gives me very nice overview
+over everything and confidence that everything is alright and so on.
+Just looking at some graphs can make you feel really good - in terms
+of "I know whats happening", not necessarily in "all is well",
+depending on those actual numbers! 😆* --someone using Beancount
+
 ## This Week In Hledger 2023-11-17
 
 Every Friday morning (or any time, tagged with "TWIH"):
@@ -16,7 +80,7 @@ achievements or experiences in the hledger matrix chat.
 ### sm
 #### Dev
 
-A new hledger user in the chat pointed out that -s/--strict mode
+A new hledger user pointed out in chat out that -s/--strict mode
 didn't work with the import command. This exposed a bug (#2113) and
 led to some reworking of the API in Hledger.Read. Until now, when
 reading multiple files, -s/--strict checks were performed for each
