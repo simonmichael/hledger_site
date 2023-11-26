@@ -47,7 +47,7 @@ Checking for errors: tips on enforcing account lifetimes, from reddit,
 and on minimising diffs in reports, from mail list.
 
 Over at https://plaintextaccounting.org/#articles-blog-posts I started
-adding blog links for 2021-2023, including ~~10~~ 23 hledger-related posts
+adding blog links for 2021-2023, including ~~10~~ 33 hledger-related posts
 from Robert Nielsen, Jonathan Dowland, Arsen Arsenović, and Zoran Zaric.
 
 #### Misc
