@@ -557,6 +557,8 @@ The core of hledger's and Ledger's journal formats is the same,
 so you can use both tools on the same files, 
 if you avoid syntax that is specific to one or the other.
 
+### Ledger to hledger
+
 However if you are a long-time Ledger user, you will certainly have
 Ledger-specific syntax, so for most Ledger users the quickest way 
 to tap into hledger reports is some variant of
@@ -593,6 +595,24 @@ Another way is to do a one-way conversion to hledger format, perhaps periodicall
 doing whatever edits and transformations are necessary and feasible.
 sed, perl and/or a powerful editor with macros, like Emacs, can be a big help.
 Try to automate the steps as a script so you can easily redo the conversion when needed.
+
+### hledger to Ledger
+
+```
+$ hledger print | ledger -f - CMD
+```
+(Note Ledger requires a space between `-f` and `-`.)
+
+hledger's `print` output should generally be readable by Ledger.
+Here are some known exceptions:
+
+hledger print will sometimes add a trailing decimal mark to amounts with digit group
+marks and no decimal digits, to disambiguate them (since 1.31),
+but Ledger currently does not parse such numbers.
+You can avoid them by suppressing digit group marks (eg with `-c`)
+or by ensuring some decimal digits (eg with `--round`);
+see [hledger > Amount formatting, parseability](hledger.md#amount-formatting-parseability).
+
 
 ## History
 
