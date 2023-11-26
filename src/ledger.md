@@ -572,13 +572,13 @@ Most Ledger users will have at least some Ledger-specific syntax,
 so the quickest way  to tap into hledger reports may be:
 
 ```
-$ ledger print --raw | hledger -f- CMD
+$ ledger print --raw | hledger -f- -I CMD
 ```
 
 The print command omits directives.
---raw prevents decimal zeroes being added to amounts and disrupting transaction balancing.
-The output may be journal entries readable by hledger.
-If so you can do quick reporting like so:
+`--raw` prevents decimal zeroes being added to amounts and disrupting transaction balancing.
+`-I` disables checking of balance assertions (if needed).
+If this works you can do quick reporting like so:
 
 ```cli
 $ ledger print --raw | hledger -f- check       # check for problems
@@ -588,30 +588,45 @@ $ ledger print --raw | hledger -f- web         # view journal in hledger-web WUI
 $ hledger-ui -f <(ledger print --raw)          # view journal in hledger-ui TUI (works in bash)
 ```
 
-This does not help with [amount expressions](#amount-expressions), like `($10 / 3)`.
-If you have those, see the workarounds above.
+Some known problems:
 
-Nor does it help with [lot notation](#lot-notation), like `-5 AAPL {$50.00} [2012/04/10] (Oh my!) @@ $375.00`.
-This is the most difficult Ledger-hledger interop issue.
-For now the only true workaround is to rewrite such entries to use hledger-style lot notation (see link above).
+- hledger does not support Ledger's amount expressions, like `($10 / 3)`.
+  If you have those, see [Amount expressions](#amount-expressions) above.
+
+- hledger does not support all of Ledger's lot notation,
+  like `-5 AAPL {$50.00} [2012/04/10] (Oh my!) @@ $375.00`.
+  It can parse it, but will ignore it, so transaction balancing will probably fail.
+  For now the only true workaround is to rewrite such entries to use hledger-style lot notation.
+  See [Lot notation](#lot-notation) above.
 
 ### hledger to Ledger
 
 ```cli
-$ hledger print | ledger -f - CMD
+$ hledger print | ledger --permissive -f - CMD
 ```
-(Note Ledger requires a space between `-f` and `-`.)
+Ledger requires a space between `-f` and `-`.
+`--permissive` disables checking of balance assertions (if needed).
 
-hledger's `print` output should generally be readable by Ledger.
-Here are some known exceptions:
+Currently there's no specific output format for Ledger; use `print`'s standard `txt` output format.
+Here are some known cases where this is not readable by Ledger:
 
-hledger print will add a trailing decimal mark to amounts with digit group
-marks and no decimal digits, to disambiguate them (since 1.31),
-but Ledger [currently](https://github.com/ledger/ledger/issues/2301) does not parse such numbers.
-You can avoid them by suppressing digit group marks (eg with `-c`)
-or by ensuring some decimal digits (eg with `--round`);
-see [hledger > Amount formatting, parseability](hledger.md#amount-formatting-parseability).
+- hledger's extended balance assertions (`=*`, `==`, `==*`) are not supported
+  by Ledger and must be avoided or commented out (eg with `sed -E -e 's/(==|=\*)/; \1/'`).
 
+- Transactions which hledger considers balanced (using global display precisions)
+  can be considered unbalanced by Ledger (using local display precisions)
+  (see [Balancing precision](#balancing-precision)).
+  Try to make those transaction amounts more precise so that they balance in both.
+
+- hledger print will add a trailing decimal mark to amounts with digit
+  group marks and no decimal digits, to disambiguate them (since
+  1.31), but Ledger
+  [currently](https://github.com/ledger/ledger/issues/2301) does not
+  parse such numbers.  You can avoid them by suppressing digit group
+  marks (eg with `-c`) or by ensuring some decimal digits (eg with
+  `--round`); see [hledger > Amount formatting, parseability](hledger.md#amount-formatting-parseability).
+
+- And see the other [Differences](#) above if needed.
 
 ## History
 
