@@ -53,7 +53,7 @@ I can set daily/weekly/monthly time [budgets](budgeting.md) if I want:
     ```
 * choose a budget interval, eg daily, weekly or monthly
 * if you have some historical timelog data, review average spending on that interval to get a baseline
-    ```shell
+    ```cli
     $ hledger -f time.journal date:thisyear bal -WA
     ```
 * in time.journal add a periodic transaction rule to allocate budget amounts, similar to baseline, on that interval
@@ -63,7 +63,7 @@ I can set daily/weekly/monthly time [budgets](budgeting.md) if I want:
         (ser:some:proj)  4h
     ```
 * run a budget report, using the same interval:
-    ```shell
+    ```cli
     $ hledger -f time.journal bal --budget -W
     Balance changes in 2017/11/27w48:
 

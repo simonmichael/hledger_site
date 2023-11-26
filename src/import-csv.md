@@ -47,7 +47,7 @@ if WHOLE FOODS
 ```
 
 You can [print] the resulting transactions in any of hledger's [output formats]:
-```shell
+```cli
 $ hledger -f checking.csv print
 2012-03-22 DEPOSIT
     assets:bank:checking          $50.00
@@ -60,7 +60,7 @@ $ hledger -f checking.csv print
 ```
 
 Or run reports directly from the CSV:
-```shell
+```cli
 $ hledger -f checking.csv bal
               $40.00  assets:bank:checking
               $10.00  assets:bank:savings
@@ -71,7 +71,7 @@ $ hledger -f checking.csv bal
 
 Or [import] any new transactions, saving them into your main journal:
 
-```shell
+```cli
 $ hledger import checking.csv --dry-run 
 ; would import 2 new transactions from checking.csv:
 
@@ -117,7 +117,7 @@ Method 2:
 You can use --alias options to rewrite those account names.
 With hledger 1.20+:
 
-```shell
+```cli
 $ hledger -f checking.csv --alias income:unknown=Income:Misc --alias expenses:unknown=Expenses:Misc print
 2012-03-22 DEPOSIT
     assets:bank:checking          $50.00
@@ -131,7 +131,7 @@ $ hledger -f checking.csv --alias income:unknown=Income:Misc --alias expenses:un
 
 (Before hledger 1.20, --alias only worked with journal format so you had to pipe it like this:)
 
-```shell
+```cli
 $ hledger -f checking.csv print | hledger -f- --alias income:unknown=Income:Misc --alias expenses:unknown=Expenses:Misc print
 ```
 

@@ -16,11 +16,11 @@ and the 3rd video is a fascinating demo of analysing Quickbooks data.
 This method is perhaps the easiest.
 
 1. Export a hledger journal as CSV, eg:
-    ```shell
+    ```cli
     $ hledger -f examples/bcexample.hledger print -o examples/bcexample.csv
     ```
     or
-    ```shell
+    ```cli
     $ hledger print -o main.csv
     ```
 
@@ -43,11 +43,11 @@ The results are much the same as the above, though you will also have an SQLite 
 This method requires Ultorg >=1.26. Note also [ultorg#53](https://github.com/ultorg/public_issues/issues/53).
 
 1. Export a hledger journal as an Sqlite database. Eg:
-    ```shell
+    ```cli
     $ hledger -f examples/bcexample.hledger print -O sql | sqlite3 bcexample.db
     ```
     or
-    ```shell
+    ```cli
     $ hledger print -O sql | sqlite3 main.db
     ```
 

@@ -33,7 +33,7 @@
 
 Monthly balance sheet:
 
-```shell
+```cli
 $ hledger bs -M
 Balance Sheet 2020-01-31,,2020-03-31
 
@@ -78,7 +78,7 @@ Loan and payment transactions are in the main journal:
 
 We use [hledger-interest] to add interest transactions, here 5% per year:
 
-```shell
+```cli
 $ hledger-interest assets:receivable:tt --act --annual=0.05 -s revenues:interest:tt -t assets:receivable:tt 
 2020-01-01 lend to Trusty Tara
     assets:bank:checking         -100.00
@@ -104,7 +104,7 @@ $ hledger-interest assets:receivable:tt --act --annual=0.05 -s revenues:interest
 It doesn't print the opening balance transaction for some reason.
 So we'll print that too, then get a monthly balance sheet:
 
-```shell
+```cli
 $ (hledger print desc:opening; hledger-interest assets:receivable:tt --act --annual=0.05 -s revenues:interest:tt -t assets:receivable:tt) | hledger -f- bs -M
 Balance Sheet 2020-01-31,,2020-03-31
 

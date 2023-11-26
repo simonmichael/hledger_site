@@ -30,7 +30,7 @@ top-level expense categories (--depth 2 Expenses), looking for average
 figures (-A), limiting
 ourselves to USD transactions only, to save screen space:
 
-```shell
+```cli
 $ hledger balance -f bcexample.hledger -MA -b 2013 --depth 2 Expenses cur:USD
 Balance changes in 2013/01/01-2014/10/31:
 
@@ -75,7 +75,7 @@ will not include it in any computations or reports.
 To put it into action, you need to add `--budget` switch to your balance invocation. If you do that,
 you would be able to see how your past expenses aligned with the budget that you just created. This
 time, lets not limit accounts in any way:
-```shell
+```cli
 $ hledger balance -f bcexample.hledger -f budget.journal -MB -b 2013 --budget cur:USD
 Balance changes in 2013/01/01-2014/10/31:
 
@@ -108,7 +108,7 @@ do not have such parent went into `<unbudgeted>` row.
 
 Allright, it seems that for Jan 2013 we have ~3000 USD of budgeted expenses and almost twice as much unbudgeted. Lets figure out what they are.
 We can see more details if we add `-E/--empty` switch:
-```shell
+```cli
 $ hledger balance -f bcexample.hledger -f budget.journal -M -b 2013-01 -e 2013-02 --budget cur:USD -E
 Balance changes in 2013/01:
 
@@ -147,7 +147,7 @@ is easy to see now that we forgot taxes. Lets add them to our budget:
 ```
 
 Lets try again for a couple of month with this updated budget:
-```shell
+```cli
 $ hledger balance -f bcexample.hledger -f budget.journal -M -b 2013-01 -e 2013-04 --budget cur:USD 
 Balance changes in 2013q1:
 
@@ -174,7 +174,7 @@ Budget report that we have used so far assumes that any unused budget amount for
 budget of the next period. Alternative popular "envelope budget" strategy assumes that you put a certain amount of money into an envelope
 each month, and any unused amount stays there for future expenses. This is easy to simulate by adding --cumulative switch. Lets redo
 the last report with it:
-```shell
+```cli
 $ hledger balance -f bcexample.hledger -f budget.journal -M -b 2013-01 -e 2013-04 --cumulative --budget cur:USD
 Ending balances (cumulative) in 2013q1:
 
@@ -229,7 +229,7 @@ For more about envelope budgeting, see the links at [wiki.plaintextaccounting.or
 Budget transaction that was created could be used to predict what would be our financial situation in the future. If you add `--forecast` switch, you will
 see how budgeted income and expense affects you past the last transaction in the journal. Since journal ends in Oct 2014, lets see next two month:
 
-```shell
+```cli
 $ hledger balance -f bcexample.hledger -f budget.journal -M -b 2014-10 -e 2015 --forecast cur:USD
 Balance changes in 2014q4:
 
@@ -269,7 +269,7 @@ could be used with any report. Forecast transactions would be added to your real
 if you have entered them on the scheduled dates.
 
 Since quite a lot of accounts do not have any budgeted transactions, lets limit the depth of the report to avoid seeing lots of zeroes:
-```shell
+```cli
 $ hledger balance -f bcexample.hledger -f budget.journal -M -b 2014-10 -e 2015 --forecast cur:USD --depth 2
 Balance changes in 2014q4:
 
@@ -290,7 +290,7 @@ Balance changes in 2014q4:
 
 As you can see, we should expect 3035 USD to be added into Assets:US each month. It is quite easy to see how overal amount of Assets will change with time if you use
 `--cumulative` switch:
-```shell
+```cli
 $ hledger balance -f bcexample.hledger -f budget.journal -M -b 2014-10 -e 2015 --forecast cur:USD --depth 2 --cumulative
 Ending balances (cumulative) in 2014q4:
 
@@ -327,7 +327,7 @@ entries at the first day of the calendar year/quarter/month/week. Thus "monthly 
 "every 20th of month from 2014/12" will happen on 2014/12/20, 2015/12/20, etc.
 
 With latest additions forecast now looks like this:
-```shell
+```cli
 hledger balance -f bcexample.hledger -f budget.journal -M -b 2014-10 -e 2015 --forecast cur:USD --depth 2 --cumulative
 Ending balances (cumulative) in 2014q4:
 
@@ -347,7 +347,7 @@ Ending balances (cumulative) in 2014q4:
 ```
 
 It is easy to see that in Nov 2014 we will run out of Assets. Using `register` we can figure out when or why it would happen:
-```shell
+```cli
 $ hledger register -f bcexample.hledger -f budget.journal -b 2014-10 -e 2014-12 --forecast cur:USD Assets
 2014/10/04 "BANK FEES" | "Monthly bank fee"         Assets:US:BofA:Checking                      -4.00 USD     -4.00 USD
 2014/10/09 "Hoogle" | "Payroll"                     Assets:US:BofA:Checking                    2550.60 USD   2546.60 USD

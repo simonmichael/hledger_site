@@ -64,7 +64,7 @@ Once we incorporate tags in our hledger file, we can use them in a variety of wa
  
 This command:
  
-```shell
+```cli
 $ hledger register Expenses tag:Halloween
 ```
  
@@ -163,7 +163,7 @@ Let’s say we want to list all the wrappings that were dust colored.
 
 We could use the command:
  
-```shell
+```cli
 $ hledger register tag:color=dust
 ```
  
@@ -175,7 +175,7 @@ The above would output something like the following (i.e., the one expense that 
  
 On the other hand, if we wanted to list only the wrappings that were parchment color, we could use the command:
  
-```shell
+```cli
 $ hledger register tag:color=parchment
 ```
  
@@ -190,7 +190,7 @@ The above command, lists the following:
  
 Now, let’s look for every wrapping colored “ancient white”. If we try:
  
-```shell
+```cli
 $ hledger register tag:color=ancient white
 ```
  
@@ -198,7 +198,7 @@ We get exactly nothing. What happened? As you most likely guessed from the title
  
 Therefore, you will need something like the following, to find all the wrappings colored “ancient white”:
  
-```shell
+```cli
 $ hledger register tag:color="ancient white"
 ```
 
@@ -273,7 +273,7 @@ The mummy now adds the tags to each purchase, resulting in:
 
 To see everything purchased made of wool, the mummy types:
 
-```shell
+```cli
 $ hledger register tag:fabric=wool
 ```
 
@@ -286,7 +286,7 @@ The result is:
 
 Or to see which wrappings had a width of 20:
 
-```shell
+```cli
 $ hledger register tag:width=20
 ```
 which outputs...
@@ -299,7 +299,7 @@ which outputs...
 
 Multiple tags can be used in the same query. For example, our monster friend wants to find out how much parchment colored cotton it has purchased:
 
-```shell
+```cli
 $ hledger register tag:fabric=cotton tag:color=parchment
 ```
 Notice that there is no comma between the two tags in the above query. You use the comma to separate tags in the data file, but not the query. 
@@ -315,17 +315,17 @@ Each wrapping purchased above is both made of cotton AND has the color of parchm
 
 If you wish to find all wrappings, say, made of wool OR colored parchment, you can run two queries. First, we find all the wool wrappings:
 
-```shell
+```cli
 $ hledger register tag:fabric=wool
 ```
 Then we find all the parchment colored ones:
-```shell
+```cli
 $ hledger register tag:color=parchment
 ```
 ## Expenses per Category
 One common question is how much did we spend in total for each tag value? For example, how much did the mummy spend on each color of wrapping? To find out, we can run a balance report for our expenses pivoted by color:
 
-```shell
+```cli
 $ hledger balance expenses --pivot color
 ```
 
@@ -343,7 +343,7 @@ Aha, we see a lot of spending on “ancient white”.
 
 Similarly, if we want to see the expenses by type of fabric, we type:
 
-```shell
+```cli
 $ hledger balance expenses --pivot fabric
 ```
 And we get:
@@ -392,7 +392,7 @@ A tag can apply to a whole transaction, as in the above, or just one of the line
  
 ### Use tags with the register command to list only the expenses for a given tag
  
-```shell
+```cli
 $ hledger -f Halloween2.hledger register Expenses tag:Halloween
 ```
  
@@ -408,7 +408,7 @@ To add a value to a tag, add one or more words to the tag:
  
 ### Limit a command to tags with specified values
  
-```shell
+```cli
 $ hledger register tag:color="ancient white"
 ```
  
@@ -447,13 +447,13 @@ Separate multiple tags with a comma:
  
 ### Use the --pivot option to total expenses by tag value
  
-```shell
+```cli
 $ hledger balance expenses --pivot color
 ```
  
 or
  
-```shell
+```cli
 $ hledger balance expenses --pivot fabric
 ```
  

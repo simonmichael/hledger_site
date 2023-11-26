@@ -4,10 +4,10 @@ One of the introductions to hledger; for others, see [Get Started](start.md).
 
 Here is a sequence of examples, focussed on command-line usage:
 
-```shell
+```cli
 $ brew install hledger    # or apt, choco, but check Install for freshness
 ```
-```shell
+```cli
 $ cat >main.journal    # record a transaction manually from command line
 2022-01-01 opening balances as of this date
     assets:bank:checking           $1000  ; This is a comment.
@@ -17,11 +17,11 @@ $ cat >main.journal    # record a transaction manually from command line
     equity:opening/closing balances
 ^D
 ```
-```shell
+```cli
 $ export LEDGER_FILE=main.journal    # use this file by default
 $ echo 'export LEDGER_FILE=main.journal' >>~/.profile    # and in future sessions
 ```
-```shell
+```cli
 $ hledger add    # record a transaction interactively
 Adding transactions to journal file main.journal
 Any command line arguments will be used as defaults.
@@ -47,7 +47,7 @@ Saved.
 Starting the next transaction (. or ctrl-D/ctrl-C to quit)
 Date [2022-02-15]: 
 ```
-```shell
+```cli
 $ hledger stats    # show journal statistics
 Main file                : main.journal
 Included files           : 
@@ -63,7 +63,7 @@ Market prices            : 0 ()
 
 Run time (throughput)    : 0.04s (47 txns/s)
 ```
-```shell
+```cli
 $ hledger bal --monthly    # show account balance changes each month
 Balance changes in 2022-01-01..2022-02-28:
 
@@ -78,7 +78,7 @@ Balance changes in 2022-01-01..2022-02-28:
 ---------------------------------++--------------
                                  ||      0     0 
 ```
-```shell
+```cli
 $ cat >checking.csv    # make some CSV data, as if downloaded from a bank
 "Date","Note","Amount"
 "2022/2/01","GOODWORKS CORP","-1000.00"
@@ -86,7 +86,7 @@ $ cat >checking.csv    # make some CSV data, as if downloaded from a bank
 "2022/2/23","ATM WITHDRAWAL","-100.00"
 ^D
 ```
-```shell
+```cli
 $ cat >checking.csv.rules    # and a rules file to help hledger read it
 skip 1
 fields date, description, amount
@@ -104,13 +104,13 @@ if ATM WITHDRAWAL
  account2 assets:cash
 ^D
 ```
-```shell
+```cli
 $ hledger import checking.csv    # import CSV records as new journal entries
 imported 2 new transactions from checking.csv
 $ hledger import checking.csv    # records already seen are ignored; cf --dry-run
 no new transactions found in checking.csv
 ```
-```shell
+```cli
 $ hledger print date:202202   # show transactions in february
 2022-02-01 GOODWORKS CORP
     assets:bank:checking           $1000
@@ -129,7 +129,7 @@ $ hledger print date:202202   # show transactions in february
     assets:cash                     $100
 
 ```
-```shell
+```cli
 $ hledger is -M    # show a monthly income statement (profit & loss report)
 Income Statement 2022-01-01..2022-02-28
 
@@ -150,7 +150,7 @@ Income Statement 2022-01-01..2022-02-28
 ===============++============
  Net:          ||   0   $450 
 ```
-```shell
+```cli
 $ hledger bs -M --tree    # show monthly asset and liability balances
 Balance Sheet 2022-01-31..2022-02-28
 
@@ -174,7 +174,7 @@ Balance Sheet 2022-01-31..2022-02-28
 ========================++========================
  Net:                   ||      $3050       $3500 
 ```
-```shell
+```cli
 $ hledger areg checking    # show checking's transactions and running balance
 Transactions in assets:bank:checking and subaccounts:
 2022-01-01 opening balances    as:ba:savings, as..         $1000         $1000
@@ -182,24 +182,24 @@ Transactions in assets:bank:checking and subaccounts:
 2022-02-22 PROPERTY MGMT CO    ex:rent                     $-500         $1500
 2022-02-23 ATM WITHDRAWAL      as:cash                     $-100         $1400
 ```
-```shell
+```cli
 $ hledger-ui --forecast   # start the terminal UI (except on Windows)
 ```
 ![](images/home-ui-1.png)
 ![](images/home-ui-2.png)
 
-```shell
+```cli
 $ hledger-ui --tree -f examples/bcexample.hledger   # a multicurrency journal
 ```
 ![](images/home-ui-3.png)
 
-```shell
+```cli
 $ hledger-web    # start the web UI
 ```
 ![](images/home-web-1.png)
 ![](images/home-web-2.png)
 
-```shell
+```cli
 $ hledger-web -f examples/bcexample.hledger    # from data by Martin Blais
 ```
 ![](images/home-web-3.png)

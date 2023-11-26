@@ -17,7 +17,7 @@ There are lots of ways to start and update a journal file:
 
 The simplest possible journal is just an empty file:
 
-```shell
+```cli
 $ touch 2023.journal
 ```
 
@@ -27,7 +27,7 @@ and so is a `.journal` or `.hledger` extension.
 
 ## with cat
 
-```shell
+```cli
 $ cat >>2023.journal
 2023-01-26
     expenses:food     $10
@@ -52,7 +52,7 @@ and save the file.
 
 Use the interactive [add](hledger.md#add) command and follow the prompts:
 
-```shell
+```cli
 $ hledger add
 ```
 

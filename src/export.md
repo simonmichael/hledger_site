@@ -5,7 +5,7 @@ You can produce similar CSV with hledger's [register] command.
 Export one account and one currency at a time. This helps keep the CSV
 simple and importable. Eg:
 
-```shell
+```cli
 $ hledger -f examples/sample.journal reg -O csv checking cur:'\$'
 "txnidx","date","code","description","account","amount","total"
 "1","2008-01-01","","income","assets:bank:checking","$1","$1"
@@ -19,7 +19,7 @@ since it guarantees one record per transaction even with complex
 multi-posting transactions, and provides the (abbreviated) other
 account names, making categorisation easier when importing:
 
-```shell
+```cli
 $ hledger -f examples/sample.journal areg checking -O csv cur:'\$'
 "txnidx","date","code","description","otheraccounts","change","balance"
 "1","2008-01-01","","income","in:salary","$1","$1"
@@ -33,7 +33,7 @@ Not all formats are supported by all commands/reports though.
 For a given report, you can check the --help or just try an output
 format to see if it has been added.
 
-```shell
+```cli
 $ hledger -f examples/sample.journal reg checking -O sql
 hledger: Sorry, output format "sql" is unrecognised or not yet implemented for this report or report mode.
 $ hledger -f examples/sample.journal print checking -O sql

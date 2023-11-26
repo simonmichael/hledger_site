@@ -14,25 +14,25 @@ See [common journal entries](common-journal-entries.md) and
 
 With invoices and payments recorded as above, you can track unpaid invoices:
 
-```shell
+```cli
 $ hledger bal receivable:supercompany
 ```
 
 or list all invoices and payments:
 
-```shell
+```cli
 $ hledger areg receivable:supercompany
 ```
 
 or just invoices:
 
-```shell
+```cli
 $ hledger areg receivable:supercompany amt:'>0'
 ```
 
 or just payments:
 
-```shell
+```cli
 $ hledger areg receivable:supercompany amt:'<0'
 ```
 

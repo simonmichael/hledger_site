@@ -3,7 +3,7 @@
 With SQLite you can do full relational queries on your hledger data.
 
 Here we export all transactions to a database and run some queries:
-```shell
+```cli
 $ hledger -f examples/bcexample.hledger print -O sql | sqlite3 bcexample.db
 $ sqlite3 bcexample.db -column -header
 SQLite version 3.37.0 2021-12-09 01:34:53
@@ -49,16 +49,16 @@ sqlite>
 ```
 
 You can avoid creating a .db file, always querying the latest journal file instead:
-```shell
+```cli
 $ (hledger print -O sql; echo "select * from postings where account like 'liabilities%' and amount > 0") | sqlite3 -column -header
 ```
 
 Here's a shell function to make that convenient:
-```shell
+```cli
 $ hq() { (hledger print -O sql; echo "$1") | sqlite3 -column -header; }
 ```
 Example queries:
-```shell
+```cli
 $ hq "select distinct(account) from postings order by account"
 $ hq "select * from postings where account like '%savings%' and amount > 0"
 ```
@@ -67,7 +67,7 @@ The `txnidx` field connects postings belonging to the same transaction.
 Using this, we can query transactions, and in more complex ways than hledger can.
 Here's an example where we want to see just the transfers from Checking to Liabilities.
 This is hard to do accurately with hledger's CLI(1):
-```shell
+```cli
 $ echo; hq "select * from postings where txnidx in \
   (select txnidx from postings where account regexp 'Liabilities' and amount > 0 and txnidx in \
     (select txnidx from postings where account regexp 'Checking' and amount < 0))"
@@ -84,7 +84,7 @@ id  txnidx  date1       date2  status  code  description                        
 ```
 
 (1. Well.. it's not *that* hard to get a decent result given typical data patterns:
-```shell
+```cli
 $ hledger -f examples/bcexample.hledger print Checking | hledger -f- areg -w80 Liabilities amt:'>0'
 Transactions in Liabilities and subaccounts:
 2012-01-08 Chase:Slate | Pay..  Li:US:Ch:Slate          140.36 USD    140.36 USD
@@ -108,7 +108,7 @@ See also [hledger and dsq / DataStation](dsq.md).
 
 And [Michael Peter: My plain text accounting workflow with hledger](https://rootknecht.net/blog/accounting/#visualizing-and-analyzing2). This recommends the following export command to create a useful primary key:
 
-```shell
+```cli
 hledger print -O sql | sed 's/id serial/id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL/g' | sqlite3 ledger.db
 ```
 

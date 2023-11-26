@@ -6,21 +6,21 @@
 `dsq` makes CSV and some other things queryable with SQL, as if it was an sqlite database. (It is powered by sqlite, with additional functions from the go sqlite lib). So combined with CSV output from `hledger print` or `hledger register` it's an instant new sqlite-like query language. Some examples with dsq 0.20.1:
 
 A quick one-line query on postings:
-```shell
+```cli
 hledger print -O csv | dsq -s csv -n -p  "select * from {} where date>'2022-06-15' and abs(amount) > 500"
 ```
 -n interprets numeric fields more accurately as numbers.
 -p shows pretty text output (otherwise it shows json and runs faster).
 
 If reading one file, you can enable caching with -C, giving a speedup when the file has not changed:
-```shell
+```cli
 hledger print -o 2022.csv
 time dsq 2022.csv -C -n -p "select count(*) from {}"
 time dsq 2022.csv -C -n -p "select count(*) from {}"
 ```
 
 -i gives an interactive REPL, avoiding reparsing files between commands, for another speedup:
-```shell
+```cli
 $ dsq 2022.csv -C -n -p -i
 dsq> select count(distinct date) from {}
 +----------------------+
@@ -46,7 +46,7 @@ The CLI has a few issues you might run into - combining flags, multiple files, c
 With no query, dsq outputs JSON (and piping through jq will prettify it).
 So here's a way to export transactions as human-readable JSON
 that is simpler than hledger's `-O json` output:
-```shell
+```cli
 $ hledger print -O csv | dsq -s csv -n | jq -S
 [
   {

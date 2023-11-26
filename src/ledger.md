@@ -477,7 +477,7 @@ these must be converted to explicit amounts. Here are the known ways:
   beancount,
   and beancount2ledger (see #[33](https://github.com/beancount/beancount2ledger/issues/33)),
   try:
-  ```shell
+  ```cli
   $ ledger2beancount file.ledger > file.beancount
   $ beancount2ledger file.beancount > file.journal
   ```
@@ -580,7 +580,7 @@ The print command omits directives.
 The output may be journal entries readable by hledger.
 If so you can do quick reporting like so:
 
-```shell
+```cli
 $ ledger print --raw | hledger -f- check       # check for problems
 $ ledger print --raw | hledger -f- stats       # show journal statistics
 $ ledger print --raw | hledger -f- is -MAS -2  # summarise monthly revenues/expenses
@@ -597,7 +597,7 @@ For now the only true workaround is to rewrite such entries to use hledger-style
 
 ### hledger to Ledger
 
-```
+```cli
 $ hledger print | ledger -f - CMD
 ```
 (Note Ledger requires a space between `-f` and `-`.)

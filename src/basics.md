@@ -23,7 +23,7 @@ Open a
 or command prompt, and check your hledger version. 
 It should be reasonably [up to date](release-notes.md).
 This doc was last tested with:
-```shell
+```cli
 $ hledger --version
 hledger 1.29
 ```
@@ -40,7 +40,7 @@ In the following examples, we'll assume the default file is being used.
 
 Check your journal file using the [stats](hledger.md#stats) command.
 You should see something like:
-```shell
+```cli
 $ hledger stats
 The hledger journal file "/home/YOU/.hledger.journal" was not found.
 Please create it first, eg with "hledger add" or a text editor.
@@ -57,7 +57,7 @@ Follow the help and use the [add](hledger.md#add) command to record your first t
 an imaginary purchase at the supermarket.
 We'll go through this in detail. Later you'll learn other ways to enter data.
 
-```shell
+```cli
 $ hledger add
 Creating hledger journal file "/home/YOU/.hledger.journal".
 Adding transactions to journal file /home/YOU/.hledger.journal
@@ -74,7 +74,7 @@ Date [2023-05-25]:
 `add` prompts for each transaction field. The first is the date.
 The value in square brackets is the suggested default (today's date). Press enter to accept it.
 
-```shell
+```cli
 Description: trip to the supermarket
 ```
 
@@ -82,7 +82,7 @@ Transactions have an optional description (a single line of text) to help you un
 You can describe the transaction here, or put a payee name, or leave it blank. 
 Type `trip to the supermarket` and press enter.
 
-```shell
+```cli
 Account 1: expenses
 ```
 
@@ -93,20 +93,20 @@ A purchase is a transfer of money from an asset account to an expense account.
 An asset is something you own, like some money in a bank account or in your pocket.
 Once the money has been "moved" to an expense, you no longer own it, but the increasing balance in the expense account reminds you where it went.
 
-```shell
+```cli
 Amount  1: $10
 ```
 
 The amount being "moved" to `expenses`. 
 You can use any currency or commodity symbol here; for this example we'll assume 10 US dollars.
 
-```shell
+```cli
 Account 2: assets
 ```
 
 Next, specify which account the money comes from. Just say `assets`.
 
-```shell
+```cli
 Amount  2 ? [$-10.0]: 
 ```
 
@@ -117,13 +117,13 @@ The minus sign indicates the money is moving from this account.
 In a balanced transaction, the sum of posted amounts is zero, in other words no money disappears into thin air.
 Press enter to accept the default. It has an extra decimal place, but never mind.
 
-```shell
+```cli
 Account 3 (or . or enter to finish this transaction): .
 ```
 
 Press enter to finish entering this transaction.
 
-```shell
+```cli
 2023-05-25 trip to the supermarket
     expenses             $10
     assets              $-10
@@ -139,7 +139,7 @@ two or more spaces, and an amount.
 (Account names can contain spaces, so at least two spaces are needed to separate them from the amount.)
 Press enter to save the journal entry.
 
-```shell
+```cli
 Saved.
 Starting the next transaction (. or ctrl-D/ctrl-C to quit)
 Date [2023-05-25]: <CTRL-D>
@@ -150,7 +150,7 @@ entry.  Hold down the control key and press d once to exit.
 
 `stats` should now report that your journal exists and contains one transaction:
 
-```shell
+```cli
 $ hledger stats
 Main journal file        : /home/YOU/.hledger.journal
 Included journal files   : 
@@ -172,7 +172,7 @@ Run time (throughput)    : 0.13s (8 txns/s)
 The [print](hledger.md#print) command shows a tidied-up view of the transaction entries in your journal.
 Since there's just one so far, you should see:
 
-```shell
+```cli
 $ hledger print
 2023-05-25 trip to the supermarket
     expenses             $10
@@ -184,7 +184,7 @@ $ hledger print
 
 List and print the journal file (on Windows, use `dir` and `type` and the file path from `hledger stats`):
 
-```shell
+```cli
 $ ls -l ~/.hledger.journal
 -rw-r--r--  1 YOU  YOU  114 May 25 16:55 /home/YOU/.hledger.journal
 $ cat ~/.hledger.journal
@@ -200,7 +200,7 @@ $ cat ~/.hledger.journal
 Since the journal file is plain text, you can edit it directly with any text editor.
 Let's open the file in a text editor and test the effect of some changes. Eg:
 
-```shell
+```cli
 $ emacs ~/.hledger.journal
 ```
 
@@ -228,7 +228,7 @@ Now try removing both amounts, and save the file. This is an invalid entry:
 
 `hledger print` now gives an error:
 
-```shell
+```cli
 $ hledger print
 hledger: Error: /Users/simon/.hledger.journal:3-5:
 3 | 2023-05-25 trip to the supermarket
@@ -252,7 +252,7 @@ Another cause of this error is forgetting to put two spaces before the amount, l
     expenses $10  ; <- problem: only one space between expenses and $10
     assets
 ```
-```shell
+```cli
 $ hledger print
 hledger: Error: /Users/simon/.hledger.journal:3-5:
 3 | 2023-05-31 trip to the supermarket
@@ -281,7 +281,7 @@ Edit the file to look like this:
 Here, we wrote both posting amounts but got the sign wrong on one of them, so they don't add up to zero.
 hledger should detect this mistake. Verify it by running some command, eg `print`. You should see:
 
-```shell
+```cli
 $ hledger print
 hledger: Error: /Users/simon/.hledger.journal:3-5:
 3 | 2023-05-31 trip to the supermarket
@@ -297,7 +297,7 @@ That makes sense. (It calls them "real" postings because there are some other ki
 
 Correct the mistake by adding the minus sign, or just removing the assets amount entirely, and verify
 that `print` works again:
-```shell
+```cli
 $ hledger print
 2023-05-25 trip to the supermarket
     expenses             $10
@@ -324,7 +324,7 @@ Make the file look like this:
 The blank line between transactions is customary, though not required.
 Test your work with `print`. You should see:
 
-```shell
+```cli
 $ hledger print
 2023-05-25 trip to the supermarket
     expenses             $10
@@ -352,7 +352,7 @@ The [register](hledger.md#register) command shows transactions in a different fo
 Remember, a posting is an increase or decrease of some account by some amount, and a transaction contains two or more of them.
 Run `register` and compare with the output of `print` above. You should see (more or less, depending on your terminal width):
 
-```shell
+```cli
 $ hledger register
 2023-05-25 trip to the super..  expenses                       $10           $10
                                 assets                        $-10             0
@@ -377,7 +377,7 @@ Run a register report for the `expenses` account. You should see something like 
 (On POSIX platforms, this command uses the terminal width so the output may look slightly different.
 You can force it to look like the below by running `export COLUMNS=80` first:
 
-```shell
+```cli
 $ hledger register expenses
 2023-05-25 trip to the super..  expenses                       $10           $10
 2023-05-26 forgot the bread     expenses                        $5           $15
@@ -387,7 +387,7 @@ Now it's clear that your `expenses` balance - ie, the total amount spent - has i
 
 Your `assets` balance should have dropped accordingly. Check it:
 
-```shell
+```cli
 $ hledger register assets
 2023-05-25 trip to the super..  assets                        $-10          $-10
 2023-05-26 forgot the bread     assets                         $-5          $-15
@@ -410,7 +410,7 @@ The other account name doesn't matter too much; `equity:opening balances` is con
 (You could also use an [unbalanced transaction](hledger.md#virtual-postings) for this if you prefer.)
 Now the report looks like this, with an accurate running balance on each date (hledger calls this a *historical balance*):
 
-```shell
+```cli
 $ hledger register assets
 2023-05-01 set initial asset..  assets                        $500          $500
 2023-05-25 trip to the super..  assets                        $-10          $490
@@ -438,7 +438,7 @@ See the linked query doc for more details.
 Run the following examples and make sure they make sense, consulting the manual as needed.
 
 Show only transactions whose description contains "bread":
-```shell
+```cli
 $ hledger print desc:bread
 2023-05-26 forgot the bread
     expenses              $5
@@ -450,7 +450,7 @@ $ hledger print desc:bread
 <!-- because it contains the regular expression metacharacter `$` which would otherwise be interpreted by the unix shell. -->
 
 Show only postings on or after a certain date to an account whose name contains "exp":
-```shell
+```cli
 $ hledger register date:2023-05-26.. exp
 2023-05-26 forgot the bread     expenses                        $5            $5
 ```
@@ -461,7 +461,7 @@ The third of hledger's three core reporting commands is [balance](hledger.md#bal
 Use it to list all the accounts posted to, and their balance.
 You should see account balances agreeing with the final running total in the register reports above:
 
-```shell
+```cli
 $ hledger balance
                 $485  assets
                $-500  equity:opening balances
@@ -473,7 +473,7 @@ $ hledger balance
 The overall total of these balances is also shown. As with other reports, you can use a query expression to select a subset of the data to report on.
 Eg:
 
-```shell
+```cli
 $ hledger balance assets
                 $485  assets
 --------------------
@@ -483,7 +483,7 @@ $ hledger balance assets
 ## balance shows balance changes by default
 
 Here's a balance report based only on the postings dated 2023-05-26:
-```shell
+```cli
 $ hledger balance date:2023-05-26
                  $-5  assets
                   $5  expenses
@@ -504,7 +504,7 @@ to see the individual postings in that account.
 Eg for assets above, we can see that the date: query caused the earlier
 postings to be excluded:
 
-```shell
+```cli
 $ hledger register date:2023-05-26 assets
 2023-05-26 forgot the bread     assets                         $-5           $-5
 ```
@@ -516,7 +516,7 @@ instead of balance changes.
 Historical balances include the effect of postings before the report start date
 (which otherwise would be excluded here by `date:2023-05-26`):
 
-```shell
+```cli
 $ hledger balance date:2023-05-26 -H
                 $485  assets
                $-500  equity:opening balances
@@ -527,7 +527,7 @@ $ hledger balance date:2023-05-26 -H
 
 `-H` works with register reports too (note the running total is now a running historical balance):
 
-```shell
+```cli
 $ hledger register date:2023-05-26 assets -H
 2023-05-26 forgot the bread     assets                         $-5          $485
 ```
@@ -547,7 +547,7 @@ unlike `balance` which shows those as negative numbers.
 
 Eg:
 
-```shell
+```cli
 $ hledger bs
 Balance Sheet 2023-05-26
 
@@ -567,7 +567,7 @@ Balance Sheet 2023-05-26
  Net:        ||       $485 
 ```
 
-```shell
+```cli
 $ hledger is
 Income Statement 2023-05-01..2023-05-26
 

@@ -519,7 +519,7 @@ P 2020-02-15 A  4 B
 
 Old `balance --change --value=end` behaviour: shows period-end value of period's balance change:
 
-```shell
+```cli
 $ hledger-1.20.4 bal -M --value=end  # --change is the default
 Balance changes in 2020-01-01..2020-02-29, valued at period ends:
 
@@ -532,7 +532,7 @@ Balance changes in 2020-01-01..2020-02-29, valued at period ends:
 
 New `balance --change --value=end` behaviour in master: shows change between period-end-valued period-end balances:
 
-```shell
+```cli
 $ hledger-master bal -M --value=end
 Period-end value changes in 2020-01-01..2020-02-29:
 
@@ -545,7 +545,7 @@ Period-end value changes in 2020-01-01..2020-02-29:
 
 `balance --value=then` is also supported in master: shows sum of postings' then-values in each period:
 
-```shell
+```cli
 $ hledger-master bal -M --value=then
 Balance changes in 2020-01-01..2020-02-29, valued at posting date:
 

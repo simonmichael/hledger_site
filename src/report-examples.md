@@ -8,7 +8,7 @@ Some example reports with an adapted copy of this [example journal][bcexample] f
 
 A yearly income statement, summarised to depth 3, sorted by amount:
 
-```shell
+```cli
 $ hledger -f examples/bcexample.hledger is -Y -3 -S
 Income Statement 2012-01-01..2014-10-11
 
@@ -50,7 +50,7 @@ Income Statement 2012-01-01..2014-10-11
 Yearly balance sheets, with commodities converted to their year-end
 value in USD where possible:
 
-```shell
+```cli
 $ hledger -f examples/bcexample.hledger bs -Y -V --infer-value
 Balance Sheet 2012-12-31..2014-12-31, valued at period ends
 
@@ -82,7 +82,7 @@ Balance Sheet 2012-12-31..2014-12-31, valued at period ends
 
 The same reports as HTML:
 
-```shell
+```cli
 $ hledger -f examples/bcexample.hledger is -Y -3 -S -o is.html
 $ hledger -f examples/bcexample.hledger bs -Y -V --infer-value -o bs.html
 $ open is.html bs.html

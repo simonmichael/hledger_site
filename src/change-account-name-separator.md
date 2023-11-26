@@ -17,7 +17,7 @@ alias /\./=:
     income.salary
 ```
 Check that subaccounts are recognised:
-```shell
+```cli
 $ hledger -f t.journal bal --no-elide
                   $1  assets
                   $1    bank
@@ -37,7 +37,7 @@ fos.ledger           1
 ```
 so we would use the `--alias` command line option instead.
 The second backslash tells the shell that's a literal backslash, not a shell escape sequence:
-```shell
+```cli
 $ hledger --alias /\\./=: -f t.timedot bal --no-elide
                 3.00  fos
                 2.00    hledger

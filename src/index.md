@@ -99,7 +99,7 @@ hledger will check that each transaction's amounts sum to zero; one of them may 
 ```
 
 You can run reports like so:
-```shell
+```cli
 $ hledger bs
 Balance Sheet 2023-02-15
 
@@ -121,7 +121,7 @@ Balance Sheet 2023-02-15
 =========================++============
  Net:                    ||      $4000 
 ```
-```shell
+```cli
 $ hledger is -MTA
 Income Statement 2023-01-01..2023-02-28
 
@@ -141,7 +141,7 @@ Income Statement 2023-01-01..2023-02-28
 ===============++==============================
  Net:          ||   0   $950     $950     $475 
 ```
-```shell
+```cli
 $ hledger aregister checking
 Transactions in assets:bank:checking and subaccounts:
 2023-01-01 opening balances     as:ba:savings, as:..         $1000         $1000
@@ -187,14 +187,14 @@ commodity $1000.00
 
 tag type
 ```
-```shell
+```cli
 $ hledger check --strict
 $ 
 ```
 
 Declaring accounts also helps set their preferred [display order](hledger.md#account-display-order):
 
-```shell
+```cli
 $ hledger accounts -t
 assets
   bank
@@ -311,7 +311,7 @@ if (TO|FROM) SAVINGS
  account2 assets:bank:savings
 ```
 
-```shell
+```cli
 $ hledger -f bank.csv print
 2023-02-22 DEPOSIT
     assets:bank:checking          $50.00
@@ -324,15 +324,15 @@ $ hledger -f bank.csv print
 ```
 
 The [import](hledger.md#import) command detects and adds just new transactions to the journal (works with most CSVs):
-```shell
+```cli
 $ hledger import bank.csv
 imported 2 new transactions from bank.csv
 ```
-```shell
+```cli
 $ hledger import bank.csv
 no new transactions found in bank.csv
 ```
-```shell
+```cli
 $ hledger aregister checking
 2023-01-01 opening balances     as:ba:savings, as:..      $1000.00      $1000.00
 2023-02-01 GOODWORKS CORP       in:salary                 $1000.00      $2000.00

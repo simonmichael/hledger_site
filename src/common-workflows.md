@@ -71,7 +71,7 @@ Here's an example:
 
 Run `hledger` in a terminal to see reports, as in the Command line workflow. Eg:
 
-```shell
+```cli
 $ hledger bs
 Balance Sheet 2020-03-20
 

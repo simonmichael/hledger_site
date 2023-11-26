@@ -17,7 +17,7 @@ and the [check](https://hledger.org/hledger.html#check) command.
 
 Here's another way to check for undeclared accounts, that works with older hledger versions,
 showing some diff tricks:
-```shell
+```cli
 $ diff -U0 --label "Unused Accounts" --label "Undeclared Accounts" <(hledger accounts --declared) <(hledger accounts --used)
 ```
 
@@ -26,7 +26,7 @@ $ diff -U0 --label "Unused Accounts" --label "Undeclared Accounts" <(hledger acc
 Save the output of a report, and later use `diff` to compare the
 output of the same report, revealing any changes.
 
-```shell
+```cli
 $ hledger COMMAND > report.txt
 $ hledger COMMAND > report2.txt
 $ diff report.txt report2.txt
@@ -35,7 +35,7 @@ $ diff report.txt report2.txt
 Or, periodically commit a report's output into your version control system,
 then use the VCS to detect any changes since the last commit.
 
-```shell
+```cli
 $ hledger COMMAND > report.txt; git add report.txt; git commit -m 'report' report.txt
 $ hledger COMMAND > report.txt; git diff -- report.txt
 ```

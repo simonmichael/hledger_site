@@ -72,7 +72,7 @@ Five numbers do not give a lot of detail. If you want to know what
 portion of expenses went to buy food, you could add up just the
 transactions with (say) "supermarket" in their description. You know how to do this with hledger:
 
-```shell
+```cli
 $ hledger register desc:supermarket expenses
 2015/05/25 trip to the super..  expenses                       $10           $10
 ```
@@ -138,7 +138,7 @@ In others, the tree structure is encoded as decimal account numbers, something l
 With hledger, tree structure is implied by writing account names like `ACCOUNT:SUBACCOUNT`.
 Try it: edit your journal file and change the account names like so:
 
-```shell
+```cli
 $ cat ~/.hledger.journal
 
 2015/05/25 trip to the supermarket
@@ -152,7 +152,7 @@ $ cat ~/.hledger.journal
 
 hledger will infer the chart of accounts from these names.
 The `accounts` command will list all accounts posted to:
-```shell
+```cli
 $ hledger accounts
 assets:cash
 assets:checking
@@ -161,7 +161,7 @@ expenses:supplies
 ```
 
 and `accounts --tree` will show the tree structure, indenting subaccounts below their parents (and eliding the common part of their names):
-```shell
+```cli
 assets
   cash
   checking
@@ -171,7 +171,7 @@ expenses
 ```
 
 Conversely, the `balance` command shows the tree structure by default:
-```shell
+```cli
 $ hledger balance
                 $-15  assets
                  $-5    cash
@@ -189,7 +189,7 @@ parent account itself.)
 
 To see full account names in a flat list, use `--flat`:
 
-```shell
+```cli
 $ hledger balance --flat
                  $-5  assets:cash
                 $-10  assets:checking
@@ -203,7 +203,7 @@ hledger accepts whatever account names you choose, so you can use as much or as 
 Most users have at least two levels of accounts.
 You can limit the amount of detail in a balance report by hiding accounts below a certain depth:
 
-```shell
+```cli
 $ hledger balance --depth 1
                 $-15  assets
                  $15  expenses

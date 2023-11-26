@@ -26,7 +26,7 @@ descriptions, either):
 She knows hledger is filling in the missing amounts, which can be seen
 with [print's -x/--explicit](hledger.md#print) flag:
 
-```shell
+```cli
 $ hledger print -x
 2018/11/01
     income:gifts            -1000
@@ -43,7 +43,7 @@ all balance changes. The total is zero, as Anya expects - each
 transaction sums to zero, and all transactions are included in this
 report, so the report also sums to zero:
 
-```shell
+```cli
 $ hledger bal
                  500  assets:bank
                  500  expenses:food
@@ -54,7 +54,7 @@ $ hledger bal
 
 Unlike partial balance reports (omitting some accounts), which typically do not have a zero total:
 
-```shell
+```cli
 $ hledger bal food
                  500  expenses:food
 --------------------
@@ -104,7 +104,7 @@ But she finds this a bit verbose. She decides to use single letters - R for rubl
 
 Now her reports show the currency symbol:
 
-```shell
+```cli
 $ hledger bal 
                500 R  assets:bank
                500 R  expenses:food
@@ -132,7 +132,7 @@ And she is ready for multicurrency accounting. Just in time, because next day a 
 
 Now she has a multicurrency journal, and the balance report shows both currencies:
 
-```shell
+```cli
 $ hledger bal 
                 10 E        
                500 R  assets
@@ -152,7 +152,7 @@ accounts now have multicurrency balances, and each currency is
 displayed on its own line. She tries 
 [flat mode](hledger.md#flat-mode), and finds it clearer:
 
-```shell
+```cli
 $ hledger bal --flat
                500 R  assets:bank
                 10 E  assets:liberapay
@@ -170,7 +170,7 @@ using that, adding one of the
 [report interval](hledger.md#report-intervals) flags (-Y/--yearly)
 to activate it:
 
-```shell
+```cli
 $ hledger bal -Y
 Balance changes in 2018:
 
@@ -211,7 +211,7 @@ exchange rate explicitly, but the manual
 [says](hledger.md#costs) hledger can figure it out. It
 seems to work:
 
-```shell
+```cli
 $ hledger bal  -Y
 Balance changes in 2018:
 
@@ -228,7 +228,7 @@ Balance changes in 2018:
 However, two things surprise her. First, where has the liberapay account gone ? She remembers that balance reports hide zero-balance accounts by default, and adds -E/--empty to show it. (She also notes that zero amounts are displayed without a currency symbol, and would be a little clearer with currency symbols on the left):
 
 <!-- emphasize=7-7,12-12 -->
-```shell
+```cli
 $ hledger bal  -YE
 Balance changes in 2018:
 
@@ -250,7 +250,7 @@ the [-B/--cost flag](hledger.md#b-cost). Sure enough, the total is now
 zero:
 
 <!-- emphasize=7:21-7:33 -->
-```shell
+```cli
 $ hledger bal -YEB
 Balance changes in 2018:
 
@@ -270,7 +270,7 @@ But now the liberapay account, which should be empty, is showing a positive euro
 With a little help, Anya goes troubleshooting. Inspecting the multicurrency transaction with print -x (and a date filter to exclude the rest) shows how hledger has parsed it:
 
 <!-- emphasize=3:24-3:38 -->
-```shell
+```cli
 $ hledger print -x date:20181104
 2018/11/04
     assets:liberapay    -10 E @@ 750 R
@@ -288,7 +288,7 @@ With -B added, the 10 euro is converted to its
 [cost](hledger.md#cost-reporting) in rubles:
 
 <!-- emphasize=3:30-3:36 -->
-```shell
+```cli
 $ hledger print -x date:20181104 -B
 2018/11/04
     assets:liberapay          -750 R
@@ -299,7 +299,7 @@ $ hledger print -x date:20181104 -B
 The register command shows how the balance reports above calculate the liberapay balance. Without -B: 10 euro are added, 10 euro are removed, the liberapay account's end balance is zero:
 
 <!-- emphasize=3:74-3:80 -->
-```shell
+```cli
 $ hledger reg liberapay
 2018/11/03                     assets:liberapay               10 E          10 E
 2018/11/04                     assets:liberapay              -10 E             0
@@ -308,7 +308,7 @@ $ hledger reg liberapay
 With -B: 10 euro are added, 750 rubles are removed, the liberapay account's end balance is "10 euro, -750 rubles". (With each currency on its own line, again. Also, it seems that register aligns the account name with the top amount, unlike the balance command):
 
 <!-- emphasize=3:74-3:80,4:74-4:80 -->
-```shell
+```cli
 $ hledger reg liberapay -B
 2018/11/03                      assets:liberapay              10 E          10 E
 2018/11/04                      assets:liberapay            -750 R          10 E

@@ -754,7 +754,7 @@ when processing non-ascii text.
 
 Check that LANG's value mentions UTF-8, and if not, change it:
 
-```shell
+```cli
 $ echo $LANG
 C
 $ export LANG=C.UTF-8    # or en_US.UTF-8, fr_FR.utf8, etc.

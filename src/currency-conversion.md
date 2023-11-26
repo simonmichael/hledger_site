@@ -22,7 +22,7 @@ A conversion rate is inferred automatically so as to make the transaction balanc
 (This can be seen with `hledger print -x`.)
 
 <!--
-```shell
+```cli
 $ hledger print -x
 2021-07-27 give dollars, get euros
     assets:cash    USD -10.00 @@ EUR 8.50
@@ -146,7 +146,7 @@ Best practice is not yet clear, suggestions welcome.
 <!-- 
 Notes:
 
-```shell
+```cli
 # Converting equity:conversion to revenue
 $ hledger close equity:conversion --close -e 7/1 \
   --close-desc 'foreign exchange gains/losses' \

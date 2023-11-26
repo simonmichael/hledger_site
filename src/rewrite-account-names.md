@@ -31,7 +31,7 @@ include business.journal
 ```
 
 Now we can see the data from both files at once, and the personal account names have changed:
-```shell
+```cli
 $ hledger -f unified.journal print
 2014/01/01                                    # from business.journal - no aliases applied
     expenses:office supplies            $1
@@ -45,7 +45,7 @@ $ hledger -f unified.journal print
 You can also specify aliases on the command line. This could be useful to
 quickly rewrite account names when sharing a report with someone else, such as
 your accountant:
-```shell
+```cli
 $ hledger --alias 'my earning=income:business' ...
 ```
 

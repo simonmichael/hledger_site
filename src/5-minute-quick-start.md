@@ -106,7 +106,7 @@ But here are some common changes people make sooner or later, so why not now:
 - A dedicated folder, to consolidate financial files and make version control
   and backups easier:
 
-  ```shell
+  ```cli
   $ mkdir ~/finance
   $ cd ~/finance
   ```
@@ -114,26 +114,26 @@ But here are some common changes people make sooner or later, so why not now:
 - A separate journal file for each year, for performance and data
   compartmentalisation:
 
-  ```shell
+  ```cli
   $ touch 2023.journal
   ```
 
 - A [LEDGER_FILE](hledger.md#setting-ledger_file) environment variable, so you won't
   have to type "-f ~/finance/2023.journal" with every command:
 
-  ```shell
+  ```cli
   $ echo "export LEDGER_FILE=~/finance/2023.journal" >> ~/.bashrc
   $ source ~/.bashrc
   ```
   Or if environment variables annoy you, symbolic-link the file to ~/.hledger.journal:
-  ```shell
+  ```cli
   $ ln -s ~/finance/2023.journal ~/.hledger.journal
   ```
 
 - Some optional [directives](hledger.md#directives), useful especially with
   non-english account names:
 
-  ```shell
+  ```cli
   $ cat > 2023.journal
 
   ; Declare the five top level accounts in your preferred language/capitalisation;
@@ -155,7 +155,7 @@ But here are some common changes people make sooner or later, so why not now:
 
 - Version control, for tracking changes:
 
-  ```shell
+  ```cli
   $ git init
   $ git add 2023.journal
   $ git commit 2023.journal -m 'start 2023 journal'
@@ -173,7 +173,7 @@ awareness. Some people enter everything by hand for this reason.
 
 Run the add command for assisted data entry in the terminal ([tutorial](basics.md)):
 
-```shell
+```cli
 $ hledger add
 ...
 Date [2023-03-10]: ...
@@ -182,7 +182,7 @@ Date [2023-03-10]: ...
 Or run hledger-web and when the web browser opens, press a to add
 ([tutorial](web.md)):
 
-```shell
+```cli
 $ hledger-web
 ...
 Opening web browser...
@@ -259,7 +259,7 @@ if ATM WITHDRAWAL
 
 Check the csv conversion looks ok:
 
-```shell
+```cli
 $ hledger -f SomeBank.csv print
 2023-03-22 DEPOSIT
     assets:checking          $50.00
@@ -276,7 +276,7 @@ command ignores csv records it has seen before, saving the latest dates in
 .latest.SomeBank.csv. This works for most csv files - you can try a dry run
 first:
 
-```shell
+```cli
 $ hledger import *.csv --dry-run
 ; would import 2 new transactions from SomeBank.csv:
 
@@ -296,7 +296,7 @@ no new transactions found in SomeBank.csv
 
 Now to commit the new rules file and changed journal file:
 
-```shell
+```cli
 $ git add SomeBank.csv.rules
 $ git commit -m 'SomeBank csv rules' SomeBank.csv.rules
 $ git commit -m 'txns' 2023.journal
@@ -321,7 +321,7 @@ See [Reconciling](hledger.md#reconciling).
 <a name="reports"></a>
 ## Run reports
 
-```shell
+```cli
 $ hledger accounts   # account names declared and used, as a list
 assets
 assets:cash

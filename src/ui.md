@@ -18,7 +18,7 @@ or command prompt
 and check your hledger-ui version.
 It should be reasonably [up to date](release-notes.md). 
 This doc was last tested with:
-```shell
+```cli
 $ hledger-ui --version
 hledger-ui 1.17.1.1
 ```
@@ -28,7 +28,7 @@ If this fails, check [Installing](install.md) for install and setup tips.
 <!--
 ## Check usage
 
-```shell
+```cli
 $ hledger-ui --help
 hledger-ui [OPTIONS] [PATTERNS]
   browse accounts, postings and entries in a full-window curses interface
@@ -59,7 +59,7 @@ and you would have to press `q`, `RETURN` to exit.)
 
 For this tutorial, we'll specify a new temporary journal file,
 to suit the steps below and avoid disturbing any existing data:
-```shell
+```cli
 $ echo > tmp.journal
 $ hledger-ui -f tmp.journal
 ```

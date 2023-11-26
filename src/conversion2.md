@@ -78,7 +78,7 @@ The @ (conversion price) method allows "cost" reporting. By adding the
 `-B/--cost` flag you can easily see what things cost (or were sold
 for) in the other commodity. Eg:
 
-```shell
+```cli
 $ hledger -f 2a.j bal --cost assets:eur
             1.20 USD  assets:eur
 --------------------
@@ -102,7 +102,7 @@ We can still calculate it using hledger valuation features like -V, --valuechang
 The equity method keeps accounts and the accounting equation (A+L+E=0)
 balanced. See how it keeps the balance report's total as zero:
 
-```shell
+```cli
 $ hledger -f 1a.j bal
             1.00 EUR  assets:eur
            -1.20 USD  assets:usd
@@ -115,7 +115,7 @@ $ hledger -f 1a.j bal
 The @ method causes unbalanced accounts and a non-zero total
 (because of the "magical" transformation from one commodity to the other):
 
-```shell
+```cli
 $ hledger -f 2a.j bal
             1.00 EUR  assets:eur
            -1.20 USD  assets:usd
@@ -126,7 +126,7 @@ $ hledger -f 2a.j bal
 
 The zero total can be seen only if all amounts are converted to cost:
 
-```shell
+```cli
 $ hledger -f 2a.j bal --cost
             1.20 USD  assets:eur
            -1.20 USD  assets:usd

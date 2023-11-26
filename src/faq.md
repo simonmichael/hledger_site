@@ -273,7 +273,7 @@ Another reason you might see amounts without an account name: dropping too many 
 
 To set that temporarily, use the `-c/--commodity-style` option (one for each commodity, as needed).
 Eg, this shows dollars with two decimal places, ADA with six, and EUR with none:
-```shell
+```cli
 hledger -c '$1000.00' -c '1000.000000 ADA' -c 'EUR 1000.' bal
 ```
 
@@ -296,7 +296,7 @@ or `-p 'every 365 days from 2020/4/15'`.
 
 Use two `register` reports with an `amt:` query. Eg:
 
-```shell
+```cli
 hledger register 'amt:<0'
 hledger register 'amt:>0'
 ```
@@ -304,13 +304,13 @@ hledger register 'amt:>0'
 ### How do I show transactions where money left an account ?
 
 You can use `register` with an account and amount query:
-```shell
+```cli
 hledger register cash 'amt:<0'
 ```
 
 If you prefer `aregister`, write it this way (because of aregister's special first argument):
 
-```shell
+```cli
 hledger aregister cash cash 'amt:<0'
 ```
 
@@ -332,24 +332,24 @@ This means using awk or some other unix tool that can treat transactions as mult
 To show one transaction per line:
 
 Use `aregister ACCT1`, with the other account as the query:
-```shell
+```cli
 hledger aregister checking expenses:tax
 ```
 
 To filter by direction, add `'amt:>0'` or  `'amt:<0'`:
-```shell
+```cli
 hledger aregister checking expenses:tax 'amt:>0'
 ```
 
 To see transactions in full:
 
 Use `print` with an `expr:` query (requires hledger >=1.30):
-```shell
+```cli
 hledger print expr:'checking AND expenses:tax'
 ```
 
 Or with hledger <1.30, you can emulate that with `not:not:`:
-```shell
+```cli
 hledger print checking not:not:expenses:tax
 ```
 
@@ -359,15 +359,15 @@ The above won't work with the `register` or balance commands because
 these process individual single-account postings, not the multi-account transactions.
 Instead, use two commands, eg:
 
-```shell
+```cli
 hledger print checking | hledger -f- -I register expenses:tax
 ```
 
-```shell
+```cli
 hledger print checking | hledger -f- -I balance expenses:tax
 ```
 
-```shell
+```cli
 hledger print liabilities:mastercard | hledger -f- -I incomestatement
 ```
 
@@ -388,7 +388,7 @@ Workarounds:
 
 - Whenever you use `-f -` to read `hledger print` output, also add `-I` to ignore balance assertions.
   And write these flags separately (`-If-` [does not work](https://github.com/simonmichael/hledger/issues/2059)). So:
-  ```shell
+  ```cli
   $ hledger print ... | hledger -f- -I ...
   ```
 
@@ -398,12 +398,12 @@ Workarounds:
   - Keep those directives in their own file if possible
     (if [directive scope rules](hledger.md#directives-and-multiple-files) allow it),
     which you can use as another input:
-    ```shell
+    ```cli
     $ hledger print ... | hledger -f- -I -f2023accounts.journal ...
     ```
 
   - Or find another way to pass the required directives along. Eg:
-    ```shell
+    ```cli
     $ { hledger print ...; grep '^[acd]' $LEDGER_FILE; } | hledger -I f- ...
     $ { hledger print ...; grep '^[acd]' `hledger files` --no-filename; } | hledger -f- -I ...
     ```

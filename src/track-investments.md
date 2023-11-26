@@ -32,7 +32,7 @@ Let's go over a simple example using [costs](hledger.md#costs):
 Some reports.
 We start with $3000.
 After the 1/2 purchase, we have $1000 remaining and 10 TSLA shares:
-```shell
+```cli
 $ hledger -f t.j bal --flat -HD
 Ending balances (historical) in 2017/01/01-2017/01/02:
 
@@ -45,7 +45,7 @@ Ending balances (historical) in 2017/01/01-2017/01/02:
 ```
 
 Show the shares' value at cost, with [`-B/--cost`](hledger.md#b-cost):
-```shell
+```cli
 $ hledger -f t.j bal --flat -HD -B
 Ending balances (historical) in 2017/01/01-2017/01/02:
 
@@ -67,7 +67,7 @@ P 2017/1/3 TSLA $250
 Show the shares's value using the latest applicable market price,
 with [`-V/--value`](hledger.md#v-market-value).
 A $500 capital gain is apparent in the totals:
-```shell
+```cli
 $ hledger -f t.j bal --flat -HD -V
 Ending balances (historical) in 2017/01/01-2017/01/02:
 
@@ -99,7 +99,7 @@ It may seem intuitive to model such a sale as follows.
 ```
 
 This leads to the following evolution
-```shell
+```cli
 hledger -f t.j balance --flat -HD
 Ending balances (historical) in 2017/01/01-2017/01/04:
 
@@ -125,7 +125,7 @@ Let's report our sale in a different way.
 ```
 
 Now, the new $500 are correctly balanced with the capital gains account.
-```shell
+```cli
 hledger -f t.j balance --flat -HD
 Ending balances (historical) in 2017/01/01-2017/01/04:
 

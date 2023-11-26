@@ -123,7 +123,7 @@ Here is a
 [sample.timedot](https://raw.github.com/simonmichael/hledger/master/examples/sample.timedot).
 <!-- to download and some queries to try: -->
 
-<!-- ```shell -->
+<!-- ```cli -->
 <!-- $ hledger -f sample.timedot balance                               # current time balances -->
 <!-- $ hledger -f sample.timedot register -p 2009/3                    # sessions in march 2009 -->
 <!-- $ hledger -f sample.timedot register -p weekly --depth 1 --empty  # time summary by week -->

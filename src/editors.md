@@ -40,7 +40,7 @@ It has some hard-coded dependence on Ledger's command-line interface,  so does n
 
 - Or: set up compatibility scripts emulating the ledger command set and CLI with hledger. For example: `ledger-display-balance-at-point` (C-c C-p) runs 
 `ledger cleared ACCT`. hledger doesn't have a "cleared" command, but you could make one similar to Ledger's using an add-on script: `hledger-cleared.sh` in $PATH containing:
-  ```shell
+  ```cli
   #!/bin/sh
   hledger balance -N -C "$@"
   ```

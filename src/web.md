@@ -18,7 +18,7 @@ or command prompt
 and check your hledger-web version.
 It should be reasonably [up to date](release-notes.md). 
 This doc was last tested with:
-```shell
+```cli
 $ hledger-web --version
 hledger-web 1.17.1
 ```
@@ -28,7 +28,7 @@ If this fails, check [Installing](install.md) for install and setup tips.
 <!--
 ## Check usage
 
-```shell
+```cli
 $ hledger-web --help
 hledger-web [OPTIONS] [PATTERNS]
   start serving the hledger web interface
@@ -75,14 +75,14 @@ Normally, this will start the web app, making it accessible only from your local
 
 For this tutorial, to follow the steps/screenshots below and avoid disturbing any
 existing data, we'll start hledger-web with a new temporary journal file:
-```shell
+```cli
 $ mkdir tmp
 $ echo > tmp/.hledger.journal
 $ hledger-web -f tmp/.hledger.journal
 ```
 
 It will print a startup message and keep running, logging any web requests received:
-```shell
+```cli
 22/Mar/2020:17:34:19 -0700 [Info#yesod-core] Application launched @(yesod-core-1.6.17.2-1LbNd7zV6uz551mHDWJO3b:Yesod.Core.Dispatch src/Yesod/Core/Dispatch.hs:163:11)
 Serving web UI and API on 127.0.0.1:5000 with base url http://127.0.0.1:5000
 This server will exit after 2m with no browser windows open (or press ctrl-c)

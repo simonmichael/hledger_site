@@ -34,18 +34,18 @@ by all of the above options/flags.
 ## Usage
 
 Generate a balance report showing the simplified accounts:
-```shell
+```cli
 $ hledger bal @simple.args
 ```
 Start a live-updating hledger-ui showing the simplified asset accounts only:
-```shell
+```cli
 $ hledger-ui --watch @simple.args assets
 ```
 
 Options in the arguments file can be overridden by similar options later on
 the command line, in the [usual way](hledger.md#options). 
 Eg, to show just a little more account detail:
-```shell
+```cli
 $ hledger bal @simple.args -3
 ```
 

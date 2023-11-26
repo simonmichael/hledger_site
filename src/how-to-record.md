@@ -45,7 +45,7 @@ Here are some options:
 
 ### From scratch
 - Write the entry using journal format, eg
-  ```shell
+  ```cli
   $ cat >>$LEDGER_FILE
   2023-01-01
       expenses:food   $10
@@ -54,7 +54,7 @@ Here are some options:
   <CTRL-D>
   ```
   or
-  ```shell
+  ```cli
   printf >>$LEDGER_FILE '2023-01-01\n  expenses:food  $10\n  assets:cash\n\n'
   ```
 

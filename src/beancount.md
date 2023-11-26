@@ -24,7 +24,7 @@ The print command discards most of the Ledger-specific syntax,
 and the output is usually hledger compatible journal entries. 
 This is good enough for most reporting needs. Some examples:
 
-```shell
+```cli
 $ ledger print | hledger -f- check       # check for problems
 $ ledger print | hledger -f- stats       # show journal statistics
 $ ledger print | hledger -f- is -MAS -2  # summarise monthly revenues/expenses

@@ -97,7 +97,7 @@ that we're holding we can use the `-V` flag.  From this view we can see the
 income realized by the fundraiser as it progresses, and the cash value
 of our current inventory.
 
-```shell
+```cli
 hledger bal -DV --pretty
 Balance changes in 2021-01-01..2021-01-04, valued at period ends:
 
@@ -128,7 +128,7 @@ fundraiser. By pivoting by payee we can see the gross revenue and inventory
 sold by each member. The row for the supplier shows the total inventory
 acquired and cost paid.
 
-```shell
+```cli
 hledger bal income:fundraiser --pivot=payee --pretty -Y
 Balance changes in 2021:
 
@@ -144,7 +144,7 @@ Balance changes in 2021:
 To see the net revenue attributed to each member, we can generate the same
 report valued by the cost of the goods.
 
-```shell
+```cli
 hledger bal income:fundraiser --pivot=payee --pretty -YV
 Balance changes in 2021, valued at period ends:
 

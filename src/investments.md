@@ -65,7 +65,7 @@ Well, in hledger (and Ledger), there's another rule:
 We can use `hledger print -x` (x for explicit) to show the above with
 all amounts and the inferred conversion price:
 
-```shell
+```cli
 $ hledger print -x
 2020-02-01
     assets:cc:ada           2000 ADA @@ $40
@@ -190,7 +190,7 @@ So far, what have we got ? The journal is <!-- (after aligning with ledger-mode'
 ```
 
 The balance sheet (truncated for brevity) shows assets are $960 and 2000 ADA:
-```shell
+```cli
 $ hledger bs --flat | head -10
 Balance Sheet 2020-02-01
 
@@ -210,7 +210,7 @@ You can omit it if it doesn't work on your system.)
 
 And with `-B/--cost` (B for cost basis) we see costs so far are:
 
-```shell
+```cli
 $ hledger bs --flat -B |head -10
 Balance Sheet 2020-02-01, valued at cost
 
@@ -276,7 +276,7 @@ P 2020-03-01 ADA $0.04
 
 Let's check the current market value (AKA *mark to market*) of our holdings.
 `-V` is a simple form of [the `--value` flag][valuation]:
-```shell
+```cli
 $ hledger bs --flat -V |head -10
 Balance Sheet 2020-02-01, current value
 
@@ -300,7 +300,7 @@ We can fix this by specifying an explicit report end date,
 which also sets the valuation date. 
 We'll use `-e` to specify 2020-02-01:
 
-```shell
+```cli
 $ hledger bs --flat -V -e 2020-02-01 |head -10
 Balance Sheet 2020-01-31, current value
 
@@ -319,7 +319,7 @@ Remember that [end dates] are exclusive,
 so the ADA purchase on 2020-02-01 is excluded.
 With a later end date, eg 2020-02-02, we see it:
 
-```shell
+```cli
 $ hledger bs --flat -V -e 2020-02-02 |head -10
 Balance Sheet 2020-02-01, current value
 
@@ -336,7 +336,7 @@ Balance Sheet 2020-02-01, current value
 And if we specify an end date after the second price directive,
 we'll see the value at that date:
 
-```shell
+```cli
 $ hledger bs --flat -V -e 2020-03-02 |head -10
 Balance Sheet 2020-03-01, current value
 
@@ -359,7 +359,7 @@ the last transaction (ie, 2020-02-29).
 This time we'll say `-e apr` (or `-e 202004`), which is less typing 
 and includes all of march:
 
-```shell
+```cli
 $ hledger bs --flat -M -V -e apr | head -10
 Balance Sheet 2020-01-31,,2020-03-31, valued at period ends
 
@@ -380,7 +380,7 @@ and worth $80, thanks to the increase in market price, in march.
 Just for comparison, here's the same report but showing cost instead
 of value. Of course cost is not affected by market prices:
 
-```shell
+```cli
 $ hledger bs --flat -M -B -e apr | head -10
 Balance Sheet 2020-01-31,,2020-03-31, valued at cost
 
@@ -407,7 +407,7 @@ gain, as of end of march, is $40. In more complex real-world reports,
 it will be helpful to show the changes in each period rather than end
 balances. We can add `--change` to see that... Or can we ?
 
-```shell
+```cli
 $ hledger bs --flat -M -V -e apr --change | head -10
 Balance Sheet 2020q1 (Balance Changes), valued at period ends
 
@@ -443,7 +443,7 @@ form, so we can visually check that the per-unit cost looks correct
 Here's the new balance sheet, with `-E` (empty) to make it show the
 now empty ada account:
 
-```shell
+```cli
 $ hledger bs --flat -e apr -E | head -10
 Balance Sheet 2020-03-31
 
@@ -465,7 +465,7 @@ This seems like a bad sign.
 And indeed a full balance sheet including equity shows a non-zero
 total, confirming that the Accounting Equation has been disturbed:
 
-```shell
+```cli
 $ hledger bse --flat
 Balance Sheet With Equity 2020-03-02
 
@@ -512,7 +512,7 @@ revenue posting. If we try, hledger complains:
     assets:bank:checking                         $80
     revenues:capital gain                       $-40
 ```
-```shell
+```cli
 $ hledger print
 ...
 could not balance this transaction (real postings are off by $-40.00)
@@ -573,7 +573,7 @@ temporarily:
 
 We would see the proper zero total:
 
-```shell
+```cli
 $ hledger bse --flat 
 Balance Sheet With Equity 2020-03-02
 
