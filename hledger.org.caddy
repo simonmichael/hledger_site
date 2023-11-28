@@ -501,7 +501,7 @@ waffle.hledger.org {
 	redir https://waffle.io/simonmichael/hledger?source=simonmichael%2Fhledger
 }
 stars.hledger.org {
-	redir https://github.com/search?o=desc&p=4&q=language%3AHaskell+stars%3A%3E=2000&ref=searchresults&s=stars&type=Repositories
+	redir https://github.com/search?o=desc&p=3&q=language%3AHaskell+stars%3A%3E=2500&ref=searchresults&s=stars&type=Repositories
 }
 wiki.hledger.org {
 	redir https://github.com/simonmichael/hledger/wiki
