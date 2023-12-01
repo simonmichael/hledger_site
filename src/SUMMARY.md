@@ -76,6 +76,7 @@
 - [5 minute quick start](5-minute-quick-start.md)
 - [Release notes](release-notes.md)
 - [Report examples](report-examples.md)
+- [Reporting version control stats](reporting-version-control-stats.md)
 - [Rewrite account names](rewrite-account-names.md)
 - [Rewrite commodity symbols](rewrite-commodity-symbols.md)
 - [Save frequently used options](save-frequently-used-options.md)

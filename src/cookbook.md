@@ -46,6 +46,7 @@ Check plaintextaccounting.org's and wiki.plaintextaccounting.org's categories.
 
 ### Reporting
 - [Report examples](report-examples.md)
+- [Reporting version control stats](reporting-version-control-stats.md)
 - [Rewrite account names](rewrite-account-names.md)
 - [Rewrite commodity symbols](rewrite-commodity-symbols.md)
 - [Tags tutorial](tags-tutorial.md)
