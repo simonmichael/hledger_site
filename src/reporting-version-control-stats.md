@@ -8,7 +8,7 @@ Start a journal with some account declarations; this is just to set the projects
 printf "account ledger\naccount hledger\naccount beancount\n" >project-commits.j
 ```
 
-Export each git commit as a transaction. git log makes this easy; we include the commit date, short hash, and summary. (You could export more, like line add/remove counts.)
+Export each git commit as a transaction. git log makes this easy; we include the commit date, short hash, and summary:
 ```cli
 for P in ledger hledger beancount; do git -C ../$P log --reverse --format="%cd (%h) %s%n  ($P)  1%n" --date=short; done >> project-commits.j 
 ```
