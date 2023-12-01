@@ -10,7 +10,9 @@ printf "account ledger\naccount hledger\naccount beancount\n" >project-commits.j
 
 Export each git commit as a transaction. git log makes this easy; we include the commit date, short hash, and summary:
 ```cli
-for P in ledger hledger beancount; do git -C ../$P log --reverse --format="%cd (%h) %s%n  ($P)  1%n" --date=short; done >> project-commits.j 
+for P in ledger hledger beancount; do
+  git -C ../$P log --reverse --format="%cd (%h) %s%n  ($P)  1%n" --date=short
+done >> project-commits2.j 
 ```
 
 The resulting journal looks like:
@@ -59,31 +61,22 @@ Balance changes in 2003-01-01..2023-12-31:
 ```
 
 ```cli
-$ for P in ledger hledger beancount; do echo $P:; hledger -f project-commits.j reg -w80 ^$P | head -1; done
-ledger:
+$ for P in ledger hledger beancount; do hledger -f project-commits.j reg -w80 ^$P | head -1; done
 2003-09-29 Initial revision     (ledger)                         1             1
-hledger:
 2007-01-27 start                (hledger)                        1             1
-beancount:
 2008-04-23 Initial import.      (beancount)                      1             1
 ```
 
 ```cli
-$ for P in ledger hledger beancount; do echo $P:; hledger -f project-commits.j print ^$P | hledger -f- bal -YATN --summary; done
-ledger:
-Balance changes in 2003-01-01..2023-12-31:
+$ for P in ledger hledger beancount; do hledger -f project-commits.j print ^$P | hledger -f- bal -YATN --summary | tail -4; done
 
         ||   Total  Average 
 ========++==================
  ledger ||    6763      322 
-hledger:
-Balance changes in 2007-01-01..2023-12-31:
 
          ||   Total  Average 
 =========++==================
  hledger ||   12043      708 
-beancount:
-Balance changes in 2008-01-01..2023-12-31:
 
            ||   Total  Average 
 ===========++==================
