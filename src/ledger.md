@@ -41,6 +41,8 @@ Compared to hledger, Ledger has
 - a lighter memory footprint and smaller executables
 
 See also: 
+
+- [PTA: Getting started FAQ: Which PTA app should I choose ?](https://plaintextaccounting.org/Getting-started-FAQ#which-pta-app-should-i-choose)
 - <https://www.libhunt.com/compare-hledger-vs-ledger>
 - <https://www.reddit.com/r/plaintextaccounting/comments/ztdk0o/ledger_vs_hledger/>
 

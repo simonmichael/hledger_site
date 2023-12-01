@@ -146,4 +146,4 @@ Check plaintextaccounting.org's and wiki.plaintextaccounting.org's categories.
 
 ## See also
 
-<https://plaintextaccounting.org> and <https://wiki.plaintextaccounting.org> collect similar but more generic advice for any and all PTA tools.
+<https://plaintextaccounting.org> collects similar but more generic advice for all PTA tools.

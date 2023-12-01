@@ -114,3 +114,19 @@ You can decide what level of accuracy you need.
 
 [1] Though if you really catch the PTA bug, you may find that nothing less than perfection will do!
 
+<!--
+Notes
+
+I'll throw out the obvious: read the docs at hledger.org. Particularly the reference manuals for hledger and hledger-web - these are also available as local man pages and info manuals - but hledger.org has them with useful hyperlinks, and has additional docs such as Get Started, FAQ, Cookbook and Developer docs. Clearly you shouldn't have to read this.. library.. up front, but at least survey everything, including the tables of contents, to get a sense of where things are.
+There's also a Videos page; and at https://plaintextaccounting.org/#articles-blog-posts , many bite-sized blog posts. These can be a nice alternative when reading docs gets boring.
+There's a lot of rabbit holes you can go down when learning PTA, so setting some goals and managing your focus is helpful. Lisp, Haskell and Emacs are also big topics and definitely not needed for hledger use, though very fun and worthwhile in themselves.
+You can always browse the mail list archives for past discussions that look interesting. And I will always recommend joining the hledger chat - a little bit of a hoop but not much. Checking the discussion there once in a while, or asking when you get stuck, can save a lot of time.
+(answer to:
+ B: I am not a coder/programmer/software professional—just a numbers-inclined user who is old enough to remember pre-GUI computing, appreciates the philosophy of plain text accounting, and had dabbled with code (Processing, Arduino, and HTML/CSS once upon a time).
+ ...
+ Now, I’m wondering if anyone here could offer some guidance towards a strategic course of study that would help me get the most out of hledger? Should I learn Lisp? Haskell? Maybe focus on understanding how to use Emacs?
+ I do believe that continued use of hledger will drive more learning (It already has!) but I can’t help but think that troubleshooting as questions and issues arise isn’t the only (or most effective) way. There’s a lot of lingo, terms—a whole universe truly—that is new to me and I’m curious now that I have arrived where others might recommend I start to get a better sense of the lay of the land so to speak.
+)
+
+-->
+
