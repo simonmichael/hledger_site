@@ -12,7 +12,7 @@ Export each git commit as a transaction. git log makes this easy; we include the
 ```cli
 for P in ledger hledger beancount; do
   git -C ../$P log --reverse --format="%cd (%h) %s%n  ($P)  1%n" --date=short
-done >> project-commits2.j 
+done >> project-commits.j 
 ```
 
 The resulting journal looks like:
