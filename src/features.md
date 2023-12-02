@@ -43,31 +43,32 @@ hledger can:
 - make a balance sheet, showing your asset and liability account balances
 - make a cashflow report, showing changes in your cash assets
 - make an income statement, showing your revenues and expenses
-- show a bar chart of transaction activity by period
+- show simple bar charts by period
 - show purchase costs/selling prices
 - show market values in any currency at any valuation date
 - calculate the rate of return of a savings account or investment
 - make reports from timeclock or timedot time logs
-- make reports from any CSV file
+- make reports from any CSV/SSV/TSV file
+- make reports from any data which you have converted to a hledger-readable format
 
 It can slice, dice, and present your data in different ways:
 
 - filter out just the items or time period you're interested in
 - show multiple periods side by side
-- summarise accounts to give the big picture
-- rewrite or pivot account names to give different views
-- output reports as plain text, HTML, or CSV
+- summarise accounts to a certain depth to give the big picture
+- rewrite or pivot account names to transform reports
+- output reports as plain text, HTML, CSV, TSV, JSON, SQL...
 - run as a live-updating terminal UI, for fast interactive exploration
 - run as a web app, allowing remote/multi-user browsing and data entry
 - run as a JSON web API, for integrating with custom apps
 
 If you add a few directives to the file, hledger can:
 
-- include multiple data sets
+- combine multiple files / data sets
 - generate recurring transactions by rule
-- add extra postings (splits) to transactions by rule
-- show a forecast of future activity, eg to help with cashflow planning
-- make a budget report, showing your budget goals and status by account and period
+- generate extra postings (splits) on transactions by rule
+- show a forecast of future activity, eg to help with planning
+- make a budget report, showing your budget goals and performance by account and period
 
 Also, it can:
 
@@ -163,15 +164,9 @@ to provide real-world value, and to never waste your time. It provides:
   strong compile-time type checking.
   Failures caused by user input are reported clearly and promptly.
 
-- Robust testing:
-  The software is continually tested by extensive automated tests.
-
 - Robust features: built-in commands and options combine well with one
   another, and are expected to do something sensible in all cases,
   with all kinds of input.
-
-- Robust calculation: results are expected to always perfectly match
-  what you would calculate on paper, up to 255 decimal places.
 
 - Robust parsing: dated items, such as balance assertions and balance
   assignments, are processed in date order. Assertions/assignments
@@ -179,13 +174,19 @@ to provide real-world value, and to never waste your time. It provides:
   assertions/assignments within a single transaction work as you would
   expect.
   
+- Robust calculation: results are expected to always perfectly match
+  what you would calculate on paper, up to 255 decimal places.
+
 - Robust reporting: reports are deterministic and not affected by the
   order of input files or data items except where that is part of
   their spec.
 
+- Robust testing:
+  The software is continually tested by more than a thousand automated tests.
+
 - Robust documentation: all functionality is documented precisely,
   with a mnemonic permalink. User manuals for your hledger
-  version are available online, and built in for offline viewing.
+  version are available online, and also built in for offline viewing.
   General and command-specific command line help is provided. We
   favour documentation-driven development.
 
@@ -193,7 +194,8 @@ to provide real-world value, and to never waste your time. It provides:
 
 - Reports normally take a fraction of a second.
 - `hledger-ui --watch` normally updates instantly as you edit.
-- On a 2021 macbook air m1, hledger parses and analyses about 25000 transactions per second.
+- On a 2021 macbook air m1, hledger processes about [15k-25k transactions per second](ledger.md#performance)
+  ([depending on version](https://github.com/simonmichael/hledger/issues/2122)).
 
 ## Compatible
 
