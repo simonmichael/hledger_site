@@ -7,6 +7,46 @@
 
 See also: [Install > Release notes](https://hledger.org/release-notes.html)
 
+## This Week In Hledger 2023-12-01
+*Share your hledger/PTA user notes, dev news, achievements or experiences in the hledger matrix chat, every Friday morning (or any time, tagged with "TWIH").*
+
+### sm
+#### Dev
+
+Added easy tagged time logging to timedot format, using letters instead of dots.
+
+#### Ops
+
+Update the stars.hledger.org redirect (we have reached the top 30 Haskell projects by github stars 🌟 🎉).
+
+#### Docs
+
+Use `cli` class instead of `shell` for all command-line examples in hledger docs.
+
+hledger: Amount formatting, parseability
+
+Ledger: interoperating tips updates, more about commodity directives and balance assertions.
+
+Videos: reorder hledger fan videos.
+
+REGRESSIONS: cleanups, discuss real names.
+
+#### Other
+
+Prepared change notes and released hledger 1.32 with the last quarter's changes.
+
+I did a big cleanup on plaintextaccounting.org, which has absorbed the
+wiki and now supports Obsidian-style wiki links and clickable headings.
+
+### Robert Nielsen
+Two things in this week's hledger fan blog. First, for beginners, some notes on reducing errors when reconciling accounts. Second, for the more advanced, a recommendation for an Awk programming book. See the details at [https://hledgerfan.com/fewer-errors-in-reconciling/](https://hledgerfan.com/fewer-errors-in-reconciling/).
+
+### Quotes of the week
+
+*It's the basis of my entire personal finance system.*
+
+*once again, I was deeply impressed by how _useful_ hledger is, and how thoughtful it is.*
+
 
 ## This Week In Hledger 2023-11-24
 *Share your hledger/PTA user notes, dev news, achievements or experiences 
@@ -30,21 +70,15 @@ Improvements/features:
 
 #### Docs
 
-hledger manual:
+hledger: added "Amount formatting, parseability",
+updated "Decimal marks, digit group marks", "commodity directive", "CSV > if table", "Timedot".
 
-- Updated:
-  - Decimal marks, digit group marks
-  - commodity directive
-  - CSV > if table (#2107)
-  - Timedot
-- Added:
-  - Amount formatting, parseability: an explanation of trailing decimal marks
-    and number formatting differences between reports. (#2115)
+Ledger: added more notes on commodity directives, from chat.
 
-Ledger: more notes on commodity directives, from chat.
-
-Checking for errors: tips on enforcing account lifetimes, from reddit,
+Checking for errors: added tips on enforcing account lifetimes, from reddit,
 and on minimising diffs in reports, from mail list.
+
+Cookbook: added "Reporting version control stats".
 
 Over at https://plaintextaccounting.org/#articles-blog-posts I started
 adding blog links for 2021-2023, including ~~10~~ 33 hledger-related posts
