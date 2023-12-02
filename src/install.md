@@ -219,7 +219,7 @@ And finally please [share any feedback](support.md) so we can make this process 
   <tr> <!-- GENTOO (ezzie) -->
     <td>
       <div class="badges">
-        <a href="https://gentoo.zugaina.org/Search?search=hledger"><img alt="Gentoo" src="https://img.shields.io/badge/Gentoo_package-1.30.1-red.svg" /></a>
+        <a href="https://gentoo.zugaina.org/Search?search=hledger"><img alt="Gentoo" src="https://img.shields.io/badge/Gentoo_package-1.31-red.svg" /></a>
       </div>
     </td>
     <td>
@@ -439,7 +439,7 @@ And finally please [share any feedback](support.md) so we can make this process 
   <tr> <!-- SANDSTORM (?) -->
     <td>
       <div class="badges">
-          <a href="https://apps.sandstorm.io/search?term=hledger"><img alt="Sandstorm" src="https://img.shields.io/badge/Sandstorm_app-1.9.2-red.svg" /></a>
+          <a href="https://apps.sandstorm.io/search?term=hledger"><img alt="Sandstorm" src="https://img.shields.io/badge/Sandstorm_app-1.31-red.svg" /></a>
       </div>
     </td>
     <td>
@@ -470,7 +470,7 @@ And finally please [share any feedback](support.md) so we can make this process 
         <a href="https://github.com/simonmichael/hledger/releases">https://github.com/simonmichael/hledger/releases</a><br>
       </div>
       <div class="notes">
-        Previews of the next major release, for testers & early adopters.
+        Previews of the next major release (occasionally), for testers & early adopters.
       </div>
     </td>
   </tr>
@@ -480,7 +480,7 @@ And finally please [share any feedback](support.md) so we can make this process 
 
 ## Build the current release
 
-<img alt="Release source" src="https://img.shields.io/badge/Release_source-1.32-brightgreen.svg" />
+<a href="https://github.com/simonmichael/hledger/tree/1.32-branch"><img alt="Release source" src="https://img.shields.io/badge/Release_source-1.32-brightgreen.svg" /></a>
 
 1. Check [build requirements](#build-requirements)
 2. Use one of the [build methods](#build-methods)
@@ -642,7 +642,7 @@ Here's <a href="https://libera.ems.host/_matrix/media/r0/download/libera.chat/51
 
 ## Build the development version
 
-<img alt="Latest source" src="https://img.shields.io/badge/Latest_source-master-green.svg" />
+<a href="https://github.com/simonmichael/hledger"><img alt="Latest source" src="https://img.shields.io/badge/Latest_source-master-green.svg" /></a>
 
 If you want the very [latest improvements](https://github.com/simonmichael/hledger/commits/master),
 our master branch on github is suitable for daily use.
