@@ -9,7 +9,7 @@ This is an old but still useful intro to budgeting with hledger.
 For more about budgeting, see also:
 
 - [hledger.org > Budgeting](budgeting.md)
-- [wiki.plaintextaccounting.org/budgeting](https://github.com/plaintextaccounting/plaintextaccounting/wiki/budgeting)
+- [plaintextaccounting.org/budgeting](https://plaintextaccounting.org/Budgeting)
 
 
 Budgeting and forecasting allows you to keep better track of your expenses and future financial situation.
@@ -222,7 +222,7 @@ hledger doesn't prevent overspending from your budget envelopes - you should wat
 The downside is that it requires more bookkeeping work from you.
 Some people use auto posting rules to try to reduce that, but this can add complexity.
 
-For more about envelope budgeting, see the links at [wiki.plaintextaccounting.org/budgeting](https://github.com/plaintextaccounting/plaintextaccounting/wiki/budgeting).
+For more about envelope budgeting, see the links at [plaintextaccounting.org/budgeting](https://plaintextaccounting.org/Budgeting).
 
 ## Forecasting
 
