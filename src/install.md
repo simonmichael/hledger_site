@@ -86,7 +86,9 @@ And finally please [share any feedback](support.md) so we can make this process 
   <tr> <!-- CI BINARIES (SM) -->
     <td>
       <div class="badges">
-        <a><img alt="hledger CI binaries" src="https://img.shields.io/badge/hledger_CI_binaries-1.32-brightgreen.svg" /></a><br>
+        <a href="https://github.com/simonmichael/hledger/releases/tag/1.32#mac-x64">
+            <img alt="hledger CI binaries" src="https://img.shields.io/badge/hledger_CI_binaries-1.32-brightgreen.svg" />
+        </a><br>
       </div>
       <!-- <div class="notes">Linux, Mac, Windows</div> -->
     </td>
@@ -119,7 +121,9 @@ And finally please [share any feedback](support.md) so we can make this process 
   <tr> <!-- CI BINARIES (SM) -->
     <td>
       <div class="badges">
-        <a><img alt="hledger CI binaries" src="https://img.shields.io/badge/hledger_CI_binaries-1.32-brightgreen.svg" /></a><br>
+        <a href="https://github.com/simonmichael/hledger/releases/tag/1.32#windows-x64">
+            <img alt="hledger CI binaries" src="https://img.shields.io/badge/hledger_CI_binaries-1.32-brightgreen.svg" />
+        </a><br>
       </div>
       <!-- <div class="notes">Linux, Mac, Windows</div> -->
     </td>
@@ -198,7 +202,9 @@ And finally please [share any feedback](support.md) so we can make this process 
   <tr> <!-- CI BINARIES (SM) -->
     <td>
       <div class="badges">
-        <a><img alt="hledger CI binaries" src="https://img.shields.io/badge/hledger_CI_binaries-1.32-brightgreen.svg" /></a><br>
+        <a href="https://github.com/simonmichael/hledger/releases/tag/1.32#linux-x64">
+            <img alt="hledger CI binaries" src="https://img.shields.io/badge/hledger_CI_binaries-1.32-brightgreen.svg" />
+        </a><br>
       </div>
       <!-- <div class="notes">Linux, Mac, Windows</div> -->
     </td>
