@@ -689,15 +689,15 @@ After installing, run the hledger tools and verify that their versions are what 
 
 <div class="command">
 $ hledger --version <br>
-hledger 1.32-g4376f8530-20231201, mac-aarch64
+hledger 1.32-g1d90ce92c-20231201, mac-aarch64
 <br>
 <br>
 $ hledger-ui --version <br>
-hledger-ui 1.32-g4376f8530-20231201, mac-aarch64
+hledger-ui 1.32-g1d90ce92c-20231201, mac-aarch64
 <br>
 <br>
 $ hledger web --version <br>
-hledger-web 1.32-g4376f8530-20231201, mac-aarch64
+hledger-web 1.32-g1d90ce92c-20231201, mac-aarch64
 <br>
 </div>
 
