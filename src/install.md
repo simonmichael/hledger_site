@@ -277,11 +277,10 @@ And finally please [share any feedback](support.md) so we can make this process 
   <tr> <!-- UBUNTU (?) -->
     <td>
       <div class="badges">
-        <a href="https://packages.ubuntu.com/kinetic/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_22_10/hledger.svg" /></a><br>
+        <!-- <a href="https://packages.ubuntu.com/XXXXX/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_XX_XX/hledger.svg" /></a><br> -->
+        <a href="https://packages.ubuntu.com/mantic/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_23_10/hledger.svg" /></a><br>
+        <a href="https://packages.ubuntu.com/lunar/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_23_04/hledger.svg" /></a><br>
         <a href="https://packages.ubuntu.com/jammy/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_22_04/hledger.svg" /></a><br>
-        <!-- <a href="https://packages.ubuntu.com/impish/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_21_10/hledger.svg" /></a><br> -->
-        <!-- <a href="https://packages.ubuntu.com/hirsute/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_21_04/hledger.svg" /></a><br> -->
-        <!-- <a href="https://packages.ubuntu.com/groovy/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_20_10/hledger.svg" /></a><br> badge broken -->
         <a href="https://packages.ubuntu.com/focal/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_20_04/hledger.svg" /></a><br>
         <a href="https://packages.ubuntu.com/bionic/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_18_04/hledger.svg" /></a><br>
         <a href="https://packages.ubuntu.com/xenial/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_16_04/hledger.svg" /></a><br>
