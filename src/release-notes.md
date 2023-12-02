@@ -82,12 +82,12 @@ strict/idempotent import, CSV rule enhancements, timedot letters, fixes.**
 Breaking changes
 
 - Display styles and display precision are now managed more carefully
-  during calculations and output, fixing a number of issues (#2111,
+  during calculations and output, fixing a number of issues ([#2111],
   "Precisiongeddon").  In brief:
 
   - Cost and value reports, such as `print -V`, now (1) consistently
     apply commodity display styles, and (2) do not add or discard
-    decimal digits unnecessarily.  (#2105)
+    decimal digits unnecessarily.  ([#2105])
   
   - When "infinite decimals" arise during calculations (eg in value
     reports, or in `prices` or `roi` output), these are now shown
@@ -95,7 +95,7 @@ Breaking changes
   
   - Non-print-like reports no longer add trailing decimal marks to
     disambiguate digit group marks (this was an unintended regression
-    in 1.31). (#2115)
+    in 1.31). ([#2115])
     
   - We now document number formatting adjustments made in certain
     reports and output formats (hledger manual > REPORTING CONCEPTS >
@@ -105,7 +105,7 @@ Breaking changes
 Features
 
 - Timedot format supports a new letters syntax for easier tagged time logging.
-  (#2116)
+  ([#2116])
 
 - `print` has a new `beancount` output format for exporting to Beancount.
   This prints journal output more likely (though not guaranteed) to
@@ -114,23 +114,23 @@ Features
 - In CSV rules, matchers using regular expressions can now interpolate
   their matched texts into the values they assign to fields (field
   assignment values can reference match groups).
-  (#2009) (Jonathan Dowland)
+  ([#2009]) (Jonathan Dowland)
   
 - In CSV rules, matchers can be negated by prepending `!`.
-  (#2088) (bobobo1618)
+  ([#2088]) (bobobo1618)
 
 - Multi-column balance reports (from `bal`, `bs`, `is` etc.) can use
   the new `--summary-only` flag (`--summary` also works) to display
   just the Total and Average columns (if enabled by `--row-total` and
   `-A/--average`) and hide the rest.
-  (#1012) (Stephen Morgan)
+  ([#1012]) (Stephen Morgan)
 
 - All commands that suport csv output now also support `tsv`
   (tab-separated values) output. The data is identical, but the fields
   are separated by tab characters and there is no quoting or
   escaping. Tab, carriage return, and newline characters in data are
   converted to spaces (this should rarely if ever happen in practice).
-  (#869) (Peter Sagerson).
+  ([#869]) (Peter Sagerson).
 
 
 Improvements
@@ -146,7 +146,7 @@ Improvements
 - `print` now shows zeros with a commodity symbol and decimal digits
   when possible, preserving more information.
 
-- `print` has a new option for controlling amount rounding (#2085):
+- `print` has a new option for controlling amount rounding ([#2085]):
   
   - `--round=none` - show amounts with original precisions (default;
     like 1.31; avoids implying less or more precision than was
@@ -172,7 +172,7 @@ Improvements
   | --round=hard       | hard | none | hard | none    |
   | --round=all        | hard | hard | hard | hard    |
 
-- The `prices` command has had a number of fixes and improvements (#2111):
+- The `prices` command has had a number of fixes and improvements ([#2111]):
 
   - It now more accurately lists the prices that hledger would use
     when calculating value reports (similar to what you'd see with
@@ -203,31 +203,31 @@ Fixes
   And more generally, when reading multiple input files, eg with
   multiple `-f` options, strict checks are done only for the overall
   combined journal (not for each individual file).
-  (#2113)
+  ([#2113])
 
-- `tag:` queries now work when reading CSV files. (#2114)
+- `tag:` queries now work when reading CSV files. ([#2114])
 
 - Using a `.json` or `.sql` file extension with `-o`/`--outputfile`
   now properly selects those output formats.
 
 - Auto postings no longer break redundant equity/cost detection and
-  transaction balancing. (#2110)
+  transaction balancing. ([#2110])
   
 - Amounts set by balance assignment now affect commodity styles again.
-  (#2091, a regression in 1.30)
+  ([#2091], a regression in 1.30)
 
 - Timedot quantities with units are parsed more accurately.
   Eg a quantity like "15m" was evaluated as 0.249999999 not 0.25,
   and since hledger 1.21, it was printed that way also.
   Now we round such quantities to two places during parsing to get
-  exact quarter-hour amounts. (#2096)
+  exact quarter-hour amounts. ([#2096])
 
 - The `demo` command no longer triggers a JSON decode error in asciinema
   2.3.0. It now also shows a better error message if asciinema fails
-  (#2094).
+  ([#2094]).
 
 - Failing balance assertions with a cost now show correct markers in
-  the error message. (#2083)
+  the error message. ([#2083])
 
 
 Docs
@@ -253,7 +253,7 @@ Docs
 Fixes
 
 - The V key now preserves the valuation mode specified at the command
-  line, if any. (#2084)
+  line, if any. ([#2084])
 
 - The hledger-ui package no longer wastefully builds its modules
   twice.
@@ -264,8 +264,8 @@ Fixes
 Features
 
 - The hledger-web app on the Sandstorm cloud platform has been updated to
-  a recent version (Jacob Weisz, #2102), and now uses Sandstorm's access
-  control. (Jakub Zárybnický, #821)
+  a recent version (Jacob Weisz, [#2102]), and now uses Sandstorm's access
+  control. (Jakub Zárybnický, [#821])
 
 Improvements
 
@@ -273,22 +273,22 @@ Improvements
   with an easier `--allow=view|add|edit|sandstorm` option.
   `add` is the default access level, while `sandstorm` is for use on Sandstorm.
   UI and docs now speak of "permissions" rather than "capabilities".
-  (#834)
+  ([#834])
 
-- The Sandstorm app's permissions and roles have been renamed for clarity. (#834)
+- The Sandstorm app's permissions and roles have been renamed for clarity. ([#834])
 
 - Permissions are now checked earlier, before the web app is started,
   producing clearer command line errors when appropriate.
 
-- Account's `adeclarationinfo` field is now included in JSON output. (#2097) (S. Zeid)
+- Account's `adeclarationinfo` field is now included in JSON output. ([#2097]) (S. Zeid)
 
 Fixes
 
 - The app can now serve on address 0.0.0.0 (exposing it on all interfaces),
   which previously didn't work.
-  (#2099) (Philipp Klocke)
+  ([#2099]) (Philipp Klocke)
 
-- The broken "File format help" link in the edit form has been fixed. (#2103)
+- The broken "File format help" link in the edit form has been fixed. ([#2103])
 
 
 ### project changes 1.32
@@ -397,6 +397,84 @@ Philipp Klocke,
 Stephen Morgan,
 bobobo1618.
 
+[#2116]: https://github.com/simonmichael/hledger/issues/2116
+[#2115]: https://github.com/simonmichael/hledger/issues/2115
+[#2114]: https://github.com/simonmichael/hledger/issues/2114
+[#2113]: https://github.com/simonmichael/hledger/issues/2113
+[#2111]: https://github.com/simonmichael/hledger/issues/2111
+[#2110]: https://github.com/simonmichael/hledger/issues/2110
+[#2105]: https://github.com/simonmichael/hledger/issues/2105
+[#2103]: https://github.com/simonmichael/hledger/issues/2103
+[#2102]: https://github.com/simonmichael/hledger/issues/2102
+[#2099]: https://github.com/simonmichael/hledger/issues/2099
+[#2097]: https://github.com/simonmichael/hledger/issues/2097
+[#2096]: https://github.com/simonmichael/hledger/issues/2096
+[#2094]: https://github.com/simonmichael/hledger/issues/2094
+[#2091]: https://github.com/simonmichael/hledger/issues/2091
+[#2088]: https://github.com/simonmichael/hledger/issues/2088
+[#2085]: https://github.com/simonmichael/hledger/issues/2085
+[#2084]: https://github.com/simonmichael/hledger/issues/2084
+[#2083]: https://github.com/simonmichael/hledger/issues/2083
+[#2079]: https://github.com/simonmichael/hledger/issues/2079
+[#2068]: https://github.com/simonmichael/hledger/issues/2068
+[#2065]: https://github.com/simonmichael/hledger/issues/2065
+[#2050]: https://github.com/simonmichael/hledger/issues/2050
+[#2045]: https://github.com/simonmichael/hledger/issues/2045
+[#2041]: https://github.com/simonmichael/hledger/issues/2041
+[#2040]: https://github.com/simonmichael/hledger/issues/2040
+[#2039]: https://github.com/simonmichael/hledger/issues/2039
+[#2034]: https://github.com/simonmichael/hledger/issues/2034
+[#2032]: https://github.com/simonmichael/hledger/issues/2032
+[#2025]: https://github.com/simonmichael/hledger/issues/2025
+[#2024]: https://github.com/simonmichael/hledger/issues/2024
+[#2023]: https://github.com/simonmichael/hledger/issues/2023
+[#2020]: https://github.com/simonmichael/hledger/issues/2020
+[#2018]: https://github.com/simonmichael/hledger/issues/2018
+[#2015]: https://github.com/simonmichael/hledger/issues/2015
+[#2012]: https://github.com/simonmichael/hledger/issues/2012
+[#2011]: https://github.com/simonmichael/hledger/issues/2011
+[#2009]: https://github.com/simonmichael/hledger/issues/2009
+[#2007]: https://github.com/simonmichael/hledger/issues/2007
+[#1997]: https://github.com/simonmichael/hledger/issues/1997
+[#1996]: https://github.com/simonmichael/hledger/issues/1996
+[#1982]: https://github.com/simonmichael/hledger/issues/1982
+[#1978]: https://github.com/simonmichael/hledger/issues/1978
+[#1977]: https://github.com/simonmichael/hledger/issues/1977
+[#1970]: https://github.com/simonmichael/hledger/issues/1970
+[#1967]: https://github.com/simonmichael/hledger/issues/1967
+[#1966]: https://github.com/simonmichael/hledger/issues/1966
+[#1965]: https://github.com/simonmichael/hledger/issues/1965
+[#1962]: https://github.com/simonmichael/hledger/issues/1962
+[#1961]: https://github.com/simonmichael/hledger/issues/1961
+[#1959]: https://github.com/simonmichael/hledger/issues/1959
+[#1953]: https://github.com/simonmichael/hledger/issues/1953
+[#1950]: https://github.com/simonmichael/hledger/issues/1950
+[#1942]: https://github.com/simonmichael/hledger/issues/1942
+[#1936]: https://github.com/simonmichael/hledger/issues/1936
+[#1933]: https://github.com/simonmichael/hledger/issues/1933
+[#1932]: https://github.com/simonmichael/hledger/issues/1932
+[#1927]: https://github.com/simonmichael/hledger/issues/1927
+[#1921]: https://github.com/simonmichael/hledger/issues/1921
+[#1919]: https://github.com/simonmichael/hledger/issues/1919
+[#1915]: https://github.com/simonmichael/hledger/issues/1915
+[#1909]: https://github.com/simonmichael/hledger/issues/1909
+[#1907]: https://github.com/simonmichael/hledger/issues/1907
+[#1905]: https://github.com/simonmichael/hledger/issues/1905
+[#1889]: https://github.com/simonmichael/hledger/issues/1889
+[#1879]: https://github.com/simonmichael/hledger/issues/1879
+[#1870]: https://github.com/simonmichael/hledger/issues/1870
+[#1839]: https://github.com/simonmichael/hledger/issues/1839
+[#1770]: https://github.com/simonmichael/hledger/issues/1770
+[#1763]: https://github.com/simonmichael/hledger/issues/1763
+[#1754]: https://github.com/simonmichael/hledger/issues/1754
+[#1562]: https://github.com/simonmichael/hledger/issues/1562
+[#1436]: https://github.com/simonmichael/hledger/issues/1436
+[#1229]: https://github.com/simonmichael/hledger/issues/1229
+[#1220]: https://github.com/simonmichael/hledger/issues/1220
+[#1012]: https://github.com/simonmichael/hledger/issues/1012
+[#869]: https://github.com/simonmichael/hledger/issues/869
+[#834]: https://github.com/simonmichael/hledger/issues/834
+[#821]: https://github.com/simonmichael/hledger/issues/821
 
 ## 2023-09-03 hledger-1.31
 
@@ -408,7 +486,7 @@ Features
 
 - Multi-pivot: the --pivot option now accepts multiple arguments,
   colon-delimited, to construct account names from multiple fields.
-  (#2050, Eric Mertens)
+  ([#2050], Eric Mertens)
 
 Improvements
 
@@ -418,7 +496,7 @@ Improvements
 
   - Amounts in conversion transactions could be displayed rounded to a
     lower precision; this no longer happens.
-    (#2079)
+    ([#2079])
 
   - Amounts could be displayed with extra zeros after the decimal mark;
     this no longer happens.
@@ -475,11 +553,11 @@ Fixes
   considered an error (as they were in hledger 1.29 and 1.30).  Now,
   such transactions are accepted, and --infer-cost has no effect on
   them. This is similar to the behaviour of --cost, --infer-equity,
-  and --infer-market-prices.  (#2045)
+  and --infer-market-prices.  ([#2045])
 
 - In journal files, equity conversion postings are now detected more
   tolerantly, using the same precision as the conversion posting's
-  amount (#2041). Eg, the following transaction is now accepted:
+  amount ([#2041]). Eg, the following transaction is now accepted:
 
       2023-01-01
           Assets               -84.01 USD @ 2.495 GEL
@@ -490,9 +568,9 @@ Fixes
 
 - The roi command now reports TWR per period and overall TWR for
   multi-period reports.
-  (#2068, Dmitry Astapov)
+  ([#2068], Dmitry Astapov)
 
-- The commands list no longer shows bar when hledger-bar is not installed (#2065),
+- The commands list no longer shows bar when hledger-bar is not installed ([#2065]),
   and had a few other cleanups.
 
 ### hledger-ui 1.31
@@ -580,15 +658,15 @@ Breaking changes
 - The CSV reader now properly skips all empty lines, as specified by docs.
   Previously, inner empty lines were not being skipped automatically.
   You might need to adjust the `skip` count in some CSV rules files.
-  (#2024)
+  ([#2024])
 
 - Timedot format now generates a single multi-posting transaction per
   date line, and supports comments and tags on all lines.
-  (#1754)
+  ([#1754])
 
 - Timeclock format now supports comments and tags.
   Descriptions can no longer contain semicolons.
-  (#1220)
+  ([#1220])
 
 Features
 
@@ -649,7 +727,7 @@ Improvements
   If you use some other $PAGER, you may have to configure it yourself
   to show ANSI (or disable ANSI entirely, eg by setting NO_COLOR=1).
   This is now documented in hledger manual > Paging.
-  (#2015)
+  ([#2015])
 
 - The print command's `--match` mode has been refined.
   Previously, similarity completely outweighed recency, so a
@@ -663,7 +741,7 @@ Improvements
 
 - The help command's documentation now mentions an issue caused by
   a too-old `info` program, as on mac.
-  (#1770)
+  ([#1770])
 
 Fixes
 
@@ -674,25 +752,25 @@ Fixes
 
 - On windows systems with multiple drive letters, the commands list
   could fail to show all installed add-ons.
-  (#2040)
+  ([#2040])
 
 - Balancing a transaction with a balance assignment now properly respects costs.
-  (#2039)
+  ([#2039])
 
 - The commands list no longer lists non-installed addons.
-  (#2034)
+  ([#2034])
 
 - Since hledger 1.25, "every Nth day of month" period rules with N > 28 could
   be calculated wrongly by a couple of days when given certain forecast start dates.
   Eg `~ every 31st day of month` with `--forecast='2023-03-30..'`.
   This is now fixed.
-  (#2032)
+  ([#2032])
 
 - Postings are now processed in correct date order when inferring balance assignments.
-  (#2025)
+  ([#2025])
 
 - Posting comment lines no longer disrupt the underline position in error messages.
-  (#1927)
+  ([#1927])
 
 - Debug output is now formatted to fit the terminal width.
 
@@ -742,7 +820,7 @@ Docs
 Fixes
 
 - A command line depth limit now works properly.
-  (#1763)
+  ([#1763])
 
 Docs
 
@@ -811,15 +889,15 @@ Breaking changes
 
   - The command is marked experimental again.
 
-  (#2020)
+  ([#2020])
 
 Fixes
 
 - `type:` queries now "see through" account aliases and pivots,
   as they did in hledger <1.27, and as `acct:` queries do.
-  (#2018)
+  ([#2018])
 
-- The corruption in 1.29's info manual is fixed. (#2023)
+- The corruption in 1.29's info manual is fixed. ([#2023])
 
 - The 1.29 release notes for periodic reports'/periodic transactions' start dates
   have been improved. Also the hledger manual's "Date adjustment" section
@@ -833,7 +911,7 @@ Improvements
 
 Fixes
 
-- The corruption in 1.29's info manual is fixed. (#2023)
+- The corruption in 1.29's info manual is fixed. ([#2023])
 
 ### hledger-web 1.29.2
 
@@ -843,7 +921,7 @@ Improvements
 
 Fixes
 
-- The corruption in 1.29's info manual is fixed. (#2023)
+- The corruption in 1.29's info manual is fixed. ([#2023])
 
 ### project changes 1.29.2
 
@@ -877,11 +955,11 @@ Improvements
        stripBy
        strip1By
 
-- Allow building with GHC 9.6.1 (#2011)
+- Allow building with GHC 9.6.1 ([#2011])
 
 Fixes
 
-- The stats report no longer displays "Exact" in front of dates. (#2012)
+- The stats report no longer displays "Exact" in front of dates. ([#2012])
 
 Docs
 
@@ -889,11 +967,11 @@ Docs
 
 ### hledger-ui 1.29.1
 
-- Allow building with GHC 9.6.1 (#2011)
+- Allow building with GHC 9.6.1 ([#2011])
 
 ### hledger-web 1.29.1
 
-- Allow building with GHC 9.6.1 (#2011)
+- Allow building with GHC 9.6.1 ([#2011])
 
 
 ## 2023-03-11 hledger-1.29
@@ -939,7 +1017,7 @@ Features
   This can also cause more verbose column headings.
 	To guarantee simple week headings, you must now start such reports
   exactly on a monday, eg `-p 'weekly from 2022-12-26 to 2023-02'`.
-  (#1982)
+  ([#1982])
 
 - You can now freely combine @/@@ notation and conversion postings
   in a single transaction. This can help readability, and also allows
@@ -971,7 +1049,7 @@ Improvements
   not just full descriptions.
 
 - aregister now supports HTML output.
-  (#1996) (Jonathan Dowland)
+  ([#1996]) (Jonathan Dowland)
 
 - aregister now shows a " (matching query)" hint in report title 
   when extra query args (other than date: or depth:) are used,
@@ -1005,7 +1083,7 @@ Improvements
   (Chris Lemaire)
 
 - Our journal reader now accepts more Ledger syntax, improving Ledger
-  file compatibility (#1962).  We now test our ability to at least
+  file compatibility ([#1962]).  We now test our ability to at least
   read the sample journals from Ledger's baseline functional tests,
   and our success rate has improved from 80% to 90% since 1.28.
   
@@ -1022,11 +1100,11 @@ Improvements
   - `pop` directive is no longer supported
 
 - When reading CSV, we now check that assigned account names are valid (parseable).
-  (#1978)
+  ([#1978])
 
 Fixes
 
-- aregister now handles an extra account query correctly. (#2007)
+- aregister now handles an extra account query correctly. ([#2007])
 
 - balance's `--help` now mentions `--layout=tidy`
 
@@ -1037,9 +1115,9 @@ Fixes
 
 - stats's `--help` no longer wrongly claims to support -O/--output-format.
 
-- Balance assignments with a cost now generate a correct balance assertion. (#1965)
+- Balance assignments with a cost now generate a correct balance assertion. ([#1965])
 
-- The CSV reader now properly skips header lines before attempting to parse records. (#1967)
+- The CSV reader now properly skips header lines before attempting to parse records. ([#1967])
 
 Scripts/addons
 
@@ -1080,35 +1158,35 @@ Docs
 - cli: balance: fix link to Budgeting page
 - cli: fix all links to Journal > Tags / Commands > tags
 - codes: improve example suggested by Rob Nielsen
-- csv, timeclock, timedot: clarify comment lines (#1953)
+- csv, timeclock, timedot: clarify comment lines ([#1953])
 - csv: add new coinbase example
-- csv: clarify amount-in/amount-out docs (#1970)
-- csv: clarify skip/valid csv semantics (#1967)
-- csv: clarify valid CSV requirements and issues (fix #1966)
+- csv: clarify amount-in/amount-out docs ([#1970])
+- csv: clarify skip/valid csv semantics ([#1967])
+- csv: clarify valid CSV requirements and issues (fix [#1966])
 - csv: cleanup, reorder, CSV rules tips -> Working with CSV
-- csv: fix wrong if tables doc; rewrite several sections (#1977)
+- csv: fix wrong if tables doc; rewrite several sections ([#1977])
 - csv: flatten, clean up CSV sections
 - csv: improve Amount field / Setting amounts
-- csv: note -in and -out are used together for one posting (#1970)
+- csv: note -in and -out are used together for one posting ([#1970])
 - csv: rules factoring tips
 - csv: try to clarify how CSV fields and hledger fields work
-- document --infer-market-prices with signed costs (#1870)
+- document --infer-market-prices with signed costs ([#1870])
 - fix duplicate market prices heading breaking info navigation
 - import: note a pitfall with multifile import
 - improve Directives summaries
 - introduction/input/output improvements
 - journal: cheatsheet: clarify date tag
-- journal: rewrite Account names, mention brackets/parentheses (#1915)
-- mention pivoting on a tag with multiple values (#1950)
+- journal: rewrite Account names, mention brackets/parentheses ([#1915])
+- mention pivoting on a tag with multiple values ([#1950])
 - more cost notation docs; describe Ledger and Beancount cost notation
-- more mention of posting order effect on inferring cost (#1959)
+- more mention of posting order effect on inferring cost ([#1959])
 - period expressions doc updates
 - Removed redundant paragraph in documentation. (J. B. Rainsberger)
 - rename directive sections, fix many links
 - reorganise commands list, like the CLI
 - reorganise bin/README & the Scripts page, add entries for recent scripts
 - replace "transaction prices" terminology with "costs"
-- tags: discuss multi-values/overriding (#1950)
+- tags: discuss multi-values/overriding ([#1950])
 - update market price inference docs per sol
 - Updated section on pivoting. Used synonyms for "member" in cases where there could be confusion with the tag named "member." (Robert Nielsen)
 - use more standard and consistent boilerplate in hledger, ui, web man pages
@@ -1123,9 +1201,9 @@ Docs
 ### hledger-web 1.29
 
 - The add form's typeahead now shows non-ascii text correctly.
-  (#1961) (Arsen Arsenović)
+  ([#1961]) (Arsen Arsenović)
 
-- In the manual, improve --base-url's description. (#1562)
+- In the manual, improve --base-url's description. ([#1562])
 
 ### project changes 1.29
 
@@ -1158,7 +1236,7 @@ Docs
 
 Infrastructure
 
-- pr template: mention COMMITS page and prefix convention (#1997)
+- pr template: mention COMMITS page and prefix convention ([#1997])
 - make ghc 9.4 and current stackage nightly the default for dev builds
 - require megaparsec 9.3+ in dev builds, for its useful dbg tool
 - make site-watch: fix runaway recursion, be more verbose
@@ -1202,7 +1280,7 @@ Features
      or parsed with `%Z`) will be localised to the system timezone
      (or to the timezone set with the `TZ` environment variable).
 
-  (#1936)
+  ([#1936])
   
 Improvements
 
@@ -1225,7 +1303,7 @@ Scripts/addons
   eg when withdrawing some or all of an investment balance containing many lots and costs.
 
 - bin/hledger-git no longer uses the non-existent git record command.
-  (#1942) (Patrick Fiaux)
+  ([#1942]) (Patrick Fiaux)
 
 - bin/watchaccounts is a small shell script for watching the account tree as you make changes.
 
@@ -1270,7 +1348,7 @@ API
 
 - hledger-ui's internal types have been changed to allow fewer invalid states\
   and make it easier  to develop and debug.
-  (#1889, #1919).
+  ([#1889], [#1919]).
 
 - Debug logging helpers have been added and cleaned up in Hledger.Ui.UIUtils:
   dbgui
@@ -1321,7 +1399,7 @@ Fixes
 
 - Balance commands using `-T -O html` no longer fail with an error
   when there is no data to report.
-  (#1933)
+  ([#1933])
 
 ### hledger-ui 1.27.1
 
@@ -1332,7 +1410,7 @@ Fixes
 Fixes
 
 - The add form no longer gives an error when there is just a single file and no file field showing.
-  (#1932)
+  ([#1932])
 
 - Uses hledger-1.27.1
 
@@ -1366,14 +1444,14 @@ Improvements
 
 - Many error messages have been improved. Most error messages now use
   a consistent, more informative format. 
-  (#1436)
+  ([#1436])
 
 - The accounts command has a new --directives flag which makes it
   show valid account directives which you can paste into a journal.
 
 - The accounts command has a new --positions flag which shows where
   accounts were declared, useful for troubleshooting.
-  (#1909)
+  ([#1909])
 
 - Bump lower bounds for Diff and githash. (Andrew Lelechenko)
 
@@ -1384,29 +1462,29 @@ Fixes
 
 - Account display order is now calculated correctly even when accounts
   are declared in multiple files.
-  (#1909)
+  ([#1909])
 
 - At --debug 5 and up, account declarations info is logged.
-  (#1909)
+  ([#1909])
 
 - hledger aregister and hledger-ui now show transactions correctly
   when there is a type: query.
-  (#1905)
+  ([#1905])
 
 - bal: Allow cumulative gain and valuechange reports.
   Previously, --cumulative with --gain or --valuechange would produce an
   empty report. This fixes this issue to produce a reasonable report.
   (Stephen Morgan)
 
-- bal: budget goal amounts now respect -c styles (fixes #1907)
+- bal: budget goal amounts now respect -c styles (fixes [#1907])
 
-- bal: budget goals now respect -H (#1879)
+- bal: budget goals now respect -H ([#1879])
 
 - bal: budget goals were ignoring rule-specified start date
 
 - cf/bs/is: Fixed non-display of child accounts when there is an
   intervening account of another type.
-  (#1921) (Stephen Morgan)
+  ([#1921]) (Stephen Morgan)
 
 - roi: make sure empty cashflows are skipped when determining first cashflow (Charlotte Van Petegem)
   Empty cashflows are added when the begin date of the report is before the first
@@ -1428,7 +1506,7 @@ Improvements
 
 - At --debug=2 and up, log debug output to ./debug.log.
 
-- Use/require brick 1.0+. (#1889)
+- Use/require brick 1.0+. ([#1889])
 
 - Use hledger 1.27
 
@@ -1451,7 +1529,7 @@ Improvements
 Fixes
 
 - Respect the add form's file selector again.
-  (Simon Michael, Kerstin, #1229)
+  (Simon Michael, Kerstin, [#1229])
 
 ### project changes 1.27
 
@@ -1529,7 +1607,7 @@ Improvements
   - considering only the first 1000 items for choosing column
     widths. You can restore the old behaviour (guaranteed alignment
     across all items) with the new `--align-all` flag.
-    ([#1839](https://github.com/simonmichael/hledger/issues/1839), Stephen Morgan)
+    ([#1839]](https://github.com/simonmichael/hledger/issues/1839), Stephen Morgan)
 
   - discarding cost data more aggressively, giving big speedups for
     large journals with many costs.
