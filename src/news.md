@@ -5,7 +5,7 @@
 <!-- toc -->
 </div>
 
-See also: [Install > Release notes](https://hledger.org/release-notes.html)
+See also: [Release notes](release-notes.md)
 
 ## This Week In Hledger 2023-12-01
 *Share your hledger/PTA user notes, dev news, achievements or experiences in the hledger matrix chat, every Friday morning (or any time, tagged with "TWIH").*
