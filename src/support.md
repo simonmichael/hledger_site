@@ -74,12 +74,6 @@
     </td>
   </tr>
   <tr valign=top>
-    <td>LibHunt:</td>
-    <td>
-      <a href="https://www.libhunt.com/r/hledger#repo-reviews">reviews and mentions</a>
-    </td>
-  </tr>
-  <tr valign=top>
     <td>Issues:</td>
     <td>
       <a href="http://bugs.hledger.org">bugs.hledger.org</a> (bugs only)<br>
