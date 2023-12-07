@@ -72,6 +72,37 @@ Changes in hledger-install.sh are shown
 [here](https://github.com/simonmichael/hledger/commits/master/hledger-install/hledger-install.sh).
 
 
+## 2023-12-07 hledger-1.32.1
+
+### hledger 1.32.1
+
+- Fixed: `import` with multiple files now updates .latest files correctly. (#2125)
+
+- Fixed: `print --round=hard` now properly pads/rounds amounts with inferred costs. (#2123)
+
+- CSV matcher syntax: mention that ! and & can't be used in the same line yet. (#2088)
+
+- Drop the "a difference of ..." line from balance assertion failure output.
+  I feel it made the message harder to read and isn't really necessary.
+
+- Declaring the empty payee name with `payee ""` now works,
+  to let `hledger check payees` accept payee-less transactions.
+  (#2119)
+
+- Built-in tags with special meaning like `type:` and `t:` are now implicitly declared,
+  so using type: in account declarations or generating t: with timedot letters 
+  won't cause `hledger check tags` to fail.
+  (#2119)
+
+### hledger-ui 1.32.1
+
+- Use hledger-1.32.1
+
+### hledger-web 1.32.1
+
+- Use hledger-1.32.1
+
+
 ## 2023-12-01 hledger-1.32
 
 **More precision control, beancount output, TSV output, --summary-only,
@@ -397,6 +428,7 @@ Philipp Klocke,
 Stephen Morgan,
 bobobo1618.
 
+[#2125]: https://github.com/simonmichael/hledger/issues/2125
 [#2116]: https://github.com/simonmichael/hledger/issues/2116
 [#2115]: https://github.com/simonmichael/hledger/issues/2115
 [#2114]: https://github.com/simonmichael/hledger/issues/2114
