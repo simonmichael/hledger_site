@@ -19,8 +19,8 @@ hledger-ui - robust, friendly plain text accounting (TUI version)
 
 ## DESCRIPTION
 
-This manual is for hledger\'s terminal interface, version 1.32. See also
-the hledger manual for common concepts and file formats.
+This manual is for hledger\'s terminal interface, version 1.32.1. See
+also the hledger manual for common concepts and file formats.
 
 hledger is a robust, user-friendly, cross-platform set of programs for
 tracking money, time, or any other commodity, using double-entry

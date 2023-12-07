@@ -33,7 +33,7 @@ accounting and a simple, editable file format. hledger is inspired by
 and largely compatible with ledger(1), and largely interconvertible with
 beancount(1).
 
-This manual is for hledger\'s command line interface, version 1.32. It
+This manual is for hledger\'s command line interface, version 1.32.1. It
 also describes the common options, file formats and concepts used by all
 hledger programs. It might accidentally teach you some
 bookkeeping/accounting as well! You don\'t need to know everything in
@@ -2338,6 +2338,8 @@ commodity 1.000,00 EUR
 commodity 1 000 000.0000   ; the no-symbol commodity
 ```
 
+Commodities do not have tags (tags in the comment will be ignored).
+
 A commodity directive\'s sample amount must always include a period or
 comma decimal mark (this rule helps disambiguate decimal marks and digit
 group marks). If you don\'t want to show any decimal digits, write the
@@ -2482,10 +2484,18 @@ check](#check) will report an error if any transaction refers to a payee
 that has not been declared. Eg:
 
 ``` journal
-payee Whole Foods
+payee Whole Foods    ; a comment
 ```
 
-Any indented subdirectives are currently ignored.
+Payees do not have tags (tags in the comment will be ignored).
+
+To declare the empty payee name, use `""`.
+
+``` journal
+payee ""
+```
+
+Ledger-style indented subdirectives, if any, are currently ignored.
 
 ### `tag` directive
 
@@ -3638,6 +3648,8 @@ expression, that also supports GNU word boundaries (`\b`, `\B`, `\<`,
 expressions\" in the hledger manual
 (<https://hledger.org/hledger.html#regular-expressions>).
 
+#### What matchers match
+
 With record matchers, it\'s important to know that the record matched is
 not the original CSV record, but a modified one: separators will be
 converted to commas, and enclosing double quotes (but not enclosing
@@ -3652,14 +3664,19 @@ the regex would see, and try to match, this modified record text:
 
     2023-01-01,Acme, Inc.,  1,000
 
+#### Combining matchers
+
 When an if block has multiple matchers, they are combined as follows:
 
 -   By default they are OR\'d (any one of them can match)
 -   When a matcher is preceded by ampersand (`&`) it will be AND\'ed
-    with the previous matcher (both of them must match).
+    with the previous matcher (both of them must match)
+-   When a matcher is preceded by an exclamation mark (`!`), the matcher
+    is negated (it may not match).
 
-When a matcher is preceded by an exclamation mark (!), the matcher will
-be negated, ie it will exclude CSV records that match.
+[Currently](https://github.com/simonmichael/hledger/pull/2088#issuecomment-1844200398)
+there is a limitation: you can\'t use both `&` and `!` on the same line
+(you can\'t AND a negated matcher).
 
 #### Match groups
 
