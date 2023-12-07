@@ -102,6 +102,10 @@ Changes in hledger-install.sh are shown
 
 - Use hledger-1.32.1
 
+[#2125]: https://github.com/simonmichael/hledger/issues/2125
+[#2123]: https://github.com/simonmichael/hledger/issues/2125
+[#2119]: https://github.com/simonmichael/hledger/issues/2125
+
 
 ## 2023-12-01 hledger-1.32
 
@@ -428,7 +432,6 @@ Philipp Klocke,
 Stephen Morgan,
 bobobo1618.
 
-[#2125]: https://github.com/simonmichael/hledger/issues/2125
 [#2116]: https://github.com/simonmichael/hledger/issues/2116
 [#2115]: https://github.com/simonmichael/hledger/issues/2115
 [#2114]: https://github.com/simonmichael/hledger/issues/2114
