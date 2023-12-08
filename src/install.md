@@ -790,8 +790,8 @@ where we'll gladly share tips or receive your feedback.
 [ghc]:             https://www.haskell.org/ghc
 [bash]:            https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29
 [make]:            https://www.gnu.org/software/make/
-[stack]:           https://www.fpcomplete.com/haskell/get-started
-[cabal]:           https://www.haskell.org/cabal
+[stack]:           https://docs.haskellstack.org/en/stable/
+[cabal]:           https://cabal.readthedocs.io/en/stable/
 [hledger-install]: https://github.com/simonmichael/hledger/blob/master/hledger-install/hledger-install.sh
 [add-on tools]:    hledger.html#addons
 [WSL]:             https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux
