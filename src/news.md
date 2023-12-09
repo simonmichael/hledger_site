@@ -7,7 +7,38 @@
 
 See also: [Release notes](release-notes.md)
 
+## This Week In Hledger 2023-12-08
+
+*Share your hledger/PTA user notes, dev news, achievements or experiences in the hledger matrix chat, every Friday morning (or any time, tagged with "TWIH").*
+
+### sm
+
+Fixed a number of issues with 1.32 and released 1.32.1.
+
+Rewrote the hledger manual's "Budget report" section, and moved some
+content to the website's Budgeting page.
+
+Tried converting the `bake` bash scripts to `just` scripts.
+
+Refactoring, issues, support.
+
+### Robert Nielsen
+
+On the hledger fan website, this I discuss one of the most useful ledger mode commands for Emacs. 
+Also, a book recommendation for graphic design that you need to know about:
+<https://hledgerfan.com/upgrading-to-hledger-1-32-a-book-on-graphic-design-and-ledger-mode-clean-buffer>
+
+### Quotes of the week
+
+*I’ve been researching the history of double entry bookkeeping
+alongside learning the basics of accounting (which is how all this
+started) and I think hledger and the whole universe of plain text
+accounting software is super cool. Just a lovely evolution of the
+method. Thanks for making it so welcoming and accessible*
+
+
 ## This Week In Hledger 2023-12-01
+
 *Share your hledger/PTA user notes, dev news, achievements or experiences in the hledger matrix chat, every Friday morning (or any time, tagged with "TWIH").*
 
 ### sm
