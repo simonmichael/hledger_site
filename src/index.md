@@ -5,6 +5,8 @@
 .content h1 { 
   font-family: Gabarito;
   font-size: 6em;
+  white-space:normal;
+  word-wrap:break-word;
   text-align:center;
   margin: 0.5em 0 0;
   display:block;
