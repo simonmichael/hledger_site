@@ -12,8 +12,9 @@ finances, time logs, or other dated quantitative data, with relatively
 little effort on your part.  You need only provide a list of
 transactions, as a plain text file in a simple human-readable
 format. (Or a CSV file plus some conversion rules.) From this hledger
-can generate a variety of useful reports and interactive views.  See
-[Features](features.md).
+can generate a variety of useful reports and interactive views.
+There is also a growing ecosystem of complementary tools and apps,
+and if you are a programmer you can easily build your own integrations.
 
 ## How is it different from other accounting software ?
 
