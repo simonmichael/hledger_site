@@ -42,7 +42,10 @@ Fast, robust, user-friendly<br>plain text accounting
 - actively developed and supported by [Simon Michael](http://joyful.com) and [contributors](CREDITS.md) since 2007
 - strengthened by your [feedback](support.md), [work](CONTRIBUTING.md) and [funding](sponsor.md). 🙏🏻\
 
-[Features](features.md) tells more, or don't hesitate to join [Discussion/Support](support.md) chat and ask questions.
+<img id="coins" src="images/coins2-248.png" style="width:25%; margin:1em 1em; float:right;" />
+
+Here's more about the [Features](features.md).
+Don't hesitate to join us in the [Discussion/Support](support.md) chat and ask questions.
 
 [![Github repo](https://img.shields.io/github/stars/simonmichael/hledger.svg?logo=GitHub&label=Github&color=brightgreen)](https://github.com/simonmichael/hledger)
 [![GitHub downloads](https://img.shields.io/github/downloads/simonmichael/hledger/total?label=Github+downloads)](https://github.com/simonmichael/hledger/releases)
