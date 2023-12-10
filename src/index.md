@@ -16,7 +16,7 @@
 # [hl]edger
 
 <div id="tagline">
-Fast, robust, user-friendly<br>plain text accounting
+Fast, friendly, robust<br> <a href="https://plaintextaccounting.org">plain text accounting</a> software
 <!-- <br>⚡️💪🏼❤️ -->
 </div>
 
