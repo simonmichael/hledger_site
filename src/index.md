@@ -1,9 +1,21 @@
-<img id="coins" src="images/coins2-248.png" style="width:120px; margin:2em 1em; float:left;" />
-<img id="coins" src="images/coins2-248.png" style="width:120px; margin:2em 1em; float:right;" />
+<!-- <img id="coins" src="images/coins2-248.png" style="width:120px; margin:2em 1em; float:left;" /> -->
+<!-- <img id="coins" src="images/coins2-248.png" style="width:120px; margin:2em 1em; float:right;" /> -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gabarito">
+<style>
+.content h1 { 
+  font-family: Gabarito;
+  font-size: 6em;
+  text-align:center;
+  margin: 0.5em 0 0;
+  display:block;
+}
+</style>
 
-# hledger!
+# [hl]edger
+
 <div id="tagline">
-Fast, robust, user-friendly<br>plain text accounting<br>⚡️💪🏼❤️
+Fast, robust, user-friendly<br>plain text accounting
+<!-- <br>⚡️💪🏼❤️ -->
 </div>
 
 ## hledger is...
@@ -389,13 +401,6 @@ hledger.org site tips:
   font-weight:bold;
 }
 
-.content h1 { 
-  font-size: 5em;
-  font-style: italic;
-  text-align:center;
-  margin: 0.5em 0 0;
-  display:block;
-}
 /* 
 .content h2 { 
   text-align:center;
