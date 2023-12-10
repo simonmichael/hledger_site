@@ -13,7 +13,7 @@
 }
 </style>
 
-# [hl]edger
+# hledger
 
 <div id="tagline">
 Fast, friendly, robust<br> <a href="https://plaintextaccounting.org">plain text accounting</a> software
