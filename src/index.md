@@ -28,7 +28,7 @@ Fast, friendly, robust<br> <a href="https://plaintextaccounting.org">plain text 
 - shipped with [web](web.md), [terminal](ui.md), [command line](basics.md), [JSON](https://hledger.org/hledger-web.md#json-api) and [Haskell](https://hackage.haskell.org/package/hledger-lib) interfaces
 - the most user friendly [plain text accounting app](https://plaintextaccounting.org)
 - comparable to [Ledger](ledger.md) and [Beancount](beancount.md)
-- built with Haskell
+- built with the powerful [Haskell language](https://haskell.org)
 - fast, lightweight, reliable (we pay $100 for [regression reports](http://hledger.org/regressionbounty))
 - free from vendor lock-in
 - local, not cloud-based; your private financial data remains under your control
@@ -45,7 +45,7 @@ Fast, friendly, robust<br> <a href="https://plaintextaccounting.org">plain text 
 <img id="coins" src="images/coins2-248.png" style="width:25%; margin:1em 1em; float:right;" />
 
 Here's more about the [Features](features.md).
-Don't hesitate to join us in the [Discussion/Support](support.md) chat and ask questions.
+Don't hesitate to join the [Discussion/Support](support.md) chat and ask questions.
 
 [![Github repo](https://img.shields.io/github/stars/simonmichael/hledger.svg?logo=GitHub&label=Github&color=brightgreen)](https://github.com/simonmichael/hledger)
 [![GitHub downloads](https://img.shields.io/github/downloads/simonmichael/hledger/total?label=Github+downloads)](https://github.com/simonmichael/hledger/releases)
@@ -379,10 +379,7 @@ $ hledger aregister checking
   [![Github topics: *accounting*](https://img.shields.io/badge/Github_topics-%2Aaccounting%2A-green)](https://github.com/search?type=topics&q=accounting)
 - [Discussion/Support](support.md)
 
-\
-\
-\
-hledger.org site tips: 
+## Site tips
 
 - Use the horizontal lines icon at top left to toggle the sidebar.
 - Use the paintbrush icon to change theme.
