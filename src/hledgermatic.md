@@ -110,7 +110,7 @@ account assets:bank:savings
 As a sole proprietor, I like to track my business and my personal life as two separate entities. 
 Legally we are one entity, and there are frequent transactions between them, so it's convenient to keep them in the same journal. 
 But I use a top-level entity prefix to keep the accounts clearly separated.
-I use two letters for these (less typing, less visual noise and keeps them aligned in reports)
+I use two letters for these (less typing, less visual noise and keeps them aligned in reports).
 So my account declarations look like this:
 
 ```journal
