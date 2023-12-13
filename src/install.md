@@ -141,8 +141,8 @@ And finally please [share any feedback](support.md) so we can make this process 
   <tr valign="top"> <!-- SCOOP (?) -->
     <td>
       <div class="badges">
+        <!-- <img alt="Scoop package" src="https://repology.org/badge/version-for-repo/scoop/hledger.svg" />  gone ? -->
         <a href="https://scoop.sh/#/apps?q=hledger">
-          <!-- <img alt="Scoop package" src="https://repology.org/badge/version-for-repo/scoop/hledger.svg" />  gone ? -->
           <img alt="Scoop package" src="https://img.shields.io/badge/scoop-1.32.1-brightgreen.svg" />
         </a>
       </div>
