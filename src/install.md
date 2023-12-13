@@ -141,8 +141,9 @@ And finally please [share any feedback](support.md) so we can make this process 
   <tr valign="top"> <!-- SCOOP (?) -->
     <td>
       <div class="badges">
-        <a href="https://github.com/ScoopInstaller/Main/blob/master/bucket/hledger.json">
-          <img alt="Scoop package" src="https://repology.org/badge/version-for-repo/scoop/hledger.svg" />
+        <a href="https://scoop.sh/#/apps?q=hledger">
+          <!-- <img alt="Scoop package" src="https://repology.org/badge/version-for-repo/scoop/hledger.svg" />  gone ? -->
+          <img alt="Scoop package" src="https://img.shields.io/badge/scoop-1.32.1-brightgreen.svg" />
         </a>
       </div>
     </td>
@@ -219,6 +220,7 @@ And finally please [share any feedback](support.md) so we can make this process 
   <tr> <!-- GENTOO (ezzie) -->
     <td>
       <div class="badges">
+        <!-- no repology badge for some reason -->
         <a href="https://gentoo.zugaina.org/Search?search=hledger"><img alt="Gentoo" src="https://img.shields.io/badge/Gentoo_package-1.32.1-brightgreen.svg" /></a>
       </div>
     </td>
