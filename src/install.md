@@ -219,7 +219,7 @@ And finally please [share any feedback](support.md) so we can make this process 
   <tr> <!-- GENTOO (ezzie) -->
     <td>
       <div class="badges">
-        <a href="https://gentoo.zugaina.org/Search?search=hledger"><img alt="Gentoo" src="https://img.shields.io/badge/Gentoo_package-1.31-red.svg" /></a>
+        <a href="https://gentoo.zugaina.org/Search?search=hledger"><img alt="Gentoo" src="https://img.shields.io/badge/Gentoo_package-1.31.2-brightgreen.svg" /></a>
       </div>
     </td>
     <td>
