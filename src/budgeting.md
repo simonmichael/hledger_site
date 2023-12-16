@@ -150,3 +150,13 @@ Budget performance in 2019/01:
                                         ||        0 [                 0] 
 ```
 
+
+Envelope budgeting sets the limits on the source side, and a pile of money approaching zero is very intuitive.
+
+Goal budgeting sets the goals (or limits) on the destination side. 
+And we don't usually enforce not going over.
+
+In either system, the numbers we pick can be goals (go at least this far) or limits (don't go beyond this).
+
+You can also mix them: envelope/source limits for some categories, goal/destination thresholds for others.
+-->
