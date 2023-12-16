@@ -19,7 +19,7 @@ See also: [Release notes](release-notes.md)
 ### Robert Nielsen
 
 Discussion of the holiday season and hledger on the hledger fan website: 
-https://hledgerfan.com/the-holiday-season-and-hledger/
+<https://hledgerfan.com/the-holiday-season-and-hledger> 
 
 ### Misc
 
