@@ -7,6 +7,36 @@
 
 See also: [Release notes](release-notes.md)
 
+## This Week In Hledger 2023-12-15
+*Share your hledger/PTA user notes, dev news, achievements or experiences in the hledger matrix chat, every Friday morning (or any time, tagged with "TWIH").*
+
+### sm
+
+- Bugfixing
+- Issue triage, ISSUES > Prioritising doc, dashboard, new issue template updates
+- hledger-web: fix --base-url, drop --file-url, better startup messages, improve tests, code cleanups, manual cleanups, code docs.
+
+### Robert Nielsen
+
+Discussion of the holiday season and hledger on the hledger fan website: 
+https://hledgerfan.com/the-holiday-season-and-hledger/
+
+### Misc
+
+[budget-cli](https://github.com/joshcanhelp/budget-cli) - 
+budget-focussed, CSV-centric, typescript PTA app
+with a good [write-up](https://www.joshcanhelp.com/budget-cli)
+
+### Quotes of the week
+
+*I switched, blissfully, away from Quicken/Quickbook/Xero/all that
+heavy crap to very simple and elegant textfile-based accounting
+(ledger/_hledger_) and it's been the best and most flexible accounting
+experience I've ever had. I finally feel completely in control of my
+companies' books.*
+
+
+
 ## This Week In Hledger 2023-12-08
 
 *Share your hledger/PTA user notes, dev news, achievements or experiences in the hledger matrix chat, every Friday morning (or any time, tagged with "TWIH").*
