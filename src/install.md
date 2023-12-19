@@ -79,6 +79,11 @@ And finally please [share any feedback](support.md) so we can make this process 
 
 ## Binary packages
 
+<!--
+All tracked by repology:
+<a style="" href="https://repology.org/project/hledger/versions"><img src="https://repology.org/badge/vertical-allrepos/hledger.svg" alt="Packaging status"></a>
+-->
+
 ### Mac
 
 <table class="mac downloads">
