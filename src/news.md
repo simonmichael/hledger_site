@@ -7,8 +7,10 @@
 
 See also: [Release notes](release-notes.md)
 
+*Share your hledger/PTA user notes, dev news, achievements or experiences 
+in the [hledger matrix chat](support.md), every Friday morning (or any time, tagged with #ThisWeekInHledger).*
+
 ## This Week In Hledger 2023-12-22
-*Share your hledger/PTA user notes, dev news, achievements or experiences in the hledger matrix chat, every Friday morning (or any time, tagged with #ThisWeekInHledger).*
 
 ### sm
 
