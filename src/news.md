@@ -7,6 +7,37 @@
 
 See also: [Release notes](release-notes.md)
 
+## This Week In Hledger 2023-12-22
+*Share your hledger/PTA user notes, dev news, achievements or experiences in the hledger matrix chat, every Friday morning (or any time, tagged with #ThisWeekInHledger).*
+
+### sm
+
+This week I worked more on consolidating project scripts, porting make rules to just.
+Also participated in timeclock discussions, did some research and brainstormed next steps.
+
+### nobodyinperson
+
+I published annextimelog v0.3.1, a git-annex based time tracker (alpha quality, bare minimum functionality),
+which can export its data to hledger-readable timeclock.
+
+<https://pypi.org/project/annextimelog>
+
+### Robert Nielsen
+
+On the hledger fan website I look at using desc as a timesaver, and why this matters: <https://hledgerfan.com/a-better-description>
+
+### Misc
+
+ShrykeWindgrace's PR upgrading hledger-ui to the new brick and vty libs has landed;
+hledger-ui now runs natively on Microsoft Windows.
+
+### Quotes of the week
+
+I’ve been using hledger for a few years. ... Every service lets you download historical data as CSV, 
+which can be imported by _hledger_ and turned into journal files and then into visual reports. ...
+It’s a bespoke setup and super nerdy and is a bit of a pain, but it’s literally the only solution that works for us.
+
+
 ## This Week In Hledger 2023-12-15
 *Share your hledger/PTA user notes, dev news, achievements or experiences in the hledger matrix chat, every Friday morning (or any time, tagged with "TWIH").*
 
