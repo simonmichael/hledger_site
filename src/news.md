@@ -33,9 +33,9 @@ hledger-ui now runs natively on Microsoft Windows.
 
 ### Quotes of the week
 
-I’ve been using hledger for a few years. ... Every service lets you download historical data as CSV, 
+*I’ve been using hledger for a few years. ... Every service lets you download historical data as CSV, 
 which can be imported by _hledger_ and turned into journal files and then into visual reports. ...
-It’s a bespoke setup and super nerdy and is a bit of a pain, but it’s literally the only solution that works for us.
+It’s a bespoke setup and super nerdy and is a bit of a pain, but it’s literally the only solution that works for us.*
 
 
 ## This Week In Hledger 2023-12-15
