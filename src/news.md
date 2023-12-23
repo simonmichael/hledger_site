@@ -37,6 +37,7 @@ hledger-ui now runs natively on Microsoft Windows.
 which can be imported by _hledger_ and turned into journal files and then into visual reports. ...
 It’s a bespoke setup and super nerdy and is a bit of a pain, but it’s literally the only solution that works for us.*
 
+---
 
 ## This Week In Hledger 2023-12-15
 *Share your hledger/PTA user notes, dev news, achievements or experiences in the hledger matrix chat, every Friday morning (or any time, tagged with "TWIH").*
@@ -66,7 +67,7 @@ heavy crap to very simple and elegant textfile-based accounting
 experience I've ever had. I finally feel completely in control of my
 companies' books.*
 
-
+---
 
 ## This Week In Hledger 2023-12-08
 
@@ -97,6 +98,8 @@ started) and I think hledger and the whole universe of plain text
 accounting software is super cool. Just a lovely evolution of the
 method. Thanks for making it so welcoming and accessible*
 
+
+---
 
 ## This Week In Hledger 2023-12-01
 
@@ -139,6 +142,8 @@ Two things in this week's hledger fan blog. First, for beginners, some notes on 
 
 *once again, I was deeply impressed by how _useful_ hledger is, and how thoughtful it is.*
 
+
+---
 
 ## This Week In Hledger 2023-11-24
 *Share your hledger/PTA user notes, dev news, achievements or experiences 
@@ -196,6 +201,8 @@ over everything and confidence that everything is alright and so on.
 Just looking at some graphs can make you feel really good - in terms
 of "I know whats happening", not necessarily in "all is well",
 depending on those actual numbers! 😆* --someone using Beancount
+
+---
 
 ## This Week In Hledger 2023-11-17
 
@@ -280,6 +287,8 @@ and am annoyed if the order of columns makes this weird*
 
 
 
+---
+
 ## This Week In Hledger 2023-11-10
 
 It's time for This Week In Hledger!
@@ -347,6 +356,8 @@ about every possible part of an hledger transaction:
 
 
 
+---
+
 ## This Week In Hledger 2023-11-03
 
 ### sm
@@ -369,6 +380,8 @@ and all the related yaks which keep showing up.
 - Beginner's corner: What are the parts of a basic hledger transaction? Two resources for learners:
   https://hledgerfan.com/beginners-corner-a-basic-hledger-transaction
 
+
+---
 
 ## This Week In Hledger 2023-10-27
 
@@ -429,6 +442,8 @@ and all the related yaks which keep showing up.
 
 
 
+---
+
 ## This Week In Hledger 2023-10-20
 
 G'day @room. It's time for This Week In Hledger ! 
@@ -465,6 +480,8 @@ Changes merged this week include:
 
 <https://hledgerfan.com/a-not-so-capital-idea-for-saving-time/> describes a timesaving tip for command line users. Specifically, when typing one of your account names, hledger "forgives" you if you don't match the capitalization of an account name.
 
+
+---
 
 ## This Week In Hledger 2023-10-13
 
