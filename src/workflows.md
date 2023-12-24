@@ -129,6 +129,9 @@ Some downloading helpers can be found at
 ### hledgermatic
 - Simon's [hledgermatic](hledgermatic.md) setup (2023)
 
+### SM's time & task dashboard
+- [SM's time & task dashboard](time-and-task-dashboard.md) (2023)
+
 ### hledger-flow
 - Andreas Pauley's hledger-flow workflow (tutorial & slideshow):\
   <https://github.com/apauley/hledger-flow>

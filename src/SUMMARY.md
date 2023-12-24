@@ -83,6 +83,7 @@
 - [Scripts and add-ons](scripts.md)
 - [Scripting hledger](scripting.md)
 - [Simon's setup notes](simons-setup.md)
+- [SM's time & task dashboard](time-and-task-dashboard.md)
 - [Sponsor](sponsor.md)
 - [Tags tutorial](tags-tutorial.md)
 - [A tax reporting setup](tax-reporting-setup.md)
