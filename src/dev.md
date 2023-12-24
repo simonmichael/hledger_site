@@ -49,4 +49,4 @@ and symlinked <!-- (or rendered by Shake.hs) --> into the site repo to make them
 - [SHAKE](SHAKE.md)
 - [TESTS](TESTS.md)
 - [VERSIONNUMBERS](VERSIONNUMBERS.md)
-- [WORKFLOWS](WORKFLOWS.md)
+- [DEVWORKFLOWS](DEVWORKFLOWS.md)

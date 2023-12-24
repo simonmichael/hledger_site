@@ -237,4 +237,4 @@ and previewing them when working on docs locally.
 - [TESTS](TESTS.md)
 - [TODO](TODO.md)
 - [VERSIONNUMBERS](VERSIONNUMBERS.md)
-- [WORKFLOWS](WORKFLOWS.md)
+- [DEVWORKFLOWS](DEVWORKFLOWS.md)
