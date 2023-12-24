@@ -119,6 +119,8 @@ hledger.org {
 	#redir /regressions             https://github.com/simonmichael/hledger/issues?q=label:regression!
 
 	# misc moved content and shortcut aliases
+	redir /common-workflows.html /workflows.html
+	redir /WORKFLOWS.html /DEVWORKFLOWS.html
 	redir /FUNDING.html /FINANCE.html
 	redir /README.html /dev-README.html
 	redir /addons.html /scripts.html
