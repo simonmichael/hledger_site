@@ -1,4 +1,4 @@
-# Common workflows
+# Workflows
 
 <div class=pagetoc>
 

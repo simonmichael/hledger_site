@@ -48,7 +48,7 @@
 - [Climate impact](climate-impact.md)
 - [Command line completion](command-line-completion.md)
 - [Common journal entries](common-journal-entries.md)
-- [Common workflows](common-workflows.md)
+- [Workflows](workflows.md)
 - [Cost notation](cost-notation.md)
 - [Create a journal](create-a-journal.md)
 - [Currency conversion](currency-conversion.md)

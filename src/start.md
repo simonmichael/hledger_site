@@ -16,7 +16,7 @@ We have (too many) quick introductions. These assume a little bit of command lin
 - [2 minute quick start](2-minute-quick-start.md)
 - [5 minute quick start](5-minute-quick-start.md)
 - [hledger manual: Common tasks](hledger.md#common-tasks)
-- [Common workflows](common-workflows.md)
+- [Workflows](workflows.md)
 
 ## Tutorials
 

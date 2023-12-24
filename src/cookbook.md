@@ -27,8 +27,7 @@ Check plaintextaccounting.org's and wiki.plaintextaccounting.org's categories.
 
 ### Setups and workflows
 - [Get Started](start.md)
-- [Common workflows](common-workflows.md)
-
+- [Workflows](workflows.md)
 ### Data entry
 - [Create a journal](create-a-journal.md)
 - [How to record journal entries](how-to-record.md)

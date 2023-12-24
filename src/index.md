@@ -360,7 +360,7 @@ $ hledger aregister checking
 ### More examples...
 
 - [Charts and Graphs](charts.md)
-- [Common workflows](common-workflows.md)
+- [Workflows](workflows.md)
 - [HTML reports](report-examples.md#income-statement-2012-01-012014-10-11)
 - [Importing CSV data](import-csv.md)
 - [Interop with other software](cookbook.md#other-software)
