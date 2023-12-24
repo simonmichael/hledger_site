@@ -126,19 +126,16 @@ Some downloading helpers can be found at
 
 ## More advanced workflows
 
-### Simon's old setup
-- [Simon's old setup](simons-setup.md) (2019)
-
 ### hledgermatic
 - Simon's [hledgermatic](hledgermatic.md) setup (2023)
-
-### Full-fledged hledger
-- Dmitry Astapov's Full-fledged Hledger workflow (tutorial):\
-  <https://github.com/adept/full-fledged-hledger>
 
 ### hledger-flow
 - Andreas Pauley's hledger-flow workflow (tutorial & slideshow):\
   <https://github.com/apauley/hledger-flow>
+
+### Full-fledged hledger
+- Dmitry Astapov's Full-fledged Hledger workflow (tutorial):\
+  <https://github.com/adept/full-fledged-hledger>
 
 ### rtrledger
 - rotorkunstkultur's setup for chaotic German freelancers:\
@@ -147,6 +144,9 @@ Some downloading helpers can be found at
 ### barrucadu's setup
 - Michael Walker's personal finance setup:\
   <https://memo.barrucadu.co.uk/personal-finance.html>
+
+### SM's old setup
+- [Simon's old setup](simons-setup.md) (2019-2023)
 
 
 [convert]:           convert-csv-files.md
