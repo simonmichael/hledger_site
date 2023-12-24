@@ -120,7 +120,8 @@ hledger.org {
 
 	# misc moved content and shortcut aliases
 	redir /common-workflows.html /workflows.html
-	redir /WORKFLOWS.html /DEVWORKFLOWS.html
+	# XXX this somehow also redirects /workflows.html ?
+	# redir /WORKFLOWS.html /DEVWORKFLOWS.html
 	redir /FUNDING.html /FINANCE.html
 	redir /README.html /dev-README.html
 	redir /addons.html /scripts.html
