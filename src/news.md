@@ -10,6 +10,47 @@ See also: [Release notes](release-notes.md)
 *Share your hledger/PTA user notes, dev news, achievements or experiences 
 in the [hledger matrix chat](support.md), every Friday morning (or any time, tagged with #ThisWeekInHledger).*
 
+## This Week In Hledger 2023-12-29
+
+**sm:**
+Fixed a tricky csv rule parsing regression [#2134] and a debug logging bug.
+
+Improved the project Justfile, improved docs.
+I also improved and "described" my time and task tracking dashboard;
+see https://hledger.org/time-and-task-dashboard.html .
+(Please accept Mr. Goldberg's excellent diagram until I have time to make my own.)
+
+And the usual support and online chatter.
+
+**Robert Nielsen:**
+TWIH: How -U helped me after making an error after mistakenly entering the wrong transactions:
+https://hledgerfan.com/fixing-my-mistake-after-accidentally-adding-pending-transactions/
+
+
+**Misc:**
+Lots of reddit posts this week, including some hledger-related ones:
+
+- [Is there any plain text accounting software which uses standard debits and credits?](https://www.reddit.com/r/plaintextaccounting/comments/18sbmsx/is_there_any_plain_text_accounting_software_which/)
+- [Is it possible to exclude certain accounts from a report?](https://www.reddit.com/r/plaintextaccounting/comments/18ry6tr/is_it_possible_to_exclude_certain_accounts_from_a/)
+- [Finding an accountant](https://www.reddit.com/r/plaintextaccounting/comments/18qzag2/finding_an_accountant/)
+- [Modelling](https://www.reddit.com/r/plaintextaccounting/comments/18ok68n/modelling/)
+- [Hledger rules file: Multiple postings for Revolut fees](https://www.reddit.com/r/plaintextaccounting/comments/18ju9ji/hledger_rules_file_multiple_postings_for_revolut/)
+- [Help migrating my personal budget system](https://www.reddit.com/r/plaintextaccounting/comments/18g4lmz/help_migrating_my_personal_budget_system/)
+
+And also some lively discussion on the [mail list](https://list.hledger.org),
+including this [proposal](https://groups.google.com/g/hledger/c/aZXoDSQW1xk/m/vV2T_HGDAgAJ) to simplify file opening and closing balances.
+
+**Quotes:**
+*The main thing that made me switch to hledger was the ease of autogenerating transactions into a plain-text format. ...
+GNUCash made recurring transactions easy but made it a lot harder to generate split transactions according to fixed splits that I regularly engage with my friends/family in.
+With hledger I have a system of taking CSVs, classifying transactions using a stack of Python scripts and using them to generate hledger importable files. 
+I go by hand and annotate transactions that my scripts couldn't classify/split, and then I import it into my main hledger file. 
+I store all my inputs and intermediate imports in a git repository along with my main ledger file for auditability and to look at annotations. 
+The ease of automation just can't be beat with PTA but it's definitely harder to use if you don't have a preference for TUI work.
+Ease of writing importers was a huge driving factor when I switched to hledger from GNUCash.*
+
+---
+
 ## This Week In Hledger 2023-12-22
 
 ### sm
