@@ -13,7 +13,7 @@ in the [hledger matrix chat](support.md), every Friday morning (or any time, tag
 ## This Week In Hledger 2023-12-29
 
 **sm:**
-Fixed a tricky csv rule parsing regression [#2134] and a debug logging bug.
+Fixed a tricky csv rule parsing regression [#2134](https://github.com/simonmichael/hledger/issues/2134) and a debug logging bug.
 
 Improved the project Justfile, improved docs.
 I also improved and "described" my time and task tracking dashboard;
