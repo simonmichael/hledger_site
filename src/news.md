@@ -17,14 +17,14 @@ Fixed a tricky csv rule parsing regression [#2134](https://github.com/simonmicha
 
 Improved the project Justfile, improved docs.
 I also improved and "described" my time and task tracking dashboard;
-see https://hledger.org/time-and-task-dashboard.html .
+see <https://hledger.org/time-and-task-dashboard.html>.
 (Please accept Mr. Goldberg's excellent diagram until I have time to make my own.)
 
 And the usual support and online chatter.
 
 **Robert Nielsen:**
 TWIH: How -U helped me after making an error after mistakenly entering the wrong transactions:
-https://hledgerfan.com/fixing-my-mistake-after-accidentally-adding-pending-transactions/
+<https://hledgerfan.com/fixing-my-mistake-after-accidentally-adding-pending-transactions>
 
 
 **Misc:**
