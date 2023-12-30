@@ -1,6 +1,8 @@
 # SM's time & task dashboard
 
-<a href="self-operating-napkin.jpg" class="highslide" onclick="return hs.expand(this, { captionText:'Self-operating Napkin by Rube Goldberg"><img src="self-operating-napkin.jpg" width="100%"></a>
+<a href="self-operating-napkin.jpg" class="highslide" 
+onclick="return hs.expand(this, { captionText:'Rube Goldberg\'s Self-operating Napkin' })"
+><img src="self-operating-napkin.jpg"></a>
 
 <!-- *2023-12-23: sm makes a cool rube goldberg dashboard with HotKey, Hammerspoon, Terminal, emacs, vterm, just, watchexec, hledger, Obsidian and emojis* -->
 
