@@ -10,6 +10,13 @@ See also: [Release notes](release-notes.md)
 *Share your hledger/PTA user notes, dev news, achievements or experiences 
 in the [hledger matrix chat](support.md), every Friday morning (or any time, tagged with #ThisWeekInHledger).*
 
+<!--
+Forgot to mention last week: 
+
+- Did some cleanup on https://plaintextaccounting.org, structure and links should be a little clearer.
+- Spotted a new PTA app: https://github.com/zhang-accounting/zhang 
+-->
+
 ## This Week In Hledger 2023-12-29
 
 **sm:**
@@ -23,7 +30,7 @@ see <https://hledger.org/time-and-task-dashboard.html>.
 And the usual support and online chatter.
 
 **Robert Nielsen:**
-TWIH: How -U helped me after making an error after mistakenly entering the wrong transactions:
+How -U helped me after making an error after mistakenly entering the wrong transactions:
 <https://hledgerfan.com/fixing-my-mistake-after-accidentally-adding-pending-transactions>
 
 
