@@ -52,6 +52,9 @@ div.pagetoc:before {
   background-color:black;
 }
 
+.highslide img {
+  border:none;
+}
 
 pre {
     z-index:-1;
