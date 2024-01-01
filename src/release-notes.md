@@ -72,6 +72,74 @@ Changes in hledger-install.sh are shown
 [here](https://github.com/simonmichael/hledger/commits/master/hledger-install/hledger-install.sh).
 
 
+## 2023-12-31 hledger-1.32.2
+
+### hledger 1.32.2
+
+Fixes
+
+- In CSV field assignments,  %FIELD interpolation and `\n` can be used together again. [#2134]
+
+- In timedot data, numbers beginning with a decimal point are accepted again. [#2130]
+
+- In a `balance --budget` report, `--layout=tall` no longer hides commodity symbols.
+
+- Value reports seeing a pathological price chain with 1000 or more
+  steps now write their warning to the console, not a debug log file.
+
+Improvements
+
+- Allow megaparsec 9.6
+
+Docs
+
+- Updated: 
+  Queries,
+  Periodic transactions,
+  Auto postings,
+  Assertions and costs,
+  Budget report
+
+### hledger-ui 1.32.2
+
+Features
+
+- hledger-ui is now available on Windows (ShrykeWindgrace)
+
+Improvements
+
+- Use Notepad as default editor on Windows (ShrykeWindgrace)
+
+- Allow brick 2.2 (Vekhir)
+
+- Allow megaparsec 9.6
+
+### hledger-web 1.32.2
+
+Fixes
+
+- The `--base-url` option works again. [#2127], [#2100]
+
+- Startup messages are more accurate and informative, eg with `--socket`. [#2127]
+
+- The non-working `--file-url` option has been dropped for now. [#2139]
+
+Improvements
+
+- Allow megaparsec 9.6
+
+- hledger-web's tests now respect and can test command line options.
+
+- hledger-web's tests now run the app at 127.0.0.1 and port 5000,
+  rather than "any of our IPv4 or IPv6 addresses" and 3000.
+
+
+[#2139]: https://github.com/simonmichael/hledger/issues/2139
+[#2134]: https://github.com/simonmichael/hledger/issues/2134
+[#2130]: https://github.com/simonmichael/hledger/issues/2130
+[#2127]: https://github.com/simonmichael/hledger/issues/2127
+[#2100]: https://github.com/simonmichael/hledger/issues/2100
+
 ## 2023-12-07 hledger-1.32.1
 
 ### hledger 1.32.1
