@@ -619,7 +619,7 @@ If you have stack installed, you can run it to install the main hledger tools in
 
 <div class="builder-command">
   stack update <br>
-  stack install --resolver=lts-21 hledger-lib-1.32.2 hledger-1.32.2 hledger-ui-1.32.2 hledger-web-1.32.2 --silent
+  stack install --resolver=lts-22 hledger-lib-1.32.2 hledger-1.32.2 hledger-ui-1.32.2 hledger-web-1.32.2 --silent
 </div>
 
 On Windows, omit hledger-ui from this command (unless you are in [WSL]).
