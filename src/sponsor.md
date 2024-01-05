@@ -106,6 +106,13 @@ and one [social good](https://www.investopedia.com/terms/s/social_good.asp) dona
 
 We thank the following generous sponsors for their support:
 
+<!-- script-generated avatars (requires JS): -->
+
+<script src="https://opencollective.com/hledger/banner.js"></script>
+
+<!-- static HTML avatars, as in README.md: -->
+<!-- 
+
 ### Organisational sponsors
 
 <a href="https://opencollective.com/hledger/organization/0/website"><img src="https://opencollective.com/hledger/organization/0/avatar.svg?avatarHeight=200"></a>
@@ -173,3 +180,4 @@ We thank the following generous sponsors for their support:
 <a href="https://opencollective.com/hledger/individual/39/website"><img src="https://opencollective.com/hledger/individual/39/avatar.svg?avatarHeight=100"></a>
 
 If your logo/avatar needs to be added, [let me know](mailto:webmaster@hledger.org)!
+-->
