@@ -49,10 +49,7 @@ because needs are so diverse.
 
 But you'll find some useful starter scripts in hledger's 
 [examples/invoicing](https://github.com/simonmichael/hledger/tree/master/examples/invoicing)
-directory, such as
-
-- this [makefile](https://github.com/simonmichael/hledger/tree/master/examples/invoicing/makefile)
-- this ['invoice' bash script](https://github.com/simonmichael/hledger/tree/master/examples/invoicing/invoice-script)
+directory.
 
 ## See also
 
