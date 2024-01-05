@@ -106,11 +106,25 @@ and one [social good](https://www.investopedia.com/terms/s/social_good.asp) dona
 
 We thank the following generous sponsors for their support:
 
-<!-- script-generated avatars (requires JS): -->
+<!-- export SVGs: https://docs.opencollective.com/help/collectives/collective-settings/data-export -->
+
+<!-- live script: https://docs.opencollective.com/help/collectives/widgets (requires JS) -->
+<!-- Displays avatars somewhat randomly as big organisation or small individual. All link to OC. -->
+<!-- You can add a style object (react style), e.g.
+<script src='https://opencollective.com/:collectiveSlug/banner.js?style={"a":{"color":"red"},"h2":{"fontFamily":"Verdana","fontWeight":"normal","fontSize":"20px"}}'></script>
+-->
+<!-- By default it uses the default styling of your h1 and h2 on your page. You can target them with CSS to customize:
+<style>
+#opencollective-banner h1 {
+  color: black;
+}
+</style>
+-->
 
 <script src="https://opencollective.com/hledger/banner.js"></script>
 
-<!-- static HTML avatars, as in README.md: -->
+<!-- static HTML images/links: -->
+<!-- Some of these link to OC, some to the sponsor's website, it's not clear why. -->
 <!-- 
 
 ### Organisational sponsors
