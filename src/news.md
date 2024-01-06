@@ -276,7 +276,7 @@ and on minimising diffs in reports, from mail list.
 
 Cookbook: added "Reporting version control stats".
 
-Over at https://plaintextaccounting.org/#articles-blog-posts I started
+Over at <https://plaintextaccounting.org/#articles-blog-posts> I started
 adding blog links for 2021-2023, including ~~10~~ 33 hledger-related posts
 from Robert Nielsen, Jonathan Dowland, Arsen Arsenović, and Zoran Zaric.
 
@@ -289,7 +289,7 @@ months of data from Open Collective.
 **Robert Nielsen:**
 On the theme of the recent Thanksgiving Day, here are three ways you
 can use hledger to be thankful:
-https://hledgerfan.com/using-hledger-for-thanksgiving/.
+<https://hledgerfan.com/using-hledger-for-thanksgiving/>.
 
 **Quotes of the week:**
 Have been taking care of my (new) records for almost two years now
@@ -475,7 +475,7 @@ Seen
 
 **Robert Nielsen:**
 Beginner's corner: What are the parts of a basic hledger transaction? Two resources for learners:
-  https://hledgerfan.com/beginners-corner-a-basic-hledger-transaction
+  <https://hledgerfan.com/beginners-corner-a-basic-hledger-transaction>
 
 
 ---
@@ -571,7 +571,7 @@ Examples
 - justfile: forecast-import: show but don't consume future-dated forecast transactions
 
 **Robert Nielsen:**
-https://hledgerfan.com/a-not-so-capital-idea-for-saving-time/> describes a timesaving tip for command line users. Specifically, when typing one of your account names, hledger "forgives" you if you don't match the capitalization of an account name.
+<https://hledgerfan.com/a-not-so-capital-idea-for-saving-time/> describes a timesaving tip for command line users. Specifically, when typing one of your account names, hledger "forgives" you if you don't match the capitalization of an account name.
 
 
 ---
