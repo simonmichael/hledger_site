@@ -32,8 +32,8 @@ In docs:
 - examples, examples/invoicing: expand READMEs, clarify status
 
 Forgot to mention last week: 
-- Did some cleanup on https://plaintextaccounting.org, structure and links should be a little clearer.
-- Spotted a new PTA app: https://github.com/zhang-accounting/zhang 
+- Did some cleanup on <https://plaintextaccounting.org>, structure and links should be a little clearer.
+- Spotted a new PTA app: <https://github.com/zhang-accounting/zhang>
 
 **Robert Nielsen:**
 TWIH: Because I use Emacs, better Emacs = better hledger. See how Emacs guru Prot helped me:
