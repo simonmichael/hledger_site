@@ -14,7 +14,6 @@ See also: [Release notes](release-notes.md)
 ## This Week In Hledger 2024-01-05
 
 **sm:** 
-
 I released [hledger 1.32.2](release-notes.md#2023-12-31-hledger-1322), which fixes bugs and adds hledger-ui on Windows.
 
 In master I worked on
