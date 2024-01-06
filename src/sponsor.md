@@ -106,7 +106,7 @@ and one [social good](https://www.investopedia.com/terms/s/social_good.asp) dona
 
 We thank you, our generous sponsors, for your support, including:
 
-<!-- export SVGs: https://docs.opencollective.com/help/collectives/collective-settings/data-export -->
+<!-- export SVGs: https://opencollective.com/dashboard/hledger/export -->
 
 <!-- live script: https://docs.opencollective.com/help/collectives/widgets (requires JS) -->
 <!-- Displays avatars somewhat randomly as big organisation or small individual. All link to OC. -->
