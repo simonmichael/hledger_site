@@ -39,7 +39,7 @@ TWIH: Because I use Emacs, better Emacs = better hledger. See how Emacs guru Pro
 <https://hledgerfan.com/better-emacs-better-hledger/>
 
 
-**Misc:**
+**Misc**
 
 - <https://hub.darcs.net/thielema/nedit/browse/hledger.nedit> A configuration for minimal syntax highlighting of HLedger journals in NEdit and XNEdit
 
@@ -60,7 +60,7 @@ TWIH: Because I use Emacs, better Emacs = better hledger. See how Emacs guru Pro
 - [Etymological observations on some accounting terms](https://egrove.olemiss.edu/cgi/viewcontent.cgi?article=1225&context=aah_journal)
 
 
-**Quotes:**
+**Quotes**
 
 - *Plain-text accounting is great. I choose hledger for the accounts of a small side business that doesn't warrant hiring an accountant.*
 
