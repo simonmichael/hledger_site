@@ -63,7 +63,7 @@ and one [social good](https://www.investopedia.com/terms/s/social_good.asp) dona
 - [![liberapay](https://img.shields.io/badge/Sponsor_hledger_via-Liberapay-limegreen "Sponsor the hledger project via Liberapay")](https://liberapay.com/hledger)
   (Fees: ~3%)
 - [![opencollective](https://img.shields.io/badge/Sponsor_hledger_via-Open_Collective-limegreen "Sponsor the hledger project via Liberapay")](https://opencollective.com/hledger#category-CONTRIBUTE)
-  (Fees: ~3% payment processor + 10% [fiscal host](https://www.oscollective.org))
+  (Fees: ~3%/$0.59 payment processor + 10% [fiscal host](https://www.oscollective.org))
 
 ### Sponsor specific tasks
 
@@ -104,7 +104,7 @@ and one [social good](https://www.investopedia.com/terms/s/social_good.asp) dona
 
 ## Sponsors
 
-We thank the following generous sponsors for their support:
+We thank you, our generous sponsors, for your support, including:
 
 <!-- export SVGs: https://docs.opencollective.com/help/collectives/collective-settings/data-export -->
 
@@ -123,12 +123,18 @@ We thank the following generous sponsors for their support:
 
 <script src="https://opencollective.com/hledger/banner.js"></script>
 
+<!--
+<table>
+<tr valign=><th>Gold</th><td><object type="image/svg+xml" data="https://opencollective.com/hledger/tiers/gold.svg?avatarHeight=36&width=600"></object></td></tr>
+<tr valign=><th>Silver</th><td><object type="image/svg+xml" data="https://opencollective.com/hledger/tiers/silver.svg?avatarHeight=36&width=600"></object></td></tr>
+<tr valign=><th>Bronze</th><td><object type="image/svg+xml" data="https://opencollective.com/hledger/tiers/bronze.svg?avatarHeight=36&width=600"></object></td></tr>
+<tr valign=><th>Custom</th><td><object type="image/svg+xml" data="https://opencollective.com/hledger/tiers/custom.svg?avatarHeight=36&width=600"></object></td></tr>
+</table>
+-->
+
+<noscript>
 <!-- static HTML images/links: -->
 <!-- Some of these link to OC, some to the sponsor's website, it's not clear why. -->
-<!-- 
-
-### Organisational sponsors
-
 <a href="https://opencollective.com/hledger/organization/0/website"><img src="https://opencollective.com/hledger/organization/0/avatar.svg?avatarHeight=200"></a>
 <a href="https://opencollective.com/hledger/organization/1/website"><img src="https://opencollective.com/hledger/organization/1/avatar.svg?avatarHeight=200"></a>
 <a href="https://opencollective.com/hledger/organization/2/website"><img src="https://opencollective.com/hledger/organization/2/avatar.svg?avatarHeight=200"></a>
@@ -149,9 +155,7 @@ We thank the following generous sponsors for their support:
 <a href="https://opencollective.com/hledger/organization/17/website"><img src="https://opencollective.com/hledger/organization/17/avatar.svg?avatarHeight=200"></a>
 <a href="https://opencollective.com/hledger/organization/18/website"><img src="https://opencollective.com/hledger/organization/18/avatar.svg?avatarHeight=200"></a>
 <a href="https://opencollective.com/hledger/organization/19/website"><img src="https://opencollective.com/hledger/organization/19/avatar.svg?avatarHeight=200"></a>
-
-### Individual sponsors
-
+<br>
 <a href="https://opencollective.com/hledger/individual/0/website"><img src="https://opencollective.com/hledger/individual/0/avatar.svg?avatarHeight=100"></a>
 <a href="https://opencollective.com/hledger/individual/1/website"><img src="https://opencollective.com/hledger/individual/1/avatar.svg?avatarHeight=100"></a>
 <a href="https://opencollective.com/hledger/individual/2/website"><img src="https://opencollective.com/hledger/individual/2/avatar.svg?avatarHeight=100"></a>
@@ -192,6 +196,6 @@ We thank the following generous sponsors for their support:
 <a href="https://opencollective.com/hledger/individual/37/website"><img src="https://opencollective.com/hledger/individual/37/avatar.svg?avatarHeight=100"></a>
 <a href="https://opencollective.com/hledger/individual/38/website"><img src="https://opencollective.com/hledger/individual/38/avatar.svg?avatarHeight=100"></a>
 <a href="https://opencollective.com/hledger/individual/39/website"><img src="https://opencollective.com/hledger/individual/39/avatar.svg?avatarHeight=100"></a>
+</noscript>
 
-If your logo/avatar needs to be added, [let me know](mailto:webmaster@hledger.org)!
--->
+<!-- (If your logo/avatar isn't appearing here, eg because you didn't use Open Collective, please [let me know](mailto:webmaster@hledger.org).) -->
