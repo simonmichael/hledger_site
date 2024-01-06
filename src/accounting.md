@@ -288,3 +288,4 @@ account.  Eg, buying food.
 - [The Significance of Ancient Mesopotamia in Accounting History](http://www.accountingin.com/accounting-historians-journal/volume-11-number-1/the-significance-of-ancient-mesopotamia-in-accounting-history/)
 - [Mesopotamian Tablet Collection](https://www.spurlock.illinois.edu/collections/notable-collections/profiles/mesopotamian-tablet.html), Spurlock Museum
 - [Ledger Art](https://www.mpm.edu/research-collections/anthropology/online-collections-research/ledger-art-collection)
+- [Etymological observations on some accounting terms](https://egrove.olemiss.edu/cgi/viewcontent.cgi?article=1225&context=aah_journal)
