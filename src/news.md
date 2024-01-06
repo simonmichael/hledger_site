@@ -5,17 +5,77 @@
 <!-- toc -->
 </div>
 
+Share your hledger/PTA user notes, dev news, achievements or experiences in the [hledger matrix chat](support.md),
+every Friday morning or any time, tagged with `TWIH:`.
+
 See also: [Release notes](release-notes.md)
 
-*Share your hledger/PTA user notes, dev news, achievements or experiences 
-in the [hledger matrix chat](support.md), every Friday morning (or any time, tagged with #ThisWeekInHledger).*
 
-<!--
+## This Week In Hledger 2024-01-05
+
+**sm:** 
+
+I released [hledger 1.32.2](release-notes.md#2023-12-31-hledger-1322), which fixes bugs and adds hledger-ui on Windows.
+
+In master I worked on
+- fix check tags to ignore modified, _modified tags automatically [#2148]
+- fix add,import,web: really avoid filenames ending with . on Windows [#1056]
+- improve GHC 9.8 support
+- add --assert and --assign modes to `close`, eg to help try alternate file migration workflows.
+
+In docs:
+- RELEASING: process updates; changelogs are now updated only in release branch
+- REGRESSIONS: split the bounty between finder and fixer
+- sponsors: improve Open Collective tiers, fee info, avatar display
+- add: clarify that `add` does not add a default commodity symbol [#815]
+- auto postings: clarify
+- examples, examples/invoicing: expand READMEs, clarify status
+
 Forgot to mention last week: 
-
 - Did some cleanup on https://plaintextaccounting.org, structure and links should be a little clearer.
 - Spotted a new PTA app: https://github.com/zhang-accounting/zhang 
--->
+
+**Robert Nielsen:**
+TWIH: Because I use Emacs, better Emacs = better hledger. See how Emacs guru Prot helped me:
+<https://hledgerfan.com/better-emacs-better-hledger/>
+
+
+**Misc:**
+
+- <https://hub.darcs.net/thielema/nedit/browse/hledger.nedit> A configuration for minimal syntax highlighting of HLedger journals in NEdit and XNEdit
+
+- <https://blog.emacsen.net/profit-first-plain-text-accounting.html>
+
+- <https://blog.emacsen.net/profit-first-constraints-plain-text-accounting.html>
+
+- <https://www.reddit.com/r/plaintextaccounting/comments/18vvvbk/data_is_wider_than_the_terminal/>
+
+- <https://www.reddit.com/r/plaintextaccounting/comments/18x0t0m/how_to_map_goals_with_investments/>
+
+- <https://www.reddit.com/r/plaintextaccounting/comments/18x5izp/accessing_both_sides_of_an_entry_in_an_automated/>
+
+- <https://www.reddit.com/r/plaintextaccounting/comments/18zgwjo/hledgerui_for_windows_where/>
+
+- <https://www.reddit.com/r/plaintextaccounting/comments/18zxlbn/hledger_year_closing/>
+
+- [Etymological observations on some accounting terms](https://egrove.olemiss.edu/cgi/viewcontent.cgi?article=1225&context=aah_journal)
+
+
+**Quotes:**
+
+- *Plain-text accounting is great. I choose hledger for the accounts of a small side business that doesn't warrant hiring an accountant.*
+
+- *I love hledger and have a few scripts to convert downloaded CSVs from various institutions into the appropriate format and dedupe any overlap if necessary.
+Once a month I download a bunch of statements, run a script and have all of the data available to me.*
+
+
+
+[#2148]: https://github.com/simonmichael/hledger/issues/2148
+[#1056]: https://github.com/simonmichael/hledger/issues/1056
+[#815]: https://github.com/simonmichael/hledger/issues/815
+
+---
+
 
 ## This Week In Hledger 2023-12-29
 
