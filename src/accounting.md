@@ -266,6 +266,8 @@ account.  Eg, buying food.
 
 ### Video
 
+- [Accounting course by Prof. Krug](https://www.youtube.com/playlist?list=PL259DBFA47F3B4761) 2011
+- [Khan Academy: Accounting and financial statements](https://www.khanacademy.org/economics-finance-domain/core-finance/accounting-and-financial-stateme)
 - Tea Leaves' [Double-Entry Bookkeeping](https://www.youtube.com/playlist?list=PLu6SHDdOToSdlAqYhy11hTrkhMc8VfCs3) and [Counting Like It's 1479](https://www.youtube.com/playlist?list=PLu6SHDdOToSe1kXR0t6Bt57vFsmIWo49b) playlists. Warning, these are not in good didactic order, so pick and choose. Eg  :
   - [Double Entry Bookkeeping for Personal Finance](https://www.youtube.com/watch?v=lIGJzQw79hg) - excellent intro
   - [Stock Transactions for Double-Entry Bookkeeping](https://www.youtube.com/watch?v=WRNoabz1WSo)
