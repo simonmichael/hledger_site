@@ -7,6 +7,7 @@
 - [FAQ](faq.md)
 - [Videos/Talks](videos.md)
 - [Install](install.md)
+- [Release notes](release-notes.md)
 - [Get Started](start.md)
 - [hledger manual](1.28/hledger.md)
 - [hledger-ui manual](1.28/hledger-ui.md)
