@@ -20,8 +20,8 @@ I added new `--assert` and `--assign` modes to `close` and clarified a problem w
 I reviewed status and proposed some changes at [Better UX around starting and ending files ? #2151](https://github.com/simonmichael/hledger/issues/2151) -
 please take a look and give your thoughts if you're interested in this.
 
-Also on <https://plaintextaccounting.org> I checked and fixed the remaining broken links;
-and, surveyed and linked all the hledger/PTA videos visible on youtube.
+Over on <https://plaintextaccounting.org> I checked and fixed the remaining broken links;
+and surveyed and linked all the hledger and PTA [videos](https://plaintextaccounting.org/#videos) visible on youtube (they're fun, check them out).
 
 **nobodyinperson:**
 TWIH: I published annextimelog v0.10.1 and it's now in a state I would cautiously call useable for something practical as one can now record, delete and also edit logged time periods.
@@ -33,7 +33,7 @@ atl ls -a project=hledger -O timeclock | hledger -f timeclock:- bal -D
 <https://pypi.org/project/annextimelog>
 
 **Robert Nielsen:**
-Getting ledger-mode to work again!](https://hledgerfan.com/why-i-installed-ledger/)
+[Getting ledger-mode to work again!](https://hledgerfan.com/why-i-installed-ledger/)
 
 **[Matrix chat](https://matrix.hledger.org) topics:**
   CSV rules
