@@ -84,3 +84,9 @@ heading-split-level = 4
 # especially in conjunction with mdbook test to see the Markdown that
 # mdbook is passing to rustdoc.
 
+# https://rust-lang.github.io/mdBook/format/mdbook.html#hiding-code-lines
+# doesn't work
+# [output.html.code.hidelines]
+# bash = "~"
+# [output.html.code]
+# hidelines = { bash = "~" }
