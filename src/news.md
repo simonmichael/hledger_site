@@ -11,6 +11,73 @@ every Friday morning or any time, tagged with `TWIH:`.
 See also: [Release notes](release-notes.md)
 
 
+## This Week In Hledger 2024-01-12
+
+**sm:**
+This week I worked mostly on support and thinking/writing about improvements to `close` and the new file/periodic files workflow.
+I introduced some new terminology to distinguish *starting/ending files* vs *opening/closing accounts*, which are unrelated events.
+I added new `--assert` and `--assign` modes to `close` and clarified a problem with using balance assignments for starting balances.
+I reviewed status and proposed some changes at [Better UX around starting and ending files ? #2151](https://github.com/simonmichael/hledger/issues/2151) -
+please take a look and give your thoughts if you're interested in this.
+
+Also on <https://plaintextaccounting.org> I checked and fixed the remaining broken links;
+and, surveyed and linked all the hledger/PTA videos visible on youtube.
+
+**nobodyinperson:**
+TWIH: I published annextimelog v0.10.1 and it's now in a state I would cautiously call useable for something practical as one can now record, delete and also edit logged time periods.
+It's a cli git-annex based time tracker focusing on conflict-free syncing between devices and flexible tagging. 
+It has timeclock output so can be piped into hledger, e.g.
+```
+atl ls -a project=hledger -O timeclock | hledger -f timeclock:- bal -D
+```
+<https://pypi.org/project/annextimelog>
+
+**Robert Nielsen:**
+Getting ledger-mode to work again!](https://hledgerfan.com/why-i-installed-ledger/)
+
+**[Matrix chat](https://matrix.hledger.org) topics:**
+  CSV rules
+, Downloading, workflows
+, MCC codes
+, PTA videos
+, PTA site link checking
+, nix
+, just
+, cost basis
+, emacs & VS code
+, annextimelog
+, reporting
+, SM's time and tasks dashboard
+
+**[Mail list](https://list.hledger.org):**
+- how far in advance should I put anticipated expenses in liabilities:accountspayable ?
+- Better UX around starting and ending files ?
+- a single, cumulative journal, or annual journal files ?
+
+**[Reddit](https://www.reddit.com/r/plaintextaccounting/new/):**
+- [hledger] Year Closing
+- How to handle currency exchange via different accounts?
+- Regexp in rules file
+
+**[Mastodon](https://fosstodon.org/search):**
+- Shared expenses bookkeeping
+- just
+- flycheck-hledger
+- importing from your forecast
+
+**Open Source Collective**, our fiscal host for project funds on Open Collective, may reduce transaction fees:
+*between 15th January and 15th April, you'll see a platform tip request on every new contribution on projects hosted by Open Source Collective.
+If the trial is a success Open Source Collective will lower our fee on contributions through opencollective.com, making donations more cost-effective for our Collectives.*
+
+**Quotes**
+
+- *each time I get the TWIH ping I get reminded to use hledger again :D But it only shows me how bad I am at managing my money 🙈😬😅*
+
+- *hledger is so awesome. I just had to do my entire accounting for the last 1½yrs (because I'm a lazy slob) and thanks to hledger's rule files, it took just one evening.*
+
+---
+
+
 ## This Week In Hledger 2024-01-05
 
 **sm:** 
