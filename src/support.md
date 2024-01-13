@@ -37,6 +37,16 @@
     </td>
   </tr>
   <tr valign=top>
+    <td>Issue tracker</td>
+    <td>
+      <a href="http://bugs.hledger.org">bugs.hledger.org</a> (bugs only)<br>
+      <a href="http://issues.hledger.org">issues.hledger.org</a> (all issues)<br>
+      <a href="ISSUES.html">open issues by category</a><br>
+      <a href="https://github.com/simonmichael/hledger_site/issues?utf8=%E2%9C%93&amp;q=">website issues</a>
+      <p>
+    </td>
+  </tr>
+  <tr valign=top>
     <td>Reddit</td>
     <td>
       <a href="https://www.reddit.com/r/plaintextaccounting/">/r/plaintextaccounting</a>
@@ -59,10 +69,10 @@
     </td>
   </tr>
   <tr valign=top>
-    <td>Twitter</td>
+    <td>Youtube</td>
     <td>
-      <a href="https://twitter.com/search?q=%23hledger&amp;src=typed_query&amp;f=live">#hledger</a> and
-      <a href="https://twitter.com/search?q=%23plaintextaccounting&amp;src=typed_query&amp;f=live">#plaintextaccounting</a>
+      <a href="https://www.youtube.com/results?search_query=hledger&sp=CAI%253D">videos</a>
+      (or <a href="https://plaintextaccounting.org/#videos">plaintextaccounting.org's list</a>)
       <p>
     </td>
   </tr>
@@ -74,12 +84,10 @@
     </td>
   </tr>
   <tr valign=top>
-    <td>Issues</td>
+    <td>Twitter</td>
     <td>
-      <a href="http://bugs.hledger.org">bugs.hledger.org</a> (bugs only)<br>
-      <a href="http://issues.hledger.org">issues.hledger.org</a> (all issues)<br>
-      <a href="ISSUES.html">open issues by category</a><br>
-      <a href="https://github.com/simonmichael/hledger_site/issues?utf8=%E2%9C%93&amp;q=">website issues</a>
+      <a href="https://twitter.com/search?q=%23hledger&amp;src=typed_query&amp;f=live">#hledger</a> and
+      <a href="https://twitter.com/search?q=%23plaintextaccounting&amp;src=typed_query&amp;f=live">#plaintextaccounting</a>
       <p>
     </td>
   </tr>
