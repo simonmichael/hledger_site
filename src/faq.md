@@ -100,7 +100,7 @@ and will usually evolve as your needs change.
 Currently hledger does have any built-in default chart of accounts.
 You can start small: name just the accounts you need, as you need them.
 Or, copy a chart of accounts that seems suitable, from other accounting software or from the web.
-Some examples can be found at https://plaintextaccounting.org/Choosing-accounts .
+Some examples can be found at <https://plaintextaccounting.org/Choosing-accounts>.
 
 ### What can hledger do for me ?
 
