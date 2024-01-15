@@ -93,13 +93,14 @@ No. A good text editor can be a very efficient way to work on your data, but the
 - use a phone-based data entry app like MoLe
 - import CSV data, avoiding manual data entry.
 
-### What account names do I use? Why isn't a default list provided ?
+### What is a good set of account names to start with ?
 
-Any standard set of account names you're familiar with. Feel free to copy list from any other software. A default list is a good idea, but right now we don't really provide one because
-
-- hledger aims to be useful for many needs and in many languages, so a single list won't do
-- we are not that large and organised yet
-- no-one has stepped up and worked on it.
+The chart of accounts (list or tree of account names) will vary according to your language and your accounting situation,
+and will usually evolve as your needs change.
+Currently hledger does have any built-in default chart of accounts.
+You can start small: name just the accounts you need, as you need them.
+Or, copy a chart of accounts that seems suitable, from other accounting software or from the web.
+Some examples can be found at https://plaintextaccounting.org/Choosing-accounts .
 
 ### What can hledger do for me ?
 
