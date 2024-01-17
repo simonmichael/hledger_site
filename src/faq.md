@@ -229,6 +229,10 @@ Also:
 
 See [hledger manual > Setting LEDGER_FILE](hledger.md#setting-ledger_file).
 
+### How should I organise files ?
+
+See <https://plaintextaccounting.org/Getting-started-FAQ#how-to-organise-files>
+
 ### Why does this entry give a "no amount" error even though I wrote an amount ?
 
 ```journal
