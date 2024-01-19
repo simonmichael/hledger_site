@@ -3671,7 +3671,7 @@ When an if block has multiple matchers, they are combined as follows:
 -   By default they are OR\'d (any one of them can match)
 -   When a matcher is preceded by ampersand (`&`) it will be AND\'ed
     with the previous matcher (both of them must match)
--   When a matcher is preceded by an exclamation mark (`!`), the matcher
+-   *Added in 1.32* When a matcher is preceded by an exclamation mark (`!`), the matcher
     is negated (it may not match).
 
 [Currently](https://github.com/simonmichael/hledger/pull/2088#issuecomment-1844200398)
@@ -3679,6 +3679,8 @@ there is a limitation: you can\'t use both `&` and `!` on the same line
 (you can\'t AND a negated matcher).
 
 #### Match groups
+
+*Added in 1.32*
 
 Matchers can define match groups: parenthesised portions of the regular
 expression which are available for reference in field assignments.
@@ -4627,7 +4629,7 @@ After the date line are zero or more time postings, consisting of:
         These are the dots in \"timedot\". Spaces are ignored and can be
         used for grouping/alignment.
 
-    -   one or more letters. These are like dots but they also generate
+    -   *Added in 1.32* one or more letters. These are like dots but they also generate
         a tag `t:` (short for \"type\") with the letter as its value,
         and a separate posting for each of the values. This provides a
         second dimension of categorisation, viewable in reports with
@@ -6612,7 +6614,7 @@ ensure perfect alignment, at the cost of more time and memory, use the
 This command also supports the [output
 destination](hledger.html#output-destination) and [output
 format](hledger.html#output-format) options. The output formats
-supported are `txt`, `csv`, `tsv`, and `json`.
+supported are `txt`, `csv`, `tsv` (*Added in 1.32*), and `json`.
 
 #### aregister and posting dates
 
@@ -6711,7 +6713,7 @@ higher-level commands as well.
 
 This command supports the [output destination](#output-destination) and
 [output format](#output-format) options, with output formats `txt`,
-`csv`, `tsv`, `json`, and (multi-period reports only:) `html`. In `txt`
+`csv`, `tsv` (*Added in 1.32*), `json`, and (multi-period reports only:) `html`. In `txt`
 output in a colour-supporting terminal, negative amounts are shown in
 red.
 
@@ -7727,7 +7729,7 @@ detection, and liabilities displayed with their sign flipped.
 This command also supports the [output
 destination](hledger.html#output-destination) and [output
 format](hledger.html#output-format) options The output formats supported
-are `txt`, `csv`, `tsv`, `html`, and (experimental) `json`.
+are `txt`, `csv`, `tsv` (*Added in 1.32*), `html`, and (experimental) `json`.
 
 ### balancesheetequity
 
@@ -7783,7 +7785,7 @@ detection, and liabilities/equity displayed with their sign flipped.
 This command also supports the [output
 destination](hledger.html#output-destination) and [output
 format](hledger.html#output-format) options The output formats supported
-are `txt`, `csv`, `tsv`, `html`, and (experimental) `json`.
+are `txt`, `csv`, `tsv` (*Added in 1.32*), `html`, and (experimental) `json`.
 
 ### cashflow
 
@@ -7838,7 +7840,7 @@ with smarter account detection.
 This command also supports the [output
 destination](hledger.html#output-destination) and [output
 format](hledger.html#output-format) options The output formats supported
-are `txt`, `csv`, `tsv`, `html`, and (experimental) `json`.
+are `txt`, `csv`, `tsv` (*Added in 1.32*), `html`, and (experimental) `json`.
 
 ### check
 
@@ -8483,7 +8485,7 @@ detection, and revenues/income displayed with their sign flipped.
 This command also supports the [output
 destination](hledger.html#output-destination) and [output
 format](hledger.html#output-format) options The output formats supported
-are `txt`, `csv`, `tsv`, `html`, and (experimental) `json`.
+are `txt`, `csv`, `tsv` (*Added in 1.32*), `html`, and (experimental) `json`.
 
 ### notes
 
@@ -8600,7 +8602,7 @@ style](#commodity-display-styles): their symbol placement, decimal mark,
 and digit group marks will be made consistent. By default, decimal
 digits are shown as they are written in the journal.
 
-With the `--round` option, `print` will try increasingly hard to display
+With the `--round` (*Added in 1.32*) option, `print` will try increasingly hard to display
 decimal digits according to the [commodity display
 styles](#commodity-display-style):
 
@@ -8662,7 +8664,7 @@ shown and the program exit code will be non-zero.
 This command also supports the [output
 destination](hledger.html#output-destination) and [output
 format](hledger.html#output-format) options The output formats supported
-are `txt`, `beancount`, `csv`, `tsv`, `json` and `sql`.
+are `txt`, `beancount` (*Added in 1.32*), `csv`, `tsv` (*Added in 1.32*), `json` and `sql`.
 
 *Experimental:* The `beancount` format tries to produce
 Beancount-compatible output, as follows:
@@ -8862,7 +8864,7 @@ $ hledger reg -w $COLUMNS,40      # use terminal width, & description width 40
 This command also supports the [output
 destination](hledger.html#output-destination) and [output
 format](hledger.html#output-format) options The output formats supported
-are `txt`, `csv`, `tsv`, and (experimental) `json`.
+are `txt`, `csv`, `tsv` (*Added in 1.32*), and (experimental) `json`.
 
 ### rewrite
 
