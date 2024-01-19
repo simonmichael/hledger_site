@@ -52,7 +52,7 @@ Don't hesitate to join the [Discussion/Support](support.md) chat and ask questio
 [![GitHub downloads](https://img.shields.io/github/downloads/simonmichael/hledger/total?label=Github+downloads)](https://github.com/simonmichael/hledger/releases)
 [![GitHub downloads, latest](https://img.shields.io/github/downloads/simonmichael/hledger/latest/total?label=Github+downloads,+latest)](https://github.com/simonmichael/hledger/releases/latest)
 [![Hackage](https://img.shields.io/hackage/v/hledger.svg?logo=Haskell&label=Hackage&colorB=brightgreen)](https://hackage.haskell.org/package/hledger)
-[![Stackage](https://repology.org/badge/version-for-repo/stackage_nighly/hledger.svg?header=Stackage)](https://www.stackage.org/nightly/package/hledger)
+[![Stackage](https://repology.org/badge/version-for-repo/stackage_lts/hledger.svg?header=Stackage)](https://www.stackage.org/lts/package/hledger)
 \
 [![CI binaries-linux-x64-static](https://github.com/simonmichael/hledger/workflows/binaries-linux-x64-static/badge.svg?branch=binaries)](https://github.com/simonmichael/hledger/actions/workflows/binaries-linux-x64-static.yml)
 [![CI binaries-mac-x64](https://github.com/simonmichael/hledger/workflows/binaries-mac-x64/badge.svg?branch=binaries)](https://github.com/simonmichael/hledger/actions/workflows/binaries-mac-x64.yml)
