@@ -15,12 +15,12 @@
   <tr valign=top>
     <td>Chat rooms</td>
     <td>
-      The <a href="http://matrix.hledger.org">#hledger chat room on Matrix</a> is the best place for quick help and feedback.
+      The <a href="https://matrix.hledger.org">#hledger chat room on Matrix</a> is the best place for quick help and feedback.
       Follow the link and choose a Matrix client (eg the web, desktop or mobile versions of Element are good).
       There's also a general <a href="https://matrix.to/#/#plaintextaccounting:matrix.org">#plaintextaccounting room</a>.
       <p>
       <!-- (<a href="https://view.matrix.org/room/ !GYlETOAdUBSCcvnEMY:matrix.org">Public chat log</a>) <br> -->
-      Or, you can join the <a href="http://irc.hledger.org">#hledger chat on Libera IRC</a> (older, less features).
+      Or, you can join the <a href="https://irc.hledger.org">#hledger chat on Libera IRC</a> (older, less features).
       To speak, you might need to <a href="https://libera.chat/guides/registration">register</a>.
       There's also <a href="https://web.libera.chat/#plaintextaccounting">#plaintextaccounting on Libera</a>.
       <p>
@@ -30,7 +30,7 @@
     <td>Mail list</td>
     <td>
       The hledger mail list; low traffic with about 200 subscribers.<br>
-      Read: <a href="http://list.hledger.org">list.hledger.org</a><br>
+      Read: <a href="https://list.hledger.org">list.hledger.org</a><br>
       Join: <a href="mailto:hledger+subscribe@googlegroups.com">hledger+subscribe@googlegroups.com</a><br>
       Send: <a href="mailto:hledger@googlegroups.com">hledger@googlegroups.com</a><br>
       <p>
@@ -39,8 +39,8 @@
   <tr valign=top>
     <td>Issue tracker</td>
     <td>
-      <a href="http://bugs.hledger.org">bugs.hledger.org</a> (bugs only)<br>
-      <a href="http://issues.hledger.org">issues.hledger.org</a> (all issues)<br>
+      <a href="https://bugs.hledger.org">bugs.hledger.org</a> (bugs only)<br>
+      <a href="https://issues.hledger.org">issues.hledger.org</a> (all issues)<br>
       <a href="ISSUES.html">open issues by category</a><br>
       <a href="https://github.com/simonmichael/hledger_site/issues?utf8=%E2%9C%93&amp;q=">website issues</a>
       <p>

@@ -21,6 +21,7 @@ Fast, friendly, robust<br> <a href="https://plaintextaccounting.org">plain text 
 </div>
 
 ## hledger is...
+
 - free GPL-licensed accounting software that runs on unix, mac, windows, and the web
 - based on readable, version-controllable, future-proof plain text files
 - good for tracking money, investments, time, or any countable commodity
@@ -28,7 +29,7 @@ Fast, friendly, robust<br> <a href="https://plaintextaccounting.org">plain text 
 - shipped with [web](web.md), [terminal](ui.md), [command line](basics.md), [JSON](hledger-web.md#json-api) and [Haskell](https://hackage.haskell.org/package/hledger-lib) interfaces
 - the most user friendly [plain text accounting app](https://plaintextaccounting.org)
 - comparable to [Ledger](ledger.md) and [Beancount](beancount.md)
-- built with the powerful [Haskell language](https://haskell.org)
+- built with the powerful [Haskell language](https://www.haskell.org/)
 - fast, lightweight, reliable (we pay $50 for [regression reports or fixes](REGRESSIONS.md))
 - free from vendor lock-in
 - local, not cloud-based; your private financial data remains under your control
@@ -39,7 +40,7 @@ Fast, friendly, robust<br> <a href="https://plaintextaccounting.org">plain text 
   [version control](https://betterexplained.com/articles/a-visual-guide-to-version-control/) 
   is helpful, but not required (much)
 - good at importing CSV from banks and other financial institutions
-- actively developed and supported by [Simon Michael](http://joyful.com) and [contributors](CREDITS.md) since 2007
+- actively developed and supported by [Simon Michael](https://joyful.com) and [contributors](CREDITS.md) since 2007
 - strengthened by your [feedback](support.md), [work](CONTRIBUTING.md) and [funding](sponsor.md). 🙏🏻\
 
 <img id="coins" src="images/coins2-248.png" style="width:25%; margin:1em 1em; float:right;" />
@@ -50,7 +51,7 @@ Don't hesitate to join the [Discussion/Support](support.md) chat and ask questio
 [![Github repo](https://img.shields.io/github/stars/simonmichael/hledger.svg?logo=GitHub&label=Github&color=brightgreen)](https://github.com/simonmichael/hledger)
 [![GitHub downloads](https://img.shields.io/github/downloads/simonmichael/hledger/total?label=Github+downloads)](https://github.com/simonmichael/hledger/releases)
 [![GitHub downloads, latest](https://img.shields.io/github/downloads/simonmichael/hledger/latest/total?label=Github+downloads,+latest)](https://github.com/simonmichael/hledger/releases/latest)
-[![Hackage](https://img.shields.io/hackage/v/hledger.svg?logo=Haskell&label=Hackage&colorB=brightgreen)](http://hackage.haskell.org/package/hledger)
+[![Hackage](https://img.shields.io/hackage/v/hledger.svg?logo=Haskell&label=Hackage&colorB=brightgreen)](https://hackage.haskell.org/package/hledger)
 [![Stackage](https://repology.org/badge/version-for-repo/stackage_nighly/hledger.svg?header=Stackage)](https://www.stackage.org/nightly/package/hledger)
 \
 [![CI binaries-linux-x64-static](https://github.com/simonmichael/hledger/workflows/binaries-linux-x64-static/badge.svg?branch=binaries)](https://github.com/simonmichael/hledger/actions/workflows/binaries-linux-x64-static.yml)
@@ -368,8 +369,8 @@ $ hledger aregister checking
 - [Scripts](scripts.md) and [Scripting](scripting.md)
 - [Track investments (2017)](track-investments.md) and [Track investments (2020)](investments.md)
 <!-- -->
-- The full hledger [Cookbook](cookbook.md)
-- [wiki.plaintextaccounting.org](https://wiki.plaintextaccounting.org)
+- hledger [Cookbook](cookbook.md)
+- [PTA Cookbook](https://plaintextaccounting.org/Cookbook)
 
 ## See also
 
