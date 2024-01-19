@@ -25,7 +25,7 @@ Fast, friendly, robust<br> <a href="https://plaintextaccounting.org">plain text 
 - based on readable, version-controllable, future-proof plain text files
 - good for tracking money, investments, time, or any countable commodity
 - good for learning  more about [double entry accounting](accounting.md)
-- shipped with [web](web.md), [terminal](ui.md), [command line](basics.md), [JSON](https://hledger.org/hledger-web.md#json-api) and [Haskell](https://hackage.haskell.org/package/hledger-lib) interfaces
+- shipped with [web](web.md), [terminal](ui.md), [command line](basics.md), [JSON](hledger-web.md#json-api) and [Haskell](https://hackage.haskell.org/package/hledger-lib) interfaces
 - the most user friendly [plain text accounting app](https://plaintextaccounting.org)
 - comparable to [Ledger](ledger.md) and [Beancount](beancount.md)
 - built with the powerful [Haskell language](https://haskell.org)
