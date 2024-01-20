@@ -11,6 +11,38 @@ every Friday morning or any time, tagged with `TWIH:`.
 See also: [Release notes](release-notes.md)
 
 
+## This Week In Hledger 2024-01-19
+
+**sm**
+I updated issue tracker labels and ISSUES and REGRESSIONS pages. On plaintextaccounting.org, I added tables of contents on all pages, tightened bullet lists, ran a link checker and fixed broken links, consolidated to a single more prominent PTA FAQ, and wrote a new "How to organise files" answer.
+
+**Robert Nielsen**
+After much procrastination, I finally do the actual changes I had planned for my hledger data. Sed was the tool of choice, and you can read about it at <https://hledgerfan.com/first-step-in-closing-out-2023>.
+
+**[Matrix chat](https://matrix.hledger.org)**
+docs, csv rules, reports, nix, flycheck-hledger error regions, lot tracking, paycheck entries, annextimelog, tags, paypal, invoicing entries, matrix clients, balance assertions, pivoting, file organisation, receivables, account types
+
+**[Mastodon](https://fosstodon.org/search)**
+4-year regressions stats
+
+**[Reddit](https://www.reddit.com/r/plaintextaccounting/new/)**
+- Tracking an asset like stocks and their growth
+- Protecting financial data with PTA
+- hledger-flow year specific rules file
+- hledger: import from source with different decimal marks
+- Any scripts/documented methods for importing nYNAB (web) data into PTA?
+
+**Misc**
+hamess has annotated the new features in version 1.32's manuals.
+
+**Quotes**
+
+*Whoa this is amazing. And really easy!*
+
+*I love hledger and have a few scripts to convert downloaded CSVs from various institutions into the appropriate format and dedupe any overlap if necessary. Once a month I download a bunch of statements, run a script and have all of the data available to me.*
+
+---
+
 ## This Week In Hledger 2024-01-12
 
 **sm:**
