@@ -410,7 +410,7 @@ issues.hledger.org {
 }
 bugs.hledger.org {
 	# all bugs
-	redir / "https://github.com/simonmichael/hledger/issues?q=is:issue+label:\"A-BUG\""
+	redir / "https://github.com/simonmichael/hledger/issues?q=is:issue+label:A-BUG"
 	# all regression bugs
 	redir /regressions https://github.com/simonmichael/hledger/issues?q=label:regression
 	# new bug form
@@ -424,7 +424,7 @@ bugs.hledger.org {
 # }
 # open wishlist issues
 wishes.hledger.org {
-	redir "https://github.com/simonmichael/hledger/issues?q=is:issue+is:open+label:\"A-WISH\""
+	redir "https://github.com/simonmichael/hledger/issues?q=is:issue+is:open+label:A-WISH"
 }
 # open pull requests
 prs.hledger.org {
