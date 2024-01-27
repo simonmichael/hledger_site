@@ -11,6 +11,43 @@ every Friday morning or any time, tagged with `TWIH:`.
 See also: [Release notes](release-notes.md)
 
 
+## This Week In Hledger 2024-01-26
+
+**sm:**
+Heavy work on 
+
+- 2151 `close` design/docs/features
+- 2150 a balance assertions regression
+- 2153 a performance regression that has been with us since 1.29
+
+And benchmarking generally. You can read some interesting new performance findings
+and help to verify or correct them at https://github.com/simonmichael/hledger/issues/2153.
+
+**Robert Nielsen**
+[Creating phony hledger transactions](https://hledgerfan.com/creating-phony-hledger-transactions/)
+
+**[Matrix chat](https://matrix.hledger.org) topics:**
+All the usual support topics (csv rules! reporting! journal entries!) and packaging - close - files layout - equity - Haskell learning resources - performance
+
+**[Mail list](https://list.hledger.org):**
+Breaking changes in hledger's Haskell API and JSON API/output, coming in 1.33.
+
+**[Reddit](https://www.reddit.com/r/plaintextaccounting/new/):**
+Nothing hledgerish this week, but check out:
+- Gainstrack - a more accessible plaintextaccounting for personal networth tracking.
+
+**[Mastodon](https://fosstodon.org/search):**
+Crickets.
+
+**Quotes**
+
+- *hledger has a decent front-end web UI, it runs as a local server on your machine by default.  The filter and searching on this view is quite good, and visualization is decent.*
+
+- *With version control and deterministic reports, you can be late, slow, make mistakes, but still keep moving incrementally towards accuracy and clarity.*
+
+---
+
+
 ## This Week In Hledger 2024-01-19
 
 **sm**
