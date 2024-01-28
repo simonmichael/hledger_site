@@ -71,6 +71,48 @@ Major releases and user-visible changes, collected from the changelogs (
 Changes in hledger-install.sh are shown
 [here](https://github.com/simonmichael/hledger/commits/master/hledger-install/hledger-install.sh).
 
+## 2024-01-28 hledger-1.32.3
+
+### hledger 1.32.3
+
+Fixes
+
+- A performance slowdown since 1.29, especially noticeable with many
+  accounts and transactions, has been fixed. [#2153]
+
+- Balance assertions involving mixed-cost balances are checked correctly again
+  (a regression in 1.30). [#2150]
+
+- import --catchup works again (a regression in 1.32). [#2156]
+
+- --anon is now a deprecated hidden flag that raises an error,
+  but is still usable as --obfuscate (also hidden). [#2133]
+
+- Balance assertion error messages are clearer, and show the diff again.
+
+### hledger-ui 1.32.3
+
+- Use hledger-1.32.3
+
+- Allow vty 6.2, brick 2.3
+
+### hledger-web 1.32.3
+
+- Use hledger-1.32.3
+
+### project changes 1.32.3
+
+- bin/hledger-bar: Fix an error when NO_COLOR is not defined;
+  allow color when NO_COLOR is defined but empty, per no-color spec;
+  and fix shellcheck warnings.
+  [#2159] (Colin Dean, Simon Michael)
+
+- bin/hledger-simplebal: Fix shellcheck warnings. (Colin Dean)
+
+### credits 1.32.3
+
+Simon Michael,
+Colin Dean.
 
 ## 2023-12-31 hledger-1.32.2
 
