@@ -114,6 +114,12 @@ Fixes
 Simon Michael,
 Colin Dean.
 
+[#2159]: https://github.com/simonmichael/hledger/issues/2159
+[#2156]: https://github.com/simonmichael/hledger/issues/2156
+[#2153]: https://github.com/simonmichael/hledger/issues/2153
+[#2150]: https://github.com/simonmichael/hledger/issues/2150
+[#2133]: https://github.com/simonmichael/hledger/issues/2133
+
 ## 2023-12-31 hledger-1.32.2
 
 ### hledger 1.32.2
