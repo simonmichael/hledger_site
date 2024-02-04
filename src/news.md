@@ -38,10 +38,7 @@ CSV rules, --pivot, queries, -f and glob patterns, QA and bug stats, close, 1.32
 
 - SM: *too.. many.. bugs..*
 
-- User: *I’m not encountering hledger bugs. It’s just one of the most solid things I’ve ever used.*
-
-- Castle In The Sky: *All the rocks around here contain a bit of Ethereum. Mankind once knew how to mine Ethereum. But... no longer. Legend has it that only the people of the floating city of Laputa knew how to make such crystals... They used Ethereum to make Laputa float in the sky.*
-
+- Aankhen: *I’m not encountering hledger bugs. It’s just one of the most solid things I’ve ever used.*
 
 ---
 
