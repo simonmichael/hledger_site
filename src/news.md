@@ -11,6 +11,41 @@ every Friday morning or any time, tagged with `TWIH:`.
 See also: [Release notes](release-notes.md)
 
 
+## This Week In Hledger 2024-02-02
+
+**sm**
+I cleaned up issue labels, updated the ISSUES page, refined the user pain score,
+worked on an issues dashboard prototype,
+tweaked the tags on `close`'s new --assert/--retain modes,
+and shipped [hledger 1.32.3](https://hledger.org/release-notes.html#2024-01-28-hledger-1323).
+
+**Robert Nielsen**
+[Working program to generate fake hledger transactions](https://hledgerfan.com/working-program-to-generate-fake-hledger-transactions/)
+
+**[Matrix chat](https://matrix.hledger.org) topics**
+CSV rules, --pivot, queries, -f and glob patterns, QA and bug stats, close, 1.32.3 release, forecasting, rewriting account names, decimal correctness, VAT, mixing changes and balances in a report, tracking subscribers
+
+**[Mail list](https://list.hledger.org)**
+1.32.3 release, foreign currency accounting
+
+**[Reddit](https://www.reddit.com/r/plaintextaccounting/new/)**
+- Technical Debt
+- Is this possible with hledger: tracking ACB of RSUs in foreign currency and deemed dispositions when transferring to registered investment accounts?
+- Correct way to track divorce / partner withdrawal in PTA
+- Hledger amount comparison
+
+**Quotes**
+
+- SM: *too.. many.. bugs..*
+
+- User: *I’m not encountering hledger bugs. It’s just one of the most solid things I’ve ever used.*
+
+- Castle In The Sky: *All the rocks around here contain a bit of Ethereum. Mankind once knew how to mine Ethereum. But... no longer. Legend has it that only the people of the floating city of Laputa knew how to make such crystals... They used Ethereum to make Laputa float in the sky.
+
+
+---
+
+
 ## This Week In Hledger 2024-01-26
 
 **sm:**
