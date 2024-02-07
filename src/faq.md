@@ -97,7 +97,7 @@ No. A good text editor can be a very efficient way to work on your data, but the
 
 The chart of accounts (list or tree of account names) will vary according to your language and your accounting situation,
 and will usually evolve as your needs change.
-Currently hledger does have any built-in default chart of accounts.
+Currently hledger does not have any built-in default chart of accounts.
 You can start small: name just the accounts you need, as you need them.
 Or, copy a chart of accounts that seems suitable, from other accounting software or from the web.
 Some examples can be found at <https://plaintextaccounting.org/Choosing-accounts>.
