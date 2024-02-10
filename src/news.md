@@ -10,6 +10,56 @@ every Friday morning or any time, tagged with `TWIH:`.
 
 See also: [Release notes](release-notes.md)
 
+## This Week In Hledger 2024-02-08
+
+**sm**
+I worked on refactoring and debugging the budget report for https://github.com/simonmichael/hledger/issues/2071 .
+Also, tweaked `close` tags, docs, and added to the PTA FAQ: https://plaintextaccounting.org/FAQ#where-are-debits-and-credits-why-are-some-balances-negative .
+I shared this time report that I like:
+
+```shell (just)
+# what happened (this week by default ?) Show simplified time categories, largest first, grouping some similar subaccounts together.
+@twhat *ARGS:
+    hledger -f "$TIMELOG" bal -b thisweek -e tomorrow -WATS -2 --alias '/.*:(res|adm|it)\b/=_:\1' "$@"
+```
+
+**Robert Nielsen**
+In this week's post, I share my R program for generating random ledger/hledger transactions. Useful if you want to have some dummy transactions for showing how some feature of hledger works without having to use real data.  <https://hledgerfan.com/the-code-to-generate-random-hledger-transactions>
+
+**[Matrix chat](https://matrix.hledger.org)**
+CSV conversion, bookkeeping situations, mixing balances and changes in a report, include vs -f, tracking saving goals, amazon prime fees, paisa..
+
+**[Mail list](https://list.hledger.org)**
+Foreign currency accounting, adding custom tags with `close`, multiple postings vs multiple transactions..
+
+**[Reddit](https://www.reddit.com/r/plaintextaccounting/new/)**
+- Need help with tracking a goal
+- Exporting Paisa interactive visualizations
+- [hledger] How do I get a specific tag column in register report
+- Do you guys enter every transaction manually
+- Thoughts on Beancount and PTA
+- Is it possible to track mileage/mpg with ledger?
+- Can I use ledger for time tracking and conversion from hours to USD?
+
+**[Mastodon](https://fosstodon.org/search)**
+..crickets..
+
+**Misc**
+
+Zegnat fixed line breaks in error messages displayed in hledger-web, making them much clearer: https://github.com/simonmichael/hledger/pull/2163
+
+reesmichael1 made `ssv:` and `tsv:` work as file path prefixes, like `csv:`: https://github.com/simonmichael/hledger/pull/2165
+
+jmtd made a dark theme for hledger-ui, testers welcome: https://github.com/simonmichael/hledger/pull/2167
+
+brplot is a fast plotting tool for command line or wasm: https://news.ycombinator.com/item?id=39319191
+
+**Quotes**
+
+*If you know how to get your transactions downloaded from your bank and don't ever want to leave the command line, hledger is great for you -- I've been using hledger since 2019 and love every minute of it.*
+
+---
+
 
 ## This Week In Hledger 2024-02-02
 
