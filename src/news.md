@@ -46,13 +46,17 @@ Foreign currency accounting, adding custom tags with `close`, multiple postings 
 
 **Misc**
 
-Zegnat fixed line breaks in error messages displayed in hledger-web, making them much clearer: <https://github.com/simonmichael/hledger/pull/2163>
+Zegnat fixed line breaks in error messages displayed in hledger-web, making them much clearer:
+<https://github.com/simonmichael/hledger/pull/2163>
 
-reesmichael1 made `ssv:` and `tsv:` work as file path prefixes, like `csv:`: <https://github.com/simonmichael/hledger/pull/2165>
+reesmichael1 made `ssv:` and `tsv:` work as file path prefixes, like `csv:`:
+<https://github.com/simonmichael/hledger/pull/2165>
 
-jmtd made a dark theme for hledger-ui, testers welcome: <https://github.com/simonmichael/hledger/pull/2167>
+jmtd made a dark theme for hledger-ui, testers welcome:
+<https://github.com/simonmichael/hledger/pull/2167>
 
-brplot is a fast plotting tool for command line or wasm: <https://news.ycombinator.com/item?id=39319191>
+brplot is a fast plotting tool for command line or wasm: 
+<https://news.ycombinator.com/item?id=39319191>
 
 **Quotes**
 
