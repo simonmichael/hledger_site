@@ -359,7 +359,7 @@ ShrykeWindgrace's PR upgrading hledger-ui to the new brick and vty libs has land
 hledger-ui now runs natively on Microsoft Windows.
 
 **Quotes of the week:**
-I’ve been using hledger for a few years. ... Every service lets you download historical data as CSV, 
+*I’ve been using hledger for a few years. ... Every service lets you download historical data as CSV, 
 which can be imported by _hledger_ and turned into journal files and then into visual reports. ...
 It’s a bespoke setup and super nerdy and is a bit of a pain, but it’s literally the only solution that works for us.*
 
@@ -411,7 +411,7 @@ Also, a book recommendation for graphic design that you need to know about:
 <https://hledgerfan.com/upgrading-to-hledger-1-32-a-book-on-graphic-design-and-ledger-mode-clean-buffer>
 
 **Quotes of the week:**
-I’ve been researching the history of double entry bookkeeping
+*I’ve been researching the history of double entry bookkeeping
 alongside learning the basics of accounting (which is how all this
 started) and I think hledger and the whole universe of plain text
 accounting software is super cool. Just a lovely evolution of the
@@ -514,7 +514,7 @@ can use hledger to be thankful:
 <https://hledgerfan.com/using-hledger-for-thanksgiving/>.
 
 **Quotes of the week:**
-Have been taking care of my (new) records for almost two years now
+*Have been taking care of my (new) records for almost two years now
 and this data is really valuable for me. Gives me very nice overview
 over everything and confidence that everything is alright and so on.
 Just looking at some graphs can make you feel really good - in terms
