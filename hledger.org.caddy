@@ -19,10 +19,9 @@ hledger.org {
 
 	file_server
 
-	# use cloudflare dns for letsencrypt validation
+	# use cloudflare dns for letsencrypt validation, see /usr/lib/systemd/system/caddy.service
 	# tls simon@joyful.com
 	tls {
-		# set in caddy.service
 		dns cloudflare {env.CLOUDFLARE_API_TOKEN}
 	}
 
