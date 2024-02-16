@@ -10,6 +10,46 @@ every Friday morning or any time, tagged with `TWIH:`.
 
 See also: [Release notes](release-notes.md)
 
+## This Week In Hledger 2024-02-16
+
+**sm**
+Not much time for hledger hacking this week;
+support and doc tweaks, and an updated example CSV rules file for Daedalus (Cardano wallet software).
+
+**Robert Nielsen**
+On this week's hledgerfan post, I show how the "include" statement solved a problem for running an hledger command over several data files: <https://hledgerfan.com/include-was-the-key>
+
+**Misc**
+
+
+**[Matrix chat](https://matrix.hledger.org)**
+Accounts vs tags, --serve-api and -X, balance assertion order, hledger.org tls cert, a visualisation of hledger compile times, stateful CSV conversion, chatGPT..
+
+**[Mail list](https://list.hledger.org)**
+- Balancing "equity:conversion" split across postings.
+- How to set the opening balance in a foreign currency account?
+
+**[Reddit](https://www.reddit.com/r/plaintextaccounting/new/)**
+- Treasury Direct t-bills 
+- Can hledger import use account mappings from previous transactions?
+- Is it possible to sort sub-accounts in hledger reports?
+- Multicurrency cash journal
+- Necessity of importing history
+- Open Source Software Supply Chain
+
+**[Mastodon](https://fosstodon.org/search)**
+- A `:hledger:` icon is now available on fosstodon.org thanks to @nobodyinperson and @mike.
+
+
+**Quotes**
+
+*I just discovered hledger about a month ago after being fed up with YNAB's costs and issues. I love hledger. It's amazing. Thank you for all your hard work! --megagram*
+
+*Work smoothly and steadily. Don't rush.*
+
+---
+
+
 ## This Week In Hledger 2024-02-08
 
 **sm**
