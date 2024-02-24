@@ -10,6 +10,58 @@ every Friday morning or any time, tagged with `TWIH:`.
 
 See also: [Release notes](release-notes.md)
 
+
+## This Week In Hledger 2024-02-23
+
+**sm**
+Miscellaneous updates:
+- use a symbolic link's target's directory for relative include paths
+- interpret glob patterns in $LEDGER_FILE
+- implicitly declare the date/date2/type tags
+- add close --assertion-type option
+- tweak close --assert's default description
+- stack:9.8: can now build all packages
+- doc: add Text encoding section
+- doc: clarify description/payee/note
+- doc: improve the tags doc
+- doc: clarify combining csv matchers
+- plaintextaccounting.org: Choosing accounts tips
+
+**Robert Nielsen**
+Inspired by a recent podcast, I look at the theme of getting the most good from limited resources. Oh, and I don't forget to mention hledger. 🙂
+<https://hledgerfan.com/creating-a-positive-impact>
+
+**Misc**
+Jonathan Dowland added a `dark` theme to hledger-ui.
+
+**[Mail list](https://list.hledger.org)**
+- Forex Accounts Receivable, timing difference between invoice and payment
+- Balancing "equity:conversion" split across postings.
+
+**[Reddit](https://www.reddit.com/r/plaintextaccounting/new/)**
+- How do you all handle grouping your transactions? (business)
+- hledger: csv rule to match amount higher or equal to 200
+- hledger periodic transaction every month except two
+- Mass edit journal entries based on a filter 
+
+**[Mastodon](https://fosstodon.org/search)**
+Fund accounting, PTA sign convention, unspaced account names, reddit monetisation..
+
+**[Matrix chat](https://matrix.hledger.org)**
+Tools for investment tracking, description/payee/note semantics, tag checking, 
+arithmetic amount expressions, Money Manager EX, CSV conversion situations,
+categorising tools, utf-8 encoding, timedot budgets, tax preparation, if tables,
+payee cleanup..
+
+**Quotes**
+
+- *Thank you for writing hledger (and -ui and -web), it's wonderful work. --Michael Iles*
+
+- *Use physical order to create mental order.*
+
+---
+
+
 ## This Week In Hledger 2024-02-16
 
 **sm**
