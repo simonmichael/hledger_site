@@ -3063,9 +3063,7 @@ how to categorise transactions based on description or other attributes.
 By default hledger looks for a rules file named like the CSV file with
 an extra `.rules` extension, in the same directory. Eg when asked to
 read `foo/FILE.csv`, hledger looks for `foo/FILE.csv.rules`. You can
-specify a different rules file with the `--rules-file` option. If no
-rules file is found, hledger will create a sample rules file, which
-you\'ll need to adjust.
+specify a different rules file with the `--rules-file` option.
 
 At minimum, the rules file must identify the date and amount fields, and
 often it also specifies the date format and how many header lines there
