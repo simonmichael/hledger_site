@@ -10,7 +10,7 @@ This page describes differences between them, and a little history.
 If you are a Ledger user trying to use hledger with your data,
 feel free to skip ahead to [Interoperating tips](#interoperating-tips).
 And please let me know your experience in the [#hledger or #plaintextaccounting chats](support.md).
-Related: [#1962](https://github.com/simonmichael/hledger/issues/1962).*
+Related: [#1962](https://github.com/simonmichael/hledger/issues/1962).
 
 ## Differences
 
@@ -38,7 +38,7 @@ Compared to hledger, Ledger has
 - assisted lot tracking for investment transactions
 - more support for embedding small programs in your data to get custom behaviour 
   (value expressions, maybe python expressions ?)
-- a lighter memory footprint and smaller executables
+- smaller executables.
 
 See also: 
 
@@ -103,60 +103,14 @@ and here is a feature comparison as of 2022 (updates welcome):
 
 ### Performance
 
-Traditionally, Ledger and hledger performance felt about the same on small files,
-but Ledger used less memory and was faster with large files - with very large files,
-up to ~10x faster. That extra speed came partly from providing fewer guarantees, 
-eg Ledger's balance assertions/assignments are not date-aware.
+Traditionally, Ledger was faster than hledger with large files (eg >5k transactions).
+(Many people record about 1-2k transactions per year.)
+Ledger's extra speed came partly from providing fewer guarantees, eg Ledger's balance assertions/assignments are not date-aware.
 
-Lately (2021) the performance gap seems to have closed, with hledger outperforming 
-Ledger in some cases - more formal benchmarking needed, please see if you can reproduce.
-\[This was an intel hledger binary running translated on a macbook m1 via Rosetta translation, ie slower than normal]:
+Since about 2021 the performance gap seems to me to have closed or reversed,
+with hledger outperforming Ledger in some cases, including on large files.
 
-```cli
-$ uname -a
-Darwin SMs-slate-mac.local 20.6.0 Darwin Kernel Version 20.6.0: Tue Oct 12 18:33:38 PDT 2021; root:xnu-7195.141.8~1/RELEASE_ARM64_T8101 arm64
-
-$ brew info ledger
-...
-/opt/homebrew/Cellar/ledger/3.2.1_7 (126 files, 4.7MB) *
-  Poured from bottle on 2021-11-18 at 16:04:23
-...
-
-$ ledger --version
-Ledger 3.2.1-20200518, the command-line accounting tool
-...
-
-$ hledger-1.24 --version
-hledger 1.24-0-gf0f830e06, mac-x86_64
-
-$ cat bench-ledger.sh 
-hledger -f examples/10000x1000x10.journal print
-hledger -f examples/10000x1000x10.journal register
-hledger -f examples/10000x1000x10.journal balance
-hledger -f examples/100000x1000x10.journal balance
-hledger -f examples/100000x1000x10.journal balance ff
-
-$ quickbench -f bench-ledger.sh -w ledger,hledger-1.24
-Running 5 tests 1 times with 2 executables at 2021-12-09 08:50:10 HST:
-
-Best times:
-+-----------------------------------------------++--------+--------------+
-|                                               || ledger | hledger-1.24 |
-+===============================================++========+==============+
-| -f examples/10000x1000x10.journal print       ||   7.08 |         0.84 |
-| -f examples/10000x1000x10.journal register    ||  18.16 |        16.65 |
-| -f examples/10000x1000x10.journal balance     ||   0.38 |         0.80 |
-| -f examples/100000x1000x10.journal balance    ||  29.14 |         6.78 |
-| -f examples/100000x1000x10.journal balance ff ||   1.13 |         5.89 |
-+-----------------------------------------------++--------+--------------+
-
-$ file /opt/homebrew/bin/ledger /Users/simon/src/hledger/bin/hledger-1.24
-/opt/homebrew/bin/ledger:                  Mach-O 64-bit executable arm64
-/Users/simon/src/hledger/bin/hledger-1.24: Mach-O 64-bit executable x86_64
-```
-
-In 2022, hledger compiled natively on a macbook air m1 processes 25k transactions per second (which means reporting on a normal year's worth of transactions takes less than a tenth of a second):
-
+In 2022, hledger ~1.25 compiled natively on a macbook air m1 processed 25k transactions per second:
 ```cli
 $ hledger --version
 hledger 1.24.99.2-gba5b0e93f-20220205, mac-aarch64
@@ -178,6 +132,14 @@ version: hledger 1.24.99.2-gba5b0e93f-20220205, mac-aarch64
 100000 txns: Run time (throughput)    : 4.32s (23158 txns/s)
 Tue Feb  8 11:03:57 HST 2022
 ```
+
+More recent hledger versions run a bit slower than this, 
+but on my mac they often run faster and in less memory than Ledger, including with large files.
+See [#2153](https://github.com/simonmichael/hledger/issues/2153) for the most recent benchmarking,
+eg https://github.com/simonmichael/hledger/issues/2153#issuecomment-1912942305.
+(Avoid hledger versions 1.29-1.32.2, which were affected by this performance bug.)
+
+More independent benchmarking is needed - please help if you can.
 
 ### Command line interface
 
