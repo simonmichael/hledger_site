@@ -136,7 +136,7 @@ Tue Feb  8 11:03:57 HST 2022
 More recent hledger versions run a bit slower than this, 
 but on my mac they often run faster and in less memory than Ledger, including with large files.
 See [#2153](https://github.com/simonmichael/hledger/issues/2153) for the most recent benchmarking,
-eg https://github.com/simonmichael/hledger/issues/2153#issuecomment-1912942305.
+eg [2153#issuecomment-1912942305](https://github.com/simonmichael/hledger/issues/2153#issuecomment-1912942305).
 (Avoid hledger versions 1.29-1.32.2, which were affected by this performance bug.)
 
 More independent benchmarking is needed - please help if you can.
