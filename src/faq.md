@@ -49,11 +49,20 @@ It's free and you can read all about it at the <https://hledger.org> home page.
 
 ### Why was hledger created ?
 
-- to provide a more usable, robust, documented, cross-platform-installable version of the Ledger accounting tool for users
-- to provide a more maintainable and hackable version of Ledger for developers 
-- to provide a useful library and toolbox for finance-minded haskell programmers
-- to explore the suitability of Haskell for such applications
-- to experiment with building a successful time-and-money-solvent project in a thriving ecosystem of financial software projects
+I needed to make working on finances more fun for myself,
+Ledger was under-maintained and using and supporting it was too frustrating,
+and I wanted to work with Haskell not C++.
+
+Slightly longer:
+
+- To provide a more usable, robust, documented, cross-platform-installable version of Ledger .
+- To provide a more maintainable and hackable version of Ledger for developers.
+- To provide a useful library and toolbox for finance-minded Haskell programmers.
+- To explore the suitability of Haskell for such applications.
+- To attempt to build a successful, solvent, self-supporting project in a thriving ecosystem of financial software projects.
+
+See also: [hledger and Ledger: History](ledger.md#history).
+
 
 ### What is the hledger project's current mission and plans ?
 
