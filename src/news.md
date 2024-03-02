@@ -219,7 +219,7 @@ Crickets.
 
 **Quotes**
 
-- *hledger has a decent front-end web UI, it runs as a local server on your machine by default.  The filter and searching on this view is quite good, and visualization is decent.*
+- *hledger has a decent front-end web UI, it runs as a local server on your machine by default.  The filter and searching on this view is quite good, and visualization is decent.*
 
 - *With version control and deterministic reports, you can be late, slow, make mistakes, but still keep moving incrementally towards accuracy and clarity.*
 
@@ -254,7 +254,7 @@ hamess has annotated the new features in version 1.32's manuals.
 
 *Whoa this is amazing. And really easy!*
 
-*I love hledger and have a few scripts to convert downloaded CSVs from various institutions into the appropriate format and dedupe any overlap if necessary. Once a month I download a bunch of statements, run a script and have all of the data available to me.*
+*I love hledger and have a few scripts to convert downloaded CSVs from various institutions into the appropriate format and dedupe any overlap if necessary. Once a month I download a bunch of statements, run a script and have all of the data available to me.*
 
 ---
 
@@ -452,7 +452,7 @@ hledger-ui now runs natively on Microsoft Windows.
 
 **Quotes of the week:**
 *I’ve been using hledger for a few years. ... Every service lets you download historical data as CSV, 
-which can be imported by _hledger_ and turned into journal files and then into visual reports. ...
+which can be imported by hledger and turned into journal files and then into visual reports. ...
 It’s a bespoke setup and super nerdy and is a bit of a pain, but it’s literally the only solution that works for us.*
 
 ---
@@ -477,7 +477,7 @@ with a good [write-up](https://www.joshcanhelp.com/budget-cli)
 **Quotes of the week:**
 I switched, blissfully, away from Quicken/Quickbook/Xero/all that
 heavy crap to very simple and elegant textfile-based accounting
-(ledger/_hledger_) and it's been the best and most flexible accounting
+(ledger/hledger) and it's been the best and most flexible accounting
 experience I've ever had. I finally feel completely in control of my
 companies' books.*
 
@@ -552,7 +552,7 @@ Two things in this week's hledger fan blog. First, for beginners, some notes on 
 
 *It's the basis of my entire personal finance system.*
 
-*once again, I was deeply impressed by how _useful_ hledger is, and how thoughtful it is.*
+*once again, I was deeply impressed by how _useful_ hledger is, and how thoughtful it is.*
 
 
 ---
@@ -930,7 +930,7 @@ What I like about the data format
 - Virtual transactions (to track funds)
 
 What I like about HLedger specifically
-- static analysis cf. [https://hledger.org/hledgermatic.html](https://hledger.org/hledgermatic.html)
+- static analysis cf. [https://hledger.org/hledgermatic.html](https://hledger.org/hledgermatic.html)
 
 What I need to do my homework on
 - The limitations of balance assertions in HLedger
