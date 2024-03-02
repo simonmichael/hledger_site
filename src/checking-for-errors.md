@@ -72,7 +72,7 @@ When comparing [balancesheetequity] diffs, do any of these help:
 Version control systems often support a "pre-commit hook", a script which
 is required to succeed before each commit. Eg:
 
-```bash
+```cli
 #!/bin/bash
 set -e
 hledger check -s

@@ -381,7 +381,7 @@ In addition to the web UI, hledger-web also serves a JSON API that can
 be used to get data or add new transactions. If you want the JSON API
 only, you can use the `--serve-api` flag. Eg:
 
-``` shell
+```cli
 $ hledger-web -f examples/sample.journal --serve-api
 ...
 ```
@@ -400,7 +400,7 @@ Eg, all account names in the journal (similar to the
 [accounts](hledger.html#accounts) command). (hledger-web\'s JSON does
 not include newlines, here we use python to prettify it):
 
-``` shell
+```cli
 $ curl -s http://127.0.0.1:5000/accountnames | python -m json.tool
 [
     "assets",
@@ -421,7 +421,7 @@ $ curl -s http://127.0.0.1:5000/accountnames | python -m json.tool
 
 Or all transactions:
 
-``` shell
+```cli
 $ curl -s http://127.0.0.1:5000/transactions | python -m json.tool
 [
     {
@@ -470,7 +470,7 @@ hledger transaction (partial data won\'t do). You can get sample JSON
 from hledger-web\'s `/transactions` or `/accounttransactions`, or you
 can export it with hledger-lib, eg like so:
 
-``` shell
+```cli
 .../hledger$ stack ghci hledger-lib
 >>> writeJsonFile "txn.json" (head $ jtxns samplejournal)
 >>> :q
@@ -572,7 +572,7 @@ and related data types):
 And here\'s how to test adding it with curl. This should add a new entry
 to your journal:
 
-``` shell
+```cli
 $ curl http://127.0.0.1:5000/add -X PUT -H 'Content-Type: application/json' --data-binary @txn.json
 ```
 

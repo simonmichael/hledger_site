@@ -32,7 +32,7 @@ some number of hours to an account. Or if the session spans more than
 one day, it is split into several transactions, one for each day. For
 the above time log, `hledger print` generates these journal entries:
 
-``` shell
+```cli
 $ hledger -f t.timeclock print
 2015-03-30 * optional description after two spaces
     (some:account name)         0.33h
@@ -48,7 +48,7 @@ Here is a
 [sample.timeclock](https://raw.github.com/simonmichael/hledger/master/examples/sample.timeclock)
 to download and some queries to try:
 
-``` shell
+```cli
 $ hledger -f sample.timeclock balance                               # current time balances
 $ hledger -f sample.timeclock register -p 2009/3                    # sessions in march 2009
 $ hledger -f sample.timeclock register -p weekly --depth 1 --empty  # time summary by week

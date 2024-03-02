@@ -80,7 +80,7 @@ Two simple transactions in hledger journal format:
 
 Some basic reports:
 
-``` shell
+```cli
 $ hledger print
 2015/09/30 gift received
     assets:cash            $20
@@ -91,7 +91,7 @@ $ hledger print
     assets:cash            $-10
 ```
 
-``` shell
+```cli
 $ hledger accounts --tree
 assets
   cash
@@ -101,7 +101,7 @@ income
   gifts
 ```
 
-``` shell
+```cli
 $ hledger balance
                  $10  assets:cash
                  $10  expenses:food
@@ -110,7 +110,7 @@ $ hledger balance
                    0
 ```
 
-``` shell
+```cli
 $ hledger register cash
 2015/09/30 gift received   assets:cash               $20           $20
 2015/10/16 farmers market  assets:cash              $-10           $10
@@ -118,7 +118,7 @@ $ hledger register cash
 
 More commands:
 
-``` shell
+```cli
 $ hledger                                 # show available commands
 $ hledger add                             # add more transactions to the journal file
 $ hledger balance                         # all accounts with aggregated balances
@@ -390,20 +390,20 @@ to it). By default this file is `$HOME/.hledger.journal` (or on Windows,
 something like `C:/Users/USER/.hledger.journal`). You can override this
 with the `$LEDGER_FILE` environment variable:
 
-``` shell
+```cli
 $ setenv LEDGER_FILE ~/finance/2016.journal
 $ hledger stats
 ```
 
 or with the `-f/--file` option:
 
-``` shell
+```cli
 $ hledger -f /some/file stats
 ```
 
 The file name `-` (hyphen) means standard input:
 
-``` shell
+```cli
 $ cat some.journal | hledger -f-
 ```
 
@@ -453,7 +453,7 @@ If needed (eg to ensure correct error messages when a file has the
 "wrong" extension), you can force a specific reader/format by prepending
 it to the file path with a colon. Examples:
 
-``` shell
+```cli
 $ hledger -f csv:/some/csv-file.dat stats
 $ echo 'i 2009/13/1 08:00:00' | hledger print -ftimeclock:-
 ```
@@ -706,7 +706,7 @@ An example:
 
 Normal balance report showing account names:
 
-``` shell
+```cli
 $ hledger balance
                2 EUR  assets:bank account
               -2 EUR  income:member fees
@@ -716,7 +716,7 @@ $ hledger balance
 
 Pivoted balance report, using member: tag values instead:
 
-``` shell
+```cli
 $ hledger balance --pivot member
                2 EUR
               -2 EUR  John Doe
@@ -727,7 +727,7 @@ $ hledger balance --pivot member
 One way to show only amounts with a member: value (using a
 [query](#queries), described below):
 
-``` shell
+```cli
 $ hledger balance --pivot member tag:member=.
               -2 EUR  John Doe
 --------------------
@@ -737,7 +737,7 @@ $ hledger balance --pivot member tag:member=.
 Another way (the acct: query matches against the pivoted "account
 name"):
 
-``` shell
+```cli
 $ hledger balance --pivot member acct:.
               -2 EUR  John Doe
 --------------------
@@ -788,14 +788,14 @@ P 2016/12/21 € $1.03
 
 How many euros do I have ?
 
-``` shell
+```cli
 $ hledger -f t.j bal -N euros
                 €100  assets:euros
 ```
 
 What are they worth at end of nov 3 ?
 
-``` shell
+```cli
 $ hledger -f t.j bal -N euros -V -e 2016/11/4
              $110.00  assets:euros
 ```
@@ -803,7 +803,7 @@ $ hledger -f t.j bal -N euros -V -e 2016/11/4
 What are they worth after 2016/12/21 ? (no report end date specified,
 defaults to today)
 
-``` shell
+```cli
 $ hledger -f t.j bal -N euros -V
              $103.00  assets:euros
 ```
@@ -888,7 +888,7 @@ P 2000-04-01 A  4 B
 
 Show the cost of each posting:
 
-``` shell
+```cli
 $ hledger -f- print --value=cost
 2000/01/01
     (a)             5 B
@@ -902,7 +902,7 @@ $ hledger -f- print --value=cost
 
 Show the value as of the last day of the report period (2000-02-29):
 
-``` shell
+```cli
 $ hledger -f- print --value=end date:2000/01-2000/03
 2000-01-01
     (a)             2 B
@@ -914,7 +914,7 @@ $ hledger -f- print --value=end date:2000/01-2000/03
 With no report period specified, that shows the value as of the last day
 of the journal (2000-03-01):
 
-``` shell
+```cli
 $ hledger -f- print --value=end
 2000/01/01
     (a)             3 B
@@ -928,7 +928,7 @@ $ hledger -f- print --value=end
 
 Show the current value (the 2000-04-01 price is still in effect today):
 
-``` shell
+```cli
 $ hledger -f- print --value=now
 2000-01-01
     (a)             4 B
@@ -942,7 +942,7 @@ $ hledger -f- print --value=now
 
 Show the value on 2000/01/15:
 
-``` shell
+```cli
 $ hledger -f- print --value=2000-01-15
 2000/01/01
     (a)             1 B
@@ -1198,7 +1198,7 @@ Some commands (print, register, stats, the balance commands) can write
 their output to a destination other than the console. This is controlled
 by the `-o/--output-file` option.
 
-``` shell
+```cli
 $ hledger balance -o -     # write to stdout (the default)
 $ hledger balance -o FILE  # write to FILE
 ```
@@ -1210,7 +1210,7 @@ register can output CSV, and the balance commands can output CSV or
 HTML. This is controlled by the `-O/--output-format` option, or by
 specifying a `.csv` or `.html` file extension with `-o/--output-file`.
 
-``` shell
+```cli
 $ hledger balance -O csv       # write CSV to stdout
 $ hledger balance -o FILE.csv  # write CSV to FILE.csv
 ```
@@ -1398,7 +1398,7 @@ components. Account names can be depth-clipped with `depth:N` or
 
 Examples:
 
-``` shell
+```cli
 $ hledger accounts
 assets:bank:checking
 assets:bank:saving
@@ -1421,7 +1421,7 @@ default). With query arguments, it counts only matched transactions.
 
 Examples:
 
-``` shell
+```cli
 $ hledger activity --quarterly
 2008-01-01 **
 2008-04-01 *******
@@ -1473,7 +1473,7 @@ Example (see the
 [tutorial](step-by-step.html#record-a-transaction-with-hledger-add) for
 a detailed explanation):
 
-``` shell
+```cli
 $ hledger add
 Adding transactions to journal file /src/hledger/examples/sample.journal
 Any command line arguments will be used as defaults.
@@ -1537,7 +1537,7 @@ The balance command can produce several styles of report:
 This is the original balance report, as found in Ledger. It usually
 looks like this:
 
-``` shell
+```cli
 $ hledger balance
                  $-1  assets
                   $1    bank:saving
@@ -1573,7 +1573,7 @@ omitted. Use `-E/--empty` to show them.
 A final total is displayed by default; use `-N/--no-total` to suppress
 it, eg:
 
-``` shell
+```cli
 $ hledger balance -p 2008/6 expenses --no-total
                   $2  expenses
                   $1    food
@@ -1585,7 +1585,7 @@ $ hledger balance -p 2008/6 expenses --no-total
 You can customise the layout of classic balance reports with
 `--format FMT`:
 
-``` shell
+```cli
 $ hledger balance --format "%20(account) %12(total)"
               assets          $-1
          bank:saving           $1
@@ -1657,7 +1657,7 @@ names and "exclusive" balance, excluding any subaccount balances. In
 this mode, you can also use `--drop N` to omit the first few account
 name components.
 
-``` shell
+```cli
 $ hledger balance -p 2008/6 expenses -N --flat --drop 1
                   $1  food
                   $1  supplies
@@ -1669,7 +1669,7 @@ With `--depth N` or `depth:N` or just `-N`, balance reports show
 accounts only to the specified numeric depth. This is very useful to
 summarise a complex set of accounts and get an overview.
 
-``` shell
+```cli
 $ hledger balance -N -1
                  $-1  assets
                   $2  expenses
@@ -1689,7 +1689,7 @@ expressed as a percentage of the column's total. This is useful to get
 an overview of the relative sizes of account balances. For example to
 obtain an overview of expenses:
 
-``` shell
+```cli
 $ hledger balance expenses -%
              100.0 %  expenses
               50.0 %    food
@@ -1735,7 +1735,7 @@ information:
        $ hledger balance ^assets ^liabilities 'not:(receivable|payable)' -p 'weekly this month'
     -->
 
-    ``` shell
+    ```cli
     $ hledger balance --quarterly income expenses -E
     Balance changes in 2008:
 
@@ -1753,7 +1753,7 @@ information:
     period, accumulating the changes across periods, starting from 0 at
     the report start date:
 
-    ``` shell
+    ```cli
     $ hledger balance --quarterly income expenses -E --cumulative
     Ending balances (cumulative) in 2008:
 
@@ -1773,7 +1773,7 @@ information:
     This is useful eg for a multi-period balance sheet, and when you are
     showing only the data after a certain start date:
 
-    ``` shell
+    ```cli
     $ hledger balance ^assets ^liabilities --quarterly --historical --begin 2008/4/1
     Ending balances (historical) in 2008/04/01-2008/12/31:
 
@@ -1814,7 +1814,7 @@ row.
 
 Here's an example of all three:
 
-``` shell
+```cli
 $ hledger balance -Q income expenses --tree -ETA
 Balance changes in 2008:
 
@@ -1881,7 +1881,7 @@ categories to construct a minimal monthly budget:
 
 You can now see a monthly budget report:
 
-``` shell
+```cli
 $ hledger balance -M --budget
 Budget performance in 2017/11/01-2017/12/31:
 
@@ -1922,7 +1922,7 @@ This can be confusing. When you need to make things clearer, use the
 `-E/--empty` flag, which will reveal all accounts including unbudgeted
 ones, giving the full picture. Eg:
 
-``` shell
+```cli
 $ hledger balance -M --budget --empty
 Budget performance in 2017/11/01-2017/12/31:
 
@@ -1944,7 +1944,7 @@ Budget performance in 2017/11/01-2017/12/31:
 
 You can roll over unspent budgets to next period with `--cumulative`:
 
-``` shell
+```cli
 $ hledger balance -M --budget --cumulative
 Budget performance in 2017/11/01-2017/12/31:
 
@@ -2023,7 +2023,7 @@ without explicitly defined budget, these transactions would be counted
 towards budgets of `expenses:personal:electronics` and
 `expenses:personal` accordingly:
 
-``` shell
+```cli
 $ hledger balance --budget -M
 Budget performance in 2019/01:
 
@@ -2040,7 +2040,7 @@ Budget performance in 2019/01:
 And with `--empty`, we can get a better picture of budget allocation and
 consumption:
 
-``` shell
+```cli
 $ hledger balance --budget -M --empty
 Budget performance in 2019/01:
 
@@ -2076,7 +2076,7 @@ Note this report shows all account balances with normal positive sign
 
 Example:
 
-``` shell
+```cli
 $ hledger balancesheet
 Balance Sheet
 
@@ -2119,7 +2119,7 @@ it assumes is under a top-level `equity` account).
 
 Example:
 
-``` shell
+```cli
 $ hledger balancesheetequity
 Balance Sheet With Equity
 
@@ -2157,7 +2157,7 @@ statements, unlike balance/print/register) (experimental).
 
 Example:
 
-``` shell
+```cli
 $ hledger cashflow
 Cashflow Statement
 
@@ -2256,14 +2256,14 @@ command line:
 *Warning: we use `>>` here to append; be careful not to type a single
 `>` which would wipe your journal!*
 
-``` shell
+```cli
 $ hledger close -f 2018.journal -e 2019 assets liabilities --opening >>2019.journal
 $ hledger close -f 2018.journal -e 2019 assets liabilities --closing >>2018.journal
 ```
 
 Now:
 
-``` shell
+```cli
 $ hledger bs -f 2019.journal                   # one file - balances are correct
 $ hledger bs -f 2018.journal -f 2019.journal   # two files - balances still correct
 $ hledger bs -f 2018.journal not:desc:closing  # to see year-end balances, must exclude closing txn
@@ -2305,7 +2305,7 @@ This command lists all descriptions that appear in transactions.
 
 Examples:
 
-``` shell
+```cli
 $ hledger descriptions
 Store Name
 Gas Station | Petrol
@@ -2332,7 +2332,7 @@ find out the cause.
 
 Examples:
 
-``` shell
+```cli
 $ hledger diff -f $LEDGER_FILE -f bank.csv assets:bank:giro 
 These transactions are in the first file only:
 
@@ -2367,13 +2367,13 @@ particular viewer with the `--info`, `--man`, `--pager`, `--cat` flags.
 
 Examples:
 
-``` shell
+```cli
 $ hledger help
 Please choose a manual by typing "hledger help MANUAL" (a substring is ok).
 Manuals: hledger hledger-ui hledger-web journal csv timeclock timedot
 ```
 
-``` shell
+```cli
 $ hledger help h --man
 
 hledger(1)                    hledger User Manuals                    hledger(1)
@@ -2410,7 +2410,7 @@ date order, and by saving `.latest.FILE` state files.
 The --dry-run output is in journal format, so you can filter it, eg to
 see only uncategorised transactions:
 
-``` shell
+```cli
 $ hledger import --dry ... | hledger -f- print unknown --ignore-assertions
 ```
 
@@ -2425,7 +2425,7 @@ assignments (eg from an institution that provides only balances and not
 posting amounts) will probably generate incorrect posting amounts. To
 avoid this problem, use print instead of import:
 
-``` shell
+```cli
 $ hledger print IMPORTFILE [--new] >> $LEDGER_FILE
 ```
 
@@ -2447,7 +2447,7 @@ statement](http://en.wikipedia.org/wiki/Income_statement). It currently
 assumes that you have top-level accounts named `income` (or `revenue`)
 and `expense` (plural forms also allowed.)
 
-``` shell
+```cli
 $ hledger incomestatement
 Income Statement
 
@@ -2489,7 +2489,7 @@ This command lists all notes that appear in transactions.
 
 Examples:
 
-``` shell
+```cli
 $ hledger notes
 Petrol
 Snacks
@@ -2503,7 +2503,7 @@ This command lists all payee names that appear in transactions.
 
 Examples:
 
-``` shell
+```cli
 $ hledger payees
 Store Name
 Gas Station
@@ -2533,7 +2533,7 @@ print's output is always a valid [hledger journal](/journal.html).\
 It preserves all transaction information, but it does not preserve
 directives or inter-transaction comments
 
-``` shell
+```cli
 $ hledger print
 2008/01/01 income
     assets:bank:checking            $1
@@ -2583,7 +2583,7 @@ transactions on the latest date) are printed. This is useful for
 ignoring already-seen entries in import data, such as downloaded CSV
 files. Eg:
 
-``` shell
+```cli
 $ hledger -f bank1.csv print --new
 # shows transactions added since last print --new on this file
 ```
@@ -2597,7 +2597,7 @@ destination](hledger.html#output-destination) and [output
 format](hledger.html#output-format) selection. Here's an example of
 print's CSV output:
 
-``` shell
+```cli
 $ hledger print -Ocsv
 "txnidx","date","date2","status","code","description","comment","account","amount","commodity","credit","debit","posting-status","posting-comment"
 "1","2008/01/01","","","","income","","assets:bank:checking","1","$","","1","",""
@@ -2633,7 +2633,7 @@ Print transactions which do not reuse an already-seen description.
 
 Example:
 
-``` shell
+```cli
 $ cat unique.journal
 1/1 test
  (acct:one)  1
@@ -2654,7 +2654,7 @@ The register command displays postings in date order, one per line, and
 their running total. This is typically used with a [query](#queries)
 selecting a particular account, to see that account's activity:
 
-``` shell
+```cli
 $ hledger register checking
 2008/01/01 income               assets:bank:checking            $1           $1
 2008/06/01 gift                 assets:bank:checking            $1           $2
@@ -2668,7 +2668,7 @@ The `--historical`/`-H` flag adds the balance from any undisplayed prior
 postings to the running total. This is useful when you want to see only
 recent activity, with a historically accurate running balance:
 
-``` shell
+```cli
 $ hledger register checking -b 2008/6 --historical
 2008/06/01 gift                 assets:bank:checking            $1           $2
 2008/06/02 save                 assets:bank:checking           $-1           $1
@@ -2691,14 +2691,14 @@ an income account where amounts are normally displayed as negative
 numbers. It's also useful to show postings on the checking account
 together with the related account:
 
-``` shell
+```cli
 $ hledger register --related --invert assets:checking
 ```
 
 With a [reporting interval](#reporting-interval), register shows summary
 postings, one per interval, aggregating the postings to each account:
 
-``` shell
+```cli
 $ hledger register --monthly income
 2008/01                 income:salary                          $-1          $-1
 2008/06                 income:gifts                           $-1          $-2
@@ -2707,7 +2707,7 @@ $ hledger register --monthly income
 Periods with no activity, and summary postings with a zero amount, are
 not shown by default; use the `--empty`/`-E` flag to see them:
 
-``` shell
+```cli
 $ hledger register --monthly income -E
 2008/01                 income:salary                          $-1          $-1
 2008/02                                                          0          $-1
@@ -2726,7 +2726,7 @@ $ hledger register --monthly income -E
 Often, you'll want to see just one line per interval. The `--depth`
 option helps with this, causing subaccounts to be aggregated:
 
-``` shell
+```cli
 $ hledger register --monthly assets --depth 1h
 2008/01                 assets                                  $1           $1
 2008/06                 assets                                 $-1            0
@@ -2755,7 +2755,7 @@ description width as part of --width's argument, comma-separated:
 
 and some examples:
 
-``` shell
+```cli
 $ hledger reg                     # use terminal width (or 80 on windows)
 $ hledger reg -w 100              # use width 100
 $ COLUMNS=100 hledger reg         # set with one-time environment variable
@@ -2792,7 +2792,7 @@ transaction's first posting amount.
 
 Examples:
 
-``` shell
+```cli
 $ hledger-rewrite.hs ^income --add-posting '(liabilities:tax)  *.33  ; income tax' --add-posting '(reserve:gifts)  $100'
 $ hledger-rewrite.hs expenses:gifts --add-posting '(reserve:gifts)  *-1"'
 $ hledger-rewrite.hs -f rewrites.hledger
@@ -2812,7 +2812,7 @@ spaces between account and amount.
 
 More:
 
-``` shell
+```cli
 $ hledger rewrite -- [QUERY]        --add-posting "ACCT  AMTEXPR" ...
 $ hledger rewrite -- ^income        --add-posting '(liabilities:tax)  *.33'
 $ hledger rewrite -- expenses:gifts --add-posting '(budget:gifts)  *-1"'
@@ -2833,7 +2833,7 @@ Transactions"](http://ledger-cli.org/3.0/doc/ledger3.html#Automated-Transactions
 found in any journal it process. I.e instead of specifying this
 operations in command line you can put them in a journal file.
 
-``` shell
+```cli
 $ rewrite-rules.journal
 ```
 
@@ -2852,13 +2852,13 @@ Note that `'='` (equality symbol) that is used instead of date in
 transactions you usually write. It indicates the query by which you want
 to match the posting to add new ones.
 
-``` shell
+```cli
 $ hledger rewrite -- -f input.journal -f rewrite-rules.journal > rewritten-tidy-output.journal
 ```
 
 This is something similar to the commands pipeline:
 
-``` shell
+```cli
 $ hledger rewrite -- -f input.journal '^income' --add-posting '(liabilities:tax)  *.33' \
   | hledger rewrite -- -f - expenses:gifts      --add-posting 'budget:gifts  *-1'       \
                                                 --add-posting 'assets:budget  *1'       \
@@ -2874,7 +2874,7 @@ postings.
 To use this tool for batch modification of your journal files you may
 find useful output in form of unified diff.
 
-``` shell
+```cli
 $ hledger rewrite -- --diff -f examples/sample.journal '^income' --add-posting '(liabilities:tax)  *.33'
 ```
 
@@ -2958,7 +2958,7 @@ it shows a report for each report period.
 
 Example:
 
-``` shell
+```cli
 $ hledger stats
 Main journal file        : /src/hledger/examples/sample.journal
 Included journal files   : 
@@ -3004,7 +3004,7 @@ This command also accepts tasty test runner options, written after a --
 (double hyphen). Eg to run only the tests in Hledger.Data.Amount, with
 ANSI colour codes disabled:
 
-``` shell
+```cli
 $ hledger test -- -pData.Amount --color=never
 ```
 
@@ -3176,7 +3176,7 @@ always, I'm not sure yet).
 Here's an example of setting the locale temporarily, on ubuntu
 gnu/linux:
 
-``` shell
+```cli
 $ file my.journal
 my.journal: UTF-8 Unicode text                 # <- the file is UTF8-encoded
 $ locale -a
@@ -3188,7 +3188,7 @@ $ LANG=en_US.utf8 hledger -f my.journal print   # <- use it for this command
 
 Here's one way to set it permanently, there are probably better ways:
 
-``` shell
+```cli
 $ echo "export LANG=en_US.UTF-8" >>~/.bash_profile
 $ bash --login
 ```
@@ -3196,7 +3196,7 @@ $ bash --login
 If we preferred to use eg `fr_FR.utf8`, we might have to install that
 first:
 
-``` shell
+```cli
 $ apt-get install language-pack-fr
 $ locale -a
 C

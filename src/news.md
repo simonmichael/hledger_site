@@ -109,7 +109,7 @@ I worked on refactoring and debugging the budget report for <https://github.com/
 Also, tweaked `close` tags, docs, and added to the PTA FAQ: <https://plaintextaccounting.org/FAQ#where-are-debits-and-credits-why-are-some-balances-negative>.
 I shared this time report that I like:
 
-```shell (just)
+```cli (just)
 # what happened (this week by default ?) Show simplified time categories, largest first, grouping some similar subaccounts together.
 @twhat *ARGS:
     hledger -f "$TIMELOG" bal -b thisweek -e tomorrow -WATS -2 --alias '/.*:(res|adm|it)\b/=_:\1' "$@"

@@ -4534,7 +4534,7 @@ some number of hours to an account. Or if the session spans more than
 one day, it is split into several transactions, one for each day. For
 the above time log, `hledger print` generates these journal entries:
 
-``` shell
+```cli
 $ hledger -f t.timeclock print
 2015-03-30 * optional description after 2 spaces   ; optional comment, tags:
     (some account)           0.33h
@@ -5484,7 +5484,7 @@ transactions. Eg:
     expenses:rent           $1000
 ```
 
-``` terminal
+```cli
 $ hledger print --forecast --today=2023/4/21
 2023-05-20 rent
     ; generated-transaction: ~ monthly from 2022-12-20
@@ -5520,7 +5520,7 @@ use `--today`; it\'s just to make these examples reproducible.)
 
 Forecast transactions affect all reports, as you would expect. Eg:
 
-``` terminal
+```cli
 $ hledger areg rent --forecast --today=2023/4/21
 Transactions in expenses:rent and subaccounts:
 2023-05-20 rent                 as:ba:checking               $1000         $1000
@@ -5530,7 +5530,7 @@ Transactions in expenses:rent and subaccounts:
 2023-09-20 rent                 as:ba:checking               $1000         $5000
 ```
 
-``` terminal
+```cli
 $ hledger bal -M expenses --forecast --today=2023/4/21
 Balance changes in 2023-05-01..2023-09-30:
 
@@ -6513,7 +6513,7 @@ Features:
 
 Example (see https://hledger.org/add.html for a detailed tutorial):
 
-``` shell
+```cli
 $ hledger add
 Adding transactions to journal file /src/hledger/examples/sample.journal
 Any command line arguments will be used as defaults.

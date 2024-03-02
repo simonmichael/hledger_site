@@ -29,7 +29,7 @@ Their most common use is to save typing, as in the examples below.
 (These and most shell examples in these docs are for the popular Bash shell;
 translate appropriately if you use a different shell.)
 
-```bash
+```cli
 # ~/finance/bashrc
 alias acc='hledger accounts'
 alias act='hledger activity'
@@ -58,7 +58,7 @@ alias all='hledger -f ~/finance/all.journal'
 
 or to customise hledger's commands:
 
-```bash
+```cli
 alias iadd='hledger-iadd --date-format %Y/%m/%d'
 alias ui='hledger-ui --watch'
 alias uir='hledger-ui --watch --register'
@@ -66,7 +66,7 @@ alias uir='hledger-ui --watch --register'
 
 or to remember useful reports:
 
-```bash
+```cli
 alias allone="all --alias '/^([^:]+)(:personal|:business)\b/ = \1' --alias '/^revenues:consulting/=revenues' --alias '/\bwells fargo\b/=wf'"
 alias budget='hledger bal --budget'
 alias forecast='hledger reg -H date:today- --forecast'
@@ -77,7 +77,7 @@ alias tripactivity='hledger act tag:trip -W'
 
 When aliases are too limiting, you can use functions instead:
 
-```bash
+```cli
 alias bassets='bal -H ^assets:business'
 alias bdebts='bal -H ^liabilities:business'
 alias brevenues='bal ^revenues:business'
@@ -105,7 +105,7 @@ function bsnapshot () { # business balance sheet + year-to-date income statement
 
 When aliases and functions are too limiting, you can use a shell script file:
 
-```bash
+```cli
 #!/bin/sh
 # ~/finance/bin/reports
 date

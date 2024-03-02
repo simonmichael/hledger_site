@@ -15,7 +15,7 @@ onclick="return hs.expand(this, { captionText:'SM\'s time and task dashboard' })
 
 \
 `time` (**L**):
-```bash
+```cli
 
 # Defined in ~/.bash_profile.local: $TIMELOG, $TIMEDATA
 
@@ -85,7 +85,7 @@ time1 *ARGS:
 
 \
 `todo` (**W**):
-```bash
+```cli
 # keep these synced with obsidian:
 
 WEEKNOTES := '~/notes/CLOUD/`date +%YW%V`.md'
@@ -115,7 +115,7 @@ TODAYHEADING := '^## ' + `date +'%a %-d'`
 
 \
 `wakelog`:
-```bash
+```cli
 #!/usr/bin/env bash
 # Show notable mac sleep/wake events, trimmed to terminal width
 # for tidy display, eg by watch. 

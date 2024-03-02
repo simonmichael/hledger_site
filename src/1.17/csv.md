@@ -73,7 +73,7 @@ fields       date, description, _, amount
 date-format  %d/%m/%Y
 ```
 
-``` shell
+```cli
 $ hledger print -f basic.csv
 2019-11-12 Foo
     expenses:unknown           10.23
@@ -122,7 +122,7 @@ currency  EUR
 account1  assets:bank:boi:checking
 ```
 
-``` shell
+```cli
 $ hledger -f bankofireland-checking.csv print
 2012-12-07 LODGMENT       529898
     assets:bank:boi:checking         EUR10.0 = EUR131.2
@@ -185,7 +185,7 @@ if %fees [1-9]
  amount3     %fees
 ```
 
-``` shell
+```cli
 $ hledger -f amazon-orders.csv print
 2012-07-29 (16000000000000DGLNJPI1P9B8DKPVHL) To Foo.  ; status:Completed
     assets:amazon
@@ -322,7 +322,7 @@ if Google
  description google | music
 ```
 
-``` shell
+```cli
 $ hledger -f paypal-custom.csv  print
 2019-10-01 (60P57143A8206782E) Calm Radio MONTHLY - $1 for the first 2 Months: Me - Order 99309. Item total: $1.00 USD first 2 months, then $6.99 / Month  ; itemid:, fromemail:simon@joyful.com, toemail:memberships@calmradio.com, time:03:46:20, type:Subscription Payment, status:Completed
     assets:online:paypal          $-6.99 = $-6.99
@@ -688,7 +688,7 @@ It's a good idea to get rapid feedback while creating/troubleshooting
 CSV rules. Here's a good way, using entr from
 http://eradman.com/entrproject :
 
-``` shell
+```cli
 $ ls foo.csv* | entr bash -c 'echo ----; hledger -f foo.csv print desc:SOMEDESC'
 ```
 
@@ -715,7 +715,7 @@ should be prefixed with one of `csv:`, `ssv:`, `tsv:`. This helps
 hledger identify the format and show the right error messages. For
 example:
 
-``` shell
+```cli
 $ hledger -f foo.ssv print
 ```
 
@@ -746,7 +746,7 @@ will not be checked, since normally these will work only when the CSV
 data is part of the main journal. If you do need to check balance
 assertions generated from CSV right away, pipe into another hledger:
 
-``` shell
+```cli
 $ hledger -f file.csv print | hledger -f- print
 ```
 
@@ -763,7 +763,7 @@ you ran it or with which version of the CSV. (It keeps state in a hidden
 `.latest.FILE.csv` file.) This is the easiest way to import CSV data.
 Eg:
 
-``` shell
+```cli
 # download the latest CSV files, then run this command.
 # Note, no -f flags needed here.
 $ hledger import *.csv [--dry]

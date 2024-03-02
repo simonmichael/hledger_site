@@ -319,7 +319,7 @@ types](https://github.com/simonmichael/hledger/blob/master/hledger-web/Hledger/W
 from or to a file. Eg here we write the first transaction of a sample
 journal:
 
-``` shell
+```cli
 $ make ghci-web
 >>> :m +*Hledger.Web.Json
 >>> writeJsonFile "txn.json" (head $ jtxns samplejournal)
@@ -332,7 +332,7 @@ discussion](https://github.com/simonmichael/hledger/issues/316#issuecomment-4658
 
 And here's how to test adding that with curl:
 
-``` shell
+```cli
 $ curl -s http://127.0.0.1:5000/add -X PUT -H 'Content-Type: application/json' --data-binary @txn.pretty.json; echo
 ```
 

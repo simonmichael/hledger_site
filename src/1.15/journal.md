@@ -153,12 +153,12 @@ primary date if unspecified.
   assets:checking
 ```
 
-``` shell
+```cli
 $ hledger register checking
 2010/02/23 movie ticket         assets:checking                $-10         $-10
 ```
 
-``` shell
+```cli
 $ hledger register checking --date2
 2010/02/19 movie ticket         assets:checking                $-10         $-10
 ```
@@ -184,12 +184,12 @@ reported on 6/1 for easy bank reconciliation:
     assets:checking        ; bank cleared it on monday, date:6/1
 ```
 
-``` shell
+```cli
 $ hledger -f t.j register food
 2015/05/30                      expenses:food                  $10           $10
 ```
 
-``` shell
+```cli
 $ hledger -f t.j register checking
 2015/06/01                      assets:checking               $-10          $-10
 ```
@@ -656,7 +656,7 @@ amounts to their transaction price's commodity, if any. (mnemonic: "B"
 is from "cost Basis", as in Ledger). Eg here is how -B affects the
 balance report for the example above:
 
-``` shell
+```cli
 $ hledger bal -N --flat
                $-135  assets:dollars
                 €100  assets:euros
@@ -676,7 +676,7 @@ is equivalent, -B shows something different:
   assets:euros     €100              ; for 100 euros
 ```
 
-``` shell
+```cli
 $ hledger bal -N --flat -B
                €-100  assets:dollars  # <- the dollars' selling price
                 €100  assets:euros
@@ -1204,7 +1204,7 @@ account expenses
 you'll see those accounts displayed in declaration order, not
 alphabetically:
 
-``` shell
+```cli
 $ hledger accounts -1
 assets
 liabilities
@@ -1581,7 +1581,7 @@ Some examples:
   assets:checking
 ```
 
-``` shell
+```cli
 $ hledger print --auto
 2017/12/01
     expenses:food              $10

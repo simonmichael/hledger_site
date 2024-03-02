@@ -457,7 +457,7 @@ bank's online register open in a browser window, for reference; the
 journal file open in an editor window; and hledger-ui in watch mode in a
 terminal window, eg:
 
-``` shell
+```cli
 $ hledger-ui --watch --register checking -C
 ```
 

@@ -73,7 +73,7 @@ biz:research  1
 
 Reporting:
 
-``` shell
+```cli
 $ hledger -f t.timedot print date:2016/2/2
 2016/02/02 *
     (inc:client1)          2.00
@@ -82,7 +82,7 @@ $ hledger -f t.timedot print date:2016/2/2
     (biz:research)          0.25
 ```
 
-``` shell
+```cli
 $ hledger -f t.timedot bal --daily --tree
 Balance changes in 2016/02/01-2016/02/03:
 
@@ -108,7 +108,7 @@ fos.hledger.timedot  4
 fos.ledger           ..
 ```
 
-``` shell
+```cli
 $ hledger -f t.timedot --alias /\\./=: bal date:2016/2/4
                 4.50  fos
                 4.00    hledger:timedot
