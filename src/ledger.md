@@ -315,7 +315,7 @@ So you might need to add a space in such cases.
 ### Decimal mark
 
 Ledger parses `1,000` as 1000, but hledger parses it as 1, by default
-(see [hledger > Decimal marks, digit group marks](hledger.md#decimal-marks-digit-group-marks)).
+(see [hledger > Decimal marks](hledger.md#decimal-marks)).
 
 To prevent any undetected disagreements, 
 use [commodity directives](#commodity-directives) or [decimal-mark directives](hledger.md#decimal-mark-directive)
@@ -591,7 +591,7 @@ Some common problems:
   [currently](https://github.com/ledger/ledger/issues/2301) does not
   parse such numbers.  You can avoid them by suppressing digit group
   marks (eg with `-c`) or by ensuring some decimal digits (eg with
-  `--round`); see [hledger > Amount formatting, parseability](hledger.md#amount-formatting-parseability).
+  `--round`); see [hledger > Trailing decimal marks](hledger.md#trailing-decimal-marks).
 
 See also the other [Differences](#) mentioned above.
 
