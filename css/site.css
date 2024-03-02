@@ -37,7 +37,7 @@ div.pagetoc:before {
 
 code {
   font-family: Consolas, "Ubuntu Mono", Menlo, "DejaVu Sans Mono", monospace, monospace !important;
-  color:black !important;
+/*  color:black !important; needs to be dark mode aware */
 }
 pre > code.hljs {
   border:thin solid lightgrey;
