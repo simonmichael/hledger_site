@@ -35,6 +35,38 @@ div.pagetoc:before {
   text-indent:-0.3em;
 }
 
+code {
+  font-family: Consolas, "Ubuntu Mono", Menlo, "DejaVu Sans Mono", monospace, monospace !important;
+  color:black !important;
+}
+pre > code.hljs {
+  border:thin solid lightgrey;
+}
+pre > code.language-cli {
+  border:none;
+  font-weight: bold;
+}
+pre > code.language-journal {
+  border:thin solid green;
+  background-color: greenyellow;
+}
+pre > code.language-csv {
+  border:thin solid darkred;
+  background-color: lightpink;
+}
+pre > code.language-rules {
+  border:thin solid palevioletred;
+  background-color: #fdd;
+}
+pre > code.language-timeclock {
+  border:thin solid darkblue;
+  background-color: lightblue;
+}
+pre > code.language-timedot {
+  border:thin solid darkcyan;
+  background-color: lightcyan;
+}
+
 /* .screenshot-right { 
   float:right; 
   clear:right;
