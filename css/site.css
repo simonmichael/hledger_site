@@ -14,6 +14,8 @@ div.pagetoc {
   float:right;
   margin-left:2em;
   max-width: 200px;
+  z-index:1;
+  position:relative;
 }
 div.pagetoc:before {
   content: "Contents";
@@ -54,10 +56,6 @@ div.pagetoc:before {
 
 .highslide img {
   border:none;
-}
-
-pre {
-    z-index:-1;
 }
 
 .clip-button {
