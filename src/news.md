@@ -11,6 +11,69 @@ every Friday morning or any time, tagged with `TWIH:`.
 See also: [Release notes](release-notes.md)
 
 
+## This Week In Hledger 2024-03-01
+<https://hledger.org/news.html#this-week-in-hledger-2024-03-01>
+
+**sm**
+A lot of work this week: bugfixing, updating for GHC 9.8, and improving docs. We weren't ready to release 1.33 on March 1st, but it's near.
+
+- web: show zero amounts with their commodity symbol [#2140]
+- fix expr:'s OR-ing of open-ended dates [#2177]
+- made stats output more private by default, added memory stats
+- in unbalanced transaction error messages, show small imbalances more precisely
+- fixed all ghc 9.8 partial head/tail warnings
+- resolved remaining ghc 9.8-related issues in our dependencies
+- updated all stack configs, switched to nightly/ghc 9.8 for dev builds
+- added support for other unicode space characters in numbers
+- added --round option to close, like print's
+- fixed potential display of ambiguous balance assertion/assignment amounts [#2176]
+- refactored the budget report and fixed wrong omitting of parent accounts [#2071]
+- made budget report's CSV/TSV output show zero instead of empty cells
+- worked on a bugs dashboard
+- doc: fix description of commodity directive's scope [#2135]
+- doc: explain hledger's transaction balancing
+- doc: discuss debits, credits, and sign
+- doc: hledger manual cleanups, fixes, flow improvement
+- doc: FAQ: update why was hledger created
+- doc: hledger and ledger: update performance notes
+- plaintextaccounting.org: link <https://lemmy.world/c/plaintextaccounting>, a reddit alternative
+
+**Robert Nielsen**
+On the hledger fan website, I take a look at needs, strategies, and spending. Also taxes and revisiting lowercasing. <https://hledgerfan.com/needs-strategies-and-spending>
+
+**Misc**
+
+**[Matrix chat](https://matrix.hledger.org)**
+wikipedia page, CSV rules, "Personal accounting in Ledger" book, unicode spaces in numbers, rvgp, loan bookkeeping, Open Collective, hledger manual size, file naming, emacs, visual studio code, aggregate shares bookkeeping..
+
+**[Mail list](https://list.hledger.org)**
+- Forex Accounts Receivable, timing difference between invoice and payment
+- Unexpected behavior using 'expr:'
+
+**[Reddit](https://www.reddit.com/r/plaintextaccounting/new/)**
+- Examples on hledger's web page manual are cut off
+- rvgp: an open-source PTA tool, that brings a proper build chain, to your accounting. Automates your Reconciliation, Validation and financial Graphing, in ruby.
+- [Beancount] CLI tool to import Wise multi-currency transactions
+- How to install Ledger CLI for Windows?
+- [beancount] Stock Purchase Plan Qualifying Disposition
+- Design patterns or idioms?
+- hledger register query only on Tuesdays
+
+**[Mastodon](https://fosstodon.org/search)**
+hledger manual size, switching from gnucash, more on the reddit IPO..
+
+**[Hacker News](https://hn.algolia.com/?query=hledger&type=comment&sort=byDate)**
+- [Ledger](https://news.ycombinator.com/item?id=39492924)
+
+**Quotes**
+
+*Quite happy with my switch from GnuCash to hledger: already automated importing the (broken) CSV my bank provides, and getting an overview of average monthly expenses is a one-liner. --rigrig*
+
+*The other nice part of `hledger` is the web UI (`hledger-web`), which is handy for checking out your transactions. --peterhajas*
+
+---
+
+
 ## This Week In Hledger 2024-02-23
 
 **sm**
