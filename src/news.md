@@ -538,7 +538,7 @@ budget-focussed, CSV-centric, typescript PTA app
 with a good [write-up](https://www.joshcanhelp.com/budget-cli)
 
 **Quotes of the week:**
-I switched, blissfully, away from Quicken/Quickbook/Xero/all that
+*I switched, blissfully, away from Quicken/Quickbook/Xero/all that
 heavy crap to very simple and elegant textfile-based accounting
 (ledger/hledger) and it's been the best and most flexible accounting
 experience I've ever had. I finally feel completely in control of my
@@ -755,7 +755,7 @@ txn was located originally.  The other way round (going through the
 journal, then finding the physical invoice/receipt) turned out to be
 much slower.*
 
-*I learned one thing: `if %FIELDBAME REGEX` matches against FIELDNAME
+*I learned one thing: `if %FIELDNAME REGEX` matches against FIELDNAME
 in the CSV. I didn't know that! I always match against the whole line
 and am annoyed if the order of columns makes this weird*
 
