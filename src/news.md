@@ -15,10 +15,9 @@ See also: [Release notes](release-notes.md)
 
 **sm**
 I fixed some doc issues on hledger.org: code blocks can now be scrolled normally, and are cheerily color-coded instead of drab grey.
-*Journal's greenyellow really makes it pop and I think it will make us rich!*
-
 The 1.33 release is still pending. Another gnarly release blocker remains to fix,
-and I was burned out on those. Instead, got deeply involved in setting up a new site for PTA discussions, <https://forum.plaintextaccounting.org>.
+and I was burned out on those.
+Instead, got deeply involved in setting up a new site for PTA discussions, <https://forum.plaintextaccounting.org>.
 
 **Robert Nielsen**
 On the hledger fan website, I look at a planning mistake that's easy to make in hledger or any planning. See it at <https://hledgerfan.com/dont-make-this-planning-mistake-with-hledger>.
@@ -45,6 +44,8 @@ Haskell software for Canadian tax prep, aregister print order, reporting prices 
 - PTA forum
 
 **Quotes**
+
+- *Journal's greenyellow really makes it pop and I think it will make us rich!* --sm
 
 - *I started setting up _hledger_ this year and I’m with you for a small business it is absolutely great. --abhiyerra*
 
