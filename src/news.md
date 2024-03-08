@@ -12,6 +12,7 @@ See also: [Release notes](release-notes.md)
 
 
 ## This Week In Hledger 2024-03-08
+<https://hledger.org/news.html#this-week-in-hledger-2024-03-08>
 
 **sm**
 I fixed some doc issues on hledger.org: code blocks can now be scrolled normally, and are cheerily color-coded instead of drab grey.
