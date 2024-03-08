@@ -11,6 +11,48 @@ every Friday morning or any time, tagged with `TWIH:`.
 See also: [Release notes](release-notes.md)
 
 
+## This Week In Hledger 2024-03-08
+
+**sm**
+I fixed some doc issues on hledger.org: code blocks can now be scrolled normally, and are cheerily color-coded instead of drab grey.
+*Journal's greenyellow really makes it pop and I think it will make us rich!*
+
+The 1.33 release is still pending. Another gnarly release blocker remains to fix,
+and I was burned out on those. Instead, got deeply involved in setting up a new site for PTA discussions, <https://forum.plaintextaccounting.org>.
+
+**Robert Nielsen**
+On the hledger fan website, I look at a planning mistake that's easy to make in hledger or any planning. See it at <https://hledgerfan.com/dont-make-this-planning-mistake-with-hledger>.
+
+**Misc**
+Jonathan Dowland fixed match group references in csv rules [#2158].
+
+
+**[Matrix chat](https://matrix.hledger.org)**
+Haskell software for Canadian tax prep, aregister print order, reporting prices effective on a date, filtering by balance size, migration issues, mint.com closure, discourse for PTA discussions, combining CSV records, CSV conversion issues, CSV rule if tables, bookkeeping success stories, downloading prices for a date range..
+
+
+**[Mail list](https://list.hledger.org)**
+- ANN: forum.plaintextaccounting.org
+- CSV rules: if tables, do you use them ? want them ?
+
+**[Reddit](https://www.reddit.com/r/plaintextaccounting/new/)**
+- [hledger] Auto posting that excludes previously matched postings
+- Question: Hledger csv first account names in csv files?
+- Discourse for Plain Text Accounting discussions ?
+
+**[Mastodon](https://fosstodon.org/search)**
+- online content platforms lock-in
+- PTA forum
+
+**Quotes**
+
+- *I started setting up _hledger_ this year and I’m with you for a small business it is absolutely great. --abhiyerra*
+
+- *In summary for me: _hledger_ has better csv importing system and ledger has support for lots. I use both. --faustlast*
+
+---
+
+
 ## This Week In Hledger 2024-03-01
 <https://hledger.org/news.html#this-week-in-hledger-2024-03-01>
 
