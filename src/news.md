@@ -11,6 +11,36 @@ every Friday morning or any time, tagged with `TWIH:`.
 See also: [Release notes](release-notes.md)
 
 
+## This Week In Hledger 2024-03-15
+<https://hledger.org/news.html#this-week-in-hledger-2024-03-15>
+
+**sm**
+No hledger dev work this week. The new PTA forum continues to work well.
+
+**Misc**
+docker-finance, a new cryptocurrency-supporting workflow system using hledger-flow,
+and the older workflows Full-fledged hledger, hledger-flow and rtrledger,
+have been added at <https://plaintextaccounting.org/#workflows>.
+
+To save time, I won't summarise discussions this week; you can see them at:
+
+<https://matrix.hledger.org>
+<https://list.hledger.org>
+<https://forum.plaintextaccounting.org/latest>
+<https://www.reddit.com/r/plaintextaccounting/new>
+<https://fosstodon.org/search> #hledger
+
+Feel free to share interesting blog posts (they don't have to be new) at the PTA forum.
+
+**Quotes**
+
+- *Way less painful than QuickBooks if you're also a programmer or adjacent. --dmoy*
+
+- *My favorite part of the (extensive) Haskell API is `Hledger.Cli.Script`. It re-exports all the most commonly used functions and data types, meaning you're just one import away from everything you need to get started.--wbadart*
+
+---
+
+
 ## This Week In Hledger 2024-03-08
 <https://hledger.org/news.html#this-week-in-hledger-2024-03-08>
 
