@@ -120,6 +120,7 @@ Check plaintextaccounting.org's and wiki.plaintextaccounting.org's categories.
 - [hledger-lots](scripts.md#hledger-lots)
 - [Average cost capital gains with hledger](https://curiousbicycle.com/post/hledger-capital-gains) 2023
 - [Track foreign stock capital gains using hledger](https://curiousbicycle.com/post/hledger-foreign-stock) 2023
+- [Full-fledged hledger: Manual lot tracking](https://github.com/adept/full-fledged-hledger/wiki/Manual-lot-tracking) 2024
 
 ### Invoicing
 - [Invoicing](invoicing.md)
