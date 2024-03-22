@@ -11,6 +11,38 @@ every Friday morning or any time, tagged with `TWIH:`.
 See also: [Release notes](release-notes.md)
 
 
+## This Week In Hledger 2024-03-22
+<https://hledger.org/news.html#this-week-in-hledger-2024-03-22>
+
+**sm**
+
+I tried getting hledger-sankey (generates Sankey diagrams of cash flows) working on my real world ledger, and contributed a patch.
+
+**Misc**
+
+Ilya Konovalov made multi-section balance reports always show a section total even when empty, fixing their CSV output. [#2186]
+
+You can see recent discussions at:
+
+<https://matrix.hledger.org>
+<https://list.hledger.org>
+<https://forum.plaintextaccounting.org/latest>
+<https://www.reddit.com/r/plaintextaccounting/new>
+<https://fosstodon.org/search> #hledger
+
+Feel free to share interesting blog posts (they don't have to be new) at the PTA forum.
+
+**Quotes**
+
+*A key advantage of hledger, and why I migrated from ledger, is that hledger internally orders transactions chronologically, whereas ledger inexplicably orders them in the order they appear in the file, irrespective of the date attached to them.--chromatin*
+
+*hledger can validate date order, that seems to eliminate copy-paste-fail-to-update-date for me. --yencabulator*
+
+*The reason I have hledger installed is for check ordereddates. --lvass*
+
+---
+
+
 ## This Week In Hledger 2024-03-15
 <https://hledger.org/news.html#this-week-in-hledger-2024-03-15>
 
