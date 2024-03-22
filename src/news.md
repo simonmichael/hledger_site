@@ -78,9 +78,9 @@ Haskell software for Canadian tax prep, aregister print order, reporting prices 
 
 - *Journal's greenyellow really makes it pop and I think it will make us rich!* --sm
 
-- *I started setting up _hledger_ this year and I’m with you for a small business it is absolutely great. --abhiyerra*
+- *I started setting up hledger this year and I’m with you for a small business it is absolutely great. --abhiyerra*
 
-- *In summary for me: _hledger_ has better csv importing system and ledger has support for lots. I use both. --faustlast*
+- *In summary for me: hledger has better csv importing system and ledger has support for lots. I use both. --faustlast*
 
 ---
 
