@@ -11,6 +11,26 @@ every Friday morning or any time, tagged with `TWIH:`.
 See also: [Release notes](release-notes.md)
 
 
+## This Week In Hledger 2024-03-29
+<https://hledger.org/news.html#this-week-in-hledger-2024-03-29>
+
+**sm**
+Doc rewrites, error message improvements.
+
+**Misc**
+- More [discussion](https://forum.plaintextaccounting.org/t/hledger-how-to-calculate-interest-with-rate-changing-in-the-middle-of-the-year/208) of hledger-interest, a call for improvements,
+  and a [pull request](https://github.com/peti/hledger-interest/pull/23) by Dmitry Astapov.
+- Some [discussion](https://forum.plaintextaccounting.org/t/excel/219) of exporting to Excel/spreadsheets.
+- How much attention to bookkeeping is just right ? [blog post](https://forum.plaintextaccounting.org/t/a-possible-to-overlook-benefit-to-using-plain-text-accounting/220)
+
+Feel free to share your experience reports or interesting links (they don't have to be new) on the [PTA forum](https://forum.plaintextaccounting.org).
+
+**Quotes**
+
+- *The initial setup of the books is pretty time consuming especially if you have a lot of accounts. I recommend starting your most important accounts and adding as you go along. --abhiyerra*
+
+---
+
 ## This Week In Hledger 2024-03-22
 <https://hledger.org/news.html#this-week-in-hledger-2024-03-22>
 
