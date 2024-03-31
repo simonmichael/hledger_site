@@ -1,38 +1,67 @@
 # A tax reporting setup
 
-A new working directory is created for each tax year:
+Tax prep is done in a subdirectory of the year.:
 
-    tax2022/
-      tax.journal
-      reports.org[.gpg]
+    finance/
+     2023/
+      taxes/
+       Health_Insurance_Form1095a_2023.pdf
+       (1099s, etc..)
+       next.journal -> ../../2024/2024.journal
+       prev.journal -> ../../2022/2022.journal
+       tax-reports.org.gpg
 
-`tax.journal` includes 
-  the tax year's journal
-  the previous year's journal, for comparison and sanity checking
-  the next (current) year's journal, since it may contain related transactions, like tax payments
-  account aliases renaming the year's account names to corresponding tax form items
+`tax-reports.org` (optionally encrypted with gpg) is the main thing;
+it is an emacs org outline shaped like the tax forms or tax
+preparation software (freetaxusa.com in my case). 
 
-`reports.org` (optionally encrypted with gpg) contains a large number of hledger reports, embedded as org source blocks, normally using tax.journal, as needed to answer every tax-related question and fill out every tax form item. This provides a useful combination of manageability, tweakability, repeatability, and persistence.
+For each form item/field, there's an outline heading, and under it one
+or more hledger reports designed to show (and explain) the required
+information. Here's an excerpt:
 
-Because tax.journal is multi-year, many reports will need `-p TAXYEAR` to limit their period.
+```org
+* tax preparation for 2023    -*- org-confirm-babel-evaluate:nil; -*-
+...
+** Income
+*** overview
+#+begin_src hledger :cmdline -f ../2???.journal -p 2023 bal -Y type:r cur:. -4 --invert
+#+end_src
 
-Use whatever headings are useful. Eg: tax software being used, tax software sections, tax form names, tax form item labels.
+#+RESULTS:
+#+begin_example
+Balance changes in 2023:
+...
+#+end_example
 
-Below item headings there will be a one or more relevant hledger reports in source blocks. Eg:
+*** Common Income
+**** Interest Income
+#+begin_src hledger :cmdline -f ../2???.journal -p 2023 bal -Y type:r interest --invert
+#+end_src
 
-    *** <Tax form name> [human description]
-    **** <Tax form's or software's item label>
-    
-    Balances in PREVYEAR and TAXYEAR:
-    #+begin_src hledger :cmdline -f tax.journal bal -VYE -e NEXTYEAR REPORTARGS
-    #+end_src
-    
-    Transactions in TAXYEAR:
-    #+begin_src hledger :cmdline -f tax.journal reg -V -p TAXYEAR REPORTARGS
-    #+end_src
+#+RESULTS:
+: Balance changes in 2023:
+...
+```
 
-With point (cursor) on a report block (eg the begin_src line),
-  `C-c C-c` runs the report, inserting/updating results
-  `C-c C-v k` erases the report results
-With point anywhere,
-  `C-u C-c C-v k` erases all reports' results
+The reports are embedded as org source blocks.  With cursor on the
+command line, `C-c C-c` runs the command and updates the RESULTS.
+(The two RESULTS above have slightly different markup, because of
+output size I think.)
+
+The commands reference `../2???.journal` (2023.journal in this case),
+and some of them use `prev.journal` or `next.journal` as well.
+
+I used to define tax-specific account aliases renaming my usual
+account names to match the names used in tax forms/tax software, 
+but that's work and another layer of confusion, so currently I don't
+bother with that.
+
+I have used this setup for a number of years now and for me it gives a
+good combination of manageability, tweakability, repeatability, and
+persistence/memory across years.
+
+For example, when starting tax prep for a year, I start with a copy of
+the previous year's outline, which includes all of last year's reports.
+As I press `C-c C-c` in each report, it updates to this year. This is
+useful for comparison and sanity checking.  Each year, the process
+becomes easier.
