@@ -65,3 +65,5 @@ the previous year's outline, which includes all of last year's reports.
 As I press `C-c C-c` in each report, it updates to this year. This is
 useful for comparison and sanity checking.  Each year, the process
 becomes easier.
+
+([Discussion](https://forum.plaintextaccounting.org/t/taxes/224))
