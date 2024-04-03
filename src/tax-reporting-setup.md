@@ -45,8 +45,8 @@ Balance changes in 2023:
 
 The reports are embedded as org source blocks.  With cursor on the
 command line, `C-c C-c` runs the command and updates the RESULTS.
-(The two RESULTS above have slightly different markup, because of
-output size I think.)
+(The two RESULTS above have different markup, because of output size - 
+`(setq org-babel-min-lines-for-block-output ...)` to control this.)
 
 The commands reference `../2???.journal` (2023.journal in this case),
 and some of them use `prev.journal` or `next.journal` as well.
