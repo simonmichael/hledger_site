@@ -110,6 +110,7 @@ Check plaintextaccounting.org's and wiki.plaintextaccounting.org's categories.
 - [PTA wiki: Inventory](https://github.com/plaintextaccounting/plaintextaccounting/wiki/Inventory)
 
 ### Investing and trading
+- [PTA Cookbook: Investing and trading](https://plaintextaccounting.org/Investing-and-trading)
 - [hledger manual > Cost reporting](hledger.md#cost-reporting)
 - [hledger manual > Value reporting](hledger.md#value-reporting)
 - [hledger manual > balance features](hledger.md#balance-features)
