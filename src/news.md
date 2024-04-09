@@ -21,7 +21,7 @@ Doc updates ([#2189], [#2191],
 Added Brian Victor's [hledger-txnsbycat.hs] to the Scripts page.
 
 On plaintextaccounting.org
-I started a project finance/donations page and public ledger;
+I started a project [finance/donations page and public ledger](https://plaintextaccounting.org/finance);
 moved blog links off the front page in favour of the PTA forum;
 added a new video in Tamil language;
 updated
