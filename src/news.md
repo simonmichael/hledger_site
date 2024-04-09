@@ -11,6 +11,53 @@ every Friday morning or any time, tagged with `TWIH:`.
 See also: [Release notes](release-notes.md)
 
 
+## This Week In Hledger 2024-04-05
+<https://hledger.org/news.html#this-week-in-hledger-2024-04-05>
+
+**sm**
+Doc updates ([#2189], [#2191], 
+[Cookbook#investing](https://hledger.org/cookbook.html#investing-and-trading),
+[A tax reporting setup](https://hledger.org/tax-reporting-setup.html)).
+Added [hledger-txnsbycat.hs] to the Scripts page.
+
+plaintextaccounting.org updates:
+started a project finance/donations page and public ledger;
+moved blog links off the front page in favour of the PTA forum;
+added a new video in Tamil language;
+updated
+[Investing and trading](https://plaintextaccounting.org/Investing-and-trading),
+[FAQ](https://plaintextaccounting.org/FAQ).
+
+**Misc**
+
+Dmitry Astapov fixed the roi command's handling of --value ([#2190]).
+
+Ellane W raised [thoughtful questions](https://fosstodon.org/@ellane@pkm.social/112200307570801031) about when to use PTA vs simpler tools like paper.
+
+lil5 [announced](https://fosstodon.org/@lil5/112216112363013745) a Go language client API for hledger-web.
+
+You can see recent discussions at eg
+<https://matrix.hledger.org>,
+<https://list.hledger.org>,
+<https://forum.plaintextaccounting.org/latest>,
+<https://www.reddit.com/r/plaintextaccounting/new>,
+<https://fosstodon.org/search> -> #hledger.
+Feel free to share interesting links (they don't have to be new) at the PTA forum.
+
+**Quotes**
+
+*Having hledger have all my accounts, personal and business and being able to filter out appropriate reports has been great for seeing things like is the business a money pit or am I actually growing wealth over time. --abhiyerra*
+
+*I use hledger and I love it. It has a learning curve (especially if you're new to double entry accounting) but it's rewarding.*
+
+[hledger-txnsbycat.hs]: https://hledger.org/scripts.html#hledger-txnsbycaths
+[#2191]: https://github.com/simonmichael/hledger/issues/2191
+[#2190]: https://github.com/simonmichael/hledger/issues/2190
+[#2189]: https://github.com/simonmichael/hledger/issues/2189
+
+---
+
+
 ## This Week In Hledger 2024-03-29
 <https://hledger.org/news.html#this-week-in-hledger-2024-03-29>
 
