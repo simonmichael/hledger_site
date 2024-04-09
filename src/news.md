@@ -18,10 +18,10 @@ See also: [Release notes](release-notes.md)
 Doc updates ([#2189], [#2191], 
 [Cookbook#investing](https://hledger.org/cookbook.html#investing-and-trading),
 [A tax reporting setup](https://hledger.org/tax-reporting-setup.html)).
-Added [hledger-txnsbycat.hs] to the Scripts page.
+Added Brian Victor's [hledger-txnsbycat.hs] to the Scripts page.
 
-plaintextaccounting.org updates:
-started a project finance/donations page and public ledger;
+On plaintextaccounting.org
+I started a project finance/donations page and public ledger;
 moved blog links off the front page in favour of the PTA forum;
 added a new video in Tamil language;
 updated
@@ -36,7 +36,7 @@ Ellane W raised [thoughtful questions](https://fosstodon.org/@ellane@pkm.social/
 
 lil5 [announced](https://fosstodon.org/@lil5/112216112363013745) a Go language client API for hledger-web.
 
-You can see recent discussions at eg
+You can see the recent discussion at eg
 <https://matrix.hledger.org>,
 <https://list.hledger.org>,
 <https://forum.plaintextaccounting.org/latest>,
