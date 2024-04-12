@@ -11,6 +11,43 @@ every Friday morning or any time, tagged with `TWIH:`.
 See also: [Release notes](release-notes.md)
 
 
+## This Week In Hledger 2024-04-12
+<https://hledger.org/news.html#this-week-in-hledger-2024-04-12>
+
+**sm**
+Investigated/refactored/discussed a problem with boolean query expressions; disallowed date: in OR expressions [#2178].
+Required process >=1.6.19.0 for HSEC-2024-0003.
+Updated docs: balance assertions, balancesheetequity.
+
+plaintextaccounting.org updates:
+FAQ,
+Borrowing and lending,
+Investing and trading,
+Shared expenses,
+project ledger.
+
+**Misc**
+- [Hacker News: Double-entry bookkeeping as a directed graph](https://news.ycombinator.com/item?id=39988993)
+
+You can see recent discussions at:
+<https://matrix.hledger.org>,
+<https://list.hledger.org>,
+<https://forum.plaintextaccounting.org/latest>,
+<https://www.reddit.com/r/plaintextaccounting/new>,
+<https://fosstodon.org/search> -> #hledger.
+Feel free to share interesting links (they don't have to be new) at the PTA forum.
+
+**Quotes**
+
+*There are few things better than doing my taxes every year and being able to confirm every number on every form with simple #hledger queries (which lets me double check both my records and the forms themselves). --Michael Rees*
+
+*I combine hledger csv output with Jupyter to generate the specific reports and charts I need. I.e business specific versus combined for taxes. --abhiyerra*
+
+[#2178]: https://github.com/simonmichael/hledger/issues/2178
+
+---
+
+
 ## This Week In Hledger 2024-04-05
 <https://hledger.org/news.html#this-week-in-hledger-2024-04-05>
 
