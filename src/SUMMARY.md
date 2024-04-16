@@ -20,7 +20,6 @@
 # DEVELOPERS
 
 - [Contributor Quick Start](CONTRIBUTING.md)
-- [Developer links](LINKS.md)
 - [Developer docs](dev.md)
 - [CREDITS](CREDITS.md)
 
@@ -136,7 +135,6 @@ and previewing them when working on docs locally.
 - [DEVWORKFLOWS](DEVWORKFLOWS.md)
 - [DOCS](DOCS.md)
 - [Developer docs](dev.md)
-- [Developer links](LINKS.md)
 - [ERRORS](ERRORS.md)
 - [EXAMPLES](EXAMPLES.md)
 - [FILES](FILES.md)
