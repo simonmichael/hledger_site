@@ -1,1 +1,1 @@
-../../doc/MOCkUPS.md
+../../doc/MOCKUPS.md
