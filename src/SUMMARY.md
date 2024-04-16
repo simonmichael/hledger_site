@@ -15,7 +15,7 @@
 - [Scripts and add-ons](scripts.md)
 - [Cookbook](cookbook.md)
 - [Discussion/Support](support.md)
-- [Climate impact](climate-impact.md)
+- [Climate impact](climate.md)
 
 # DEVELOPERS
 
@@ -44,7 +44,7 @@
 - [Change account name separator](change-account-name-separator.md)
 - [Charts and Graphs](charts.md)
 - [Checking for errors](checking-for-errors.md)
-- [Climate impact](climate-impact.md)
+- [Climate impact](climate.md)
 - [Command line completion](command-line-completion.md)
 - [Common journal entries](common-journal-entries.md)
 - [Workflows](workflows.md)
