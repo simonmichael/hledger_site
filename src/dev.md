@@ -1,16 +1,11 @@
 # Developer docs
 
-<div class=pagetoc>
-
-<!-- toc -->
-</div>
-
 Contributor, developer, and maintainer docs.
 These aim to describe and communicate the structure, processes and
 workflows of the hledger project - "the machine that makes the machine".
 
-Mostly they are UPPERCASE files in the hledger repo's doc/ directory,
-symlinked into the hledger_site repo so they appear on hledger.org.
+These mostly are kept in doc/ in the main hledger repo,
+and then symlinked into the hledger_site repo for rendering on hledger.org.
 
 - [README](dev-README.md)
 - [ROADMAP](ROADMAP.md)
