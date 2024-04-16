@@ -243,7 +243,7 @@ account.  Eg, buying food.
   [Accounting Principles I](https://www.cliffsnotes.com/study-guides/accounting/accounting-principles-i),
   [Accounting Principles II](https://www.cliffsnotes.com/study-guides/accounting/accounting-principles-ii)
 - [Bean Counter](http://www.dwmbeancounter.com/) - tutorials, such as
-  [So, you want to learn Bookkeeping!](http://www.dwmbeancounter.com/tutorial/Tutorial.html).
+  [So, you want to learn Bookkeeping!](https://www.dwmbeancounter.com/BCTutorials/BCIntro/index.html).
   This has been recommended on the ledger list and [on HN](https://news.ycombinator.com/item?id=17245101).
 - [Accounting Coach](https://www.accountingcoach.com/)
 - [Accounting Basics](http://www.accountingverse.com/accounting-basics/)
