@@ -24,7 +24,7 @@
 - [Developer docs](dev.md)
 - [CREDITS](CREDITS.md)
 
-# PROJECT FINANCE
+# FINANCE
 
 - [Sponsor hledger](sponsor.md)
 - [Regression bounty](REGRESSIONS.md)
