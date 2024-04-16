@@ -22,7 +22,6 @@
 - [Contributor Quick Start](CONTRIBUTING.md)
 - [Developer links](LINKS.md)
 - [Developer docs](dev.md)
-<!-- - [Developer FAQ](devfaq.md) -->
 - [CREDITS](CREDITS.md)
 
 # PROJECT FINANCE
@@ -66,10 +65,8 @@
 - [How to figure out journal entries](how-to-figure-out.md)
 - [Importing CSV data](import-csv.md)
 - [Install](install.md)
-- [Investment Accounting Feature Ladder](investment-accounting-features.md)
 - [Invoicing](invoicing.md)
 - [Mobile apps](mobile.md)
-- [Mockups](mockups.md)
 - [Multicurrency tutorial (2018)](multicurrency-tutorial.md)
 - [News](news.md)
 - [Project accounting](project-accounting.md)
@@ -144,9 +141,10 @@ and previewing them when working on docs locally.
 - [EXAMPLES](EXAMPLES.md)
 - [FILES](FILES.md)
 - [FINANCE](FINANCE.md)
+- [Investment Accounting Feature Ladder](investment-accounting-features.md)
 - [ISSUES](ISSUES.md)
 - [MAKE](MAKE.md)
-- [Mockups](mockups.md)
+- [MOCKUPS](MOCKUPS.md)
 - [PULLREQUESTS](PULLREQUESTS.md)
 - [README](dev-README.md)
 - [REGRESSIONS](REGRESSIONS.md)
