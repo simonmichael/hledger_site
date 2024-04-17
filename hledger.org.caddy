@@ -106,7 +106,7 @@ hledger.org {
 	redir /contributors {uri}.html
 	redir /faq {uri}.html
 	redir /finance FINANCE.html
-	redir /release-notes {uri}.html
+	redir /relnotes {uri}.html
 	redir /roadmap {uri}.html
 	redir /contrib /CONTRIBUTING.html
 	redir /ui /hledger-ui.html
@@ -117,6 +117,8 @@ hledger.org {
 	redir /regressions REGRESSIONS.html
 
 	# misc moved content and shortcut aliases
+	redir /release-notes.html /relnotes.html
+	redir /release-notes      /relnotes.html
 	redir /common-workflows.html /workflows.html
 	# XXX this somehow also redirects /workflows.html ?
 	# redir /WORKFLOWS.html /DEVWORKFLOWS.html
