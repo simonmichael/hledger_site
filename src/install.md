@@ -62,7 +62,7 @@ div.badges > a > img {
 }
 </style>
 
-The current hledger release is **1.32.3**. 
+The current hledger release is **1.33**.
 [Release notes](release-notes.md)
 
 Here are lots of ways to install hledger:
@@ -82,6 +82,7 @@ And finally please [share any feedback](support.md) so we can make this process 
 <!--
 All tracked by repology:
 <a style="" href="https://repology.org/project/hledger/versions"><img src="https://repology.org/badge/vertical-allrepos/hledger.svg" alt="Packaging status"></a>
+https://repology.org/project/hledger/badges
 -->
 
 ### Mac
@@ -91,15 +92,16 @@ All tracked by repology:
   <tr> <!-- CI BINARIES (SM) -->
     <td>
       <div class="badges">
-        <a href="https://github.com/simonmichael/hledger/releases/tag/1.32.3#mac-x64">
-            <img alt="hledger CI binaries" src="https://img.shields.io/badge/hledger_CI_binaries-1.32.3-brightgreen.svg" />
+        <a href="https://github.com/simonmichael/hledger/releases/tag/1.33#mac-x64">
+            <img alt="hledger CI binaries" src="https://img.shields.io/badge/hledger_CI_binaries-1.33-brightgreen.svg" />
         </a><br>
       </div>
       <!-- <div class="notes">Linux, Mac, Windows</div> -->
     </td>
     <td>
       <div class="command">
-        <a href="https://github.com/simonmichael/hledger/releases/tag/1.32.3#mac-x64">hledger-mac-x64.zip</a>
+        <a href="https://github.com/simonmichael/hledger/releases/tag/1.33#mac-x64">hledger-mac-x64.zip</a>,
+        <a href="https://github.com/simonmichael/hledger/releases/tag/1.33#mac-arm64">hledger-mac-arm64.zip</a>
       </div>
       <div class="notes"></div>
     </td>
@@ -126,15 +128,15 @@ All tracked by repology:
   <tr> <!-- CI BINARIES (SM) -->
     <td>
       <div class="badges">
-        <a href="https://github.com/simonmichael/hledger/releases/tag/1.32.3#windows-x64">
-            <img alt="hledger CI binaries" src="https://img.shields.io/badge/hledger_CI_binaries-1.32.3-brightgreen.svg" />
+        <a href="https://github.com/simonmichael/hledger/releases/tag/1.33#windows-x64">
+            <img alt="hledger CI binaries" src="https://img.shields.io/badge/hledger_CI_binaries-1.33-brightgreen.svg" />
         </a><br>
       </div>
       <!-- <div class="notes">Linux, Mac, Windows</div> -->
     </td>
     <td>
       <div class="command">
-        <a href="https://github.com/simonmichael/hledger/releases/tag/1.32.3#windows-x64">hledger-windows-x64.zip</a>
+        <a href="https://github.com/simonmichael/hledger/releases/tag/1.33#windows-x64">hledger-windows-x64.zip</a>
         <!-- <span style="font-weight:normal; font-style:italic; font-size:small;">
           (Also runs on other platforms with <a href="https://www.winehq.org">Wine</a>)
         </span> -->
@@ -146,10 +148,10 @@ All tracked by repology:
   <tr valign="top"> <!-- SCOOP (?) -->
     <td>
       <div class="badges">
-        <!-- <img alt="Scoop package" src="https://repology.org/badge/version-for-repo/scoop/hledger.svg" />  gone ? -->
         <a href="https://scoop.sh/#/apps?q=hledger">
-          <img alt="Scoop package" src="https://img.shields.io/badge/scoop-1.32.1-red.svg" />
+          <img alt="Scoop package" src="https://repology.org/badge/version-for-repo/scoop/hledger.svg" />
         </a>
+          <!-- <img alt="Scoop package" src="https://img.shields.io/badge/scoop-1.32.3-red.svg" /> -->
       </div>
     </td>
     <td style="padding-top:10px;">
@@ -208,15 +210,15 @@ All tracked by repology:
   <tr> <!-- CI BINARIES (SM) -->
     <td>
       <div class="badges">
-        <a href="https://github.com/simonmichael/hledger/releases/tag/1.32.3#linux-x64">
-            <img alt="hledger CI binaries" src="https://img.shields.io/badge/hledger_CI_binaries-1.32.3-brightgreen.svg" />
+        <a href="https://github.com/simonmichael/hledger/releases/tag/1.33#linux-x64">
+            <img alt="hledger CI binaries" src="https://img.shields.io/badge/hledger_CI_binaries-1.33-brightgreen.svg" />
         </a><br>
       </div>
       <!-- <div class="notes">Linux, Mac, Windows</div> -->
     </td>
     <td>
       <div class="command">
-        <a href="https://github.com/simonmichael/hledger/releases/tag/1.32.3#linux-x64">hledger-linux-x64.zip</a>
+        <a href="https://github.com/simonmichael/hledger/releases/tag/1.33#linux-x64">hledger-linux-x64.zip</a>
       </div>
       <div class="notes"></div>
     </td>
@@ -226,7 +228,7 @@ All tracked by repology:
     <td>
       <div class="badges">
         <!-- no repology badge for some reason -->
-        <a href="https://gentoo.zugaina.org/Search?search=hledger"><img alt="Gentoo" src="https://img.shields.io/badge/Gentoo_package-1.32.1-red.svg" /></a>
+        <a href="https://gentoo.zugaina.org/Search?search=hledger"><img alt="Gentoo" src="https://img.shields.io/badge/Gentoo_package-1.32.3-red.svg" /></a>
       </div>
     </td>
     <td>
@@ -291,6 +293,7 @@ All tracked by repology:
     <td>
       <div class="badges">
         <!-- <a href="https://packages.ubuntu.com/XXXXX/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_XX_XX/hledger.svg" /></a><br> -->
+        <a href="https://packages.ubuntu.com/noble/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_24_04/hledger.svg" /></a><br>
         <a href="https://packages.ubuntu.com/mantic/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_23_10/hledger.svg" /></a><br>
         <a href="https://packages.ubuntu.com/lunar/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_23_04/hledger.svg" /></a><br>
         <a href="https://packages.ubuntu.com/jammy/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_22_04/hledger.svg" /></a><br>
@@ -308,6 +311,7 @@ All tracked by repology:
   <tr> <!-- FEDORA (?) -->
     <td>
       <div class="badges">
+        <a ><img src="https://img.shields.io/badge/Fedora_41_package-1.30.1-red.svg" /></a><br>
         <a ><img src="https://img.shields.io/badge/Fedora_40_package-1.30.1-red.svg" /></a><br>
         <a ><img src="https://img.shields.io/badge/Fedora_39_package-1.30.1-red.svg" /></a><br>
         <a ><img src="https://img.shields.io/badge/Fedora_38_package-1.27.1-red.svg" /></a><br>
@@ -378,7 +382,7 @@ All tracked by repology:
   <tr> <!-- NETBSD (?) -->
     <td>
       <div class="badges">
-        <a href="https://cdn.netbsd.org/pub/pkgsrc/current/pkgsrc/finance/hledger/index.html"><img src="https://img.shields.io/badge/NetBSD-1.28-red.svg" alt="netbsd package" /></a><br>
+        <a href="https://cdn.netbsd.org/pub/pkgsrc/current/pkgsrc/finance/hledger/index.html"><img src="https://img.shields.io/badge/NetBSD-1.31-red.svg" alt="netbsd package" /></a><br>
       </div>
     </td>
     <td>
@@ -410,7 +414,7 @@ All tracked by repology:
   <tr> <!-- DOCKER (adept) -->
     <td>
       <div class="badges">
-        <a href="https://hub.docker.com/r/dastapov/hledger"><img alt="Docker" src="https://img.shields.io/badge/Docker_image-1.32.3-brightgreen.svg" /></a><br>
+        <a href="https://hub.docker.com/r/dastapov/hledger"><img alt="Docker" src="https://img.shields.io/badge/Docker_image-1.32.3-red.svg" /></a><br>
         <a href="https://hub.docker.com/search?q=hledger&amp;type=image&amp;sort=updated_at&amp;order=desc">more..</a>
       </div>
       <!-- <div class="notes">Linux, Mac, Windows</div> -->
@@ -474,10 +478,11 @@ All tracked by repology:
     </td>
     <td style="padding-top:10px;">
       <div class="command" style="margin-bottom:4px;">
-        <a href="https://github.com/simonmichael/hledger/releases">https://github.com/simonmichael/hledger/releases</a><br>
+        <a href="https://github.com/simonmichael/hledger/releases">https://github.com/simonmichael/hledger/releases</a>
+        (<a href="https://github.com/simonmichael/hledger/releases.atom">RSS</a>)
       </div>
       <div class="notes">
-        Previews of the next major release (occasionally), for testers & early adopters.
+        Any preview releases for testers & early adopters, will be visible on the Github releases page/feed.
       </div>
     </td>
   </tr>
@@ -487,7 +492,7 @@ All tracked by repology:
 
 ## Build the current release
 
-<a href="https://github.com/simonmichael/hledger/tree/1.32-branch"><img alt="Release source" src="https://img.shields.io/badge/Release_source-1.32.3-brightgreen.svg" /></a>
+<a href="https://github.com/simonmichael/hledger/tree/1.33-branch"><img alt="Release source" src="https://img.shields.io/badge/Release_source-1.33-brightgreen.svg" /></a>
 
 1. Check [build requirements](#build-requirements)
 2. Use one of the [build methods](#build-methods)
@@ -619,7 +624,7 @@ If you have stack installed, you can run it to install the main hledger tools in
 
 <div class="builder-command">
   stack update <br>
-  stack install --resolver=lts-22 hledger-lib-1.32.3 hledger-1.32.3 hledger-ui-1.32.3 hledger-web-1.32.3 --silent
+  stack install --resolver=lts-22 hledger-lib-1.33 hledger-1.33 hledger-ui-1.33 hledger-web-1.33 process-1.6.19.0 Cabal-3.10.1.0 haskeline-0.8.2.1 vty-windows-0.2.0.2 --silent 
 </div>
 
 On Windows, omit hledger-ui from this command (unless you are in [WSL]).
@@ -631,7 +636,7 @@ If you have GHC and cabal, you can run cabal to install the main hledger tools i
 <div class="builder-command">
   cabal update <br>
   cabal install alex happy<br>
-  cabal install hledger-1.32.3 hledger-ui-1.32.3 hledger-web-1.32.3
+  cabal install hledger-1.33 hledger-ui-1.33 hledger-web-1.33
 </div>
 
 On Windows, omit hledger-ui from this command (unless you are in [WSL]).
@@ -696,15 +701,15 @@ After installing, run the hledger tools and verify that their versions are what 
 
 <div class="command">
 $ hledger --version <br>
-hledger 1.32.3...
+hledger 1.33-...
 <br>
 <br>
 $ hledger-ui --version <br>
-hledger-ui 1.32.3...
+hledger-ui 1.33-...
 <br>
 <br>
 $ hledger web --version <br>
-hledger-web 1.32.3...
+hledger-web 1.33-...
 <br>
 </div>
 
@@ -713,7 +718,7 @@ If you like, you can also run the unit tests:
 <div class="command">
 $ hledger test <br>
 ... <br>
-All 225 tests passed (0.04s)
+All 227 tests passed (0.04s)
 </div>
 
 or the more thorough functional tests, if you are in hledger's source directory:
@@ -721,7 +726,7 @@ or the more thorough functional tests, if you are in hledger's source directory:
 <div class="command">
 $ make functest <br>
 ... <br>
- Total   1034 ...<br>
+ Total   1047 ...<br>
 functest PASSED
 </div>
 
