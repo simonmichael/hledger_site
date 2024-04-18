@@ -82,8 +82,8 @@ Knowing some [double entry accounting] will help you get the most from hledger,
 but you can do fine just by following the examples below. You'll find your
 bookkeeping/accounting skills improve naturally (and [help] is available).
 
-[double entry accounting]: https://hledger.org/accounting.md#accounting-links
-[help]: https://hledger.org/support.md
+[double entry accounting]: accounting.md#accounting-links
+[help]: support.md
 
 
 <a name="install"></a>
