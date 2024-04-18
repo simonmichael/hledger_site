@@ -494,6 +494,10 @@ https://repology.org/project/hledger/badges
 
 <a href="https://github.com/simonmichael/hledger/tree/1.33-branch"><img alt="Release source" src="https://img.shields.io/badge/Release_source-1.33-brightgreen.svg" /></a>
 
+You can build and install the current release 
+without needing git or a full copy of the hledger source.
+(If you'd prefer to use git and the full source, see [below](#build-the-development-version).)
+
 1. Check [build requirements](#build-requirements)
 2. Use one of the [build methods](#build-methods)
 
@@ -656,14 +660,19 @@ Here's <a href="https://libera.ems.host/_matrix/media/r0/download/libera.chat/51
 
 <a href="https://github.com/simonmichael/hledger"><img alt="Latest source" src="https://img.shields.io/badge/Latest_source-master-green.svg" /></a>
 
-If you want the very [latest improvements](https://github.com/simonmichael/hledger/commits/master),
+If you want to test the very [latest improvements](https://github.com/simonmichael/hledger/commits/master),
 our master branch on github is suitable for daily use.
+Or you can build the latest release, or any other past version.
 
 1. Check [build requirements](#build-requirements) above
 
 2. Get the source with [git](https://en.wikipedia.org/wiki/Git) and enter the source directory:
     <div class="builder-command">
+    # either the latest dev code: <br>
     git clone https://github.com/simonmichael/hledger <br>
+    # or a release tag, eg: <br>
+    git clone https://github.com/simonmichael/hledger -b 1.33 <br>
+
     cd hledger
     </div>
 
