@@ -568,7 +568,6 @@ must be set to a UTF-8-aware locale. See [Check your locale](#check-your-locale)
 
   <blockquote class="warnings">
     <a href="https://gitlab.haskell.org/ghc/ghc/-/issues/20592">mac m1: building with ghc 9+ requires extra include dir</a><br>
-    <a href="https://github.com/jtdaugherty/vty/pull/1#issuecomment-297143444">windows: hledger-ui is not available</a><br>
     <a href="https://github.com/simonmichael/hledger/issues/961#issuecomment-471229644">windows: cross-environment non-ascii display issues</a><br>
     <!-- <a href="https://github.com/simonmichael/hledger/issues/1039">windows: hledger-web fails to start on Windows 7</a><br> -->
     <a href="https://wiki.archlinux.org/index.php/Haskell">arch: haskell build advice from Arch wiki</a><br>
@@ -628,10 +627,8 @@ If you have stack installed, you can run it to install the main hledger tools in
 
 <div class="builder-command">
   stack update <br>
-  stack install --resolver=lts-22 hledger-lib-1.33 hledger-1.33 hledger-ui-1.33 hledger-web-1.33 process-1.6.19.0 Cabal-3.10.1.0 haskeline-0.8.2.1 vty-windows-0.2.0.2 --silent 
+  stack install --verbosity=error --resolver=lts-22 hledger-lib-1.33 hledger-1.33 hledger-ui-1.33 hledger-web-1.33 process-1.6.19.0 Cabal-3.10.1.0 haskeline-0.8.2.1   # on Windows, add vty-windows-0.2.0.2
 </div>
-
-On Windows, omit hledger-ui from this command (unless you are in [WSL]).
 
 #### Build with cabal
 
@@ -642,8 +639,6 @@ If you have GHC and cabal, you can run cabal to install the main hledger tools i
   cabal install alex happy<br>
   cabal install hledger-1.33 hledger-ui-1.33 hledger-web-1.33
 </div>
-
-On Windows, omit hledger-ui from this command (unless you are in [WSL]).
 
 #### Build with nix
 
