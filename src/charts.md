@@ -51,6 +51,10 @@ $ hledger bar -- -v 1 -f $TIMELOG biz -p weeklyfrom3weeksago
 [hledger-plot](https://pypi.org/project/hledger-utils) (2023)
 is a powerful graphical chart-making tool written in python.
 
+### hledger-sankey
+
+- <https://github.com/adept/hledger-sankey> A python3 script (that uses pandas and plotly) to plot three sankey graphs of hledger data
+- <https://github.com/JustSaX/hledger-sankey> hledger-sankey made interactive with Streamlit
 ### hledger-vega
 
 [hledger-vega](https://github.com/xitian9/hledger-vega) (2022) is a set of scripts for producing custom charts
@@ -119,3 +123,15 @@ hledger -f examples/bcexample.hledger bal -O csv -N expenses -3 cur:USD \
 ```
 ![ploterific example 2](images/ploterific2.svg)
 
+### SankeyMATIC
+
+- <https://sankeymatic.com> make sankey diagrams in your browser
+
+The format is `Source [Amount] Target`. A rough script that exports the outflows from several asset accounts:
+
+```cli
+LEDGER_FILE=examples/sample.journal
+for f in checking saving cash; do 
+  hledger areg $f -O tsv | tail +2 | sed -e "s/^/$f\t/"
+done | cut -f1,6,7 | gsed -E -e 's/\$//' -e 's/([^\t]*)\t([^\t]*)\t([^\t]*)/\1 [\3] \2/' | grep '\[-' | gsed 's/\[-/[/'
+```
