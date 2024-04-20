@@ -414,7 +414,7 @@ https://repology.org/project/hledger/badges
   <tr> <!-- DOCKER (adept) -->
     <td>
       <div class="badges">
-        <a href="https://hub.docker.com/r/dastapov/hledger"><img alt="Docker" src="https://img.shields.io/badge/Docker_image-1.32.3-red.svg" /></a><br>
+        <a href="https://hub.docker.com/r/dastapov/hledger"><img alt="Docker" src="https://img.shields.io/badge/Docker_image-1.33-brightgreen.svg" /></a><br>
         <a href="https://hub.docker.com/search?q=hledger&amp;type=image&amp;sort=updated_at&amp;order=desc">more..</a>
       </div>
       <!-- <div class="notes">Linux, Mac, Windows</div> -->
