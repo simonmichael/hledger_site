@@ -5,12 +5,14 @@
 <!-- toc -->
 </div>
 
-The current hledger release is **1.33**. Here are the [release notes](release-notes.md).
+The current hledger release is **1.33**. 
+Here are the **[release notes](release-notes.md)**.
+
 There are three main ways to install hledger on your computer:
 
 - [Release binaries](#release-binaries) are provided by hledger's maintainer and are always up to date.
-- [Packaged binaries](#package-binaries) are provided by system packagers are sometimes less up to date.
-- You can [build your own binaries from source](#build-from-source), which takes more time and resources.
+- [Packaged binaries](#package-binaries) are provided by system packagers and are sometimes less up to date.
+- Or you can [build your own binaries](#build-from-source), which takes more time and resources.
 
 After installing, here are some [final things](#run-requirements) to check.
 [Your feedback](support.md) helps make this process smoother.
@@ -25,12 +27,6 @@ Official release binaries for Mac, Windows, GNU/Linux
 
 
 ## Packaged binaries
-
-<!--
-All packages tracked by repology:
-<a style="" href="https://repology.org/project/hledger/versions"><img src="https://repology.org/badge/vertical-allrepos/hledger.svg" alt="Packaging status"></a>
-https://repology.org/project/hledger/badges
--->
 
 ### Homebrew (Mac, Linux, WSL)
 
@@ -87,8 +83,7 @@ https://repology.org/project/hledger/badges
 \
 ![Raspberry Pi contributed binaries](https://img.shields.io/badge/Raspberry_Pi_contributed_binaries-1.18.1-red.svg)
 [hledger-aarch64-manjaro.gz](https://github.com/simonmichael/hledger/releases/tag/1.18.1)
-[hledger-armhf32-debian.gz](https://github.com/simonmichael/hledger/releases/tag/1.18)\
-Note: unaudited third party binaries
+[hledger-armhf32-debian.gz](https://github.com/simonmichael/hledger/releases/tag/1.18) *(unaudited)*
 <!-- nobodyinperson -->
 
 [![ubuntu_24_04](https://repology.org/badge/version-for-repo/ubuntu_24_04/hledger.svg)](https://packages.ubuntu.com/noble/hledger)
@@ -127,11 +122,11 @@ Note: unaudited third party binaries
 [![Nix](https://repology.org/badge/version-for-repo/nix_unstable/hledger.svg)](https://search.nixos.org/packages?channel=unstable&from=0&size=50&sort=relevance&type=packages&query=hledger)
 `nix-shell -p hledger hledger-ui hledger-web`
 \
-On Linux, note
+Issues:
 [#1030](https://github.com/simonmichael/hledger/issues/1030),
 [#1033](https://github.com/simonmichael/hledger/issues/1033),
 [#2089](https://github.com/simonmichael/hledger/issues/2089),
-[hledger manual > Troubleshooting](https://hledger.org/hledger.html#troubleshooting).
+[Troubleshooting](https://hledger.org/hledger.html#troubleshooting)
 <!-- maralorn, chvp -->
 
 ### Sandstorm (Web)
