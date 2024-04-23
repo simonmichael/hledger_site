@@ -2,778 +2,341 @@
 
 <div class=pagetoc>
 
-
 <!-- toc -->
 </div>
 
-<style>
-h2 {
-    margin-top:2em;
-}
-h3 {
-    margin-top:1em;
-    margin-bottom:0;
-}
-table.downloads { 
-  width:100%;
-}
-table.downloads > tbody > tr { 
-  border-top:thin solid #ddd; 
-  border-bottom:thin solid #ddd; 
-  vertical-align: top;
-}
-/* table.downloads > tbody > tr > td { 
-  padding-top:0.5em;
-  padding-bottom:0.5em;
-} */
-table.downloads > tbody > tr > td:nth-child(1) { 
-  min-width:10em;
-}
-table.downloads > tbody > tr > td:nth-child(2) { 
-  width:99%;
-}
-div.section > table td:nth-child(1) {
-  padding-right:1em;
-}
-div.command {
-  font-weight:bold;
-  white-space:nowrap;
-  /* margin-bottom:1em; */
-}
-div.builder-command {
-  margin:1em 0.5em 1em;
-  font-weight:bold;
-  white-space:nowrap;
-}
-div.notes {
-  font-size:small;
-  font-style:italic;
-}
-div.badges {
-  font-size:small;
-  font-style:italic;
-}
-div.badges > a > img {
-  width: 10em;
-}
-.warnings > a:before {
-    content: " ⚠ ";
-    color:red;
-}
-</style>
+The current hledger release is **1.33**. Here are the [release notes](release-notes.md).
+There are three main ways to install hledger on your computer:
 
-The current hledger release is **1.33**.
-[Release notes](release-notes.md)
+- [Release binaries](#release-binaries) are provided by hledger's maintainer and are always up to date.
+- [Packaged binaries](#package-binaries) are provided by system packagers are sometimes less up to date.
+- You can [build your own binaries from source](#build-from-source), which takes more time and resources.
 
-Here are lots of ways to install hledger:
-- [Binary packages](#binary-packages) install quickly but are not always up to date (look for green badges below).
-- [Building the current release](#build-the-current-release) (or [development version](#build-the-development-version))
-  from source code takes longer and has some [build requirements](#build-requirements).
+After installing, here are some [final things](#run-requirements) to check.
+[Your feedback](support.md) helps make this process smoother.
 
-After downloading binaries or building from source, 
-please check that the [run requirements](#run-requirements) (PATH and locale) are satisfied.
 
-And finally please [share any feedback](support.md) so we can make this process smoother!
+## Release binaries
 
-<br clear=all>
+Official release binaries for Mac, Windows, GNU/Linux
+([RSS feed](https://github.com/simonmichael/hledger/releases.atom)):\
+[![hledger release binaries](https://img.shields.io/badge/hledger_release_binaries-1.33-brightgreen.svg)](https://github.com/simonmichael/hledger/releases/tag/1.33)
+[release binaries](https://github.com/simonmichael/hledger/releases/tag/1.33)
 
-## Binary packages
+
+## Packaged binaries
 
 <!--
-All tracked by repology:
+All packages tracked by repology:
 <a style="" href="https://repology.org/project/hledger/versions"><img src="https://repology.org/badge/vertical-allrepos/hledger.svg" alt="Packaging status"></a>
 https://repology.org/project/hledger/badges
 -->
 
-### Mac
+### Homebrew (Mac, Linux, WSL)
 
-<table class="mac downloads">
-
-  <tr> <!-- CI BINARIES (SM) -->
-    <td>
-      <div class="badges">
-        <a href="https://github.com/simonmichael/hledger/releases/tag/1.33#mac-x64">
-            <img alt="hledger CI binaries" src="https://img.shields.io/badge/hledger_CI_binaries-1.33-brightgreen.svg" />
-        </a><br>
-      </div>
-      <!-- <div class="notes">Linux, Mac, Windows</div> -->
-    </td>
-    <td>
-      <div class="command">
-        <a href="https://github.com/simonmichael/hledger/releases/tag/1.33#mac-x64">hledger-mac-x64.zip</a>,
-        <a href="https://github.com/simonmichael/hledger/releases/tag/1.33#mac-arm64">hledger-mac-arm64.zip</a>
-      </div>
-      <div class="notes"></div>
-    </td>
-  </tr>
-
-  <tr> <!-- HOMEBREW (homebrew packagers, chenrui ?) -->
-    <td>
-      <div class="badges">
-        <a href="https://formulae.brew.sh/formula/hledger"><img alt="Homebrew" src="https://repology.org/badge/version-for-repo/homebrew/hledger.svg" /></a>
-      </div>
-      <!-- <div class="notes">Linux, Mac, WSL</div> -->
-    </td>
-    <td>
-      <div class="command">brew install hledger</div>
-    </td>
-  </tr>
-
-</table>
+[![Homebrew](https://repology.org/badge/version-for-repo/homebrew/hledger.svg)](https://formulae.brew.sh/formula/hledger)
+`brew install hledger`
+<!-- homebrew packagers, chenrui ? -->
 
 ### Windows
 
-<table class="windows downloads">
+[![Scoop](https://repology.org/badge/version-for-repo/scoop/hledger.svg)](https://scoop.sh/#/apps?q=hledger)
+`scoop install hledger`
+\
+[![Chocolatey](https://repology.org/badge/version-for-repo/chocolatey/hledger.svg)](https://community.chocolatey.org/packages/hledger)
+`choco install hledger -y`
+\
+[![Winget](https://repology.org/badge/version-for-repo/winget/hledger.svg)](https://github.com/microsoft/winget-pkgs/tree/master/manifests/s/simonmichael/hledger)
+`winget install simonmichael.hledger`
 
-  <tr> <!-- CI BINARIES (SM) -->
-    <td>
-      <div class="badges">
-        <a href="https://github.com/simonmichael/hledger/releases/tag/1.33#windows-x64">
-            <img alt="hledger CI binaries" src="https://img.shields.io/badge/hledger_CI_binaries-1.33-brightgreen.svg" />
-        </a><br>
-      </div>
-      <!-- <div class="notes">Linux, Mac, Windows</div> -->
-    </td>
-    <td>
-      <div class="command">
-        <a href="https://github.com/simonmichael/hledger/releases/tag/1.33#windows-x64">hledger-windows-x64.zip</a>
-        <!-- <span style="font-weight:normal; font-style:italic; font-size:small;">
-          (Also runs on other platforms with <a href="https://www.winehq.org">Wine</a>)
-        </span> -->
-      </div>
-      <div class="notes"></div>
-    </td>
-  </tr>
+### Linux
 
-  <tr valign="top"> <!-- SCOOP (?) -->
-    <td>
-      <div class="badges">
-        <a href="https://scoop.sh/#/apps?q=hledger">
-          <img alt="Scoop package" src="https://repology.org/badge/version-for-repo/scoop/hledger.svg" />
-        </a>
-          <!-- <img alt="Scoop package" src="https://img.shields.io/badge/scoop-1.32.3-red.svg" /> -->
-      </div>
-    </td>
-    <td style="padding-top:10px;">
-      <div class="command" style="margin-bottom:4px;">
-        scoop install hledger
-      </div>
-      <div class="notes">
-      <!--   <span class="warnings"> -->
-      <!--   </span> -->
-      </div>
-    </td>
-  </tr>
+[![Alpine edge](https://repology.org/badge/version-for-repo/alpine_edge/hledger.svg)](https://pkgs.alpinelinux.org/packages?name=hledger*&branch=edge)
+`doas apk add hledger hledger-ui hledger-web`\
+[![Alpine 3.19](https://repology.org/badge/version-for-repo/alpine_3_19/hledger.svg)](https://pkgs.alpinelinux.org/packages?name=hledger*&branch=v3.19)\
+[![Alpine 3.18](https://repology.org/badge/version-for-repo/alpine_3_18/hledger.svg)](https://pkgs.alpinelinux.org/packages?name=hledger*&branch=v3.18)\
+[![Alpine 3.17](https://repology.org/badge/version-for-repo/alpine_3_17/hledger.svg)](https://pkgs.alpinelinux.org/packages?name=hledger*&branch=v3.17)\
+[enabling the community repository](https://wiki.alpinelinux.org/wiki/Repositories#Enabling_the_community_repository)
+<!-- dhruvin -->
 
-  <tr valign="top"> <!-- CHOCOLATEY (?) -->
-    <td>
-      <div class="badges">
-        <a href="https://community.chocolatey.org/packages/hledger">
-          <img alt="Chocolatey package" src="https://repology.org/badge/version-for-repo/chocolatey/hledger.svg" />
-        </a>
-      </div>
-    </td>
-    <td style="padding-top:10px;">
-      <div class="command" style="margin-bottom:4px;">
-        choco install hledger -y
-      </div>
-      <div class="notes">
-      <!--   <span class="warnings"> -->
-      <!--   </span> -->
-      </div>
-    </td>
-  </tr>
+[![Arch](https://repology.org/badge/version-for-repo/arch/hledger.svg)](https://archlinux.org/packages/extra/x86_64/hledger/)
+`pacman -Sy hledger hledger-ui hledger-web`
 
-  <tr valign="top"> <!-- WINGET (?) -->
-    <td>
-      <div class="badges">
-        <a href="https://github.com/microsoft/winget-pkgs/tree/master/manifests/s/simonmichael/hledger">
-          <img alt="Winget package" src="https://repology.org/badge/version-for-repo/winget/hledger.svg" />
-        </a>
-      </div>
-    </td>
-    <td style="padding-top:10px;">
-      <div class="command" style="margin-bottom:4px;">
-        winget install simonmichael.hledger
-      </div>
-      <div class="notes">
-      </div>
-    </td>
-  </tr>
+[![Debian unstable](https://repology.org/badge/version-for-repo/debian_unstable/hledger.svg)](https://packages.debian.org/unstable/hledger)
+`sudo apt install hledger hledger-ui hledger-web`\
+[![Debian stable](https://img.shields.io/badge/Debian_stable_package-1.18.1-red.svg)](https://packages.debian.org/stable/hledger)\
+[![Debian oldstable](https://img.shields.io/badge/Debian_oldstable_package-1.10-red.svg)](https://packages.debian.org/oldstable/hledger)\
+[![Debian oldoldstable](https://img.shields.io/badge/Debian_oldoldstable_package-1.0.1-red.svg)](https://packages.debian.org/oldstable/hledger)\
+[more..](https://packages.debian.org/search?searchon=names&keywords=hledger)
+<!-- Clint -->
 
-</table>
+![Fedora_41](https://img.shields.io/badge/Fedora_41_package-1.30.1-red.svg)
+`sudo dnf install hledger`\
+![Fedora_40](https://img.shields.io/badge/Fedora_40_package-1.30.1-red.svg)\
+![Fedora_39](https://img.shields.io/badge/Fedora_39_package-1.30.1-red.svg)\
+![Fedora_38](https://img.shields.io/badge/Fedora_38_package-1.27.1-red.svg)\
+![Fedora 37](https://repology.org/badge/version-for-repo/fedora_37/hledger.svg)\
+[more..](https://src.fedoraproject.org/rpms/hledger)
 
-### GNU/Linux
+[![Gentoo](https://img.shields.io/badge/Gentoo_package-1.32.3-red.svg)](https://gentoo.zugaina.org/Search?search=hledger)
+`sudo layman -a haskell && sudo emerge hledger hledger-ui hledger-web`
+<!-- ezzie -->
 
-<table class="linux downloads">
+![Raspberry Pi release binaries](https://img.shields.io/badge/Raspberry_Pi_release_binaries-1.22.2-red.svg)
+[hledger-linux-arm32v7.zip](https://github.com/simonmichael/hledger/releases/tag/1.22.1)
+\
+![Raspberry Pi contributed binaries](https://img.shields.io/badge/Raspberry_Pi_contributed_binaries-1.18.1-red.svg)
+[hledger-aarch64-manjaro.gz](https://github.com/simonmichael/hledger/releases/tag/1.18.1)
+[hledger-armhf32-debian.gz](https://github.com/simonmichael/hledger/releases/tag/1.18)\
+Note: unaudited third party binaries
+<!-- nobodyinperson -->
 
-  <tr> <!-- CI BINARIES (SM) -->
-    <td>
-      <div class="badges">
-        <a href="https://github.com/simonmichael/hledger/releases/tag/1.33#linux-x64">
-            <img alt="hledger CI binaries" src="https://img.shields.io/badge/hledger_CI_binaries-1.33-brightgreen.svg" />
-        </a><br>
-      </div>
-      <!-- <div class="notes">Linux, Mac, Windows</div> -->
-    </td>
-    <td>
-      <div class="command">
-        <a href="https://github.com/simonmichael/hledger/releases/tag/1.33#linux-x64">hledger-linux-x64.zip</a>
-      </div>
-      <div class="notes"></div>
-    </td>
-  </tr>
+[![ubuntu_24_04](https://repology.org/badge/version-for-repo/ubuntu_24_04/hledger.svg)](https://packages.ubuntu.com/noble/hledger)
+`sudo apt install hledger hledger-ui hledger-web`\
+[![ubuntu_23_10](https://repology.org/badge/version-for-repo/ubuntu_23_10/hledger.svg)](https://packages.ubuntu.com/mantic/hledger)\
+[![ubuntu_23_04](https://repology.org/badge/version-for-repo/ubuntu_23_04/hledger.svg)](https://packages.ubuntu.com/lunar/hledger) \
+[![ubuntu_22_04](https://repology.org/badge/version-for-repo/ubuntu_22_04/hledger.svg)](https://packages.ubuntu.com/jammy/hledger) \
+[![ubuntu_20_04](https://repology.org/badge/version-for-repo/ubuntu_20_04/hledger.svg)](https://packages.ubuntu.com/focal/hledger) \
+[![ubuntu_18_04](https://repology.org/badge/version-for-repo/ubuntu_18_04/hledger.svg)](https://packages.ubuntu.com/bionic/hledger)\
+[![ubuntu_16_04](https://repology.org/badge/version-for-repo/ubuntu_16_04/hledger.svg)](https://packages.ubuntu.com/xenial/hledger)\
+[more..](https://packages.ubuntu.com/search?suite=all&searchon=names&keywords=hledger)
 
-  <tr> <!-- GENTOO (ezzie) -->
-    <td>
-      <div class="badges">
-        <!-- no repology badge for some reason -->
-        <a href="https://gentoo.zugaina.org/Search?search=hledger"><img alt="Gentoo" src="https://img.shields.io/badge/Gentoo_package-1.32.3-red.svg" /></a>
-      </div>
-    </td>
-    <td>
-      <div class="command">sudo layman -a haskell &amp;&amp; sudo emerge hledger hledger-ui hledger-web</div>
-    </td>
-  </tr>
-
-  <tr> <!-- ALPINE (dhruvin) -->
-    <td>
-      <div class="badges">
-        <a href="https://pkgs.alpinelinux.org/packages?name=hledger*&branch=edge"><img alt="Alpine edge" src="https://repology.org/badge/version-for-repo/alpine_edge/hledger.svg" /></a>
-      </div>
-    </td>
-    <td>
-      <div class="command">
-          doas apk add hledger hledger-ui hledger-web
-      </div>
-      <div class="notes">
-          <a href="https://wiki.alpinelinux.org/wiki/Repositories#Enabling_the_community_repository">enabling the community repository</a>
-      </div>
-    </td>
-  </tr>
-
-  <tr> <!-- ARCH (?) -->
-    <td>
-      <div class="badges">
-        <a href="https://archlinux.org/packages/extra/x86_64/hledger/"><img alt="Arch" src="https://repology.org/badge/version-for-repo/arch/hledger.svg" /></a>
-      </div>
-    </td>
-    <td>
-      <div class="command">pacman -Sy hledger hledger-ui hledger-web</div>
-    </td>
-  </tr>
-
-  <tr> <!-- VOID (?) -->
-    <td>
-      <div class="badges">
-        <a href="https://voidlinux.org/packages/?q=hledger"><img src="https://repology.org/badge/version-for-repo/void_x86_64/hledger.svg" alt="Void Linux x86_64" /></a>
-      </div>
-    </td>
-    <td>
-      <div class="command">xbps-install -S hledger hledger-ui hledger-web</div>
-    </td>
-  </tr>
-
-  <tr> <!-- DEBIAN (Clint) -->
-    <td>
-      <div class="badges">
-        <a href="https://packages.debian.org/unstable/hledger"><img src="https://repology.org/badge/version-for-repo/debian_unstable/hledger.svg" alt="Debian unstable" /></a><br>
-        <a href="https://packages.debian.org/stable/hledger"><img src="https://img.shields.io/badge/Debian_stable_package-1.18.1-red.svg" alt="Debian stable" /></a><br>
-        <a href="https://packages.debian.org/oldstable/hledger"><img src="https://img.shields.io/badge/Debian_oldstable_package-1.10-red.svg" alt="Debian oldstable" /></a><br>
-        <a href="https://packages.debian.org/oldstable/hledger"><img src="https://img.shields.io/badge/Debian_oldoldstable_package-1.0.1-red.svg" alt="Debian oldoldstable" /></a><br>
-        <a href="https://packages.debian.org/search?searchon=names&amp;keywords=hledger">more..</a>
-      </div>
-    </td>
-    <td>
-      <div class="command">sudo apt install hledger hledger-ui hledger-web</div>
-    </td>
-  </tr>
-
-  <tr> <!-- UBUNTU (?) -->
-    <td>
-      <div class="badges">
-        <!-- <a href="https://packages.ubuntu.com/XXXXX/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_XX_XX/hledger.svg" /></a><br> -->
-        <a href="https://packages.ubuntu.com/noble/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_24_04/hledger.svg" /></a><br>
-        <a href="https://packages.ubuntu.com/mantic/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_23_10/hledger.svg" /></a><br>
-        <a href="https://packages.ubuntu.com/lunar/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_23_04/hledger.svg" /></a><br>
-        <a href="https://packages.ubuntu.com/jammy/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_22_04/hledger.svg" /></a><br>
-        <a href="https://packages.ubuntu.com/focal/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_20_04/hledger.svg" /></a><br>
-        <a href="https://packages.ubuntu.com/bionic/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_18_04/hledger.svg" /></a><br>
-        <a href="https://packages.ubuntu.com/xenial/hledger"><img src="https://repology.org/badge/version-for-repo/ubuntu_16_04/hledger.svg" /></a><br>
-        <a href="https://packages.ubuntu.com/search?suite=all&amp;searchon=names&amp;keywords=hledger">more..</a>
-      </div>
-    </td>
-    <td>
-      <div class="command">sudo apt install hledger hledger-ui hledger-web</div>
-    </td>
-  </tr>
-
-  <tr> <!-- FEDORA (?) -->
-    <td>
-      <div class="badges">
-        <a ><img src="https://img.shields.io/badge/Fedora_41_package-1.30.1-red.svg" /></a><br>
-        <a ><img src="https://img.shields.io/badge/Fedora_40_package-1.30.1-red.svg" /></a><br>
-        <a ><img src="https://img.shields.io/badge/Fedora_39_package-1.30.1-red.svg" /></a><br>
-        <a ><img src="https://img.shields.io/badge/Fedora_38_package-1.27.1-red.svg" /></a><br>
-        <a ><img src="https://repology.org/badge/version-for-repo/fedora_37/hledger.svg" /></a><br>
-        <a ><img src="https://repology.org/badge/version-for-repo/fedora_36/hledger.svg" /></a><br>
-        <a href="https://src.fedoraproject.org/rpms/hledger">more..</a>
-      </div>
-    </td>
-    <td>
-      <div class="command">sudo dnf install hledger</div>
-    </td>
-  </tr>
-
-</table>
-
-### Raspberry Pi
-
-<table class="pi downloads">
-
-  <tr valign="top"> <!-- CI BINARIES (SM) -->
-    <td>
-      <div class="badges">
-        <img alt="hledger CI binaries" src="https://img.shields.io/badge/hledger_CI_binaries-1.22.2-red.svg" />
-      </div>
-    </td>
-    <td style="padding-top:10px;">
-      <div class="command" style="margin-bottom:4px;">
-        <a href="https://github.com/simonmichael/hledger/releases/tag/1.22.1">hledger-linux-arm32v7.zip</a><br>
-      </div>
-      <div class="notes"></div>
-    </td>
-  </tr>
-
-  <tr valign="top"> <!-- THIRD PARTY (nobodyinperson?) -->
-    <td>
-      <div class="badges">
-        <img alt="Contributed binaries" src="https://img.shields.io/badge/Contributed_binaries-1.18.1-red.svg" />
-      </div>
-    </td>
-    <td style="padding-top:10px;">
-      <div class="command" style="margin-bottom:4px;">
-        <a href="https://github.com/simonmichael/hledger/releases/tag/1.18.1">hledger-aarch64-manjaro.gz</a><br>
-        <a href="https://github.com/simonmichael/hledger/releases/tag/1.18">hledger-armhf32-debian.gz</a>
-      </div>
-      <div class="notes">
-        Note: unaudited third party binaries
-      </div>
-    </td>
-  </tr>
-
-</table>
+[![Void Linux x86_64](https://repology.org/badge/version-for-repo/void_x86_64/hledger.svg)](https://voidlinux.org/packages/?q=hledger)
+`xbps-install -S hledger hledger-ui hledger-web`
 
 ### BSD
 
-<table class="bsd downloads">
+[![freebsd ports](https://repology.org/badge/version-for-repo/freebsd/hledger.svg)](https://www.freshports.org/search.php?query=hledger)
+`pkg install hs-hledger hs-hledger-ui hs-hledger-web`
+\
+[![netbsd package](https://img.shields.io/badge/NetBSD-1.31-red.svg)](https://cdn.netbsd.org/pub/pkgsrc/current/pkgsrc/finance/hledger/index.html)
+`pkg_add hledger`
+\
+![openbsd ports](https://repology.org/badge/version-for-repo/openbsd/hledger.svg)
+`pkg_add hledger`
 
-  <tr> <!-- OPENBSD (?) -->
-    <td>
-      <div class="badges">
-        <img src="https://repology.org/badge/version-for-repo/openbsd/hledger.svg" alt="openbsd ports" /><br>
-      </div>
-    </td>
-    <td>
-      <div class="command">pkg_add hledger</div>
-    </td>
-  </tr>
+### Docker (Linux, Mac, Windows)
 
-  <tr> <!-- NETBSD (?) -->
-    <td>
-      <div class="badges">
-        <a href="https://cdn.netbsd.org/pub/pkgsrc/current/pkgsrc/finance/hledger/index.html"><img src="https://img.shields.io/badge/NetBSD-1.31-red.svg" alt="netbsd package" /></a><br>
-      </div>
-    </td>
-    <td>
-      <div class="command">pkg_add hledger</div>
-      <div class="notes">
-      </div>
-    </td>
-  </tr>
+[![Docker](https://img.shields.io/badge/Docker_image-1.33-brightgreen.svg)](https://hub.docker.com/r/dastapov/hledger)
+`docker pull dastapov/hledger`\
+[more..](https://hub.docker.com/search?q=hledger&type=image&sort=updated_at&order=desc)
+<!-- adept -->
 
-  <tr> <!-- FREEBSD (?) -->
-    <td>
-      <div class="badges">
-        <a href="https://www.freshports.org/search.php?query=hledger"><img src="https://repology.org/badge/version-for-repo/freebsd/hledger.svg" alt="freebsd ports" /></a><br>
-      </div>
-    </td>
-    <td>
-      <div class="command">pkg install hs-hledger hs-hledger-ui hs-hledger-web</div>
-      <div class="notes">
-      </div>
-    </td>
-  </tr>
+### Nix (Linux, Mac)
 
-</table>
+[![Nix](https://repology.org/badge/version-for-repo/nix_unstable/hledger.svg)](https://search.nixos.org/packages?channel=unstable&from=0&size=50&sort=relevance&type=packages&query=hledger)
+`nix-shell -p hledger hledger-ui hledger-web`
+\
+On Linux, note
+[#1030](https://github.com/simonmichael/hledger/issues/1030),
+[#1033](https://github.com/simonmichael/hledger/issues/1033),
+[#2089](https://github.com/simonmichael/hledger/issues/2089),
+[hledger manual > Troubleshooting](https://hledger.org/hledger.html#troubleshooting).
+<!-- maralorn, chvp -->
 
-### Other
+### Sandstorm (Web)
 
-<table class="multiplatform downloads">
-
-  <tr> <!-- DOCKER (adept) -->
-    <td>
-      <div class="badges">
-        <a href="https://hub.docker.com/r/dastapov/hledger"><img alt="Docker" src="https://img.shields.io/badge/Docker_image-1.33-brightgreen.svg" /></a><br>
-        <a href="https://hub.docker.com/search?q=hledger&amp;type=image&amp;sort=updated_at&amp;order=desc">more..</a>
-      </div>
-      <!-- <div class="notes">Linux, Mac, Windows</div> -->
-    </td>
-    <td>
-      <div class="command">docker pull dastapov/hledger</div>
-    </td>
-  </tr>
-
-  <tr> <!-- NIX (maralorn, chvp) -->
-    <td>
-      <div class="badges">
-        <a href="https://search.nixos.org/packages?channel=unstable&from=0&size=50&sort=relevance&type=packages&query=hledger"
-        ><img alt="Nix" src="https://repology.org/badge/version-for-repo/nix_unstable/hledger.svg" /></a>
-      </div>
-      <!-- <div class="notes">Linux, Mac</div> -->
-    </td>
-    <td>
-      <div class="command">
-          nix-shell -p hledger hledger-ui hledger-web
-          <!-- nix-env -f https://github.com/NixOS/nixpkgs/archive/nixpkgs-unstable.tar.gz -iA hledger hledger-ui hledger-web -->
-      </div>
-      <div class="notes">
-          On Linux, note <span class="warnings">
-          <a href="https://github.com/simonmichael/hledger/issues/1030">#1030</a>,
-          <a href="https://github.com/simonmichael/hledger/issues/1033">#1033</a>,
-          <a href="https://github.com/simonmichael/hledger/issues/2089">#2089</a>,
-          <a href="https://hledger.org/hledger.html#troubleshooting">hledger manual > Troubleshooting</a>.
-      </div>
-    </td>
-  </tr>
-
-  <tr> <!-- SANDSTORM (?) -->
-    <td>
-      <div class="badges">
-          <a href="https://apps.sandstorm.io/search?term=hledger"><img alt="Sandstorm" src="https://img.shields.io/badge/Sandstorm_app-1.31-red.svg" /></a>
-      </div>
-    </td>
-    <td>
-      <div class="command"><a href="https://apps.sandstorm.io/app/8x12h6p0x0nrzk73hfq6zh2jxtgyzzcty7qsatkg7jfg2mzw5n90">HLedger Web app</a></div>
-      <div class="notes">
-        <!-- <span class=warnings> -->
-        <!--   [features needed](https://github.com/simonmichael/hledger/issues/425) -->
-        <!-- </span> -->
-      </div>
-    </td>
-  </tr>
-
-</table>
-
-### Preview releases
-
-<table class="pi downloads">
-
-  <tr> <!-- PREVIEWS (SM) -->
-    <td>
-      <div class="badges">
-        <img alt="hledger CI binaries" src="https://img.shields.io/badge/hledger_CI_binaries-Preview-green.svg" />
-      </div>
-      <!-- <div class="notes">Linux, Mac, Windows</div> -->
-    </td>
-    <td style="padding-top:10px;">
-      <div class="command" style="margin-bottom:4px;">
-        <a href="https://github.com/simonmichael/hledger/releases">https://github.com/simonmichael/hledger/releases</a>
-        (<a href="https://github.com/simonmichael/hledger/releases.atom">RSS</a>)
-      </div>
-      <div class="notes">
-        Any preview releases for testers & early adopters, will be visible on the Github releases page/feed.
-      </div>
-    </td>
-  </tr>
-
-</table>
+[![Sandstorm](https://img.shields.io/badge/Sandstorm_app-1.31-red.svg)](https://apps.sandstorm.io/search?term=hledger)
+[HLedger Web sandstorm app](https://apps.sandstorm.io/app/8x12h6p0x0nrzk73hfq6zh2jxtgyzzcty7qsatkg7jfg2mzw5n90)
+<!-- jacob weisz -->
 
 
-## Build the current release
 
-<a href="https://github.com/simonmichael/hledger/tree/1.33-branch"><img alt="Release source" src="https://img.shields.io/badge/Release_source-1.33-brightgreen.svg" /></a>
-
-You can build and install the current release 
-without needing git or a full copy of the hledger source.
-(If you'd prefer to use git and the full source, see [below](#build-the-development-version).)
-
-1. Check [build requirements](#build-requirements)
-2. Use one of the [build methods](#build-methods)
+## Build from source
 
 ### Build requirements
 
-#### Hardware
+Building hledger requires the GHC compiler and either the stack or cabal build tool.
+These are usually easy to install (see below).
+But they will require quite a bit of memory and disk space -
+up to 4G of RAM and 2G of your hard drive to build the hledger tools.
+See also the [build tips](#build-tips) below.
 
-- A machine where the Haskell build tools are available.
-- 4G of RAM is [recommended](#more-build-tips).
-- 2G of free disk space will be needed if this is your first Haskell build.
-
-#### GHC, stack, cabal
-
-These are the Haskell build tools.
-If you choose the "Build with hledger-install" method below, they will be installed automatically.
-If you choose the "Build with stack" method, you will need to have [stack] installed.
-If you choose the "Build with cabal" method, you will need to have [cabal] and [GHC] installed.
-
-You can probably install these tools with your local packaging system.
-They need not be the latest versions (but later versions are better):
-- GHC should be >=8.8.
-  On Arch GNU/Linux, the packaged GHC is non-standard and may be troublesome.
-- cabal (ie cabal-install) should be >=3.2.
-- stack should be >=2.7. 
-  You can often upgrade an existing stack installation quickly with `stack upgrade`.
-  On Windows, prefer the 64-bit version of stack.
-
-Or, you can install them with [ghcup](https://haskell.org/ghcup).
-Since 2022, this is most reliable, platform-independent and recommended method.
-
-1. Install ghcup
-2. Install a recent version of ghc and stack
-    <div class="builder-command">
-      ghcup install ghc <br>
-      ghcup install stack<br>
-      # or interactively: ghcup tui
-    </div>
-3. When ghcup asks if stack should use ghcup-managed GHC, say yes.
-
-#### C libraries
-
-On unix systems, you may need to install additional C libraries 
+On unix systems, you will need a [UTF-8-aware locale](#lang) configured.
+Also you may need to install additional C libraries 
 to avoid errors like "*cannot find -ltinfo*" when building hledger.
-Install them with a command like the below:
+Eg,
 
-<table>
-  <tr>
-    <td width="1%" style="white-space:nowrap;"><div class="distro">Debian, Ubuntu & co.:</div></td>
-    <td><div class="command" style="margin:0;"> sudo apt install libgmp-dev libtinfo-dev zlib1g-dev</div></td>
-  </tr>
+- on Debian or Ubuntu: `sudo apt install libgmp-dev libtinfo-dev zlib1g-dev`
+- on Fedora or RHEL: `sudo dnf install gmp-devel ncurses-devel zlib-devel`
 
-  <tr>
-    <td><div class="distro">Fedora, RHEL:</div></td>
-    <td><div class="command"> sudo dnf install gmp-devel ncurses-devel zlib-devel </div></td>
-  </tr>
-</table>
+### Build with hledger-install
 
-(Please [send updates](#footer) for this list.)
+[hledger-install.sh][hledger-install] is an automated install script that requires only [bash].
+This is a good choice if you are not used to building Haskell software.
+It installs build tools if needed,
+then builds the current release of the hledger tools and some [add-on tools],
+installing them in ~/.local/bin (or ~/.cabal/bin if you had cabal and not stack installed.)
 
-#### UTF-8 locale
+```
+curl -O https://raw.githubusercontent.com/simonmichael/hledger/master/hledger-install/hledger-install.sh
+less hledger-install.sh   # <- good practice: inspect downloads before running
+bash hledger-install.sh
+```
 
-On unix systems, when building hledger the `LANG` environment variable
-must be set to a UTF-8-aware locale. See [Check your locale](#check-your-locale).
+### Build with stack
 
-#### Known build issues
+`stack` is a reliable Haskell build tool.
+You can install it with your system package manager or with [ghcup] or from its [website][stack].
+Then:
 
-- Here are some known platform-specific build issues and workarounds:
+```
+stack update
+stack install --verbosity error --resolver lts-22 \
+    hledger-lib-1.33 hledger-1.33 hledger-ui-1.33 hledger-web-1.33
+```
 
-  <blockquote class="warnings">
-    <a href="https://gitlab.haskell.org/ghc/ghc/-/issues/20592">mac m1: building with ghc 9+ requires extra include dir</a><br>
-    <a href="https://github.com/simonmichael/hledger/issues/961#issuecomment-471229644">windows: cross-environment non-ascii display issues</a><br>
-    <!-- <a href="https://github.com/simonmichael/hledger/issues/1039">windows: hledger-web fails to start on Windows 7</a><br> -->
-    <a href="https://wiki.archlinux.org/index.php/Haskell">arch: haskell build advice from Arch wiki</a><br>
-    <!-- <a href="https://github.com/commercialhaskell/stack/issues/3984">arch: No information found for ghc-8.4.2</a><br> -->
-    <!-- <a href="https://github.com/simonmichael/hledger/issues/709">freebsd 12: no cabal file found</a><br> -->
-    <!-- <a href="https://github.com/commercialhaskell/stack/issues/2822#issuecomment-318892816">openbsd: how to install stack</a><br> -->
-    <a href="https://deftly.net/posts/2017-10-12-using-cabal-on-openbsd.html">openbsd 6: exec: permission denied</a><br>
-    <a href="https://github.com/commercialhaskell/stack/issues/3313#issuecomment-570353913">openbsd: stack install tips</a><br>
-    <a href="https://github.com/simonmichael/hledger/issues/1030">nix: nix install on linux can fail with “cloning builder process: Operation not permitted”</a><br>
-    <a href="https://github.com/simonmichael/hledger/issues/1033">nix: on Linux, nix-installed hledger won’t handle non-ascii data</a><br>
-  </blockquote>
+On MS Windows, run this instead:
+```
+stack update
+stack install --verbosity error --resolver lts-22 \
+    hledger-lib-1.33 hledger-1.33 hledger-ui-1.33 hledger-web-1.33 \
+    process-1.6.19.0 Cabal-3.10.1.0 haskeline-0.8.2.1 vty-windows-0.2.0.2
+```
 
-#### More build tips
+### Build with cabal
+
+`cabal` is another popular Haskell build tool.
+You can install it with your system package manager or with [ghcup].
+You will also need a a supported version of GHC (8.10 - 9.8).
+Then:
+
+```
+cabal update
+cabal install alex happy
+cabal install hledger-1.33 hledger-ui-1.33 hledger-web-1.33
+```
+
+### Build in a source checkout
+
+This is the best way to build if you'd like to customise or contribute to hledger.
+Use [git] to get the source code for the
+[latest development version](https://github.com/simonmichael/hledger/commits/master):
+
+    git clone https://github.com/simonmichael/hledger
+
+or the latest release:
+
+    git clone https://github.com/simonmichael/hledger -b 1.33
+
+Then:
+
+    cd hledger
+
+and you can build and install with:
+
+    stack update
+    stack install
+
+or:
+
+    cabal update
+    cabal install alex happy
+    cabal install all:exes
+
+### Build in a Docker container
+
+This will use a docker image with the necessary build tools pre-installed:
+
+    cd hledger/docker
+    ./build.sh   # or build-dev.sh to keep build artifacts
+
+### Build on Android
+
+Here's 
+[how to build hledger on Android with Termux](https://libera.ems.host/_matrix/media/r0/download/libera.chat/51835530d2b9eed094096d8a2c79e03dda2c35fb),
+if your phone has plenty of memory.
+
+### Build tips
 
 - Building the hledger tools and possibly all their dependencies could take anywhere from a minute to an hour.
-
 - On machines with less than 4G of RAM, the build may use swap space and 
   take much longer (overnight), or die part-way through. 
   In such low memory situations, try adding `-j1` to the stack/cabal install command, 
   and retry a few times, or [ask](support.md) for more tips.
-
-- You could build just hledger CLI to use less time and space, 
-  by omitting hledger-ui and hledger-web from the commands below.
-
+- You could build just the hledger CLI to use less time and space, 
+  by omitting hledger-ui and hledger-web.
 - It's ok to kill a build and rerun the command later; you won't lose progress.
-
-- You can add `--dry-run` to the stack/cabal/nix install commands
+- You can add `--dry-run` to stack/cabal/nix install commands
   to see how much building remains.
-
 - If you have previously installed the hledger tools, 
   they will usually be overwritten by the new version.
   If you have them installed in multiple places in your PATH, 
   you may see a warning, reminding you to remove or rename the old executables.
 
-### Build methods
+Here are some known build issues and workarounds on various platforms (possibly obsolete):
 
-Use any of the following methods:
+- [mac m1: building with ghc 9+ requires extra include dir](https://gitlab.haskell.org/ghc/ghc/-/issues/20592)
+- [windows: cross-environment non-ascii display issues](https://github.com/simonmichael/hledger/issues/961#issuecomment-471229644)
+- [arch: haskell build advice from Arch wiki](https://wiki.archlinux.org/index.php/Haskell)
+- [openbsd 6: exec: permission denied](https://deftly.net/posts/2017-10-12-using-cabal-on-openbsd.html)
+- [openbsd: stack install tips](https://github.com/commercialhaskell/stack/issues/3313#issuecomment-570353913)
+- [nix: nix install on linux can fail with "cloning builder process: Operation not permitted"](https://github.com/simonmichael/hledger/issues/1030)
+- [nix: on Linux, nix-installed hledger won't handle non-ascii data](https://github.com/simonmichael/hledger/issues/1033)
 
-#### Build with hledger-install
-
-The [hledger-install.sh][hledger-install] script builds the current release of the hledger tools, 
-plus some [add-on tools], in a relatively reliable way,
-requiring [bash] but not any Haskell build tools.
-It uses stack or cabal if you have them (installing stack in ~/.local/bin otherwise), 
-and installs the hledger tools in ~/.local/bin or ~/.cabal/bin respectively.
-This can be a good choice if you are new to Haskell.
-
-<div class="builder-command">
-  curl -O https://raw.githubusercontent.com/simonmichael/hledger/master/hledger-install/hledger-install.sh <br>
-  less hledger-install.sh <em style="margin-left:1em; font-weight:normal;"># <- good security practice: inspect downloaded scripts before running</em><br>
-  bash hledger-install.sh
-</div>
-
-#### Build with stack
-
-If you have stack installed, you can run it to install the main hledger tools in ~/.local/bin:
-
-<div class="builder-command">
-  stack update <br>
-  stack install --verbosity=error --resolver=lts-22 hledger-lib-1.33 hledger-1.33 hledger-ui-1.33 hledger-web-1.33 process-1.6.19.0 Cabal-3.10.1.0 haskeline-0.8.2.1   # on Windows, add vty-windows-0.2.0.2
-</div>
-
-#### Build with cabal
-
-If you have GHC and cabal, you can run cabal to install the main hledger tools in ~/.cabal/bin:
-
-<div class="builder-command">
-  cabal update <br>
-  cabal install alex happy<br>
-  cabal install hledger-1.33 hledger-ui-1.33 hledger-web-1.33
-</div>
-
-#### Build with nix
-
-If you have [nix], you can use nix-env to build hledger from source 
-(but we try to provide a [nix command](#other) that installs already-cached binaries, see above).
-
-#### Build on Android
-
-Here's <a href="https://libera.ems.host/_matrix/media/r0/download/libera.chat/51835530d2b9eed094096d8a2c79e03dda2c35fb">how to build hledger on Android with Termux</a> 
-(if your phone has plenty of memory).
-
-
-## Build the development version
-
-<a href="https://github.com/simonmichael/hledger"><img alt="Latest source" src="https://img.shields.io/badge/Latest_source-master-green.svg" /></a>
-
-If you want to test the very [latest improvements](https://github.com/simonmichael/hledger/commits/master),
-our master branch on github is suitable for daily use.
-Or you can build the latest release, or any other past version.
-
-1. Check [build requirements](#build-requirements) above
-
-2. Get the source with [git](https://en.wikipedia.org/wiki/Git) and enter the source directory:
-    <div class="builder-command">
-    # either the latest dev code: <br>
-    git clone https://github.com/simonmichael/hledger <br>
-    # or a release tag, eg: <br>
-    git clone https://github.com/simonmichael/hledger -b 1.33 <br>
-
-    cd hledger
-    </div>
-
-3. Build and install executables (to ~/.local/bin) with [stack]:
-
-    <div class="builder-command">
-    stack update<br>
-    stack install
-    </div>
-
-    or (to ~/.cabal/bin) with [cabal]:
-
-    <div class="builder-command">
-    cabal update<br>
-    cabal install alex happy<br>
-    cabal install all:exes
-    </div>
-
-    or you can build in a Docker container which includes the necessary tools and dependencies:
-
-    <div class="builder-command">
-    git clone https://github.com/simonmichael/hledger <br>
-    cd hledger/docker <br>
-    ./build.sh
-    </div>
-
-    (This will build the image tagged `hledger` with just the latest binaries inside.
-    If you want to keep all the build artifacts and use the resulting
-    image for hledger development, run `./build-dev.sh` instead.)
-
-## Run requirements
+## Check your installation
 
 After installing, run the hledger tools and verify that their versions are what you just installed
 (and not older versions from a previous install). Eg:
 
-<div class="command">
-$ hledger --version <br>
-hledger 1.33-...
-<br>
-<br>
-$ hledger-ui --version <br>
-hledger-ui 1.33-...
-<br>
-<br>
-$ hledger web --version <br>
-hledger-web 1.33-...
-<br>
-</div>
+    $ hledger --version
+    hledger 1.33-...
+    $ hledger-ui --version
+    hledger-ui 1.33-...
+    $ hledger web --version
+    hledger-web 1.33-...
 
-If you like, you can also run the unit tests:
+You can run the built-in unit tests if you'd like:
 
-<div class="command">
-$ hledger test <br>
-... <br>
-All 227 tests passed (0.04s)
-</div>
+    $ hledger test
+    ...
+    All 227 tests passed (0.04s)
 
-or the more thorough functional tests, if you are in hledger's source directory:
+or the more thorough functional tests, if you are set up for working with the hledger source code:
 
-<div class="command">
-$ make functest <br>
-... <br>
- Total   1047 ...<br>
-functest PASSED
-</div>
+    $ just functest
+    ...
+     Total   1047 ...
+    functest PASSED
 
-If things are not yet working, then:
 
-### Check your PATH
+### PATH
 
-After building/installing, you may see a message about where the executables were installed.
-Eg:
+If the hledger tools won't run at the command line or you don't see
+the expected --version output, check that the newly installed
+executables are first in your shell's PATH.
+After building/installing, you may have seen a message about where the
+executables were installed.  Eg:
 
-- with stack: `$HOME/.local/bin` (on Windows, `%APPDATA%\local\bin`)
-- with cabal: `$HOME/.cabal/bin` (on Windows, `%APPDATA%\cabal\bin`)
-- with nix:   `$HOME/.nix-profile/bin`
+- If you installed with stack, it's `$HOME/.local/bin` (on Windows, `%APPDATA%\local\bin`)
+- If you installed with cabal, it's `$HOME/.cabal/bin` (on Windows, `%APPDATA%\cabal\bin`)
+- If you installed with nix, it could be `$HOME/.nix-profile/bin`
 
-Make sure that this install directory is included in your shell's `$PATH`
-(preferably near the start, to preempt any old hledger binaries you might have lying around).
+Make sure that this `bin` directory is included in your shell's `PATH` setting,
+and preferably near the start of the list, 
+to preempt any old hledger binaries you might have lying around.
 How to configure this depends on your platform and shell.
 Eg if you are using bash, this will show $PATH:
 
-<div class="command">
-  echo $PATH
-</div>
+    echo $PATH
 
 and this will add the stack and cabal install dirs to it permanently:
 
-<div class="command">
-  echo "export PATH=~/.local/bin:~/.cabal/bin:$PATH" >> ~/.profile <br>
-  source ~/.profile
-</div>
+    echo "export PATH=~/.local/bin:~/.cabal/bin:$PATH" >> ~/.profile 
+    source ~/.profile
 
 Here's [how to set environment variables on Windows](https://www.devdungeon.com/content/set-environment-variables-windows).
 
+
 <a name="locale"></a> <!-- required permalink, used in error messages -->
 
-### Check your locale
+### LANG
 
-On unix systems, when running hledger 
-(and other GHC-compiled programs, like GHC, cabal & stack), 
-the `LANG` environment variable must be set to a UTF-8-aware locale
-to avoid errors like "*invalid byte sequence*" or "*mkTextEncoding: invalid argument*"
-when processing non-ascii text. 
-
-Check that LANG's value mentions UTF-8, and if not, change it:
+On most unix systems, when you are processing non-ASCII text with hledger,
+the `LANG` environment variable must be set to a UTF-8-aware locale,
+to avoid errors like "*invalid byte sequence*" or "*mkTextEncoding: invalid argument*".
+(This applies to the Haskell build tools like GHC, cabal and stack, as well.)
+Check that your `LANG` setting mentions UTF-8, and if not, change it. Eg:
 
 ```cli
 $ echo $LANG
@@ -788,27 +351,28 @@ package manager first. See
 [hledger: Troubleshooting](hledger.md#troubleshooting) for more help.
 <!-- XXX ^ improve -->
 
-If you see similar problems on Microsoft Windows, 
-perhaps [this doc](https://techtrix.co/how-do-i-change-the-default-encoding-in-windows-10/#How_do_I_change_my_Windows_locale)
-can help with configuring it.
+On Microsoft Windows, if you see such error messages, perhaps
+[this doc](https://techtrix.co/how-do-i-change-the-default-encoding-in-windows-10/#How_do_I_change_my_Windows_locale)
+can help.
 
-With Nix or GUIX, the procedures are [different](https://github.com/simonmichael/hledger/issues/1033#issuecomment-1062506027).
+On Nix or GUIX, the procedures are [different](https://github.com/simonmichael/hledger/issues/1033#issuecomment-1062506027).
+
 
 ## Next steps
 
-Nicely done! Now see **[Get started](start.md)**,
-or come to the **[#hledger chat](support.md)**
+Nicely done! Now see [Get started](start.md),
+or come to the [#hledger chat](support.md)
 where we'll gladly share tips or receive your feedback.
-
-<br>
 
 
 [ghc]:             https://www.haskell.org/ghc
 [bash]:            https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29
 [make]:            https://www.gnu.org/software/make/
+[ghcup]:           https://haskell.org/ghcup
 [stack]:           https://docs.haskellstack.org/en/stable/
 [cabal]:           https://cabal.readthedocs.io/en/stable/
 [hledger-install]: https://github.com/simonmichael/hledger/blob/master/hledger-install/hledger-install.sh
 [add-on tools]:    hledger.html#addons
 [WSL]:             https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux
 [nix]:             https://nixos.org
+[git]:             https://en.wikipedia.org/wiki/Git
