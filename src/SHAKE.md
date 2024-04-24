@@ -1,1 +1,0 @@
-../../doc/SHAKE.md
