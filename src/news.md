@@ -11,6 +11,37 @@ every Friday morning or any time, tagged with `TWIH:`.
 See also: [Release notes](release-notes.md)
 
 
+## This Week In Hledger 2024-04-19
+<https://hledger.org/news.html#this-week-in-hledger-2024-04-19>
+
+**sm**
+Worked on release process, github workflows, platform build issues,
+mac arm release binaries, CLI commands list, a hledger add ANSI bug,
+misc doc updates, and released hledger 1.33.
+
+**Misc**
+
+You can see recent discussions at:
+<https://matrix.hledger.org>
+<https://list.hledger.org>
+<https://forum.plaintextaccounting.org/latest>
+<https://www.reddit.com/r/plaintextaccounting/new>
+<https://fosstodon.org/search> #hledger
+
+**Quotes**
+
+*Been using ledger and hledger for about four years, love them
+dearly. I find ledger + Emacs ledger-mode the most convenient for
+daily use. Hledger has a somewhat nicer way of formatting reports on
+the CLI, making it useful for creating ad-hoc reports and digging into
+your data. --compns8-ng*
+
+*I've been using hledger ... [it] has more features like balance sheet,
+income statement generation with a plain text file for the last 3
+years and it's been working out great. --rwbt*
+
+---
+
 ## This Week In Hledger 2024-04-12
 <https://hledger.org/news.html#this-week-in-hledger-2024-04-12>
 
