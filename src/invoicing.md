@@ -8,7 +8,7 @@
 Freelancers and businesses send invoices to clients to request payment.
 
 See [common journal entries](common-journal-entries.md) and
-<https://wiki.plaintextaccounting.org/Invoicing>
+<https://plaintextaccounting.org/Invoicing>
 
 ## Reports
 
@@ -54,5 +54,5 @@ directory.
 ## See also
 
 - [examples/invoicing/](https://github.com/simonmichael/hledger/tree/master/examples/invoicing)
-- <https://wiki.plaintextaccounting.org/invoicing>
-
+- [kairos](https://kairosdotapp.github.io) ([repo](https://github.com/kairosdotapp/kairos))
+- <https://plaintextaccounting.org/Invoicing>
