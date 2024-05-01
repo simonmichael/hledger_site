@@ -5,10 +5,11 @@
 <div>
 <table>
   <tr valign=top>
-    <td>PTA website</td>
+    <td>PTA website and forum</td>
     <td>
-      <a href="https://plaintextaccounting.org">plaintextaccounting.org</a>
-      introduces plain text accounting generally (not hledger-specific).
+      <a href="https://plaintextaccounting.org">plaintextaccounting.org</a> and
+      <a href="https://forum.plaintextaccounting.org">forum.plaintextaccounting.org</a>
+      introduce and discuss plain text accounting generally (not hledger-specific).
       <p>
     </td>
   </tr>
