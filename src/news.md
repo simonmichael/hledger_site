@@ -11,6 +11,30 @@ every Friday morning or any time, tagged with `TWIH:`.
 See also: [Release notes](release-notes.md)
 
 
+## This Week In Hledger 2024-04-26
+
+**sm**
+- imp: run checks in a well-defined order, and tweak that order
+- imp!: check ordereddates: drop --date2 support; check primary dates only
+- fix: balcmds: show digit groups marks in html output again [#2196]
+- imp: web: support base64 >=1.0
+- tools: retire the main Makefile
+- tools: relnotes.hs: generate/update release notes from changelogs
+- tools: md-issue-refs.el: manage issue links in markdown
+- examples: vanguard, fidelity csv rules updates
+- doc updates: import, csv amount decimal places, charts, dev docs, install page.
+
+You can see recent discussions via the links at <https://hledger.org/support.html>.
+
+**Quotes**
+
+*Trust me, if you need to run some complicated analysis, (h)ledger has your back and you can find how to do it in the docs. --lvass*
+
+*Thank you for this remarkably beautiful and useful tool. --yse*
+
+---
+
+
 ## This Week In Hledger 2024-04-19
 <https://hledger.org/news.html#this-week-in-hledger-2024-04-19>
 
