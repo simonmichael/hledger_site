@@ -1,6 +1,6 @@
 <a name="help"></a><a name="help-feedback"></a>
 
-# Discussion / Support
+# Support / Discussion
 
 <div>
 <table>

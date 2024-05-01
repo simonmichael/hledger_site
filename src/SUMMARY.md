@@ -14,7 +14,7 @@
 - [hledger-web manual](1.28/hledger-web.md)
 - [Scripts and add-ons](scripts.md)
 - [Cookbook](cookbook.md)
-- [Discussion/Support](support.md)
+- [Support/Discussion](support.md)
 
 # DEVELOPERS
 

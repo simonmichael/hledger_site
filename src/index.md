@@ -46,7 +46,7 @@ Fast, friendly, robust<br> <a href="https://plaintextaccounting.org">plain text 
 <img id="coins" src="images/coins2-248.png" style="width:25%; margin:1em 1em; float:right;" />
 
 Here's more about the [Features](features.md).
-Don't hesitate to join the [Discussion/Support](support.md) chat and ask questions.
+Don't hesitate to join the [chat](support.md) and ask questions.
 
 [![Github repo](https://img.shields.io/github/stars/simonmichael/hledger.svg?logo=GitHub&label=Github&color=brightgreen)](https://github.com/simonmichael/hledger)
 [![GitHub downloads](https://img.shields.io/github/downloads/simonmichael/hledger/total?label=Github+downloads)](https://github.com/simonmichael/hledger/releases)
@@ -378,7 +378,7 @@ $ hledger aregister checking
 - [![Github topic: #hledger](https://img.shields.io/badge/Github_topic-%23hledger-green)](https://github.com/topics/hledger?o=desc&s=updated)
   [![Github topic: #plaintext-accounting](https://img.shields.io/badge/Github_topic-%23plaintext--accounting-green)](https://github.com/topics/plaintext-accounting?o=desc&s=updated)
   [![Github topics: *accounting*](https://img.shields.io/badge/Github_topics-%2Aaccounting%2A-green)](https://github.com/search?type=topics&q=accounting)
-- [Discussion/Support](support.md)
+- [Support/Discussion](support.md)
 
 ## Site tips
 
