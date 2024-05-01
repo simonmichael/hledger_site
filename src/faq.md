@@ -63,7 +63,6 @@ Slightly longer:
 
 See also: [hledger and Ledger: History](ledger.md#history).
 
-
 ### What is the hledger project's current mission and plans ?
 
 1. Help make plain text accounting more usable and useful for all.
