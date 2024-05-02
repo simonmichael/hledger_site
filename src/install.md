@@ -5,7 +5,7 @@
 <!-- toc -->
 </div>
 
-The current hledger release is **1.33**. 
+The current hledger release is **1.33.1**.
 Here are the **[release notes](release-notes.md)**.
 
 There are three main ways to install hledger on your computer:
@@ -22,8 +22,8 @@ After installing, here are some [final things](#run-requirements) to check.
 
 Official release binaries for Mac, Windows, GNU/Linux
 ([RSS feed](https://github.com/simonmichael/hledger/releases.atom)):\
-[![hledger release binaries](https://img.shields.io/badge/hledger_release_binaries-1.33-brightgreen.svg)](https://github.com/simonmichael/hledger/releases/tag/1.33)
-[release binaries](https://github.com/simonmichael/hledger/releases/tag/1.33)
+[![hledger release binaries](https://img.shields.io/badge/hledger_release_binaries-1.33.1-brightgreen.svg)](https://github.com/simonmichael/hledger/releases/tag/1.33.1)
+[release binaries](https://github.com/simonmichael/hledger/releases/tag/1.33.1)
 
 
 ## Packaged binaries
@@ -112,7 +112,7 @@ Official release binaries for Mac, Windows, GNU/Linux
 
 ### Docker (Linux, Mac, Windows)
 
-[![Docker](https://img.shields.io/badge/Docker_image-1.33-brightgreen.svg)](https://hub.docker.com/r/dastapov/hledger)
+[![Docker](https://img.shields.io/badge/Docker_image-1.33-red.svg)](https://hub.docker.com/r/dastapov/hledger)
 `docker pull dastapov/hledger`\
 [more..](https://hub.docker.com/search?q=hledger&type=image&sort=updated_at&order=desc)
 <!-- adept -->
@@ -178,15 +178,14 @@ Then:
 ```
 stack update
 stack install --verbosity error --resolver lts-22 \
-    hledger-lib-1.33 hledger-1.33 hledger-ui-1.33 hledger-web-1.33
+    hledger-lib-1.33.1 hledger-1.33.1 hledger-ui-1.33.1 hledger-web-1.33.1
 ```
 
 On MS Windows, run this instead:
 ```
 stack update
 stack install --verbosity error --resolver lts-22 \
-    hledger-lib-1.33 hledger-1.33 hledger-ui-1.33 hledger-web-1.33 \
-    process-1.6.19.0 Cabal-3.10.1.0 haskeline-0.8.2.1 vty-windows-0.2.0.2
+    hledger-lib-1.33.1 hledger-1.33.1 hledger-ui-1.33.1 hledger-web-1.33.1 vty-windows-0.2.0.2
 ```
 
 ### Build with cabal
@@ -199,7 +198,7 @@ Then:
 ```
 cabal update
 cabal install alex happy
-cabal install hledger-1.33 hledger-ui-1.33 hledger-web-1.33
+cabal install hledger-1.33.1 hledger-ui-1.33.1 hledger-web-1.33.1
 ```
 
 ### Build in a source checkout
@@ -212,7 +211,7 @@ Use [git] to get the source code for the
 
 or the latest release:
 
-    git clone https://github.com/simonmichael/hledger -b 1.33
+    git clone https://github.com/simonmichael/hledger -b 1.33.1
 
 Then:
 
@@ -275,11 +274,11 @@ After installing, run the hledger tools and verify that their versions are what 
 (and not older versions from a previous install). Eg:
 
     $ hledger --version
-    hledger 1.33-...
+    hledger 1.33.1-...
     $ hledger-ui --version
-    hledger-ui 1.33-...
+    hledger-ui 1.33.1-...
     $ hledger web --version
-    hledger-web 1.33-...
+    hledger-web 1.33.1-...
 
 You can run the built-in unit tests if you'd like:
 
