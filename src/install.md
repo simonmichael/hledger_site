@@ -155,13 +155,15 @@ Eg,
 - on Debian or Ubuntu: `sudo apt install libgmp-dev libtinfo-dev zlib1g-dev`
 - on Fedora or RHEL: `sudo dnf install gmp-devel ncurses-devel zlib-devel`
 
+Here are some ways to build hledger:
+
 ### Build with hledger-install
 
 [hledger-install.sh][hledger-install] is an automated install script that requires only [bash].
 This is a good choice if you are not used to building Haskell software.
 It installs build tools if needed,
 then builds the current release of the hledger tools and some [add-on tools],
-installing them in ~/.local/bin (or ~/.cabal/bin if you had cabal and not stack installed.)
+installing them in ~/.local/bin (or ~/.cabal/bin if you had cabal and not stack installed).
 
 ```
 curl -O https://raw.githubusercontent.com/simonmichael/hledger/master/hledger-install/hledger-install.sh
@@ -203,9 +205,8 @@ cabal install hledger-1.33.1 hledger-ui-1.33.1 hledger-web-1.33.1
 
 ### Build in a source checkout
 
-This is the best way to build if you'd like to customise or contribute to hledger.
-Use [git] to get the source code for the
-[latest development version](https://github.com/simonmichael/hledger/commits/master):
+If you'd like to customise or review the hledger source code, it's better to get it yourself with [git].
+Eg the [latest development version](https://github.com/simonmichael/hledger/commits/master):
 
     git clone https://github.com/simonmichael/hledger
 
