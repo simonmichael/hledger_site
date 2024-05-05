@@ -18,17 +18,17 @@ After installing, here are some [final things](#run-requirements) to check.
 [Your feedback](support.md) helps make this process smoother.
 
 
-## Release binaries
+## Release binaries (Linux, Mac, Windows)
 
-Official release binaries for Mac, Windows, GNU/Linux
-([RSS feed](https://github.com/simonmichael/hledger/releases.atom)):\
+Official release binaries.
+([RSS](https://github.com/simonmichael/hledger/releases.atom)):\
 [![hledger release binaries](https://img.shields.io/badge/hledger_release_binaries-1.33.1-brightgreen.svg)](https://github.com/simonmichael/hledger/releases/tag/1.33.1)
 [release binaries](https://github.com/simonmichael/hledger/releases/tag/1.33.1)
 
 
 ## Packaged binaries
 
-### Homebrew (Mac, Linux, WSL)
+### Homebrew (Linux, Mac, WSL)
 
 [![Homebrew](https://repology.org/badge/version-for-repo/homebrew/hledger.svg)](https://formulae.brew.sh/formula/hledger)
 `brew install hledger`
