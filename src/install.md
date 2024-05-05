@@ -34,6 +34,13 @@ Official release binaries for Mac, Windows, GNU/Linux
 `brew install hledger`
 <!-- homebrew packagers, chenrui ? -->
 
+### Docker (Linux, Mac, Windows)
+
+[![Docker](https://img.shields.io/badge/Docker_image-1.33.1-brightgreen.svg)](https://hub.docker.com/r/dastapov/hledger)
+`docker pull dastapov/hledger`\
+[more..](https://hub.docker.com/search?q=hledger&type=image&sort=updated_at&order=desc)
+<!-- adept -->
+
 ### Windows
 
 [![Scoop](https://repology.org/badge/version-for-repo/scoop/hledger.svg)](https://scoop.sh/#/apps?q=hledger)
@@ -109,13 +116,6 @@ Official release binaries for Mac, Windows, GNU/Linux
 \
 ![openbsd ports](https://repology.org/badge/version-for-repo/openbsd/hledger.svg)
 `pkg_add hledger`
-
-### Docker (Linux, Mac, Windows)
-
-[![Docker](https://img.shields.io/badge/Docker_image-1.33.1-brightgreen.svg)](https://hub.docker.com/r/dastapov/hledger)
-`docker pull dastapov/hledger`\
-[more..](https://hub.docker.com/search?q=hledger&type=image&sort=updated_at&order=desc)
-<!-- adept -->
 
 ### Nix (Linux, Mac)
 
