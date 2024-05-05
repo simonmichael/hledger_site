@@ -21,10 +21,10 @@ After installing, here are some [final things](#run-requirements) to check.
 ## Release binaries
 
 Official release binaries for Linux, Mac, Windows.
-([RSS](https://github.com/simonmichael/hledger/releases.atom)):\
+
 [![hledger release binaries](https://img.shields.io/badge/hledger_release_binaries-1.33.1-brightgreen.svg)](https://github.com/simonmichael/hledger/releases/tag/1.33.1)
 [release binaries](https://github.com/simonmichael/hledger/releases/tag/1.33.1)
-
+([![RSS](images/rss.png) RSS](https://github.com/simonmichael/hledger/releases.atom))
 
 ## Packaged binaries
 
