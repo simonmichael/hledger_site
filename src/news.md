@@ -13,8 +13,6 @@ See also: [Release notes](release-notes.md)
 
 ## This Week In Hledger 2024-05-03
 
-<https://hledger.org/news.html#this-week-in-hledger-2024-05-03>
-
 **sm**
 
 - fix: show trailing decimal mark on cost amounts too, when needed
@@ -33,13 +31,15 @@ See also: [Release notes](release-notes.md)
 
 **Misc**
 
-- https://kairosdotapp.github.io/kairos invoice generator, timedot compatible
+- <https://kairosdotapp.github.io/kairos> invoice generator, timedot compatible
 
 You can see recent discussions via the links at <https://hledger.org/support.html>.
 
 **Quotes**
 
 *It's been a while since I've been in this room, but I've been using hledger all the while. It continues to be incredible. --daveakre*
+
+<https://hledger.org/news.html#this-week-in-hledger-2024-05-03>
 
 ---
 
