@@ -11,6 +11,39 @@ every Friday morning or any time, tagged with `TWIH:`.
 See also: [Release notes](release-notes.md)
 
 
+## This Week In Hledger 2024-05-03
+
+<https://hledger.org/news.html#this-week-in-hledger-2024-05-03>
+
+**sm**
+
+- fix: show trailing decimal mark on cost amounts too, when needed
+- imp: Revert problematic process-1.6.19.0 bound, it seems not strictly needed [#2149]
+- Released hledger 1.33.1
+- dev script updates
+- fix: journal: parse include directives with trailing whitespace
+- imp: support ghc-debug for analysing memory/profile info
+- imp: cli: commands list reorg, cleanups
+- imp: check: check ordereddates before balance assertions, when both are enabled
+- imp: web: provide a basic openapi specification of the current HTTP-JSON API
+- doc updates: github release windows install instructions, check command, Contributor Quick Start, Developer FAQ, misc site tweaks
+- examples: custom paypal csv rules
+
+[#2149]: https://github.com/simonmichael/hledger/issues/2149
+
+**Misc**
+
+- https://kairosdotapp.github.io/kairos invoice generator, timedot compatible
+
+You can see recent discussions via the links at <https://hledger.org/support.html>.
+
+**Quotes**
+
+*It's been a while since I've been in this room, but I've been using hledger all the while. It continues to be incredible. --daveakre*
+
+---
+
+
 ## This Week In Hledger 2024-04-26
 
 **sm**
