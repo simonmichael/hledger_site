@@ -39,8 +39,6 @@ You can see recent discussions via the links at <https://hledger.org/support.htm
 
 *It's been a while since I've been in this room, but I've been using hledger all the while. It continues to be incredible. --daveakre*
 
-<https://hledger.org/news.html#this-week-in-hledger-2024-05-03>
-
 ---
 
 
