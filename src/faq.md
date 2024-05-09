@@ -464,6 +464,19 @@ See [Scripts and add-ons](scripts.md).
 Install the example [Scripts and add-ons](scripts.md) and find a suitable one to copy and modify.
 Also see [Scripting](scripting.md).
 If your new script can be useful to others, consider contributing it with a pull request.
+### What's a good way to manage hledger scripts ?
+
+Once you start defining handy scripts, they tend to proliferate and become hard to remember.
+
+One solution is to gather scripts into a [Makefile](https://www.gnu.org/software/make),
+and run them with `make SCRIPT`.
+This is very traditional and very common, as make is usually installed by default, but it has downsides.
+Listing scripts, handling arguments, portability, and dealing with make's special syntax are all a hassle.
+
+As someone who has used `make` for a few decades, I urge, nay *beg*, you to install and use [just](https://github.com/casey/just) instead.
+It is much better for this job and complements hledger and PTA very well.
+See the example [Justfile](scripts.md#justfile) and [hledger and just](just.md).
+
 ### Is there a config file ?
 
 So far, no, we have resisted this.
@@ -532,17 +545,4 @@ hledger will not search parent directories for a journal file,
 though there's probably a tool that will.
 
 Related: [#2194](https://github.com/simonmichael/hledger/issues/2194)
-
-### What's a good way to manage many hledger scripts ?
-
-Once you start defining handy scripts, they tend to proliferate and become hard to remember.
-
-One solution is to gather scripts into a [Makefile](https://www.gnu.org/software/make),
-and run them with `make SCRIPT`.
-This is very traditional and very common, as make is usually installed by default, but it has downsides.
-Listing scripts, handling arguments, portability, and dealing with make's special syntax are all a hassle.
-
-As someone who has used `make` for a few decades, I urge, nay *beg*, you to install and use [just](https://github.com/casey/just) instead.
-It is much better for this job and complements hledger and PTA very well.
-See the example [Justfile](scripts.md#justfile) and [hledger and just](just.md).
 
