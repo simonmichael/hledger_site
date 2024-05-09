@@ -235,6 +235,17 @@ Also:
 
 <!-- ## File management -->
 
+### There are so many docs, where do I even.. ?
+
+Yes they tend to accumulate. You don't have to read them all!
+In fact you can ignore them if you want. Run `hledger` for help, and get started with `hledger add`.
+
+For more guidance, begin at the [Get Started](start.md) page, and/or the [chat room](support.md).
+
+The most complete reference is the [hledger manual](hledger.md); if you read this and nothing else, you'll be an expert.
+This manual is rather large, however.
+So read the table of contents, the first sections, and quickly skim the rest, so you know where to find out more when needed.
+
 ### How do I set the default file to something other than ~/.hledger.journal ?
 
 See [hledger manual > Setting LEDGER_FILE](hledger.md#setting-ledger_file).
@@ -246,17 +257,6 @@ See <https://plaintextaccounting.org/FAQ#how-should-i-organise-files>
 ### What account names should I use ?
 
 See <https://plaintextaccounting.org/FAQ#how-should-i-choose-account-names>
-
-### There are so many docs, where do I even.. ?
-
-Yes they tend to accumulate. You don't have to read them all!
-In fact you can ignore them if you want. Run `hledger` for help, and get started with `hledger add`.
-
-For more guidance, begin at the [Get Started](start.md) page, and/or the [chat room](support.md).
-
-The most complete reference is the [hledger manual](hledger.md); if you read this and nothing else, you'll be an expert.
-This manual is rather large, however.
-So read the table of contents, the first sections, and quickly skim the rest, so you know where to find out more when needed.
 
 ## Journals
 
