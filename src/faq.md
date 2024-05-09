@@ -1,7 +1,6 @@
 # Frequently Asked Questions
 
-Welcome! If you have additions or suggestions,
-please click the "edit this page" link at the bottom,
+If you have additions or suggestions, just click the "edit this page" link at the bottom,
 or let us know in the [chat](support).
 
 <!-- toc -->
