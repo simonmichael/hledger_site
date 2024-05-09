@@ -539,8 +539,8 @@ Once you start defining handy scripts, they tend to proliferate and become hard 
 
 One solution is to gather scripts into a [Makefile](https://www.gnu.org/software/make),
 and run them with `make SCRIPT`.
-This is very traditional and very common, as `make` is usually installed by default, but it has big downsides.
-Listing scripts, handling arguments, and dealing with Make's special syntax are all a hassle.
+This is very traditional and very common, as make is usually installed by default, but it has downsides.
+Listing scripts, handling arguments, portability, and dealing with make's special syntax are all a hassle.
 
 As someone who has used `make` for a few decades, I urge, nay *beg*, you to install and use [just](https://github.com/casey/just) instead.
 It is much better for this job and complements hledger and PTA very well.
