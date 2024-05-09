@@ -532,3 +532,17 @@ hledger will not search parent directories for a journal file,
 though there's probably a tool that will.
 
 Related: [#2194](https://github.com/simonmichael/hledger/issues/2194)
+
+### What's a good way to manage many hledger scripts ?
+
+Once you start defining handy scripts, they tend to proliferate and become hard to remember.
+
+One solution is to gather scripts into a [Makefile](https://www.gnu.org/software/make),
+and run them with `make SCRIPT`.
+This is very traditional and very common, as `make` is usually installed by default, but it has big downsides.
+Listing scripts, handling arguments, and dealing with Make's special syntax are all a hassle.
+
+As someone who has used `make` for a few decades, I urge, nay *beg*, you to install and use [just](https://github.com/casey/just) instead.
+It is much better for this job.
+See the example [Justfile](scripts.md#justfile) and [hledger and just](just.md).
+
