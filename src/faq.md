@@ -464,3 +464,44 @@ See [Scripts and add-ons](scripts.md).
 Install the example [Scripts and add-ons](scripts.md) and find a suitable one to copy and modify.
 Also see [Scripting](scripting.md).
 If your new script can be useful to others, consider contributing it with a pull request.
+### Is there a config file ?
+
+So far, no, we have resisted this.
+In short, because config files add complexity and variance.
+Better to just work the best way in the first place.
+I'm of the opinion config files would be a net loss for productivity.
+
+And yet it would probably be a very popular feature.
+If you want it to happen, feel free to make a case for it and propose a specification,
+in chat or [#1013](https://github.com/simonmichael/hledger/issues/1013).
+
+Below are some ways emulate a config file.
+
+### How can I save and reuse common options/arguments ?
+
+Save them in a text file, with one option or argument per line,
+then include `@FILE` in your hledger command line.
+See [argument files](#argument-files).
+
+### How can I always run hledger with certain options ?
+
+This works best with general options, not command-specific options.
+You can run hledger via a small script.
+Since you will likely have other scripts or applications that run "`hledger`",
+it's most robust if the script is also called `hledger`.
+
+Here's how to do it on unix systems:
+somewhere in your PATH before the actual hledger executable, eg in `~/bin`,
+create a `hledger` script containing:
+
+```sh
+#!/bin/sh
+env hledger -I "$@"
+```
+
+and make it executable:
+
+```cli
+$ chmod +x ~/bin/hledger
+```
+
