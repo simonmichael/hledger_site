@@ -248,8 +248,8 @@ But it is rather large; so maybe read the table of contents, the first sections,
 and just skim the rest so you know where to find out more.
 
 You can jump to topics in the manual with a url like [hledger.org/hledger#time-periods](https://hledger.org/hledger#time-periods).
-(This makes a good web browser keyword, 
-eg in Safari using the Keyword Search extension, define `hm` as `https://hledger.org/hledger#@@@`.)
+(This makes a good web browser keyword;
+eg in your browser, define `hm TOPIC` as a shortcut for `https://hledger.org/hledger#TOPIC`.)
 The website also has a search feature.
 To consult the manual locally, see `hledger help -h`.
 
