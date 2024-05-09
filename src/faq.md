@@ -484,12 +484,9 @@ Save them in a text file, with one option or argument per line,
 then include `@FILE` in your hledger command line.
 See [argument files](#argument-files).
 
-### How can I always run hledger with certain options ?
+### How can I always run hledger with certain general options ?
 
 You can run hledger via a small script.
-This works best for general options like `-I`,
-not command-specific options like `print`'s `-x`.
-
 Since you will likely have other scripts or applications that run "`hledger`",
 it's most robust if the script is also called `hledger`.
 Here's how to do it on unix systems:
@@ -507,6 +504,18 @@ and make it executable:
 
 ```cli
 $ chmod +x ~/bin/hledger
+```
+
+### How can I always run hledger commands with certain command-specific options ?
+
+Make a shell alias or script for that command. Eg in your shell config:
+```sh
+alias print=`hledger print -x`
+```
+or in `~/bin/print`:
+```sh
+#!/bin/sh
+hledger print -x "$@"
 ```
 
 ### How can I automatically use a journal file in the current directory ?
