@@ -493,11 +493,13 @@ it's most robust if the script is also called `hledger`.
 
 Here's how to do it on unix systems:
 somewhere in your PATH before the actual hledger executable, eg in `~/bin`,
-create a `hledger` script containing:
+create a `hledger` script that runs the actual hledger,
+with your preferred options/arguments and any others specified on the command line,
+something like this:
 
 ```sh
 #!/bin/sh
-env hledger -I "$@"
+/usr/local/bin/hledger -I --infer-equity --infer-costs --infer-market-prices "$@"
 ```
 
 and make it executable:
