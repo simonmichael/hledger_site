@@ -243,7 +243,7 @@ When you'd like a bit more guidance, use the [Get Started](start.md) page,
 and/or the [chat room](support.md).
 
 If you want the most complete reference, go straight to the [hledger manual](hledger.md).
-If you read this and nothing else, you'll be an expert.
+If you read this and nothing else, you'll be a hledger expert.
 But it is rather large; so maybe read the table of contents, the first sections, 
 and just skim the rest so you know where to find out more.
 
