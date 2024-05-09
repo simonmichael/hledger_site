@@ -506,7 +506,7 @@ and make it executable:
 $ chmod +x ~/bin/hledger
 ```
 
-### How can I always run hledger commands with certain command-specific options ?
+### How can I always run hledger commands with certain command options ?
 
 Make a shell alias or script for that command. Eg in your shell config:
 ```sh
