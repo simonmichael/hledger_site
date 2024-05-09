@@ -467,15 +467,16 @@ If your new script can be useful to others, consider contributing it with a pull
 ### Is there a config file ?
 
 So far, no, we have resisted this.
-In short, because config files add complexity and variance.
-Better to just work the best way in the first place.
-I'm of the opinion config files would be a net loss for productivity.
+In short, because config files add complexity and variance;
+it's better to just work the best way in the first place.
+There are ways power users can emulate them,
+and I'm of the opinion config files would be a net loss for productivity, overall.
 
-And yet it would probably be a very popular feature.
+Despite this, it would probably be a very popular feature.
 If you want it to happen, feel free to make a case for it and propose a specification,
 in chat or [#1013](https://github.com/simonmichael/hledger/issues/1013).
 
-Below are some ways emulate a config file.
+Below are some ways to emulate a config file.
 
 ### How can I save and reuse common options/arguments ?
 
