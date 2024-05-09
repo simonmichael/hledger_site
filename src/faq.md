@@ -237,14 +237,14 @@ Also:
 
 ### There are so many docs, where do I even.. ?
 
-Yes they tend to accumulate. You don't have to read them all!
-In fact you can ignore them if you want. Run `hledger` for help, and get started with `hledger add`.
+You're right. You can skip them: just run `hledger` for help.
 
-For more guidance, begin at the [Get Started](start.md) page, and/or the [chat room](support.md).
+But if you'd like more guidance, use the [Get Started](start.md) page. And/or the [chat room](support.md).
 
-The most complete reference is the [hledger manual](hledger.md); if you read this and nothing else, you'll be an expert.
-This manual is rather large, however.
-So read the table of contents, the first sections, and quickly skim the rest, so you know where to find out more when needed.
+For the most complete reference, use the [hledger manual](hledger.md).
+If you read this and nothing else, you'll be an expert.
+But it is rather large; so read the table of contents, the first sections, 
+and quickly skim the rest so you know where to find out more when needed.
 
 ### How do I set the default file to something other than ~/.hledger.journal ?
 
