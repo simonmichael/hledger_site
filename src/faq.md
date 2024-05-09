@@ -244,20 +244,26 @@ and/or the [chat room](support.md).
 
 If you want the most complete reference, go straight to the [hledger manual](hledger.md).
 If you read this and nothing else, you'll be an expert.
-But it is rather large; so read the table of contents, the first sections, 
-and quickly skim the rest so you know where to find out more when needed.
+But it is rather large; so maybe read the table of contents, the first sections, 
+and just skim the rest so you know where to find out more.
+
+You can jump to topics in the manual with a url like [hledger.org/hledger#time-periods](https://hledger.org/hledger#time-periods).
+(This makes a good web browser keyword, 
+eg in Safari using the Keyword Search extension, define `hm` as `https://hledger.org/hledger#@@@`.)
+The website also has a search feature.
+To consult the manual locally, see `hledger help -h`.
 
 ### How do I set the default file to something other than ~/.hledger.journal ?
 
-See [hledger manual > Setting LEDGER_FILE](hledger.md#setting-ledger_file).
+See [hledger manual: Setting LEDGER_FILE](hledger.md#setting-ledger_file).
 
 ### How should I organise files ?
 
-See <https://plaintextaccounting.org/FAQ#how-should-i-organise-files>
+See [PTA FAQ: How should I organise files ?](https://plaintextaccounting.org/FAQ#how-should-i-organise-files).
 
 ### What account names should I use ?
 
-See <https://plaintextaccounting.org/FAQ#how-should-i-choose-account-names>
+See [PTA FAQ: How should I choose account names ?](https://plaintextaccounting.org/FAQ#how-should-i-choose-account-names).
 
 ## Journals
 
