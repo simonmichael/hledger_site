@@ -543,6 +543,6 @@ This is very traditional and very common, as `make` is usually installed by defa
 Listing scripts, handling arguments, and dealing with Make's special syntax are all a hassle.
 
 As someone who has used `make` for a few decades, I urge, nay *beg*, you to install and use [just](https://github.com/casey/just) instead.
-It is much better for this job.
+It is much better for this job and complements hledger and PTA very well.
 See the example [Justfile](scripts.md#justfile) and [hledger and just](just.md).
 
