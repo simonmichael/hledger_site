@@ -258,10 +258,6 @@ The most complete reference is the [hledger manual](hledger.md); if you read thi
 This manual is rather large, however.
 So read the table of contents, the first sections, and quickly skim the rest, so you know where to find out more when needed.
 
-### Where can I find more tips for getting started ?
-
-
-
 ## Journals
 
 ### Why does this entry give a "no amount" error even though I wrote an amount ?
