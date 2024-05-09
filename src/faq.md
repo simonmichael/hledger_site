@@ -488,9 +488,9 @@ See [argument files](#argument-files).
 
 This works best with general options, not command-specific options.
 You can run hledger via a small script.
+
 Since you will likely have other scripts or applications that run "`hledger`",
 it's most robust if the script is also called `hledger`.
-
 Here's how to do it on unix systems:
 somewhere in your PATH before the actual hledger executable, eg in `~/bin`,
 create a `hledger` script that runs the actual hledger,
