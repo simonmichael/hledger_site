@@ -1,9 +1,8 @@
 # Frequently Asked Questions
 
-Welcome! This FAQ is for all hledger-related topics, for now.
-If you have additions or improvements,
+Welcome! If you have additions or suggestions,
 please click the "edit this page" link at the bottom,
-or [chat](support) with us.
+or let us know in the [chat](support).
 
 <!-- toc -->
 
