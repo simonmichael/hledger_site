@@ -486,8 +486,9 @@ See [argument files](#argument-files).
 
 ### How can I always run hledger with certain options ?
 
-This works best with general options, not command-specific options.
 You can run hledger via a small script.
+This works best with general options, like `-I`
+(not command-specific options, like `print`'s `-x`).
 
 Since you will likely have other scripts or applications that run "`hledger`",
 it's most robust if the script is also called `hledger`.
