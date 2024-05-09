@@ -515,6 +515,7 @@ Perhaps you have journals in multiple project directories.
 If you use a standard filename, such as `default.journal`,
 you can run hledger with the `-f default.journal` option or set `LEDGER_FILE` to `default.journal`, perhaps in a script;
 then hledger will use the `default.journal` file in the current directory.
+Note you can also use [file glob patterns](https://en.wikipedia.org/wiki/Glob_(programming)) in `-f` or `LEDGER_FILE`.
 
 For more flexibility, you could use [direnv](https://direnv.net) to customise LEDGER_FILE per directory.
 
