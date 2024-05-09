@@ -509,3 +509,16 @@ and make it executable:
 $ chmod +x ~/bin/hledger
 ```
 
+### How can I automatically use a journal file in the current directory ?
+
+Perhaps you have journals in multiple project directories.
+If you use a standard filename, such as `default.journal`,
+you can run hledger with the `-f default.journal` option or set `LEDGER_FILE` to `default.journal`, perhaps in a script;
+then hledger will use the `default.journal` file in the current directory.
+
+For more flexibility, you could use [direnv](https://direnv.net) to customise LEDGER_FILE per directory.
+
+hledger will not search parent directories for a journal file,
+though there's probably a tool that will.
+
+Related: [#2194](https://github.com/simonmichael/hledger/issues/2194)
