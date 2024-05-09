@@ -495,8 +495,8 @@ it's most robust if the script is also called `hledger`.
 Here's how to do it on unix systems:
 somewhere in your PATH before the actual hledger executable, eg in `~/bin`,
 create a `hledger` script that runs the actual hledger,
-with your preferred options/arguments and any others specified on the command line,
-something like this:
+with your preferred options/arguments (plus any others provided).
+Something like this:
 
 ```sh
 #!/bin/sh
