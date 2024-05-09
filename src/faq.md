@@ -231,15 +231,28 @@ Also:
 - Look for a relevant page at [Cookbook > Other software](cookbook.md#other-software)
 - See also [Exporting from hledger](export.md).
 
-## Using hledger
+## Getting started
 
-### How do I set environment variables like LEDGER_FILE (persistently) ?
+<!-- ## File management -->
+
+### How do I set the default file to something other than ~/.hledger.journal ?
 
 See [hledger manual > Setting LEDGER_FILE](hledger.md#setting-ledger_file).
 
 ### How should I organise files ?
 
-See <https://plaintextaccounting.org/Getting-started-FAQ#how-to-organise-files>
+See <https://plaintextaccounting.org/FAQ#how-should-i-organise-files>
+
+### What account names should I use ?
+
+See <https://plaintextaccounting.org/FAQ#how-should-i-choose-account-names>
+
+### Where can I find more tips for getting started ?
+
+See the [Get Started](start.md) page, and/or the [chat room](support.md).
+
+
+## Journals
 
 ### Why does this entry give a "no amount" error even though I wrote an amount ?
 
@@ -267,13 +280,53 @@ Because there's only a single space between `assets:bank:checking` and the `;` c
 so the comment is parsed as part of the account name. (`hledger accounts` shows this.)
 There must be at least two spaces between an account name and anything that follows it.
 
-### Why do some directives not affect other files ? Why can't I include account aliases ?
+### Why do some directives not affect other files ? Why can't I include account aliases from a sub file ?
 
 Directives vary in their scope, ie which journal entries and which input files they affect. The differences are partly due to historical accident, and partly by design, so that reordering files, or adding another file, does not change their meaning. See [journal format > Directives and multiple files](hledger.md#directives-and-multiple-files).
 Related discussion:
 [#217](https://github.com/simonmichael/hledger/issues/217),
 [#510](https://github.com/simonmichael/hledger/issues/510),
 [#1007](https://github.com/simonmichael/hledger/issues/1007).
+
+## CSV
+
+### Where can I find hledger CSV rules for my financial institutions ?
+
+Look for a suitable rules file in the [examples/csv/](https://github.com/simonmichael/hledger/tree/master/examples/csv) directory on github.
+Or you can [get the hledger source](https://hledger.org/install.html#build-in-a-source-checkout) and look in examples/csv/.
+
+If your financial institution is not there yet, please use these for inspiration,
+ask in the chat for help, and perhaps send a pull request contributing your new rules.
+
+### How do I make new hledger CSV rules ?
+
+See the [Importing CSV](csv.md) tutorial and the [hledger manual > CSV format](hledger.md#csv-format).
+(After checking for a pre-existing rules file in examples/csv/ in the hledger repo.)
+If possible, add your new rules file to that directory and send a pull request.
+
+### When importing CSV from two bank accounts, how do I avoid duplicate entries for a transfer between them ?
+
+You can have one of the rules files skip that transaction.
+Eg if you have checking and savings CSVs, in savings.csv.rules you might have a rule like
+```rules
+# already imported from checking
+if TRANSFER FROM .*CHECKING
+ skip
+```
+
+Other options: you could remove one of the entries manually.
+Or you could import both entries, but have them transfer to and from an imaginary third account
+(but this creates extra noise in your journal and reports).
+
+
+### Where can I find more help on CSV conversion issues ?
+
+Study the whole [CSV](hledger.md#csv) section in the manual carefully.
+[Working with CSV](hledger.md#working-with-csv) has useful tips, eg for [setting amounts](hledger.md#setting-amounts).
+And of course, make use of the chat.
+
+## Reporting
+
 
 ### Why am I seeing some amounts without an account name in reports ?
 
@@ -387,6 +440,7 @@ hledger print liabilities:mastercard | hledger -f- -I incomestatement
 Complex multi-account transactions could muddle these reports a little;
 if that's a problem you might need to exclude those transactions or split them up.
 
+
 ### What are some gotchas with piping `hledger print` into another hledger command ?
 
 `hledger print` reproduces transactions, but it discards directives.
@@ -421,62 +475,17 @@ Workarounds:
     $ { hledger print ...; grep '^[acd]' `hledger files` --no-filename; } | hledger -f- -I ...
     ```
 
+
+
+## hledger-ui
+
 ### With hledger-ui in iTerm2 on mac, why does Shift-Up/Shift-Down move the selection instead of adjusting the report period ?
 
 iTerm2 by default doesn't recognise SHIFT-UP/SHIFT-DOWN keys correctly. (If this has changed in recent releases, please let us know.)
 Here's one way to fix it: iTerm2 > CMD-i > Keys > Key Mappings > Presets -> select "xterm Defaults" (not "Terminal.app Compatibility").
 
-### When importing CSV from two bank accounts, how do I avoid duplicate entries for a transfer between them ?
 
-You can have one of the rules files skip that transaction.
-Eg if you have checking and savings CSVs, in savings.csv.rules you might have a rule like
-```rules
-# already imported from checking
-if TRANSFER FROM .*CHECKING
- skip
-```
-
-Other options: you could remove one of the entries manually.
-Or you could import both entries, but have them transfer to and from an imaginary third account
-(but this creates extra noise in your journal and reports).
-
-## Customising hledger
-
-### How do I install hledger CSV rules for my financial institutions ?
-
-git clone the main hledger repo, and look in examples/csv/ for a rules file you can copy to your financial working directory.
-If your financial institution is not there yet, please use these for inspiration,
-ask the #hledger chat for help, and send a pull request contributing your working rules to the repo.
-
-### How do I make new hledger CSV rules ?
-
-See the [Importing CSV](csv.md) tutorial and the [hledger manual > CSV format](hledger.md#csv-format).
-(After checking for a pre-existing rules file in examples/csv/ in the hledger repo.)
-If possible, add your new rules file to that directory and send a pull request.
-
-### How do I install more hledger scripts and add-on commands ?
-
-git clone the hledger repo, and add the bin/ directory to your shell's PATH.
-See [Scripts and add-ons](scripts.md).
-
-### How do I make new hledger scripts ?
-
-Install the example [Scripts and add-ons](scripts.md) and find a suitable one to copy and modify.
-Also see [Scripting](scripting.md).
-If your new script can be useful to others, consider contributing it with a pull request.
-
-### What's a good way to manage hledger scripts ?
-
-Once you start defining handy scripts, they tend to proliferate and become hard to remember.
-
-One solution is to gather scripts into a [Makefile](https://www.gnu.org/software/make),
-and run them with `make SCRIPT`.
-This is very traditional and very common, but it has downsides.
-Listing scripts, handling arguments, portability, and dealing with make's special syntax are all a hassle.
-
-As someone who has used make for a few decades, I urge, nay *beg*, you to install and use [just](https://github.com/casey/just) instead.
-It is much better for this job and complements hledger and PTA very well.
-See the example [Justfile](scripts.md#justfile) and [hledger and just](just.md).
+## Customising
 
 ### Is there a config file ?
 
@@ -546,4 +555,32 @@ hledger will not search parent directories for a journal file,
 though there's probably a tool that will.
 
 Related: [#2194](https://github.com/simonmichael/hledger/issues/2194)
+
+
+
+## Scripting
+
+### How do I install more hledger scripts and add-on commands ?
+
+git clone the hledger repo, and add the bin/ directory to your shell's PATH.
+See [Scripts and add-ons](scripts.md).
+
+### How do I make new hledger scripts ?
+
+Install the example [Scripts and add-ons](scripts.md) and find a suitable one to copy and modify.
+Also see [Scripting](scripting.md).
+If your new script can be useful to others, consider contributing it with a pull request.
+
+### What's a good way to manage hledger scripts ?
+
+Once you start defining handy scripts, they tend to proliferate and become hard to remember.
+
+One solution is to gather scripts into a [Makefile](https://www.gnu.org/software/make),
+and run them with `make SCRIPT`.
+This is very traditional and very common, but it has downsides.
+Listing scripts, handling arguments, portability, and dealing with make's special syntax are all a hassle.
+
+As someone who has used make for a few decades, I urge, nay *beg*, you to install and use [just](https://github.com/casey/just) instead.
+It is much better for this job and complements hledger and PTA very well.
+See the example [Justfile](scripts.md#justfile) and [hledger and just](just.md).
 
