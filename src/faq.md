@@ -240,16 +240,16 @@ You're right. You can skip them: just run `hledger` for help.
 When you'd like a bit more guidance, use the [Get Started](start.md) page,
 and/or the [chat room](support.md).
 
-If you want the most complete reference, go straight to the [hledger manual](hledger.md).
+If you want the most complete reference, use the [hledger manual](hledger.md).
 If you read this and nothing else, you'll be a hledger expert.
 But it is rather large; so maybe read the table of contents, the first sections, 
 and just skim the rest so you know where to find out more.
 
-You can jump to topics in the manual with a url like [hledger.org/hledger#time-periods](https://hledger.org/hledger#time-periods).
+You can jump to topics in the manual with a url like [`hledger.org/hledger#time-periods`](https://hledger.org/hledger#time-periods).
 (This makes a good web browser keyword;
 eg in your browser, define `hm TOPIC` as a shortcut for `https://hledger.org/hledger#TOPIC`.)
 The website also has a search feature.
-To consult the manual locally, see `hledger help -h`.
+To read a local copy of the manual, see `hledger help -h`.
 
 ### Where can I find non-english docs ?
 
@@ -552,6 +552,9 @@ and make it executable:
 ```cli
 $ chmod +x ~/bin/hledger
 ```
+
+Unfortunately... this fails with commands that don't support the usual general options,
+like `hledger add`, and many add-ons. Back to the drawing board.
 
 ### How can I always run hledger commands with certain command options ?
 
