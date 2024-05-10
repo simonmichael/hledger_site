@@ -251,6 +251,18 @@ eg in your browser, define `hm TOPIC` as a shortcut for `https://hledger.org/hle
 The website also has a search feature.
 To consult the manual locally, see `hledger help -h`.
 
+### Where can I find non-english-language docs ?
+
+Unfortunately, I know of very few non-english docs for hledger.
+There must be some I don't know about, please contribute any good links.
+
+Could you help translate some docs ? Please get in touch.
+
+Otherwise, you could try Google Translate or similar.
+
+There are  couple of non-english videos at https://plaintextaccounting.org/#videos
+and https://hledger.org/videos.html .
+
 ### How do I set the default file to something other than ~/.hledger.journal ?
 
 See [hledger manual: Setting LEDGER_FILE](hledger.md#setting-ledger_file).
