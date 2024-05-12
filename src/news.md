@@ -10,6 +10,31 @@ every Friday morning or any time, tagged with `TWIH:`.
 
 See also: [Release notes](release-notes.md)
 
+## This Week In Hledger 2024-05-10
+
+**sm**
+
+- imp: `-I` can now be overridden by `-s` or `check`
+- imp: commands list updates
+- doc updates: commands list, report start & end date, smart dates, balance command
+- site updates: install, FAQ reorg
+
+**Misc**
+
+- Docker image for 1.33.1 is available
+- For recent discussions, see <https://hledger.org/support>
+
+**Quotes**
+
+*I use hledger for my solo-company. It is really great, and very easy to understand what is going on. Highly recommend. --koeng*
+
+*Just start with hledger-ui and like the article said: mess it up a bunch and keep fixing it or starting over. Pick one particular "zone" of finances (eg: monthly bills) and track only that part of it for a while. You'll figure it out! --ramses0*
+
+<https://hledger.org/news.html#this-week-in-hledger-2024-05-10>
+
+---
+
+
 
 ## This Week In Hledger 2024-05-03
 
