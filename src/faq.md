@@ -328,7 +328,7 @@ See the [Importing CSV](csv.md) tutorial and the [hledger manual > CSV format](h
 (After checking for a pre-existing rules file in examples/csv/ in the hledger repo.)
 If possible, add your new rules file to that directory and send a pull request.
 
-### When importing CSV from two bank accounts, how do I avoid duplicate entries for a transfer between them ?
+### When importing CSV from two bank accounts, and there's a transfer between them, how do I avoid duplicate entries ?
 
 You can have one of the rules files skip that transaction.
 Eg if you have checking and savings CSVs, in savings.csv.rules you might have a rule like
@@ -343,11 +343,11 @@ Or you could import both entries, but have them transfer to and from an imaginar
 (but this creates extra noise in your journal and reports).
 
 
-### Where can I find more help on CSV conversion issues ?
+### Where can I find more help with CSV conversion ?
 
 Study the whole [CSV](hledger.md#csv) section in the manual carefully.
 [Working with CSV](hledger.md#working-with-csv) has useful tips, eg for [setting amounts](hledger.md#setting-amounts).
-And of course, make use of the chat.
+And of course, make use of the [chat](#support).
 
 ## Reporting
 
