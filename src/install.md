@@ -174,27 +174,30 @@ bash hledger-install.sh
 ### Build with stack
 
 `stack` is a reliable Haskell build tool.
-You can install it with your system package manager or with [ghcup] or from its [website][stack].
-Then:
+You can install it 
+
+- with your system package manager
+- or from its [website][stack]
+- or with [ghcup] (good if you plan to do a lot of Haskelling).
+
+Once stack is installed, run these commands:
 
 ```
 stack update
-stack install --verbosity error --resolver lts-22 \
-    hledger-lib-1.33.1 hledger-1.33.1 hledger-ui-1.33.1 hledger-web-1.33.1
+stack install hledger-lib-1.33.1 hledger-1.33.1 hledger-ui-1.33.1 hledger-web-1.33.1 \
+  --resolver=nightly-2024-05-16 --install-ghc --verbosity=error
 ```
 
-On MS Windows, run this instead:
-```
-stack update
-stack install --verbosity error --resolver lts-22 \
-    hledger-lib-1.33.1 hledger-1.33.1 hledger-ui-1.33.1 hledger-web-1.33.1 vty-windows-0.2.0.2
-```
+stack will install a compatible version of the GHC compiler if needed,
+using 1-2G of disk space under `~/.stack` or (if stack is configured for ghcup) under `~/.ghcup`,
+Then it will build the hledger tools and install them in `~/.local/bin`.
 
 ### Build with cabal
 
 `cabal` is another popular Haskell build tool.
 You can install it with your system package manager or with [ghcup].
-You will also need a a supported version of GHC (8.10 - 9.8).
+You will also need to install a supported version of GHC: 
+any version from 8.10.7 to 9.8, with newer versions preferred.
 Then:
 
 ```
@@ -202,6 +205,8 @@ cabal update
 cabal install alex happy
 cabal install hledger-1.33.1 hledger-ui-1.33.1 hledger-web-1.33.1
 ```
+
+This will build the hledger tools and install them in `~/.cabal/bin`.
 
 ### Build in a source checkout
 
