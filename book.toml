@@ -18,7 +18,7 @@ use-default-preprocessors = true
 [preprocessor.toc]
 # why does uncommenting this disable the TOC ?
 # marker = "<!-- toc -->"
-max-level = 3
+max-level = 2
 
 [output.html]
 theme = "theme"
