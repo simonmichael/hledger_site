@@ -377,10 +377,20 @@ even if they use period decimal marks in the journal.
 
 ## How do I report by financial year, not calendar year ?
 
-Use hledger 1.29+, and just specify the desired start date, eg `hledger is -Y -b 2020/4/15`
-or `hledger is -p 'yearly from 2020/4/15'`.
-With older hledger versions, you can approximate it with `-p 'every 12 months from 2020/4`
-or `-p 'every 365 days from 2020/4/15'`.
+Just specify the desired start date, eg `hledger is -Y -b 2020/4/15` or `hledger is -p 'yearly from 2020/4/15'`.
+(With hledger <1.29, you can approximate this with `-p 'every 12 months from 2020/4`.
+or `-p 'every 365 days from 2020/4/15'`.)
+
+## How can I report (or generate transactions) on every Nth ... of ..., etc. ?
+
+Use a [period expression](hledger.md#period-expressions) with one of the [more complex report intervals](hledger.md#more-complex-report-intervals).
+
+## How can I report (or generate transactions) on the last day of each month ?
+
+Use "every 31st day". Eg:
+```cli
+hledger balancesheet -p 'every 31st day'
+```
 
 ## How do I report inflows and outflows separately ?
 
