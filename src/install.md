@@ -167,7 +167,7 @@ installing them in ~/.local/bin (or ~/.cabal/bin if you had cabal and not stack 
 
 ```
 curl -O https://raw.githubusercontent.com/simonmichael/hledger/master/hledger-install/hledger-install.sh
-less hledger-install.sh   # <- good practice: inspect downloads before running
+less hledger-install.sh   # <- optional, good practice: inspect downloads before running
 bash hledger-install.sh
 ```
 
