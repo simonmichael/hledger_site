@@ -10,6 +10,36 @@ every Friday morning or any time, tagged with `TWIH:`.
 
 See also: [Release notes](release-notes.md)
 
+
+---
+
+## This Week In Hledger 2024-05-24
+
+**sm**
+Actually this fortnight, since I missed a post.
+Last week I finished getting hledger back into stackage nightly,
+fixed build errors with GHC 8.10,
+and updated github workflows.
+This week I worked on release automation,
+flattened and simplified page tables-of-contents on hledger.org,
+updated/added more hledger docs in the tldr project,
+and fixed breakage in the hledger-install.sh script on non-windows platforms.
+
+**Misc**
+
+- https://github.com/phobo3s/hledger-Excel exports from excel to journal format.
+- For recent discussions, see <https://hledger.org/support.html>.
+
+**Quotes**
+
+*After coming from hledger, I did try firefly, but, stuck with hledger due to how amazingly powerful it is with nothing but a text input.*
+
+*Switched to beancount ... I really didn’t lose any of my reporting flows that I had with (h)ledger... I just made scripts that convert the beancount journal on the fly, run whatever I was used to with hledger, and then delete the temporary file.*
+
+<https://hledger.org/news.html#this-week-in-hledger-2024-05-24>
+
+---
+
 ## This Week In Hledger 2024-05-10
 
 **sm**
