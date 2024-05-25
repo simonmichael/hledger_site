@@ -27,7 +27,7 @@ and fixed breakage in the hledger-install.sh script on non-windows platforms.
 
 **Misc**
 
-- https://github.com/phobo3s/hledger-Excel exports from excel to journal format.
+- [hledger-Excel](https://github.com/phobo3s/hledger-Excel) exports from excel to journal format.
 - For recent discussions, see <https://hledger.org/support.html>.
 
 **Quotes**
