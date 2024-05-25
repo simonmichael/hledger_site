@@ -135,3 +135,5 @@ for f in checking saving cash; do
   hledger areg $f -O tsv | tail +2 | sed -e "s/^/$f\t/"
 done | cut -f1,6,7 | gsed -E -e 's/\$//' -e 's/([^\t]*)\t([^\t]*)\t([^\t]*)/\1 [\3] \2/' | grep '\[-' | gsed 's/\[-/[/'
 ```
+
+[hledger-sankeymatic](https://github.com/victormihalache/hledger-sankeymatic) is a shell script that uses `awk` to generate sankey flow nodes you can paste directly into <https://sankeymatic.com>.
