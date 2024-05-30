@@ -152,3 +152,9 @@ and previewing them when working on docs locally.
 - [ROADMAP](ROADMAP.md)
 - [TESTS](TESTS.md)
 - [VERSIONNUMBERS](VERSIONNUMBERS.md)
+
+- [CHANGES-ui.md](CHANGES-ui.md)
+- [CHANGES-web.md](CHANGES-web.md)
+- [CHANGES-cli.md](CHANGES-cli.md)
+- [CHANGES-lib.md](CHANGES-lib.md)
+- [CHANGES.md](CHANGES.md)
