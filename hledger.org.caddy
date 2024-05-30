@@ -105,7 +105,6 @@ hledger.org {
 	redir /README {uri}.html
 	redir /CONTRIBUTING {uri}.html
 	redir /contributors {uri}.html
-	redir /faq {uri}.html
 	redir /finance FINANCE.html
 	redir /relnotes {uri}.html
 	redir /roadmap {uri}.html
@@ -140,7 +139,13 @@ hledger.org {
 	redir /rewriting-accounts /hledger.html#rewriting-accounts
 	# work around bad budgeting page link in manuals
 	redir /*/budgeting.html /budgeting.html
-	redir /userfaq.html /faq.html
+
+	@FAQ {
+		path_regexp /FAQ(\.html)?
+	}
+	redir @FAQ /faq.html
+	redir /userfaq.html faq.html
+	redir /faq faq.html
 
 	# old-style manual paths/shortcuts
 	redir /hledger {uri}.html
