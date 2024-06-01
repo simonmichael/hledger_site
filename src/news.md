@@ -13,6 +13,37 @@ See also: [Release notes](release-notes.md)
 
 ---
 
+## This Week In Hledger 2024-05-31
+
+**sm**
+- integrate tldr pages as --tldr
+- make help -m, --man jump to TOPIC properly
+- --color now also accepts y or n, like --pretty
+- CLI commands list and options cleanups
+- make checkembeddedfiles more robust
+- tools: just twih date fixes
+- release prep
+
+Doc updates:
+- Unicode characters: mention UTF-8 on windows
+- update/simplify general options list
+- sync command descriptions with tldr docs
+- tldr contributing docs
+- website: properly redirect old /FAQ path; tagline tweak
+- PTA website: add first sponsor logo; mention `hledger-sankey`
+
+**Misc**: for recent discussions, see <https://hledger.org/support.html>
+
+**Quotes**
+
+- *I've switched all my accounting over to hledger (a Haskell-based and slightly more feature-filled version of the original) and I'm SUPER happy with it so far.*
+
+- *A little daily-ish data-entry-and-reconciling ritual, with a pleasant tool setup, can be quite satisfying! I actually look forward to it. (That right there is part of my PTA success story. I used to suffer a lot of stress around all things finance.)*
+
+<https://hledger.org/news.html#this-week-in-hledger-2024-05-31>
+
+---
+
 ## This Week In Hledger 2024-05-24
 
 **sm**
