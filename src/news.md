@@ -40,8 +40,6 @@ Doc updates:
 
 - *A little daily-ish data-entry-and-reconciling ritual, with a pleasant tool setup, can be quite satisfying! I actually look forward to it. (That right there is part of my PTA success story. I used to suffer a lot of stress around all things finance.)*
 
-<https://hledger.org/news.html#this-week-in-hledger-2024-05-31>
-
 ---
 
 ## This Week In Hledger 2024-05-24
@@ -67,8 +65,6 @@ and fixed breakage in the hledger-install.sh script on non-windows platforms.
 
 *Switched to beancount ... I really didn’t lose any of my reporting flows that I had with (h)ledger... I just made scripts that convert the beancount journal on the fly, run whatever I was used to with hledger, and then delete the temporary file.*
 
-<https://hledger.org/news.html#this-week-in-hledger-2024-05-24>
-
 ---
 
 ## This Week In Hledger 2024-05-10
@@ -90,8 +86,6 @@ and fixed breakage in the hledger-install.sh script on non-windows platforms.
 *I use hledger for my solo-company. It is really great, and very easy to understand what is going on. Highly recommend. --koeng*
 
 *Just start with hledger-ui and like the article said: mess it up a bunch and keep fixing it or starting over. Pick one particular "zone" of finances (eg: monthly bills) and track only that part of it for a while. You'll figure it out! --ramses0*
-
-<https://hledger.org/news.html#this-week-in-hledger-2024-05-10>
 
 ---
 
@@ -153,7 +147,6 @@ You can see recent discussions via the links at <https://hledger.org/support.htm
 
 
 ## This Week In Hledger 2024-04-19
-<https://hledger.org/news.html#this-week-in-hledger-2024-04-19>
 
 **sm**
 Worked on release process, github workflows, platform build issues,
@@ -184,7 +177,6 @@ years and it's been working out great. --rwbt*
 ---
 
 ## This Week In Hledger 2024-04-12
-<https://hledger.org/news.html#this-week-in-hledger-2024-04-12>
 
 **sm**
 Investigated/refactored/discussed a problem with boolean query expressions; disallowed date: in OR expressions [#2178].
@@ -221,7 +213,6 @@ Feel free to share interesting links (they don't have to be new) at the PTA foru
 
 
 ## This Week In Hledger 2024-04-05
-<https://hledger.org/news.html#this-week-in-hledger-2024-04-05>
 
 **sm**
 Doc updates ([#2189], [#2191], 
@@ -268,7 +259,6 @@ Feel free to share interesting links (they don't have to be new) at the PTA foru
 
 
 ## This Week In Hledger 2024-03-29
-<https://hledger.org/news.html#this-week-in-hledger-2024-03-29>
 
 **sm**
 Doc rewrites, error message improvements.
@@ -288,7 +278,6 @@ Feel free to share your experience reports or interesting links (they don't have
 ---
 
 ## This Week In Hledger 2024-03-22
-<https://hledger.org/news.html#this-week-in-hledger-2024-03-22>
 
 **sm**
 
@@ -320,7 +309,6 @@ Feel free to share interesting blog posts (they don't have to be new) at the PTA
 
 
 ## This Week In Hledger 2024-03-15
-<https://hledger.org/news.html#this-week-in-hledger-2024-03-15>
 
 **sm**
 No hledger dev work this week. The new PTA forum continues to work well.
@@ -350,7 +338,6 @@ Feel free to share interesting blog posts (they don't have to be new) at the PTA
 
 
 ## This Week In Hledger 2024-03-08
-<https://hledger.org/news.html#this-week-in-hledger-2024-03-08>
 
 **sm**
 I fixed some doc issues on hledger.org: code blocks can now be scrolled normally, and are cheerily color-coded instead of drab grey.
@@ -394,7 +381,6 @@ Haskell software for Canadian tax prep, aregister print order, reporting prices 
 
 
 ## This Week In Hledger 2024-03-01
-<https://hledger.org/news.html#this-week-in-hledger-2024-03-01>
 
 **sm**
 A lot of work this week: bugfixing, updating for GHC 9.8, and improving docs. We weren't ready to release 1.33 on March 1st, but it's near.
