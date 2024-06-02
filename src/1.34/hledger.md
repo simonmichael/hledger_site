@@ -16,8 +16,10 @@ version).
 ## SYNOPSIS
 
 `hledger`\
-`hledger COMMAND     [OPTS] [ARGS]`\
-`hledger ADDONCMD -- [OPTS] [ARGS]`
+or\
+`hledger COMMAND [OPTS] [ARGS]`\
+or\
+`hledger ADDONCMD [OPTS] -- [ADDONOPTS] [ADDONARGS]`
 
 ## DESCRIPTION
 
@@ -170,8 +172,8 @@ The file name `-` means standard input:
 $ cat FILE | hledger -f- print
 ```
 
-If reading non-journal data in this way, you\'ll need to add a file
-format prefix, like:
+If reading non-journal data in this way, you\'ll need to write the
+format as a prefix, like `timeclock:` here:
 
 ``` cli
 $ echo 'i 2009/13/1 08:00:00' | hledger print -f timeclock:-
@@ -265,9 +267,9 @@ difficulty, you can always run the add-on directly, without using
 
 ## Options
 
-Run `hledger -h` to see general command line help, and general options
-which are common to most hledger commands. These options can be written
-anywhere on the command line:
+Run `hledger -h` to see general command line help. The following general
+options are common to most hledger commands. General options can be
+written either before or after the command name.
 
     General input/data transformation flags:
       -f --file=FILE            Read data from FILE, or from stdin if -. Can be
@@ -335,7 +337,6 @@ anywhere on the command line:
                                 Eg: -c '.' or -c '1.000,00 EUR'
          --color=YN --colour    Use ANSI color codes in text output? Can be
                                 'y'/'yes'/'always', 'n'/'no'/'never' or 'auto'.
-                                (A NO_COLOR environment variable overrides this.)
          --pretty[=YN]          Use box-drawing characters in text output? Can be
                                 'y'/'yes' or 'n'/'no'.
                                 If YN is specified, the equals is required.
@@ -344,22 +345,22 @@ anywhere on the command line:
     General help flags:
       -h --help                 show command line help
          --tldr                 show command examples with tldr
-         --info                 show the hledger manual with info
-         --man                  show the hledger manual with man
+         --info                 show the manual with info
+         --man                  show the manual with man
          --version              show version information
 
-Some reporting options can also be written as [query
-arguments](#queries).
+Usually hledger accepts any unambiguous flag prefix, eg you can write
+`--tl` instead of `--tldr` or `--dry` instead of `--dry-run`.
 
-## Command line tips
+If the same option appears more than once in a command, usually the last
+(right-most) wins.
 
-Here are some details useful to know about for hledger command lines
-(and elsewhere). Feel free to skip this section until you need it.
+With most commands, arguments are interpreted as a hledger
+[query](hledger.md#queries) which filter the data. Some queries can be
+expressed either with options or with arguments.
 
-### Option repetition
-
-If options are repeated in a command line, hledger will generally use
-the last (right-most) occurence.
+Below are more tips for using the command line interface - feel free to
+skip these until you need them.
 
 ### Special characters
 
@@ -691,6 +692,9 @@ Some notes about the various output formats:
     representation of hledger\'s internal data types. To understand the
     JSON, read the Haskell type definitions, which are mostly in
     <https://github.com/simonmichael/hledger/blob/master/hledger-lib/Hledger/Data/Types.hs>.
+    [hledger-web\'s OpenAPI
+    specification](https://github.com/simonmichael/hledger/blob/master/hledger-web/config/openapi.yaml)
+    may also be relevant.
 
 <!-- -->
 
@@ -815,9 +819,10 @@ will try to use the available terminal width.
 **LEDGER_FILE** The main journal file to use when not specified with
 `-f/--file`. Default: `$HOME/.hledger.journal`.
 
-**NO_COLOR** If this environment variable is set (with any value),
-hledger will not use ANSI color codes in terminal output, unless
-overridden by an explicit `--color/--colour` option.
+**NO_COLOR** If this environment variable exists (with any value,
+including empty), hledger will not use ANSI color codes in terminal
+output, unless overridden by an explicit `--color=y`/`--colour=y`
+option.
 
 ## PART 2: DATA FORMATS
 
@@ -2952,20 +2957,33 @@ date.
 #### Secondary dates
 
 A secondary date is written after the primary date, following an equals
-sign. If the year is omitted, the primary date\'s year is assumed. When
-running reports, the primary (left) date is used by default, but with
-the `--date2` flag (or `--aux-date` or `--effective`), the secondary
-(right) date will be used instead.
+sign: `DATE1=DATE2`. If the year is omitted, the primary date\'s year is
+assumed. When running reports, the primary (left side) date is used by
+default, but with the `--date2` flag (`--aux-date` or`--effective` also
+work, for Ledger users), the secondary (right side) date will be used
+instead.
 
-The meaning of secondary dates is up to you, but it\'s best to follow a
-consistent rule. Eg \"primary = the bank\'s clearing date, secondary =
-date the transaction was initiated, if different\".
+The meaning of secondary dates is up to you. Eg it could be \"primary is
+the bank\'s clearing date, secondary is the date the transaction was
+initiated, if different\".
 
-Downsides: makes your financial data more complicated, less portable,
-and less trustworthy in an audit. Keeping the meaning of the two dates
-consistent requires discipline, and you have to remember which reporting
-mode is appropriate for a given report. [Posting dates](#posting-dates)
-are simpler and better.
+In practice, this feature usually adds confusion:
+
+-   You have to remember the primary and secondary dates\' meaning, and
+    follow that consistently.
+-   It splits your bookkeeping into two modes, and you have to remember
+    which mode is appropriate for a given report.
+-   Usually your balance assertions will work with only one of these
+    modes.
+-   It makes your financial data more complicated, less portable, and
+    less clear in an audit.
+-   It interacts with every feature, creating an ongoing cost for
+    implementors.
+-   It distracts new users and supporters.
+-   [Posting dates](#posting-dates) are simpler and work better.
+
+So secondary dates are officially deprecated in hledger, remaining only
+as a Ledger compatibility aid; we recommend using posting dates instead.
 
 #### Star comments
 
@@ -5478,38 +5496,40 @@ $ hledger balance Income:Dues --pivot kind:member
 
 ## Generating data
 
-hledger has several features for generating data, such as:
+hledger can enrich the data provided to it, or generate new data, in a
+number of ways. Mostly, this is done only if you request it:
 
--   [Periodic transaction](#periodic-transactions) rules can generate
-    single or repeating transactions following a template. These are
-    usually dated in the future, eg to help with forecasting. They are
-    activated by the `--forecast` option.
-
--   The balance command\'s `--budget` option uses these same periodic
-    rules to generate goals for the budget report.
-
--   [Auto posting](#auto-postings) rules can generate extra postings on
-    certain matched transactions. They are always applied to forecast
-    transactions; with the `--auto` flag they are applied to
-    transactions recorded in the journal as well.
-
+-   Missing amounts or missing costs in transactions are inferred
+    automatically when possible.
 -   The `--infer-equity` flag infers missing conversion equity postings
-    from @/@@ costs. And the inverse `--infer-costs` flag infers missing
-    @/@@ costs from conversion equity postings.
+    from @/@@ costs.
+-   The `--infer-costs` flag infers missing costs from conversion equity
+    postings.
+-   The `--infer-market-prices` flag infers `P` price directives from
+    costs.
+-   The `--auto` flag adds extra postings to transactions matched by
+    [auto posting rules](#auto-postings).
+-   The `--forecast` option generates transactions from [periodic
+    transaction rules](#periodic-transactions).
+-   The `balance --budget` report infers budget goals from periodic
+    transaction rules.
+-   Commands like `close`, `rewrite`, and `hledger-interest` generate
+    transactions or postings.
+-   CSV data is converted to transactions by applying CSV conversion
+    rules.. etc.
 
-Generated data of this kind is temporary, existing only at report time.
-But you can see it in the output of `hledger print`, and you can save
-that to your journal, in effect converting it from temporary generated
-data to permanent recorded data. This could be useful as a data entry
-aid.
+Such generated data is temporary, existing only at report time. You can
+convert it to permanent recorded data by, eg, capturing the output of
+`hledger print` and saving it in your journal file. This can sometimes
+be useful as a data entry aid.
 
-If you are wondering what data is being generated and why, add the
-`--verbose-tags` flag. In `hledger print` output you will see extra tags
-like `generated-transaction`, `generated-posting`, and `modified` on
-generated/modified data. Also, even without `--verbose-tags`, generated
-data always has equivalen hidden tags (with an underscore prefix), so eg
-you could match generated transactions with
-`tag:_generated-transaction`.
+If you are curious what data is being generated and why, run
+`hledger print -x --verbose-tags`. `-x/--explicit` shows inferred
+amounts and `--verbose-tags` adds tags like `generated-transaction`
+(from periodic rules) and `generated-posting`, `modified` (from auto
+posting rules). Similar hidden tags (with an underscore prefix) are
+always present, also, so you can always match such data with queries
+like `tag:generated` or `tag:modified`.
 
 ## Forecasting
 

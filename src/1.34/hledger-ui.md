@@ -16,6 +16,7 @@ plain text accounting app.
 ## SYNOPSIS
 
 `hledger-ui    [OPTS] [QUERYARGS]`\
+or\
 `hledger ui -- [OPTS] [QUERYARGS]`
 
 ## DESCRIPTION
@@ -61,49 +62,26 @@ enable \"forecast mode\".
 
 ## OPTIONS
 
-Any QUERYARGS are interpreted as a hledger search query which filters
-the data.
+Any arguments are interpreted as a hledger [query](hledger.md#queries)
+which filters the data. hledger-ui provides the following options:
 
-hledger-ui provides the following options:
+    Flags:
+      -w --watch                watch for data and date changes and reload
+                                automatically
+         --theme=THEME          use this custom display theme (default,
+                                greenterm, terminal, dark)
+         --cash                 start in the cash accounts screen
+         --bs                   start in the balance sheet accounts screen
+         --is                   start in the income statement accounts screen
+         --all                  start in the all accounts screen
+         --register=ACCTREGEX   start in the (first matched) account's register
+         --change               show period balances (changes) at startup instead
+                                of historical balances
+      -l --flat                 show accounts as a flat list (default)
+      -t --tree                 show accounts as a tree
 
-`-w --watch`
-:   watch for data and date changes and reload automatically
-
-`--theme=default|terminal|greenterm|dark`
-:   use this custom display theme
-
-`--menu`
-:   start in the menu screen
-
-`--cash`
-:   start in the cash accounts screen
-
-`--bs`
-:   start in the balance sheet accounts screen
-
-`--is`
-:   start in the income statement accounts screen
-
-`--all`
-:   start in the all accounts screen
-
-`--register=ACCTREGEX`
-:   start in the (first) matched account\'s register screen
-
-`--change`
-:   show period balances (changes) at startup instead of historical
-    balances
-
-`-l --flat`
-:   show accounts as a flat list (default)
-
-`-t --tree`
-:   show accounts as a tree
-
-hledger-ui also supports many of hledger\'s general options (and the
-hledger manual\'s command line tips also apply here):
-
-### General options
+and also supports many of hledger\'s [general
+options](hledger.md#options):
 
     General input/data transformation flags:
       -f --file=FILE            Read data from FILE, or from stdin if -. Can be
@@ -171,7 +149,6 @@ hledger manual\'s command line tips also apply here):
                                 Eg: -c '.' or -c '1.000,00 EUR'
          --color=YN --colour    Use ANSI color codes in text output? Can be
                                 'y'/'yes'/'always', 'n'/'no'/'never' or 'auto'.
-                                (A NO_COLOR environment variable overrides this.)
          --pretty[=YN]          Use box-drawing characters in text output? Can be
                                 'y'/'yes' or 'n'/'no'.
                                 If YN is specified, the equals is required.
@@ -180,9 +157,12 @@ hledger manual\'s command line tips also apply here):
     General help flags:
       -h --help                 show command line help
          --tldr                 show command examples with tldr
-         --info                 show the hledger manual with info
-         --man                  show the hledger manual with man
+         --info                 show the manual with info
+         --man                  show the manual with man
          --version              show version information
+
+With hledger-ui, the `--debug` option sends debug output to a
+`hledger-ui.log` file in the current directory.
 
 ## MOUSE
 
@@ -428,9 +408,7 @@ when you press g to reload. Once you have fixed the problem, press g
 again to reload and resume normal operation. (Or, you can press escape
 to cancel the reload attempt.)
 
-## TIPS
-
-### Watch mode
+## WATCH MODE
 
 One of hledger-ui\'s best features is the auto-reloading `-w/--watch`
 mode. With this flag, it will update the display automatically whenever
@@ -469,12 +447,6 @@ work around, press `g` to reload manually, or try
 
 If you are viewing files mounted from another machine, the system clocks
 on both machines should be roughly in agreement.
-
-### Debug output
-
-You can add `--debug[=N]` to the command line to log debug output. This
-will be logged to the file `hledger-ui.log` in the current directory. N
-ranges from 1 (least output, the default) to 9 (maximum output).
 
 ## ENVIRONMENT
 
