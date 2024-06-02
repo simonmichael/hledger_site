@@ -131,12 +131,13 @@ MANUALS=\
 # clean checkout of the main hledger repo's master branch. (Note
 # Shake.hs there might get rebuilt or have its deps installed.)
 snapshot-%:
-	git -C .. checkout $*-branch && \
-	(cd ..; ./Shake.hs webmanuals; git reset --hard) && \
-	mkdir -p src/$* && \
-	for f in $(MANUALS); do test -e $$f && cp $$f src/$*; done && \
-	git -C .. checkout master && \
-	git add src/$* && git commit -m "snapshot of $* manuals" src/$*
+	@echo "this needs fixing, see RELEASING.md > Release prep"; exit 1
+#	git -C .. checkout $*-branch && \
+#	(cd ..; ./Shake.hs webmanuals; git reset --hard) && \
+#	mkdir -p src/$* && \
+#	for f in $(MANUALS); do test -e $$f && cp $$f src/$*; done && \
+#	git -C .. checkout master && \
+#	git add src/$* && git commit -m "snapshot of $* manuals" src/$*
 
 # Run this after mdbook build/serve to make old manuals visible via symlinks.
 # These will be wiped by the next mdbook build/serve.
