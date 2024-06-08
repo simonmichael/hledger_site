@@ -13,6 +13,34 @@ See also: [Release notes](release-notes.md)
 
 ---
 
+## This Week In Hledger 2024-06-07
+
+**sm**
+Released hledger 1.34, fixed some CI issues. Improved docs:
+- cli, ui, web: synopsis, options cleanup/consistency
+- command flags are now included in manuals (and Shake cmddocs updates them)
+- diff, prices: improve help layout
+- environment: correction, NO_COLOR does not override --color=yes
+- Generating data: rewrite
+- ghrelnotes: fix mac, linux install commands
+- ghrelnotes: link to the Build from source doc
+- secondary dates: officially deprecate secondary dates and --date2
+- web JSON API, cli JSON output: link to OpenAPI spec
+
+**Misc**
+recent discussions: <https://hledger.org/support.html>
+
+**Quotes**
+
+- *Ledger and Hledger are some of my favourite tools.*
+
+- *Thank you for creating such an awesome tool. I absolutely love hledger. I've been using it for more than a year, and I've become more responsible with my finances as a result. Before I started using hledger, I knew nothing about accounting. In fact, I was oblivious of my personal finances. Now, I've not only started keeping track of my finances, but I've also started investing and keeping a budget. --aaditmshah*
+
+<https://hledger.org/news.html#this-week-in-hledger-2024-06-07>
+
+
+---
+
 ## This Week In Hledger 2024-05-31
 
 **sm**
