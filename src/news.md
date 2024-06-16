@@ -13,6 +13,33 @@ See also: [Release notes](release-notes.md)
 
 ---
 
+## This Week In Hledger 2024-06-14
+
+**sm**
+
+I fixed an old bug with account type declarations in multiple files, and an incompatibility of --tldr with tealdeer. I automated the updating of option docs in manuals, and worked on code cleanups, refactoring, and removing tech debt. And I worked on various improvements:
+- tabular balance reports now show an outer table border and inter-column borders with --pretty, and they have better layout and headings in text and html output.
+- better/clearer command line processing
+- a config file system for next release
+
+Doc updates: box-drawing characters, --pretty, --tldr.
+
+
+
+**Misc**
+The docker image for hledger 1.34 is out. And for recent discussions see: <https://hledger.org/support.html>
+
+**Quotes**
+
+- *I switched away from Quickbooks, years ago, to plain text accounting. Couldn't be happier. I can do everything better using hledger/ledger, git, vim and make.*
+
+- *I've switched all my accounting over to hledger (a Haskell-based and slightly more feature-filled version of the original) and I'm SUPER happy with it so far.*
+
+<https://hledger.org/news.html#this-week-in-hledger-2024-06-14>
+
+
+---
+
 ## This Week In Hledger 2024-06-07
 
 **sm**
