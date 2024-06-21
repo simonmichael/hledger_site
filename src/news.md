@@ -13,6 +13,25 @@ See also: [Release notes](release-notes.md)
 
 ---
 
+## This Week In Hledger 2024-06-21
+
+**sm**
+Updated the hledger-register-max script, fixed a problem with just ghci* scripts, refactored the main procedure and command line processing, worked on config file support.
+
+**Misc**
+recent discussions: <https://hledger.org/support.html>
+
+**Quotes**
+
+- *I liked that hledger had a few reports that ledger didn't have, like real balance sheets and income statements. Both integrate well with emacs, but their journal files differ in slightly incompatible ways, so they're not drop-in replacements. Both are very fast.*
+
+- *My primary consumption method is hledger_-ui, a nice curses-based UI. It's got a `watch` mode so will update in real-time as you make edits to the source database, which is nice.*
+
+<https://hledger.org/news.html#this-week-in-hledger-2024-06-21>
+
+
+---
+
 ## This Week In Hledger 2024-06-14
 
 **sm**
