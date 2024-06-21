@@ -25,7 +25,7 @@ recent discussions: <https://hledger.org/support.html>
 
 - *I liked that hledger had a few reports that ledger didn't have, like real balance sheets and income statements. Both integrate well with emacs, but their journal files differ in slightly incompatible ways, so they're not drop-in replacements. Both are very fast.*
 
-- *My primary consumption method is hledger_-ui, a nice curses-based UI. It's got a `watch` mode so will update in real-time as you make edits to the source database, which is nice.*
+- *My primary consumption method is hledger-ui, a nice curses-based UI. It's got a `watch` mode so will update in real-time as you make edits to the source database, which is nice.*
 
 <https://hledger.org/news.html#this-week-in-hledger-2024-06-21>
 
