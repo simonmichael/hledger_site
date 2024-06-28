@@ -8,8 +8,19 @@
 Share your hledger/PTA user notes, dev news, achievements or experiences in the [hledger matrix chat](support.md),
 every Friday morning or any time, tagged with `TWIH:`.
 
-See also: [Release notes](release-notes.md)
+See also: [Release notes](release-notes.md), [Recent discussion](https://hledger.org/support.html).
 
+---
+
+## This Week In Hledger 2024-06-28
+
+**sm** Worked on CLI and config file support.
+
+**Quotes**
+
+- *Every time I think hledger is missing something I always find either the exact feature I was looking for or two things that coupled together accomplish what I need it to do. --vm*
+
+- *It just keeps getting better --glguy*
 
 ---
 
