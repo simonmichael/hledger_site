@@ -513,62 +513,22 @@ Workarounds:
 
 ## CUSTOMISING
 
-## Is there a config file ?
-
-So far, no, we have resisted this.
-In short, because config files add complexity and variance;
-it's better to just work the best way in the first place.
-There are ways power users can emulate them,
-and I'm of the opinion config files would be a net loss for productivity, overall.
-
-Despite this, it would probably be a very popular feature.
-If you want it to happen, feel free to make a case for it and propose a specification,
-in chat or [#1013](https://github.com/simonmichael/hledger/issues/1013).
-
-Below are some ways to emulate a config file.
-
 ## How can I save and reuse common options/arguments ?
 
 Save them in a text file, with one option or argument per line,
 then include `@FILE` in your hledger command line.
 See [argument files](#argument-files).
+This is superseded by...
 
-## How can I always run hledger with certain general options ?
+## Is there a config file ?
 
-You can run hledger via a small script.
-Since you will likely have other scripts or applications that run "`hledger`",
-it's most robust if the script is also called `hledger`.
-Here's how to do it on unix systems:
-somewhere in your PATH before the actual hledger executable, eg in `~/bin`,
-create a `hledger` script that runs the actual hledger,
-with your preferred options/arguments (plus any others provided).
-Something like this:
+~~So far, no, we have resisted this. In short, because config files add complexity and variance;~~
 
-```sh
-#!/bin/sh
-/usr/local/bin/hledger -I --infer-equity --infer-costs --infer-market-prices "$@"
-```
+Yes! In current hledger master. Testers needed.
 
-and make it executable:
-
-```cli
-$ chmod +x ~/bin/hledger
-```
-
-Unfortunately... this fails with commands that don't support the usual general options,
-like `hledger add`, and many add-ons. Back to the drawing board.
-
-## How can I always run hledger commands with certain command options ?
-
-Make a shell alias or script for that command. Eg in your shell config:
-```sh
-alias print=`hledger print -x`
-```
-or in `~/bin/print`:
-```sh
-#!/bin/sh
-hledger print -x "$@"
-```
+Here's how to [build hledger master](https://hledger.org/install.html#build-in-a-source-checkout)
+(or if you're on x64 linux, you can use the binary from a [recent CI run](https://github.com/simonmichael/hledger/actions/runs/9751700252)),
+Notes welcome in hledger chat or at [#1013](https://github.com/simonmichael/hledger/issues/1013).
 
 ## How can I automatically use a journal file in the current directory ?
 
@@ -585,6 +545,7 @@ though there's probably a tool that will.
 
 Related: [#2194](https://github.com/simonmichael/hledger/issues/2194)
 
+With the new config file support, you could add `-f FILE` to a `hledger.conf` file in or above this directory.
 
 
 ## SCRIPTING
