@@ -12,6 +12,19 @@ See also: [Release notes](release-notes.md), [Recent discussion](https://hledger
 
 ---
 
+## This Week In Hledger 2024-07-05
+
+**sm**
+Testing/refinement of CLI, config file support; Tiller csv rules example; explain shebang commands better in hledger-script-example.
+
+**Quotes**
+
+*+1 for plain text accounting. I'm using hledger to track my finances. I do use the web UI to submit information but I edit the plain text store extensively.*
+
+*Now I use hledger, which has been fantastic. I back up the file to a shared drive that's sync'ed to my phone, so every time I get a message from the bank or pay with cash, I can immediately note it down (this would have been much less workable before I found the "cone" app) and track my spending across dozens of accounts.*
+
+---
+
 ## This Week In Hledger 2024-06-28
 
 **sm** Worked on CLI and config file support.
