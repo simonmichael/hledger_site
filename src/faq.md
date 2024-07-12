@@ -456,8 +456,8 @@ hledger print checking not:not:expenses:tax
 ## How do I show a register or balance report between one account and another ?
 
 The above won't work with the `register` or balance commands because
-these process individual single-account postings, not the multi-account transactions.
-Instead, use two commands, eg:
+these report on individual account postings, not whole transactions.
+Instead, run a print report to select transactions to use in a second report, like so:
 
 ```cli
 hledger print checking | hledger -f- -I register expenses:tax
