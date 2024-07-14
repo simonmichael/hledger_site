@@ -5,11 +5,11 @@ like [make](https://en.wikipedia.org/wiki/Make_(software)),
 but easier and more suitable for running commands (and more cross platform).
 It is a nice tool for creating (and remembering!) financial reports and scripts.
 
-Define commands (AKA "recipes") in a `justfile` in your finance directory.
+Define commands (AKA "recipes") in a `Justfile` in your finance directory.
 Each recipe can be a single command line, a shell script, or any other kind of shebang script.
 Here's [just's manual](https://just.systems/man/en).
 
-We provide an example [Scripts > justfile](scripts.md#justfile),
+We provide an example [Scripts > Justfile](scripts.md#justfile),
 but of course you can customise this with your own reports
 or start fresh with `just --init`.
 Then you can
