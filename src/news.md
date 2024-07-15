@@ -12,6 +12,19 @@ See also: [Release notes](release-notes.md), [Recent discussion](https://hledger
 
 ---
 
+## This Week In Hledger 2024-07-12
+
+**sm**
+Command line parsing testing & fixes; hledger-ui menu screen keys; example shell scripts updates; doc updates (add, config files, hledger-ui).
+
+**Quotes**
+
+- *It's hugely valuable to have all of your financial data in one, human-readable place. Not only to you, but to whomever might be executing your will ;)*
+
+- *I have it running on my laptop at all times (a window in my tmux config displays various reports on my accounts like current balance, uncleared balance, uncleared transactions, etc.). I find it helps me to be mindful of my money if it's only a couple keypresses away.*
+
+---
+
 ## This Week In Hledger 2024-07-05
 
 **sm**
