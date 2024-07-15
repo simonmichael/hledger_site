@@ -9973,4 +9973,4 @@ $ echo "export LOCALE_ARCHIVE=${glibcLocales}/lib/locale/locale-archive" >>~/.pr
 
 **COMPATIBILITY ISSUES: hledger gives an error with my Ledger file**\
 Not all of Ledger\'s journal file syntax or feature set is supported.
-See [hledger and Ledger](ledger.md) for full details.
+See [hledger and Ledger](/ledger.md) for full details.
