@@ -292,9 +292,9 @@ You might need to work around some current limitations:
   and avoid inter-transaction comments.
   
 - Transactions will be printed in date order.
-  If you don't want to sort them all by date, you could tidy just a subset of transactions at a time
-  (eg selecting them and using `C-u M-S-| hledger -f- -I print` in Emacs).
-  Add `-I` to ignore any failing balance assertions.
+  If you don't want to sort them all by date, you could tidy just a subset of transactions at a time.
+  You may need to use `-I` to ignore balance assertions.
+  (Eg in Emacs: select region, `C-u M-S-| hledger -If- print`).
 
 - If you have `include` directives, the included files' transactions will also be printed.
   Workaround: tidy one file at a time, temporarily commenting out include directives.
