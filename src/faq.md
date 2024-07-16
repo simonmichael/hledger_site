@@ -289,7 +289,7 @@ You might need to work around some current limitations:
 
 - Only transactions are printed, not directives or inter-transaction comments.
   Workaround: group directives at the start of the file, and copy them to the new output,
-  and avoid inter-transaction comments.
+  and don't use inter-transaction comments.
   
 - Transactions will be printed in date order.
   If you don't want to sort them all by date, you could tidy just a subset of transactions at a time.
