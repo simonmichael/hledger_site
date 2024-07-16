@@ -278,6 +278,33 @@ See [PTA FAQ: How should I choose account names ?](https://plaintextaccounting.o
 
 ## JOURNALS
 
+## How can I tidy a journal file ?
+
+Method 1: use Emacs's ledger-mode.
+This is the least destructive way, but it requires Emacs and ledger-mode.
+Select the whole journal, or a region, or move the cursor to a specific transaction, and press `M-q`.
+
+Method 2: use hledger's `print` command.
+You might need to work around some current limitations:
+
+- Only transactions are printed, not directives or inter-transaction comments.
+  Workaround: group directives at the start of the file, and copy them to the new output,
+  and avoid inter-transaction comments.
+  
+- Transactions will be printed in date order.
+  If you don't want to sort them all by date, you could tidy just a subset of transactions at a time
+  (eg selecting them and using `C-u M-S-| hledger -f- print` in Emacs).
+
+- If you have included files, their transactions will also be printed.
+  Workaround: tidy one file at a time, temporarily commenting out include directives.
+
+- Amounts will be right-aligned, within each transaction but not across all transactions.
+  If you want whole-file alignment and more alignment options, eg aligning on decimal mark, use ledger-mode.
+
+The `print` method has some inconveniences, but also extra power, 
+eg to select a subset of transactions with a query,
+or to transform the data with `--explicit`, `--infer-costs`, `--alias`, `--pivot`, etc.
+
 ## Why does this entry give a "no amount" error even though I wrote an amount ?
 
 ```journal
