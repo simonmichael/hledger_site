@@ -309,8 +309,7 @@ or to transform the data with `--explicit`, `--infer-costs`, `--alias`, `--commo
 Some examples:
 ```cli
 cp $LEDGER_FILE $LEDGER_FILE.bak
-hledger print $LEDGER_FILE.new
-mv $LEDGER_FILE.new $LEDGER_FILE
+hledger print > $LEDGER_FILE.new && mv $LEDGER_FILE.new $LEDGER_FILE
 ```
 
 Using the `sponge` helper for updating a file in place:
