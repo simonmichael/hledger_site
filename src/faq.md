@@ -293,9 +293,10 @@ You might need to work around some current limitations:
   
 - Transactions will be printed in date order.
   If you don't want to sort them all by date, you could tidy just a subset of transactions at a time
-  (eg selecting them and using `C-u M-S-| hledger -f- print` in Emacs).
+  (eg selecting them and using `C-u M-S-| hledger -f- -I print` in Emacs).
+  Add `-I` to ignore any failing balance assertions.
 
-- If you have included files, their transactions will also be printed.
+- If you have `include` directives, the included files' transactions will also be printed.
   Workaround: tidy one file at a time, temporarily commenting out include directives.
 
 - Amounts will be right-aligned, within each transaction but not across all transactions.
@@ -303,7 +304,29 @@ You might need to work around some current limitations:
 
 The `print` method has some inconveniences, but also extra power, 
 eg to select a subset of transactions with a query,
-or to transform the data with `--explicit`, `--infer-costs`, `--alias`, `--pivot`, etc.
+or to transform the data with `--explicit`, `--infer-costs`, `--alias`, `--commodity-style`, `--pivot`, etc.
+
+Some examples:
+```cli
+cp $LEDGER_FILE $LEDGER_FILE.bak
+hledger print $LEDGER_FILE.new
+mv $LEDGER_FILE.new $LEDGER_FILE
+```
+
+Using the `sponge` helper for updating a file in place:
+```cli
+hledger print | sponge $LEDGER_FILE
+```
+
+Preserving directives and inter-transaction comments (though not their positions):
+```cli
+(grep -E '^([#;]|[[:alpha:]])' $LEDGER_FILE; hledger print) > $LEDGER_FILE.new
+```
+
+Note, any time you do mass edits to valuable data, it's wise to keep a backup and check your changes.
+Eg by comparing reports before and after,
+by running your usual `hledger check`s,
+and/or by keeping your files in a version control system like git.
 
 ## Why does this entry give a "no amount" error even though I wrote an amount ?
 
