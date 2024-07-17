@@ -325,7 +325,7 @@ Preserving directives and inter-transaction comments (though not their positions
 Note, any time you do mass edits to valuable data, it's wise to keep a backup and check your changes.
 Eg by comparing reports before and after,
 by running your usual `hledger check`s,
-and/or by keeping your files in a version control system like git.
+or by using a version control system.
 
 ## Why does this entry give a "no amount" error even though I wrote an amount ?
 
