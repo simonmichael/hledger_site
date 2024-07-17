@@ -23,7 +23,7 @@ hledger issues are tracked in the hledger repos on github. There are some shortc
 [wishes.hledger.org](https://wishes.hledger.org/) (wishes only) \
 [issues.hledger.org](https://issues.hledger.org/) (all issues) \
 [prs.hledger.org](https://prs.hledger.org/) (all pull requests) \
-[open issues by category](https://file+.vscode-resource.vscode-cdn.net/Users/simon/src/hledger/site/src/ISSUES.html) \
+[open issues by category](ISSUES.html#open-issues) \
 [website issues](https://github.com/simonmichael/hledger_site/issues?utf8=%E2%9C%93&q=) \
 [finance issues](https://github.com/simonmichael/hledger_finance/issues?utf8=%E2%9C%93&q=) \
 
