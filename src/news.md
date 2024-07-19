@@ -12,6 +12,27 @@ See also: [Release notes](release-notes.md), [Recent discussion](https://hledger
 
 ---
 
+## This Week In Hledger 2024-07-19
+
+**sm**
+- bs,cf,is: show interval in report title
+- check recentassertions: improve message
+- cli parsing, config file: fixes, new example config
+- ui menu screen: consistent control/display of narrowed period
+- web: guess a more robust base url when --base-url is not used
+- web: require a http[s] scheme in --base-url
+- docs: Date adjustments, FAQ: How to tidy a journal
+- daily support
+
+**Misc**
+Michael Rees posted a PR implementing flexible register sorting (#2211).
+Adolf Szabo released placc, a free PTA app built with nim, not yet open source.
+
+**Quotes**
+*I just moved my whole financial life over to hledger and oh my goodness I’m so much happier (I dumped both QuickBooks and Quicken, which I’d been using previously).*
+
+---
+
 ## This Week In Hledger 2024-07-12
 
 **sm**
