@@ -57,6 +57,13 @@ which can be synced with a server via Syncthing.
 [google play](https://play.google.com/store/apps/details?id=com.mpease.ledger)\
 Expense tracking app with *ledger export.
 
+### NanoLedger (Android, MIT)
+
+<https://f-droid.org/packages/be.chvp.nanoledger> 
+is a data entry app inspired by cone, for recording transactions on your phone in ledger or hledger journal format.
+([Blog post](https://www.chvp.be/blog/nanoledger), 
+[discussion](https://www.reddit.com/r/plaintextaccounting/comments/17sielr/nanoledger_android_app_for_data_entry_with))
+
 
 
 ## Apps with CSV export
