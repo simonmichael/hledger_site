@@ -12,6 +12,20 @@ See also: [Release notes](release-notes.md), [Recent discussion](https://hledger
 
 ---
 
+## This Week In Hledger 2024-08-09
+
+**sm**
+Offline for a while, not much to show in last three weeks.
+Improved bad regexp error message; bin/ updates;
+timeclock, cookbook, mobile doc updates.
+Writing a new course or book on time tracking.
+
+**Quotes**
+
+*it is very satisfying to get a report of my last 10 years swiftly over the weekend. Thanks for the software :) -- droidoneone*
+
+---
+
 ## This Week In Hledger 2024-07-19
 
 **sm**
