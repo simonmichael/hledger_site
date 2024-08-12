@@ -162,7 +162,7 @@ Here are some ways to build hledger:
 [hledger-install.sh][hledger-install] is an automated install script that requires only [bash].
 This is a good choice if you are not used to building Haskell software.
 It installs build tools if needed,
-then builds the current release of the hledger tools and some [add-on tools],
+then builds the current release of the hledger tools and some [add-on tools](scripts.md),
 installing them in ~/.local/bin (or ~/.cabal/bin if you had cabal and not stack installed).
 
 ```
@@ -372,7 +372,6 @@ where we'll gladly share tips or receive your feedback.
 [stack]:           https://docs.haskellstack.org/en/stable/
 [cabal]:           https://cabal.readthedocs.io/en/stable/
 [hledger-install]: https://github.com/simonmichael/hledger/blob/master/hledger-install/hledger-install.sh
-[add-on tools]:    hledger.html#addons
 [WSL]:             https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux
 [nix]:             https://nixos.org
 [git]:             https://en.wikipedia.org/wiki/Git
