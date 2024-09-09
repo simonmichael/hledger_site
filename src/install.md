@@ -5,7 +5,7 @@
 <!-- toc -->
 </div>
 
-The current hledger release is **1.34**.
+The current hledger release is **1.40**.
 Here are the **[release notes](release-notes.md)**.
 
 There are three main ways to install hledger on your computer:
@@ -22,8 +22,8 @@ After installing, here are some [final things](#run-requirements) to check.
 
 Official release binaries for Linux, Mac, Windows.
 
-[![hledger release binaries](https://img.shields.io/badge/hledger_release_binaries-1.34-brightgreen.svg)](https://github.com/simonmichael/hledger/releases/tag/1.34)
-[release binaries](https://github.com/simonmichael/hledger/releases/tag/1.34)
+[![hledger release binaries](https://img.shields.io/badge/hledger_release_binaries-1.40-brightgreen.svg)](https://github.com/simonmichael/hledger/releases/tag/1.40)
+[release binaries](https://github.com/simonmichael/hledger/releases/tag/1.40)
 ([![RSS](images/rss.png) RSS](https://github.com/simonmichael/hledger/releases.atom))
 
 ## Packaged binaries
@@ -36,7 +36,7 @@ Official release binaries for Linux, Mac, Windows.
 
 ### Docker (Linux, Mac, Windows)
 
-[![Docker](https://img.shields.io/badge/Docker_image-1.34-brightgreen.svg)](https://hub.docker.com/r/dastapov/hledger)
+[![Docker](https://img.shields.io/badge/Docker_image-1.34-red.svg)](https://hub.docker.com/r/dastapov/hledger)
 `docker pull dastapov/hledger`\
 [more..](https://hub.docker.com/search?q=hledger&type=image&sort=updated_at&order=desc)
 <!-- adept -->
@@ -184,8 +184,8 @@ Once stack is installed, run these commands:
 
 ```
 stack update
-stack install hledger-lib-1.34 hledger-1.34 hledger-ui-1.34 hledger-web-1.34 \
-  --resolver=nightly-2024-05-16 --install-ghc --verbosity=error
+stack install hledger-lib-1.40 hledger-1.40 hledger-ui-1.40 hledger-web-1.40 \
+  --resolver=nightly-2024-09-04 --install-ghc --verbosity=error
 ```
 
 stack will install a compatible version of the GHC compiler if needed,
@@ -203,7 +203,7 @@ Then:
 ```
 cabal update
 cabal install alex happy
-cabal install hledger-1.34 hledger-ui-1.34 hledger-web-1.34
+cabal install hledger-1.40 hledger-ui-1.40 hledger-web-1.40
 ```
 
 This will build the hledger tools and install them in `~/.cabal/bin`.
@@ -217,7 +217,7 @@ Eg the [latest development version](https://github.com/simonmichael/hledger/comm
 
 or the latest release:
 
-    git clone https://github.com/simonmichael/hledger -b 1.34
+    git clone https://github.com/simonmichael/hledger -b 1.40
 
 Then:
 
@@ -280,11 +280,11 @@ After installing, run the hledger tools and verify that their versions are what 
 (and not older versions from a previous install). Eg:
 
     $ hledger --version
-    hledger 1.34, ...
+    hledger 1.40, ...
     $ hledger-ui --version
-    hledger-ui 1.34, ...
+    hledger-ui 1.40, ...
     $ hledger web --version
-    hledger-web 1.34, ...
+    hledger-web 1.40, ...
 
 You can run the built-in unit tests if you'd like:
 
@@ -296,7 +296,7 @@ or the more thorough functional tests, if you are set up for working with the hl
 
     $ just functest
     ...
-     Total   1047 ...
+     Total   1082 ...
     functest PASSED
 
 
