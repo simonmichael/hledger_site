@@ -129,16 +129,17 @@ MANUALS=\
 
 # After a release (>= 1.22), commit a snapshot of the release manuals
 # as src/VER/, copied from the parent directory, which should be a
-# clean checkout of the main hledger repo's master branch. (Note
-# Shake.hs there might get rebuilt or have its deps installed.)
+# clean checkout of the main hledger repo's master branch.
+# Behaviour with a dirty main repo is unclear.
+# Shake.hs in main repo might get rebuilt or have its deps installed.
+# This leaves the main repo checked out on release branch.
+# Includes the main repo's current git hash in the message, FWIW.
 snapshot-%:
-	@echo "this needs fixing, see RELEASING.md > Release prep"; exit 1
-#	git -C .. checkout $*-branch && \
-#	(cd ..; ./Shake.hs webmanuals; git reset --hard) && \
-#	mkdir -p src/$* && \
-#	for f in $(MANUALS); do test -e $$f && cp $$f src/$*; done && \
-#	git -C .. checkout master && \
-#	git add src/$* && git commit -m "snapshot of $* manuals" src/$*
+	git -C .. checkout $*-branch && \
+	(cd ..; ./Shake.hs webmanuals) && \
+	mkdir -p src/$* && \
+	for f in $(MANUALS); do test -e $$f && cp $$f src/$*; done && \
+	git add src/$* && git commit -m "snapshot of $* manuals (`git -C .. show-ref heads/master -s9`)" src/$*
 
 # Run this after mdbook build/serve to make old manuals visible via symlinks.
 # These will be wiped by the next mdbook build/serve.
