@@ -6,7 +6,7 @@ CURRENT_RELEASE=1.34
 build:
 	@echo "building site with current manuals in /"
 	@make -s build3-dev
-	@make -s build3-1.34
+	@make -s build3-1.40
 	@make -s sitemap
 
 # Render most versions of manuals (excluding old versions not packaged anywhere). 
@@ -40,8 +40,9 @@ all buildall: \
 	build3-1.31 \
 	build3-1.32 \
 	build3-1.33 \
+	build3-1.34 \
 	build3-dev \
-	build3-1.34
+	build3-1.40
 	@make -s sitemap
 
 # Install some required tools.
