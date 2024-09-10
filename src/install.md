@@ -56,6 +56,7 @@ Official release binaries for Linux, Mac, Windows.
 
 [![Alpine edge](https://repology.org/badge/version-for-repo/alpine_edge/hledger.svg)](https://pkgs.alpinelinux.org/packages?name=hledger*&branch=edge)
 `doas apk add hledger hledger-ui hledger-web`\
+[![Alpine 3.20](https://repology.org/badge/version-for-repo/alpine_3_20/hledger.svg)](https://pkgs.alpinelinux.org/packages?name=hledger*&branch=v3.20)\
 [![Alpine 3.19](https://repology.org/badge/version-for-repo/alpine_3_19/hledger.svg)](https://pkgs.alpinelinux.org/packages?name=hledger*&branch=v3.19)\
 [![Alpine 3.18](https://repology.org/badge/version-for-repo/alpine_3_18/hledger.svg)](https://pkgs.alpinelinux.org/packages?name=hledger*&branch=v3.18)\
 [![Alpine 3.17](https://repology.org/badge/version-for-repo/alpine_3_17/hledger.svg)](https://pkgs.alpinelinux.org/packages?name=hledger*&branch=v3.17)\
