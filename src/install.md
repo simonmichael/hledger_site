@@ -379,7 +379,9 @@ Otherwise, here's how to set them up:
 
    - GNU/Linux: `apt install bash-completion`
 
-   - Mac using homebrew: `brew install bash bash-completion@2; brew link --overwrite bash-completion@2`\
+   - Mac using homebrew:\
+    `brew install bash bash-completion@2; brew link --overwrite bash-completion@2`\
+    and add the recommended line to your bash profile, if needed.\
      (Note: Apple's old bash 3 and the corresponding bash-completion v1 won't work.)
 
 2. Install the hledger shell completions under your XDG_DATA_DIR. Eg:
@@ -403,11 +405,11 @@ Now completions should work as shown above. Here are all the things you can comp
 - command-specific flags, after the command argument
 - flag values, for flags that have standard values
 - query prefixes
-- account names from the journal after an account name prefix
-- appropriate data from the journal after these query prefixes: `acct:`, `code:`, `cur:`, `desc:`, `note:`, `payee:`, `real:`, `status:`, `tag:`
-- amount comparison operators after `amt:`.
+- account names from the journal, after an account name prefix
+- appropriate data from the journal, after these query prefixes: `acct:`, `code:`, `cur:`, `desc:`, `note:`, `payee:`, `real:`, `status:`, `tag:`
+- amount comparison operators, after `amt:`.
 
-When a completion includes special characters, backslashes will be inserted automatically (this does not work right in all cases).
+When a completion includes special characters, backslashes will be inserted automatically; this does not work right in all cases.
 
 ## Next steps
 
