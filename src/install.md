@@ -14,7 +14,7 @@ There are three main ways to install hledger on your computer:
 - [Packaged binaries](#package-binaries) are provided by system packagers and are sometimes less up to date.
 - Or you can [build your own binaries](#build-from-source), which takes more time and resources.
 
-After installing, here are some [final things](#run-requirements) to check.
+After installing, there are some [final things to check](#check-your-installation).
 [Your feedback](support.md) helps make this process smoother.
 
 
@@ -330,13 +330,15 @@ Here's [how to set environment variables on Windows](https://www.devdungeon.com/
 
 
 <a name="locale"></a> <!-- required permalink, used in error messages -->
+<a name="lang"></a>
 
-### LANG
+### Text encoding
 
 On most unix systems, when you are processing non-ASCII text with hledger,
-the `LANG` environment variable must be set to a UTF-8-aware locale,
-to avoid errors like "*invalid byte sequence*" or "*mkTextEncoding: invalid argument*".
+the `LANG` environment variable must be set to a suitable locale to ensure hledger can decode the text,
+avoiding errors like "*invalid byte sequence*" or "*mkTextEncoding: invalid argument*".
 (This applies to the Haskell build tools like GHC, cabal and stack, as well.)
+We usually recommend the UTF-8 text encoding.
 Check that your `LANG` setting mentions UTF-8, and if not, change it. Eg:
 
 ```cli
