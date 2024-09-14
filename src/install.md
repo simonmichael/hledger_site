@@ -358,6 +358,54 @@ can help.
 
 On Nix or GUIX, the procedures are [different](https://github.com/simonmichael/hledger/issues/1033#issuecomment-1062506027).
 
+### Shell completions
+
+If you use the bash shell, you can optionally install hledger's shell completions.
+These will show context-sensitive autocompletions when you press TAB in a hledger command line.
+(If you'd like autocompletions for another shell, consider contributing them:
+[hledger/shell-completion/README](https://raw.githubusercontent.com/simonmichael/hledger/1.40-branch/hledger/shell-completion/).)
+
+If you installed hledger with your system's package manager, it might have configured completions also.
+Here's how to test if completions are working:
+
+- `hledger<SPACE><TAB><TAB>` should list all hledger commands.
+- `hledger reg acct:<TAB><TAB>` should list your top-level account names.
+
+Otherwise, here's how to set them up:
+
+1. Ensure the bash-completion package is installed on your system. Eg:
+
+   - GNU/Linux: `apt install bash-completion`
+
+   - Mac using homebrew: `brew install bash bash-completion@2; brew link --overwrite bash-completion@2`\
+     (Note: Apple's old bash 3 and the corresponding bash-completion v1 won't work.)
+
+2. Download the hledger shell completions under your XDG_DATA_DIR. Eg:
+
+    ```
+    mkdir -p ~/.local/share/bash-completion/completions
+    cd ~/.local/share/bash-completion/completions
+    curl -o hledger https://raw.githubusercontent.com/simonmichael/hledger/1.40-branch/hledger/shell-completion/hledger-completion.bash
+    ln -sf hledger hledger-ui
+    ln -sf hledger hledger-web
+    cd -
+    ```
+
+3. If needed: start a new bash shell.
+
+Now completions should work as shown above. Here are all the things you can complete by pressing TAB once or twice:
+
+- the "hledger", "hledger-ui" and "hledger-web" commands
+- hledger's command argument
+- general flags
+- command-specific flags, after the command argument
+- flag values, for flags that have standard values
+- query prefixes
+- amount comparison operators after `amt:`
+- appropriate data from the journal after these query prefixes:
+  `acct:`, `code:`, `cur:`, `desc:`, `note:`, `payee:`, `real:`, `status:`, `tag:`.
+
+When a completion includes special characters, backslashes will be inserted automatically; this does not work right in all cases.
 
 ## Next steps
 
