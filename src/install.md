@@ -363,8 +363,9 @@ On Nix or GUIX, the procedures are [different](https://github.com/simonmichael/h
 ### Shell completions
 
 If you use the bash shell, you can optionally set up context-sensitive autocompletions when you press TAB in a hledger command line.
-(If you'd like autocompletions for another shell, consider contributing them:
-[hledger/shell-completion/README](https://raw.githubusercontent.com/simonmichael/hledger/1.40-branch/hledger/shell-completion/).)
+Here's an [asciinema demo](https://asciinema.org/a/227935).
+If you'd like autocompletions for another shell, consider contributing them:
+[hledger/shell-completion/README](https://github.com/simonmichael/hledger/tree/master/hledger/shell-completion).
 
 If you installed hledger with your system's package manager, it might have configured completions already.
 Here's how to test if completions are working: at a bash shell prompt,
@@ -402,9 +403,9 @@ Now completions should work as shown above. Here are all the things you can comp
 - command-specific flags, after the command argument
 - flag values, for flags that have standard values
 - query prefixes
-- amount comparison operators after `amt:`
-- appropriate data from the journal after these query prefixes:
-  `acct:`, `code:`, `cur:`, `desc:`, `note:`, `payee:`, `real:`, `status:`, `tag:`.
+- account names from the journal after an account name prefix
+- appropriate data from the journal after these query prefixes: `acct:`, `code:`, `cur:`, `desc:`, `note:`, `payee:`, `real:`, `status:`, `tag:`
+- amount comparison operators after `amt:`.
 
 When a completion includes special characters, backslashes will be inserted automatically (this does not work right in all cases).
 
