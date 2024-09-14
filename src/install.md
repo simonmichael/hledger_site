@@ -360,13 +360,12 @@ On Nix or GUIX, the procedures are [different](https://github.com/simonmichael/h
 
 ### Shell completions
 
-If you use the bash shell, you can optionally install hledger's shell completions.
-These will show context-sensitive autocompletions when you press TAB in a hledger command line.
+If you use the bash shell, you can optionally set up context-sensitive autocompletions when you press TAB in a hledger command line.
 (If you'd like autocompletions for another shell, consider contributing them:
 [hledger/shell-completion/README](https://raw.githubusercontent.com/simonmichael/hledger/1.40-branch/hledger/shell-completion/).)
 
-If you installed hledger with your system's package manager, it might have configured completions also.
-Here's how to test if completions are working:
+If you installed hledger with your system's package manager, it might have configured completions already.
+Here's how to test if completions are working: at a bash shell prompt,
 
 - `hledger<SPACE><TAB><TAB>` should list all hledger commands.
 - `hledger reg acct:<TAB><TAB>` should list your top-level account names.
@@ -380,7 +379,7 @@ Otherwise, here's how to set them up:
    - Mac using homebrew: `brew install bash bash-completion@2; brew link --overwrite bash-completion@2`\
      (Note: Apple's old bash 3 and the corresponding bash-completion v1 won't work.)
 
-2. Download the hledger shell completions under your XDG_DATA_DIR. Eg:
+2. Install the hledger shell completions under your XDG_DATA_DIR. Eg:
 
     ```
     mkdir -p ~/.local/share/bash-completion/completions
@@ -405,7 +404,7 @@ Now completions should work as shown above. Here are all the things you can comp
 - appropriate data from the journal after these query prefixes:
   `acct:`, `code:`, `cur:`, `desc:`, `note:`, `payee:`, `real:`, `status:`, `tag:`.
 
-When a completion includes special characters, backslashes will be inserted automatically; this does not work right in all cases.
+When a completion includes special characters, backslashes will be inserted automatically (this does not work right in all cases).
 
 ## Next steps
 
