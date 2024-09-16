@@ -395,7 +395,7 @@ then install the [latest hledger completions] yourself, under your XDG_DATA_HOME
 
 ```
 curl https://raw.githubusercontent.com/simonmichael/hledger/1.40-branch/hledger/shell-completion/hledger-completion.bash \
-  -o ~/.local/share/bash-completion/completions/hledger --create-dir
+  -o ~/.local/share/bash-completion/completions/hledger --create-dirs
 ```
 
 Here are all the things you can complete by pressing TAB once or twice:
