@@ -362,42 +362,43 @@ On Nix or GUIX, the procedures are [different](https://github.com/simonmichael/h
 
 ### Shell completions
 
-If you use the bash shell, you can optionally set up context-sensitive autocompletions when you press TAB in a hledger command line.
-Here's an [asciinema demo](https://asciinema.org/a/227935).
-If you'd like autocompletions for another shell, consider contributing them:
-[hledger/shell-completion/README](https://github.com/simonmichael/hledger/tree/master/hledger/shell-completion).
+If you use the bash shell, you can optionally set up context-sensitive autocompletions when you press TAB in a hledger command line
+(see [demo](https://asciinema.org/a/227935)).
+To contribute completions for another shell, see [hledger/shell-completion/README](https://github.com/simonmichael/hledger/tree/master/hledger/shell-completion).
 
-If you installed hledger with your system's package manager, it might have configured completions already.
-Here's how to test if completions are working: at a bash shell prompt,
+First, test if completions are already working: at a bash shell prompt,
 
-- `hledger<SPACE><TAB><TAB>` should list all hledger commands.
+- `hledger<SPACE><TAB><TAB>` should list all hledger commands
 - `hledger reg acct:<TAB><TAB>` should list your top-level account names.
 
-Otherwise, here's how to set them up:
+If not, first ensure that general bash completion is installed and enabled (doc updates welcome):
 
-1. Ensure the bash-completion package is installed on your system. Eg:
+**On a Mac, using homebrew:**
+- `brew remove -f bash-completion`
+- `brew install bash-completion@2`
+- Add the suggested line to your ~/.bash_profile, if it's not already there
+- `source ~/.bash_profile` (or open a new bash shell)
 
-   - GNU/Linux: `apt install bash-completion`
+**On GNU/Linux:**
+- `apt install bash-completion`
+- `source ~/.bash_profile` (or open a new bash shell)
 
-   - Mac using homebrew:\
-    `brew install bash bash-completion@2; brew link --overwrite bash-completion@2`\
-    and add the recommended line to your bash profile, if needed.\
-     (Note: Apple's old bash 3 and the corresponding bash-completion v1 won't work.)
+Then, after using your system package manager to install hledger (`brew install hledger`, `apt install hledger` or similar),
+completions may be working.
 
-2. Install the hledger shell completions under your XDG_DATA_DIR. Eg:
+If your system's hledger package does not yet include completions,
+or if they are not up to date (as with homebrew's hledger 1.40 formula),
+or if you have installed hledger by other means,
+then install the [latest hledger completions] yourself, under your XDG_DATA_HOME directory. Eg:
 
-    ```
-    mkdir -p ~/.local/share/bash-completion/completions
-    cd ~/.local/share/bash-completion/completions
-    curl -o hledger https://raw.githubusercontent.com/simonmichael/hledger/1.40-branch/hledger/shell-completion/hledger-completion.bash
-    ln -sf hledger hledger-ui
-    ln -sf hledger hledger-web
-    cd -
-    ```
+[latest hledger completions]: https://raw.githubusercontent.com/simonmichael/hledger/1.40-branch/hledger/shell-completion/hledger-completion.bash
 
-3. If needed: start a new bash shell.
+```
+curl https://raw.githubusercontent.com/simonmichael/hledger/1.40-branch/hledger/shell-completion/hledger-completion.bash \
+  -o ~/.local/share/bash-completion/completions/hledger --create-dir
+```
 
-Now completions should work as shown above. Here are all the things you can complete by pressing TAB once or twice:
+Here are all the things you can complete by pressing TAB once or twice:
 
 - the "hledger", "hledger-ui" and "hledger-web" commands
 - hledger's command argument
