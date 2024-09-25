@@ -371,7 +371,7 @@ First, test if completions are already working: at a bash shell prompt,
 - `hledger<SPACE><TAB><TAB>` should list all hledger commands
 - `hledger reg acct:<TAB><TAB>` should list your top-level account names.
 
-If not, first ensure that general bash completion is installed and enabled (doc updates welcome):
+If not, first ensure that [bash-completion](https://salsa.debian.org/debian/bash-completion) is installed and enabled:
 
 **On a Mac, using homebrew:**
 - `brew remove -f bash-completion`
@@ -382,6 +382,8 @@ If not, first ensure that general bash completion is installed and enabled (doc 
 **On GNU/Linux:**
 - `apt install bash-completion`
 - `source ~/.bash_profile` (or open a new bash shell)
+
+...
 
 Then, after using your system package manager to install hledger (`brew install hledger`, `apt install hledger` or similar),
 completions may be working.
