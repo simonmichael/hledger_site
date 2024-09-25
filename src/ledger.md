@@ -205,13 +205,12 @@ Here are some of the roadbumps to expect (see also: [#1752](https://github.com/s
 - Some may be interpreted differently (balance assertions, balance assignments..)
 - Some may have different restrictions (dates, comments..)
 
-Below you'll find lots of tips for how to handle these and other differences.
-But first, an overview. Here are the features supported in Ledger's journal format,
-from the [Ledger manual](https://www.ledger-cli.org/3.0/doc/ledger3.html) (2022-12),
+You'll find lots of tips for how to handle these and other differences, below.
+
+But first, an overview of Ledger's (extensive) journal format.
+Here are its features, from the [Ledger manual](https://www.ledger-cli.org/3.0/doc/ledger3.html) (2022-12),
 and their supportedness in hledger (1.40, 2024-09):
-Y (supported),
-Ignored (accepted but ignored), or
-N (not accepted).
+Y (supported), Ignored (accepted but ignored), or N (not accepted).
 
 | Supported&nbsp;in&nbsp;hledger&nbsp;?                                                                                                                 | 1.40    | hledger name, notes <!-- goal ? -->
 |-------------------------------------------------------------------------------------------------------------------------------------------------------|---------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -227,7 +226,7 @@ N (not accepted).
 | [5.7.1.1 Payee metadata tag](https://www.ledger-cli.org/3.0/doc/ledger3.html#Payee-metadata-tag)                                                      | N       |
 | [5.7.2 Metadata values](https://www.ledger-cli.org/3.0/doc/ledger3.html#Metadata-values)                                                              | Y       | "Tag values". They are terminated by a comma or newline.
 | [5.7.3 Typed metadata](https://www.ledger-cli.org/3.0/doc/ledger3.html#Typed-metadata)                                                                | N       | Values of the `date:`/`date2:` tags are checked as dates; all others are strings.
-| [5.8 Virtual postings](https://www.ledger-cli.org/3.0/doc/ledger3.html#Virtual-postings)                                                              | Y       | AKA "unbalanced postings"
+| [5.8 Virtual postings](https://www.ledger-cli.org/3.0/doc/ledger3.html#Virtual-postings)                                                              | Y       | "Virtual postings" AKA "unbalanced postings", and "balanced virtual postings"
 | [5.9 Expression amounts](https://www.ledger-cli.org/3.0/doc/ledger3.html#Expression-amounts)                                                          | N       | 
 | [4.5.4 Value expressions](https://www.ledger-cli.org/3.0/doc/ledger3.html#Complete-control-over-commodity-pricing)                                    | N       | 
 | [5.10 Balance verification](https://www.ledger-cli.org/3.0/doc/ledger3.html#Balance-verification)                                                     | Y       |
@@ -238,7 +237,7 @@ N (not accepted).
 | [5.10.4 Balancing transactions](https://www.ledger-cli.org/3.0/doc/ledger3.html#Balancing-transactions)                                               | Y       |
 | [5.11 Posting cost](https://www.ledger-cli.org/3.0/doc/ledger3.html#Posting-cost)                                                                     | Y       | "Inferred cost"
 | [5.12 Explicit posting costs](https://www.ledger-cli.org/3.0/doc/ledger3.html#Explicit-posting-costs)                                                 | Y       | "(Explicit) unit cost"
-| [5.12.1 Primary and secondary commodities](https://www.ledger-cli.org/3.0/doc/ledger3.html#Primary-and-secondary-commodities)                         | Y       | Essentially yes - order of postings determines which commodity is converted to, in some cases.
+| [5.12.1 Primary and secondary commodities](https://www.ledger-cli.org/3.0/doc/ledger3.html#Primary-and-secondary-commodities)                         | Y       | Essentially yes - in certain cases, order of postings determines which commodity is converted to.
 | [5.13 Posting cost expressions](https://www.ledger-cli.org/3.0/doc/ledger3.html#Posting-cost-expressions)                                             | N       |
 | [5.14 Total posting costs](https://www.ledger-cli.org/3.0/doc/ledger3.html#Total-posting-costs)                                                       | Y       | "(Explicit) total cost"
 | [5.15 Virtual posting costs](https://www.ledger-cli.org/3.0/doc/ledger3.html#Virtual-posting-costs)                                                   | Ignored | The parentheses are ignored (it's treated like a regular cost).
@@ -297,7 +296,7 @@ N (not accepted).
 | `N COMM` ignore pricing information for a commodity                                                                                                   | Ignored |
 | `D AMT` set a default commodity and its format                                                                                                        | Y       | A decimal mark is required (followed by 0 or more zeroes).
 | `C AMT1 = AMT2` declare a commodity equivalency                                                                                                       | Ignored | <!-- Y? -->
-| `I, i, O, o, b, h` timeclock entries in journal                                                                                                       | N       | Timeclock data must be in a separate timeclock file. (A journal file could `include` that.)
+| `I, i, O, o, b, h` timeclock entries in journal                                                                                                       | N       | Timeclock data must be in a separate timeclock file. (A journal file can `include` that if needed.)
 | `--command-line-flags` in journal                                                                                                                     | Ignored |
 
 ### Decoding errors
