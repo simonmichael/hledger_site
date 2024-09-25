@@ -192,19 +192,21 @@ More independent benchmarking is needed - please help if you can.
 
 ### Journal format
 
-hledger's journal file format is very similar to Ledger's.
-Some syntactic forms 
-(eg [hledger comments](hledger.md#file-comments) 
-vs [Ledger comments](https://www.ledger-cli.org/3.0/doc/ledger3.html#Commenting-on-your-Journal),
-or [balance assertions](hledger.md#assertions-and-ordering))
-can be interpreted in slightly different ways.
-A small number of Ledger's syntactic forms are ignored (lot notation)
-or rejected (value expressions). With some care to restrict yourself to compatible features,
-or to keep non-compatible features in separate files,
-it's possible to keep a journal file that works with both hledger and Ledger simultaneously.
-See also [#1752](https://github.com/simonmichael/hledger/issues/1752).
+hledger's journal format mimics (a subset of) Ledger's quite closely.
+You can maintain a journal file that works with both hledger and Ledger simultaneously,
+if you restrict yourself to compatible features,
+perhaps keeping non-compatible features in separate files.
 
-Here is a detailed list of Ledger's file format features,
+A typical gnarly old Ledger file will not work with hledger as-is.
+Here are some of the roadbumps to expect (see also: [#1752](https://github.com/simonmichael/hledger/issues/1752)):
+
+- Some syntactic features are supported only by one or the other (Ledger's `(AMOUNTEXPR)`, `((VALUEEXPR))`.. , hledger's `==`, `=*`, `==*`..)
+- Some will be accepted but ignored, probably causing transactions not to balance (`{LOTCOST}`, `{=LOTFIXEDCOST}`, `[LOTDATE]`, `(LOTNOTE)`..)
+- Some may be interpreted differently (balance assertions, balance assignments..)
+- Some may have different restrictions (dates, comments..)
+
+Below you'll find lots of tips for how to handle these and other differences.
+But first, an overview. Here are the features supported in Ledger's journal format,
 from the [Ledger manual](https://www.ledger-cli.org/3.0/doc/ledger3.html) (2022-12),
 and their supportedness in hledger (1.40, 2024-09):
 Y (supported),
@@ -226,8 +228,8 @@ N (not accepted).
 | [5.7.2 Metadata values](https://www.ledger-cli.org/3.0/doc/ledger3.html#Metadata-values)                                                              | Y       | "Tag values". They are terminated by a comma or newline.
 | [5.7.3 Typed metadata](https://www.ledger-cli.org/3.0/doc/ledger3.html#Typed-metadata)                                                                | N       | Values of the `date:`/`date2:` tags are checked as dates; all others are strings.
 | [5.8 Virtual postings](https://www.ledger-cli.org/3.0/doc/ledger3.html#Virtual-postings)                                                              | Y       | AKA "unbalanced postings"
-| [5.9 Expression amounts](https://www.ledger-cli.org/3.0/doc/ledger3.html#Expression-amounts)                                                          | N       | `(AMOUNTEXPR)`, not supported.
-| [4.5.4 Value expressions](https://www.ledger-cli.org/3.0/doc/ledger3.html#Complete-control-over-commodity-pricing)                                    | N       | `((VALUEEXPR))`, not supported.
+| [5.9 Expression amounts](https://www.ledger-cli.org/3.0/doc/ledger3.html#Expression-amounts)                                                          | N       | 
+| [4.5.4 Value expressions](https://www.ledger-cli.org/3.0/doc/ledger3.html#Complete-control-over-commodity-pricing)                                    | N       | 
 | [5.10 Balance verification](https://www.ledger-cli.org/3.0/doc/ledger3.html#Balance-verification)                                                     | Y       |
 | [5.10.1 Balance assertions](https://www.ledger-cli.org/3.0/doc/ledger3.html#Balance-assertions)                                                       | Y       |
 | [5.10.1.1 Special assertion value 0](https://www.ledger-cli.org/3.0/doc/ledger3.html#Special-assertion-value-0)                                       | N       |
