@@ -211,7 +211,7 @@ Y (supported),
 Ignored (accepted but ignored), or
 N (not accepted).
 
-| Supported&nbsp;in&nbsp;hledger ?                                                                                                                      | 1.40    | hledger name, notes <!-- goal ? -->
+| Supported&nbsp;in&nbsp;hledger&nbsp;?                                                                                                                 | 1.40    | hledger name, notes <!-- goal ? -->
 |-------------------------------------------------------------------------------------------------------------------------------------------------------|---------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | **TRANSACTIONS SYNTAX**                                                                                                                               |         |
 | [5.1 Basic format](https://www.ledger-cli.org/3.0/doc/ledger3.html#Basic-format)                                                                      | Y       |
