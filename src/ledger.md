@@ -46,7 +46,7 @@ See also:
 - <https://www.libhunt.com/compare-hledger-vs-ledger>
 - <https://www.reddit.com/r/plaintextaccounting/comments/ztdk0o/ledger_vs_hledger/>
 
-### Features
+### Feature differences
 
 Over time, features have propagated both ways.
 Here is 
@@ -101,7 +101,7 @@ and here is a feature comparison as of 2022 (updates welcome):
 | ui command                                        | Y       |        |
 | web command                                       | Y       |        |
 
-### Performance
+### Performance differences
 
 Traditionally, Ledger was faster than hledger with large files (eg >5k transactions).
 (Many people record about 1-2k transactions per year.)
@@ -141,7 +141,7 @@ eg [2153#issuecomment-1912942305](https://github.com/simonmichael/hledger/issues
 
 More independent benchmarking is needed - please help if you can.
 
-### Command line interface
+### Command line differences
 
 - hledger does not require a space between command-line flags and their values,
   eg `-fFILE` works as well as `-f FILE`
@@ -190,7 +190,7 @@ More independent benchmarking is needed - please help if you can.
      
    So the hledger equivalent of Ledger's `-U` flag ("match uncleared") is `-UP` ("match unmarked or pending").
 
-### Journal format
+### Journal format differences
 
 hledger's journal format mimics (a subset of) Ledger's quite closely.
 You can maintain a journal file that works with both hledger and Ledger simultaneously,
