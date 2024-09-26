@@ -78,7 +78,7 @@ And here is a rough feature comparison:
 | Output formats:  | xml                                                              | html, fods, tsv, ssv, sql
 | Commands:        | cleared, convert, entry, emacs, equity, pricemap, select, source | activity, add, aregister, balancesheet, balancesheetequity, cashflow, check, close, codes, demo, descriptions, diff, files, help, import, incomestatement, notes, rewrite, roi, test
 | Add-on commands: |                                                                  | bar, check-fancyassertions, edit, git, iadd, interest, lots, pijul, plot..
-| CLI help:        | general --help                                                   | general --help, command --help, auto-paginated
+| CLI help:        | general --help                                                   | general and command-specific --help, auto-paginated
 | TLDR short help: | ledger                                                           | hledger and all commands, also built-in as --tldr
 | User manual formats: | web                                                          | web, info, man, built-in info/man/text
 | APIs:            | C++, python                                                      | haskell, HTTP-JSON
@@ -86,17 +86,17 @@ And here is a rough feature comparison:
 | CSV deduplication: | checksum-based (requires unique CSV records)                   | date-based (requires date-ordered CSV records)
 | REPL:            | built-in                                                         | haskell GHCI
 | Pivoting:        | on single tag                                                    | on one or more tags/other fields
-| Shell completions: | bash (commands, flags, some accounts)                          | bash (commands, flags, flag values, query types, queryable journal data)
+| Shell completions: | bash (commands, flags, maybe accounts)                         | bash (commands, flags, flag values, query types, queryable journal data)
 | Other:           | automated lot reporting (`--lots`)                               | account type awareness
 |                  | automatic revaluation transactions (`--revalued`)                | customisable account display order
 |                  | embedded expression language                                     | standard financial reports
 |                  | embedded python snippets                                         | multi-period balance reports
 |                  |                                                                  | international number notations
 |                  |                                                                  | commands summary
+|                  |                                                                  | built-in asciinema demos
 |                  |                                                                  | regular releases
 |                  |                                                                  | regression bounties
 |                  |                                                                  | active support chat
-|                  |                                                                  |
 
 ### Performance differences
 
