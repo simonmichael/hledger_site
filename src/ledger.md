@@ -31,7 +31,7 @@ Compared to Ledger, hledger has
 - an easier query syntax 
 - better depth limiting
 - a battle-tested CSV/SSV/TSV import system
-- and comes with multiple officially-supported user interfaces (CLI, console, TUI, WUI).
+- and comes with multiple officially-supported user interfaces (CLI, TUI, WUI, HTTP-JSON).
 
 Compared to hledger, Ledger has
 
@@ -49,7 +49,7 @@ See also:
 ### Feature differences
 
 Over time, features have propagated both ways. Here is [a presentation of hledger's features](features.md).
-And here is an approximate feature comparison:
+And here is a rough feature comparison:
  
 |                                                                       | Ledger | hledger |
 |-----------------------------------------------------------------------|--------|---------|
@@ -71,8 +71,8 @@ And here is an approximate feature comparison:
 |                                                                       |        |         |
 | **Features in Ledger only:**                                          |        |         |
 | xml output format                                                     | Y      |         |
-| automatic revaluation transactions (`--revalued`)                     | Y      |         |
 | automated lot reporting (`--lots`)                                    | Y      |         |
+| automatic revaluation transactions (`--revalued`)                     | Y      |         |
 | embedded expression language                                          | Y      |         |
 | embedded python snippets                                              | Y      |         |
 | built-in REPL                                                         | Y      |         |
@@ -165,20 +165,18 @@ More independent benchmarking is needed - please help if you can.
   powerful than Ledger's, simpler, and easier to remember.
   It uses google-like prefixes, such as `desc:`, `payee:`, `amt:`, and `not:`.
   Multiple query terms are combined using fixed AND/OR rules.
-  We don't yet support full boolean expressions, so some more advanced
-  queries require two invocations of hledger in a pipe, eg: 
-  `hledger print QUERY1 | hledger -f- reg QUERY2`
+  More complex query combinations with AND/OR/NOT can be expressed with `expr:"BOOLEANEXPR"`.
+  Some complex queries can also be achieved by using two invocations of hledger in a pipe, eg:
+  `hledger print QUERY1 | hledger -f- -I reg QUERY2`
 
 - hledger provides more short flags (`-b`, `-e`, `-p`, `-D`, `-W`, `-M`, `-Q`, `-Y`) and the `date:` query argument for setting report period and interval, and all of these combine nicely.
 
-- hledger cleans up some old [semantic confusion](https://github.com/simonmichael/hledger/issues/564) around what "uncleared" means:
-
-  - hledger renames Ledger's "uncleared" status (ie, when the status field
-    is empty) to "unmarked", and the `--uncleared`/`-U` flag to `--unmarked`/`-U`
-  - hledger uses `-P` as the short form of `--pending`. Ledger uses `-P` for grouping by payee. 
-  - each of hledger's `--unmarked`/`-U`, `--pending`/`-P`, `--cleared`/`-C` flags match only that single status. To match more than one status, the flags can be combined.
-     
-   So the hledger equivalent of Ledger's `-U` flag ("match uncleared") is `-UP` ("match unmarked or pending").
+- hledger handles the transaction/posting status mark more precisely,
+  fixing a [recurring source of confusion](https://github.com/simonmichael/hledger/issues/564):
+  It calls the three statuses "unmarked", "pending", "cleared",
+  and provides corresponding `--unmarked`/`-U`, `--pending`/`-P`, and `--cleared`/`-C` flags, which can be combined.
+  Ledger's `-U`, which matches things not cleared, is `-UP` in hledger.
+  hledger's `-U` matches things with no status mark, which can't easily be done in Ledger.
 
 ### Journal format differences
 
