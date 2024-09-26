@@ -48,58 +48,48 @@ See also:
 
 ### Feature differences
 
-Over time, features have propagated both ways.
-Here is 
-[a presentation of hledger features](features.md)
-and here is a feature comparison as of 2022 (updates welcome):
+Over time, features have propagated both ways. Here is [a presentation of hledger's features](features.md).
+And here is an approximate feature comparison:
  
-|                                                   | hledger | Ledger |
-|---------------------------------------------------|---------|--------|
-| **Common features:**                              |         |        |
-| journal format                                    | Y       | Y      |
-| csv format                                        | Y       | Y      |
-| timeclock format                                  | Y       | Y      |
-| multiple commodities                              | Y       | Y      |
-| conversion prices and cost reporting              | Y       | Y      |
-| market prices and value reporting                 | Y       | Y      |
-| virtual (unbalanced) postings                     | Y       | Y      |
-| automated postings                                | Y       | Y      |
-| periodic transactions                             | Y       | Y      |
-| budget reporting                                  | Y       | Y      |
-| capital gains reporting                           | Y       | Y      |
-| report filtering with flags and query arguments   | Y       | Y      |
-| basic output format customisation                 | Y       | Y      |
-| print, register, balance commands                 | Y       | Y      |
-| **Features in Ledger only:**                      |         |        |
-| automatic revaluation transactions (`--revalued`) |         | Y      |
-| lot reporting (`--lots`)                          |         | Y      |
-| embedded programming language (value expressions) |         | Y      |
-| embedded python snippets / python API             |         | Y      |
-| probably miscellaneous other things...            |         | Y      |
-| **Features in hledger only:**                     |         |        |
-| international number formats                      | Y       |        |
-| timedot format                                    | Y       |        |
-| multi-period balance reports                      | Y       |        |
-| account types                                     | Y       |        |
-| activity command                                  | Y       |        |
-| add command                                       | Y       |        |
-| balancesheet command                              | Y       |        |
-| cashflow command                                  | Y       |        |
-| check command                                     | Y       |        |
-| close command                                     | Y       |        |
-| descriptions command                              | Y       |        |
-| diff command                                      | Y       |        |
-| files command                                     | Y       |        |
-| iadd command                                      | Y       |        |
-| import command                                    | Y       |        |
-| incomestatement command                           | Y       |        |
-| irr command                                       | Y       |        |
-| interest command                                  | Y       |        |
-| notes command                                     | Y       |        |
-| prices command                                    | Y       |        |
-| rewrite command                                   | Y       |        |
-| ui command                                        | Y       |        |
-| web command                                       | Y       |        |
+|                                                                       | Ledger | hledger |
+|-----------------------------------------------------------------------|--------|---------|
+| **Features common to both:**                                          |        |         |
+| supported UIs: cli                                                    | Y      | Y       |
+| input formats: journal, timeclock, csv                                | Y      | Y       |
+| multiple commodities                                                  | Y      | Y       |
+| conversion prices and cost reporting                                  | Y      | Y       |
+| market prices and value reporting                                     | Y      | Y       |
+| virtual (unbalanced) postings                                         | Y      | Y       |
+| automated postings                                                    | Y      | Y       |
+| periodic transactions                                                 | Y      | Y       |
+| budget reporting                                                      | Y      | Y       |
+| unrealised capital gains reporting                                    | Y      | Y       |
+| report filtering with flags and query arguments                       | Y      | Y       |
+| basic output format customisation                                     | Y      | Y       |
+| commands: accounts, balance, commodities, payees, prices, print, register, stats, tags | Y  | Y |
+| output formats: text, csv                                             | Y      | Y       |
+|                                                                       |        |         |
+| **Features in Ledger only:**                                          |        |         |
+| automatic revaluation transactions (`--revalued`)                     | Y      |         |
+| automated lot reporting (`--lots`)                                    | Y      |         |
+| embedded expression language                                          | Y      |         |
+| embedded python snippets                                              | Y      |         |
+| built-in REPL                                                         | Y      |         |
+| commands: cleared, convert, entry, emacs, equity, pricemap, select, source | Y |         |
+| output formats: xml                                                   | Y      |         |
+| apis: C++, python                                                     | Y      |         |
+|                                                                       |        |         |
+| **Features in hledger only:**                                         |        |         |
+| other supported UIs: tui, web                                         |        | Y       |
+| other input formats: timedot, tsv, ssv, *sv                           |        | Y       |
+| account type awareness                                                |        | Y       |
+| international number formats                                          |        | Y       |
+| multi-period balance reports                                          |        | Y       |
+| haskell REPL                                                          |        | Y       |
+| commands: activity, add, aregister, balancesheet, balancesheetequity, cashflow, check, close, codes, demo, descriptions, diff, files, help, import, incomestatement, notes, rewrite, roi, test | | Y |
+| add-on commands: bar, check-fancyassertions, edit, git, iadd, interest, lots, pijul, plot.. | | Y |
+| output formats: html, fods, tsv, ssv, sql                             |        | Y       |
+| apis: haskell, HTTP-JSON                                              |        | Y       |
 
 ### Performance differences
 
