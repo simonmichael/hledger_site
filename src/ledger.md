@@ -50,46 +50,40 @@ See also:
 
 Over time, features have propagated both ways. Here is [a presentation of hledger's features](features.md).
 And here is a rough feature comparison:
- 
-|                                                                       | Ledger | hledger |
-|-----------------------------------------------------------------------|--------|---------|
-| **Features common to both:**                                          |        |         |
-| command line interface                                                | Y      | Y       |
-| journal, timeclock, csv input formats                                 | Y      | Y       |
-| text, csv output formats                                              | Y      | Y       |
-| multiple commodities                                                  | Y      | Y       |
-| costs and cost reporting                                              | Y      | Y       |
-| market prices and value reporting                                     | Y      | Y       |
-| virtual (unbalanced) postings                                         | Y      | Y       |
-| automated postings                                                    | Y      | Y       |
-| periodic transactions                                                 | Y      | Y       |
-| budget reporting                                                      | Y      | Y       |
-| unrealised capital gains reporting                                    | Y      | Y       |
-| report filtering with flags and query arguments                       | Y      | Y       |
-| basic output format customisation                                     | Y      | Y       |
-| commands: accounts, balance, commodities, payees, prices, print, register, stats, tags | Y  | Y |
-|                                                                       |        |         |
-| **Features in Ledger only:**                                          |        |         |
-| xml output format                                                     | Y      |         |
-| automated lot reporting (`--lots`)                                    | Y      |         |
-| automatic revaluation transactions (`--revalued`)                     | Y      |         |
-| embedded expression language                                          | Y      |         |
-| embedded python snippets                                              | Y      |         |
-| built-in REPL                                                         | Y      |         |
-| C++, python apis                                                      | Y      |         |
-| commands: cleared, convert, entry, emacs, equity, pricemap, select, source | Y |         |
-|                                                                       |        |         |
-| **Features in hledger only:**                                         |        |         |
-| terminal, web interfaces                                              |        | Y       |
-| timedot, tsv, ssv, *sv input formats                                  |        | Y       |
-| html, fods, tsv, ssv, sql output formats                              |        | Y       |
-| account type awareness                                                |        | Y       |
-| international number formats                                          |        | Y       |
-| multi-period balance reports                                          |        | Y       |
-| haskell REPL                                                          |        | Y       |
-| haskell, HTTP-JSON apis                                               |        | Y       |
-| commands: activity, add, aregister, balancesheet, balancesheetequity, cashflow, check, close, codes, demo, descriptions, diff, files, help, import, incomestatement, notes, rewrite, roi, test | | Y |
-| add-on commands: bar, check-fancyassertions, edit, git, iadd, interest, lots, pijul, plot.. | | Y |
+
+**Features common to both:**
+- command line interface
+- journal, timeclock, csv input formats
+- text, csv output formats
+- multiple commodities
+- costs and cost reporting
+- market prices and value reporting
+- virtual/unbalanced postings
+- automated postings
+- periodic transactions
+- budget reporting
+- unrealised capital gains reporting
+- report filtering with flags and query arguments
+- basic output format customisation
+- commands: accounts, balance, commodities, payees, prices, print, register, stats, tags
+
+**Features in only one or the other:**
+
+|                  | Ledger                                                           | hledger
+|------------------|------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| User interfaces: |                                                                  | terminal, web
+| Input formats:   |                                                                  | timedot, tsv, ssv, *sv
+| Output formats:  | xml                                                              | html, fods, tsv, ssv, sql
+| Commands:        | cleared, convert, entry, emacs, equity, pricemap, select, source | activity, add, aregister, balancesheet, balancesheetequity, cashflow, check, close, codes, demo, descriptions, diff, files, help, import, incomestatement, notes, rewrite, roi, test
+| Add-on commands: |                                                                  | bar, check-fancyassertions, edit, git, iadd, interest, lots, pijul, plot..
+| APIs:            | C++, python                                                      | haskell, HTTP-JSON
+| REPL?:           | built-in                                                         | haskell GHCI
+| Other:           | automated lot reporting (`--lots`)                               | account type awareness
+|                  | automatic revaluation transactions (`--revalued`)                | standard financial reports
+|                  | embedded expression language                                     | multi-period balance reports
+|                  | embedded python snippets                                         | international number formats
+
+
 
 ### Performance differences
 
