@@ -54,10 +54,11 @@ And here is an approximate feature comparison:
 |                                                                       | Ledger | hledger |
 |-----------------------------------------------------------------------|--------|---------|
 | **Features common to both:**                                          |        |         |
-| supported UIs: cli                                                    | Y      | Y       |
-| input formats: journal, timeclock, csv                                | Y      | Y       |
+| command line interface                                                | Y      | Y       |
+| journal, timeclock, csv input formats                                 | Y      | Y       |
+| text, csv output formats                                              | Y      | Y       |
 | multiple commodities                                                  | Y      | Y       |
-| conversion prices and cost reporting                                  | Y      | Y       |
+| costs and cost reporting                                              | Y      | Y       |
 | market prices and value reporting                                     | Y      | Y       |
 | virtual (unbalanced) postings                                         | Y      | Y       |
 | automated postings                                                    | Y      | Y       |
@@ -67,29 +68,28 @@ And here is an approximate feature comparison:
 | report filtering with flags and query arguments                       | Y      | Y       |
 | basic output format customisation                                     | Y      | Y       |
 | commands: accounts, balance, commodities, payees, prices, print, register, stats, tags | Y  | Y |
-| output formats: text, csv                                             | Y      | Y       |
 |                                                                       |        |         |
 | **Features in Ledger only:**                                          |        |         |
+| xml output format                                                     | Y      |         |
 | automatic revaluation transactions (`--revalued`)                     | Y      |         |
 | automated lot reporting (`--lots`)                                    | Y      |         |
 | embedded expression language                                          | Y      |         |
 | embedded python snippets                                              | Y      |         |
 | built-in REPL                                                         | Y      |         |
+| C++, python apis                                                      | Y      |         |
 | commands: cleared, convert, entry, emacs, equity, pricemap, select, source | Y |         |
-| output formats: xml                                                   | Y      |         |
-| apis: C++, python                                                     | Y      |         |
 |                                                                       |        |         |
 | **Features in hledger only:**                                         |        |         |
-| other supported UIs: tui, web                                         |        | Y       |
-| other input formats: timedot, tsv, ssv, *sv                           |        | Y       |
+| terminal, web interfaces                                              |        | Y       |
+| timedot, tsv, ssv, *sv input formats                                  |        | Y       |
+| html, fods, tsv, ssv, sql output formats                              |        | Y       |
 | account type awareness                                                |        | Y       |
 | international number formats                                          |        | Y       |
 | multi-period balance reports                                          |        | Y       |
 | haskell REPL                                                          |        | Y       |
+| haskell, HTTP-JSON apis                                               |        | Y       |
 | commands: activity, add, aregister, balancesheet, balancesheetequity, cashflow, check, close, codes, demo, descriptions, diff, files, help, import, incomestatement, notes, rewrite, roi, test | | Y |
 | add-on commands: bar, check-fancyassertions, edit, git, iadd, interest, lots, pijul, plot.. | | Y |
-| output formats: html, fods, tsv, ssv, sql                             |        | Y       |
-| apis: haskell, HTTP-JSON                                              |        | Y       |
 
 ### Performance differences
 
