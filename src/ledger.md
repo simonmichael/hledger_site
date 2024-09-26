@@ -52,8 +52,10 @@ Over time, features have propagated both ways. Here is [a presentation of hledge
 And here is a rough feature comparison:
 
 **Features common to both:**
+
 - command line interface
 - journal, timeclock, csv input formats
+- csv conversion rules
 - text, csv output formats
 - multiple commodities
 - costs and cost reporting
@@ -67,23 +69,34 @@ And here is a rough feature comparison:
 - basic output format customisation
 - commands: accounts, balance, commodities, payees, prices, print, register, stats, tags
 
-**Features in only one or the other:**
+**Additional specific/different features:**
 
 |                  | Ledger                                                           | hledger
 |------------------|------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-| User interfaces: |                                                                  | terminal, web
+| Other user interfaces: |                                                            | terminal, web
 | Input formats:   |                                                                  | timedot, tsv, ssv, *sv
 | Output formats:  | xml                                                              | html, fods, tsv, ssv, sql
 | Commands:        | cleared, convert, entry, emacs, equity, pricemap, select, source | activity, add, aregister, balancesheet, balancesheetequity, cashflow, check, close, codes, demo, descriptions, diff, files, help, import, incomestatement, notes, rewrite, roi, test
 | Add-on commands: |                                                                  | bar, check-fancyassertions, edit, git, iadd, interest, lots, pijul, plot..
+| CLI help:        | general --help                                                   | general --help, command --help, auto-paginated
+| TLDR short help: | ledger                                                           | hledger and all commands, also built-in as --tldr
+| User manual formats: | web                                                          | web, info, man, built-in info/man/text
 | APIs:            | C++, python                                                      | haskell, HTTP-JSON
-| REPL?:           | built-in                                                         | haskell GHCI
+| Config file:     | general options                                                  | general and command-specific options
+| CSV deduplication: | checksum-based (requires unique CSV records)                   | date-based (requires date-ordered CSV records)
+| REPL:            | built-in                                                         | haskell GHCI
+| Pivoting:        | on single tag                                                    | on one or more tags/other fields
+| Shell completions: | bash (commands, flags, some accounts)                          | bash (commands, flags, flag values, query types, queryable journal data)
 | Other:           | automated lot reporting (`--lots`)                               | account type awareness
-|                  | automatic revaluation transactions (`--revalued`)                | standard financial reports
-|                  | embedded expression language                                     | multi-period balance reports
-|                  | embedded python snippets                                         | international number formats
-
-
+|                  | automatic revaluation transactions (`--revalued`)                | customisable account display order
+|                  | embedded expression language                                     | standard financial reports
+|                  | embedded python snippets                                         | multi-period balance reports
+|                  |                                                                  | international number notations
+|                  |                                                                  | commands summary
+|                  |                                                                  | regular releases
+|                  |                                                                  | regression bounties
+|                  |                                                                  | active support chat
+|                  |                                                                  |
 
 ### Performance differences
 
