@@ -100,12 +100,13 @@ And here is a rough feature comparison:
 
 ### Performance differences
 
-Traditionally, Ledger was faster than hledger with large files (eg >5k transactions).
+Ledger was traditionally faster than hledger with large files, eg  above 5k transactions.
 (Many people record about 1-2k transactions per year.)
-Ledger's extra speed came partly from providing fewer guarantees, eg Ledger's balance assertions/assignments are not date-aware.
+Ledger's speed came partly from providing fewer guarantees, eg Ledger's balance assertions/assignments are not date-aware.
 
 Since about 2021 the performance gap seems to me to have closed or reversed,
-with hledger outperforming Ledger in some cases, including on large files.
+at least on my mac, where hledger often runs faster and in less memory than Ledger,
+especially with very large files.
 
 In 2022, hledger ~1.25 compiled natively on a macbook air m1 processed 25k transactions per second:
 ```cli
@@ -130,13 +131,30 @@ version: hledger 1.24.99.2-gba5b0e93f-20220205, mac-aarch64
 Tue Feb  8 11:03:57 HST 2022
 ```
 
-More recent hledger versions run a bit slower than this, 
-but on my mac they often run faster and in less memory than Ledger, including with large files.
-See [#2153](https://github.com/simonmichael/hledger/issues/2153) for the most recent benchmarking,
-eg [2153#issuecomment-1912942305](https://github.com/simonmichael/hledger/issues/2153#issuecomment-1912942305).
-(Avoid hledger versions 1.29-1.32.2, which were affected by this performance bug.)
+Newer hledger versions are slower than this.
+hledger 1.29-1.32.2 have a performance bug which can be seen with large files,
+[#2153](https://github.com/simonmichael/hledger/issues/2153)
+(see eg [2153#issuecomment-1912942305](https://github.com/simonmichael/hledger/issues/2153#issuecomment-1912942305) benchmarks).
 
-More independent benchmarking is needed - please help if you can.
+2024's hledger 1.40 on macbook air m1 runs at roughly 16k txns/s for me:
+
+```cli
+$ hledger -f examples/100ktxns-1kaccts.journal stats
+Main file           : .../100ktxns-1kaccts.journal
+Included files      : 0
+Txns span           : 2000-01-01 to 2273-10-16 (100000 days)
+Last txn            : 2273-10-15 (90965 days from now)
+Txns                : 100000 (1.0 per day)
+Txns last 30 days   : 31 (1.0 per day)
+Txns last 7 days    : 8 (1.1 per day)
+Payees/descriptions : 100000
+Accounts            : 1000 (depth 10)
+Commodities         : 26
+Market prices       : 100000
+Runtime stats       : 6.23 s elapsed, 16051 txns/s, 258 MB live, 773 MB alloc
+```
+
+More independent benchmarking is needed, help welcome.
 
 ### Command line differences
 
@@ -195,7 +213,7 @@ perhaps keeping non-compatible features in separate files.
 A typical gnarly old Ledger file will not work with hledger as-is.
 Here are some of the roadbumps to expect (see also: [#1752](https://github.com/simonmichael/hledger/issues/1752)):
 
-- Some syntactic features are supported only by one or the other (Ledger's `(AMOUNTEXPR)`, `((VALUEEXPR))`.. , hledger's `==`, `=*`, `==*`..)
+- Some features are supported only by one or the other (Ledger's `(AMOUNTEXPR)`, `((VALUEEXPR))`.. , hledger's `==`, `=*`, `==*`..)
 - Some will be accepted but ignored, probably causing transactions not to balance (`{LOTCOST}`, `{=LOTFIXEDCOST}`, `[LOTDATE]`, `(LOTNOTE)`..)
 - Some may be interpreted differently (balance assertions, balance assignments..)
 - Some may have different restrictions (dates, comments..)
