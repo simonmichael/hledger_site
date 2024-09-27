@@ -67,9 +67,9 @@ These features are common to both hledger and Ledger:
 - basic output format customisation
 - commands: accounts, balance, commodities, payees, prices, print, register, stats, tags
 
-See the [PTA Feature Matrix](https://plaintextaccounting.org/feature-matrix) for a detailed overview of feature differences.
+For differences, see the detailed [PTA Feature Matrix](https://plaintextaccounting.org/#feature-matrix).
 
-[Features](features.md) introduces hledger's features for new users.
+The [Features](features.md) page introduces hledger's features for new users.
 
 ### Performance differences
 
