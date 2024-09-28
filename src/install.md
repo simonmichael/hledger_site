@@ -190,7 +190,7 @@ stack install hledger-lib-1.40 hledger-1.40 hledger-ui-1.40 hledger-web-1.40 \
 ```
 
 stack will install a compatible version of the GHC compiler if needed,
-using 1-2G of disk space under `~/.stack`, or if stack is configured for ghcup, under `~/.ghcup`.
+perhaps using ~2G of disk space (under `~/.ghcup` if it is configured to use ghcup, otherwise under `~/.stack`).
 Then it will build the hledger tools and install them in `~/.local/bin`.
 
 ### Build with cabal
