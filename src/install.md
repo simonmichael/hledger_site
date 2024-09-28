@@ -197,8 +197,8 @@ Then it will build the hledger tools and install them in `~/.local/bin`.
 
 `cabal` is another popular Haskell build tool.
 You can install it with your system package manager or with [ghcup].
-You will also need to install a supported version of GHC: 
-any version from 8.10.7 to 9.8, with newer versions preferred.
+You will also need to install a version of GHC that can build current hledger;
+usually any version newer than 8.10.7 will do.
 Then:
 
 ```
