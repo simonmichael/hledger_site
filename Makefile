@@ -104,7 +104,7 @@ serve:
 
 # Auto-rebuild site when source files change (mdbook watch/serve should but usually don't).
 watch:
-	find src | entr -d bash -c 'date; mdbook build'
+	watchexec -w src -- mdbook build
 
 keepwatching:
 	while true; do make -s watch; done
