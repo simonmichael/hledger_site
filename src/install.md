@@ -203,9 +203,13 @@ Then:
 
 ```
 cabal update
-cabal install alex happy
 cabal install hledger-1.40 hledger-ui-1.40 hledger-web-1.40
 ```
+<!--
+New haskellers used to sometimes need step 2 `cabal install alex happy`.
+Nowadays that needs `--overwrite-policy=always` to avoid failing.
+Try without, let the caballers deal with it.
+-->
 
 This will build the hledger tools and install them in `~/.cabal/bin`.
 
@@ -232,7 +236,6 @@ and you can build and install with:
 or:
 
     cabal update
-    cabal install alex happy
     cabal install all:exes
 
 ### Build in a Docker container
