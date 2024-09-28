@@ -217,14 +217,13 @@ This will build the hledger tools and install them in `~/.cabal/bin`.
 
 ### Build in a source checkout
 
-If you'd like to customise or review the hledger source code,
-get the [latest development version](https://github.com/simonmichael/hledger/commits/master) with git.
-(To get a release branch instead, add eg `-b 1.40` to this command.)
+If you'd like to build the [latest hledger source code](https://github.com/simonmichael/hledger/commits/master),
+get it with git (to get a release branch instead, add eg `-b 1.40`):
 
     git clone https://github.com/simonmichael/hledger
     cd hledger
 
-Then you can build and install with:
+When in this directory you can build and install with:
 
     stack update
     stack install
