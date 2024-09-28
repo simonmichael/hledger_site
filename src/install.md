@@ -186,7 +186,7 @@ Once stack is installed, run these commands:
 ```
 stack update
 stack install hledger-lib-1.40 hledger-1.40 hledger-ui-1.40 hledger-web-1.40 \
-  --resolver=nightly-2024-09-04 --install-ghc --verbosity=error
+  --resolver=nightly-2024-09-26 --install-ghc --verbosity=error
 ```
 
 stack will install a compatible version of the GHC compiler if needed,
