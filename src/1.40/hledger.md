@@ -1984,7 +1984,7 @@ can\'t warn you when you mis-spell an account name in the journal.
 Usually you\'ll find that error later, as an extra account in balance
 reports, or an incorrect balance when reconciling.
 
-In [strict mode](#strict-mode), enabled with the `-s`/`--strict` flag,
+In [strict mode], enabled with the `-s`/`--strict` flag, or when you run `hledger check accounts`,
 hledger will report an error if any transaction uses an account name
 that has not been declared by an [account directive](#account). Some
 notes:
@@ -2000,6 +2000,7 @@ notes:
     [included](#include-directive) files of all types.
 -   It\'s currently not possible to declare \"all possible subaccounts\"
     with a wildcard; every account posted to must be declared.
+- If you use the [--infer-equity](#inferring-equity-conversion-postings) flag, you will also need declarations for the account names it generates.
 
 #### Account display order
 
@@ -6104,6 +6105,8 @@ The equity account names will be \"equity:conversion:A-B:A\" and
 commodity symbol. You can customise the \"equity:conversion\" part by
 declaring an account with the `V`/`Conversion` [account
 type](#account-types).
+
+Note you will need to add [account declarations](#account-error-checking) for these to your journal, if you use `check accounts` or `check --strict`.
 
 ### Combining costs and equity conversion postings
 
