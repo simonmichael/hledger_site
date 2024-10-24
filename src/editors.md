@@ -24,38 +24,101 @@ Here are more details and tips.
 
 ### ledger-mode
 
-<https://github.com/ledger/ledger-mode>
-([manual](http://www.ledger-cli.org/3.0/doc/ledger-mode.html)), for
-[Emacs](https://www.gnu.org/software/emacs/), is the most used and
-maintained helper mode for hledger and Ledger files. 
+<http://github.com/ledger/ledger-mode>
+(\[manual\](<http://www.ledger-cli.org/3.0/doc/ledger-mode.html>)), for
+\[Emacs\](<https://www.gnu.org/software/emacs/>), is the most used and
+maintained helper mode for hledger and Ledger files.
 
-It has some hard-coded dependence on Ledger's command-line interface,  so does not work perfectly with hledger, whose CLI is similar but not identical. There are a few ways to get around this:
+It has some hard-coded dependence on Ledger's command-line interface, so does not work perfectly with hledger, whose CLI is similar but not identical. There are a few ways to get around this:
 
-- Most common: configure ledger-mode to run `hledger`, and accept that some more advanced features (reports, reconcile-mode) will not work for now; help welcome. Configure ledger-mode this way:
+**1. Basic configuration:**
 
-  1. M-x customize-group, ledger-exec
-  2. change `ledger-binary-path` to hledger
+``` elisp
+(setq ledger-binary-path "hledger"
+      ledger-mode-should-check-version nil
+      ledger-report-auto-width nil
+      ledger-report-links-in-register nil
+      ledger-report-native-highlighting-arguments '("--color=always"))
+(add-to-list 'auto-mode-alist '("\\.hledger\\'" . ledger-mode))
+```
 
-- Or: keep your hledger journal 100% Ledger-compatible, and let ledger-mode run `ledger` as it usually does. Unless you are a Ledger user who wants to run both tools, you may find this too limiting.
+Or, using use-package:
 
-- Or: set up compatibility scripts emulating the ledger command set and CLI with hledger. For example: `ledger-display-balance-at-point` (C-c C-p) runs 
-`ledger cleared ACCT`. hledger doesn't have a "cleared" command, but you could make one similar to Ledger's using an add-on script: `hledger-cleared.sh` in $PATH containing:
-  ```cli
-  #!/bin/sh
-  hledger balance -N -C "$@"
-  ```
-  This approach can solve some of the incompatibilities, but it's a hassle.
+``` elisp
+(use-package ledger-mode
+  :custom
+  ((ledger-binary-path "hledger")
+   (ledger-mode-should-check-version nil)
+   (ledger-report-auto-width nil)
+   (ledger-report-links-in-register nil)
+   (ledger-report-native-highlighting-arguments '("--color=always")))
+  :mode ("\\.hledger\\'" "\\.ledger\\'"))
+```
 
-More tips:
+This configuration makes ledger-mode commands run hledger, configures colored output and turns off some incompatible functionality. Most editing functions in the journal buffer work correctly and so do most of the reports. Annoyingly, reconcilliation, quick balance display and the add-transaction prompt fail due to hardcoded ledger-specific options that hledger doesn't have. (Help wanted)
 
-To toggle a transaction's cleared status: move point to it, C-c C-e.
+**Feature Compatibility Checklist:**
 
-To toggle just a posting's status: move point to it, C-c C-c.
+-   [ ] **Ledger Buffer**
+    -   [x] Navigation
+    -   [x] Completion
+    -   [x] Set effective date (\<C-c\> \<C-t\>)
+    -   [ ] Quick balance display (\<C-c\> \<C-p\>) -- **FAILS due to --date-format**
+    -   [x] Copy Transaction (\<C-c\> \<C-k\>)
+    -   [x] Clear Posting/Transaction
+    -   [x] Delete transaction
+    -   [x] Sorting transactions
+    -   [x] Narrowing (i.e. regex filtering)
+    -   [x] Transaction completion by payee (\<C-c\> \<TAB\>)
+    -   [ ] Add transaction (\<C-c\> \<C-a\>) -- **FAILS due to --date-format**
+-   [ ] **Report Buffer** (\<C-c\> \<C-o\> \<C-r\>)
+    -   [x] balance
+    -   [x] register
+    -   [ ] payee -- **FAILS, hledger uses \@item syntax for argument files, ledger uses \@payee to filter transactions**
+    -   [x] account
+    -   [x] custom
+    NOTE: custom report simply opens the minibuffer with the word ledger prefilled. It works if you input a valid hledger command, but it doesn't use the current buffer filename or anything. It does update on buffer changes however. Naming and saving custom reports works as well.
+        -   [ ] Expansion formats
+            -   [x] %(ledger-file)
+            -   [x] %(payee)
+            -   [x] %(account)
+            -   [ ] %(tag-name) -- **TODO: Figure out what/why.**
+            -   [ ] %(tag-value) -- **TODO: Figure out what/why.**
+            -   [x] %(month)
+        -   [ ] Jump to transaction from register report -- **FAILS**
+        -   [x] Reverse report order
+-   [ ] **Reconcile Buffer** -- **FAILS due to --date-format, among other reasons.**
+NOTE: Opening the reconcile buffer uses Narrowing (\<C-c\> \<C-f\>) to filter transactions to only ones relevant to the selected account. After the reconcile buffer errors out filtering needs to be turned off with \<C-c\> \<C-f\>.
+-   [ ] **Scheduling Transactions** -- **ledger/hledger CLI incompatibility**
+    NOTE: ledger has a scheduler for periodic transactions which are written in a separate ledger file. Ledger-mode provides a way to view and copy those transactions into the main journal, making the process of updating the journal with periodic transactions somewhat easier. The closest corresponding functionality are hledger's periodic transactions and the --forecast option (how easy it would be to adapt ledger-mode to it remains to be seen).
+
+**2. Compatibility scripts**
+
+Example: `ledger-display-balance-at-point` (C-c C-p) runs `ledger cleared ACCT`. Hledger doesn't have a cleared command, but the incantation `hledger balance -N -C ACCT` is equivalent to it.
+Therefore, by putting the following script in your PATH:
+
+``` shell
+#!/bin/sh
+hledger balance -N -C "$@"
+```
+
+... and making `ledger-display-balance-at-point` run it, you get the correct functionality. Some incompatibilities can be solved in this fashion, but it's a hassle.
+
+TODO -- Make a list of commands ledger-mode runs
+TODO -- Compile the set of scripts from links below
+
+TODO -- Add common hledger reports as custom reports
 
 [#367 ledger-mode setup for hledger needs documenting](https://github.com/simonmichael/hledger/issues/367) has more tips to be collected here.
+[hledger-related issues](https://github.com/ledger/ledger-mode/issues?q=label:hledger)
 
-Here are ledger-mode's [hledger-related issues](https://github.com/ledger/ledger-mode/issues?q=label:hledger).
+**Errors:**
 
+1.  The --date-format error:
+    ledger-mode hardcodes this option into it's ledger incantations. It can be avoided in some, but not all cases. Generally the first and most common error you bump into.
+2.  --columns: see [#279](https://github.com/ledger/ledger-mode/issues/279)
+    This error is why (setq ledger-report-auto-width nil) is necessary.
+3. TODO -- Probably some i've missed
 
 ### hledger-mode
 
