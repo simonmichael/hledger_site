@@ -24,7 +24,7 @@ Here are more details and tips.
 
 ### Ledger-mode
 
-<http://github.com/ledger/ledger-mode>
+<https://github.com/ledger/ledger-mode>
 ([manual](http://www.ledger-cli.org/3.0/doc/ledger-mode.html)), for
 [Emacs](https://www.gnu.org/software/emacs/), is the most used and
 maintained helper mode for hledger and Ledger files.
