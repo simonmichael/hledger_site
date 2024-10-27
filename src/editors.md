@@ -62,25 +62,104 @@ colored output correctly and turns off some incompatible functionality.
 Most editing functions in the journal buffer work correctly and so do
 most of the reports. Annoyingly, reconcilliation, quick balance display
 and the add-transaction prompt fail due to hardcoded ledger-specific
-options that hledger doesn't have. A way to get around this is outlined
-under the feature compatibility list.
+options that hledger doesn't have. Hence the following:
+
+**2. Compatibility script**
+
+Further functionality can be gained by putting the following script in
+your PATH and pointing \`ledger-binary-path\` to it.
+
+``` elisp
+(setq ledger-binary-path "hledger.sh")
+(setq ledger-default-date-string "%Y-%m-%d")
+```
+
+The script works by converting command line options and arguments to
+hledger's equivalent incantations, or filtering them out. By using it
+all the commands in the journal buffer become functional. It enables the
+Quick Balance Display (\<C-c\> \<C-p\>), display-ledger-stats (\<C-c\>
+\<C-l\>) and Add Transaction (\<C-c\> \<C-p\>) and gets us a step closer
+to reconcilliation (still not there tho).
+
+``` shell
+#!/bin/sh
+# hledger.sh
+# Kudos to acarrico for the original script.
+
+# The script is contingent on ledger-default-date-string
+# being set to "%Y-%m-%d", aka ISO date format.
+
+iargs=("$@")
+oargs=()
+j=0;
+date=;
+for((i=0; i<${#iargs[@]}; ++i)); do
+    case ${iargs[i]} in
+        --date-format)
+            # drop --date-format and the next arg
+            i=$((i+1));
+            ;;
+        cleared) # for ledger-di
+            splay-balance-at-point
+            # convert "cleared" to "balance -N -C"
+            oargs[j]=balance; oargs[j+1]=-N; oargs[j+2]=-C; j=$((j+3));
+            ;;
+        xact)
+            # convert "xact" to "print --match"
+            oargs[j]=print; oargs[j+1]=--match; j=$((j+2));
+            # drop xact argument and stash the date argument
+            i=$((i+1));
+            date=${iargs[i]};
+            ;;
+        # NOTE: Reconciliation still doesn't work for other reasons
+        #       so the following filters/conversions are spurious.
+        # --sort) # for reconcilliation
+        #     # drop --sort and the next arg
+        #     i=$((i+1));
+        #     ;;
+        # --uncleared) # for reconcilliation
+        #     # convert "--uncleared" to "--unmarked --pending"
+        #     oargs[j]=--unmarked; oargs[j+1]=--pending; j=$((j+2))
+        #     ;;
+        *)
+            # keep any other args:
+            oargs[j]=${iargs[i]};
+            j=$((j+1));
+            ;;
+    esac
+done
+
+if test "$date"
+then
+    # substitute the given date for the old date:
+    hledger "${oargs[@]}" | sed "1s/....-..-../$date/"
+else
+    # echo "${oargs[@]}"
+    hledger "${oargs[@]}"
+fi
+
+```
+
+**TODO** – Generalize script to work with different date formats
 
 **Feature Compatibility Checklist:**
 
-- [ ] **Ledger Buffer**
+- [x] **Ledger Buffer**
   - [x] Navigation
   - [x] Completion
   - [x] Set effective date (\<C-c\> \<C-t\>)
-  - [ ] Quick balance display (\<C-c\> \<C-p\>) – **FAILS due to
-    –date-format**
+  - [x] Quick balance display (\<C-c\> \<C-p\>) – **FAILS due to
+    -–date-format, fixed by script**
   - [x] Copy Transaction (\<C-c\> \<C-k\>)
   - [x] Clear Posting/Transaction
   - [x] Delete transaction
   - [x] Sorting transactions
   - [x] Narrowing (i.e. regex filtering)
   - [x] Transaction completion by payee (\<C-c\> \<TAB\>)
-  - [ ] Add transaction (\<C-c\> \<C-a\>) – **FAILS due to
-    –date-format**
+  - [x] Add transaction (\<C-c\> \<C-a\>) – **FAILS due to -–date-format,
+    fixed by script**
+  - [x] display-ledger-stats (\<C-c\> \<C-l\>) – **FAILS due to
+    -–date-format, fixed by script**
 - [ ] **Report Buffer** (\<C-c\> \<C-o\> \<C-r\>)
   - [x] balance
   - [x] register
@@ -101,15 +180,14 @@ under the feature compatibility list.
       - [ ] %(tag-value) – **TODO: Figure out what/why.**
       - [x] %(month)
     - [ ] Jump to transaction from register report – **FAILS, line data
-      is passed to emacs using ledger's –prepend-format**
+      is passed to emacs using ledger's -–prepend-format**
     - [x] Reversing report order
-- [ ] **Reconcile Buffer** – **FAILS due to –date-format**  
-  NOTE: Opening
-  the reconcile buffer uses Narrowing (\<C-c\> \<C-f\>) to filter
-  transactions to only ones relevant to the selected account. After the
-  reconcile buffer errors out filtering needs to be turned off with
-  \<C-c\> \<C-f\>.
-- [ ] **Scheduling Transactions** – **FAILS ledger/hledger UI
+- [ ] **Reconcile Buffer** – **FAILS due to an assortment of errors**  
+  NOTE: Opening the reconcile buffer uses Narrowing (\<C-c\> \<C-f\>) to
+  filter transactions to only ones relevant to the selected account.
+  After the reconcile buffer errors out filtering needs to be turned off
+  with \<C-c\> \<C-f\>.
+- [ ] **Scheduling Transactions** – **FAILS -- ledger/hledger UI
   incompatibility**  
   NOTE: ledger has a scheduler for periodic
   transactions which are written in a separate ledger file. Ledger-mode
@@ -118,25 +196,6 @@ under the feature compatibility list.
   transactions somewhat easier. The closest corresponding functionality
   are hledger's periodic transactions and the –forecast option (how easy
   it would be to adapt ledger-mode to it remains to be seen).
-
-**2. Compatibility scripts**
-
-Example: ledger-display-balance-at-point (C-c C-p) runs \`ledger cleared
-ACCT\`. Hledger doesn't have a cleared command, but the incantation
-\`hledger balance -N -C ACCT\` is equivalent to it. Therefore, by
-putting the following script in your PATH:
-
-``` shell
-#!/bin/sh
-hledger balance -N -C "$@"
-```
-
-… and making ledger-display-balance-at-point run it, you get the correct
-functionality. Some incompatibilities can be solved in this fashion, but
-it's a hassle.
-
-**TODO** – Make a list of commands ledger-mode runs  
-**TODO** – Compile the set of scripts from links below
 
 **TODO** – Add common hledger reports as custom reports
 
@@ -159,6 +218,10 @@ more tips to be collected here.
     transactions by prepending line data to ledger's output, then
     stripping that data from the buffer and turning the output to links.
     Hledger doesn't have a –prepend-format CLI option.
+4.  command emacs is not recognised.  
+    This is the next hurdle to
+    reconcilliation. ledger-cli has an option to output data, formatted
+    for elisp consumption, which the reconcile buffer uses.
 
 ### hledger-mode
 
