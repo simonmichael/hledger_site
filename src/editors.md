@@ -112,7 +112,7 @@ for((i=0; i<${#iargs[@]}; ++i)); do
             date=${iargs[i]};
             ;;
         # NOTE: Reconciliation still doesn't work for other reasons
-        #       so the following filters/conversions are spurious.
+        #       so the following filters/conversions are unnecessary for now.
         # --sort) # for reconcilliation
         #     # drop --sort and the next arg
         #     i=$((i+1));
