@@ -1,8 +1,8 @@
 # Report examples
 
-Some [simple reports on the essentials page](essentials.md#run-reports).
+There are some [example reports on the home page](index.md/#examples).
 
-Some example reports with an adapted copy of this [example journal][bcexample] from beancount:
+Here are some more example reports using the [bcexample journal][bcexample] from beancount:
 
 [bcexample]: https://raw.githubusercontent.com/simonmichael/hledger/master/examples/bcexample.hledger
 
