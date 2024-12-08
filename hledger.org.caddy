@@ -82,6 +82,7 @@ hledger.org {
 		path /1.33/*
 		path /1.34/*
 		path /1.40/*
+		path /1.41/*
 		path /dev/*
 	}
 	root @oldmanpath /opt/hledger/site/out2/
@@ -94,7 +95,7 @@ hledger.org {
 		path /hledger-ui.html
 		path /hledger-web.html
 	}
-	redir @unversionedmanpath /1.40{uri}
+	redir @unversionedmanpath /1.41{uri}
 
 	# workaround for mdbook not allowing external links in sidebar (see src/SUMMARY.md)
 	redir /financerepo.html http://finance.hledger.org
