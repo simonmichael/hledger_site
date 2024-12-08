@@ -130,3 +130,12 @@ You can always browse the mail list archives for past discussions that look inte
 
 -->
 
+### Motivation
+
+Find things that get you in the mood and energised.
+
+- [The Richest Man in Babylon](https://forum.plaintextaccounting.org/t/the-richest-man-in-babylon/396)
+
+### Have fun, take breaks!
+
+- [Accounting for Dragons](https://podcastle.org/2009/10/09/pc-miniature-38-accounting-for-dragons).
