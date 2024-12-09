@@ -5,7 +5,7 @@
 <!-- toc -->
 </div>
 
-The current hledger release is **1.40**.
+The current hledger release is **1.41**.
 Here are the **[release notes](release-notes.md)**.
 
 There are three main ways to install hledger on your computer:
@@ -22,8 +22,8 @@ After installing, there are some [final things to check](#check-your-installatio
 
 Official release binaries for Linux, Mac, Windows.
 
-[![hledger release binaries](https://img.shields.io/badge/hledger_release_binaries-1.40-brightgreen.svg)](https://github.com/simonmichael/hledger/releases/tag/1.40)
-[release binaries](https://github.com/simonmichael/hledger/releases/tag/1.40)
+[![hledger release binaries](https://img.shields.io/badge/hledger_release_binaries-1.41-brightgreen.svg)](https://github.com/simonmichael/hledger/releases/tag/1.41)
+[release binaries](https://github.com/simonmichael/hledger/releases/tag/1.41)
 ([![RSS](images/rss.png) RSS](https://github.com/simonmichael/hledger/releases.atom))
 
 ## Packaged binaries
@@ -36,7 +36,7 @@ Official release binaries for Linux, Mac, Windows.
 
 ### Docker (Linux, Mac, Windows)
 
-[![Docker](https://img.shields.io/badge/Docker_image-1.40-brightgreen.svg)](https://hub.docker.com/r/dastapov/hledger)
+[![Docker](https://img.shields.io/badge/Docker_image-1.40-red.svg)](https://hub.docker.com/r/dastapov/hledger)
 `docker pull dastapov/hledger`\
 [more..](https://hub.docker.com/search?q=hledger&type=image&sort=updated_at&order=desc)
 <!-- adept -->
@@ -185,8 +185,8 @@ Once stack is installed, run these commands:
 
 ```
 stack update
-stack install hledger-lib-1.40 hledger-1.40 hledger-ui-1.40 hledger-web-1.40 \
-  --resolver=nightly-2024-09-26 --install-ghc --verbosity=error
+stack install base-compat-0.14.0 hledger-lib-1.41 hledger-1.41 hledger-ui-1.41 hledger-web-1.41 \
+  --resolver=lts-23 --verbosity=error
 ```
 
 stack will install a compatible version of the GHC compiler if needed,
@@ -205,7 +205,7 @@ Then:
 
 ```
 cabal update
-cabal install hledger-1.40 hledger-ui-1.40 hledger-web-1.40
+cabal install hledger-1.41 hledger-ui-1.41 hledger-web-1.41
 ```
 <!--
 New haskellers used to sometimes need step 2 `cabal install alex happy`.
@@ -218,7 +218,7 @@ This will build the hledger tools and install them in `~/.cabal/bin`.
 ### Build in a source checkout
 
 If you'd like to build the [latest hledger source code](https://github.com/simonmichael/hledger/commits/master),
-get it with git (to get a release branch instead, add eg `-b 1.40`):
+get it with git (to get a release branch instead, add eg `-b 1.41`):
 
     git clone https://github.com/simonmichael/hledger
     cd hledger
@@ -279,11 +279,11 @@ After installing, run the hledger tools and verify that their versions are what 
 (and not older versions from a previous install). Eg:
 
     $ hledger --version
-    hledger 1.40, ...
+    hledger 1.41, ...
     $ hledger-ui --version
-    hledger-ui 1.40, ...
+    hledger-ui 1.41, ...
     $ hledger web --version
-    hledger-web 1.40, ...
+    hledger-web 1.41, ...
 
 You can run the built-in unit tests if you'd like:
 
@@ -295,7 +295,7 @@ or the more thorough functional tests, if you are set up for working with the hl
 
     $ just functest
     ...
-     Total   1082 ...
+     Total   1110 ...
     functest PASSED
 
 
@@ -386,15 +386,13 @@ If not, first ensure that [bash-completion](https://salsa.debian.org/debian/bash
 Then, after using your system package manager to install hledger (`brew install hledger`, `apt install hledger` or similar),
 completions may be working.
 
-If your system's hledger package does not yet include completions,
-or if they are not up to date (as with homebrew's hledger 1.40 formula),
-or if you have installed hledger by other means,
+If your system's hledger package does not yet include completions, or if they are not up to date, or if you have installed hledger by other means,
 then install the [latest hledger completions] yourself, under your XDG_DATA_HOME directory. Eg:
 
-[latest hledger completions]: https://raw.githubusercontent.com/simonmichael/hledger/1.40-branch/hledger/shell-completion/hledger-completion.bash
+[latest hledger completions]: https://raw.githubusercontent.com/simonmichael/hledger/1.41-branch/hledger/shell-completion/hledger-completion.bash
 
 ```
-curl https://raw.githubusercontent.com/simonmichael/hledger/1.40-branch/hledger/shell-completion/hledger-completion.bash \
+curl https://raw.githubusercontent.com/simonmichael/hledger/1.41-branch/hledger/shell-completion/hledger-completion.bash \
   -o ~/.local/share/bash-completion/completions/hledger --create-dirs
 ```
 
