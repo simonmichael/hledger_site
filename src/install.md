@@ -335,9 +335,10 @@ Here's [how to set environment variables on Windows](https://www.devdungeon.com/
 On most unix systems, when you are processing non-ASCII text with hledger,
 the `LANG` environment variable must be set to a suitable locale to ensure hledger can decode the text,
 avoiding errors like "*invalid byte sequence*" or "*mkTextEncoding: invalid argument*".
-(This applies to the Haskell build tools like GHC, cabal and stack, as well.)
+This applies to the Haskell build tools like GHC, cabal and stack, as well.
+
 We usually recommend the UTF-8 text encoding.
-Check that your `LANG` setting mentions UTF-8, and if not, change it. Eg:
+On unix-like systems, check that your `LANG` setting mentions UTF-8, and if not, change it. Eg:
 
 ```cli
 $ echo $LANG
@@ -352,9 +353,17 @@ package manager first. See
 [hledger: Troubleshooting](hledger.md#troubleshooting) for more help.
 <!-- XXX ^ improve -->
 
-On Microsoft Windows, if you see such error messages, perhaps
-[this doc](https://techtrix.co/how-do-i-change-the-default-encoding-in-windows-10/#How_do_I_change_my_Windows_locale)
-can help.
+On Microsoft Windows, I read that this might help in powershell:
+```
+$env:LC_ALL = "C.UTF-8"
+$env:LANG = "C.UTF-8"
+```
+or this in CMD:
+```
+set LC_ALL=C.UTF-8
+set LANG=C.UTF-8
+```
+There are also lots of ways to get pre-built binaries for Windows, if you don't need to build your own: https://hledger.org/install.html
 
 On Nix or GUIX, the procedures are [different](https://github.com/simonmichael/hledger/issues/1033#issuecomment-1062506027).
 
