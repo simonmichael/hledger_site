@@ -154,6 +154,12 @@ todo:
 If you are not comfortable with Make's syntax, or when scripts get more complex,
 dedicated or multi-function shell scripts will be less hassle.
 
+## Just
+
+`just is a more modern alternative to make. I prefer it and recommend it for many use cases.
+See [hledger and just](just.md) for more details.
+
+
 ## Add-on commands
 
 If you name scripts hledger-something and make them executable in PATH,
