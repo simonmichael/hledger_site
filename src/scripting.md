@@ -156,7 +156,7 @@ dedicated or multi-function shell scripts will be less hassle.
 
 ## Just
 
-`just is a more modern alternative to make. I prefer it and recommend it for many use cases.
+`just` is a more modern alternative to make. I prefer it and recommend it for many use cases.
 See [hledger and just](just.md) for more details.
 
 
