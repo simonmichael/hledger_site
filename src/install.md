@@ -239,10 +239,11 @@ This will build the hledger tools and install them in `~/.cabal/bin`.
 ### Build in a source checkout
 
 If you'd like to build the [latest hledger source code](https://github.com/simonmichael/hledger/commits/master),
-get it with git (to get a release branch instead, add eg `-b 1.41`):
+get it with git:
 
     git clone https://github.com/simonmichael/hledger
     cd hledger
+    git checkout 1.41   # optional: switch to release tag
 
 You can build and install this source with:
 
