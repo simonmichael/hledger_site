@@ -297,12 +297,10 @@ Here are some known build issues and workarounds on various platforms (possibly 
 After installing, run the hledger tools and verify that their versions are what you just installed
 (and not older versions from a previous install). Eg:
 
-    $ hledger --version
-    hledger 1.41, ...
-    $ hledger-ui --version
-    hledger-ui 1.41, ...
-    $ hledger web --version
-    hledger-web 1.41, ...
+    $ hledger --version; hledger-ui --version; hledger-web --version
+    hledger 1.41-gc772f5de0-20241209, mac-aarch64
+    hledger-ui 1.41-gc772f5de0-20241209, mac-aarch64
+    hledger-web 1.41-gc772f5de0-20241209, mac-aarch64
 
 You can run the built-in unit tests if you'd like:
 
