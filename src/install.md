@@ -185,7 +185,7 @@ echo b
 
 ```
 curl -O https://raw.githubusercontent.com/simonmichael/hledger/master/hledger-install/hledger-install.sh
-less hledger-install.sh   # <- optional, good practice: inspect downloads before running
+less hledger-install.sh   # <- good practice: inspect scripts before running
 bash hledger-install.sh
 ```
 
@@ -247,7 +247,7 @@ get it with git (to get a release branch instead, add eg `-b 1.41`):
     git clone https://github.com/simonmichael/hledger
     cd hledger
 
-When in this directory you can build and install with:
+You can build and install this source with:
 
     stack update
     stack install
@@ -257,11 +257,9 @@ or:
     cabal update
     cabal install all:exes
 
-### Build in a Docker container
+or:
 
-This will use a docker image with the necessary build tools pre-installed:
-
-    cd hledger/docker
+    cd docker
     ./build.sh   # or build-dev.sh to keep build artifacts
 
 ### Build on Android
