@@ -60,11 +60,11 @@ https://github.com/microsoft/winget-cli/issues/210: Some users have reported iss
 
 [![Alpine edge](https://repology.org/badge/version-for-repo/alpine_edge/hledger.svg)](https://pkgs.alpinelinux.org/packages?name=hledger*&branch=edge)
 `doas apk add hledger hledger-ui hledger-web`\
+[![Alpine 3.21](https://repology.org/badge/version-for-repo/alpine_3_21/hledger.svg)](https://pkgs.alpinelinux.org/packages?name=hledger*&branch=v3.21)\
 [![Alpine 3.20](https://repology.org/badge/version-for-repo/alpine_3_20/hledger.svg)](https://pkgs.alpinelinux.org/packages?name=hledger*&branch=v3.20)\
 [![Alpine 3.19](https://repology.org/badge/version-for-repo/alpine_3_19/hledger.svg)](https://pkgs.alpinelinux.org/packages?name=hledger*&branch=v3.19)\
 [![Alpine 3.18](https://repology.org/badge/version-for-repo/alpine_3_18/hledger.svg)](https://pkgs.alpinelinux.org/packages?name=hledger*&branch=v3.18)\
 [![Alpine 3.17](https://repology.org/badge/version-for-repo/alpine_3_17/hledger.svg)](https://pkgs.alpinelinux.org/packages?name=hledger*&branch=v3.17)\
-[enabling the community repository](https://wiki.alpinelinux.org/wiki/Repositories#Enabling_the_community_repository)
 <!-- dhruvin -->
 
 [![Arch](https://repology.org/badge/version-for-repo/arch/hledger.svg)](https://archlinux.org/packages/extra/x86_64/hledger/)
@@ -72,21 +72,22 @@ https://github.com/microsoft/winget-cli/issues/210: Some users have reported iss
 
 [![Debian unstable](https://repology.org/badge/version-for-repo/debian_unstable/hledger.svg)](https://packages.debian.org/unstable/hledger)
 `sudo apt install hledger hledger-ui hledger-web`\
-[![Debian stable](https://img.shields.io/badge/Debian_stable_package-1.18.1-red.svg)](https://packages.debian.org/stable/hledger)\
-[![Debian oldstable](https://img.shields.io/badge/Debian_oldstable_package-1.10-red.svg)](https://packages.debian.org/oldstable/hledger)\
-[![Debian oldoldstable](https://img.shields.io/badge/Debian_oldoldstable_package-1.0.1-red.svg)](https://packages.debian.org/oldstable/hledger)\
+[![Debian testing](https://img.shields.io/badge/Debian_testing_package-1.32.3-red.svg)](https://packages.debian.org/testing/hledger)\
+[![Debian stable](https://img.shields.io/badge/Debian_stable_package-1.25-red.svg)](https://packages.debian.org/stable/hledger)\
+[![Debian oldstable](https://img.shields.io/badge/Debian_oldstable_package-1.18.1-red.svg)](https://packages.debian.org/oldstable/hledger)\
 [more..](https://packages.debian.org/search?searchon=names&keywords=hledger)
 <!-- Clint -->
 
-![Fedora_41](https://img.shields.io/badge/Fedora_41_package-1.30.1-red.svg)
+![Fedora_42](https://img.shields.io/badge/Fedora_42_package-1.32.3-red.svg)
 `sudo dnf install hledger`\
+![Fedora_41](https://img.shields.io/badge/Fedora_41_package-1.32.3-red.svg)\
 ![Fedora_40](https://img.shields.io/badge/Fedora_40_package-1.30.1-red.svg)\
 ![Fedora_39](https://img.shields.io/badge/Fedora_39_package-1.30.1-red.svg)\
 ![Fedora_38](https://img.shields.io/badge/Fedora_38_package-1.27.1-red.svg)\
 ![Fedora 37](https://repology.org/badge/version-for-repo/fedora_37/hledger.svg)\
 [more..](https://src.fedoraproject.org/rpms/hledger)
 
-[![Gentoo](https://img.shields.io/badge/Gentoo_package-1.32.3-red.svg)](https://gentoo.zugaina.org/Search?search=hledger)
+[![Gentoo](https://img.shields.io/badge/Gentoo_package-1.34-red.svg)](https://gentoo.zugaina.org/Search?search=hledger)
 `sudo layman -a haskell && sudo emerge hledger hledger-ui hledger-web`
 <!-- ezzie -->
 
@@ -98,10 +99,9 @@ https://github.com/microsoft/winget-cli/issues/210: Some users have reported iss
 [hledger-armhf32-debian.gz](https://github.com/simonmichael/hledger/releases/tag/1.18) *(unaudited)*
 <!-- nobodyinperson -->
 
-[![ubuntu_24_04](https://repology.org/badge/version-for-repo/ubuntu_24_04/hledger.svg)](https://packages.ubuntu.com/noble/hledger)
+[![ubuntu_24_10](https://repology.org/badge/version-for-repo/ubuntu_24_10/hledger.svg)](https://packages.ubuntu.com/oracular/hledger)
 `sudo apt install hledger hledger-ui hledger-web`\
-[![ubuntu_23_10](https://repology.org/badge/version-for-repo/ubuntu_23_10/hledger.svg)](https://packages.ubuntu.com/mantic/hledger)\
-[![ubuntu_23_04](https://repology.org/badge/version-for-repo/ubuntu_23_04/hledger.svg)](https://packages.ubuntu.com/lunar/hledger) \
+[![ubuntu_24_04](https://repology.org/badge/version-for-repo/ubuntu_24_04/hledger.svg)](https://packages.ubuntu.com/noble/hledger) \
 [![ubuntu_22_04](https://repology.org/badge/version-for-repo/ubuntu_22_04/hledger.svg)](https://packages.ubuntu.com/jammy/hledger) \
 [![ubuntu_20_04](https://repology.org/badge/version-for-repo/ubuntu_20_04/hledger.svg)](https://packages.ubuntu.com/focal/hledger) \
 [![ubuntu_18_04](https://repology.org/badge/version-for-repo/ubuntu_18_04/hledger.svg)](https://packages.ubuntu.com/bionic/hledger)\
@@ -115,9 +115,6 @@ https://github.com/microsoft/winget-cli/issues/210: Some users have reported iss
 
 [![freebsd ports](https://repology.org/badge/version-for-repo/freebsd/hledger.svg)](https://www.freshports.org/search.php?query=hledger)
 `pkg install hs-hledger hs-hledger-ui hs-hledger-web`
-\
-[![netbsd package](https://img.shields.io/badge/NetBSD-1.31-red.svg)](https://cdn.netbsd.org/pub/pkgsrc/current/pkgsrc/finance/hledger/index.html)
-`pkg_add hledger`
 \
 ![openbsd ports](https://repology.org/badge/version-for-repo/openbsd/hledger.svg)
 `pkg_add hledger`
