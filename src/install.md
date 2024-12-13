@@ -51,6 +51,10 @@ Official release binaries for Linux, Mac, Windows.
 \
 [![Winget](https://repology.org/badge/version-for-repo/winget/hledger.svg)](https://github.com/microsoft/winget-pkgs/tree/master/manifests/s/simonmichael/hledger)
 `winget install simonmichael.hledger`
+<!--
+https://learn.microsoft.com/en-us/windows/package-manager/winget/#use-winget
+https://github.com/microsoft/winget-cli/issues/210: Some users have reported isssues with the client not being on their PATH 
+-->
 
 ### Linux
 
@@ -166,6 +170,19 @@ It installs build tools if needed,
 then builds the current release of the hledger tools and some [add-on tools](scripts.md),
 installing them in ~/.local/bin (or ~/.cabal/bin if you had cabal and not stack installed).
 
+<!--
+Issues with cli snippets in hledger.org code blocks:
+
+- Wrap long lines with \ to make them visible without scrolling on the website.
+- When multiple lines are copy/pasted from the website to a terminal, only the first runs (because of ^J's ?)
+  Insert ;\ between lines to work around.
+
+```
+echo a
+echo b
+```
+-->
+
 ```
 curl -O https://raw.githubusercontent.com/simonmichael/hledger/master/hledger-install/hledger-install.sh
 less hledger-install.sh   # <- optional, good practice: inspect downloads before running
@@ -179,15 +196,22 @@ You can install it
 
 - with your system package manager
 - or from its [website][stack]
-- or with [ghcup] (good if you plan to do a lot of Haskelling).
+- or with [ghcup] (this is ideal if you plan to do more Haskelling).
 
-Once stack is installed, run these commands:
-
+Once stack is installed, run:
 ```
 stack update
-stack install base-compat-0.14.0 hledger-lib-1.41 hledger-1.41 hledger-ui-1.41 hledger-web-1.41 \
-  --resolver=lts-23 --verbosity=error
+stack install hledger-1.41 hledger-ui-1.41 hledger-web-1.41 hledger-lib-1.41 \
+  base-compat-0.14.0 --resolver=lts-23 --verbosity=error
 ```
+<!--
+ghc 9.10:
+```
+stack update
+stack install hledger-1.41 hledger-ui-1.41 hledger-web-1.41 \
+   --resolver nightly-2024-12-13
+```
+-->
 
 stack will install a compatible version of the GHC compiler if needed,
 perhaps using ~2G of disk space (under `~/.ghcup` if it is configured to use ghcup, otherwise under `~/.stack`).
@@ -195,13 +219,13 @@ Then it will build the hledger tools and install them in `~/.local/bin`.
 
 ### Build with cabal
 
-`cabal` is another popular Haskell build tool.
+`cabal` is the other popular Haskell build tool.
 You can install it with your system package manager.
 You will also need to install a version of GHC that can build current hledger;
 usually any version newer than 8.10.7 will do.
 Or, you can install both of these with [ghcup].
 
-Then:
+Then run:
 
 ```
 cabal update
@@ -321,7 +345,7 @@ Eg if you are using bash, this will show $PATH:
 
 and this will add the stack and cabal install dirs to it permanently:
 
-    echo "export PATH=~/.local/bin:~/.cabal/bin:$PATH" >> ~/.profile 
+    echo "export PATH=~/.local/bin:~/.cabal/bin:$PATH" >> ~/.profile
     source ~/.profile
 
 Here's [how to set environment variables on Windows](https://www.devdungeon.com/content/set-environment-variables-windows).
