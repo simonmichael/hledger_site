@@ -198,17 +198,9 @@ You can install it
 Once stack is installed, run:
 ```
 stack update
-stack install hledger-1.41 hledger-ui-1.41 hledger-web-1.41 hledger-lib-1.41 \
-  base-compat-0.14.0 --resolver=lts-23 --verbosity=error
-```
-<!--
-ghc 9.10:
-```
-stack update
 stack install hledger-1.41 hledger-ui-1.41 hledger-web-1.41 \
-   --resolver nightly-2024-12-13
+  --resolver=nightly-2024-12-19 --verbosity=error
 ```
--->
 
 stack will install a compatible version of the GHC compiler if needed,
 perhaps using ~2G of disk space (under `~/.ghcup` if it is configured to use ghcup, otherwise under `~/.stack`).
