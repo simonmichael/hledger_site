@@ -29,7 +29,7 @@ look for ideas at [Ledger](ledger.md). Eg
 - costs in balance assertion/assignment amounts can not be read by Ledger and will need to be removed or commented
 - some hledger balance assertions can not be read by Ledger and will need to be modified or commented out.
 
-Paisa will only see accounts whose top level is Assets, Liabilities, Equity, Income or Expense (case insensitive). If you don't use those, you can use `print --alias` to rewrite them. For other account names special to Paisa, see <https://ananthakumaran.in/paisa/accounts.html>.
+Paisa will only see accounts whose top level is Assets, Liabilities, Equity, Income or Expense (case sensitive). If you don't use those, you can use `print --alias` to rewrite them. For other account names special to Paisa, see <https://ananthakumaran.in/paisa/accounts.html>.
 
 ### Installing hledger as a fake Ledger
 
