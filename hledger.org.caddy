@@ -352,6 +352,12 @@ hledger.org {
 	# for fun
 	redir /DEBITS.html /CREDITS.html
 
+	@versionRoots {
+		path_regexp version ^/(\d+\.\d+)/?$
+	}
+
+	redir @versionRoots {1}/hledger.html
+
 	# rewrites
 
 	# rewrite any slug without an extension, to the .html form
