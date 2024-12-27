@@ -888,6 +888,9 @@ config file, with a `y`/`yes` or `n`/`no` value to force it on or off.
 
 In unix-like environments, when displaying large output (in any output
 format) in the terminal, hledger tries to use a pager when appropriate.
+(You can disable this with the `--pager=no` option, perhaps in your
+config file.)
+
 The pager shows one page of text at a time, and lets you scroll around
 to see more. While it is active, usually `SPACE` shows the next page,
 `h` shows help, and `q` quits. The home/end/page up/page down/cursor
@@ -968,6 +971,13 @@ aliases](#alias-directive) to rewrite your account names temporarily, if
 needed, as in this
 [hledger2beancount.conf](https://github.com/simonmichael/hledger/blob/master/examples/hledger2beancount.conf)
 config file.
+
+2024-12-20: Some more things not yet handled for you:
+
+-   P directives are not converted automatically - convert those
+    yourself
+-   Balance assignments are not converted (Beancount doesnt support
+    them) - replace those with explicit amounts
 
 ##### Beancount account names
 
@@ -2594,7 +2604,7 @@ not matching accounts as you expect, try troubleshooting with the
 accounts command, eg something like:
 
 ``` cli
-$ hledger accounts --alias assets=bassetts type:a
+$ hledger accounts --types -1 --alias assets=bassetts
 ```
 
 ### `commodity` directive
@@ -9617,11 +9627,6 @@ at `http://localhost:5000` then you might run the `balance` command with
 the extra option `--base-url=http://localhost:5000`. You can also
 produce relative links, like `--base-url="some/path"` or
 `--base-url=""`.)
-
-The balance reports\' HTML output currently does not indent [tree
-mode](#list-or-tree-mode) reports properly
-([#1846](https://github.com/simonmichael/hledger/issues/1846)). So in
-HTML balance reports, use list mode for now (it is the default).
 
 #### Some useful balance reports
 
