@@ -128,16 +128,13 @@ MANUALS=\
 	../hledger-ui/hledger-ui.md \
 	../hledger-web/hledger-web.md \
 
-# After a release (>= 1.22), commit a snapshot of the release manuals
-# as src/VER/, copied from the parent directory, which should be a
-# clean checkout of the main hledger repo's master branch.
-# Behaviour with a dirty main repo is unclear.
-# Shake.hs in main repo might get rebuilt or have its deps installed.
-# This leaves the main repo checked out on release branch.
-# Includes the main repo's current git hash in the message, FWIW.
+# Create (or update) a snapshot of the VER release manuals, in src/VER/hledger*.
+# These will be copied from the main repo in the parent directory, which should be clean.
+# It will be switched to the `VER-branch` branch (and left there).
+# The commit message will include the main repo's current git hash, FWIW.
 snapshot-%:
 	git -C .. checkout $*-branch && \
-	(cd ..; ./Shake.hs webmanuals) && \
+	(cd ..; ./Shake webmanuals) && \
 	mkdir -p src/$* && \
 	for f in $(MANUALS); do test -e $$f && cp $$f src/$*; done && \
 	git add src/$* && git commit -m "snapshot of $* manuals (`git -C .. show-ref heads/master -s9`)" src/$*
