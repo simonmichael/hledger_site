@@ -52,7 +52,7 @@ Practical advice and examples for real-world tasks:
 - [hledger's examples/ directory](https://github.com/simonmichael/hledger/tree/master/examples)
 - [plaintextaccounting.org](https://plaintextaccounting.org)  general PTA docs, not hledger-specific
 - [PTA forum](https://forum.plaintextaccounting.org) discussion on discourse
-- [/r/plaintextaccounting](https://www.reddit.com/r/plaintextaccounting/new/) discussion on reddit ([note]())
+- [/r/plaintextaccounting](https://www.reddit.com/r/plaintextaccounting/new/) discussion on reddit ([note](https://forum.plaintextaccounting.org/t/welcome-to-the-plain-text-accounting-forum/33))
 
 ## Support
 
