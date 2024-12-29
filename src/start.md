@@ -43,19 +43,16 @@ You can also view the hledger manual in the terminal with [`hledger help`](hledg
 - [hledger-ui manual](hledger-ui.md)
 - [hledger-web manual](hledger-web.md)
 
-## How-tos
+## More docs
 
 Practical advice and examples for real-world tasks:
 
 - [FAQ](faq.md)
 - [Cookbook](cookbook.md)
-
-See also:
-
 - [hledger's examples/ directory](https://github.com/simonmichael/hledger/tree/master/examples)
-- [wiki.plaintextaccounting.org](https://wiki.plaintextaccounting.org)  general PTA tips, not hledger-specific
-- [plaintextaccounting reddit](https://www.reddit.com/r/plaintextaccounting/new/) discussion of various PTA topics
-- [PTA blog posts](https://plaintextaccounting.org/#articles-blog-posts) (old)
+- [plaintextaccounting.org](https://plaintextaccounting.org)  general PTA docs, not hledger-specific
+- [PTA forum](https://forum.plaintextaccounting.org) discussion on discourse
+- [/r/plaintextaccounting](https://www.reddit.com/r/plaintextaccounting/new/) discussion on reddit ([note]())
 
 ## Support
 
@@ -138,4 +135,4 @@ Find things that get you in the mood and energised.
 
 ### Have fun, take breaks!
 
-- [Accounting for Dragons](https://podcastle.org/2009/10/09/pc-miniature-38-accounting-for-dragons).
+- [Accounting for Dragons](https://podcastle.org/2009/10/09/pc-miniature-38-accounting-for-dragons)
