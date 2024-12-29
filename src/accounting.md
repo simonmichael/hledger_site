@@ -79,11 +79,10 @@ $ hledger register desc:supermarket expenses
 
 But descriptions are irregular, and as you can see we missed the $5 purchase on the following day.
 
-Instead, the major "top-level" accounts above are subdivided into subaccounts which can be used
-in transactions, thereby categorising them in a more structured way.
-If needed, these subaccounts can be subdivided further.
-This tree of accounts is called the Chart of Accounts. Here's a simple example
-where `assets`, `revenue` and `expenses` each have a few subaccounts:
+Instead, bookkeepers usually subdivide the top-level accounts into subaccounts, subsubaccounts, etc.
+which can be used in transactions to record more specific categories.
+This forms a hierarchy or tree of accounts, called the Chart of Accounts. 
+Here's a simple example where `assets`, `revenue` and `expenses` each have a few subaccounts:
 
 ```
 assets
@@ -162,6 +161,7 @@ expenses:supplies
 
 and `accounts --tree` will show the tree structure, indenting subaccounts below their parents (and eliding the common part of their names):
 ```cli
+$ hledger accounts --tree
 assets
   cash
   checking
@@ -170,9 +170,21 @@ expenses
   supplies
 ```
 
-Conversely, the `balance` command shows the tree structure by default:
+Similarly, the `balance` command shows a flat list of accounts and their balance changes, by default:
 ```cli
 $ hledger balance
+                 $-5  assets:cash
+                $-10  assets:checking
+                  $5  expenses:food
+                 $10  expenses:supplies
+--------------------
+                   0
+```
+
+And with `--tree`, it shows the account hierarchy:
+
+```cli
+$ hledger balance --tree
                 $-15  assets
                  $-5    cash
                 $-10    checking
@@ -182,22 +194,8 @@ $ hledger balance
 --------------------
                    0
 ```
-
-As you can see, the balance reported for parent accounts includes the
-balances of any subaccounts (it would also include any postings to the
-parent account itself.)
-
-To see full account names in a flat list, use `--flat`:
-
-```cli
-$ hledger balance --flat
-                 $-5  assets:cash
-                $-10  assets:checking
-                  $5  expenses:food
-                 $10  expenses:supplies
---------------------
-                   0
-```
+In tree mode, the balance reported for parent accounts includes the balances of any subaccounts.
+Eg above, the $15 expenses balance is the sum of the subaccount balances ($5 expenses:food and $10 expenses:supplies).
 
 hledger accepts whatever account names you choose, so you can use as much or as little account hierarchy as you need.
 Most users have at least two levels of accounts.
