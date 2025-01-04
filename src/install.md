@@ -88,7 +88,7 @@ https://github.com/microsoft/winget-cli/issues/210: Some users have reported iss
 [more..](https://src.fedoraproject.org/rpms/hledger)
 
 [![Gentoo](https://img.shields.io/badge/Gentoo_package-1.34-red.svg)](https://gentoo.zugaina.org/Search?search=hledger)
-`sudo layman -a haskell && sudo emerge hledger hledger-ui hledger-web`
+`sudo eselect repository enable haskell && sudo emerge hledger hledger-ui hledger-web`
 <!-- ezzie -->
 
 ![Raspberry Pi release binaries](https://img.shields.io/badge/Raspberry_Pi_release_binaries-1.22.2-red.svg)
