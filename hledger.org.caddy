@@ -352,11 +352,9 @@ hledger.org {
 	# for fun
 	redir /DEBITS.html /CREDITS.html
 
-	@versionRoots {
-		path_regexp version ^/(\d+\.\d+)/?$
-	}
+	@versionRoots path_regexp version ^/(\d+\.\d+)/?$
 
-	redir @versionRoots {1}/hledger.html
+	redir @versionRoots {re.version.1}/hledger.html
 
 	# rewrites
 
