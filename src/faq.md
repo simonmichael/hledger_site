@@ -378,6 +378,11 @@ you could add this rule, and enable it with `--auto`:
 ```
 Related: [50% of the balance?](https://forum.plaintextaccounting.org/t/50-of-the-balance/461)
 
+## How could I record call/put stock options ?
+
+Here's a [suggestion](https://groups.google.com/g/beancount/c/iJirO6GOMgU/m/8VDgUQxyIQAJ) from the beancount mail list
+([reddit](https://www.reddit.com/r/plaintextaccounting/comments/1i0ul0y/callput_stock_options_and_hledger/)).
+
 
 ## CSV
 
