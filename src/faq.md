@@ -391,6 +391,10 @@ Other options: you could remove one of the entries manually.
 Or you could import both entries, but have them transfer to and from an imaginary third account
 (but this creates extra noise in your journal and reports).
 
+## Can I do arithmetic calculations in CSV rules ?
+
+Eg, dividing the amount by 2 ? No; currently the best thing is to preprocess the CSV,
+adding the calculated values as a new field, before converting it with hledger.
 
 ## Where can I find more help with CSV conversion ?
 
@@ -399,7 +403,6 @@ Study the whole [CSV](hledger.md#csv) section in the manual carefully.
 And of course, make use of the [chat](#support).
 
 ## REPORTING
-
 
 ## Why am I seeing some amounts without an account name in reports ?
 
