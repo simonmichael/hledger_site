@@ -361,6 +361,24 @@ Related discussion:
 [#510](https://github.com/simonmichael/hledger/issues/510),
 [#1007](https://github.com/simonmichael/hledger/issues/1007).
 
+## Can I use arithmetic expressions in journal entries ?
+
+Eg, [Ledger-style amount expressions](https://ledger-cli.org/doc/ledger3.html#Expression-amounts) ?
+Generally no, hledger doesn't allow this.
+(If you want it, you could revive PR [#934](https://github.com/simonmichael/hledger/pull/934).)
+
+In some cases, you can emulate it with [auto postings](https://hledger.org/hledger.html#auto-postings),
+which can multiple amounts by a constant. Eg to (effectively) divide all food expenses by 2,
+you could add this rule, and enable it with `--auto`:
+
+```journal
+# Add a posting subtracting half from every food expense (good enough for expense reports)
+= revenues
+    (expenses:food)  *-.5
+```
+Related: [50% of the balance?](https://forum.plaintextaccounting.org/t/50-of-the-balance/461)
+
+
 ## CSV
 
 ## Where can I find hledger CSV rules for my financial institutions ?
