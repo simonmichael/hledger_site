@@ -77,7 +77,8 @@ $ hledger register desc:supermarket expenses
 2015/05/25 trip to the super..  expenses                       $10           $10
 ```
 
-But descriptions are irregular, and as you can see we missed the $5 purchase on the following day.
+But descriptions are irregular, so eg the report above misses
+[the $5 purchase on the following day](basics.md#record-a-transaction-by-editing).
 
 Instead, bookkeepers usually subdivide the top-level accounts into subaccounts, subsubaccounts, etc.
 which can be used in transactions to record more specific categories.
