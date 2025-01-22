@@ -821,7 +821,7 @@ displayed as shown:
 $ hledger print -c '$1.000,0'
 ```
 
-This option can repeated to set the display style for multiple
+This option can be repeated to set the display style for multiple
 commodities/currencies. Its argument is as described in the [commodity
 directive](#commodity-directive).
 
