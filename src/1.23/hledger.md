@@ -5616,11 +5616,11 @@ expressions](#regular-expressions):
      ^expenses?(:|$)                                                    | Expense
 
 For people using standard english account names, this feature helps
-hledger's [high-level reports](#declaring-account-types) work out of the
+hledger's [high-level reports](#account-types) work out of the
 box with minimal configuration.
 
 If you use non-english account names, you should [declare account
-types](#declaring-account-types) to make these reports work. And more
+types](#account-types) to make these reports work. And more
 generally, declaring accounts and types is usually a good idea, for
 increased clarity and predictability (and for the other benefits of
 account directives: error checking, display order, etc).
