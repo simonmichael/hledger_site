@@ -43,18 +43,22 @@ Official release binaries for Linux, Mac, Windows.
 
 ### Windows
 
+<!--
+https://learn.microsoft.com/en-us/windows/package-manager/winget/#use-winget
+https://github.com/microsoft/winget-cli/issues/210: Some users have reported isssues with the client not being on their PATH 
+-->
+[![Winget](https://repology.org/badge/version-for-repo/winget/hledger.svg)](https://github.com/microsoft/winget-pkgs/tree/master/manifests/s/simonmichael/hledger)
+`winget install hledger`\
+Installs to `C:\Users\Simon\AppData\Local\Microsoft\WinGet\Links\hledger.exe`.
+On ARM machines this runs via emulation (slower than normal).
+hledger-ui and hledger-web aren't available via winget yet.
+\
+\
 [![Scoop](https://repology.org/badge/version-for-repo/scoop/hledger.svg)](https://scoop.sh/#/apps?q=hledger)
 `scoop install hledger`
 \
 [![Chocolatey](https://repology.org/badge/version-for-repo/chocolatey/hledger.svg)](https://community.chocolatey.org/packages/hledger)
 `choco install hledger -y`
-\
-[![Winget](https://repology.org/badge/version-for-repo/winget/hledger.svg)](https://github.com/microsoft/winget-pkgs/tree/master/manifests/s/simonmichael/hledger)
-`winget install simonmichael.hledger`
-<!--
-https://learn.microsoft.com/en-us/windows/package-manager/winget/#use-winget
-https://github.com/microsoft/winget-cli/issues/210: Some users have reported isssues with the client not being on their PATH 
--->
 
 ### Linux
 
@@ -149,7 +153,9 @@ But they will require quite a bit of memory and disk space -
 up to 4G of RAM and 2G of your hard drive to build the hledger tools.
 See also the [build tips](#build-tips) below.
 
-On unix systems, you will need a [UTF-8-aware locale](#lang) configured.
+### Build on Unix/Linux/Mac
+
+On unix systems (most machines, except Windows), you will need a [UTF-8-aware locale](#lang) configured.
 Also you may need to install additional C libraries 
 to avoid errors like "*cannot find -ltinfo*" when building hledger.
 Eg,
@@ -157,15 +163,16 @@ Eg,
 - on Debian or Ubuntu: `sudo apt install libgmp-dev libtinfo-dev zlib1g-dev`
 - on Fedora or RHEL: `sudo dnf install gmp-devel ncurses-devel zlib-devel`
 
-Here are some ways to build hledger:
+Here are some ways to build hledger on unix:
 
-### Build with hledger-install
+#### Build with hledger-install
 
 [hledger-install.sh][hledger-install] is an automated install script that requires only [bash].
-This is a good choice if you are not used to building Haskell software.
-It installs build tools if needed,
-then builds the current release of the hledger tools and some [add-on tools](scripts.md),
-installing them in ~/.local/bin (or ~/.cabal/bin if you had cabal and not stack installed).
+This is a good choice if you are not used to building Haskell software
+(and if you are using a unix-based system, not Windows).
+hledger-install.sh downloads Haskell build tools if needed,
+then builds the current release of the hledger tools, plus a number of [add-on tools](scripts.md),
+and installs them in ~/.local/bin. (Or ~/.cabal/bin, if you had cabal and not stack installed.)
 
 <!--
 Issues with cli snippets in hledger.org code blocks:
@@ -186,7 +193,7 @@ less hledger-install.sh   # <- good practice: inspect scripts before running
 bash hledger-install.sh
 ```
 
-### Build with stack
+#### Build with stack
 
 `stack` is a reliable Haskell build tool.
 You can install it 
@@ -199,14 +206,19 @@ Once stack is installed, run:
 ```
 stack update
 stack install hledger-1.41 hledger-ui-1.41 hledger-web-1.41 \
-  --resolver=nightly-2024-12-19 --verbosity=error
+  --resolver=nightly-2025-01-01 --verbosity=error
+```
+
+Or as one line you can paste on Windows:
+```
+stack update & stack install hledger-1.41 hledger-ui-1.41 hledger-web-1.41 --resolver=nightly-2025-01-01 --verbosity=error
 ```
 
 stack will install a compatible version of the GHC compiler if needed,
 perhaps using ~2G of disk space (under `~/.ghcup` if it is configured to use ghcup, otherwise under `~/.stack`).
 Then it will build the hledger tools and install them in `~/.local/bin`.
 
-### Build with cabal
+#### Build with cabal
 
 `cabal` is the other popular Haskell build tool.
 You can install it with your system package manager.
@@ -228,16 +240,16 @@ Try without, let the caballers deal with it.
 
 This will build the hledger tools and install them in `~/.cabal/bin`.
 
-### Build in a source checkout
+#### Build in a source checkout
 
 If you'd like to build the [latest hledger source code](https://github.com/simonmichael/hledger/commits/master),
-get it with git:
+download that first with git:
 
     git clone https://github.com/simonmichael/hledger
     cd hledger
     git checkout 1.41   # optional: switch to release tag
 
-You can build and install this source with:
+Now you can build and install this source with:
 
     stack update
     stack install
@@ -251,6 +263,40 @@ or:
 
     cd docker
     ./build.sh   # or build-dev.sh to keep build artifacts
+
+### Build on Windows
+
+These notes are for WIndows 11. Some things may apply to older Windows versions as well.
+
+**stack**\
+On Windows, stack is the easiest way to get a haskell toolchain.
+stack will install GHC and other tools for you automatically.
+You can install stack with `winget install commercialhaskell.stack`.
+On ARM machines, stack currently will install x86_64 versions of GHC, which will build x86_64 hledger binaries, and all of these will run via emulation (slowly).
+
+**ghcup**\
+If you want more control over your haskell toolchain, to more easily see what's installed
+and manage tool versions and disk space, you could install ghcup.
+Then you can use `ghcup tui` to install ghc and either stack or cabal.
+(These docs focus on stack.
+If you are using both ghcup and stack, install stack via ghcup, so that stack will leave ghc management to ghcup.)
+ghcup isn't yet easy to install on ARM machines, however.
+
+**Windows updates**\
+For stack and probably other haskell tools, you need to apply all windows updates to get the latest TLS certificates, so that network requests will work.
+
+**Build and install**\
+Then you could run `stack install hledger`.
+This would build the hledger version from the current stackage LTS snapshot, which is not always the latest release.
+So instead, it's better to use the latest `stack install` command shown above.
+Here it is as a one-line command you can paste into a Windows CMD or powershell window:
+```
+stack update & stack install hledger-1.41 hledger-ui-1.41 hledger-web-1.41 --resolver=nightly-2025-01-01 --verbosity=error
+```
+
+On Windows, the build may die repeatedly with a "... permission denied (Access is denied.)" error; we [don't know why](https://github.com/commercialhaskell/stack/issues/2426).
+Each time, you have to run it again to continue (up arrow, enter).
+When complete, it installs executables at eg `C:\Users\Simon\AppData\Roaming\local\bin\hledger.exe`.
 
 ### Build on Android
 
