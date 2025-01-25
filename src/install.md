@@ -209,11 +209,6 @@ stack install hledger-1.41 hledger-ui-1.41 hledger-web-1.41 \
   --resolver=nightly-2025-01-01 --verbosity=error
 ```
 
-Or as one line you can paste on Windows:
-```
-stack update & stack install hledger-1.41 hledger-ui-1.41 hledger-web-1.41 --resolver=nightly-2025-01-01 --verbosity=error
-```
-
 stack will install a compatible version of the GHC compiler if needed,
 perhaps using ~2G of disk space (under `~/.ghcup` if it is configured to use ghcup, otherwise under `~/.stack`).
 Then it will build the hledger tools and install them in `~/.local/bin`.
@@ -296,6 +291,7 @@ stack update & stack install hledger-1.41 hledger-ui-1.41 hledger-web-1.41 --res
 
 On Windows, the build may die repeatedly with a "... permission denied (Access is denied.)" error; we [don't know why](https://github.com/commercialhaskell/stack/issues/2426).
 Each time, you have to run it again to continue (up arrow, enter).
+
 When complete, it installs executables at eg `C:\Users\Simon\AppData\Roaming\local\bin\hledger.exe`.
 
 ### Build on Android
