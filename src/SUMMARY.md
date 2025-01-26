@@ -25,9 +25,9 @@
 
 # FINANCE
 
-- [Finance](FINANCE.md)
-- [Regression bounty](REGRESSIONS.md)
+- [Project finances](FINANCE.md)
 - [Sponsor hledger](sponsor.md)
+- [Regression bounty](REGRESSIONS.md)
 - [Financial reports](financerepo.md)
 
 # ALL PAGES
@@ -81,7 +81,7 @@
 - [Scripting hledger](scripting.md)
 - [Simon's setup notes](simons-setup.md)
 - [SM's time & task dashboard](time-and-task-dashboard.md)
-- [Sponsor](sponsor.md)
+- [Sponsor hledger](sponsor.md)
 - [Tags tutorial](tags-tutorial.md)
 - [A tax reporting setup](tax-reporting-setup.md)
 - [Converting time to money](time-to-money.md)
@@ -139,14 +139,14 @@ and previewing them when working on docs locally.
 - [ERRORS](ERRORS.md)
 - [EXAMPLES](EXAMPLES.md)
 - [FILES](FILES.md)
-- [FINANCE](FINANCE.md)
+- [Project finances](FINANCE.md)
 - [Investment Accounting Feature Ladder](investment-accounting-features.md)
 - [ISSUES](ISSUES.md)
 - [JUST-MAKE-SHAKE](JUST-MAKE-SHAKE.md)
 - [MOCKUPS](MOCKUPS.md)
 - [PULLREQUESTS](PULLREQUESTS.md)
 - [README](dev-README.md)
-- [REGRESSIONS](REGRESSIONS.md)
+- [Regression bounty](REGRESSIONS.md)
 - [RELEASING](RELEASING.md)
 - [REPOS](REPOS.md)
 - [ROADMAP](ROADMAP.md)
