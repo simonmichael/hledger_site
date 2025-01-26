@@ -1,2 +1,1 @@
-Financial reports are in the hledger_finance repo,
-see <http://finance.hledger.org>.
+Financial reports are in the [hledger_finance](https://github.com/simonmichael/hledger_finance) repo.

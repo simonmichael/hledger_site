@@ -25,10 +25,10 @@
 
 # FINANCE
 
-- [Sponsor hledger](sponsor.md)
+- [Finance](FINANCE.md)
 - [Regression bounty](REGRESSIONS.md)
+- [Sponsor hledger](sponsor.md)
 - [Financial reports](financerepo.md)
-- [FINANCE notes](FINANCE.md)
 
 # ALL PAGES
 

@@ -1,4 +1,4 @@
-# Sponsoring hledger
+# Sponsor hledger
 
 <div class=pagetoc>
 
