@@ -51,7 +51,6 @@
 - [Cost notation](cost-notation.md)
 - [Create a journal](create-a-journal.md)
 - [Currency conversion](currency-conversion.md)
-- [Currency conversion 2](conversion2.md)
 - [Editor configuration](editors.md)
 - [Exporting from hledger](export.md)
 - [FAQ](faq.md)

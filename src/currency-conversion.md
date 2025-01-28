@@ -4,12 +4,17 @@
 
 <!-- toc -->
 </div>
+*I wrote two currency conversion explainers in 2021, now both combined on this page.
+Ist shows some different ways to record currency conversions.
+See [Cookbook > Multiple currencies](cookbook.md#multiple-currencies) for more.
+
+----
 
 Here are various ways of recording a conversion from one currency or commodity to another.
 
-## Implicit conversion
+## Implicit conversion rate
 
-For simplicity, let's assume we are just exchanging cash with a friend:
+Let's say we are exchanging cash with a friend:
 
 ```journal
 2021-07-27 give dollars, get euros
@@ -30,24 +35,23 @@ $ hledger print -x
 ```
 -->
 
-This is easy to write and to understand; it's fine for getting started.
+This is easy to write and to understand.
 However it is not a fully correct double-entry-bookkeeping journal entry,
 since USD has magically transformed into EUR "in flight".
-It is also somewhat error prone, since a typo in either amount may not be detected.
+It is also error prone, since a typo in either amount may not be detected.
 For example, we might forget the decimal point and write `USD -1000`.
 Also, it is easy to create such entries accidentally.
 For example, in one posting within a transaction we might mistype or omit the currency symbol.
-
 hledger accepts these implicit conversions by default, for convenience and compatibility.
 But you can disallow them by using 
 [strict mode](hledger.md#strict-mode) 
 or by running the [check](hledger.md#check) command
 (eg: `hledger check balancednoautoconversion`).
 
-## Declared conversion rate
+## Explicit conversion rate
 
-We can declare the conversion rate,
-which adds redundancy allowing hledger to catch errors,
+We can record the conversion rate (cost of one currency in the other) explicitly.
+This adds redundancy, allowing hledger to catch more errors,
 and also makes the rate more explicit to human readers.
 We can write the total amount with `@@` 
 (convenient when entries are complex):
@@ -68,12 +72,9 @@ or the per-unit amount with `@`
 ```
 
 hledger calls these "[costs](hledger.md#costs)".
-They can also be used [generate market prices](hledger.md#--infer-market-price-market-prices-from-transactions)
-for value reports.
+This is the most common way to record such transactions.
 
-This is probably the most frequently used style among hledger users.
-
-## Fully balanced conversion
+## Conversion using equity
 
 A fully correct double-entry-bookkeeping journal entry 
 avoids the PTA-specific `@`/`@@` notation,
@@ -98,7 +99,7 @@ or, letting hledger infer the above:
 
 This is discussed more [here](investments.md#a-more-correct-entry).
 
-## Two entries
+## Two entries for one conversion
 
 This comes up eg when [converting](import-csv.md) Paypal CSV, 
 which provides two records for a currency conversion, one for each side.
@@ -133,7 +134,7 @@ Ie: some canadian dollars received, followed by two transactions converting that
 This is equivalent to the "Fully balanced conversion" above, 
 just with the conversion entry split into two.
 
-## Balancing the books
+## Balancing the accounting equation
 
 If you are a fan of the accounting equation and like to check it by seeing
 a zero total in the [`balancesheetequity`](hledger.md#balancesheetequity) report,
@@ -158,3 +159,146 @@ $ hledger close equity:conversion --close -e 7/1 \
     revenues:conversion
 
 ``` -->
+
+## Converting with equity or with costs
+
+In a currency conversion or a stock purchase/sale, one commodity is exchanged for another.
+In plain text accounting, there are two ways to record such conversions:
+
+### Equity method
+
+Balance both commodities against an Equity account. Eg:
+
+<!-- 1a.j -->
+```journal
+2021-01-01
+  assets:usd                -1.20 USD
+  equity:conversion          1.20 USD
+  equity:conversion         -1.00 EUR
+  assets:eur                 1.00 EUR
+```
+
+or, equivalently:
+
+<!-- 1b.j -->
+```journal
+2021-01-01
+  assets:usd                -1.20 USD
+  assets:eur                 1.00 EUR
+  equity:conversion
+```
+
+### Cost method
+
+PTA tools provide the @ (or @@) notation for specifying a conversion cost
+(essentially; Ledger/Beancount also provide an alternate {} notation):
+
+<!-- 2a.j -->
+```journal
+2021-01-01
+  assets:usd                -1.20 USD
+  assets:eur                 1.00 EUR @ 1.20 USD
+```
+
+@-priced amounts (the 1.00 EUR above) will be converted to their price's commodity (USD)
+
+- internally for checking transaction balancedness, always
+- and visibly in reports, when the `-B/--cost` flag is used.
+
+Note the redundancy in this entry; the two amounts and the @ price must agree. 
+This provides some extra error checking, but you can also write it non-redundantly, 
+by omitting an amount:
+
+<!-- 2b.j -->
+```journal
+2021-01-01
+  assets:usd                           ; the -1.20 USD amount is inferred
+  assets:eur                 1.00 EUR @ 1.20 USD
+```
+
+or the conversion price:
+
+<!-- 2c.j -->
+```journal
+2021-01-01
+  assets:usd                -1.20 USD
+  assets:eur                 1.00 EUR  ; the @ 1.20 USD price is inferred
+```
+
+### Which is better ?
+
+It depends...
+#### Cost reporting
+
+The @ (conversion price) method allows "cost" reporting. By adding the
+`-B/--cost` flag you can easily see what things cost (or were sold
+for) in the other commodity. Eg:
+
+```cli
+$ hledger -f 2a.j bal --cost assets:eur
+            1.20 USD  assets:eur
+--------------------
+            1.20 USD  
+```
+
+
+#### Capital gain/loss reporting
+
+The equity method keeps a trace of all commodity exchanges in the equity account,
+in effect properly recording the accumulated gain/loss from all commodity exchanges
+(it can be seen by valuing the accumulated total of those equity balances in some commodity).
+
+The @ method does not record the gain/loss from commodity exchanges
+(at least, not so explicitly and not grouped by commodity pair.
+We can still calculate it using hledger valuation features like -V, --valuechange, --gain.)
+
+#### The accounting equation
+
+The equity method keeps accounts and the accounting equation (A+L+E=0)
+balanced. See how it keeps the balance report's total as zero:
+
+```cli
+$ hledger -f 1a.j bal
+            1.00 EUR  assets:eur
+           -1.20 USD  assets:usd
+           -1.00 EUR
+            1.20 USD  equity:conversion
+--------------------
+                   0  
+```
+
+The @ method causes unbalanced accounts and a non-zero total
+(because of the "magical" transformation from one commodity to the other):
+
+```cli
+$ hledger -f 2a.j bal
+            1.00 EUR  assets:eur
+           -1.20 USD  assets:usd
+--------------------
+            1.00 EUR
+           -1.20 USD  
+```
+
+The zero total can be seen only if all amounts are converted to cost:
+
+```cli
+$ hledger -f 2a.j bal --cost
+            1.20 USD  assets:eur
+           -1.20 USD  assets:usd
+--------------------
+                   0  
+```
+
+### Summary
+
+The equity method: 
+
+- doesn't support cost reporting.
+
+The @ method:
+
+- doesn't support easy gain/loss reporting by commodity pair.
+- doesn't maintain balanced accounts
+
+However, hledger nowadays can convert between these styles on the fly, using `--infer-equity` or (with some restrictions) `--infer-costs`. 
+See the [hledger manual > Cost reporting](hledger.md#cost-reporting) for the latest on this.

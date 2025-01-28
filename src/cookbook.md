@@ -128,9 +128,9 @@ Check plaintextaccounting.org's and wiki.plaintextaccounting.org's categories.
 - [Project accounting](project-accounting.md)
 
 ### Multiple currencies
-- [Currency conversion](currency-conversion.md) and 
-  [Currency conversion 2](conversion2.md)
-- [Multicurrency tutorial (2018)](multicurrency-tutorial.md)
+- [Multicurrency tutorial](multicurrency-tutorial.md) (2018)
+- [Currency conversion](currency-conversion.md) (2021)
+- [hledger manual > Cost reporting](hledger.md#cost-reporting) (2023)
 
 ### Non-profit accounting
 
