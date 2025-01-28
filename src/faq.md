@@ -484,7 +484,7 @@ hledger aregister cash cash 'amt:<0'
 ### How do I show the full entries for an account's deposits/withdrawals ?
 
 Expanding the above reports to show the full transactions is difficult, because `print` is a
-transaction-based report, whose query [matches if any postings are matched](#combining-query-terms).
+transaction-based report, whose query [matches if any postings are matched](hledger.md#combining-query-terms).
 
 You can do it in Emacs ledger-mode with `C-c C-f` (or `M-x ledger-occur`) and a regular expression.
 Eg, to show just the transactions where `cash` was decreased:
