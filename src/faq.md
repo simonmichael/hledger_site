@@ -467,30 +467,24 @@ Use "every 31st day". Eg:
 hledger balancesheet -p 'every 31st day'
 ```
 
-### How do I report inflows and outflows separately ?
+### How do I show just deposits, or just withdrawals, in an account ?
 
-Use two `register` reports with an `amt:` query. Eg:
-
+Use `amt:` to match on amount sign. Usually you'll want to add an account query as well:
 ```cli
-hledger register 'amt:<0'
-hledger register 'amt:>0'
+hledger register cash 'amt:>0'   # cash inflows
+hledger register cash 'amt:<0'   # cash outflows
 ```
 
-### How do I show just deposits to, or withdrawals from, an account ?
-
-Use `register` with an account and amount query:
-```cli
-hledger register cash 'amt:<0'
-```
-
-Or `aregister`, in which case write it like this (because of aregister's special first argument):
+If you use `aregister`, it's like this (because of aregister's special first argument):
 
 ```cli
 hledger aregister cash cash 'amt:<0'
 ```
 
-Printing the full transactions with `print` is difficult, since `print` is a
-transaction-based report that [matches transactions with any matched postings](#combining-query-terms).
+### How do I show the full entries for an account's deposits/withdrawals ?
+
+Expanding the above reports to show the full transactions is difficult, because `print` is a
+transaction-based report, whose query [matches if any postings are matched](#combining-query-terms).
 
 You can do it in Emacs ledger-mode with `C-c C-f` (or `M-x ledger-occur`) and a regular expression.
 Eg, to show just the transactions where `cash` was decreased:
