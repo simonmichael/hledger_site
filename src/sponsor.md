@@ -35,7 +35,7 @@ Our fiscal host on Open Collective is
 for thousands of open source projects".
 So their fee is at least a sort of donation to support free/open-source software.
 
-### Sponsor the lead developer (Simon)
+### Sponsor the lead developer
 
 These donations are private and help support Simon.
 You can also support by offering me bounties or consulting gigs.
