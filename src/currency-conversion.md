@@ -4,8 +4,8 @@
 
 <!-- toc -->
 </div>
-*I wrote two currency conversion explainers in 2021, now both combined on this page.
-Ist shows some different ways to record currency conversions.
+
+*I wrote two currency conversion explainers in 2021, now both combined on this page, showing different ways of recording conversions.
 See [Cookbook > Multiple currencies](cookbook.md#multiple-currencies) for more.*
 
 ----
