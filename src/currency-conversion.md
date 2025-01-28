@@ -6,7 +6,7 @@
 </div>
 *I wrote two currency conversion explainers in 2021, now both combined on this page.
 Ist shows some different ways to record currency conversions.
-See [Cookbook > Multiple currencies](cookbook.md#multiple-currencies) for more.
+See [Cookbook > Multiple currencies](cookbook.md#multiple-currencies) for more.*
 
 ----
 
@@ -161,6 +161,9 @@ $ hledger close equity:conversion --close -e 7/1 \
 ``` -->
 
 ## Converting with equity or with costs
+
+Here's another look at the equity vs costs style of conversion entries,
+somewhat repeating the content above.
 
 In a currency conversion or a stock purchase/sale, one commodity is exchanged for another.
 In plain text accounting, there are two ways to record such conversions:
