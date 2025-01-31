@@ -150,7 +150,7 @@ For transactions which don't appear in downloaded data (cash transactions, etc.)
       the main thing I recall is turn on `ledger-complete-in-steps`.)
     - when the journal entry is finalised, mark it cleared (`C-c C-e`).
 
-## More error checking; flycheck (2023)
+## More error checking (2023)
 
 I run `make Import` (equivalent to: `make csv` which fetches latest bank & paypal csvs, plus `make import` which essentially runs `hledger import *.csv`).
 

@@ -5,7 +5,7 @@
 <!-- toc -->
 </div>
 
-A relatively simple, automated workflow using current hledger features. This is the kind of setup I use myself as of 2023. The Files layout will give you the gist of it. It is a journal first setup (journal files are primary, CSV files are disposable).
+A relatively simple, automated workflow using current hledger features. The Files layout will give you the gist of it. It is a journal first setup (journal files are primary, CSV files are disposable).
 
 ## Tools
 
