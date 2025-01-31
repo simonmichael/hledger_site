@@ -1,4 +1,4 @@
-# hledgermatic
+# SM's 2023 setup
 
 <div class=pagetoc>
 

@@ -142,6 +142,7 @@ hledger.org {
 	redir /rewriting-accounts /hledger.html#rewriting-accounts
 	# work around bad budgeting page link in manuals
 	redir /*/budgeting.html /budgeting.html
+	redir /hledgermatic.html /sm-2023-setup.html
 
 	@FAQ {
 		path_regexp /FAQ(\.html)?

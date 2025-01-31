@@ -78,7 +78,8 @@
 - [Save frequently used options](save-frequently-used-options.md)
 - [Scripts and add-ons](scripts.md)
 - [Scripting hledger](scripting.md)
-- [Simon's setup notes](simons-setup.md)
+- [SM's 2019 setup](sm-2019-setup.md)
+- [SM's 2023 setup](sm-2023-setup.md)
 - [SM's time & task dashboard](time-and-task-dashboard.md)
 - [Sponsor hledger](sponsor.md)
 - [Tags tutorial](tags-tutorial.md)
@@ -106,7 +107,7 @@
 - [hledger and SQLite](sqlite.md)
 - [hledger and Ultorg](ultorg.md)
 - [hledger and YNAB](ynab.md)
-- [hledgermatic](hledgermatic.md)
+- [sm-2023-setup](sm-2023-setup.md)
 
 <!--
 Other manual versions.

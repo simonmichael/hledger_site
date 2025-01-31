@@ -1,4 +1,4 @@
-# Simon's old setup
+# SM's 2019 setup
 
 <div class=pagetoc>
 
@@ -29,12 +29,12 @@ $ tree ~/notes
 
 Files are in `~/notes`.
 There's one YEAR.journal file per year containing all transactions in date order.
-It includes:
+It `include`s two sub files:
 
 - YEAR.prices containing P records for the year
 - forecast.journal containing periodic transaction rules
 
-all.journal includes all the year journals.
+all.journal `include`s all the year journals.
 It provides all historical data, but is slow, and my old journals are inconsistent/broken, so it's currently rarely used.
 
 current.journal is a symlink for scripts which don't know the year.
@@ -47,13 +47,10 @@ which is automatically sourced by my bash profile.
 
 Data fetching and report scripts are defined in `~/notes/Makefile`.
 
-~~Increasingly, I am moving reports and scripts in a (more powerful and robust) Shake file, `~/notes/do.hs`
-([details](https://gist.github.com/simonmichael/74f82343b1f625b2861fcf27c3ddeb2f)).~~
-
 ## Version control
 
-Journal file, included files, makefile and scripts in git.
-A mixture of manual and cron-based automatic committing.
+Journal file, included files, makefile and scripts are tracked in git,
+with a mixture of manual and cron-based automatic committing.
 
 ## Environment
 
@@ -106,7 +103,7 @@ Most journal entries are generated from downloaded CSV:
 
 - I fetch CSV from Paypal's API using `paypaljson` and `paypaljson2csv` scripts.
 
-CSV rules are never finished; they get one or two small tweaks most
+CSV rules are never entirely finished; they get one or two small tweaks most
 times I import.  They don't cover 100% of my possible entries; a few
 that are too hard to generate just get generated partially, with a ';
 TODO:` tag for me to fix them up manually. There aren't many of those
@@ -115,20 +112,20 @@ at this point
 I fetch currency prices with barrucadu's market-prices.py script
 ([details](https://gist.github.com/simonmichael/9ca4d74b30567dcc3b93763ffe88abf9)).
 
-## Entering data (2021)
+## Data entry (2021)
 
 For transactions downloaded from banks:
 
 - In an iterm3 tab titled FINANCE, I have a TUI emacs with two side-by-side windows.
-- In the first window is 2021.journal, with ledger-mode and auto-revert-mode enabled.
+- dIn the first window is 2021.journal, with ledger-mode and auto-revert-mode enabled.
 - In the second window I switch to a shell and run make Import to download and import latest transactions.
-- These show up in the journal right away. I switch focus there, select all the new entries and hit M-q to realign them with ledger-mode (which is better at that).
+- These show up in the journal right away. I switch focus there, select all the new entries and hit M-q to realign them with ledger-mode (which is better at that than hledger print).
 - I process them one at a time from the top, marking each one cleared (C-c C-e) when it looks good.
 - When there's an unknown posting, I:
   - replace the unknown account with the appropriate account (assuming I know it)
   - switch to common.rules in the second window, and search for that account or its parent (assuming it's in the rules somewhere)
   - add some portion of the new entry's description as a new pattern for this account. Or tweak the existing patterns so it will be matched next time (or to avoid over-matching by the wrong rule).
-- when all new entries are marked cleared, I git commit the journal and any updated rules file(s). Or if I don't, it will be auto-committed by a nightly cron job, in theory.
+- when all new entries are marked cleared, I git commit the journal and any updated rules file(s). Or if I don't, it will be auto-committed by a nightly cron job (in theory).
 - I do this daily-ish, so it's a small number of new txns each time.
 
 For transactions which don't appear in downloaded data (cash transactions, etc.):
@@ -153,7 +150,7 @@ For transactions which don't appear in downloaded data (cash transactions, etc.)
       the main thing I recall is turn on `ledger-complete-in-steps`.)
     - when the journal entry is finalised, mark it cleared (`C-c C-e`).
 
-## Workflow (2023)
+## More error checking; flycheck (2023)
 
 I run `make Import` (equivalent to: `make csv` which fetches latest bank & paypal csvs, plus `make import` which essentially runs `hledger import *.csv`).
 

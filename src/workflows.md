@@ -126,11 +126,10 @@ Some downloading helpers can be found at
 
 ## More advanced workflows
 
-### hledgermatic
-- Simon's [hledgermatic](hledgermatic.md) setup (2023)
-
-### SM's time & task dashboard
-- [SM's time & task dashboard](time-and-task-dashboard.md) (2023)
+### SM's
+- [SM's 2023 setup](sm-2023-setup.md)
+- [SM's 2019 setup](sm-2019-setup.md)
+- [SM's time & task dashboard](time-and-task-dashboard.md)
 
 ### hledger-flow
 - Andreas Pauley's hledger-flow workflow (tutorial & slideshow):\
@@ -147,9 +146,6 @@ Some downloading helpers can be found at
 ### barrucadu's setup
 - Michael Walker's personal finance setup:\
   <https://memo.barrucadu.co.uk/personal-finance.html>
-
-### SM's old setup
-- [Simon's old setup](simons-setup.md) (2019-2023)
 
 
 [convert]:           convert-csv-files.md
