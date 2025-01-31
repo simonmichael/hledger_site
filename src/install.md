@@ -415,7 +415,6 @@ or this in CMD:
 set LC_ALL=C.UTF-8
 set LANG=C.UTF-8
 ```
-There are also lots of ways to get pre-built binaries for Windows, if you don't need to build your own: https://hledger.org/install.html
 
 On Nix or GUIX, the procedures are [different](https://github.com/simonmichael/hledger/issues/1033#issuecomment-1062506027).
 
