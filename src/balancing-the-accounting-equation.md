@@ -45,12 +45,18 @@ equity. In traditional accounting, they should be transferred to an account like
 `equity:retained earnings` at the end of each reporting period. 
 
 You could record such transfers in your journal, either manually or
-[using the close command](hledger.md#example-retain-earnings>).
+[using close --retain](hledger.md#example-retain-earnings>).
 Most PTA users don't bother with this.
 
 More conveniently, you can use an account alias to convert revenue/expense accounts to equity temporarily. 
 Eg:\
 `--alias '/^(revenues|income|expenses)\b/=equity'`
+
+However, that doesn't work if you have declared your account types with `type:` tags.
+Alternatively, you could try including `close --retain`'s output on the fly (which is probably what the bse command should have built in).
+Eg if you are using bash:
+
+`hledger -f $LEDGER_FILE -f <(hledger close --retain) bse`
 
 ### 2. Unbalanced conversions with cost notation (@/@@)
 Currency/commodity conversions using @/@@ notation and no
@@ -93,11 +99,14 @@ If you specify a report start date, be sure to include
 balances from previous transactions by adding `-H/--historical`.
 (Or use the `bse` command, which does this automatically.)
 
+### 7. Disrupted balance assertions
+Some combination of the above may cause balance assertions to fail, in which case you can disable those with `-I`.
+
 ## An improved accounting equation report
-Combining these, here is a more robust command for checking the accounting equation:
+Combining these, here are some commands more likely to accurately check the accounting equation, for the moment:
 
 ```cli
-$ hledger bse -R --infer-equity --alias '/^(revenues|income|expenses)\b/=equity' not:desc:'closing balances' --layout tall -f YYYY.journal
+$ hledger bse -R --infer-equity --alias '/^(revenues|income|expenses)\b/=equity' not:desc:'closing balances' --layout tall
 ```
 
 - `-R` - (--real) excludes any unbalanced virtual postings
@@ -106,3 +115,10 @@ $ hledger bse -R --infer-equity --alias '/^(revenues|income|expenses)\b/=equity'
 - `not:desc:...` - excludes any final closing balance transactions that would hide ending balances (suitable for checking a single journal file)
 - `--layout tall` - improves readability when there are many commodities
 - `-f ...` - optional, specifies a file other than the default $LEDGER_FILE.
+
+```cli
+$ hledger bse -R --infer-equity -f $LEDGER_FILE -f <(hledger close --retain) -I not:desc:'closing balances' --layout tall
+```
+- `<(...)` - bash syntax, puts the command's output in a temporary file
+- `hledger close --retain` - generates transactions transferring revenues & expenses to equity
+- `-I` - ignores any failing balance assertions
