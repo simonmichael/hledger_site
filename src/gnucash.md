@@ -12,6 +12,7 @@ Some relevant tools
 - [gnucash-to-beancount](https://github.com/henriquebastos/gnucash-to-beancount/) (2017) gnucash sqlite to beancount
 - [cookthebooks](https://github.com/colemannugent/cookthebooks) (2017) gnucash xml to ledger
 - [pygnucash/gnucash2ledger.py](https://github.com/MatzeB/pygnucash/blob/master/gnucash2ledger.py) (2014) gnucash sqlite to ledger
+<!-- sync: https://plaintextaccounting.org/#gnucash -->
 
 Some related discussion:
 
