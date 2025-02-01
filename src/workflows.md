@@ -127,6 +127,7 @@ Some downloading helpers can be found at
 ## More advanced workflows
 
 ### SM
+- [hledger workflow 2025](https://joyful.com/hledger+workflow+2025)
 - [SM's 2023 setup](sm-2023-setup.md)
 - [SM's 2019 setup](sm-2019-setup.md)
 - [SM's time & task dashboard](time-and-task-dashboard.md)
