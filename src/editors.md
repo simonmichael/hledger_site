@@ -314,7 +314,7 @@ and easily evaluated inline or exported in various formats.
 If you have many reports, this can be a nice way to save and organise and interactively update them.
 
 In 2021 a number of org addons including ob-hledger.el were moved from org to the separate org-contrib package. 
-As of 2025 the primary hosting for this seems to be https://git.sr.ht/~bzg/org-contrib .
+As of 2025 the primary hosting for this seems to be <https://git.sr.ht/~bzg/org-contrib>.
 Here are the [ob-hledger.el changes](https://git.sr.ht/~bzg/org-contrib/log/master/item/lisp/ob-hledger.el).
 
 To enable org-contrib in emacs:
