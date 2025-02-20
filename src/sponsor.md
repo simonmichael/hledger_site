@@ -29,11 +29,30 @@ so your donations may not be tax-deductible,
 and the CFO (Simon) pays US and state income tax on all donations,
 in addition to the fees below.
 
+### Fees
+
+- Github charges no fees if donating from a personal account.
+- Github charges
+  [3-6%](https://docs.github.com/en/sponsors/receiving-sponsorships-through-github-sponsors/about-github-sponsors-for-open-source-contributors#sponsorship-payouts)
+  if donating from an organization account.
+- Liberapay charges no fees themselves, but the payment processor (Paypal or Stripe) charges a fee.
+- On Open Collective,
+  - Our fiscal host charges 10% (of which 15% goes to Open Collective).
+  - Open Collective may also solicit a voluntary tip.
+  - The payment processor (if it's PayPal, Stripe, or Wise) charges their usual fee.
+
+Payment processors:
+- Paypal fees vary from 0% to 3.5% + some fixed fee, depending on
+  whether you're paying within the same country, whether there's a currency conversion, etc.
+- Stripe charges 2.9% + 0.30 USD.
+- Wise charges are unclear, probably on the low end.
+
 Our fiscal host on Open Collective is 
-[The Open Source Collective](https://www.oscollective.org),
+[Open Source Collective](https://www.oscollective.org),
 "a non-profit umbrella organisation providing financial and legal infrastructure 
 for thousands of open source projects".
-So their fee is at least a sort of donation to support free/open-source software.
+So their fee is at least a sort of donation to support other free/open-source software.
+
 
 ### Sponsor the lead developer
 
@@ -41,11 +60,8 @@ These donations are private and help support Simon.
 You can also support by offering me bounties or consulting gigs.
 
 - [![github](https://img.shields.io/badge/Sponsor_Simon_via-Github-limegreen "Sponsor the project leader via Github")](https://github.com/sponsors/simonmichael)
-  (Fees: 0%)
 - [![liberapay](https://img.shields.io/badge/Sponsor_Simon_via-Liberapay-limegreen "Sponsor the project leader via Liberapay")](https://liberapay.com/simonmichael)
-  (Fees: ~3%)
 - [![paypal](https://img.shields.io/badge/Sponsor_Simon_via-Paypal-limegreen "Sponsor the project leader via Paypal")](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5J33NLXYXCYAY)
-  (Fees: ~3%)
   <!-- https://www.paypal.com/en_US/i/btn/x-click-but04.gif -->
 
 ### Sponsor other developers
@@ -55,32 +71,24 @@ You can also support by offering me bounties or consulting gigs.
 
 ### Sponsor the hledger project
 
-These donations are public and [reported with hledger](https://github.com/simonmichael/hledger_finance#readme).
+These donations are [public](https://github.com/simonmichael/hledger_finance#readme).
 They are deployed by the CFO (Simon), with input from the hledger team and community.
 So far, project funds have been used for project expenses, regression bounties,
 and one [social good](https://www.investopedia.com/terms/s/social_good.asp) donation.
 
 - [![liberapay](https://img.shields.io/badge/Sponsor_hledger_via-Liberapay-limegreen "Sponsor the hledger project via Liberapay")](https://liberapay.com/hledger)
-  (Fees: ~3%)
 - [![opencollective](https://img.shields.io/badge/Sponsor_hledger_via-Open_Collective-limegreen "Sponsor the hledger project via Liberapay")](https://opencollective.com/hledger#category-CONTRIBUTE)
-  (Fees: ~3%/$0.59 payment processor + 10% [fiscal host](https://www.oscollective.org))
 
 ### Sponsor specific tasks
 
-- [![issue bounty](https://img.shields.io/badge/Sponsor_a_task_via-the_issue_tracker-limegreen "Sponsor a task via the issue tracker")](https://github.com/simonmichael/hledger/issues?q=label:bounty) (simplest)
-  - post a bounty pledge on an [open issue](CONTRIBUTING.md#open-issues)
-  - when resolved, pay the claimant directly (honour system).
-- [![bountysource bounty](https://img.shields.io/badge/Sponsor_a_task_via-Bountysource-limegreen "Sponsor a task via Bountysource")](https://app.bountysource.com/teams/hledger/issues)
-  <!-- - [![bountysource](https://api.bountysource.com/badge/team?team_id=75979&style=bounties_received "issues bountied via bountysource")](https://www.bountysource.com/teams/hledger) -->
-  - search for the issue you want to sponsor
-  - add some bounty to it
-  - post a comment on the issue announcing the bounty
-  - when resolved, pay through Bountysource.
-- [![opencollective bounty](https://img.shields.io/badge/Sponsor_a_task_via-Open_Collective-limegreen "Sponsor a task via Open Collective")](https://opencollective.com/hledger#category-CONTRIBUTE)
-  - make a one-time donation via [Open Collective](#sponsor-the-hledger-project),
-    describing the bounty
-  - when resolved, the claimant submits a payment request for approval by the CFO
-    (see our [regression bounty process](https://hledger.org/regressionbounty)).
+- [![issue bounty](https://img.shields.io/badge/Sponsor_a_task_via-the_issue_tracker-limegreen "Sponsor a task via the issue tracker")](https://github.com/simonmichael/hledger/issues?q=label:bounty)\
+  Post a bounty pledge on an [open issue](CONTRIBUTING.md#open-issues).
+  When resolved, pay the claimant directly (honour system).
+- [![opencollective bounty](https://img.shields.io/badge/Sponsor_a_task_via-Open_Collective-limegreen "Sponsor a task via Open Collective")](https://opencollective.com/hledger#category-CONTRIBUTE)\
+  Make a one-time donation via [Open Collective](#sponsor-the-hledger-project),
+  describing the bounty.
+  When resolved, the claimant submits a payment request for approval by the CFO
+  (see our [regression bounty process](https://hledger.org/regressionbounty)).
 
 <!-- hledger OC tiers are: Backers, Sponsors -->
 <!-- Old: warning, OC badges are flaky/confusing, eg major trouble resizing the images below. -->
@@ -104,7 +112,7 @@ and one [social good](https://www.investopedia.com/terms/s/social_good.asp) dona
 
 ## Sponsors
 
-We thank you, our generous sponsors, for your support, including:
+Thank you to our generous sponsors for their support. They include:
 
 <!-- export SVGs: https://opencollective.com/dashboard/hledger/export -->
 
