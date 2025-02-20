@@ -71,7 +71,7 @@ and offer donations, bounties or paid work.
 
 ### Sponsor the hledger project
 
-These donations are [public](https://github.com/simonmichael/hledger_finance#readme)
+These donations are [public](https://github.com/simonmichael/hledger_finance#reports)
 and managed by the hledger CFO (Simon), with input from the hledger team and community.
 So far, project funds have been used for project expenses, regression bounties,
 and one [social good](https://www.investopedia.com/terms/s/social_good.asp) donation.
