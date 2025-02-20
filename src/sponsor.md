@@ -56,8 +56,8 @@ So their fee is at least a sort of donation to support other free/open-source so
 
 ### Sponsor the lead developer
 
-These donations are private and help support Simon.
-You can also support by offering me bounties or consulting gigs.
+These donations help support Simon, allowing me to do more hledger work. Thank you!
+You can also offer me bounties or consulting gigs.
 
 - [![github](https://img.shields.io/badge/Sponsor_Simon_via-Github-limegreen "Sponsor the project leader via Github")](https://github.com/sponsors/simonmichael)
 - [![liberapay](https://img.shields.io/badge/Sponsor_Simon_via-Liberapay-limegreen "Sponsor the project leader via Liberapay")](https://liberapay.com/simonmichael)
@@ -66,13 +66,13 @@ You can also support by offering me bounties or consulting gigs.
 
 ### Sponsor other developers
 
-- You can find their names at [CREDITS](CREDITS.md), 
-  check their website/Github profile, and offer donations, bounties or paid work.
+You can find their names at [CREDITS](CREDITS.md), check their website or Github profile,
+and offer donations, bounties or paid work.
 
 ### Sponsor the hledger project
 
-These donations are [public](https://github.com/simonmichael/hledger_finance#readme).
-They are deployed by the CFO (Simon), with input from the hledger team and community.
+These donations are [public](https://github.com/simonmichael/hledger_finance#readme)
+and managed by the hledger CFO (Simon), with input from the hledger team and community.
 So far, project funds have been used for project expenses, regression bounties,
 and one [social good](https://www.investopedia.com/terms/s/social_good.asp) donation.
 
