@@ -47,6 +47,8 @@ Payment processors:
 - Stripe charges 2.9% + 0.30 USD.
 - Wise charges are unclear, probably on the low end.
 
+(Liberapay says: "In the last year, the average fee percentages have been 3.1% for the payments processed by Stripe and 5% for the payments processed by PayPal.")
+
 Our fiscal host on Open Collective is 
 [Open Source Collective](https://www.oscollective.org),
 "a non-profit umbrella organisation providing financial and legal infrastructure 
