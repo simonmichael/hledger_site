@@ -23,37 +23,10 @@ Is it the right time for you to help ? Consider:
 
 ## How to sponsor
 <!-- keep synced with README.md: -->
-It's easy, even if not yet as efficient as we'd like.
-Neither hledger project nor our fiscal host is a registered charity, 
-so your donations may not be tax-deductible,
-and the CFO (Simon) pays US and state income tax on all donations,
-in addition to the fees below.
-
-### Fees
-
-- Github charges no fees if donating from a personal account.
-- Github charges
-  [3-6%](https://docs.github.com/en/sponsors/receiving-sponsorships-through-github-sponsors/about-github-sponsors-for-open-source-contributors#sponsorship-payouts)
-  if donating from an organization account.
-- Liberapay charges no fees themselves, but the payment processor (Paypal or Stripe) charges a fee.
-- On Open Collective,
-  - Our fiscal host charges 10% (of which 15% goes to Open Collective).
-  - Open Collective may also solicit a voluntary tip.
-  - The payment processor (if it's PayPal, Stripe, or Wise) charges their usual fee.
-
-Payment processors:
-- Paypal fees vary from 0% to 3.5% + some fixed fee, depending on
-  whether you're paying within the same country, whether there's a currency conversion, etc.
-- Stripe charges 2.9% + 0.30 USD.
-- Wise charges are unclear, probably on the low end.
-
-(Liberapay says: "In the last year, the average fee percentages have been 3.1% for the payments processed by Stripe and 5% for the payments processed by PayPal.")
-
-Our fiscal host on Open Collective is 
-[Open Source Collective](https://www.oscollective.org),
-"a non-profit umbrella organisation providing financial and legal infrastructure 
-for thousands of open source projects".
-So their fee is at least a sort of donation to support other free/open-source software.
+It's easy, even if not yet as efficient as we'd like. 
+When choosing a donation method, you may want to check the [fees](#fees) (below).
+The hledger project is not a registered charity, so your donations may not be tax-deductible.
+The CFO (Simon) pays US and state income tax on all donations in addition to the fees.
 
 
 ### Sponsor the lead developer
@@ -92,25 +65,48 @@ and one [social good](https://www.investopedia.com/terms/s/social_good.asp) dona
   When resolved, the claimant submits a payment request for approval by the CFO
   (see our [regression bounty process](https://hledger.org/regressionbounty)).
 
-<!-- hledger OC tiers are: Backers, Sponsors -->
-<!-- Old: warning, OC badges are flaky/confusing, eg major trouble resizing the images below. -->
-<!-- doesn't show correct count: -->
-<!-- <img src="https://opencollective.com/hledger/tiers/sponsors/badge.svg?label=Sponsors&color=brightgreen" /> \ -->
-<!-- doesn't show all: -->
-<!-- - <object type="image/svg+xml" data="https://opencollective.com/hledger/tiers/sponsors.svg?avatarHeight=36&width=600"></object> -->
-<!-- - <object type="image/svg+xml" data="https://opencollective.com/hledger/tiers/backers.svg?avatarHeight=36&width=600"></object> -->
-<!-- doesn't show all: -->
-<!-- [![](https://opencollective.com/hledger/sponsor/0/avatar.svg)](https://opencollective.com/hledger/sponsor/0/website) -->
-<!-- [![](https://opencollective.com/hledger/sponsor/1/avatar.svg)](https://opencollective.com/hledger/sponsor/1/website) -->
-<!-- [![](https://opencollective.com/hledger/sponsor/2/avatar.svg)](https://opencollective.com/hledger/sponsor/2/website) -->
-<!-- [![](https://opencollective.com/hledger/sponsor/3/avatar.svg)](https://opencollective.com/hledger/sponsor/3/website) -->
-<!-- [![](https://opencollective.com/hledger/sponsor/4/avatar.svg)](https://opencollective.com/hledger/sponsor/4/website) -->
-<!-- [![](https://opencollective.com/hledger/sponsor/5/avatar.svg)](https://opencollective.com/hledger/sponsor/5/website) -->
-<!-- [![](https://opencollective.com/hledger/sponsor/6/avatar.svg)](https://opencollective.com/hledger/sponsor/6/website) -->
-<!-- [![](https://opencollective.com/hledger/sponsor/7/avatar.svg)](https://opencollective.com/hledger/sponsor/7/website) -->
-<!-- [![](https://opencollective.com/hledger/sponsor/8/avatar.svg)](https://opencollective.com/hledger/sponsor/8/website) -->
-<!-- [![](https://opencollective.com/hledger/sponsor/9/avatar.svg)](https://opencollective.com/hledger/sponsor/9/website) -->
-<!-- [![](https://opencollective.com/hledger/sponsor/10/avatar.svg)](https://opencollective.com/hledger/sponsor/10/website)\ -->
+### Fees
+
+**Donation platforms:**
+
+<!-- https://docs.github.com/en/sponsors/receiving-sponsorships-through-github-sponsors/about-github-sponsors-for-open-source-contributors#sponsorship-payouts -->
+Github
+  - If donating from a personal account
+    - Charges no fees.
+  - If donating from an organization account
+    - Charges 3% platform fee.
+    - Charges 3% payment processing fee if paying via credit card.
+
+<!-- https://en.liberapay.com/about/ -->
+Liberapay
+  - Charges no platform fee, other than voluntary donations to their project (they are non-profit).
+  - Charges payment processor fees (Paypal or Stripe, see below).
+
+<!-- https://opencollective.com/pricing -->
+Open Collective
+  - Open Source Collective (fiscal host) charges 10% of contributions (and 15% of this goes to Open Collective).
+  - Open Collective may solicit a voluntary tip from contributions.
+  - Open Collective charges payment processor fees on contributions if paying with PayPal, Stripe, or Wise, see below.
+  - Expense payouts have no fees.
+
+**Payment processors:**
+
+Paypal
+- 0% to 3.5% + some fixed amount,
+  depending on whether you're paying in the same country, there's a currency conversion, etc.
+  Liberapay says: "the average fee percentages have been 3.1% for the payments processed by Stripe and 5% for the payments processed by PayPal."
+
+Stripe
+- 2.9% + 0.30 USD.
+
+Wise
+- Unclear.
+
+Our fiscal host on Open Collective currently is 
+[Open Source Collective](https://www.oscollective.org),
+"a non-profit umbrella organisation providing financial and legal infrastructure 
+for thousands of open source projects".
+So their fee is at least a sort of donation to support other free/open-source software.
 
 ## Sponsors
 
@@ -209,3 +205,24 @@ Thank you to our generous sponsors for their support. They include:
 </noscript>
 
 <!-- (If your logo/avatar isn't appearing here, eg because you didn't use Open Collective, please [let me know](mailto:webmaster@hledger.org).) -->
+
+
+<!-- hledger OC tiers are: Backers, Sponsors -->
+<!-- Old: warning, OC badges are flaky/confusing, eg major trouble resizing the images below. -->
+<!-- doesn't show correct count: -->
+<!-- <img src="https://opencollective.com/hledger/tiers/sponsors/badge.svg?label=Sponsors&color=brightgreen" /> \ -->
+<!-- doesn't show all: -->
+<!-- - <object type="image/svg+xml" data="https://opencollective.com/hledger/tiers/sponsors.svg?avatarHeight=36&width=600"></object> -->
+<!-- - <object type="image/svg+xml" data="https://opencollective.com/hledger/tiers/backers.svg?avatarHeight=36&width=600"></object> -->
+<!-- doesn't show all: -->
+<!-- [![](https://opencollective.com/hledger/sponsor/0/avatar.svg)](https://opencollective.com/hledger/sponsor/0/website) -->
+<!-- [![](https://opencollective.com/hledger/sponsor/1/avatar.svg)](https://opencollective.com/hledger/sponsor/1/website) -->
+<!-- [![](https://opencollective.com/hledger/sponsor/2/avatar.svg)](https://opencollective.com/hledger/sponsor/2/website) -->
+<!-- [![](https://opencollective.com/hledger/sponsor/3/avatar.svg)](https://opencollective.com/hledger/sponsor/3/website) -->
+<!-- [![](https://opencollective.com/hledger/sponsor/4/avatar.svg)](https://opencollective.com/hledger/sponsor/4/website) -->
+<!-- [![](https://opencollective.com/hledger/sponsor/5/avatar.svg)](https://opencollective.com/hledger/sponsor/5/website) -->
+<!-- [![](https://opencollective.com/hledger/sponsor/6/avatar.svg)](https://opencollective.com/hledger/sponsor/6/website) -->
+<!-- [![](https://opencollective.com/hledger/sponsor/7/avatar.svg)](https://opencollective.com/hledger/sponsor/7/website) -->
+<!-- [![](https://opencollective.com/hledger/sponsor/8/avatar.svg)](https://opencollective.com/hledger/sponsor/8/website) -->
+<!-- [![](https://opencollective.com/hledger/sponsor/9/avatar.svg)](https://opencollective.com/hledger/sponsor/9/website) -->
+<!-- [![](https://opencollective.com/hledger/sponsor/10/avatar.svg)](https://opencollective.com/hledger/sponsor/10/website)\ -->
