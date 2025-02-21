@@ -103,7 +103,11 @@ balances from previous transactions by adding `-H/--historical`.
 Some combination of the above may cause balance assertions to fail, in which case you can disable those with `-I`.
 
 ## An improved accounting equation report
-Combining these, here are some commands more likely to accurately check the accounting equation, for the moment:
+So combining these workarounds, 
+here are some commands more likely to accurately check the accounting equation,
+for the moment:
+
+### Merging RX with aliases
 
 ```cli
 $ hledger bse -R --infer-equity --alias '/^(revenues|income|expenses)\b/=equity' not:desc:'closing balances' --layout tall
@@ -116,9 +120,22 @@ $ hledger bse -R --infer-equity --alias '/^(revenues|income|expenses)\b/=equity'
 - `--layout tall` - improves readability when there are many commodities
 - `-f ...` - optional, specifies a file other than the default $LEDGER_FILE.
 
+### Merging RX with close
+
 ```cli
 $ hledger bse -R --infer-equity -f $LEDGER_FILE -f <(hledger close --retain) -I not:desc:'closing balances' --layout tall
 ```
 - `<(...)` - bash syntax, puts the command's output in a temporary file
 - `hledger close --retain` - generates transactions transferring revenues & expenses to equity
 - `-I` - ignores any failing balance assertions
+
+### Trial balance report
+
+You could also just use the balance command to show a full [trial balance report](https://en.wikipedia.org/wiki/Trial_balance) involving all accounts,
+which may be simpler. 
+
+```cli
+$ hledger bal type:ALERX -R --infer-equity not:desc:'closing balances' --layout tall
+```
+
+- `type:ALERX` - consider only asset/liability/equity/revenue/expense accounts, not any non-standard accounts you might be using
