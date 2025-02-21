@@ -105,7 +105,8 @@ Some combination of the above may cause balance assertions to fail, in which cas
 ## An improved accounting equation report
 So combining these workarounds, 
 here are some commands more likely to accurately check the accounting equation,
-for the moment:
+for the moment.
+A zero final total indicates the accounting equation is balanced.
 
 ### Merging RX with aliases
 
