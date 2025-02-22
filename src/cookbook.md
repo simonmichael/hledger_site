@@ -56,7 +56,6 @@ Check plaintextaccounting.org's and wiki.plaintextaccounting.org's categories.
 
 ### Customising
 - [Change account name separator](change-account-name-separator.md)
-- [Command line completion](command-line-completion.md)
 - [Editor configuration](editors.md)
 - [Save frequently used options](save-frequently-used-options.md)
 - [Scripting hledger](scripting.md)

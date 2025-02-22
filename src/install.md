@@ -420,55 +420,61 @@ On Nix or GUIX, the procedures are [different](https://github.com/simonmichael/h
 
 ### Shell completions
 
-If you use the bash shell, you can optionally set up context-sensitive autocompletions when you press TAB in a hledger command line
-(see [demo](https://asciinema.org/a/227935)).
-To contribute completions for another shell, see [hledger/shell-completion/README](https://github.com/simonmichael/hledger/tree/master/hledger/shell-completion).
+If you use the bash or zsh shells, you can optionally set up context-sensitive autocompletion for hledger command lines.
+Here's an old [demo](https://asciinema.org/a/227935).
+To contribute completions for other shells, see [hledger/shell-completion/README](https://github.com/simonmichael/hledger/tree/master/hledger/shell-completion).
 
-First, test if completions are already working: at a bash shell prompt,
+#### bash
 
-- `hledger<SPACE><TAB><TAB>` should list all hledger commands
-- `hledger reg acct:<TAB><TAB>` should list your top-level account names.
+1. Ensure that [bash-completion](https://salsa.debian.org/debian/bash-completion) is installed and enabled:
 
-If not, first ensure that [bash-completion](https://salsa.debian.org/debian/bash-completion) is installed and enabled:
+    On a Mac, using homebrew:
+    - `brew remove -f bash-completion`
+    - `brew install bash-completion@2`
+    - Add the suggested line to your ~/.bash_profile, if it's not already there
+    - `source ~/.bash_profile` (or open a new bash shell)
 
-**On a Mac, using homebrew:**
-- `brew remove -f bash-completion`
-- `brew install bash-completion@2`
-- Add the suggested line to your ~/.bash_profile, if it's not already there
-- `source ~/.bash_profile` (or open a new bash shell)
+    On GNU/Linux:
+    - `apt install bash-completion`
+    - `source ~/.bash_profile` (or open a new bash shell)
 
-**On GNU/Linux:**
-- `apt install bash-completion`
-- `source ~/.bash_profile` (or open a new bash shell)
+2. Install hledger with your system package manager (`brew install hledger`, `apt install hledger` or similar).
 
-...
+    Now completions may be working.
 
-Then, after using your system package manager to install hledger (`brew install hledger`, `apt install hledger` or similar),
-completions may be working.
+    If not, eg because your system's hledger package does not yet include the bash completions, or if they are not up to date, 
+    or if you have installed hledger by other means, then install the 
+    [latest hledger bash completions](https://raw.githubusercontent.com/simonmichael/hledger/1.41-branch/hledger/shell-completion/hledger-completion.bash)
+    yourself, under your XDG_DATA_HOME directory. Eg:
 
-If your system's hledger package does not yet include completions, or if they are not up to date, or if you have installed hledger by other means,
-then install the [latest hledger completions] yourself, under your XDG_DATA_HOME directory. Eg:
+    ```
+    curl https://raw.githubusercontent.com/simonmichael/hledger/1.41-branch/hledger/shell-completion/hledger-completion.bash \
+      -o ~/.local/share/bash-completion/completions/hledger --create-dirs
+    ```
 
-[latest hledger completions]: https://raw.githubusercontent.com/simonmichael/hledger/1.41-branch/hledger/shell-completion/hledger-completion.bash
+Here's what the bash completions should complete when you press TAB once or twice in a command line:
 
-```
-curl https://raw.githubusercontent.com/simonmichael/hledger/1.41-branch/hledger/shell-completion/hledger-completion.bash \
-  -o ~/.local/share/bash-completion/completions/hledger --create-dirs
-```
+Before the command argument:
+- the "hledger", "hledger-ui" and "hledger-web" executable names
+- general flags and flag values
+- hledger's command argument.
+  Eg `hledger <TAB><TAB>` should list all hledger commands, and `hledger b<TAB><TAB>` should list the ones starting with b.
 
-Here are all the things you can complete by pressing TAB once or twice:
-
-- the "hledger", "hledger-ui" and "hledger-web" commands
-- hledger's command argument
-- general flags
-- command-specific flags, after the command argument
-- flag values, for flags that have standard values
-- query prefixes
-- account names from the journal, after an account name prefix
-- appropriate data from the journal, after these query prefixes: `acct:`, `code:`, `cur:`, `desc:`, `note:`, `payee:`, `real:`, `status:`, `tag:`
-- amount comparison operators, after `amt:`.
+After the command argument:
+- command-specific flags and flag values
+- account names
+- query prefixes, like `payee:` or `status:`
+- valid query values after these query prefixes: `acct:`, `code:`, `cur:`, `desc:`, `note:`, `payee:`, `real:`, `status:`, `tag:`.
+  Eg `hledger reg acct:<TAB><TAB>` should list your top-level account names.
+- amount comparison operators after `amt:`.
 
 When a completion includes special characters, backslashes will be inserted automatically; this does not work right in all cases.
+
+#### zsh
+
+1. Ensure that [zsh-completions](https://github.com/zsh-users/zsh-completions/tree/0adf2f053ece56262ad8a173678add97c8ca4042) is installed and enabled.
+2. ? [discussion](https://www.reddit.com/r/plaintextaccounting/comments/1iqqpgg/hledger_shell_completions_for_zsh/)
+
 
 ## Next steps
 

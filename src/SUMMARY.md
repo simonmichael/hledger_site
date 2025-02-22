@@ -45,7 +45,6 @@
 - [Charts and Graphs](charts.md)
 - [Checking for errors](checking-for-errors.md)
 - [CLIMATE](CLIMATE.md)
-- [Command line completion](command-line-completion.md)
 - [Common journal entries](common-journal-entries.md)
 - [Workflows](workflows.md)
 - [Cost notation](cost-notation.md)
