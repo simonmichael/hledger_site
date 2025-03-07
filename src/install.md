@@ -36,7 +36,7 @@ Official release binaries for Linux, Mac, Windows.
 
 ### Docker (Linux, Mac, Windows)
 
-[![Docker](https://img.shields.io/badge/Docker_image-1.41-red.svg)](https://hub.docker.com/r/dastapov/hledger)
+[![Docker](https://img.shields.io/badge/Docker_image-1.42-brightgreen.svg)](https://hub.docker.com/r/dastapov/hledger)
 `docker pull dastapov/hledger`\
 [more..](https://hub.docker.com/search?q=hledger&type=image&sort=updated_at&order=desc)
 <!-- adept -->
