@@ -129,7 +129,8 @@ Check plaintextaccounting.org's and wiki.plaintextaccounting.org's categories.
 ### Multiple currencies
 - [Multicurrency tutorial](multicurrency-tutorial.md) (2018)
 - [Currency conversion](currency-conversion.md) (2021)
-- [hledger manual > Cost reporting](hledger.md#cost-reporting) (2023)
+- [hledger manual > Cost reporting](hledger.md#cost-reporting)
+- [hledger manual > Value reporting](hledger.md#value-reporting)
 
 ### Non-profit accounting
 
