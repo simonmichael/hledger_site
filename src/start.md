@@ -36,8 +36,9 @@ Or, start with a more detailed step-by-step tutorial, with screenshots.
 - [Tutorial: hledger-web](web.md)
 - [Tutorial: hledger basics](basics.md)
 - [Tutorial: hledger-ui](ui.md)
-- [Accounting basics and further study](accounting.md)
+- [Accounting basics for PTA users](accounting-pta.md)
 - [Tutorial: Import CSV data](import-csv.md)
+- [Accounting: further study](accounting.md)
 
 ## Manuals
 

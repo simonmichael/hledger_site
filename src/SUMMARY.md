@@ -34,7 +34,8 @@
 
 <!-- This section is hidden by CSS, but lists all site pages so that mdbook will render them: -->
 
-- [Accounting basics and further study](accounting.md)
+- [Accounting basics for PTA users](accounting-pta.md)
+- [Accounting: further study](accounting.md)
 - [Balancing the accounting equation](balancing-the-accounting-equation.md)
 - [Borrowing and lending](loans.md)
 - [Budgeting and Forecasting (2018)](budgeting-and-forecasting.md)
