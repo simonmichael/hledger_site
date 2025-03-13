@@ -1,4 +1,4 @@
-# 5 minute quick start
+# 10 minute quick start
 
 <div class=pagetoc>
 
