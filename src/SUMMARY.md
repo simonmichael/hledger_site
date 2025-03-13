@@ -34,7 +34,7 @@
 
 <!-- This section is hidden by CSS, but lists all site pages so that mdbook will render them: -->
 
-- [Accounting](accounting.md)
+- [Accounting basics and further study](accounting.md)
 - [Balancing the accounting equation](balancing-the-accounting-equation.md)
 - [Borrowing and lending](loans.md)
 - [Budgeting and Forecasting (2018)](budgeting-and-forecasting.md)
@@ -60,7 +60,7 @@
 - [Home](index.md)
 - [How to record journal entries](how-to-record.md)
 - [How to figure out journal entries](how-to-figure-out.md)
-- [Importing CSV data](import-csv.md)
+- [Tutorial: Import CSV data](import-csv.md)
 - [Install](install.md)
 - [Invoicing](invoicing.md)
 - [Mobile apps](mobile.md)

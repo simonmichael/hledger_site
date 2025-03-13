@@ -1,4 +1,4 @@
-# Tutorial: Accounting basics and further study
+# Accounting basics and further study
 
 <div class=pagetoc>
 
