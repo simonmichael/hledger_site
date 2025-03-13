@@ -119,7 +119,7 @@ using tools/services that automate this (ledger_autosync, Plaid, plaid2qif, Till
 Use hledger's import command to convert and import the new transactions,
 and use any of the hledger UIs to see reports.
 
-[Importing CSV data](import-csv.md) is a quick tutorial on the importing from CSV part.
+[Tutorial: Import CSV data](import-csv.md) is a quick tutorial on the importing from CSV part.
 Some downloading helpers can be found at
 <https://plaintextaccounting.org/#data-importconversion> (search for "download").
 
@@ -132,19 +132,19 @@ Some downloading helpers can be found at
 - [SM's 2019 setup](sm-2019-setup.md)
 - [SM's time & task dashboard](time-and-task-dashboard.md)
 
-### hledger-flow
-- Andreas Pauley's hledger-flow workflow (tutorial & slideshow):\
-  <https://github.com/apauley/hledger-flow>
-
 ### Full-fledged hledger
 - Dmitry Astapov's Full-fledged Hledger workflow (tutorial):\
   <https://github.com/adept/full-fledged-hledger>
+
+### hledger-flow
+- Andreas Pauley's hledger-flow workflow (tutorial & slideshow):\
+  <https://github.com/apauley/hledger-flow>
 
 ### rtrledger
 - rotorkunstkultur's setup for chaotic German freelancers:\
   <https://github.com/rotorkunstkultur/rtrledger>
 
-### barrucadu's setup
+### barrucadu
 - Michael Walker's personal finance setup:\
   <https://memo.barrucadu.co.uk/personal-finance.html>
 
