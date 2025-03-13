@@ -43,10 +43,9 @@ Official release binaries for Linux, Mac, Windows.
 
 ### Windows
 
-<!--
-https://learn.microsoft.com/en-us/windows/package-manager/winget/#use-winget
-https://github.com/microsoft/winget-cli/issues/210: Some users have reported isssues with the client not being on their PATH 
--->
+[![Scoop](https://repology.org/badge/version-for-repo/scoop/hledger.svg)](https://scoop.sh/#/apps?q=hledger)
+`scoop install hledger`
+\
 [![Winget](https://repology.org/badge/version-for-repo/winget/hledger.svg)](https://github.com/microsoft/winget-pkgs/tree/master/manifests/s/simonmichael/hledger)
 `winget install hledger`\
 Installs to `C:\Users\Simon\AppData\Local\Microsoft\WinGet\Links\hledger.exe`.
@@ -54,11 +53,12 @@ On ARM machines this runs via emulation (slower than normal).
 hledger-ui and hledger-web aren't available via winget yet.
 \
 \
-[![Scoop](https://repology.org/badge/version-for-repo/scoop/hledger.svg)](https://scoop.sh/#/apps?q=hledger)
-`scoop install hledger`
-\
 [![Chocolatey](https://repology.org/badge/version-for-repo/chocolatey/hledger.svg)](https://community.chocolatey.org/packages/hledger)
 `choco install hledger -y`
+<!--
+https://learn.microsoft.com/en-us/windows/package-manager/winget/#use-winget
+https://github.com/microsoft/winget-cli/issues/210: Some users have reported isssues with the client not being on their PATH 
+-->
 
 ### Linux
 
@@ -91,7 +91,7 @@ hledger-ui and hledger-web aren't available via winget yet.
 ![Fedora 37](https://repology.org/badge/version-for-repo/fedora_37/hledger.svg)\
 [more..](https://src.fedoraproject.org/rpms/hledger)
 
-[![Gentoo](https://img.shields.io/badge/Gentoo_package-1.34-red.svg)](https://gentoo.zugaina.org/Search?search=hledger)
+[![Gentoo](https://img.shields.io/badge/Gentoo_package-1.41-red.svg)](https://gentoo.zugaina.org/Search?search=hledger)
 `sudo eselect repository enable haskell && sudo emerge hledger hledger-ui hledger-web`
 <!-- ezzie -->
 
