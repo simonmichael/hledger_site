@@ -250,8 +250,8 @@ alias food = expenses:food
 
 ### Other UIs
 
-Instead of using the command line, you could run [`hledger-ui`](ui.md) or [`hledger-web`](web.md).
-Here are the command line, terminal, and web interfaces, with more complex data:
+Instead of using the command line, you could use the [`ui`](ui.md) or [`web`](web.md) inferfaces
+(or `repl`, `add`, `iadd`, ...)
 
 <a href="/images/cli-green-bs-reg.png" class="highslide" onclick="return hs.expand(this, { captionText:'The hledger command line interface.' })"><img src="images/cli-green-bs-reg.png" height="190"></a>
 <a href="/images/home-ui-3.png"        class="highslide" onclick="return hs.expand(this, { captionText:'The hledger-ui text user interface.' })"><img src="images/home-ui-3.png"        height="190"></a>
