@@ -7,8 +7,6 @@
 
 [hledger-ui](hledger-ui.md) is hledger's TUI (a full-window terminal interface).
 It's fast, efficient, and a bit more featureful than the web UI.
-One limitation: on Microsoft Windows, it can only be installed inside [WSL](https://en.wikipedia.org/wiki/WSL).
-Screenshots below!
 
 ## Check your installation
 
