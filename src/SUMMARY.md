@@ -68,7 +68,7 @@
 - [News](news.md)
 - [Project accounting](project-accounting.md)
 - [2 minute quick start](2-minute-quick-start.md)
-- [5 minute quick start](5-minute-quick-start.md)
+- [10 minute quick start](10-minute-quick-start.md)
 - [Release notes](relnotes.md)
 - [Report examples](report-examples.md)
 - [Reporting version control stats](reporting-version-control-stats.md)

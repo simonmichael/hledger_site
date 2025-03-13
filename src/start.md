@@ -25,7 +25,7 @@ Here they are, simplest first - pick one that you like:
 
 - [Home page quick start](index.md#quick-start)
 - [2 minute quick start](2-minute-quick-start.md)
-- [5 minute quick start](5-minute-quick-start.md)
+- [10 minute quick start](10-minute-quick-start.md)
 - [hledger manual: Common tasks](hledger.md#common-tasks)
 - [Workflows](workflows.md)
 
