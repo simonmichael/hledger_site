@@ -56,19 +56,14 @@ You can also view them on your local machine with [`hledger help`](hledger.md#he
 
 ## More docs
 
-Practical advice and examples for real-world tasks:
+- [FAQ](faq.md) frequently asked questions
+- [Cookbook](cookbook.md) task-oriented tips and how-tos
+- [examples/](https://github.com/simonmichael/hledger/tree/master/examples) misc. examples and snippets, old and new 
+- [plaintextaccounting.org](https://plaintextaccounting.org) general PTA docs, not hledger-specific
 
-- [FAQ](faq.md)
-- [Cookbook](cookbook.md)
-- [hledger's examples/ directory](https://github.com/simonmichael/hledger/tree/master/examples)
-- [plaintextaccounting.org](https://plaintextaccounting.org)  general PTA docs, not hledger-specific
-- [PTA forum](https://forum.plaintextaccounting.org) discussions
-- [/r/plaintextaccounting](https://www.reddit.com/r/plaintextaccounting/new/) discussions on Reddit
-  ([note](https://forum.plaintextaccounting.org/t/welcome-to-the-plain-text-accounting-forum/33))
+## Tips
 
-## Advice
-
-Here are some thoughts on how to approach hledger and accounting.
+Some ideas on how to approach hledger and accounting:
 
 ### Little and often
 
