@@ -44,6 +44,7 @@ Or, start with a more detailed step-by-step tutorial, with screenshots.
 Or, read the manuals to know everything.
 These are the authoritative and most up-to-date hledger docs.
 You can also view them on your local machine with [`hledger help`](hledger.md#help), `hledger-ui --man`, `hledger-web --info`, etc.
+The hledger manual's table of contents is a good overview.
 
 - [hledger manual](hledger.md)
 - [hledger-ui manual](hledger-ui.md)
@@ -56,10 +57,10 @@ You can also view them on your local machine with [`hledger help`](hledger.md#he
 
 ## More docs
 
-- [FAQ](faq.md) frequently asked questions
-- [Cookbook](cookbook.md) task-oriented tips and how-tos
-- [examples/](https://github.com/simonmichael/hledger/tree/master/examples) misc. examples and snippets, old and new 
-- [plaintextaccounting.org](https://plaintextaccounting.org) general PTA docs, not hledger-specific
+- [FAQ](faq.md) - frequently asked questions
+- [Cookbook](cookbook.md) - task-oriented tips and how-tos
+- [examples/](https://github.com/simonmichael/hledger/tree/master/examples) - examples and snippets, old and new 
+- [plaintextaccounting.org](https://plaintextaccounting.org) - general PTA docs, not hledger-specific
 
 ## Tips
 
@@ -132,9 +133,10 @@ You can always browse the mail list archives for past discussions that look inte
 
 ### Motivation
 
-Find things that get you in the mood and energised.
+Find things that get you in the mood and energised. Maybe a book ?
 
 - [The Richest Man in Babylon](https://forum.plaintextaccounting.org/t/the-richest-man-in-babylon/396)
+- [Your Money or Your Life](https://yourmoneyoryourlife.com)
 
 ### Have fun, take breaks!
 
