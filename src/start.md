@@ -72,6 +72,10 @@ Find things that get you in the mood and energised. Maybe a book ?
 
 - [The Richest Man in Babylon](https://forum.plaintextaccounting.org/t/the-richest-man-in-babylon/396)
 - [Your Money or Your Life](https://yourmoneyoryourlife.com)
+- [The Millionaire Next Door](https://en.wikipedia.org/wiki/The_Millionaire_Next_Door)
+- [Debtors Anonymous](https://debtorsanonymous.org) /
+  [Business Debtors Anonymous](https://debtorsanonymous.org/getting-started/business-debtors-anonymous/) /
+  [Underearners Anonymous](https://www.underearnersanonymous.org)
 
 ### Little and often
 
