@@ -36,8 +36,8 @@ Or, start with a more detailed step-by-step tutorial, with screenshots.
 - [Tutorial: hledger-web](web.md)
 - [Tutorial: hledger basics](basics.md)
 - [Tutorial: hledger-ui](ui.md)
-- [Tutorial: Accounting basics and further study](accounting.md)
-- [Importing CSV data](import-csv.md)
+- [Accounting basics and further study](accounting.md)
+- [Tutorial: Importing CSV data](import-csv.md)
 
 ## Manuals
 
