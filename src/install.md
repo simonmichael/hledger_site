@@ -5,7 +5,7 @@
 <!-- toc -->
 </div>
 
-The current hledger release is **1.42**.
+The current hledger release is **1.42.1**.
 Here are the **[release notes](release-notes.md)**.
 
 There are three main ways to install hledger on your computer:
@@ -22,8 +22,8 @@ After installing, there are some [final things to check](#check-your-installatio
 
 Official release binaries for Linux, Mac, Windows.
 
-[![hledger release binaries](https://img.shields.io/badge/hledger_release_binaries-1.42-brightgreen.svg)](https://github.com/simonmichael/hledger/releases/tag/1.42)
-[release binaries](https://github.com/simonmichael/hledger/releases/tag/1.42)
+[![hledger release binaries](https://img.shields.io/badge/hledger_release_binaries-1.42.1-brightgreen.svg)](https://github.com/simonmichael/hledger/releases/tag/1.42.1)
+[release binaries](https://github.com/simonmichael/hledger/releases/tag/1.42.1)
 ([![RSS](images/rss.png) RSS](https://github.com/simonmichael/hledger/releases.atom))
 
 ## Packaged binaries
@@ -36,7 +36,7 @@ Official release binaries for Linux, Mac, Windows.
 
 ### Docker (Linux, Mac, Windows)
 
-[![Docker](https://img.shields.io/badge/Docker_image-1.42-brightgreen.svg)](https://hub.docker.com/r/dastapov/hledger)
+[![Docker](https://img.shields.io/badge/Docker_image-1.42-red.svg)](https://hub.docker.com/r/dastapov/hledger)
 `docker pull dastapov/hledger`\
 [more..](https://hub.docker.com/search?q=hledger&type=image&sort=updated_at&order=desc)
 <!-- adept -->
@@ -205,7 +205,7 @@ You can install it
 Once stack is installed, run:
 ```
 stack update
-stack install hledger-1.42 hledger-ui-1.42 hledger-web-1.42 \
+stack install hledger-1.42.1 hledger-ui-1.42.1 hledger-web-1.42.1 \
   --resolver=nightly-2025-03-01 --verbosity=error
 ```
 
@@ -225,7 +225,7 @@ Then run:
 
 ```
 cabal update
-cabal install hledger-1.42 hledger-ui-1.42 hledger-web-1.42
+cabal install hledger-1.42.1 hledger-ui-1.42.1 hledger-web-1.42.1
 ```
 <!--
 New haskellers used to sometimes need step 2 `cabal install alex happy`.
@@ -242,7 +242,7 @@ download that first with git:
 
     git clone https://github.com/simonmichael/hledger
     cd hledger
-    git checkout 1.42   # optional: switch to release tag
+    git checkout 1.42.1   # optional: switch to release tag
 
 Now you can build and install this source with:
 
@@ -286,7 +286,7 @@ This would build the hledger version from the current stackage LTS snapshot, whi
 So instead, it's better to use the latest `stack install` command shown above.
 Here it is as a one-line command you can paste into a Windows CMD or powershell window:
 ```
-stack update & stack install hledger-1.42 hledger-ui-1.42 hledger-web-1.42 --resolver=nightly-2025-03-01 --verbosity=error
+stack update & stack install hledger-1.42.1 hledger-ui-1.42.1 hledger-web-1.42.1 --resolver=nightly-2025-03-01 --verbosity=error
 ```
 
 On Windows, the build may die repeatedly with a "... permission denied (Access is denied.)" error; we [don't know why](https://github.com/commercialhaskell/stack/issues/2426).
@@ -333,9 +333,9 @@ After installing, run the hledger tools and verify that their versions are what 
 (and not older versions from a previous install). Eg:
 
     $ hledger --version; hledger-ui --version; hledger-web --version
-    hledger 1.42-g36ef67b68-20250307, mac-aarch64
-    hledger-ui 1.42-g36ef67b68-20250307, mac-aarch64
-    hledger-web 1.42-g36ef67b68-20250307, mac-aarch64
+    hledger 1.42.1-gdaafa059a-20250312, mac-aarch64
+    hledger-ui 1.42.1-gdaafa059a-20250312, mac-aarch64
+    hledger-web 1.42.1-gdaafa059a-20250312, mac-aarch64
 
 You can run the built-in unit tests if you'd like:
 
@@ -347,7 +347,7 @@ or the more thorough functional tests, if you are set up for working with the hl
 
     $ just functest
     ...
-     Total   1131 ...
+     Total   1133 ...
     functest PASSED
 
 
