@@ -133,20 +133,16 @@ Some downloading helpers can be found at
 - [SM's time & task dashboard](time-and-task-dashboard.md)
 
 ### Full-fledged hledger
-- Dmitry Astapov's Full-fledged Hledger workflow (tutorial):\
-  <https://github.com/adept/full-fledged-hledger>
+- Dmitry Astapov's [Full-fledged Hledger](https://github.com/adept/full-fledged-hledger), a CSV-first workflow tutorial
 
 ### hledger-flow
-- Andreas Pauley's hledger-flow workflow (tutorial & slideshow):\
-  <https://github.com/apauley/hledger-flow>
+- Andreas Pauley's [hledger-flow](https://github.com/apauley/hledger-flow), a tool implementing a variant of the above
 
-### rtrledger
-- rotorkunstkultur's setup for chaotic German freelancers:\
-  <https://github.com/rotorkunstkultur/rtrledger>
+### rtrLEDGER
+- rotorkunstkultur's [hledger system for chaotic German freelancers](https://github.com/rotorkunstkultur/rtrledger), using SKR04 accounts
 
 ### barrucadu
-- Michael Walker's personal finance setup:\
-  <https://memo.barrucadu.co.uk/personal-finance.html>
+- Michael Walker's [personal finance setup](https://memo.barrucadu.co.uk/personal-finance.html), with Grafana dashboard
 
 
 [convert]:           convert-csv-files.md
