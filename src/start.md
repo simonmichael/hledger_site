@@ -66,6 +66,13 @@ The hledger manual's table of contents is a good overview.
 
 Some ideas on how to approach hledger and accounting:
 
+### Motivation
+
+Find things that get you in the mood and energised. Maybe a book ?
+
+- [The Richest Man in Babylon](https://forum.plaintextaccounting.org/t/the-richest-man-in-babylon/396)
+- [Your Money or Your Life](https://yourmoneyoryourlife.com)
+
 ### Little and often
 
 Accounting is an ongoing activity, best done in regular small doses.
@@ -130,13 +137,6 @@ You can always browse the mail list archives for past discussions that look inte
 )
 
 -->
-
-### Motivation
-
-Find things that get you in the mood and energised. Maybe a book ?
-
-- [The Richest Man in Babylon](https://forum.plaintextaccounting.org/t/the-richest-man-in-babylon/396)
-- [Your Money or Your Life](https://yourmoneyoryourlife.com)
 
 ### Have fun, take breaks!
 
