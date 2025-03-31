@@ -63,6 +63,7 @@ Check plaintextaccounting.org's and wiki.plaintextaccounting.org's categories.
 ### Other user interfaces
 - [hledger-web tips](hledger-web-tips.md)
 - [Mobile apps](mobile.md)
+- See PTA UI tools starting at [UI, console](https://plaintextaccounting.org/#ui-console)
 
 ### Scripts and add-ons
 - [Scripts and add-ons](scripts.md)
