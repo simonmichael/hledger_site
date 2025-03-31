@@ -30,6 +30,9 @@ hledger issues are tracked in the hledger repos on github. There are some shortc
 **Mastodon**\
 [#hledger](https://fosstodon.org/tags/hledger) and [#plaintextaccounting](https://fosstodon.org/tags/plaintextaccounting)
 
+**Bluesky**\
+[#hledger](https://bsky.app/hashtag/hledger) and [#plaintextaccounting](https://bsky.app/hashtag/plaintextaccounting)
+
 **Reddit**\
 [/r/plaintextaccounting](https://www.reddit.com/r/plaintextaccounting/)
 
