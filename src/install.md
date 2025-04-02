@@ -384,13 +384,32 @@ Here's [how to set environment variables on Windows](https://www.devdungeon.com/
 
 ### Text encoding
 
-On most unix systems, when you are processing non-ASCII text with hledger,
-the `LANG` environment variable must be set to a suitable locale to ensure hledger can decode the text,
-avoiding errors like "*invalid byte sequence*" or "*mkTextEncoding: invalid argument*".
-This applies to the Haskell build tools like GHC, cabal and stack, as well.
+**On Microsoft Windows:**
 
-We usually recommend the UTF-8 text encoding.
-On unix-like systems, check that your `LANG` setting mentions UTF-8, and if not, change it. Eg:
+For hledger-web, you might need to check the "Use Unicode UTF-8" checkbox in Region Settings
+(like [this](https://github.com/simonmichael/hledger/issues/708#issuecomment-1773836682)).
+
+For hledger or hledger-ui in a powershell window, possibly this might help:
+```
+$env:LC_ALL = "C.UTF-8"
+$env:LANG = "C.UTF-8"
+```
+
+or in a CMD window:
+```
+set LC_ALL=C.UTF-8
+set LANG=C.UTF-8
+```
+
+**On most unix systems:**
+
+When your hledger data contains non-ASCII characters (as is usually the case),
+the `LANG` environment variable must be set to a suitable locale to ensure hledger can decode the text,
+preventing error messages like "*invalid byte sequence*" or "*mkTextEncoding: invalid argument*".
+(This applies to the Haskell build tools like GHC, cabal and stack, as well.)
+
+We most often recommend the UTF-8 text encoding.
+Check that your `LANG` variable mentions UTF-8, and if not, change it. Eg:
 
 ```cli
 $ echo $LANG
@@ -405,18 +424,10 @@ package manager first. See
 [hledger: Troubleshooting](hledger.md#troubleshooting) for more help.
 <!-- XXX ^ improve -->
 
-On Microsoft Windows, I read that this might help in powershell:
-```
-$env:LC_ALL = "C.UTF-8"
-$env:LANG = "C.UTF-8"
-```
-or this in CMD:
-```
-set LC_ALL=C.UTF-8
-set LANG=C.UTF-8
-```
+**On Nix or GUIX:**
 
-On Nix or GUIX, the procedures are [different](https://github.com/simonmichael/hledger/issues/1033#issuecomment-1062506027).
+The procedures are [different](https://github.com/simonmichael/hledger/issues/1033#issuecomment-1062506027).
+
 
 ### Shell completions
 
