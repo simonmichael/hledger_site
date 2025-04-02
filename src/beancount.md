@@ -14,7 +14,6 @@ but different enough that neither can read the other's files.
 There are two old converters: [beancount2ledger](https://github.com/beancount/beancount2ledger)
 and [ledger2beancount](https://github.com/beancount/ledger2beancount).
 They are not actively maintained, and limited in what they support.
-
-Since hledger 1.32, and especially in hledger 1.40.99+,
-the best option for exporting from hledger to beancount is
+Since hledger 1.32, and especially since hledger 1.41,
+the best option for exporting from hledger to Beancount is
 hledger's [print](dev/hledger.md#print) command, which supports [beancount output](dev/hledger.md#beancount-output).
