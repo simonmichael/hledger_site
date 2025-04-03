@@ -206,7 +206,7 @@ Once stack is installed, run:
 ```
 stack update
 stack install hledger-1.42.1 hledger-ui-1.42.1 hledger-web-1.42.1 \
-  --resolver=nightly-2025-03-01 --verbosity=error
+  --resolver=nightly-2025-04-01 --verbosity=error
 ```
 
 stack will install a compatible version of the GHC compiler if needed,
@@ -286,7 +286,7 @@ This would build the hledger version from the current stackage LTS snapshot, whi
 So instead, it's better to use the latest `stack install` command shown above.
 Here it is as a one-line command you can paste into a Windows CMD or powershell window:
 ```
-stack update & stack install hledger-1.42.1 hledger-ui-1.42.1 hledger-web-1.42.1 --resolver=nightly-2025-03-01 --verbosity=error
+stack update & stack install hledger-1.42.1 hledger-ui-1.42.1 hledger-web-1.42.1 --resolver=nightly-2025-04-01 --verbosity=error
 ```
 
 On Windows, the build may die repeatedly with a "... permission denied (Access is denied.)" error; we [don't know why](https://github.com/commercialhaskell/stack/issues/2426).
@@ -384,12 +384,22 @@ Here's [how to set environment variables on Windows](https://www.devdungeon.com/
 
 ### Text encoding
 
-**On Microsoft Windows:**
+In general, all of your hledger data should use the text encoding that is configured in your system locale.
+If your system's and data's text encodings don't match, 
+then any non-ascii characters will tend to display as mojibake (garbled text), 
+or cause program-ending error messages (like "invalid byte sequence" or "mkTextEncoding: invalid argument").
+(If you are building hledger from source, this affects the Haskell build tools as well.)
 
-For hledger-web, you might need to check the "Use Unicode UTF-8" checkbox in Region Settings
-(like [this](https://github.com/simonmichael/hledger/issues/708#issuecomment-1773836682)).
+Almost all hledger docs and example data use UTF-8 text encoding, though that's not required.
 
-For hledger or hledger-ui in a powershell window, possibly this might help:
+**On Microsoft Windows**
+
+You should (probably?) check the "Use Unicode UTF-8 for worldwide language support" checkbox in Region Settings.
+It may be hard to find; here's where it is in Windows 11:
+![windows 11 UTF-8 setting](images/win11-utf8-setting.png){width=50%}
+
+<!--
+Or for hledger or hledger-ui in a powershell window, possibly this might help:
 ```
 $env:LC_ALL = "C.UTF-8"
 $env:LANG = "C.UTF-8"
@@ -400,16 +410,12 @@ or in a CMD window:
 set LC_ALL=C.UTF-8
 set LANG=C.UTF-8
 ```
+-->
 
-**On most unix systems:**
+**On most unix systems**
 
-When your hledger data contains non-ASCII characters (as is usually the case),
-the `LANG` environment variable must be set to a suitable locale to ensure hledger can decode the text,
-preventing error messages like "*invalid byte sequence*" or "*mkTextEncoding: invalid argument*".
-(This applies to the Haskell build tools like GHC, cabal and stack, as well.)
-
-We most often recommend the UTF-8 text encoding.
-Check that your `LANG` variable mentions UTF-8, and if not, change it. Eg:
+The `LANG` environment variable should be set to a suitable locale.
+Eg if your data is UTF-8 encoded, check that your `LANG` variable mentions UTF-8, and if not, change it. Eg:
 
 ```cli
 $ echo $LANG
@@ -419,12 +425,11 @@ $ echo $LANG
 C.UTF-8
 ```
 
-In some cases the locale may need to be installed with your system
-package manager first. See
-[hledger: Troubleshooting](hledger.md#troubleshooting) for more help.
-<!-- XXX ^ improve -->
+On some systems the exact punctuation and capitalisation is important.
+And some cases the locale may need to be installed with your system package manager first.
+See also: [hledger: Troubleshooting](hledger.md#troubleshooting).
 
-**On Nix or GUIX:**
+**On Nix or GUIX**
 
 The procedures are [different](https://github.com/simonmichael/hledger/issues/1033#issuecomment-1062506027).
 
