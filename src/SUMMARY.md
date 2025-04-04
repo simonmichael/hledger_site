@@ -26,7 +26,6 @@
 # FINANCE
 
 - [Project finances](FINANCE.md)
-- [Financial reports](financerepo.md)
 - [Sponsor hledger](sponsor.md)
 - [Regression bounty](REGRESSIONS.md)
 
