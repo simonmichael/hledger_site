@@ -11,7 +11,7 @@ Here are the **[release notes](release-notes.md)**.
 There are three main ways to install hledger on your computer:
 
 - [Release binaries](#release-binaries) are provided by hledger's maintainer and are always up to date.
-- [Packaged binaries](#package-binaries) are provided by system packagers and are sometimes less up to date.
+- [Packaged binaries](#packaged-binaries) are provided by system packagers and are sometimes less up to date.
 - Or you can [build your own binaries](#build-from-source), which takes more time and resources.
 
 After installing, there are some [final things to check](#check-your-installation).
