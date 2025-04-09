@@ -418,7 +418,7 @@ The procedures are [different](https://github.com/simonmichael/hledger/issues/10
 
 You should (probably?) check the "Use Unicode UTF-8 for worldwide language support" checkbox in Region Settings.
 It may be hard to find; here's where it is in Windows 11:
-![windows 11 UTF-8 setting](images/win11-utf8-setting.png){width=50%}
+![windows 11 UTF-8 setting](images/win11-utf8-setting.png)
 
 <!--
 Or for hledger or hledger-ui in a powershell window, possibly this might help:
