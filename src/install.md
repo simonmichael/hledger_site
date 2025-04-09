@@ -389,28 +389,9 @@ If your system's and data's text encodings don't match,
 then any non-ascii characters will tend to display as mojibake (garbled text), 
 or cause program-ending error messages (like "invalid byte sequence" or "mkTextEncoding: invalid argument").
 (If you are building hledger from source, this affects the Haskell build tools as well.)
+Related: [#73](https://github.com/simonmichael/hledger/issues/73)
 
 Almost all hledger docs and example data use UTF-8 text encoding, though that's not required.
-
-**On Microsoft Windows**
-
-You should (probably?) check the "Use Unicode UTF-8 for worldwide language support" checkbox in Region Settings.
-It may be hard to find; here's where it is in Windows 11:
-![windows 11 UTF-8 setting](images/win11-utf8-setting.png){width=50%}
-
-<!--
-Or for hledger or hledger-ui in a powershell window, possibly this might help:
-```
-$env:LC_ALL = "C.UTF-8"
-$env:LANG = "C.UTF-8"
-```
-
-or in a CMD window:
-```
-set LC_ALL=C.UTF-8
-set LANG=C.UTF-8
-```
--->
 
 **On most unix systems**
 
@@ -432,6 +413,26 @@ See also: [hledger: Troubleshooting](hledger.md#troubleshooting).
 **On Nix or GUIX**
 
 The procedures are [different](https://github.com/simonmichael/hledger/issues/1033#issuecomment-1062506027).
+
+**On Microsoft Windows**
+
+You should (probably?) check the "Use Unicode UTF-8 for worldwide language support" checkbox in Region Settings.
+It may be hard to find; here's where it is in Windows 11:
+![windows 11 UTF-8 setting](images/win11-utf8-setting.png){width=50%}
+
+<!--
+Or for hledger or hledger-ui in a powershell window, possibly this might help:
+```
+$env:LC_ALL = "C.UTF-8"
+$env:LANG = "C.UTF-8"
+```
+
+or in a CMD window:
+```
+set LC_ALL=C.UTF-8
+set LANG=C.UTF-8
+```
+-->
 
 
 ### Shell completions
