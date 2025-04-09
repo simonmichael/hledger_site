@@ -407,7 +407,7 @@ C.UTF-8
 ```
 
 On some systems the exact punctuation and capitalisation is important.
-And some cases the locale may need to be installed with your system package manager first.
+And in some cases the locale may need to be installed with your system package manager first.
 See also: [hledger: Troubleshooting](hledger.md#troubleshooting).
 
 **On Nix or GUIX**
