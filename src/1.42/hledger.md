@@ -3633,6 +3633,8 @@ The following encodings are supported
 `cp874`,
 `cp932`.
 
+*Added in 1.42.*
+
 
 ### `separator`
 
