@@ -265,34 +265,38 @@ These notes are for WIndows 11. Some things may apply to older Windows versions 
 
 **stack**\
 On Windows, stack is the easiest way to get a haskell toolchain.
-stack will install GHC and other tools for you automatically.
-You can install stack with `winget install commercialhaskell.stack`.
-On ARM machines, stack currently will install x86_64 versions of GHC, which will build x86_64 hledger binaries, and all of these will run via emulation (slowly).
+(Though if you are on a Windows ARM machine, note that currently stack will install x86_64 versions of the tools, and build x86_64 hledger binaries, and all of these will run via emulation, ie slowly.)
 
-**ghcup**\
-If you want more control over your haskell toolchain, to more easily see what's installed
-and manage tool versions and disk space, you could install ghcup.
-Then you can use `ghcup tui` to install ghc and either stack or cabal.
-(These docs focus on stack.
-If you are using both ghcup and stack, install stack via ghcup, so that stack will leave ghc management to ghcup.)
+One way to install stack is to open a Windows CMD or powershell window and run this:
+
+    winget install commercialhaskell.stack
+
+Another way is to use ghcup. 
+In this case usually ghcup takes the responsibility of installing haskell tools, 
+making it easier to see and manage installed tool versions.
 ghcup isn't yet easy to install on ARM machines, however.
 
 **Windows updates**\
 For stack and probably other haskell tools, you need to apply all windows updates to get the latest TLS certificates, so that network requests will work.
 
 **Build and install**\
-Then you could run `stack install hledger`.
-This would build the hledger version from the current stackage LTS snapshot, which is not always the latest release.
-So instead, it's better to use the latest `stack install` command shown above.
-Here it is as a one-line command you can paste into a Windows CMD or powershell window:
-```
-stack update && stack install hledger-1.42.1 hledger-ui-1.42.1 hledger-web-1.42.1 --resolver=nightly-2025-04-01 --verbosity=error
-```
+Then you can use stack to build the current hledger release.
+It will also install GHC and other build tools if needed.
 
-On Windows, the build may die repeatedly with a "... permission denied (Access is denied.)" error; we [don't know why](https://github.com/commercialhaskell/stack/issues/2426).
+    stack update
+    stack install hledger-1.42.1 hledger-ui-1.42.1 hledger-web-1.42.1 --resolver=nightly-2025-04-01 --verbosity=error
+
+Or if you fetched the latest hledger source code with git as shown above,
+in the source directory you could build the latest by running
+
+    stack update
+    stack install
+
+On Windows, building may die repeatedly with a "... permission denied (Access is denied.)" error; 
+we [don't know why](https://github.com/commercialhaskell/stack/issues/2426).
 Each time, you have to run it again to continue (up arrow, enter).
 
-When complete, it installs executables at eg `C:\Users\Simon\AppData\Roaming\local\bin\hledger.exe`.
+When building is complete, stack installs executables at eg `C:\Users\USER\AppData\Roaming\local\bin\hledger.exe`.
 
 ### Build on Android
 
