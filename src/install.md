@@ -286,7 +286,7 @@ This would build the hledger version from the current stackage LTS snapshot, whi
 So instead, it's better to use the latest `stack install` command shown above.
 Here it is as a one-line command you can paste into a Windows CMD or powershell window:
 ```
-stack update & stack install hledger-1.42.1 hledger-ui-1.42.1 hledger-web-1.42.1 --resolver=nightly-2025-04-01 --verbosity=error
+stack update && stack install hledger-1.42.1 hledger-ui-1.42.1 hledger-web-1.42.1 --resolver=nightly-2025-04-01 --verbosity=error
 ```
 
 On Windows, the build may die repeatedly with a "... permission denied (Access is denied.)" error; we [don't know why](https://github.com/commercialhaskell/stack/issues/2426).
