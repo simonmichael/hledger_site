@@ -121,6 +121,8 @@ from your hledger reports, using the powerful [vega-lite](https://vega.github.io
 docker-finance, a hledger-based system, can [visualise large quantities of metadata](https://gitea.com/EvergreenCrypto/docker-finance#meta-w-root-c-analysis)
 using [ROOT](https://root.cern).
 
+![docker-finance screenshot](images/charts-docker-finance.png)
+
 ## Other charting tools
 
 ### Ledger chart tools
