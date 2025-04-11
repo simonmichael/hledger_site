@@ -116,8 +116,8 @@ from your hledger reports, using the powerful [vega-lite](https://vega.github.io
 
 Tools built for Ledger can sometimes be adapted to work with hledger also; or, hledger data can be exported to Ledger-readable files. Eg:
 
-- [Report Scripts for Ledger CLI with Gnuplot](https://www.sundialdreams.com/report-scripts-for-ledger-cli-with-gnuplot/) (2016) demonstrates generating GNUplot charts from Ledger.
-- [ledger-plots](https://github.com/esovetkin/ledger-plots) (2018) is an R script that makes PDF charts from Ledger.
+- [Report Scripts for Ledger CLI with Gnuplot](https://www.sundialdreams.com/report-scripts-for-ledger-cli-with-gnuplot/) (2016)
+- [ledger-plots](https://github.com/esovetkin/ledger-plots) (2018), an R package that makes PDF charts from Ledger
 - More can be found at the PTA site:
   [GUI](https://plaintextaccounting.org/#ui-gui),
   [web](https://plaintextaccounting.org/#ui-web),
