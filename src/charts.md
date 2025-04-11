@@ -16,7 +16,7 @@ hledger bal --layout bare -N expenses -o expenses.csv
 ```
 
 **The quickest way to get polished, ready-to-use charts** as of 2025 is probably to  export to Beancount format
-and then use [Fava](https://fava.pythonanywhere.com), a mature web UI with great charts.
+and then use [Fava](https://fava.pythonanywhere.com), a mature web UI with ready-made charts.
 (If this doesn't work, you may need to alias some account names, eg; see [Beancount output](https://hledger.org/hledger.html#beancount-output)):
 ```
 hledger print -O beancount >export.beancount
