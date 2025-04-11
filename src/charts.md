@@ -17,6 +17,10 @@ and then use one of the many ways to make charts from CSV data.
 
 Simplest first:
 
+### hledger-web
+
+hledger-web has a simple balance over time chart (in the register view).
+
 ### hledger-bar
 
 [hledger-bar](scripts.md#hledger-bar) (2023)
@@ -51,10 +55,17 @@ $ hledger bar -- -v 1 -f $TIMELOG biz -p weeklyfrom3weeksago
 [hledger-plot](https://pypi.org/project/hledger-utils) (2023)
 is a powerful graphical chart-making tool written in python.
 
+### Fava
+
+Fava is a mature web UI for Beancount with great charts.
+You can fairly easily [export a Beancount file from hledger](https://hledger.org/dev/hledger.html#beancount-output) and then use Fava.
+This is probably the quickest way to get polished charts for hledger data.
+
 ### hledger-sankey
 
 - <https://github.com/adept/hledger-sankey> A python3 script (that uses pandas and plotly) to plot three sankey graphs of hledger data
 - <https://github.com/JustSaX/hledger-sankey> hledger-sankey made interactive with Streamlit
+
 ### hledger-vega
 
 [hledger-vega](https://github.com/xitian9/hledger-vega) (2022) is a set of scripts for producing custom charts
