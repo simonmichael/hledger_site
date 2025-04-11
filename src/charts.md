@@ -7,11 +7,19 @@
 
 Tips and techniques for producing graphical charts from hledger data.
 
-The most common general approach is to produce simple [CSV output](hledger.md#output-format) from a report - usually the balance report with -N/--no-total and --layout=bare:
+The most general, lowest-common-denominator way is to produce simple [CSV output](hledger.md#output-format)
+from a report and then make charts from that using the tool of your choice.
+Eg, drag the CSV file into a spreadsheet and use its charting tools.
+The `balance` command with --layout=bare and -N/--no-total is most often used:
 ```
-hledger bal expenses -N --layout bare -o report.csv
+hledger bal --layout bare -N expenses -o expenses.csv
 ```
-and then use one of the many ways to make charts from CSV data.
+
+The quickest way to get polished, ready-to-use charts, as of 2025, is probably to 
+[export to Beancount format](https://hledger.org/hledger.html#beancount-output) and then use Fava.
+[Fava](https://fava.pythonanywhere.com) is a mature web UI for Beancount with great charts.
+
+But see also:
 
 ## Charting tools built for hledger
 
@@ -19,7 +27,7 @@ Simplest first:
 
 ### hledger-web
 
-hledger-web has a simple balance over time chart (in the register view).
+hledger-web has a simple balance over time chart, in the register view. ([demo](https://demo.hledger.org/register?q=inacct:Assets:US:ETrade))
 
 ### hledger-bar
 
@@ -55,50 +63,60 @@ $ hledger bar -- -v 1 -f $TIMELOG biz -p weeklyfrom3weeksago
 [hledger-plot](https://pypi.org/project/hledger-utils) (2023)
 is a powerful graphical chart-making tool written in python.
 
-### Fava
-
-Fava is a mature web UI for Beancount with great charts.
-You can fairly easily [export a Beancount file from hledger](https://hledger.org/dev/hledger.html#beancount-output) and then use Fava.
-This is probably the quickest way to get polished charts for hledger data.
-
 ### hledger-sankey
 
-- <https://github.com/adept/hledger-sankey> A python3 script (that uses pandas and plotly) to plot three sankey graphs of hledger data
-- <https://github.com/JustSaX/hledger-sankey> hledger-sankey made interactive with Streamlit
+- <https://github.com/adept/hledger-sankey> is a python script using pandas and plotly to plot three sankey graphs of hledger data
+- <https://github.com/JustSaX/hledger-sankey> is hledger-sankey made interactive with Streamlit
 
 ### hledger-vega
 
 [hledger-vega](https://github.com/xitian9/hledger-vega) (2022) is a set of scripts for producing custom charts
 from your hledger reports, using the powerful [vega-lite](https://vega.github.io/vega-lite/).
-It works best with hledger 1.25+. 
 <!-- <https://nest.pijul.com/simonmichael/hledger-vega> is another variant -->
 
 ![hledger-vega example](images/hledger-vega.png)
-
 
 ### r-ledger
 
 [r-ledger](https://github.com/trevorld/r-ledger) is an R package for making reports and charts from hledger, Ledger or Beancount.
 
-## Other tools
 
-### Spreadsheets
-
-Drag the CSV file into your favourite spreadsheet app and use its interactive charting tools.
+## Other charting tools
 
 ### Ledger chart tools
 
 Tools built for Ledger or other PTA apps can sometimes be adapted to work with hledger also; or, hledger data can be exported to be read by Ledger. 
+Here are some of these:
 
 - [These simple bash scripts](https://www.sundialdreams.com/report-scripts-for-ledger-cli-with-gnuplot/) (2016) generate GNUplot charts from Ledger.
 - [ledger-plots](https://github.com/esovetkin/ledger-plots) (2018) is an R package for making charts from Ledger.
 - [ledger-plot](https://github.com/Tagirijus/ledger-plot) (2019) is a python script for making GNUplot charts from Ledger.
+- More can be found at the PTA site:
+  [GUI](https://plaintextaccounting.org/#ui-gui),
+  [web](https://plaintextaccounting.org/#ui-web),
+  [mobile](https://plaintextaccounting.org/#ui-mobile),
+  [other](https://plaintextaccounting.org/#reporting)
+
+### SankeyMATIC
+
+- <https://sankeymatic.com> make sankey diagrams in your browser
+
+The format is `Source [Amount] Target`. A rough script that exports the outflows from several asset accounts:
+
+```cli
+LEDGER_FILE=examples/sample.journal
+for f in checking saving cash; do 
+  hledger areg $f -O tsv | tail +2 | sed -e "s/^/$f\t/"
+done | cut -f1,6,7 | gsed -E -e 's/\$//' -e 's/([^\t]*)\t([^\t]*)\t([^\t]*)/\1 [\3] \2/' | grep '\[-' | gsed 's/\[-/[/'
+```
+
+[hledger-sankeymatic](https://github.com/victormihalache/hledger-sankeymatic) is a shell script that uses `awk` to generate sankey flow nodes you can paste directly into <https://sankeymatic.com>.
 
 ### ploterific
 
 [ploterific](https://github.com/GregorySchwartz/ploterific) (`stack install hvega-theme ploterific`) produces simple charts,
 in a HTML file that uses the [Vega-Lite](https://vega.github.io/vega-lite/) javascript library.
-Charts can also be saved as SVG or PNG. An example:
+Charts can also be saved as SVG or PNG. Here's a detailed example:
 
 ```
 hledger -f examples/bcexample.hledger bal -O csv -N expenses -3 cur:USD \
@@ -134,17 +152,3 @@ hledger -f examples/bcexample.hledger bal -O csv -N expenses -3 cur:USD \
 ```
 ![ploterific example 2](images/ploterific2.svg)
 
-### SankeyMATIC
-
-- <https://sankeymatic.com> make sankey diagrams in your browser
-
-The format is `Source [Amount] Target`. A rough script that exports the outflows from several asset accounts:
-
-```cli
-LEDGER_FILE=examples/sample.journal
-for f in checking saving cash; do 
-  hledger areg $f -O tsv | tail +2 | sed -e "s/^/$f\t/"
-done | cut -f1,6,7 | gsed -E -e 's/\$//' -e 's/([^\t]*)\t([^\t]*)\t([^\t]*)/\1 [\3] \2/' | grep '\[-' | gsed 's/\[-/[/'
-```
-
-[hledger-sankeymatic](https://github.com/victormihalache/hledger-sankeymatic) is a shell script that uses `awk` to generate sankey flow nodes you can paste directly into <https://sankeymatic.com>.
