@@ -110,6 +110,12 @@ from your hledger reports, using the powerful [vega-lite](https://vega.github.io
 
 ![r-ledger screenshot](images/charts-r-ledger.png)
 
+### Grafana export script
+
+[Visualise your finances with hledger, InfluxDB, and Grafana](https://memo.barrucadu.co.uk/hledger-influxdb-grafana.html) (2017)
+
+![grafana screenshot](images/charts-grafana.png)
+
 ## Other charting tools
 
 ### Ledger chart tools
