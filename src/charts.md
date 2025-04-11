@@ -112,9 +112,9 @@ Here are some of these:
 
 ### SankeyMATIC
 
-- <https://sankeymatic.com> make sankey diagrams in your browser
+At https://sankeymatic.com you can make sankey diagrams in your browser.
 
-The format is `Source [Amount] Target`. A rough script that exports the outflows from several asset accounts:
+The data format is `Source [Amount] Target`. Here's a rough script that exports the outflows from several asset accounts:
 
 ```cli
 LEDGER_FILE=examples/sample.journal
