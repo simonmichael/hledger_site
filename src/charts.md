@@ -35,7 +35,7 @@ hledger-web has a simple balance over time chart, in the register view. ([demo](
 ```
 hledger web
 ```
-![hledger-web chart](images/charts-hledger-web.png)
+![hledger-web screenshot](images/charts-hledger-web.png)
 
 ### hledger-bar
 
@@ -69,16 +69,16 @@ $ hledger bar -- -v 1 -f $TIMELOG biz -p weeklyfrom3weeksago
 ### hledger-plot
 
 [hledger-plot](https://pypi.org/project/hledger-utils) (2023)
-is a powerful graphical chart-making tool written in python.
+is a powerful chart-making tool written in python.
 
-![hledger-plot chart](images/charts-hledger-plot.png)
+![hledger-plot screenshot](images/charts-hledger-plot.png)
 
 ### hledger-sankey
 
 - <https://github.com/adept/hledger-sankey> is a python script using pandas and plotly to plot three sankey graphs of hledger data
 - <https://github.com/JustSaX/hledger-sankey> is hledger-sankey made interactive with Streamlit
 
-![hledger-sankey chart](images/charts-hledger-sankey.png)
+![hledger-sankey screenshot](images/charts-hledger-sankey.png)
 
 ### hledger-vega
 
@@ -86,12 +86,13 @@ is a powerful graphical chart-making tool written in python.
 from your hledger reports, using the powerful [vega-lite](https://vega.github.io/vega-lite/).
 <!-- <https://nest.pijul.com/simonmichael/hledger-vega> is another variant -->
 
-![hledger-vega example](images/hledger-vega.png)
+![hledger-vega screenshot](images/charts-hledger-vega.png)
 
 ### r-ledger
 
 [r-ledger](https://github.com/trevorld/r-ledger) is an R package for making reports and charts from hledger, Ledger or Beancount.
 
+![r-ledger screenshot](images/charts-r-ledger.png)
 
 ## Other charting tools
 
