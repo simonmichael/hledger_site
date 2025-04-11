@@ -116,6 +116,11 @@ from your hledger reports, using the powerful [vega-lite](https://vega.github.io
 
 ![grafana screenshot](images/charts-grafana.png)
 
+### docker-finance metadata visualising
+
+docker-finance, a hledger-based system, can [visualise large quantities of metadata](https://gitea.com/EvergreenCrypto/docker-finance#meta-w-root-c-analysis)
+using [ROOT](https://root.cern).
+
 ## Other charting tools
 
 ### Ledger chart tools
