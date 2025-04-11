@@ -35,6 +35,7 @@ hledger-web has a simple balance over time chart, in the register view. ([demo](
 ```
 hledger web
 ```
+![hledger-web chart](images/charts-hledger-web.png)
 
 ### hledger-bar
 
@@ -70,10 +71,14 @@ $ hledger bar -- -v 1 -f $TIMELOG biz -p weeklyfrom3weeksago
 [hledger-plot](https://pypi.org/project/hledger-utils) (2023)
 is a powerful graphical chart-making tool written in python.
 
+![hledger-plot chart](images/charts-hledger-plot.png)
+
 ### hledger-sankey
 
 - <https://github.com/adept/hledger-sankey> is a python script using pandas and plotly to plot three sankey graphs of hledger data
 - <https://github.com/JustSaX/hledger-sankey> is hledger-sankey made interactive with Streamlit
+
+![hledger-sankey chart](images/charts-hledger-sankey.png)
 
 ### hledger-vega
 
