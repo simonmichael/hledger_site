@@ -7,19 +7,23 @@
 
 Tips and techniques for producing graphical charts from hledger data.
 
-The most general, lowest-common-denominator way is to produce simple [CSV output](hledger.md#output-format)
+**The most general, lowest-common-denominator way** is to produce simple [CSV output](hledger.md#output-format)
 from a report and then make charts from that using the tool of your choice.
 Eg, drag the CSV file into a spreadsheet and use its charting tools.
-The `balance` command with --layout=bare and -N/--no-total is most often used:
+The `balance` command with --layout=bare and -N/--no-total is most often used. Eg:
 ```
 hledger bal --layout bare -N expenses -o expenses.csv
 ```
 
-The quickest way to get polished, ready-to-use charts, as of 2025, is probably to 
-[export to Beancount format](https://hledger.org/hledger.html#beancount-output) and then use Fava.
-[Fava](https://fava.pythonanywhere.com) is a mature web UI for Beancount with great charts.
+**The quickest way to get polished, ready-to-use charts** as of 2025 is probably to  export to Beancount format
+and then use [Fava](https://fava.pythonanywhere.com), a mature web UI with great charts.
+(If this doesn't work, you may need to alias some account names, eg; see [Beancount output](https://hledger.org/hledger.html#beancount-output)):
+```
+hledger print -O beancount >export.beancount
+fava export.beancount
+```
 
-But see also:
+Here are some other ways:
 
 ## Charting tools built for hledger
 
@@ -28,6 +32,9 @@ Simplest first:
 ### hledger-web
 
 hledger-web has a simple balance over time chart, in the register view. ([demo](https://demo.hledger.org/register?q=inacct:Assets:US:ETrade))
+```
+hledger web
+```
 
 ### hledger-bar
 
