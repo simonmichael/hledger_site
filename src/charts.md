@@ -73,6 +73,22 @@ is a powerful chart-making tool written in python.
 
 ![hledger-plot screenshot](images/charts-hledger-plot.png)
 
+### hledger-sankeymatic
+
+At <https://sankeymatic.com> you can make flow diagrams in your browser,
+from data records like `Source [Amount] Target`. 
+
+Here's a rough script that exports the outflows from several asset accounts:
+
+```cli
+LEDGER_FILE=examples/sample.journal
+for f in checking saving cash; do 
+  hledger areg $f -O tsv | tail +2 | sed -e "s/^/$f\t/"
+done | cut -f1,6,7 | gsed -E -e 's/\$//' -e 's/([^\t]*)\t([^\t]*)\t([^\t]*)/\1 [\3] \2/' | grep '\[-' | gsed 's/\[-/[/'
+```
+
+[hledger-sankeymatic](https://github.com/victormihalache/hledger-sankeymatic) is a better script to help you export hledger data to SankeyMATIC.
+
 ### hledger-sankey
 
 - <https://github.com/adept/hledger-sankey> is a python script using pandas and plotly to plot three sankey graphs of hledger data
@@ -109,21 +125,6 @@ Here are some of these:
   [web](https://plaintextaccounting.org/#ui-web),
   [mobile](https://plaintextaccounting.org/#ui-mobile),
   [other](https://plaintextaccounting.org/#reporting)
-
-### SankeyMATIC
-
-At <https://sankeymatic.com> you can make sankey diagrams in your browser.
-
-The data format is `Source [Amount] Target`. Here's a rough script that exports the outflows from several asset accounts:
-
-```cli
-LEDGER_FILE=examples/sample.journal
-for f in checking saving cash; do 
-  hledger areg $f -O tsv | tail +2 | sed -e "s/^/$f\t/"
-done | cut -f1,6,7 | gsed -E -e 's/\$//' -e 's/([^\t]*)\t([^\t]*)\t([^\t]*)/\1 [\3] \2/' | grep '\[-' | gsed 's/\[-/[/'
-```
-
-[hledger-sankeymatic](https://github.com/victormihalache/hledger-sankeymatic) is a shell script that uses `awk` to generate sankey flow nodes you can paste directly into <https://sankeymatic.com>.
 
 ### ploterific
 
