@@ -18,7 +18,7 @@
 
 # hledger
 
-<div id="tagline">
+<div id="tagline" style="margin-bottom:1em;">
 Robust, friendly, fast<br> plain text accounting software
 </div>
 
