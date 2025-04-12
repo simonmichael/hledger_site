@@ -49,21 +49,22 @@ Here's more about the [Features](features.md).
 Don't hesitate to join the [chat](support.md) and ask questions.
 
 [![Github repo](https://img.shields.io/github/stars/simonmichael/hledger.svg?logo=GitHub&label=Github+stars&color=brightgreen)](https://github.com/simonmichael/hledger)
-[![GitHub downloads](https://img.shields.io/github/downloads/simonmichael/hledger/total?logo=GitHub&label=Github+downloads)](https://github.com/simonmichael/hledger/releases)
 [![GitHub downloads, latest](https://img.shields.io/github/downloads/simonmichael/hledger/latest/total?logo=GitHub&label=Github+downloads,+latest&color=brightgreen)](https://github.com/simonmichael/hledger/releases/latest)
+[![GitHub downloads](https://img.shields.io/github/downloads/simonmichael/hledger/total?logo=GitHub&label=Github+downloads)](https://github.com/simonmichael/hledger/releases)
+[![Homebrew](https://img.shields.io/homebrew/installs/dy/hledger?color=brightgreen&label=homebrew&logo=homebrew)](https://formulae.brew.sh/formula/hledger)
+[![Hackage](https://img.shields.io/hackage/v/hledger.svg?logo=Haskell&label=Hackage&colorB=brightgreen)](https://hackage.haskell.org/package/hledger)
+[![Stackage LTS](https://repology.org/badge/version-for-repo/stackage_lts/hledger.svg?logo=Haskell&header=Stackage+LTS)](https://www.stackage.org/lts/package/hledger)
+<!--
+[![Stackage Nightly](https://repology.org/badge/version-for-repo/stackage_nightly/hledger.svg?header=Stackage+Nightly)](https://www.stackage.org/nightly/package/hledger)
   [![CI binaries-linux-x64](https://github.com/simonmichael/hledger/workflows/binaries-linux-x64/badge.svg)](https://github.com/simonmichael/hledger/actions/workflows/binaries-linux-x64.yml)
     [![CI binaries-mac-x64](https://github.com/simonmichael/hledger/workflows/binaries-mac-x64/badge.svg)](https://github.com/simonmichael/hledger/actions/workflows/binaries-mac-x64.yml)
   [![CI binaries-mac-arm64](https://github.com/simonmichael/hledger/workflows/binaries-mac-arm64/badge.svg)](https://github.com/simonmichael/hledger/actions/workflows/binaries-mac-arm64.yml)
 [![CI binaries-windows-x64](https://github.com/simonmichael/hledger/workflows/binaries-windows-x64/badge.svg)](https://github.com/simonmichael/hledger/actions/workflows/binaries-windows-x64.yml)
-[![Hackage](https://img.shields.io/hackage/v/hledger.svg?logo=Haskell&label=Hackage&colorB=brightgreen)](https://hackage.haskell.org/package/hledger)
-[![Stackage LTS](https://repology.org/badge/version-for-repo/stackage_lts/hledger.svg?logo=Haskell&header=Stackage+LTS)](https://www.stackage.org/lts/package/hledger)
-![Homebrew](https://img.shields.io/homebrew/installs/dy/hledger?color=brightgreen&label=homebrew&logo=homebrew)
-<!--
-[![Stackage Nightly](https://repology.org/badge/version-for-repo/stackage_nightly/hledger.svg?header=Stackage+Nightly)](https://www.stackage.org/nightly/package/hledger)\
+[![Stackage Nightly](https://repology.org/badge/version-for-repo/stackage_nightly/hledger.svg?header=Stackage+Nightly)](https://www.stackage.org/nightly/package/hledger)
 ![GitHub downloads, linux-x64](https://img.shields.io/github/downloads/simonmichael/hledger/hledger-linux-x64.zip?label=Github+downloads)
-![GitHub downloads, latest, linux-x64](https://img.shields.io/github/downloads/simonmichael/hledger/latest/hledger-linux-x64.zip?label=Github+downloads,+latest)\
+![GitHub downloads, latest, linux-x64](https://img.shields.io/github/downloads/simonmichael/hledger/latest/hledger-linux-x64.zip?label=Github+downloads,+latest)
 ![GitHub downloads, mac-x64](https://img.shields.io/github/downloads/simonmichael/hledger/hledger-mac-x64.zip?label=Github+downloads)
-![GitHub downloads, latest, mac-x64](https://img.shields.io/github/downloads/simonmichael/hledger/latest/hledger-mac-x64.zip?label=Github+downloads,+latest)\
+![GitHub downloads, latest, mac-x64](https://img.shields.io/github/downloads/simonmichael/hledger/latest/hledger-mac-x64.zip?label=Github+downloads,+latest)
 ![GitHub downloads, windows-x64](https://img.shields.io/github/downloads/simonmichael/hledger/hledger-windows-x64.zip?label=Github+downloads)
 ![GitHub downloads, latest, windows-x64](https://img.shields.io/github/downloads/simonmichael/hledger/latest/hledger-windows-x64.zip?label=Github+downloads,+latest)
 -->
