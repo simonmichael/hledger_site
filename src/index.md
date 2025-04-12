@@ -18,6 +18,31 @@
 <div id="tagline">
 Robust, friendly, fast<br> <a href="https://plaintextaccounting.org">plain text accounting</a> software
 <!-- <br>⚡️💪🏼❤️ -->
+
+[![Github repo](https://img.shields.io/github/stars/simonmichael/hledger.svg?logo=GitHub&label=Github+stars&color=brightgreen)](https://github.com/simonmichael/hledger)
+[![GitHub downloads, latest](https://img.shields.io/github/downloads/simonmichael/hledger/latest/total?logo=GitHub&label=Github+downloads,+latest&color=brightgreen)](https://github.com/simonmichael/hledger/releases/latest)
+[![GitHub downloads](https://img.shields.io/github/downloads/simonmichael/hledger/total?logo=GitHub&label=Github+downloads)](https://github.com/simonmichael/hledger/releases)
+[![Homebrew](https://img.shields.io/homebrew/installs/dy/hledger?color=brightgreen&label=homebrew&logo=homebrew)](https://formulae.brew.sh/formula/hledger)
+[![Hackage](https://img.shields.io/hackage/v/hledger.svg?logo=Haskell&label=Hackage&colorB=brightgreen)](https://hackage.haskell.org/package/hledger)
+[![Stackage LTS](https://repology.org/badge/version-for-repo/stackage_lts/hledger.svg?logo=Haskell&header=Stackage+LTS)](https://www.stackage.org/lts/package/hledger)
+<!--
+[![Stackage Nightly](https://repology.org/badge/version-for-repo/stackage_nightly/hledger.svg?header=Stackage+Nightly)](https://www.stackage.org/nightly/package/hledger)
+  [![CI binaries-linux-x64](https://github.com/simonmichael/hledger/workflows/binaries-linux-x64/badge.svg)](https://github.com/simonmichael/hledger/actions/workflows/binaries-linux-x64.yml)
+    [![CI binaries-mac-x64](https://github.com/simonmichael/hledger/workflows/binaries-mac-x64/badge.svg)](https://github.com/simonmichael/hledger/actions/workflows/binaries-mac-x64.yml)
+  [![CI binaries-mac-arm64](https://github.com/simonmichael/hledger/workflows/binaries-mac-arm64/badge.svg)](https://github.com/simonmichael/hledger/actions/workflows/binaries-mac-arm64.yml)
+[![CI binaries-windows-x64](https://github.com/simonmichael/hledger/workflows/binaries-windows-x64/badge.svg)](https://github.com/simonmichael/hledger/actions/workflows/binaries-windows-x64.yml)
+[![Stackage Nightly](https://repology.org/badge/version-for-repo/stackage_nightly/hledger.svg?header=Stackage+Nightly)](https://www.stackage.org/nightly/package/hledger)
+![GitHub downloads, linux-x64](https://img.shields.io/github/downloads/simonmichael/hledger/hledger-linux-x64.zip?label=Github+downloads)
+![GitHub downloads, latest, linux-x64](https://img.shields.io/github/downloads/simonmichael/hledger/latest/hledger-linux-x64.zip?label=Github+downloads,+latest)
+![GitHub downloads, mac-x64](https://img.shields.io/github/downloads/simonmichael/hledger/hledger-mac-x64.zip?label=Github+downloads)
+![GitHub downloads, latest, mac-x64](https://img.shields.io/github/downloads/simonmichael/hledger/latest/hledger-mac-x64.zip?label=Github+downloads,+latest)
+![GitHub downloads, windows-x64](https://img.shields.io/github/downloads/simonmichael/hledger/hledger-windows-x64.zip?label=Github+downloads)
+![GitHub downloads, latest, windows-x64](https://img.shields.io/github/downloads/simonmichael/hledger/latest/hledger-windows-x64.zip?label=Github+downloads,+latest)
+![GitHub downloads, latest](https://img.shields.io/github/downloads/simonmichael/hledger/latest/hledger-linux-x64.zip?label=Github_downloads,_latest,_linux-x64)
+![GitHub downloads, latest](https://img.shields.io/github/downloads/simonmichael/hledger/latest/hledger-mac-x64.zip?label=Github_downloads,_latest,_mac-x64)
+![GitHub downloads, latest](https://img.shields.io/github/downloads/simonmichael/hledger/latest/hledger-windows-x64.zip?label=Github_downloads,_latest,_windows-x64)
+-->
+
 </div>
 
 ## hledger is...
@@ -41,61 +66,45 @@ Robust, friendly, fast<br> <a href="https://plaintextaccounting.org">plain text 
   is helpful, but not required (much)
 - good at importing CSV from banks and other financial institutions
 - actively developed and supported by [Simon Michael](https://joyful.com) and [contributors](CREDITS.md) since 2007
-- strengthened by your [feedback](support.md), [work](CONTRIBUTING.md) and [funding](sponsor.md). 🙏🏻\
+- strengthened by community [feedback](support.md) and [funding](sponsor.md). 🙏🏻\
+
+Here's more about the [Features](features.md).
+Don't hesitate to ask questions in the [chat](support.md).
+Or explore the documentation links in the left sidebar.
+(If not visible, click/tap the icon at top left.)
 
 <img id="coins" src="images/coins2-248.png" style="width:25%; margin:1em 1em; float:right;" />
 
-Here's more about the [Features](features.md).
-Don't hesitate to join the [chat](support.md) and ask questions.
-
-[![Github repo](https://img.shields.io/github/stars/simonmichael/hledger.svg?logo=GitHub&label=Github+stars&color=brightgreen)](https://github.com/simonmichael/hledger)
-[![GitHub downloads, latest](https://img.shields.io/github/downloads/simonmichael/hledger/latest/total?logo=GitHub&label=Github+downloads,+latest&color=brightgreen)](https://github.com/simonmichael/hledger/releases/latest)
-[![GitHub downloads](https://img.shields.io/github/downloads/simonmichael/hledger/total?logo=GitHub&label=Github+downloads)](https://github.com/simonmichael/hledger/releases)
-[![Homebrew](https://img.shields.io/homebrew/installs/dy/hledger?color=brightgreen&label=homebrew&logo=homebrew)](https://formulae.brew.sh/formula/hledger)
-[![Hackage](https://img.shields.io/hackage/v/hledger.svg?logo=Haskell&label=Hackage&colorB=brightgreen)](https://hackage.haskell.org/package/hledger)
-[![Stackage LTS](https://repology.org/badge/version-for-repo/stackage_lts/hledger.svg?logo=Haskell&header=Stackage+LTS)](https://www.stackage.org/lts/package/hledger)
-<!--
-[![Stackage Nightly](https://repology.org/badge/version-for-repo/stackage_nightly/hledger.svg?header=Stackage+Nightly)](https://www.stackage.org/nightly/package/hledger)
-  [![CI binaries-linux-x64](https://github.com/simonmichael/hledger/workflows/binaries-linux-x64/badge.svg)](https://github.com/simonmichael/hledger/actions/workflows/binaries-linux-x64.yml)
-    [![CI binaries-mac-x64](https://github.com/simonmichael/hledger/workflows/binaries-mac-x64/badge.svg)](https://github.com/simonmichael/hledger/actions/workflows/binaries-mac-x64.yml)
-  [![CI binaries-mac-arm64](https://github.com/simonmichael/hledger/workflows/binaries-mac-arm64/badge.svg)](https://github.com/simonmichael/hledger/actions/workflows/binaries-mac-arm64.yml)
-[![CI binaries-windows-x64](https://github.com/simonmichael/hledger/workflows/binaries-windows-x64/badge.svg)](https://github.com/simonmichael/hledger/actions/workflows/binaries-windows-x64.yml)
-[![Stackage Nightly](https://repology.org/badge/version-for-repo/stackage_nightly/hledger.svg?header=Stackage+Nightly)](https://www.stackage.org/nightly/package/hledger)
-![GitHub downloads, linux-x64](https://img.shields.io/github/downloads/simonmichael/hledger/hledger-linux-x64.zip?label=Github+downloads)
-![GitHub downloads, latest, linux-x64](https://img.shields.io/github/downloads/simonmichael/hledger/latest/hledger-linux-x64.zip?label=Github+downloads,+latest)
-![GitHub downloads, mac-x64](https://img.shields.io/github/downloads/simonmichael/hledger/hledger-mac-x64.zip?label=Github+downloads)
-![GitHub downloads, latest, mac-x64](https://img.shields.io/github/downloads/simonmichael/hledger/latest/hledger-mac-x64.zip?label=Github+downloads,+latest)
-![GitHub downloads, windows-x64](https://img.shields.io/github/downloads/simonmichael/hledger/hledger-windows-x64.zip?label=Github+downloads)
-![GitHub downloads, latest, windows-x64](https://img.shields.io/github/downloads/simonmichael/hledger/latest/hledger-windows-x64.zip?label=Github+downloads,+latest)
--->
-<!--
-\
-![GitHub downloads, latest](https://img.shields.io/github/downloads/simonmichael/hledger/latest/hledger-linux-x64.zip?label=Github_downloads,_latest,_linux-x64)\
-![GitHub downloads, latest](https://img.shields.io/github/downloads/simonmichael/hledger/latest/hledger-mac-x64.zip?label=Github_downloads,_latest,_mac-x64)\
-![GitHub downloads, latest](https://img.shields.io/github/downloads/simonmichael/hledger/latest/hledger-windows-x64.zip?label=Github_downloads,_latest,_windows-x64)\
--->
-
 ## Quick start
 
-Welcome! This plain text accounting stuff is useful and more fun than it sounds - care to give it a try ?
+Welcome! 
+This plain text accounting stuff is very useful, and more fun than it sounds - care to give it a try ?
+See [Get&nbsp;Started](start.md), or the following short guide:
 
-[Install](install.md), then see [Get Started](start.md), or the Examples below,
-or run `hledger` to see help and demos.
-Full documentation is ready when you need it, in the sidebar to the left.
-(If not visible, click/tap the horizontal-lines icon at top left.)
-<!--
-[hledger](hledger.md), [hledger-ui](hledger-ui.md), [hledger-web](hledger-web.md) manuals,
-[Cookbook](cookbook.md), [FAQ](faq.md) and [Videos/Talks](videos.md),
--->
+### 1. Install hledger
 
-## Examples
+Install hledger on your computer.
+The [Install](install.md) page shows how to get an up-to-date version quickly.
 
-Here are three transactions in [journal format](hledger.md#journal),
-recorded in the [journal file](hledger.md#input) (`$LEDGER_FILE` or `~/.hledger.journal`)
-by [`hledger add`](hledger.md#add) or [other method](create-a-journal.md).
-The [account names](hledger.md#account-names) and [amounts](hledger.md#amounts) are separated by at least two spaces;
-a positive amount means "added to this account", negative means "removed from this account".
-hledger will check that each transaction's amounts sum to zero; one of them may be omitted for convenience.
+### 2. Start a transactions journal
+
+hledger reads transactions from a [journal file](hledger.md#input).
+By default this is `~/.hledger.journal` or `C:\Users\USER\.hledger.journal`.
+You can change this by configuring $LEDGER_FILE.
+
+This file uses [journal format](hledger.md#journal). 
+Here is the basic form of a transaction entry:
+
+[![hledger basic transaction, showing names of parts](https://raw.githubusercontent.com/RobertNielsen1/hledger/master/hledger%20basic%20transaction%20--%20terms.png)](https://github.com/RobertNielsen1/hledger/blob/master/hledger%20basic%20transaction%20--%20terms.png)
+
+- It begins with a date and description
+- followed by indented lines specifying [accounts](hledger.md#account-names) and [amounts](hledger.md#amounts), with at least two spaces before the amount.
+- A positive amount means "added to this account", negative means "removed from this account". <!-- (Equivalent to "debit" and "credit" in traditional accounting.) -->
+- The amounts in a transaction must add up to zero.
+- If you leave one amount blank, it will be filled in automatically.
+
+Here's a short journal, annotated with comments.
+Transactions are usually ordered by date, with the first one setting starting balances:
 
 ```journal
 
@@ -117,8 +126,19 @@ hledger will check that each transaction's amounts sum to zero; one of them may 
     expenses:food             $50
     assets:cash                        ; <- $-50 is inferred here.
 ```
+<!--
+(It it looks verbose, note we often use auto-completion, or generate entries automatically from bank data.
+You can also use shorter account names or aliases.)
+-->
 
-You can run reports like so:
+Save the above in your journal file, using a text editor.
+Or, run `hledger add` or `hledger web`, and record these transactions interactively
+(you can skip the comments).
+
+### 3. Run reports
+
+Now you can see reports, such as a balance sheet - what you own and owe.
+(If you used non-english account names, you might need [declarations](#4-add-declarations-optional) first.)
 ```cli
 $ hledger bs
 Balance Sheet 2023-02-15
@@ -141,6 +161,8 @@ Balance Sheet 2023-02-15
 =========================++============
  Net:                    ||      $4000 
 ```
+
+Or an income statement, AKA profit and loss report - what you received and spent.
 ```cli
 $ hledger is -MTA
 Income Statement 2023-01-01..2023-02-28
@@ -161,6 +183,8 @@ Income Statement 2023-01-01..2023-02-28
 ===============++==============================
  Net:          ||   0   $950     $950     $475 
 ```
+
+Or the transactions and running balance in an account:
 ```cli
 $ hledger aregister checking
 Transactions in assets:bank:checking and subaccounts:
@@ -168,25 +192,29 @@ Transactions in assets:bank:checking and subaccounts:
 2023-02-01 GOODWORKS CORP       in:salary                    $1000         $2000
 ```
 
-### Declarations
+### 4. Add declarations (optional)
 
-If you use other account names, it's useful to declare their [account types](hledger.md#account-types):
+If your top-level accounts use non-english names, it's useful to declare their [account types](hledger.md#account-types).
+This helps reports like `bs` and `is` show the right accounts.
+Eg:
 ```journal
 
-account actifs                          ; type:Asset, 2+ spaces required before the ;
-account actifs:banque:compte courant    ; type:Cash
-account actifs:banque:compte d'épargne  ; type:Cash
-account actifs:espèces                  ; type:Cash
-account passifs                         ; type:Liability
-account capitaux propres                ; type:Equity
-account revenus                         ; type:Revenue
-account dépenses                        ; type:Expense
+account actifs                          ; type:A, note 2+ spaces required before the ;
+account actifs:banque:compte courant    ; type:C
+account actifs:banque:compte d'épargne  ; type:C
+account actifs:espèces                  ; type:C
+account passifs                         ; type:L
+account capitaux propres                ; type:E
+account revenus                         ; type:R
+account dépenses                        ; type:X
 ```
 
-Or declare all accounts, currencies and tags, if you want [strict error checking](hledger.md#strict-mode):
+If you want more error checking, you can declare all the allowed account and commodity/currency names,
+and then use [strict mode](hledger.md#strict-mode):
+
 ```journal
 
-account assets                   ; type:A, 2+ spaces required before the ;
+account assets                   ; type:A
 account assets:bank              ; type:C
 account assets:bank:checking
 account assets:bank:savings
@@ -204,18 +232,16 @@ account expenses:food
 account expenses:gifts
 
 commodity $1000.00
-
-tag type
 ```
 ```cli
 $ hledger check --strict
-$ 
+$ hledger -s CMD ...
 ```
 
-Declaring accounts also helps set their preferred [display order](hledger.md#account-display-order):
+Declaring accounts also sets their preferred [display order](hledger.md#account-display-order) (instead of sorting alphabetically):
 
 ```cli
-$ hledger accounts -t
+$ hledger accounts --tree
 assets
   bank
     checking
@@ -232,21 +258,6 @@ expenses
   rent
   food
   gifts
-```
-
-You can declare [account aliases](hledger.md#alias-directive) to save typing:
-```journal
-
-alias chk  = assets:bank:checking
-alias cash = assets:cash
-alias card = liabilities:creditcard
-alias food = expenses:food
-
-...
-
-2023-02-15 market
-    food          $50
-    cash
 ```
 
 ### Other UIs
@@ -360,7 +371,7 @@ $ hledger aregister checking
 2023-02-23 TRANSFER TO SAVINGS  as:ba:savings              $-10.00      $2040.00
 ```
 
-### More examples...
+## More examples...
 
 - [Charts and Graphs](charts.md)
 - [Workflows](workflows.md)
