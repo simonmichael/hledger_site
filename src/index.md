@@ -110,7 +110,7 @@ The amounts in a transaction must add up to zero.
 If you leave one amount blank, it will be calculated automatically.
 
 Here's an example journal, with comments.
-Transactions are usually ordered by date, with the first one setting starting balances:
+Transactions are ordered by date, and the first one sets starting balances.
 
 ```journal
 
@@ -136,14 +136,22 @@ Transactions are usually ordered by date, with the first one setting starting ba
 (It it looks verbose, note we often use auto-completion, or generate entries automatically from bank data.
 You can also use shorter account names or aliases.)
 -->
+
 Save this as your journal file, using a text editor.
 Or, run `hledger add` or `hledger web`, and record these transactions interactively
-(you can skip the comments).
+(no need to enter the comments).
+
+One more thing: in accounting, there are five standard account types:
+*assets*, *liabilities*, *equity*, *revenues* (or *income*), and *expenses*.
+As a convenience, hledger detects these types from the top level account names, but this only works for the english names.
+So if you used non-english names for your top level accounts,
+please add [account type declarations](#4-add-declarations-optional) for them also.
 
 ### 3. Run reports
 
-Now you can see reports, such as a balance sheet, showing what you own and owe.
-(If you used non-english account names, you might need [declarations](#4-add-declarations-optional) first):
+Now you can see reports, such as...
+
+A balance sheet, showing what you own and owe:
 ```cli
 $ hledger bs
 Balance Sheet 2023-02-15
@@ -167,7 +175,7 @@ Balance Sheet 2023-02-15
  Net:                    ||      $4000 
 ```
 
-Or an income statement, AKA profit and loss report, showing what you received and spent:
+An income statement (AKA profit and loss report), showing what you received and spent:
 ```cli
 $ hledger is -MTA
 Income Statement 2023-01-01..2023-02-28
@@ -199,27 +207,28 @@ Transactions in assets:bank:checking and subaccounts:
 
 ### 4. Add declarations (optional)
 
-If your top-level accounts use non-english names, it's useful to declare their [account types](hledger.md#account-types).
-This helps reports like `bs` and `is` show the right accounts.
+If your top-level accounts use non-english or non-standard names, it's useful to declare their [account types](hledger.md#account-types).
+This helps reports like `bs` and `is` show them correctly.
 Eg:
 ```journal
+; Declare some account types.
+; Subaccounts of these will inherit their parent's type.
 
-account actifs                          ; type:A, note 2+ spaces required before the ;
-account actifs:banque:compte courant    ; type:C
-account actifs:banque:compte d'épargne  ; type:C
-account actifs:espèces                  ; type:C
-account passifs                         ; type:L
-account capitaux propres                ; type:E
-account revenus                         ; type:R
-account dépenses                        ; type:X
+account actifs                          ; type:Asset
+account actifs:banque:compte courant    ; type:Cash
+account actifs:banque:compte d'épargne  ; type:Cash, (note: 2+ spaces required after the account name)
+account actifs:espèces                  ; type:Cash
+account passifs                         ; type:Liability
+account capitaux propres                ; type:Equity
+account revenus                         ; type:Revenue
+account dépenses                        ; type:Expense
 ```
 
 If you want more error checking, you can declare all allowed account and commodity/currency names,
 and then use [strict mode](hledger.md#strict-mode):
 
 ```journal
-
-account assets                   ; type:A
+account assets                   ; type:A, (using the single-letter spellings this time)
 account assets:bank              ; type:C
 account assets:bank:checking
 account assets:bank:savings
@@ -265,22 +274,21 @@ expenses
   gifts
 ```
 
-Congrats! You can now use hledger to track your daily finances.
+Congratulations, you can now use hledger to track your daily finances!
+But see [Get&nbsp;Started](start.md) for more detailed help and tutorials.
 
-When you want to learn more, see [Get&nbsp;Started](start.md).
-
-Bookkeeping, accounting, and plain text accounting take some time to master.
-With practice, doc-reading, and [support/discussion](support.md), you will gradually
+Bookkeeping, accounting, and plain text accounting are valuable skills, and they do take some time to master.
+With practice, more doc reading, and [support/discussion](support.md), you will gradually
 - build up a set of account names best suited to you
 - learn the proper journal entries for your real-world transactions
 - learn how to produce the reports most useful for you
 - and learn new workflows that you may find more convenient.
 <!-- - learn how to prevent, detect and fix errors quickly -->
 
-### Other UIs
+### Other user interfaces
 
-Instead of using the command line, you can use the [`ui`](ui.md) or [`web`](web.md) inferfaces
-(or `repl`, `add`, `iadd`, ...)
+Instead of using the command line, you can use the [`ui`](ui.md) or [`web`](web.md) interfaces
+(or [`repl`](hledger.md#repl), [`add`](hledger.md#add), [`iadd`](hledger.md#iadd), ...)
 
 <a href="/images/cli-green-bs-reg.png" class="highslide" onclick="return hs.expand(this, { captionText:'The hledger command line interface.' })"><img src="images/cli-green-bs-reg.png" height="190"></a>
 <a href="/images/home-ui-3.png"        class="highslide" onclick="return hs.expand(this, { captionText:'The hledger-ui text user interface.' })"><img src="images/home-ui-3.png"        height="190"></a>
@@ -288,7 +296,7 @@ Instead of using the command line, you can use the [`ui`](ui.md) or [`web`](web.
 
 ### Time tracking
 
-hledger can also read time logs in [timeclock](hledger.md#timeclock) format:
+hledger can also read time logs, in [timeclock](hledger.md#timeclock) format:
 
 ```timeclock
 
@@ -304,7 +312,7 @@ $ hledger -f 2023.timeclock register -D
 2023-04-01   personal:reading:online            2.01h        11.66h
 ```
 
-Or in [timedot](hledger.md#timedot) format:
+or in [timedot](hledger.md#timedot) format:
 
 ```timedot
 
