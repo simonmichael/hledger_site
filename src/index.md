@@ -69,9 +69,9 @@ Robust, friendly, fast<br> <a href="https://plaintextaccounting.org">plain text 
 - strengthened by community [feedback](support.md) and [funding](sponsor.md). 🙏🏻\
 
 Here's more about the [Features](features.md).
-Don't hesitate to ask questions in the [chat](support.md).
-Or explore the documentation links in the left sidebar.
-(If not visible, click/tap the icon at top left.)
+Don't hesitate to ask questions in the chat - see [Support/Discussion](support.md).
+Or explore the documentation links in the left sidebar
+(if not visible, click/tap the icon at top left).
 
 <img id="coins" src="images/coins2-248.png" style="width:25%; margin:1em 1em; float:right;" />
 
@@ -384,14 +384,6 @@ $ hledger aregister checking
 <!-- -->
 - hledger [Cookbook](cookbook.md)
 - [PTA Cookbook](https://plaintextaccounting.org/Cookbook)
-
-## See also
-
-- [![](https://raw.githubusercontent.com/sindresorhus/awesome/main/media/badge-flat.svg) hledger list](https://github.com/edkedk99/awesome-hledger#readme)
-- [![Github topic: #hledger](https://img.shields.io/badge/Github_topic-%23hledger-green)](https://github.com/topics/hledger?o=desc&s=updated)
-  [![Github topic: #plaintext-accounting](https://img.shields.io/badge/Github_topic-%23plaintext--accounting-green)](https://github.com/topics/plaintext-accounting?o=desc&s=updated)
-  [![Github topics: *accounting*](https://img.shields.io/badge/Github_topics-%2Aaccounting%2A-green)](https://github.com/search?type=topics&q=accounting)
-- [Support/Discussion](support.md)
 
 ## Site tips
 
