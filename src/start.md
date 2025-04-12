@@ -7,6 +7,7 @@
 
 Starting out with hledger and Plain Text Accounting, not to mention setting up a new accounting system, can be a lot to take in. This page aims to help!
 After [installing](install.md) hledger, reading some of the docs below should be helpful.
+When you want more detail, remember that full documentation links are in the left sidebar. (If not visible, click/tap the icon at top left.)
 
 ## Getting help
 
