@@ -17,7 +17,9 @@
 
 <div id="tagline">
 Robust, friendly, fast<br> <a href="https://plaintextaccounting.org">plain text accounting</a> software
-<!-- <br>⚡️💪🏼❤️ -->
+</div>
+
+<div align=center>
 
 [![Github repo](https://img.shields.io/github/stars/simonmichael/hledger.svg?logo=GitHub&label=Github+stars&color=brightgreen)](https://github.com/simonmichael/hledger)
 [![GitHub downloads, latest](https://img.shields.io/github/downloads/simonmichael/hledger/latest/total?logo=GitHub&label=Github+downloads,+latest&color=brightgreen)](https://github.com/simonmichael/hledger/releases/latest)
@@ -44,6 +46,8 @@ Robust, friendly, fast<br> <a href="https://plaintextaccounting.org">plain text 
 -->
 
 </div>
+
+<img id="coins" src="images/coins2-248.png" style="width:25%; margin:1em 1em; float:right;" />
 
 ## hledger is...
 
@@ -72,10 +76,7 @@ More about [Features](features.md).
 
 Welcome!
 Don't hesitate to [ask questions](support.md).
-Or explore the documentation links in the left sidebar
-(if not visible, click/tap the icon at top left).
-
-<img id="coins" src="images/coins2-248.png" style="width:25%; margin:1em 1em; float:right;" />
+Or explore the documentation links in the sidebar (if not visible, click/tap the icon at top left).
 
 ## Quick start
 
