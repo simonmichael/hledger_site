@@ -66,10 +66,12 @@ Robust, friendly, fast<br> <a href="https://plaintextaccounting.org">plain text 
   is helpful, but not required (much)
 - good at importing CSV from banks and other financial institutions
 - actively developed and supported by [Simon Michael](https://joyful.com) and [contributors](CREDITS.md) since 2007
-- strengthened by community [feedback](support.md) and [funding](sponsor.md). 🙏🏻\
+- strengthened by community feedback and [funding](sponsor.md).
 
-Here's more about the [Features](features.md).
-Don't hesitate to ask questions in the chat - see [Support/Discussion](support.md).
+More about [Features](features.md).
+
+Welcome!
+Don't hesitate to [ask questions](support.md).
 Or explore the documentation links in the left sidebar
 (if not visible, click/tap the icon at top left).
 
@@ -77,8 +79,7 @@ Or explore the documentation links in the left sidebar
 
 ## Quick start
 
-Welcome! 
-This plain text accounting stuff is very useful, and more fun than it sounds - care to give it a try ?
+This plain text accounting stuff is both useful and more fun than it sounds - care to give it a try ?
 See [Get&nbsp;Started](start.md), or the following short guide:
 
 ### 1. Install hledger
@@ -183,7 +184,7 @@ Income Statement 2023-01-01..2023-02-28
  Net:          ||   0   $950     $950     $475 
 ```
 
-Or an account register - the transactions and running balance in an account:
+Or an account register, showing the transactions and running balance in an account:
 ```cli
 $ hledger aregister checking
 Transactions in assets:bank:checking and subaccounts:
@@ -262,11 +263,14 @@ expenses
 Congrats! You can now use hledger to track your daily finances.
 
 When you want to learn more, see [Get&nbsp;Started](start.md).
-With more practice, doc-reading, [support](support.md) and time, you will gradually
+
+Bookkeeping, accounting, and plain text accounting take some time to master.
+With practice, doc-reading, and [support/discussion](support.md), you will gradually
 - build up a set of account names best suited to you
-- learn the proper journal entries for all your real-world transactions
+- learn the proper journal entries for your real-world transactions
 - learn how to produce the reports most useful for you
 - and learn new workflows that you may find more convenient.
+<!-- - learn how to prevent, detect and fix errors quickly -->
 
 ### Other UIs
 
