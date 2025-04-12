@@ -92,18 +92,18 @@ hledger reads transactions from a [journal file](hledger.md#input).
 By default this is `~/.hledger.journal` or `C:\Users\USER\.hledger.journal`.
 You can change this by configuring $LEDGER_FILE.
 
-This file uses [journal format](hledger.md#journal). 
-Here is the basic form of a transaction entry:
+This file uses [journal format](hledger.md#journal), containing transaction entries like this (the black text):
 
 [![hledger basic transaction, showing names of parts](https://raw.githubusercontent.com/RobertNielsen1/hledger/master/hledger%20basic%20transaction%20--%20terms.png)](https://github.com/RobertNielsen1/hledger/blob/master/hledger%20basic%20transaction%20--%20terms.png)
 
-- It begins with a date and description
-- followed by indented lines specifying [accounts](hledger.md#account-names) and [amounts](hledger.md#amounts), with at least two spaces before the amount.
-- A positive amount means "added to this account", negative means "removed from this account". <!-- (Equivalent to "debit" and "credit" in traditional accounting.) -->
-- The amounts in a transaction must add up to zero.
-- If you leave one amount blank, it will be filled in automatically.
+A transaction begins with a date and description, followed by an indented list of accounts and amounts.
+Note the 2 or more spaces required between each account name and amount.
+A positive amount means "added to this account", a negative amount means "removed from this account"
+(AKA [debit and credit](https://plaintextaccounting.org/FAQ#where-are-debits-and-credits)).
+The amounts in a transaction must add up to zero.
+If you leave one amount blank, it will be calculated automatically.
 
-Here's a short journal, annotated with comments.
+Here's an example journal, with comments.
 Transactions are usually ordered by date, with the first one setting starting balances:
 
 ```journal
@@ -130,15 +130,14 @@ Transactions are usually ordered by date, with the first one setting starting ba
 (It it looks verbose, note we often use auto-completion, or generate entries automatically from bank data.
 You can also use shorter account names or aliases.)
 -->
-
-Save the above in your journal file, using a text editor.
+Save this as your journal file, using a text editor.
 Or, run `hledger add` or `hledger web`, and record these transactions interactively
 (you can skip the comments).
 
 ### 3. Run reports
 
-Now you can see reports, such as a balance sheet - what you own and owe.
-(If you used non-english account names, you might need [declarations](#4-add-declarations-optional) first.)
+Now you can see reports, such as a balance sheet, showing what you own and owe.
+(If you used non-english account names, you might need [declarations](#4-add-declarations-optional) first):
 ```cli
 $ hledger bs
 Balance Sheet 2023-02-15
@@ -162,7 +161,7 @@ Balance Sheet 2023-02-15
  Net:                    ||      $4000 
 ```
 
-Or an income statement, AKA profit and loss report - what you received and spent.
+Or an income statement, AKA profit and loss report, showing what you received and spent:
 ```cli
 $ hledger is -MTA
 Income Statement 2023-01-01..2023-02-28
@@ -184,7 +183,7 @@ Income Statement 2023-01-01..2023-02-28
  Net:          ||   0   $950     $950     $475 
 ```
 
-Or the transactions and running balance in an account:
+Or an account register - the transactions and running balance in an account:
 ```cli
 $ hledger aregister checking
 Transactions in assets:bank:checking and subaccounts:
@@ -209,7 +208,7 @@ account revenus                         ; type:R
 account dépenses                        ; type:X
 ```
 
-If you want more error checking, you can declare all the allowed account and commodity/currency names,
+If you want more error checking, you can declare all allowed account and commodity/currency names,
 and then use [strict mode](hledger.md#strict-mode):
 
 ```journal
@@ -260,9 +259,18 @@ expenses
   gifts
 ```
 
+Congrats! You can now use hledger to track your daily finances.
+
+When you want to learn more, see [Get&nbsp;Started](start.md).
+With more practice, doc-reading, [support](support.md) and time, you will gradually
+- build up a set of account names best suited to you
+- learn the proper journal entries for all your real-world transactions
+- learn how to produce the reports most useful for you
+- and learn new workflows that you may find more convenient.
+
 ### Other UIs
 
-Instead of using the command line, you could use the [`ui`](ui.md) or [`web`](web.md) inferfaces
+Instead of using the command line, you can use the [`ui`](ui.md) or [`web`](web.md) inferfaces
 (or `repl`, `add`, `iadd`, ...)
 
 <a href="/images/cli-green-bs-reg.png" class="highslide" onclick="return hs.expand(this, { captionText:'The hledger command line interface.' })"><img src="images/cli-green-bs-reg.png" height="190"></a>
