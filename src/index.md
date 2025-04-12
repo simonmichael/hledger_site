@@ -211,6 +211,7 @@ If your top-level accounts use non-english or non-standard names, it's useful to
 This helps reports like `bs` and `is` show them correctly.
 Eg:
 ```journal
+
 ; Declare some account types.
 ; Subaccounts of these will inherit their parent's type.
 
@@ -228,6 +229,7 @@ If you want more error checking, you can declare all allowed account and commodi
 and then use [strict mode](hledger.md#strict-mode):
 
 ```journal
+
 account assets                   ; type:A, (using the single-letter spellings this time)
 account assets:bank              ; type:C
 account assets:bank:checking
@@ -274,6 +276,8 @@ expenses
   gifts
 ```
 
+### Next steps
+
 Congratulations, you can now use hledger to track your daily finances!
 But see [Get&nbsp;Started](start.md) for more detailed help and tutorials.
 
@@ -285,7 +289,7 @@ With practice, more doc reading, and [support/discussion](support.md), you will 
 - and learn new workflows that you may find more convenient.
 <!-- - learn how to prevent, detect and fix errors quickly -->
 
-### Other user interfaces
+## Other user interfaces
 
 Instead of using the command line, you can use the [`ui`](ui.md) or [`web`](web.md) interfaces
 (or [`repl`](hledger.md#repl), [`add`](hledger.md#add), [`iadd`](hledger.md#iadd), ...)
@@ -294,7 +298,7 @@ Instead of using the command line, you can use the [`ui`](ui.md) or [`web`](web.
 <a href="/images/home-ui-3.png"        class="highslide" onclick="return hs.expand(this, { captionText:'The hledger-ui text user interface.' })"><img src="images/home-ui-3.png"        height="190"></a>
 <a href="/images/web-bcexample.png"    class="highslide" onclick="return hs.expand(this, { captionText:'The hledger-web web user interface.' })"><img src="images/web-bcexample.png"    height="190"></a>
 
-### Time tracking
+## Time tracking
 
 hledger can also read time logs, in [timeclock](hledger.md#timeclock) format:
 
@@ -342,7 +346,7 @@ Balance changes in 2023-02-01..2023-02-02:
             ||       4.50        2.75     7.25     3.62 
 ```
 
-### CSV import
+## CSV import
 
 hledger can read [CSV](hledger.md#csv) (or SSV, TSV, or other character-separated) files representing transactions:
 
