@@ -21,10 +21,14 @@ After installing, there are some [final things to check](#check-your-installatio
 ## Release binaries
 
 Official release binaries for Linux, Mac, Windows.
+Download manually, or more conveniently with [eget](https://github.com/zyedidia/eget):
 
+<!-- [release binaries](https://github.com/simonmichael/hledger/releases/tag/1.42.1) -->
 [![hledger release binaries](https://img.shields.io/badge/hledger_release_binaries-1.42.1-brightgreen.svg)](https://github.com/simonmichael/hledger/releases/tag/1.42.1)
-[release binaries](https://github.com/simonmichael/hledger/releases/tag/1.42.1)
-([![RSS](images/rss.png) RSS](https://github.com/simonmichael/hledger/releases.atom))
+`eget simonmichael/hledger --all`
+
+[![RSS](images/rss.png)](https://github.com/simonmichael/hledger/releases.atom) RSS feed for new releases
+
 
 ## Packaged binaries
 
