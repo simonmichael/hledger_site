@@ -16,7 +16,7 @@
 # hledger
 
 <div id="tagline">
-Robust, friendly, fast<br> <a href="https://plaintextaccounting.org">plain text accounting</a> software
+Robust, friendly, fast<br> plain text accounting software
 </div>
 
 <div align=center>
@@ -51,26 +51,28 @@ Robust, friendly, fast<br> <a href="https://plaintextaccounting.org">plain text 
 
 ## hledger is...
 
-- free GPL-licensed accounting software that runs on unix, mac, windows, and the web
+- free GPLv3+ accounting software that runs on unix, mac, windows, and the web
 - based on readable, version-controllable, future-proof plain text files
+- the most user friendly [plain text accounting](https://plaintextaccounting.org) app
+- interoperable with [Ledger](ledger.md), [Beancount](beancount.md), [Fava](https://beancount.github.io/fava/), [Paisa](https://paisa.fyi), ...
 - good for tracking money, investments, time, or any countable commodity
-- good for learning  more about [double entry accounting](accounting.md)
-- shipped with [web](web.md), [terminal](ui.md), [command line](basics.md), [JSON](hledger-web.md#json-api) and [Haskell](https://hackage.haskell.org/package/hledger-lib) interfaces
-- the most user friendly [plain text accounting app](https://plaintextaccounting.org)
-- comparable to [Ledger](ledger.md) and [Beancount](beancount.md)
-- built with the powerful [Haskell language](https://www.haskell.org/)
-- fast, lightweight, reliable (we pay $50 for [regression reports or fixes](REGRESSIONS.md))
+- good for learning  more about [double entry bookkeeping](accounting.md)
+- shipped with [command line](basics.md), [terminal](ui.md), and [web](web.md) UIs <!--, [JSON](hledger-web.md#json-api) and [Haskell](https://hackage.haskell.org/package/hledger-lib) -->
+- good at importing CSV from banks and other financial institutions
+- fast, lightweight, and dependable (we pay $50 for [regression reports or fixes](REGRESSIONS.md))
+- local, not cloud-based (your private financial data remains under your control)
 - free from vendor lock-in
-- local, not cloud-based; your private financial data remains under your control
-- [scripting-friendly](scripting.md) and automatable
-- comfortable for technical users, but also usable by others. Knowing about 
+- comfortable for technical users, but also usable by non-techies
+  (command line skills are useful but not essential)
+- automatable and [scripting-friendly](scripting.md)
+- built with the powerful, high assurance [Haskell language](https://www.haskell.org/)
+- actively used, developed and supported by [Simon Michael](https://joyful.com) and [contributors](CREDITS.md) since 2007
+- strengthened by community feedback and [funding](sponsor.md).
+<!--
   [command lines](https://tutorial.djangogirls.org/en/intro_to_command_line/), 
   [text editors](https://www.codementor.io/@kmcgillivray/introduction-to-text-editors-and-the-command-line-j0upqatas) and 
   [version control](https://betterexplained.com/articles/a-visual-guide-to-version-control/) 
-  is helpful, but not required (much)
-- good at importing CSV from banks and other financial institutions
-- actively developed and supported by [Simon Michael](https://joyful.com) and [contributors](CREDITS.md) since 2007
-- strengthened by community feedback and [funding](sponsor.md).
+-->
 
 More about [Features](features.md).
 
