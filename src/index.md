@@ -13,6 +13,9 @@
 }
 </style>
 
+<img id="coins" src="images/coins2-248.png" style="width:25%; margin:1em 1em; float:right;" />
+<div>
+
 # hledger
 
 <div id="tagline">
@@ -46,8 +49,7 @@ Robust, friendly, fast<br> plain text accounting software
 -->
 
 </div>
-
-<img id="coins" src="images/coins2-248.png" style="width:25%; margin:1em 1em; float:right;" />
+</div>
 
 ## hledger is...
 
