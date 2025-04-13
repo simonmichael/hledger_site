@@ -305,7 +305,7 @@ With practice, more doc reading, and [support/discussion](support.md), you will 
 ## Other user interfaces
 
 Instead of using the command line, you can use the [`ui`](ui.md) or [`web`](web.md) interfaces
-(or [`repl`](hledger.md#repl), [`add`](hledger.md#add), [`iadd`](hledger.md#iadd), ...)
+(or [`repl`](hledger.md#repl), [`add`](hledger.md#add), [`iadd`](scripts.md#iadd), ...)
 
 <a href="/images/cli-green-bs-reg.png" class="highslide" onclick="return hs.expand(this, { captionText:'The hledger command line interface.' })"><img src="images/cli-green-bs-reg.png" height="190"></a>
 <a href="/images/home-ui-3.png"        class="highslide" onclick="return hs.expand(this, { captionText:'The hledger-ui text user interface.' })"><img src="images/home-ui-3.png"        height="190"></a>
