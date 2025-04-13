@@ -26,7 +26,7 @@
 }
 </style>
 
-<img id="coins" class="responsive-image" src="images/coins2-248.png" style="width:25%; margin:1em 1em; " />
+<img id="coins" class="responsive-image" src="images/coins2-248.png" />
 <div>
 
 # hledger
