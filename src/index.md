@@ -15,12 +15,13 @@
   margin: 1em 1em;
   float: right;
 }
-@media (max-width: 768px) {  /* typical breakpoint for tablets/phones */
-  .content h1 { .content h1 { font-size:20vw; }  /* fit "hledger" within a small screen */
+@media (max-width: 500px) {  /* typical breakpoint for tablets/phones */
+  .content h1 { font-size:20vw; }  /* fit "hledger" within a small screen */
   .responsive-image {  /* put the image on its own line */
       float: none;
       display: block;
       width: 50%;
+      margin: 1em auto;
   }
 }
 </style>
@@ -28,7 +29,7 @@
 <img id="coins" class="responsive-image" src="images/coins2-248.png" style="width:25%; margin:1em 1em; " />
 <div>
 
-<h1 style="white-space: nowrap;">hledger</h1>
+# hledger
 
 <div id="tagline" style="margin-bottom:1em;">
 Robust, friendly, fast<br> plain text accounting software
