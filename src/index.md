@@ -11,9 +11,30 @@
   margin: 0.5em 0 0;
   display:block;
 }
+.responsive-image {
+    /* width: 25%; */
+    /* margin: 1em 1em; */
+    float: right;
+}
+/* Styles for smaller screens (e.g., max-width: 768px - typical breakpoint for tablets/phones) */
+@media (max-width: 400px) {
+    .responsive-image {
+        float: none; /* Remove float */
+        display: block; /* Make it a block-level element */
+        margin: 1em auto; /* Center the image (optional) */
+        /* width: 50%; Adjust width for smaller screens (optional) */
+    }
+    /* Optional: Hide the image on very small screens */
+    /* @media (max-width: 480px) {
+ /*
+    .responsive-image {
+        display: none;
+    }
+    */
+}
 </style>
 
-<img id="coins" src="images/coins2-248.png" style="width:25%; margin:1em 1em; float:right;" />
+<img id="coins" class="responsive-image" src="images/coins2-248.png" style="width:25%; margin:1em 1em; float:right;" />
 <div>
 
 <h1 style="white-space: nowrap;">hledger</h1>
