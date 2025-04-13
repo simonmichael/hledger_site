@@ -464,19 +464,20 @@ $ hledger aregister checking
 2023-02-23 TRANSFER TO SAVINGS  as:ba:savings              $-10.00      $2040.00
 ```
 
+More: [Tutorial: Import CSV data](import-csv.md)
+
+
 ## More examples...
 
 - [Charts and Graphs](charts.md)
-- [Workflows](workflows.md)
 - [HTML reports](report-examples.md#income-statement-2012-01-012014-10-11)
-- [Importing CSV data](import-csv.md)
 - [Interop with other software](cookbook.md#other-software)
+- [Investing and trading](cookbook#investing-and-trading)
 - [Mobile apps](mobile.md)
 - [Scripts](scripts.md) and [Scripting](scripting.md)
-- [Track investments (2017)](track-investments.md) and [Track investments (2020)](investments.md)
-<!-- -->
-- hledger [Cookbook](cookbook.md)
-- [PTA Cookbook](https://plaintextaccounting.org/Cookbook)
+- [Workflows](workflows.md)
+- The hledger [Cookbook](cookbook.md)
+- The [PTA Cookbook](https://plaintextaccounting.org/Cookbook)
 
 ## Site tips
 
