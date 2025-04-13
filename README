@@ -44,3 +44,7 @@ built separately due to mdbook limitations):
 
     make buildall
 
+Depending on how the repository is cloned, it may be necessary to
+delete the existing highslide symlink in the root directory with a new
+symlink to src/highslide in order to prevent a build error about a
+path not being a directory.
