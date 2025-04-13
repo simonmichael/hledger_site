@@ -133,7 +133,7 @@ See [Get&nbsp;Started](start.md), or the following short guide:
 Install hledger on your computer.
 The [Install](install.md) page shows how to get an up-to-date version quickly.
 
-### 2. Start a transactions journal
+### 2. Record transactions
 
 hledger reads transactions from a [journal file](hledger.md#input).
 By default this is `~/.hledger.journal` or `C:\Users\USER\.hledger.journal`.
@@ -143,7 +143,7 @@ This file uses [journal format](hledger.md#journal), containing transaction entr
 
 [![hledger basic transaction, showing names of parts](https://raw.githubusercontent.com/RobertNielsen1/hledger/master/hledger%20basic%20transaction%20--%20terms.png)](https://github.com/RobertNielsen1/hledger/blob/master/hledger%20basic%20transaction%20--%20terms.png)
 
-A transaction begins with a date and description, followed by an indented list of accounts and amounts.
+A transaction entry begins with a date and description, followed by an indented list of accounts and amounts.
 Note the 2 or more spaces required between each account name and amount.
 A positive amount means "added to this account", a negative amount means "removed from this account"
 (AKA [debit and credit](https://plaintextaccounting.org/FAQ#where-are-debits-and-credits)).
@@ -179,18 +179,110 @@ You can also use shorter account names or aliases.)
 -->
 
 Save this as your journal file, using a text editor.
-Or, run `hledger add` or `hledger web`, and record these transactions interactively
-(no need to enter the comments).
+Or, you could run `hledger add` or `hledger web` and record these transactions interactively. (No need to enter the comments.)
 
-One more thing: in accounting, there are five standard account types:
-*assets*, *liabilities*, *equity*, *revenues* (or *income*), and *expenses*.
-As a convenience, hledger detects these types from the top level account names, but this only works for the english names.
-So if you used non-english names for your top level accounts,
-please add [account type declarations](#4-add-declarations-optional) for them also.
+### 3. Add declarations (optional)
 
-### 3. Run reports
+**Account types**
+
+In accounting there are five standard account types: *assets*, *liabilities*, *equity*, *revenues* (or *income*), and *expenses*.
+hledger also uses a couple of subtypes: *cash*, *conversion*.
+
+It's recommended to [declare the types](hledger.md#account-types) of your top level accounts,
+to help reports show the right accounts.
+hledger can infer types from english account names, but you may be using another language,
+and anyway it's good practice to make this explicit.
+So add `account` directives at the top of your journal file, something like these:
+
+```journal
+
+; Top level account types. Subaccounts will inherit these.
+account assets                   ; type:A
+account assets:bank              ; type:C
+account assets:cash              ; type:C
+account liabilities              ; type:L
+account equity                   ; type:E
+account equity:conversion        ; type:V
+account revenues                 ; type:R
+account expenses                 ; type:X
+```
+Translations:
+[ar](https://github.com/simonmichael/hledger/blob/master/examples/i18n/ar.journal)
+[da](https://github.com/simonmichael/hledger/blob/master/examples/i18n/da.journal)
+[de](https://github.com/simonmichael/hledger/blob/master/examples/i18n/de.journal)
+[en](https://github.com/simonmichael/hledger/blob/master/examples/i18n/en.journal)
+[es](https://github.com/simonmichael/hledger/blob/master/examples/i18n/es.journal)
+[fr](https://github.com/simonmichael/hledger/blob/master/examples/i18n/fr.journal)
+[ja](https://github.com/simonmichael/hledger/blob/master/examples/i18n/ja.journal)
+[ko](https://github.com/simonmichael/hledger/blob/master/examples/i18n/ko.journal)
+[no](https://github.com/simonmichael/hledger/blob/master/examples/i18n/no.journal)
+[pt](https://github.com/simonmichael/hledger/blob/master/examples/i18n/pt.journal)
+[se](https://github.com/simonmichael/hledger/blob/master/examples/i18n/se.journal)
+[zh](https://github.com/simonmichael/hledger/blob/master/examples/i18n/zh.journal)
+
+
+**Account and commodity names**
+
+If you want more error checking, you can declare all allowed account names
+(not just top level accounts), and all allowed commodities/currencies,
+and then use [strict mode](hledger.md#strict-mode), which disallows any others:
+
+```journal
+
+; All accounts.
+account assets                   ; type:A
+account assets:bank              ; type:C
+account assets:bank:checking
+account assets:bank:savings
+account assets:cash              ; type:C
+account liabilities              ; type:L
+account liabilities:credit card
+account equity                   ; type:E
+account equity:conversion        ; type:V
+account equity:opening/closing
+account income                   ; type:R
+account income:salary
+account income:gifts
+account expenses                 ; type:X
+account expenses:rent
+account expenses:food
+account expenses:gifts
+
+; Currencies, and their numeric display style.
+commodity $1000.00
+```
+```cli
+$ hledger check --strict
+$ hledger -s CMD ...
+```
+
+Declaring accounts also sets their preferred [display order](hledger.md#account-display-order) (instead of sorting alphabetically).
+
+### 4. Run reports
 
 Now you can see reports, such as...
+
+A list of accounts, showing the hierarchy and types detected:
+```cli
+$ hledger accounts --tree --types
+assets               ; type: A
+  bank               ; type: C
+    checking         ; type: C
+    savings          ; type: C
+  cash               ; type: C
+liabilities          ; type: L
+  credit card        ; type: L
+equity               ; type: E
+  conversion         ; type: V
+  opening/closing    ; type: E
+income               ; type: R
+  salary             ; type: R
+  gifts              ; type: R
+expenses             ; type: X
+  rent               ; type: X
+  food               ; type: X
+  gifts              ; type: X
+```
 
 A balance sheet, showing what you own and owe:
 ```cli
@@ -238,7 +330,7 @@ Income Statement 2023-01-01..2023-02-28
  Net:          ||   0   $950     $950     $475 
 ```
 
-Or an account register, showing the transactions and running balance in an account:
+An account register, showing the transactions and running balance in a particular account:
 ```cli
 $ hledger aregister checking
 Transactions in assets:bank:checking and subaccounts:
@@ -246,83 +338,13 @@ Transactions in assets:bank:checking and subaccounts:
 2023-02-01 GOODWORKS CORP       in:salary                    $1000         $2000
 ```
 
-### 4. Add declarations (optional)
-
-If your top-level accounts use non-english or non-standard names, it's useful to declare their [account types](hledger.md#account-types).
-This helps reports like `bs` and `is` show them correctly.
-Eg:
-```journal
-
-; Declare some account types.
-; Subaccounts of these will inherit their parent's type.
-
-account actifs                          ; type:Asset
-account actifs:banque:compte courant    ; type:Cash
-account actifs:banque:compte d'épargne  ; type:Cash, (note: 2+ spaces required after the account name)
-account actifs:espèces                  ; type:Cash
-account passifs                         ; type:Liability
-account capitaux propres                ; type:Equity
-account revenus                         ; type:Revenue
-account dépenses                        ; type:Expense
-```
-
-If you want more error checking, you can declare all allowed account and commodity/currency names,
-and then use [strict mode](hledger.md#strict-mode):
-
-```journal
-
-account assets                   ; type:A, (using the single-letter spellings this time)
-account assets:bank              ; type:C
-account assets:bank:checking
-account assets:bank:savings
-account assets:cash              ; type:C
-account liabilities              ; type:L
-account liabilities:credit card
-account equity                   ; type:E
-account equity:opening/closing
-account income                   ; type:R
-account income:salary
-account income:gifts
-account expenses                 ; type:X
-account expenses:rent
-account expenses:food
-account expenses:gifts
-
-commodity $1000.00
-```
-```cli
-$ hledger check --strict
-$ hledger -s CMD ...
-```
-
-Declaring accounts also sets their preferred [display order](hledger.md#account-display-order) (instead of sorting alphabetically):
-
-```cli
-$ hledger accounts --tree
-assets
-  bank
-    checking
-    savings
-  cash
-liabilities
-  credit card
-equity
-  opening/closing
-income
-  salary
-  gifts
-expenses
-  rent
-  food
-  gifts
-```
-
-### Next steps
+## Next steps
 
 Congratulations, you can now use hledger to track your daily finances!
 But see [Get&nbsp;Started](start.md) for more detailed help and tutorials.
 
-Bookkeeping, accounting, and plain text accounting are valuable skills, and they do take some time to master.
+If you are new to bookkeeping, accounting, or plain text accounting:
+these are valuable skills, and they do take some time to master.
 With practice, more doc reading, and [support/discussion](support.md), you will gradually
 - build up a set of account names best suited to you
 - learn the proper journal entries for your real-world transactions
@@ -366,8 +388,8 @@ biz:research  .... ..
 fos:hledger   .... .... ....
 
 2023/2/2
-fos:ledger    0.25
-fos:haskell   .5
+fos:ledger    .
+fos:haskell   ..
 biz:client1   .... ....
 ```
 ```
@@ -389,7 +411,8 @@ Balance changes in 2023-02-01..2023-02-02:
 
 ## CSV import
 
-hledger can read [CSV](hledger.md#csv) (or SSV, TSV, or other character-separated) files representing transactions:
+Most banks and financial institutions provide data in CSV format.
+hledger can read from any [CSV](hledger.md#csv) (or SSV, TSV, or other character-separated) file representing transactions. Eg:
 
 ```csv
 
@@ -424,7 +447,7 @@ $ hledger -f bank.csv print
 
 ```
 
-The [import](hledger.md#import) command detects and adds just new transactions to the journal (works with most CSVs):
+The [import](hledger.md#import) command detects just the new transactions, and adds them to the journal:
 ```cli
 $ hledger import bank.csv
 imported 2 new transactions from bank.csv
