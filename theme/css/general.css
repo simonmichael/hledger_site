@@ -175,3 +175,24 @@ blockquote {
     margin: 5px 0px;
     font-weight: bold;
 }
+
+blockquote {
+    padding: 1em 1.25em;
+}
+
+blockquote > p:has(cite) {
+    margin-top: 0;
+    text-align: right;
+}
+
+blockquote > p > cite {
+    font-style: normal;
+}
+
+p {
+    margin: 0;
+}
+
+* + p {
+    margin-top: 1em;
+}
