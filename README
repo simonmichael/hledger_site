@@ -29,6 +29,11 @@ the website via symbolic links in src/. These are:
   These should be generated/updated before rendering the website, by
   doing "make Shake && ./Shake" webmanuals in the main hledger repo.
 
+To install the necessary tools on Debian or Ubuntu (assuming Rust is
+installed):
+
+  sudo apt update && make tools
+
 To render the latest site content (in out/): 
 
     make
