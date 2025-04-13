@@ -57,19 +57,19 @@ Robust, friendly, fast<br> plain text accounting software
 - based on readable, version-controllable, future-proof plain text files
 - the most user friendly [plain text accounting](https://plaintextaccounting.org) app
 - interoperable with [Ledger](ledger.md), [Beancount](beancount.md), [Fava](https://beancount.github.io/fava/), [Paisa](https://paisa.fyi), ...
-- good for tracking money, investments, time, or any countable commodity
-- good for learning  more about [double entry bookkeeping](accounting.md)
-- shipped with [command line](basics.md), [terminal](ui.md), and [web](web.md) UIs <!--, [JSON](hledger-web.md#json-api) and [Haskell](https://hackage.haskell.org/package/hledger-lib) -->
-- good at importing CSV from banks and other financial institutions
-- fast, lightweight, and dependable (we pay $50 for [regression reports or fixes](REGRESSIONS.md))
+- fast, lightweight, and dependable (we pay $50 for [regression reports/fixes](REGRESSIONS.md))
 - local, not cloud-based (your private financial data remains under your control)
 - free from vendor lock-in
-- comfortable for technical users, but also usable by non-techies
+- shipped with [command line](basics.md), [terminal](ui.md), and [web](web.md) UIs <!--, [JSON](hledger-web.md#json-api) and [Haskell](https://hackage.haskell.org/package/hledger-lib) -->
+- good at importing CSV from banks and other financial institutions
+- good for tracking money, investments, time, or any countable commodity
+- good for learning  more about [double entry bookkeeping](accounting.md)
+- comfortable for technical users, also usable by non-techies
   (command line skills are useful but not essential)
 - automatable and [scripting-friendly](scripting.md)
 - built with the powerful, high assurance [Haskell language](https://www.haskell.org/)
 - actively used, developed and supported by [Simon Michael](https://joyful.com) and [contributors](CREDITS.md) since 2007
-- strengthened by community feedback and [funding](sponsor.md).
+- strengthened by community feedback and [funding](sponsor.md)
 <!--
   [command lines](https://tutorial.djangogirls.org/en/intro_to_command_line/), 
   [text editors](https://www.codementor.io/@kmcgillivray/introduction-to-text-editors-and-the-command-line-j0upqatas) and 
