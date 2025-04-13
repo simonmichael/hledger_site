@@ -129,12 +129,6 @@ $ hledger -f checking.csv --alias income:unknown=Income:Misc --alias expenses:un
 
 ```
 
-(Before hledger 1.20, --alias only worked with journal format so you had to pipe it like this:)
-
-```cli
-$ hledger -f checking.csv print | hledger -f- --alias income:unknown=Income:Misc --alias expenses:unknown=Expenses:Misc print
-```
-
 
 ## See also
 
