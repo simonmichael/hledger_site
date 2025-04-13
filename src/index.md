@@ -6,11 +6,12 @@
   font-family: Gabarito;
   font-size: 6em;
   white-space:normal;
-  word-wrap:break-word;
+  /* word-wrap:break-word; */
   text-align:center;
   margin: 0.5em 0 0;
   display:block;
 }
+/* Trying to force image above or below heading rather than word-wrapping it, on small screens */
 .responsive-image {
     /* width: 25%; */
     /* margin: 1em 1em; */
