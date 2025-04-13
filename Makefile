@@ -50,7 +50,8 @@ all buildall: \
 # Install some required tools.
 # --force rebuilds mdbook-toc even if only mdbook changed, avoiding a warning.
 tools:
-	cargo install mdbook mdbook-toc --force
+	cargo install mdbook --version 0.4.22 --force
+	cargo install mdbook-toc --force
 	sudo apt install -y npm && npm install -g static-sitemap-cli   # sscli
 
 
