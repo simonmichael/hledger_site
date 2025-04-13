@@ -40,18 +40,28 @@ Robust, friendly, fast<br> plain text accounting software
 
 <div id="quotes">
 
-*I discovered hledger last week and I hope it's not too early to describe it as life-changing. thank you for building this software --gnidan*
+> I discovered hledger last week and I hope it's not too early to describe it as life-changing. thank you for building this software
+>
+> ― <cite>gnidan</cite>
 
-*I have massively enjoyed using hledger and am incredibly impressed with how active the development and support for it are! --Pixelized*
+> I have massively enjoyed using hledger and am incredibly impressed with how active the development and support for it are!
+>
+> ― <cite>Pixelized</cite>
 
-*I completed my first year of bookkeeping for both business and personal expenses with hledger last year. I can honestly say that I observed zero bugs with the software. It has worked seamlessly. --csgagnon*
+> I completed my first year of bookkeeping for both business and personal expenses with hledger last year. I can honestly say that I observed zero bugs with the software. It has worked seamlessly.
+>
+> ― <cite>csgagnon</cite>
 
-*I've been using hledger for managing my personal finances for a few years now, and I'm really happy with it! --guivho*
+> I've been using hledger for managing my personal finances for a few years now, and I'm really happy with it!
+>
+> ― <cite>guivho</cite>
 
-*hledger focuses on testing and correctness alongside comprehensive documentation, giving me a much better picture of its capabilities.
-I dove in and spent a week entering a year and a half of data, which was enough to convince me.
-hledger is truly an amazing tool. I can’t count how many times I’ve thought wouldn’t it be nice if… only to realize it can already do that ... 
-The attention to detail is marvelous. --Shiv J. M.*
+> hledger focuses on testing and correctness alongside comprehensive documentation, giving me a much better picture of its capabilities.
+> I dove in and spent a week entering a year and a half of data, which was enough to convince me.
+> hledger is truly an amazing tool. I can’t count how many times I’ve thought wouldn’t it be nice if… only to realize it can already do that […]
+> The attention to detail is marvelous.
+>
+> ― <cite>Shiv J.M.</cite>
 
 [![Github repo](https://img.shields.io/github/stars/simonmichael/hledger.svg?logo=GitHub&label=Github+stars&color=brightgreen)](https://github.com/simonmichael/hledger)
 [![GitHub downloads, latest](https://img.shields.io/github/downloads/simonmichael/hledger/latest/total?logo=GitHub&label=Github+downloads,+latest&color=brightgreen)](https://github.com/simonmichael/hledger/releases/latest)
