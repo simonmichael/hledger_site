@@ -56,8 +56,10 @@ Robust, friendly, fast<br> plain text accounting software
 
 *I've been using hledger for managing my personal finances for a few years now, and I'm really happy with it! --guivho*
 
-*hledger focuses on testing and correctness alongside comprehensive documentation, giving me a much better picture of its capabilities. I dove in and spent a week entering a year and a half of data, which was enough to convince me.
-hledger is truly an amazing tool. I can’t count how many times I’ve thought wouldn’t it be nice if… only to realize it can already do that ... The attention to detail is marvelous. --Shiv J.M.*
+*hledger focuses on testing and correctness alongside comprehensive documentation, giving me a much better picture of its capabilities.
+I dove in and spent a week entering a year and a half of data, which was enough to convince me.
+hledger is truly an amazing tool. I can’t count how many times I’ve thought wouldn’t it be nice if… only to realize it can already do that ... 
+The attention to detail is marvelous. --Shiv J. M.*
 
 </div>
 </div>
