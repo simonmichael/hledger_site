@@ -76,7 +76,20 @@ The attention to detail is marvelous. --Shiv J. M.*
 ![GitHub downloads, latest](https://img.shields.io/github/downloads/simonmichael/hledger/latest/hledger-mac-x64.zip?label=Github_downloads,_latest,_mac-x64)
 ![GitHub downloads, latest](https://img.shields.io/github/downloads/simonmichael/hledger/latest/hledger-windows-x64.zip?label=Github_downloads,_latest,_windows-x64)
 -->
+<!--
+[Features](#hledger-is) |
+[Quick start](#quick-start) |
+[Other user interfaces](#other-user-interfaces) |
+[Time tracking](#time-tracking) |
+[CSV import](#csv-import) |
+[More examples](#more-examples) |
+[Site tips](#site-tips) |
+-->
+</div>
 
+<div class=pagetoc style="margin-top:2.5em">
+
+<!-- toc -->
 </div>
 
 ## hledger is...
