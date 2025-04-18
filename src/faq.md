@@ -497,9 +497,9 @@ Eg, to show just the transactions where `cash` was decreased:
 
 or the ones where `cash` was increased:
 
-`C-c C-c cash[^-]+[0-9]`
+`C-c C-f cash[^-]+[0-9]`
 
-(If you want to filter the source journal directly, make sure all amounts are explicit, as with `print -x`.)
+(If you do this with the source journal itself, make sure all amounts are explicit, as with `print -x`.)
 
 ### How do I show transactions between one account and another account ?
 
