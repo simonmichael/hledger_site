@@ -494,11 +494,11 @@ Here's a reasonably robust example:
 
 Show transactions where a cash account was increased:
 ```cli
-hledger print -x cash | awk '/:cash.*  [^-=]*[0-9]/' RS="\n\n" ORS="\n\n"
+hledger print -x cash | awk '/:cash.*?  [^-=]*[0-9]/' RS="\n\n" ORS="\n\n"
 ```
 or decreased:
 ```cli
-hledger print -x cash | awk '/:cash.*  [^=]*-/' RS="\n\n" ORS="\n\n"
+hledger print -x cash | awk '/:cash.*?  [^=]*-/' RS="\n\n" ORS="\n\n"
 ```
 
 You can also do this kind of filtering using `C-c C-f` in Emacs ledger-mode.
