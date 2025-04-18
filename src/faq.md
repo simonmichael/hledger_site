@@ -501,7 +501,7 @@ or decreased:
 hledger print -x cash | awk '/:cash.*?  [^=]*-/' RS="\n\n" ORS="\n\n"
 ```
 
-You can also do this kind of filtering using `C-c C-f` in Emacs ledger-mode.
+You can also do this kind of filtering with `C-c C-f` in Emacs ledger-mode, which is easier.
 
 ### How do I show transactions between one account and another account ?
 
