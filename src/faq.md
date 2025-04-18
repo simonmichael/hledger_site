@@ -488,9 +488,9 @@ transaction-based report, whose query [matches if any postings are matched](hled
 
 For now the best approach is to run `hledger print -x ACCT` and filter the output yourself,
 keeping only transactions where ACCT and a negative (or positive) amount appear on the same line.
-This requires a tool such as awk, and a regular expression that's good enough for your data
-(avoiding false matches in descriptions, comments, subaccount names, balance assertions, commodity symbols..).
-Here's a reasonably robust example:
+This requires a tool such as awk, and a regular expression that's good enough for your data.
+It's difficult to do this 100% reliably, avoiding false matches in descriptions, comments, subaccount names, balance assertions, commodity symbols.
+But here's an example that will work for most of us:
 
 Show transactions where a cash account was increased:
 ```cli
