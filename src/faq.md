@@ -488,17 +488,17 @@ transaction-based report, whose query [matches if any postings are matched](hled
 
 For now the best approach is to run `hledger print -x ACCT` and filter the output yourself,
 keeping only transactions where ACCT and a negative (or positive) amount appear on the same line.
-This requires a tool such as awk, and a regular expression that's good enough for your data.
-(The regexp can get pretty complicated to avoid false matches, balance assertions, allow subaccounts etc.)
+This requires a tool such as awk, and a regular expression that's good enough for your data
+(avoiding false matches in descriptions, comments, subaccount names, balance assertions, commodity symbols..).
 Here's a reasonably robust example:
 
 Show transactions where a cash account was increased:
 ```cli
-hledger print -x cash | awk '/:cash[^ ]*  [^-=]*[0-9]/' RS="\n\n" ORS="\n\n"
+hledger print -x cash | awk '/:cash*  [^-=]*[0-9]/' RS="\n\n" ORS="\n\n"
 ```
 or decreased:
 ```cli
-hledger print -x cash | awk '/:cash[^ ]*  [^=]*-/' RS="\n\n" ORS="\n\n"
+hledger print -x cash | awk '/:cash*  [^=]*-/' RS="\n\n" ORS="\n\n"
 ```
 
 You can also do this kind of filtering using `C-c C-f` in Emacs ledger-mode.
