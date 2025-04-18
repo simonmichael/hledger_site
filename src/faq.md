@@ -486,20 +486,22 @@ hledger aregister cash cash 'amt:<0'
 Expanding the above reports to show the full transactions is difficult, because `print` is a
 transaction-based report, whose query [matches if any postings are matched](hledger.md#combining-query-terms).
 
-For now the best approach seems to be to run `hledger print -x ACCT` and filter the output yourself,
+For now the best approach is to run `hledger print -x ACCT` and filter the output yourself,
 keeping only transactions where ACCT and a negative (or positive) amount appear on the same line.
-This means using awk or some other unix tool that can treat transactions as multi-line records (example welcome).
+This requires a tool such as awk, and a regular expression that's good enough for your data.
+(The regexp can get pretty complicated to avoid false matches, balance assertions, allow subaccounts etc.)
+Here's a reasonably robust example:
 
-An easier way is to load the output into Emacs, and filter the entries with ledger-mode's ledger-occur (`C-c C-f`).
-Eg, to show just the transactions where `cash` was decreased:
+Show transactions where a cash account was increased:
+```cli
+hledger print -x cash | awk '/:cash[^ ]*  [^-=]*[0-9]/' RS="\n\n" ORS="\n\n"
+```
+or decreased:
+```cli
+hledger print -x cash | awk '/:cash[^ ]*  [^=]*-/' RS="\n\n" ORS="\n\n"
+```
 
-`C-c C-f cash.*-`
-
-or the ones where `cash` was increased:
-
-`C-c C-f cash[^-]+[0-9]`
-
-(If you do this with the source journal itself, make sure all amounts are explicit, as with `print -x`.)
+You can also do this kind of filtering using `C-c C-f` in Emacs ledger-mode.
 
 ### How do I show transactions between one account and another account ?
 
