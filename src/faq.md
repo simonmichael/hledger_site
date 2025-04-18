@@ -486,11 +486,11 @@ hledger aregister cash cash 'amt:<0'
 Expanding the above reports to show the full transactions is difficult, because `print` is a
 transaction-based report, whose query [matches if any postings are matched](hledger.md#combining-query-terms).
 
-For now the best approach seems to be to filter the output of `hledger print ACCT`,
+For now the best approach seems to be to run `hledger print ACCT` and filter the output yourself,
 keeping only transactions where ACCT and a negative (or positive) amount appear on the same line.
-
 This means using awk or some other unix tool that can treat transactions as multi-line records (example welcome).
-But the easiest way is in Emacs, using ledger-mode's ledger-occur (`C-c C-f`).
+
+But the easier way is to filter the journal in Emacs, using ledger-mode's ledger-occur (`C-c C-f`).
 Eg, to show just the transactions where `cash` was decreased:
 
 `C-c C-f :cash.*- *[1-9]`
