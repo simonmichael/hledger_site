@@ -292,15 +292,15 @@ You might need to work around some current limitations:
   and don't use inter-transaction comments.
   
 - Transactions will be printed in date order.
-  If you don't want to sort them all by date, you could tidy just a subset of transactions at a time.
-  You may need to use `-I` to ignore balance assertions.
-  (Eg in Emacs: select region, `C-u M-S-| hledger -If- print`).
+  Workaround if you don't want to sort them all by date:
+  tidy just a subset of transactions at a time (using `-I` if needed).
+  Eg in Emacs: select region, `C-u M-S-| hledger -If- print`.
 
 - If you have `include` directives, the included files' transactions will also be printed.
   Workaround: tidy one file at a time, temporarily commenting out include directives.
 
 - Amounts will be right-aligned, within each transaction but not across all transactions.
-  If you want whole-file alignment and more alignment options, eg aligning on decimal mark, use ledger-mode.
+  Workaround if you want whole-file alignment and more alignment options, like aligning on decimal mark: use ledger-mode.
 
 The `print` method has some inconveniences, but also extra power, 
 eg to select a subset of transactions with a query,
