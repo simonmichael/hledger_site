@@ -503,6 +503,12 @@ hledger print -x cash | awk '/:cash.*?  [^=]*-/' RS="\n\n" ORS="\n\n"
 
 You can also do this kind of filtering with `C-c C-f` in Emacs ledger-mode, which is easier.
 
+New: with a hledger dev build, you can [now do](https://hledger.org/dev/hledger.html#boolean-queries)
+```cli
+hledger print any:'cash amt:>0'
+```
+
+
 ### How do I show transactions between one account and another account ?
 
 To show one transaction per line:
