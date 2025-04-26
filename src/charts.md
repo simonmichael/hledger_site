@@ -96,6 +96,12 @@ done | cut -f1,6,7 | gsed -E -e 's/\$//' -e 's/([^\t]*)\t([^\t]*)\t([^\t]*)/\1 [
 
 ![hledger-sankey screenshot](images/charts-hledger-sankey.png)
 
+### hledger-sankey-visualization
+
+<https://github.com/AlessandroW/hledger-sankey-visualization> is a javascript that reads hledger's JSON output, and uses amCharts.
+
+![hledger-sankey-visualization screenshot](images/chart-hledger-sankey-visualization.png)
+
 ### hledger-vega
 
 [hledger-vega](https://github.com/xitian9/hledger-vega) (2022) is a set of scripts for producing custom charts
