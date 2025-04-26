@@ -50,7 +50,7 @@ Windows \
 [![Scoop](https://repology.org/badge/version-for-repo/scoop/hledger.svg)](https://scoop.sh/#/apps?q=hledger)
 `scoop install hledger` \
 [![Winget](https://repology.org/badge/version-for-repo/winget/hledger.svg)](https://github.com/microsoft/winget-pkgs/tree/master/manifests/s/simonmichael/hledger)
-`winget install hledger` \
+`winget install -e --id simonmichael.hledger` \
 [![Chocolatey](https://repology.org/badge/version-for-repo/chocolatey/hledger.svg)](https://community.chocolatey.org/packages/hledger)
 `choco install hledger -y`
 <!--
@@ -185,7 +185,7 @@ This will build the hledger tools and install them in `~/.cabal/bin`.
 -->
 
 Building hledger requires the GHC compiler and either the stack or cabal build tool
-which you can install with your package manager (brew, apt, winget..), or with [ghcup], or with [stack] (simplest).
+which you can install with your package manager (brew, apt, winget..), with [ghcup], or with [stack] (simplest).
 Or, you can use docker. All this may need perhaps 4G of RAM and 4G of disk space.
 
 ### On Mac
@@ -236,9 +236,11 @@ First, apply all windows updates (to get the latest TLS certificates for network
 
 Install [stack] - in a command or powershell window, run:
 
-    winget install commercialhaskell.stack
+    winget install -e --id commercialhaskell.stack
 
-Install [git].
+Install [git]:
+
+    winget install -e --id Git.Git
 
 Get the hledger source:
 
@@ -254,8 +256,6 @@ Build and install hledger:
 On Windows, this may die repeatedly with a "... permission denied (Access is denied.)" error; 
 we [don't know why](https://github.com/commercialhaskell/stack/issues/2426).
 Just run it again to continue (press up arrow, enter).
-
-When building is complete, stack installs executables somewhere like `C:\Users\USER\AppData\Roaming\local\bin\hledger.exe`.
 
 On Windows, things work best if you build in the environment where you will use hledger.
 Eg don't build it in a WSL or MINGW window if you plan to use it in CMD or Powershell.
