@@ -126,7 +126,7 @@ Or explore the documentation links in the sidebar (if not visible, click/tap the
 ## Quick start
 
 This plain text accounting stuff is both useful and more fun than it sounds - care to give it a try ?
-Read on... (or see [Get&nbsp;Started](start.md) for more detailed tutorials).
+Read on... or see [Get&nbsp;Started](start.md) for more detailed tutorials.
 
 ### 1. Install hledger
 
@@ -195,7 +195,7 @@ The above is all you need to get started, but we usually add some declarations a
 
 **Commodities**
 
-Declare your currencies/commodities, and their numeric display style:
+Declare your currencies/commodities, and their display style:
 
 ```
 
@@ -366,10 +366,10 @@ Transactions in assets:bank:checking and subaccounts:
 2023-02-01 GOODWORKS CORP       in:salary                    $1000         $2000
 ```
 
-Congratulations, you can now begin using hledger to track your daily finances!
+Congratulations, you can now begin to track your daily finances with hledger!
 
-See [Get&nbsp;Started](start.md) for more tutorials.
-If you are new to bookkeeping, accounting, or plain text accounting: know these are valuable skills, that take time to master.
+Next, see [Get&nbsp;Started](start.md) for more detailed help.
+If you are new to bookkeeping, accounting, or plain text accounting, know that these are valuable skills, which take time to master.
 With practice, more doc reading, and [support/discussion](support.md), you will gradually
 - build up a set of account names best suited to you
 - learn the proper journal entries for your real-world transactions
