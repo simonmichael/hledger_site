@@ -11,8 +11,8 @@ Here are the **[release notes](release-notes.md)**.
 Here are several ways you can install hledger:
 
 - Install [official binaries](#official-binaries) from Github. (Always up to date.)
-- Install [packaged binaries](#packaged-binaries) using your package manager. (Often less up to date.)
-- Build your [own binaries](#build-from-source) from the hledger source code. (Requires Haskell build tools and a reasonably powerful computer.)
+- Install [packaged binaries](#packaged-binaries) using your package manager. (Sometimes less up to date.)
+- Build your [own binaries](#build-from-source) from the hledger source code. (Requires about 4G of RAM & disk and some time.)
 
 As the final step, [check your installation](#check-your-installation).
 
@@ -24,17 +24,14 @@ Official [release binaries] are provided for Linux, Mac, and Windows.
 Here's an [![RSS](images/rss.png) RSS feed](https://github.com/simonmichael/hledger/releases.atom).
 \
 Download them manually, 
-or [use eget](https://github.com/zyedidia/eget?tab=readme-ov-file#how-to-get-eget) (recommended):
-
+or [use eget](https://github.com/zyedidia/eget?tab=readme-ov-file#how-to-get-eget) (recommended).
+(For [prerelease binaries], add `--pre-release`):
 
 [![hledger release binaries](https://img.shields.io/badge/hledger_release_binaries-1.42.1-brightgreen.svg)](https://github.com/simonmichael/hledger/releases/tag/1.42.1)
 `eget simonmichael/hledger --all`
 
-(Or add `--pre-release` to test newer [prerelease binaries].)
-
 [release binaries]:    https://github.com/simonmichael/hledger/releases/tag/1.42.1
 [prerelease binaries]: https://github.com/simonmichael/hledger/releases/tag/nightly
-
 
 ## Packaged binaries
 
@@ -292,7 +289,7 @@ If your hledger is new enough (a pre-release), you should now run:
 
     hledger setup
 
-to check your setup. Otherwise, read on..
+to check your setup. If this doesn't work, read on..
 
 ### PATH
 
@@ -305,8 +302,8 @@ If this doesn't work, you may need to add the binaries' install directory to you
 
 stack or cabal show the install directory in their output, and warn you if it is not in PATH.
 It could be, eg:
-- `$HOME/.local/bin` or `C:\Users\USER\AppData\Roaming\local\bin\` (stack) 
-- `$HOME/.cabal/bin` or `C:\Users\USER\AppData\Roaming\cabal\bin\` (cabal) 
+- `~/.local/bin` or `C:\Users\USER\AppData\Roaming\local\bin\` (stack) 
+- `~/.cabal/bin` or `C:\Users\USER\AppData\Roaming\cabal\bin\` (cabal) 
 
 On unix, these commands will add both bin directories to PATH permanently (probably):
 
