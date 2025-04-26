@@ -126,32 +126,42 @@ Or explore the documentation links in the sidebar (if not visible, click/tap the
 ## Quick start
 
 This plain text accounting stuff is both useful and more fun than it sounds - care to give it a try ?
-See [Get&nbsp;Started](start.md), or the following short guide:
+Read on... (or see [Get&nbsp;Started](start.md) for more detailed tutorials).
 
 ### 1. Install hledger
 
-Install hledger on your computer.
 The [Install](install.md) page shows how to get an up-to-date version quickly.
 
 ### 2. Record transactions
 
-hledger reads transactions from a [journal file](hledger.md#input).
-By default this is `~/.hledger.journal` or `C:\Users\USER\.hledger.journal`.
-You can change this by configuring $LEDGER_FILE.
+hledger reads transactions from a [journal file](hledger.md#input) -
+usually `~/.hledger.journal`, or `C:\Users\USER\.hledger.journal`, or whatever you've set LEDGER_FILE to.
+<!-- It uses [journal format](hledger.md#journal). -->
 
-This file uses [journal format](hledger.md#journal), containing transaction entries like this (the black text):
+Transactions are recorded there, like this:
 
-[![hledger basic transaction, showing names of parts](https://raw.githubusercontent.com/RobertNielsen1/hledger/master/hledger%20basic%20transaction%20--%20terms.png)](https://github.com/RobertNielsen1/hledger/blob/master/hledger%20basic%20transaction%20--%20terms.png)
+```journal
+2025-04-10 MyGas
+  Expenses:Automotive              $9.19
+  Liabilities:Acme Credit Card
+```
 
-A transaction entry begins with a date and description, followed by an indented list of accounts and amounts.
-Note the 2 or more spaces required between each account name and amount.
-A positive amount means "added to this account", a negative amount means "removed from this account"
-(AKA [debit and credit](https://plaintextaccounting.org/FAQ#where-are-debits-and-credits)).
-The amounts in a transaction must add up to zero.
-If you leave one amount blank, it will be calculated automatically.
+A date and description are followed by several indented account postings, with two or more spaces between each account name and its amount.
 
-Here's an example journal, with comments.
-Transactions are ordered by date, and the first one sets starting balances.
+Account names are flexible and may contain spaces. A colon indicates a subaccount.
+
+The amounts in a transaction must add up to zero. If you leave one amount blank, it will be calculated automatically.
+
+A positive amount means "added to this account", a negative amount means "removed from this account" ([debit and credit](https://plaintextaccounting.org/FAQ#where-are-debits-and-credits)).
+
+Here are the parts in more detail:
+
+[![a hledger transaction entry, showing names of parts](https://raw.githubusercontent.com/RobertNielsen1/hledger/master/hledger%20basic%20transaction%20--%20terms.png)](https://github.com/RobertNielsen1/hledger/blob/master/hledger%20basic%20transaction%20--%20terms.png)
+
+Here's the start of a journal, with comments.
+To follow along with these examples, you can save this as your journal file.
+You can use a text editor, 
+or you could run [hledger add](hledger.md#add) or [hledger web](hledger.md#web) and record these transactions interactively (no need to enter the comments).
 
 ```journal
 
@@ -178,35 +188,52 @@ Transactions are ordered by date, and the first one sets starting balances.
 You can also use shorter account names or aliases.)
 -->
 
-Save this as your journal file, using a text editor.
-Or, you could run `hledger add` or `hledger web` and record these transactions interactively. (No need to enter the comments.)
 
-### 3. Add declarations (optional)
+### 3. Add declarations
 
-**Account types**
+The above is all you need to get started, but we usually add some declarations at the top of the file, to allow more error checking:
 
-In accounting there are five standard account types: *assets*, *liabilities*, *equity*, *revenues* (or *income*), and *expenses*.
-hledger also uses a couple of subtypes: *cash*, *conversion*.
+**Commodities**
 
-It's recommended to [declare the types](hledger.md#account-types) of your top level accounts,
-to help reports show the right accounts.
-hledger can infer types from english account names, but you may be using another language,
-and anyway it's good practice to make this explicit.
-So add `account` directives at the top of your journal file, something like these:
+Declare your currencies/commodities, and their numeric display style:
+
+```
+
+commodity $1000.00
+```
+
+or it could be:
+
+```
+
+commodity $ 1.000,00
+```
+
+Now you can check that all amounts have a valid commodity symbol:
+```cli
+$ hledger check commodities
+$
+```
+
+**Accounts**
+
+It's good to declare at least your top level accounts and their [type](hledger.md#account-types),
+to help reports show the right accounts. Like this:
 
 ```journal
 
-; Top level account types. Subaccounts will inherit these.
 account assets                   ; type:A
-account assets:bank              ; type:C
-account assets:cash              ; type:C
 account liabilities              ; type:L
 account equity                   ; type:E
-account equity:conversion        ; type:V
-account revenues                 ; type:R
+account income                   ; type:R
 account expenses                 ; type:X
+
+account assets:bank              ; type:C
+account assets:cash              ; type:C
+
+account equity:conversion        ; type:V
 ```
-Translations:
+Or in your preferred language:
 [ar](https://github.com/simonmichael/hledger/blob/master/examples/i18n/ar.journal)
 [da](https://github.com/simonmichael/hledger/blob/master/examples/i18n/da.journal)
 [de](https://github.com/simonmichael/hledger/blob/master/examples/i18n/de.journal)
@@ -219,44 +246,45 @@ Translations:
 [pt](https://github.com/simonmichael/hledger/blob/master/examples/i18n/pt.journal)
 [se](https://github.com/simonmichael/hledger/blob/master/examples/i18n/se.journal)
 [zh](https://github.com/simonmichael/hledger/blob/master/examples/i18n/zh.journal)
+...
 
+Declaring accounts also sets their preferred [display order](hledger.md#account-display-order) in reports.
 
-**Account and commodity names**
-
-If you want more error checking, you can declare all allowed account names
-(not just top level accounts), and all allowed commodities/currencies,
-and then use [strict mode](hledger.md#strict-mode), which disallows any others:
+For stronger error checking, you can declare all account names, not just the top-level ones:
 
 ```journal
 
-; All accounts.
 account assets                   ; type:A
 account assets:bank              ; type:C
 account assets:bank:checking
 account assets:bank:savings
 account assets:cash              ; type:C
+
 account liabilities              ; type:L
 account liabilities:credit card
+
 account equity                   ; type:E
 account equity:conversion        ; type:V
 account equity:opening/closing
+
 account income                   ; type:R
 account income:salary
 account income:gifts
+
 account expenses                 ; type:X
 account expenses:rent
 account expenses:food
 account expenses:gifts
-
-; Currencies, and their numeric display style.
-commodity $1000.00
 ```
+
+Then you can check that all transactions use valid account names:
 ```cli
-$ hledger check --strict
-$ hledger -s CMD ...
+$ hledger check accounts
+$
 ```
 
-Declaring accounts also sets their preferred [display order](hledger.md#account-display-order) (instead of sorting alphabetically).
+You can also enable [strict mode](hledger.md#strict-mode), which checks commodity and account names,
+by adding `-s`/`--strict` to any command (or your [config file](hledger.md#config-file)).
 
 ### 4. Run reports
 
@@ -338,13 +366,10 @@ Transactions in assets:bank:checking and subaccounts:
 2023-02-01 GOODWORKS CORP       in:salary                    $1000         $2000
 ```
 
-## Next steps
+Congratulations, you can now begin using hledger to track your daily finances!
 
-Congratulations, you can now use hledger to track your daily finances!
-But see [Get&nbsp;Started](start.md) for more detailed help and tutorials.
-
-If you are new to bookkeeping, accounting, or plain text accounting:
-these are valuable skills, and they do take some time to master.
+See [Get&nbsp;Started](start.md) for more tutorials.
+If you are new to bookkeeping, accounting, or plain text accounting: know these are valuable skills, that take time to master.
 With practice, more doc reading, and [support/discussion](support.md), you will gradually
 - build up a set of account names best suited to you
 - learn the proper journal entries for your real-world transactions
