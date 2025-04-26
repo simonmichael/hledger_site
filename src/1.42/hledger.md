@@ -523,7 +523,7 @@ tips.
 | In hledger-ui\'s filter prompt | Use single or double quotes |
 | In hledger-web\'s search form | Use single or double quotes |
 | In an [argument file](#argument-files) | Don\'t use spaces, don\'t shell-escape, do regex-escape when needed |
-| In a [config file](#config-files) | Use single or double quotes, and enclose the whole argument <br>(`"desc:a b"` not `desc:"a b"`) |
+| In a [config file](#config-file) | Use single or double quotes, and enclose the whole argument <br>(`"desc:a b"` not `desc:"a b"`) |
 | In `ghci` (the Haskell REPL) | Use double quotes, and enclose the whole argument |
 
 #### Using a wild card
