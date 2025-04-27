@@ -138,7 +138,7 @@ hledger reads transactions from a [journal file](hledger.md#input) -
 usually `~/.hledger.journal`, or `C:\Users\USER\.hledger.journal`, or whatever you've set LEDGER_FILE to.
 <!-- It uses [journal format](hledger.md#journal). -->
 
-Transactions are recorded there, like this:
+Transactions are recorded like this:
 
 ```journal
 2025-04-10 MyGas
@@ -146,9 +146,9 @@ Transactions are recorded there, like this:
   Liabilities:Acme Credit Card
 ```
 
-A date and description are followed by several indented account postings, with two or more spaces between each account name and its amount.
-
-Account names are flexible and may contain spaces. A colon indicates a subaccount.
+A date and description, followed by several indented account postings, 
+with two or more spaces between each account name and its amount.
+Colons indicate subaccounts.
 
 The amounts in a transaction must add up to zero. If you leave one amount blank, it will be calculated automatically.
 
