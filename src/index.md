@@ -190,16 +190,18 @@ You can also use shorter account names or aliases.)
 -->
 
 Some people record all transactions by hand in this way.
-But you can also import them from bank data (shown below).
+But you can also import them from bank data, as we'll see below.
 
 
 ### 3. Add declarations
 
-The above is all you need to get started, but we usually add some declarations at the top of the file, to allow more error checking:
+Transaction entries like the above are all you need to get started, so feel free to skip this step till later.
+
+But usually we add some declarations at the top of the file, which help prevent errors:
 
 **Commodities**
 
-Declare your currencies/commodities, and their display style:
+Declare your currencies/commodities, and their display style. In this case there's only one, $ :
 
 ```
 
@@ -213,7 +215,7 @@ or it could be:
 commodity $ 1.000,00
 ```
 
-Now you can check that all amounts have a valid commodity symbol:
+Now, you can check that all amounts have a valid commodity symbol:
 ```cli
 $ hledger check commodities
 $
@@ -221,8 +223,22 @@ $
 
 **Accounts**
 
-It's good to declare at least your top level accounts and their [type](hledger.md#account-types),
-to help reports show the right accounts. Like this:
+Declare your top level accounts and their [type](hledger.md#account-types).
+Eg like this
+(or in other languages:
+[ar](https://github.com/simonmichael/hledger/blob/master/examples/i18n/ar.journal)
+[da](https://github.com/simonmichael/hledger/blob/master/examples/i18n/da.journal)
+[de](https://github.com/simonmichael/hledger/blob/master/examples/i18n/de.journal)
+[en](https://github.com/simonmichael/hledger/blob/master/examples/i18n/en.journal)
+[es](https://github.com/simonmichael/hledger/blob/master/examples/i18n/es.journal)
+[fr](https://github.com/simonmichael/hledger/blob/master/examples/i18n/fr.journal)
+[ja](https://github.com/simonmichael/hledger/blob/master/examples/i18n/ja.journal)
+[ko](https://github.com/simonmichael/hledger/blob/master/examples/i18n/ko.journal)
+[no](https://github.com/simonmichael/hledger/blob/master/examples/i18n/no.journal)
+[pt](https://github.com/simonmichael/hledger/blob/master/examples/i18n/pt.journal)
+[se](https://github.com/simonmichael/hledger/blob/master/examples/i18n/se.journal)
+[zh](https://github.com/simonmichael/hledger/blob/master/examples/i18n/zh.journal)
+...):
 
 ```journal
 
@@ -237,24 +253,11 @@ account assets:cash              ; type:C
 
 account equity:conversion        ; type:V
 ```
-Or in your preferred language:
-[ar](https://github.com/simonmichael/hledger/blob/master/examples/i18n/ar.journal)
-[da](https://github.com/simonmichael/hledger/blob/master/examples/i18n/da.journal)
-[de](https://github.com/simonmichael/hledger/blob/master/examples/i18n/de.journal)
-[en](https://github.com/simonmichael/hledger/blob/master/examples/i18n/en.journal)
-[es](https://github.com/simonmichael/hledger/blob/master/examples/i18n/es.journal)
-[fr](https://github.com/simonmichael/hledger/blob/master/examples/i18n/fr.journal)
-[ja](https://github.com/simonmichael/hledger/blob/master/examples/i18n/ja.journal)
-[ko](https://github.com/simonmichael/hledger/blob/master/examples/i18n/ko.journal)
-[no](https://github.com/simonmichael/hledger/blob/master/examples/i18n/no.journal)
-[pt](https://github.com/simonmichael/hledger/blob/master/examples/i18n/pt.journal)
-[se](https://github.com/simonmichael/hledger/blob/master/examples/i18n/se.journal)
-[zh](https://github.com/simonmichael/hledger/blob/master/examples/i18n/zh.journal)
-...
 
-Declaring accounts also sets their preferred [display order](hledger.md#account-display-order) in reports.
+This helps reports show the right accounts. 
+It also sets their preferred [display order](hledger.md#account-display-order).
 
-For stronger error checking, you can declare all account names, not just the top-level ones:
+If you want more error checking, declare all account names, not just the top-level ones:
 
 ```journal
 
@@ -287,8 +290,9 @@ $ hledger check accounts
 $
 ```
 
-You can also enable [strict mode](hledger.md#strict-mode), which checks commodity and account names,
-by adding `-s`/`--strict` to any command (or your [config file](hledger.md#config-file)).
+You can also use [strict mode](hledger.md#strict-mode),
+which enables both of these checks, 
+by adding `-s` to any command (or to your [config file](hledger.md#config-file)).
 
 ### 4. Run reports
 
