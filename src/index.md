@@ -142,7 +142,7 @@ Transactions are recorded like this:
 
 ```journal
 2025-04-10 MyGas
-  Expenses:Automotive              $9.19
+  Expenses:Automotive              $20
   Liabilities:Acme Credit Card
 ```
 
@@ -155,14 +155,14 @@ Here are the parts in more detail:
 
 A transaction is a movement of money between accounts.
 So the amounts in a transaction must add up to zero.
-If you leave one amount blank, it will be calculated automatically.
+If you leave one amount blank, it will be calculated automatically ($-20 in this case).
 
 A positive amount means "added to this account", a negative amount means "removed from this account" ([debit and credit](https://plaintextaccounting.org/FAQ#where-are-debits-and-credits)).
 
 Here's the start of a journal, with comments.
-To follow along with these examples, you can save this as your journal file.
-You can use a text editor, 
-or you could run [hledger add](hledger.md#add) or [hledger web](hledger.md#web) and record these transactions interactively (no need to enter the comments).
+To follow along with these examples, save this as your journal file.
+You can use a text editor; or you could run [hledger add](hledger.md#add) or [hledger web](hledger.md#web)
+and enter these transactions interactively (no need to enter the comments).
 
 ```journal
 
@@ -188,6 +188,9 @@ or you could run [hledger add](hledger.md#add) or [hledger web](hledger.md#web) 
 (It it looks verbose, note we often use auto-completion, or generate entries automatically from bank data.
 You can also use shorter account names or aliases.)
 -->
+
+Some people record all transactions by hand in this way.
+But you can also import them from bank data (shown below).
 
 
 ### 3. Add declarations
