@@ -203,14 +203,14 @@ But usually we add some declarations at the top of the file, which help prevent 
 
 Declare your currencies/commodities, and their display style. In this case there's only one, $ :
 
-```
+```journal
 
 commodity $1000.00
 ```
 
 or it could be:
 
-```
+```journal
 
 commodity $ 1.000,00
 ```
