@@ -196,7 +196,7 @@ But you can also import them from bank data, as we'll see below.
 ### 3. Add declarations
 
 Transaction entries like the above are all you need to get started, so feel free to skip this step till later.
-But we usually add some declarations at the top of the file, to help prevent errors.
+But we usually add some declarations at the top of the file to enable more error checking.
 
 First, declare your currencies/commodities, and their display style. In this case there's only one, `$`:
 
