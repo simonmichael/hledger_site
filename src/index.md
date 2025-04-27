@@ -289,10 +289,9 @@ You can also use [strict mode](hledger.md#strict-mode),
 which enables both of these checks, 
 by adding `-s` to any command (or to your [config file](hledger.md#config-file)).
 
-Here's the [above journal][quickstart.journal] in full.
+Here's the [above journal](https://raw.githubusercontent.com/simonmichael/hledger/refs/heads/master/examples/quickstart.journal) in full.
 
 <!-- [quickstart.journa]: https://github.com/simonmichael/hledger/blob/master/examples/quickstart.journal -->
-[quickstart.journa]: https://raw.githubusercontent.com/simonmichael/hledger/refs/heads/master/examples/quickstart.journal
 
 ### 4. Run reports
 
