@@ -196,12 +196,9 @@ But you can also import them from bank data, as we'll see below.
 ### 3. Add declarations
 
 Transaction entries like the above are all you need to get started, so feel free to skip this step till later.
+But we usually add some declarations at the top of the file, to help prevent errors.
 
-But usually we add some declarations at the top of the file, which help prevent errors:
-
-**Commodities**
-
-Declare your currencies/commodities, and their display style. In this case there's only one, $ :
+First, declare your currencies/commodities, and their display style. In this case there's only one, `$`:
 
 ```journal
 
@@ -221,10 +218,8 @@ $ hledger check commodities
 $
 ```
 
-**Accounts**
-
-Declare your top level accounts and their [type](hledger.md#account-types).
-Eg like this
+Next, declare your top level accounts and their [type](hledger.md#account-types),
+eg like this
 (or in other languages:
 [ar](https://github.com/simonmichael/hledger/blob/master/examples/i18n/ar.journal)
 [da](https://github.com/simonmichael/hledger/blob/master/examples/i18n/da.journal)
@@ -257,7 +252,7 @@ account equity:conversion        ; type:V
 This helps reports show the right accounts. 
 It also sets their preferred [display order](hledger.md#account-display-order).
 
-If you want more error checking, declare all account names, not just the top-level ones:
+If you'd like more error checking, declare all account names, not just the top-level ones:
 
 ```journal
 
