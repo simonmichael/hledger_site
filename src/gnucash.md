@@ -2,10 +2,8 @@
 
 Tips for co-using/converting/switching GnuCash and hledger.
 
-Some relevant tools
-(this list should normally be about the same as [PTA > Data import/conversion > GnuCash](https://plaintextaccounting.org/#gnucash)).
-
-gnucash-xml, gnucash-sql, gnucash-sqlite refer to different GnuCash storage back ends: XML, general SQL (sqlite/mysql/postgres), or sqlite only.
+Conversion tools
+(gnucash-xml, gnucash-sql, gnucash-sqlite refer to different GnuCash storage back ends: XML, general SQL (sqlite/mysql/postgres), or sqlite only):
 
 - [WolfgangFahl/pynomina](https://github.com/WolfgangFahl/pynomina) (updated 2025) interconversion between many formats, including gnucash-xml and beancount
 - [piecash/scripts/ledger.py](https://github.com/sdementen/piecash/blob/master/piecash/scripts/ledger.py) (updated 2024) gnucash-sql to ledger
