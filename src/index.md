@@ -149,14 +149,15 @@ Transactions are recorded like this:
 A date and description, followed by several indented account postings, 
 with two or more spaces between each account name and its amount.
 Colons indicate subaccounts.
-
-The amounts in a transaction must add up to zero. If you leave one amount blank, it will be calculated automatically.
-
-A positive amount means "added to this account", a negative amount means "removed from this account" ([debit and credit](https://plaintextaccounting.org/FAQ#where-are-debits-and-credits)).
-
 Here are the parts in more detail:
 
 [![a hledger transaction entry, showing names of parts](https://raw.githubusercontent.com/RobertNielsen1/hledger/master/hledger%20basic%20transaction%20--%20terms.png)](https://github.com/RobertNielsen1/hledger/blob/master/hledger%20basic%20transaction%20--%20terms.png)
+
+A transaction is a movement of money between accounts.
+So the amounts in a transaction must add up to zero.
+If you leave one amount blank, it will be calculated automatically.
+
+A positive amount means "added to this account", a negative amount means "removed from this account" ([debit and credit](https://plaintextaccounting.org/FAQ#where-are-debits-and-credits)).
 
 Here's the start of a journal, with comments.
 To follow along with these examples, you can save this as your journal file.
