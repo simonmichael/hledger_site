@@ -3,15 +3,18 @@
 Tips for co-using/converting/switching GnuCash and hledger.
 
 Some relevant tools
-(should be about the same as [PTA > Data import/conversion > GnuCash](https://plaintextaccounting.org/#gnucash)):
+(this list should normally be about the same as [PTA > Data import/conversion > GnuCash](https://plaintextaccounting.org/#gnucash)).
 
-- [piecash/scripts/ledger.py](https://github.com/sdementen/piecash/blob/master/piecash/scripts/ledger.py) (updated 2024) gnucash xml/sqlite/mysql/postgres to ledger
-- [lodenrogue/gnucash2ledger](https://github.com/lodenrogue/gnucash2ledger) (2023) gnucash xml to ledger
-- [tfree87/gnucash2ledger](https://github.com/tfree87/gnucash2ledger) (2021) gnucash xml to *ledger
-- [gnucash-xml-to-ledger-dat](https://github.com/icyflame/gnucash-xml-to-ledger-dat) (2020) gnucash xml to ledger
-- [gnucash-to-beancount](https://github.com/henriquebastos/gnucash-to-beancount/) (2017) gnucash sqlite to beancount
-- [cookthebooks](https://github.com/colemannugent/cookthebooks) (2017) gnucash xml to ledger
-- [pygnucash/gnucash2ledger.py](https://github.com/MatzeB/pygnucash/blob/master/gnucash2ledger.py) (2014) gnucash sqlite to ledger
+gnucash-xml, gnucash-sql, gnucash-sqlite refer to different GnuCash storage back ends: XML, general SQL (sqlite/mysql/postgres), or sqlite only.
+
+- [WolfgangFahl/pynomina](https://github.com/WolfgangFahl/pynomina) (updated 2025) interconversion between many formats, including gnucash-xml and beancount
+- [piecash/scripts/ledger.py](https://github.com/sdementen/piecash/blob/master/piecash/scripts/ledger.py) (updated 2024) gnucash-sql to ledger
+- [lodenrogue/gnucash2ledger](https://github.com/lodenrogue/gnucash2ledger) (2023) gnucash-xml to ledger
+- [tfree87/gnucash2ledger](https://github.com/tfree87/gnucash2ledger) (2021) gnucash-xml to *ledger
+- [gnucash-xml-to-ledger-dat](https://github.com/icyflame/gnucash-xml-to-ledger-dat) (2020) gnucash-xml to ledger
+- [gnucash-to-beancount](https://github.com/henriquebastos/gnucash-to-beancount/) (2017) gnucash-sqlite to beancount
+- [cookthebooks](https://github.com/colemannugent/cookthebooks) (2017) gnucash-xml to ledger
+- [pygnucash/gnucash2ledger.py](https://github.com/MatzeB/pygnucash/blob/master/gnucash2ledger.py) (2014) gnucash-sqlite to ledger
 <!-- sync: https://plaintextaccounting.org/#gnucash -->
 
 Some related discussion:
