@@ -287,7 +287,7 @@ $
 
 You can also use [strict mode](hledger.md#strict-mode),
 which enables both of these checks, 
-by adding `-s` to any command (or to your [config file](hledger.md#config-file)).
+by adding `-s` to any command (or to your [config file](hledger.md#config-files)).
 
 Here's the [above journal](https://raw.githubusercontent.com/simonmichael/hledger/refs/heads/master/examples/quickstart.journal) in full.
 
