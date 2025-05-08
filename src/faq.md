@@ -604,13 +604,7 @@ This is superseded by...
 
 ### Is there a config file ?
 
-~~So far, no, we have resisted this. In short, because config files add complexity and variance;~~
-
-Yes! In current hledger master. Testers needed.
-
-Here's how to [build hledger master](https://hledger.org/install.html#build-in-a-source-checkout)
-(or if you're on x64 linux, you can use the binary from a [recent CI run](https://github.com/simonmichael/hledger/actions/runs/9751700252)),
-Notes welcome in hledger chat or at [#1013](https://github.com/simonmichael/hledger/issues/1013).
+Yes, since hledger-1.40. See [Config files](https://hledger.org/dev/hledger.html#config-files).
 
 ### How can I automatically use a journal file in the current directory ?
 
