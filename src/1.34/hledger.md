@@ -4211,7 +4211,7 @@ that would trigger the prepending effect, which we don\'t want here.
 When you are reading CSV data, eg with a command like
 `hledger -f foo.csv print`, hledger will infer each commodity\'s decimal
 precision (and other [commodity display
-styles](#commodity-display-styles)) from the amounts - much as when
+styles](#commodity-display-style)) from the amounts - much as when
 reading a journal file without `commodity` directives (see the link).
 
 Note, the commodity styles are not inferred from the numbers in the
@@ -4220,7 +4220,7 @@ by the CSV rules.
 
 When you are importing CSV data with the `import` command, eg
 `hledger import foo.csv`, there\'s another step: `import` tries to make
-the new entries [conform](#commodity-display-styles) to the journal\'s
+the new entries [conform](#commodity-display-style) to the journal\'s
 existing styles. So for each commodity - let\'s say it\'s EUR - `import`
 will choose:
 
@@ -7200,7 +7200,7 @@ Amounts are shown right-aligned within each transaction (but not aligned
 across all transactions; you can do that with ledger-mode in Emacs).
 
 Amounts will be (mostly) normalised to their [commodity display
-style](#commodity-display-styles): their symbol placement, decimal mark,
+style](#commodity-display-style): their symbol placement, decimal mark,
 and digit group marks will be made consistent. By default, decimal
 digits are shown as they are written in the journal.
 
