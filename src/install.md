@@ -5,7 +5,7 @@
 <!-- toc -->
 </div>
 
-The current hledger release is **1.42.1**.
+The current hledger release is **1.42.2**.
 Here are the **[release notes](release-notes.md)**.
 
 Here are several ways you can install hledger:
@@ -27,10 +27,10 @@ Download them manually,
 or [use eget](https://github.com/zyedidia/eget?tab=readme-ov-file#how-to-get-eget) (recommended).
 (For [prerelease binaries], add `--pre-release`):
 
-[![hledger release binaries](https://img.shields.io/badge/hledger_release_binaries-1.42.1-brightgreen.svg)](https://github.com/simonmichael/hledger/releases/tag/1.42.1)
+[![hledger release binaries](https://img.shields.io/badge/hledger_release_binaries-1.42.2-brightgreen.svg)](https://github.com/simonmichael/hledger/releases/tag/1.42.2)
 `eget simonmichael/hledger --all`
 
-[release binaries]:    https://github.com/simonmichael/hledger/releases/tag/1.42.1
+[release binaries]:    https://github.com/simonmichael/hledger/releases/tag/1.42.2
 [prerelease binaries]: https://github.com/simonmichael/hledger/releases/tag/nightly
 
 ## Packaged binaries
@@ -40,7 +40,7 @@ Homebrew (Mac, Linux) <!-- chenrui ? --> \
 `brew install hledger`
 
 Docker (Linux, Mac, Windows) <!-- adept --> ([more](https://hub.docker.com/search?q=hledger&type=image&sort=updated_at&order=desc)) \
-[![Docker](https://img.shields.io/badge/Docker_image-1.42.1-brightgreen.svg)](https://hub.docker.com/r/dastapov/hledger)
+[![Docker](https://img.shields.io/badge/Docker_image-1.42.2-red.svg)](https://hub.docker.com/r/dastapov/hledger)
 `docker pull dastapov/hledger`
 
 Windows \
@@ -157,7 +157,7 @@ bash hledger-install.sh
 
 ```
 stack update
-stack install hledger-1.42.1 hledger-ui-1.42.1 hledger-web-1.42.1 \
+stack install hledger-1.42.2 hledger-ui-1.42.2 hledger-web-1.42.2 \
   --resolver=nightly-2025-04-01 --verbosity=error
 ```
 
@@ -175,7 +175,7 @@ Then run:
 
 ```
 cabal update
-cabal install hledger-1.42.1 hledger-ui-1.42.1 hledger-web-1.42.1
+cabal install hledger-1.42.2 hledger-ui-1.42.2 hledger-web-1.42.2
 ```
 
 This will build the hledger tools and install them in `~/.cabal/bin`.
@@ -204,7 +204,7 @@ Get the [hledger source code](https://github.com/simonmichael/hledger/commits/ma
 
     git clone https://github.com/simonmichael/hledger
     cd hledger
-    git checkout 1.42.1   # switch to the latest release tag (optional)
+    git checkout 1.42.2   # switch to the latest release tag (optional)
 
 Then build and install with stack:
 
@@ -243,7 +243,7 @@ Get the hledger source:
 
     git clone https://github.com/simonmichael/hledger
     cd hledger
-    git checkout 1.42.1   # switch to the latest release tag (optional)
+    git checkout 1.42.2   # switch to the latest release tag (optional)
 
 Build and install hledger:
 
@@ -296,7 +296,7 @@ to check your setup. If this doesn't work, read on..
 After installing, try to run the hledger tools (hledger, hledger-ui, hledger-web) and look for the expected versions. Eg:
 
     $ hledger --version
-    hledger 1.42.1-gdaafa059a-20250312, mac-aarch64
+    hledger 1.42.2, mac-aarch64
 
 If this doesn't work, you may need to add the binaries' install directory to your shell's PATH.
 
