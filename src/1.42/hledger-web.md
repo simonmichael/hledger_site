@@ -21,8 +21,8 @@ or\
 
 ## DESCRIPTION
 
-This manual is for hledger\'s web interface, version 1.42. See also the
-hledger manual for common concepts and file formats.
+This manual is for hledger\'s web interface, version 1.42.2. See also
+the hledger manual for common concepts and file formats.
 
 hledger is a robust, user-friendly, cross-platform set of programs for
 tracking money, time, or any other commodity, using double-entry
@@ -59,15 +59,15 @@ with a date field. (See hledger(1) -\> Input for details.)
 
 hledger-web can be run in three modes:
 
--   Transient mode (the default): your default web browser will be
-    opened to show the app if possible, and the app exits automatically
-    after two minutes of inactivity (no requests received and no open
-    browser windows viewing it).
+- Transient mode (the default): your default web browser will be opened
+  to show the app if possible, and the app exits automatically after two
+  minutes of inactivity (no requests received and no open browser
+  windows viewing it).
 
--   With `--serve`: the app runs without stopping, and without opening a
-    browser.
+- With `--serve`: the app runs without stopping, and without opening a
+  browser.
 
--   With `--serve-api`: only the JSON API is served.
+- With `--serve-api`: only the JSON API is served.
 
 In all cases hledger-web runs as a foreground process, logging requests
 to stdout.
@@ -221,26 +221,29 @@ completions](install.html#shell-completions).
 
 ## PERMISSIONS
 
-By default, hledger-web allows anyone who can reach it to view the journal
-and to add new transactions, but not to change existing data.
+By default, hledger-web allows anyone who can reach it to view the
+journal and to add new transactions, but not to change existing data.
 
-You can restrict who can reach it, by
+You can restrict who can reach it by
 
-- setting the IP address it listens on (see `--host` above).
-  By default it listens on 127.0.0.1, accessible to users on the local machine only.
-- putting it behind an authenticating proxy, such as caddy or apache
-- putting it behind a firewall
+- setting the IP address it listens on (see `--host` above). By default
+  it listens on 127.0.0.1, accessible to all users on the local machine.
+- putting it behind an authenticating proxy, using eg apache or nginx
+- custom firewall rules
 
-And you can restrict what the users reaching it can do,
-by specifying the `--allow=ACCESSLEVEL` option at startup.
-ACCESSLEVEL is one of:
+You can restrict what the users who reach it can do, by
 
-- `view` - allows viewing the journal file(s)
-- `add`  - also allows adding new transactions to the main journal file
-- `edit` - also allows editing, uploading or downloading the journal file(s)
-- `sandstorm` - (for the hledger-web Sandstorm app:) allows whichever of `view`, `add`, or `edit` are specified in the `X-Sandstorm-Permissions` HTTP header
-
-The default access level is `add`.
+- using the `--capabilities=CAP[,CAP..]` flag when you start it,
+  enabling one or more of the following capabilities. The default value
+  is `view,add`:
+  - `view` - allows viewing the journal file and all included files
+  - `add` - allows adding new transactions to the main journal file
+  - `manage` - allows editing, uploading or downloading the main or
+    included files
+- using the `--capabilities-header=HTTPHEADER` flag to specify a HTTP
+  header from which it will read capabilities to enable. hledger-web on
+  Sandstorm uses the X-Sandstorm-Permissions header to integrate with
+  Sandstorm\'s permissions. This is disabled by default.
 
 ## EDITING, UPLOADING, DOWNLOADING
 

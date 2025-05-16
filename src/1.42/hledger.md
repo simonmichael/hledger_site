@@ -29,7 +29,7 @@ accounting and a simple, editable file format. hledger is inspired by
 and largely compatible with ledger(1), and largely interconvertible with
 beancount(1).
 
-This manual is for hledger\'s command line interface, version 1.42. It
+This manual is for hledger\'s command line interface, version 1.42.2. It
 also describes the common options, file formats and concepts used by all
 hledger programs. It might accidentally teach you some
 bookkeeping/accounting as well! You don\'t need to know everything in
@@ -192,11 +192,11 @@ You can specify multiple `-f` options, to read multiple files as one big
 journal. When doing this, note that certain features (described below)
 will be affected:
 
--   [Balance assertions](#balance-assertions) will not see the effect of
-    transactions in previous files. (Usually this doesn\'t matter as
-    each file will set the corresponding opening balances.)
--   Some [directives](#directives) will not affect previous or
-    subsequent files.
+- [Balance assertions](#balance-assertions) will not see the effect of
+  transactions in previous files. (Usually this doesn\'t matter as each
+  file will set the corresponding opening balances.)
+- Some [directives](#directives) will not affect previous or subsequent
+  files.
 
 If needed, you can work around these by using a single parent file which
 [includes](#include-directive) the others, or concatenating the files
@@ -208,17 +208,17 @@ hledger checks input files for valid data. By default, the most
 important errors are detected, while still accepting easy journal files
 without a lot of declarations:
 
--   Are the input files parseable, with valid syntax ?
--   Are all transactions balanced ?
--   Do all balance assertions pass ?
+- Are the input files parseable, with valid syntax ?
+- Are all transactions balanced ?
+- Do all balance assertions pass ?
 
 With the `-s`/`--strict` flag, additional checks are performed:
 
--   Are all accounts posted to, declared with an `account` directive ?
-    ([Account error checking](#account-error-checking))
--   Are all commodities declared with a `commodity` directive ?
-    ([Commodity error checking](#commodity-error-checking))
--   Are all commodity conversions declared explicitly ?
+- Are all accounts posted to, declared with an `account` directive ?
+  ([Account error checking](#account-error-checking))
+- Are all commodities declared with a `commodity` directive ?
+  ([Commodity error checking](#commodity-error-checking))
+- Are all commodity conversions declared explicitly ?
 
 You can use the [check](#check) command to run individual checks \-- the
 ones listed above and some more.
@@ -236,16 +236,15 @@ COMMANDS](#part-4-commands) below.
 
 To use a particular command, run `hledger CMD [CMDOPTS] [CMDARGS]`,
 
--   CMD is the full command name, or its standard abbreviation shown in
-    the commands list, or any unambiguous prefix of the name.
+- CMD is the full command name, or its standard abbreviation shown in
+  the commands list, or any unambiguous prefix of the name.
 
--   CMDOPTS are command-specific options, if any. Command-specific
-    options must be written after the command name. Eg:
-    `hledger print -x`.
+- CMDOPTS are command-specific options, if any. Command-specific options
+  must be written after the command name. Eg: `hledger print -x`.
 
--   CMDARGS are additional arguments to the command, if any. Most
-    hledger commands accept arguments representing a [query](#queries),
-    to limit the data in some way. Eg: `hledger reg assets:checking`.
+- CMDARGS are additional arguments to the command, if any. Most hledger
+  commands accept arguments representing a [query](#queries), to limit
+  the data in some way. Eg: `hledger reg assets:checking`.
 
 To list a command\'s options, arguments, and documentation in the
 terminal, run `hledger CMD -h`. Eg: `hledger bal -h`.
@@ -440,10 +439,10 @@ $ hledger balance 'assets:$account'
 If you are using hledger in a Powershell or Command window on Microsoft
 Windows, the escaping rules are different:
 
--   In a Powershell window (`powershell`, blue background), you must use
-    double quotes or single quotes (not backslash).
--   In a Command window (`cmd`, black background), you must use double
-    quotes (not single quotes or backslash).
+- In a Powershell window (`powershell`, blue background), you must use
+  double quotes or single quotes (not backslash).
+- In a Command window (`cmd`, black background), you must use double
+  quotes (not single quotes or backslash).
 
 The next two sections were written for Unix-like shells, so might need
 to be adapted if you\'re using `cmd` or `powershell`. (Edits welcome.)
@@ -496,11 +495,11 @@ $ hledger ui cur:\\\\$
 
 If you are wondering why *four* backslashes:
 
--   `$` is unescaped
--   `\$` is regex-escaped
--   `\\$` is regex-escaped, then shell-escaped
--   `\\\\$` is regex-escaped, then shell-escaped, then both slashes are
-    shell-escaped once more for hledger argument pass-through.
+- `$` is unescaped
+- `\$` is regex-escaped
+- `\\$` is regex-escaped, then shell-escaped
+- `\\\\$` is regex-escaped, then shell-escaped, then both slashes are
+  shell-escaped once more for hledger argument pass-through.
 
 Or you can avoid such triple-escaping, by running the add-on executable
 directly:
@@ -523,7 +522,7 @@ tips.
 | In hledger-ui\'s filter prompt | Use single or double quotes |
 | In hledger-web\'s search form | Use single or double quotes |
 | In an [argument file](#argument-files) | Don\'t use spaces, don\'t shell-escape, do regex-escape when needed |
-| In a [config file](#config-file) | Use single or double quotes, and enclose the whole argument <br>(`"desc:a b"` not `desc:"a b"`) |
+| In a [config file](#config-files) | Use single or double quotes, and enclose the whole argument <br>(`"desc:a b"` not `desc:"a b"`) |
 | In `ghci` (the Haskell REPL) | Use double quotes, and enclose the whole argument |
 
 #### Using a wild card
@@ -540,38 +539,38 @@ $ hledger register credit.card
 
 hledger is expected to handle non-ascii characters correctly:
 
--   they should be parsed correctly in input files and on the command
-    line, by all hledger tools (add, iadd, hledger-web\'s
-    search/add/edit forms, etc.)
+- they should be parsed correctly in input files and on the command
+  line, by all hledger tools (add, iadd, hledger-web\'s search/add/edit
+  forms, etc.)
 
--   they should be displayed correctly by all hledger tools, and
-    on-screen alignment should be preserved.
+- they should be displayed correctly by all hledger tools, and on-screen
+  alignment should be preserved.
 
 This requires a well-configured environment. Here are some tips:
 
--   A system locale must be configured, and it must be one that can
-    decode the characters being used. In bash, you can set a locale like
-    this: `export LANG=en_US.UTF-8`. There are some more details in
-    [Troubleshooting](#troubleshooting). This step is essential -
-    without it, hledger will quit on encountering a non-ascii character
-    (as with all GHC-compiled programs).
+- A system locale must be configured, and it must be one that can decode
+  the characters being used. In bash, you can set a locale like this:
+  `export LANG=en_US.UTF-8`. There are some more details in
+  [Troubleshooting](#troubleshooting). This step is essential - without
+  it, hledger will quit on encountering a non-ascii character (as with
+  all GHC-compiled programs).
 
--   Your terminal software (eg Terminal.app, iTerm, CMD.exe, xterm..)
-    must support unicode. On Windows, you may need to use Windows
-    Terminal and/or enable UTF-8 support.
+- Your terminal software (eg Terminal.app, iTerm, CMD.exe, xterm..) must
+  support unicode. On Windows, you may need to use Windows Terminal
+  and/or enable UTF-8 support.
 
--   The terminal must be using a font which includes the required
-    unicode glyphs.
+- The terminal must be using a font which includes the required unicode
+  glyphs.
 
--   The terminal should be configured to display wide characters as
-    double width (for report alignment).
+- The terminal should be configured to display wide characters as double
+  width (for report alignment).
 
--   On Windows, for best results you should run hledger in the same kind
-    of environment in which it was built. Eg hledger built in the
-    standard CMD.EXE environment (like the binaries on our download
-    page) might show display problems when run in a cygwin or msys
-    terminal, and vice versa. (See eg
-    [#961](https://github.com/simonmichael/hledger/issues/961#issuecomment-471229644)).
+- On Windows, for best results you should run hledger in the same kind
+  of environment in which it was built. Eg hledger built in the standard
+  CMD.EXE environment (like the binaries on our download page) might
+  show display problems when run in a cygwin or msys terminal, and vice
+  versa. (See eg
+  [#961](https://github.com/simonmichael/hledger/issues/961#issuecomment-471229644)).
 
 ### Regular expressions
 
@@ -674,17 +673,17 @@ exactly what they support:
 
 Some things to note:
 
--   In the `alias` directive and `--alias` option, regular expressions
-    must be enclosed in forward slashes (`/REGEX/`). Elsewhere in
-    hledger, these are not required.
+- In the `alias` directive and `--alias` option, regular expressions
+  must be enclosed in forward slashes (`/REGEX/`). Elsewhere in hledger,
+  these are not required.
 
--   In queries, to match a regular expression metacharacter like `$` as
-    a literal character, prepend a backslash. Eg to search for amounts
-    with the dollar sign in hledger-web, write `cur:\$`.
+- In queries, to match a regular expression metacharacter like `$` as a
+  literal character, prepend a backslash. Eg to search for amounts with
+  the dollar sign in hledger-web, write `cur:\$`.
 
--   On the command line, some metacharacters like `$` have a special
-    meaning to the shell and so must be escaped at least once more. See
-    [Special characters](#special-characters).
+- On the command line, some metacharacters like `$` have a special
+  meaning to the shell and so must be escaped at least once more. See
+  [Special characters](#special-characters).
 
 ### Argument files
 
@@ -960,10 +959,10 @@ If you plan to export to Beancount often, you may want to follow its
 [conventions](https://plaintextaccounting.org/#other-features), for a
 cleaner conversion:
 
--   use Beancount-friendly account names
--   use currency codes instead of currency symbols
--   use cost notation instead of equity conversion postings
--   avoid virtual postings
+- use Beancount-friendly account names
+- use currency codes instead of currency symbols
+- use cost notation instead of equity conversion postings
+- avoid virtual postings, balance assignments, and secondary dates.
 
 There is one big adjustment you must handle yourself: for Beancount, the
 top level account names must be `Assets`, `Liabilities`, `Equity`,
@@ -975,10 +974,9 @@ config file.
 
 2024-12-20: Some more things not yet handled for you:
 
--   P directives are not converted automatically - convert those
-    yourself
--   Balance assignments are not converted (Beancount doesnt support
-    them) - replace those with explicit amounts
+- P directives are not converted automatically - convert those yourself.
+- Balance assignments are not converted (Beancount doesn\'t support
+  them) - replace those with explicit amounts.
 
 ##### Beancount account names
 
@@ -1316,10 +1314,10 @@ will also ignore regions beginning with a `comment` line and ending with
 an `end comment` line (or file end). Here\'s a suggestion for choosing
 between them:
 
--   `#` for top-level notes
--   `;` for commenting out things temporarily
--   `comment` for quickly commenting large regions (remember it\'s
-    there, or you might get confused)
+- `#` for top-level notes
+- `;` for commenting out things temporarily
+- `comment` for quickly commenting large regions (remember it\'s there,
+  or you might get confused)
 
 Eg:
 
@@ -1347,14 +1345,14 @@ Each transaction is recorded as a journal entry, beginning with a
 [simple date](#simple-dates) in column 0. This can be followed by any of
 the following optional fields, separated by spaces:
 
--   a [status](#status) character (empty, `!`, or `*`)
--   a code (any short number or text, enclosed in parentheses)
--   a description (any remaining text until end of line or a semicolon)
--   a comment (any remaining text following a semicolon until end of
-    line, and any following indented lines beginning with a semicolon)
--   0 or more indented [*posting* lines](#postings), describing what was
-    transferred and the accounts involved (indented comment lines are
-    also allowed, but not blank lines or non-indented lines).
+- a [status](#status) character (empty, `!`, or `*`)
+- a code (any short number or text, enclosed in parentheses)
+- a description (any remaining text until end of line or a semicolon)
+- a comment (any remaining text following a semicolon until end of line,
+  and any following indented lines beginning with a semicolon)
+- 0 or more indented [*posting* lines](#postings), describing what was
+  transferred and the accounts involved (indented comment lines are also
+  allowed, but not blank lines or non-indented lines).
 
 Here\'s a simple journal file containing one transaction:
 
@@ -1513,12 +1511,12 @@ A posting is an addition of some amount to, or removal of some amount
 from, an account. Each posting line begins with at least one space or
 tab (2 or 4 spaces is common), followed by:
 
--   (optional) a [status](#status) character (empty, `!`, or `*`),
-    followed by a space
--   (required) an [account name](#account-names) (any text, optionally
-    containing **single spaces**, until end of line or a double space)
--   (optional) **two or more spaces** (or tabs) followed by an
-    [amount](#amounts).
+- (optional) a [status](#status) character (empty, `!`, or `*`),
+  followed by a space
+- (required) an [account name](#account-names) (any text, optionally
+  containing **single spaces**, until end of line or a double space)
+- (optional) **two or more spaces** (or tabs) followed by an
+  [amount](#amounts).
 
 If the amount is positive, it is being added to the account; if
 negative, it is being removed from the account.
@@ -1934,12 +1932,12 @@ Because auto postings are optional in hledger, accounts affected by them
 effectively have two balances. But balance assertions can only test one
 or the other of these. So to avoid making fragile assertions, either:
 
--   assert the balance calculated with `--auto`, and always use `--auto`
-    with that file
--   or assert the balance calculated without `--auto`, and never use
-    `--auto` with that file
--   or avoid balance assertions on accounts affected by auto postings
-    (or avoid auto postings entirely).
+- assert the balance calculated with `--auto`, and always use `--auto`
+  with that file
+- or assert the balance calculated without `--auto`, and never use
+  `--auto` with that file
+- or avoid balance assertions on accounts affected by auto postings (or
+  avoid auto postings entirely).
 
 #### Assertions and precision
 
@@ -2182,21 +2180,20 @@ non-essential:
 that amounts are transferred from and to). Though not required, these
 declarations can provide several benefits:
 
--   They can document your intended chart of accounts, providing a
-    reference.
--   They can store additional account information as
-    [comments](#account-comments), or as [tags](#tags) which can be used
-    to filter or pivot reports.
--   They can restrict which accounts may be posted to by transactions,
-    eg in [strict mode](#strict-mode), which helps prevent errors.
--   They influence account display order in reports, allowing
-    non-alphabetic sorting (eg Revenues to appear above Expenses).
--   They can help hledger know your accounts\' types (asset, liability,
-    equity, revenue, expense), enabling reports like
-    [balancesheet](#balancesheet) and
-    [incomestatement](#incomestatement).
--   They help with account name completion (in hledger add, hledger-web,
-    hledger-iadd, ledger-mode, etc.)
+- They can document your intended chart of accounts, providing a
+  reference.
+- They can store additional account information as
+  [comments](#account-comments), or as [tags](#tags) which can be used
+  to filter or pivot reports.
+- They can restrict which accounts may be posted to by transactions, eg
+  in [strict mode](#strict-mode), which helps prevent errors.
+- They influence account display order in reports, allowing
+  non-alphabetic sorting (eg Revenues to appear above Expenses).
+- They can help hledger know your accounts\' types (asset, liability,
+  equity, revenue, expense), enabling reports like
+  [balancesheet](#balancesheet) and [incomestatement](#incomestatement).
+- They help with account name completion (in hledger add, hledger-web,
+  hledger-iadd, ledger-mode, etc.)
 
 They are written as the word `account` followed by a hledger-style
 [account name](#account-names). Eg:
@@ -2241,20 +2238,20 @@ or when you run `hledger check accounts`, hledger will report an error
 if any transaction uses an account name that has not been declared by an
 [account directive](#account). Some notes:
 
--   The declaration is case-sensitive; transactions must use the correct
-    account name capitalisation.
--   The account directive\'s scope is \"whole file and below\" (see
-    [directives](#directives)). This means it affects all of the current
-    file, and any files it includes, but not parent or sibling files.
-    The position of account directives within the file does not matter,
-    though it\'s usual to put them at the top.
--   Accounts can only be declared in `journal` files, but will affect
-    [included](#include-directive) files of all types.
--   It\'s currently not possible to declare \"all possible subaccounts\"
-    with a wildcard; every account posted to must be declared.
--   If you use the
-    [\--infer-equity](#inferring-equity-conversion-postings) flag, you
-    will also need declarations for the account names it generates.
+- The declaration is case-sensitive; transactions must use the correct
+  account name capitalisation.
+- The account directive\'s scope is \"whole file and below\" (see
+  [directives](#directives)). This means it affects all of the current
+  file, and any files it includes, but not parent or sibling files. The
+  position of account directives within the file does not matter, though
+  it\'s usual to put them at the top.
+- Accounts can only be declared in `journal` files, but will affect
+  [included](#include-directive) files of all types.
+- It\'s currently not possible to declare \"all possible subaccounts\"
+  with a wildcard; every account posted to must be declared.
+- If you use the
+  [\--infer-equity](#inferring-equity-conversion-postings) flag, you
+  will also need declarations for the account names it generates.
 
 #### Account display order
 
@@ -2312,22 +2309,21 @@ explicitly, by adding `type:` [tags](#tags) to their account directives.
 The tag\'s value should be one of the [five main account
 types](https://en.wikipedia.org/wiki/Chart_of_accounts#Types_of_accounts):
 
--   `A` or `Asset` (things you own)
--   `L` or `Liability` (things you owe)
--   `E` or `Equity` (investment/ownership; balanced counterpart of
-    assets & liabilities)
--   `R` or `Revenue` (what you received money from, AKA income;
-    technically part of Equity)
--   `X` or `Expense` (what you spend money on; technically part of
-    Equity)
+- `A` or `Asset` (things you own)
+- `L` or `Liability` (things you owe)
+- `E` or `Equity` (investment/ownership; balanced counterpart of assets
+  & liabilities)
+- `R` or `Revenue` (what you received money from, AKA income;
+  technically part of Equity)
+- `X` or `Expense` (what you spend money on; technically part of Equity)
 
 or, it can be (these are used less often):
 
--   `C` or `Cash` (a subtype of Asset, indicating [liquid
-    assets](https://en.wikipedia.org/wiki/Cash_and_cash_equivalents) for
-    the [cashflow](#cashflow) report)
--   `V` or `Conversion` (a subtype of Equity, for conversions (see [Cost
-    reporting](#cost-reporting)).)
+- `C` or `Cash` (a subtype of Asset, indicating [liquid
+  assets](https://en.wikipedia.org/wiki/Cash_and_cash_equivalents) for
+  the [cashflow](#cashflow) report)
+- `V` or `Conversion` (a subtype of Equity, for conversions (see [Cost
+  reporting](#cost-reporting)).)
 
 Subaccounts inherit their parent\'s type, or they can override it. Here
 is a typical set of account type declarations:
@@ -2347,60 +2343,59 @@ account equity:conversion  ; type: V
 
 Here are some tips for working with account types.
 
--   The rules for inferring types from account names are as follows.
-    These are just a convenience that sometimes help new users get
-    going; if they don\'t work for you, just ignore them and declare
-    your account types. See also [Regular
-    expressions](#regular-expressions).
+- The rules for inferring types from account names are as follows. These
+  are just a convenience that sometimes help new users get going; if
+  they don\'t work for you, just ignore them and declare your account
+  types. See also [Regular expressions](#regular-expressions).
 
-        If account's name contains this (CI) regular expression:            | its type is:
-        --------------------------------------------------------------------|-------------
-        ^assets?(:.+)?:(cash|bank|che(ck|que?)(ing)?|savings?|current)(:|$) | Cash
-        ^assets?(:|$)                                                       | Asset
-        ^(debts?|liabilit(y|ies))(:|$)                                      | Liability
-        ^equity:(trad(e|ing)|conversion)s?(:|$)                             | Conversion
-        ^equity(:|$)                                                        | Equity
-        ^(income|revenue)s?(:|$)                                            | Revenue
-        ^expenses?(:|$)                                                     | Expense
+      If account's name contains this (CI) regular expression:            | its type is:
+      --------------------------------------------------------------------|-------------
+      ^assets?(:.+)?:(cash|bank|che(ck|que?)(ing)?|savings?|current)(:|$) | Cash
+      ^assets?(:|$)                                                       | Asset
+      ^(debts?|liabilit(y|ies))(:|$)                                      | Liability
+      ^equity:(trad(e|ing)|conversion)s?(:|$)                             | Conversion
+      ^equity(:|$)                                                        | Equity
+      ^(income|revenue)s?(:|$)                                            | Revenue
+      ^expenses?(:|$)                                                     | Expense
 
--   If you declare any account types, it\'s a good idea to declare an
-    account for all of the account types, because a mixture of declared
-    and name-inferred types can disrupt certain reports.
+- If you declare any account types, it\'s a good idea to declare an
+  account for all of the account types, because a mixture of declared
+  and name-inferred types can disrupt certain reports.
 
--   Certain uses of [account aliases](#alias-directive) can disrupt
-    account types. See [Rewriting accounts \> Aliases and account
-    types](#aliases-and-account-types).
+- Certain uses of [account aliases](#alias-directive) can disrupt
+  account types. See [Rewriting accounts \> Aliases and account
+  types](#aliases-and-account-types).
 
--   As mentioned above, subaccounts will inherit a type from their
-    parent account. More precisely, an account\'s type is decided by the
-    first of these that exists:
+- As mentioned above, subaccounts will inherit a type from their parent
+  account. More precisely, an account\'s type is decided by the first of
+  these that exists:
 
-    1.  A `type:` declaration for this account.
-    2.  A `type:` declaration in the parent accounts above it,
-        preferring the nearest.
-    3.  An account type inferred from this account\'s name.
-    4.  An account type inferred from a parent account\'s name,
-        preferring the nearest parent.
-    5.  Otherwise, it will have no type.
+  1.  A `type:` declaration for this account.
+  2.  A `type:` declaration in the parent accounts above it, preferring
+      the nearest.
+  3.  An account type inferred from this account\'s name.
+  4.  An account type inferred from a parent account\'s name, preferring
+      the nearest parent.
+  5.  Otherwise, it will have no type.
 
--   For troubleshooting, you can list accounts and their types with:
+- For troubleshooting, you can list accounts and their types with:
 
-    ``` cli
-    $ hledger accounts --types [ACCTPAT] [-DEPTH] [type:TYPECODES]
-    ```
+  ``` cli
+  $ hledger accounts --types [ACCTPAT] [-DEPTH] [type:TYPECODES]
+  ```
 
 ### `alias` directive
 
 You can define account alias rules which rewrite your account names, or
 parts of them, before generating reports. This can be useful for:
 
--   expanding shorthand account names to their full form, allowing
-    easier data entry and a less verbose journal
--   adapting old journals to your current chart of accounts
--   experimenting with new account organisations, like a new hierarchy
--   combining two accounts into one, eg to see their sum or difference
-    on one line
--   customising reports
+- expanding shorthand account names to their full form, allowing easier
+  data entry and a less verbose journal
+- adapting old journals to your current chart of accounts
+- experimenting with new account organisations, like a new hierarchy
+- combining two accounts into one, eg to see their sum or difference on
+  one line
+- customising reports
 
 Account aliases also rewrite account names in [account
 directives](#account). They do not affect account names being entered
@@ -2492,10 +2487,9 @@ entry, we apply:
 
 In other words, for (an account name in) a given journal entry:
 
--   the nearest alias declaration before/above the entry is applied
-    first
--   the next alias before/above that will be be applied next, and so on
--   aliases defined after/below the entry do not affect it.
+- the nearest alias declaration before/above the entry is applied first
+- the next alias before/above that will be be applied next, and so on
+- aliases defined after/below the entry do not affect it.
 
 This gives nearby aliases precedence over distant ones, and helps
 provide semantic stability - aliases will keep working the same way
@@ -2922,10 +2916,10 @@ accidentally alter their meaning, as in this example:
 
 So,
 
--   Do write two spaces between your period expression and your
-    transaction description, if any.
--   Don\'t accidentally write two spaces in the middle of your period
-    expression.
+- Do write two spaces between your period expression and your
+  transaction description, if any.
+- Don\'t accidentally write two spaces in the middle of your period
+  expression.
 
 ### Auto postings
 
@@ -2959,18 +2953,18 @@ Generated postings\' amounts can depend on the matched posting\'s
 amount. So auto postings can be useful for, eg, adding tax postings with
 a standard percentage. AMOUNT can be:
 
--   a number with no commodity symbol, like `2`. The matched posting\'s
-    commodity symbol will be added to this.
+- a number with no commodity symbol, like `2`. The matched posting\'s
+  commodity symbol will be added to this.
 
--   a normal amount with a commodity symbol, like `$2`. This will be
-    used as-is.
+- a normal amount with a commodity symbol, like `$2`. This will be used
+  as-is.
 
--   an asterisk followed by a number, like `*2`. This will multiply the
-    matched posting\'s amount (and total price, if any) by the number.
+- an asterisk followed by a number, like `*2`. This will multiply the
+  matched posting\'s amount (and total price, if any) by the number.
 
--   an asterisk followed by an amount with commodity symbol, like `*$2`.
-    This multiplies and also replaces the commodity symbol with this new
-    one.
+- an asterisk followed by an amount with commodity symbol, like `*$2`.
+  This multiplies and also replaces the commodity symbol with this new
+  one.
 
 Some examples:
 
@@ -3032,9 +3026,9 @@ itself, will also be used in the generated posting.
 
 Currently, auto postings are added:
 
--   after [missing amounts are inferred, and transactions are checked
-    for balancedness](#postings),
--   but before [balance assertions](#balance-assertions) are checked.
+- after [missing amounts are inferred, and transactions are checked for
+  balancedness](#postings),
+- but before [balance assertions](#balance-assertions) are checked.
 
 Note this means that journal entries must be balanced both before and
 after auto postings are added. This changed in hledger 1.12+; see
@@ -3049,19 +3043,18 @@ infer amounts.
 
 Automated postings will have some extra [tags](#tags):
 
--   `generated-posting:= QUERY` - shows this was generated by an auto
-    posting rule, and the query
--   `_generated-posting:= QUERY` - a hidden tag, which does not appear
-    in hledger\'s output. This can be used to match postings generated
-    \"just now\", rather than generated in the past and saved to the
-    journal.
+- `generated-posting:= QUERY` - shows this was generated by an auto
+  posting rule, and the query
+- `_generated-posting:= QUERY` - a hidden tag, which does not appear in
+  hledger\'s output. This can be used to match postings generated \"just
+  now\", rather than generated in the past and saved to the journal.
 
 Also, any transaction that has been changed by auto posting rules will
 have these tags added:
 
--   `modified:` - this transaction was modified
--   `_modified:` - a hidden tag not appearing in the comment; this
-    transaction was modified \"just now\".
+- `modified:` - this transaction was modified
+- `_modified:` - a hidden tag not appearing in the comment; this
+  transaction was modified \"just now\".
 
 #### Auto postings on forecast transactions only
 
@@ -3286,18 +3279,18 @@ initiated, if different\".
 
 In practice, this feature usually adds confusion:
 
--   You have to remember the primary and secondary dates\' meaning, and
-    follow that consistently.
--   It splits your bookkeeping into two modes, and you have to remember
-    which mode is appropriate for a given report.
--   Usually your balance assertions will work with only one of these
-    modes.
--   It makes your financial data more complicated, less portable, and
-    less clear in an audit.
--   It interacts with every feature, creating an ongoing cost for
-    implementors.
--   It distracts new users and supporters.
--   [Posting dates](#posting-dates) are simpler and work better.
+- You have to remember the primary and secondary dates\' meaning, and
+  follow that consistently.
+- It splits your bookkeeping into two modes, and you have to remember
+  which mode is appropriate for a given report.
+- Usually your balance assertions will work with only one of these
+  modes.
+- It makes your financial data more complicated, less portable, and less
+  clear in an audit.
+- It interacts with every feature, creating an ongoing cost for
+  implementors.
+- It distracts new users and supporters.
+- [Posting dates](#posting-dates) are simpler and work better.
 
 So secondary dates are officially deprecated in hledger, remaining only
 as a Ledger compatibility aid; we recommend using posting dates instead.
@@ -3385,70 +3378,67 @@ A slight digression for Ledger and Beancount users.
 
 **Ledger** has a number of cost/lot-related notations:
 
--   `@ UNITCOST` and `@@ TOTALCOST`
-    -   expresses a conversion rate, as in hledger
-    -   when buying, also creates a lot that can be selected at selling
-        time
--   `(@) UNITCOST` and `(@@) TOTALCOST` ([virtual
-    cost](https://www.ledger-cli.org/3.0/doc/ledger3.html#Virtual-posting-costs))
-    -   like the above, but also means \"this cost was exceptional,
-        don\'t use it when inferring market prices\".
--   `{=UNITCOST}` and `{{=TOTALCOST}}` ([fixed
-    price](https://www.ledger-cli.org/3.0/doc/ledger3.html#Fixing-Lot-Prices))
-    -   when buying, means \"this cost is also the fixed value, don\'t
-        let it fluctuate in value reports\"
--   `{UNITCOST}` and `{{TOTALCOST}}` ([lot
-    price](https://www.ledger-cli.org/3.0/doc/ledger3.html#Buying-and-Selling-Stock))
-    -   can be used identically to `@ UNITCOST` and `@@ TOTALCOST`, also
-        creates a lot
-    -   when selling, combined with `@ ...`, selects an existing lot by
-        its cost basis. Does not check if that lot is present.
--   `[YYYY/MM/DD]` ([lot
-    date](https://www.ledger-cli.org/3.0/doc/ledger3.html#Lot-dates))
-    -   when buying, attaches this acquisition date to the lot
-    -   when selling, selects a lot by its acquisition date
--   `(SOME TEXT)` ([lot
-    note](https://www.ledger-cli.org/3.0/doc/ledger3.html#Lot-notes))
-    -   when buying, attaches this note to the lot
-    -   when selling, selects a lot by its note
+- `@ UNITCOST` and `@@ TOTALCOST`
+  - expresses a conversion rate, as in hledger
+  - when buying, also creates a lot that can be selected at selling time
+- `(@) UNITCOST` and `(@@) TOTALCOST` ([virtual
+  cost](https://www.ledger-cli.org/3.0/doc/ledger3.html#Virtual-posting-costs))
+  - like the above, but also means \"this cost was exceptional, don\'t
+    use it when inferring market prices\".
+- `{=UNITCOST}` and `{{=TOTALCOST}}` ([fixed
+  price](https://www.ledger-cli.org/3.0/doc/ledger3.html#Fixing-Lot-Prices))
+  - when buying, means \"this cost is also the fixed value, don\'t let
+    it fluctuate in value reports\"
+- `{UNITCOST}` and `{{TOTALCOST}}` ([lot
+  price](https://www.ledger-cli.org/3.0/doc/ledger3.html#Buying-and-Selling-Stock))
+  - can be used identically to `@ UNITCOST` and `@@ TOTALCOST`, also
+    creates a lot
+  - when selling, combined with `@ ...`, selects an existing lot by its
+    cost basis. Does not check if that lot is present.
+- `[YYYY/MM/DD]` ([lot
+  date](https://www.ledger-cli.org/3.0/doc/ledger3.html#Lot-dates))
+  - when buying, attaches this acquisition date to the lot
+  - when selling, selects a lot by its acquisition date
+- `(SOME TEXT)` ([lot
+  note](https://www.ledger-cli.org/3.0/doc/ledger3.html#Lot-notes))
+  - when buying, attaches this note to the lot
+  - when selling, selects a lot by its note
 
 Currently, hledger
 
--   accepts any or all of the above in any order after the posting
-    amount
--   supports `@` and `@@`
--   treats `(@)` and `(@@)` as synonyms for `@` and `@@`
--   and ignores the rest. (This can break transaction balancing.)
+- accepts any or all of the above in any order after the posting amount
+- supports `@` and `@@`
+- treats `(@)` and `(@@)` as synonyms for `@` and `@@`
+- and ignores the rest. (This can break transaction balancing.)
 
 **Beancount** has simpler
 [notation](https://beancount.github.io/docs/beancount_language_syntax.html#costs-and-prices)
 and different
 [behaviour](https://beancount.github.io/docs/how_inventories_work.html):
 
--   `@ UNITCOST` and `@@ TOTALCOST`
-    -   expresses a cost without creating a lot, as in hledger
-    -   when buying (acquiring) or selling (disposing of) a lot, and
-        combined with `{...}`: is not used except to document the
-        cost/selling price
--   `{UNITCOST}` and `{{TOTALCOST}}`
-    -   when buying, expresses the cost for transaction balancing, and
-        also creates a lot with this cost basis attached
-    -   when selling,
-        -   selects a lot by its cost basis
-        -   raises an error if that lot is not present or can not be
-            selected unambiguously (depending on booking method
-            configured)
-        -   expresses the selling price for transaction balancing
--   `{}`, `{YYYY-MM-DD}`, `{"LABEL"}`, `{UNITCOST, "LABEL"}`,
-    `{UNITCOST, YYYY-MM-DD, "LABEL"}`
-    -   when selling, other combinations of date/cost/label, like the
-        above, are accepted for selecting the lot.
+- `@ UNITCOST` and `@@ TOTALCOST`
+  - expresses a cost without creating a lot, as in hledger
+  - when buying (acquiring) or selling (disposing of) a lot, and
+    combined with `{...}`: is not used except to document the
+    cost/selling price
+- `{UNITCOST}` and `{{TOTALCOST}}`
+  - when buying, expresses the cost for transaction balancing, and also
+    creates a lot with this cost basis attached
+  - when selling,
+    - selects a lot by its cost basis
+    - raises an error if that lot is not present or can not be selected
+      unambiguously (depending on booking method configured)
+    - expresses the selling price for transaction balancing
+- `{}`, `{YYYY-MM-DD}`, `{"LABEL"}`, `{UNITCOST, "LABEL"}`,
+  `{UNITCOST, YYYY-MM-DD, "LABEL"}`
+  - when selling, other combinations of date/cost/label, like the above,
+    are accepted for selecting the lot.
 
 Currently, hledger
 
--   supports `@` and `@@`
--   accepts the `{UNITCOST}`/`{{TOTALCOST}}` notation, but ignores it
--   and rejects the rest.
+- supports `@` and `@@`
+- accepts the `{UNITCOST}`/`{{TOTALCOST}}` notation, but ignores it
+- and rejects the rest.
 
 <a name="csv-format"></a>
 
@@ -3500,7 +3490,7 @@ $ hledger print -f basic.csv
     income:unknown            -10.23
 ```
 
-There\'s an introductory [Importing CSV data](/import-csv.html) tutorial
+There\'s an introductory [Tutorial: Import CSV data](/import-csv.html)
 on hledger.org, and more [CSV rules examples](#csv-rules-examples)
 below, and a larger collection at
 <https://github.com/simonmichael/hledger/tree/master/examples/csv>.
@@ -3566,75 +3556,29 @@ rule\"](#reading-files-specified-by-rule).
 
 ### `encoding`
 
-```rules
+``` rules
 encoding ENCODING
 ```
 
-hledger normally expects non-ascii text to be UTF8-encoded.
-If you need to read CSV files which have some other encoding,
-you can do it by adding `encoding ENCODING` to your CSV rules.
-Eg: `encoding iso-8859-1`.
+hledger normally expects non-ascii text to be UTF8-encoded. If you need
+to read CSV files which have some other encoding, you can do it by
+adding `encoding ENCODING` to your CSV rules. Eg: `encoding iso-8859-1`.
 
-The following encodings are supported
-(some alternate names and spellings also work, but [inconsistently](https://github.com/dmwit/encoding/issues/28))
-:
+The following encodings are supported (some alternate names and
+spellings also work, but
+[inconsistently](https://github.com/dmwit/encoding/issues/28)) :
 
-`ascii`,
-`utf-8`,
-`utf-16`,
-`utf-32`,
-`iso-8859-1`,
-`iso-8859-2`,
-`iso-8859-3`,
-`iso-8859-4`,
-`iso-8859-5`,
-`iso-8859-6`,
-`iso-8859-7`,
-`iso-8859-8`,
-`iso-8859-9`,
-`iso-8859-10`,
-`iso-8859-11`,
-`iso-8859-13`,
-`iso-8859-14`,
-`iso-8859-15`,
-`iso-8859-16`,
-`cp1250`,
-`cp1251`,
-`cp1252`,
-`cp1253`,
-`cp1254`,
-`cp1255`,
-`cp1256`,
-`cp1257`,
-`cp1258`,
-`koi8-r`,
-`koi8-u`,
-`gb18030`,
-`macintosh`,
-`jis-x-0201`,
-`jis-x-0208`,
-`iso-2022-jp`,
-`shift-jis`,
-`cp437`,
-`cp737`,
-`cp775`,
-`cp850`,
-`cp852`,
-`cp855`,
-`cp857`,
-`cp860`,
-`cp861`,
-`cp862`,
-`cp863`,
-`cp864`,
-`cp865`,
-`cp866`,
-`cp869`,
-`cp874`,
-`cp932`.
+`ascii`, `utf-8`, `utf-16`, `utf-32`, `iso-8859-1`, `iso-8859-2`,
+`iso-8859-3`, `iso-8859-4`, `iso-8859-5`, `iso-8859-6`, `iso-8859-7`,
+`iso-8859-8`, `iso-8859-9`, `iso-8859-10`, `iso-8859-11`, `iso-8859-13`,
+`iso-8859-14`, `iso-8859-15`, `iso-8859-16`, `cp1250`, `cp1251`,
+`cp1252`, `cp1253`, `cp1254`, `cp1255`, `cp1256`, `cp1257`, `cp1258`,
+`koi8-r`, `koi8-u`, `gb18030`, `macintosh`, `jis-x-0201`, `jis-x-0208`,
+`iso-2022-jp`, `shift-jis`, `cp437`, `cp737`, `cp775`, `cp850`, `cp852`,
+`cp855`, `cp857`, `cp860`, `cp861`, `cp862`, `cp863`, `cp864`, `cp865`,
+`cp866`, `cp869`, `cp874`, `cp932`.
 
 *Added in 1.42.*
-
 
 ### `separator`
 
@@ -3834,12 +3778,12 @@ fields date, description, , amount, , , somefield, anotherfield
 In a fields list, the separator is always comma; it is unrelated to the
 CSV file\'s separator. Also:
 
--   There must be least two items in the list (at least one comma).
--   Field names may not contain spaces. Spaces before/after field names
-    are optional.
--   Field names may contain `_` (underscore) or `-` (hyphen).
--   Fields you don\'t care about can be given a dummy name or an empty
-    name.
+- There must be least two items in the list (at least one comma).
+- Field names may not contain spaces. Spaces before/after field names
+  are optional.
+- Field names may contain `_` (underscore) or `-` (hyphen).
+- Fields you don\'t care about can be given a dummy name or an empty
+  name.
 
 If the CSV contains column headings, it\'s convenient to use these for
 your field names, suitably modified (eg lower-cased with spaces replaced
@@ -3880,12 +3824,12 @@ comment note: %somefield - %anotherfield, date: %1
 
 Tips:
 
--   Interpolation strips outer whitespace (so a CSV value like `" 1 "`
-    becomes `1` when interpolated)
-    ([#1051](https://github.com/simonmichael/hledger/issues/1051)).
--   Interpolations always refer to a CSV field - you can\'t interpolate
-    a hledger field. (See [Referencing other
-    fields](#referencing-other-fields) below).
+- Interpolation strips outer whitespace (so a CSV value like `" 1 "`
+  becomes `1` when interpolated)
+  ([#1051](https://github.com/simonmichael/hledger/issues/1051)).
+- Interpolations always refer to a CSV field - you can\'t interpolate a
+  hledger field. (See [Referencing other
+  fields](#referencing-other-fields) below).
 
 ### Field names
 
@@ -3992,20 +3936,19 @@ different situations.
     field has a non-zero value will be used as the amount of the first
     and second postings. Here are some tips to avoid confusion:
 
-    -   It\'s not \"amount-in for posting 1 and amount-out for posting
-        2\", it is \"extract a single amount from the amount-in or
-        amount-out field, and use that for posting 1 and (negated) for
-        posting 2\".
-    -   Don\'t use both `amount` and `amount-in`/`amount-out` in the
-        same rules file; choose based on whether the amount is in a
-        single CSV field or spread across two fields.
-    -   In each record, at most one of the two CSV fields should contain
-        a non-zero amount; the other field must contain a zero or
-        nothing.
-    -   hledger assumes both CSV fields contain unsigned numbers, and it
-        automatically negates the amount-out values.
-    -   If the data doesn\'t fit these requirements, you\'ll probably
-        need an if rule (see below).
+    - It\'s not \"amount-in for posting 1 and amount-out for posting
+      2\", it is \"extract a single amount from the amount-in or
+      amount-out field, and use that for posting 1 and (negated) for
+      posting 2\".
+    - Don\'t use both `amount` and `amount-in`/`amount-out` in the same
+      rules file; choose based on whether the amount is in a single CSV
+      field or spread across two fields.
+    - In each record, at most one of the two CSV fields should contain a
+      non-zero amount; the other field must contain a zero or nothing.
+    - hledger assumes both CSV fields contain unsigned numbers, and it
+      automatically negates the amount-out values.
+    - If the data doesn\'t fit these requirements, you\'ll probably need
+      an if rule (see below).
 
 3.  **`amountN`** (where N is a number from 1 to 99) sets the amount of
     only a single posting: the Nth posting in the transaction. You\'ll
@@ -4087,9 +4030,9 @@ If any of the matchers succeeds, all of the indented rules will be
 applied. They are usually [field assignments](#field-assignments), but
 the following special rules may also be used within an if block:
 
--   `skip` - skips the matched CSV record (generating no transaction
-    from it)
--   `end` - skips the rest of the current CSV file.
+- `skip` - skips the matched CSV record (generating no transaction from
+  it)
+- `end` - skips the rest of the current CSV file.
 
 Some examples:
 
@@ -4162,11 +4105,11 @@ in the hledger manual
 
 When an if block has multiple matchers, each on its own line,
 
--   By default they are OR\'d (any of them can match).
--   Matcher lines beginning with `&` (or `&&`, *since 1.42*) are AND\'ed
-    with the matcher above (all in the AND\'ed group must match).
--   Matcher lines beginning with `& !` (*since 1.41*, or `&& !`, *since
-    1.42*) are first negated and then AND\'ed with the matcher above.
+- By default they are OR\'d (any of them can match).
+- Matcher lines beginning with `&` (or `&&`, *since 1.42*) are AND\'ed
+  with the matcher above (all in the AND\'ed group must match).
+- Matcher lines beginning with `& !` (*since 1.41*, or `&& !`, *since
+  1.42*) are first negated and then AND\'ed with the matcher above.
 
 You can also combine multiple matchers one the same line separated by
 `&&` (AND) or `&& !` (AND NOT). Eg
@@ -4336,14 +4279,14 @@ Note that hledger will only accept valid CSV conforming to [RFC
 formats (like RFC 4180 but with semicolon or tab as separators). This
 means, eg:
 
--   Values may be enclosed in double quotes, or not. Enclosing in single
-    quotes is not allowed. (Eg `'A','B'` is rejected.)
--   When values are enclosed in double quotes, spaces outside the quotes
-    are [not
-    allowed](https://stackoverflow.com/questions/4863852/space-before-quote-in-csv-field).
-    (Eg `"A", "B"` is rejected.)
--   When values are not enclosed in quotes, they may not contain double
-    quotes. (Eg `A"A, B` is rejected.)
+- Values may be enclosed in double quotes, or not. Enclosing in single
+  quotes is not allowed. (Eg `'A','B'` is rejected.)
+- When values are enclosed in double quotes, spaces outside the quotes
+  are [not
+  allowed](https://stackoverflow.com/questions/4863852/space-before-quote-in-csv-field).
+  (Eg `"A", "B"` is rejected.)
+- When values are not enclosed in quotes, they may not contain double
+  quotes. (Eg `A"A, B` is rejected.)
 
 If your CSV/SSV/TSV is not valid in this sense, you\'ll need to
 transform it before reading with hledger. Try using sed, or a more
@@ -4451,8 +4394,8 @@ A number of other tools and workflows, hledger-specific and otherwise,
 exist for converting, deduplicating, classifying and managing CSV data.
 See:
 
--   <https://hledger.org/cookbook.html#setups-and-workflows>
--   <https://plaintextaccounting.org> -\> data import/conversion
+- <https://hledger.org/cookbook.html#setups-and-workflows>
+- <https://plaintextaccounting.org> -\> data import/conversion
 
 #### Setting amounts
 
@@ -4529,21 +4472,20 @@ There is some special handling making it easier to parse and to reverse
 amount signs. (This only works for whole amounts, not for cost amounts
 such as COST in `amount1  AMT @ COST`):
 
--   **If an amount value begins with a plus sign:**\
-    that will be removed: `+AMT` becomes `AMT`
+- **If an amount value begins with a plus sign:**\
+  that will be removed: `+AMT` becomes `AMT`
 
--   **If an amount value is parenthesised:**\
-    it will be de-parenthesised and sign-flipped: `(AMT)` becomes `-AMT`
+- **If an amount value is parenthesised:**\
+  it will be de-parenthesised and sign-flipped: `(AMT)` becomes `-AMT`
 
--   **If an amount value has two minus signs (or two sets of
-    parentheses, or a minus sign and parentheses):**\
-    they cancel out and will be removed: `--AMT` or `-(AMT)` becomes
-    `AMT`
+- **If an amount value has two minus signs (or two sets of parentheses,
+  or a minus sign and parentheses):**\
+  they cancel out and will be removed: `--AMT` or `-(AMT)` becomes `AMT`
 
--   **If an amount value contains just a sign (or just a set of
-    parentheses):**\
-    that is removed, making it an empty value. `"+"` or `"-"` or `"()"`
-    becomes `""`.
+- **If an amount value contains just a sign (or just a set of
+  parentheses):**\
+  that is removed, making it an empty value. `"+"` or `"-"` or `"()"`
+  becomes `""`.
 
 It\'s not possible (without preprocessing the CSV) to set an amount to
 its absolute value, ie discard its sign.
@@ -4679,32 +4621,32 @@ if something
 Here\'s how to think of CSV rules being evaluated (if you really need
 to). First,
 
--   `include` - all includes are inlined, from top to bottom, depth
-    first. (At each include point the file is inlined and scanned for
-    further includes, recursively, before proceeding.)
+- `include` - all includes are inlined, from top to bottom, depth first.
+  (At each include point the file is inlined and scanned for further
+  includes, recursively, before proceeding.)
 
 Then \"global\" rules are evaluated, top to bottom. If a rule is
 repeated, the last one wins:
 
--   `skip` (at top level)
--   `date-format`
--   `newest-first`
--   `fields` - names the CSV fields, optionally sets up initial
-    assignments to hledger fields
+- `skip` (at top level)
+- `date-format`
+- `newest-first`
+- `fields` - names the CSV fields, optionally sets up initial
+  assignments to hledger fields
 
 Then for each CSV record in turn:
 
--   test all `if` blocks. If any of them contain a `end` rule, skip all
-    remaining CSV records. Otherwise if any of them contain a `skip`
-    rule, skip that many CSV records. If there are multiple matched
-    `skip` rules, the first one wins.
--   collect all field assignments at top level and in matched `if`
-    blocks. When there are multiple assignments for a field, keep only
-    the last one.
--   compute a value for each hledger field - either the one that was
-    assigned to it (and interpolate the %CSVFIELD references), or a
-    default
--   generate a hledger transaction (journal entry) from these values.
+- test all `if` blocks. If any of them contain a `end` rule, skip all
+  remaining CSV records. Otherwise if any of them contain a `skip` rule,
+  skip that many CSV records. If there are multiple matched `skip`
+  rules, the first one wins.
+- collect all field assignments at top level and in matched `if` blocks.
+  When there are multiple assignments for a field, keep only the last
+  one.
+- compute a value for each hledger field - either the one that was
+  assigned to it (and interpolate the %CSVFIELD references), or a
+  default
+- generate a hledger transaction (journal entry) from these values.
 
 This is all part of the CSV reader, one of several readers hledger can
 use to parse input files. When all files have been read successfully,
@@ -4718,12 +4660,12 @@ user specified.
 Some things than can help reduce duplication and complexity in rules
 files:
 
--   Extracting common rules usable with multiple CSV files into a
-    `common.rules`, and adding `include common.rules` to each CSV\'s
-    rules file.
+- Extracting common rules usable with multiple CSV files into a
+  `common.rules`, and adding `include common.rules` to each CSV\'s rules
+  file.
 
--   Splitting if blocks into smaller if blocks, extracting the
-    frequently used parts.
+- Splitting if blocks into smaller if blocks, extracting the frequently
+  used parts.
 
 ### CSV rules examples
 
@@ -5080,22 +5022,22 @@ $ hledger -f sample.timeclock register -p weekly --depth 1 --empty  # time summa
 
 To generate time logs, ie to clock in and clock out, you could:
 
--   use these shell aliases at the command line:
+- use these shell aliases at the command line:
 
-    ``` cli
-    alias ti='echo i `date "+%Y-%m-%d %H:%M:%S"` $* >>$TIMELOG'
-    alias to='echo o `date "+%Y-%m-%d %H:%M:%S"` >>$TIMELOG'
-    ```
+  ``` cli
+  alias ti='echo i `date "+%Y-%m-%d %H:%M:%S"` $* >>$TIMELOG'
+  alias to='echo o `date "+%Y-%m-%d %H:%M:%S"` >>$TIMELOG'
+  ```
 
--   or Emacs\'s built-in timeclock.el, or the extended
-    [timeclock-x.el](http://www.emacswiki.org/emacs/timeclock-x.el), and
-    perhaps the extras in
-    [ledgerutils.el](http://hub.darcs.net/simon/ledgertools/ledgerutils.el)
+- or Emacs\'s built-in timeclock.el, or the extended
+  [timeclock-x.el](http://www.emacswiki.org/emacs/timeclock-x.el), and
+  perhaps the extras in
+  [ledgerutils.el](http://hub.darcs.net/simon/ledgertools/ledgerutils.el)
 
--   or use the old `ti` and `to` scripts in the [ledger 2.x
-    repository](https://github.com/ledger/ledger/tree/maint/scripts).
-    These rely on a \"timeclock\" executable which I think is just the
-    ledger 2 executable renamed.
+- or use the old `ti` and `to` scripts in the [ledger 2.x
+  repository](https://github.com/ledger/ledger/tree/maint/scripts).
+  These rely on a \"timeclock\" executable which I think is just the
+  ledger 2 executable renamed.
 
 <a name="timedot-format"></a>
 
@@ -5133,49 +5075,49 @@ description, and/or a transaction comment following a semicolon.
 
 After the date line are zero or more time postings, consisting of:
 
--   **An account name** - any hledger-style [account
-    name](#account-names), optionally indented.
+- **An account name** - any hledger-style [account
+  name](#account-names), optionally indented.
 
--   **Two or more spaces** - required if there is an amount (as in
-    journal format).
+- **Two or more spaces** - required if there is an amount (as in journal
+  format).
 
--   **A timedot amount**, which can be
+- **A timedot amount**, which can be
 
-    -   empty (representing zero)
+  - empty (representing zero)
 
-    -   a number, optionally followed by a unit `s`, `m`, `h`, `d`, `w`,
-        `mo`, or `y`, representing a precise number of seconds, minutes,
-        hours, days weeks, months or years (hours is assumed by
-        default), which will be converted to hours according to 60s =
-        1m, 60m = 1h, 24h = 1d, 7d = 1w, 30d = 1mo, 365d = 1y.
+  - a number, optionally followed by a unit `s`, `m`, `h`, `d`, `w`,
+    `mo`, or `y`, representing a precise number of seconds, minutes,
+    hours, days weeks, months or years (hours is assumed by default),
+    which will be converted to hours according to 60s = 1m, 60m = 1h,
+    24h = 1d, 7d = 1w, 30d = 1mo, 365d = 1y.
 
-    -   one or more dots (period characters), each representing 0.25.
-        These are the dots in \"timedot\". Spaces are ignored and can be
-        used for grouping/alignment.
+  - one or more dots (period characters), each representing 0.25. These
+    are the dots in \"timedot\". Spaces are ignored and can be used for
+    grouping/alignment.
 
-    -   *Added in 1.32* one or more letters. These are like dots but
-        they also generate a tag `t:` (short for \"type\") with the
-        letter as its value, and a separate posting for each of the
-        values. This provides a second dimension of categorisation,
-        viewable in reports with `--pivot t`.
+  - *Added in 1.32* one or more letters. These are like dots but they
+    also generate a tag `t:` (short for \"type\") with the letter as its
+    value, and a separate posting for each of the values. This provides
+    a second dimension of categorisation, viewable in reports with
+    `--pivot t`.
 
--   **An optional comment** following a semicolon (a hledger-style
-    [posting comment](#posting-comments)).
+- **An optional comment** following a semicolon (a hledger-style
+  [posting comment](#posting-comments)).
 
 There is some flexibility to help with keeping time log data and notes
 in the same file:
 
--   Blank lines and lines beginning with `#` or `;` are ignored.
+- Blank lines and lines beginning with `#` or `;` are ignored.
 
--   After the first date line, lines which do not contain a double space
-    are parsed as postings with zero amount. (hledger\'s register
-    reports will show these if you add -E).
+- After the first date line, lines which do not contain a double space
+  are parsed as postings with zero amount. (hledger\'s register reports
+  will show these if you add -E).
 
--   Before the first date line, lines beginning with `*` (eg org
-    headings) are ignored. And from the first date line onward, Emacs
-    org mode heading prefixes at the start of lines (one or more `*`\'s
-    followed by a space) will be ignored. This means the time log can
-    also be a org outline.
+- Before the first date line, lines beginning with `*` (eg org headings)
+  are ignored. And from the first date line onward, Emacs org mode
+  heading prefixes at the start of lines (one or more `*`\'s followed by
+  a space) will be ignored. This means the time log can also be a org
+  outline.
 
 Timedot files don\'t support directives like journal files. So a common
 pattern is to have a main journal file (eg `time.journal`) that contains
@@ -5410,11 +5352,11 @@ nothing.
 Dates with no separators are allowed but might give surprising results
 if mistyped:
 
--   `20181301` (YYYYMMDD with an invalid month) is parsed as an
-    eight-digit year
--   `20181232` (YYYYMMDD with an invalid day) gives a parse error
--   `201801012` (a valid YYYYMMDD followed by additional digits) gives a
-    parse error
+- `20181301` (YYYYMMDD with an invalid month) is parsed as an
+  eight-digit year
+- `20181232` (YYYYMMDD with an invalid day) gives a parse error
+- `201801012` (a valid YYYYMMDD followed by additional digits) gives a
+  parse error
 
 The meaning of relative dates depends on today\'s date. If you need to
 test or reproduce old reports, you can use the `--today` option to
@@ -5429,11 +5371,11 @@ become multi-period, showing each subperiod as a separate row or column.
 
 The following standard intervals can be enabled with command-line flags:
 
--   `-D/--daily`
--   `-W/--weekly`
--   `-M/--monthly`
--   `-Q/--quarterly`
--   `-Y/--yearly`
+- `-D/--daily`
+- `-W/--weekly`
+- `-M/--monthly`
+- `-Q/--quarterly`
+- `-Y/--yearly`
 
 More complex intervals can be specified using `-p/--period`, described
 below.
@@ -5448,12 +5390,12 @@ periodic reports. (If you don\'t want that, specify a start date.)
 
 For example, if the journal\'s first transaction is on january 10th,
 
--   `hledger register` (no report interval) will start the report on
-    january 10th.
--   `hledger register --monthly` will start the report on the previous
-    month boundary, january 1st.
--   `hledger register --monthly --begin 1/5` will start the report on
-    january 5th \[1\].
+- `hledger register` (no report interval) will start the report on
+  january 10th.
+- `hledger register --monthly` will start the report on the previous
+  month boundary, january 1st.
+- `hledger register --monthly --begin 1/5` will start the report on
+  january 5th \[1\].
 
 Also if you are generating transactions or budget goals with [periodic
 transaction rules](#periodic-transactions), their start date may be
@@ -5466,13 +5408,13 @@ intervals, so that the last subperiod has the same length as the others.
 
 For example, if the journal\'s last transaction is on february 20th,
 
--   `hledger register` will end the report on february 20th.
--   `hledger register --monthly` will end the report at the end of
-    february.
--   `hledger register --monthly --end 2/14` also will end the report at
-    the end of february.
--   `hledger register --monthly --begin 1/5 --end 2/14` will end the
-    report on march 4th \[1\].
+- `hledger register` will end the report on february 20th.
+- `hledger register --monthly` will end the report at the end of
+  february.
+- `hledger register --monthly --end 2/14` also will end the report at
+  the end of february.
+- `hledger register --monthly --begin 1/5 --end 2/14` will end the
+  report on march 4th \[1\].
 
 \[1\] Since hledger 1.29.
 
@@ -5568,31 +5510,31 @@ any) by a space or the word `in`:
 Some more complex intervals can be specified within period expressions,
 such as:
 
--   `biweekly` (every two weeks)
--   `fortnightly`
--   `bimonthly` (every two months)
--   `every day|week|month|quarter|year`
--   `every N days|weeks|months|quarters|years`
+- `biweekly` (every two weeks)
+- `fortnightly`
+- `bimonthly` (every two months)
+- `every day|week|month|quarter|year`
+- `every N days|weeks|months|quarters|years`
 
 Weekly on a custom day:
 
--   `every Nth day of week` (`th`, `nd`, `rd`, or `st` are all accepted
-    after the number)
--   `every WEEKDAYNAME` (full or three-letter english weekday name, case
-    insensitive)
+- `every Nth day of week` (`th`, `nd`, `rd`, or `st` are all accepted
+  after the number)
+- `every WEEKDAYNAME` (full or three-letter english weekday name, case
+  insensitive)
 
 Monthly on a custom day:
 
--   `every Nth day [of month]` (`31st day` will be adjusted to each
-    month\'s last day)
--   `every Nth WEEKDAYNAME [of month]`
+- `every Nth day [of month]` (`31st day` will be adjusted to each
+  month\'s last day)
+- `every Nth WEEKDAYNAME [of month]`
 
 Yearly on a custom month and day:
 
--   `every MM/DD [of year]` (month number and day of month number)
--   `every MONTHNAME DDth [of year]` (full or three-letter english month
-    name, case insensitive, and day of month number)
--   `every DDth MONTHNAME [of year]` (equivalent to the above)
+- `every MM/DD [of year]` (month number and day of month number)
+- `every MONTHNAME DDth [of year]` (full or three-letter english month
+  name, case insensitive, and day of month number)
+- `every DDth MONTHNAME [of year]` (equivalent to the above)
 
 Examples:
 
@@ -5627,8 +5569,8 @@ $ hledger register checking -p "every 3rd day of week"
 
 This special form is also supported:
 
--   `every WEEKDAYNAME,WEEKDAYNAME,...` (full or three-letter english
-    weekday names, case insensitive)
+- `every WEEKDAYNAME,WEEKDAYNAME,...` (full or three-letter english
+  weekday names, case insensitive)
 
 Also, `weekday` and `weekendday` are shorthand for `mon,tue,wed,thu,fri`
 and `sat,sun`.
@@ -5671,9 +5613,9 @@ regular expression, so `--depth assets=2 --depth 1` would collapse
 You can supply multiple depth arguments and they will all be applied, so
 `--depth assets=2 --depth liabilities=3 --depth 1` would collapse:
 
--   accounts matching `assets` to depth 2,
--   accounts matching `liabilities` to depth 3,
--   all other accounts to depth 1.
+- accounts matching `assets` to depth 2,
+- accounts matching `liabilities` to depth 3,
+- all other accounts to depth 1.
 
 If an account is matched by more than one regular expression depth
 argument then the more specific one will used. For example, if
@@ -5690,53 +5632,53 @@ subset of your data. Most hledger commands accept query arguments, to
 restrict their scope. Multiple query terms can be provided to build up a
 more complex query.
 
--   By default, a query term is interpreted as a case-insensitive
-    substring pattern for matching [account names](#account-names):
+- By default, a query term is interpreted as a case-insensitive
+  substring pattern for matching [account names](#account-names):
 
-    `car:fuel`\
-    `dining groceries`\
+  `car:fuel`\
+  `dining groceries`\
 
--   Patterns containing spaces or other [special
-    characters](#special-characters) must be enclosed in single or
-    double quotes:
+- Patterns containing spaces or other [special
+  characters](#special-characters) must be enclosed in single or double
+  quotes:
 
-    `'personal care'`\
+  `'personal care'`\
 
--   These patterns are actually regular expressions, so you can add
-    regexp metacharacters for more precision (see \"[Regular
-    expressions](#regular-expressions)\" above for details):
+- These patterns are actually regular expressions, so you can add regexp
+  metacharacters for more precision (see \"[Regular
+  expressions](#regular-expressions)\" above for details):
 
-    `'^expenses\b'`\
-    `'food$'`\
-    `'fuel|repair'`\
-    `'accounts (payable|receivable)'`\
+  `'^expenses\b'`\
+  `'food$'`\
+  `'fuel|repair'`\
+  `'accounts (payable|receivable)'`\
 
--   To match something other than account name, add one of the query
-    type prefixes described in \"Query types\" below:
+- To match something other than account name, add one of the query type
+  prefixes described in \"Query types\" below:
 
-    `date:202312-`\
-    `status:`\
-    `desc:amazon`\
-    `cur:USD`\
-    `cur:\\$`\
-    `amt:'>0'`\
+  `date:202312-`\
+  `status:`\
+  `desc:amazon`\
+  `cur:USD`\
+  `cur:\\$`\
+  `amt:'>0'`\
 
--   Add a `not:` prefix to negate a term:
+- Add a `not:` prefix to negate a term:
 
-    `not:status:'*'`\
-    `not:desc:'opening|closing'`\
-    `not:cur:USD`\
+  `not:status:'*'`\
+  `not:desc:'opening|closing'`\
+  `not:cur:USD`\
 
--   Terms with different types are AND-ed, terms with the same type are
-    OR-ed (mostly; see \"Combining query terms\" below). The following
-    query:
+- Terms with different types are AND-ed, terms with the same type are
+  OR-ed (mostly; see \"Combining query terms\" below). The following
+  query:
 
-    `date:2022 desc:amazon desc:amzn`
+  `date:2022 desc:amazon desc:amzn`
 
-    is interpreted as:
+  is interpreted as:
 
-    *date is in 2022 AND ( transaction description contains \"amazon\"
-    OR \"amzn\" )*
+  *date is in 2022 AND ( transaction description contains \"amazon\" OR
+  \"amzn\" )*
 
 ### Query types
 
@@ -5861,32 +5803,32 @@ types](#aliases-and-account-types).
 **`tag:NAMEREGEX[=VALREGEX]`**\
 Match by tag name, and optionally also by tag value. Note:
 
--   Both regular expressions do infix matching. If you need a complete
-    match, use `^` and `$`.\
-    Eg: `tag:'^fullname$'`, `tag:'^fullname$=^fullvalue$`
--   To match values, ignoring names, do `tag:.=VALREGEX`
--   Accounts also inherit the tags of their parent accounts.
--   Postings also inherit the tags of their account and their
-    transaction .
--   Transactions also acquire the tags of their postings.
+- Both regular expressions do infix matching. If you need a complete
+  match, use `^` and `$`.\
+  Eg: `tag:'^fullname$'`, `tag:'^fullname$=^fullvalue$`
+- To match values, ignoring names, do `tag:.=VALREGEX`
+- Accounts also inherit the tags of their parent accounts.
+- Postings also inherit the tags of their account and their transaction
+  .
+- Transactions also acquire the tags of their postings.
 
 ### Combining query terms
 
 When given multiple space-separated query terms, most commands select
 things which match:
 
--   any of the description terms AND
--   any of the account terms AND
--   any of the status terms AND
--   all the other terms.
+- any of the description terms AND
+- any of the account terms AND
+- any of the status terms AND
+- all the other terms.
 
 The [print](#print) command is a little different, showing transactions
 which:
 
--   match any of the description terms AND
--   have any postings matching any of the positive account terms AND
--   have no postings matching any of the negative account terms AND
--   match all the other terms.
+- match any of the description terms AND
+- have any postings matching any of the positive account terms AND
+- have no postings matching any of the negative account terms AND
+- match all the other terms.
 
 We also support more complex boolean queries with the `expr:` prefix.
 This allows one to combine query terms using `and`, `or`, `not` keywords
@@ -5894,26 +5836,24 @@ This allows one to combine query terms using `and`, `or`, `not` keywords
 
 Some examples:
 
--   Exclude account names containing \'food\':
+- Exclude account names containing \'food\':
 
-    `expr:"not food"` (`not:food` is equivalent)
+  `expr:"not food"` (`not:food` is equivalent)
 
--   Match things which have \'cool\' in the description and the \'A\'
-    tag:
+- Match things which have \'cool\' in the description and the \'A\' tag:
 
-    `expr:"desc:cool and tag:A"` (`expr:"desc:cool tag:A"` is
-    equivalent)
+  `expr:"desc:cool and tag:A"` (`expr:"desc:cool tag:A"` is equivalent)
 
--   Match things which either do not reference the \'expenses:food\'
-    account, or do have the \'A\' tag:
+- Match things which either do not reference the \'expenses:food\'
+  account, or do have the \'A\' tag:
 
-    `expr:"not expenses:food or tag:A"`
+  `expr:"not expenses:food or tag:A"`
 
--   Match things which either do not reference the \'expenses:food\'
-    account, or which reference the \'expenses:drink\' account and also
-    have the \'A\' tag:
+- Match things which either do not reference the \'expenses:food\'
+  account, or which reference the \'expenses:drink\' account and also
+  have the \'A\' tag:
 
-    `expr:"expenses:food or (expenses:drink and tag:A)"`
+  `expr:"expenses:food or (expenses:drink and tag:A)"`
 
 `expr:` has a restriction: `date:` queries may not be used inside `or`
 expressions. That would allow disjoint report periods or disjoint result
@@ -5946,23 +5886,22 @@ Normally, hledger groups amounts and displays their totals by account
 fields\') value is used as a synthetic account name, causing different
 grouping and display. PIVOTEXPR can be
 
--   any of these standard transaction or posting fields (their value is
-    substituted): `status`, `code`, `desc`, `payee`, `note`, `acct`,
-    `comm`/`cur`, `amt`, `cost`
--   or a tag name
--   or any combination of these, colon-separated.
+- any of these standard transaction or posting fields (their value is
+  substituted): `status`, `code`, `desc`, `payee`, `note`, `acct`,
+  `comm`/`cur`, `amt`, `cost`
+- or a tag name
+- or any combination of these, colon-separated.
 
 Some special cases:
 
--   Colons appearing in PIVOTEXPR or in a pivoted tag value will
-    generate account hierarchy.
--   When pivoting a posting has multiple values for a tag, the pivoted
-    value of that tag will be the first value.
--   When a posting has multiple commodities, the pivoted value of
-    \"comm\"/\"cur\" will be \"\". Also when an unrecognised tag name or
-    field is provided, its pivoted value will be \"\". (If this causes
-    confusing output, consider excluding those postings from the
-    report.)
+- Colons appearing in PIVOTEXPR or in a pivoted tag value will generate
+  account hierarchy.
+- When pivoting a posting has multiple values for a tag, the pivoted
+  value of that tag will be the first value.
+- When a posting has multiple commodities, the pivoted value of
+  \"comm\"/\"cur\" will be \"\". Also when an unrecognised tag name or
+  field is provided, its pivoted value will be \"\". (If this causes
+  confusing output, consider excluding those postings from the report.)
 
 Examples:
 
@@ -6026,24 +5965,24 @@ $ hledger balance Income:Dues --pivot kind:member
 hledger can enrich the data provided to it, or generate new data, in a
 number of ways. Mostly, this is done only if you request it:
 
--   Missing amounts or missing costs in transactions are inferred
-    automatically when possible.
--   The `--infer-equity` flag infers missing conversion equity postings
-    from @/@@ costs.
--   The `--infer-costs` flag infers missing costs from conversion equity
-    postings.
--   The `--infer-market-prices` flag infers `P` price directives from
-    costs.
--   The `--auto` flag adds extra postings to transactions matched by
-    [auto posting rules](#auto-postings).
--   The `--forecast` option generates transactions from [periodic
-    transaction rules](#periodic-transactions).
--   The `balance --budget` report infers budget goals from periodic
-    transaction rules.
--   Commands like `close`, `rewrite`, and `hledger-interest` generate
-    transactions or postings.
--   CSV data is converted to transactions by applying CSV conversion
-    rules.. etc.
+- Missing amounts or missing costs in transactions are inferred
+  automatically when possible.
+- The `--infer-equity` flag infers missing conversion equity postings
+  from @/@@ costs.
+- The `--infer-costs` flag infers missing costs from conversion equity
+  postings.
+- The `--infer-market-prices` flag infers `P` price directives from
+  costs.
+- The `--auto` flag adds extra postings to transactions matched by [auto
+  posting rules](#auto-postings).
+- The `--forecast` option generates transactions from [periodic
+  transaction rules](#periodic-transactions).
+- The `balance --budget` report infers budget goals from periodic
+  transaction rules.
+- Commands like `close`, `rewrite`, and `hledger-interest` generate
+  transactions or postings.
+- CSV data is converted to transactions by applying CSV conversion
+  rules.. etc.
 
 Such generated data is temporary, existing only at report time. You can
 convert it to permanent recorded data by, eg, capturing the output of
@@ -6176,46 +6115,46 @@ default in almost all situations, while also being flexible. Here are
 
 The forecast period starts on:
 
--   the later of
-    -   the start date in the periodic transaction rule
-    -   the start date in `--forecast`\'s argument
--   otherwise (if those are not available): the later of
-    -   the report start date specified with `-b`/`-p`/`date:`
-    -   the day after the latest ordinary transaction in the journal
--   otherwise (if none of these are available): today.
+- the later of
+  - the start date in the periodic transaction rule
+  - the start date in `--forecast`\'s argument
+- otherwise (if those are not available): the later of
+  - the report start date specified with `-b`/`-p`/`date:`
+  - the day after the latest ordinary transaction in the journal
+- otherwise (if none of these are available): today.
 
 The forecast period ends on:
 
--   the earlier of
-    -   the end date in the periodic transaction rule
-    -   the end date in `--forecast`\'s argument
--   otherwise: the report end date specified with `-e`/`-p`/`date:`
--   otherwise: 180 days (\~6 months) from today.
+- the earlier of
+  - the end date in the periodic transaction rule
+  - the end date in `--forecast`\'s argument
+- otherwise: the report end date specified with `-e`/`-p`/`date:`
+- otherwise: 180 days (\~6 months) from today.
 
 ### Forecast troubleshooting
 
 When \--forecast is not doing what you expect, one of these tips should
 help:
 
--   Remember to use the `--forecast` option.
--   Remember to have at least one periodic transaction rule in your
-    journal.
--   Test with `print --forecast`.
--   Check for typos or too-restrictive start/end dates in your periodic
-    transaction rule.
--   Leave at least 2 spaces between the rule\'s period expression and
-    description fields.
--   Check for future-dated ordinary transactions suppressing forecasted
-    transactions.
--   Try setting explicit report start and/or end dates with `-b`, `-e`,
-    `-p` or `date:`
--   Try adding the `-E` flag to encourage display of empty periods/zero
-    transactions.
--   Try setting explicit forecast start and/or end dates with
-    `--forecast=START..END`
--   Consult [Forecast period, in detail](#forecast-period-in-detail),
-    above.
--   Check inside the engine: add `--debug=2` (eg).
+- Remember to use the `--forecast` option.
+- Remember to have at least one periodic transaction rule in your
+  journal.
+- Test with `print --forecast`.
+- Check for typos or too-restrictive start/end dates in your periodic
+  transaction rule.
+- Leave at least 2 spaces between the rule\'s period expression and
+  description fields.
+- Check for future-dated ordinary transactions suppressing forecasted
+  transactions.
+- Try setting explicit report start and/or end dates with `-b`, `-e`,
+  `-p` or `date:`
+- Try adding the `-E` flag to encourage display of empty periods/zero
+  transactions.
+- Try setting explicit forecast start and/or end dates with
+  `--forecast=START..END`
+- Consult [Forecast period, in detail](#forecast-period-in-detail),
+  above.
+- Check inside the engine: add `--debug=2` (eg).
 
 ## Budgeting
 
@@ -6264,9 +6203,9 @@ infers a commodity\'s display styles from its amounts as they are
 written in the journal (excluding cost amounts and amounts in periodic
 transaction rules or auto posting rules). It uses
 
--   the symbol placement and decimal mark of the first amount seen
--   the digit group marks of the first amount with digit group marks
--   and the maximum number of decimal digits seen across all amounts.
+- the symbol placement and decimal mark of the first amount seen
+- the digit group marks of the first amount with digit group marks
+- and the maximum number of decimal digits seen across all amounts.
 
 And as fallback if no applicable amounts are found, it would use a
 default style, like `$1000.00` (symbol on the left with no space, period
@@ -6335,32 +6274,32 @@ format amounts a little bit differently to suit different consumers:
 **1. \"hledger-readable output\" - should be readable by hledger (and by
 humans)**
 
--   This is produced by reports that show full journal entries: `print`,
-    `import`, `close`, `rewrite` etc.
--   It shows amounts with their original journal precisions, which may
-    not be consistent.
--   It adds a trailing decimal mark when needed to avoid showing
-    ambiguous amounts.
--   It can be parsed reliably (by hledger and ledger2beancount at least,
-    but perhaps not by Ledger..)
+- This is produced by reports that show full journal entries: `print`,
+  `import`, `close`, `rewrite` etc.
+- It shows amounts with their original journal precisions, which may not
+  be consistent.
+- It adds a trailing decimal mark when needed to avoid showing ambiguous
+  amounts.
+- It can be parsed reliably (by hledger and ledger2beancount at least,
+  but perhaps not by Ledger..)
 
 **2. \"human-readable output\" - usually for humans**
 
--   This is produced by all other reports.
--   It shows amounts with standard display precisions, which will be
-    consistent within each commodity.
--   It shows ambiguous amounts unmodified.
--   It can be parsed reliably in the context of a known report (when you
-    know decimals are consistently not being shown, you can assume a
-    single mark is a digit group mark).
+- This is produced by all other reports.
+- It shows amounts with standard display precisions, which will be
+  consistent within each commodity.
+- It shows ambiguous amounts unmodified.
+- It can be parsed reliably in the context of a known report (when you
+  know decimals are consistently not being shown, you can assume a
+  single mark is a digit group mark).
 
 **3. \"machine-readable output\" - usually for other software**
 
--   This is produced by all reports when an output format like `csv`,
-    `tsv`, `json`, or `sql` is selected.
--   It shows amounts as 1 or 2 do, but without digit group marks.
--   It can be parsed reliably (if needed, the decimal mark can be
-    changed with -c/\--commodity-style).
+- This is produced by all reports when an output format like `csv`,
+  `tsv`, `json`, or `sql` is selected.
+- It shows amounts as 1 or 2 do, but without digit group marks.
+- It can be parsed reliably (if needed, the decimal mark can be changed
+  with -c/\--commodity-style).
 
 ## Cost reporting
 
@@ -6416,14 +6355,14 @@ Here, hledger will attach a `@@ €100` cost to the first amount (you can
 see it with `hledger print -x`). This form looks convenient, but there
 are downsides:
 
--   It sacrifices some error checking. For example, if you accidentally
-    wrote €10 instead of €100, hledger would not be able to detect the
-    mistake.
+- It sacrifices some error checking. For example, if you accidentally
+  wrote €10 instead of €100, hledger would not be able to detect the
+  mistake.
 
--   It is sensitive to the order of postings - if they were reversed, a
-    different entry would be inferred and reports would be different.
+- It is sensitive to the order of postings - if they were reversed, a
+  different entry would be inferred and reports would be different.
 
--   The per-unit cost basis is not easy to read.
+- The per-unit cost basis is not easy to read.
 
 So generally this kind of entry is not recommended. You can make sure
 you have none of these by using `-s` ([strict mode](#strict-mode)), or
@@ -6439,13 +6378,13 @@ price\".
 
 Some things to note:
 
--   Costs are attached to specific posting amounts in specific
-    transactions, and once recorded they do not change. This contrasts
-    with [market prices](#market-prices), which are ambient and
-    fluctuating.
+- Costs are attached to specific posting amounts in specific
+  transactions, and once recorded they do not change. This contrasts
+  with [market prices](#market-prices), which are ambient and
+  fluctuating.
 
--   Conversion to cost is performed before conversion to market value
-    (described below).
+- Conversion to cost is performed before conversion to market value
+  (described below).
 
 ### Equity conversion postings
 
@@ -6496,14 +6435,14 @@ $ hledger bal --infer-costs -B
 
 Here are some downsides of this kind of entry:
 
--   The per-unit cost basis is not easy to read.
+- The per-unit cost basis is not easy to read.
 
--   Instead of `-B` you must remember to type `-B --infer-costs`.
+- Instead of `-B` you must remember to type `-B --infer-costs`.
 
--   `--infer-costs` works only where hledger can identify the two
-    equity:conversion postings and match them up with the two non-equity
-    postings. So writing the journal entry in a particular format
-    becomes more important. More on this below.
+- `--infer-costs` works only where hledger can identify the two
+  equity:conversion postings and match them up with the two non-equity
+  postings. So writing the journal entry in a particular format becomes
+  more important. More on this below.
 
 ### Inferring equity conversion postings
 
@@ -6562,32 +6501,32 @@ $ hledger print -x --infer-costs --infer-equity
 
 Downsides:
 
--   The precise format of the journal entry becomes more important. If
-    hledger can\'t detect and match up the cost and equity postings, it
-    will give a transaction balancing error.
+- The precise format of the journal entry becomes more important. If
+  hledger can\'t detect and match up the cost and equity postings, it
+  will give a transaction balancing error.
 
--   The [add](#add) command does not yet accept this kind of entry
-    ([#2056](https://github.com/simonmichael/hledger/issues/2056)).
+- The [add](#add) command does not yet accept this kind of entry
+  ([#2056](https://github.com/simonmichael/hledger/issues/2056)).
 
--   This is the most verbose form.
+- This is the most verbose form.
 
 ### Requirements for detecting equity conversion postings
 
 `--infer-costs` has certain requirements (unlike `--infer-equity`, which
 always works). It will infer costs only in transactions with:
 
--   Two non-equity postings, in different commodities. Their order is
-    significant: the cost will be added to the first of them.
+- Two non-equity postings, in different commodities. Their order is
+  significant: the cost will be added to the first of them.
 
--   Two postings to equity conversion accounts, next to one another,
-    which balance the two non-equity postings. This balancing is checked
-    to the same precision (number of decimal places) used in the
-    conversion posting\'s amount. Equity conversion accounts are:
+- Two postings to equity conversion accounts, next to one another, which
+  balance the two non-equity postings. This balancing is checked to the
+  same precision (number of decimal places) used in the conversion
+  posting\'s amount. Equity conversion accounts are:
 
-    -   any accounts declared with account type `V`/`Conversion`, or
-        their subaccounts
-    -   otherwise, accounts named `equity:conversion`, `equity:trade`,
-        or `equity:trading`, or their subaccounts.
+  - any accounts declared with account type `V`/`Conversion`, or their
+    subaccounts
+  - otherwise, accounts named `equity:conversion`, `equity:trade`, or
+    `equity:trading`, or their subaccounts.
 
 And multiple such four-posting groups can coexist within a single
 transaction. When `--infer-costs` fails, it does not infer a cost in
@@ -6639,14 +6578,14 @@ Market prices can change from day to day. hledger will use the prices on
 a particular valuation date (or on more than one date). By default
 hledger uses \"end\" dates for valuation. More specifically:
 
--   For single period reports (including normal print and register
-    reports):
-    -   If an explicit [report end date](#report-start-end-date) is
-        specified, that is used
-    -   Otherwise the latest transaction date or P directive date is
-        used (even if it\'s in the future)
--   For [multiperiod reports](#report-intervals), each period is valued
-    on its last day.
+- For single period reports (including normal print and register
+  reports):
+  - If an explicit [report end date](#report-start-end-date) is
+    specified, that is used
+  - Otherwise the latest transaction date or P directive date is used
+    (even if it\'s in the future)
+- For [multiperiod reports](#report-intervals), each period is valued on
+  its last day.
 
 This can be customised with the \--value option described below, which
 can select either \"then\", \"end\", \"now\", or \"custom\" dates.
@@ -6703,15 +6642,15 @@ carefully, and try adding `--debug` or `--debug=2` to troubleshoot.
 
 `--infer-market-prices` can infer market prices from:
 
--   multicommodity transactions with explicit prices (`@`/`@@`)
+- multicommodity transactions with explicit prices (`@`/`@@`)
 
--   multicommodity transactions with implicit prices (no `@`, two
-    commodities, unbalanced). (With these, the order of postings
-    matters. `hledger print -x` can be useful for troubleshooting.)
+- multicommodity transactions with implicit prices (no `@`, two
+  commodities, unbalanced). (With these, the order of postings matters.
+  `hledger print -x` can be useful for troubleshooting.)
 
--   [multicommodity transactions with equity
-    postings](#conversion-with-equity-postings), if cost is inferred
-    with [`--infer-costs`](#infer-cost-requirements).
+- [multicommodity transactions with equity
+  postings](#conversion-with-equity-postings), if cost is inferred with
+  [`--infer-costs`](#infer-cost-requirements).
 
 There is a limitation (bug) currently: when a valuation commodity is not
 specified, prices inferred with `--infer-market-prices` do not help
@@ -6720,9 +6659,9 @@ might not happen because no valuation commodity was detected
 (`--debug=2` will show this). To be safe, specify the valuation
 commmodity, eg:
 
--   `-X EUR --infer-market-prices`, not `-V --infer-market-prices`
--   `--value=then,EUR --infer-market-prices`, not
-    `--value=then --infer-market-prices`
+- `-X EUR --infer-market-prices`, not `-V --infer-market-prices`
+- `--value=then,EUR --infer-market-prices`, not
+  `--value=then --infer-market-prices`
 
 Signed costs and market prices can be confusing. For reference, here is
 the current behaviour, since hledger 1.25. (If you think it should work
@@ -6796,11 +6735,11 @@ follows, in this order of preference:
 
 This means:
 
--   If you have [P directives](#p-directive), they determine which
-    commodities `-V` will convert, and to what.
+- If you have [P directives](#p-directive), they determine which
+  commodities `-V` will convert, and to what.
 
--   If you have no P directives, and use the `--infer-market-prices`
-    flag, [costs](#costs) determine it.
+- If you have no P directives, and use the `--infer-market-prices` flag,
+  [costs](#costs) determine it.
 
 Amounts for which no valuation commodity can be found are not converted.
 
@@ -7067,69 +7006,70 @@ commands](../scripts.md), they also will be listed.
 
 **[Help commands](#help-commands)**
 
--   [help](#help) - show the hledger manual with info/man/pager
--   [demo](#demo) - show small hledger demos in the terminal
+- [commands](#commands-1) - show the hledger commands list (default)
+- [demo](#demo) - show small hledger demos in the terminal
+- [help](#help) - show the hledger manual with info, man, or pager
 
 **[User interface commands](#user-interface-commands)**
 
--   [ui](hledger-ui.html) - (if installed) run hledger\'s terminal UI
--   [web](hledger-web.html) - (if installed) run hledger\'s web UI
+- [repl](#repl) - run commands from an interactive prompt
+- [run](#run) - run commands from a script
+- [ui](hledger-ui.html) - (if installed) run hledger\'s terminal UI
+- [web](hledger-web.html) - (if installed) run hledger\'s web UI
 
 **[Data entry commands](#data-entry-commands)**
 
--   [add](#add) - add transactions using terminal prompts
--   [import](#import) - add new transactions from other files, eg CSV
-    files
+- [add](#add) - add transactions using terminal prompts
+- [import](#import) - add new transactions from other files, eg CSV
+  files
 
 **[Basic report commands](#basic-report-commands)**
 
--   [accounts](#accounts) - show account names
--   [codes](#codes) - show transaction codes
--   [commodities](#commodity-directive) - show commodity/currency
-    symbols
--   [descriptions](#descriptions) - show transaction descriptions
--   [files](#files) - show input file paths
--   [notes](#notes) - show note parts of transaction descriptions
--   [payees](#payees) - show payee parts of transaction descriptions
--   [prices](#prices) - show market prices
--   [stats](#stats) - show journal statistics
--   [tags](#tags-1) - show tag names
+- [accounts](#accounts) - show account names
+- [codes](#codes) - show transaction codes
+- [commodities](#commodity-directive) - show commodity/currency symbols
+- [descriptions](#descriptions) - show transaction descriptions
+- [files](#files) - show input file paths
+- [notes](#notes) - show note parts of transaction descriptions
+- [payees](#payees) - show payee parts of transaction descriptions
+- [prices](#prices) - show market prices
+- [stats](#stats) - show journal statistics
+- [tags](#tags-1) - show tag names
 
 **[Standard report commands](#standard-report-commands)**
 
--   [print](#print) - show transactions or export journal data
--   [aregister](#aregister) (areg) - show transactions in a particular
-    account
--   [register](#register) (reg) - show postings in one or more accounts
-    & running total
--   [balancesheet](#balancesheet) (bs) - show assets, liabilities and
-    net worth
--   [balancesheetequity](#balancesheetequity) (bse) - show assets,
-    liabilities and equity
--   [cashflow](#cashflow) (cf) - show changes in liquid assets
--   [incomestatement](#incomestatement) (is) - show revenues and
-    expenses
+- [print](#print) - show transactions or export journal data
+- [aregister](#aregister) (areg) - show transactions in a particular
+  account
+- [register](#register) (reg) - show postings in one or more accounts &
+  running total
+- [balancesheet](#balancesheet) (bs) - show assets, liabilities and net
+  worth
+- [balancesheetequity](#balancesheetequity) (bse) - show assets,
+  liabilities and equity
+- [cashflow](#cashflow) (cf) - show changes in liquid assets
+- [incomestatement](#incomestatement) (is) - show revenues and expenses
 
 **[Advanced report commands](#advanced-report-commands)**
 
--   [balance](#balance) (bal) - show balance changes, end balances,
-    budgets, gains..
--   [roi](#roi) - show return on investments
+- [balance](#balance) (bal) - show balance changes, end balances,
+  budgets, gains..
+- [roi](#roi) - show return on investments
 
 **[Chart commands](#chart-commands)**
 
--   [activity](#activity) - show bar charts of posting counts per period
+- [activity](#activity) - show bar charts of posting counts per period
 
 **[Data generation commands](#data-generation-commands)**
 
--   [close](#close) - generate balance-zeroing/restoring transactions
--   [rewrite](#rewrite) - generate auto postings, like print \--auto
+- [close](#close) - generate balance-zeroing/restoring transactions
+- [rewrite](#rewrite) - generate auto postings, like print \--auto
 
 **[Maintenance commands](#maintenance-commands)**
 
--   [check](#check) - check for various kinds of error in the data
--   [diff](#diff) - compare account transactions in two journal files
--   [test](#test) - run self tests
+- [check](#check) - check for various kinds of error in the data
+- [diff](#diff) - compare account transactions in two journal files
+- [test](#test) - run self tests
 
 Next, these commands are described in detail.
 
@@ -7243,46 +7183,41 @@ commands will run more quickly than if you ran them individually at the
 command line.
 
 Also like `run`, the input file(s) specified for the `repl` command will
-be the default input for all interactive commands, you can override this
-temporarily by specifying an `-f` option in particular commands, and
-commands will not see any changes made to input files (eg by `add`)
-until you exit and restart the REPL.
+be the default input for all interactive commands. You can override this
+temporarily by specifying an `-f` option in particular commands. But
+note that commands will not see any changes made to input files (eg by
+`add`) until you exit and restart the REPL.
 
 The command syntax is the same as with `run`:
 
--   enter one hledger command at a time, without the usual `hledger`
-    first word
--   empty lines and comment text from `#` to end of line are ignored
--   use single or double quotes to quote arguments when needed
--   type `exit` or `quit` or control-D to exit the REPL.
+- enter one hledger command at a time, without the usual `hledger` first
+  word
+- empty lines and comment text from `#` to end of line are ignored
+- use single or double quotes to quote arguments when needed
+- type `exit` or `quit` or control-D to exit the REPL.
 
 While it is running, the REPL remembers your command history, and you
 can navigate in the usual ways:
 
--   Keypad or Emacs navigation keys to edit the current command line
--   UP/DOWN or control-P/control-N to step back/forward through history
--   control-R to search for a past command
--   TAB completes file paths.
+- Keypad or Emacs navigation keys to edit the current command line
+- UP/DOWN or control-P/control-N to step back/forward through history
+- control-R to search for a past command
+- TAB to complete file paths.
 
-The `commands` and `help` commands, and the command help flags
-(`CMD --tldr`, `CMD -h/--help`, `CMD --info`, `CMD --man`), work in the
-usual way, and can be useful.
+Generally `repl` command lines should feel much like the normal hledger
+CLI, but you may find differences. `repl` is a little stricter; eg it
+requires full command names or official abbreviations (as seen in the
+commands list).
+
+The `commands` and `help` commands, and the command help flags
+(`CMD --tldr`, `CMD -h/--help`, `CMD --info`, `CMD --man`), can be
+useful.
 
 You can type control-C to cancel a long-running command (but only once;
 typing it a second time will exit the REPL).
 
-And in most shells you can type control-Z to exit temporarily to the
-shell (and `fg` to return to the REPL).
-
-You may find some differences in behaviour between `run` command lines
-and normal hledger command lines. For example, in the REPL,
-
--   the command name must be written first, options afterward
--   full command names or official abbreviations (as in the command
-    list) must be used
--   options parsing with addon commands might be less flexible than the
-    CLI
--   the `stats` command gives false timings, currently
+And in most shells you can type control-Z to temporarily exit to the
+shell (and then `fg` to return to the REPL).
 
 #### Examples
 
@@ -7329,11 +7264,11 @@ This command is experimental and could change in the future.
 
 You can use `run` in three ways:
 
--   `hledger run -- CMD1 -- CMD2 -- CMD3` - read commands from the
-    command line, separated by `--`
--   `hledger run SCRIPTFILE1 SCRIPTFILE2` - read commands from one or
-    more files
--   `cat SCRIPTFILE1 | hledger run` - read commands from standard input.
+- `hledger run -- CMD1 -- CMD2 -- CMD3` - read commands from the command
+  line, separated by `--`
+- `hledger run SCRIPTFILE1 SCRIPTFILE2` - read commands from one or more
+  files
+- `cat SCRIPTFILE1 | hledger run` - read commands from standard input.
 
 `run` first loads the input file(s) specified by `LEDGER_FILE` or by
 `-f` options, in the usual way. Then it runs each command in turn, each
@@ -7351,14 +7286,14 @@ twice as fast).
 Command scripts, whether in a file or written on the command line, have
 a simple syntax:
 
--   each line may contain a single hledger command and its arguments,
-    without the usual `hledger` first word
--   empty lines are ignored
--   text from `#` to end of line is a comment, and ignored
--   you can use single or double quotes to quote arguments when needed,
-    as on the command line
--   these extra commands are available: `echo TEXT` prints some text,
-    and `exit` or `quit` ends the run.
+- each line may contain a single hledger command and its arguments,
+  without the usual `hledger` first word
+- empty lines are ignored
+- text from `#` to end of line is a comment, and ignored
+- you can use single or double quotes to quote arguments when needed, as
+  on the command line
+- these extra commands are available: `echo TEXT` prints some text, and
+  `exit` or `quit` ends the run.
 
 On unix systems you can use `#!/usr/bin/env hledger run` in the first
 line of a command file to make it a runnable script. If that gives an
@@ -7367,11 +7302,10 @@ error, use `#!/usr/bin/env -S hledger run`.
 It\'s ok to use the `run` command recursively within a command script.
 
 You may find some differences in behaviour between `run` command lines
-and normal hledger command lines. For example, with `run`,
-
--   the command name must be written first, options afterward
--   full command names or official abbreviations (as in the command
-    list) must be used
+and normal hledger command lines. `run` is a little stricter; eg it
+requires full command names or official abbreviations (as seen in the
+commands list), and command options must be written after the command
+name.
 
 #### Examples
 
@@ -7450,47 +7384,47 @@ control-d or control-c to exit.
 
 Features:
 
--   add tries to provide useful defaults, using the most similar (by
-    description) recent transaction (filtered by the query, if any) as a
-    template.
--   You can also set the initial defaults with command line arguments.
--   [Readline-style edit
-    keys](http://tiswww.case.edu/php/chet/readline/rluserman.html#SEC3)
-    can be used during data entry.
--   The tab key will auto-complete whenever possible - accounts,
-    payees/descriptions, dates (`yesterday`, `today`, `tomorrow`). If
-    the input area is empty, it will insert the default value.
--   A parenthesised transaction [code](#entries) may be entered
-    following a date.
--   [Comments](#transaction-comments) and tags may be entered following
-    a description or amount.
--   If you make a mistake, enter `<` at any prompt to go one step
-    backward.
--   Input prompts are displayed in a different colour when the terminal
-    supports it.
+- add tries to provide useful defaults, using the most similar (by
+  description) recent transaction (filtered by the query, if any) as a
+  template.
+- You can also set the initial defaults with command line arguments.
+- [Readline-style edit
+  keys](http://tiswww.case.edu/php/chet/readline/rluserman.html#SEC3)
+  can be used during data entry.
+- The tab key will auto-complete whenever possible - accounts,
+  payees/descriptions, dates (`yesterday`, `today`, `tomorrow`). If the
+  input area is empty, it will insert the default value.
+- A parenthesised transaction [code](#entries) may be entered following
+  a date.
+- [Comments](#transaction-comments) and tags may be entered following a
+  description or amount.
+- If you make a mistake, enter `<` at any prompt to go one step
+  backward.
+- Input prompts are displayed in a different colour when the terminal
+  supports it.
 
 Notes:
 
--   If you enter a number with no commodity symbol, and you have
-    declared a default commodity with a `D` directive, you might expect
-    `add` to add this symbol for you. It does not do this; we assume
-    that if you are using a `D` directive you prefer not to see the
-    commodity symbol repeated on amounts in the journal.
+- If you enter a number with no commodity symbol, and you have declared
+  a default commodity with a `D` directive, you might expect `add` to
+  add this symbol for you. It does not do this; we assume that if you
+  are using a `D` directive you prefer not to see the commodity symbol
+  repeated on amounts in the journal.
 
 Examples:
 
--   Record new transactions, saving to the default journal file:
+- Record new transactions, saving to the default journal file:
 
-    `hledger add`
+  `hledger add`
 
--   Add transactions to 2024.journal, but also load 2023.journal for
-    completions:
+- Add transactions to 2024.journal, but also load 2023.journal for
+  completions:
 
-    `hledger add --file 2024.journal --file 2023.journal`
+  `hledger add --file 2024.journal --file 2023.journal`
 
--   Provide answers for the first four prompts:
+- Provide answers for the first four prompts:
 
-    `hledger add today 'best buy' expenses:supplies '$20'`
+  `hledger add today 'best buy' expenses:supplies '$20'`
 
 There is a detailed tutorial at <https://hledger.org/add.html>.
 
@@ -7588,36 +7522,36 @@ Overlap detection is automatic, and shouldn\'t require much attention
 from you, except perhaps at first import (see below). But here\'s how it
 works:
 
--   For each `FILE` being imported from:
+- For each `FILE` being imported from:
 
-    1.  hledger reads a file named `.latest.FILE` file in the same
-        directory, if any. This file contains the latest record date
-        previously imported from FILE, in YYYY-MM-DD format. If multiple
-        records with that date were imported, the date is repeated on N
-        lines.
+  1.  hledger reads a file named `.latest.FILE` file in the same
+      directory, if any. This file contains the latest record date
+      previously imported from FILE, in YYYY-MM-DD format. If multiple
+      records with that date were imported, the date is repeated on N
+      lines.
 
-    2.  hledger reads records from FILE. If a latest date was found in
-        step 1, any records before that date, and the first N records on
-        that date, are skipped.
+  2.  hledger reads records from FILE. If a latest date was found in
+      step 1, any records before that date, and the first N records on
+      that date, are skipped.
 
--   After a successful import from all FILEs, without error and without
-    `--dry-run`, hledger updates each FILE\'s `.latest.FILE` for next
-    time.
+- After a successful import from all FILEs, without error and without
+  `--dry-run`, hledger updates each FILE\'s `.latest.FILE` for next
+  time.
 
 If this goes wrong, it\'s relatively easy to repair:
 
--   You\'ll notice it before import when you preview with
-    `import --dry-run`.
--   Or after import when you try to reconcile your hledger account
-    balances with your bank.
--   `hledger print -f FILE.csv` will show all recently downloaded
-    transactions. Compare these with your journal. Copy/paste if needed.
--   Update your conversion rules and print again, if needed.
--   You can manually update or remove the .latest file, or use
-    `import --catchup FILE`.
--   Download and import more often, eg twice a week, at least while you
-    are learning. It\'s easier to review and troubleshoot when there are
-    fewer transactions.
+- You\'ll notice it before import when you preview with
+  `import --dry-run`.
+- Or after import when you try to reconcile your hledger account
+  balances with your bank.
+- `hledger print -f FILE.csv` will show all recently downloaded
+  transactions. Compare these with your journal. Copy/paste if needed.
+- Update your conversion rules and print again, if needed.
+- You can manually update or remove the .latest file, or use
+  `import --catchup FILE`.
+- Download and import more often, eg twice a week, at least while you
+  are learning. It\'s easier to review and troubleshoot when there are
+  fewer transactions.
 
 #### First import
 
@@ -7707,10 +7641,10 @@ Here are two kinds of \"deduplication\" which `import` does not handle
 (and generally should not, since these can happen legitimately in
 financial data):
 
--   Two or more of the new CSV records are identical, and generate
-    identical new journal entries.
--   A new CSV record generates a journal entry identical to one(s)
-    already in the journal.
+- Two or more of the new CSV records are identical, and generate
+  identical new journal entries.
+- A new CSV record generates a journal entry identical to one(s) already
+  in the journal.
 
 ## Basic report commands
 
@@ -7978,13 +7912,12 @@ included files, and commodity names.
 
 It also shows some run time statistics:
 
--   elapsed time
--   throughput: the number of transactions processed per second
--   live: the peak memory in use by the program to do its work
--   alloc: the peak memory allocation from the OS as seen by GHC.
-    Measuring this externally, eg with GNU time, is more accurate;
-    usually that will be a larger number; sometimes (with swapping?)
-    smaller.
+- elapsed time
+- throughput: the number of transactions processed per second
+- live: the peak memory in use by the program to do its work
+- alloc: the peak memory allocation from the OS as seen by GHC.
+  Measuring this externally, eg with GNU time, is more accurate; usually
+  that will be a larger number; sometimes (with swapping?) smaller.
 
 The `stats` command\'s run time is similar to that of a balance report.
 
@@ -8136,11 +8069,11 @@ With the `--round` (*Added in 1.32*) option, `print` will try
 increasingly hard to display decimal digits according to the [commodity
 display styles](#commodity-display-style):
 
--   `--round=none` show amounts with original precisions (default)
--   `--round=soft` add/remove decimal zeros in amounts (except costs)
--   `--round=hard` round amounts (except costs), possibly hiding
-    significant digits
--   `--round=all` round all amounts and costs
+- `--round=none` show amounts with original precisions (default)
+- `--round=soft` add/remove decimal zeros in amounts (except costs)
+- `--round=hard` round amounts (except costs), possibly hiding
+  significant digits
+- `--round=all` round all amounts and costs
 
 `soft` is good for non-lossy cleanup, formatting amounts more
 consistently where it\'s safe to do so.
@@ -8164,15 +8097,14 @@ $ hledger print assets:cash | hledger -f- -I reg expenses:food
 
 There are some situations where print\'s output can become unparseable:
 
--   [Value reporting](#value-reporting) affects posting amounts but not
-    [balance assertion](#balance-assertions) or [balance
-    assignment](#balance-assignments) amounts, potentially causing those
-    to [fail](https://github.com/simonmichael/hledger/issues/1429).
--   [Auto postings](#auto-postings) can generate postings with [too many
-    missing
-    amounts](https://github.com/simonmichael/hledger/issues/1276).
--   [Account aliases can generate bad account
-    names](#aliases-can-generate-bad-account-names).
+- [Value reporting](#value-reporting) affects posting amounts but not
+  [balance assertion](#balance-assertions) or [balance
+  assignment](#balance-assignments) amounts, potentially causing those
+  to [fail](https://github.com/simonmichael/hledger/issues/1429).
+- [Auto postings](#auto-postings) can generate postings with [too many
+  missing amounts](https://github.com/simonmichael/hledger/issues/1276).
+- [Account aliases can generate bad account
+  names](#aliases-can-generate-bad-account-names).
 
 #### print, other features
 
@@ -8204,28 +8136,28 @@ are `txt`, `beancount` (*Added in 1.32*), `csv`, `tsv` (*Added in
 The `beancount` format tries to produce Beancount-compatible output, as
 follows:
 
--   Transaction and postings with unmarked status are converted to
-    cleared (`*`) status.
--   Transactions\' payee and note are backslash-escaped and
-    double-quote-escaped and wrapped in double quotes.
--   Transaction tags are copied to Beancount #tag format.
--   Commodity symbols are converted to upper case, and a small number of
-    currency symbols like `$` are converted to the corresponding
-    currency names.
--   Account name parts are capitalised and unsupported characters are
-    replaced with `-`. If an account name part does not begin with a
-    letter, or if the first part is not Assets, Liabilities, Equity,
-    Income, or Expenses, an error is raised. (Use `--alias` options to
-    bring your accounts into compliance.)
--   An `open` directive is generated for each account used, on the
-    earliest transaction date.
+- Transaction and postings with unmarked status are converted to cleared
+  (`*`) status.
+- Transactions\' payee and note are backslash-escaped and
+  double-quote-escaped and wrapped in double quotes.
+- Transaction tags are copied to Beancount #tag format.
+- Commodity symbols are converted to upper case, and a small number of
+  currency symbols like `$` are converted to the corresponding currency
+  names.
+- Account name parts are capitalised and unsupported characters are
+  replaced with `-`. If an account name part does not begin with a
+  letter, or if the first part is not Assets, Liabilities, Equity,
+  Income, or Expenses, an error is raised. (Use `--alias` options to
+  bring your accounts into compliance.)
+- An `open` directive is generated for each account used, on the
+  earliest transaction date.
 
 Some limitations:
 
--   Balance assertions are removed.
--   Balance assignments become missing amounts.
--   Virtual and balanced virtual postings become regular postings.
--   Directives are not converted.
+- Balance assertions are removed.
+- Balance assignments become missing amounts.
+- Virtual and balanced virtual postings become regular postings.
+- Directives are not converted.
 
 Here\'s an example of print\'s CSV output:
 
@@ -8245,18 +8177,18 @@ $ hledger print -Ocsv
 "5","2008/12/31","","*","","pay off","","assets:bank:checking","-1","$","1","","",""
 ```
 
--   There is one CSV record per posting, with the parent transaction\'s
-    fields repeated.
--   The \"txnidx\" (transaction index) field shows which postings belong
-    to the same transaction. (This number might change if transactions
-    are reordered within the file, files are parsed/included in a
-    different order, etc.)
--   The amount is separated into \"commodity\" (the symbol) and
-    \"amount\" (numeric quantity) fields.
--   The numeric amount is repeated in either the \"credit\" or \"debit\"
-    column, for convenience. (Those names are not accurate in the
-    accounting sense; it just puts negative amounts under credit and
-    zero or greater amounts under debit.)
+- There is one CSV record per posting, with the parent transaction\'s
+  fields repeated.
+- The \"txnidx\" (transaction index) field shows which postings belong
+  to the same transaction. (This number might change if transactions are
+  reordered within the file, files are parsed/included in a different
+  order, etc.)
+- The amount is separated into \"commodity\" (the symbol) and \"amount\"
+  (numeric quantity) fields.
+- The numeric amount is repeated in either the \"credit\" or \"debit\"
+  column, for convenience. (Those names are not accurate in the
+  accounting sense; it just puts negative amounts under credit and zero
+  or greater amounts under debit.)
 
 ### aregister
 
@@ -8328,12 +8260,12 @@ $ hledger areg checking date:jul
 
 Each `aregister` line item shows:
 
--   the transaction\'s date (or the relevant posting\'s date if
-    different, see below)
--   the names of all the other account(s) involved in this transaction
-    (probably abbreviated)
--   the total change to this account\'s balance from this transaction
--   the account\'s historical running balance after this transaction.
+- the transaction\'s date (or the relevant posting\'s date if different,
+  see below)
+- the names of all the other account(s) involved in this transaction
+  (probably abbreviated)
+- the total change to this account\'s balance from this transaction
+- the account\'s historical running balance after this transaction.
 
 Transactions making a net change of zero are not shown by default; add
 the `-E/--empty` flag to show them.
@@ -8824,10 +8756,10 @@ This report shows accounts declared with the `Cash` type (see [account
 types](https://hledger.org/hledger.html#account-types)). Or if no such
 accounts are declared, it shows accounts
 
--   under a top-level account named `asset` (case insensitive, plural
-    allowed)
--   whose name contains some variation of `cash`, `bank`, `checking` or
-    `saving`.
+- under a top-level account named `asset` (case insensitive, plural
+  allowed)
+- whose name contains some variation of `cash`, `bank`, `checking` or
+  `saving`.
 
 More precisely: all accounts matching this case insensitive regular
 expression:
@@ -9042,9 +8974,8 @@ listing account balances, balance changes, values, value changes and
 more, during one time period or many. Generally it shows a table, with
 rows representing accounts, and columns representing periods.
 
-Note there are some higher-level variants of the `balance` command with
-convenient defaults, which can be simpler to use:
-[`balancesheet`](#balancesheet),
+Note there are some variants of the `balance` command with convenient
+defaults, which are simpler to use: [`balancesheet`](#balancesheet),
 [`balancesheetequity`](#balancesheetequity), [`cashflow`](#cashflow) and
 [`incomestatement`](#incomestatement). When you need more control, then
 use `balance`.
@@ -9053,63 +8984,62 @@ use `balance`.
 
 Here\'s a quick overview of the `balance` command\'s features, followed
 by more detailed descriptions and examples. Many of these work with the
-higher-level commands as well.
+other balance-like commands as well (`bs`, `cf`, `is`..).
 
 `balance` can show..
 
--   accounts as a [list (`-l`) or a tree (`-t`)](#list-or-tree-mode)
--   optionally depth-limited ([`-[1-9]`](#depth-limiting))
--   sorted [by declaration order and name](#simple-balance-report), or
-    [by amount](#sorting-by-amount)
+- accounts as a [list (`-l`) or a tree (`-t`)](#list-or-tree-mode)
+- optionally depth-limited ([`-[1-9]`](#depth-limiting))
+- sorted [by declaration order and name](#simple-balance-report), or [by
+  amount](#sorting-by-amount)
 
 ..and their..
 
--   balance changes (the default)
--   or actual and planned balance changes ([`--budget`](#budget-report))
--   or value of balance changes ([`-V`](#valuation-type))
--   or change of balance values
-    ([`--valuechange`](#balance-report-types))
--   or unrealised capital gain/loss ([`--gain`](#balance-report-types))
--   or balance changes from sibling postings (`--related`/`-r`)
--   or postings count ([`--count`](#balance-report-types))
+- balance changes (the default)
+- or actual and planned balance changes ([`--budget`](#budget-report))
+- or value of balance changes ([`-V`](#valuation-type))
+- or change of balance values ([`--valuechange`](#balance-report-types))
+- or unrealised capital gain/loss ([`--gain`](#balance-report-types))
+- or balance changes from sibling postings (`--related`/`-r`)
+- or postings count ([`--count`](#balance-report-types))
 
 ..in..
 
--   one time period (the whole journal period by default)
--   or multiple periods ([`-D`, `-W`, `-M`, `-Q`, `-Y`,
-    `-p INTERVAL`](#report-intervals))
+- one time period (the whole journal period by default)
+- or multiple periods ([`-D`, `-W`, `-M`, `-Q`, `-Y`,
+  `-p INTERVAL`](#report-intervals))
 
 ..either..
 
--   per period (the default)
--   or accumulated since report start date
-    ([`--cumulative`](#accumulation-type))
--   or accumulated since account creation
-    ([`--historical/-H`](#accumulation-type))
+- per period (the default)
+- or accumulated since report start date
+  ([`--cumulative`](#accumulation-type))
+- or accumulated since account creation
+  ([`--historical/-H`](#accumulation-type))
 
 ..possibly converted to..
 
--   cost ([`--value=cost[,COMM]`/`--cost`/`-B`](#valuation-type))
--   or market value, as of transaction dates
-    ([`--value=then[,COMM]`](#valuation-type))
--   or at period ends ([`--value=end[,COMM]`](#valuation-type))
--   or now ([`--value=now`](#valuation-type))
--   or at some other date ([`--value=YYYY-MM-DD`](#valuation-type))
+- cost ([`--value=cost[,COMM]`/`--cost`/`-B`](#valuation-type))
+- or market value, as of transaction dates
+  ([`--value=then[,COMM]`](#valuation-type))
+- or at period ends ([`--value=end[,COMM]`](#valuation-type))
+- or now ([`--value=now`](#valuation-type))
+- or at some other date ([`--value=YYYY-MM-DD`](#valuation-type))
 
 ..with..
 
--   totals ([`-T`](#multi-period-balance-report)), averages
-    ([`-A`](#multi-period-balance-report)), percentages
-    ([`-%`](#percentages)), inverted sign
-    ([`--invert`](#sorting-by-amount))
--   rows and columns swapped
-    ([`--transpose`](#multi-period-balance-report))
--   another field used as account name
-    ([`--pivot`](#multi-period-balance-report))
--   custom-formatted line items (single-period reports only)
-    ([`--format`](#balance-report-line-format))
--   commodities displayed on the same line or multiple lines
-    ([`--layout`](#balance-report-layout))
+- totals ([`-T`](#multi-period-balance-report)), averages
+  ([`-A`](#multi-period-balance-report)), percentages
+  ([`-%`](#percentages)), inverted sign
+  ([`--invert`](#sorting-by-amount))
+- rows and columns swapped
+  ([`--transpose`](#multi-period-balance-report))
+- another field used as account name
+  ([`--pivot`](#multi-period-balance-report))
+- custom-formatted line items (single-period reports only)
+  ([`--format`](#balance-report-line-format))
+- commodities displayed on the same line or multiple lines
+  ([`--layout`](#balance-report-layout))
 
 This command supports the [output destination](#output-destination) and
 [output format](#output-format) options, with output formats `txt`,
@@ -9194,23 +9124,23 @@ interpolated like so:
 
 `%[MIN][.MAX](FIELDNAME)`
 
--   MIN pads with spaces to at least this width (optional)
+- MIN pads with spaces to at least this width (optional)
 
--   MAX truncates at this width (optional)
+- MAX truncates at this width (optional)
 
--   FIELDNAME must be enclosed in parentheses, and can be one of:
+- FIELDNAME must be enclosed in parentheses, and can be one of:
 
-    -   `depth_spacer` - a number of spaces equal to the account\'s
-        depth, or if MIN is specified, MIN \* depth spaces.
-    -   `account` - the account\'s name
-    -   `total` - the account\'s balance/posted total, right justified
+  - `depth_spacer` - a number of spaces equal to the account\'s depth,
+    or if MIN is specified, MIN \* depth spaces.
+  - `account` - the account\'s name
+  - `total` - the account\'s balance/posted total, right justified
 
 Also, FMT can begin with an optional prefix to control how
 multi-commodity amounts are rendered:
 
--   `%_` - render on multiple lines, bottom-aligned (the default)
--   `%^` - render on multiple lines, top-aligned
--   `%,` - render on one line, comma-separated
+- `%_` - render on multiple lines, bottom-aligned (the default)
+- `%^` - render on multiple lines, top-aligned
+- `%,` - render on one line, comma-separated
 
 There are some quirks. Eg in one-line mode, `%(depth_spacer)` has no
 effect, instead `%(account)` has indentation built in. Experimentation
@@ -9218,14 +9148,14 @@ may be needed to get pleasing results.
 
 Some example formats:
 
--   `%(total)` - the account\'s total
--   `%-20.20(account)` - the account\'s name, left justified, padded to
-    20 characters and clipped at 20 characters
--   `%,%-50(account)  %25(total)` - account name padded to 50
-    characters, total padded to 20 characters, with multiple commodities
-    rendered on one line
--   `%20(total)  %2(depth_spacer)%-(account)` - the default format for
-    the single-column balance report
+- `%(total)` - the account\'s total
+- `%-20.20(account)` - the account\'s name, left justified, padded to 20
+  characters and clipped at 20 characters
+- `%,%-50(account)  %25(total)` - account name padded to 50 characters,
+  total padded to 20 characters, with multiple commodities rendered on
+  one line
+- `%20(total)  %2(depth_spacer)%-(account)` - the default format for the
+  single-column balance report
 
 #### Filtered balance report
 
@@ -9267,20 +9197,20 @@ $ hledger -f examples/sample.journal balance
 
 Notes:
 
--   \"Boring\" accounts are combined with their subaccount for more
-    compact output, unless `--no-elide` is used. Boring accounts have no
-    balance of their own and just one subaccount (eg `assets:bank` and
-    `liabilities` above).
+- \"Boring\" accounts are combined with their subaccount for more
+  compact output, unless `--no-elide` is used. Boring accounts have no
+  balance of their own and just one subaccount (eg `assets:bank` and
+  `liabilities` above).
 
--   All balances shown are \"inclusive\", ie including the balances from
-    all subaccounts. Note this means some repetition in the output,
-    which requires explanation when sharing reports with
-    non-plaintextaccounting-users. A tree mode report\'s final total is
-    the sum of the top-level balances shown, not of all the balances
-    shown.
+- All balances shown are \"inclusive\", ie including the balances from
+  all subaccounts. Note this means some repetition in the output, which
+  requires explanation when sharing reports with
+  non-plaintextaccounting-users. A tree mode report\'s final total is
+  the sum of the top-level balances shown, not of all the balances
+  shown.
 
--   Each group of sibling accounts (ie, under a common parent) is sorted
-    separately.
+- Each group of sibling accounts (ie, under a common parent) is sorted
+  separately.
 
 #### Depth limiting
 
@@ -9343,8 +9273,9 @@ commodity, it is treated as 0).
 
 Revenues and liability balances are typically negative, however, so `-S`
 shows these in reverse order. To work around this, you can add
-`--invert` to flip the signs. (Or, use one of the higher-level reports,
-which flip the sign automatically. Eg: `hledger incomestatement -MAS`).
+`--invert` to flip the signs. Or you could use one of the higher-level
+balance reports (`bs`, `is`..), which flip the sign automatically (eg:
+`hledger is -MAS`).
 
 <a name="tree-mode"></a>
 
@@ -9394,43 +9325,43 @@ Balance changes in 2008:
 
 Notes:
 
--   The report\'s start/end dates will be expanded, if necessary, to
-    fully encompass the displayed subperiods (so that the first and last
-    subperiods have the same duration as the others).
--   Leading and trailing periods (columns) containing all zeroes are not
-    shown, unless `-E/--empty` is used.
--   Accounts (rows) containing all zeroes are not shown, unless
-    `-E/--empty` is used.
--   Amounts with many commodities are shown in abbreviated form, unless
-    `--no-elide` is used.
--   Average and/or total columns can be added with the `-A/--average`
-    and `-T/--row-total` flags.
--   The `--transpose` flag can be used to exchange rows and columns.
--   The `--pivot FIELD` option causes a different transaction field to
-    be used as \"account name\". See [PIVOTING](#pivoting).
--   The `--summary-only` flag (`--summary` also works) hides all but the
-    Total and Average columns (those should be enabled with
-    `--row-total` and `-A/--average`).
+- The report\'s start/end dates will be expanded, if necessary, to fully
+  encompass the displayed subperiods (so that the first and last
+  subperiods have the same duration as the others).
+- Leading and trailing periods (columns) containing all zeroes are not
+  shown, unless `-E/--empty` is used.
+- Accounts (rows) containing all zeroes are not shown, unless
+  `-E/--empty` is used.
+- Amounts with many commodities are shown in abbreviated form, unless
+  `--no-elide` is used.
+- Average and/or total columns can be added with the `-A/--average` and
+  `-T/--row-total` flags.
+- The `--transpose` flag can be used to exchange rows and columns.
+- The `--pivot FIELD` option causes a different transaction field to be
+  used as \"account name\". See [PIVOTING](#pivoting).
+- The `--summary-only` flag (`--summary` also works) hides all but the
+  Total and Average columns (those should be enabled with `--row-total`
+  and `-A/--average`).
 
 Multi-period reports with many periods can be too wide for easy viewing
 in the terminal. Here are some ways to handle that:
 
--   Hide the totals row with `-N/--no-total`
--   Filter to a single currency with `cur:`
--   Convert to a single currency with `-V [--infer-market-price]`
--   Use a more compact layout like `--layout=bare`
--   Maximize the terminal window
--   Reduce the terminal\'s font size
--   View with a pager like less, eg:
-    `hledger bal -D --color=yes | less -RS`
--   Output as CSV and use a CSV viewer like
-    [visidata](https://www.visidata.org)
-    (`hledger bal -D -O csv | vd -f csv`), Emacs\'
-    [csv-mode](https://elpa.gnu.org/packages/csv-mode.html)
-    (`M-x csv-mode, C-c C-a`), or a spreadsheet
-    (`hledger bal -D -o a.csv && open a.csv`)
--   Output as HTML and view with a browser:
-    `hledger bal -D -o a.html && open a.html`
+- Hide the totals row with `-N/--no-total`
+- Filter to a single currency with `cur:`
+- Convert to a single currency with `-V [--infer-market-price]`
+- Use a more compact layout like `--layout=bare`
+- Maximize the terminal window
+- Reduce the terminal\'s font size
+- View with a pager like less, eg:
+  `hledger bal -D --color=yes | less -RS`
+- Output as CSV and use a CSV viewer like
+  [visidata](https://www.visidata.org)
+  (`hledger bal -D -O csv | vd -f csv`), Emacs\'
+  [csv-mode](https://elpa.gnu.org/packages/csv-mode.html)
+  (`M-x csv-mode, C-c C-a`), or a spreadsheet
+  (`hledger bal -D -o a.csv && open a.csv`)
+- Output as HTML and view with a browser:
+  `hledger bal -D -o a.html && open a.html`
 
 #### Balance change, end balance
 
@@ -9480,15 +9411,15 @@ There are three important option groups:
 
 The basic calculation to perform for each table cell. It is one of:
 
--   `--sum` : sum the posting amounts (**default**)
--   `--budget` : sum the amounts, but also show the budget goal amount
-    (for each account/period)
--   `--valuechange` : show the change in period-end historical balance
-    values (caused by deposits, withdrawals, and/or market price
-    fluctuations)
--   `--gain` : show the unrealised capital gain/loss, (the current
-    valued balance minus each amount\'s original cost)
--   `--count` : show the count of postings
+- `--sum` : sum the posting amounts (**default**)
+- `--budget` : sum the amounts, but also show the budget goal amount
+  (for each account/period)
+- `--valuechange` : show the change in period-end historical balance
+  values (caused by deposits, withdrawals, and/or market price
+  fluctuations)
+- `--gain` : show the unrealised capital gain/loss, (the current valued
+  balance minus each amount\'s original cost)
+- `--count` : show the count of postings
 
 ##### Accumulation type
 
@@ -9496,46 +9427,44 @@ How amounts should accumulate across a report\'s subperiods/columns.
 Another way to say it: which time period\'s postings should contribute
 to each cell\'s calculation. It is one of:
 
--   `--change` : calculate with postings from column start to column
-    end, ie \"just this column\". Typically used to see
-    revenues/expenses. (**default for balance, cashflow,
-    incomestatement**)
+- `--change` : calculate with postings from column start to column end,
+  ie \"just this column\". Typically used to see revenues/expenses.
+  (**default for balance, cashflow, incomestatement**)
 
--   `--cumulative` : calculate with postings from report start to column
-    end, ie \"previous columns plus this column\". Typically used to
-    show changes accumulated since the report\'s start date. Not often
-    used.
+- `--cumulative` : calculate with postings from report start to column
+  end, ie \"previous columns plus this column\". Typically used to show
+  changes accumulated since the report\'s start date. Not often used.
 
--   `--historical/-H` : calculate with postings from journal start to
-    column end, ie \"all postings from before report start date until
-    this column\'s end\". Typically used to see historical end balances
-    of assets/liabilities/equity. (**default for balancesheet,
-    balancesheetequity**)
+- `--historical/-H` : calculate with postings from journal start to
+  column end, ie \"all postings from before report start date until this
+  column\'s end\". Typically used to see historical end balances of
+  assets/liabilities/equity. (**default for balancesheet,
+  balancesheetequity**)
 
 ##### Valuation type
 
 Which kind of value or cost conversion should be applied, if any, before
 displaying the report. It is one of:
 
--   no valuation type : don\'t convert to cost or value (**default**)
--   `--value=cost[,COMM]` : convert amounts to cost (then optionally to
-    some other commodity)
--   `--value=then[,COMM]` : convert amounts to market value on
-    transaction dates
--   `--value=end[,COMM]` : convert amounts to market value on period end
-    date(s)\
-    (**default with `--valuechange`, `--gain`**)
--   `--value=now[,COMM]` : convert amounts to market value on today\'s
-    date
--   `--value=YYYY-MM-DD[,COMM]` : convert amounts to market value on
-    another date
+- no valuation type : don\'t convert to cost or value (**default**)
+- `--value=cost[,COMM]` : convert amounts to cost (then optionally to
+  some other commodity)
+- `--value=then[,COMM]` : convert amounts to market value on transaction
+  dates
+- `--value=end[,COMM]` : convert amounts to market value on period end
+  date(s)\
+  (**default with `--valuechange`, `--gain`**)
+- `--value=now[,COMM]` : convert amounts to market value on today\'s
+  date
+- `--value=YYYY-MM-DD[,COMM]` : convert amounts to market value on
+  another date
 
 or one of the equivalent simpler flags:
 
--   `-B/--cost` : like \--value=cost (though, note \--cost and \--value
-    are independent options which can both be used at once)
--   `-V/--market` : like \--value=end
--   `-X COMM/--exchange COMM` : like \--value=end,COMM
+- `-B/--cost` : like \--value=cost (though, note \--cost and \--value
+  are independent options which can both be used at once)
+- `-V/--market` : like \--value=end
+- `-X COMM/--exchange COMM` : like \--value=end,COMM
 
 See [Cost reporting](#cost-reporting) and [Value
 reporting](#value-reporting) for more about these.
@@ -9546,10 +9475,10 @@ Most combinations of these options should produce reasonable reports,
 but if you find any that seem wrong or misleading, let us know. The
 following restrictions are applied:
 
--   `--valuechange` implies `--value=end`
--   `--valuechange` makes `--change` the default when used with the
-    `balancesheet`/`balancesheetequity` commands
--   `--cumulative` or `--historical` disables `--row-total/-T`
+- `--valuechange` implies `--value=end`
+- `--valuechange` makes `--change` the default when used with the
+  `balancesheet`/`balancesheetequity` commands
+- `--cumulative` or `--historical` disables `--row-total/-T`
 
 For reference, here is what the combinations of accumulation and
 valuation show:
@@ -9565,8 +9494,8 @@ valuation show:
 The `--budget` report type is like a regular balance report, but with
 two main differences:
 
--   Budget goals and performance percentages are also shown, in brackets
--   Accounts which don\'t have budget goals are hidden by default.
+- Budget goals and performance percentages are also shown, in brackets
+- Accounts which don\'t have budget goals are hidden by default.
 
 This is useful for comparing planned and actual income, expenses, time
 usage, etc.
@@ -9633,47 +9562,47 @@ version should be relatively robust and intuitive, but you may still
 find surprises. Here are more notes to help with learning and
 troubleshooting.
 
--   In the above example, `expenses:bus` and `expenses:food` are shown
-    because they have budget goals during the report period.
+- In the above example, `expenses:bus` and `expenses:food` are shown
+  because they have budget goals during the report period.
 
--   Their parent `expenses` is also shown, with budget goals aggregated
-    from the children.
+- Their parent `expenses` is also shown, with budget goals aggregated
+  from the children.
 
--   The subaccounts `expenses:food:groceries` and `expenses:food:dining`
-    are not shown since they have no budget goal of their own, but they
-    contribute to `expenses:food`\'s actual amount.
+- The subaccounts `expenses:food:groceries` and `expenses:food:dining`
+  are not shown since they have no budget goal of their own, but they
+  contribute to `expenses:food`\'s actual amount.
 
--   Unbudgeted accounts `expenses:movies` and `expenses:gifts` are also
-    not shown, but they contribute to `expenses`\'s actual amount.
+- Unbudgeted accounts `expenses:movies` and `expenses:gifts` are also
+  not shown, but they contribute to `expenses`\'s actual amount.
 
--   The other unbudgeted accounts `income` and `assets:bank:checking`
-    are grouped as `<unbudgeted>`.
+- The other unbudgeted accounts `income` and `assets:bank:checking` are
+  grouped as `<unbudgeted>`.
 
--   `--depth` or `depth:` can be used to limit report depth in the usual
-    way (but will not reveal unbudgeted subaccounts).
+- `--depth` or `depth:` can be used to limit report depth in the usual
+  way (but will not reveal unbudgeted subaccounts).
 
--   Amounts are always inclusive of subaccounts (even in `-l/--list`
-    mode).
+- Amounts are always inclusive of subaccounts (even in `-l/--list`
+  mode).
 
--   Numbers displayed in a \--budget report will not always agree with
-    the totals, because of hidden unbudgeted accounts; this is normal.
-    `-E/--empty` can be used to reveal the hidden accounts.
+- Numbers displayed in a \--budget report will not always agree with the
+  totals, because of hidden unbudgeted accounts; this is normal.
+  `-E/--empty` can be used to reveal the hidden accounts.
 
--   In the periodic rules used for setting budget goals, unbalanced
-    postings are convenient.
+- In the periodic rules used for setting budget goals, unbalanced
+  postings are convenient.
 
--   You can filter budget reports with the usual queries, eg to focus on
-    particular accounts. It\'s common to restrict them to just expenses.
-    (The `<unbudgeted>` account is occasionally hard to exclude; this is
-    because of date surprises, discussed below.)
+- You can filter budget reports with the usual queries, eg to focus on
+  particular accounts. It\'s common to restrict them to just expenses.
+  (The `<unbudgeted>` account is occasionally hard to exclude; this is
+  because of date surprises, discussed below.)
 
--   When you have multiple currencies, you may want to convert them to
-    one (`-X COMM --infer-market-prices`) and/or show just one at a time
-    (`cur:COMM`). If you do need to show multiple currencies at once,
-    `--layout bare` can be helpful.
+- When you have multiple currencies, you may want to convert them to one
+  (`-X COMM --infer-market-prices`) and/or show just one at a time
+  (`cur:COMM`). If you do need to show multiple currencies at once,
+  `--layout bare` can be helpful.
 
--   You can \"roll over\" amounts (actual and budgeted) to the next
-    period with `--cumulative`.
+- You can \"roll over\" amounts (actual and budgeted) to the next period
+  with `--cumulative`.
 
 See also: <https://hledger.org/budgeting.html>.
 
@@ -9755,14 +9684,14 @@ commands show multi-commodity amounts and commodity symbols. It can
 improve readability, for humans and/or machines (other software). It has
 four possible values:
 
--   `--layout=wide[,WIDTH]`: commodities are shown on a single line,
-    optionally elided to WIDTH
--   `--layout=tall`: each commodity is shown on a separate line
--   `--layout=bare`: commodity symbols are in their own column, amounts
-    are bare numbers
--   `--layout=tidy`: data is normalised to easily-consumed \"tidy\"
-    form, with one row per data value. (This one is currently supported
-    only by the `balance` command.)
+- `--layout=wide[,WIDTH]`: commodities are shown on a single line,
+  optionally elided to WIDTH
+- `--layout=tall`: each commodity is shown on a separate line
+- `--layout=bare`: commodity symbols are in their own column, amounts
+  are bare numbers
+- `--layout=tidy`: data is normalised to easily-consumed \"tidy\" form,
+  with one row per data value. (This one is currently supported only by
+  the `balance` command.)
 
 Here are the `--layout` modes supported by each [output
 format](#output-format) Only CSV output supports all of them:
@@ -9922,37 +9851,37 @@ produce relative links, like `--base-url="some/path"` or
 
 Some frequently used `balance` options/reports are:
 
--   `bal -M revenues expenses`\
-    Show revenues/expenses in each month. Also available as the
-    [`incomestatement`](#incomestatement) command.
+- `bal -M revenues expenses`\
+  Show revenues/expenses in each month. Also available as the
+  [`incomestatement`](#incomestatement) command.
 
--   `bal -M -H assets liabilities`\
-    Show historical asset/liability balances at each month end. Also
-    available as the [`balancesheet`](#balancesheet) command.
+- `bal -M -H assets liabilities`\
+  Show historical asset/liability balances at each month end. Also
+  available as the [`balancesheet`](#balancesheet) command.
 
--   `bal -M -H assets liabilities equity`\
-    Show historical asset/liability/equity balances at each month end.
-    Also available as the [`balancesheetequity`](#balancesheetequity)
-    command.
+- `bal -M -H assets liabilities equity`\
+  Show historical asset/liability/equity balances at each month end.
+  Also available as the [`balancesheetequity`](#balancesheetequity)
+  command.
 
--   `bal -M assets not:receivable`\
-    Show changes to liquid assets in each month. Also available as the
-    [`cashflow`](#cashflow) command.
+- `bal -M assets not:receivable`\
+  Show changes to liquid assets in each month. Also available as the
+  [`cashflow`](#cashflow) command.
 
 Also:
 
--   `bal -M expenses -2 -SA`\
-    Show monthly expenses summarised to depth 2 and sorted by average
-    amount.
+- `bal -M expenses -2 -SA`\
+  Show monthly expenses summarised to depth 2 and sorted by average
+  amount.
 
--   `bal -M --budget expenses`\
-    Show monthly expenses and budget goals.
+- `bal -M --budget expenses`\
+  Show monthly expenses and budget goals.
 
--   `bal -M --valuechange investments`\
-    Show monthly change in market value of investment assets.
+- `bal -M --valuechange investments`\
+  Show monthly change in market value of investment assets.
 
--   `bal investments --valuechange -D date:lastweek amt:'>1000' -STA [--invert]`\
-    Show top gainers \[or losers\] last week
+- `bal investments --valuechange -D date:lastweek amt:'>1000' -STA [--invert]`\
+  Show top gainers \[or losers\] last week
 
 ### roi
 
@@ -9990,19 +9919,19 @@ Price directives will be taken into account if you supply appropriate
 
 Note, in some cases this report can fail, for these reasons:
 
--   Error (NotBracketed): No solution for Internal Rate of Return (IRR).
-    Possible causes: IRR is huge (\>1000000%), balance of investment
-    becomes negative at some point in time.
--   Error (SearchFailed): Failed to find solution for Internal Rate of
-    Return (IRR). Either search does not converge to a solution, or
-    converges too slowly.
+- Error (NotBracketed): No solution for Internal Rate of Return (IRR).
+  Possible causes: IRR is huge (\>1000000%), balance of investment
+  becomes negative at some point in time.
+- Error (SearchFailed): Failed to find solution for Internal Rate of
+  Return (IRR). Either search does not converge to a solution, or
+  converges too slowly.
 
 Examples:
 
--   Using roi to compute total return of investment in stocks:
-    <https://github.com/simonmichael/hledger/blob/master/examples/investing/roi-unrealised.ledger>
+- Using roi to compute total return of investment in stocks:
+  <https://github.com/simonmichael/hledger/blob/master/examples/investing/roi-unrealised.ledger>
 
--   Cookbook \> Return on Investment: <https://hledger.org/roi.html>
+- Cookbook \> Return on Investment: <https://hledger.org/roi.html>
 
 #### Spaces and special characters in `--inv` and `--pnl`
 
@@ -10036,27 +9965,27 @@ will be sorted into two categories: \"cash flow\" and \"profit and
 loss\", as ROI needs to know which part of the investment value is your
 contributions and which is due to the return on investment.
 
--   \"Cash flow\" is depositing or withdrawing money, buying or selling
-    assets, or otherwise converting between your investment commodity
-    and any other commodity. Example:
+- \"Cash flow\" is depositing or withdrawing money, buying or selling
+  assets, or otherwise converting between your investment commodity and
+  any other commodity. Example:
 
-    ``` journal
-    2019-01-01 Investing in Snake Oil
-      assets:cash          -$100
-      investment:snake oil
+  ``` journal
+  2019-01-01 Investing in Snake Oil
+    assets:cash          -$100
+    investment:snake oil
 
-    2020-01-01 Selling my Snake Oil
-      assets:cash           $10
-      investment:snake oil  = 0
-    ```
+  2020-01-01 Selling my Snake Oil
+    assets:cash           $10
+    investment:snake oil  = 0
+  ```
 
--   \"Profit and loss\" is change in the value of your investment:
+- \"Profit and loss\" is change in the value of your investment:
 
-    ``` journal
-    2019-06-01 Snake Oil falls in value
-      investment:snake oil  = $57
-      equity:unrealized profit or loss
-    ```
+  ``` journal
+  2019-06-01 Snake Oil falls in value
+    investment:snake oil  = $57
+    equity:unrealized profit or loss
+  ```
 
 All non-investment postings are assumed to be \"cash flow\", unless they
 match `--pnl` query. Changes in value of your investment due to \"profit
@@ -10139,15 +10068,15 @@ to the effects of cash in-flows and out-flows.
 
 References:
 
--   [Explanation of rate of
-    return](https://www.investopedia.com/terms/r/rateofreturn.asp)
--   [Explanation of IRR](https://www.investopedia.com/terms/i/irr.asp)
--   [Explanation of
-    TWR](https://www.investopedia.com/terms/t/time-weightedror.asp)
--   [IRR vs TWR](https://smartasset.com/investing/time-weighted-return)
--   [Examples of computing IRR and TWR and discussion of the limitations
-    of both
-    metrics](https://blog.commonwealth.com/measuring-portfolio-performance-twr-vs.-irr)
+- [Explanation of rate of
+  return](https://www.investopedia.com/terms/r/rateofreturn.asp)
+- [Explanation of IRR](https://www.investopedia.com/terms/i/irr.asp)
+- [Explanation of
+  TWR](https://www.investopedia.com/terms/t/time-weightedror.asp)
+- [IRR vs TWR](https://smartasset.com/investing/time-weighted-return)
+- [Examples of computing IRR and TWR and discussion of the limitations
+  of both
+  metrics](https://blog.commonwealth.com/measuring-portfolio-performance-twr-vs.-irr)
 
 ## Chart commands
 
@@ -10321,13 +10250,13 @@ report show a zero total, demonstrating that the accounting equation
 
 In all modes, the following things can be overridden:
 
--   the accounts to be closed/opened, with account query arguments
--   the balancing account, with `--close-acct=ACCT` and/or
-    `--open-acct=ACCT`
--   the transaction descriptions, with `--close-desc=DESC` and
-    `--open-desc=DESC`
--   the transaction\'s tag value, with a `--MODE=NEW` option argument
--   the closing/opening dates, with `-e OPENDATE`
+- the accounts to be closed/opened, with account query arguments
+- the balancing account, with `--close-acct=ACCT` and/or
+  `--open-acct=ACCT`
+- the transaction descriptions, with `--close-desc=DESC` and
+  `--open-desc=DESC`
+- the transaction\'s tag value, with a `--MODE=NEW` option argument
+- the closing/opening dates, with `-e OPENDATE`
 
 By default, the closing date is yesterday, or the journal\'s end date,
 whichever is later; and the opening date is always one day after the
@@ -10593,16 +10522,15 @@ https://github.com/simonmichael/hledger/issues/99
 This command predates print \--auto, and currently does much the same
 thing, but with these differences:
 
--   with multiple files, rewrite lets rules in any file affect all other
-    files. print \--auto uses standard directive scoping; rules affect
-    only child files.
+- with multiple files, rewrite lets rules in any file affect all other
+  files. print \--auto uses standard directive scoping; rules affect
+  only child files.
 
--   rewrite\'s query limits which transactions can be rewritten; all are
-    printed. print \--auto\'s query limits which transactions are
-    printed.
+- rewrite\'s query limits which transactions can be rewritten; all are
+  printed. print \--auto\'s query limits which transactions are printed.
 
--   rewrite applies rules specified on command line or in the journal.
-    print \--auto applies rules specified in the journal.
+- rewrite applies rules specified on command line or in the journal.
+  print \--auto applies rules specified in the journal.
 
 ## Maintenance commands
 
@@ -10639,22 +10567,21 @@ reported).
 These important checks are performed by default, by almost all hledger
 commands:
 
--   **parseable** - data files are in a supported
-    [format](#data-formats), with no syntax errors and no invalid
-    include directives. This ensures that all files exist and are
-    readable.
+- **parseable** - data files are in a supported [format](#data-formats),
+  with no syntax errors and no invalid include directives. This ensures
+  that all files exist and are readable.
 
--   **autobalanced** - all transactions are [balanced](#postings), after
-    inferring missing amounts and conversion [costs](#costs) where
-    possible, and then converting to cost. This ensures that each
-    individual transaction is well formed.
+- **autobalanced** - all transactions are [balanced](#postings), after
+  inferring missing amounts and conversion [costs](#costs) where
+  possible, and then converting to cost. This ensures that each
+  individual transaction is well formed.
 
--   **assertions** - all [balance assertions](#balance-assertions) in
-    the journal are passing. Balance assertions are like canaries in
-    your journal, they catch many problems. They can get in the way
-    sometimes; you can disable them temporarily with
-    `-I`/`--ignore-assertions` (unless overridden with `-s`/`--strict`
-    or `hledger check assertions`).
+- **assertions** - all [balance assertions](#balance-assertions) in the
+  journal are passing. Balance assertions are like canaries in your
+  journal, they catch many problems. They can get in the way sometimes;
+  you can disable them temporarily with `-I`/`--ignore-assertions`
+  (unless overridden with `-s`/`--strict` or
+  `hledger check assertions`).
 
 #### Strict checks
 
@@ -10664,54 +10591,53 @@ always enables the balance assertions check, also. These provide extra
 error-catching power when you are serious about keeping your data clean
 and free of typos:
 
--   **balanced** - like `autobalanced`, but in [conversion
-    transactions](#recording-costs), costs must be written explicitly.
-    This ensures some redundancy in the entry, which helps prevent
-    typos.
+- **balanced** - like `autobalanced`, but in [conversion
+  transactions](#recording-costs), costs must be written explicitly.
+  This ensures some redundancy in the entry, which helps prevent typos.
 
--   **commodities** - all commodity symbols used [must be
-    declared](#commodity-error-checking). This guards against mistyping
-    or omitting commodity symbols.
+- **commodities** - all commodity symbols used [must be
+  declared](#commodity-error-checking). This guards against mistyping or
+  omitting commodity symbols.
 
--   **accounts** - all account names used [must be
-    declared](#account-error-checking). This prevents the use of
-    mis-spelled or outdated account names.
+- **accounts** - all account names used [must be
+  declared](#account-error-checking). This prevents the use of
+  mis-spelled or outdated account names.
 
 #### Other checks
 
 These other checks are not wanted by everyone, but can be run using the
 `check` command:
 
--   **ordereddates** - within each file, transactions are ordered by
-    date. This is a simple and effective error catcher, and you should
-    use it. Alas! not everyone wants it. If you do, use
-    `hledger check -s ordereddates`. When enabled, this check is
-    performed early, before balance assertions (because copy-pasted
-    dates are often the root cause of balance assertion failures).
+- **ordereddates** - within each file, transactions are ordered by date.
+  This is a simple and effective error catcher, and you should use it.
+  Alas! not everyone wants it. If you do, use
+  `hledger check -s ordereddates`. When enabled, this check is performed
+  early, before balance assertions (because copy-pasted dates are often
+  the root cause of balance assertion failures).
 
--   **payees** - all payees used by transactions [must be
-    declared](#payee-directive). This will force you to always use
-    known/declared payee names. For most people this is a bit too
-    restrictive.
+- **payees** - all payees used by transactions [must be
+  declared](#payee-directive). This will force you to always use
+  known/declared payee names. For most people this is a bit too
+  restrictive.
 
--   **tags** - all tags used by transactions [must be
-    declared](#tag-directive). This prevents mistyped tag names.
+- **tags** - all tags used by transactions [must be
+  declared](#tag-directive). This prevents mistyped tag names.
 
--   **recentassertions** - all accounts with balance assertions must
-    have a balance assertion within the last 7 days before their latest
-    posting. This encourages you to add balance assertions fairly
-    regularly for your active asset/liability accounts, which in turn
-    should encourage you to check and reconcile with their real world
-    balances fairly regularly. [`close --assert`](#close---assert) can
-    be helpful. (The older balance assertions become redundant; you can
-    remove them periodically, or leave them in place, perhaps commented,
-    as documentation.)
+- **recentassertions** - all accounts with balance assertions must have
+  a balance assertion within the last 7 days before their latest
+  posting. This encourages you to add balance assertions fairly
+  regularly for your active asset/liability accounts, which in turn
+  should encourage you to check and reconcile with their real world
+  balances fairly regularly. [`close --assert`](#close---assert) can be
+  helpful. (The older balance assertions become redundant; you can
+  remove them periodically, or leave them in place, perhaps commented,
+  as documentation.)
 
--   **uniqueleafnames** - no two accounts may have the same leaf name.
-    The leaf name is the last colon-separated part of an account name,
-    eg `checking` in `assets:bank:checking`. This encourages you to keep
-    those unique, effectively giving each account a short name which is
-    easier to remember and to type in reporting commands.
+- **uniqueleafnames** - no two accounts may have the same leaf name. The
+  leaf name is the last colon-separated part of an account name, eg
+  `checking` in `assets:bank:checking`. This encourages you to keep
+  those unique, effectively giving each account a short name which is
+  easier to remember and to type in reporting commands.
 
 #### Custom checks
 
@@ -10720,11 +10646,11 @@ scripts](#add-on-commands). See also [Cookbook \>
 Scripting](scripting.html). Here are some examples from
 [hledger/bin/](https://github.com/simonmichael/hledger/tree/master/bin):
 
--   **hledger-check-tagfiles** - all tag values containing / (a forward
-    slash) exist as file paths
+- **hledger-check-tagfiles** - all tag values containing / (a forward
+  slash) exist as file paths
 
--   **hledger-check-fancyassertions** - more complex balance assertions
-    are passing
+- **hledger-check-fancyassertions** - more complex balance assertions
+  are passing
 
 ### diff
 
@@ -10783,16 +10709,15 @@ sanity-check the installed hledger executable on your platform. All
 tests are expected to pass - if you ever see a failure, please report as
 a bug!
 
-This command also accepts tasty test runner options, written after a \--
-(double hyphen). Eg to run only the tests in Hledger.Data.Amount, with
-ANSI colour codes disabled:
+Any arguments before a `--` argument will be passed to the `tasty` test
+runner as test-selecting -p patterns, and any arguments after `--` will
+be passed to tasty unchanged.
 
-``` cli
-$ hledger test -- -pData.Amount --color=never
-```
+Examples:
 
-For help on these, see https://github.com/feuerbach/tasty#options
-(`-- --help` currently doesn\'t show them).
+    $ hledger test               # run all unit tests
+    $ hledger test balance       # run tests with "balance" in their name
+    $ hledger test -- -h         # show tasty's options
 
 <a name="common-tasks"></a>
 
@@ -10829,15 +10754,15 @@ hledger has a flexible command line interface. We strive to keep it
 simple and ergonomic, but if you run into one of the sharp edges
 described in [OPTIONS](#options), here are some tips that might help:
 
--   command-specific options must go after the command (it\'s fine to
-    put common options there too: `hledger CMD OPTS ARGS`)
--   running add-on executables directly simplifies command line parsing
-    (`hledger-ui OPTS ARGS`)
--   enclose \"problematic\" args in single quotes
--   if needed, also add a backslash to hide regular expression
-    metacharacters from the shell
--   to see how a misbehaving command line is being parsed, add
-    `--debug=2`.
+- command-specific options must go after the command (it\'s fine to put
+  common options there too: `hledger CMD OPTS ARGS`)
+- running add-on executables directly simplifies command line parsing
+  (`hledger-ui OPTS ARGS`)
+- enclose \"problematic\" args in single quotes
+- if needed, also add a backslash to hide regular expression
+  metacharacters from the shell
+- to see how a misbehaving command line is being parsed, add
+  `--debug=2`.
 
 ## Starting a journal file
 
@@ -10935,68 +10860,68 @@ to january 1st.
 Add an opening balances transaction to the journal, declaring the
 balances on this date. Here are two ways to do it:
 
--   The first way: open the journal in any text editor and save an entry
-    like this:
+- The first way: open the journal in any text editor and save an entry
+  like this:
 
-    ``` journal
-    2023-01-01 * opening balances
-        assets:bank:checking                $1000   = $1000
-        assets:bank:savings                 $2000   = $2000
-        assets:cash                          $100   = $100
-        liabilities:creditcard               $-50   = $-50
-        equity:opening/closing balances
-    ```
+  ``` journal
+  2023-01-01 * opening balances
+      assets:bank:checking                $1000   = $1000
+      assets:bank:savings                 $2000   = $2000
+      assets:cash                          $100   = $100
+      liabilities:creditcard               $-50   = $-50
+      equity:opening/closing balances
+  ```
 
-    These are start-of-day balances, ie whatever was in the account at
-    the end of the previous day.
+  These are start-of-day balances, ie whatever was in the account at the
+  end of the previous day.
 
-    The \* after the date is an optional status flag. Here it means
-    \"cleared & confirmed\".
+  The \* after the date is an optional status flag. Here it means
+  \"cleared & confirmed\".
 
-    The currency symbols are optional, but usually a good idea as
-    you\'ll be dealing with multiple currencies sooner or later.
+  The currency symbols are optional, but usually a good idea as you\'ll
+  be dealing with multiple currencies sooner or later.
 
-    The = amounts are optional balance assertions, providing extra error
-    checking.
+  The = amounts are optional balance assertions, providing extra error
+  checking.
 
--   The second way: run `hledger add` and follow the prompts to record a
-    similar transaction:
+- The second way: run `hledger add` and follow the prompts to record a
+  similar transaction:
 
-    ``` cli
-    $ hledger add
-    Adding transactions to journal file /Users/simon/finance/2023.journal
-    Any command line arguments will be used as defaults.
-    Use tab key to complete, readline keys to edit, enter to accept defaults.
-    An optional (CODE) may follow transaction dates.
-    An optional ; COMMENT may follow descriptions or amounts.
-    If you make a mistake, enter < at any prompt to go one step backward.
-    To end a transaction, enter . when prompted.
-    To quit, enter . at a date prompt or press control-d or control-c.
-    Date [2023-02-07]: 2023-01-01
-    Description: * opening balances
-    Account 1: assets:bank:checking
-    Amount  1: $1000
-    Account 2: assets:bank:savings
-    Amount  2 [$-1000]: $2000
-    Account 3: assets:cash
-    Amount  3 [$-3000]: $100
-    Account 4: liabilities:creditcard
-    Amount  4 [$-3100]: $-50
-    Account 5: equity:opening/closing balances
-    Amount  5 [$-3050]: 
-    Account 6 (or . or enter to finish this transaction): .
-    2023-01-01 * opening balances
-        assets:bank:checking                      $1000
-        assets:bank:savings                       $2000
-        assets:cash                                $100
-        liabilities:creditcard                     $-50
-        equity:opening/closing balances          $-3050
+  ``` cli
+  $ hledger add
+  Adding transactions to journal file /Users/simon/finance/2023.journal
+  Any command line arguments will be used as defaults.
+  Use tab key to complete, readline keys to edit, enter to accept defaults.
+  An optional (CODE) may follow transaction dates.
+  An optional ; COMMENT may follow descriptions or amounts.
+  If you make a mistake, enter < at any prompt to go one step backward.
+  To end a transaction, enter . when prompted.
+  To quit, enter . at a date prompt or press control-d or control-c.
+  Date [2023-02-07]: 2023-01-01
+  Description: * opening balances
+  Account 1: assets:bank:checking
+  Amount  1: $1000
+  Account 2: assets:bank:savings
+  Amount  2 [$-1000]: $2000
+  Account 3: assets:cash
+  Amount  3 [$-3000]: $100
+  Account 4: liabilities:creditcard
+  Amount  4 [$-3100]: $-50
+  Account 5: equity:opening/closing balances
+  Amount  5 [$-3050]: 
+  Account 6 (or . or enter to finish this transaction): .
+  2023-01-01 * opening balances
+      assets:bank:checking                      $1000
+      assets:bank:savings                       $2000
+      assets:cash                                $100
+      liabilities:creditcard                     $-50
+      equity:opening/closing balances          $-3050
 
-    Save this transaction to the journal ? [y]: 
-    Saved.
-    Starting the next transaction (. or ctrl-D/ctrl-C to quit)
-    Date [2023-01-01]: .
-    ```
+  Save this transaction to the journal ? [y]: 
+  Saved.
+  Starting the next transaction (. or ctrl-D/ctrl-C to quit)
+  Date [2023-01-01]: .
+  ```
 
 If you\'re using version control, this could be a good time to commit
 the journal. Eg:
@@ -11009,8 +10934,9 @@ $ git commit -m 'initial balances' 2023.journal
 
 As you spend or receive money, you can record these transactions using
 one of the methods above (text editor, hledger add) or by using the
-[hledger-iadd](#iadd) or [hledger-web](#web) add-ons, or by using the
-[import command](#import) to convert CSV data downloaded from your bank.
+[hledger-iadd](scripts.md#iadd) or [hledger-web](#web) add-ons, or by
+using the [import command](#import) to convert CSV data downloaded from
+your bank.
 
 Here are some simple transactions, see the hledger_journal(5) manual and
 hledger.org for more ideas:
@@ -11291,13 +11217,13 @@ terminal window.
 **LEDGER_FILE issues: I configured LEDGER_FILE but hledger is not using
 it**\
 
--   `LEDGER_FILE` should be a real environment variable, not just a
-    shell variable. Eg on unix, the command `env | grep LEDGER_FILE`
-    should show it. You may need to use `export` (see
-    <https://stackoverflow.com/a/7411509>). On Windows,
-    `$env:LEDGER_FILE` should show it.
--   You may need to force your shell to see the new configuration. A
-    simple way is to close your terminal window and open a new one.
+- `LEDGER_FILE` should be a real environment variable, not just a shell
+  variable. Eg on unix, the command `env | grep LEDGER_FILE` should show
+  it. You may need to use `export` (see
+  <https://stackoverflow.com/a/7411509>). On Windows, `$env:LEDGER_FILE`
+  should show it.
+- You may need to force your shell to see the new configuration. A
+  simple way is to close your terminal window and open a new one.
 
 **LANG issues: I get errors like \"Illegal byte sequence\" or \"Invalid
 or incomplete multibyte or wide character\" or \"commitAndReleaseBuffer:

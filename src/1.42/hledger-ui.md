@@ -21,8 +21,8 @@ or\
 
 ## DESCRIPTION
 
-This manual is for hledger\'s terminal interface, version 1.42. See also
-the hledger manual for common concepts and file formats.
+This manual is for hledger\'s terminal interface, version 1.42.2. See
+also the hledger manual for common concepts and file formats.
 
 hledger is a robust, user-friendly, cross-platform set of programs for
 tracking money, time, or any other commodity, using double-entry
@@ -176,9 +176,9 @@ completions](install.html#shell-completions).
 In most modern terminals, you can navigate through the screens with a
 mouse or touchpad:
 
--   Use mouse wheel or trackpad to scroll up and down
--   Click on list items to go deeper
--   Click on the left margin (column 0) to go back.
+- Use mouse wheel or trackpad to scroll up and down
+- Click on list items to go deeper
+- Click on the left margin (column 0) to go back.
 
 ## KEYS
 
@@ -336,22 +336,21 @@ toggle showing changes with the `H` key.
 This screen shows the transactions affecting a particular account. Each
 line represents one transaction, and shows:
 
--   the other account(s) involved, in abbreviated form. (If there are
-    both real and virtual postings, it shows only the accounts affected
-    by real postings.)
+- the other account(s) involved, in abbreviated form. (If there are both
+  real and virtual postings, it shows only the accounts affected by real
+  postings.)
 
--   the overall change to the current account\'s balance; positive for
-    an inflow to this account, negative for an outflow.
+- the overall change to the current account\'s balance; positive for an
+  inflow to this account, negative for an outflow.
 
--   the running total after the transaction. With the `H` key you can
-    toggle between
+- the running total after the transaction. With the `H` key you can
+  toggle between
 
-    -   the period total, which is from just the transactions displayed
-    -   or the historical total, which includes any undisplayed
-        transactions before the start of the report period (and matching
-        the filter query if any). This will be the running historical
-        balance (what you would see on a bank\'s website, eg) if not
-        disturbed by a query.
+  - the period total, which is from just the transactions displayed
+  - or the historical total, which includes any undisplayed transactions
+    before the start of the report period (and matching the filter query
+    if any). This will be the running historical balance (what you would
+    see on a bank\'s website, eg) if not disturbed by a query.
 
 Note, this screen combines each transaction\'s in-period postings to a
 single line item, dated with the earliest in-period transaction or
@@ -442,24 +441,36 @@ bandwidth for your accounting. Of course you can still interact with
 hledger-ui when needed, eg to toggle cleared mode, or to explore the
 history.
 
-There are currently some limitations with `--watch`:
+### \--watch problems
 
-It may not work correctly for you, depending on platform or system
-configuration. (Eg
-[#836](https://github.com/simonmichael/hledger/issues/836).)
+*However.* There are limitations/unresolved bugs with `--watch`:
 
-At least on mac, there can be a slow build-up of CPU usage over time,
-until the program is restarted (or, suspending and restarting with
-`CTRL-z` `fg` may be enough).
+- It may not work at all for you, depending on platform or system
+  configuration. On some unix systems, increasing
+  fs.inotify.max_user_watches or fs.file-max parameters in
+  /etc/sysctl.conf might help.
+  ([#836](https://github.com/simonmichael/hledger/issues/836))
+- It may not detect file changes made by certain tools, such as
+  Jetbrains IDEs or gedit.
+  ([#1617](https://github.com/simonmichael/hledger/issues/1617))
+- It may not detect changes made from outside a virtual machine, ie by
+  an editor running on the host system.
+- It may not detect file changes on certain less common filesystems.
+- It may use increasing CPU and RAM over time, especially with large
+  files. (This is probably not \--watch specific, you may be able to
+  reproduce it by pressing `g` repeatedly.)
+  ([#1825](https://github.com/simonmichael/hledger/issues/1825))
 
-It will not detect file changes made by certain editors, such as
-Jetbrains IDEs or `gedit`, or on certain less common filesystems. (To
-work around, press `g` to reload manually, or try
-[#1617](https://github.com/simonmichael/hledger/issues/1617)\'s
-`fs.inotify.max_user_watches` workaround and let us know.)
+Tips/workarounds:
 
-If you are viewing files mounted from another machine, the system clocks
-on both machines should be roughly in agreement.
+- If \--watch won\'t work for you, press `g` to reload data manually
+  instead.
+- If \--watch is leaking resources over time, quit and restart (or
+  suspend and resume) hledger-ui when you\'re not using it.
+- When running hledger-ui inside a VM, also make file changes inside the
+  VM.
+- When working with files mounted from another machine, make sure the
+  system clocks on both machines are roughly in agreement.
 
 ## ENVIRONMENT
 
@@ -476,10 +487,12 @@ Some known issues:
 
 `-f-` doesn\'t work (hledger-ui can\'t read from stdin).
 
-If you press `g` with large files, there could be a noticeable pause.
-
-The Transaction screen does not update from file changes until you exit
-and re-endter it (see SCREENS \> Transaction above).
-
-`--watch` is not yet fully robust on all platforms (see Watch mode
+`--watch` is not robust, especially with large files (see WATCH MODE
 above).
+
+The Transaction screen does not update after file changes, even if you
+press `g`, until you exit and re-enter it.
+([#2288](https://github.com/simonmichael/hledger/issues/2288))
+
+If you press `g` with large files, there could be a noticeable pause
+with the UI unresponsive.
