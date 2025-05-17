@@ -455,6 +455,12 @@ draftprs.hledger.org {
 readyprs.hledger.org {
 	redir https://github.com/simonmichael/hledger/pulls?q=is:open+-is%3Adraft
 }
+assignedprs.hledger.org {
+	redir https://github.com/simonmichael/hledger/pulls?q=is%3Aopen+assignee%3A*
+}
+unassignedprs.hledger.org {
+	redir https://github.com/simonmichael/hledger/pulls?q=is%3Aopen+no%3Aassignee
+}
 # old trello board
 trello.hledger.org {
 	redir https://trello.com/board/hledger-planning-board/5127f6bb0698a36663002981
