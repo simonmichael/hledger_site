@@ -3505,7 +3505,7 @@ any.
 
 #### description field
 
-`description` sets the transaction\'s [description](#description), if
+`description` sets the transaction\'s [description](#description-1), if
 any.
 
 #### comment field
