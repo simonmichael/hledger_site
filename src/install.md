@@ -333,7 +333,7 @@ or the more thorough functional tests, if you are set up for working with the hl
 ### Locale
 
 hledger expects non-ascii input to be decodable with the system locale's text encoding.
-(For CSV/SSV/TSV files, this can be overridden by the [`encoding`](#encoding) CSV rule.)
+(For CSV/SSV/TSV files, this can be overridden by the [`encoding`](hledger.md#encoding) CSV rule.)
 
 Trying to read files which have the wrong text encoding will fail.
 Also, trying to read non-ascii text on a system with no locale configured will fail.
