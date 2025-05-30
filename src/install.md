@@ -195,7 +195,7 @@ Old issues:
 
 ### On Unix/Linux
 
-You will need a [UTF-8-aware locale](#lang) configured.
+You will need a [system locale](#locale) with a text encoding configured; it might need to be UTF-8.
 You may also need to install extra C libraries, to avoid build errors like "*cannot find -ltinfo*". Eg:
 - On Debian or Ubuntu: `sudo apt install libgmp-dev libtinfo-dev zlib1g-dev`
 - On Fedora or RHEL: `sudo dnf install gmp-devel ncurses-devel zlib-devel`
@@ -328,7 +328,6 @@ or the more thorough functional tests, if you are set up for working with the hl
 -->
 
 <a name="locale"></a> <!-- required permalink, used in error messages -->
-<a name="lang"></a>
 
 ### Locale
 

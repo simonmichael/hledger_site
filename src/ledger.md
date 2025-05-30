@@ -287,12 +287,9 @@ Y (supported), Ignored (accepted but ignored), or N (not accepted).
 
 ### Decoding errors
 
-hledger, like most Haskell programs, exits with a confusing error message
-if it sees non-ascii data
-and the system locale is not configured to decode UTF-8.
-If your data contains non-ascii characters and hledger gives an error
-such as "invalid byte sequence", "mkTextEncoding: invalid argument" or similar,
-you must [configure your locale](https://hledger.org/install.html#check-your-locale).
+hledger, like most Haskell programs, exits with an error if it sees non-ascii data
+which can't be decoded using the system locale's text encoding.
+To avoid this, see [Install: Locale](https://hledger.org/install.html#locale).
 
 ### Tabs and spaces
 
