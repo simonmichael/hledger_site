@@ -158,7 +158,7 @@ bash hledger-install.sh
 ```
 stack update
 stack install hledger-1.42.2 hledger-ui-1.42.2 hledger-web-1.42.2 \
-  --resolver=nightly-2025-04-01 --verbosity=error
+  --resolver=nightly-2025-05-01 --verbosity=error
 ```
 
 stack will install a compatible version of the GHC compiler if needed,
@@ -332,45 +332,54 @@ or the more thorough functional tests, if you are set up for working with the hl
 
 ### Locale
 
-hledger expects data files to use the same text encoding that is configured in the system locale.
-Otherwise you will see program-terminating errors when processing non-ascii characters.
-([#73](https://github.com/simonmichael/hledger/issues/73))
+hledger expects non-ascii input to be decodable with the system locale's text encoding.
+(For CSV/SSV/TSV files, this can be overridden by the [`encoding`](#encoding) CSV rule.)
 
-The most common encoding to use is UTF-8.
-Some Linux and Nix systems use the C locale, which can handle ASCII text only. You should reconfigure these to C.UTF-8,
-usually by setting the `LANG` environment variable. Eg:
+Trying to read files which have the wrong text encoding will fail.
+Also, trying to read non-ascii text on a system with no locale configured will fail.
+(This also applies to the Haskell build tools, such as ghc, ghcup, cabal and stack.)
+
+To fix this, configure your system locale appropriately,
+and/or convert the files to your system's text encoding (using `iconv` on unix, or powershell or notepad on Windows).
+
+Eg, let's say you want to work with UTF-8 text on a GNU/Linux system,
+but it's configured with the C locale, which can only handle ASCII text:
 
 ```cli
 $ echo $LANG
 C
-$ export LANG=C.UTF-8    # or en_US.UTF-8, fr_FR.utf8, etc.
+```
+
+So, first check that you have a UTF-8-capable locale installed (`locale -a`).
+If not, install one (perhaps by using your package manager, 
+perhaps by uncommenting it in `/etc/locale.gen` and running `locale-gen`).
+
+Then change the system locale. 
+Here's one common way to set it permanently for your shell.
+Note exact punctuation and capitalisation of locale names is important on some systems.
+```cli
+$ echo "export LANG=C.utf8" >>~/.profile    # or en_US.UTF-8, fr_FR.utf8, etc.
+# close the shell/terminal window and open a new one
 $ echo $LANG
 C.UTF-8
 ```
 
-On some systems the exact punctuation and capitalisation is important;
-and the locale you have named may need to be installed.
-Check which locales are installed with `locale -a`, and see also [Troubleshooting](hledger.md#troubleshooting).
+For Nix users, the procedure is [different](https://github.com/simonmichael/hledger/issues/1033#issuecomment-1062506027),
+eg you might need to set `LOCALE_ARCHIVE` instead.
+Likewise for GUIX users.
 
-On Nix or GUIX, the procedures are [different](https://github.com/simonmichael/hledger/issues/1033#issuecomment-1062506027).
-
-On Windows, you should probably check the "Use Unicode UTF-8 for worldwide language support" checkbox in Region Settings.
+Windows users who want to use UTF-8 encoding, eg to interoperate with unix systems,
+might find the "Use Unicode UTF-8 for worldwide language support" setting helpful.
 Here's where it is in Windows 11:
 ![windows 11 UTF-8 setting](images/win11-utf8-setting.png)
+Though it might cause problems with some older applications, including some GUI programs.
 
-<!--
-Or for hledger or hledger-ui in a powershell window, possibly this might help:
-```
-$env:LC_ALL = "C.UTF-8"
-$env:LANG = "C.UTF-8"
+Here's a way to select UTF-8 for Windows Terminal and PowerShell, without affecting the entire system: 
+add this line to the PowerShell profile file:
+```conf
+$OutputEncoding = [console]::InputEncoding = [console]::OutputEncoding = New-Object System.Text.UTF8Encoding
 ```
 
-or in a CMD window:
-```
-set LC_ALL=C.UTF-8
-set LANG=C.UTF-8
-```
--->
 
 ### Completions
 
