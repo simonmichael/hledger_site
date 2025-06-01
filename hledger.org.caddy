@@ -15,6 +15,11 @@ hledger.org {
 		output file /var/log/caddy/hledger.org.log
 		# format single_field common_log
 		format transform "{common_log}"
+		# log in local time zone - requires caddy 2.6.3+
+		# format transform "{common_log}" {
+		# 	time_format "02/Jan/2006:15:04:05 -0700"  # ?
+		# 	time_zone   local
+		# }
 	}
 
 	file_server
