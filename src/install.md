@@ -353,9 +353,9 @@ How likely is this to affect you ? It depends on your platform and the data you 
 
 If you hit this problem, you can 
 
-- configure your system encoding to match the files you usually work with. If you're not sure which encoding to use, pick UTF-8.
-- or you can convert the files to your system's text encoding. Use `iconv` on unix/mac, powershell or notepad on Windows.
-- or you can use the CSV [`encoding`](hledger.md#encoding) rule to auto-convert CSV(/SSV/TSV) files.
+- configure your system encoding to match the files you usually work with, if feasible. If you're not sure which encoding to use, pick UTF-8.
+- or, convert the files to your system's text encoding. Use `iconv` on unix/mac, powershell or notepad on Windows.
+- or, use the CSV [`encoding`](hledger.md#encoding) rule to auto-convert CSV(/SSV/TSV) files.
 
 Here's an example. Let's say you want to work with UTF-8 text on a GNU/Linux system,
 but it's configured with the C locale, which can only handle ASCII text:
