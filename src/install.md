@@ -195,7 +195,7 @@ Old issues:
 
 ### On Unix/Linux
 
-You will need a [system locale](#locale) with a text encoding configured; it might need to be UTF-8.
+You will need a system locale with a [text encoding](#text-encoding) configured; it might need to be UTF-8.
 You may also need to install extra C libraries, to avoid build errors like "*cannot find -ltinfo*". Eg:
 - On Debian or Ubuntu: `sudo apt install libgmp-dev libtinfo-dev zlib1g-dev`
 - On Fedora or RHEL: `sudo dnf install gmp-devel ncurses-devel zlib-devel`
@@ -327,21 +327,37 @@ or the more thorough functional tests, if you are set up for working with the hl
     functest PASSED
 -->
 
-<a name="locale"></a> <!-- required permalink, used in error messages -->
+<a name="locale"></a> <!-- required permalink, maybe used in some error messages -->
+<a name="text-encoding"></a> <!-- newer required permalink, used elsewhere -->
 
-### Locale
+### Text encoding
 
-hledger expects non-ascii input to be decodable with the system locale's text encoding.
-(For CSV/SSV/TSV files, this can be overridden by the [`encoding`](hledger.md#encoding) CSV rule.)
+hledger expects non-ascii input to be decodable with the system locale's text encoding;
+usually if you try to read a file with a text encoding different from the system encoding, it will fail.
+This also applies to the Haskell build tools, if you are building hledger from source.
 
-Trying to read files which have the wrong text encoding will fail.
-Also, trying to read non-ascii text on a system with no locale configured will fail.
-(This also applies to the Haskell build tools, such as ghc, ghcup, cabal and stack.)
+How likely is this to affect you ? It depends on your platform and the data you are working with:
 
-To fix this, configure your system locale appropriately,
-and/or convert the files to your system's text encoding (using `iconv` on unix, or powershell or notepad on Windows).
+- On Mac, the system encoding is always UTF-8.
+  You'll notice this problem only if you try to process files in a foreign encoding,
+  eg received from a Windows user.
 
-Eg, let's say you want to work with UTF-8 text on a GNU/Linux system,
+- On Windows, the system encoding varies by region.
+  If you are working with your own data, you won't notice this problem.
+  If you are on Windows 11 and often need to share files with mac/unix systems,
+  there is a setting for UTF-8 encoding which you might want to enable.
+
+- On GNU/Linux and other unix systems, the system encoding varies, and is sometimes none.
+  You should ensure that at least some encoding is configured, so that you can work with non-ascii data.
+  It may be controlled by the `LANG` environment variable, or in other ways.
+
+If you hit this problem, you can 
+
+- configure your system encoding to match the files you usually work with. If you're not sure which encoding to use, pick UTF-8.
+- or you can convert the files to your system's text encoding. Use `iconv` on unix/mac, powershell or notepad on Windows.
+- or you can use the CSV [`encoding`](hledger.md#encoding) rule to auto-convert CSV(/SSV/TSV) files.
+
+Here's an example. Let's say you want to work with UTF-8 text on a GNU/Linux system,
 but it's configured with the C locale, which can only handle ASCII text:
 
 ```cli

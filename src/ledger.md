@@ -289,7 +289,7 @@ Y (supported), Ignored (accepted but ignored), or N (not accepted).
 
 hledger, like most Haskell programs, exits with an error if it sees non-ascii data
 which can't be decoded using the system locale's text encoding.
-To avoid this, see [Install: Locale](https://hledger.org/install.html#locale).
+To avoid this, see [Install: Text encoding](install.md#text-encoding).
 
 ### Tabs and spaces
 
