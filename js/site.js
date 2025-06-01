@@ -12,7 +12,7 @@ function sidebarHideAllPages() {
   $('#sidebar li:contains("ALL PAGES") ~ li, #sidebar li:contains("ALL PAGES")').hide();  // XXX requires jquery..
 }
 
-var currentrelease = '1.42';
+var currentrelease = '1.43';
 
 function addDocVersions() {
   var parts = window.location.pathname.split('/');
@@ -30,6 +30,7 @@ function addDocVersions() {
     // include just packaged versions to save screen space (keep synced with site/Makefile)
     docversions.innerHTML = '\
       <a href="/dev/' +newdest3+'">dev</a>  · \
+      <a href="/1.43/'+newdest3+'">1.43</a> · \
       <a href="/1.42/'+newdest3+'">1.42</a> · \
       <a href="/1.41/'+newdest3+'">1.41</a> · \
       <a href="/1.40/'+newdest3+'">1.40</a> · \
