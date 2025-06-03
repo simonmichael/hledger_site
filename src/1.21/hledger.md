@@ -7419,62 +7419,7 @@ variable. The command `env | grep LEDGER_FILE` should show it. You may
 need to use `export`. Here's an
 [explanation](http://stackoverflow.com/a/7411509).
 
-**Getting errors like "Illegal byte sequence" or "Invalid or incomplete
-multibyte or wide character" or "commitAndReleaseBuffer: invalid
-argument (invalid character)"**\
-Programs compiled with GHC (hledger, haskell build tools, etc.) need to
-have a UTF-8-aware locale configured in the environment, otherwise they
-will fail with these kinds of errors when they encounter non-ascii
-characters.
+**Text decoding issues: I get errors like "Illegal byte sequence" or "Invalid or incomplete multibyte or wide character" or "commitAndReleaseBuffer: invalid argument (invalid character)"**\
+hledger usually needs non-ascii input to be decodable with the system locale's text encoding.
+See [Text encoding](#text-encoding) and [Install: Text encoding](/install.md#text-encoding).
 
-To fix it, set the LANG environment variable to some locale which
-supports UTF-8. The locale you choose must be installed on your system.
-
-Here's an example of setting LANG temporarily, on Ubuntu GNU/Linux:
-
-```cli
-$ file my.journal
-my.journal: UTF-8 Unicode text         # the file is UTF8-encoded
-$ echo $LANG
-C                                      # LANG is set to the default locale, which does not support UTF8
-$ locale -a                            # which locales are installed ?
-C
-en_US.utf8                             # here's a UTF8-aware one we can use
-POSIX
-$ LANG=en_US.utf8 hledger -f my.journal print   # ensure it is used for this command
-```
-
-If available, `C.UTF-8` will also work. If your preferred locale isn't
-listed by `locale -a`, you might need to install it. Eg on
-Ubuntu/Debian:
-
-```cli
-$ apt-get install language-pack-fr
-$ locale -a
-C
-en_US.utf8
-fr_BE.utf8
-fr_CA.utf8
-fr_CH.utf8
-fr_FR.utf8
-fr_LU.utf8
-POSIX
-$ LANG=fr_FR.utf8 hledger -f my.journal print
-```
-
-Here's how you could set it permanently, if you use a bash shell:
-
-```cli
-$ echo "export LANG=en_US.utf8" >>~/.bash_profile
-$ bash --login
-```
-
-Exact spelling and capitalisation may be important. Note the difference
-on MacOS (`UTF-8`, not `utf8`). Some platforms (eg ubuntu) allow variant
-spellings, but others (eg macos) require it to be exact:
-
-```cli
-$ locale -a | grep -iE en_us.*utf
-en_US.UTF-8
-$ LANG=en_US.UTF-8 hledger -f my.journal print
-```

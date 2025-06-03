@@ -119,26 +119,20 @@ the `LEDGER_FILE` environment variable, to something like
 `~/finance/2023.journal`. For more about how to do that on your system,
 see [Common tasks \> Setting LEDGER_FILE](#setting-ledger_file).
 
-### Text encoding
+## Text encoding
 
-hledger input files containing non-ascii characters must use UTF-8
-encoding, with the exception of CSV (SSV, TSV..) files, which can be
-read from other encodings (see [`encoding`](#encoding) CSV rule).
+hledger expects non-ascii input to be decodable with the system locale\'s text encoding.
+(For CSV/SSV/TSV files, this can be overridden by the [`encoding`](#encoding) CSV rule.)
 
-In UTF-8 input files, an optional [byte order mark
-(BOM)](https://www.unicode.org/faq/utf_bom.html#BOM) at the beginning of
-the file is allowed.
+So, trying to read non-ascii files which have the wrong text encoding,
+or when no system locale is configured, will fail.
+To fix this, configure your system locale appropriately,
+and/or convert the files to your system\'s text encoding (using `iconv` on unix, or powershell or notepad on Windows).
+See [Install: Text encoding](/install.md#text-encoding) for more tips.
 
-Your system may need to be configured with a locale that understands the
-input file\'s encoding. Eg on some unix systems, you may need set the
-`LANG` environment variable. You can read more about this in [Unicode
-characters](#unicode-characters), below.
+hledger\'s output will use the system locale\'s encoding.
 
-On some unix systems you can use the `file` command to show a file\'s
-text encoding. On mac, you\'ll need the version from homebrew:
-`brew install file-formula`.
-
-hledger\'s text output is always UTF-8 encoded.
+hledger\'s docs and example files mostly use UTF-8 encoding.
 
 ### Data formats
 
@@ -921,10 +915,9 @@ variable, which will be used instead.
 HTML output can be styled by an optional `hledger.css` file in the same
 directory.
 
-HTML output will be UTF-8 encoded. If your web browser is showing junk
-characters, you may need to change its text encoding to UTF-8. Eg in
-Safari, see View -\> Text Encoding and Settings -\> Advanced -\> Default
-Encoding.
+HTML output will be a HTML fragment, not a complete HTML document.
+Like other hledger output, for non-ascii characters it will use the system locale's text encoding
+(see [Text encoding](#text-encoding)).
 
 #### CSV / TSV output
 
@@ -9835,8 +9828,8 @@ $ hledger -f examples/bcexample.hledger bal assets:us:etrade -3 -Y -O csv --layo
 #### Balance report output
 
 As noted in [Output format](#output-format), if you choose HTML output
-(by using `-O html` or `-o somefile.html`), it will use the UTF-8 text
-encoding, And you can create a `hledger.css` file in the same directory
+(by using `-O html` or `-o somefile.html`),
+you can create a `hledger.css` file in the same directory
 to customise the report\'s appearance.
 
 The HTML and [FODS](https://en.wikipedia.org/wiki/OpenDocument) output
@@ -11190,8 +11183,8 @@ Some known issues and limitations:
 The need to precede add-on command options with `--` when invoked from
 hledger is awkward. (See Command options, Constructing command lines.)
 
-A UTF-8-aware system locale must be configured to work with non-ascii
-data. (See Unicode characters, Troubleshooting.)
+A system locale with a suitable text encoding must be configured to work with non-ascii data.
+(See Text encoding, Troubleshooting.)
 
 On Microsoft Windows, depending whether you are running in a CMD window
 or a Cygwin/MSYS/Mintty window and how you installed hledger, non-ascii
@@ -11225,34 +11218,9 @@ it**\
 - You may need to force your shell to see the new configuration. A
   simple way is to close your terminal window and open a new one.
 
-**LANG issues: I get errors like \"Illegal byte sequence\" or \"Invalid
-or incomplete multibyte or wide character\" or \"commitAndReleaseBuffer:
-invalid argument (invalid character)\"**\
-Programs compiled with GHC (hledger, haskell build tools, etc.) need the
-system locale to be UTF-8-aware, or they will fail when they encounter
-non-ascii characters. To fix it, set the LANG environment variable to a
-locale which supports UTF-8 and which is installed on your system.
-
-On unix, `locale -a` lists the installed locales. Look for one which
-mentions `utf8`, `UTF-8` or similar. Some examples: `C.UTF-8`,
-`en_US.utf-8`, `fr_FR.utf8`. If necessary, use your system package
-manager to install one. Then select it by setting the `LANG` environment
-variable. Note, exact spelling and capitalisation of the locale name may
-be important: Here\'s one common way to configure this permanently for
-your shell:
-
-``` cli
-$ echo "export LANG=en_US.utf8" >>~/.profile
-# close and re-open terminal window
-```
-
-If you are using Nix (not NixOS) for GHC and Hledger, you might need to
-set the `LOCALE_ARCHIVE` variable:
-
-``` cli
-$ echo "export LOCALE_ARCHIVE=${glibcLocales}/lib/locale/locale-archive" >>~/.profile
-# close and re-open terminal window
-```
+**Text decoding issues: I get errors like "Illegal byte sequence" or "Invalid or incomplete multibyte or wide character" or "commitAndReleaseBuffer: invalid argument (invalid character)"**\
+hledger usually needs non-ascii input to be decodable with the system locale's text encoding.
+See [Text encoding](#text-encoding) and [Install: Text encoding](/install.md#text-encoding).
 
 **COMPATIBILITY ISSUES: hledger gives an error with my Ledger file**\
 Not all of Ledger\'s journal file syntax or feature set is supported.

@@ -9591,8 +9591,8 @@ Some known issues and limitations:
 The need to precede add-on command options with `--` when invoked from
 hledger is awkward. (See Command options, Constructing command lines.)
 
-A UTF-8-aware system locale must be configured to work with non-ascii
-data. (See Unicode characters, Troubleshooting.)
+A system locale with a suitable text encoding must be configured to work with non-ascii data.
+(See Text encoding, Troubleshooting.)
 
 On Microsoft Windows, depending whether you are running in a CMD window
 or a Cygwin/MSYS/Mintty window and how you installed hledger, non-ascii
@@ -9625,26 +9625,9 @@ it**\
 -   You may need to force your shell to see the new configuration. A
     simple way is to close your terminal window and open a new one.
 
-**LANG issues: I get errors like \"Illegal byte sequence\" or \"Invalid
-or incomplete multibyte or wide character\" or \"commitAndReleaseBuffer:
-invalid argument (invalid character)\"**\
-Programs compiled with GHC (hledger, haskell build tools, etc.) need the
-system locale to be UTF-8-aware, or they will fail when they encounter
-non-ascii characters. To fix it, set the LANG environment variable to a
-locale which supports UTF-8 and which is installed on your system.
-
-On unix, `locale -a` lists the installed locales. Look for one which
-mentions `utf8`, `UTF-8` or similar. Some examples: `C.UTF-8`,
-`en_US.utf-8`, `fr_FR.utf8`. If necessary, use your system package
-manager to install one. Then select it by setting the `LANG` environment
-variable. Note, exact spelling and capitalisation of the locale name may
-be important: Here\'s one common way to configure this permanently for
-your shell:
-
-```cli
-$ echo "export LANG=en_US.utf8" >>~/.profile
-# close and re-open terminal window
-```
+**Text decoding issues: I get errors like "Illegal byte sequence" or "Invalid or incomplete multibyte or wide character" or "commitAndReleaseBuffer: invalid argument (invalid character)"**\
+hledger usually needs non-ascii input to be decodable with the system locale's text encoding.
+See [Text encoding](#text-encoding) and [Install: Text encoding](/install.md#text-encoding).
 
 **COMPATIBILITY ISSUES: hledger gives an error with my Ledger file**\
 Not all of Ledger\'s journal file syntax or feature set is supported.

@@ -3165,50 +3165,7 @@ variable. The command `env | grep LEDGER_FILE` should show it. You may
 need to use `export`. Here's an
 [explanation](http://stackoverflow.com/a/7411509).
 
-**"Illegal byte sequence" or "Invalid or incomplete multibyte or wide
-character" errors**\
-In order to handle non-ascii letters and symbols (like £), hledger needs
-an appropriate locale. This is usually configured system-wide; you can
-also configure it temporarily. The locale may need to be one that
-supports UTF-8, if you built hledger with GHC \< 7.2 (or possibly
-always, I'm not sure yet).
+**Text decoding issues: I get errors like "Illegal byte sequence" or "Invalid or incomplete multibyte or wide character" or "commitAndReleaseBuffer: invalid argument (invalid character)"**\
+hledger usually needs non-ascii input to be decodable with the system locale's text encoding.
+See [Text encoding](#text-encoding) and [Install: Text encoding](/install.md#text-encoding).
 
-Here's an example of setting the locale temporarily, on ubuntu
-gnu/linux:
-
-```cli
-$ file my.journal
-my.journal: UTF-8 Unicode text                 # <- the file is UTF8-encoded
-$ locale -a
-C
-en_US.utf8                             # <- a UTF8-aware locale is available
-POSIX
-$ LANG=en_US.utf8 hledger -f my.journal print   # <- use it for this command
-```
-
-Here's one way to set it permanently, there are probably better ways:
-
-```cli
-$ echo "export LANG=en_US.UTF-8" >>~/.bash_profile
-$ bash --login
-```
-
-If we preferred to use eg `fr_FR.utf8`, we might have to install that
-first:
-
-```cli
-$ apt-get install language-pack-fr
-$ locale -a
-C
-en_US.utf8
-fr_BE.utf8
-fr_CA.utf8
-fr_CH.utf8
-fr_FR.utf8
-fr_LU.utf8
-POSIX
-$ LANG=fr_FR.utf8 hledger -f my.journal print
-```
-
-Note some platforms allow variant locale spellings, but not all (ubuntu
-accepts `fr_FR.UTF8`, mac osx requires exactly `fr_FR.UTF-8`).
