@@ -29,7 +29,7 @@ accounting and a simple, editable file format. hledger is inspired by
 and largely compatible with ledger(1), and largely interconvertible with
 beancount(1).
 
-This manual is for hledger\'s command line interface, version 1.43. It
+This manual is for hledger\'s command line interface, version 1.43.1. It
 also describes the common options, file formats and concepts used by all
 hledger programs. It might accidentally teach you some
 bookkeeping/accounting as well! You don\'t need to know everything in
@@ -119,21 +119,22 @@ the `LEDGER_FILE` environment variable, to something like
 `~/finance/2023.journal`. For more about how to do that on your system,
 see [Common tasks \> Setting LEDGER_FILE](#setting-ledger_file).
 
-## Text encoding
+### Text encoding
 
-hledger expects non-ascii input to be decodable with the system locale\'s text encoding.
-(For CSV/SSV/TSV files, this can be overridden by the [`encoding`](#encoding) CSV rule.)
+hledger expects non-ascii input to be decodable with the system
+locale\'s text encoding. (For CSV/SSV/TSV files, this can be overridden
+by the [`encoding`](#encoding) CSV rule.)
 
 So, trying to read non-ascii files which have the wrong text encoding,
-or when no system locale is configured, will fail.
-To fix this, configure your system locale appropriately,
-and/or convert the files to your system\'s text encoding (using `iconv` on unix, or powershell or notepad on Windows).
-See [Install: Text encoding](/install.md#text-encoding) for more tips.
+or when no system locale is configured, will fail. To fix this,
+configure your system locale appropriately, and/or convert the files to
+your system\'s text encoding (using `iconv` on unix, or powershell or
+notepad on Windows). See [Install: Text
+encoding](/install.md#text-encoding) for more tips.
 
 hledger\'s output will use the system locale\'s encoding.
 
 hledger\'s docs and example files mostly use UTF-8 encoding.
-
 
 ### Data formats
 
@@ -917,9 +918,9 @@ variable, which will be used instead.
 HTML output can be styled by an optional `hledger.css` file in the same
 directory.
 
-HTML output will be a HTML fragment, not a complete HTML document.
-Like other hledger output, for non-ascii characters it will use the system locale's text encoding
-(see [Text encoding](#text-encoding)).
+HTML output will be a HTML fragment, not a complete HTML document. Like
+other hledger output, for non-ascii characters it will use the system
+locale\'s text encoding (see [Text encoding](#text-encoding)).
 
 #### CSV / TSV output
 
@@ -11372,8 +11373,8 @@ Some known issues and limitations:
 The need to precede add-on command options with `--` when invoked from
 hledger is awkward. (See Command options, Constructing command lines.)
 
-A system locale with a suitable text encoding must be configured to work with non-ascii data.
-(See Text encoding, Troubleshooting.)
+A system locale with a suitable text encoding must be configured to work
+with non-ascii data. (See Text encoding, Troubleshooting.)
 
 On Microsoft Windows, depending whether you are running in a CMD window
 or a Cygwin/MSYS/Mintty window and how you installed hledger, non-ascii
@@ -11407,9 +11408,12 @@ it**\
 - You may need to force your shell to see the new configuration. A
   simple way is to close your terminal window and open a new one.
 
-**Text decoding issues: I get errors like "Illegal byte sequence" or "Invalid or incomplete multibyte or wide character" or "commitAndReleaseBuffer: invalid argument (invalid character)"**\
-hledger usually needs its input to be decodable with the system locale's text encoding.
-See [Text encoding](#text-encoding) and [Install: Text encoding](/install.md#text-encoding).
+**Text decoding issues: I get errors like \"Illegal byte sequence\" or
+\"Invalid or incomplete multibyte or wide character\" or
+\"commitAndReleaseBuffer: invalid argument (invalid character)\"**\
+hledger usually needs its input to be decodable with the system
+locale\'s text encoding. See [Text encoding](#text-encoding) and
+[Install: Text encoding](/install.md#text-encoding).
 
 **COMPATIBILITY ISSUES: hledger gives an error with my Ledger file**\
 Not all of Ledger\'s journal file syntax or feature set is supported.
