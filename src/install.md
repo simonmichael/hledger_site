@@ -40,7 +40,7 @@ Homebrew (Mac, Linux) <!-- chenrui ? --> \
 `brew install hledger`
 
 Docker (Linux, Mac, Windows) <!-- adept --> ([more](https://hub.docker.com/search?q=hledger&type=image&sort=updated_at&order=desc)) \
-[![Docker](https://img.shields.io/badge/Docker_image-1.43-red.svg)](https://hub.docker.com/r/dastapov/hledger)
+[![Docker](https://img.shields.io/badge/Docker_image-1.43.1-brightgreen.svg)](https://hub.docker.com/r/dastapov/hledger)
 `docker pull dastapov/hledger`
 
 Windows \
