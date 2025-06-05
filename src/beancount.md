@@ -37,4 +37,4 @@ commodity 1.00 USD
 commodity 1.00 EUR
 ...
 ```
-Here's the doc for [commodity directive](https://hledger.org/dev/hledger.html#commodity-directive).
+Here's the [commodity directive](https://hledger.org/dev/hledger.html#commodity-directive) doc.
