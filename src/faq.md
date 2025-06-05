@@ -306,26 +306,28 @@ The `print` method has some inconveniences, but also extra power,
 eg to select a subset of transactions with a query,
 or to transform the data with `--explicit`, `--infer-costs`, `--alias`, `--commodity-style`, `--pivot`, etc.
 
-Some examples:
+Note, any time you do mass edits to valuable data, it's wise to keep a backup and check your changes.
+Eg by comparing reports before and after,
+by running your usual `hledger check`s,
+or by using a version control system.
+
+Here are some examples using `print`:
+
 ```cli
 cp $LEDGER_FILE $LEDGER_FILE.bak
 hledger print > $LEDGER_FILE.new && mv $LEDGER_FILE.new $LEDGER_FILE
 ```
 
-Using the `sponge` helper for updating a file in place:
+Or using the `sponge` helper for updating a file in place:
 ```cli
 hledger print | sponge $LEDGER_FILE
 ```
 
-Preserving directives and inter-transaction comments (though not their positions):
+A one-liner that preserves directives and inter-transaction comments (though not their positions):
 ```cli
 (grep -E '^([#;]|[[:alpha:]])' $LEDGER_FILE; hledger print) > $LEDGER_FILE.new
 ```
 
-Note, any time you do mass edits to valuable data, it's wise to keep a backup and check your changes.
-Eg by comparing reports before and after,
-by running your usual `hledger check`s,
-or by using a version control system.
 
 ### Why does this entry give a "no amount" error even though I wrote an amount ?
 
