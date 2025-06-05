@@ -16,7 +16,8 @@ Use hledger's [print](hledger.md#print) command, which supports [Beancount outpu
 
 ## Beancount to hledger
 
-Use Beancount 2's [bean-report](https://beancount.github.io/docs/running_beancount_and_generating_reports.html#bean-report):
+Use Beancount 2's [bean-report](https://beancount.github.io/docs/running_beancount_and_generating_reports.html#bean-report) tool.
+(It's not available with Beancount 3):
 ```cli
 $ bean-report foo.beancount hledger > foo.hledger
 ```
