@@ -14,7 +14,7 @@ but different enough that neither can read the other's files.
 
 Use hledger's [print](hledger.md#print) command, which supports [Beancount output](hledger.md#beancount-output).
 
-This can be useful for viewing hledger data in [Fava](https://beancount.github.io/fava/), eg. In simple cases it can be:
+This can be useful for viewing hledger data in [Fava](https://beancount.github.io/fava/), eg˘. In simple cases it can be:
 ```
 $ hledger print -o tmp.beancount
 $ fava tmp.beancount
@@ -36,4 +36,5 @@ commodity 1.00 USD
 commodity 1.00 EUR
 ...
 ```
-(bean-report generates the commodity directives; just add the numbers, with two decimal places or however many is appropriate.)
+bean-report generates these commodity directives, but without the numbers; add those, with two decimal places or however many is appropriate.
+Here's the doc for [commodity directive](https://hledger.org/dev/hledger.html#commodity-directive).
