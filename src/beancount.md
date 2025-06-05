@@ -14,6 +14,12 @@ but different enough that neither can read the other's files.
 
 Use hledger's [print](hledger.md#print) command, which supports [Beancount output](hledger.md#beancount-output).
 
+This can be useful for viewing hledger data in [Fava](https://beancount.github.io/fava/). Eg:
+```
+hledger print -o tmp.beancount
+fava tmp.beancount
+```
+
 ## Beancount to hledger
 
 Use Beancount 2's [bean-report](https://beancount.github.io/docs/running_beancount_and_generating_reports.html#bean-report) tool.
