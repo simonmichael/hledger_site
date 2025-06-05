@@ -12,11 +12,11 @@ but different enough that neither can read the other's files.
 
 ## hledger to Beancount
 
-Use hledger's [print](hledger.md#print) command, which supports [beancount output](hledger.md#beancount-output).
+Use hledger's [print](hledger.md#print) command, which supports [Beancount output](hledger.md#beancount-output).
 
 ## Beancount to hledger
 
-Use Beancount 2's `bean-report`:
+Use Beancount 2's [bean-report](https://beancount.github.io/docs/running_beancount_and_generating_reports.html#bean-report):
 ```cli
 $ bean-report foo.beancount hledger > foo.hledger
 ```
