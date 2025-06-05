@@ -30,11 +30,11 @@ $ bean-report foo.beancount hledger > foo.hledger
 
 This will convert `@@` total costs to `@` unit costs, which tends to create precision problems,
 causing hledger to complain that transactions are unbalanced.
-To fix it, declare a sensible display/balancing precision for each commodity, like this:
+To fix it, declare a sensible display/balancing precision for each commodity, like this,
+using two decimal places or however many is appropriate:
 ```journal
 commodity 1.00 USD
 commodity 1.00 EUR
 ...
 ```
-bean-report generates these commodity directives, but without the numbers; add those, with two decimal places or however many is appropriate.
 Here's the doc for [commodity directive](https://hledger.org/dev/hledger.html#commodity-directive).
