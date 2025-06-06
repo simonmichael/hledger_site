@@ -13,7 +13,7 @@ For some project and feature differences,
 see the [PTA apps](https://plaintextaccounting.org/#pta-apps) overview
 and [Feature matrix](https://plaintextaccounting.org/#feature-matrix).
 
-See also [hledger and Ledger](ledger.md); some of that applies here too.
+See also: [hledger and Ledger](ledger.md).
 
 Compared to Beancount, hledger has
 
@@ -21,6 +21,7 @@ Compared to Beancount, hledger has
 - a single best version with all features (the latest)
 - a single binary to install, rather than a python source package
 - easy install on Windows
+- more speed
 - up-to-date docs
 - all reference info in a single manual, viewable in multiple formats and offline, on all platforms
 - easy built in data entry and CSV/SSV/TSV import
@@ -56,7 +57,7 @@ $ pip3 install beancount==2.3.6
 $ bean-report foo.beancount hledger > foo.hledger
 ```
 
-Things to watch out for:
+Here are some things to watch out for:
 
 ### Total costs
 
