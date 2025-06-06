@@ -58,13 +58,13 @@ $ bean-report foo.beancount hledger > foo.hledger
 
 Things to watch out for:
 
-### Total costs, unbalanced transactions 
+### Total costs
 
 bean-report converts `@@` total costs to `@` unit costs.
-This tends to create imprecise entries, causing hledger to complain that transactions are unbalanced.
+`@` costs are more standard and often more useful, eg when selling part of a lot.
+But this conversion tends to create imprecise entries, causing hledger to complain that transactions are unbalanced.
 
-However, `@` costs are more standard and often more useful.
-And there's an easy fix: declare a sensible display/balancing precision which hledger should use for each commodity.
+There's an easy fix: declare a sensible display/balancing precision which hledger should use for each commodity.
 To do that, in the converted file, add sample numbers to the [commodity directives](https://hledger.org/hledger.html#commodity-directive),
 using two decimal places or however many is appropriate. Eg, change:
 ```journal
