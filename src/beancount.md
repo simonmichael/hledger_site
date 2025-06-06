@@ -9,16 +9,15 @@ Tips for co-using or converting between [Beancount](https://beancount.github.io)
 If you are a Beancount user trying to use your data with hledger, or vice-versa,
 please [let me know](support.md) your experience so I can make this smoother.
 
+See also:
+- [hledger and Ledger](ledger.md)
+- [Beancount documentation](https://beancount.github.io/docs)
 
 ## Differences
 
 For some project and feature differences,
 see the [PTA apps](https://plaintextaccounting.org/#pta-apps) overview
 and [Feature matrix](https://plaintextaccounting.org/#feature-matrix).
-
-See also:
-- [hledger and Ledger](ledger.md)
-- [Beancount documentation](https://beancount.github.io/docs)
 
 Compared to hledger, Beancount has
 
