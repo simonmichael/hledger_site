@@ -29,7 +29,7 @@ Compared to Beancount, hledger has
 
 - more active chat rooms and beginner support
 - regular quarterly releases
-- good packaging: a single best version, a single binary to install, easy install on Windows
+- good installability (a clear best version, a single binary to install, easy install on Windows)
 - more speed
 - up-to-date docs
 - a single reference manual, viewable in multiple formats and offline, on all platforms
