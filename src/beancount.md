@@ -11,7 +11,7 @@ please [let me know](support.md) your experience so I can make this smoother.
 
 See also:
 
-- [PTA FAQ: Which PTA app should I choose ?](https://plaintextaccounting.org/Getting-started-FAQ#which-pta-app-should-i-choose)
+- [Which PTA app should I choose ? (PTA FAQ)](https://plaintextaccounting.org/Getting-started-FAQ#which-pta-app-should-i-choose)
 - [hledger and Ledger](ledger.md)
 - [Beancount documentation](https://beancount.github.io/docs)
 

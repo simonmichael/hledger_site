@@ -13,9 +13,9 @@ please [let me know](support.md) your experience so I can make this smoother.
 
 See also: 
 
-- [PTA FAQ: Which PTA app should I choose ?](https://plaintextaccounting.org/Getting-started-FAQ#which-pta-app-should-i-choose)
+- [Which PTA app should I choose ? (PTA FAQ)](https://plaintextaccounting.org/Getting-started-FAQ#which-pta-app-should-i-choose)
 - [ledger vs hledger (reddit, 2022)](https://www.reddit.com/r/plaintextaccounting/comments/ztdk0o/ledger_vs_hledger/)
-- [#1962 easy Ledger file reading](https://github.com/simonmichael/hledger/issues/1962)
+- [easy Ledger file reading (#1962)](https://github.com/simonmichael/hledger/issues/1962)
 
 ## Differences
 
