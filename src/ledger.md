@@ -28,11 +28,12 @@ Compared to hledger, Ledger has
 
 - assisted lot tracking for investment transactions
 - a data format supporting embedded code (value expressions, python expressions..)
-- more speed with large files.
+- more speed with large files
+- a C++ API.
 
 Compared to Ledger, hledger has
 
-- active maintenance and support (since 2008). There's a new release every quarter.
+- more active maintenance and support (since 2008). There's a new release every quarter.
 - a complete and accurate manual
 - more built in reports, including standard financial reports 
 - multi-period reports
@@ -41,7 +42,8 @@ Compared to Ledger, hledger has
 - a battle-tested CSV/SSV/TSV import system
 - multiple officially-supported user interfaces: CLI, TUI, web, HTTP-JSON
 - timedot time logging format
-- fully documented future-proof data formats.
+- fully documented future-proof data formats
+- a Haskell API.
 
 Ledger's files can be read by hledger if you avoid tool-specific features, and vice versa.
 
