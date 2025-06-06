@@ -6,6 +6,9 @@
 </div>
 
 Tips for co-using or converting between [Beancount](https://beancount.github.io) and hledger.
+If you are a Beancount user trying to use your data with hledger, or vice-versa,
+please [let me know](support.md) your experience so I can make this smoother.
+
 
 ## Differences
 
@@ -44,9 +47,6 @@ but different enough that neither can read the other's files directly.
 
 
 ## Beancount to hledger
-
-(If you are a Beancount user trying to use your data with hledger,
-please [let me know](support.md) your experience.)
 
 The most reliable way to export Beancount data is with 
 Beancount 2's [bean-report](https://beancount.github.io/docs/running_beancount_and_generating_reports.html#bean-report) tool.
