@@ -30,8 +30,8 @@ Compared to hledger, Beancount has
 - a more active mail list
 - a better web app (Fava)
 - more automated lot tracking for investment transactions
-- an extensible data format using plugins
-- extensibility using Python
+- a data format extendable by plugins
+- a Python API
 
 Compared to Beancount, hledger has
 
@@ -44,8 +44,8 @@ Compared to Beancount, hledger has
 - a single reference manual, viewable in multiple formats and offline
 - easier, built in features: data entry, CSV import, reports, query syntax, multi-period reports, time logging
 - multiple officially-supported user interfaces (CLI, TUI, web, HTTP-JSON), and export to Fava
-- fully documented data formats not using third-party plugins
-- extensibility using Haskell
+- fully documented future-proof data formats
+- a Haskell API
 
 [Beancount's journal syntax](https://beancount.github.io/docs/beancount_language_syntax.html) is similar to 
 [hledger's](hledger.md#journal),

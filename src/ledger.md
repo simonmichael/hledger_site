@@ -5,7 +5,7 @@
 </div>
 
 hledger was inspired by the app that pioneered plain text accounting: Ledger (<https://ledger-cli.org>).
-This page describes differences between them, and a little history.
+This page describes differences between them, and a little [history](#history).
 
 If you are a Ledger user trying to use your data with hledger, or vice-versa,
 please [let me know](support.md) your experience so I can make this smoother.
@@ -24,23 +24,26 @@ It aims to be somewhat useful to non-techies and accounting beginners, as well a
 It is written in Haskell, which helps with correctness and maintainability.
 It tries to reimplement Ledger's best parts in more depth, with more consistency and robustness.
 
+Compared to hledger, Ledger has
+
+- assisted lot tracking for investment transactions
+- a data format supporting embedded code (value expressions, python expressions..)
+- more speed with large files.
+
 Compared to Ledger, hledger has
 
 - active maintenance and support (since 2008). There's a new release every quarter.
 - a complete and accurate manual
-- standard "financial statement" reports
+- more built in reports, including standard financial reports 
 - multi-period reports
-- an easier query syntax 
+- easier query syntax 
 - better depth limiting
 - a battle-tested CSV/SSV/TSV import system
-- and comes with multiple officially-supported user interfaces (CLI, TUI, web, HTTP-JSON).
+- multiple officially-supported user interfaces: CLI, TUI, web, HTTP-JSON
+- timedot time logging format
+- fully documented future-proof data formats.
 
-Compared to hledger, Ledger has
-
-- assisted lot tracking for investment transactions
-- more support for embedding small programs in your data to get custom behaviour 
-  (value expressions, python expressions ?)
-- smaller executables.
+Ledger's files can be read by hledger if you avoid tool-specific features, and vice versa.
 
 ### Feature differences
 
