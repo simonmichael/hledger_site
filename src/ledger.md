@@ -16,16 +16,14 @@ Related: [#1962](https://github.com/simonmichael/hledger/issues/1962).
 
 ### 10000 foot view
 
-How is hledger different from Ledger ? First, the high-order differences:
-
-- hledger is actively maintained (since 2008). There's a new release every quarter.
-- hledger focusses strongly on UX, reliability, and real-world practicality.
-- hledger aims to be somewhat useful to non-techies and accounting beginners, also.
-- hledger tries to reimplement Ledger's best parts in more depth, with more consistency and robustness.
-- hledger is written in Haskell, which helps with correctness and maintainability.
+hledger focusses strongly on UX, reliability, and real-world practicality.
+It aims to be somewhat useful to non-techies and accounting beginners, as well as experts.
+It is written in Haskell, which helps with correctness and maintainability.
+It tries to reimplement Ledger's best parts in more depth, with more consistency and robustness.
 
 Compared to Ledger, hledger has
 
+- active maintenance and support (since 2008). There's a new release every quarter.
 - a complete and accurate manual
 - standard "financial statement" reports
 - multi-period reports
@@ -288,7 +286,7 @@ Y (supported), Ignored (accepted but ignored), or N (not accepted).
 
 ### Decoding errors
 
-hledger, like most Haskell programs, exits with an error if it sees non-ascii data
+hledger reports an error if it sees non-ascii data
 which can't be decoded using the system locale's text encoding.
 To avoid this, see [Install: Text encoding](install.md#text-encoding).
 
