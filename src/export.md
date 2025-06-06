@@ -15,6 +15,18 @@ This usually preserves the most information.
 txt (AKA hledger journal), beancount, HTML or JSON output formats are good choices here.
 CSV/TSV/FODS are also supported but there will be multiple records per transaction, which you may need to recombine later.
 
+Examples:
+```cli
+$ hledger print date:2025 -o 2025.json
+```
+
+```cli
+$ hledger print -o all.beancount
+```
+
+Check the output format docs for additional tips, 
+eg [Beancount output](hledger.md#beancount-output) may need account aliases.
+
 ## Export account transactions with aregister
 
 You can export a register (list of changes, plus running balance) with hledger's [register] command.
@@ -31,7 +43,7 @@ $ hledger -f examples/sample.journal reg -O csv checking cur:'\$'
 
 But the [aregister] command may be better for this,
 because it guarantees one record per transaction even with complex multi-posting transactions, 
-and it shows the other account names (abbreviated), making later categorisation easier:
+and it shows the other account names (abbreviated), making categorisation easier later:
 
 ```cli
 $ hledger -f examples/sample.journal areg checking -O csv cur:'\$'
@@ -42,10 +54,27 @@ $ hledger -f examples/sample.journal areg checking -O csv cur:'\$'
 "5","2008-12-31","","pay off","li:debts","$-1","0"
 ```
 
+## Export report data
+
+You can export the output of other reports, like a balance sheet or income statement.
+Eg:
+```cli
+$ hledger bs -o bs.html
+$ open bs.html
+```
+
+```cli
+$ hledger is -o is.tsv
+```
+
+If you export as CSV or TSV, you can drag those files into a spreadsheet.
+
+If your spreadsheet can read FODS format, use that instead, to preserve more formatting.
+
 ## Other
 
 - [hledger2psql](https://github.com/edkedk99/hledger2psql) is a tool that exports a hledger journal to a postgres database.
-- [Interfacing with real-life human accountants](https://groups.google.com/g/hledger/c/HS1Wd2iUSgA/m/oqVhSEf4AgAJ) (hledger list, 2023) 
+- [Interfacing with real-life human accountants (hledger list, 2023)](https://groups.google.com/g/hledger/c/HS1Wd2iUSgA/m/oqVhSEf4AgAJ)
 
 
 
