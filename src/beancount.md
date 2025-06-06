@@ -39,8 +39,6 @@ Compared to hledger, Beancount has
 - extensibility using Python
 - a more active mail list
 
-## Interoperating / converting
-
 Beancount's journal format is similar to hledger's,
 but different enough that neither can read the other's files.
 
