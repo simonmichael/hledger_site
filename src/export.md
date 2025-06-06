@@ -2,15 +2,17 @@
 
 A number of hledger reports support multiple output formats, such as plain text, HTML, JSON, beancount, or SQL.
 There are also tabular formats such as CSV, TSV, and FODS.
-See [hledger: Output format][output format] for full details.
+See [hledger:&nbsp;Output&nbsp;format][output format] for full details.
 
-Here are some common ways to export hledger data:
+Here are some common ways to export hledger data.
+
+
 
 ## Export journal entries with print
 
 You can [print](hledger.md#print) whole journal entries.
 This usually preserves the most information.
-txt (hledger journal), beancount journal, HTML or JSON output formats are good choices.
+txt (AKA hledger journal), beancount, HTML or JSON output formats are good choices here.
 CSV/TSV/FODS are also supported but there will be multiple records per transaction, which you may need to recombine later.
 
 ## Export account transactions with aregister
