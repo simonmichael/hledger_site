@@ -19,21 +19,26 @@ For some project and feature differences,
 see the [PTA apps](https://plaintextaccounting.org/#pta-apps) overview
 and [Feature matrix](https://plaintextaccounting.org/#feature-matrix).
 
+hledger focusses strongly on UX, reliability, and real-world practicality.
+It aims to be somewhat useful to non-techies and accounting beginners, as well as experts.
+It is written in Haskell, which helps with correctness and maintainability.
+
 Compared to hledger, Beancount has
 
 - a more active mail list
-- a best-in-class web app (Fava)
+- a better web app (Fava)
 - more automated lot tracking for investment transactions
-- extensible data format using plugins
+- an extensible data format using plugins
 - extensibility using Python
 
 Compared to Beancount, hledger has
 
-- more active chat rooms and beginner support
-- regular new releases (every quarter)
+- more active chat rooms
+- more active maintenance and support. There's a new release every quarter.
 - good installability (a clear best version, a single binary to install, easy install on Windows)
 - more speed
 - up-to-date docs
+- more beginner resources
 - a single reference manual, viewable in multiple formats and offline
 - easier, built in features: data entry, CSV import, reports, query syntax, multi-period reports, time logging
 - multiple officially-supported user interfaces (CLI, TUI, web, HTTP-JSON), and export to Fava
