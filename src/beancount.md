@@ -28,11 +28,11 @@ Compared to hledger, Beancount has
 Compared to Beancount, hledger has
 
 - more active chat rooms and beginner support
-- regular quarterly releases
+- regular new releases (every quarter)
 - good installability (a clear best version, a single binary to install, easy install on Windows)
 - more speed
 - up-to-date docs
-- a single reference manual, viewable in multiple formats and offline, on all platforms
+- a single reference manual, viewable in multiple formats and offline
 - easier, built in features: data entry, CSV import, reports, query syntax, multi-period reports, time logging
 - multiple officially-supported user interfaces (CLI, TUI, web, HTTP-JSON), and export to Fava
 - fully documented data formats not using third-party plugins
