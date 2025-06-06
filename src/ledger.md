@@ -7,9 +7,9 @@
 hledger was inspired by the app that pioneered plain text accounting: Ledger (<https://ledger-cli.org>).
 This page describes differences between them, and a little history.
 
-If you are a Ledger user trying to use hledger with your data,
+If you are a Ledger user trying to use your data with hledger,
 feel free to skip ahead to [Interoperating tips](#interoperating-tips).
-And please let me know your experience in the [#hledger or #plaintextaccounting chats](support.md).
+And  please [let me know](support.md) your experience.
 Related: [#1962](https://github.com/simonmichael/hledger/issues/1962).
 
 ## Differences
@@ -18,20 +18,21 @@ Related: [#1962](https://github.com/simonmichael/hledger/issues/1962).
 
 How is hledger different from Ledger ? First, the high-order differences:
 
-- hledger is actively maintained (since 2008)
-- hledger focusses strongly on UX, reliability, and real-world practicality
-- hledger is written in Haskell, which helps with correctness and maintainability
-- hledger tries to reimplement Ledger's best parts in more depth, with improved functionality and robustness.
+- hledger is actively maintained (since 2008). There's a new release every quarter.
+- hledger focusses strongly on UX, reliability, and real-world practicality.
+- hledger aims to be somewhat useful to non-techies and accounting beginners, also.
+- hledger tries to reimplement Ledger's best parts in more depth, with more consistency and robustness.
+- hledger is written in Haskell, which helps with correctness and maintainability.
 
 Compared to Ledger, hledger has
 
 - a complete and accurate manual
 - standard "financial statement" reports
-- multi-column reports
+- multi-period reports
 - an easier query syntax 
 - better depth limiting
 - a battle-tested CSV/SSV/TSV import system
-- and comes with multiple officially-supported user interfaces (CLI, TUI, WUI, HTTP-JSON).
+- and comes with multiple officially-supported user interfaces (CLI, TUI, web, HTTP-JSON).
 
 Compared to hledger, Ledger has
 
