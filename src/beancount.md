@@ -70,9 +70,11 @@ bean-report converts `@@` total costs to `@` unit costs.
 `@` costs are more standard and often more useful, eg when selling part of a lot.
 But this conversion tends to create imprecise entries, causing hledger to complain that transactions are unbalanced.
 
-There's an easy fix: declare a sensible display/balancing precision which hledger should use for each commodity.
-To do that, in the converted file, add sample numbers to the [commodity directives](https://hledger.org/hledger.html#commodity-directive),
-using two decimal places or however many is appropriate. Eg, change:
+To fix this, declare a sensible display/balancing precision for each commodity:
+in the converted file, add sample numbers to the [commodity directives](https://hledger.org/hledger.html#commodity-directive),
+with the same number of decimal places you want to see in reports.
+This also allows hledger to check transactions' balancedness more leniently.
+Eg, change:
 ```journal
 commodity USD
 commodity EUR
@@ -82,11 +84,10 @@ to:
 commodity 1.00 USD
 commodity 1.00 EUR
 ```
-This allows hledger to check the journal entries' balancedness more leniently.
 
 ## hledger to Beancount
 
-The best way is with hledger's [print](hledger.md#print) command, which supports [Beancount output](hledger.md#beancount-output).
+The best way to export from hledger to Beancount is with hledger's [print](hledger.md#print) command, which supports [Beancount output](hledger.md#beancount-output).
 
 This can be useful for viewing hledger data in [Fava](https://beancount.github.io/fava/), eg.
 In simple cases it can be:
