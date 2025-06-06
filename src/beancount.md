@@ -29,17 +29,11 @@ Compared to Beancount, hledger has
 
 - more active chat rooms and beginner support
 - regular quarterly releases
-- a single best version with all features (the latest)
-- a single binary to install, rather than a python source package
-- easy install on Windows
+- good packaging: a single best version, a single binary to install, easy install on Windows
 - more speed
 - up-to-date docs
-- all reference info in a single manual, viewable in multiple formats and offline, on all platforms
-- easy built in data entry and CSV/SSV/TSV import
-- easy built in reports
-- easy query syntax
-- multi-period reports
-- support for time logging
+- a single reference manual, viewable in multiple formats and offline, on all platforms
+- easier, built in features: data entry, CSV import, reports, query syntax, multi-period reports, time logging
 - multiple officially-supported user interfaces (CLI, TUI, web, HTTP-JSON), and export to Fava
 - fully documented data formats not using third-party plugins
 - extensibility using Haskell
