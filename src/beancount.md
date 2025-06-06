@@ -11,7 +11,7 @@ please [let me know](support.md) your experience so I can make this smoother.
 
 See also:
 
-- [PTA: Getting started FAQ: Which PTA app should I choose ?](https://plaintextaccounting.org/Getting-started-FAQ#which-pta-app-should-i-choose)
+- [PTA FAQ: Which PTA app should I choose ?](https://plaintextaccounting.org/Getting-started-FAQ#which-pta-app-should-i-choose)
 - [hledger and Ledger](ledger.md)
 - [Beancount documentation](https://beancount.github.io/docs)
 
@@ -70,9 +70,9 @@ bean-report converts `@@` total costs to `@` unit costs.
 `@` costs are more standard and often more useful, eg when selling part of a lot.
 But this conversion tends to create imprecise entries, causing hledger to complain that transactions are unbalanced.
 
-To fix this, declare a sensible display/balancing precision for each commodity:
-in the converted file, add sample numbers to the [commodity directives](https://hledger.org/hledger.html#commodity-directive),
-with the same number of decimal places you want to see in reports.
+To fix this, declare a display/balancing precision for each commodity.
+In the converted file, add sample numbers to the [commodity directives](https://hledger.org/hledger.html#commodity-directive),
+with the number of decimal places you'd like to see in reports.
 This also allows hledger to check transactions' balancedness more leniently.
 Eg, change:
 ```journal
