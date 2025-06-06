@@ -10,6 +10,8 @@ If you are a Beancount user trying to use your data with hledger, or vice-versa,
 please [let me know](support.md) your experience so I can make this smoother.
 
 See also:
+
+- [PTA: Getting started FAQ: Which PTA app should I choose ?](https://plaintextaccounting.org/Getting-started-FAQ#which-pta-app-should-i-choose)
 - [hledger and Ledger](ledger.md)
 - [Beancount documentation](https://beancount.github.io/docs)
 

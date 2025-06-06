@@ -10,11 +10,14 @@ This page describes differences between them, and a little history.
 If you are a Ledger user trying to use your data with hledger, or vice-versa,
 please [let me know](support.md) your experience so I can make this smoother.
 [Interoperating tips](#interoperating-tips) has specific tips.
-Related: [#1962](https://github.com/simonmichael/hledger/issues/1962).
+
+See also: 
+
+- [PTA: Getting started FAQ: Which PTA app should I choose ?](https://plaintextaccounting.org/Getting-started-FAQ#which-pta-app-should-i-choose)
+- [ledger vs hledger (reddit, 2022)](https://www.reddit.com/r/plaintextaccounting/comments/ztdk0o/ledger_vs_hledger/)
+- [#1962 easy Ledger file reading](https://github.com/simonmichael/hledger/issues/1962)
 
 ## Differences
-
-### 10000 foot view
 
 hledger focusses strongly on UX, reliability, and real-world practicality.
 It aims to be somewhat useful to non-techies and accounting beginners, as well as experts.
@@ -36,14 +39,8 @@ Compared to hledger, Ledger has
 
 - assisted lot tracking for investment transactions
 - more support for embedding small programs in your data to get custom behaviour 
-  (value expressions, maybe python expressions ?)
+  (value expressions, python expressions ?)
 - smaller executables.
-
-See also: 
-
-- [PTA: Getting started FAQ: Which PTA app should I choose ?](https://plaintextaccounting.org/Getting-started-FAQ#which-pta-app-should-i-choose)
-- <https://www.libhunt.com/compare-hledger-vs-ledger>
-- <https://www.reddit.com/r/plaintextaccounting/comments/ztdk0o/ledger_vs_hledger/>
 
 ### Feature differences
 
