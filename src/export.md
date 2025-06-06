@@ -1,10 +1,23 @@
 # Exporting from hledger
 
-Many finance apps have a way to import CSV files from financial institutions.
-You can produce similar CSV with hledger's [register] command.
-Export one account and one currency at a time. This helps keep the CSV
-simple and importable. Eg:
+A number of hledger reports support multiple output formats, such as plain text, HTML, JSON, beancount, or SQL.
+There are also tabular formats such as CSV, TSV, and FODS.
+See [hledger: Output format][output format] for full details.
 
+Here are some common ways to export hledger data:
+
+## Export journal entries with print
+
+You can [print](hledger.md#print) whole journal entries.
+This usually preserves the most information.
+txt (hledger journal), beancount journal, HTML or JSON output formats are good choices.
+CSV/TSV/FODS are also supported but there will be multiple records per transaction, which you may need to recombine later.
+
+## Export account transactions with aregister
+
+You can export a register (list of changes, plus running balance) with hledger's [register] command.
+You should probably export the activity of just one account and one currency at a time.
+Eg:
 ```cli
 $ hledger -f examples/sample.journal reg -O csv checking cur:'\$'
 "txnidx","date","code","description","account","amount","total"
@@ -14,10 +27,9 @@ $ hledger -f examples/sample.journal reg -O csv checking cur:'\$'
 "5","2008-12-31","","pay off","assets:bank:checking","$-1","0"
 ```
 
-The new [aregister] command (currently in master) is best for this,
-since it guarantees one record per transaction even with complex
-multi-posting transactions, and provides the (abbreviated) other
-account names, making categorisation easier when importing:
+But the [aregister] command may be better for this,
+because it guarantees one record per transaction even with complex multi-posting transactions, 
+and it shows the other account names (abbreviated), making later categorisation easier:
 
 ```cli
 $ hledger -f examples/sample.journal areg checking -O csv cur:'\$'
@@ -28,33 +40,15 @@ $ hledger -f examples/sample.journal areg checking -O csv cur:'\$'
 "5","2008-12-31","","pay off","li:debts","$-1","0"
 ```
 
-hledger supports other [output formats], including HTML, JSON and SQL.
-Not all formats are supported by all commands/reports though.
-For a given report, you can check the --help or just try an output
-format to see if it has been added.
+## Other
 
-```cli
-$ hledger -f examples/sample.journal reg checking -O sql
-hledger: Sorry, output format "sql" is unrecognised or not yet implemented for this report or report mode.
-$ hledger -f examples/sample.journal print checking -O sql
-create table if not exists postings(id serial,txnidx int,date1 date,date2 date,status text,code text,description text,comment text,account text,amount numeric,commodity text,credit numeric,debit numeric,posting_status text,posting_comment text);
-insert into postings(txnidx,date1,date2,status,code,description,comment,account,amount,commodity,credit,debit,posting_status,posting_comment) values
-('1','2008-01-01',NULL,NULL,NULL,'income',NULL,'assets:bank:checking','1','$',NULL,'1',NULL,NULL)
-,('1','2008-01-01',NULL,NULL,NULL,'income',NULL,'income:salary','-1','$','1',NULL,NULL,NULL)
-,('2','2008-06-01',NULL,NULL,NULL,'gift',NULL,'assets:bank:checking','1','$',NULL,'1',NULL,NULL)
-,('2','2008-06-01',NULL,NULL,NULL,'gift',NULL,'income:gifts','-1','$','1',NULL,NULL,NULL)
-,('3','2008-06-02',NULL,NULL,NULL,'save',NULL,'assets:bank:saving','1','$',NULL,'1',NULL,NULL)
-,('3','2008-06-02',NULL,NULL,NULL,'save',NULL,'assets:bank:checking','-1','$','1',NULL,NULL,NULL)
-,('5','2008-12-31',NULL,'*',NULL,'pay off',NULL,'liabilities:debts','1','$',NULL,'1',NULL,NULL)
-,('5','2008-12-31',NULL,'*',NULL,'pay off',NULL,'assets:bank:checking','-1','$','1',NULL,NULL,NULL)
-;
-```
+- [hledger2psql](https://github.com/edkedk99/hledger2psql) is a tool that exports a hledger journal to a postgres database.
+- [Interfacing with real-life human accountants](https://groups.google.com/g/hledger/c/HS1Wd2iUSgA/m/oqVhSEf4AgAJ) (hledger list, 2023) 
 
-[hledger2psql](https://github.com/edkedk99/hledger2psql) is a tool that exports a hledger journal to a postgres database.
+
 
 [register]: hledger.html#register
 [aregister]: hledger.html#aregister
-[output formats]: hledger.html#output-format
+[output format]: hledger.html#output-format
 
 
-Related discussion: https://groups.google.com/g/hledger/c/HS1Wd2iUSgA/m/oqVhSEf4AgAJ
