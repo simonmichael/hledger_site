@@ -54,5 +54,5 @@ directory.
 ## See also
 
 - [examples/invoicing/](https://github.com/simonmichael/hledger/tree/master/examples/invoicing)
-- [kairos](https://kairosdotapp.github.io) ([repo](https://github.com/kairosdotapp/kairos))
+- <https://github.com/kairosdotapp/kairos>
 - <https://plaintextaccounting.org/Invoicing>
