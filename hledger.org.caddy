@@ -425,6 +425,12 @@ matrix.hledger.org {
 hep.hledger.org hip.hledger.org {
 	redir https://github.com/simonmichael/hledger/issues/462
 }
+release.hledger.org {
+	redir https://github.com/simonmichael/hledger/releases/latest
+}
+nightly.hledger.org {
+	redir https://github.com/simonmichael/hledger/releases/nightly
+}
 issues.hledger.org {
 	# all issues (bugs, PRs, etc)
 	redir / https://github.com/simonmichael/hledger/issues?q=is%3Aissue
