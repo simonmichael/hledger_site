@@ -455,6 +455,9 @@ bugs.hledger.org {
 wishes.hledger.org {
 	redir "https://github.com/simonmichael/hledger/issues?q=is:issue+is:open+label:A-WISH"
 }
+regressions.hledger.org {
+	redir "https://hledger.org/REGRESSIONS.html"
+}
 # open pull requests
 prs.hledger.org {
 	redir https://github.com/simonmichael/hledger/pulls?q=is:open
