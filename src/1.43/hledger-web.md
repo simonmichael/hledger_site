@@ -21,7 +21,7 @@ or\
 
 ## DESCRIPTION
 
-This manual is for hledger\'s web interface, version 1.43.1. See also
+This manual is for hledger\'s web interface, version 1.43.2. See also
 the hledger manual for common concepts and file formats.
 
 hledger is a robust, user-friendly, cross-platform set of programs for

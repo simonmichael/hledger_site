@@ -29,7 +29,7 @@ accounting and a simple, editable file format. hledger is inspired by
 and largely compatible with ledger(1), and largely interconvertible with
 beancount(1).
 
-This manual is for hledger\'s command line interface, version 1.43.1. It
+This manual is for hledger\'s command line interface, version 1.43.2. It
 also describes the common options, file formats and concepts used by all
 hledger programs. It might accidentally teach you some
 bookkeeping/accounting as well! You don\'t need to know everything in
@@ -5761,11 +5761,14 @@ This is the default query type, so we usually don\'t bother writing the
 **`amt:N, amt:'<N', amt:'<=N', amt:'>N', amt:'>=N'`**\
 Match postings with a single-commodity amount equal to, less than, or
 greater than N. (Postings with multi-commodity amounts are not tested
-and will always match.) The comparison has two modes: if N is preceded
-by a + or - sign (or is 0), the two signed numbers are compared.
-Otherwise, the absolute magnitudes are compared, ignoring sign. `amt:`
-needs quotes to hide the less than/greater than sign from the command
-line shell.
+and will always match.) `amt:` needs quotes to hide the less
+than/greater than sign from the command line shell.
+
+The comparison has two modes: if N is preceded by a + or - sign (or is
+0), the two signed numbers are compared. Otherwise, the absolute
+magnitudes are compared, ignoring sign.
+
+Keep in mind that `amt:` matches posting amounts, not account balances.
 
 #### code: query
 
@@ -7523,6 +7526,32 @@ Examples:
   `hledger add today 'best buy' expenses:supplies '$20'`
 
 There is a detailed tutorial at <https://hledger.org/add.html>.
+
+### add and balance assertions
+
+Since hledger 1.43, whenever you enter a posting amount, `add` will
+re-check all [balance assertions](#balance-assertions) in the journal,
+and if any of them fail, it will report the problem and ask for the
+amount again.
+
+You can also add a new balance assertion, following the amount as in
+journal format.
+
+The new transaction\'s date, and the new posting\'s posting date if any
+(entered in a comment following the amount), will influence assertion
+checking.
+
+You can use `-I`/`--ignore-assertions` to disable this assertion
+checking.
+
+### add and balance assignments
+
+If you try to add a new posting which is dated earlier than a balance
+assignment in that account and commodity, it will be rejected. It\'s
+because by the time `add` runs, all balance assignments have been
+processed and have become assertions. So if you need to do this, add the
+`-I` flag to disable assertions temporarily.
+([#2406](https://github.com/simonmichael/hledger/issues/2406)).
 
 ### import
 
