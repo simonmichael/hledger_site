@@ -10,7 +10,7 @@
 The [#hledger matrix chat](https://matrix.hledger.org/) is the best place for quick help and feedback. (Element is a good client.) \
 The [#hledger IRC chat](https://irc.hledger.org/) is older but also available. \
 The [#plaintextaccounting matrix chat](https://matrix.to/#/#plaintextaccounting:matrix.org) and [#plaintextaccounting IRC chat](https://web.libera.chat/#plaintextaccounting) discuss all PTA apps. \
-<!-- (To speak here, you might need to [register](https://libera.chat/guides/registration).) --> \
+<!-- (To speak here, you might need to [register](https://libera.chat/guides/registration).) -->
 
 **Mail list**\
 The hledger mail list is on google groups, low traffic with about 200 subscribers. \
