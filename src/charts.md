@@ -51,7 +51,7 @@ $ hledger bar someacct
 ```
 
 ```
-$ hledger bar -- -v 1 -f $TIMELOG biz
+$ hledger bar -v 1 -f $TIMELOG biz
 2023-01	        15 +++++++++++++++
 2023-02	        10 ++++++++++
 2023-03	        20 ++++++++++++++++++++
@@ -59,7 +59,7 @@ $ hledger bar -- -v 1 -f $TIMELOG biz
 ```
 
 ```
-$ hledger bar -- -v 1 -f $TIMELOG biz -p weeklyfrom3weeksago
+$ hledger bar -v 1 -f $TIMELOG biz -p weeklyfrom3weeksago
 2023-03-27W13	         8 ++++++++
 2023-04-03W14	         2 ++
 2023-04-10W15	         4 ++++
