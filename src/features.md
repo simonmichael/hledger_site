@@ -244,7 +244,7 @@ Double Entry Bookkeeping, Plain Text Accounting, and Accounting in general are d
 as a newcomer you might feel 
 there's too both much and not enough to read, 
 too much flexibility and not enough structure or guidance.
-You may need to [pace yourself](start.md), 
+You may need to [pace yourself](doc.md), 
 ask the [chat](support.md) for tips, 
 and learn through practice.
 

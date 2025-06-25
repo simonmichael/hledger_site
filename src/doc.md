@@ -1,11 +1,63 @@
-# User Cookbook
+# Docs
 
 <div class=pagetoc>
 
 <!-- toc -->
 </div>
 
-Here you'll find task-oriented advice and additional user notes that didn't fit in the manual. Unlike the manual, these docs vary in age and quality.
+An overview of all hledger documentation.
+
+Note that some of these docs overlap; you don't need to read them all.
+Pick the ones that best fit your needs.
+
+Also, know that starting out with hledger and plain text accounting, 
+setting up a new accounting system, and bringing order to your financial life,
+can be a lot. [Learning hledger](learn.md) has some tips.
+
+And, your fellow users can help. To ask questions or search past discussions, see:
+
+- the [#hledger matrix chat](https://matrix.hledger.org/) (especially good for quick help)
+- or the [#hledger IRC chat](https://irc.hledger.org/)
+- or the [hledger mail list](https://list.hledger.org/)
+- or the [PTA forum](https://forum.plaintextaccounting.org/)
+- or other [Support](support.md) places, such as the issue tracker.
+
+## Quick intros
+
+Short introductions, which assume a bit of command line know-how.
+
+- [Home page quick start](index.md#quick-start)
+- [2 minute quick start](2-minute-quick-start.md)
+- [10 minute quick start](10-minute-quick-start.md)
+- [hledger manual: Common tasks](hledger.md#common-tasks)
+- [Workflows](workflows.md)
+
+## Slow intros
+
+Slower-paced, step-by-step tutorials.
+
+- [Tutorial: hledger-web](web.md)
+- [Tutorial: hledger basics](basics.md)
+- [Tutorial: hledger-ui](ui.md)
+- [Accounting basics for PTA users](accounting-pta.md)
+- [Tutorial: Import CSV data](import-csv.md)
+- [Accounting: further study](accounting.md)
+
+## Thorough reference docs
+
+The manuals are the authoritative hledger docs.
+You can also view them on your local machine with [`hledger help`](hledger.md#help), `hledger-ui --man`, `hledger-web --info` etc.
+<!-- The hledger manual's table of contents is a good overview. -->
+
+- [hledger manual](hledger.md)
+- [hledger-ui manual](hledger-ui.md)
+- [hledger-web manual](hledger-web.md)
+- [Release notes](relnotes.md)
+- [FAQ](faq.md) - frequently asked questions
+
+## Cookbook: Using hledger
+<!-- sections ordered roughly by need -->
+Tips and how-tos that didn't fit in the manual. These vary in age and quality.
 
 <!--
 Documentor tips:
@@ -14,19 +66,8 @@ Include minimal answers/inline examples when feasible, followed by links to long
 Check plaintextaccounting.org's and wiki.plaintextaccounting.org's categories.
 -->
 
-<!-- two column layout, interferes with editing in Obsidian, skip for now
-<div style="float:left;">
-</div>
-<div style="float:right;">
-</div>
-<br clear=all>
--->
-
-## General usage
-<!-- sections ordered roughly by need -->
 
 ### Setups and workflows
-- [Get Started](start.md)
 - [Workflows](workflows.md)
 
 ### Data entry
@@ -35,6 +76,10 @@ Check plaintextaccounting.org's and wiki.plaintextaccounting.org's categories.
 - [How to figure out journal entries](how-to-figure-out.md)
 - [Importing CSV data](import-csv.md)
 - [Cost notation](cost-notation.md)
+
+### Examples
+
+- [examples/](https://github.com/simonmichael/hledger/tree/master/examples) - examples and snippets, old and new 
 
 ### Preserving your data
 - [Track changes with version control](track-changes-with-version-control.md)
@@ -84,7 +129,7 @@ Check plaintextaccounting.org's and wiki.plaintextaccounting.org's categories.
 - [hledger and Ultorg](ultorg.md)
 - [hledger and YNAB](ynab.md)
 
-## Accounting tasks
+## Cookbook: Accounting tasks
 <!-- sections ordered mostly alphabetically -->
 
 ### Learning accounting and bookkeeping

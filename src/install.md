@@ -455,8 +455,7 @@ When a completion includes special characters, backslashes will be inserted auto
 
 ## Next steps
 
-Nicely done! Now see [Get started](start.md),
-or come to the [#hledger chat](support.md)
+Nicely done! Now see [Docs](doc.md), or come to the [#hledger chat](support.md)
 where we'll gladly share tips or receive your feedback.
 
 

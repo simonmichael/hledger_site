@@ -3,23 +3,17 @@
 # HLEDGER.ORG
 
 - [Home](index.md)
-- [News](news.md)
-- [FAQ](faq.md)
-- [Videos/Talks](videos.md)
+<!-- - [News](news.md) -->
 - [Install](install.md)
 - [Release notes](relnotes.md)
-- [Get Started](start.md)
-- [hledger manual](1.28/hledger.md)
-- [hledger-ui manual](1.28/hledger-ui.md)
-- [hledger-web manual](1.28/hledger-web.md)
-- [Cookbook](cookbook.md)
-- [Scripts and add-ons](scripts.md)
+- [Docs](doc.md)
+- [Videos/Talks](videos.md)
 - [Support/Discussion](support.md)
+- [Scripts and add-ons](scripts.md)
 
 # DEVELOPERS
 
 - [Contributor Quick Start](CONTRIBUTING.md)
-- [Developer FAQ](DEVFAQ.md)
 - [Developer docs](dev.md)
 - [CREDITS](CREDITS.md)
 
@@ -56,13 +50,13 @@
 - [Features](features.md)
 - [Forecasting](forecasting.md)
 - [Foreign trip expenses](foreign-trip-expenses.md)
-- [Get Started](start.md)
 - [Home](index.md)
 - [How to record journal entries](how-to-record.md)
 - [How to figure out journal entries](how-to-figure-out.md)
 - [Tutorial: Import CSV data](import-csv.md)
 - [Install](install.md)
 - [Invoicing](invoicing.md)
+- [Learning hledger](learn.md)
 - [Mobile apps](mobile.md)
 - [Multicurrency tutorial (2018)](multicurrency-tutorial.md)
 - [News](news.md)

@@ -1,7 +1,5 @@
 # 2 minute quick start
 
-One of the introductions to hledger; for others, see [Get Started](start.md).
-
 Here is a sequence of examples, focussed on command-line usage:
 
 ```cli

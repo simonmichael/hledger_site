@@ -5,8 +5,6 @@
 <!-- toc -->
 </div>
 
-One of the introductions to hledger; for others, see [Get Started](start.md).
-
 [full website]:   https://hledger.org
 [hledger]:        hledger.md
 [hledger manual]: hledger.md

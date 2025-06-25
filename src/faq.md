@@ -237,7 +237,7 @@ Also:
 
 You're right. You can skip them: just run `hledger` for help.
 
-When you'd like a bit more guidance, use the [Get Started](start.md) page,
+When you'd like a bit more guidance, use the [Docs](doc.md) page,
 and/or the [chat room](support.md).
 
 If you want the most complete reference, use the [hledger manual](hledger.md).

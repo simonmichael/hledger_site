@@ -120,13 +120,11 @@ The attention to detail is marvelous. --Shiv J. M.*
 More about [Features](features.md).
 
 Welcome!
-Don't hesitate to [ask questions](support.md).
-Or explore the documentation links in the sidebar (if not visible, click/tap the icon at top left).
+Don't hesitate to [ask questions](support.md), or explore the [Docs](doc.md).
 
 ## Quick start
 
 This plain text accounting stuff is both useful and more fun than it sounds - care to give it a try ?
-Read on... or see [Get&nbsp;Started](start.md) for more detailed tutorials.
 
 ### 1. Install hledger
 
@@ -375,7 +373,7 @@ Transactions in assets:bank:checking and subaccounts:
 
 Congratulations, you can now begin to track your daily finances with hledger!
 
-[Get&nbsp;Started](start.md) has more detailed help.
+[Docs](doc.md) has more detailed help.
 If you are new to bookkeeping, accounting, or plain text accounting, know that these are valuable skills, which take time to master.
 With practice, more doc reading, and [support/discussion](support.md), you will gradually
 - build up a set of account names best suited to you
