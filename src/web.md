@@ -121,7 +121,7 @@ You may need to click or press `TAB` to focus the Date field:
 [![](images/hledger-web/Screen%20Shot%202020-03-22%20at%206.12.04%20PM.png)](images/hledger-web/Screen%20Shot%202020-03-22%20at%206.12.04%20PM.png)
 
 <!-- For dates, you can click the date picker or type the [date](hledger.md#smart-dates). -->
-We'll copy the sample transactions from the [quick start](index.md#quick-start). 
+We'll copy the sample transactions from the [5-minute quick start](5-minute-quick-start.md).
 Press `TAB` to advance to each next field. 
 Amount2 can be left blank, or you can fill in `$-1234` if you prefer:
 [![](images/hledger-web/Screen%20Shot%202020-03-22%20at%206.17.53%20PM.png)](images/hledger-web/Screen%20Shot%202020-03-22%20at%206.17.53%20PM.png)

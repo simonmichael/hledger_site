@@ -79,7 +79,7 @@ This bare-bones data entry UI is hledger's [add](hledger.md#add) command,
 also introduced in [Easy workflow #1: hledger add](basics.md).
 
 Here, we'll use it to enter a few transactions, 
-similar to the [quick start](index.md#quick-start) example.
+similar to the [5-minute quick start](5-minute-quick-start.md) example.
 After each prompt, type the value shown in white and press `RETURN`.
 
 Note when we get to `Amount 2`, hledger guesses that this is a two-posting transaction
