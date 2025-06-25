@@ -96,14 +96,14 @@ This plain text accounting stuff is both useful and more fun than it sounds - ca
 The [Install](install.md) page shows how to get an up-to-date version of hledger quickly.
 
 Next, explore the [Docs](doc.md),
-and don't hesitate to [ask questions](support.md).
+and don't hesitate to ask questions in the [Support](support.md) fora.
 
 
 A few tips for using this website:
 
-- Use the horizontal lines icon at top left to toggle the sidebar.
-- Use the paintbrush icon to change theme.
-- Use the magnifying-glass icon to search.
+- If the site's left-side navigation bar is hidden, use the lines button at top left to show it.
+- To change theme, use the paintbrush button.
+- To search, use the magnifying-glass button.
 - [Access keys](https://en.wikipedia.org/wiki/Access_key#Access_in_different_browsers) are also available:\
   `s` toggle sidebar, `t` theme, `/` search,\
   `1` home page, `2` recent changes, `<` previous page, `>` next page.
