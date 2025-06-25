@@ -5,16 +5,14 @@
 <!-- toc -->
 </div>
 
-An overview of all hledger documentation.
+An overview of hledger user docs.
+(You don't need to read all of these; pick the ones that fit your needs.)
 
-Note that some of these docs overlap; you don't need to read them all.
-Pick the ones that best fit your needs.
+Note, starting out with hledger and plain text accounting, 
+setting up a new accounting system, and bringing order to your financial life, can be a lot.
+[Learning hledger](learn.md) has some tips.
 
-Also, know that starting out with hledger and plain text accounting, 
-setting up a new accounting system, and bringing order to your financial life,
-can be a lot. [Learning hledger](learn.md) has some tips.
-
-And, your fellow users can help. To ask questions or search past discussions, see:
+Also, your fellow users can help. To ask questions or search past discussions, see:
 
 - the [#hledger matrix chat](https://matrix.hledger.org/) (especially good for quick help)
 - or the [#hledger IRC chat](https://irc.hledger.org/)
@@ -25,6 +23,7 @@ And, your fellow users can help. To ask questions or search past discussions, se
 ## Quick intros
 
 Short introductions, which assume a bit of command line know-how.
+These overlap somewhat.
 
 - [2 minute quick start](2-minute-quick-start.md)
 - [5 minute quick start](5-minute-quick-start.md)
@@ -57,6 +56,7 @@ You can also view them on your local machine with [`hledger help`](hledger.md#he
 
 ## Cookbook: Using hledger
 <!-- sections ordered roughly by need -->
+
 Tips and how-tos that didn't fit in the manual. These vary in age and quality.
 
 <!--
@@ -157,9 +157,9 @@ Check plaintextaccounting.org's and wiki.plaintextaccounting.org's categories.
 
 ### Investing and trading
 - [PTA Cookbook: Investing and trading](https://plaintextaccounting.org/Investing-and-trading)
-- [hledger manual > Cost reporting](hledger.md#cost-reporting)
-- [hledger manual > Value reporting](hledger.md#value-reporting)
-- [hledger manual > balance features](hledger.md#balance-features)
+- [hledger manual: Cost reporting](hledger.md#cost-reporting)
+- [hledger manual: Value reporting](hledger.md#value-reporting)
+- [hledger manual: balance features](hledger.md#balance-features)
 - [Track investments (2017)](track-investments.md)
 - [Track investments (2020)](investments.md)
 - [Calculate unrealized gain](gain.md)
@@ -176,8 +176,8 @@ Check plaintextaccounting.org's and wiki.plaintextaccounting.org's categories.
 ### Multiple currencies
 - [Multicurrency tutorial](multicurrency-tutorial.md) (2018)
 - [Currency conversion](currency-conversion.md) (2021)
-- [hledger manual > Cost reporting](hledger.md#cost-reporting)
-- [hledger manual > Value reporting](hledger.md#value-reporting)
+- [hledger manual: Cost reporting](hledger.md#cost-reporting)
+- [hledger manual: Value reporting](hledger.md#value-reporting)
 
 ### Non-profit accounting
 
