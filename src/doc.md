@@ -51,7 +51,7 @@ You can also view them on your local machine with [`hledger help`](hledger.md#he
 - [hledger-ui manual](hledger-ui.md)
 - [hledger-web manual](hledger-web.md)
 - [Release notes](relnotes.md)
-- [FAQ](faq.md) - frequently asked questions
+- [FAQ](faq.md)
 - [Accounting: further study](accounting.md)
 
 ## Cookbook: Using hledger
