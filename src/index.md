@@ -74,14 +74,6 @@ Robust, friendly, fast<br> plain text accounting software
 
 More about [Features](features.md).
 
-Welcome!
-Don't hesitate to [ask questions](support.md), or explore the [Docs](doc.md).
-
-This plain text accounting stuff is both useful and more fun than it sounds - care to give it a try ?
-The [Install](install.md) page shows how to get an up-to-date version quickly.
-
-## Other user interfaces
-
 Instead of using the command line, you can use the [`ui`](ui.md) or [`web`](web.md) interfaces
 (or [`repl`](hledger.md#repl), [`add`](hledger.md#add), [`iadd`](scripts.md#iadd), ...)
 
@@ -89,125 +81,25 @@ Instead of using the command line, you can use the [`ui`](ui.md) or [`web`](web.
 <a href="/images/home-ui-3.png"        class="highslide" onclick="return hs.expand(this, { captionText:'The hledger-ui text user interface.' })"><img src="images/home-ui-3.png"        height="190"></a>
 <a href="/images/web-bcexample.png"    class="highslide" onclick="return hs.expand(this, { captionText:'The hledger-web web user interface.' })"><img src="images/web-bcexample.png"    height="190"></a>
 
-## Time tracking
-
-hledger can also read time logs, in [timeclock](hledger.md#timeclock) format:
-
-```timeclock
-
-i 2023/03/27 09:00:00 projects:a
-o 2023/03/27 17:00:34
-i 2023/03/31 22:21:45 personal:reading:online
-o 2023/04/01 02:00:34
-```
-```
-$ hledger -f 2023.timeclock register -D
-2023-03-27   projects:a                         8.01h         8.01h
-2023-03-31   personal:reading:online            1.64h         9.65h
-2023-04-01   personal:reading:online            2.01h        11.66h
-```
-
-or in [timedot](hledger.md#timedot) format:
-
-```timedot
-
-2023/2/1
-biz:research  .... ..
-fos:hledger   .... .... ....
-
-2023/2/2
-fos:ledger    .
-fos:haskell   ..
-biz:client1   .... ....
-```
-```
-$ hledger -f 2023.timedot balance -tDTA  # tree, Daily, Total, Average
-Balance changes in 2023-02-01..2023-02-02:
-
-            || 2023-02-01  2023-02-02    Total  Average 
-============++==========================================
- biz        ||       1.50        2.00     3.50     1.75 
-   client1  ||          0        2.00     2.00     1.00 
-   research ||       1.50           0     1.50     0.75 
- fos        ||       3.00        0.75     3.75     1.88 
-   haskell  ||          0        0.50     0.50     0.25 
-   hledger  ||       3.00           0     3.00     1.50 
-   ledger   ||          0        0.25     0.25     0.12 
-------------++------------------------------------------
-            ||       4.50        2.75     7.25     3.62 
-```
-
-## CSV import
-
-Most banks and financial institutions provide data in CSV format.
-hledger can read from any [CSV](hledger.md#csv) (or SSV, TSV, or other character-separated) file representing transactions. Eg:
-
-```csv
-
-"Date","Notes","Amount"
-"2023/2/22","DEPOSIT","50.00"
-"2023/2/23","TRANSFER TO SAVINGS","-10.00"
-```
-```rules
-
-# bank.csv.rules  # this rules file tells hledger how to read bank.csv
-skip 1
-fields date, description, amount
-currency $
-account1 assets:bank:checking
-
-if WHOLE FOODS
- account2 expenses:food
-
-if (TO|FROM) SAVINGS
- account2 assets:bank:savings
-```
-
-```cli
-$ hledger -f bank.csv print
-2023-02-22 DEPOSIT
-    assets:bank:checking          $50.00
-    income:unknown               $-50.00
-
-2023-02-23 TRANSFER TO SAVINGS
-    assets:bank:checking         $-10.00
-    assets:bank:savings           $10.00
-
-```
-
-The [import](hledger.md#import) command detects just the new transactions, and adds them to the journal:
-```cli
-$ hledger import bank.csv
-imported 2 new transactions from bank.csv
-```
-```cli
-$ hledger import bank.csv
-no new transactions found in bank.csv
-```
-```cli
-$ hledger aregister checking
-2023-01-01 opening balances     as:ba:savings, as:..      $1000.00      $1000.00
-2023-02-01 GOODWORKS CORP       in:salary                 $1000.00      $2000.00
-2023-02-22 DEPOSIT              in:unknown                  $50.00      $2050.00
-2023-02-23 TRANSFER TO SAVINGS  as:ba:savings              $-10.00      $2040.00
-```
-
-More: [Tutorial: Import CSV data](import-csv.md)
-
-
-## More examples...
+Some examples of doing other things with hledger:
 
 - [Charts and Graphs](charts.md)
 - [HTML reports](report-examples.md#income-statement-2012-01-012014-10-11)
 - [Interop with other software](cookbook.md#other-software)
 - [Investing and trading](cookbook#investing-and-trading)
 - [Mobile apps](mobile.md)
-- [Scripts](scripts.md) and [Scripting](scripting.md)
-- [Workflows](workflows.md)
-- The hledger [Cookbook](cookbook.md)
-- The [PTA Cookbook](https://plaintextaccounting.org/Cookbook)
+- [Scripts and addons](scripts.md)
+  <!-- and [Scripting](scripting.md) -->
 
-## Site tips
+Welcome!
+This plain text accounting stuff is both useful and more fun than it sounds - care to give it a try ?
+The [Install](install.md) page shows how to get an up-to-date version of hledger quickly.
+
+Next, explore the [Docs](doc.md),
+and don't hesitate to [ask questions](support.md).
+
+
+A few tips for using this website:
 
 - Use the horizontal lines icon at top left to toggle the sidebar.
 - Use the paintbrush icon to change theme.
