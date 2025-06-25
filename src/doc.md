@@ -38,9 +38,8 @@ Slower-paced, step-by-step tutorials.
 - [Tutorial: hledger-web](web.md)
 - [Tutorial: hledger basics](basics.md)
 - [Tutorial: hledger-ui](ui.md)
-- [Accounting basics for PTA users](accounting-pta.md)
 - [Tutorial: Import CSV data](import-csv.md)
-- [Accounting: further study](accounting.md)
+- [Accounting basics for PTA users](accounting-pta.md)
 
 ## Thorough reference docs
 
@@ -53,6 +52,7 @@ You can also view them on your local machine with [`hledger help`](hledger.md#he
 - [hledger-web manual](hledger-web.md)
 - [Release notes](relnotes.md)
 - [FAQ](faq.md) - frequently asked questions
+- [Accounting: further study](accounting.md)
 
 ## Cookbook: Using hledger
 <!-- sections ordered roughly by need -->
