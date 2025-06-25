@@ -38,32 +38,13 @@ Robust, friendly, fast<br> plain text accounting software
 
 </div>
 
-<div id="quotes">
-
-*I discovered hledger last week and I hope it's not too early to describe it as life-changing. thank you for building this software --gnidan*
-
-*I have massively enjoyed using hledger and am incredibly impressed with how active the development and support for it are! --Pixelized*
-
-*I completed my first year of bookkeeping for both business and personal expenses with hledger last year. I can honestly say that I observed zero bugs with the software. It has worked seamlessly. --csgagnon*
-
-*I've been using hledger for managing my personal finances for a few years now, and I'm really happy with it! --guivho*
-
-*hledger focuses on testing and correctness alongside comprehensive documentation, giving me a much better picture of its capabilities.
-I dove in and spent a week entering a year and a half of data, which was enough to convince me.
-hledger is truly an amazing tool. I can’t count how many times I’ve thought wouldn’t it be nice if… only to realize it can already do that ... 
-The attention to detail is marvelous. --Shiv J. M.*
-
-[![Github repo](https://img.shields.io/github/stars/simonmichael/hledger.svg?logo=GitHub&label=Github+stars&color=brightgreen)](https://github.com/simonmichael/hledger)
-[![GitHub downloads, latest](https://img.shields.io/github/downloads/simonmichael/hledger/latest/total?logo=GitHub&label=Github+downloads,+latest&color=brightgreen)](https://github.com/simonmichael/hledger/releases/latest)
-[![GitHub downloads](https://img.shields.io/github/downloads/simonmichael/hledger/total?logo=GitHub&label=Github+downloads)](https://github.com/simonmichael/hledger/releases)
-[![Homebrew](https://img.shields.io/homebrew/installs/dy/hledger?color=brightgreen&label=homebrew&logo=homebrew)](https://formulae.brew.sh/formula/hledger)
-[![Hackage](https://img.shields.io/hackage/v/hledger.svg?logo=Haskell&label=Hackage&colorB=brightgreen)](https://hackage.haskell.org/package/hledger)
-[![Stackage LTS](https://repology.org/badge/version-for-repo/stackage_lts/hledger.svg?logo=Haskell&header=Stackage+LTS)](https://www.stackage.org/lts/package/hledger)
-</div>
-
-<div class=pagetoc style="margin-top:2.5em">
-
-<!-- toc -->
+<div id="quote" class="quote">
+  <noscript>
+    <span class="quote-text"></span>
+    <span class="quote-author"></span>
+  </noscript>
+  <span id="quote-text"   class="quote-text"></span>
+  <span id="quote-author" class="quote-author"></span>
 </div>
 
 ## hledger is...
@@ -266,14 +247,14 @@ More: [Tutorial: Import CSV data](import-csv.md)
   margin:0 0 0.5em;
 }
 
-#quotes {
+div.quote {
   width: 80%;
   margin: auto;
   text-align:center;
-  <!-- font-size:xx-large; -->
-  <!-- font-style:italic;  -->
-  <!-- margin:0 0 0.5em; -->
+  font-style:italic;
 }
+.quote-text {}
+.quote-author { white-space:nowrap; }
 
 #leadingword {
   font-weight:bold;
@@ -290,3 +271,51 @@ code::first-line {
   font-weight:bold;
 }
 </style>
+
+
+<script>
+const quotesmd = `
+I discovered hledger last week and I hope it's not too early to describe it as life-changing. thank you for building this software --gnidan
+
+I have massively enjoyed using hledger and am incredibly impressed with how active the development and support for it are! --Pixelized
+
+I completed my first year of bookkeeping for both business and personal expenses with hledger last year.
+I can honestly say that I observed zero bugs with the software. It has worked seamlessly. --csgagnon
+
+I've been using hledger for managing my personal finances for a few years now, and I'm really happy with it! --guivho
+
+hledger focuses on testing and correctness alongside comprehensive documentation, giving me a much better picture of its capabilities.
+I dove in and spent a week entering a year and a half of data, which was enough to convince me.
+hledger is truly an amazing tool. I can’t count how many times I’ve thought wouldn’t it be nice if…
+only to realize it can already do that. The attention to detail is marvelous. --Shiv J. M.
+`;
+
+const quotes = quotesmd.trim().split('\n\n').map(q => q.replace(/^\*|\*$/g, '').trim());
+
+// Pick a quote based on the current date and time, changing it every N hours
+// (default: every 24 hours).
+function getQuote(intervalinhours) {
+  const now = new Date();
+  const t = now.getTime();
+  const n = Math.floor(t / (1000 * 60 * 60 * intervalinhours));
+  const quote = quotes[n % quotes.length];
+  const parts = quote.split(' --');
+  return {
+    text:   parts[0].trim(),
+    author: parts[1] ? parts[1].trim() : ''
+  };
+}
+
+// Display the quote
+document.addEventListener('DOMContentLoaded', () => {
+  const quoteel       = document.querySelector('#quote');
+  const quotetextel   = document.querySelector('#quote-text');
+  const quoteauthorel = document.querySelector('#quote-author');
+  if (quoteel && quotetextel && quoteauthorel) {
+    const quote = getQuote(1);  // update hourly
+    quotetextel.textContent = quote.text;
+    quoteauthorel.textContent = '-- ' + quote.author;
+    quoteel.style.display = 'block';
+  }
+});
+</script>
