@@ -134,7 +134,6 @@ A few tips for using this website:
 
 #tagline {
   font-size:xx-large;
-  font-style:italic; 
   text-align:center;
   margin:0 0 0.5em;
 }
