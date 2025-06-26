@@ -267,15 +267,32 @@ The other nice part of hledger is the web UI (hledger-web), which is handy for c
 
 Quite happy with my switch from GnuCash to hledger: already automated importing the (broken) CSV my bank provides, and getting an overview of average monthly expenses is a one-liner. --rigrig
 
+I've been using hledger for two years now, and I don't use any exported data from my banks. Here's my workflow:
+Everytime I make a transaction, I put a note on my phone. The note is a simplified version of hledger file format. ...
+each block is started with the date, and each line corresponds to a journal entry. 
+In each entry, the first item is the dollar amount, the 2nd item is the credited account, the 3rd item is the debited account, and the rest will be taken as the entry description.
+Every week end, I will parse this note with a Python script that I wrote, and put the output in the actual journal file. 
+The shorthand account names in the note will be converted into actual account name (e.g. 'bank1' to 'assets:bank:bank1'), based on a dictionary file.
+I'd then proceed to manually check that all ending balances in hledger match with the actual amount in the real world. (It's pretty satisfying to see the numbers match.)
+After I've finished processing the note from my phone, that note will be archvied and I will start with a new note.
+--abfar
+
 In summary for me: hledger has better csv importing system and ledger has support for lots. I use both. --faustlast
 
-I started setting up hledger this year and I’m with you for a small business it is absolutely great. --abhiyerra
+I started setting up hledger this year and I’m with you for a small business it is absolutely great.
+Some notes:
+- The initial setup of the books is pretty time consuming especially if you have a lot of accounts. I recommend starting your most important accounts and adding as you go along.
+- Mass changing categories is just a search and replace so I have been getting pretty fine grained with the categories as I go along.
+- Being a small business the separation from business and personal is needed from a legal standpoint, but from a practical standpoint I live off an owner’s draw and a put cash into the LLC when investing in its growth. Having hledger have all my accounts, personal and business and being able to filter out appropriate reports has been great for seeing things like is the business a money pit or am I actually growing wealth over time.
+- I combine hledger csv output with Jupyter to generate the specific reports and charts I need. I.e business specific versus combined for taxes. This filtering also has me thinking of other ideas like figuring out which credit cards to apply for based on my expenses.
+Overall more fine tuned than what I have been able to achieve with Quickbooks over 8 years.
+--abhiyerra
 
 journal's greenyellow really makes it pop and I think it will make us rich! --sm
 
 My favorite part of the (extensive) Haskell API is Hledger.Cli.Script. It re-exports all the most commonly used functions and data types, meaning you're just one import away from everything you need to get started. --wbadart
 
-Way less painful than QuickBooks if you're also a programmer or adjacent. --dmoy
+I generally despise having to do double entry bookkeeping in the first place, but when I do (in some situations you have to), I use ledger (or hledger). Way less painful than QuickBooks if you're also a programmer or adjacent. --dmoy
 
 The reason I have hledger installed is for check ordereddates. --lvass
 
@@ -283,13 +300,9 @@ hledger can validate date order, that seems to eliminate copy-paste-fail-to-upda
 
 A key advantage of hledger, and why I migrated from ledger, is that hledger internally orders transactions chronologically, whereas ledger inexplicably orders them in the order they appear in the file, irrespective of the date attached to them.--chromatin
 
-The initial setup of the books is pretty time consuming especially if you have a lot of accounts. I recommend starting your most important accounts and adding as you go along. --abhiyerra
-
 I use hledger and I love it. It has a learning curve (especially if you're new to double entry accounting) but it's rewarding.
 
 Having hledger have all my accounts, personal and business and being able to filter out appropriate reports has been great for seeing things like is the business a money pit or am I actually growing wealth over time. --abhiyerra
-
-I combine hledger csv output with Jupyter to generate the specific reports and charts I need. I.e. business specific versus combined for taxes. --abhiyerra
 
 There are few things better than doing my taxes every year and being able to confirm every number on every form with simple #hledger queries (which lets me double check both my records and the forms themselves). --Michael Rees
 
@@ -470,7 +483,95 @@ Thank you for maintaining the compendium. I love hledger docs. --Aaron Fiore
 
 Emacs users should look into Flycheck integration, eg [flycheck-hledger](https://hledger.org/editors.html#flycheck-hledger) . Real time indication of parse and balance errors as you edit is nice! --HN
 
+I use hledger only for the things I want reports of (taxes, utilities etc split with spouse, money spent on specific hobbies, etc; not restaurants etc).
+Entering everything into ledger is mind-numbingly boring.
+Outside of automatic git hooks for validation, I really only run hledger when reconciling balance with spouse or when reporting taxes. --HN
+
+I used to keep track of everything in a spreadsheet that had all expected paycheck deposits and bill expenses plotted out for the year. It was great being able to see at a glance if the checking account was in danger of going in the red. Ultimately I moved to a double-entry system using hledger. It's a little less convenient for seeing future balances, but a whole lot more flexible. --HN
+
+I use it for many things (i use hledger)
+- Tracking pending payment from clients
+- Keeping track of my expenses in various sectors, food (groceries, eatout), books, magazine subscriptions, etc
+- Keeping track of my current balance accounts across various currency deposits
+- Loans I give to people, and gifts I give to people
+- Creating virtual envelops to segregate my savings account money for my goals like travelling, buying gifts for someone, investment goals, etc
+This has helped me tremendously
+- for reducing my eatout habits and eating more at home by realising just how much I was wasting money by eating out daily, and inputting the saved amount into compound interest calculator to realize potential lost income and wealth from putting those into an index fund account
+- to keep track of pending payments from clients and calculating my real cashflow against cashflow based on expected income
+- reduce my impulsive spending, by tracking my savings account money with virtual envelops aka 40% for investment goals, 1% for gifts, etc, it helps me to not just see a big balance on my account and start spending it away seeing that money as segregated chunks in my mind helps me stay in my lane.
+- I have a program that generates all sorts of charts to track my wealth growth over time, expense growth and decline across categories, which I then dump into a webpage with my notes on how the changes were a net positive or negative outcome on my life, I do it annually to decide what i’ll do next
+- I also have a python script that takes my ledger file and converts it into an excel sheet to send it to my chartered accountant to file my annual taxes
+I also maintain a separate ledger file for my business (I dont maintain that one manually, I just export the data from accountant’s software, to do my own calculations at home)
+- I use it to calculate cashflow projections to predict how my expenses might potentially grow with rise in revenue
+- Track categories of spending to spot anomalies in spend across departments
+- Calculate whether I should hire more or raise marketing spend, calculate metrics like ROIC (Return on Invested Capital)
+The double entry helps me catch discrepancies in accounting if any, by importing bank statements and generating a ledger from that, I have accounts separated by usecase (discretionary spends, employee perks, business inputs) , with each one getting deposit from main account weekly. I use that to calculate if somethings odd and books are all cool.
+I have had trouble before with an accountant running pseudo expenses on my books without telling me, just to impress me by showing a high taxes saved, without being transparent, landed me in court once, with a huge fine with late penalties.
+Now I dont trust accountants and make sure I double check no matter what.
+Plus I have a lot of automation scripts and stuff, imports from stripe account, imports from bank statements, accountant’s own ledger, etc
+I match them all with python scripts and try to look for discrepancies.
+I love plain text accounting, as a programmer it works for me, I automated a ton of it, and I have tons of my own macros and shortcuts in my code editor(vim) to make things very easy and simple,
+I love it overall, I built out my own system on top of hledger across the years.
+--teitoklien
+
+Plain Text Accounting has become significantly easier to do for me on a regular basis, thanks to LLMs. Specifically: importing bank statements into hledger and avoiding manual entry.
+I use a JSON file to map bank entries to my hledger accounts. For new transactions without mappings, I run a Python script that generates a prompt for Claude. It lists my hledger accounts and asks for mappings for the new entries.
+Claude returns hledger journal entries based on these mappings, which I can quickly review.
+Then another script prints out hledger journal entries for that month's bank transactions, all cleanly mapped. It takes me just a few minutes to tweak and finalize.
+I can also specify these mapping instructions in plain-language which would've otherwise been a fragile hodgepodge of regexps and conditionals.
+--HN
+
+I’m a huge ledger fan (hledger specifically) and have used it to run my entire accounting life for the past 8 years or so.
+A few tips:
+- Resist the urge to break up your various accounts into too many separate files. I tried that and went back to one file per account per year (aka “venmo-2024.hledger”). Also helps with below…
+- GitHub CoPilot is remarkably and shockingly good at working with ledger files. It will do the balance addition/subtraction on following lines almost perfectly. 
+  Also, if you need to manually enter a new line, you can often just enter a shortcut one-line comment and it’ll fill the entire entry
+--HN
+
+This is the big advantage of hledger. It has two ways of translating csv into journal form - one simple and one more complicated, but very flexible.
+I find it best to have a separate journal for each downloaded account. I just include them into a master journal (along with a manual entry journal) and generate reports from that.
+I also use git so I can roll back the latest import, if something goes wrong - but that hasn’t happened yet. --HN
+
+Hledger is AWESOME --teitoklien
+
+finally settled on hledger. Like GnuCash, I own and control my data, but with hledger I have an ability to go in and correct or change something (and not in a "accounting-appropriate" way) in bulk just by editing it in Sublime Text. --HN
+
+The deal breaker for me was the underlying XML or SQLite formats of GnuCash. These are not terribly amenable to scripting, either for ingesting raw data or reporting. Whereas this is basically the point of plain-text tools like Beancount or HLedger. GnuCash feels too much like a walled-garden compared to plain-text tools.
+The plain-text format requires more work at first, but after you get the hang of it (and provided you have some background in scripting software) it is awesome. --HN
+
+One nice feature of hledger is its csv rules system, which is very flexible. I extended it with simple python scripts to add extra information for registering capital gains. So, end of the day the raw input data is just some csv files with records and the output is financial reports with various levels of detail. --HN
+
+Has anyone else gone on the following journey:
+1. Use excel
+2. See ledger/hledger. Think this must be 'the way'. Go all in.
+3. Constantly wrestle with ledger/hledger because you only do your accounting once per month/quarter which is not enough frequency to really grok it.
+4. Use excel with a new sense of calm that you're not missing out on something better
+--HN
+
+I'm now in my 5th year of tracking every penny in and out of my life with hledger, with a mostly manual approach. Some benefits:
+- as noted by a spreadsheet user, it adds friction to spending money, which has curbed frivolous/ unplanned expenses for me (and double entry accounting makes it impossible for money to "disappear")
+- if you subscribe to Files over Apps, hledger and its ilk (beancounter, gnu cash) are hands down your most mature, stable options
+- I've learned a great deal about accounting and how money works in general
+- the reports I can generate from my ledger give me a decent starting point at tax time
+Happy accounting! --HN
+
+I have been using hledger for a while now and have a pretty automated process for importing exported CSVs. I would love a little more automation in terms of pulling down the data, but on the bright side the manual process provides a good touch point to keep up on accounting regularly in small doses. This is great for just keeping an eye on things on a monthly basis. --HN
+
+I have a very similar setup but with hledger. 
+A "do-nothing" script helps me download statements by opening bank websites, waits for manual import and finally checks balances. 
+That makes it a lot less repetitive and error prone. Or at least, I catch the errors faster.
+I've found hledger and Shake to be fast enough to process almost a decade of finances. 
+Dmitry Astapov has an extremely well produced tutorial workflow. --HN
+
+I remember that when I used hledger for tracking my expenses over 3 years, 
+I had to "close books" once a year and consolidate all the transactions for the past year 
+into 1 entry in a new ledger file to keep entry/query operations fast. --HN
+
 Thanks @simonmic for hledger, such a fantastic tool! 🥳 --Yann Büchau
+
+I also use ledger/hledger to process a decade of finances. I reconcile once a year when doing taxes. 
+I have multiple python scripts orchestrated with org-mode to generate reports/plots. 
+I run them in separate processes since they are independent, which makes it fast enough (seconds). --HN
 
 Thanks for producing such a great tool - I'm learning a lot, and am finding it really helpful. --Matt Maguire
 
