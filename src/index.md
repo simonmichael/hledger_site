@@ -1,3 +1,5 @@
+<!-- * Home ----------------------------------------------------------------->
+
 <!-- <img id="coins" src="images/coins2-248.png" style="width:120px; margin:2em 1em; float:left;" /> -->
 <!-- <img id="coins" src="images/coins2-248.png" style="width:120px; margin:2em 1em; float:right;" /> -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gabarito">
@@ -30,6 +32,7 @@
 <img id="coins" class="responsive-image" src="images/coins2-248.png" />
 <div id="heading">
 
+<!-- ** Content -------------------------------------------------------------->
 # hledger
 
 <div id="tagline" style="margin-bottom:1em;">
@@ -109,6 +112,7 @@ A few tips for using this website:
   `1` home page, `2` recent changes, `<` previous page, `>` next page.
 
 
+<!-- ** Styles --------------------------------------------------------------->
 <style>
 
 #grabber {
@@ -164,11 +168,11 @@ code::first-line {
 }
 </style>
 
-
+<!-- ** Quotes --------------------------------------------------------------->
 <script>
 /* 
-Quotes in markdown format. Each is one paragraph, ideally followed by --AUTHORNAME.
-They are ordered roughly oldest first, though sometimes multiple quotes by the same author are grouped.
+Quotes in markdown format. Each is one paragraph, ideally followed by "-- AUTHOR".
+They are ordered roughly chronologically, though sometimes grouped by author.
 */
 const quotesmd = `
 
@@ -585,7 +589,10 @@ hledger focuses on testing and correctness alongside comprehensive documentation
 hledger can do everything but make my red numbers green. --nenion
 
 `;
+</script>
 
+<!-- ** Scripts -------------------------------------------------------------->
+<script>
 const quotes = quotesmd.trim().split('\n\n').map(q => q.replace(/^\*|\*$/g, '').trim());
 
 // Pick a quote based on the current date and time, changing it every N hours.
