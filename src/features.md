@@ -209,8 +209,8 @@ and with a little care can run both tools on the same data files.
 the [origins](ledger.md)
 and [differences](ledger.md#differences).)
 
-hledger can read [Beancount] files, or vice versa, by converting them
-with the [beancount2ledger] and [ledger2beancount] tools.
+hledger can also convert its files to [Beancount] format
+(and Beancount can convert its files to hledger format).
 
 Many [tools](https://plaintextaccounting.org/#data-importconversion)
 exist for importing from other applications.  Data can be exported as
