@@ -359,7 +359,7 @@ I just moved my whole financial life over to hledger and oh my goodness I’m so
 
 It is very satisfying to get a report of my last 10 years swiftly over the weekend. Thanks for the software :) -- droidoneone
 
-I took the plunge into PTA with hledger to draft my company's books in 2023 and to escape the torture of QuickBooks in a multiple-currency world. I am pleased to report that I have succeeded in completing my fiscal year 2023 recordkeeping and my accountants have not fired me. Moreover, I feel like I will actually have a head-start on 2024 and will be able to do gasp tax planning, rather than feeling like I'm always playing catch-up.
+I took the plunge into PTA with hledger to draft my company's books in 2023 and to escape the torture of QuickBooks in a multiple-currency world. I am pleased to report that I have succeeded in completing my fiscal year 2023 recordkeeping and my accountants have not fired me. Moreover, I feel like I will actually have a head-start on 2024 and will be able to do *gasp* tax planning, rather than feeling like I'm always playing catch-up.
 Many thanks for the help I've received to get me to this point! I'm a believer. --jbrains
 
 I periodically download bank csv and convert it to the hledger/ledger format, auto-assigning categories (accounts) based on a rules file that I update as needed (typically one or two new rules per month). At tax reporting time I use hledger to total up each income/expense account for the reporting period, and I plug those numbers into my accountant's tax form generating app. After a few iterations, my chart of accounts has clarified and the process has become pretty routine. --HN
