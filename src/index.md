@@ -38,16 +38,10 @@
 <div id="tagline" style="margin-bottom:1em;">
 Robust, friendly, fast<br> plain text accounting software
 </div>
-
 </div>
-
 <div id="quote" class="quote">
-  <noscript>
-    <span class="quote-text"></span>
-    <span class="quote-author"></span>
-  </noscript>
-  <span id="quote-text"   class="quote-text"></span>
-  <span id="quote-author" class="quote-author"></span>
+  <noscript> <span class="quote-text"></span> <span class="quote-author"></span> </noscript>
+  <span id="quote-text" class="quote-text"></span> <span id="quote-author" class="quote-author"></span>
 </div>
 
 ## hledger is...
