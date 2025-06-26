@@ -143,6 +143,7 @@ div.quote {
   margin: auto;
   text-align:center;
   font-style:italic;
+  font-size:90%;
 }
 .quote-text {}
 .quote-author { white-space:nowrap; }
