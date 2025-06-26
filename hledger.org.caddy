@@ -165,13 +165,10 @@ hledger.org {
 	redir /manual /hledger.html
 	redir /journal /hledger.html#journal-format
 	redir /csv /hledger.html#csv-format
-	redir /timeclock /hledger.html#timeclock-format
-	redir /timedot /hledger.html#timedot-format
 	redir /manual.html /hledger.html
 	redir /journal.html /hledger.html#journal-format
 	redir /csv.html /hledger.html#csv-format
 	redir /timeclock.html /hledger.html#timeclock-format
-	redir /timedot.html /hledger.html#timedot-format
 
 	# invalid/non-provided manual paths
 	#
