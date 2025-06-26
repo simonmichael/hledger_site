@@ -609,7 +609,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (quoteel && quotetextel && quoteauthorel) {
     const quote = getQuote(1);  // update hourly
     quotetextel.textContent   = quote.text;
-    quoteauthorel.textContent = '-- ' + quote.author;
+    quoteauthorel.textContent = quote.author ? '-- ' + quote.author : '';
     quoteel.style.display     = 'block';
   }
 });
