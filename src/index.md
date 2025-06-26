@@ -364,7 +364,7 @@ I periodically download bank csv and convert it to the hledger/ledger format, au
 
 I was not very happy with YNAB recently (for various reasons), and by coincidence I came across an article on Hacker News where PTA was mentioned. So I ended up with hledger and I have to say: so far no regrets! Thanks a million for the great software! --kokomuck
 
-I use hledger for the nice web ui: [demo.hledger.org/register](http://demo.hledger.org/register) --HN
+I use hledger for the nice web ui: demo.hledger.org --HN
 
 Also, just wanted to take a moment to express my gratitude for this amazing tool, and the whole PTA ecosystem as well! Just saving my poor programmer brain from having to muddle through spreadsheets is already a huge bonus! --avrahamappel
 
