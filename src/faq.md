@@ -209,7 +209,7 @@ but the parser needed lots more work to become useful, so later I removed it aga
 
 ### How is hledger different from / interoperable with... ?
 
-See [Cookbook > Other software](cookbook.md#other-software) for notes on 
+See [Cookbook > Other software](doc.md#other-software) for notes on 
 Ledger, Beancount, GnuCash, Quickbooks, etc.
 Also:
 
@@ -219,14 +219,14 @@ Also:
 
 ### How could I import/migrate from...
 
-- Look for a relevant page at [Cookbook > Other software](cookbook.md#other-software)
+- Look for a relevant page at [Cookbook > Other software](doc.md#other-software)
 - Otherwise, try to export CSV representing transactions - one record per transaction - and then use [hledger's CSV reader](import-csv.md).
   Also look for [pre-existing CSV rules](https://github.com/simonmichael/hledger/tree/master/examples/csv) you can use.
 - Or, make a custom script or workflow to convert the old data to hledger's simple [journal format](hledger.md#journal-format).
 
 ### How could I export/migrate to...
 
-- Look for a relevant page at [Cookbook > Other software](cookbook.md#other-software)
+- Look for a relevant page at [Cookbook > Other software](doc.md#other-software)
 - See also [Exporting from hledger](export.md).
 
 ## GETTING STARTED

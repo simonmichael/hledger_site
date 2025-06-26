@@ -88,7 +88,7 @@ Some examples of doing other things with hledger:
 
 - [Charts and Graphs](charts.md)
 - [HTML reports](report-examples.md#income-statement-2012-01-012014-10-11)
-- [Interop with other software](cookbook.md#other-software)
+- [Interop with other software](doc.md#other-software)
 - [Investing and trading](cookbook#investing-and-trading)
 - [Mobile apps](mobile.md)
 - [Scripts and addons](scripts.md)

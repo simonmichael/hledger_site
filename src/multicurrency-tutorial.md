@@ -7,7 +7,7 @@ It places it goes pretty fast and does not explain itself well.
 But it contains a lot of small examples, 
 and if you can follow each step, you will understand quite a bit about hledger's behaviour.
 If you get stuck, [let me know](https://matrix.to/#/#haskell-stack:matrix.org).
-See [Cookbook > Multiple currencies](cookbook.md#multiple-currencies) for more.*
+See [Cookbook > Multiple currencies](doc.md#multiple-currencies) for more.*
 
 ----
 
