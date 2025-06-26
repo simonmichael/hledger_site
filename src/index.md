@@ -271,7 +271,7 @@ In summary for me: hledger has better csv importing system and ledger has suppor
 
 I started setting up hledger this year and I’m with you for a small business it is absolutely great. --abhiyerra
 
-[journal code blocks'] greenyellow really makes it pop and I think it will make us rich! --sm
+journal's greenyellow really makes it pop and I think it will make us rich! --sm
 
 My favorite part of the (extensive) Haskell API is Hledger.Cli.Script. It re-exports all the most commonly used functions and data types, meaning you're just one import away from everything you need to get started. --wbadart
 
