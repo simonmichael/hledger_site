@@ -21,7 +21,6 @@
 
 - [Finance](FINANCE.md)
 - [Sponsor hledger](sponsor.md)
-- [Regression bounty](REGRESSIONS.md)
 
 # ALL PAGES
 
