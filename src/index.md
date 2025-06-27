@@ -133,10 +133,10 @@ Here are some common paths for getting started:
 - **If you'd like a more gentle introduction:**\
   try [Tutorial: hledger basics](basics.md).
 
-- **If you'd like to avoid typing commands and use a TUI:**\
+- **If you'd like to avoid typing commands and use a TUI instead:**\
   see [Tutorial: hledger-ui](ui.md).
 
-- **If you'd like to avoid the terminal and use a web browser:**\
+- **If you'd like to avoid the terminal and use a web browser instead:**\
   see [Tutorial: hledger-web](web.md).
 
 - **If you've read enough:**\
