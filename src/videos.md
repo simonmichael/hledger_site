@@ -1,4 +1,4 @@
-# Videos, Talks
+# Videos
 
 hledger-related videos:
 

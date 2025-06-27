@@ -7,8 +7,8 @@
 - [Install](install.md)
 - [Release notes](relnotes.md)
 - [Docs](doc.md)
-- [Videos/Talks](videos.md)
-- [Support/Discussion](support.md)
+- [Videos](videos.md)
+- [Support](support.md)
 - [Scripts and add-ons](scripts.md)
 
 # DEVELOPERS
@@ -87,7 +87,7 @@
 - [Tutorial: hledger basics](basics.md)
 - [Tutorial: hledger-ui](ui.md)
 - [Tutorial: hledger-web](web.md)
-- [Videos/Talks](videos.md)
+- [Videos](videos.md)
 - [Visualising discussion 2023](visualising2023.md)
 - [hledger and Beancount](beancount.md)
 - [hledger and dsq/DataStation](dsq.md)
