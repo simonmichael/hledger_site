@@ -15,8 +15,8 @@ FAQ answers should be useful and brief, linking to more detail if needed.
 
 [Accounting](https://en.wikipedia.org/wiki/Accounting) means keeping track of the flow and whereabouts of things you value, 
 such as money or time, and using this information for insight, planning and decision-making.
-Here's hledger's [Accounting concepts](accounting.md) page
-and [Accounting links](accounting.md#accounting-links).
+Here's our [Accounting basics](accounting-pta.md)
+and [Accounting: further study](accounting.md#accounting-links) pages.
 
 ### Why might I want to do accounting ?
 
