@@ -5,18 +5,37 @@
 <!-- toc -->
 </div>
 
-Some ideas for approaching hledger, accounting, and financial repair/growth.
+Here are some ideas for approaching hledger, accounting, and financial repair/growth.
+
+## Pace yourself
+
+If you are new to bookkeeping, accounting, or plain text accounting -
+remember these are valuable skills, which take time to master.
+
+## Look ahead
+
+With practice, doc reading, and maybe support/discussion, you will gradually
+- build up a set of account names best suited to you
+- learn the proper journal entries for your real-world transactions
+- learn how to produce the reports most useful for you
+- learn new workflows that you may find more convenient.
+<!-- - learn how to prevent, detect and fix errors quickly -->
 
 ## Motivation
 
-Find things that get you in the mood and energised. Maybe a book ?
+Find things that get you in the mood and energised. 
+<!-- - Maybe a pile of bills ? -->
+- Maybe doing accounts for a friend or family member ?
+- Maybe a [video or talk](videos.md) ?
+- Maybe a book ?
 
-- [The Richest Man in Babylon](https://forum.plaintextaccounting.org/t/the-richest-man-in-babylon/396)
-- [Your Money or Your Life](https://yourmoneyoryourlife.com)
-- [The Millionaire Next Door](https://en.wikipedia.org/wiki/The_Millionaire_Next_Door)
-- [Debtors Anonymous](https://debtorsanonymous.org) /
-  [Business Debtors Anonymous](https://debtorsanonymous.org/getting-started/business-debtors-anonymous/) /
-  [Underearners Anonymous](https://www.underearnersanonymous.org)
+  - [The Richest Man in Babylon](https://forum.plaintextaccounting.org/t/the-richest-man-in-babylon/396)
+  - [Your Money or Your Life](https://yourmoneyoryourlife.com)
+  - [The Millionaire Next Door](https://en.wikipedia.org/wiki/The_Millionaire_Next_Door)
+  - [Debtors Anonymous](https://debtorsanonymous.org) /
+    [Business Debtors Anonymous](https://debtorsanonymous.org/getting-started/business-debtors-anonymous/) /
+    [Underearners Anonymous](https://www.underearnersanonymous.org)
+
 
 ## Little and often
 
@@ -38,6 +57,8 @@ Later you can come back and improve your old journal entries if you wish.
 You can decide what level of accuracy you need.
 
 ## Small steps
+
+<!-- just keep taking small steps - pretty soon you'll be much further along. -->
 
 You can start using hledger in very simple ways, and get immediate benefit.
 Prioritise your work: a good way is to think about your most pressing needs and what kind of report would help.

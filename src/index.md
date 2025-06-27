@@ -1,7 +1,7 @@
 <!-- * Home ----------------------------------------------------------------->
 
-<!-- <img id="coins" src="images/coins2-248.png" style="width:120px; margin:2em 1em; float:left;" /> -->
-<!-- <img id="coins" src="images/coins2-248.png" style="width:120px; margin:2em 1em; float:right;" /> -->
+<!-- ** High priority styles (?) --------------------------------------------->
+
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gabarito">
 <style>
 .content h1 { 
@@ -28,23 +28,150 @@
 }
 </style>
 
+<!-- ** Banner --------------------------------------------------------------->
 
 <img id="coins" class="responsive-image" src="images/coins2-248.png" />
 <div id="heading">
 
-<!-- ** Content -------------------------------------------------------------->
 # hledger
 
 <div id="tagline" style="margin-bottom:1em;">
-Robust, friendly, fast<br> plain text accounting software
+Robust, friendly, fast, free,<br>
+plain text accounting software
 </div>
+</div>
+<div style="display:flex; justify-content:center; align-items:flex-start; flex-wrap:wrap; margin-top:1em;">
+<a href="/images/cli-green-bs-reg.png" class="highslide" onclick="return hs.expand(this, { captionText:'The hledger command line interface.' })"><img src="images/cli-green-bs-reg.png" width="200"></a>
+<a href="/images/home-ui-3.png"        class="highslide" onclick="return hs.expand(this, { captionText:'The hledger-ui text user interface.' })"><img src="images/home-ui-3.png"        width="200"></a>
+<a href="/images/web-bcexample.png"    class="highslide" onclick="return hs.expand(this, { captionText:'The hledger-web web user interface.' })"><img src="images/web-bcexample.png"    width="200"></a>
 </div>
 <div id="quote" class="quote">
   <noscript> <span class="quote-text"></span> <span class="quote-author"></span> </noscript>
   <span id="quote-text" class="quote-text"></span> <span id="quote-author" class="quote-author"></span>
 </div>
 
-## hledger is...
+\
+\
+
+----
+
+<!-- ** Description ---------------------------------------------------------->
+<a name="description"></a>
+
+**hledger** is free, GPLv3+ accounting software that runs on unix, mac, windows, and the web.
+
+More precisely, it is user-friendly **[plain text accounting](https://plaintextaccounting.org)** software,
+which uses human-readable, future-proof, plain text data files.
+Your financial data remains local, private, and free from vendor lock-in.
+(Also version-controllable and scriptable.)
+
+hledger is fast, lightweight, and dependable.
+It comes with [command line](basics.md), [TUI](ui.md), and [web browser](web.md) interfaces.
+There are also some compatible [phone apps](mobile.md).
+It is comfortable for technical users, but also usable by non-techies (perhaps with a little setup help).
+Command line skills are useful but not essential.
+You can enter data using your favourite text editor, or a data entry tool,
+or by downloading and importing CSV data from banks and other financial institutions.
+
+hledger is flexible. 
+Using time-tested [double entry bookkeeping](accounting.md),
+with an easier-to-learn [sign convention](accounting-pta.md),
+it can track and report on
+money, 
+investments, 
+cryptocurrencies, 
+time, 
+inventory, 
+or any countable commodity.
+Use it to:
+figure out personal finances..
+run a business..
+run a non-profit..
+run a FOSS project..
+provide data for tax filing..
+learn bookkeeping..
+track time..
+manage a D&D game..
+
+hledger is actively maintained and used (since 2007!)
+with an improved version [released each quarter](RELEASING.md#hledger-release-types).
+We take quality seriously; if you find or fix a regression, [we'll pay you $50](REGRESSIONS.md).
+It is built with the powerful, high assurance [Haskell programming language](https://haskell.org).
+It is a long term project led by [Simon Michael](https://joyful.com) with many [contributors](CREDITS.md).
+
+**[Features](features.md)** goes into these things in more detail.
+
+\
+\
+
+----
+
+<!-- ** Next actions --------------------------------------------------------->
+<a name="actions"></a>
+
+**Welcome!**
+This plain text accounting stuff is both useful and more fun than you'd think. Would you like to give it a try ?
+
+**[Install](install.md)** tells how to get an up-to-date version of hledger quickly.
+
+**[Support](support.md)** lists our chats and other fora - don't hesitate to ask questions, report issues, or search past discussions.
+
+**[Docs](doc.md)** has all the info you may need next.
+Just keep in mind that starting out with hledger and plain text accounting, 
+setting up a new accounting system, and bringing order to your financial life, could be a lot,
+and it *(probably)* won't happen overnight.
+[Learning hledger](learn.md) has some tips; also, call on your fellow users for help.
+
+Here are some common paths for getting started:
+
+- **If you're technical and want a quick taste of hledger:**\
+  try the 
+  [2 minute](2-minute-quick-start.md),
+  [5 minute](5-minute-quick-start.md),
+  or [10 minute](10-minute-quick-start.md) quick starts.
+
+- **If you'd like a more gentle introduction:**\
+  try [Tutorial: hledger basics](basics.md).
+
+- **If you'd like to avoid typing commands and use a TUI:**\
+  see [Tutorial: hledger-ui](ui.md).
+
+- **If you'd like to avoid the terminal and use a web browser:**\
+  see [Tutorial: hledger-web](web.md).
+
+- **If you've read enough:**\
+  try running some commands. They are all safe, you won't break anything. Here's a good sequence:\
+  `hledger setup`, `hledger`, `hledger demo`, `hledger add`, `hledger print`, `hledger balance`, `hledger ui`, `hledger web`, `hledger help`
+
+\
+\
+
+----
+
+<!-- ** Site tips ------------------------------------------------------------>
+<a name="site"></a>
+
+Before we end the page, a few tips for using this website:
+
+- If the site's left-side navigation bar is hidden, use the lines button at top left to show it.
+- To change theme, use the paintbrush button.
+- To search, use the magnifying-glass button.
+- [Access keys](https://en.wikipedia.org/wiki/Access_key#Access_in_different_browsers) are also available:\
+  `s` toggle sidebar, `t` theme, `/` search,\
+  `1` home page, `2` recent changes, `<` previous page, `>` next page.
+
+<!-- ** Old text ------------------------------------------------------------->
+
+<!--
+Older:
+ 
+It can exchange with other PTA apps like [Ledger](ledger.md) and [Beancount](beancount.md),
+and web apps like [Fava](https://beancount.github.io/fava/) and [Paisa](https://paisa.fyi).
+
+[scripting-friendly](scripting.md).)
+ 
+
+[funding](sponsor.md)
 
 - free GPLv3+ accounting software that runs on unix, mac, windows, and the web
 - based on readable, version-controllable, future-proof plain text files
@@ -53,7 +180,7 @@ Robust, friendly, fast<br> plain text accounting software
 - fast, lightweight, and dependable (we pay $50 for [regression reports/fixes](REGRESSIONS.md))
 - local, not cloud-based (your private financial data remains under your control)
 - free from vendor lock-in
-- shipped with [command line](basics.md), [terminal](ui.md), and [web](web.md) UIs <!--, [JSON](hledger-web.md#json-api) and [Haskell](https://hackage.haskell.org/package/hledger-lib) -->
+- shipped with [command line](basics.md), [terminal](ui.md), and [web](web.md) UIs
 - good at importing CSV from banks and other financial institutions
 - good for tracking money, investments, time, or any countable commodity
 - good for learning  more about [double entry bookkeeping](accounting.md)
@@ -63,47 +190,11 @@ Robust, friendly, fast<br> plain text accounting software
 - built with the powerful, high assurance [Haskell language](https://www.haskell.org/)
 - actively used, developed and supported by [Simon Michael](https://joyful.com) and [contributors](CREDITS.md) since 2007
 - strengthened by community feedback and [funding](sponsor.md)
-<!--
-  [command lines](https://tutorial.djangogirls.org/en/intro_to_command_line/), 
-  [text editors](https://www.codementor.io/@kmcgillivray/introduction-to-text-editors-and-the-command-line-j0upqatas) and 
-  [version control](https://betterexplained.com/articles/a-visual-guide-to-version-control/) 
+
+[command lines](https://tutorial.djangogirls.org/en/intro_to_command_line/), 
+[text editors](https://www.codementor.io/@kmcgillivray/introduction-to-text-editors-and-the-command-line-j0upqatas) and 
+[version control](https://betterexplained.com/articles/a-visual-guide-to-version-control/) 
 -->
-
-More about [Features](features.md).
-
-Instead of using the command line, you can use the [`ui`](ui.md) or [`web`](web.md) interfaces
-(or [`repl`](hledger.md#repl), [`add`](hledger.md#add), [`iadd`](scripts.md#iadd), ...)
-
-<a href="/images/cli-green-bs-reg.png" class="highslide" onclick="return hs.expand(this, { captionText:'The hledger command line interface.' })"><img src="images/cli-green-bs-reg.png" height="190"></a>
-<a href="/images/home-ui-3.png"        class="highslide" onclick="return hs.expand(this, { captionText:'The hledger-ui text user interface.' })"><img src="images/home-ui-3.png"        height="190"></a>
-<a href="/images/web-bcexample.png"    class="highslide" onclick="return hs.expand(this, { captionText:'The hledger-web web user interface.' })"><img src="images/web-bcexample.png"    height="190"></a>
-
-Some examples of doing other things with hledger:
-
-- [Charts and Graphs](charts.md)
-- [HTML reports](report-examples.md#income-statement-2012-01-012014-10-11)
-- [Interop with other software](doc.md#other-software)
-- [Investing and trading](cookbook#investing-and-trading)
-- [Mobile apps](mobile.md)
-- [Scripts and addons](scripts.md)
-  <!-- and [Scripting](scripting.md) -->
-
-Welcome!
-This plain text accounting stuff is both useful and more fun than it sounds - care to give it a try ?
-The [Install](install.md) page shows how to get an up-to-date version of hledger quickly.
-
-Next, explore the [Docs](doc.md),
-and don't hesitate to ask questions in the [Support](support.md) fora.
-
-
-A few tips for using this website:
-
-- If the site's left-side navigation bar is hidden, use the lines button at top left to show it.
-- To change theme, use the paintbrush button.
-- To search, use the magnifying-glass button.
-- [Access keys](https://en.wikipedia.org/wiki/Access_key#Access_in_different_browsers) are also available:\
-  `s` toggle sidebar, `t` theme, `/` search,\
-  `1` home page, `2` recent changes, `<` previous page, `>` next page.
 
 
 <!-- ** Styles --------------------------------------------------------------->

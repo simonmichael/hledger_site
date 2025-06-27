@@ -249,11 +249,3 @@ Transactions in assets:bank:checking and subaccounts:
 Congratulations, you can now begin to track your daily finances with hledger!
 
 [Docs](doc.md) has more detailed help.
-If you are new to bookkeeping, accounting, or plain text accounting, know that these are valuable skills, which take time to master.
-With practice, more doc reading, and [support/discussion](support.md), you will gradually
-- build up a set of account names best suited to you
-- learn the proper journal entries for your real-world transactions
-- learn how to produce the reports most useful for you
-- and learn new workflows that you may find more convenient.
-<!-- - learn how to prevent, detect and fix errors quickly -->
-

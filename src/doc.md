@@ -6,19 +6,12 @@
 </div>
 
 An overview of hledger user docs.
-(You don't need to read all of these; pick the ones that fit your needs.)
+You don't need to read all of them; pick the ones that fit your needs.
 
-Note, starting out with hledger and plain text accounting, 
+A note: starting out with hledger and plain text accounting, 
 setting up a new accounting system, and bringing order to your financial life, can be a lot.
-[Learning hledger](learn.md) has some tips.
-
-Also, your fellow users can help. To ask questions or search past discussions, see:
-
-- the [#hledger matrix chat](https://matrix.hledger.org/) (especially good for quick help)
-- or the [#hledger IRC chat](https://irc.hledger.org/)
-- or the [hledger mail list](https://list.hledger.org/)
-- or the [PTA forum](https://forum.plaintextaccounting.org/)
-- or other [Support](support.md) places, such as the issue tracker.
+So just keep taking small steps; pretty soon you'll be much further along.
+[Learning hledger](learn.md) has more tips; also, your fellow users can provide [Support](support.md).
 
 ## Quick intros
 

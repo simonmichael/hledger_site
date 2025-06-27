@@ -34,9 +34,9 @@ hledger is a **[Plain Text Accounting]** system, which means:
 
 - It is fast, lightweight, non-distracting, and great for learning more of double-entry bookkeeping and accounting.
 
-## What can it do, in detail ?
+## What can it do, exactly ?
 
-hledger can:
+hledger can (as of 2023):
 
 - list your transactions, payees, currencies/commodities, accounts, statistics
 - show the hierarchy of accounts and subaccounts
@@ -77,6 +77,17 @@ Also, it can:
 - help you enter new transactions with prompts or a terminal UI
 - help you convert and import new transactions from external sources, eg banks
 - be used as a library in a quick Haskell script or compiled program
+
+## What else can it do ?
+
+Here are a few more examples of things it can do:
+
+- [Charts and Graphs](charts.md)
+- [HTML reports](report-examples.md#income-statement-2012-01-012014-10-11)
+- [Working with other software](doc.md#other-software)
+- [Investing and trading](doc.md#investing-and-trading)
+- [Scripts and addons](scripts.md)..
+<!-- and [Scripting](scripting.md) -->
 
 ## Batteries are included
 
