@@ -108,7 +108,7 @@ serve:
 
 # Auto-rebuild site when source files change (mdbook watch/serve should but usually don't).
 watch:
-	watchexec --wrap-process=session -w src -- mdbook build
+	watchexec -w src -w ../doc -w css -w js -- mdbook build
 
 keepwatching:
 	while true; do make -s watch; done
