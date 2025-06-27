@@ -1,3 +1,7 @@
+.content a {
+  white-space: nowrap;
+}
+
 #menu-bar {
   font-style: italic;
 }
