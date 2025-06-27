@@ -6,7 +6,7 @@
 </div>
 
 Building and supporting good software and documentation is very costly;
-hledger comes from many thousands of skilled person-hours, sustained over 15+ years.
+hledger comes from thousands of skilled person-hours, sustained over 18+ years.
 Your support is invaluable and greatly appreciated!
 Is it the right time for you to help ? Consider:
 
