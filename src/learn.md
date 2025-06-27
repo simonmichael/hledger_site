@@ -5,21 +5,32 @@
 <!-- toc -->
 </div>
 
-Here are some ideas for approaching hledger, accounting, and financial repair/growth.
-
 ## Pace yourself
 
-If you are new to bookkeeping, accounting, or plain text accounting -
-remember these are valuable skills, which take time to master.
+Starting out with plain text accounting and hledger,
+learning enough double entry bookkeeping,
+setting up a new accounting system, 
+and bringing order to your financial life, can be a lot.
+
+Remember these are valuable skills, which take time to master.
+
+## Support
+
+Your fellow users can provide [Support](support.md). The chats are great for that.
+(Especially matrix chat, which supports persistent history, long messages, code blocks, reactions, voice/video calls, etc.)
 
 ## Look ahead
 
-With practice, doc reading, and maybe support/discussion, you will gradually
-- build up a set of account names best suited to you
-- learn the proper journal entries for your real-world transactions
-- learn how to produce the reports most useful for you
-- learn new workflows that you may find more convenient.
-<!-- - learn how to prevent, detect and fix errors quickly -->
+If you're starting out with PTA, here's what's probably ahead.
+Note each of these can start out super simple and be refined over time,
+and old entries can always be improved retroactively.
+
+- Check your hledger setup, and start a journal file.
+- Build up a set of account names/categories best suited to your situation.
+- Learn suitable journal entries for your typical transactions.
+- Learn how to catch and fix errors easily.
+- Learn how to produce reports useful for you.
+- Find convenient and efficient workflows for data entry, reconciling, reporting, backups, etc.
 
 ## Motivation
 
@@ -35,7 +46,6 @@ Find things that get you in the mood and energised.
   - [Debtors Anonymous](https://debtorsanonymous.org) /
     [Business Debtors Anonymous](https://debtorsanonymous.org/getting-started/business-debtors-anonymous/) /
     [Underearners Anonymous](https://www.underearnersanonymous.org)
-
 
 ## Little and often
 

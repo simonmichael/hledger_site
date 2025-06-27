@@ -6,12 +6,8 @@
 </div>
 
 An overview of hledger user docs.
-You don't need to read all of them; pick the ones that fit your needs.
-
-A note: starting out with hledger and plain text accounting, 
-setting up a new accounting system, and bringing order to your financial life, can be a lot.
-So just keep taking small steps; pretty soon you'll be much further along.
-[Learning hledger](learn.md) has more tips; also, your fellow users can provide [Support](support.md).
+You don't need to read them all; pick the ones that fit your needs.
+There are also some [Videos](videos.md).
 
 ## Quick intros
 
@@ -28,11 +24,13 @@ These overlap somewhat.
 
 Slower-paced, step-by-step tutorials.
 
+- [Tips for learning hledger](learn.md)
 - [Tutorial: hledger-web](web.md)
 - [Tutorial: hledger basics](basics.md)
 - [Tutorial: hledger-ui](ui.md)
 - [Tutorial: Import CSV data](import-csv.md)
 - [Accounting basics for PTA users](accounting-pta.md)
+- [hledger fan's short beginner videos](https://youtube.com/channel/UCZLxXTjOqLzq4z5Jy0AyWSQ)
 
 ## Thorough reference docs
 
@@ -45,6 +43,7 @@ You can also view them on your local machine with [`hledger help`](hledger.md#he
 - [hledger-web manual](hledger-web.md)
 - [Release notes](relnotes.md)
 - [FAQ](faq.md)
+- [Plain Text Accounting FAQ](https://plaintextaccounting.org/FAQ)
 - [Accounting: further study](accounting.md)
 
 ## Cookbook: Using hledger
@@ -97,7 +96,6 @@ Check plaintextaccounting.org's and wiki.plaintextaccounting.org's categories.
 - [Change account name separator](change-account-name-separator.md)
 - [Editor configuration](editors.md)
 - [Save frequently used options](save-frequently-used-options.md)
-- [Scripting hledger](scripting.md)
 
 ### Other user interfaces
 - [hledger-web tips](hledger-web-tips.md)
@@ -106,6 +104,7 @@ Check plaintextaccounting.org's and wiki.plaintextaccounting.org's categories.
 
 ### Scripts and add-ons
 - [Scripts and add-ons](scripts.md)
+- [Scripting hledger](scripting.md)
 
 ### Other software
 - [Exporting from hledger](export.md)
@@ -186,6 +185,6 @@ Check plaintextaccounting.org's and wiki.plaintextaccounting.org's categories.
 
 ### Shared expenses
 
-## See also
+## Cookbook: Plain Text Accounting
 
-<https://plaintextaccounting.org> collects similar but more generic advice for all PTA tools.
+The [Plain Text Accounting Cookbook](https://plaintextaccounting.org/Cookbook) collects similar but more generic advice for all PTA apps.
