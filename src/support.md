@@ -2,14 +2,22 @@
 
 # Support
 
-Summary:
-- [#hledger matrix chat](https://matrix.hledger.org/) is the most active, and the best for getting quick help.
-- [hledger mail list](https://list.hledger.org/) is often quiet, but it's only an email away.
-- [PTA forum](https://forum.plaintextaccounting.org/) is the best for long content and easy searching.
-- [Mastodon](https://fosstodon.org/tags/hledger) is quick and can reach a broader community.
-- [#hledger IRC chat](https://irc.hledger.org/) is also there, for the IRCers.
-<br>
-<br>
+The main support/discussion channels:
+
+|                                                         |                                                              |
+|---------------------------------------------------------|--------------------------------------------------------------|
+| **[#hledger matrix chat](https://matrix.hledger.org/)** | the most active chat, the best place for getting quick help. |
+| **[#hledger IRC chat](https://irc.hledger.org/)**       | less featureful chat, available for the IRCers.              |
+| **[hledger mail list](https://list.hledger.org/)**      | fairly quiet, but it's only an email away.                   |
+| **[PTA forum](https://forum.plaintextaccounting.org/)** | the best place for long content and pleasant searching.      |
+| **[Mastodon](https://fosstodon.org/tags/hledger)**      | quick and can reach beyond the hledger and PTA communities.  |
+| **[hledger bug tracker](https://bugs.hledger.org/)**    | for hledger generally. Bug report shortcut: [bugs.hledger.org/new](https://bugs.hledger.org/new)
+| **[website bug tracker](https://github.com/simonmichael/hledger_site/issues?utf8=%E2%9C%93&q=)** | for hledger.org
+
+\
+\
+
+----
 
 **PTA website and forum**\
 [plaintextaccounting.org](https://plaintextaccounting.org/) introduces plain text accounting generally. \
