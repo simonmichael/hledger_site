@@ -99,8 +99,8 @@ We take quality seriously; if you find or fix a regression, [we'll pay you $50](
 It is built with the powerful, high assurance [Haskell programming language](https://haskell.org).
 It is a long term project led by [Simon Michael](https://joyful.com) with many [contributors](CREDITS.md).
 
+**[Features](features.md)** goes into more detail on these.
 **[FAQ](faq.md)** answers some common questions.
-**[Features](features.md)** goes into more detail on those.
 
 <!-- \ -->
 <!-- \ -->
