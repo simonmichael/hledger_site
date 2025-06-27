@@ -1,6 +1,15 @@
 <a name="help"></a><a name="help-feedback"></a>
 
-# Support / Discussion
+# Support
+
+Summary:
+- [#hledger matrix chat](https://matrix.hledger.org/) is the most active, and the best for getting quick help.
+- [hledger mail list](https://list.hledger.org/) is often quiet, but it's only an email away.
+- [PTA forum](https://forum.plaintextaccounting.org/) is the best for long content and easy searching.
+- [Mastodon](https://fosstodon.org/tags/hledger) is quick and can reach a broader community.
+- [#hledger IRC chat](https://irc.hledger.org/) is also there, for the IRCers.
+<br>
+<br>
 
 **PTA website and forum**\
 [plaintextaccounting.org](https://plaintextaccounting.org/) introduces plain text accounting generally. \
