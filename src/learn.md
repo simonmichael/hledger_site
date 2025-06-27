@@ -1,4 +1,4 @@
-# Learning hledger
+# Tips for learning hledger
 
 <div class=pagetoc>
 

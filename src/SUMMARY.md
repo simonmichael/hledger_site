@@ -19,7 +19,7 @@
 
 # FINANCE
 
-- [Project finances](FINANCE.md)
+- [Finance](FINANCE.md)
 - [Sponsor hledger](sponsor.md)
 - [Regression bounty](REGRESSIONS.md)
 
@@ -56,7 +56,7 @@
 - [Tutorial: Import CSV data](import-csv.md)
 - [Install](install.md)
 - [Invoicing](invoicing.md)
-- [Learning hledger](learn.md)
+- [Tips for learning hledger](learn.md)
 - [Mobile apps](mobile.md)
 - [Multicurrency tutorial (2018)](multicurrency-tutorial.md)
 - [News](news.md)
@@ -133,7 +133,7 @@ and previewing them when working on docs locally.
 - [ERRORS](ERRORS.md)
 - [EXAMPLES](EXAMPLES.md)
 - [FILES](FILES.md)
-- [Project finances](FINANCE.md)
+- [Finance](FINANCE.md)
 - [Investment Accounting Feature Ladder](investment-accounting-features.md)
 - [ISSUES](ISSUES.md)
 - [JUST-MAKE-SHAKE](JUST-MAKE-SHAKE.md)
