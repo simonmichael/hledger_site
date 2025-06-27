@@ -36,7 +36,7 @@
 # hledger
 
 <div id="tagline" style="margin-bottom:1em;">
-Robust, friendly, fast, free,<br>
+Robust, friendly, fast,<br>
 plain text accounting software
 </div>
 </div>
@@ -99,29 +99,27 @@ We take quality seriously; if you find or fix a regression, [we'll pay you $50](
 It is built with the powerful, high assurance [Haskell programming language](https://haskell.org).
 It is a long term project led by [Simon Michael](https://joyful.com) with many [contributors](CREDITS.md).
 
-**[Features](features.md)** goes into these things in more detail.
+**[FAQ](faq.md)** answers some common questions.
+**[Features](features.md)** goes into more detail on those.
 
-\
-\
+<!-- \ -->
+<!-- \ -->
 
-----
+<!-- ---- -->
 
-<!-- ** Next actions --------------------------------------------------------->
-<a name="actions"></a>
+<!-- ** Start ---------------------------------------------------------------->
+<!-- <a name="start"></a> -->
 
-**Welcome!**
-This plain text accounting stuff is both useful and more fun than you'd think. Would you like to give it a try ?
+## Get started!
+
+Welcome!
+This plain text accounting stuff is both useful and much more fun than you'd think.
 
 **[Install](install.md)** tells how to get an up-to-date version of hledger quickly.
 
-**[Support](support.md)** lists our chats and other fora - don't hesitate to ask questions, report issues, or search past discussions.
+**[Support](support.md)** lists our chats and other fora - don't hesitate to ask questions, report issues, or search.
 
-**[Docs](doc.md)** has all the info you may need next.
-Just keep in mind that starting out with hledger and plain text accounting, 
-setting up a new accounting system, and bringing order to your financial life, could be a lot,
-and it *(probably)* won't happen overnight.
-[Learning hledger](learn.md) has some tips; also, call on your fellow users for help.
-
+**[Docs](doc.md)** has all the info you might need next.
 Here are some common paths for getting started:
 
 - **If you're technical and want a quick taste of hledger:**\
@@ -131,17 +129,44 @@ Here are some common paths for getting started:
   or [10 minute](10-minute-quick-start.md) quick starts.
 
 - **If you'd like a more gentle introduction:**\
-  try [Tutorial: hledger basics](basics.md).
+  see [Tutorial: hledger basics](basics.md).
 
-- **If you'd like to avoid typing commands and use a TUI instead:**\
-  see [Tutorial: hledger-ui](ui.md).
+<!-- - **If you'd like to avoid the command line and use a terminal interface instead:**\ -->
+<!--   see [Tutorial: hledger-ui](ui.md). -->
 
 - **If you'd like to avoid the terminal and use a web browser instead:**\
   see [Tutorial: hledger-web](web.md).
 
-- **If you've read enough:**\
-  try running some commands. They are all safe, you won't break anything. Here's a good sequence:\
+- **If you'd like to watch/listen to a video:**\
+  see [Videos](videos.md).
+
+- **If you'd like to better understand the accounting part:**\
+  see [Accounting basics for PTA users](accounting-pta.md)
+  and maybe [Accounting: further study](accounting.md).
+
+- **If you like to learn by exploring:**\
+  try running some commands. They are all safe, you won't break anything. Here's a good sequence:
   `hledger setup`, `hledger`, `hledger demo`, `hledger add`, `hledger print`, `hledger balance`, `hledger ui`, `hledger web`, `hledger help`
+
+- **If you'd like to go straight to the authoritative doc:**\
+  read the **[hledger manual](hledger.md)**, you wise and sensible person.
+
+\
+\
+
+<!-- ---- -->
+
+<!-- ** More ----------------------------------------------------------------->
+<!-- <a name="more"></a> -->
+
+In the site sidebar you'll see a few more things, such as 
+the **[Contributor Quick Start](CONTRIBUTING.md)** and **[Developer docs](dev.md)**.
+
+**[CREDITS](CREDITS.md)** shows many of the people who have contributed code to hledger.
+
+And, the project's **[Finance](FINANCE.md)** and **[Sponsor hledger](sponsor.md)** pages.
+hledger comes from thousands of skilled person-hours, sustained over 18+ years.
+Your support is invaluable and greatly appreciated!
 
 \
 \
@@ -151,11 +176,13 @@ Here are some common paths for getting started:
 <!-- ** Site tips ------------------------------------------------------------>
 <a name="site"></a>
 
-Before we end the page, a few tips for using this website:
+And before we end the page, a few tips for using this website:
 
 - If the site's left-side navigation bar is hidden, use the lines button at top left to show it.
 - To change theme, use the paintbrush button.
 - To search, use the magnifying-glass button.
+- The Left and Right arrow keys will step through the main pages, as seen in the sidebar.
+  Then all pages, alphabetically, if you keep going..
 - [Access keys](https://en.wikipedia.org/wiki/Access_key#Access_in_different_browsers) are also available:\
   `s` toggle sidebar, `t` theme, `/` search,\
   `1` home page, `2` recent changes, `<` previous page, `>` next page.
@@ -513,7 +540,7 @@ As a programmer, I find ledger/hledger/beancount to be the most convenient way t
 
 hledger focuses on testing and correctness alongside comprehensive documentation, giving me a much better picture of its capabilities. I dove in and spent a week entering a year and a half of data, which was enough to convince me. hledger is truly an amazing tool. I can’t count how many times I’ve thought wouldn’t it be nice if… only to realize it can already do that, or how many times I’ve been disappointed at an apparent bug only to realize I was the one at fault. I don’t know how much is unique to hledger and how much comes from its precursors or contemporaries, but I’m also struck by all the thoughtful touches, like having both aregister and register, or having all of =, ==, =*, and ==* for balance assertions. The attention to detail is marvelous. I have to assume that, whatever the provenance, this flexible competence is born of real use and familiarity. I couldn’t help overflowing with praise in the very friendly Matrix room --Shiv J. M.
 
-What you'll like about hledger and legerCLI is a) the undo function of your favourite text editor and b) separate files that you can include into a master c) awesome reports on the terminal. --HN
+What you'll like about hledger and ledger CLI is a) the undo function of your favourite text editor and b) separate files that you can include into a master c) awesome reports on the terminal. --HN
 
 This week, I used hledger to help an overwhelmed relative decipher their bank activity. ... Even though there were a significant number of transactions we simply could not interpret thanks to the poor quality of the data itself, this was enough for register, aregister, and balance to answer any questions. I was able to account for almost every penny with a high degree of confidence, categorize expenses, and make projections for the future based on the patterns I saw. It took less than an hour from when I started entering the data to turn the terrifying unknown into the mundane, comprehensible known, and I can never put a price on the peace of mind it gave us all. --Shiv J. M.
 
