@@ -102,11 +102,6 @@ It is a long term project led by [Simon Michael](https://joyful.com) with many [
 **[Features](features.md)** goes into more detail on these.
 **[FAQ](faq.md)** answers some common questions.
 
-<!-- \ -->
-<!-- \ -->
-
-<!-- ---- -->
-
 <!-- ** Start ---------------------------------------------------------------->
 <!-- <a name="start"></a> -->
 
@@ -116,6 +111,10 @@ Welcome!
 This plain text accounting stuff is both useful and much more fun than you'd think.
 
 **[Install](install.md)** tells how to get an up-to-date version of hledger quickly.
+  <!-- See also [Scripts and add-ons](scripts.md). -->
+  <!-- ([Release notes](relnotes.md)) -->
+
+
 
 **[Support](support.md)** lists our chats and other fora - don't hesitate to ask questions, report issues, or search.
 
@@ -151,24 +150,26 @@ Here are some common paths for getting started:
 - **If you'd like to go straight to the authoritative doc:**\
   read the **[hledger manual](hledger.md)**, you wise and sensible person.
 
-<br>
+## Get involved
 
-In the site sidebar you'll see a few more things, such as 
-the **[Contributor Quick Start](CONTRIBUTING.md)** and **[Developer docs](dev.md)**.
-
-**[CREDITS](CREDITS.md)** shows many of the people who have contributed code to hledger.
-
-And, the project's **[Finance](FINANCE.md)** and **[Sponsor hledger](sponsor.md)** pages.
-hledger comes to you from thousands of skilled person-hours, sustained over 18+ years.
 Your support is invaluable and greatly appreciated!
+See **[Sponsor hledger](sponsor.md)**
+and [Finance](FINANCE.md).
+
+To contribute in other ways, see
+**[Contributor Quick Start](CONTRIBUTING.md)**
+and [Developer docs](dev.md).
+
+**[CREDITS](CREDITS.md)** shows many of the people who have contributed code over the years.
+
+
+<!-- ** Site tips ------------------------------------------------------------>
+<a name="site"></a>
 
 <br>
 <br>
 
 ----
-
-<!-- ** Site tips ------------------------------------------------------------>
-<a name="site"></a>
 
 And before we end the page, a few tips for using this website:
 
