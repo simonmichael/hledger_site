@@ -25,6 +25,7 @@
 # ALL PAGES
 
 <!-- This section is hidden by CSS, but lists all site pages so that mdbook will render them: -->
+<!-- In recent mdbook versions, eg 4.51, duplicates must be avoided. -->
 
 - [Accounting basics for PTA users](accounting-pta.md)
 - [Accounting: further study](accounting.md)
@@ -49,11 +50,11 @@
 - [Features](features.md)
 - [Forecasting](forecasting.md)
 - [Foreign trip expenses](foreign-trip-expenses.md)
-- [Home](index.md)
+<!-- - [Home](index.md) -->
 - [How to record journal entries](how-to-record.md)
 - [How to figure out journal entries](how-to-figure-out.md)
 - [Tutorial: Import CSV data](import-csv.md)
-- [Install](install.md)
+<!-- - [Install](install.md) -->
 - [Invoicing](invoicing.md)
 - [Tips for learning hledger](learn.md)
 - [Mobile apps](mobile.md)
@@ -63,18 +64,18 @@
 - [2 minute quick start](2-minute-quick-start.md)
 - [5 minute quick start](5-minute-quick-start.md)
 - [10 minute quick start](10-minute-quick-start.md)
-- [Release notes](relnotes.md)
+<!-- - [Release notes](relnotes.md) -->
 - [Report examples](report-examples.md)
 - [Reporting version control stats](reporting-version-control-stats.md)
 - [Rewrite account names](rewrite-account-names.md)
 - [Rewrite commodity symbols](rewrite-commodity-symbols.md)
 - [Save frequently used options](save-frequently-used-options.md)
-- [Scripts and add-ons](scripts.md)
+<!-- - [Scripts and add-ons](scripts.md) -->
 - [Scripting hledger](scripting.md)
 - [SM's 2019 setup](sm-2019-setup.md)
 - [SM's 2023 setup](sm-2023-setup.md)
 - [SM's time & task dashboard](time-and-task-dashboard.md)
-- [Sponsor hledger](sponsor.md)
+<!-- - [Sponsor hledger](sponsor.md) -->
 - [Tags tutorial](tags-tutorial.md)
 - [A tax reporting setup](tax-reporting-setup.md)
 - [Converting time to money](time-to-money.md)
@@ -86,7 +87,7 @@
 - [Tutorial: hledger basics](basics.md)
 - [Tutorial: hledger-ui](ui.md)
 - [Tutorial: hledger-web](web.md)
-- [Videos](videos.md)
+<!-- - [Videos](videos.md) -->
 - [Visualising discussion 2023](visualising2023.md)
 - [hledger and Beancount](beancount.md)
 - [hledger and dsq/DataStation](dsq.md)
@@ -100,7 +101,7 @@
 - [hledger and SQLite](sqlite.md)
 - [hledger and Ultorg](ultorg.md)
 - [hledger and YNAB](ynab.md)
-- [sm-2023-setup](sm-2023-setup.md)
+<!-- - [sm-2023-setup](sm-2023-setup.md) -->
 
 <!--
 Other manual versions.
@@ -122,17 +123,17 @@ and previewing them when working on docs locally.
 - [CHANGELOGS](CHANGELOGS.md)
 - [CODE](CODE.md)
 - [COMMITS](COMMITS.md)
-- [Contributor Quick Start](CONTRIBUTING.md)
+<!-- - [Contributor Quick Start](CONTRIBUTING.md) -->
 - [Developer FAQ](DEVFAQ.md)
-- [CREDITS](CREDITS.md)
+<!-- - [CREDITS](CREDITS.md) -->
 - [DECISIONS](DECISIONS.md)
 - [DEVWORKFLOWS](DEVWORKFLOWS.md)
 - [DOCS](DOCS.md)
-- [Developer docs](dev.md)
+<!-- - [Developer docs](dev.md) -->
 - [ERRORS](ERRORS.md)
 - [EXAMPLES](EXAMPLES.md)
 - [FILES](FILES.md)
-- [Finance](FINANCE.md)
+<!-- - [Finance](FINANCE.md) -->
 - [Investment Accounting Feature Ladder](investment-accounting-features.md)
 - [ISSUES](ISSUES.md)
 - [JUST-MAKE-SHAKE](JUST-MAKE-SHAKE.md)
