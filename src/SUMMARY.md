@@ -11,14 +11,11 @@
 - [Support](support.md)
 - [Scripts and add-ons](scripts.md)
 
-# DEVELOPERS
+# CONTRIBUTE
 
 - [Contributor Quick Start](CONTRIBUTING.md)
 - [Developer docs](dev.md)
 - [CREDITS](CREDITS.md)
-
-# FINANCE
-
 - [Finance](FINANCE.md)
 - [Sponsor hledger](sponsor.md)
 
