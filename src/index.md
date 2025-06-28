@@ -50,8 +50,8 @@ plain text accounting software
   <span id="quote-text" class="quote-text"></span> <span id="quote-author" class="quote-author"></span>
 </div>
 
-\
-\
+<br>
+<br>
 
 ----
 
@@ -151,13 +151,7 @@ Here are some common paths for getting started:
 - **If you'd like to go straight to the authoritative doc:**\
   read the **[hledger manual](hledger.md)**, you wise and sensible person.
 
-\
-\
-
-<!-- ---- -->
-
-<!-- ** More ----------------------------------------------------------------->
-<!-- <a name="more"></a> -->
+<br>
 
 In the site sidebar you'll see a few more things, such as 
 the **[Contributor Quick Start](CONTRIBUTING.md)** and **[Developer docs](dev.md)**.
@@ -165,11 +159,11 @@ the **[Contributor Quick Start](CONTRIBUTING.md)** and **[Developer docs](dev.md
 **[CREDITS](CREDITS.md)** shows many of the people who have contributed code to hledger.
 
 And, the project's **[Finance](FINANCE.md)** and **[Sponsor hledger](sponsor.md)** pages.
-hledger comes from thousands of skilled person-hours, sustained over 18+ years.
+hledger comes to you from thousands of skilled person-hours, sustained over 18+ years.
 Your support is invaluable and greatly appreciated!
 
-\
-\
+<br>
+<br>
 
 ----
 
@@ -181,7 +175,7 @@ And before we end the page, a few tips for using this website:
 - If the site's left-side navigation bar is hidden, use the lines button at top left to show it.
 - To change theme, use the paintbrush button.
 - To search, use the magnifying-glass button.
-- The Left and Right arrow keys will step through the main pages, as seen in the sidebar.
+- The left and right arrow keys will step through the main pages, as seen in the sidebar.
   Then all pages, alphabetically, if you keep going..
 - [Access keys](https://en.wikipedia.org/wiki/Access_key#Access_in_different_browsers) are also available:\
   `s` toggle sidebar, `t` theme, `/` search,\
