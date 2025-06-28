@@ -22,7 +22,7 @@ max-level = 3
 
 [output.html]
 theme = "theme"
-default-theme = "auto"
+# default-theme = "light"
 # preferred-dark-theme = "navy"
 #preferred-dark-theme = "light"
 # smart-punctuation = false
