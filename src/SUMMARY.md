@@ -15,9 +15,9 @@
 
 - [Contributor Quick Start](CONTRIBUTING.md)
 - [Developer docs](dev.md)
-- [CREDITS](CREDITS.md)
 - [Finance](FINANCE.md)
 - [Sponsor hledger](sponsor.md)
+- [CREDITS](CREDITS.md)
 
 # ALL PAGES
 
