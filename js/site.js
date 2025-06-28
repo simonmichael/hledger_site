@@ -3,7 +3,8 @@ hs.graphicsDir = '/highslide/graphics/';
 hs.outlineType = 'rounded-white';
 
 $(document).ready( function() {
-  sidebarHideAllPages();
+  // this happens too late to prevent visual popping
+  // sidebarHideAllPages();
   addDocVersions();
   highlightCurrentDocVersion();
 });
