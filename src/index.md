@@ -582,7 +582,7 @@ I used hledger for years it was great. --HN
 
 over the past year I've become a daily user of hledger, my workflow has gotten quite sophisticated and I can get 99% of what I need. It's amazing, thanks so much for anyone/everyone involved. -- Peter Linsley
 
-Many thanks to Simon Michael for not only that wonderful program but also being so responsive. --HN
+Many thanks to Simon Michael for not only that wonderful program but also being so responsive. --chromatin
 
 I originally had a question I wanted to ask but then I read through part of the manual and got most of it and a different angle I hadn't quite considered answered; so I'm just stopping by to say thanks for the effort of documenting this in so much detail. --j416
 
@@ -598,17 +598,17 @@ Outside of automatic git hooks for validation, I really only run hledger when re
 
 I used to keep track of everything in a spreadsheet that had all expected paycheck deposits and bill expenses plotted out for the year. It was great being able to see at a glance if the checking account was in danger of going in the red. Ultimately I moved to a double-entry system using hledger. It's a little less convenient for seeing future balances, but a whole lot more flexible. --HN
 
-I use it for many things (i use hledger)
+I use it for many things ...
 - Tracking pending payment from clients
 - Keeping track of my expenses in various sectors, food (groceries, eatout), books, magazine subscriptions, etc
 - Keeping track of my current balance accounts across various currency deposits
 - Loans I give to people, and gifts I give to people
-- Creating virtual envelops to segregate my savings account money for my goals like travelling, buying gifts for someone, investment goals, etc
+- Creating virtual envelopes to segregate my savings account money for my goals like travelling, buying gifts for someone, investment goals, etc
 This has helped me tremendously
 - for reducing my eatout habits and eating more at home by realising just how much I was wasting money by eating out daily, and inputting the saved amount into compound interest calculator to realize potential lost income and wealth from putting those into an index fund account
 - to keep track of pending payments from clients and calculating my real cashflow against cashflow based on expected income
-- reduce my impulsive spending, by tracking my savings account money with virtual envelops aka 40% for investment goals, 1% for gifts, etc, it helps me to not just see a big balance on my account and start spending it away seeing that money as segregated chunks in my mind helps me stay in my lane.
-- I have a program that generates all sorts of charts to track my wealth growth over time, expense growth and decline across categories, which I then dump into a webpage with my notes on how the changes were a net positive or negative outcome on my life, I do it annually to decide what i’ll do next
+- reduce my impulsive spending, by tracking my savings account money with virtual envelopes aka 40% for investment goals, 1% for gifts, etc, it helps me to not just see a big balance on my account and start spending it away seeing that money as segregated chunks in my mind helps me stay in my lane.
+- I have a program that generates all sorts of charts to track my wealth growth over time, expense growth and decline across categories, which I then dump into a webpage with my notes on how the changes were a net positive or negative outcome on my life, I do it annually to decide what I’ll do next
 - I also have a python script that takes my ledger file and converts it into an excel sheet to send it to my chartered accountant to file my annual taxes
 I also maintain a separate ledger file for my business (I dont maintain that one manually, I just export the data from accountant’s software, to do my own calculations at home)
 - I use it to calculate cashflow projections to predict how my expenses might potentially grow with rise in revenue
