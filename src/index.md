@@ -173,14 +173,12 @@ and [Developer docs](dev.md).
 
 And before we end the page, a few tips for using this website:
 
-- If the site's left-side navigation bar is hidden, use the lines button at top left to show it.
-- To change theme, use the paintbrush button.
-- To search, use the magnifying-glass button.
-- The left and right arrow keys will step through the main pages, as seen in the sidebar.
-  Then all pages, alphabetically, if you keep going..
-- [Access keys](https://en.wikipedia.org/wiki/Access_key#Access_in_different_browsers) are also available:\
-  `s` toggle sidebar, `t` theme, `/` search,\
-  `1` home page, `2` recent changes, `<` previous page, `>` next page.
+- The lines button at top left toggles the site's navigation sidebar.
+- The paintbrush button changes the site theme.
+- The magnifying-glass button searches this site.
+- The left and right arrow keys step through the pages (as listed in the sidebar).
+- [Access keys](https://en.wikipedia.org/wiki/Access_key#Access_in_different_browsers) are also available:
+  `s` sidebar, `t` theme, `/` search, `1` home, `2` changes.
 
 <!-- ** Old text ------------------------------------------------------------->
 
