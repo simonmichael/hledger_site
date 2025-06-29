@@ -462,7 +462,7 @@ Now I use hledger, which has been fantastic. I back up the file to a shared driv
 
 I have it running on my laptop at all times (a window in my tmux config displays various reports on my accounts like current balance, uncleared balance, uncleared transactions, etc.). I find it helps me to be mindful of my money if it's only a couple keypresses away.
 
-It's hugely valuable to have all of your financial data in one, human-readable place. Not only to you, but to whomever might be executing your will ;)
+It's hugely valuable to have all of your financial data in one, human-readable place. Not only to you, but to whomever might be executing your will ;) --jibcage
 
 I just moved my whole financial life over to hledger and oh my goodness I’m so much happier (I dumped both QuickBooks and Quicken, which I’d been using previously).
 
@@ -547,11 +547,11 @@ One unexpectedly-sweet benefit is that your spending is a high-granularity recor
 
 I've been using hledger for managing my personal finances for a few years now, and I'm really happy with it! --guivho
 
-+1 for full-fledged hledger! I just got it set up last week, and putting together the small scripts for parsing all of the CSVs was (to me) a fun programming exercise that reaped huge visibility into how I spend my money :) --HN
++1 for full-fledged hledger! I just got it set up last week, and putting together the small scripts for parsing all of the CSVs was (to me) a fun programming exercise that reaped huge visibility into how I spend my money :) --jibcage
 
 Thanx for all time and effort you put in this and the whole hledger project, kudos to you all! --guivho
 
-highly recommend its tui [hledger-ui](https://hledger.org/hledger-ui.html) --HN
+also highly recommend its tui (hledger-ui) --karlicoss
 
 I'm glad I found this community and a eco system of PTA. I'm learning so much about this everyday as I'm in a process of learning accounting and also hledger. -- rickx34
 
@@ -628,18 +628,18 @@ I use a JSON file to map bank entries to my hledger accounts. For new transactio
 Claude returns hledger journal entries based on these mappings, which I can quickly review.
 Then another script prints out hledger journal entries for that month's bank transactions, all cleanly mapped. It takes me just a few minutes to tweak and finalize.
 I can also specify these mapping instructions in plain-language which would've otherwise been a fragile hodgepodge of regexps and conditionals.
---HN
+--jasim
 
 I’m a huge ledger fan (hledger specifically) and have used it to run my entire accounting life for the past 8 years or so.
 A few tips:
 - Resist the urge to break up your various accounts into too many separate files. I tried that and went back to one file per account per year (aka “venmo-2024.hledger”). Also helps with below…
 - GitHub CoPilot is remarkably and shockingly good at working with ledger files. It will do the balance addition/subtraction on following lines almost perfectly. 
   Also, if you need to manually enter a new line, you can often just enter a shortcut one-line comment and it’ll fill the entire entry
---HN
+--nlh
 
 This is the big advantage of hledger. It has two ways of translating csv into journal form - one simple and one more complicated, but very flexible.
 I find it best to have a separate journal for each downloaded account. I just include them into a master journal (along with a manual entry journal) and generate reports from that.
-I also use git so I can roll back the latest import, if something goes wrong - but that hasn’t happened yet. --HN
+I also use git so I can roll back the latest import, if something goes wrong - but that hasn’t happened yet. --wrycoder
 
 Hledger is AWESOME --teitoklien
 
