@@ -163,12 +163,12 @@ hledger.org {
 	redir /hledger-ui {uri}.html
 	redir /hledger-web {uri}.html
 	redir /manual /hledger.html
-	redir /journal /hledger.html#journal-format
-	redir /csv /hledger.html#csv-format
+	redir /journal /hledger.html#journal
+	redir /csv /hledger.html#csv
 	redir /manual.html /hledger.html
-	redir /journal.html /hledger.html#journal-format
-	redir /csv.html /hledger.html#csv-format
-	redir /timeclock.html /hledger.html#timeclock-format
+	redir /journal.html /hledger.html#journal
+	redir /csv.html /hledger.html#csv
+	redir /timeclock.html /hledger.html#timeclock
 
 	# invalid/non-provided manual paths
 	#
