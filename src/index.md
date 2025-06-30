@@ -693,6 +693,55 @@ hledger focuses on testing and correctness alongside comprehensive documentation
 
 hledger can do everything but make my red numbers green. --nenion
 
+I just closed out my household's 2024 books and completed my first full year of plain text accounting with hledger ...
+Plain text accounting with hledger has been a profound experience and transformed our household's relationship to our finances and financial planning. 
+ --bitsonchips
+
+I got interested in accounting through my research background in the history of mathematics and science. This led me to Luca Pacioli and this fun little book by Jane Gleeson-White: Double Entry: How the Merchants of Venice Created Modern Finance.
+ --bitsonchips
+
+I am far from a "power user" or any kind of coder. I'm a mom with a basic understanding of terminal commands. ...
+I am eternally grateful to everyone who has contributed to and maintains hledger's documentation and made it accessible for a user like me.
+ --bitsonchips
+
+I prefer hledger-web which is a beautiful way to look at our books. I have been able to keep up with journal entries and produce quarterly and now end-of-year reports and hledger has made it all honestly quite joyful. This in turn has transformed how I feel about handling our finances generally and more importantly how I feel about them going forward. Amazing!
+ --bitsonchips
+
+It's so great to see others enjoying hledger as much as I do. --HowlOfTheSun
+
+I have been using it for past few years. Its flawless and to the core. It rakes some time to adjust it as per our requirements but i would say that after about an year of usage, it starts making a lot of sense and gives what we wants. --jeetu77
+
+I have gained so much benefit from hledger and PTA, I am grateful for all your (and others) work on it. --HowlOfTheSun
+
+PTA changed my life this year. --igbanam
+
+Keep up the good work. We love it. --igbanam
+
+[I'm] using a Google form that I can access via my mobile to log journal entries while I am traveling away from home. Importing the spreadsheet into hledger saves a ton of time.
+
+My main lesson learned is to aim to minimize categories to what is actually useful information for us. --bitsonchips
+
+ for me the main goal was, and still is, conscious awareness of my finances. Therefore I manually enter everything: this adds a little friction to every transaction, which has at times been enough to discourage something. --barrucadu
+
+I get receipts for everything and enter transactions generally on the day they happen, and also check my bank and card statements every weekend. It's basically automatic now, to the point that I start to feel antsy if I have some transactions building up that I've not recorded yet. --barrucadu
+
+At the start of the year ... I start a new journal file and enter future-dated transactions for all my income and expenses. It's necessarily an estimate (e.g. I'm not going to spend exactly my entire food budget every month) but it's handy to see how things are trending, and helps me plan how to save for big expenses. --barrucadu
+
+There seem to be two major schools — one relies primarily on imports from external sources, the other relies on (semi-)manual transaction entry. --gumnos
+
+I’m just about to close off my 2024 journal in hledger. First full year for me as well. Love it! --megagram
+
+I think hledger was the Occam’s Razor for my family’s needs and my level of ability. I was up for the challenge of plain text accounting and I think I got lucky with hledger. The onramp was steep enough to be interesting and short enough to get use-benefit fairly quickly. I also just find it really elegant imho. --bitsonchips
+
+I aim to manually enter our household’s cash/checking journal entries at least weekly. It takes less than an hour. Often less than 30 minutes. Even less if I manage it every 3-4 days. It’s a habit now and I look forward to completing it. --bitsonchips
+
+I have thought about importing from electronic bank statements but it’s a level of engagement and data translation that doesn’t excite me. The routine mindful maintenance practice (I know it as “soji”) of journaling expenses and revenues has been a healthy friction that brings awareness to our spending as well as our earning. --bitsonchips
+
+I also pay my kid to occasionally do entries with me. This is also an accounting expense. And fun times familiarizing them with financial literacy. --bitsonchips
+
+What really drew me in from the beginning is how well hledger preserves the simplicity and elegance and double entry. It is so delightfully uncluttered. Precious few things convey this elegance and everyday utility. --bitsonchips
+
+
 `;
 </script>
 
