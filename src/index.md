@@ -500,7 +500,7 @@ The nicest thing about hledger and the original is the extremely simple file for
 
 Thank you for hledger. After front-loading the cli learning curve, I am recognizing it to be, for small business purposes, more practical than commercial products such as Quicken. That is saying a lot, considering the true development cost behind a program like Quicken with long-term corporate investment. --czerny2018
 
-The other really big win is that you can put your accounting in source control. I can not express to you the amount of ass-saving this has brought me. ...  I can find out what the ledger said at any given date. And I have incredibly readable diffs. This last point is so incredibly important that I could not ever possibly think of using GnuCash again. --HN
+The other really big win is that you can put your accounting in source control. I can not express to you the amount of ass-saving this has brought me. ...  I can find out what the ledger said at any given date. And I have incredibly readable diffs. This last point is so incredibly important that I could not ever possibly think of using GnuCash again. --mikekchar (Ledger user)
 
 One nice feature of hledger is its csv rules system, which is very flexible. -- faustiast
 
