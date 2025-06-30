@@ -1,6 +1,11 @@
-// http://www.highslide.com/ref
-hs.graphicsDir = '/highslide/graphics/';
-hs.outlineType = 'rounded-white';
+// This file gets included twice - early by the theme to reduce flash,
+// and again at the end for silly mdbook reasons (see book.toml).
+// The first time, highslide won't have loaded yet.
+if (typeof hs !== 'undefined') {
+  // http://www.highslide.com/ref
+  hs.graphicsDir = '/highslide/graphics/';
+  hs.outlineType = 'rounded-white';
+}
 
 $(document).ready( function() {
   // this happens too late to prevent visual popping
