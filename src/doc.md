@@ -127,7 +127,9 @@ Check plaintextaccounting.org's and wiki.plaintextaccounting.org's categories.
 <!-- sections ordered mostly alphabetically -->
 
 ### Learning accounting and bookkeeping
-- [Accounting concepts](accounting.md)
+- [Tips for learning hledger](learn.md)
+- [Accounting basics for PTA users](accounting-pta.md)
+- [Accounting: further study](accounting.md)
 - [Common journal entries](common-journal-entries.md)
 - [pta.o: Choosing cash or accrual](https://plaintextaccounting.org/#choosing-cash-vs-accrual)
 
