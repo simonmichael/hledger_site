@@ -5,6 +5,11 @@
 <!-- toc -->
 </div>
 
+<style>
+h2 { margin-top:2em; }
+h3 { margin-top:0; }
+</style>
+
 An overview of hledger user docs.
 You don't need to read them all; pick the ones that fit your needs.
 There are also some [Videos](videos.md).
