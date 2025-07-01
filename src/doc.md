@@ -25,9 +25,48 @@ Short introductions, assuming a bit of command line know-how.
 - [hledger manual: Common tasks](hledger.md#common-tasks)
 - [Workflows](workflows.md)
 
-## Slow intros
+## hledger by example
+### First steps
+- [Getting hledger installed](getting-hledger-installed.md)
+- [Checking your setup](checking-your-setup.md)
+### Working with a journal
+- [Setting up a default journal](setting-up-a-default-journal.md)
+<!-- - Adding transactions -->
+<!-- - Checking for errors -->
+<!-- - Using include files -->
+<!-- - Declaring commodities -->
+<!-- - Declaring accounts -->
+<!-- - Displaying transactions -->
+<!-- - Reading multiple journals -->
+### Working with other kinds of data
+- [Reading timeclock files](reading-timeclock-files.md)
+- [Reading timedot files](reading-timedot-files.md)
+- [Reading CSV files](reading-csv-files.md)
+- [Importing new transactions](importing-new-transactions.md)
+<!-- ## Customising -->
+<!-- - Setting up a config file -->
+<!-- - Configuring colour -->
+<!-- - Configuring a pager -->
+<!-- - Configuring pretty table borders -->
+<!-- - Configuring shell completions -->
+<!-- ## Reporting -->
+<!-- - Showing balances -->
+<!-- - Showing balance changes -->
+<!-- - Showing revenues and expenses -->
+<!-- - Showing general journal activity -->
+<!-- - Showing account activity -->
+<!-- - Reconciling an account balance -->
+<!-- - Showing the accounting equation -->
+<!-- - Limiting by date -->
+<!-- - Limiting by account name -->
+<!-- - Limiting by account type -->
+<!-- - Limiting by account depth -->
+<!-- ## Setting a budget -->
+<!-- ## Tracking cost -->
+<!-- ## Tracking value -->
+<!-- ## Tracking investments -->
 
-Slower-paced tutorials.
+## Tutorials
 
 - [Tutorial: hledger add](add.md)
 - [Tutorial: hledger-ui](ui.md)
@@ -37,7 +76,7 @@ Slower-paced tutorials.
 - [hledger fan's beginner videos](https://youtube.com/channel/UCZLxXTjOqLzq4z5Jy0AyWSQ)
 - [Tips for learning hledger](learn.md)
 
-## Thorough reference docs
+## Reference docs
 
 The manuals are the authoritative hledger docs.
 (You can also view them on your local machine with `hledger help`, eg).

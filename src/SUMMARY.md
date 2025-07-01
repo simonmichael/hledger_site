@@ -63,6 +63,15 @@
 - [hledger and SQLite](sqlite.md)
 - [hledger and Ultorg](ultorg.md)
 - [hledger and YNAB](ynab.md)
+- [hledger by example](hledger-by-example.md)
+<!-- keeping these in order under their parent -->
+- [Getting hledger installed](getting-hledger-installed.md)
+- [Checking your setup](checking-your-setup.md)
+- [Setting up a default journal](setting-up-a-default-journal.md)
+- [Reading timeclock files](reading-timeclock-files.md)
+- [Reading timedot files](reading-timedot-files.md)
+- [Reading CSV files](reading-csv-files.md)
+- [Importing new transactions](importing-new-transactions.md)
 <!--
 Other manual versions.
 Uncommenting these causes mdbook to render them as part of the main site,
