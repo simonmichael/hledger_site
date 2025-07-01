@@ -3,7 +3,6 @@
 # HLEDGER.ORG
 
 - [Home](index.md)
-<!-- - [News](news.md) -->
 - [Install](install.md)
 - [Release notes](relnotes.md)
 - [Docs](doc.md)
@@ -21,9 +20,14 @@
 
 # ALL PAGES
 
-<!-- This section is hidden by CSS, but lists all site pages so that mdbook will render them: -->
-<!-- In recent mdbook versions, eg 4.51, duplicates must be avoided. -->
+<!-- Pages must be listed here for mdbook to render them. -->
+<!-- Since mdbook 4.50 or so, duplicates must be avoided. -->
 
+<!-- user docs -->
+- [2 minute quick start](2-minute-quick-start.md)
+- [5 minute quick start](5-minute-quick-start.md)
+- [10 minute quick start](10-minute-quick-start.md)
+- [A tax reporting setup](tax-reporting-setup.md)
 - [Accounting basics for PTA users](accounting-pta.md)
 - [Accounting: further study](accounting.md)
 - [Balancing the accounting equation](balancing-the-accounting-equation.md)
@@ -37,7 +41,7 @@
 - [Checking for errors](checking-for-errors.md)
 - [CLIMATE](CLIMATE.md)
 - [Common journal entries](common-journal-entries.md)
-- [Workflows](workflows.md)
+- [Converting time to money](time-to-money.md)
 - [Cost notation](cost-notation.md)
 - [Create a journal](create-a-journal.md)
 - [Currency conversion](currency-conversion.md)
@@ -47,49 +51,10 @@
 - [Features](features.md)
 - [Forecasting](forecasting.md)
 - [Foreign trip expenses](foreign-trip-expenses.md)
-<!-- - [Home](index.md) -->
-- [How to record journal entries](how-to-record.md)
-- [How to figure out journal entries](how-to-figure-out.md)
-- [Tutorial: Import CSV data](import-csv.md)
-<!-- - [Install](install.md) -->
-- [Invoicing](invoicing.md)
-- [Tips for learning hledger](learn.md)
-- [Mobile apps](mobile.md)
-- [Multicurrency tutorial (2018)](multicurrency-tutorial.md)
-- [News](news.md)
-- [Project accounting](project-accounting.md)
-- [2 minute quick start](2-minute-quick-start.md)
-- [5 minute quick start](5-minute-quick-start.md)
-- [10 minute quick start](10-minute-quick-start.md)
-<!-- - [Release notes](relnotes.md) -->
-- [Report examples](report-examples.md)
-- [Reporting version control stats](reporting-version-control-stats.md)
-- [Rewrite account names](rewrite-account-names.md)
-- [Rewrite commodity symbols](rewrite-commodity-symbols.md)
-- [Save frequently used options](save-frequently-used-options.md)
-<!-- - [Scripts and add-ons](scripts.md) -->
-- [Scripting hledger](scripting.md)
-- [SM's 2019 setup](sm-2019-setup.md)
-- [SM's 2023 setup](sm-2023-setup.md)
-- [SM's time & task dashboard](time-and-task-dashboard.md)
-<!-- - [Sponsor hledger](sponsor.md) -->
-- [Tags tutorial](tags-tutorial.md)
-- [A tax reporting setup](tax-reporting-setup.md)
-- [Converting time to money](time-to-money.md)
-- [Time planning](time-planning.md)
-- [Track changes with version control](track-changes-with-version-control.md)
-- [Track investments (2017)](track-investments.md)
-- [Track investments (2020)](investments.md)
-- [Tracking and selling inventory](inventory.md)
-- [Tutorial: hledger add](add.md)
-- [Tutorial: hledger-ui](ui.md)
-- [Tutorial: hledger-web](web.md)
-<!-- - [Videos](videos.md) -->
-- [Visualising discussion 2023](visualising2023.md)
 - [hledger and Beancount](beancount.md)
 - [hledger and dsq/DataStation](dsq.md)
-- [hledger and just](just.md)
 - [hledger and GnuCash](gnucash.md)
+- [hledger and just](just.md)
 - [hledger and Ledger](ledger.md)
 - [hledger and Obsidian](obsidian.md)
 - [hledger and Paisa](paisa.md)
@@ -98,8 +63,6 @@
 - [hledger and SQLite](sqlite.md)
 - [hledger and Ultorg](ultorg.md)
 - [hledger and YNAB](ynab.md)
-<!-- - [sm-2023-setup](sm-2023-setup.md) -->
-
 <!--
 Other manual versions.
 Uncommenting these causes mdbook to render them as part of the main site,
@@ -112,25 +75,55 @@ and previewing them when working on docs locally.
 - [hledger manual (dev)](dev/hledger.md)
 - [hledger-ui manual (dev)](dev/hledger-ui.md)
 - [hledger-web manual (dev)](dev/hledger-web.md)
-
 - [hledger-web tips](hledger-web-tips.md)
+- [How to figure out journal entries](how-to-figure-out.md)
+- [How to record journal entries](how-to-record.md)
+- [Invoicing](invoicing.md)
+- [Mobile apps](mobile.md)
+- [Multicurrency tutorial (2018)](multicurrency-tutorial.md)
+- [News](news.md)
+- [Project accounting](project-accounting.md)
+- [Report examples](report-examples.md)
+- [Reporting version control stats](reporting-version-control-stats.md)
+- [Rewrite account names](rewrite-account-names.md)
+- [Rewrite commodity symbols](rewrite-commodity-symbols.md)
+- [Save frequently used options](save-frequently-used-options.md)
+- [Scripting hledger](scripting.md)
+- [SM's 2019 setup](sm-2019-setup.md)
+- [SM's 2023 setup](sm-2023-setup.md)
+- [SM's time & task dashboard](time-and-task-dashboard.md)
+- [Tags tutorial](tags-tutorial.md)
+- [Time planning](time-planning.md)
+- [Tips for learning hledger](learn.md)
+- [Track changes with version control](track-changes-with-version-control.md)
+- [Track investments (2017)](track-investments.md)
+- [Track investments (2020)](investments.md)
+- [Tracking and selling inventory](inventory.md)
+- [Tutorial: hledger add](add.md)
+- [Tutorial: hledger-ui](ui.md)
+- [Tutorial: hledger-web](web.md)
+- [Tutorial: Import CSV data](import-csv.md)
+- [Visualising discussion 2023](visualising2023.md)
+- [Workflows](workflows.md)
 
+<!-- dev docs -->
 - [ACHIEVEMENTS](ACHIEVEMENTS.md)
 - [BENCHMARKS](BENCHMARKS.md)
+- [CHANGES-ui.md](CHANGES-ui.md)
+- [CHANGES-web.md](CHANGES-web.md)
+- [CHANGES-cli.md](CHANGES-cli.md)
+- [CHANGES-lib.md](CHANGES-lib.md)
+- [CHANGES.md](CHANGES.md)
 - [CHANGELOGS](CHANGELOGS.md)
 - [CODE](CODE.md)
 - [COMMITS](COMMITS.md)
-<!-- - [Contributor Quick Start](CONTRIBUTING.md) -->
 - [Developer FAQ](DEVFAQ.md)
-<!-- - [CREDITS](CREDITS.md) -->
 - [DECISIONS](DECISIONS.md)
 - [DEVWORKFLOWS](DEVWORKFLOWS.md)
 - [DOCS](DOCS.md)
-<!-- - [Developer docs](dev.md) -->
 - [ERRORS](ERRORS.md)
 - [EXAMPLES](EXAMPLES.md)
 - [FILES](FILES.md)
-<!-- - [Finance](FINANCE.md) -->
 - [Investment Accounting Feature Ladder](investment-accounting-features.md)
 - [ISSUES](ISSUES.md)
 - [JUST-MAKE-SHAKE](JUST-MAKE-SHAKE.md)
@@ -143,9 +136,3 @@ and previewing them when working on docs locally.
 - [ROADMAP](ROADMAP.md)
 - [TESTS](TESTS.md)
 - [VERSIONNUMBERS](VERSIONNUMBERS.md)
-
-- [CHANGES-ui.md](CHANGES-ui.md)
-- [CHANGES-web.md](CHANGES-web.md)
-- [CHANGES-cli.md](CHANGES-cli.md)
-- [CHANGES-lib.md](CHANGES-lib.md)
-- [CHANGES.md](CHANGES.md)
