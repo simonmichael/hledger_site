@@ -533,12 +533,12 @@ As a programmer, I find ledger/hledger/beancount to be the most convenient way t
 
 hledger focuses on testing and correctness alongside comprehensive documentation, giving me a much better picture of its capabilities. I dove in and spent a week entering a year and a half of data, which was enough to convince me. hledger is truly an amazing tool. I can’t count how many times I’ve thought wouldn’t it be nice if… only to realize it can already do that, or how many times I’ve been disappointed at an apparent bug only to realize I was the one at fault. I don’t know how much is unique to hledger and how much comes from its precursors or contemporaries, but I’m also struck by all the thoughtful touches, like having both aregister and register, or having all of =, ==, =*, and ==* for balance assertions. The attention to detail is marvelous. I have to assume that, whatever the provenance, this flexible competence is born of real use and familiarity. I couldn’t help overflowing with praise in the very friendly Matrix room --Shiv J. M.
 
-What you'll like about hledger and ledger CLI is a) the undo function of your favourite text editor and b) separate files that you can include into a master c) awesome reports on the terminal. --HN
+What you'll like about hledger and ledger CLI is a) the undo function of your favourite text editor and b) separate files that you can include into a master c) awesome reports on the terminal. --TomK32
 
 This week, I used hledger to help an overwhelmed relative decipher their bank activity. ... Even though there were a significant number of transactions we simply could not interpret thanks to the poor quality of the data itself, this was enough for register, aregister, and balance to answer any questions. I was able to account for almost every penny with a high degree of confidence, categorize expenses, and make projections for the future based on the patterns I saw. It took less than an hour from when I started entering the data to turn the terrifying unknown into the mundane, comprehensible known, and I can never put a price on the peace of mind it gave us all. --Shiv J. M.
 
 With auto sync and hledger, I've gone from my budget taking 1 - 2 hours a week to 10 - 20mins. No more hunting for that one typo that meant my budget didn't balance with my bank balance.
-hledger has also been fantastic as far as help. I've jumped on IRC a few times for help and bug reports. The lead dev has been amazing. Fixing bugs the same day and offering help on using hledger. --HN
+hledger has also been fantastic as far as help. I've jumped on IRC a few times for help and bug reports. The lead dev has been amazing. Fixing bugs the same day and offering help on using hledger. --xupybd
 
 Adopting hledger for plain text accounting has paid dividends in more ways than I can count. It’s brought order to my somewhat chaotic finances and allowed me to track details I was barely aware of, freeing me from the vague sense of unease that used to occasionally creep into my mind when I wondered, for instance, how much I was spending on food. --Shiv J. M.
 
@@ -741,6 +741,12 @@ I also pay my kid to occasionally do entries with me. This is also an accounting
 
 What really drew me in from the beginning is how well hledger preserves the simplicity and elegance and double entry. It is so delightfully uncluttered. Precious few things convey this elegance and everyday utility. --bitsonchips
 
+I just discovered PTA and hledger today, a few hours ago, and have with 
+much ease imported CSV dumps from my banks etc, and am currently getting 
+an overview of my life I've never had before.
+Thank you so much for developing this amazing utility! You changed my life 
+for the better today, and I will use this for ever :-)
+--Martin Josefsson
 
 `;
 </script>
