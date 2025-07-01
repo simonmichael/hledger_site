@@ -66,7 +66,7 @@ Your financial data remains local, private, and free from vendor lock-in.
 (Also version-controllable and scriptable.)
 
 hledger is fast, lightweight, and dependable.
-It comes with [command line](basics.md), [TUI](ui.md), and [web browser](web.md) interfaces.
+It comes with [command line](hledger.md), [TUI](hledger-ui.md), and [web browser](hledger-web.md) interfaces.
 There are also some compatible [phone apps](mobile.md).
 It is comfortable for technical users, but also usable by non-techies (perhaps with a little setup help).
 Command line skills are useful but not essential.
@@ -128,7 +128,7 @@ Here are some common paths for getting started:
   or [10 minute](10-minute-quick-start.md) quick starts.
 
 - **If you'd like a more gentle introduction:**\
-  see [Tutorial: hledger basics](basics.md).
+  see [Tutorial: hledger add](add.md).
 
 <!-- - **If you'd like to avoid the command line and use a terminal interface instead:**\ -->
 <!--   see [Tutorial: hledger-ui](ui.md). -->
@@ -200,7 +200,7 @@ and web apps like [Fava](https://beancount.github.io/fava/) and [Paisa](https://
 - fast, lightweight, and dependable (we pay $50 for [regression reports/fixes](REGRESSIONS.md))
 - local, not cloud-based (your private financial data remains under your control)
 - free from vendor lock-in
-- shipped with [command line](basics.md), [terminal](ui.md), and [web](web.md) UIs
+- shipped with [command line](add.md), [terminal](ui.md), and [web](web.md) UIs
 - good at importing CSV from banks and other financial institutions
 - good for tracking money, investments, time, or any countable commodity
 - good for learning  more about [double entry bookkeeping](accounting.md)

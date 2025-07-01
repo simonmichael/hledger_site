@@ -11,8 +11,8 @@ There are also some [Videos](videos.md).
 
 ## Quick intros
 
-Short introductions, which assume a bit of command line know-how.
-These overlap somewhat.
+Short introductions, assuming a bit of command line know-how.
+(These overlap.)
 
 - [2 minute quick start](2-minute-quick-start.md)
 - [5 minute quick start](5-minute-quick-start.md)
@@ -22,25 +22,27 @@ These overlap somewhat.
 
 ## Slow intros
 
-Slower-paced, step-by-step tutorials.
+Slower-paced tutorials.
 
-- [Tips for learning hledger](learn.md)
-- [Tutorial: hledger-web](web.md)
-- [Tutorial: hledger basics](basics.md)
+- [Tutorial: hledger add](add.md)
 - [Tutorial: hledger-ui](ui.md)
+- [Tutorial: hledger-web](web.md)
 - [Tutorial: Import CSV data](import-csv.md)
 - [Accounting basics for PTA users](accounting-pta.md)
-- [hledger fan's short beginner videos](https://youtube.com/channel/UCZLxXTjOqLzq4z5Jy0AyWSQ)
+- [hledger fan's beginner videos](https://youtube.com/channel/UCZLxXTjOqLzq4z5Jy0AyWSQ)
+- [Tips for learning hledger](learn.md)
 
 ## Thorough reference docs
 
 The manuals are the authoritative hledger docs.
-You can also view them on your local machine with [`hledger help`](hledger.md#help), `hledger-ui --man`, `hledger-web --info` etc.
-<!-- The hledger manual's table of contents is a good overview. -->
+(You can also view them on your local machine with `hledger help`, eg).
 
 - [hledger manual](hledger.md)
 - [hledger-ui manual](hledger-ui.md)
 - [hledger-web manual](hledger-web.md)
+
+<!-- -->
+
 - [Release notes](relnotes.md)
 - [FAQ](faq.md)
 - [Plain Text Accounting FAQ](https://plaintextaccounting.org/FAQ)

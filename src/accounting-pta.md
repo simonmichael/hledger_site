@@ -6,7 +6,7 @@
 </div>
 
 Here we'll give a quick hledger-oriented intro to some useful accounting concepts,
-using the journal file created in [Tutorial: hledger add](basics.md).
+using the journal file created in [Tutorial: hledger add](add.md).
 Also we'll discuss account hierarchy in hledger.
 
 
@@ -77,7 +77,7 @@ $ hledger register desc:supermarket expenses
 ```
 
 But descriptions are irregular, so eg the report above misses
-[the $5 purchase on the following day](basics.md#record-a-transaction-by-editing).
+[the $5 purchase on the following day](add.md#record-a-transaction-by-editing).
 
 Instead, bookkeepers usually subdivide the top-level accounts into subaccounts, subsubaccounts, etc.
 which can be used in transactions to record more specific categories.

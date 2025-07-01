@@ -76,7 +76,7 @@ Press `a`:
 [![](images/hledger-ui/Screen%20Shot%202020-03-24%20at%202.31.31%20PM.png)](images/hledger-ui/Screen%20Shot%202020-03-24%20at%202.31.31%20PM.png)
 
 This bare-bones data entry UI is hledger's [add](hledger.md#add) command,
-also introduced in [Easy workflow #1: hledger add](basics.md).
+also introduced in [Tutorial: hledger add](add.md).
 
 Here, we'll use it to enter a few transactions, 
 similar to the [5-minute quick start](5-minute-quick-start.md) example.

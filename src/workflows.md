@@ -19,7 +19,7 @@ Eg, run
 `hledger bs` to see your account balances (a [balance sheet]), and
 `hledger is` to see your income and expenses (an [income statement]).
 
-[Tutorial: hledger basics](basics.md) describes this process, and hledger's basic concepts and file format, step by step.
+[Tutorial: hledger add](add.md) describes this process, and hledger's basic concepts and file format, step by step.
 You might want to skim through this one even if you don't plan to use `hledger add`.
 
 ### Web UI

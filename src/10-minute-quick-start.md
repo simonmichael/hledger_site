@@ -169,7 +169,7 @@ Recording transactions manually may sound tedious, but with a good text editor
 or other data entry tool it can be fast. It also provides greatest financial
 awareness. Some people enter everything by hand for this reason.
 
-Run the add command for assisted data entry in the terminal ([tutorial](basics.md)):
+Run the add command for assisted data entry in the terminal ([tutorial](add.md)):
 
 ```cli
 $ hledger add
