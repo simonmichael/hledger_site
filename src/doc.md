@@ -26,12 +26,18 @@ Short introductions, assuming a bit of command line know-how.
 - [Workflows](workflows.md)
 
 ## hledger by example
-*WIP*
-### First steps
+
+A growing series of guided lessons.
+
 - [Getting hledger installed](getting-hledger-installed.md)
 - [Checking your setup](checking-your-setup.md)
-### Working with a journal
-- [Setting up a default journal](setting-up-a-default-journal.md)
+- [A default journal file](a-default-journal-file.md)
+- [First transaction: starting balances](setting-starting-balances.md)
+
+<!-- - [Reading timeclock files](reading-timeclock-files.md) -->
+<!-- - [Reading timedot files](reading-timedot-files.md) -->
+<!-- - [Reading CSV files](reading-csv-files.md) -->
+<!-- - [Importing new transactions](importing-new-transactions.md) -->
 <!-- - Adding transactions -->
 <!-- - Checking for errors -->
 <!-- - Using include files -->
@@ -39,11 +45,9 @@ Short introductions, assuming a bit of command line know-how.
 <!-- - Declaring accounts -->
 <!-- - Displaying transactions -->
 <!-- - Reading multiple journals -->
-### Working with other kinds of data
-- [Reading timeclock files](reading-timeclock-files.md)
-- [Reading timedot files](reading-timedot-files.md)
-- [Reading CSV files](reading-csv-files.md)
-- [Importing new transactions](importing-new-transactions.md)
+<!-- ### First steps -->
+<!-- ### Working with a journal -->
+<!-- ### Working with other kinds of data -->
 <!-- ## Customising -->
 <!-- - Setting up a config file -->
 <!-- - Configuring colour -->

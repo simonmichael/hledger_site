@@ -67,7 +67,8 @@
 <!-- keeping these in order under their parent -->
 - [Getting hledger installed](getting-hledger-installed.md)
 - [Checking your setup](checking-your-setup.md)
-- [Setting up a default journal](setting-up-a-default-journal.md)
+- [A default journal file](a-default-journal-file.md)
+- [First transaction: starting balances](setting-starting-balances.md)
 - [Reading timeclock files](reading-timeclock-files.md)
 - [Reading timedot files](reading-timedot-files.md)
 - [Reading CSV files](reading-csv-files.md)
