@@ -44,7 +44,7 @@ A growing series of guided lessons.
 - [Getting hledger installed](getting-hledger-installed.md)
 - [Checking your setup](checking-your-setup.md)
 - [A default journal file](a-default-journal-file.md)
-- [First transaction: starting balances](setting-starting-balances.md)
+- [First transaction: starting balances](first-transaction.md)
 
 <!-- - [Reading timeclock files](reading-timeclock-files.md) -->
 <!-- - [Reading timedot files](reading-timedot-files.md) -->
