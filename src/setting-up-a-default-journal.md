@@ -1,25 +1,34 @@
 # Setting up a default journal
 
-The output of `hledger setup` mentions a "default journal file". This is the file hledger will use by default, if you don't specify one on the command line with `-f FILE`.
+The output of `hledger setup` mentions a "default journal file". This is the file hledger will read from (and add transactions to) by default. It's good to configure a default journal, so that you don't have to write `-f FILE` in your hledger commands all the time.
 
-You can create that file yourself, at the path shown:
+If you know how to set the `LEDGER_FILE` environment variable, you can specify the file with that.
 
-Eg on unix:
+<!--
+Eg, on unix:
 ```
 touch ~/.hledger.journal
 ```
-
-or in Windows powershell. (On Windows, creating the file with `-encoding ascii` seems needed for the moment. The `-append` is for safety, in case you already have data there; but it might defeat the `-encoding`.)
+But on Windows, some fiddling is required to select the right text encoding.
+-->
+<!--
+or in Windows powershell:
 ```
 out-file -append -encoding ascii $HOME/.hledger.journal
 ```
+(On Windows, creating the file with `-encoding ascii` seems needed for the moment. The `-append` is for safety, in case you already have data there; but it might defeat the `-encoding`..)
+-->
 
-Another way to create the journal is to use hledger's `add` command. (On Windows, also use `--color no` for now). 
-
-Let's record a first "opening balances" transaction, declaring how much cash is in your wallet today. Run `hledger add` as shown below, but instead of "$10", enter whatever amount and currency symbol seems correct for you. You can press enter at prompts to accept the default value.
+Or, you can create a file at the default location. 
+The most portable way to do that, is to use hledger's `add` command.
+So let's record a transaction:
+an "opening balances" transaction, declaring how much cash is in your wallet today. 
+Run `hledger add`, answering the prompts as shown below.
+Instead of "$10", enter whatever amount and currency symbol seems correct for you. 
+(If you're on Windows, also use `--color=no` for now):
 
 ```
-PS C:\Users\Simon> hledger add --color n
+PS C:\Users\Simon> hledger add --color=no
 Adding transactions to journal file C:\Users\Simon\.hledger.journal
 Any command line arguments will be used as defaults.
 Use tab key to complete, readline keys to edit, enter to accept defaults.

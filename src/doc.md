@@ -26,6 +26,7 @@ Short introductions, assuming a bit of command line know-how.
 - [Workflows](workflows.md)
 
 ## hledger by example
+*WIP*
 ### First steps
 - [Getting hledger installed](getting-hledger-installed.md)
 - [Checking your setup](checking-your-setup.md)

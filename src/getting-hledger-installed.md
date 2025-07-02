@@ -1,11 +1,13 @@
 # Getting hledger installed
 
 [Install](install.md) shows the ways to get hledger installed on your computer.
-Each new hledger version is better than the preceding ones, so using the latest version is ideal.
+Each new hledger version is better than the preceding ones, so using the latest is ideal.
+"hledger by example" assumes you are using the latest hledger version.
 
 It's important that hledger is installed somewhere in your system's PATH, so that you can just type "hledger" and it runs.
 How exactly to do this depends on your system and install method.
-Here's a simple method, using the official release binaries:
+Here's a simple method, using the official release binaries.
+Copy and paste the appropriate line(s) into a terminal window to run them:
 
 On a mac with an ARM processor:
 ```
@@ -19,7 +21,7 @@ or on a GNU/linux machine (intel):
 ```
 curl -sL https://github.com/simonmichael/hledger/releases/download/1.43.2/hledger-linux-x64.tar.gz | tar -xzv -f- -C/usr/local/bin hledger hledger-ui hledger-web
 ```
-or on a Windows machine (intel or ARM):
+or on a Windows machine (intel or ARM), in a powershell window:
 ```
 cd ~
 curl https://github.com/simonmichael/hledger/releases/download/1.43.2/hledger-windows-x64.zip -OutFile hledger-windows-x64.zip
