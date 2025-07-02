@@ -14,16 +14,28 @@ An overview of hledger user docs.
 You don't need to read them all; pick the ones that fit your needs.
 There are also some [Videos](videos.md).
 
-## Quick intros
+## Quick starts
 
-Short introductions, assuming a bit of command line know-how.
-(These overlap.)
+Fast introductions, assuming a bit of command line know-how.
+(These overlap one another.)
 
 - [2 minute quick start](2-minute-quick-start.md)
 - [5 minute quick start](5-minute-quick-start.md)
 - [10 minute quick start](10-minute-quick-start.md)
 - [hledger manual: Common tasks](hledger.md#common-tasks)
 - [Workflows](workflows.md)
+
+## Tutorials
+
+Slower-paced introductions to various topics.
+
+- [Tutorial: hledger add](add.md)
+- [Tutorial: hledger-ui](ui.md)
+- [Tutorial: hledger-web](web.md)
+- [Tutorial: Import CSV data](import-csv.md)
+- [Accounting basics for PTA users](accounting-pta.md)
+- [hledger fan's beginner videos](https://youtube.com/channel/UCZLxXTjOqLzq4z5Jy0AyWSQ)
+- [Tips for learning hledger](learn.md)
 
 ## hledger by example
 
@@ -71,20 +83,10 @@ A growing series of guided lessons.
 <!-- ## Tracking value -->
 <!-- ## Tracking investments -->
 
-## Tutorials
-
-- [Tutorial: hledger add](add.md)
-- [Tutorial: hledger-ui](ui.md)
-- [Tutorial: hledger-web](web.md)
-- [Tutorial: Import CSV data](import-csv.md)
-- [Accounting basics for PTA users](accounting-pta.md)
-- [hledger fan's beginner videos](https://youtube.com/channel/UCZLxXTjOqLzq4z5Jy0AyWSQ)
-- [Tips for learning hledger](learn.md)
-
 ## Reference docs
 
 The manuals are the authoritative hledger docs.
-(You can also view them on your local machine with `hledger help`, eg).
+<!-- (You can also view them on your local machine with `hledger help`, eg). -->
 
 - [hledger manual](hledger.md)
 - [hledger-ui manual](hledger-ui.md)
