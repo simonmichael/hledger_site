@@ -748,6 +748,11 @@ Thank you so much for developing this amazing utility! You changed my life
 for the better today, and I will use this for ever :-)
 --Martin Josefsson
 
+I had a wonderful time setting up a static site for viewing my hledger data.
+I wanted something more accessible on mobile than command-line reports, ... 
+I’m very happy with everything and it was so easy with all the tools we have now.
+--TheRealDaMuffin
+
 `;
 </script>
 
