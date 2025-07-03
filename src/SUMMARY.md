@@ -18,7 +18,26 @@
 - [Finance](FINANCE.md)
 - [CREDITS](CREDITS.md)
 
-# ALL PAGES
+# HLEDGER BY EXAMPLE
+
+- [hledger by example](hledger-by-example.md)
+<!-- keeping these in order under their parent -->
+- [Getting hledger installed](getting-hledger-installed.md)
+- [Checking your setup](checking-your-setup.md)
+- [A default journal file](a-default-journal-file.md)
+- [First transaction: starting balances](first-transaction.md)
+- [Journal entries](journal-entries.md)
+- [More transactions](more-transactions.md)
+- [print: show whole transactions](print-.md)
+- [register: show postings](register.md)
+- [balance: show account totals](balance.md)
+
+- [Reading timeclock files](reading-timeclock-files.md)
+- [Reading timedot files](reading-timedot-files.md)
+- [Reading CSV files](reading-csv-files.md)
+- [Importing new transactions](importing-new-transactions.md)
+
+# OTHER PAGES
 
 <!-- Pages must be listed here for mdbook to render them. -->
 <!-- Since mdbook 4.50 or so, duplicates must be avoided. -->
@@ -63,16 +82,6 @@
 - [hledger and SQLite](sqlite.md)
 - [hledger and Ultorg](ultorg.md)
 - [hledger and YNAB](ynab.md)
-- [hledger by example](hledger-by-example.md)
-<!-- keeping these in order under their parent -->
-- [Getting hledger installed](getting-hledger-installed.md)
-- [Checking your setup](checking-your-setup.md)
-- [A default journal file](a-default-journal-file.md)
-- [First transaction: starting balances](first-transaction.md)
-- [Reading timeclock files](reading-timeclock-files.md)
-- [Reading timedot files](reading-timedot-files.md)
-- [Reading CSV files](reading-csv-files.md)
-- [Importing new transactions](importing-new-transactions.md)
 <!--
 Other manual versions.
 Uncommenting these causes mdbook to render them as part of the main site,

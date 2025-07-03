@@ -37,6 +37,10 @@ Slower-paced introductions to various topics.
 - [hledger fan's beginner videos](https://youtube.com/channel/UCZLxXTjOqLzq4z5Jy0AyWSQ)
 - [Tips for learning hledger](learn.md)
 
+
+<!--
+Use outline in SUMMARY.md for now
+
 ## hledger by example
 
 A growing series of guided lessons.
@@ -45,7 +49,12 @@ A growing series of guided lessons.
 - [Checking your setup](checking-your-setup.md)
 - [A default journal file](a-default-journal-file.md)
 - [First transaction: starting balances](first-transaction.md)
-
+- [Inspecting the journal](inspecting-the-journal.md)
+- [More transactions](more-transactions.md)
+- [print: show whole transactions](print-.md)
+- [register: show postings](register.md)
+- [balance: show account totals](balance.md)
+-->
 <!-- - [Reading timeclock files](reading-timeclock-files.md) -->
 <!-- - [Reading timedot files](reading-timedot-files.md) -->
 <!-- - [Reading CSV files](reading-csv-files.md) -->
