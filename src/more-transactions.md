@@ -4,7 +4,7 @@ Here's a journal with a few more transactions.
 You could practice using `hledger add` to add similar transactions to your journal.
 Or: open the file in a text editor and copy/paste these entries.
 
-```
+```journal
 2025-01-01 starting balances
     assets:cash               100 USD
     assets:bank:checking     1000 USD

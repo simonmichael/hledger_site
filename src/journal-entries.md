@@ -1,7 +1,8 @@
 # Journal entries
 
 That `add` command will have created the journal file and one journal entry, something like this:
-```
+
+```journal
 PS C:\Users\Simon> cat .hledger.journal
 ; journal created 2025-07-01 by hledger
 
