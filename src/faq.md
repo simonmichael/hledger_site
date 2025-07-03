@@ -561,11 +561,11 @@ if that's a problem you might need to exclude those transactions or split them u
 
 ### What are some gotchas with piping `hledger print` into another hledger command ?
 
-`hledger print` reproduces transactions, but it discards directives.
+`hledger print` reproduces transactions, but not directives.
 The output will normally be a valid journal, but it can have a different meaning or even be unparseable due to:
 
 1. Loss of `decimal-mark` directives, which could disrupt number parsing.
-2. Loss of `commodity` directives declaring display precisions, which could disrupt transaction balancing.
+2. Loss of `commodity` directives declaring display precisions, which (in hledger <=1.43) could disrupt transaction balancing.
 3. Loss of `account` directives declaring accounts' types, which could alter reports.
 4. Balance assertions which break because you have excluded transactions they depend on.
 
