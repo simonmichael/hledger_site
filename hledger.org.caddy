@@ -463,9 +463,9 @@ prs.hledger.org {
 draftprs.hledger.org {
 	redir https://github.com/simonmichael/hledger/pulls?q=is:open+is%3Adraft
 }
-# ready open pull requests
+# ready open pull requests - not marked draft by contributor, not labelled needs-* by maintainer
 readyprs.hledger.org {
-	redir https://github.com/simonmichael/hledger/pulls?q=is:open+-is%3Adraft
+	redir https://github.com/simonmichael/hledger/pulls?q=is:open+-is:draft+-label:needs-changes+-label:needs-clarification+-label:needs-code+-label:needs-debugging+-label:needs-design+-label:needs-discussion+-label:needs-docs+-label:needs-history-cleanup+-label:needs-impact-analysis+-label:needs-mockup/screenshot+-label:needs-other-task+-label:needs-rebase+-label:needs-repro+-label:needs-research+-label:needs-review+-label:needs-testing+-label:needs-tests+-label:needs-value-proposition
 }
 assignedprs.hledger.org {
 	redir https://github.com/simonmichael/hledger/pulls?q=is%3Aopen+assignee%3A*
