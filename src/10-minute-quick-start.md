@@ -46,7 +46,7 @@ hledger: free GPLv3+ accounting software for linux, mac, windows, web, etc.
 [multiple currencies]: hledger.md#commodities
 [valuation]:           hledger.md#valuation
 [summarising]:         hledger.md#depth-limiting
-[aliasing]:            hledger.md#account-aliases
+[aliasing]:            hledger.md#alias-directive
 [pivoting]:            hledger.md#pivoting
 [CLI]:                 hledger.md
 [TUI]:                 ui.md
