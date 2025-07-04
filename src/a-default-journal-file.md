@@ -19,19 +19,36 @@ If you know how to configure the `LEDGER_FILE` environment variable on your syst
 This lets you keep the file wherever you choose,
 such as a version-controlled directory like `~/finance` (eg: `LEDGER_FILE=~/finance/2025.journal`).
 
-Otherwise, stick with the default location for simplicity: `.hledger.journal` in your home directory.
-You can always move it later, if needed.
+Otherwise, use the default location for now: `.hledger.journal` in your home directory.
+You can move it later if needed.
 
-<!--
-You can start this file yourself - eg with `touch ~/.hledger.journal` on unix,
-or `out-file -encoding ascii ~/.hledger.journal` on Windows.
-Warning - that Windows command would erase an existing file in that location.
-( `-append` is for safety, in case you already have data there; but it might defeat the `-encoding`.)
--->
+On unix systems, it's easy to start this file yourself - eg you could do:
+```
+touch ~/.hledger.journal
+```
 
-You can create this file yourself, but there's a reliable and portable way that we'll use here:
-just record a transaction with `hledger add`.
-We'll do that next.
+On Windows, it's more complicated because of text encoding, so we recommend another method:
+just record a transaction with `hledger add`. This works on all platforms and is simple.
+We'll do that on the next page.
+
+<br>
+(But if you're interested in the details, here's how you would do it on Windows:)
+
+First, back up any pre-existing journal file (just in case you have one):
+```
+mv -ErrorAction SilentlyContinue ~/.hledger.journal ~/.hledger.journal.old
+```
+
+Then check what is the system text encoding. This is affected by your region, Windows version, and/or whether you changed the "Language for non-Unicode programs" setting to UTF-8 (see [Install: Text encoding](https://hledger.org/install.html#text-encoding)). UTF-8 is ideal, as it will be the most compatible with non-Windows machines and hledger's example files.
+```
+hledger setup | Select-String -Pattern encoding
+```
+
+Then ensure the file is created with that encoding:
+```
+Set-Content -Path ~/.hledger.journal -Value "" -Encoding ENCODING   # change ENCODING appropriately
+```
+
 
 
 (Part of [hledger by example](hledger-by-example.md).)
