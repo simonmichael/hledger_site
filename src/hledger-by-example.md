@@ -15,5 +15,9 @@ Some notes about these examples:
 <!--
 Show don't tell. Keep prose brief.
 We don't have Go by Example's side by side layout.
+https://gobyexample.com
+https://lotz84.github.io/haskellbyexample
+https://typeclasses.com/phrasebook/hello-world
+https://doc.rust-lang.org/rust-by-example
 -->
 
