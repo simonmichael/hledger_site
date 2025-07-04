@@ -22,33 +22,34 @@ such as a version-controlled directory like `~/finance` (eg: `LEDGER_FILE=~/fina
 Otherwise, use the default location for now: `.hledger.journal` in your home directory.
 You can move it later if needed.
 
-On unix systems, it's easy to start this file yourself - eg you could do:
+To start the journal file, just record a transaction with `hledger add`, which will create the file if needed. This works on all platforms and is simple.
+We'll do this on the next page.
+
+<br>
+
+Or, on unix systems you can easily create the file yourself, with a text editor or by doing:
 ```
 touch ~/.hledger.journal
 ```
 
-On Windows, it's more complicated because of text encoding, so we recommend another method:
-just record a transaction with `hledger add`. This works on all platforms and is simple.
-We'll do that on the next page.
-
 <br>
-(But if you're interested in the details, here's how you would do it on Windows:)
 
-First, back up any pre-existing journal file (just in case you have one):
-```
-mv -ErrorAction SilentlyContinue ~/.hledger.journal ~/.hledger.journal.old
-```
+On Windows we recommend using `hledger add` to get started, because of text encoding complications. But here's how to do it manually if you're interested:
 
-Then check what is the system text encoding. This is affected by your region, Windows version, and/or whether you changed the "Language for non-Unicode programs" setting to UTF-8 (see [Install: Text encoding](https://hledger.org/install.html#text-encoding)). UTF-8 is ideal, as it will be the most compatible with non-Windows machines and hledger's example files.
-```
-hledger setup | Select-String -Pattern encoding
-```
+1. Back up any pre-existing journal file (just in case):
+    ```
+    mv -ErrorAction SilentlyContinue ~/.hledger.journal ~/.hledger.journal.old
+    ```
 
-Then ensure the file is created with that encoding:
-```
-Set-Content -Path ~/.hledger.journal -Value "" -Encoding ENCODING   # change ENCODING appropriately
-```
+2. Find the system text encoding. This is affected by your region, Windows version, and/or whether you [changed the "Language for non-Unicode programs" setting to UTF-8](install.md#text-encoding). (UTF-8 is ideal, being the most compatible with non-Windows machines and hledger's example files):
+    ```
+    hledger setup | Select-String -Pattern encoding
+    ```
 
+3. Create the file, ensuring it uses the system text encoding. Replace ENCODING with the encoding name from step 2:
+    ```
+    Set-Content -Path ~/.hledger.journal -Value "" -Encoding ENCODING
+    ```
 
 
 (Part of [hledger by example](hledger-by-example.md).)
