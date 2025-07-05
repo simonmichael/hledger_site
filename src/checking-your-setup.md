@@ -46,4 +46,6 @@ PS C:\Users\Simon>
 ```
 -->
 
+<br>
+
 (Part of [hledger by example](hledger-by-example.md).)

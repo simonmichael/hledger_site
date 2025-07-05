@@ -34,4 +34,6 @@ $ hledger --version
 hledger 1.43.2 ...
 ```
 
+<br>
+
 (Part of [hledger by example](hledger-by-example.md).)

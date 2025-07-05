@@ -1,27 +1,49 @@
-# First transaction: starting balances
+# Add a transaction: starting balances
 
+<!--
 We'll use hledger's `add` command to append a new transaction to the journal file,
 auto-creating the file if it doesn't exist.
+-->
 
-The first transaction in a journal is usually a special "starting balances" transaction,
+The first transaction in a journal is usually a "starting balances" transaction,
 which sets up the starting balances in one or more asset and liability accounts.
 (*Assets* are things you own, like a bank checking account or the cash in your wallet.
 *Liabilities* are things you owe, like a credit card balance.)
 
-Let's record just one starting balance: how much cash is in your wallet today.
-Run `hledger add` (and if you're on Windows, add `--color=no` for now):
+Let's start by recording one starting balance: how much cash is in your wallet today.
+You can do it quickly with a text editor, or with more guidance using hledger's `add` command. We'll show both. (hledger-web is a third way, not shown here.)
+## Using a text editor
+If you're comfortable using text editors, open the journal file in your favourite editor.
+(If you forgot where the journal file is, run `hledger files`.)
+Then add an entry something like the below. Use today's date and the actual currency and amount.
+Feel free to adapt the account names and description, too (more on account names later):
+```
+2025-07-01 starting balances
+    assets:cash              $10
+    equity:start            $-10
+```
+This means "on july 1st 2025, 10 dollars was transferred from equity:start to assets:cash".
+This is how bookkeepers say "we'll start tracking the assets:cash balance from july 1st onward".
+The next section steps through this entry in more detail.
 
-<br>
+## Using hledger add
+Or, you can create the same entry using hledger's easy `add` command.
+`add` will prompt you for the information needed.
+And it provides useful defaults and completions (especially later when you have more data).
+
+Run it like so (if you're on Windows, also write `--color=no`):
 
 ```
 PS C:\Users\Simon> hledger add --color=no
+```
+
+<br>
+
+It first prints some help (which is slightly wrong for Windows: the TAB key won't work there):
+```
 Adding transactions to journal file C:\Users\Simon\.hledger.journal
 Any command line arguments will be used as defaults.
 Use tab key to complete, readline keys to edit, enter to accept defaults.
-```
-(Note: the TAB key won't complete input on Windows, contrary to what the help says.)
-
-```
 An optional (CODE) may follow transaction dates.
 An optional ; COMMENT may follow descriptions or amounts.
 If you make a mistake, enter < at any prompt to go one step backward.
@@ -29,7 +51,7 @@ To end a transaction, enter . when prompted.
 To quit, enter . at a date prompt or press control-d or control-c.
 Date [2025-07-01]:
 ```
-`add` prompts you for the transaction's date. Press RETURN to accept today's date.
+Then it prompts you for the transaction's date. Press RETURN to accept today's date.
 
 <br>
 
@@ -61,7 +83,6 @@ If you have multiple currencies, just record the main one for now.
 ```
 Account 2: equity:start
 ```
-Transactions involve two or more accounts.
 Since $10 has appeared in assets:cash, we must say where it came from.
 Starting balances always come from an equity account.
 (*Equity* represents "ownership" and other things; if you're doing personal accounting, this might be the only time you'll use it.)
@@ -107,18 +128,9 @@ PS C:\Users\Simon>
 hledger starts to read another transaction.
 Press `.` and RETURN to end the `add` session and exit to the command line.
 
+
+You have recorded your first transaction!
+
 <br>
-
-Now, if you reran `hledger setup` you would see:
-
-![hledger setup 2 in powershell](images/hledger-setup-2-powershell.png)
-
-
-And `hledger files` lists the file:
-```
-PS C:\Users\Simon> hledger files
-C:\Users\Simon\.hledger.journal
-```
-
 
 (Part of [hledger by example](hledger-by-example.md).)

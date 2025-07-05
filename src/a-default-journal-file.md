@@ -2,9 +2,8 @@
 
 hledger reads transactions from, and appends new transactions to, a *journal file*.
 This is named after the *General Journal* in bookkeeping.
-
-The file can be specified with `-f FILE` on the command line.
-But it's good to configure a default file, so that you don't have to write `-f FILE` in every command.
+You can specify it with `-f FILE` in hledger commands.
+But it's good to configure a default file, so that you don't have to write `-f FILE` every time.
 
 `hledger setup` or `hledger files` will show if a default file is configured:
 
@@ -15,41 +14,82 @@ Please create it first, eg with "hledger add" or a text editor.
 Or, specify an existing data file with -f or $LEDGER_FILE.
 ```
 
-If you know how to configure the `LEDGER_FILE` environment variable on your system, feel free to do that.
-This lets you keep the file wherever you choose,
-such as a version-controlled directory like `~/finance` (eg: `LEDGER_FILE=~/finance/2025.journal`).
+<!-- <br> -->
 
-Otherwise, use the default location for now: `.hledger.journal` in your home directory.
-You can move it later if needed.
+If you know how to configure its path in the `LEDGER_FILE` environment variable,
+you can keep this file wherever you like.
+For example, you might have `LEDGER_FILE=~/finance/main.journal`,
+where ~/finance is a version-controlled directory.
 
-To start the journal file, just record a transaction with `hledger add`, which will create the file if needed. This works on all platforms and is simple.
-We'll do this on the next page.
+If not, just use the default location: `.hledger.journal` in your home directory.
+You can move the file later if needed.
 
-<br>
 
-Or, on unix systems you can easily create the file yourself, with a text editor or by doing:
+## Start the journal
+
+You can start the journal by running
+```
+hledger add
+```
+and adding a transaction. This will create the file if needed. We'll show this on the next page.
+
+<!-- <br> -->
+
+## Start the journal, another way
+
+Or if you prefer, you can create the file yourself with your favourite text editor.
+
+On unix systems, eg:
+```
+emacs ~/.hledger.journal
+```
+or:
 ```
 touch ~/.hledger.journal
 ```
 
 <br>
 
-On Windows we recommend using `hledger add` to get started, because of text encoding complications. But here's how to do it manually if you're interested:
+On Windows:
+```
+notepad $HOME/.hledger.journal
+```
+or:
+```
+mv -ErrorAction SilentlyContinue ~/.hledger.journal ~/.hledger.journal.old
+Set-Content -Path $HOME/.hledger.journal -Value ""
+```
+<!-- 
+(Warning, this erases any pre-existing .hledger.journal file.)
+-->
 
-1. Back up any pre-existing journal file (just in case):
-    ```
-    mv -ErrorAction SilentlyContinue ~/.hledger.journal ~/.hledger.journal.old
-    ```
+Note these Windows commands create the file with the system's text encoding, which is necessary.
 
-2. Find the system text encoding. This is affected by your region, Windows version, and/or whether you [changed the "Language for non-Unicode programs" setting to UTF-8](install.md#text-encoding). (UTF-8 is ideal, being the most compatible with non-Windows machines and hledger's example files):
-    ```
-    hledger setup | Select-String -Pattern encoding
-    ```
+(You can see what the system text encoding is by running `[System.Text.Encoding]::Default.EncodingName`.
+If you want your files to be compatible with non-Windows machines, the "Unicode (UTF-8)" encoding is best.
+For that, you might need to set ["Language for non-Unicode programs > Use Unicode UTF-8 for worldwide language support"](install.md#text-encoding).)
+<!--
+See also: [Console]::OutputEncoding.EncodingName.
+By default, GHC-compiled programs on Windows use the ANSI APIs ("Windows interprets these byte sequences based on the current system locale's ANSI code page"), and are affected by the above setting.
+With +RTS --io-manager=native, they use the Unicode (Wide-Character) APIs ("These functions take wide character arguments, which are typically UTF-16 encoded strings ... Programs using these APIs are 'Unicode-aware'"). But currently (ghc 9.12) there is no support for networking with the native I/O manager.
+-->
 
-3. Create the file, ensuring it uses the system text encoding. Replace ENCODING with the encoding name from step 2:
-    ```
-    Set-Content -Path ~/.hledger.journal -Value "" -Encoding ENCODING
-    ```
+<!--
+<br>
 
+Now (or after completing `hledger add` on the next page), `hledger files` should list the file, with no error:
+```
+PS C:\Users\Simon> hledger files
+C:\Users\Simon\.hledger.journal
+```
+
+<br>
+
+Now, if you reran `hledger setup` you would see:
+
+![hledger setup 2 in powershell](images/hledger-setup-2-powershell.png)
+-->
+
+<br>
 
 (Part of [hledger by example](hledger-by-example.md).)

@@ -36,4 +36,6 @@ Credits are written as negative numbers, and Debits are written as positive numb
 Thanks to this notation, you won't ever need to think about Credit and Debit, unless you want to.
 Many users find it easier to think of the signs and the direction of flow between accounts.
 
+<br>
+
 (Part of [hledger by example](hledger-by-example.md).)
