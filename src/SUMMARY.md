@@ -29,7 +29,7 @@
 - [Journal entries](journal-entries.md)
 - [More transactions](more-transactions.md)
 - [print: show whole transactions](print-.md)
-- [register: show postings](register.md)
+- [register: show detailed changes](register.md)
 - [balance: show account totals](balance.md)
 
 - [Reading timeclock files](reading-timeclock-files.md)

@@ -1,7 +1,7 @@
 # Journal entries
 
-Here is another kind of journal entry, representing a purchase, with the parts labelled in red.
-It's useful to know these names, so that you can look them up in the [manual](hledger.md#transactions):
+Here's the journal entry for a common type of transaction - a purchase - with the parts labelled in red.
+(You can read more about each part in the [manual](hledger.md#transactions).):
 
 [![a hledger transaction entry, with parts named](https://raw.githubusercontent.com/RobertNielsen1/hledger/master/hledger%20basic%20transaction%20--%20terms.png)](https://github.com/RobertNielsen1/hledger/blob/master/hledger%20basic%20transaction%20--%20terms.png)
 This entry means: "on april 10th 2018, there was a $9.19 car-related expense, paid with the Acme credit card".
@@ -16,7 +16,9 @@ This means we always record both the source and the destination of money
     It's not a physical account like your wallet (AKA assets:cash), or a bank account (like Liabilities:Acme Credit Card); 
     it's an expense account.
 
-3. We also use a convenient sign notation: money leaving an account (a Credit, in bookkeeping language) is written as a negative number, and money entering an account (a Debit) is written as a positive number. Together with 1, this means the amounts in a transaction's journal entry must always add up to zero.
+3. We also use a convenient sign notation: money leaving an account (a Credit, in bookkeeping language) is written as a negative number, 
+   and money entering an account (a Debit) is written as a positive number. 
+   Together with rule 1, this means the amounts in a transaction must always add up to zero.
 
 4. Why is there no amount next to Liabilities:Acme Credit Card, above ?
     As a convenience, we are allowed to leave one amount blank, and
