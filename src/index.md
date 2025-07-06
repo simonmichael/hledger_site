@@ -504,11 +504,11 @@ The other really big win is that you can put your accounting in source control. 
 
 One nice feature of hledger is its csv rules system, which is very flexible. -- faustiast
 
-I'm an on-again, off-again contributor to GnuCash but I really like ledger too, and especially hledger because just knowing it's Haskell puts my mind at ease about several things. --HN
+I'm an on-again, off-again contributor to GnuCash but I really like ledger too, and especially hledger because just knowing it's Haskell puts my mind at ease about several things. --yawaramin
 
 Just going on record to say that plain text accounting is everything I hoped it would be. I'm keeping up to date with data entry, and finally seeing patterns that are helping me plan ahead. --ellane
 
-Wow, hledger looks impressive. I think I'll use it as an example for when people ask for a "real world haskell program" as it has a web interface, gui (I think I saw one), is cross platform, and only requires downloading the executable. --HN
+Wow, hledger looks impressive. I think I'll use it as an example for when people ask for a "real world haskell program" as it has a web interface, gui (I think I saw one), is cross platform, and only requires downloading the executable. --codygman
 
 I really like how I can complicate things at my own pace: import rules messing up some transactions but no spoons to fix it now? Just add them manually, and the journal is still fine. --rigrig
 
