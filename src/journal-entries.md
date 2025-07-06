@@ -1,40 +1,32 @@
 # Journal entries
 
-That `add` command will have created the journal file and one journal entry, something like this:
-
-```
-PS C:\Users\Simon> cat .hledger.journal
-; journal created 2025-07-01 by hledger
-
-2025-07-01 starting balances
-    assets:cash              $10
-    equity:start            $-10
-```
-
-The above means "on july 1st 2025, 10 dollars was transferred from equity:start to assets:cash".
-(This is how bookkeepers say "we'll start tracking the assets:cash balance from july 1st onward".)
-
-Below is another journal entry, with the parts labelled in red.
-It's useful to know these names, so that you can look them up in the manual.
-This one means "on april 10th 2018, there was a $9.19 car-related expense, paid with the Acme credit card".
+Here is another kind of journal entry, representing a purchase, with the parts labelled in red.
+It's useful to know these names, so that you can look them up in the [manual](hledger.md#transactions):
 
 [![a hledger transaction entry, with parts named](https://raw.githubusercontent.com/RobertNielsen1/hledger/master/hledger%20basic%20transaction%20--%20terms.png)](https://github.com/RobertNielsen1/hledger/blob/master/hledger%20basic%20transaction%20--%20terms.png)
+This entry means: "on april 10th 2018, there was a $9.19 car-related expense, paid with the Acme credit card".
 
+A few more notes about this entry, and journal entries generally:
 
-In this entry, you can see one of the amounts was left blank.
-The amounts in a transaction must add up to zero;
-so you can leave one blank, to save typing, and it will be inferred automatically ($-9.19 in this case).
+1. To reduce errors, we use Double Entry Bookkeeping.
+This means we always record both the source and the destination of money
+(where it came from, and where it went).
 
-Also, you can see that Expenses:Automotive - a spending category - is treated
-as another kind of account, like assets:cash or Liabilities:Acme Credit Card.
-It's not a bank account (an asset) or a credit card account (a liability) -
-it's an expense account.
+2. Expenses:Automotive, a spending category, is just another kind of account.
+    It's not a physical account like your wallet (AKA assets:cash), or a bank account (like Liabilities:Acme Credit Card); 
+    it's an expense account.
 
-This is Double Entry Bookkeeping, with a simplifying notation:
-Credits are written as negative numbers, and Debits are written as positive numbers.
+3. We also use a convenient sign notation: money leaving an account (a Credit, in bookkeeping language) is written as a negative number, and money entering an account (a Debit) is written as a positive number. Together with 1, this means the amounts in a transaction's journal entry must always add up to zero.
 
+4. Why is there no amount next to Liabilities:Acme Credit Card, above ?
+    As a convenience, we are allowed to leave one amount blank, and
+    it will be inferred automatically (eg $-9.19 is inferred above).
+    This is optional, just to save typing.
+
+<!--
 Thanks to this notation, you won't ever need to think about Credit and Debit, unless you want to.
 Many users find it easier to think of the signs and the direction of flow between accounts.
+-->
 
 <br>
 
