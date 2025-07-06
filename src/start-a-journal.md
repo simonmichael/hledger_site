@@ -1,4 +1,4 @@
-# A default journal file
+# Start a journal
 
 hledger reads transactions from, and appends new transactions to, a *journal file*.
 This is named after the *General Journal* in bookkeeping.

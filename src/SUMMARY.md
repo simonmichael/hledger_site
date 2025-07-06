@@ -24,8 +24,8 @@
 <!-- keeping these in order under their parent -->
 - [Getting hledger installed](getting-hledger-installed.md)
 - [Checking your setup](checking-your-setup.md)
-- [A default journal file](a-default-journal-file.md)
-- [Add a transaction: starting balances](first-transaction.md)
+- [Start a journal](start-a-journal.md)
+- [Add a transaction: starting balances](add-a-transaction.md)
 - [Journal entries](journal-entries.md)
 - [More transactions](more-transactions.md)
 - [print: show whole transactions](print-.md)

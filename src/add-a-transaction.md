@@ -17,7 +17,7 @@ If you're comfortable using text editors, open the journal file in your favourit
 (If you forgot where the journal file is, run `hledger files`.)
 Then add an entry something like the below. Use today's date and the actual currency and amount.
 Feel free to adapt the account names and description, too (more on account names later):
-```
+```journal
 2025-07-01 starting balances
     assets:cash              $10
     equity:start            $-10
@@ -127,8 +127,6 @@ PS C:\Users\Simon>
 ```
 hledger starts to read another transaction.
 Press `.` and RETURN to end the `add` session and exit to the command line.
-
-
 You have recorded your first transaction!
 
 <br>
