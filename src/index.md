@@ -517,7 +517,8 @@ I just started using hledger for personal double-entry bookkeeping. So far it is
 - I can split up transactions between different accounts. This is useful because I can split a dinner bill between my credit card and cash. It is also useful because I can split items from a large Amazon order into their respective categories.
 - The ledger file is a very simple text file, so I can keep it in version control.
 - I haven't taken advantage of the report features yet, but they look very flexible. You can add up any accounts you want based on regular expressions.
-- You can have "virtual" accounts that can be used for budgets. For example, you can set aside arbitrary chunks of your savings account for different purposes and keep track of them separately, even though they all actually reside in your savings account at your bank. --HN
+- You can have "virtual" accounts that can be used for budgets. For example, you can set aside arbitrary chunks of your savings account for different purposes and keep track of them separately, even though they all actually reside in your savings account at your bank.
+--jdreaver
 
 I have massively enjoyed using hledger and am incredibly impressed with how active the development and support for it are! --Pixelized
 
@@ -752,6 +753,9 @@ I had a wonderful time setting up a static site for viewing my hledger data.
 I wanted something more accessible on mobile than command-line reports, ... 
 I’m very happy with everything and it was so easy with all the tools we have now.
 --TheRealDaMuffin
+
+I just started using hledger myself and I love it.
+--Shivalicious
 
 `;
 </script>
