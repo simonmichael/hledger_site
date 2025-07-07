@@ -128,7 +128,7 @@ Here are some common paths for getting started:
   or [10 minute](10-minute-quick-start.md) quick starts.
 
 - **If you'd like a more gentle introduction:**\
-  see [hledger by example](hledger-by-example.md), or the [tutorials](doc.md#tutorials).
+  see **[hledger by example](hledger-by-example.md)**, or the [tutorials](doc.md#tutorials).
 
 <!-- - **If you'd like to avoid the command line and use a terminal interface instead:**\ -->
 <!--   see [Tutorial: hledger-ui](ui.md). -->
