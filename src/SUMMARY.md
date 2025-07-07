@@ -20,10 +20,10 @@
 
 # HLEDGER BY EXAMPLE
 
+<!-- keep these in order: -->
 - [hledger by example](hledger-by-example.md)
-<!-- keeping these in order under their parent -->
-- [Getting hledger installed](getting-hledger-installed.md)
-- [Checking your setup](checking-your-setup.md)
+- [Get hledger installed](get-hledger-installed.md)
+- [Check your setup](check-your-setup.md)
 - [Start a journal](start-a-journal.md)
 - [Add a transaction: starting balances](add-a-transaction.md)
 - [Journal entries](journal-entries.md)
