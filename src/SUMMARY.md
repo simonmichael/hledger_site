@@ -31,6 +31,8 @@
 - [print: show whole transactions](print-.md)
 - [register: show detailed changes](register.md)
 - [balance: show account totals](balance.md)
+- [balancesheet: assets and liabilities](balancesheet.md)
+- [incomestatement: revenues and expenses](incomestatement.md)
 
 - [Reading timeclock files](reading-timeclock-files.md)
 - [Reading timedot files](reading-timedot-files.md)

@@ -37,14 +37,12 @@ Slower-paced introductions to various topics.
 - [hledger fan's beginner videos](https://youtube.com/channel/UCZLxXTjOqLzq4z5Jy0AyWSQ)
 - [Tips for learning hledger](learn.md)
 
-
-<!--
-Use outline in SUMMARY.md for now
-
 ## hledger by example
 
-A growing series of guided lessons.
+A growing "book" introducing hledger one step at a time.
+For now, enable the site's sidebar to see the book's outline.
 
+<!--
 - [Getting hledger installed](getting-hledger-installed.md)
 - [Checking your setup](checking-your-setup.md)
 - [A default journal file](a-default-journal-file.md)

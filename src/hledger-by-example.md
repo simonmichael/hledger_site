@@ -1,16 +1,14 @@
 # hledger by example
 
-The beginnings of a "hledger by example" book.
+A growing "book" introducing hledger one step at a time.
 
+For now, enable the site's sidebar to see the book's outline.
 <!-- For now, see the outline at [Docs: hledger by example](doc.md#hledger-by-example). -->
 
-Some notes about these examples:
+You could use the left and right arrow keys to step through the pages.
+(Press right arrow now to step to the next page.)
 
-- For now, enable the site's sidebar to see the book's outline.
-- You can use the left and right arrow keys to step through the pages.
-  Eg press right arrow now to step to the next page.
-- Examples assume the latest hledger version.
-- On Windows, examples assume a powershell window (not a CMD window).
+Examples assume the latest hledger version; and on Windows, a powershell window, not CMD.
 
 <!--
 Show don't tell. Keep prose brief.

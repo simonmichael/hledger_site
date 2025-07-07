@@ -128,23 +128,23 @@ Here are some common paths for getting started:
   or [10 minute](10-minute-quick-start.md) quick starts.
 
 - **If you'd like a more gentle introduction:**\
-  see [Tutorial: hledger add](add.md).
+  see [hledger by example](hledger-by-example.md), or the [tutorials](doc.md#tutorials).
 
 <!-- - **If you'd like to avoid the command line and use a terminal interface instead:**\ -->
 <!--   see [Tutorial: hledger-ui](ui.md). -->
 
 - **If you'd like to avoid the terminal and use a web browser instead:**\
-  see [Tutorial: hledger-web](web.md).
+  see [Tutorial: hledger-web](web.md), or the [hledger-web demo](https://demo.hledger.org).
 
 - **If you'd like to watch/listen to a video:**\
   see [Videos](videos.md).
 
-- **If you'd like to better understand the accounting part:**\
+- **If you'd like to learn more about the accounting part:**\
   see [Accounting basics for PTA users](accounting-pta.md)
   and maybe [Accounting: further study](accounting.md).
 
 - **If you like to learn by exploring:**\
-  try running some commands. They are all safe, you won't break anything. Here's a good sequence:
+  try running some commands. You won't break anything. Here's a good sequence:
   `hledger setup`, `hledger`, `hledger demo`, `hledger add`, `hledger print`, `hledger balance`, `hledger ui`, `hledger web`, `hledger help`
 
 - **If you'd like to go straight to the authoritative doc:**\

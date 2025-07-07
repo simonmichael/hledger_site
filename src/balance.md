@@ -249,6 +249,9 @@ Ending balances (historical) in 2025-01-01..2025-01-04:
  2025-01-04 ||  850 USD     -200 USD 
 ```
 
+`balance` has a lot of options.
+Next, we'll see two specialised balance-like reports that are easier to use.
+
 <br>
 
 (Part of [hledger by example](hledger-by-example.md).)
