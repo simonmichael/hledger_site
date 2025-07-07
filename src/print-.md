@@ -1,5 +1,7 @@
 # print: show whole transactions
 
+Now that we have data, let's explore some of hledger's reports.
+
 The `print` command shows whole transactions (journal entries), much as they appear in the journal:
 ```
 $ hledger print
@@ -56,7 +58,7 @@ $ hledger print -x
 
 ```
 
-It can select transactions involving certain accounts:
+You can select transactions involving certain accounts:
 ```
 $ hledger print expenses:food
 2025-01-04 shopping
@@ -66,7 +68,7 @@ $ hledger print expenses:food
 
 ```
 
-Or by their description:
+Or by description:
 ```
 $ hledger print desc:'pay half'
 2025-01-03 pay half of credit card balance
