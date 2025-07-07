@@ -1,4 +1,4 @@
-# Getting hledger installed
+# Get hledger installed
 
 [Install](install.md) shows the ways to get hledger installed on your computer.
 Each new hledger version is better than the preceding ones, so using the latest is ideal.
