@@ -1,4 +1,4 @@
-# Checking your setup
+# Check your setup
 
 You can run hledger's `setup` command at any time to check for configuration problems.
 Eg on Windows, at this stage, it may be showing something like this:
