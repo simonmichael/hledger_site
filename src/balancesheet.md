@@ -27,7 +27,7 @@ Balance Sheet 2025-01-04
  Net:                    ||    650 USD 
 ```
 
-Balances for each day, in tree mode, down to account depth 2:
+Balances at end of each day, in tree mode, down to account depth 2:
 ```
 $ hledger bs -Dt -2
 Daily Balance Sheet 2025-01-01..2025-01-04
