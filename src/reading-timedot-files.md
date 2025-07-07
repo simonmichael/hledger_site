@@ -30,4 +30,6 @@ Balance changes in 2023-02-01..2023-02-02:
             ||       4.50        2.75     7.25     3.62 
 ```
 
+<br>
+
 (Part of [hledger by example](hledger-by-example.md))

@@ -31,4 +31,6 @@ $ hledger aregister checking
 
 See also: [Tutorial: Import CSV data](import-csv.md)
 
+<br>
+
 (Part of [hledger by example](hledger-by-example.md).)

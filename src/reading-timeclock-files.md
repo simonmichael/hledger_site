@@ -16,5 +16,6 @@ $ hledger -f 2023.timeclock register -D
 2023-04-01   personal:reading:online            2.01h        11.66h
 ```
 
+<br>
 
 (Part of [hledger by example](hledger-by-example.md).)
