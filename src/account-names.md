@@ -38,13 +38,13 @@ The best account names are easy to remember, easy to spell, and easy to type.
 It can be helpful if the last part of account names is unique.
 Eg say you have business and personal checking accounts:
 ```
-assets:bank1:checking
-assets:bank2:checking
+assets:wells fargo:checking
+assets:credit union:checking
 ```
 you could instead name them something like:
 ```
-assets:bank1:bchecking
-assets:bank2:pchecking
+assets:wells fargo:bchecking
+assets:credit union:pchecking
 ```
 making it easier to match the account you want (`hledger register pchecking`).
 
@@ -115,10 +115,9 @@ liabilities
   credit card
 ```
 
-The set of account names that you use is traditionally called the Chart of Accounts.
-The chart of accounts is always adapted for the accounting and reporting needs
-of the person or organisation.
-Expect your account names to evolve continually as your needs change.
+The set of account names that you use is called the Chart of Accounts.
+Your chart of accounts will depend on your accounting and reporting needs.
+Start with a simple one, and expect it to grow and evolve as your needs change.
 
 
 
