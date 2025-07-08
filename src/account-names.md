@@ -95,6 +95,32 @@ expenses:recreation
 expenses:rent
 expenses:utilities
 ```
+or, displayed in tree mode:
+```
+assets
+  bank
+  cash
+equity
+  start
+expenses
+  food
+  health
+  recreation
+  rent
+  utilities
+income
+  gifts
+  salary
+liabilities
+  credit card
+```
+
+The set of account names that you use is traditionally called the Chart of Accounts.
+The chart of accounts is always adapted for the accounting and reporting needs
+of the person or organisation.
+Expect your account names to evolve continually as your needs change.
+
+
 
 <br>
 
