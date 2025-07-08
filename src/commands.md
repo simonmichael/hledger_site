@@ -85,6 +85,8 @@ But most are reports. They fall into these broad types:
 - balance reports, which show totals for multiple accounts (balance, balancesheet, incomestatement...)
 - other kinds of report (activity, roi...)
 
+Next, we'll explore some reports.
+
 <br>
 
 (Part of [hledger by example](hledger-by-example.md).)

@@ -31,10 +31,11 @@
 - [Overview of commands](commands.md)
 - [print: show whole transactions](print-.md)
 - [register: show detailed changes](register.md)
-<!-- - [accounts: list accounts] -->
 - [balance: show account totals](balance.md)
+- [Account names](account-names.md)
 <!--
-- [account types]
+- [Account types]
+- [accounts: list accounts]
 -->
 - [balancesheet: assets and liabilities](balancesheet.md)
 - [incomestatement: revenues and expenses](incomestatement.md)
