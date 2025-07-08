@@ -35,10 +35,8 @@ As usual, there two common ways to update the journal:
 A few differences from the previous example:
 
 - The starting balances transaction now sets balances for three accounts, not just one.
-- One of them is a liability, a credit card with a balance owed; so this one is negative.
+- One of them is a liability (a credit card with a balance owed); so this one is negative.
 - Currency symbols are using a different style: a three-letter currency code, on the right side.
-- These entries leave one of the amounts blank; those will be calculated automatically.
-  (Eg for equity:start it is -700 USD.)
 
 These entries represent the following money flows:
 
