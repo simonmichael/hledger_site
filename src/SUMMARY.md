@@ -28,11 +28,19 @@
 - [Add a transaction: starting balances](add-a-transaction.md)
 - [Journal entries](journal-entries.md)
 - [More transactions](more-transactions.md)
+- [Overview of commands](commands.md)
 - [print: show whole transactions](print-.md)
 - [register: show detailed changes](register.md)
+<!-- - [accounts: list accounts] -->
 - [balance: show account totals](balance.md)
+<!--
+- [account types]
+-->
 - [balancesheet: assets and liabilities](balancesheet.md)
 - [incomestatement: revenues and expenses](incomestatement.md)
+<!--
+- [cashflow: changes in cash accounts](cashflow.md)
+-->
 
 - [Reading timeclock files](reading-timeclock-files.md)
 - [Reading timedot files](reading-timedot-files.md)
