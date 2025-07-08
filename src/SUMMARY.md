@@ -27,12 +27,12 @@
 - [Start a journal](start-a-journal.md)
 - [Add a transaction: starting balances](add-a-transaction.md)
 - [Journal entries](journal-entries.md)
+- [Account names](account-names.md)
 - [More transactions](more-transactions.md)
 - [Overview of commands](commands.md)
 - [print: show whole transactions](print-.md)
 - [register: show detailed changes](register.md)
 - [balance: show account totals](balance.md)
-- [Account names](account-names.md)
 <!--
 - [Account types]
 - [accounts: list accounts]
@@ -43,10 +43,10 @@
 - [cashflow: changes in cash accounts](cashflow.md)
 -->
 
-- [Reading timeclock files](reading-timeclock-files.md)
-- [Reading timedot files](reading-timedot-files.md)
 - [Reading CSV files](reading-csv-files.md)
 - [Importing new transactions](importing-new-transactions.md)
+- [Reading timeclock files](reading-timeclock-files.md)
+- [Reading timedot files](reading-timedot-files.md)
 
 # OTHER PAGES
 

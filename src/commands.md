@@ -82,7 +82,7 @@ But most are reports. They fall into these broad types:
 - list reports, which list items of a particular type (accounts, commodities, payees...)
 - print-like reports, which show whole transactions as journal entries (print, close...)
 - register reports, which show transactions or postings compactly with a running total (register, aregister...)
-- balance reports, which show totals for multiple accounts (balance, balancesheet, incomestatement...)
+- balance reports, which show total balance changes or end balances for multiple accounts (balance, balancesheet, incomestatement...)
 - other kinds of report (activity, roi...)
 
 Next, we'll explore some reports.

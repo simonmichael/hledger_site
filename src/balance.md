@@ -1,7 +1,7 @@
 # balance: show account totals
 
 
-`balance` shows the total *balance change* per account, usually for multiple accounts at once:
+`balance` shows (by default) the total *balance change* per account, usually for multiple accounts at once:
 
 ```
 $ hledger balance

@@ -1,7 +1,5 @@
 # print: show whole transactions
 
-Now that we have data, let's explore some of hledger's reports.
-
 The `print` command shows whole transactions (journal entries), much as they appear in the journal:
 ```
 $ hledger print
