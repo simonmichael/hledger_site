@@ -30,6 +30,10 @@ or [use eget](https://github.com/zyedidia/eget?tab=readme-ov-file#how-to-get-ege
 [![hledger release binaries](https://img.shields.io/badge/hledger_release_binaries-1.43.2-brightgreen.svg)](https://github.com/simonmichael/hledger/releases/tag/1.43.2)
 `eget simonmichael/hledger --all`
 
+If you [use mise](https://mise.jdx.dev/getting-started.html#installing-mise-cli), you can install the latest hledger binary globally:
+
+[![hledger release binaries](https://img.shields.io/badge/hledger_release_binaries-1.43.2-brightgreen.svg)](https://github.com/simonmichael/hledger/releases/tag/1.43.2) `mise use -g ubi:simonmichael/hledger`
+
 [release binaries]:    https://github.com/simonmichael/hledger/releases/tag/1.43.2
 [prerelease binaries]: https://github.com/simonmichael/hledger/releases/tag/nightly
 
