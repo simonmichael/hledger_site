@@ -360,8 +360,6 @@ hledger has a decent front-end web UI, it runs as a local server on your machine
 
 I’m not encountering hledger bugs. It’s just one of the most solid things I’ve ever used. --Aankhen
 
-too.. many.. bugs.. --sm
-
 If you know how to get your transactions downloaded from your bank and don't ever want to leave the command line, hledger is great for you -- I've been using hledger since 2019 and love every minute of it.
 
 Work smoothly and steadily. Don't rush.
@@ -564,14 +562,14 @@ I landed on hledger when researched open source and plain text options. It does 
 For day to day journal entries I use hledger-web. It’s pretty much perfect in terms of elegant simplicity and functionality. It’s well documented and the hledger community is active, generous, and kind. --bitsonchips
 
 I started using hledger because of:
-- tracking irregular payments from a bunch of sources, often outstanding for a while
-- tracking how much somebody owes me / i owe them
-- being pretty much cash-only for a long while (long story). with cash, if you don't track the expenses manually, you wake up at the end of the month with a whole bunch of money gone and no idea what happened to it
-- not knowing how much money i actually have available because it's spread across my wallet / bank account / paypal / piggy bank
+- tracking irregular payments from a bunch of sources, often outstanding for a while;
+- tracking how much somebody owes me / i owe them;
+- being pretty much cash-only for a long while (long story). with cash, if you don't track the expenses manually, you wake up at the end of the month with a whole bunch of money gone and no idea what happened to it;
+- not knowing how much money i actually have available because it's spread across my wallet / bank account / paypal / piggy bank.
 hledger really helped me not go crazy with all of this!
 PS. another unexpected benefit - tracking expenses can also help with ambient worries like "ugh i spend too much on takeout food". 
 like, if you track it, at the end of the month you can look at how much you spent on it and conclude that it's actually reasonable (within your budget) and stop feeling guilty about it!
---HN
+--uryga
 
 I discovered hledger last week and I hope it's not too early to describe it as life-changing. thank you for building this software --gnidan
 
@@ -646,8 +644,9 @@ Hledger is AWESOME --teitoklien
 
 finally settled on hledger. Like GnuCash, I own and control my data, but with hledger I have an ability to go in and correct or change something (and not in a "accounting-appropriate" way) in bulk just by editing it in Sublime Text. --HN
 
-The deal breaker for me was the underlying XML or SQLite formats of GnuCash. These are not terribly amenable to scripting, either for ingesting raw data or reporting. Whereas this is basically the point of plain-text tools like Beancount or HLedger. GnuCash feels too much like a walled-garden compared to plain-text tools.
-The plain-text format requires more work at first, but after you get the hang of it (and provided you have some background in scripting software) it is awesome. --HN
+The deal breaker for me was the underlying XML or SQLite formats of GnuCash. These are not terribly amenable to scripting, either for ingesting raw data or reporting. Whereas this is basically the point of plain-text tools like Beancount or hledger. GnuCash feels too much like a walled-garden compared to plain-text tools.
+The plain-text format requires more work at first, but after you get the hang of it (and provided you have some background in scripting software) it is awesome.
+--GlibMonkeyDeath
 
 One nice feature of hledger is its csv rules system, which is very flexible. I extended it with simple python scripts to add extra information for registering capital gains. So, end of the day the raw input data is just some csv files with records and the output is financial reports with various levels of detail. --HN
 
