@@ -142,6 +142,7 @@ Check plaintextaccounting.org's and wiki.plaintextaccounting.org's categories.
 - [Balancing the accounting equation](balancing-the-accounting-equation.md)
 
 ### Reporting
+- **[Making sense of your finances with hledger reports](https://teosiyan.com/2025/07/09/hledger-commands)**
 - [Report examples](report-examples.md)
 - [Reporting version control stats](reporting-version-control-stats.md)
 - [Rewrite account names](rewrite-account-names.md)
