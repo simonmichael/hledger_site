@@ -45,7 +45,7 @@ plain text accounting software
 <a href="/images/home-ui-3.png"        class="highslide" onclick="return hs.expand(this, { captionText:'The hledger-ui text user interface.' })"><img src="images/home-ui-3.png"        width="200"></a>
 <a href="/images/web-bcexample.png"    class="highslide" onclick="return hs.expand(this, { captionText:'The hledger-web web user interface.' })"><img src="images/web-bcexample.png"    width="200"></a>
 </div>
-<div id="quote" class="quote">
+<div id="quote" class="quote" title="Quote updates hourly.">
   <noscript> <span class="quote-text"></span> <span class="quote-author"></span> </noscript>
   <span id="quote-text" class="quote-text"></span> <span id="quote-author" class="quote-author"></span>
 </div>
@@ -755,6 +755,9 @@ I’m very happy with everything and it was so easy with all the tools we have n
 
 I just started using hledger myself and I love it.
 --Shivalicious
+
+I love that you include hledger! It's amazing piece of software, even if a little obscure for people unfamiliar with plaintext accounting!
+--virgoerns
 
 `;
 </script>
