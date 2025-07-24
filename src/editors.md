@@ -379,8 +379,6 @@ Run `:TSInstall ledger` to enable [nvim-treesitter](https://github.com/nvim-tree
 
 ## VS Code
 
-### hledger-vscode
-
 [\*hledger\* in VS Code marketplace](https://marketplace.visualstudio.com/search?term=hledger&target=VSCode&category=All%20categories&sortBy=Relevance)
 
 - <https://marketplace.visualstudio.com/items?itemName=mark-hansen.hledger-vscode> 2017-2024
