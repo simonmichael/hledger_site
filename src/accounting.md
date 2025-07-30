@@ -16,6 +16,7 @@ beyond the [Accounting basics for PTA users](accounting-pta.md).
  [Double-entry bookkeeping system](http://en.wikipedia.org/wiki/Double_entry_bookkeeping_system),
  [General journal](http://en.wikipedia.org/wiki/General_journal)
  etc.
+- [Accounting 101](https://www.edo.ca/downloads/accounting-101.pdf) (PDF, edo.ca)
 - [Accounting For Dragons](http://podcastle.org/2009/10/09/pc-miniature-38-accounting-for-dragons) why you should know accounting
 - Cliffs Notes:
   [Accounting Principles I](https://www.cliffsnotes.com/study-guides/accounting/accounting-principles-i),
