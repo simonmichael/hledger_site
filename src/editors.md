@@ -346,10 +346,21 @@ See also
 ### calc
 
 Calc can help perform arithmetic on amounts in the buffer during data entry.
-Eg to split an amount by two: 
+Position the cursor anywhere in the number, then use `C-x * w` to enter embedded Calc mode, and `q` to exit.
 
-- put point at the start of the amount, after the currency symbol
-- `C-x * w 2 / q`
+Eg to halve an amount: put cursor at the number, then `C-x w * 2 / q`
+
+Note Calc rewrites decimal numbers to a standard format, hiding trailing zeros by default, which you may not want.
+To preserve trailing zeros, you must force a fixed number of decimal digits. 
+In calc mode (eg before pressing q above) do:
+- `d f 2 return`   to force two digits (eg shows .00)
+- `d f 3 return`   to force three digits (eg shows .005 when there's a half cent)
+- `d n`            to choose normal mode (shows all digits except trailing zeros)
+
+And to ensure that such config changes are saved in (and reloaded from) ~/.emacs.d/calc.el rather than the current buffer, add this to your emacs config:
+```lisp
+(setq calc-mode-save-mode 'save)
+```
 
 ### Misc
 
