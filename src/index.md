@@ -759,6 +759,9 @@ I just started using hledger myself and I love it.
 I love that you include hledger! It's amazing piece of software, even if a little obscure for people unfamiliar with plaintext accounting!
 --virgoerns
 
+I wanted to thank you. I quietly use hledger every day. I don't use it for financial transactions (though I am interested in the envelope budgeting possibilities), I just use it to record my hours. I've done this for years. It goes along with Org mode and some Bash/Perl scripts to help extract and process my notes files that include my hours.
+--Steven Shaw
+
 `;
 </script>
 
