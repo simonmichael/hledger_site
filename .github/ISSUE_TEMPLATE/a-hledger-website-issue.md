@@ -1,5 +1,5 @@
 ---
-name: A hledger.org website issue
+name: A hledger website issue
 about: An issue with hledger.org content or infrastructure
 labels: ''
 title: ''
