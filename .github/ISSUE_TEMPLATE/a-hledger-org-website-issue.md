@@ -1,14 +1,11 @@
 ---
 name: A hledger.org website issue
-about: "(Tip: for hledger itself, use bugs.hledger.org instead.)"
-title: ''
+about: An issue with hledger.org content or infrastructure
 labels: ''
+title: ''
 assignees: simonmichael
-
 ---
 
 Thanks for reporting website issues.
 You are welcome to send PRs also - click the "edit this page" link on any page.
-See also:
-https://github.com/simonmichael/hledger/issues - for reporting hledger issues
-https://hledger.org/support - for support
+(Please remove all of this text before submitting.)
