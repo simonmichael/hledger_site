@@ -1,24 +1,46 @@
 CURRENT_RELEASE=1.43
 
-# Render the current site and current dev and release manuals, saving them in out.
-# The sitemap files are restored afterward (mdbook removes them).
+default: build
+
+# Install some required tools.
+# --force rebuilds mdbook-toc even if only mdbook changed, avoiding a warning.
+tools:
+	cargo install mdbook --version 0.4.51 --force
+	cargo install mdbook-toc --force
+	sudo apt install -y npm && npm install -g static-sitemap-cli   # sscli
+
+
+# Render the current site and current dev and release manuals, saving them in out/ and out2/.
+# See notes below.
 # The current release should be the last version rendered.
+# mdbook removes the sitemap files, so we rebuild those afterward.
 build:
-	@echo "building site with current manuals in /"
+	@echo "building site with the current and dev manuals"
 	@make -s build3-dev
 	@make -s build3-1.43
 	@make -s sitemap
 
-# Render most versions of manuals (excluding old versions not packaged anywhere). 
-# We want to link only one version in the sidebar, but mdbook won't render (and will remove) unlinked versions.
+# Render most versions of manuals (excluding old unpackaged versions). 
+#
+# This is fiddly because of how mdbook works. Goals (simplified 2025-08):
+# - in the sidebar, link to the current release version of manuals only
+# - in the site search, search only the current manuals (ideally the current release version)
+# - keep old versions of the manuals out of search engines
+#
+# mdbook won't render (and will remove rendered versions of) any pages not linked in SUMMARY.
 # We work around this by, for each version,
 # temporarily linking that version of the manuals in SUMMARY, rendering the whole site,
-# and saving the rendered manuals in out2/VERSION/.
-# Re-rendering the whole site is of course wasteful and slow, but ensures all manual versions
-# include the up-to-date site sidebar.
-# The sitemap files are restored afterward (mdbook removes them).
-# The current release should be the last version rendered. Keep synced with site.js:
-all buildall: \
+# and saving the rendered manuals in out2/VERSION/ (which caddy serves as /VERSION/*).
+# A limitation: when viewing an old manual, the sidebar manuals links will all be
+# to that old version.
+# Re-rendering the whole site for each version is of course wasteful and slow,
+# but it's how we ensure all manual versions include the latest site sidebar.
+#
+# Keep this list synced with site.js.
+# The current release should be the last version rendered.
+# Old hledger versions had seven manuals, newer ones have three.
+# mdbook removes the sitemap files, so we rebuild those afterward.
+all: \
 	build7-1.0 \
 	build7-1.2 \
 	build7-1.9 \
@@ -27,7 +49,6 @@ all buildall: \
 	build7-1.18 \
 	build7-1.19 \
 	build3-1.21 \
-	build3-dev \
 	build3-1.22 \
 	build3-1.23 \
 	build3-1.24 \
@@ -48,45 +69,30 @@ all buildall: \
 	build3-1.43
 	@make -s sitemap
 
-# Install some required tools.
-# --force rebuilds mdbook-toc even if only mdbook changed, avoiding a warning.
-tools:
-	cargo install mdbook --version 0.4.51 --force
-	cargo install mdbook-toc --force
-	sudo apt install -y npm && npm install -g static-sitemap-cli   # sscli
-
-
-# Render the seven manuals for this hledger version <= 1.21, saving them in out2.
-# The manuals source should exist in src/VER/.
-# After this you should "make build" to rebuild the site with current manuals.
-# The perl command rewrites links to numeric manual versions but not links to the dev version.
-# The noindex meta tag will be added.
-build7-%:
-	@echo "building site with the seven $* manuals in /$*"
-	@perl -i -p0e "s/- +(.*?)]\([0-9].*?hledger\.md\)\n- +(.*?)]\([0-9].*?hledger-ui\.md\)\n- +(.*?)]\([0-9].*?hledger-web\.md\)/- \1 ($*)]($*\/hledger.md)\n- \2 ($*)]($*\/hledger-ui.md)\n- \3 ($*)]($*\/hledger-web.md)\n- [journal manual ($*)]($*\/journal.md)\n- [csv manual ($*)]($*\/csv.md)\n- [timeclock manual ($*)]($*\/timeclock.md)\n- [timedot manual ($*)]($*\/timedot.md)/m" src/SUMMARY.md
-	@sed -i -e 's/<\/title>/<\/title>\n<meta name="robots" content="noindex" \/>/' theme/index.hbs
-	@mdbook build
-	@mkdir -p out2
-	@cp -r out/$* out2
-	@git checkout -- src/SUMMARY.md theme/index.hbs
-
-# Render the three manuals for this hledger version > 1.21 (or "dev"), saving them in out2.
-# The manuals source should exist in src/VER/.
-# After this you should "make build" to rebuild the site with current manuals.
-# The perl command rewrites links to numeric manual versions, but not links to the dev version.
-# The default manual links should be to a numeric version for this reason,
-# the exact number doesn't matter, though we typically keep it updated.
-# The noindex meta tag will be added to all but the current release.
+# Render the three manuals for a specified hledger version >1.21 (or "dev"), as out2/VER/.
+# Their source should exist in src/VER/.
+# This adds noindex meta attribute to the page template unless building the current release version,
+# adjusts the sidebar's manuals links' text and target to VER,
+# builds the site, and copies the rendered manuals from out/VER/ to out2/VER/.
+# After this you should rebuild the site with the current manuals (make build).
 build3-%:
 	@echo "building site with the three $* manuals in /$*"
-	@perl -i -pe "s/^- +(.*?)]\([0-9].*?(hledger(|-ui|-web)\.md)\)/- \1 ($*)]($*\/\2)/" src/SUMMARY.md
 	@if [ ! x"$*" = x"$(CURRENT_RELEASE)" ] ; then \
 		sed -i -e 's/<\/title>/<\/title>\n<meta name="robots" content="noindex" \/>/' theme/index.hbs; \
 	fi
-	@mdbook build
-	@mkdir -p out2
-	@cp -r out/$* out2
-	@git checkout -- src/SUMMARY.md theme/index.hbs
+	@perl -i -pe "s%^- +\[(hledger(|-ui|-web) manual)[^]]*?\]\([^/]*?/(hledger(|-ui|-web)\.md)%- [\1 ($*)]($*/\3%" src/SUMMARY.md
+	@mdbook build && mkdir -p out2 && cp -r out/$* out2
+	@git checkout -- theme/index.hbs src/SUMMARY.md
+
+# Render the seven manuals for a specified hledger version <=1.21, as out2/VER/.
+# Their source should exist in src/VER/.
+# See above.
+build7-%:
+	@echo "building site with the seven $* manuals in /$*"
+	@sed -i -e 's/<\/title>/<\/title>\n<meta name="robots" content="noindex" \/>/' theme/index.hbs
+	@perl -i -p0e "s%^- +\[hledger manual.*?hledger-web\.md\)%- [hledger manual (1.0)](1.0/hledger.md)\n- [hledger-ui manual (1.0)](1.0/hledger-ui.md)\n- [hledger-web manual (1.0)](1.0/hledger-web.md)\n- [journal manual (1.0)](1.0/journal.md)\n- [csv manual (1.0)](1.0/csv.md)\n- [timeclock manual (1.0)](1.0/timeclock.md)\n- [timedot manual (1.0)](1.0/timedot.md)%ms" src/SUMMARY.md 
+	@mdbook build && mkdir -p out2 && cp -r out/$* out2
+	@git checkout -- theme/index.hbs src/SUMMARY.md
 
 # Generate sitemap.xml, after copying the old manuals under out/ temporarily.
 #	@echo "building sitemap.xml"
