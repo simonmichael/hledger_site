@@ -6,7 +6,7 @@
 </div>
 
 Here's a tutorial on tracking "investments" - stocks, cryptocurrencies, and similar - in hledger.
-This is a more in-depth version of [Tracking investments](tracking-investments.md),
+This is a more in-depth version of [Tracking investments](track-investments.md),
 using hledger 1.17; older hledger versions may not match this doc.
 I hope to teach you a little basic investment accounting, 
 or a little about doing it with hledger (and other PTA tools), 
