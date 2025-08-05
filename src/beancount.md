@@ -59,30 +59,86 @@ Beancount 2's [bean-report](https://beancount.github.io/docs/running_beancount_a
 It's not available with Beancount 3, you'll need to install Beancount 2:
 ```
 $ pip3 install beancount==2.3.6
-$ bean-report foo.beancount hledger > foo.hledger
+$ bean-report example.beancount hledger > example.hledger
 ```
 
-Here are some things to watch out for:
+The above is a good start, but not yet robust. 
+Here are some things you may need to fix manually, as of 2.3.6.
 
 ### Total costs
 
 bean-report converts `@@` total costs to `@` unit costs.
 `@` costs are more standard and often more useful, eg when selling part of a lot.
 But this conversion tends to create imprecise entries, causing hledger to complain that transactions are unbalanced.
+You may need to manually adjust the decimals in such entries.
 
-To fix this, declare a display/balancing precision for each commodity.
-In the converted file, add sample numbers to the [commodity directives](https://hledger.org/hledger.html#commodity-directive),
-with the number of decimal places you'd like to see in reports.
-This also allows hledger to check transactions' balancedness more leniently.
-Eg, change:
-```journal
-commodity USD
-commodity EUR
+### Double @
+
+bean-report converts the combination of `{}` and `@` to invalid syntax with two `@`'s.
+Eg:
+
+```beancount
+2013-10-21 * "Sell shares of ITOT"
+  Assets:US:ETrade:ITOT                                -8 ITOT {101.20 USD} @ 105.75 USD
+  Assets:US:ETrade:Cash                            837.05 USD
+  Expenses:Financial:Commissions                     8.95 USD
+  Income:US:ETrade:Gains                           -36.40 USD
 ```
-to:
+
+becomes
+
 ```journal
-commodity 1.00 USD
-commodity 1.00 EUR
+2013-10-21 * Sell shares of ITOT
+  Assets:US:ETrade:ITOT                                            -8 ITOT @ 101.20 USD     @ 105.75 USD
+  Assets:US:ETrade:Cash                                                  837.05 USD
+  Expenses:Financial:Commissions                                           8.95 USD
+  Income:US:ETrade:Gains                                                 -36.40 USD
+```
+
+Quick fix: comment out the second @ price:
+```journal
+  Assets:US:ETrade:ITOT                                            -8 ITOT @ 101.20 USD     ;@ 105.75 USD
+```
+
+
+### Queries
+
+Custom query definitions are not properly commented out:
+
+```beancount
+2015-01-01 query "home" "
+  SELECT LAST(date) as latest, account, SUM(position) as total
+  WHERE account ~ ':Home:'
+  GROUP BY account
+"
+```
+
+becomes
+
+```journal
+;; Query: 2015-01-01 "home" "
+  SELECT LAST(date) as latest, account, SUM(position) as total
+  WHERE account ~ ':Home:'
+  GROUP BY account
+"
+```
+
+Quick fix: fully comment out any query definitions:
+```journal
+;; Query: 2015-01-01 "home" "
+;  SELECT LAST(date) as latest, account, SUM(position) as total
+;  WHERE account ~ ':Home:'
+;  GROUP BY account
+;"
+```
+
+So, something like this (applies the quick fixes above) might work better for you:
+```
+$ bean-report example.beancount hledger | perl -pe 's/(@.*?)@/\1;@/' | perl -p0e 's/^(;; Query.*?^")/comment\n\1\nend comment/smg' > example.hledger
+```
+or just run a single report without saving:
+```
+$ bean-report example.beancount hledger | perl -pe 's/(@.*?)@/\1;@/' | perl -p0e 's/^(;; Query.*?^")/comment\n\1\nend comment/smg' | hledger -f- stats
 ```
 
 ## hledger to Beancount
