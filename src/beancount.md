@@ -71,10 +71,14 @@ Beancount 2's [bean-report](https://beancount.github.io/docs/running_beancount_a
 It's not available with Beancount 3, you'll need to install Beancount 2:
 ```
 $ pip3 install beancount==2.3.6
+```
+
+Then you can do
+```
 $ bean-report example.beancount hledger > example.hledger
 ```
 
-The above is a good start, but not yet robust. 
+This is a good start, but not yet robust. 
 Here are some things you may need to fix manually, as of 2.3.6.
 
 ### Total costs
