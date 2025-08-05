@@ -52,6 +52,18 @@ Compared to Beancount, hledger has
 but different enough that neither can read the other's files directly.
 
 
+## hledger to Beancount
+
+The best way to export from hledger to Beancount is with hledger's [print](hledger.md#print) command, which supports [Beancount output](hledger.md#beancount-output).
+
+This can be useful for viewing hledger data in [Fava](https://beancount.github.io/fava/), eg.
+In simple cases it can be:
+```
+$ pip3 install fava
+$ hledger print -o tmp.beancount
+$ fava tmp.beancount
+```
+
 ## Beancount to hledger
 
 The most reliable way to export Beancount data is with 
@@ -139,17 +151,5 @@ $ bean-report example.beancount hledger | perl -pe 's/(@.*?)@/\1;@/' | perl -p0e
 or just run a single report without saving:
 ```
 $ bean-report example.beancount hledger | perl -pe 's/(@.*?)@/\1;@/' | perl -p0e 's/^(;; Query.*?^")/comment\n\1\nend comment/smg' | hledger -f- stats
-```
-
-## hledger to Beancount
-
-The best way to export from hledger to Beancount is with hledger's [print](hledger.md#print) command, which supports [Beancount output](hledger.md#beancount-output).
-
-This can be useful for viewing hledger data in [Fava](https://beancount.github.io/fava/), eg.
-In simple cases it can be:
-```
-$ pip3 install fava
-$ hledger print -o tmp.beancount
-$ fava tmp.beancount
 ```
 
