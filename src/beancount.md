@@ -79,25 +79,25 @@ Eg:
 
 ```beancount
 2013-10-21 * "Sell shares of ITOT"
-  Assets:US:ETrade:ITOT                                -8 ITOT {101.20 USD} @ 105.75 USD
-  Assets:US:ETrade:Cash                            837.05 USD
-  Expenses:Financial:Commissions                     8.95 USD
-  Income:US:ETrade:Gains                           -36.40 USD
+  Assets:US:ETrade:ITOT                   -8 ITOT {101.20 USD} @ 105.75 USD
+  Assets:US:ETrade:Cash               837.05 USD
+  Expenses:Financial:Commissions        8.95 USD
+  Income:US:ETrade:Gains              -36.40 USD
 ```
 
 becomes
 
 ```journal
 2013-10-21 * Sell shares of ITOT
-  Assets:US:ETrade:ITOT                                            -8 ITOT @ 101.20 USD     @ 105.75 USD
-  Assets:US:ETrade:Cash                                                  837.05 USD
-  Expenses:Financial:Commissions                                           8.95 USD
-  Income:US:ETrade:Gains                                                 -36.40 USD
+  Assets:US:ETrade:ITOT                -8 ITOT @ 101.20 USD    @ 105.75 USD
+  Assets:US:ETrade:Cash               837.05 USD
+  Expenses:Financial:Commissions        8.95 USD
+  Income:US:ETrade:Gains              -36.40 USD
 ```
 
 Quick fix: comment out the second @ price:
 ```journal
-  Assets:US:ETrade:ITOT                                            -8 ITOT @ 101.20 USD     ;@ 105.75 USD
+  Assets:US:ETrade:ITOT                -8 ITOT @ 101.20 USD    ;@ 105.75 USD
 ```
 
 
