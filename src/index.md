@@ -105,7 +105,7 @@ It is a long term project led by [Simon Michael](https://joyful.com) with many [
 <!-- ** Start ---------------------------------------------------------------->
 <!-- <a name="start"></a> -->
 
-## Get started!
+## Get started
 
 Welcome!
 This plain text accounting stuff is both useful and much more fun than you'd think.
