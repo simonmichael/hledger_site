@@ -332,10 +332,12 @@ I switched, blissfully, away from Quicken/Quickbook/Xero/all that heavy crap
 to very simple and elegant textfile-based accounting (ledger/hledger)
 and it's been the best and most flexible accounting experience I've ever had.
 I finally feel completely in control of my companies' books.
+--wolverine876
 
 I’ve been using hledger for a few years. ... Every service lets you download historical data as CSV,
 which can be imported by hledger and turned into journal files and then into visual reports. ...
 It’s a bespoke setup and super nerdy and is a bit of a pain, but it’s literally the only solution that works for us.
+--statico
 
 The main thing that made me switch to hledger was the ease of autogenerating transactions into a plain-text format. ...
 GNUCash made recurring transactions easy but made it a lot harder to generate split transactions according to fixed splits that I regularly engage with my friends/family in.
@@ -344,6 +346,7 @@ I go by hand and annotate transactions that my scripts couldn't classify/split, 
 I store all my inputs and intermediate imports in a git repository along with my main ledger file for auditability and to look at annotations. 
 The ease of automation just can't be beat with PTA but it's definitely harder to use if you don't have a preference for TUI work.
 Ease of writing importers was a huge driving factor when I switched to hledger from GNUCash.
+--Karrot_Kream
 
 Plain-text accounting is great. I choose hledger for the accounts of a small side business that doesn't warrant hiring an accountant.
 
@@ -762,6 +765,9 @@ I love that you include hledger! It's amazing piece of software, even if a littl
 
 I wanted to thank you. I quietly use hledger every day. I don't use it for financial transactions (though I am interested in the envelope budgeting possibilities), I just use it to record my hours. I've done this for years. It goes along with Org mode and some Bash/Perl scripts to help extract and process my notes files that include my hours.
 --Steven Shaw
+
+Thanks for your work on plaintextaccounting and hledger. Was a HUGE help, I am finally doing some bookkeeping, for over a year now :)
+--vNyo
 
 `;
 </script>
