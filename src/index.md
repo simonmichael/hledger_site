@@ -659,7 +659,7 @@ Has anyone else gone on the following journey:
 2. See ledger/hledger. Think this must be 'the way'. Go all in.
 3. Constantly wrestle with ledger/hledger because you only do your accounting once per month/quarter which is not enough frequency to really grok it.
 4. Use excel with a new sense of calm that you're not missing out on something better
---HN
+--davidhunter
 
 I'm now in my 5th year of tracking every penny in and out of my life with hledger, with a mostly manual approach. Some benefits:
 - as noted by a spreadsheet user, it adds friction to spending money, which has curbed frivolous/ unplanned expenses for me (and double entry accounting makes it impossible for money to "disappear")
