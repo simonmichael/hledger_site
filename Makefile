@@ -1,4 +1,4 @@
-CURRENT_RELEASE=1.43
+CURRENT_RELEASE=1.50
 
 default: build
 
@@ -17,7 +17,7 @@ tools:
 build:
 	@echo "building site with the current and dev manuals"
 	@make -s build3-dev
-	@make -s build3-1.43
+	@make -s build3-1.50
 	@make -s sitemap
 
 # Render most versions of manuals (excluding old unpackaged versions). 
@@ -65,8 +65,9 @@ all: \
 	build3-1.40 \
 	build3-1.41 \
 	build3-1.42 \
+	build3-1.43 \
 	build3-dev \
-	build3-1.43
+	build3-1.50
 	@make -s sitemap
 
 # Render the three manuals for a specified hledger version >1.21 (or "dev"), as out2/VER/.

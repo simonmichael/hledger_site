@@ -102,9 +102,9 @@ and splice those into the site with caddy rewrites.
 It's useful to uncomment the dev manuals though, allowing searching for new features
 and previewing them when working on docs locally.
 -->
-- [hledger manual (1.43)](1.43/hledger.md)
-- [hledger-ui manual (1.43)](1.43/hledger-ui.md)
-- [hledger-web manual (1.43)](1.43/hledger-web.md)
+- [hledger manual (dev)](dev/hledger.md)
+- [hledger-ui manual (dev)](dev/hledger-ui.md)
+- [hledger-web manual (dev)](dev/hledger-web.md)
 - [hledger-web tips](hledger-web-tips.md)
 - [How to figure out journal entries](how-to-figure-out.md)
 - [How to record journal entries](how-to-record.md)

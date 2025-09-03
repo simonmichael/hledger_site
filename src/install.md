@@ -5,7 +5,7 @@
 <!-- toc -->
 </div>
 
-The current hledger release is **1.43.2**.
+The current hledger release is **1.50**.
 Here are the **[release notes](release-notes.md)**.
 
 Here are several ways you can install hledger:
@@ -27,10 +27,10 @@ Download them manually,
 or [use eget](https://github.com/zyedidia/eget?tab=readme-ov-file#how-to-get-eget) (recommended).
 (For [prerelease binaries], add `--pre-release`):
 
-[![hledger release binaries](https://img.shields.io/badge/hledger_release_binaries-1.43.2-brightgreen.svg)](https://github.com/simonmichael/hledger/releases/tag/1.43.2)
+[![hledger release binaries](https://img.shields.io/badge/hledger_release_binaries-1.50-brightgreen.svg)](https://github.com/simonmichael/hledger/releases/tag/1.50)
 `eget simonmichael/hledger --all`
 
-[release binaries]:    https://github.com/simonmichael/hledger/releases/tag/1.43.2
+[release binaries]:    https://github.com/simonmichael/hledger/releases/tag/1.50
 [prerelease binaries]: https://github.com/simonmichael/hledger/releases/tag/nightly
 
 ## Packaged binaries
@@ -40,7 +40,7 @@ Homebrew (Mac, Linux) <!-- chenrui ? --> \
 `brew install hledger`
 
 Docker (Linux, Mac, Windows) <!-- adept --> ([more](https://hub.docker.com/search?q=hledger&type=image&sort=updated_at&order=desc)) \
-[![Docker](https://img.shields.io/badge/Docker_image-1.43.2-brightgreen.svg)](https://hub.docker.com/r/dastapov/hledger)
+[![Docker](https://img.shields.io/badge/Docker_image-1.43.2-red.svg)](https://hub.docker.com/r/dastapov/hledger)
 `docker pull dastapov/hledger`
 
 Windows \
@@ -204,7 +204,7 @@ Get the [hledger source code](https://github.com/simonmichael/hledger/commits/ma
 
     git clone https://github.com/simonmichael/hledger
     cd hledger
-    git checkout 1.43.2   # switch to the latest release tag (optional)
+    git checkout 1.50   # switch to the latest release tag (optional)
 
 Then build and install with stack:
 
@@ -243,7 +243,7 @@ Get the hledger source:
 
     git clone https://github.com/simonmichael/hledger
     cd hledger
-    git checkout 1.43.2   # switch to the latest release tag (optional)
+    git checkout 1.50   # switch to the latest release tag (optional)
 
 Build and install hledger:
 
@@ -296,7 +296,7 @@ to check your setup. If this doesn't work, read on..
 After installing, try to run the hledger tools (hledger, hledger-ui, hledger-web) and look for the expected versions. Eg:
 
     $ hledger --version
-    hledger 1.43.2, mac-aarch64
+    hledger 1.50, mac-aarch64
 
 If this doesn't work, you may need to add the binaries' install directory to your shell's PATH.
 
@@ -317,13 +317,13 @@ You can run the built-in unit tests if you'd like:
 
     $ hledger test
     ...
-    All 234 tests passed (0.04s)
+    All 245 tests passed (0.04s)
 
 or the more thorough functional tests, if you are set up for working with the hledger source code:
 
     $ just functest
     ...
-     Total   1133 ...
+     Total   1206 ...
     functest PASSED
 -->
 
@@ -421,11 +421,11 @@ If you use the bash or zsh shells, you can set up context-sensitive auto-complet
 
     If not, eg because your system's hledger package does not yet include the bash completions, or if they are not up to date, 
     or if you have installed hledger by other means, then install the 
-    [latest hledger bash completions](https://raw.githubusercontent.com/simonmichael/hledger/1.43-branch/hledger/shell-completion/hledger-completion.bash)
+    [latest hledger bash completions](https://raw.githubusercontent.com/simonmichael/hledger/1.50-branch/hledger/shell-completion/hledger-completion.bash)
     yourself, under your XDG_DATA_HOME directory. Eg:
 
     ```
-    curl https://raw.githubusercontent.com/simonmichael/hledger/1.43-branch/hledger/shell-completion/hledger-completion.bash \
+    curl https://raw.githubusercontent.com/simonmichael/hledger/1.50-branch/hledger/shell-completion/hledger-completion.bash \
       -o ~/.local/share/bash-completion/completions/hledger --create-dirs
     ```
 
