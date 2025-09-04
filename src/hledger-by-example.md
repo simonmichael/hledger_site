@@ -18,21 +18,17 @@ Eg press the right arrow key now to step to the next page.
 - [print: show whole transactions](print-.md)
 - [register: show detailed changes](register.md)
 - [balance: show account totals](balance.md)
-<!--
-- [Account types]
-- [accounts: list accounts]
--->
 - [balancesheet: assets and liabilities](balancesheet.md)
 - [incomestatement: revenues and expenses](incomestatement.md)
-<!--
-- [cashflow: changes in cash accounts](cashflow.md)
--->
-
 - [Reading CSV files](reading-csv-files.md)
 - [Importing new transactions](importing-new-transactions.md)
 - [Reading timeclock files](reading-timeclock-files.md)
 - [Reading timedot files](reading-timedot-files.md)
-
+<!--
+- [Account types]
+- [accounts: list accounts]
+- [cashflow: changes in cash accounts](cashflow.md)
+-->
 
 <!--
 Show don't tell. Keep prose brief.
