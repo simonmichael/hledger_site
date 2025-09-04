@@ -31,7 +31,7 @@ You can start the journal by running
 ```
 hledger add
 ```
-and adding a transaction. This will create the file if needed. We'll show this on the next page.
+and adding a transaction (see the next page for an example). This will create the file if needed. 
 
 <!-- <br> -->
 
@@ -64,8 +64,7 @@ Set-Content -Path $HOME/.hledger.journal -Value ""
 -->
 
 Note these Windows commands create the file with the system's text encoding, which is necessary.
-
-(You can see what the system text encoding is by running `[System.Text.Encoding]::Default.EncodingName`.
+(You can see what your system text encoding is by running `[System.Text.Encoding]::Default.EncodingName`.
 If you want your files to be compatible with non-Windows machines, the "Unicode (UTF-8)" encoding is best.
 For that, you might need to set ["Language for non-Unicode programs > Use Unicode UTF-8 for worldwide language support"](install.md#text-encoding).)
 <!--

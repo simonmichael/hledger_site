@@ -11,7 +11,7 @@ which sets up the starting balances in one or more asset and liability accounts.
 *Liabilities* are things you owe, like a credit card balance.)
 
 Let's start by recording one starting balance: how much cash is in your wallet today.
-You can do it quickly with a text editor, or with more guidance using hledger's `add` command. We'll show both. (hledger-web is a third way, not shown here.)
+You can do it quickly with a text editor, or with more guidance using hledger's `add` command. We'll show both. (hledger-web is another way.)
 ## Using a text editor
 If you're comfortable using text editors, open the journal file in your favourite editor.
 (If you forgot where the journal file is, run `hledger files`.)

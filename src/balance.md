@@ -18,9 +18,9 @@ $ hledger balance
 ```
 
 The `balance` command is quite flexible.
-The above is its original output style (as in Ledger), with amounts on the left.
-Specifying a *report interval*, like monthly, enables more modern tabular output, with a title.
-Eg here are the changes broken down by month (there's only one month in this case):
+The above is its original output style (as in Ledger), with amounts on the left; it is simple.
+Specifying a *report interval*, like monthly, enables more flexible tabular output, with a title.
+Eg here are the changes broken down by month:
 
 ```
 $ hledger balance -M
@@ -40,7 +40,28 @@ Balance changes in 2025-01:
                          ||         0 
 ```
 
-or by day:
+(You can add `--pretty` to your command or hledger config file for prettier borders:)
+```
+$ hledger balance -M --pretty
+Balance changes in 2025-01:
+
+┌─────────────────────────╥───────────┐
+│                         ║       Jan │
+╞═════════════════════════╬═══════════╡
+│ assets:bank:checking    ║   750 USD │
+│ assets:cash             ║   100 USD │
+│ equity:start            ║  -700 USD │
+│ expenses:food           ║   200 USD │
+│ expenses:rent           ║   800 USD │
+│ expenses:supplies       ║    50 USD │
+│ liabilities:credit card ║  -200 USD │
+│ revenues:salary         ║ -1000 USD │
+├─────────────────────────╫───────────┤
+│                         ║         0 │
+└─────────────────────────╨───────────┘
+```
+
+Here are the changes by day:
 ```
 $ hledger balance -D
 Balance changes in 2025-01-01..2025-01-04:
