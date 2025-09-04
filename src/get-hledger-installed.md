@@ -4,8 +4,8 @@ Each new hledger version is better than the preceding ones, so using the latest 
 And you'll want to have it installed somewhere in your system's PATH, so that you can just type "hledger" and it runs.
 
 [Install](install.md) shows all the ways to get hledger installed on your computer.
-But here's a quick way, using the official release binaries.
-Copy and paste the appropriate command(s) into a terminal window to run them:
+But here's a quick way: install the official release binaries, 
+by copy/pasting the appropriate command below into a terminal window.
 
 On a Linux machine with an intel processor:
 ```
