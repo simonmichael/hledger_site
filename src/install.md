@@ -20,12 +20,11 @@ As the final step, [check your installation](#check-your-installation).
 
 ## Official binaries
 
-Official [release binaries] are provided for Linux, Mac, and Windows.
-Here's an [![RSS](images/rss.png) RSS feed](https://github.com/simonmichael/hledger/releases.atom).
+Official [release binaries] are provided for Linux, Mac, and Windows
+([![RSS](images/rss.png) RSS feed](https://github.com/simonmichael/hledger/releases.atom)).
 \
-Download them manually, 
-or [use eget](https://github.com/zyedidia/eget?tab=readme-ov-file#how-to-get-eget) (recommended).
-(For [prerelease binaries], add `--pre-release`):
+Download them manually (see [Get hledger installed](get-hledger-installed.md)),
+or use a download tool like [eget](https://github.com/zyedidia/eget?tab=readme-ov-file#how-to-get-eget):
 
 [![hledger release binaries](https://img.shields.io/badge/hledger_release_binaries-1.50-brightgreen.svg)](https://github.com/simonmichael/hledger/releases/tag/1.50)
 `eget simonmichael/hledger --all`
