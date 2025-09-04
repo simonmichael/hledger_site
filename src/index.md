@@ -769,6 +769,16 @@ I wanted to thank you. I quietly use hledger every day. I don't use it for finan
 Thanks for your work on plaintextaccounting and hledger. Was a HUGE help, I am finally doing some bookkeeping, for over a year now :)
 --vNyo
 
+It’s the only tool that stuck with me, and I love it.
+--olexsmir
+
+The community is lovely. If you have questions, “what is the way to do it?”, you will get plenty of help if you ask on reddit/forum
+--olexsmir
+
+I switched to hledger because of the excellent and simple import framework for CSVs and the excellent built in CLI reports.
+--bagobok
+
+
 `;
 </script>
 
