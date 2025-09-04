@@ -20,7 +20,7 @@
 
 # HLEDGER BY EXAMPLE
 
-<!-- keep these in order: -->
+<!-- keep these in order, and synced with hledger-by-example.md -->
 - [hledger by example](hledger-by-example.md)
 - [Get hledger installed](get-hledger-installed.md)
 - [Check your setup](check-your-setup.md)

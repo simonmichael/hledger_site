@@ -2,14 +2,36 @@
 
 A growing "book" introducing hledger one step at a time.
 
-Examples assume the latest hledger version; and on Windows, a powershell window, not CMD.
-
-For now, enable the site sidebar to see the book's table of contents.
-<!-- For now, see the outline at [Docs: hledger by example](doc.md#hledger-by-example). -->
-
-You can use the left and right arrow buttons on this page,
-or press the left and right arrow keys, to step through the pages.
+You can use the sidebar links, the left and right arrow buttons on this page,
+or the left and right arrow keys, to step through the pages.
 Eg press the right arrow key now to step to the next page.
+
+<!-- keep synced: sidebar links in SUMMARY.md -->
+- [Get hledger installed](get-hledger-installed.md)
+- [Check your setup](check-your-setup.md)
+- [Start a journal](start-a-journal.md)
+- [Add a transaction: starting balances](add-a-transaction.md)
+- [Journal entries](journal-entries.md)
+- [Account names](account-names.md)
+- [More transactions](more-transactions.md)
+- [Overview of commands](commands.md)
+- [print: show whole transactions](print-.md)
+- [register: show detailed changes](register.md)
+- [balance: show account totals](balance.md)
+<!--
+- [Account types]
+- [accounts: list accounts]
+-->
+- [balancesheet: assets and liabilities](balancesheet.md)
+- [incomestatement: revenues and expenses](incomestatement.md)
+<!--
+- [cashflow: changes in cash accounts](cashflow.md)
+-->
+
+- [Reading CSV files](reading-csv-files.md)
+- [Importing new transactions](importing-new-transactions.md)
+- [Reading timeclock files](reading-timeclock-files.md)
+- [Reading timedot files](reading-timedot-files.md)
 
 
 <!--
