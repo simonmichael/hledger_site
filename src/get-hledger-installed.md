@@ -39,6 +39,8 @@ hledger 1.50 ...
 The examples in this book assume you are using this latest hledger version.
 (And if you're on Windows, that you are using powershell, not CMD.EXE.)
 
+Press the right arrow key (or click the right arrow button) again to step to the next page.
+
 <br>
 
 (Part of [hledger by example](hledger-by-example.md).)
