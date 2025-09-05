@@ -778,6 +778,20 @@ The community is lovely. If you have questions, “what is the way to do it?”,
 I switched to hledger because of the excellent and simple import framework for CSVs and the excellent built in CLI reports.
 --bagobok
 
+hledger, however, has support for adding 'posting dates' as specially formatted comments. What's really clever is how it automatically chooses which date to sort the reports by depending on the query!
+--seabass-labrax
+
+It is a lot of work, especially if you're just starting out and there are gazillion things you own(lucky you). But it's worth it. You are always informed and it has changed my perspective on personal finance completely.
+--zipping1549
+
+I use 0.1% of hledger and that's enough for me. Thank you to the author for providing this powerful tool for free.
+--laurent_du
+
+Thank you so much for hledger 🙏! Both my wife and I enjoy using it and we find it extremely useful
+--alex-sparus
+
+I’ve written a bunch of Python scripts to do my books using hledger. The nice thing is I no longer pay the $75/month for Quickbooks.
+--abhiyerra
 
 `;
 </script>
