@@ -427,15 +427,14 @@ $ hledger reg --date2
 2025-09-06                 assets:checking          $-10             0
 ```
 
-Secondary dates are supported in hledger only for Ledger compatibility.
-The docs linked above explain why I think you should probably prefer posting dates.
-In particular, secondary dates mean you always have to pick one of two reporting modes,
-and your balance assertions will probably fail in one of them
-(because balances depend on the dates of postings).
-
 Both features are non-standard tool-specific notations added to standard Double Entry Bookkeeping.
 They make money "disappear" temporarily, unbalancing the accounting equation during the period between the two dates. (For most people this is harmless.)
 They allow precise reports from fewer journal entries, which can be convenient.
+
+But the docs linked above explain why I think you should avoid secondary dates.
+In particular, secondary dates mean you always have to pick one of two reporting modes,
+and your balance assertions will probably fail in one of them (because balances depend on the dates of postings).
+Posting dates don't have this problem.
 
 ### Why does this entry give a "no amount" error even though I wrote an amount ?
 
