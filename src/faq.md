@@ -424,7 +424,7 @@ and your balance assertions will probably fail in one of them.
 
 Both features are non-standard tool-specific notations added to standard Double Entry Bookkeeping.
 They make money "disappear" temporarily, unbalancing the accounting equation during the period between the two dates. (For most people this is harmless.)
-They allow more precise reports, and compact journal entries, which can be convenient.
+They allow precise reports from fewer journal entries, which can be convenient.
 
 ### Why does this entry give a "no amount" error even though I wrote an amount ?
 
