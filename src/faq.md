@@ -349,7 +349,7 @@ Here's a secondary transaction date (<https://hledger.org/hledger.html#secondary
 
 ```journal
 2025-08-30=2025-08-27 * pay credit card
-    liabilities:credit-card                        $10
+    liabilities:credit-card              $10
     assets:checking
 ```
 
@@ -357,7 +357,7 @@ or:
 
 ```journal
 2025-08-30 * pay credit card   ; date2:2025-08-27
-    liabilities:credit-card                        $10
+    liabilities:credit-card              $10
     assets:checking
 ```
 
@@ -365,7 +365,7 @@ Here's a posting date (<https://hledger.org/hledger.html#posting-dates>):
 
 ```journal
 2025-08-30 * pay credit card
-    liabilities:credit-card                        $10  ; [2025-08-27]
+    liabilities:credit-card              $10  ; date:2025-08-27
     assets:checking
 ```
 
@@ -373,7 +373,7 @@ or:
 
 ```journal
 2025-08-30 * pay credit card
-    liabilities:credit-card                        $10  ; date:2025-08-27
+    liabilities:credit-card              $10  ; [2025-08-27]
     assets:checking
 ```
 
@@ -381,7 +381,7 @@ Here's a secondary posting date:
 
 ```journal
 2025-08-30 * pay credit card
-    liabilities:credit-card                        $10  ; [=2025-08-27]
+    liabilities:credit-card              $10  ; date2:2025-08-27
     assets:checking
 ```
 
@@ -389,16 +389,22 @@ or:
 
 ```journal
 2025-08-30 * pay credit card
-    liabilities:credit-card                        $10  ; date2:2025-08-27
+    liabilities:credit-card              $10  ; [=2025-08-27]
     assets:checking
 ```
 
 Here's primary and secondary dates for the transaction and each posting, all used at once:
 
 ```journal
+2025-09-01 * pay credit card                  ;                  date2:2025-09-02
+    liabilities:credit-card              $10  ; date:2025-09-03, date2:2025-09-04
+    assets:checking                           ; date:2025-09-05, date2:2025-09-06
+```
+or:
+```journal
 2025-09-01=2025-09-02 * pay credit card
-    liabilities:credit-card                        $10  ; [2025-09-03=2025-09-04]
-    assets:checking                                     ; [2025-09-05=2025-09-06]
+    liabilities:credit-card              $10  ; [2025-09-03=2025-09-04]
+    assets:checking                           ; [2025-09-05=2025-09-06]
 ```
 and their effect:
 ```
@@ -413,12 +419,12 @@ $ hledger print date2:2025/9/2
     assets:checking                          ; [2025-09-05=2025-09-06]
 
 $ hledger reg
-2025-09-03 pay credit card      li:credit-card                 $10           $10
-2025-09-05                      assets:checking               $-10             0
+2025-09-03 pay credit c..  li:credit-card            $10           $10
+2025-09-05                 assets:checking          $-10             0
 
 $ hledger reg --date2
-2025-09-04 pay credit card      li:credit-card                 $10           $10
-2025-09-06                      assets:checking               $-10             0
+2025-09-04 pay credit c..  li:credit-card            $10           $10
+2025-09-06                 assets:checking          $-10             0
 ```
 
 Secondary dates are supported in hledger only for Ledger compatibility.
