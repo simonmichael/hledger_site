@@ -330,17 +330,18 @@ A one-liner that preserves directives and inter-transaction comments (though not
 
 ### Why did hledger rename Ledger's "effective dates" to "secondary dates" ?
 
-To reduce confusions like:
+To avoid confusions like:
 Which is the effective date ?
 Which should be the later date ?
 What does effective mean ?
 If there are more than two dates of interest, what to call the others ?
 
-### Are effective/secondary date and posting dates the same ? Which should I use ?
+### Are effective/secondary dates and posting dates the same ? Which should I use ?
 
-No, they're different; though often both are tried for a similar use case (transactions which have more than one date of interest).
+No, they're different; though often they are tried for a similar use case
+(transactions which have more than one date of interest).
 
-Here's a secondary date (https://hledger.org/hledger.html#secondary-dates):
+Here's a [secondary date](https://hledger.org/hledger.html#secondary-dates):
 
 ```journal
 2025-08-30=2025-08-27 * pay credit card
@@ -356,7 +357,7 @@ or:
     assets:checking
 ```
 
-Here's a posting date (https://hledger.org/hledger.html#posting-dates):
+Here's a [posting date](https://hledger.org/hledger.html#posting-dates):
 
 ```journal
 2025-08-30 * pay credit card
