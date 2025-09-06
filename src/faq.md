@@ -338,8 +338,12 @@ If there are more than two dates of interest, what to call the others ?
 
 ### Are secondary dates and posting dates the same ? Which should I use ?
 
-No, they're different; though often they are tried for a similar use case
+These are independent features, which can be used separately or together.
+Both can be applied to a similar use case
 (transactions which have more than one date of interest).
+Secondary dates are best avoided IMHO, and they are deprecated in hledger.
+
+More detail:
 
 Here's a secondary transaction date (<https://hledger.org/hledger.html#secondary-dates>):
 
@@ -417,7 +421,7 @@ $ hledger reg --date2
 2025-09-06                      assets:checking               $-10             0
 ```
 
-Secondary dates are deprecated in hledger, and kept only for Ledger compatibility.
+Secondary dates are supported in hledger only for Ledger compatibility.
 The docs linked above explain why I think you should probably prefer posting dates.
 In particular, secondary dates mean you always have to pick one of two reporting modes,
 and your balance assertions will probably fail in one of them.
