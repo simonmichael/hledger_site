@@ -428,12 +428,13 @@ $ hledger reg --date2
 ```
 
 Both features are non-standard tool-specific notations added to standard Double Entry Bookkeeping.
-They make money "disappear" temporarily, unbalancing the accounting equation during the period between the two dates. (For most people this is harmless.)
-They allow precise reports from fewer journal entries, which can be convenient.
+They make money "disappear" temporarily, unbalancing the accounting equation during the period between the two dates.
+But for most people this doesn't matter, and being able to represent multiple dates precisely with one journal entry
+(the alternative is multiple entries updating a settlement account) is convenient.
 
 But the docs linked above explain why I think you should avoid secondary dates.
-In particular, secondary dates mean you always have to pick one of two reporting modes,
-and your balance assertions will probably fail in one of them (because balances depend on the dates of postings).
+In particular, they require you to choose between reporting modes, 
+and they tend to break balance assertions (because balances depend on the dates of postings).
 Posting dates don't have this problem.
 
 ### Why does this entry give a "no amount" error even though I wrote an amount ?
