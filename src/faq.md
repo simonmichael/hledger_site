@@ -328,6 +328,81 @@ A one-liner that preserves directives and inter-transaction comments (though not
 (grep -E '^([#;]|[[:alpha:]])' $LEDGER_FILE; hledger print) > $LEDGER_FILE.new
 ```
 
+### Why did hledger rename Ledger's "effective dates" to "secondary dates" ?
+
+To reduce confusions like:
+Which is the effective date ?
+Which should be the later date ?
+What does effective mean ?
+If there are more than two dates of interest, what to call the others ?
+
+### Are effective/secondary date and posting dates the same ? Which should I use ?
+
+No, they're different; though often both are tried for a similar use case (transactions which have more than one date of interest).
+
+Here's a secondary date (https://hledger.org/hledger.html#secondary-dates):
+
+```journal
+2025-08-30=2025-08-27 * pay credit card
+    liabilities:credit-card                        $10
+    assets:checking
+```
+
+or:
+
+```journal
+2025-08-30 * pay credit card   ; date2:2025-08-27
+    liabilities:credit-card                        $10
+    assets:checking
+```
+
+Here's a posting date (https://hledger.org/hledger.html#posting-dates):
+
+```journal
+2025-08-30 * pay credit card
+    liabilities:credit-card                        $10  ; [2025-08-27]
+    assets:checking
+```
+
+or:
+
+```journal
+2025-08-30 * pay credit card
+    liabilities:credit-card                        $10  ; date:2025-08-27
+    assets:checking
+```
+
+Here's a posting secondary date:
+
+```journal
+2025-08-30 * pay credit card
+    liabilities:credit-card                        $10  ; [=2025-08-27]
+    assets:checking
+```
+
+or:
+
+```journal
+2025-08-30 * pay credit card
+    liabilities:credit-card                        $10  ; date2:2025-08-27
+    assets:checking
+```
+
+Here's primary and secondary dates for the transaction and each posting, all used at once:
+
+```journal
+2025-09-01=2025-09-02 * pay credit card
+    liabilities:credit-card                        $10  ; [2025-09-03=2025-09-04]
+    assets:checking                                     ; [2025-09-05=2025-09-06]
+```
+
+Both features are non-standard tool-specific notations added to standard Double Entry Bookkeeping.
+They make money "disappear" temporarily, unbalancing the accounting equation during the period between the two dates. (For most people this is harmless.)
+They allow more precise reports, and compact journal entries, which can be convenient.
+
+The docs linked above explain why I think you should probably prefer posting dates and avoid secondary dates.
+In particular, secondary dates mean you always have to pick one of two reporting modes,
+and your balance assertions will probably fail in one of them.
 
 ### Why does this entry give a "no amount" error even though I wrote an amount ?
 
