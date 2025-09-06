@@ -396,6 +396,26 @@ Here's primary and secondary dates for the transaction and each posting, all use
     liabilities:credit-card                        $10  ; [2025-09-03=2025-09-04]
     assets:checking                                     ; [2025-09-05=2025-09-06]
 ```
+and their effect:
+```
+$ hledger print date:2025/9/1
+2025-09-01=2025-09-02 * pay credit card
+    liabilities:credit-card             $10  ; [2025-09-03=2025-09-04]
+    assets:checking                          ; [2025-09-05=2025-09-06]
+
+$ hledger print date2:2025/9/2
+2025-09-01=2025-09-02 * pay credit card
+    liabilities:credit-card             $10  ; [2025-09-03=2025-09-04]
+    assets:checking                          ; [2025-09-05=2025-09-06]
+
+$ hledger reg
+2025-09-03 pay credit card      li:credit-card                 $10           $10
+2025-09-05                      assets:checking               $-10             0
+
+$ hledger reg --date2
+2025-09-04 pay credit card      li:credit-card                 $10           $10
+2025-09-06                      assets:checking               $-10             0
+```
 
 Both features are non-standard tool-specific notations added to standard Double Entry Bookkeeping.
 They make money "disappear" temporarily, unbalancing the accounting equation during the period between the two dates. (For most people this is harmless.)
