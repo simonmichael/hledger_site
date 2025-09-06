@@ -430,7 +430,8 @@ $ hledger reg --date2
 Secondary dates are supported in hledger only for Ledger compatibility.
 The docs linked above explain why I think you should probably prefer posting dates.
 In particular, secondary dates mean you always have to pick one of two reporting modes,
-and your balance assertions will probably fail in one of them.
+and your balance assertions will probably fail in one of them
+(because balances depend on the dates of postings).
 
 Both features are non-standard tool-specific notations added to standard Double Entry Bookkeeping.
 They make money "disappear" temporarily, unbalancing the accounting equation during the period between the two dates. (For most people this is harmless.)
