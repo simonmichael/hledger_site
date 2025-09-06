@@ -401,7 +401,8 @@ Both features are non-standard tool-specific notations added to standard Double 
 They make money "disappear" temporarily, unbalancing the accounting equation during the period between the two dates. (For most people this is harmless.)
 They allow more precise reports, and compact journal entries, which can be convenient.
 
-The docs linked above explain why I think you should probably prefer posting dates and avoid secondary dates.
+Secondary dates are deprecated in hledger, and kept only for Ledger compatibility.
+The docs linked above explain why I think you should probably prefer posting dates.
 In particular, secondary dates mean you always have to pick one of two reporting modes,
 and your balance assertions will probably fail in one of them.
 
