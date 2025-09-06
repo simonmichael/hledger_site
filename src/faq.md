@@ -341,7 +341,7 @@ If there are more than two dates of interest, what to call the others ?
 No, they're different; though often they are tried for a similar use case
 (transactions which have more than one date of interest).
 
-Here's a [secondary date](https://hledger.org/hledger.html#secondary-dates):
+Here's a secondary transaction date (<https://hledger.org/hledger.html#secondary-dates>):
 
 ```journal
 2025-08-30=2025-08-27 * pay credit card
@@ -357,7 +357,7 @@ or:
     assets:checking
 ```
 
-Here's a [posting date](https://hledger.org/hledger.html#posting-dates):
+Here's a posting date (<https://hledger.org/hledger.html#posting-dates>):
 
 ```journal
 2025-08-30 * pay credit card
@@ -373,7 +373,7 @@ or:
     assets:checking
 ```
 
-Here's a posting secondary date:
+Here's a secondary posting date:
 
 ```journal
 2025-08-30 * pay credit card
