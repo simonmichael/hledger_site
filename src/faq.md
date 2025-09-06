@@ -336,7 +336,7 @@ Which should be the later date ?
 What does effective mean ?
 If there are more than two dates of interest, what to call the others ?
 
-### Are effective/secondary dates and posting dates the same ? Which should I use ?
+### Are secondary dates and posting dates the same ? Which should I use ?
 
 No, they're different; though often they are tried for a similar use case
 (transactions which have more than one date of interest).
