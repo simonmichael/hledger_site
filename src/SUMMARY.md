@@ -47,7 +47,7 @@
 - [Reading timeclock files](reading-timeclock-files.md)
 - [Reading timedot files](reading-timedot-files.md)
 
-# OTHER PAGES
+# MORE DOCS
 
 <!-- Pages must be listed here for mdbook to render them. -->
 <!-- Since mdbook 4.50 or so, duplicates must be avoided. -->
@@ -123,7 +123,8 @@
 - [Visualising discussion 2023](visualising2023.md)
 - [Workflows](workflows.md)
 
-<!-- dev docs -->
+# DEV DOCS
+
 - [ACHIEVEMENTS](ACHIEVEMENTS.md)
 - [BENCHMARKS](BENCHMARKS.md)
 - [CHANGES-ui.md](CHANGES-ui.md)
