@@ -19,7 +19,7 @@ Is it the right time for you to help ? Consider:
   > and to help grow a shared global culture of accountability and sustainability.**\
   (See also: [FAQ](faq.md#what-is-the-hledger-projects-current-mission-and-plans-))
 
-  <!-- see also: faq.md, ROADMAP.md -->
+See also: [FINANCE](FINANCE.md) overview and reports for the project.
 
 ## How to sponsor
 <!-- keep synced with README.md: -->
