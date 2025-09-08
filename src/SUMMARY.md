@@ -18,6 +18,13 @@
 - [Finance](FINANCE.md)
 - [CREDITS](CREDITS.md)
 
+# MANUALS
+
+<!-- These manual links are rewritten to an appropriate version site build scripts -->
+- [hledger manual (dev)](dev/hledger.md)
+- [hledger-ui manual (dev)](dev/hledger-ui.md)
+- [hledger-web manual (dev)](dev/hledger-web.md)
+
 # HLEDGER BY EXAMPLE
 
 <!-- keep these in order, and synced with hledger-by-example.md -->
@@ -85,18 +92,6 @@
 - [hledger and SQLite](sqlite.md)
 - [hledger and Ultorg](ultorg.md)
 - [hledger and YNAB](ynab.md)
-<!--
-Other manual versions.
-Uncommenting these causes mdbook to render them as part of the main site,
-including them in search results (and in the site TOC, though we try to hide these links with CSS).
-So mostly we instead build each one with a separate mdbook run, in out2/ (see Makefile), 
-and splice those into the site with caddy rewrites.
-It's useful to uncomment the dev manuals though, allowing searching for new features
-and previewing them when working on docs locally.
--->
-- [hledger manual (dev)](dev/hledger.md)
-- [hledger-ui manual (dev)](dev/hledger-ui.md)
-- [hledger-web manual (dev)](dev/hledger-web.md)
 - [hledger-web tips](hledger-web-tips.md)
 - [How to figure out journal entries](how-to-figure-out.md)
 - [How to record journal entries](how-to-record.md)
