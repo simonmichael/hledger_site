@@ -13,7 +13,6 @@
 # CONTRIBUTE
 
 - [Contributor Quick Start](CONTRIBUTING.md)
-- [Developer docs](dev.md)
 - [Sponsor hledger](sponsor.md)
 - [Finance](FINANCE.md)
 - [CREDITS](CREDITS.md)
@@ -125,6 +124,8 @@
 
 # DEV DOCS
 
+- [Developer docs](dev.md)
+- [Developer FAQ](DEVFAQ.md)
 - [ACHIEVEMENTS](ACHIEVEMENTS.md)
 - [BENCHMARKS](BENCHMARKS.md)
 - [CHANGES-ui.md](CHANGES-ui.md)
@@ -135,7 +136,6 @@
 - [CHANGELOGS](CHANGELOGS.md)
 - [CODE](CODE.md)
 - [COMMITS](COMMITS.md)
-- [Developer FAQ](DEVFAQ.md)
 - [DECISIONS](DECISIONS.md)
 - [DEVWORKFLOWS](DEVWORKFLOWS.md)
 - [DOCS](DOCS.md)

@@ -13,6 +13,7 @@ h3 { margin-top:0; }
 An overview of hledger user docs.
 You don't need to read them all; pick the ones that fit your needs.
 There are also some [Videos](videos.md).
+[Developer docs](dev.md) are elsewhere.
 
 ## Quick starts
 
