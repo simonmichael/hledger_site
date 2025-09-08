@@ -9,12 +9,8 @@
 - [Videos](videos.md)
 - [Support](support.md)
 - [Scripts and add-ons](scripts.md)
-
-# CONTRIBUTE
-
-- [Contributor Quick Start](CONTRIBUTING.md)
 - [Sponsor hledger](sponsor.md)
-- [Finance](FINANCE.md)
+- [Contributor Quick Start](CONTRIBUTING.md)
 - [CREDITS](CREDITS.md)
 
 # MANUALS
@@ -46,7 +42,7 @@
 - [Reading timeclock files](reading-timeclock-files.md)
 - [Reading timedot files](reading-timedot-files.md)
 
-# MORE DOCS
+# MORE USER DOCS
 
 <!-- Pages must be listed here for mdbook to render them. -->
 <!-- Since mdbook 4.50 or so, duplicates must be avoided. -->
@@ -122,7 +118,7 @@
 - [Visualising discussion 2023](visualising2023.md)
 - [Workflows](workflows.md)
 
-# DEV DOCS
+# DEVELOPER DOCS
 
 - [Developer docs](dev.md)
 - [Developer FAQ](DEVFAQ.md)
@@ -137,6 +133,7 @@
 - [ERRORS](ERRORS.md)
 - [EXAMPLES](EXAMPLES.md)
 - [FILES](FILES.md)
+- [FINANCE](FINANCE.md)
 - [Investment Accounting Feature Ladder](investment-accounting-features.md)
 - [ISSUES](ISSUES.md)
 - [JUST-MAKE-SHAKE](JUST-MAKE-SHAKE.md)
