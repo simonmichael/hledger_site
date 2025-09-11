@@ -24,13 +24,6 @@ It aims to be somewhat useful to non-techies and accounting beginners, as well a
 It is written in Haskell, which helps with correctness and maintainability.
 It tries to reimplement Ledger's best parts in more depth, with more consistency and robustness.
 
-Compared to hledger, Ledger has
-
-- assisted lot tracking for investment transactions
-- a data format supporting embedded code (value expressions, python expressions..)
-- more speed with large files
-- a C++ API.
-
 Compared to Ledger, hledger has
 
 - more active maintenance and support (since 2008). There's a new release every quarter.
@@ -45,7 +38,14 @@ Compared to Ledger, hledger has
 - fully documented future-proof data formats
 - a Haskell API.
 
-Ledger's files can be read by hledger if you avoid tool-specific features, and vice versa.
+Compared to hledger, Ledger has
+
+- assisted lot tracking for investment transactions
+- a data format supporting embedded code (value expressions, python expressions..)
+- more speed with large files
+- a C++ API.
+
+hledger can read Ledger's files, and vice versa, if you avoid using tool-specific syntax.
 
 ### Feature differences
 
