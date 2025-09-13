@@ -48,6 +48,9 @@ or:
 touch ~/.hledger.journal
 ```
 
+Files containing non-ascii characters should use the system's text encoding.
+(See [Install: Text encoding](install.md#text-encoding).)
+
 <br>
 
 On Windows:
@@ -63,10 +66,11 @@ Set-Content -Path $HOME/.hledger.journal -Value ""
 (Warning, this erases any pre-existing .hledger.journal file.)
 -->
 
-Note these Windows commands create the file with the system's text encoding, which is necessary.
-(You can see what your system text encoding is by running `[System.Text.Encoding]::Default.EncodingName`.
-If you want your files to be compatible with non-Windows machines, the "Unicode (UTF-8)" encoding is best.
-For that, you might need to set ["Language for non-Unicode programs > Use Unicode UTF-8 for worldwide language support"](install.md#text-encoding).)
+These Windows commands ensure the file uses system's text encoding.
+You can see what your system text encoding is by running `[System.Text.Encoding]::Default.EncodingName` or `hledger setup`.
+
+If you need your files to be compatible with non-Windows machines, the "Unicode (UTF-8)" encoding is best.
+For that, you might need to set ["Language for non-Unicode programs > Use Unicode UTF-8 for worldwide language support"](install.md#text-encoding).
 <!--
 See also: [Console]::OutputEncoding.EncodingName.
 By default, GHC-compiled programs on Windows use the ANSI APIs ("Windows interprets these byte sequences based on the current system locale's ANSI code page"), and are affected by the above setting.
