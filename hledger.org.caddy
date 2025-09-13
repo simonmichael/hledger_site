@@ -346,7 +346,7 @@ hledger.org {
 	redir /step-by-step.html /basics.html
 	redir /basics-tutorial /basics.html
 	redir /basics-tutorial.html /basics.html
-	redir /add.html /basics.html
+	redir /basics.html /add.html
 	redir /basics /basics.html
 	redir /More-docs.html /accounting-links.html
 	redir /1.5/argfiles.html /save-frequently-used-options.html
