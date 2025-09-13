@@ -45,7 +45,7 @@ Docker (Linux, Mac, Windows) <!-- adept --> ([more](https://hub.docker.com/searc
 Windows \
 [![Scoop](https://repology.org/badge/version-for-repo/scoop/hledger.svg)](https://scoop.sh/#/apps?q=hledger)
 `scoop install hledger` \
-[![Winget](https://repology.org/badge/version-for-repo/winget/hledger.svg)](https://github.com/microsoft/winget-pkgs/tree/master/manifests/s/simonmichael/hledger)
+[![Winget](https://img.shields.io/badge/Winget_package-1.50-brightgreen.svg)](https://github.com/microsoft/winget-pkgs/tree/master/manifests/s/simonmichael/hledger)
 `winget install -e --id simonmichael.hledger` \
 [![Chocolatey](https://repology.org/badge/version-for-repo/chocolatey/hledger.svg)](https://community.chocolatey.org/packages/hledger)
 `choco install hledger -y`
