@@ -180,15 +180,6 @@ Maybe. You can ask them to enter data via hledger-web,
 or import from their mobile expenses app or a shared spreadsheet.
 You can show them the hledger-web UI, or HTML reports, or give them CSV to open in a spreadsheet.
 
-### Why are my revenue (income), liability, and equity balances negative ?
-
-It's normal; it's because hledger and most other plain text accounting tools
-use negative and positive numbers instead of credit and debit terminology.
-Certain hledger reports (`balancesheet`, `incomestatement`, `cashflow`)
-and flags (`--invert`) can show them as positive when needed.
-See [Accounting > Debits and credits](accounting.md#debits-and-credits).
-
-
 ## HLEDGER AND OTHER SOFTWARE
 
 ### How does hledger relate to Ledger ?
@@ -284,6 +275,14 @@ See [PTA FAQ: How should I organise files ?](https://plaintextaccounting.org/FAQ
 ### What account names should I use ?
 
 See [PTA FAQ: How should I choose account names ?](https://plaintextaccounting.org/FAQ#how-should-i-choose-account-names).
+
+### Why are my revenue (income), liability, and equity balances negative ?
+
+It's normal; it's because hledger and most other plain text accounting tools
+use negative and positive numbers instead of credit and debit terminology.
+Certain hledger reports (`balancesheet`, `incomestatement`, `cashflow`)
+and flags (`--invert`) can show them as positive when needed.
+See [Accounting basics for PTA users](accounting-pta.md).
 
 ## JOURNALS
 
