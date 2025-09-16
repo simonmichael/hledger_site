@@ -81,6 +81,7 @@ We take quality seriously; [we pay $50](REGRESSIONS.md) each time a regression i
 hledger is **fast, lightweight, and versatile**.
 Using time-tested [double entry bookkeeping](accounting.md),
 with an easier-to-learn [sign convention](accounting-pta.md),
+and [easy reports](5-minute-quick-start.md#3-run-reports),
 it can track and report on:
 money, 
 investments, 

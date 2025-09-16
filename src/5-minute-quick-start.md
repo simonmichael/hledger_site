@@ -168,6 +168,8 @@ Here's the [above journal](https://raw.githubusercontent.com/simonmichael/hledge
 
 ### 3. Run reports
 
+<!-- NB Home links here -->
+
 Now you can see reports, such as...
 
 A list of accounts, showing the hierarchy and types detected:
