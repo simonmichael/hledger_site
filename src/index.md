@@ -60,47 +60,54 @@ plain text accounting software
 
 **hledger** is free, GPLv3+ accounting software that runs on unix, mac, windows, and the web.
 
-More precisely, it is user-friendly **[plain text accounting](https://plaintextaccounting.org)** software,
-which uses human-readable, future-proof, plain text data files.
-Your financial data remains local, private, and free from vendor lock-in.
-(Also version-controllable and scriptable.)
-
-hledger is fast, lightweight, and dependable.
-It comes with [command line](hledger.md), [TUI](hledger-ui.md), and [web browser](hledger-web.md) interfaces.
-There are also some compatible [phone apps](mobile.md).
-It is comfortable for technical users, but also usable by non-techies (perhaps with a little setup help).
+It is **user-friendly [plain text accounting](https://plaintextaccounting.org) software**,
+using human-readable plain text data files.
+It comes with [command line](hledger.md), [TUI](hledger-ui.md), and [web browser](hledger-web.md) interfaces,
+and there are also some compatible [phone apps](mobile.md).
+It is powerful enough for the most technical users, 
+but also usable by non-techies (especially with a little setup help).
 Command line skills are useful but not essential.
-You can enter data using your favourite text editor, or a data entry tool,
-or by downloading and importing CSV data from banks and other financial institutions.
+You can enter data using 
+a data entry UI,
+or your favourite text editor/IDE,
+or by importing CSV data from banks.
 
-hledger is flexible. 
+hledger is **dependable**. 
+Your financial data remains local, private, and free from vendor lock-in.
+The plain text file formats are version controllable, scriptable, and future proof.
+hledger is built with the powerful, high assurance [Haskell programming language](https://haskell.org).
+We take quality seriously; [we pay $50](REGRESSIONS.md) each time a regression is found or fixed.
+
+hledger is **fast, lightweight, and versatile**.
 Using time-tested [double entry bookkeeping](accounting.md),
 with an easier-to-learn [sign convention](accounting-pta.md),
-it can track and report on
+it can track and report on:
 money, 
 investments, 
 cryptocurrencies, 
 time, 
 inventory, 
-or any countable commodity.
+or any other countable commodity.
 Use it to:
 figure out personal finances..
+track your investments..
 run a business..
 run a non-profit..
 run a FOSS project..
-provide data for tax filing..
-learn bookkeeping..
+calculate and justify tax data..
 track time..
+learn double entry bookkeeping..
 manage a D&D game..
 
-hledger is actively maintained and used (since 2007!)
-with an improved version [released each quarter](RELEASING.md#hledger-release-types).
-We take quality seriously; if you find or fix a regression, [we'll pay you $50](REGRESSIONS.md).
-It is built with the powerful, high assurance [Haskell programming language](https://haskell.org).
-It is a long term project led by [Simon Michael](https://joyful.com) with many [contributors](CREDITS.md).
+hledger is **actively maintained and used** (since 2007),
+with a [new release each quarter](RELEASING.md#hledger-release-types)
+and excellent free support. Paid support and customisation are also available.
+hledger is a long term project led by [Simon Michael](https://joyful.com) with many [contributors](CREDITS.md).
 
-**[Features](features.md)** goes into more detail on these.
-**[FAQ](faq.md)** answers some common questions.
+**[Features](features.md)** talks more about those,
+and **[FAQ](faq.md)** answers more questions,
+like [How does hledger relate to Ledger ?](faq..md#how-does-hledger-relate-to-ledger-)
+<!-- and [Why are my revenue, liability, and equity balances negative ?](faq.md#why-are-my-revenue-income-liability-and-equity-balances-negative-). -->
 
 <!-- ** Start ---------------------------------------------------------------->
 <!-- <a name="start"></a> -->
@@ -171,7 +178,7 @@ and [Developer docs](dev.md).
 
 ----
 
-And before we end the page, a few tips for using this website:
+Tips for using this website:
 
 - The lines button at top left toggles the site's navigation sidebar.
 - The paintbrush button changes the site theme.
