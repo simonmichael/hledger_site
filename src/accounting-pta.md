@@ -27,7 +27,7 @@ and within each transaction (and over all transactions) the sum of amounts must 
 
 As a consequence in hledger and similar PTA tools, it's common for reports to show
 equity, liability, and revenue (income) balances as negative numbers.
-(Some hledger reports/options can show them as positive for readability.)
+Some hledger reports can show them as positive by default.
 
 Here is [Ledger's discussion of this](https://www.ledger-cli.org/3.0/doc/ledger3.html#Stating-where-money-goes).
 
