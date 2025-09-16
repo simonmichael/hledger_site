@@ -75,7 +75,7 @@ or by importing CSV data from banks.
 hledger is **dependable**. 
 Your financial data remains local, private, and free from vendor lock-in.
 The plain text file formats are version controllable, scriptable, and future proof.
-hledger is built with the powerful, high assurance [Haskell programming language](https://haskell.org).
+hledger is thoroughly documented, and built with the high assurance [Haskell](https://haskell.org) programming language.
 We take quality seriously; [we pay $50](REGRESSIONS.md) each time a regression is found or fixed.
 
 hledger is **fast, lightweight, and versatile**.
