@@ -116,7 +116,7 @@ like [How does hledger relate to Ledger ?](faq..md#how-does-hledger-relate-to-le
 ## Get started
 
 Welcome!
-This plain text accounting stuff is both useful and much more fun than you'd think.
+This plain text accounting stuff is both useful and more fun than you'd think.
 
 **[Install](install.md)** tells how to get an up-to-date version of hledger quickly.
   <!-- See also [Scripts and add-ons](scripts.md). -->
