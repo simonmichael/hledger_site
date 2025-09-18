@@ -59,6 +59,18 @@ My goals included:
 - Explore the suitability of Haskell for such applications.
 - Attempt to build a successful, solvent, self-supporting project in a thriving ecosystem of financial software projects.
 
+A 2025 [comment](https://news.ycombinator.com/item?id=45140901):
+
+> > HN> When Gnucash did something, I was never sure what actually happened. And sometimes it would crash. Was all my data safe? Hard to tell.
+>
+> You express it exactly, I felt the same way with Gnucash, Quicken, and all the other non-plain-text accounting apps I tried.
+> Finance was stressful enough without also worrying about messed-up data.
+> That was perhaps the biggest motivation to switch to Ledger, when I found it.
+>
+> Later, I often could not figure out how to make Ledger do something I knew it could do,
+> and I often was surprised by a crash or wrong behaviour when it saw some new combination of features and data that hadn't been tested or implemented yet.
+> This was a big motivation to write hledger.
+
 See also: [hledger and Ledger: History](ledger.md#history).
 
 ### What is the hledger project's current mission and plans ?

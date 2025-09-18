@@ -621,7 +621,10 @@ For a while I ran [LedgerTips](http://twitter.com/LedgerTips) on twitter.
 hledger shared #ledger's IRC channel until 2014, when I created 
 the [#hledger](http://irc.hledger.org) channel (now accessible on Libera IRC and Matrix).
 
-In 2016 I set up https://plaintextaccounting.org as a common entry point and information hub.
+In 2016 I set up <https://plaintextaccounting.org> as a common entry point and information hub.
 
 The further adventures in hledger's development are not yet told, other than in the commit log, issue tracker and mail list, but other contributors joined the project and [CREDITS](CREDITS.md) notes some of their work.
 
+See also:
+
+- [FAQ: Why was hledger created ?](faq.md#why-was-hledger-created-)
