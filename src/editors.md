@@ -1,4 +1,4 @@
-# Editor configuration
+# Editors
 
 <div class=pagetoc>
 
