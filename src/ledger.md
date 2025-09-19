@@ -311,8 +311,8 @@ to disambiguate the decimal mark character during parsing.
 
 ### Balancing precision
 
-Ledger and hledger can occasionally disagree on whether a transaction is balanced.
-In this journal, $'s precision (number of decimal places) is 2 in txn1, 4 in txn2, and 4 globally:
+Ledger and hledger <1.50 could occasionally disagree on whether a
+transaction's journal entry is balanced, such as in this case:
 
 ```journal
 2022-01-01 txn1
@@ -324,16 +324,11 @@ In this journal, $'s precision (number of decimal places) is 2 in txn1, 4 in txn
     checking
 ```
 
-Ledger checks transaction balancedness using local precisions only,
-so it balances with precision 2, and accepts txn1's $-0.00045312 imbalance.
+Ledger checks txn1's $ balance with the entry's local $ precision, 2 decimal places; so its $-0.00045312 imbalance is accepted.
+hledger <1.50 checked it with the journal's global $ precision, 4 decimal places; so that imbalance was rejected,
+requiring a `-c '\$0.00'` option or `commodity $0.00` directive to make things work.
 
-hledger checks transaction balancedness using global precisions,
-so it balances with precision 4, and rejects txn1's imbalance.
-To read these entries with hledger, you have to limit \$'s global precision,
-by adding `-c '\$0.00'` to the command (easiest when piping)
-or `commodity $0.00` to the file (more permanent, when creating a new file).
-
-More: [#1964](https://github.com/simonmichael/hledger/issues/1964)
+To avoid this problem, use hledger 1.50+, which balances transactions as Ledger does.
 
 ### Balance assertions / assignments
 
@@ -568,10 +563,9 @@ Some common problems:
 - hledger's extended balance assertions (`=*`, `==`, `==*`) are not supported
   by Ledger and must be avoided or commented out (eg with `sed -E -e 's/(==|=\*)/; \1/'`).
 
-- Transactions which hledger considers balanced (using global display precisions)
-  can be considered unbalanced by Ledger (using local display precisions)
+- hledger <1.50 sometimes rejected transactions which Ledger considers balanced, requiring additional configuration
   (see [Balancing precision](#balancing-precision)).
-  Try to make those transaction amounts more precise so that they balance in both.
+  Use hledger 1.50+ instead.
 
 - hledger print will add a trailing decimal mark to amounts with digit
   group marks and no decimal digits, to disambiguate them (since
