@@ -400,7 +400,7 @@ I haven't tested all of these, but in 2025Q3 I think they rank in features and a
 2. [HLedger Formatter](https://marketplace.visualstudio.com/items?itemName=iiatlas.hledger-formatter) by iiatlas
   ([source](https://github.com/iiAtlas/hledger-formatter))
   2025
-3. [hledger](https://marketplace.visualstudio.com/items?itemName=patrickt.hledger-tools) by patrickt
+3. [hledger (Tools)](https://marketplace.visualstudio.com/items?itemName=patrickt.hledger-tools) by patrickt
   ([source](https://github.com/ptimoney/hledger-tools))
   2024-
 4. [hledger-vscode](https://marketplace.visualstudio.com/items?itemName=mark-hansen.hledger-vscode) by mark-hansen
