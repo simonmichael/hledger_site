@@ -392,13 +392,20 @@ Run `:TSInstall ledger` to enable [nvim-treesitter](https://github.com/nvim-tree
 
 [\*hledger\* in VS Code marketplace](https://marketplace.visualstudio.com/search?term=hledger&target=VSCode&category=All%20categories&sortBy=Relevance):
 
-- [hledger-vscode (mark-hansen.hledger-vscode)](https://marketplace.visualstudio.com/items?itemName=mark-hansen.hledger-vscode) 2017-2024
-  [repo](https://github.com/mhansen/hledger-vscode)
-- [hledger (patrickt.hledger-tools)](https://marketplace.visualstudio.com/items?itemName=patrickt.hledger-tools) 2024-2025
-  [repo](https://github.com/ptimoney/hledger-tools)
-- [hledger Language Support (evsyukov.hledger)](https://marketplace.visualstudio.com/items?itemName=evsyukov.hledger) 2025
-  [repo](https://github.com/juev/hledger-vscode)
+I haven't tested all of these, but in 2025Q3 I think they rank in features and activity roughly like so:
 
+1. [hledger Language Support](https://marketplace.visualstudio.com/items?itemName=evsyukov.hledger) by evsyukov
+  ([source](https://github.com/juev/hledger-vscode))
+  2025
+2. [HLedger Formatter](https://marketplace.visualstudio.com/items?itemName=iiatlas.hledger-formatter) by iiatlas
+  ([source](https://github.com/iiAtlas/hledger-formatter))
+  2025
+3. [hledger](https://marketplace.visualstudio.com/items?itemName=patrickt.hledger-tools) by patrickt
+  ([source](https://github.com/ptimoney/hledger-tools))
+  2024-
+4. [hledger-vscode](https://marketplace.visualstudio.com/items?itemName=mark-hansen.hledger-vscode) by mark-hansen
+  ([source](https://github.com/mhansen/hledger-vscode))
+  2017-
 
 ## Miscellaneous
 
