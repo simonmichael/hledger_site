@@ -38,6 +38,10 @@ using simple text files and small flexible tools, rather than databases and big 
 Minus and plus signs are usually used instead of Credit and Debit notation, making it easier to learn than traditional DEB.
 The text files are human-readable and easy to convert or to manage with [version-control](https://en.wikipedia.org/wiki/Version_control) tools.
 
+### Is there another plain text accounting FAQ ?
+
+Why yes there is: you may want to also check the general <https://plaintextaccounting.org/FAQ>.
+
 ## THE HLEDGER PROJECT
 
 ### What's hledger ?
