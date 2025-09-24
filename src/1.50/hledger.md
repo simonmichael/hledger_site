@@ -5822,6 +5822,8 @@ This is because `assets:bank:savings` matches at level 3 in the account
 name, while `assets` matches at level 1. The same would be true with the
 argument `--depth assets=1 --depth savings=2`.
 
+To match a string containing spaces, put both the string and the depth value between the quotes. E.g. `--depth "string with spaces=3".
+
 ## Queries
 
 Many hledger commands accept query arguments, which restrict their scope
@@ -8756,7 +8758,7 @@ Often, you\'ll want to see just one line per interval. The `--depth`
 option helps with this, causing subaccounts to be aggregated:
 
 ``` cli
-$ hledger register --monthly assets --depth 1h
+$ hledger register --monthly assets --depth 1
 2008/01                 assets                                  $1           $1
 2008/06                 assets                                 $-1            0
 2008/12                 assets                                 $-1          $-1
