@@ -801,6 +801,18 @@ Thank you so much for hledger 🙏! Both my wife and I enjoy using it and we fin
 I’ve written a bunch of Python scripts to do my books using hledger. The nice thing is I no longer pay the $75/month for Quickbooks.
 --abhiyerra
 
+hledger suits me because of the relatively simple csv import process, reports that are nicely formatted, and the excellent documentation.
+--musings-26
+
+simonmic is pretty good about having a steady cadence of features/fixes rolling out with hledger without it breaking things.
+--gumnos
+
+hledger-web has worked so well for me. Going on nearly two years now. It is elegant, and reliable, with excellent documentation, generous community, and a quick, straightforward onramp. It is a perfect, free, and open-source remedy in a subscription-based, data-sucking, privacy destroying dystopia. It’s completely transformed my relationship to my finances for the better.
+--bitsonchips
+
+I’m not trying to spend all my time coding or fussing about under the hood ... I enter transactions manually as part of a routine. Checking-weekly, Savings-monthly, Investments-quarterly. I run quarterly reports and year-end closing statements and enjoy every moment of it.
+--bitsonchips
+
 `;
 </script>
 
