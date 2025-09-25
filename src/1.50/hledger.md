@@ -27,7 +27,7 @@ accounting and a simple, editable file format. hledger is inspired by
 and largely compatible with ledger(1), and largely interconvertible with
 beancount(1).
 
-This manual is for hledger\'s command line interface, version 1.50. It
+This manual is for hledger\'s command line interface, version 1.50.1. It
 also describes the common options, file formats and concepts used by all
 hledger programs. It might accidentally teach you some
 bookkeeping/accounting as well! You don\'t need to know everything in
@@ -708,7 +708,7 @@ example:
 
 # Options following a `[COMMAND]` heading are used with that hledger command only.
 [print]
---explicit --show-costs
+--explicit --infer-costs
 ```
 
 To use a config file, specify it with the `--conf` option. Its options
@@ -7172,10 +7172,9 @@ Related: [#1625](https://github.com/simonmichael/hledger/issues/1625)
 ### Effect of valuation on reports
 
 Here is a reference for how valuation is supposed to affect each part of
-hledger\'s reports. (It\'s wide, you may need to scroll sideways.) It
-may be useful when troubleshooting. If you find problems, please report
-them, ideally with a reproducible example. Related:
-[#329](https://github.com/simonmichael/hledger/issues/329),
+hledger\'s reports. It may be useful when troubleshooting. If you find
+problems, please report them, ideally with a reproducible example.
+Related: [#329](https://github.com/simonmichael/hledger/issues/329),
 [#1083](https://github.com/simonmichael/hledger/issues/1083).
 
 First, a quick glossary:
@@ -11588,12 +11587,15 @@ We welcome bug reports in the hledger issue tracker
 
 Some known issues and limitations:
 
-A system locale with a suitable text encoding must be configured to work
-with non-ascii data. (See Text encoding, Troubleshooting.)
+hledger uses the system\'s text encoding when reading non-ascii text. If
+no system encoding is configured, or if the data\'s encoding is
+different, hledger will give an error. (See Text encoding,
+Troubleshooting.)
 
 On Microsoft Windows, depending what kind of terminal window you use,
 non-ascii characters, ANSI text formatting, and/or the add command\'s
-TAB key for completion, may not be supported.
+TAB key, may not be fully supported. (For best results, try a powershell
+window.)
 
 When processing large data files, hledger uses more memory than Ledger.
 
