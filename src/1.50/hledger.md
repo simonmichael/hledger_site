@@ -2068,10 +2068,12 @@ tagged things by tag name and or tag value with a `tag:` query. (See
 When querying for tag names or values, note that postings inherit tags
 from their transaction and from their account, and transactions acquire
 tags from their postings. So in the example above, - the assets:checking
-posting effectively has four tags (one of its own, one from the account,
-two from the transaction) - the expenses:food posting effectively has
-four tags (two of its own, two from the transaction) - the transaction
-effectively has all six tags (two of its own, and two from each posting)
+posting effectively has four tags (one of its own, two from the transaction, 
+and one from the account) - the expenses:food posting effectively has
+five tags (two of its own, two from the transaction, and one from the account) - 
+the transaction effectively has all six tags (two of its own, one acquired
+from the first posting, two acquired from the second posting, and one inherited 
+from the account).
 
 #### Displaying tags
 
