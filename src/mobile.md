@@ -13,13 +13,15 @@ Here are some options. See also:
 <https://plaintextaccounting.org/#ui-mobile>
 
 ## Offline data entry apps
-These apps saves a local *ledger file, which can be synced via Syncthing. For Adroid app there are two candidates: Cone and NanoLedger. Here is the difference between them:
+These apps save a local *ledger file, which can be synced via Syncthing. 
+
+As of 2025-09, there are two known Android apps: Cone and NanoLedger. Here is the difference between them:
 
 
 |                          | Cone                                                                           | NanoLedger                                                                           |
 | ------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
 | Journal view screen      | Transactions can be sorted by new to old or reversed, and elements are colored | Transactions can only be sorted by new to old, and elements aren't colored           |
-| Transaction entry screen | The description field is a free form                                           | The description field is split into status field, payee field and note field         |
+| Transaction entry screen | The description field is free form                                           | The description field is split into status field, payee field and note field         |
 | Theme                    | Light, dark, auto                                                              | Always auto                                                                          |
 | Modify old transaction   | No                                                                             | Yes. You can edit or delete old transaction, or use it as the template for a new one |
 | License                  | GNU GPL v3                                                                     | MIT                                                                                  |
