@@ -298,7 +298,10 @@ It's normal; it's because hledger and most other plain text accounting tools
 use negative and positive numbers instead of credit and debit terminology.
 Certain hledger reports (`balancesheet`, `incomestatement`, `cashflow`)
 and flags (`--invert`) can show them as positive when needed.
-See [Accounting basics for PTA users](accounting-pta.md).
+See: 
+- [Accounting basics for PTA users](accounting-pta.md)
+- [PTA FAQ: Where are debits and credits ?](https://plaintextaccounting.org/FAQ#where-are-debits-and-credits)
+- [PTA FAQ: Why do some balances look negative ?](https://plaintextaccounting.org/FAQ#why-do-some-balances-look-negative)
 
 ## JOURNALS
 
