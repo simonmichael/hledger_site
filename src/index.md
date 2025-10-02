@@ -813,6 +813,10 @@ hledger-web has worked so well for me. Going on nearly two years now. It is eleg
 I’m not trying to spend all my time coding or fussing about under the hood ... I enter transactions manually as part of a routine. Checking-weekly, Savings-monthly, Investments-quarterly. I run quarterly reports and year-end closing statements and enjoy every moment of it.
 --bitsonchips
 
+I've been using hledger for a few years to run my personal and company accounts and I think it is superb.
+--livmackintosh
+
+
 `;
 </script>
 
