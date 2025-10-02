@@ -45,7 +45,7 @@ Docker (Linux, Mac, Windows) <!-- adept --> ([more](https://hub.docker.com/searc
 Windows \
 [![Scoop](https://repology.org/badge/version-for-repo/scoop/hledger.svg)](https://scoop.sh/#/apps?q=hledger)
 `scoop install hledger` \
-[![Winget](https://img.shields.io/badge/Winget_package-1.50-red.svg)](https://github.com/microsoft/winget-pkgs/tree/master/manifests/s/simonmichael/hledger)
+[![Winget](https://img.shields.io/badge/Winget_package-1.50.2-brightgreen.svg)](https://github.com/microsoft/winget-pkgs/tree/master/manifests/s/simonmichael/hledger)
 `winget install -e --id simonmichael.hledger` \
 [![Chocolatey](https://repology.org/badge/version-for-repo/chocolatey/hledger.svg)](https://community.chocolatey.org/packages/hledger)
 `choco install hledger -y`
@@ -96,7 +96,7 @@ Fedora ([more](https://src.fedoraproject.org/rpms/hledger)) \
 ![Fedora_39](https://img.shields.io/badge/Fedora_39_package-1.30.1-red.svg)\
 ![Fedora_38](https://img.shields.io/badge/Fedora_38_package-1.27.1-red.svg)\
 Gentoo <!-- ezzie --> \
-[![Gentoo](https://img.shields.io/badge/Gentoo_package-1.41-red.svg)](https://gentoo.zugaina.org/Search?search=hledger)
+[![Gentoo](https://img.shields.io/badge/Gentoo_package-1.43.2-red.svg)](https://gentoo.zugaina.org/Search?search=hledger)
 `sudo eselect repository enable haskell && sudo emerge hledger hledger-ui hledger-web` \
 Raspberry Pi <!-- nobodyinperson --> \
 ![Raspberry Pi release binaries](https://img.shields.io/badge/Raspberry_Pi_release_binaries-1.22.2-red.svg)
@@ -105,8 +105,9 @@ Raspberry Pi <!-- nobodyinperson --> \
 [hledger-aarch64-manjaro.gz](https://github.com/simonmichael/hledger/releases/tag/1.18.1) ,
 [hledger-armhf32-debian.gz](https://github.com/simonmichael/hledger/releases/tag/1.18) (unaudited) \
 Ubuntu ([more](https://packages.ubuntu.com/search?suite=all&searchon=names&keywords=hledger)) \
-[![ubuntu_24_10](https://repology.org/badge/version-for-repo/ubuntu_24_10/hledger.svg)](https://packages.ubuntu.com/oracular/hledger)
+[![ubuntu_25_10](https://repology.org/badge/version-for-repo/ubuntu_25_10/hledger.svg)](https://packages.ubuntu.com/questing/hledger)
 `sudo apt install hledger hledger-ui hledger-web`\
+[![ubuntu_25_04](https://repology.org/badge/version-for-repo/ubuntu_25_04/hledger.svg)](https://packages.ubuntu.com/plucky/hledger) \
 [![ubuntu_24_04](https://repology.org/badge/version-for-repo/ubuntu_24_04/hledger.svg)](https://packages.ubuntu.com/noble/hledger) \
 [![ubuntu_22_04](https://repology.org/badge/version-for-repo/ubuntu_22_04/hledger.svg)](https://packages.ubuntu.com/jammy/hledger) \
 [![ubuntu_20_04](https://repology.org/badge/version-for-repo/ubuntu_20_04/hledger.svg)](https://packages.ubuntu.com/focal/hledger) \
