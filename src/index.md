@@ -107,7 +107,7 @@ hledger is a long term project led by [Simon Michael](https://joyful.com) with m
 
 **[Features](features.md)** talks more about those,
 and **[FAQ](faq.md)** answers more questions,
-like [How does hledger relate to Ledger ?](faq..md#how-does-hledger-relate-to-ledger-)
+like [How does hledger relate to Ledger ?](faq.md#how-does-hledger-relate-to-ledger-)
 <!-- and [Why are my revenue, liability, and equity balances negative ?](faq.md#why-are-my-revenue-income-liability-and-equity-balances-negative-). -->
 
 <!-- ** Start ---------------------------------------------------------------->
