@@ -733,7 +733,7 @@ Keep up the good work. We love it. --igbanam
 
 My main lesson learned is to aim to minimize categories to what is actually useful information for us. --bitsonchips
 
- for me the main goal was, and still is, conscious awareness of my finances. Therefore I manually enter everything: this adds a little friction to every transaction, which has at times been enough to discourage something. --barrucadu
+For me the main goal was, and still is, conscious awareness of my finances. Therefore I manually enter everything: this adds a little friction to every transaction, which has at times been enough to discourage something. --barrucadu
 
 I get receipts for everything and enter transactions generally on the day they happen, and also check my bank and card statements every weekend. It's basically automatic now, to the point that I start to feel antsy if I have some transactions building up that I've not recorded yet. --barrucadu
 
