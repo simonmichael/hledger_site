@@ -816,6 +816,9 @@ I’m not trying to spend all my time coding or fussing about under the hood ...
 I've been using hledger for a few years to run my personal and company accounts and I think it is superb.
 --livmackintosh
 
+"Watch your pennies and the dollars will take care of themselves."
+
+"If you can manage your brain, you can manage your fortune."
 
 `;
 </script>
