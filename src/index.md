@@ -76,7 +76,7 @@ hledger is **dependable**.
 Your financial data remains local, private, and free from vendor lock-in.
 The plain text file formats are version controllable, scriptable, and future proof.
 hledger is thoroughly documented, and built with the high assurance [Haskell](https://haskell.org) programming language.
-We take quality seriously; [we pay $50](REGRESSIONS.md) each time a regression is found or fixed.
+We take quality seriously; [we will pay you $50](REGRESSIONS.md) for finding or fixing a regression bug.
 
 hledger is **fast, lightweight, and versatile**.
 Using time-tested [double entry bookkeeping](accounting.md),
