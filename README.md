@@ -1,18 +1,27 @@
-This is hledger_site, the repo for the hledger.org website.
-It contains most of the source files for the hledger.org website.
+## hledger site repo
+
+This is the repository for the hledger.org website.
+(If you're looking for the main hledger code repo, see <https://github.com/simonmichael/hledger>.)
+<!-- (Or the hledger project finance repo at <https://github.com/simonmichael/hledger_finance>.) -->
+
+It contains the configuration and most of the content source files for the site.
+(But most dev docs and the dev version of the manuals are symlinked from the main hledger repo.)
+
+### History
 
 This repo was created in 2019 by combining the site/ subfolder
 previously in the main hledger repo, and the github wiki, preserving
 the essential histories of both (though for the true original history
 of site/ up to 2019/08, see the main hledger repo.)
 
-It is intended to be cloned as the "site" subdirectory of the main
-hledger repo. Currently this is done manually, not via git submodule
-or subtree.
-
 In 2021, this site was converted from sphinx to mdbook.  
 
-Site configuration is in book.toml.  
+### Config 
+
+This is intended to be cloned as the "site" subdirectory of the main hledger repo.
+Currently this is done manually, not via git submodule or subtree.
+
+mdbook configuration is in book.toml.  
 
 Some static assets are kept in css/, theme/, js/ and highslide/. 
 
@@ -32,7 +41,7 @@ the website via symbolic links in src/. These are:
 To install the necessary tools on Debian or Ubuntu (assuming Rust is
 installed):
 
-  sudo apt update && make tools
+    sudo apt update && make tools
 
 To render the latest site content (in out/): 
 
