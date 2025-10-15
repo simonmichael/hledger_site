@@ -160,7 +160,11 @@ Here are some common paths for getting started:
 
 ## Get involved
 
-Your support is invaluable and greatly appreciated!
+[Add a github star](https://github.com/simonmichael/hledger/tree/master)
+to help make us a [notable Haskell app](https://joyful.com/Haskell#What%20are%20some%20Haskell%20apps%20?)!
+(As of 2025 we're [#19](dev.md#dev-links).)
+
+Your financial support is invaluable and helps sustain this work.
 See **[Sponsor hledger](sponsor.md)**
 and [Finance](FINANCE.md).
 
