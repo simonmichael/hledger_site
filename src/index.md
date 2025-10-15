@@ -357,6 +357,7 @@ Ease of writing importers was a huge driving factor when I switched to hledger f
 --Karrot_Kream
 
 Plain-text accounting is great. I choose hledger for the accounts of a small side business that doesn't warrant hiring an accountant.
+--bogle
 
 hledger is so awesome. I just had to do my entire accounting for the last 1½yrs (because I'm a lazy slob) and thanks to hledger's rule files, it took just one evening.
 
