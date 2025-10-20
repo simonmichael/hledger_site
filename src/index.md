@@ -372,6 +372,7 @@ I love hledger and have a few scripts to convert downloaded CSVs from various in
 Whoa this is amazing. And really easy!
 
 With version control and deterministic reports, you can be late, slow, make mistakes, but still keep moving incrementally towards accuracy and clarity.
+--sm
 
 hledger has a decent front-end web UI, it runs as a local server on your machine by default.  The filter and searching on this view is quite good, and visualization is decent.
 
@@ -412,7 +413,8 @@ Some notes:
 Overall more fine tuned than what I have been able to achieve with Quickbooks over 8 years.
 --abhiyerra
 
-journal's greenyellow really makes it pop and I think it will make us rich! --sm
+journal's greenyellow really makes it pop and I think it will make us rich!
+--sm
 
 My favorite part of the (extensive) Haskell API is Hledger.Cli.Script. It re-exports all the most commonly used functions and data types, meaning you're just one import away from everything you need to get started. --wbadart
 
