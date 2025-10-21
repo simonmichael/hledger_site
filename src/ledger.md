@@ -459,7 +459,7 @@ For now the only true workaround is to rewrite such entries to use hledger-style
 
 - hledger's input data formats (journal, timeclock, timedot, ...) are separate;
   you can't mix timeclock entries and journal entries in one file as in Ledger.
-  (Though a journal file can `include` a timeclock file.)
+  (Though a journal file can `include` a timeclock or timedot file.)
   This helps implement more useful error messages.
   
 - hledger supports international number formats, auto-detecting the
@@ -475,8 +475,9 @@ For now the only true workaround is to rewrite such entries to use hledger-style
 
 - hledger [auto postings](hledger.md#auto-postings) allow only
   minimal customisation of the amount (just multiplying the matched
-  amount by a constant), not a full embedded expression language like
-  Ledger. (And we call them "auto" to avoid "automatic" vs "automated" confusion.)
+  amount by a constant) - plus interpolation of matched text - 
+  but not a full embedded expression language like Ledger.
+  (And we call them "auto" to avoid the spelling confusion of "automatic" vs "automated".)
 
 - In multi-period reports, hledger expands the report start/end dates
   to span whole periods.
