@@ -41,55 +41,26 @@ Slower-paced introductions to various topics.
 ## hledger by example
 
 A growing "book" introducing hledger one step at a time.
-For now, enable the site's sidebar to see the book's outline.
 
-<!--
-- [Getting hledger installed](getting-hledger-installed.md)
-- [Checking your setup](checking-your-setup.md)
-- [A default journal file](a-default-journal-file.md)
-- [First transaction: starting balances](first-transaction.md)
-- [Inspecting the journal](inspecting-the-journal.md)
+<!-- keep synced: hledger-by-example.md, SUMMARY.md, doc.md -->
+- [hledger by example](hledger-by-example.md)
+- [Get hledger installed](get-hledger-installed.md)
+- [Check your setup](check-your-setup.md)
+- [Start a journal](start-a-journal.md)
+- [Add a transaction: starting balances](add-a-transaction.md)
+- [Journal entries](journal-entries.md)
+- [Account names](account-names.md)
 - [More transactions](more-transactions.md)
+- [Overview of commands](commands.md)
 - [print: show whole transactions](print-.md)
-- [register: show postings](register.md)
+- [register: show detailed changes](register.md)
 - [balance: show account totals](balance.md)
--->
-<!-- - [Reading timeclock files](reading-timeclock-files.md) -->
-<!-- - [Reading timedot files](reading-timedot-files.md) -->
-<!-- - [Reading CSV files](reading-csv-files.md) -->
-<!-- - [Importing new transactions](importing-new-transactions.md) -->
-<!-- - Adding transactions -->
-<!-- - Checking for errors -->
-<!-- - Using include files -->
-<!-- - Declaring commodities -->
-<!-- - Declaring accounts -->
-<!-- - Displaying transactions -->
-<!-- - Reading multiple journals -->
-<!-- ### First steps -->
-<!-- ### Working with a journal -->
-<!-- ### Working with other kinds of data -->
-<!-- ## Customising -->
-<!-- - Setting up a config file -->
-<!-- - Configuring colour -->
-<!-- - Configuring a pager -->
-<!-- - Configuring pretty table borders -->
-<!-- - Configuring shell completions -->
-<!-- ## Reporting -->
-<!-- - Showing balances -->
-<!-- - Showing balance changes -->
-<!-- - Showing revenues and expenses -->
-<!-- - Showing general journal activity -->
-<!-- - Showing account activity -->
-<!-- - Reconciling an account balance -->
-<!-- - Showing the accounting equation -->
-<!-- - Limiting by date -->
-<!-- - Limiting by account name -->
-<!-- - Limiting by account type -->
-<!-- - Limiting by account depth -->
-<!-- ## Setting a budget -->
-<!-- ## Tracking cost -->
-<!-- ## Tracking value -->
-<!-- ## Tracking investments -->
+- [balancesheet: assets and liabilities](balancesheet.md)
+- [incomestatement: revenues and expenses](incomestatement.md)
+- [Reading CSV files](reading-csv-files.md)
+- [Importing new transactions](importing-new-transactions.md)
+- [Reading timeclock files](reading-timeclock-files.md)
+- [Reading timedot files](reading-timedot-files.md)
 
 ## Reference docs
 

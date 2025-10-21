@@ -6,7 +6,7 @@ You can use the sidebar links, the left and right arrow buttons on this page,
 or the left and right arrow keys, to step through the pages.
 Eg press the right arrow key now to step to the next page.
 
-<!-- keep synced: sidebar links in SUMMARY.md -->
+<!-- keep synced: hledger-by-example.md, SUMMARY.md, doc.md -->
 - [Get hledger installed](get-hledger-installed.md)
 - [Check your setup](check-your-setup.md)
 - [Start a journal](start-a-journal.md)
