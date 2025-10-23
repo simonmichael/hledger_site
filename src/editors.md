@@ -390,9 +390,8 @@ Run `:TSInstall ledger` to enable [nvim-treesitter](https://github.com/nvim-tree
 
 ## VS Code
 
-[\*hledger\* in VS Code marketplace](https://marketplace.visualstudio.com/search?term=hledger&target=VSCode&category=All%20categories&sortBy=Relevance):
-
-I haven't tested all of these, but in 2025Q3 I think they rank in features and activity roughly like so:
+Extensions for working with hledger journal files -
+as of 2025Q3 I think they rank in features and activity roughly like so:
 
 1. [hledger Language Support](https://marketplace.visualstudio.com/items?itemName=evsyukov.hledger) by evsyukov
   ([source](https://github.com/juev/hledger-vscode))
@@ -402,10 +401,21 @@ I haven't tested all of these, but in 2025Q3 I think they rank in features and a
   2025
 3. [hledger (Tools)](https://marketplace.visualstudio.com/items?itemName=patrickt.hledger-tools) by patrickt
   ([source](https://github.com/ptimoney/hledger-tools))
-  2024-
+  2024
 4. [hledger-vscode](https://marketplace.visualstudio.com/items?itemName=mark-hansen.hledger-vscode) by mark-hansen
   ([source](https://github.com/mhansen/hledger-vscode))
-  2017-
+  2017
+
+Extensions for working with hledger CSV rules files:
+
+- [hledger rules](https://marketplace.visualstudio.com/items?itemName=EthanOlpin.hledger-rules)
+  ([source](https://github.com/EthanOlpin/hledger-rules-vscode)) by EthanOlpin 2025
+
+All VS Code extensions mentioning "hledger":
+
+- [search for \*hledger\*](https://marketplace.visualstudio.com/search?term=hledger&target=VSCode&category=All%20categories&sortBy=Relevance)
+
+
 
 ## Miscellaneous
 
