@@ -17,7 +17,7 @@ Set up:
 2. Sign up with SimpleFIN, and copy the setup token.
 3. Paste the setup token into your `simplefinsetup` script, and run it to get a custom access url.
 4. Paste the access url into your `simplefinjson` script.
-5. In a [rules file](https://hledger.org/hledger.html#csv) for each bank account, configure a `source` rule to extract that account's CSV data:
+5. In a [rules file](https://hledger.org/hledger.html#csv) for each bank account, configure a `source` rule to read that account's data:
     ```rules
     source | simplefincsv data/simplefin.json 'my bank name.*checking'
     ```
