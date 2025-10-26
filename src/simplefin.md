@@ -5,8 +5,8 @@ Like Plaid or Yodlee, but simpler and cheaper.
 
 Ideally your banks would run their own simplefin servers, 
 but in practice you'll be using [SimpleFIN's server](https://beta-bridge.simplefin.org).
-You authenticate directly with your banks, operations are read only, SimpleFIN sees only encrypted data by default
-(you can optionally grant temporary access for diagnosing problems).
+You authenticate directly with your banks, operations are read only, SimpleFIN apparently sees only encrypted data
+(you can optionally grant temporary unencrypted access for diagnosing problems).
 
 SimpleFIN works well as an import source for hledger. An example workflow:
 
