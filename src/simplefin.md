@@ -10,11 +10,11 @@ You authenticate directly with your banks, operations are read only, SimpleFIN a
 
 SimpleFIN works well as an import source for hledger. An example workflow:
 
-Set up scripts:
+Set up:
 
 1. Make a local copy of the [bin/simplefinsetup,simplefinjson,simplefincsv](https://github.com/simonmichael/hledger/tree/master/bin#simplefinsetup) scripts.
 2. Sign up with SimpleFIN, copy their setup token.
-3. Paste the setup token into the `simplefinsetup` script, run that once, copy the access url it shows.
+3. Paste the setup token into the `simplefinsetup` script; run that once to get a custom access url.
 4. Paste the access url into the `simplefinjson` script.
 
 Every day or as needed:
