@@ -150,6 +150,7 @@ Check plaintextaccounting.org's and wiki.plaintextaccounting.org's categories.
 - [hledger and Paisa](paisa.md)
 - [hledger and Postgres](postgres.md)
 - [hledger and Quicken/Quickbooks](quicken.md)
+- [hledger and SimpleFIN](simplefin.md)
 - [hledger and SQLite](sqlite.md)
 - [hledger and Ultorg](ultorg.md)
 - [hledger and YNAB](ynab.md)
