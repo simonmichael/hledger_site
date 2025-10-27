@@ -74,9 +74,13 @@ or by importing CSV data from banks.
 
 hledger is **dependable**. 
 Your financial data remains local, private, and free from vendor lock-in.
-The plain text file formats are version controllable, scriptable, and future proof.
+It is stored as plain text files, which are 
+human readable,
+version controllable,
+scripting friendly,
+and future proof.
 hledger is thoroughly documented, and built with the high assurance [Haskell](https://haskell.org) programming language.
-We take quality seriously; [we will pay you $50](REGRESSIONS.md) for finding or fixing a regression bug.
+We take quality seriously. [We will pay you $50](REGRESSIONS.md) if you find or fix a regression bug.
 
 hledger is **fast, lightweight, and versatile**.
 Using time-tested [double entry bookkeeping](accounting.md),
@@ -89,6 +93,7 @@ cryptocurrencies,
 time, 
 inventory, 
 or any other countable commodity.
+<!--
 Use it to:
 figure out personal finances..
 track your investments..
@@ -99,6 +104,7 @@ calculate and justify tax data..
 track time..
 learn double entry bookkeeping..
 manage a D&D game..
+-->
 
 hledger is **actively maintained and used** (since 2007),
 with a [new release each quarter](RELEASING.md#hledger-release-types)
