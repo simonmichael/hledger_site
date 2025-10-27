@@ -827,6 +827,10 @@ I've been using hledger for a few years to run my personal and company accounts 
 
 "If you can manage your brain, you can manage your fortune."
 
+#plaintextaccounting isn't the best solution for all situations; nothing is!
+I'm guessing your friend will be too busy, disorganised, and non-software-oriented to deal with learning and managing backups, versions, double entry bookkeeping, plain text accounting, text editors, terminals, sharing access, etc. A google sheet makes most of those problems go away.
+--sm
+
 `;
 </script>
 
