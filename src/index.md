@@ -468,12 +468,16 @@ Thank you for creating such an awesome tool. I absolutely love hledger. I've bee
 Ledger and Hledger are some of my favourite tools.
 
 I've switched all my accounting over to hledger (a Haskell-based and slightly more feature-filled version of the original) and I'm SUPER happy with it so far.
-
-I switched away from Quickbooks, years ago, to plain text accounting. Couldn't be happier. I can do everything better using hledger/ledger, git, vim and make.
+--nlh
 
 My primary consumption method is hledger-ui, a nice curses-based UI. It's got a watch mode so will update in real-time as you make edits to the source database, which is nice.
+--nlh
+
+I switched away from Quickbooks, years ago, to plain text accounting. Couldn't be happier. I can do everything better using hledger/ledger, git, vim and make.
+--_td9r
 
 I liked that hledger had a few reports that ledger didn't have, like real balance sheets and income statements. Both integrate well with emacs, but their journal files differ in slightly incompatible ways, so they're not drop-in replacements. Both are very fast.
+--projektfu
 
 It just keeps getting better --glguy
 
