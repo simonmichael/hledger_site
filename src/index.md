@@ -292,6 +292,61 @@ code::first-line {
 }
 </style>
 
+<!-- ** Scripts -------------------------------------------------------------->
+<script>
+
+// Get the current hourly quote.
+function getQuote() {
+  const now = new Date();
+  const t = now.getTime();
+  const n = Math.floor(t / (1000 * 60 * 60));
+  const quote = quotes[n % quotes.length];
+  const parts = quote.split(' --');
+  return {
+    text:   parts[0].trim(),
+    author: parts[1] ? parts[1].trim() : ''
+  };
+}
+
+// Show the current hourly quote, and schedule an update on the next hour.
+function updateQuote() {
+  const quoteel       = document.querySelector('#quote');
+  const quotetextel   = document.querySelector('#quote-text');
+  const quoteauthorel = document.querySelector('#quote-author');
+  if (quoteel && quotetextel && quoteauthorel) {
+    const quote = getQuote();
+    quotetextel.textContent   = quote.text;
+    quoteauthorel.textContent = quote.author ? '-- ' + quote.author : '';
+    quoteel.style.display     = 'block';
+    scheduleNextQuoteUpdate();
+  }
+}
+
+// Schedule a quote update on the next hour.
+function scheduleNextQuoteUpdate() {
+  // Calculate milliseconds until next hour
+  const now = new Date();
+  const msUntilNextHour = (60 - now.getMinutes()) * 60 * 1000 - now.getSeconds() * 1000 - now.getMilliseconds();
+  // Set initial timeout to sync with the hour
+  setTimeout(() => {
+    updateQuote();
+    // Then update every hour
+    setInterval(updateQuote, 60 * 60 * 1000);
+  }, msUntilNextHour);
+}
+
+// On page load, show the current hourly quote, and start an hourly updater.
+document.addEventListener('DOMContentLoaded', () => {
+  const quoteel       = document.querySelector('#quote');
+  const quotetextel   = document.querySelector('#quote-text');
+  const quoteauthorel = document.querySelector('#quote-author');
+  if (quoteel && quotetextel && quoteauthorel) {
+    updateQuote();
+  }
+});
+
+</script>
+
 <!-- ** Quotes --------------------------------------------------------------->
 <script>
 /* 
@@ -842,60 +897,5 @@ I'm guessing your friend will be too busy, disorganised, and non-software-orient
 --sm
 
 `;
-</script>
-
-<!-- ** Scripts -------------------------------------------------------------->
-<script>
 const quotes = quotesmd.trim().split('\n\n').map(q => q.replace(/^\*|\*$/g, '').trim());
-
-// Get the current hourly quote.
-function getQuote() {
-  const now = new Date();
-  const t = now.getTime();
-  const n = Math.floor(t / (1000 * 60 * 60));
-  const quote = quotes[n % quotes.length];
-  const parts = quote.split(' --');
-  return {
-    text:   parts[0].trim(),
-    author: parts[1] ? parts[1].trim() : ''
-  };
-}
-
-// Show the current hourly quote, and schedule an update on the next hour.
-function updateQuote() {
-  const quoteel       = document.querySelector('#quote');
-  const quotetextel   = document.querySelector('#quote-text');
-  const quoteauthorel = document.querySelector('#quote-author');
-  if (quoteel && quotetextel && quoteauthorel) {
-    const quote = getQuote();
-    quotetextel.textContent   = quote.text;
-    quoteauthorel.textContent = quote.author ? '-- ' + quote.author : '';
-    quoteel.style.display     = 'block';
-    scheduleNextQuoteUpdate();
-  }
-}
-
-// Schedule a quote update on the next hour.
-function scheduleNextQuoteUpdate() {
-  // Calculate milliseconds until next hour
-  const now = new Date();
-  const msUntilNextHour = (60 - now.getMinutes()) * 60 * 1000 - now.getSeconds() * 1000 - now.getMilliseconds();
-  // Set initial timeout to sync with the hour
-  setTimeout(() => {
-    updateQuote();
-    // Then update every hour
-    setInterval(updateQuote, 60 * 60 * 1000);
-  }, msUntilNextHour);
-}
-
-// On page load, show the current hourly quote, and start an hourly updater.
-document.addEventListener('DOMContentLoaded', () => {
-  const quoteel       = document.querySelector('#quote');
-  const quotetextel   = document.querySelector('#quote-text');
-  const quoteauthorel = document.querySelector('#quote-author');
-  if (quoteel && quotetextel && quoteauthorel) {
-    updateQuote();
-  }
-});
-
 </script>
