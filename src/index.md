@@ -879,10 +879,16 @@ hledger suits me because of the relatively simple csv import process, reports th
 simonmic is pretty good about having a steady cadence of features/fixes rolling out with hledger without it breaking things.
 --gumnos
 
+I really like hledger, since the CLI tool makes it extremely easy to get started. Documention is also really nice with lots of examples.
+--PerryStyle
+
 hledger-web has worked so well for me. Going on nearly two years now. It is elegant, and reliable, with excellent documentation, generous community, and a quick, straightforward onramp. It is a perfect, free, and open-source remedy in a subscription-based, data-sucking, privacy destroying dystopia. It’s completely transformed my relationship to my finances for the better.
 --bitsonchips
 
 I’m not trying to spend all my time coding or fussing about under the hood ... I enter transactions manually as part of a routine. Checking-weekly, Savings-monthly, Investments-quarterly. I run quarterly reports and year-end closing statements and enjoy every moment of it.
+--bitsonchips
+
+I enter transactions manually as part of a routine. Checking-weekly, Savings-monthly, Investments-quarterly. I run quarterly reports and year-end closing statements and enjoy every moment of it.
 --bitsonchips
 
 I've been using hledger for a few years to run my personal and company accounts and I think it is superb.
@@ -895,6 +901,9 @@ I've been using hledger for a few years to run my personal and company accounts 
 #plaintextaccounting isn't the best solution for all situations; nothing is!
 I'm guessing your friend will be too busy, disorganised, and non-software-oriented to deal with learning and managing backups, versions, double entry bookkeeping, plain text accounting, text editors, terminals, sharing access, etc. A google sheet makes most of those problems go away.
 --sm
+
+I just completely read the ledger vs. hledger thing and what you linked now. That pages is really a wealth of information and completely fair afaik which I really appreciate.
+--AppropriateCover7972
 
 `;
 const quotes = quotesmd.trim().split('\n\n').map(q => q.replace(/^\*|\*$/g, '').trim());
