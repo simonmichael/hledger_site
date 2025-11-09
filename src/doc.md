@@ -179,6 +179,9 @@ Check plaintextaccounting.org's and wiki.plaintextaccounting.org's categories.
 ### Forecasting
 - [Forecasting](forecasting.md)
 
+### FOSS projects
+- [Plain Text Accounting with hledger (FOSS for All presentation)](https://docs.google.com/presentation/d/17kkPlLOFhpwfEIhHfT0hJ1PRmZ6-Tq7JIAdTAhjp24A/preview?pru=AAABmo3qmB4*fWFiJB8Z7cZwQbc72JsTjA&slide=id.g38f1acd61f5_0_19)
+
 ### Inventory tracking
 - [Tracking and selling inventory](inventory.md)
 - [PTA wiki: Inventory](https://github.com/plaintextaccounting/plaintextaccounting/wiki/Inventory)

@@ -1,0 +1,16 @@
+https://rust-lang.github.io/mdBook/format/theme/index.html
+
+Here are the files you can override:
+
+index.hbs is the handlebars template.
+head.hbs is appended to the HTML <head> section.
+header.hbs content is appended on top of every book page.
+css/ contains the CSS files for styling the book.
+css/chrome.css is for UI elements.
+css/general.css is the base styles.
+css/print.css is the style for printer output.
+css/variables.css contains variables used in other CSS files.
+book.js is mostly used to add client side functionality, like hiding / un-hiding the sidebar, changing the theme, ...
+highlight.js is the JavaScript that is used to highlight code snippets, you should not need to modify this.
+highlight.css is the theme used for the code highlighting.
+favicon.svg and favicon.png the favicon that will be used. The SVG version is used by newer browsers.
