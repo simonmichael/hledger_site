@@ -2,6 +2,12 @@
 
 hledger-related videos:
 
+- Short videos of `add` and `web` data entry (in korean) can be found in 
+  [Plain Text Accounting with hledger (FOSS for All presentation)](https://docs.google.com/presentation/d/17kkPlLOFhpwfEIhHfT0hJ1PRmZ6-Tq7JIAdTAhjp24A/preview?pru=AAABmo3qmB4*fWFiJB8Z7cZwQbc72JsTjA&slide=id.g38f1acd61f5_0_19)
+  (2025, 2m)
+
+- [Hledger in 10 Minutes: The Ultimate CLI Tool](https://www.youtube.com/watch?v=hshDr2Af2RU) (2025, 5m)
+
 - [Simon Michael @ HaskellerZ meetup](https://www.youtube.com/watch?v=6PKmZSHxu0c) (2021, 2h) <!-- apr 29 --> \
   "Inside hledger: an architectural tour and how-to" (hledger intro and code dive) \
   [slides](https://rawcdn.githack.com/simonmichael/hledger/4013a81af8dd2804c73ecac18fb3e7e4745a4275/doc/haskellerz/haskellerz.slidy.html)
@@ -19,7 +25,7 @@ hledger-related videos:
   - [hledger: fast fancy formatting](https://www.youtube.com/watch?v=Hb-hK8Lc67s)
   - [hledger: who did you pay?](https://www.youtube.com/watch?v=DrMoawQBKHE)
   - [hledger: bring order to your expenses](https://www.youtube.com/watch?v=O7_--Jz0jeQ&t=2s)
-  - [hledger: commands to help with reconciling](https://www.youtube.com/watch?v=gt4hm8pfMHk)
+  - [hledger: commands to help with reconciling](https://www.youtube.com/watch?v=gt4hm8pfMHk)7
   - [hledger: shortcuts part 1](https://www.youtube.com/watch?v=ItnYCw8cgKc)
   - [hledger: shortcuts part 2](https://www.youtube.com/watch?v=0d-28UIFhlo)
   - [hledger: shortcuts part 3](https://www.youtube.com/watch?v=_3pHNICDgHc)
