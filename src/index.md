@@ -905,6 +905,11 @@ I'm guessing your friend will be too busy, disorganised, and non-software-orient
 I just completely read the ledger vs. hledger thing and what you linked now. That pages is really a wealth of information and completely fair afaik which I really appreciate.
 --AppropriateCover7972
 
+- low IQ: just model the real world
+- average IQ: i need a complex system to super accurately describe what i would be like as a fortune 500 company
+- high IQ: just model the real world
+--veeque
+
 `;
 const quotes = quotesmd.trim().split('\n\n').map(q => q.replace(/^\*|\*$/g, '').trim());
 </script>
