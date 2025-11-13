@@ -910,6 +910,14 @@ I just completely read the ledger vs. hledger thing and what you linked now. Tha
 - high IQ: just model the real world
 --veeque
 
+Also great for "eyeball auditing". When Gnucash did something, I was never sure what actually happened. And sometimes it would crash. Was all my data safe? Hard to tell.
+With ledger/hledger, I've never felt unsure about the change I'm making, and if something wipes out records I'll notice it before committing.
+--yencabulator
+
+"never sure what actually happened" - I felt the same way with Gnucash, Quicken, and all the other non-plain-text accounting apps I tried. Finance was stressful enough without also worrying about messed-up data. That was perhaps the biggest motivation to switch to Ledger, when I found it.
+Later, I often could not figure out how to make Ledger do something I knew it could do, and I often was surprised by a crash or wrong behaviour when it saw some new combination of features and data that hadn't been tested or implemented yet. This was a big motivation to write hledger.
+--sm
+
 `;
 const quotes = quotesmd.trim().split('\n\n').map(q => q.replace(/^\*|\*$/g, '').trim());
 </script>
