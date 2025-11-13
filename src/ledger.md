@@ -520,12 +520,13 @@ Most Ledger users will have at least some Ledger-specific syntax,
 so the quickest way  to tap into hledger reports may be:
 
 ```
-$ ledger print --raw | hledger -f- -I CMD
+$ ledger print | hledger -f- -I CMD
 ```
 
 The print command omits directives.
-`--raw` prevents decimal zeroes being added to amounts and disrupting transaction balancing.
 `-I` disables checking of balance assertions (if needed).
+(ledger's `--raw` flag used to help hledger's transaction balancing but shouldn't be needed since hledger 1.50.)
+
 If this works you can do quick reporting like so:
 
 ```cli
