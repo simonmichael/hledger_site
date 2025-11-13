@@ -553,32 +553,32 @@ It is very satisfying to get a report of my last 10 years swiftly over the weeke
 I took the plunge into PTA with hledger to draft my company's books in 2023 and to escape the torture of QuickBooks in a multiple-currency world. I am pleased to report that I have succeeded in completing my fiscal year 2023 recordkeeping and my accountants have not fired me. Moreover, I feel like I will actually have a head-start on 2024 and will be able to do *gasp* tax planning, rather than feeling like I'm always playing catch-up.
 Many thanks for the help I've received to get me to this point! I'm a believer. --jbrains
 
-I periodically download bank csv and convert it to the hledger/ledger format, auto-assigning categories (accounts) based on a rules file that I update as needed (typically one or two new rules per month). At tax reporting time I use hledger to total up each income/expense account for the reporting period, and I plug those numbers into my accountant's tax form generating app. After a few iterations, my chart of accounts has clarified and the process has become pretty routine. --HN
+I periodically download bank csv and convert it to the hledger/ledger format, auto-assigning categories (accounts) based on a rules file that I update as needed (typically one or two new rules per month). At tax reporting time I use hledger to total up each income/expense account for the reporting period, and I plug those numbers into my accountant's tax form generating app. After a few iterations, my chart of accounts has clarified and the process has become pretty routine. --sm
 
 I was not very happy with YNAB recently (for various reasons), and by coincidence I came across an article on Hacker News where PTA was mentioned. So I ended up with hledger and I have to say: so far no regrets! Thanks a million for the great software! --kokomuck
 
-I use hledger for the nice web ui: demo.hledger.org --HN
+I use hledger for the nice web ui: demo.hledger.org --philips
 
 Also, just wanted to take a moment to express my gratitude for this amazing tool, and the whole PTA ecosystem as well! Just saving my poor programmer brain from having to muddle through spreadsheets is already a huge bonus! --avrahamappel
 
-I can second that hledger is great. As a bonus, hledger-web makes it possible to also modify data, making it usable alternative to command line tools. --HN
+I can second that hledger is great. As a bonus, hledger-web makes it possible to also modify data, making it usable alternative to command line tools. --markokocic
 
 Feels great to be able to track things in such details for free. And actually own all of the data. Great piece of software --maximrichter
 
 Just use hledger, which offers hledger-web, put it online behind a nginx and you are done.
-It uses ledger compatible transaction files which can you edit and inspect manually if needed, offers a bunch of additional functionality, and is a joy to use, both the web and command line version. --HN
+It uses ledger compatible transaction files which can you edit and inspect manually if needed, offers a bunch of additional functionality, and is a joy to use, both the web and command line version. --levosmetalo
 
 The ledger didn’t work out for the first time - the manuals and HOWTOs were overcomplicated with examples of processing credit accounts, stock accounts, debts and so on. I’m almost never used all of these in my life (I’m living in one of CIS countires and usually we do not have enough money to use credits or stocks like financial instruments here).
 Also, all of the guides assumed that I was budgeting on a rolling basis - without two-week periods, like I do.
 --Eugene Andrienko
 
-Maybe it's about the tools? I could never bother myself tracking my expenses in any application I tried until I started using plain old ledger (actually hledger) from the command line. Only then it started to feel almost effortless. --HN
+Maybe it's about the tools? I could never bother myself tracking my expenses in any application I tried until I started using plain old ledger (actually hledger) from the command line. Only then it started to feel almost effortless. --levosmetalo
 
-I use hledger and hledger-web. It's mostly compatible with ledger with some nice features on top and a web interface. --HN
+I use hledger and hledger-web. It's mostly compatible with ledger with some nice features on top and a web interface. --levosmetalo
 
 I'm loving what hledger can do with my data --ellane
 
-The nicest thing about hledger and the original is the extremely simple file format. It allows you to write your own pretty easily (especially if you stick to the very simple format of a bunch of transactions). I wrote one for my use. --HN
+The nicest thing about hledger and the original is the extremely simple file format. It allows you to write your own pretty easily (especially if you stick to the very simple format of a bunch of transactions). I wrote one for my use. --howeyc
 
 Thank you for hledger. After front-loading the cli learning curve, I am recognizing it to be, for small business purposes, more practical than commercial products such as Quicken. That is saying a lot, considering the true development cost behind a program like Quicken with long-term corporate investment. --czerny2018
 
@@ -604,15 +604,15 @@ I just started using hledger for personal double-entry bookkeeping. So far it is
 
 I have massively enjoyed using hledger and am incredibly impressed with how active the development and support for it are! --Pixelized
 
-I really enjoy the ease of plaintext accounting. (h)ledger rules! --HN
+I really enjoy the ease of plaintext accounting. (h)ledger rules! --linuxlover2
 
 Hledger is not a "silver bullet" that automatically calculates all the necessary things for you. It is like a small database, that allows you to SELECT data from financial transactions, filter them by account name or by date. And with a nice ability to convert from one currency to another "on the fly". --Eugene Andrienko
 
-I've been using hledger for almost 9 months now and I must say that it's been incredible. Never before have I been able to track and manage my personal finance this efficiently. --HN
+I've been using hledger for almost 9 months now and I must say that it's been incredible. Never before have I been able to track and manage my personal finance this efficiently. --shradha408
 
 New convert here. I’m a software developer with a cursory understanding of double-entry bookkeeping (and basically nothing else about accounting) from school, way back when. I’ve wanted more detailed tracking of my finances for a while now, found the whole PTA community about a week ago, and started using hledger a few days ago. It took some effort to enter the current state of my finances (and will require a lot more to fill in past years), but I’d really like to thank Simon Michael and everyone else involved with hledger, its forebears and inspirations, and the community at large. I always believed this sort of deep understanding of my finances was out of my reach without training and opaque software. Instead, you’ve made this vastly complicated subject accessible even to someone like me. --Shiv J. M.
 
-As a programmer, I find ledger/hledger/beancount to be the most convenient way to do things. My text editor is already an extension of my hands. I can use any version control I want. I can write my own reports using any language I want. I can write code to automate transactions and I can do it in any language I like. --HN
+As a programmer, I find ledger/hledger/beancount to be the most convenient way to do things. My text editor is already an extension of my hands. I can use any version control I want. I can write my own reports using any language I want. I can write code to automate transactions and I can do it in any language I like. --mikekchar
 
 hledger focuses on testing and correctness alongside comprehensive documentation, giving me a much better picture of its capabilities. I dove in and spent a week entering a year and a half of data, which was enough to convince me. hledger is truly an amazing tool. I can’t count how many times I’ve thought wouldn’t it be nice if… only to realize it can already do that, or how many times I’ve been disappointed at an apparent bug only to realize I was the one at fault. I don’t know how much is unique to hledger and how much comes from its precursors or contemporaries, but I’m also struck by all the thoughtful touches, like having both aregister and register, or having all of =, ==, =*, and ==* for balance assertions. The attention to detail is marvelous. I have to assume that, whatever the provenance, this flexible competence is born of real use and familiarity. I couldn’t help overflowing with praise in the very friendly Matrix room --Shiv J. M.
 
@@ -626,7 +626,7 @@ hledger has also been fantastic as far as help. I've jumped on IRC a few times f
 Adopting hledger for plain text accounting has paid dividends in more ways than I can count. It’s brought order to my somewhat chaotic finances and allowed me to track details I was barely aware of, freeing me from the vague sense of unease that used to occasionally creep into my mind when I wondered, for instance, how much I was spending on food. --Shiv J. M.
 
 My partner and I have been tracking all our spending for the last five years with hledger (ledger reimplemented in haskell) and some custom import and management scripts inspired by "Full-fledged hledger" [1]. More recently we added Plaid [2] for auto-importing from financial accounts. I love having a plain-text history and being able to ask complex queries.
-One unexpectedly-sweet benefit is that your spending is a high-granularity record of where you have been and what you have been doing, encoding some signals you might not have thought to write in a diary. Things like "that was when we were saving for our down payment" or "I was going to coffee shops every day trying to finish my dissertation" or "that was when we had a pandemic." I enjoy looking back through our ledger the same way I enjoy going way back in my gmail history. --HN
+One unexpectedly-sweet benefit is that your spending is a high-granularity record of where you have been and what you have been doing, encoding some signals you might not have thought to write in a diary. Things like "that was when we were saving for our down payment" or "I was going to coffee shops every day trying to finish my dissertation" or "that was when we had a pandemic." I enjoy looking back through our ledger the same way I enjoy going way back in my gmail history. --cproctor
 
 I've been using hledger for managing my personal finances for a few years now, and I'm really happy with it! --guivho
 
@@ -640,7 +640,7 @@ I'm glad I found this community and a eco system of PTA. I'm learning so much ab
 
 I finally ditched QuickBooks / Quicken / all that crap and moved everything personally & for my consulting company over to hledger (which is just a slightly fancy version of ledger).
 Turns out, everything I hated about QuickBooks for all these years centered around its inability to bulk-edit transactions or categorize/recategorize things en masse, leading to countless hours wasted clicking or, worse, those bulk journal entires to move things from one place to another (which forces you to follow a breadcrumb path of asset movements, which is a nightmare).
-But when everything is just a list of things in a text file, you get the power of every great text editor on earth (vi, emacs, or whatever) and can make mass changes trivially. Life's much much much much better this way. --HN
+But when everything is just a list of things in a text file, you get the power of every great text editor on earth (vi, emacs, or whatever) and can make mass changes trivially. Life's much much much much better this way. --nlh
 
 I landed on hledger when researched open source and plain text options. It does everything we need it to:  journal entries and quarterly reports like balance sheet, income and expense reports. You do need to be somewhat comfortable with interfaces like your command line terminal and Emacs but the instructions and documentation for it are clear for beginners from my experience.
 For day to day journal entries I use hledger-web. It’s pretty much perfect in terms of elegant simplicity and functionality. It’s well documented and the hledger community is active, generous, and kind. --bitsonchips
@@ -657,11 +657,11 @@ like, if you track it, at the end of the month you can look at how much you spen
 
 I discovered hledger last week and I hope it's not too early to describe it as life-changing. thank you for building this software --gnidan
 
-hledger is another open-source CLI tool for accounting that works amazingly well for me. You can add transactions editing in plain text too and there is a basic web UI on top of it. --HN
+hledger is another open-source CLI tool for accounting that works amazingly well for me. You can add transactions editing in plain text too and there is a basic web UI on top of it. --diibv
 
 can confirm after 3 months: so far hledger usage appears to be life changing --gnidan
 
-I used hledger for years it was great. --HN
+I used hledger for years it was great. --xupybd
 
 over the past year I've become a daily user of hledger, my workflow has gotten quite sophisticated and I can get 99% of what I need. It's amazing, thanks so much for anyone/everyone involved. -- Peter Linsley
 
@@ -669,17 +669,17 @@ Many thanks to Simon Michael for not only that wonderful program but also being 
 
 I originally had a question I wanted to ask but then I read through part of the manual and got most of it and a different angle I hadn't quite considered answered; so I'm just stopping by to say thanks for the effort of documenting this in so much detail. --j416
 
-Simon is an amazing project owner. He and his documentation are the reasons I like hledger over the alternatives. --HN
+Simon is an amazing project owner. He and his documentation are the reasons I like hledger over the alternatives. --xupybd
 
 Thank you for maintaining the compendium. I love hledger docs. --Aaron Fiore
 
-Emacs users should look into Flycheck integration, eg [flycheck-hledger](https://hledger.org/editors.html#flycheck-hledger) . Real time indication of parse and balance errors as you edit is nice! --HN
+Emacs users should look into Flycheck integration, eg [flycheck-hledger](https://hledger.org/editors.html#flycheck-hledger) . Real time indication of parse and balance errors as you edit is nice! --sm
 
 I use hledger only for the things I want reports of (taxes, utilities etc split with spouse, money spent on specific hobbies, etc; not restaurants etc).
 Entering everything into ledger is mind-numbingly boring.
-Outside of automatic git hooks for validation, I really only run hledger when reconciling balance with spouse or when reporting taxes. --HN
+Outside of automatic git hooks for validation, I really only run hledger when reconciling balance with spouse or when reporting taxes. --yencabulator
 
-I used to keep track of everything in a spreadsheet that had all expected paycheck deposits and bill expenses plotted out for the year. It was great being able to see at a glance if the checking account was in danger of going in the red. Ultimately I moved to a double-entry system using hledger. It's a little less convenient for seeing future balances, but a whole lot more flexible. --HN
+I used to keep track of everything in a spreadsheet that had all expected paycheck deposits and bill expenses plotted out for the year. It was great being able to see at a glance if the checking account was in danger of going in the red. Ultimately I moved to a double-entry system using hledger. It's a little less convenient for seeing future balances, but a whole lot more flexible. --twilight00
 
 I use it for many things ...
 - Tracking pending payment from clients
@@ -726,13 +726,13 @@ I also use git so I can roll back the latest import, if something goes wrong - b
 
 Hledger is AWESOME --teitoklien
 
-finally settled on hledger. Like GnuCash, I own and control my data, but with hledger I have an ability to go in and correct or change something (and not in a "accounting-appropriate" way) in bulk just by editing it in Sublime Text. --HN
+finally settled on hledger. Like GnuCash, I own and control my data, but with hledger I have an ability to go in and correct or change something (and not in a "accounting-appropriate" way) in bulk just by editing it in Sublime Text. --mszcz
 
 The deal breaker for me was the underlying XML or SQLite formats of GnuCash. These are not terribly amenable to scripting, either for ingesting raw data or reporting. Whereas this is basically the point of plain-text tools like Beancount or hledger. GnuCash feels too much like a walled-garden compared to plain-text tools.
 The plain-text format requires more work at first, but after you get the hang of it (and provided you have some background in scripting software) it is awesome.
 --GlibMonkeyDeath
 
-One nice feature of hledger is its csv rules system, which is very flexible. I extended it with simple python scripts to add extra information for registering capital gains. So, end of the day the raw input data is just some csv files with records and the output is financial reports with various levels of detail. --HN
+One nice feature of hledger is its csv rules system, which is very flexible. I extended it with simple python scripts to add extra information for registering capital gains. So, end of the day the raw input data is just some csv files with records and the output is financial reports with various levels of detail. --mszcz
 
 Has anyone else gone on the following journey:
 1. Use excel
@@ -746,25 +746,25 @@ I'm now in my 5th year of tracking every penny in and out of my life with hledge
 - if you subscribe to Files over Apps, hledger and its ilk (beancounter, gnu cash) are hands down your most mature, stable options
 - I've learned a great deal about accounting and how money works in general
 - the reports I can generate from my ledger give me a decent starting point at tax time
-Happy accounting! --HN
+Happy accounting! --wbadart
 
-I have been using hledger for a while now and have a pretty automated process for importing exported CSVs. I would love a little more automation in terms of pulling down the data, but on the bright side the manual process provides a good touch point to keep up on accounting regularly in small doses. This is great for just keeping an eye on things on a monthly basis. --HN
+I have been using hledger for a while now and have a pretty automated process for importing exported CSVs. I would love a little more automation in terms of pulling down the data, but on the bright side the manual process provides a good touch point to keep up on accounting regularly in small doses. This is great for just keeping an eye on things on a monthly basis. --zefhous
 
 I have a very similar setup but with hledger. 
 A "do-nothing" script helps me download statements by opening bank websites, waits for manual import and finally checks balances. 
 That makes it a lot less repetitive and error prone. Or at least, I catch the errors faster.
 I've found hledger and Shake to be fast enough to process almost a decade of finances. 
-Dmitry Astapov has an extremely well produced tutorial workflow. --HN
+Dmitry Astapov has an extremely well produced tutorial workflow. --chrislloyd
 
 I remember that when I used hledger for tracking my expenses over 3 years, 
 I had to "close books" once a year and consolidate all the transactions for the past year 
-into 1 entry in a new ledger file to keep entry/query operations fast. --HN
+into 1 entry in a new ledger file to keep entry/query operations fast. --asadjb
 
 Thanks @simonmic for hledger, such a fantastic tool! 🥳 --Yann Büchau
 
 I also use ledger/hledger to process a decade of finances. I reconcile once a year when doing taxes. 
 I have multiple python scripts orchestrated with org-mode to generate reports/plots. 
-I run them in separate processes since they are independent, which makes it fast enough (seconds). --HN
+I run them in separate processes since they are independent, which makes it fast enough (seconds). --faustlast
 
 Thanks for producing such a great tool - I'm learning a lot, and am finding it really helpful. --Matt Maguire
 
