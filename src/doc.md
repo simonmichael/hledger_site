@@ -11,14 +11,13 @@ h3 { margin-top:0; }
 </style>
 
 hledger has a lot of documentation, to suit different needs.
-Here is the overview.
 Docs can also be accessed from the left sidebar.
 
 ## Reference
 
 The manuals are thorough and authoritative.
 Do at least skim the table of contents so you'll know where to look in future.
-You can also read these locally with commands like 
+You can also view the manuals locally with commands like 
 `hledger help`, `hledger CMD --help`, `hledger-ui --man`, `hledger-web --info`, `man hledger-ui`, `info hledger-web`:
 
 - **[hledger manual](hledger.md)**
@@ -157,7 +156,7 @@ See also:
 
 ## Cookbook
 
-The Cookbook is all the other hledger docs, notes and tips gathered on this site and from elsewhere.
+All the other docs, notes and tips gathered on this site.
 See also the more generic [Plain Text Accounting Cookbook](https://plaintextaccounting.org/Cookbook).
 
 ### USING HLEDGER:
