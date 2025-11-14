@@ -156,7 +156,7 @@ See also:
 
 ## Cookbook
 
-All the other docs, notes and tips gathered on this site.
+Additional docs, tips and rough notes.
 See also the more generic [Plain Text Accounting Cookbook](https://plaintextaccounting.org/Cookbook).
 
 ### USING HLEDGER:
