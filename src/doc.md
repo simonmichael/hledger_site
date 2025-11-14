@@ -12,26 +12,42 @@ h3 { margin-top:0; }
 
 hledger has a lot of documentation, to suit different needs.
 Here is the overview.
-(Docs can also be accessed from the left sidebar.)
+Docs can also be accessed from the left sidebar.
+
+## TL;DR
+
+You can get very brief command help with a [tldr](https://tldr.sh) [client](https://tealdeer-rs.github.io/tealdeer/)
+(`tldr hledger`, `tldr hledger balance`, ...) or [in your browser](https://tldr.inbrowser.app):
+
+- [hledger](https://tldr.inbrowser.app/pages/common/hledger)
+- [hledger add](https://tldr.inbrowser.app/pages/common/hledger-add)
+- [hledger accounts](https://tldr.inbrowser.app/pages/common/hledger-accounts)
+- [hledger add](https://tldr.inbrowser.app/pages/common/hledger-add)
+- [hledger aregister](https://tldr.inbrowser.app/pages/common/hledger-aregister)
+- [hledger balance](https://tldr.inbrowser.app/pages/common/hledger-balance)
+- [hledger balancesheet](https://tldr.inbrowser.app/pages/common/hledger-balancesheet)
+- [hledger import](https://tldr.inbrowser.app/pages/common/hledger-import)
+- [hledger incomestatement](https://tldr.inbrowser.app/pages/common/hledger-incomestatement)
+- [hledger print](https://tldr.inbrowser.app/pages/common/hledger-print)
+- [hledger-ui](https://tldr.inbrowser.app/pages/common/hledger-ui)
+- [hledger-web](https://tldr.inbrowser.app/pages/common/hledger-web)
 
 ## Reference docs
 
 The manuals are the most thorough and authoritative hledger docs.
 They are long, but do at least skim the table of contents so you'll know where to look in future.
-You can view them here:
 
 - **[hledger manual](hledger.md)**
 - [hledger-ui manual](hledger-ui.md)
 - [hledger-web manual](hledger-web.md)
 
-or on your local machine with commands like 
-`hledger help`, `hledger CMD --help`, `hledger --man`, `hledger-ui --info`, `man hledger`, `info hledger-ui`.
+(You can also read the manuals in the terminal/offline, with commands like 
+`hledger help`, `hledger CMD --help`, `hledger --man`, `hledger-ui --info`, `man hledger`, `info hledger-ui`.)
 
 See also:
 
 - **[hledger FAQ](faq.md)**
 - [Plain Text Accounting FAQ](https://plaintextaccounting.org/FAQ)
-- [Accounting: further study](accounting.md)
 - [Release notes](relnotes.md)
 - [Developer docs](dev.md)
 
@@ -42,6 +58,7 @@ Fast introductions for folks comfortable with command line tools.
 - [2 minute quick start](2-minute-quick-start.md)
 - [5 minute quick start](5-minute-quick-start.md)
 - [10 minute quick start](10-minute-quick-start.md)
+- [hledger and Ledger](ledger.md) (for Ledger users)
 - [hledger manual: Common tasks](hledger.md#common-tasks)
 - [Workflows](workflows.md)
 
@@ -109,7 +126,7 @@ Longer talks:
 
 - [Youngbin Han @ FOSS for All](https://docs.google.com/presentation/d/17kkPlLOFhpwfEIhHfT0hJ1PRmZ6-Tq7JIAdTAhjp24A/preview?pru=AAABmo3qmB4*fWFiJB8Z7cZwQbc72JsTjA&slide=id.g38f1acd61f5_0_19)
   (2025, slides, korean and english) \
-  Plain Text Accounting with hledger (for FOSS) \
+  Plain Text Accounting with hledger \
   with short videos of
   [add](https://docs.google.com/presentation/d/17kkPlLOFhpwfEIhHfT0hJ1PRmZ6-Tq7JIAdTAhjp24A/preview?pru=AAABmo3qmB4*fWFiJB8Z7cZwQbc72JsTjA&slide=id.g39fe649dc22_0_50) and
   [web](https://docs.google.com/presentation/d/17kkPlLOFhpwfEIhHfT0hJ1PRmZ6-Tq7JIAdTAhjp24A/preview?pru=AAABmo3qmB4*fWFiJB8Z7cZwQbc72JsTjA&slide=id.g3a079a19bed_0_7)
