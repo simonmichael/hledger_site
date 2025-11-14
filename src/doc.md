@@ -14,9 +14,27 @@ hledger has a lot of documentation, to suit different needs.
 Here is the overview.
 Docs can also be accessed from the left sidebar.
 
+## Reference
+
+The manuals are thorough and authoritative.
+Do at least skim the table of contents so you'll know where to look in future.
+You can also read these locally with commands like 
+`hledger help`, `hledger CMD --help`, `hledger-ui --man`, `hledger-web --info`, `man hledger-ui`, `info hledger-web`:
+
+- **[hledger manual](hledger.md)**
+- [hledger-ui manual](hledger-ui.md)
+- [hledger-web manual](hledger-web.md)
+
+See also:
+
+- **[hledger FAQ](faq.md)**
+- [Plain Text Accounting FAQ](https://plaintextaccounting.org/FAQ)
+- [Release notes](relnotes.md)
+- [Developer docs](dev.md)
+
 ## TL;DR
 
-You can get very brief command help with a [tldr](https://tldr.sh) [client](https://tealdeer-rs.github.io/tealdeer/)
+You can get very brief help with a [tldr](https://tldr.sh) [client](https://tealdeer-rs.github.io/tealdeer/)
 (`tldr hledger`, `tldr hledger balance`, ...) or [in your browser](https://tldr.inbrowser.app):
 
 - [hledger](https://tldr.inbrowser.app/pages/common/hledger)
@@ -31,25 +49,6 @@ You can get very brief command help with a [tldr](https://tldr.sh) [client](http
 - [hledger print](https://tldr.inbrowser.app/pages/common/hledger-print)
 - [hledger-ui](https://tldr.inbrowser.app/pages/common/hledger-ui)
 - [hledger-web](https://tldr.inbrowser.app/pages/common/hledger-web)
-
-## Reference docs
-
-The manuals are the most thorough and authoritative hledger docs.
-They are long, but do at least skim the table of contents so you'll know where to look in future.
-
-- **[hledger manual](hledger.md)**
-- [hledger-ui manual](hledger-ui.md)
-- [hledger-web manual](hledger-web.md)
-
-(You can also read the manuals in the terminal/offline, with commands like 
-`hledger help`, `hledger CMD --help`, `hledger --man`, `hledger-ui --info`, `man hledger`, `info hledger-ui`.)
-
-See also:
-
-- **[hledger FAQ](faq.md)**
-- [Plain Text Accounting FAQ](https://plaintextaccounting.org/FAQ)
-- [Release notes](relnotes.md)
-- [Developer docs](dev.md)
 
 ## Quick starts
 
@@ -158,8 +157,8 @@ See also:
 
 ## Cookbook
 
-The "Cookbook" is all the other hledger docs, notes and tips gathered on this site and elsewhere.
-(See also the [plaintextaccounting.org: Cookbook](https://plaintextaccounting.org/Cookbook), which collects more generic notes for all PTA apps.)
+The Cookbook is all the other hledger docs, notes and tips gathered on this site and from elsewhere.
+See also the more generic [Plain Text Accounting Cookbook](https://plaintextaccounting.org/Cookbook).
 
 ### USING HLEDGER:
 
