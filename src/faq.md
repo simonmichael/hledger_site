@@ -269,7 +269,7 @@ Otherwise, you could try Google Translate or similar.
 
 There are  couple of non-english videos at
 [PTA: Videos](https://plaintextaccounting.org/#videos)
-and [hledger: Videos](videos.md).
+and [Docs: Videos](doc.md#videos).
 
 ### How do I set the default file to something other than ~/.hledger.journal ?
 

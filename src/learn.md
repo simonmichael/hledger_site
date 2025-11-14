@@ -24,7 +24,7 @@ Your fellow users can provide [Support](support.md). The chats are great for tha
 Find things that get you in the mood and energised. 
 <!-- - Maybe a pile of bills ? -->
 - Maybe doing accounts for a friend or family member ?
-- Maybe a [video or talk](videos.md) ?
+- Maybe a [video or talk](doc.md#videos) ?
 - Maybe a book ?
 
   - [The Richest Man in Babylon](https://forum.plaintextaccounting.org/t/the-richest-man-in-babylon/396)

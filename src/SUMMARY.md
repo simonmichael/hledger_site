@@ -6,7 +6,6 @@
 - [Install](install.md)
 - [Release notes](relnotes.md)
 - [Docs](doc.md)
-- [Videos](videos.md)
 - [Support](support.md)
 - [Scripts and add-ons](scripts.md)
 - [Sponsor hledger](sponsor.md)
