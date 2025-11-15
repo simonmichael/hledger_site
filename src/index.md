@@ -458,6 +458,7 @@ hledger can validate date order, that seems to eliminate copy-paste-fail-to-upda
 A key advantage of hledger, and why I migrated from ledger, is that hledger internally orders transactions chronologically, whereas ledger inexplicably orders them in the order they appear in the file, irrespective of the date attached to them.--chromatin
 
 I use hledger and I love it. It has a learning curve (especially if you're new to double entry accounting) but it's rewarding.
+--prsy
 
 Having hledger have all my accounts, personal and business and being able to filter out appropriate reports has been great for seeing things like is the business a money pit or am I actually growing wealth over time. --abhiyerra
 
