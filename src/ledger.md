@@ -35,7 +35,7 @@ Compared to Ledger, hledger has
 - a battle-tested CSV/SSV/TSV import system
 - multiple officially-supported user interfaces: CLI, TUI, web, HTTP-JSON
 - timedot time logging format
-- fully documented future-proof data formats
+- fully documented future-proof declarative data formats
 - a Haskell API.
 
 Compared to hledger, Ledger has
