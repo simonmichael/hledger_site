@@ -126,8 +126,8 @@ Longer talks:
   (2025, slides, korean and english) \
   Plain Text Accounting with hledger \
   with short videos of
-  [add](https://docs.google.com/presentation/d/17kkPlLOFhpwfEIhHfT0hJ1PRmZ6-Tq7JIAdTAhjp24A/preview?pru=AAABmo3qmB4*fWFiJB8Z7cZwQbc72JsTjA&slide=id.g39fe649dc22_0_50) and
-  [web](https://docs.google.com/presentation/d/17kkPlLOFhpwfEIhHfT0hJ1PRmZ6-Tq7JIAdTAhjp24A/preview?pru=AAABmo3qmB4*fWFiJB8Z7cZwQbc72JsTjA&slide=id.g3a079a19bed_0_7)
+  [add](https://www.youtube.com/watch?v=rh5EFnm0t_M) and
+  [web](https://www.youtube.com/watch?v=zOjvSYCvXNc)
 - [Glenn Ramsey @ Kiwi Pycon XI](https://youtube.com/watch?v=lazZwTmAEHs)  (2022, 30m)\
   Plain text accounting for fun and profit
 - [Simon Michael @ HaskellerZ meetup](https://www.youtube.com/watch?v=6PKmZSHxu0c) (2021, 2h) <!-- apr 29 --> \
