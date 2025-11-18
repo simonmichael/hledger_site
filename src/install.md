@@ -5,7 +5,7 @@
 <!-- toc -->
 </div>
 
-The current hledger release is **1.50.2**.
+The current hledger release is **1.50.3**.
 Here are the **[release notes](release-notes.md)**.
 
 Here are several ways you can install hledger:
@@ -26,10 +26,10 @@ Official [release binaries] are provided for Linux, Mac, and Windows
 Download them manually (see [Get hledger installed](get-hledger-installed.md)),
 or use a download tool like [eget](https://github.com/zyedidia/eget?tab=readme-ov-file#how-to-get-eget):
 
-[![hledger release binaries](https://img.shields.io/badge/hledger_release_binaries-1.50.2-brightgreen.svg)](https://github.com/simonmichael/hledger/releases/tag/1.50.2)
+[![hledger release binaries](https://img.shields.io/badge/hledger_release_binaries-1.50.3-brightgreen.svg)](https://github.com/simonmichael/hledger/releases/tag/1.50.3)
 `eget simonmichael/hledger --all`
 
-[release binaries]:    https://github.com/simonmichael/hledger/releases/tag/1.50.2
+[release binaries]:    https://github.com/simonmichael/hledger/releases/tag/1.50.3
 [prerelease binaries]: https://github.com/simonmichael/hledger/releases/tag/nightly
 
 ## Packaged binaries
@@ -39,13 +39,13 @@ Homebrew (Mac, Linux) <!-- chenrui ? --> \
 `brew install hledger`
 
 Docker (Linux, Mac, Windows) <!-- adept --> ([more](https://hub.docker.com/search?q=hledger&type=image&sort=updated_at&order=desc)) \
-[![Docker](https://img.shields.io/badge/Docker_image-1.50.2-brightgreen.svg)](https://hub.docker.com/r/dastapov/hledger)
+[![Docker](https://img.shields.io/badge/Docker_image-1.50.3-red.svg)](https://hub.docker.com/r/dastapov/hledger)
 `docker pull dastapov/hledger`
 
 Windows \
 [![Scoop](https://repology.org/badge/version-for-repo/scoop/hledger.svg)](https://scoop.sh/#/apps?q=hledger)
 `scoop install hledger` \
-[![Winget](https://img.shields.io/badge/Winget_package-1.50.2-brightgreen.svg)](https://github.com/microsoft/winget-pkgs/tree/master/manifests/s/simonmichael/hledger)
+[![Winget](https://img.shields.io/badge/Winget_package-1.50.3-red.svg)](https://github.com/microsoft/winget-pkgs/tree/master/manifests/s/simonmichael/hledger)
 `winget install -e --id simonmichael.hledger` \
 [![Chocolatey](https://repology.org/badge/version-for-repo/chocolatey/hledger.svg)](https://community.chocolatey.org/packages/hledger)
 `choco install hledger -y`
@@ -204,7 +204,7 @@ Get the [hledger source code](https://github.com/simonmichael/hledger/commits/ma
 
     git clone https://github.com/simonmichael/hledger
     cd hledger
-    git checkout 1.50.2   # switch to the latest release tag (optional)
+    git checkout 1.50.3   # switch to the latest release tag (optional)
 
 Then build and install with stack:
 
@@ -243,7 +243,7 @@ Get the hledger source:
 
     git clone https://github.com/simonmichael/hledger
     cd hledger
-    git checkout 1.50.2   # switch to the latest release tag (optional)
+    git checkout 1.50.3   # switch to the latest release tag (optional)
 
 Build and install hledger:
 
@@ -296,7 +296,7 @@ to check your setup. If this doesn't work, read on..
 After installing, try to run the hledger tools (hledger, hledger-ui, hledger-web) and look for the expected versions. Eg:
 
     $ hledger --version
-    hledger 1.50.2, mac-aarch64
+    hledger 1.50.3, mac-aarch64
 
 If this doesn't work, you may need to add the binaries' install directory to your shell's PATH.
 
@@ -323,7 +323,7 @@ or the more thorough functional tests, if you are set up for working with the hl
 
     $ just functest
     ...
-     Total   1206 ...
+     Total   1215 ...
     functest PASSED
 -->
 
