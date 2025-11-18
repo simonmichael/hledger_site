@@ -889,6 +889,13 @@ With ledger/hledger, I've never felt unsure about the change I'm making, and if 
 Later, I often could not figure out how to make Ledger do something I knew it could do, and I often was surprised by a crash or wrong behaviour when it saw some new combination of features and data that hadn't been tested or implemented yet. This was a big motivation to write hledger.
 --sm
 
+I'm new to hledger, and finding it useful, and overall a joy to work with!
+--h_ahsatan
+
+Before anything else let me thank you for your work on hledger. Using it and learning about double-entry accounting has been truly transformative for my personal finances and even made accounting interesting to me!
+--athal124
+
+
 `;
 const quotes = quotesmd.trim().split('\n\n').map(q => q.replace(/^\*|\*$/g, '').trim());
 </script>
