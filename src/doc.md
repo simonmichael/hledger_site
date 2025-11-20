@@ -154,6 +154,12 @@ See also:
 - [Youtube: latest "hledger" results](https://www.youtube.com/results?search_query=hledger&sp=CAISAhAB)
 - [plaintextaccounting.org: Videos](https://plaintextaccounting.org/#videos)
 
+## Articles
+
+A few notable posts:
+
+- [Why We Chose Plain Text Accounting with Hledger](https://www.gizra.com/content/plain-text-accounting-hledger/) real-world getting started notes, nice hledger-ui examples
+
 ## Cookbook
 
 Additional docs, tips and rough notes.
