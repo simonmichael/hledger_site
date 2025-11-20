@@ -895,6 +895,13 @@ I'm new to hledger, and finding it useful, and overall a joy to work with!
 Before anything else let me thank you for your work on hledger. Using it and learning about double-entry accounting has been truly transformative for my personal finances and even made accounting interesting to me!
 --athal124
 
+Splendid, I got all my accounts correct now. Very well. I am officially on hledger now :) I did a complete year rebuild with 1100 transactions within 10 seconds. I am happy with that result, its like 50-100 times faster than [previous conversion scripts] :D --TheAnachron
+
+I've been an hledger user for 5 years now and am very happy with it. I have a background in software development but I've not chosen to hack into hledger and I don't think that it requires one to be a developer or is aimed at highly technical users. Of course, the very nature of plain text accounting requires some modest skills but you can go a lo-ong way with half a dozen hledger commands (accounts, print, is, regards, stats, bs) and the command line. The add commands is not great but usable. I suspect that using it at a command line is faster than any other front-end and it fits my tastes well.
+--rajandatta
+
+I think the best option for non-tech-savvy users is hledger-web. Minimalistic UI, the basic functionality is there, available on all platforms, rendered in browser.
+--ShrykeWindgrace
 
 `;
 const quotes = quotesmd.trim().split('\n\n').map(q => q.replace(/^\*|\*$/g, '').trim());
