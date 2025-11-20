@@ -419,6 +419,8 @@ All VS Code extensions mentioning "hledger":
 
 ## Miscellaneous
 
+- <https://github.com/mondeja/hledger-fmt> a hledger journal formatter; can integrate with VS Code or other editors
+
 From the mail list, a trick for aligning transaction amounts: 
 "Space-indent the account, tab-indent the amount, set a large tab stop."
 
