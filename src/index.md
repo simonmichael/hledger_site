@@ -903,6 +903,17 @@ I've been an hledger user for 5 years now and am very happy with it. I have a ba
 I think the best option for non-tech-savvy users is hledger-web. Minimalistic UI, the basic functionality is there, available on all platforms, rendered in browser.
 --ShrykeWindgrace
 
+Having worked with hledger for some time now, I believe that the “better way” was in fact already implemented, and it immediately made my life better. It’s easier for me to edit my data. It’s easier for me to keep track of what was changed. And it’s easier for me to answer questions I always used a bit of gut feeling to answer, instead of hard data.
+--amitaibu
+
+hledger has proven itself to allow us to get data quicker than before. 
+--amitaibu
+
+I’m happy I’ve decided to stick around beyond my first reaction of not having a “proper” UI. While hledger does in fact have a Web version, I found the hledger-ui more robust.
+--amitaibu
+
+In the end, it took me only a couple of days, of having worked on both spreadsheets and hledger in parallel, before having full confidence that hledger is the solution we were seeking for. I’m not missing our spreadsheets at all.
+--amitaibu
 `;
 const quotes = quotesmd.trim().split('\n\n').map(q => q.replace(/^\*|\*$/g, '').trim());
 </script>
