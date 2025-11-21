@@ -4,7 +4,7 @@ Here's how a plain text accounting app, and hledger specifically, can solve vari
 Do any of these apply to you ?
 
 **I am a technical person wanting to track finances with familiar tools and a minimum of fuss**\
-You can learn hledger's syntax quickly, manage the data with your favourite text processing tools,
+You can learn hledger's syntax quickly, manage data with your favourite text processing tools,
 and produce useful financial reports right away with a single executable requiring no configuration.
 
 **I want to try Plain Text Accounting, but I am finding it hard to get started**\
@@ -65,7 +65,7 @@ It stores data as human-readable plain text files, which means you can do even l
 The command line interface means you can turn complex operations into easy commands, or integrate it in automated scripts.
 
 **My accounting software is not improving, and I would prefer a tool that's actively maintained and supported**\
-hledger delivers a new major release every quarter, with followup bugfix releases when needed.
+hledger has delivered a new major release [every quarter](RELEASING.md#hledger-release-types) since 2017.
 It's the only PTA app with active chat rooms (matrix and IRC).
 It's the most-used PTA app in
 [some](https://chaos.social/@scy/114663971347130842)
