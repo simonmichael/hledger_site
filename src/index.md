@@ -132,9 +132,9 @@ This plain text accounting stuff is both useful and more fun than you'd think.
 
 
 
-**[Support](support.md)** lists our chats and other fora - don't hesitate to ask questions, report issues, or search.
+**[Support](support.md)** lists our discussion fora. Don't hesitate to ask questions or report issues.
 
-**[Docs](doc.md)** lists our comprehensive documentation. This should probably be your next stop!
+**[Docs](doc.md)** lists our extensive documentation. This is a good place to visit next.
 
 ## Get involved
 

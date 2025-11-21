@@ -16,7 +16,7 @@ Docs can also be accessed from the left sidebar.
 ## Reference
 
 The manuals are thorough and authoritative.
-Do at least skim the table of contents so you'll know where to look in future.
+Do at least skim their tables of contents so you'll know where to look in future.
 You can also view the manuals locally with commands like 
 `hledger help`, `hledger CMD --help`, `hledger-ui --man`, `hledger-web --info`, `man hledger-ui`, `info hledger-web`:
 
@@ -33,10 +33,10 @@ See also:
 - [What problems does hledger solve ?](what-problems-does-hledger-solve.md)
 - [Features](features.md)
 
-## TL;DR
+## Too long, didn't read
 
 You can get very brief help with a [tldr](https://tldr.sh) [client](https://tealdeer-rs.github.io/tealdeer/)
-(`tldr hledger`, `tldr hledger balance`, ...) or [in your browser](https://tldr.inbrowser.app):
+or [in your browser](https://tldr.inbrowser.app):
 
 - [hledger](https://tldr.inbrowser.app/pages/common/hledger)
 - [hledger add](https://tldr.inbrowser.app/pages/common/hledger-add)

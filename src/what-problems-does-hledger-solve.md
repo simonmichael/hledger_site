@@ -1,6 +1,6 @@
 # What problems does hledger solve ?
 
-Here's how a plain text accounting app, and hledger specifically, can solve various problems.
+Here are some problems a plain text accounting app, and hledger specifically, can solve.
 Do any of these apply to you ?
 
 **I am a technical person wanting to track finances with familiar tools and a minimum of fuss**\
