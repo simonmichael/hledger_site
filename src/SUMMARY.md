@@ -115,6 +115,7 @@
 - [Tutorial: hledger-web](web.md)
 - [Tutorial: Import CSV data](import-csv.md)
 - [Visualising discussion 2023](visualising2023.md)
+- [What problem(s) does hledger solve ?](what-problems-does-hledger-solve.md)
 - [Workflows](workflows.md)
 
 # DEVELOPER DOCS

@@ -30,6 +30,8 @@ See also:
 - [Plain Text Accounting FAQ](https://plaintextaccounting.org/FAQ)
 - [Release notes](relnotes.md)
 - [Developer docs](dev.md)
+- [What problem(s) does hledger solve ?](what-problems-does-hledger-solve.md)
+- [Features](features.md)
 
 ## TL;DR
 

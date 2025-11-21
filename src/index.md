@@ -111,8 +111,10 @@ with a [new release each quarter](RELEASING.md#hledger-release-types)
 and excellent free support. Paid support and customisation are also available.
 hledger is a long term project led by [Simon Michael](https://joyful.com) with many [contributors](CREDITS.md).
 
-**[Features](features.md)** talks more about those,
-and **[FAQ](faq.md)** answers more questions,
+See
+**[What problem(s) does hledger solve ?](what-problems-does-hledger-solve.md)**,
+**[Features](features.md)**,
+and **[FAQ](faq.md)** for more answers,
 like [How does hledger relate to Ledger ?](faq.md#how-does-hledger-relate-to-ledger-)
 <!-- and [Why are my revenue, liability, and equity balances negative ?](faq.md#why-are-my-revenue-income-liability-and-equity-balances-negative-). -->
 
