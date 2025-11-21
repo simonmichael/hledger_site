@@ -40,8 +40,8 @@ Best of all, plain text data files are ideal for version control. This means you
 **My accounting software is inefficient**\
 Perhaps it's slow to start up, or perhaps certain operations are quite tedious or slow.
 hledger is very lightweight and fast, starting instantly and usually producing results in a fraction of a second even on old machines.
-It stores data as human-readable plain text files, where you can easily do bulk edits.
-The command line interface means you can convert complex operations into easy commands, or build powerful automations.
+It stores data as human-readable plain text files, which means you can easily do bulk edits.
+The command line interface means you can turn complex operations into easy commands, or integrate it in powerful scripts.
 
 **I like the idea of Plain Text Accounting, but I am finding it hard to get started.**\
 Perhaps you've struggled to get a productive Beancount setup.
@@ -49,7 +49,8 @@ Or you weren't able to figure out how to do some things with Ledger.
 You are finding it too much work to produce basic financial reports at the command line.
 Maybe you want a GUI or TUI, that's simple to install and use.
 You want more up to date and complete documentation, or active chat rooms where you can get quick support.
-hledger aims to serve both techies and non-techies, and provides a smoother getting started experience.
+hledger aims to serve both techies and non-techies, and provides a smoother getting started experience,
+with standard financial reports and simple UIs that just work with no configuration needed.
 
 **My accounting software is not improving, and I would prefer a tool that's actively maintained and supported.**\
 hledger delivers a new major release every quarter, with followup bugfix releases when needed.
