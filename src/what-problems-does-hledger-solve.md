@@ -34,12 +34,12 @@ or to run your own hledger-web server, and these are optional.
 **My accounting software is opaque or unreliable, and I worry about messing up my data**\
 Most hledger operations are read only and can't affect your data.
 Commands that change your files are clearly identified, and often are append-only.
-hledger provides extensive error checking features to prevent data errors, and the app itself is heavily tested and written in a high-assurance programming language.
+hledger provides extensive error checking features to help you avoid data errors, and the app itself is heavily tested and written in a high assurance programming language.
 Best of all, plain text data files are ideal for version control. This means you can review and audit every change to your data, and undo or roll back history at any time.
 
 **My accounting software is inefficient**\
 Perhaps it's slow to start up, or perhaps certain operations are quite tedious or slow.
-hledger is very lightweight and fast, starting instantly and usually producing results in a fraction of a second even on old machines.
+hledger is lightweight and fast, starting instantly and usually producing results in a fraction of a second even on old machines.
 It stores data as human-readable plain text files, which means you can easily do bulk edits.
 The command line interface means you can turn complex operations into easy commands, or integrate it in powerful scripts.
 
@@ -55,5 +55,7 @@ with standard financial reports and simple UIs that just work with no configurat
 **My accounting software is not improving, and I would prefer a tool that's actively maintained and supported.**\
 hledger delivers a new major release every quarter, with followup bugfix releases when needed.
 It's the only PTA app with active chat rooms (matrix and IRC).
-It's the most-used PTA app at least in some circles.
+It's the most-used PTA app in
+[some](https://chaos.social/@scy/114663971347130842)
+[circles](https://matrix.to/#/!EPSbhTFKacHmjCdoQb:matrix.org/$YPqMTQy8ij5G3Jv7axvWcaFDYPipl940L-FhvdXQJ8s).
 
