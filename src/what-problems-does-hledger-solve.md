@@ -31,19 +31,19 @@ The user manuals are also built in and viewable on any machine.
 The only time you might need the internet is to download bank data
 or to run your own hledger-web server, and these are optional.
 
-**My accounting software has an inefficient UI**\
-Perhaps it's slow to start up, or perhaps certain operations are quite tedious.
-hledger stores all data in human-readable plain text files, which you can easily bulk-edit, review, back up or restore.
-The command line interface means you can convert complex operations into easy commands, or create powerful automations.
-hledger is also very lightweight and fast, starting instantly and usually producing results in a fraction of a second even on old machines.
-
-**My accounting software is opaque, and I worry about messing up my data**\
-Most hledger operations are read only and have no effect on your data.
+**My accounting software is opaque or unreliable, and I worry about messing up my data**\
+Most hledger operations are read only and can't affect your data.
 Commands that change your files are clearly identified, and often are append-only.
-hledger provides extensive error checking features to prevent data errors, and the app itself is heavily tested.
+hledger provides extensive error checking features to prevent data errors, and the app itself is heavily tested and written in a high-assurance programming language.
 Best of all, plain text data files are ideal for version control. This means you can review and audit every change to your data, and undo or roll back history at any time.
 
-**I like the idea of Plain Text Accounting, but am finding it hard to get started.**\
+**My accounting software is inefficient**\
+Perhaps it's slow to start up, or perhaps certain operations are quite tedious or slow.
+hledger is very lightweight and fast, starting instantly and usually producing results in a fraction of a second even on old machines.
+It stores data as human-readable plain text files, where you can easily do bulk edits.
+The command line interface means you can convert complex operations into easy commands, or build powerful automations.
+
+**I like the idea of Plain Text Accounting, but I am finding it hard to get started.**\
 Perhaps you've struggled to get a productive Beancount setup.
 Or you weren't able to figure out how to do some things with Ledger.
 You are finding it too much work to produce basic financial reports at the command line.
