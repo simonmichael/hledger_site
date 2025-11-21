@@ -4,9 +4,10 @@ Here's a long list of answers (which might sound like marketing).
 Perhaps you have one of these problems:
 
 **You don't have an effective accounting system, and are experiencing financial chaos, loss, or worry**\
-Having some kind of system to keep a record of financial activity and give you clarity and insight will be a great help.
-hledger is one dependable accounting tool that scales smoothly from very basic to very advanced needs.
-It provides structure, guidance for people new to accounting, and a supportive community.
+This was my situation when I started writing hledger.
+I can tell you that having some kind of system to keep a record of financial activity and give clarity and insight will be a huge help.
+hledger is a very dependable accounting tool that scales smoothly from very basic to very advanced needs.
+It provides structure, extensive documentation with guidance for people new to accounting, and a supportive community.
 It is lightweight and minimal, so you can start simply without feeling overwhelmed by complex software.
 
 **Your paper-based records are too much work and hard to get insights from**\
