@@ -112,7 +112,7 @@ and excellent free support. Paid support and customisation are also available.
 hledger is a long term project led by [Simon Michael](https://joyful.com) with many [contributors](CREDITS.md).
 
 See
-**[What problem(s) does hledger solve ?](what-problems-does-hledger-solve.md)**,
+**[What problems does hledger solve ?](what-problems-does-hledger-solve.md)**,
 **[Features](features.md)**,
 and **[FAQ](faq.md)** for more answers,
 like [How does hledger relate to Ledger ?](faq.md#how-does-hledger-relate-to-ledger-)
