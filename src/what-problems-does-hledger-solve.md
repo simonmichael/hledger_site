@@ -65,7 +65,7 @@ It stores data as human-readable plain text files, which means you can do even l
 The command line interface means you can turn complex operations into easy commands, or integrate it in automated scripts.
 
 **My accounting software is not improving, and I would prefer a tool that's actively maintained and supported**\
-hledger has delivered a new major release [every quarter](RELEASING.md#hledger-release-types) since 2017.
+hledger has delivered a new major release every quarter since 2017.
 It's the only PTA app with active chat rooms (matrix and IRC).
 It's the most-used PTA app in
 [some](https://chaos.social/@scy/114663971347130842)
