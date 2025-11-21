@@ -200,11 +200,27 @@ You can show them the hledger-web UI, or HTML reports, or give them CSV to open 
 
 ### How does hledger relate to Ledger ?
 
-hledger (begun 2006) is inspired by, and a friendly coopetitor of, John Wiegley's Ledger (begun 2003). 
-It is an attempt to rewrite Ledger in a more expressive programming language
-and take it to the next level in usability and practicality.
+hledger (begun in 2006) is inspired by, and a friendly coopetitor of, John Wiegley's [Ledger](https://ledger-cli.org) (begun in 2003).
+Ledger is the pioneer whose brilliant design and data formats defined this new software genre.
+
+hledger is an attempt to recreate Ledger in a more expressive programming language
+and take it to a higher level of usability and practicality.
+hledger provides high Ledger compatibility and it's possible to keep your data files readable by both.
 See [hledger and Ledger](ledger.md).
 
+### How does hledger relate to Beancount ?
+
+Beancount (begun in 2008) is the other "big 3" PTA app.
+Witten in the popular Python programming language, it's notable for
+best-in-class capital gains tracking (as of 2025)
+and an excellent web app (Fava).
+
+Beancount's file format is different from h/Ledger's.
+Beancount can export to hledger format, with some manual fixups required.
+hledger can export to Beancount format, allowing hledger data to be viewed in Fava.
+See [hledger and Beancount](beancount.md).
+
+<!--
 ### What is/was ledger4 ?
 
 hledger has its own parser for a file format close to Ledger's.
@@ -213,6 +229,7 @@ calling it [ledger4](https://github.com/ledger/ledger4).
 For a while I integrated this as an alternate file format within hledger,
 hoping to improve our ability to read original Ledger files,
 but the parser needed lots more work to become useful, so later I removed it again.
+-->
 
 ### How is hledger different from / interoperable with... ?
 
