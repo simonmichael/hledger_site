@@ -11,7 +11,8 @@ It provides structure, extensive documentation with guidance for people new to a
 It is lightweight and minimal, so you can start simply without feeling overwhelmed by complex software.
 
 **My paper-based records are too much work and hard to get insights from**\
-You can optionally automate most data entry with hledger, by importing bank data.
+hledger data takes up no physical space and is easy to back up and preserve.
+You can optionally import bank data to hledger, automating most data entry.
 With a little programming you can automate many accounting tasks.
 And hledger provides many useful and flexible reports that give immediate insight.
 
