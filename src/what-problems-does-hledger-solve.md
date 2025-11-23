@@ -4,11 +4,13 @@ Here are some problems a plain text accounting app, and hledger specifically, ca
 Do any of these apply to you ?
 
 <style>
-h3 { 
-    margin:0;
-    word-wrap:normal; 
-}
+h3 { margin:0 0 -0.5em;}
 </style>
+
+<div class=pagetoc>
+
+<!-- toc -->
+</div>
 
 ### I am a technical person wanting to track finances with familiar tools and a minimum of fuss
 You can learn hledger's syntax quickly, manage data with your favourite text processing tools,
@@ -27,7 +29,7 @@ Because the files are plain text and relatively small, it’s easy to copy them 
 Multiple independent software apps can read them, and you could relatively easily build a new one.
 They are also human-readable and printable, useful even without software or computers.
 
-### I do simple single entry accounting. But sometimes the numbers are wrong, so I can't really rely on them
+### I do single entry accounting; sometimes reports are wrong, I can't rely on them
 You can do single entry with hledger too, if you like.
 But for centuries, the standard for serious accounting has been double entry, because it is so good at preventing errors.
 hledger, like other plaintext accounting apps, is built around double entry accounting.
