@@ -3,6 +3,10 @@
 Here are some problems a plain text accounting app, and hledger specifically, can solve.
 Do any of these apply to you ?
 
+**I am a technical person wanting to track finances with familiar tools and a minimum of fuss**\
+You can learn hledger's syntax quickly, manage data with your favourite text processing tools,
+and produce useful financial reports right away with a single executable requiring no configuration.
+
 **I don't have an effective accounting system, and am experiencing financial chaos, loss, or worry**\
 (This was my situation when I started writing hledger.)
 I can tell you that having some kind of system to keep a record of financial activity and give clarity and insight is a huge help; it can be life-changing.
@@ -21,10 +25,6 @@ Using a plain text accounting app like hledger,
 you'll be working hands-on with double entry bookkeeping and general journal entries,
 with a minimum of distracting software and jargon.
 Also you'll have a supportive community of fellow learners and experts to answer questions.
-
-**I am a technical person wanting to track finances with familiar tools and a minimum of fuss**\
-You can learn hledger's syntax quickly, manage data with your favourite text processing tools,
-and produce useful financial reports right away with a single executable requiring no configuration.
 
 **I want to try Plain Text Accounting, but I am finding it hard to get started**\
 Perhaps you've struggled to get a productive Beancount setup.
