@@ -3,6 +3,25 @@
 Here are some problems a plain text accounting app, and hledger specifically, can solve.
 Do any of these apply to you ?
 
+**I don't have an effective accounting system, and am experiencing financial chaos, loss, or worry**\
+(This was my situation when I started writing hledger.)
+I can tell you that having some kind of system to keep a record of financial activity and give clarity and insight is a huge help; it can be life-changing.
+hledger is a free, highly dependable accounting tool, that scales smoothly from basic to advanced needs.
+It provides structure, extensive documentation with guidance for people new to accounting, and a supportive community.
+It is lightweight and minimal, so you can start simply without feeling overwhelmed by complex software.
+
+**I’m worried I may accidentally lose my financial records (paper or digital).**\
+hledger data takes up no physical space.
+Because the files are plain text and relatively small, it’s easy to copy them and to make redundant backups, and to use a version control system providing a clear history of changes.
+Multiple independent software apps can read them, and you could relatively easily build a new one.
+They are also human-readable and printable, useful even without software or computers.
+
+**I am confused by accounting and bookkeeping, and I want to get better at it**\
+Using a plain text accounting app like hledger,
+you'll be working hands-on with double entry bookkeeping and general journal entries,
+with a minimum of distracting software and jargon.
+Also you'll have a supportive community of fellow learners and experts to answer questions.
+
 **I am a technical person wanting to track finances with familiar tools and a minimum of fuss**\
 You can learn hledger's syntax quickly, manage data with your favourite text processing tools,
 and produce useful financial reports right away with a single executable requiring no configuration.
@@ -16,24 +35,10 @@ You want more up to date and complete documentation, or active chat rooms where 
 hledger aims to serve both techies and non-techies and to provide a smoother getting started experience,
 with standard financial reports and simple UIs that work out of the box.
 
-**I am confused by accounting and bookkeeping, and I want to get better at it**\
-Using a plain text accounting app like hledger,
-you'll be working hands-on with standard double entry bookkeeping and general journal entries
-in a pure form, with a minimum of distracting software and jargon.
-Also you'll have a supportive community of fellow learners and experts to answer questions.
-
-**I don't have an effective accounting system, and am experiencing financial chaos, loss, or worry**\
-(This was my situation when I started writing hledger.)
-I can tell you that having some kind of system to keep a record of financial activity and give clarity and insight is a huge help; it can be life-changing.
-hledger is a free, highly dependable accounting tool, that scales smoothly from basic to advanced needs.
-It provides structure, extensive documentation with guidance for people new to accounting, and a supportive community.
-It is lightweight and minimal, so you can start simply without feeling overwhelmed by complex software.
-
 **My paper-based system is too much work and too hard to get insights from**\
-hledger data takes up no physical space and is easy to back up and preserve.
-You can optionally import bank data, reducing manual data entry work.
+hledger can optionally import bank data, reducing the work of manual data entry.
 With a little programming you can automate many accounting tasks.
-And hledger provides many useful and flexible reports that give immediate insight.
+And hledger provides many useful and flexible reports.
 
 **My accounting spreadsheet has grown too large, too error prone, or too limiting**\
 hledger provides a simple, expressive, widely used syntax for describing any kind of financial transaction, using standard double entry bookkeeping.
