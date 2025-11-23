@@ -26,7 +26,7 @@ you'll be working hands-on with double entry bookkeeping and general journal ent
 with a minimum of distracting software and jargon.
 Also you'll have a supportive community of fellow learners and experts to answer questions.
 
-**I do single entry accounting, which seems simpler. But it doesn't always match reality, so I can't really rely the numbers**
+**I do single entry accounting, which seems simpler. But sometimes the numbers are wrong, and it's hard to understand why; so I can't really rely on them**\
 You can do this with hledger too, eg when getting started.
 But for centuries, the standard for serious accounting has been double entry accounting, because it is so good at preventing errors.
 hledger and other plaintext accounting apps are built for double entry accounting.
