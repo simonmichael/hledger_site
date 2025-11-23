@@ -7,10 +7,7 @@ Do any of these apply to you ?
 h3 { margin:0 0 -0.5em;}
 </style>
 
-<div class=pagetoc>
-
 <!-- toc -->
-</div>
 
 ### I am a technical person wanting to track finances with familiar tools and a minimum of fuss
 You can learn hledger's syntax quickly, manage data with your favourite text processing tools,
