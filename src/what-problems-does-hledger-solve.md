@@ -24,7 +24,7 @@ They are also human-readable and printable, useful even without software or comp
 You can do single entry with hledger too, if you like.
 But for centuries, the standard for serious accounting has been double entry, because it is so good at preventing errors.
 hledger, like other plaintext accounting apps, is built around double entry accounting.
-This provides great reassurance that your reports are rock solid, so you can confidently use them to make decisions and actions.
+This provides great reassurance that your reports are rock solid, so you can confidently make decisions and take actions based on them.
 
 **I am confused by accounting and bookkeeping, and I want to get better at it**\
 Using a plain text accounting app like hledger,
