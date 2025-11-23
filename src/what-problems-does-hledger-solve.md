@@ -20,17 +20,17 @@ Because the files are plain text and relatively small, it’s easy to copy them 
 Multiple independent software apps can read them, and you could relatively easily build a new one.
 They are also human-readable and printable, useful even without software or computers.
 
+**I do simple single entry accounting. But sometimes the numbers are wrong, so I can't really rely on them**\
+You can do single entry with hledger too, if you like.
+But for centuries, the standard for serious accounting has been double entry, because it is so good at preventing errors.
+hledger, like other plaintext accounting apps, is built around double entry accounting.
+This provides great reassurance that your reports are rock solid, so you can make confidently make decisions based on them.
+
 **I am confused by accounting and bookkeeping, and I want to get better at it**\
 Using a plain text accounting app like hledger,
 you'll be working hands-on with double entry bookkeeping and general journal entries,
 with a minimum of distracting software and jargon.
 Also you'll have a supportive community of fellow learners and experts to answer questions.
-
-**I do single entry accounting, which seems simpler. But sometimes the numbers are wrong, and it's hard to understand why; so I can't really rely on them**\
-You can do this with hledger too, eg when getting started.
-But for centuries, the standard for serious accounting has been double entry accounting, because it is so good at preventing errors.
-hledger and other plaintext accounting apps are built for double entry accounting.
-This provides great reassurance and confidence that your reports are accurate and you can make decisions based on them.
 
 **I want to try Plain Text Accounting, but I am finding it hard to get started**\
 Perhaps you've struggled to get a productive Beancount setup.
