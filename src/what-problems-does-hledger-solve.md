@@ -11,7 +11,7 @@ and produce useful financial reports right away with a single executable requiri
 (This was my situation when I started writing hledger.)
 I can tell you that having some kind of system to keep a record of financial activity and give clarity and insight is a huge help; it can be life-changing.
 hledger is a free, highly dependable accounting tool, that scales smoothly from basic to advanced needs.
-It provides structure, extensive documentation with guidance for people new to accounting, and a supportive community.
+It provides structure, extensive documentation, and a supportive community.
 It is lightweight and minimal, so you can start simply without feeling overwhelmed by complex software.
 
 **I’m worried I may accidentally lose my financial records (paper or digital).**\
