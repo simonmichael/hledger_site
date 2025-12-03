@@ -916,6 +916,15 @@ I’m happy I’ve decided to stick around beyond my first reaction of not havin
 
 In the end, it took me only a couple of days, of having worked on both spreadsheets and hledger in parallel, before having full confidence that hledger is the solution we were seeking for. I’m not missing our spreadsheets at all.
 --amitaibu
+
+thanks for making hledger awesome. you're saving me from buying at least two software licenses for tax year 2025 and I am off-ramping funds to donate with that in mind
+--gnidan
+
+it's like every day brings new excitement. last night I got the balancing the account equation user doc to work with my multi-commodity setup, so now I can see predicted retained earnings before actually closing my books
+--gnidan
+
+my accounting equation actually balances!!! this makes me giddy (my mom's half of the family is all bookkeepers/accountants and I think it might be genetic)
+--gnidan
 `;
 const quotes = quotesmd.trim().split('\n\n').map(q => q.replace(/^\*|\*$/g, '').trim());
 </script>
