@@ -147,7 +147,10 @@ snapshot-%:
 	(cd ..; ./Shake webmanuals) && \
 	mkdir -p src/$* && \
 	for f in $(MANUALS); do test -e $$f && cp $$f src/$*; done && \
-	git add src/$* && git commit -m "snapshot of $* manuals (`git -C .. show-ref heads/master -s9`)" src/$*
+	git add src/$* \
+		&& git commit -m "snapshot of $* manuals (`git -C .. show-ref heads/master -s9`)" src/$* \
+		&& echo "Site manuals snapshot updated. If it's a new version, please add to site.js, Makefile, hledger.org.caddy" \
+		|| [[ $$? == 1 ]]  # ignore "nothing to commit"
 
 # Run this after mdbook build/serve to make old manuals visible via symlinks.
 # These will be wiped by the next mdbook build/serve.
