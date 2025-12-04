@@ -40,7 +40,7 @@ accounting and a simple, editable file format. hledger is inspired by
 and largely compatible with ledger(1), and largely interconvertible with
 beancount(1).
 
-This manual is for hledger\'s command line interface, version 1.50.1. It
+This manual is for hledger\'s command line interface, version 1.50.4. It
 also describes the common options, file formats and concepts used by all
 hledger programs. It might accidentally teach you some
 bookkeeping/accounting as well! You don\'t need to know everything in
@@ -397,158 +397,128 @@ skip these until you need them.
 
 ### Special characters
 
-Here we touch on shell escaping/quoting rules, and give some examples.
-This is a slightly complicated topic which you may not need at first,
-but you should be aware of it, so you can return here when needed.
+In commands you type at the command line, certain characters have
+special meaning and sometimes need to be \"escaped\" or \"quoted\", by
+prefixing backslashes or enclosing in quotes.
 
 If you are able to minimise the use of special characters in your data,
-you won\'t need escaping as much, and your command lines will be
-simpler. For example, avoiding spaces in account names, and using an
-ISO-4217 currency code like `USD` instead of the `$` currency symbol,
-can be helpful.
+you won\'t have to deal with this as much. For example, you could use
+hyphen `-` or underscore `_` instead of spaces in account names, and you
+could use the `USD` currency code instead of the `$` currency symbol in
+amounts.
 
-But if you want to use spaced account names and `$`, go right ahead;
-escaping isn\'t a big deal.
+But if you prefer to use spaced account names and `$`, it\'s fine. Just
+be aware of this topic so you can check this doc when needed. (These
+examples are mostly tested on unix; some details might need to be
+adapted if you\'re on Windows.)
 
 #### Escaping shell special characters
 
-At the command line, characters which have special meaning for your
-shell must be \"shell-escaped\" (AKA \"quoted\") if you want hledger to
-see them. Often these include space, `<`, `>`, `(`, `)`, `|`, `\`, `$`
-and/or `%`.
+These are some characters which may have special meaning to your shell
+(the program which interprets command lines):
 
-For example, to match an account name containing the phrase \"credit
-card\", don\'t write this:
+- SPACE, `<`, `>`, `(`, `)`, `|`, `\`, `%`
+- `$` if followed by a word character
+
+So for example, to match an account name containing spaces, like
+\"credit card\", don\'t write:
 
 ``` cli
 $ hledger register credit card
 ```
 
-In that command, \"credit\" and \"card\" are treated as separate query
-arguments (described below), so this would match accounts containing
-either word. Instead, enclose the phrase in double or single quotes:
+Instead, enclose the name in single quotes:
 
 ``` cli
-$ hledger register "credit card"
+$ hledger register 'credit card'
 ```
 
-In Unix shells, writing a backslash before the character can also work.
-Eg:
+On unix or in Windows powershell, if you use double quotes your shell
+will silently treat `$` as variable interpolation. So you should
+probably avoid double quotes, unless you want that behaviour, eg in a
+script:
+
+``` cli
+$ hledger register "assets:$SOMEACCT"
+```
+
+But in an older Windows CMD.EXE window, you must use double quotes:
+
+``` cli
+C:\Users\Me> hledger register "credit card"
+```
+
+On unix or in Windows powershell, as an alternative to quotes you can
+write a backslash before each special character:
 
 ``` cli
 $ hledger register credit\ card
 ```
 
-Some shell characters still have a special meaning inside double quotes,
-such as the dollar sign (`$`). Eg in `"assets:$account"`, the bash shell
-would replace `$account` with the value of a shell variable with that
-name. When you don\'t want that, use single quotes, which escape more
-strongly:
+Finally, since hledger\'s query arguments are [regular
+expressions](#regular-expressions) (described below), you could also
+fill that gap with `.` which matches any character:
 
 ``` cli
-$ hledger balance 'assets:$account'
+$ hledger register credit.card
 ```
-
-#### Escaping on Windows
-
-If you are using hledger in a Powershell or Command window on Microsoft
-Windows, the escaping rules are different:
-
-- In a Powershell window (`powershell`, blue background), you must use
-  double quotes or single quotes (not backslash).
-- In a Command window (`cmd`, black background), you must use double
-  quotes (not single quotes or backslash).
-
-The next two sections were written for Unix-like shells, so might need
-to be adapted if you\'re using `cmd` or `powershell`. (Edits welcome.)
 
 #### Escaping regular expression special characters
 
-Many hledger arguments are [regular expressions](#regular-expressions)
-(described below), and these too have characters which cause special
-effects. Some of those characters are `.`, `^`, `$`, `[`, `]`, `(`, `)`,
-`|`, and `\`. When you don\'t want these to cause special effects, you
-can \"regex-escape\" them by writing `\` (a backslash) before them. But
-since backslash is also special to the shell, you may need to also
-shell-escape the backslashes.
+Some characters also have special meaning in [regular
+expressions](#regular-expressions), which hledger\'s arguments often
+are. Those include:
 
-Eg, in the bash shell, to match a literal `$` sign, you could write:
+- `.`, `^`, `$`, `[`, `]`, `(`, `)`, `|`, `\`
+
+To escape one of these, write `\` before it. But note this is in
+addition to the shell escaping above. So for characters which are
+special to both shell and regular expressions, like `\` and `$`, you
+will sometimes need two levels of escaping.
+
+For example, a balance report that uses a `cur:` query restricting it to
+just the \$ currency, should be written like this:
 
 ``` cli
 $ hledger balance cur:\\$
 ```
 
-or:
+Explanation:
+
+1.  Add a backslash `\` before the dollar sign `$` to protect it from
+    regular expressions (so it will be matched literally with no special
+    meaning).
+2.  Add another backslash before that backslash, to protect it from the
+    shell (so the shell won\'t consume it).
+3.  `$` doesn\'t need to be protected from the shell in this case,
+    because it\'s not followed by a word character; but it would be
+    harmless to do so.
+
+But here\'s another way to write that, which tends to be easier: add
+backslashes to escape from regular expressions, then enclose with quotes
+to escape from the shell:
 
 ``` cli
-$ hledger balance 'cur:\$'
-```
-
-(The dollar sign is regex-escaped by the backslash preceding it. Then
-that backslash is shell-escaped by another backslash, or by single
-quotes.)
-
-#### Escaping add-on arguments
-
-When you run an external add-on command with `hledger` (described
-below), any options or arguments being passed through to the add-on
-executable lose one level of shell-escaping, so you must add an extra
-level of shell-escaping to compensate.
-
-Eg, in the bash shell, to run the `ui` add-on and match a literal `$`
-sign, you need to write:
-
-``` cli
-$ hledger ui cur:'\\$'
-```
-
-or:
-
-``` cli
-$ hledger ui cur:\\\\$
-```
-
-If you are wondering why *four* backslashes:
-
-- `$` is unescaped
-- `\$` is regex-escaped
-- `\\$` is regex-escaped, then shell-escaped
-- `\\\\$` is regex-escaped, then shell-escaped, then both slashes are
-  shell-escaped once more for hledger argument pass-through.
-
-Or you can avoid such triple-escaping, by running the add-on executable
-directly:
-
-``` cli
-$ hledger-ui cur:\\$
+$ hledger balance cur:'\$'
 ```
 
 #### Escaping in other situations
 
 hledger options and arguments are sometimes used in places other than
-the command line, with different escaping rules. For example,
-backslash-quoting generally does not work there. Here are some more
-tips.
+the command line, where the escaping/quoting rules are different. For
+example, backslash-quoting may not be available. Here\'s a quick
+reference:
 
 |  |  |
 |:------------------|:----------------------------------------------------|
+| In unix shell | Use single quotes and/or backslash (or double quotes for variable interpolation) |
+| In Windows `powershell` | Use single quotes (or double quotes for variable interpolation) |
 | In Windows `cmd` | Use double quotes |
-| In Windows `powershell` | Use single or double quotes |
 | In hledger-ui\'s filter prompt | Use single or double quotes |
 | In hledger-web\'s search form | Use single or double quotes |
-| In an [argument file](#argument-files) | Don\'t use spaces, don\'t shell-escape, do regex-escape when needed |
-| In a [config file](#config-file) | Use single or double quotes, and enclose the whole argument <br>(`"desc:a b"` not `desc:"a b"`) |
+| In an [argument file](#argument-files) | Don\'t use spaces, don\'t shell-escape, do regex-escape, write one argument/option per line |
+| In a [config file](#config-file) | Use single or double quotes, and enclose the whole argument <br>(`'desc:a b'` not `desc:'a b'`) |
 | In `ghci` (the Haskell REPL) | Use double quotes, and enclose the whole argument |
-
-#### Using a wild card
-
-When escaping a special character is too much hassle (or impossible),
-you can often just write `.` (period) instead. In regular expressions,
-this means \"accept any character here\". Eg:
-
-``` cli
-$ hledger register credit.card
-```
 
 ### Unicode characters
 
@@ -699,15 +669,32 @@ Some things to note:
 ### Argument files
 
 You can save a set of command line options and arguments in a file, and
-then reuse them by writing `@FILENAME` as a command line argument. Eg:
-`hledger bal @foo.args`.
+then use them by writing `@FILE.args` as a hledger command argument. The
+`.args` file extension is conventional, but not required. In an argument
+file,
 
-An argument file\'s format is more restrictive than the command line.
-Each line should contain just one option or argument. Don\'t use spaces
-except inside quotes; write `=` or nothing between a flag and its
-argument. If you use quotes, they must enclose the whole line. For the
-special characters mentioned above, use one less level of quoting than
-you would at the command line.
+- Each line can contain one argument, flag, or option.
+- Blank lines or lines beginning with `#` are ignored.
+- An option\'s flag and value should be joined by `=`.
+- An option value or an argument may contain spaces. Don\'t use single
+  or double quotes.
+- And generally, use one less level of quoting/escaping than at the
+  command line. Eg `cur:\$`, not `cur:\\$` as on the command line.
+
+For example:
+
+``` text
+# cash.args
+
+assets:cash
+assets:charles schwab:sweep
+cur:\$
+-c=$1.
+```
+
+``` cli
+$ hledger bal @cash.args
+```
 
 ### Config files
 
@@ -872,8 +859,9 @@ the `-w`/`--width` option.
 Balance reports (`balance`, `balancesheet`, `incomestatement`\...) use
 whatever width they need. Multi-period multi-currency reports can often
 be wider than the window. Besides using a pager, helpful techniques for
-this situation include `--layout=bare`, `-V`, `cur:`, `--transpose`,
-`--tree`, `--depth`, `--drop`, switching to html output, etc.
+this situation include `--layout=bare`, `-X COMM`, `cur:`,
+`--transpose`, `--tree`, `--depth`, `--drop`, switching to html output,
+etc.
 
 ##### Box-drawing characters
 
@@ -1134,8 +1122,18 @@ These environment variables affect hledger:
 specifies the `less` options hledger should use. (Otherwise, `LESS` +
 custom options are used.)
 
-**LEDGER_FILE** The main journal file to use when not specified with
-`-f/--file`. Default: `$HOME/.hledger.journal`.
+**LEDGER_FILE** The default journal file, to be used when no `-f/--file`
+option is provided. For example, it could be `~/finance/main.journal`.
+This can also be a glob pattern, eg `./2???.journal`. (If the glob
+matches multiple files, only the alphanumerically first one is used.) If
+LEDGER_FILE points to a non-existent file, an error will be raised. If
+the value is the empty string, it is ignored.
+
+If LEDGER_FILE is not set and `-f` is not provided, the default journal
+file is `$HOME/.hledger.journal` (or if a home directory can\'t be
+detected, `./.hledger.journal`).
+
+See also [Common tasks \> Setting LEDGER_FILE](#setting-ledger_file).
 
 **NO_COLOR** If this environment variable exists (with any value,
 including empty), hledger will not use ANSI color codes in terminal
@@ -2779,21 +2777,22 @@ multiple files. hledger\'s globs are similar to zsh\'s: `?` to match any
 character; `[a-z]` to match any character in a range; `*` to match zero
 or more characters that aren\'t a path separator (like `/`); `**` to
 match zero or more subdirectories and/or zero or more characters at the
-start of a file name; etc. Also, hledger\'s globs always exclude the
-including file itself. So, you can do
+start of a file name; etc. For convenience, `include` always excludes
+the current file. So, you can do
 
 - `include *.journal` to include all other journal files in the current
   directory (excluding [dot
   files](https://en.wikipedia.org/wiki/Hidden_file_and_hidden_directory))
 - `include **.journal` to include all other journal files in this
-  directory and below (excluding dot directories/files)
+  directory and below (excluding dot files and top-level dot
+  directories)
 - `include timelogs/2???.timedot` to include all timedot files named
   like a year number.
 
-There is a limitation: hledger\'s globs always exclude paths involving
-dot files or dot directories. This is a workaround for unavoidable dot
-directory traversal; you can disable it and revert to older behaviour
-with the `--old-glob` flag, for now.
+Note `*` and `**` usually won\'t match dot files or dot directories,
+with one exception: `**` does search non-top-level dot directories. If
+this causes problems, make your glob pattern more specific (eg
+`**.journal` instead of `**`).
 
 If you are using many, or deeply nested, include files, and have an
 error that\'s hard to pinpoint: a good troubleshooting command is
@@ -3565,16 +3564,18 @@ The following kinds of rule can appear in the rules file, in any order.
 | [**`archive`**](#archive) | optionally enable an archive of imported files |
 | [**`encoding`**](#encoding) | optionally declare which text encoding the data has |
 | [**`separator`**](#separator) | declare the field separator, instead of relying on file extension |
-| [**`skip`**](#skip) | skip one or more header lines at start of file |
+| [**`decimal-mark`**](#decimal-mark-1) | declare the decimal mark used in CSV amounts, when ambiguous |
 | [**`date-format`**](#date-format) | declare how to parse CSV dates/date-times |
 | [**`timezone`**](#timezone) | declare the time zone of ambiguous CSV date-times |
 | [**`newest-first`**](#newest-first) | improve txn order when: there are multiple records, newest first, all with the same date |
 | [**`intra-day-reversed`**](#intra-day-reversed) | improve txn order when: same-day txns are in opposite order to the overall file |
-| [**`decimal-mark`**](#decimal-mark-1) | declare the decimal mark used in CSV amounts, when ambiguous |
+| [**`skip`**](#skip) | (at top level) skip header line(s) at start of file |
 | [**`fields` list**](#fields-list) | name CSV fields for easy reference, and optionally assign their values to hledger fields |
 | [**Field assignment**](#field-assignment) | assign a CSV value or interpolated text value to a hledger field |
 | [**`if` block**](#if-block) | conditionally assign values to hledger fields, or `skip` a record or `end` (skip rest of file) |
 | [**`if` table**](#if-table) | conditionally assign values to hledger fields, using compact syntax |
+| [**`skip`**](#if-block) | (inside an `if` rule) skip current record(s) |
+| [**`end`**](#if-block) | (inside an `if` rule) skip all remaining records |
 | [**`balance-type`**](#balance-type) | select which type of balance assertions/assignments to generate |
 | [**`include`**](#include) | inline another CSV rules file |
 
@@ -3623,16 +3624,16 @@ files, then run `hledger import rules/*`.
 See also [\"Working with CSV \> Reading files specified by
 rule\"](#reading-files-specified-by-rule).
 
-#### Data cleaning / generating commands
+#### Data cleaning / data generating commands
 
 After `source`\'s file pattern, you can write `|` (pipe) and a data
-cleaning command. If hledger\'s CSV rules aren\'t enough, you can
-pre-process the downloaded data here with a shell command or script, to
-make it more suitable for conversion. The command will be executed by
-your default shell, in the directory of the rules file, will receive the
-data file\'s content as standard input, and should output zero or more
-lines of character-separated-values, suitable for conversion by the CSV
-rules.
+cleaning command (or command pipeline). If hledger\'s CSV rules aren\'t
+enough, you can pre-process the downloaded data here with a shell
+command or script, to make it more suitable for conversion. The command
+will be executed by your default shell, in the directory of the rules
+file, will receive the data file\'s content as standard input, and
+should output zero or more lines of character-separated-values, suitable
+for conversion by the CSV rules.
 
 Examples:
 
@@ -5801,34 +5802,42 @@ Examples:
 
 ## Depth
 
-With the `--depth NUM` option (short form: `-NUM`), reports will show
-accounts only to the specified depth, hiding deeper subaccounts. Use
-this when you want a summary with less detail. This flag has the same
-effect as a `depth:` query argument. So all of these are equivalent:
-`depth:2`, `--depth=2`, `-2`.
+With the `--depth NUM` option (short form, usually preferred: `-NUM`),
+reports will show accounts only to the specified depth, hiding deeper
+subaccounts. Use this when you want a summary with less detail. This
+flag has the same effect as a `depth:` query argument. So all of these
+are equivalent: `depth:2`, `--depth=2`, `-2`.
 
-In place of a single number which limits the depth for all accounts, you
-can also provide depth limits for specific accounts, by providing a
-`REGEX=DEPTH` argument instead of just a `DEPTH` *(since 1.41)*. For
-example, `--depth assets=2` (or `depth:assets=2`) will collapse accounts
-matching the regular expression \"assets\" to depth 2. So
-`assets:bank:savings` would be collapsed to `assets:bank`, but
-`liabilities:bank:credit card` would not be affected.
+You can also provide custom depths for specific accounts, by providing a
+`REGEX=NUM` argument instead of just `NUM` *(since 1.41)*. For example,
+`--depth assets=2` (or `depth:assets=2`) will collapse accounts matching
+the regular expression \"assets\" to depth 2. So `assets:bank:savings`
+would be collapsed to `assets:bank`, but `liabilities:bank:credit card`
+would not be affected.
 
-(If REGEX contains spaces or other special characters, enclose it in
+If REGEX contains spaces or other special characters, enclose it in
 quotes in the [usual way](#special-characters). Eg:
-`--depth 'credit card=2'`)
+`--depth 'credit card=2'`
 
-Specific depth options and a general depth option can be combined. Eg
-`--depth assets=3 --depth expenses=2 --depth 1` would collapse accounts
-containing \"assets\" to depth 3, accounts containing \"expenses\" to
-depth 2, and all other accounts to depth 1.
+### Combining depth options
 
-If an account is matched by more than one regular expression depth
-argument, the most specific (deepest) match will be used. For example,
-with `--depth assets=1 --depth savings=2`, `assets:bank:savings` will be
-collapsed to depth 2, not depth 1 (because \"savings\" matches a deeper
-part of it than \"assets\" does).
+If a command line contains multiple general depth options, the last one
+wins. (Useful for overriding a depth specified by scripts.)
+
+Or a command may contain a combination of general and custom depth
+options. In this case, the most specifically (deepest) matching option
+wins. Some examples:
+
+- `--depth assets=3 --depth expenses=2 --depth 1` would collapse
+  accounts containing \"assets\" to depth 3, accounts containing
+  \"expenses\" to depth 2, and all other accounts to depth 1.
+
+- `--depth assets=1 --depth savings=2` would collapse
+  `assets:bank:savings` to depth 2 (not depth 1; because \"savings\"
+  matches a deeper part of the account name than \"assets\").
+
+Note currently, to override a custom depth option `--depth REGEX=NUM`
+with a later option, the later option must use the same REGEX.
 
 ## Queries
 
@@ -6815,17 +6824,38 @@ often sufficient. The market prices are declared with a special `P`
 directive, and/or they can be inferred from the costs recorded in
 transactions, by using the `--infer-market-prices` flag.
 
-### -V: Value
-
-The `-V/--market` flag converts amounts to market value in their default
-*valuation commodity*, using the [market prices](#p-directive) in effect
-on the *valuation date(s)*, if any. More on these in a minute.
-
 ### -X: Value in specified commodity
 
-The `-X/--exchange=COMM` option is like `-V`, except you tell it which
-currency you want to convert to, and it tries to convert everything to
-that.
+The `-X COMM` (or `--exchange=COMM`) option converts amounts to their
+market value in the specified commodity, using the [market
+prices](#p-directive) in effect on the *valuation date(s)*, if any.
+(More on these in a minute.)
+
+Use this when you want to (eg) show everything in your base currency as
+far as possible. (Commodities for which no conversion rate can be found,
+will not be converted.)
+
+COMM should be the full commodity symbol or name. Remember to quote
+[special shell characters](#special-characters), if needed. Some
+examples:
+
+- `-X€`
+- `-X$` (nothing after \$, no quoting needed)
+- `-X CNY` (the space after -X is optional)
+- `-X 'red apples'`
+- `-X 'r&r'`
+
+### -V: Value in default commodity(s)
+
+The `-V/--market` flag is a variant of `-X` where you don\'t have to
+specify COMM. Instead it tries to guess a *default valuation commodity*
+for each original commodity, based on the [market prices](#p-directive)
+in effect on the valuation date(s).
+
+`-V` can often be a convenient shortcut for `-X MYCURRENCY`, but not
+always; depending on your data it could guess multiple valuation
+commodities. Usually you want to convert to a single commodity, so it\'s
+better to use `-X`, unless you\'re sure `-V` is doing what you want.
 
 ### Valuation date
 
@@ -7690,29 +7720,27 @@ There is a detailed tutorial at <https://hledger.org/add.html>.
 
 ### add and balance assertions
 
-Since hledger 1.43, whenever you enter a posting amount, `add` will
-re-check all [balance assertions](#balance-assertions) in the journal,
-and if any of them fail, it will report the problem and ask for the
-amount again.
+Since hledger 1.43, you can add a [balance
+assertion](#balance-assertions) by writing `AMOUNT = BALANCE` when asked
+for an amount. Eg `100 = 500`.
 
-You can also add a new balance assertion, following the amount as in
-journal format.
-
-The new transaction\'s date, and the new posting\'s posting date if any
-(entered in a comment following the amount), will influence assertion
-checking.
-
-You can use `-I`/`--ignore-assertions` to disable assertion checking
-temporarily.
+Also, each time you enter a new amount, hledger re-checks all balance
+assertions in the journal and rejects the new amount if it would make
+any of them fail. You can run `add` with `-I`/`--ignore-assertions` to
+disable balance assertion checking.
 
 ### add and balance assignments
 
-Balance assignments are not recalculated during a `hledger add` session.
-When `add` runs, it sees the journal with all balance assignments
-already processed and converted to assertions. So if you add a new
-posting which is dated earlier than a balance assignment, it will break
-the assertion and be rejected. You can make it work by using
-`hledger add -I`.
+Since hledger 1.50.3, you can add a [balance
+assignment](#balance-assignments) by writing `= BALANCE` (or `==`, `=*`
+etc) when asked for an amount. The missing amount will be calculated
+automatically.
+
+`add` normally won\'t let you add a new posting which is dated earlier
+than an existing balance assignment. (Because when `add` runs, existing
+balance assignments have already been calculated and converted to
+amounts and balance assertions.) You can allow it by disabling balance
+assertion checking with `-I`.
 
 ### import
 
@@ -8307,8 +8335,12 @@ Show full journal entries, representing transactions.
 ``` flags
 Flags:
   -x --explicit             show all amounts explicitly
-     --show-costs           show transaction prices even with conversion
-                            postings
+     --invert               display all amounts with reversed sign
+     --location             add tags showing file paths and line numbers
+  -m --match=DESC           fuzzy search for one recent transaction with
+                            description closest to DESC
+     --new                  show only newer-dated transactions added in each
+                            file since last run
      --round=TYPE           how much rounding or padding should be done when
                             displaying amounts ?
                             none - show original decimal digits,
@@ -8319,15 +8351,9 @@ Flags:
                                    (can unbalance transactions)
                             all  - also round cost amounts to precision
                                    (can unbalance transactions)
-     --invert               display all amounts with reversed sign
-     --new                  show only newer-dated transactions added in each
-                            file since last run
-  -m --match=DESC           fuzzy search for one recent transaction with
-                            description closest to DESC
      --base-url=URLPREFIX   in html output, generate links to hledger-web,
                             with this prefix. (Usually the base url shown by
                             hledger-web; can also be relative.)
-     --location             add tags showing file paths and line numbers
   -O --output-format=FMT    select the output format. Supported formats:
                             txt, beancount, csv, tsv, html, fods, json, sql.
   -o --output-file=FILE     write output to FILE. A file extension matching
@@ -8361,7 +8387,7 @@ $ hledger print -f examples/sample.journal date:200806
     assets:cash                 $-2
 ```
 
-#### print explicitness
+#### print amount explicitness
 
 Normally, whether posting amounts are implicit or explicit is preserved.
 For example, when an amount is omitted in the journal, it will not
@@ -8378,19 +8404,23 @@ multi-commodity amount (which can arise when a multi-commodity
 transaction has an implicit amount) to be split into multiple
 single-commodity postings, keeping the output parseable.
 
-#### print amount style
+#### print alignment
 
 Amounts are shown right-aligned within each transaction (but not aligned
-across all transactions; you can do that with ledger-mode in Emacs).
+across all transactions; you can achieve that with ledger-mode in
+Emacs).
 
-Amounts will be (mostly) normalised to their [commodity display
-style](#commodity-display-style): their symbol placement, decimal mark,
-and digit group marks will be made consistent. By default, decimal
-digits are shown as they are written in the journal.
+#### print amount style
 
-With the `--round` (*Added in 1.32*) option, `print` will try
-increasingly hard to display decimal digits according to the [commodity
-display styles](#commodity-display-style):
+Amounts will be displayed mostly in their [commodity\'s display
+style](#commodity-display-style), with standardised symbol placement,
+decimal mark, and digit group marks. This does not apply to their
+decimal digits; `print` normally shows the same decimal digits that are
+recorded in each journal entry.
+
+You can override the decimal precisions with `print`\'s special
+`--round` option (*since 1.32*). `--round` tries to show amounts with
+their commodities\' standard decimal precisions, increasingly strongly:
 
 - `--round=none` show amounts with original precisions (default)
 - `--round=soft` add/remove decimal zeros in amounts (except costs)
@@ -8398,19 +8428,19 @@ display styles](#commodity-display-style):
   significant digits
 - `--round=all` round all amounts and costs
 
-`soft` is good for non-lossy cleanup, formatting amounts more
-consistently where it\'s safe to do so.
+`soft` is good for non-lossy cleanup, displaying more consistent
+decimals where possible, without making entries unbalanced.
 
-`hard` and `all` can cause `print` to show invalid unbalanced journal
-entries; they may be useful eg for stronger cleanup, with manual fixups
-when needed.
+`hard` or `all` can be good for stronger cleanup, when decimal rounding
+is wanted. Note rounding can produce unbalanced journal entries, perhaps
+requiring manual fixup.
 
 #### print parseability
 
-print\'s output is usually a valid [hledger journal](#journal), and you
-can process it again with a second hledger command. This can be useful
-for certain kinds of search (though the same can be achieved with
-`expr:` queries now):
+Normally, print\'s output is a valid [hledger journal](#journal), which
+you can \"pipe\" to a second hledger command for further processing.
+This is sometimes convenient for achieving certain kinds of query
+(though less needed now that queries have become more powerful):
 
 ``` cli
 # Show running total of food expenses paid from cash.
@@ -8418,16 +8448,21 @@ for certain kinds of search (though the same can be achieved with
 $ hledger print assets:cash | hledger -f- -I reg expenses:food
 ```
 
-There are some situations where print\'s output can become unparseable:
+But here are some things which can cause print\'s output to become
+unparseable:
 
-- [Value reporting](#value-reporting) affects posting amounts but not
-  [balance assertion](#balance-assertions) or [balance
-  assignment](#balance-assignments) amounts, potentially causing those
-  to [fail](https://github.com/simonmichael/hledger/issues/1429).
-- [Auto postings](#auto-postings) can generate postings with [too many
-  missing amounts](https://github.com/simonmichael/hledger/issues/1276).
-- [Account aliases can generate bad account
-  names](#aliases-can-generate-bad-account-names).
+- `--round` (see above) can disrupt transaction balancing.
+- [Account aliases](#alias-directive) or [pivoting](#pivoting) can
+  disrupt account names, balance assertions, or balance assignments.
+- [Value reporting](#value-reporting) also can disrupt balance
+  assertions or balance assignments.
+- [Auto postings](#auto-postings) can generate too many amountless
+  postings.
+- [`--infer-costs or --infer-equity`](#equity-conversion-postings) can
+  generate too-complex redundant costs.
+- Because print always shows transactions in date order, balance
+  assertions involving non-date-ordered transactions (and same-day
+  postings) could be disrupted.
 
 #### print, other features
 
@@ -8555,9 +8590,11 @@ option.
 This is a more \"real world\", bank-like view than the
 [`register`](#register) command (which shows individual postings,
 possibly from multiple accounts, not necessarily in historical mode). As
-a quick rule of thumb: - use `aregister` for reviewing and reconciling
-real-world asset/liability accounts - use `register` for reviewing
-detailed revenues/expenses.
+a quick rule of thumb:
+
+- `aregister` is best when reconciling real-world asset/liability
+  accounts
+- `register` is best when reviewing individual revenues/expenses.
 
 `aregister` requires one argument: the account to report on. You can
 write either the full account name, or a case-insensitive regular
@@ -10490,9 +10527,18 @@ Flags:
                                    (can unbalance transactions)
 ```
 
-`close` has six modes, selected by choosing one of the mode flags
-(`--close` is the default). They all do much the same operation, but
-with different defaults, useful in different situations.
+`close` has six modes, selected by choosing one of the mode flags:
+`--clopen`, `--close` (default), `--open`, `--assert`, `--assign`, or
+`--retain`. They are all doing the same kind of operation, but with
+different defaults for different situations.
+
+The journal entries generated by `close` will have a `clopen:` tag,
+which is helpful when you want to exclude them from reports. If the main
+journal file name contains a number, the tag\'s value will be that base
+file name with the number incremented. Eg if the journal file is
+2025.journal, the tag will be `clopen:2026`. Or you can set the tag
+value by providing an argument to the mode flag. Eg `--close=foo` or
+`--clopen=2025-main`.
 
 #### close \--clopen
 
@@ -10530,11 +10576,6 @@ RX accounts (Revenue, Expense).
 
 Assertions will be added indicating and checking the new balances of the
 closed/opened accounts.
-
-The generated transactions will have a `clopen:` tag. If the main
-journal\'s base file name contains a number (eg a year number), the
-tag\'s value will be that base file name with the number incremented. Or
-you can choose the tag value yourself, by using `--clopen=TAGVAL`.
 
 #### close \--close
 
@@ -10595,12 +10636,13 @@ report show a zero total, demonstrating that the accounting equation
 In all modes, the following things can be overridden:
 
 - the accounts to be closed/opened, with account query arguments
+- the closing/opening dates, with `-e OPENDATE`
 - the balancing account, with `--close-acct=ACCT` and/or
   `--open-acct=ACCT`
 - the transaction descriptions, with `--close-desc=DESC` and
   `--open-desc=DESC`
-- the transaction\'s tag value, with a `--MODE=NEW` option argument
-- the closing/opening dates, with `-e OPENDATE`
+- the transactions\' `clopen` tag value, with a `TAGVAL` argument for
+  the mode flag (see above).
 
 By default, the closing date is yesterday, or the journal\'s end date,
 whichever is later; and the opening date is always one day after the
@@ -10902,9 +10944,9 @@ hledger check ordereddates payees  # run basic checks and two others
 If you are an Emacs user, you can also configure flycheck-hledger to run
 these checks, providing instant feedback as you edit the journal.
 
-Here are the checks currently available. Generally, they are performed
-in the order they are shown here (and only the first failure is
-reported).
+Here are the checks currently available. They are generally checked in
+the order they are shown here, and only the first failure will be
+reported.
 
 #### Basic checks
 
@@ -10918,31 +10960,32 @@ commands:
 - **autobalanced** - all transactions are [balanced](#postings), after
   automatically inferring missing amounts and conversion rates and then
   converting amounts to cost. This ensures that each transaction\'s
-  entry is well formed.
+  journal entry is well formed.
 
-- **assertions** - all [balance assertions](#balance-assertions) in the
-  journal are passing. Balance assertions are a strong defense against
-  errors; they help catch many problems. If this check gets in your way,
-  you can disable it with `-I`/`--ignore-assertions`. Or you can add
-  that to your config file to disable it by default (and then use
-  `-s`/`--strict` or `hledger check assertions` to enable it).
+- **assertions** - all balance assertions in the journal are passing.
+  [Balance assertions](#balance-assertions) are a strong defense against
+  errors, catching many problems. This check is on by default, but if it
+  gets in your way, you can disable it temporarily with
+  `-I`/`--ignore-assertions`, or as a default by adding that flag to
+  your config file. (Then use `-s`/`--strict` or
+  `hledger check assertions` when you want to enable it).
 
 #### Strict checks
 
-These additional checks are performed by all commands when the
-`-s`/`--strict` flag is used ([strict mode](#strict-mode)). They provide
-extra error-catching power to keep your data clean and correct. Strict
-mode also always enables the `assertions` check.
+When the `-s`/`--strict` flag is used (AKA [strict mode](#strict-mode)),
+all commands will perform the following additional checks (and
+`assertions`, above). These provide extra error-catching power to help
+you keep your data clean and correct:
 
-- **balanced** - like `autobalanced`, but all conversions between
-  commodities must use explicit [cost notation](#recording-costs) or
-  [equity postings](#equity-conversion-postings). This prevents wrong
+- **balanced** - like `autobalanced`, but implicit conversions between
+  commodities are not allowed; all conversion transactions must use
+  [cost notation](#recording-costs) or [equity
+  postings](#equity-conversion-postings). This prevents wrong
   conversions caused by typos.
 
 - **commodities** - all commodity symbols used must be
   [declared](#commodity-error-checking). This guards against mistyping
-  or omitting commodity symbols. Declaring commodities also sets their
-  precision for display and transaction balancing.
+  or omitting commodity symbols.
 
 - **accounts** - all account names used must be
   [declared](#account-error-checking). This prevents the use of
@@ -10973,10 +11016,10 @@ command:
   encourage adding balance assertions for your active asset/liability
   accounts, which in turn should encourage you to reconcile regularly
   with those real world balances - another strong defense against
-  errors. [`hledger close --assert`](#close---assert) can help generate
-  assertion entries. Over time the older assertions become somewhat
-  redundant, and you can remove them if you like (they don\'t affect
-  performance much, but they add some noise to the journal).
+  errors. ([`hledger close --assert >>$LEDGER_FILE`](#close---assert) is
+  a convenient way to add new balance assertions. Later these become
+  quite redundant, and you might choose to remove them to reduce
+  clutter.)
 
 - **uniqueleafnames** - no two accounts may have the same last account
   name part (eg the `checking` in `assets:bank:checking`). This ensures
@@ -10990,8 +11033,8 @@ scripts](#add-on-commands). See also [Cookbook \>
 Scripting](scripting.html). Here are some examples from
 [hledger/bin/](https://github.com/simonmichael/hledger/tree/master/bin):
 
-- **hledger-check-tagfiles** - all tag values containing / (a forward
-  slash) exist as file paths
+- **hledger-check-tagfiles** - all tag values containing `/` exist as
+  file paths
 
 - **hledger-check-fancyassertions** - more complex balance assertions
   are passing
