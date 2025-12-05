@@ -8,24 +8,23 @@
 The current hledger release is **1.51**.
 Here are the **[release notes](release-notes.md)**.
 
-Here are several ways you can install hledger:
+You can install hledger by any of these methods:
 
-- Install [official binaries](#official-binaries) from Github. (Always up to date.)
-- Install [packaged binaries](#packaged-binaries) using your package manager. (Sometimes less up to date.)
-- Build your [own binaries](#build-from-source) from the hledger source code. (Requires about 4G of RAM & disk and some time.)
+- Install [official binaries](#official-binaries) from Github (quick)
+- Install [packaged binaries](#packaged-binaries) (quick; not always up to date)
+- Install binaries you [build from source](#build-from-source) (takes longer)
 
-As the final step, [check your installation](#check-your-installation).
+and then, [check your setup](#check-your-setup).
 
 <!-- [Your feedback](support.md) helps make this process smoother. -->
 
 ## Official binaries
 
-Official release binaries for Linux, Mac, and Windows are provided in the hledger github repo
-([![RSS](images/rss.png) RSS feed](https://github.com/simonmichael/hledger/releases.atom)).
-\
-Click the badge below to install them manually,
+Official release binaries for Linux, Mac, and Windows are provided in the hledger github repo.
+You can click the badge below to install them manually,
 or copy-paste the install command from [Get hledger installed](get-hledger-installed.md),
 or use a download tool like [eget](https://github.com/zyedidia/eget?tab=readme-ov-file#how-to-get-eget):
+<!-- ([![RSS](images/rss.png) RSS feed](https://github.com/simonmichael/hledger/releases.atom)). -->
 
 [![hledger release binaries](https://img.shields.io/badge/hledger_release_binaries-1.51-brightgreen.svg)][release binaries]
 `eget simonmichael/hledger --all`
@@ -124,7 +123,7 @@ Sandstorm (web) \
 
 Building hledger requires the GHC compiler and either the stack or cabal build tool
 which you can install with your package manager (brew, apt, winget..), with [ghcup], or with [stack] (simplest).
-Or, you can use docker. All this may need perhaps 4G of RAM and 4G of disk space.
+Or, you can use docker. All this may need perhaps 4G of RAM and 4G or more of disk space.
 
 ### On Mac
 
@@ -238,13 +237,13 @@ if your phone has plenty of memory.
 - It's ok to kill a build and rerun the command later; you won't lose progress.
 - You can add `--dry-run` to the install command to see how much building remains.
 
-## Check your installation
+## Check your setup
 
-If your hledger is new enough (a pre-release), you should now run:
+With modern hledger versions, you should now run:
 
     hledger setup
 
-to check your setup. If this doesn't work, read on..
+to check your installation. If this doesn't work, read on..
 
 ### PATH
 
