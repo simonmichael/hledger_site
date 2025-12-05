@@ -2,7 +2,8 @@
 
 # Support
 
-**Main discussion channels:**\
+**Main discussion channels:**
+
 |                                                         |                                                              |
 |---------------------------------------------------------|--------------------------------------------------------------
 | **[#hledger matrix chat](https://matrix.hledger.org/)** | active chat room, the best place for getting quick help
