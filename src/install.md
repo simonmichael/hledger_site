@@ -195,10 +195,23 @@ Old issues:
 
 ### On Unix/Linux
 
-You will need a system locale with a [text encoding](#text-encoding) configured; it might need to be UTF-8.
-You may also need to install extra C libraries, to avoid build errors like "*cannot find -ltinfo*". Eg:
-- On Debian or Ubuntu: `sudo apt install libgmp-dev libtinfo-dev zlib1g-dev`
-- On Fedora or RHEL: `sudo dnf install gmp-devel ncurses-devel zlib-devel`
+You will need 
+
+1. The header files for certain C libraries, which stack/cabal can't install for you.
+   Otherwise you'll see build errors like "*cannot find -ltinfo*".
+   The exact package names will be specific to your system, but here are some likely install commands:
+   - Debian-based systems: `apt install libgmp-dev libncurses-dev zlib1g-dev`
+   - Older Debian systems: `apt install libgmp3-dev libncurses5-dev zlib1g-dev`
+   - Redhat-based systems: `dnf install gmp-devel ncurses-devel zlib-devel`
+   - Arch: `pacman -S gmp ncurses zlib`
+   - Alpine: `apk add gmp-dev ncurses-dev zlib-dev`
+   - openSUSE: `zypper install gmp-devel ncurses-devel zlib-devel`
+
+2. A configured system locale that specifies a text encoding.
+  Otherwise you'll see text-decoding-related errors when working with non-ascii characters.
+  For example, `echo $LANG` should show something like `en_US.UTF-8` or `zh_CN.GB2312` or `C.UTF-8` - 
+  it should not be just `C`, or unset.
+  This is discussed more in [Text encoding](#text-encoding), below.
 
 Get the [hledger source code](https://github.com/simonmichael/hledger/commits/master) with [git](https://git-scm.com):
 
