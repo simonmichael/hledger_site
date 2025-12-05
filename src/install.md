@@ -296,7 +296,7 @@ to check your setup. If this doesn't work, read on..
 After installing, try to run the hledger tools (hledger, hledger-ui, hledger-web) and look for the expected versions. Eg:
 
     $ hledger --version
-    hledger 1.51-g.......-20251205, mac-aarch64
+    hledger 1.51-g0915ad482-20251205, mac-aarch64
 
 If this doesn't work, you may need to add the binaries' install directory to your shell's PATH.
 
