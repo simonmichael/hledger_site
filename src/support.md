@@ -43,20 +43,35 @@ hledger issues are tracked in the hledger repos on github. There are some shortc
 [simon@joyful.com](mailto:simon@joyful.com)
 
 **Mastodon**\
-[#hledger](https://fosstodon.org/tags/hledger) and [#plaintextaccounting](https://fosstodon.org/tags/plaintextaccounting)
+[#hledger](https://fosstodon.org/tags/hledger),
+[hledger](https://fosstodon.org/search?q=hledger),
+[#plaintextaccounting](https://fosstodon.org/tags/plaintextaccounting),
+[plaintextaccounting](https://fosstodon.org/search?q=plaintextaccounting)
 
 **Bluesky**\
-[#hledger](https://bsky.app/hashtag/hledger) and [#plaintextaccounting](https://bsky.app/hashtag/plaintextaccounting)
+[#hledger](https://bsky.app/hashtag/hledger),
+[hledger](https://bsky.app/search?q=hledger),
+[#plaintextaccounting](https://bsky.app/hashtag/plaintextaccounting),
+[plaintextaccounting](https://bsky.app/search?q=plaintextaccounting)
 
 **Twitter / X.com**\
-[#hledger](https://x.com/search?q=%23hledger&src=typed_query&f=live), [hledger](https://x.com/search?q=hledger&src=typed_query&f=live) \
-[#plaintextaccounting](https://x.com/search?q=%23plaintextaccounting&src=typed_query&f=live), [plaintextaccounting](https://x.com/search?q=plaintextaccounting&src=typed_query&f=live)
+[#hledger](https://x.com/search?q=%23hledger&src=typed_query&f=live),
+[hledger](https://x.com/search?q=hledger&src=typed_query&f=live),
+[#plaintextaccounting](https://x.com/search?q=%23plaintextaccounting&src=typed_query&f=live),
+[plaintextaccounting](https://x.com/search?q=plaintextaccounting&src=typed_query&f=live) \
+xcancel.com:\
+[#hledger](https://xcancel.com/search?f=tweets&q=%23hledger),
+[hledger](https://xcancel.com/search?f=tweets&q=hledger),
+[#plaintextaccounting](https://xcancel.com/search?f=tweets&q=%23plaintextaccounting),
+[plaintextaccounting](https://xcancel.com/search?f=tweets&q=plaintextaccounting)
 
 **Hacker News**\
-[stories](https://hn.algolia.com/?query=hledger&sort=byDate&prefix&page=0&dateRange=all&type=story) and [comments](https://hn.algolia.com/?query=hledger&sort=byDate&prefix=false&page=0&dateRange=all&type=comment)
+[stories](https://hn.algolia.com/?query=hledger&sort=byDate&prefix&page=0&dateRange=all&type=story) and
+[comments](https://hn.algolia.com/?query=hledger&sort=byDate&prefix=false&page=0&dateRange=all&type=comment)
 
 **Youtube**\
-[videos](https://www.youtube.com/results?search_query=hledger&sp=CAI%253D) (or [plaintextaccounting.org's list](https://plaintextaccounting.org/#videos))
+["hledger" videos](https://www.youtube.com/results?search_query=hledger&sp=CAI%253D)
+(or [plaintextaccounting.org's list](https://plaintextaccounting.org/#videos))
 
 **Stack Exchange**\
 [[hledger] on money.stackexchange.com](https://money.stackexchange.com/questions/tagged/hledger?tab=newest)
@@ -65,7 +80,7 @@ hledger issues are tracked in the hledger repos on github. There are some shortc
 [plaintextaccounting.org](https://plaintextaccounting.org/) introduces plain text accounting generally.
 
 **PTA forum**\
-[forum.plaintextaccounting.org](https://forum.plaintextaccounting.org/) is a comfortable place for all PTA discussion.
+[forum.plaintextaccounting.org](https://forum.plaintextaccounting.org/) is a comfortable place for long-term PTA discussion.
 
 **PTA reddit**\
 [reddit.com/r/plaintextaccounting](https://reddit.com/r/plaintextaccounting/) is reasonably active, but consider using the forum instead for better UX and content rights.
