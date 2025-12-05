@@ -48,6 +48,10 @@ hledger issues are tracked in the hledger repos on github. There are some shortc
 **Bluesky**\
 [#hledger](https://bsky.app/hashtag/hledger) and [#plaintextaccounting](https://bsky.app/hashtag/plaintextaccounting)
 
+**Twitter / X.com**\
+[#hledger](https://x.com/search?q=%23hledger&src=typed_query&f=live), [hledger](https://x.com/search?q=hledger&src=typed_query&f=live) \
+[#plaintextaccounting](https://x.com/search?q=%23plaintextaccounting&src=typed_query&f=live), [plaintextaccounting](https://x.com/search?q=plaintextaccounting&src=typed_query&f=live)
+
 **Hacker News**\
 [stories](https://hn.algolia.com/?query=hledger&sort=byDate&prefix&page=0&dateRange=all&type=story) and [comments](https://hn.algolia.com/?query=hledger&sort=byDate&prefix=false&page=0&dateRange=all&type=comment)
 
@@ -56,9 +60,6 @@ hledger issues are tracked in the hledger repos on github. There are some shortc
 
 **Stack Exchange**\
 [[hledger] on money.stackexchange.com](https://money.stackexchange.com/questions/tagged/hledger?tab=newest)
-
-**Twitter (old)**\
-[#hledger](https://twitter.com/search?q=%23hledger&src=typed_query&f=live) and [#plaintextaccounting](https://twitter.com/search?q=%23plaintextaccounting&src=typed_query&f=live)
 
 **PTA website**\
 [plaintextaccounting.org](https://plaintextaccounting.org/) introduces plain text accounting generally.
