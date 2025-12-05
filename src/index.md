@@ -925,6 +925,14 @@ it's like every day brings new excitement. last night I got the balancing the ac
 
 my accounting equation actually balances!!! this makes me giddy (my mom's half of the family is all bookkeepers/accountants and I think it might be genetic)
 --gnidan
+
+I just donated to Simon Michael because #hledger literally keeps me financially sane.
+--Davide Aversa
+
+After two weeks of using #PlainTextAccounting (double-entry bookkeeping) w/ #hledger, I couldn't be happier. So many things I couldn't record and evaluate with my old single-entry (income-expense) system are now a piece of cake! Best of all, multiple open source apps (hledger, etc.) exist & reports can be exported in many formats.
+
+
+
 `;
 const quotes = quotesmd.trim().split('\n\n').map(q => q.replace(/^\*|\*$/g, '').trim());
 </script>
