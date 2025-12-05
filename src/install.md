@@ -5,7 +5,7 @@
 <!-- toc -->
 </div>
 
-The current hledger release is **1.50.4**.
+The current hledger release is **1.51**.
 Here are the **[release notes](release-notes.md)**.
 
 Here are several ways you can install hledger:
@@ -26,10 +26,10 @@ Official [release binaries] are provided for Linux, Mac, and Windows
 Download them manually (see [Get hledger installed](get-hledger-installed.md)),
 or use a download tool like [eget](https://github.com/zyedidia/eget?tab=readme-ov-file#how-to-get-eget):
 
-[![hledger release binaries](https://img.shields.io/badge/hledger_release_binaries-1.50.4-brightgreen.svg)](https://github.com/simonmichael/hledger/releases/tag/1.50.4)
+[![hledger release binaries](https://img.shields.io/badge/hledger_release_binaries-1.51-brightgreen.svg)](https://github.com/simonmichael/hledger/releases/tag/1.51)
 `eget simonmichael/hledger --all`
 
-[release binaries]:    https://github.com/simonmichael/hledger/releases/tag/1.50.4
+[release binaries]:    https://github.com/simonmichael/hledger/releases/tag/1.51
 [prerelease binaries]: https://github.com/simonmichael/hledger/releases/tag/nightly
 
 ## Packaged binaries
@@ -204,7 +204,7 @@ Get the [hledger source code](https://github.com/simonmichael/hledger/commits/ma
 
     git clone https://github.com/simonmichael/hledger
     cd hledger
-    git checkout 1.50.4   # switch to the latest release tag (optional)
+    git checkout 1.51   # switch to the latest release tag (optional)
 
 Then build and install with stack:
 
@@ -243,7 +243,7 @@ Get the hledger source:
 
     git clone https://github.com/simonmichael/hledger
     cd hledger
-    git checkout 1.50.4   # switch to the latest release tag (optional)
+    git checkout 1.51   # switch to the latest release tag (optional)
 
 Build and install hledger:
 
@@ -296,7 +296,7 @@ to check your setup. If this doesn't work, read on..
 After installing, try to run the hledger tools (hledger, hledger-ui, hledger-web) and look for the expected versions. Eg:
 
     $ hledger --version
-    hledger 1.50.4-gd635be5ef-20251204, mac-aarch64
+    hledger 1.51-g.......-20251205, mac-aarch64
 
 If this doesn't work, you may need to add the binaries' install directory to your shell's PATH.
 
