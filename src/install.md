@@ -197,8 +197,8 @@ Old issues:
 
 You will need 
 
-1. The header files for certain C libraries, which stack/cabal can't install for you.
-   Otherwise you'll see build errors like "*cannot find -ltinfo*".
+1. The header files for certain C libraries, which stack/cabal can't install for you;
+   otherwise you'll see build errors like "*cannot find -ltinfo*".
    The exact package names will be specific to your system, but here are some likely install commands:
    - Debian-based systems: `apt install libgmp-dev libncurses-dev zlib1g-dev`
    - Older Debian systems: `apt install libgmp3-dev libncurses5-dev zlib1g-dev`
@@ -207,9 +207,9 @@ You will need
    - Alpine: `apk add gmp-dev ncurses-dev zlib-dev`
    - openSUSE: `zypper install gmp-devel ncurses-devel zlib-devel`
 
-2. A configured system locale that specifies a text encoding.
-  Otherwise you'll see text-decoding-related errors when working with non-ascii characters.
-  For example, `echo $LANG` should show something like `en_US.UTF-8` or `zh_CN.GB2312` or `C.UTF-8` - 
+2. A configured system locale that specifies a text encoding;
+  otherwise you'll see text decoding errors when processing non-ascii characters.
+  For example, on most unix systems `echo $LANG` should show something like `en_US.UTF-8` or `zh_CN.GB2312` or `C.UTF-8` - 
   it should not be just `C`, or unset.
   This is discussed more in [Text encoding](#text-encoding), below.
 
