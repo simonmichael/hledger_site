@@ -198,7 +198,7 @@ Old issues:
 You will need 
 
 1. The header files for certain C libraries, which stack/cabal can't install for you;
-   otherwise you'll see build errors like "*cannot find -ltinfo*".
+   otherwise you'll see build errors like "cannot find -ltinfo".
    The exact package names will be specific to your system, but here are some likely install commands:
    - Debian-based systems: `apt install libgmp-dev libncurses-dev zlib1g-dev`
    - Older Debian systems: `apt install libgmp3-dev libncurses5-dev zlib1g-dev`
@@ -206,6 +206,7 @@ You will need
    - Arch: `pacman -S gmp ncurses zlib`
    - Alpine: `apk add gmp-dev ncurses-dev zlib-dev`
    - openSUSE: `zypper install gmp-devel ncurses-devel zlib-devel`
+   - FreeBSD: `pkg install gmp ncurses`
 
 2. A configured system locale that specifies a text encoding;
   otherwise you'll see text decoding errors when processing non-ascii characters.
