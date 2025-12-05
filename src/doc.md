@@ -154,20 +154,25 @@ Longer talks:
 See also:
 
 - [Youtube: latest "hledger" results](https://www.youtube.com/results?search_query=hledger&sp=CAISAhAB)
-- [plaintextaccounting.org: Videos](https://plaintextaccounting.org/#videos)
+- [PTA: Videos](https://plaintextaccounting.org/#videos)
 
 ## Articles
 
 A few notable posts:
 
-- [Why We Chose Plain Text Accounting with Hledger](https://www.gizra.com/content/plain-text-accounting-hledger/) real-world getting started notes, nice hledger-ui examples
+- [Amitai Burstein: Why We Chose Plain Text Accounting with Hledger](https://www.gizra.com/content/plain-text-accounting-hledger/) - getting started; hledger-ui
+- [Teo Si-Yan: Making sense of your finances with hledger reports](https://teosiyan.com/2025/07/09/hledger-commands) - basic reports
 
 ## Cookbook
 
 Additional docs, tips and rough notes.
-See also the more generic [Plain Text Accounting Cookbook](https://plaintextaccounting.org/Cookbook).
+If you don't find what you'll looking for here, try also:
+- [Plain Text Accounting Cookbook](https://plaintextaccounting.org/Cookbook)
+- [PTA forum: hledger tag](https://forum.plaintextaccounting.org/tag/hledger)
+- [Reddit: plaintextaccounting: "hledger"](https://www.reddit.com/r/plaintextaccounting/search/?q=hledger&sort=new)
+- [Support](support.md)
 
-### USING HLEDGER:
+### USING HLEDGER
 
 ### Checking for errors
 - [Checking for errors](checking-for-errors.md)
@@ -188,6 +193,7 @@ See also the more generic [Plain Text Accounting Cookbook](https://plaintextacco
 ### Examples
 
 - [examples/](https://github.com/simonmichael/hledger/tree/master/examples) - examples and snippets, old and new 
+- [examples/csv/](https://github.com/simonmichael/hledger/tree/master/examples/csv) - hledger CSV rules library
 
 ### Making charts
 - [Charts and Graphs](charts.md)
@@ -211,10 +217,10 @@ See also the more generic [Plain Text Accounting Cookbook](https://plaintextacco
 
 ### Preserving your data
 - [Track changes with version control](track-changes-with-version-control.md)
-- Keep backups - [3-2-1 rule](https://en.wikipedia.org/wiki/Backup#3-2-1_rule)
+- [Backups](https://en.wikipedia.org/wiki/Backup), the 3-2-1 rule
 
 ### Reporting
-- **[Making sense of your finances with hledger reports](https://teosiyan.com/2025/07/09/hledger-commands)**
+- [Making sense of your finances with hledger reports](https://teosiyan.com/2025/07/09/hledger-commands)
 - [Report examples](report-examples.md)
 - [Reporting version control stats](reporting-version-control-stats.md)
 - [Rewrite account names](rewrite-account-names.md)
@@ -231,17 +237,17 @@ See also the more generic [Plain Text Accounting Cookbook](https://plaintextacco
 ### User interfaces
 - [hledger-web tips](hledger-web-tips.md)
 - [Mobile apps](mobile.md)
-- See PTA UI tools starting at [UI, console](https://plaintextaccounting.org/#ui-console)
+- [PTA: Software: UI, console](https://plaintextaccounting.org/#ui-console)
 
 
-### ACCOUNTING TASKS:
+### ACCOUNTING
 
 ### Accounting and bookkeeping
 
 - [Accounting basics for PTA users](accounting-pta.md)
 - [Accounting: further study](accounting.md)
 - [Common journal entries](common-journal-entries.md)
-- [pta.o: Choosing cash or accrual](https://plaintextaccounting.org/#choosing-cash-vs-accrual)
+- [PTA: Choosing cash or accrual](https://plaintextaccounting.org/#choosing-cash-vs-accrual)
 
 ### Borrowing and lending
 - [Borrowing and lending](loans.md)
@@ -258,7 +264,7 @@ See also the more generic [Plain Text Accounting Cookbook](https://plaintextacco
 - [Forecasting](forecasting.md)
 
 ### FOSS projects
-- [Plain Text Accounting with hledger (FOSS for All presentation)](https://docs.google.com/presentation/d/17kkPlLOFhpwfEIhHfT0hJ1PRmZ6-Tq7JIAdTAhjp24A/preview?pru=AAABmo3qmB4*fWFiJB8Z7cZwQbc72JsTjA&slide=id.g38f1acd61f5_0_19)
+- [Youngbin Han: Plain Text Accounting with hledger](https://docs.google.com/presentation/d/17kkPlLOFhpwfEIhHfT0hJ1PRmZ6-Tq7JIAdTAhjp24A/preview?pru=AAABmo3qmB4*fWFiJB8Z7cZwQbc72JsTjA&slide=id.g38f1acd61f5_0_19) (slides)
 
 ### Inventory tracking
 - [Tracking and selling inventory](inventory.md)
@@ -289,6 +295,7 @@ See also the more generic [Plain Text Accounting Cookbook](https://plaintextacco
 - [hledger manual: Value reporting](hledger.md#value-reporting)
 
 ### Non-profit accounting
+- [PTA: Non profit accounting](https://plaintextaccounting.org/Non-profit-accounting)
 
 ### Taxes
 - [A tax reporting setup](tax-reporting-setup.md)
@@ -301,5 +308,5 @@ See also the more generic [Plain Text Accounting Cookbook](https://plaintextacco
 - [Foreign trip expenses](foreign-trip-expenses.md)
 
 ### Shared expenses
-
+- [PTA: Shared finances](https://plaintextaccounting.org/Shared-finances)
 
