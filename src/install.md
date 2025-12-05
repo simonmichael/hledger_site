@@ -45,7 +45,7 @@ Docker (Linux, Mac, Windows) <!-- adept --> ([more](https://hub.docker.com/searc
 Windows \
 [![Scoop](https://repology.org/badge/version-for-repo/scoop/hledger.svg)](https://scoop.sh/#/apps?q=hledger)
 `scoop install hledger` \
-[![Winget](https://img.shields.io/badge/Winget_package-1.50.3-red.svg)](https://github.com/microsoft/winget-pkgs/tree/master/manifests/s/simonmichael/hledger)
+[![Winget](https://img.shields.io/badge/Winget_package-1.50.4-red.svg)](https://github.com/microsoft/winget-pkgs/tree/master/manifests/s/simonmichael/hledger)
 `winget install -e --id simonmichael.hledger` \
 [![Chocolatey](https://repology.org/badge/version-for-repo/chocolatey/hledger.svg)](https://community.chocolatey.org/packages/hledger)
 `choco install hledger -y`
@@ -124,62 +124,6 @@ Sandstorm (web) \
 
 
 ## Build from source
-
-<!--
-Issues with cli snippets in hledger.org code blocks:
-
-- Wrap long lines with \ to make them visible without scrolling on the website.
-- When multiple lines are copy/pasted from the website to a terminal, only the first runs (because of ^J's ?)
-  Insert ;\ between lines to work around.
-
-```
-echo a
-echo b
-```
--->
-
-<!--
-[hledger-install.sh][hledger-install] is an automated install script that requires only [bash].
-This is a good choice if you are not used to building Haskell software
-(and if you are using a unix-based system, not Windows).
-hledger-install.sh downloads Haskell build tools if needed,
-then builds the current release of the hledger tools, plus a number of [add-on tools](scripts.md),
-and installs them in ~/.local/bin. (Or ~/.cabal/bin, if you had cabal and not stack installed.)
-```
-curl -O https://raw.githubusercontent.com/simonmichael/hledger/master/hledger-install/hledger-install.sh
-less hledger-install.sh   # <- good practice: inspect scripts before running
-bash hledger-install.sh
-```
--->
-
-<!--
-#### Build with stack
-
-```
-stack update
-stack install hledger-1.42.2 hledger-ui-1.42.2 hledger-web-1.42.2 \
-  --resolver=nightly-2025-05-01 --verbosity=error
-```
-
-stack will install a compatible version of the GHC compiler if needed,
-perhaps using ~2G of disk space (under `~/.ghcup` if it is configured to use ghcup, otherwise under `~/.stack`).
-Then it will build the hledger tools and install them in `~/.local/bin`.
-
-`cabal` is the other popular Haskell build tool.
-You can install it with your system package manager, or with [ghcup]
-You will also need to install a version of GHC that can build current hledger;
-usually any version newer than 8.10.7 will do.
-Or, you can install both of these with [ghcup].
-
-Then run:
-
-```
-cabal update
-cabal install hledger-1.42.2 hledger-ui-1.42.2 hledger-web-1.42.2
-```
-
-This will build the hledger tools and install them in `~/.cabal/bin`.
--->
 
 Building hledger requires the GHC compiler and either the stack or cabal build tool
 which you can install with your package manager (brew, apt, winget..), with [ghcup], or with [stack] (simplest).
@@ -326,20 +270,6 @@ On unix, these commands will add both bin directories to PATH permanently (proba
 
 On Windows, here's [how to set environment variables](https://www.devdungeon.com/content/set-environment-variables-windows).
 
-<!--
-You can run the built-in unit tests if you'd like:
-
-    $ hledger test
-    ...
-    All 245 tests passed (0.04s)
-
-or the more thorough functional tests, if you are set up for working with the hledger source code:
-
-    $ just functest
-    ...
-     Total   1215 ...
-    functest PASSED
--->
 
 <a name="locale"></a> <!-- required permalink, maybe used in some error messages -->
 <a name="text-encoding"></a> <!-- newer required permalink, used elsewhere -->
