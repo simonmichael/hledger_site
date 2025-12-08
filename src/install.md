@@ -5,7 +5,7 @@
 <!-- toc -->
 </div>
 
-The current hledger release is **1.51**.
+The current hledger release is **1.51.1**.
 Here are the **[release notes](release-notes.md)**.
 
 You can install hledger by any of these methods:
@@ -26,10 +26,10 @@ or copy-paste the install command from [Get hledger installed](get-hledger-insta
 or use a download tool like [eget](https://github.com/zyedidia/eget?tab=readme-ov-file#how-to-get-eget):
 <!-- ([![RSS](images/rss.png) RSS feed](https://github.com/simonmichael/hledger/releases.atom)). -->
 
-[![hledger release binaries](https://img.shields.io/badge/hledger_release_binaries-1.51-brightgreen.svg)][release binaries]
+[![hledger release binaries](https://img.shields.io/badge/hledger_release_binaries-1.51.1-brightgreen.svg)][release binaries]
 `eget simonmichael/hledger --all`
 
-[release binaries]:    https://github.com/simonmichael/hledger/releases/tag/1.51
+[release binaries]:    https://github.com/simonmichael/hledger/releases/tag/1.51.1
 [prerelease binaries]: https://github.com/simonmichael/hledger/releases/tag/nightly
 
 ## Packaged binaries
@@ -38,7 +38,7 @@ Homebrew (Mac, Linux) <!-- chenrui ? --> \
 [![Homebrew](https://repology.org/badge/version-for-repo/homebrew/hledger.svg)](https://formulae.brew.sh/formula/hledger) `brew install hledger`
 
 Docker (Linux, Mac, Windows) <!-- adept --> ([more](https://hub.docker.com/search?q=hledger&type=image&sort=updated_at&order=desc)) \
-[![Docker](https://img.shields.io/badge/Docker_image-1.51-brightgreen.svg)](https://hub.docker.com/r/dastapov/hledger) `docker pull dastapov/hledger`
+[![Docker](https://img.shields.io/badge/Docker_image-1.51-red.svg)](https://hub.docker.com/r/dastapov/hledger) `docker pull dastapov/hledger`
 
 Windows \
 [![Scoop](https://repology.org/badge/version-for-repo/scoop/hledger.svg)](https://scoop.sh/#/apps?q=hledger) `scoop install hledger` \
@@ -158,7 +158,7 @@ Get the [hledger source code](https://github.com/simonmichael/hledger/commits/ma
 
     git clone https://github.com/simonmichael/hledger
     cd hledger
-    git checkout 1.51   # switch to the latest release tag (optional)
+    git checkout 1.51.1   # switch to the latest release tag (optional)
 
 Then build and install with stack:
 
@@ -197,7 +197,7 @@ Get the hledger source:
 
     git clone https://github.com/simonmichael/hledger
     cd hledger
-    git checkout 1.51   # switch to the latest release tag (optional)
+    git checkout 1.51.1   # switch to the latest release tag (optional)
 
 Build and install hledger:
 
@@ -250,7 +250,7 @@ to check your installation. If this doesn't work, read on..
 After installing, try to run the hledger tools (hledger, hledger-ui, hledger-web) and look for the expected versions. Eg:
 
     $ hledger --version
-    hledger 1.51-g0915ad482-20251205, mac-aarch64
+    hledger 1.51.1-...-20251208, mac-aarch64
 
 If this doesn't work, you may need to add the binaries' install directory to your shell's PATH.
 
