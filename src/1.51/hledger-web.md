@@ -32,8 +32,8 @@ or\
 
 ## DESCRIPTION
 
-This manual is for hledger\'s web interface, version 1.51. See also the
-hledger manual for common concepts and file formats.
+This manual is for hledger\'s web interface, version 1.51.1. See also
+the hledger manual for common concepts and file formats.
 
 hledger is a robust, user-friendly, cross-platform set of programs for
 tracking money, time, or any other commodity, using double-entry
