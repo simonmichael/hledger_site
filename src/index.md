@@ -931,6 +931,9 @@ I just donated to Simon Michael because #hledger literally keeps me financially 
 
 After two weeks of using #PlainTextAccounting (double-entry bookkeeping) w/ #hledger, I couldn't be happier. So many things I couldn't record and evaluate with my old single-entry (income-expense) system are now a piece of cake! Best of all, multiple open source apps (hledger, etc.) exist & reports can be exported in many formats.
 
+Fwiw the flexibility of how technical the tool can be has been a big feature for me ...
+point being, I could learn along the way. The level of precision/sophistication is really flexible.
+--kjb4
 
 
 `;
