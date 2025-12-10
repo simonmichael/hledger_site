@@ -72,7 +72,7 @@ or you can record transactions with your favourite text editing tools, IDEs, or 
 
 hledger's user interfaces might seem basic, but you'll find it is **powerful, expressive, and fun to use**.
 It scales smoothly from simple to sophisticated needs.
-In fact, it is a combination of
+In fact, hledger is a combination of
 
 - user-friendly, dependable accounting app
 - swiss army penknife and power tool for financial data
@@ -81,16 +81,20 @@ In fact, it is a combination of
 
 It can help you
 - understand bookkeeping
-- keep your financial records safe, accurate, and private
-- know your financial status
-- store and search your financial history
+- keep your financial records safe, correct, and private
 - untangle accounting messes
+- know your financial status
+- keep track of loans, due dates, invoices
+- forecast future activity and balances
+- search your financial history
+- categorise your spending
 - understand your patterns
-- make impactful changes
+- make impactful changes and plans
 - track spending and saving goals
-- explore forecasts and scenarios
+- answer financial questions
+- explore what-if scenarios
 - produce detailed time reports
-- report data needed for tax preparation
+- get data needed for tax preparation
 - convert/transform financial data
 - check the correctness of other systems
 - automate accounting tasks
