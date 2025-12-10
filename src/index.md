@@ -58,7 +58,49 @@ plain text accounting software
 <!-- ** Description ---------------------------------------------------------->
 <a name="description"></a>
 
-**hledger** is free, GPLv3+ accounting software that runs on unix, mac, windows, and the web.
+<div class=pagetoc>
+
+<!-- toc -->
+</div>
+
+**hledger** is free, friendly, fast, battle-tested, cross-platform, double-entry, multi-currency, multi-interface, GNU GPLv3-licensed, **[plain text accounting software](https://plaintextaccounting.org)**!
+It lets you track and analyse money, investments, and cryptocurrencies; also time, inventory, or other things involving dates or numbers.
+
+hledger is built around human-readable, version-controllable, future-proof, **plain text data**.
+You can **import from CSV** or other data sources;
+or you can record transactions with your favourite text editing tools, IDEs, or data entry UIs.
+
+hledger's user interfaces might seem basic, but you'll find it is **powerful, expressive, and fun to use**.
+It scales smoothly from simple to sophisticated needs.
+In fact, it is a combination of
+
+- user-friendly, dependable accounting app
+- swiss army penknife and power tool for financial data
+- hands-on bookkeeping tutorial / refresher course / library
+- and a supportive community of fellow money wranglers.
+
+It can help you
+- understand bookkeeping
+- keep your financial records safe, accurate, and private
+- know your financial status
+- store and search your financial history
+- untangle accounting messes
+- understand your patterns
+- make impactful changes
+- track spending and saving goals
+- explore forecasts and scenarios
+- produce detailed time reports
+- report data needed for tax preparation
+- convert/transform financial data
+- check the correctness of other systems
+- automate accounting tasks
+- create more clarity, balance, and peace of mind.
+
+----
+
+## Why hledger ?
+
+hledger is free, GPLv3+ accounting software that runs on unix, mac, windows, and the web.
 
 It is **user-friendly [plain text accounting](https://plaintextaccounting.org) software**,
 using human-readable plain text data files.
@@ -111,12 +153,14 @@ with a [new release each quarter](RELEASING.md#hledger-release-types)
 and excellent free support. Paid support and customisation are also available.
 hledger is a long term project led by [Simon Michael](https://joyful.com) with many [contributors](CREDITS.md).
 
-See
+See also
 **[What problems does hledger solve ?](what-problems-does-hledger-solve.md)**,
 **[Features](features.md)**,
-and **[FAQ](faq.md)** for more answers,
-like [How does hledger relate to Ledger ?](faq.md#how-does-hledger-relate-to-ledger-)
+and the **[FAQ](faq.md)**,
+which answers questions like [How does hledger relate to Ledger ?](faq.md#how-does-hledger-relate-to-ledger-)
 <!-- and [Why are my revenue, liability, and equity balances negative ?](faq.md#why-are-my-revenue-income-liability-and-equity-balances-negative-). -->
+
+----
 
 <!-- ** Start ---------------------------------------------------------------->
 <!-- <a name="start"></a> -->
