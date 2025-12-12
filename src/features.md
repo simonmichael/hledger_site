@@ -1,24 +1,53 @@
-# Features
+# Why hledger ?
 
 <div class=pagetoc>
 
 <!-- toc -->
 </div>
 
-## What can hledger do for me ?
 
-hledger can provide clarity and insight into your personal or business
-finances, time logs, or other dated quantitative data, with relatively
-little effort on your part.  You need only provide a list of
-transactions, as a plain text file in a simple human-readable
-format. (Or a CSV file plus some conversion rules.) From this hledger
-can generate a variety of useful reports and interactive views.
-There is also a growing ecosystem of complementary tools and apps,
-and if you are a programmer you can easily build your own integrations.
+[hledger](index.md) is free, **user-friendly accounting software** that runs on unix, mac, windows, and the web,
+using human-readable plain text data files.
+It comes with [command line](hledger.md), [TUI](hledger-ui.md), and [web browser](hledger-web.md) interfaces,
+and there are also some compatible [phone apps](mobile.md).
+It is powerful enough for the most technical users, 
+but also usable by non-techies (especially with a little setup help).
+Command line skills are useful but not essential.
+You can enter data using 
+a data entry UI,
+or your favourite text editor/IDE,
+or by importing CSV data from banks.
 
-## How is it different from other accounting software ?
+hledger is **dependable**. 
+Your financial data remains local, private, and free from vendor lock-in.
+It is stored as plain text files, which are 
+human readable,
+version controllable,
+scripting friendly,
+and future proof.
+hledger is thoroughly documented, and built with the high assurance [Haskell](https://haskell.org) programming language.
+We take quality seriously. [We will pay you $50](REGRESSIONS.md) if you find or fix a regression bug.
 
-hledger is a **[Plain Text Accounting]** system, which means:
+hledger is **fast, lightweight, and versatile**.
+Using time-tested [double entry bookkeeping](accounting.md),
+with an easier-to-learn [sign convention](accounting-pta.md),
+and [easy reports](5-minute-quick-start.md#3-run-reports),
+it can track and report on:
+money, 
+investments, 
+cryptocurrencies, 
+time, 
+inventory, 
+or any other countable commodity.
+
+hledger is **actively maintained and used** (since 2008),
+with a [new release each quarter](RELEASING.md#hledger-release-types)
+and excellent free support. Paid support and customisation are also available.
+hledger is a long term project led by [Simon Michael](https://joyful.com) with many [contributors](CREDITS.md).
+
+## How is it different from traditional accounting software ?
+
+hledger is a **[plain text accounting]** system, which means:
 
 - Data is stored in simple plain text files, which can be easily read by humans, tracked with version control software such as Git, and maintained with text processing tools. This facilitates auditing, portability, and longevity of your valuable accounting data.
 
@@ -34,60 +63,24 @@ hledger is a **[Plain Text Accounting]** system, which means:
 
 - It is fast, lightweight, non-distracting, and great for learning more of double-entry bookkeeping and accounting.
 
-## What can it do, exactly ?
+## How is it different from other plain text accounting apps ?
 
-hledger can (as of 2023):
+See [hledger and Ledger](ledger.md)
+and [hledger and Beancount](beancount.md).
 
-- list your transactions, payees, currencies/commodities, accounts, statistics
-- show the hierarchy of accounts and subaccounts
-- show the transactions affecting any account, and calculate its running balance
-- make a balance sheet, showing your asset and liability account balances
-- make a cashflow report, showing changes in your cash assets
-- make an income statement, showing your revenues and expenses
-- show simple bar charts by period
-- show purchase costs/selling prices
-- show market values in any currency at any valuation date
-- calculate the rate of return of a savings account or investment
-- make reports from timeclock or timedot time logs
-- make reports from any CSV/SSV/TSV file
-- make reports from any data which you have converted to a hledger-readable format
 
-It can slice, dice, and present your data in different ways:
+## What can hledger do for me ?
 
-- filter out just the items or time period you're interested in
-- show multiple periods side by side
-- summarise accounts to a certain depth to give the big picture
-- rewrite or pivot account names to transform reports
-- output reports as plain text, HTML, CSV, TSV, JSON, SQL...
-- run as a live-updating terminal UI, for fast interactive exploration
-- run as a web app, allowing remote/multi-user browsing and data entry
-- run as a JSON web API, for integrating with custom apps
+hledger can provide clarity and insight into your personal or business
+finances, time logs, or other dated quantitative data, with relatively
+little effort on your part.  You need only provide a list of
+transactions, as a plain text file in a simple human-readable
+format. (Or a CSV file plus some conversion rules.) From this hledger
+can generate a variety of useful reports and interactive views.
+There is also a growing ecosystem of complementary tools and apps,
+and if you are a programmer you can easily build your own integrations.
 
-If you add a few directives to the file, hledger can:
-
-- combine multiple files / data sets
-- generate recurring transactions by rule
-- generate extra postings (splits) on transactions by rule
-- show a forecast of future activity, eg to help with planning
-- make a budget report, showing your budget goals and performance by account and period
-
-Also, it can:
-
-- generate interest transactions by rule
-- help you enter new transactions with prompts or a terminal UI
-- help you convert and import new transactions from external sources, eg banks
-- be used as a library in a quick Haskell script or compiled program
-
-## What else can it do ?
-
-Here are a few more examples of things it can do:
-
-- [Charts and Graphs](charts.md)
-- [HTML reports](report-examples.md#income-statement-2012-01-012014-10-11)
-- [Working with other software](doc.md#other-software)
-- [Investing and trading](doc.md#investing-and-trading)
-- [Scripts and addons](scripts.md)..
-<!-- and [Scripting](scripting.md) -->
+See [What problems does hledger solve ?](what-problems-does-hledger-solve.md)
 
 ## Batteries are included
 
@@ -160,7 +153,7 @@ Here are some things it provides out of the box:
 - Easy import/export/co-usage with Ledger CLI or Beancount
 - Easy to [download] or [build] on all major platforms
 
-## Dependable
+## It's dependable
 
 hledger strives to be comfortable to use, to be absolutely dependable,
 to provide real-world value, and to never waste your time. It provides:
@@ -202,14 +195,14 @@ to provide real-world value, and to never waste your time. It provides:
   General and command-specific command line help is provided. We
   favour documentation-driven development.
 
-## Fast
+## It's fast
 
 - Reports normally take a fraction of a second.
 - `hledger-ui --watch` normally updates instantly as you edit.
 - On a 2021 macbook air m1, hledger processes about [15k-25k transactions per second](ledger.md#performance)
   ([depending on version](https://github.com/simonmichael/hledger/issues/2122)).
 
-## Compatible
+## It's compatible
 
 hledger is a rewrite of the pioneering [Ledger CLI], aiming to
 build out the same core features to a higher level of quality,
@@ -227,7 +220,7 @@ Many [tools](https://plaintextaccounting.org/#data-importconversion)
 exist for importing from other applications.  Data can be exported as
 CSV, JSON or basic SQL.
 
-## Free Software
+## It's Free Software
 
 hledger is [Free Software], with no purchase price or monthly fees.
 It is licensed under [GNU GPLv3+][gpl], providing the strongest guarantee
@@ -235,42 +228,78 @@ that you will always have the right to run, inspect, modify, or share it.
 It is [actively maintained], with regular [releases]
 and a [large chat room and other support resources](support.md).
 
-[![github](https://img.shields.io/github/stars/simonmichael/hledger.svg?logo=GitHub&label=Github)](https://github.com/simonmichael/hledger)
 
-<!-- - The plain text format and fast command-line interface -->
-<!--   (plus a reusable [library] for building your own [commands][script]) -->
-<!--   facilitate scripting and customisation. -->
+## What exactly can it do ?
 
-## But not yet...
+hledger can (as of 2023):
 
-- ... easy for completely non-technical people to install and use (without a little help)
-- ... easy to use on a phone
-- ... equipped with mature, polished GUIs
-- ... or easy charts
-- ... able to download directly from banks and financial institutions
-- ... with as many investing-savvy users as Beancount
-- ... simple, clear and obvious for all needs, or masterable in a day (or a week).
+- list your transactions, payees, currencies/commodities, accounts, statistics
+- show the hierarchy of accounts and subaccounts
+- show the transactions affecting any account, and calculate its running balance
+- make a balance sheet, showing your asset and liability account balances
+- make a cashflow report, showing changes in your cash assets
+- make an income statement, showing your revenues and expenses
+- show simple bar charts by period
+- show purchase costs/selling prices
+- show market values in any currency at any valuation date
+- calculate the rate of return of a savings account or investment
+- make reports from timeclock or timedot time logs
+- make reports from any CSV/SSV/TSV file
+- make reports from any data which you have converted to a hledger-readable format
 
-Double Entry Bookkeeping, Plain Text Accounting, and Accounting in general are deep and rich topics;
-as a newcomer you might feel 
-there's too both much and not enough to read, 
-too much flexibility and not enough structure or guidance.
+It can slice, dice, and present your data in different ways:
+
+- filter out just the items or time period you're interested in
+- show multiple periods side by side
+- summarise accounts to a certain depth to give the big picture
+- rewrite or pivot account names to transform reports
+- output reports as plain text, HTML, CSV, TSV, JSON, SQL...
+- run as a live-updating terminal UI, for fast interactive exploration
+- run as a web app, allowing remote/multi-user browsing and data entry
+- run as a JSON web API, for integrating with custom apps
+
+If you add a few directives to the file, hledger can:
+
+- combine multiple files / data sets
+- generate recurring transactions by rule
+- generate extra postings (splits) on transactions by rule
+- show a forecast of future activity, eg to help with planning
+- make a budget report, showing your budget goals and performance by account and period
+
+Also, it can:
+
+- generate interest transactions by rule
+- help you enter new transactions with prompts or a terminal UI
+- help you convert and import new transactions from external sources, eg banks
+- be used as a library in a quick Haskell script or compiled program
+
+Here are a few more examples of things it can do:
+
+- [Charts and Graphs](charts.md)
+- [HTML reports](report-examples.md#income-statement-2012-01-012014-10-11)
+- [Working with other software](doc.md#other-software)
+- [Investing and trading](doc.md#investing-and-trading)
+- [Scripts and addons](scripts.md)
+
+## When might hledger not be a good choice ?
+
+hledger is not yet ..
+
+- easy for completely non-technical people to install and use without help
+- easy to use on a phone
+- equipped with mature, polished GUIs, or easy charts
+- able to download directly from banks and financial institutions
+- capable of automatically tracking capital gains like Beancount and Ledger
+- masterable in a day (or a week..)
+
+Plain Text Accounting, and Double Entry Bookkeeping and Accounting generally, are deep and rich topics.
+As a newcomer you might feel there's both too much and not enough to read;
+too much flexibility, and not enough structure or guidance.
+
 You may need to [pace yourself](doc.md), 
 ask the [chat](support.md) for tips, 
-and learn through practice.
+and learn through hands-on practice.
 
-<!--
-What is planned for hledger ?
-
-More support for investing,
-more support for correctness and accounting/business rules,
-more input/output formats,
-more speed,
-more GUI,
-charts,
-better getting started experience.
-See also [ROADMAP](ROADMAP.md).
--->
 
 [blog posts]:                 https://plaintextaccounting.org/#articles-blog-posts
 [example files]:              https://github.com/simonmichael/hledger/tree/master/examples

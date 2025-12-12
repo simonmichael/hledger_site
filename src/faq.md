@@ -106,7 +106,7 @@ Depending on their needs, you send them a few standard reports (balance sheet, i
 - or as PDF
 - or as CSV they can import into Excel and elsewhere
 
-### Must I enter data in a text editor ??
+### Must I enter data in a text editor ?
 
 No. A good text editor can be a very efficient way to work on your data, but there are other ways:
 
@@ -163,7 +163,7 @@ but the following semi-manual workflow is almost always possible and quick:
 2. `hledger import ACCT1.csv ACCT2.csv ...`
 3. review/clean up the new entries in your journal.
 
-### Isn't plain text ugly and hard to use ?
+### Isn't plain text hard to work with ?
 
 No way, it's great, honest.
 We love it.
@@ -257,7 +257,7 @@ Also:
 
 <!-- ## FILE MANAGEMENT -->
 
-### There are so many docs, where do I even.. ?
+### There are so many docs, where do I even..
 
 You're right. You can skip them: just run `hledger` for help.
 
@@ -322,7 +322,7 @@ See:
 
 ## JOURNALS
 
-### What journal editing helpers are available for my text editor or IDE ?
+### What helpers are available for my text editor or IDE ?
 
 See [Editors](editors.md).
 

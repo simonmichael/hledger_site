@@ -37,7 +37,7 @@
 
 <div id="tagline" style="margin-bottom:1em;">
 Robust, friendly, fast,<br>
-plain text accounting software
+plain text accounting
 </div>
 </div>
 <div style="display:flex; justify-content:center; align-items:flex-start; flex-wrap:wrap; margin-top:1em;">
@@ -79,7 +79,7 @@ In fact, hledger is a combination of
 - hands-on bookkeeping tutorial / refresher course / library
 - and a supportive community of fellow money wranglers.
 
-It can help you
+It can help you to..
 - understand bookkeeping
 - keep your financial records safe, correct, and private
 - untangle accounting messes
@@ -100,116 +100,44 @@ It can help you
 - automate accounting tasks
 - create more clarity, balance, and peace of mind.
 
-----
+More about it:
 
-## Why hledger ?
-
-hledger is free, GPLv3+ accounting software that runs on unix, mac, windows, and the web.
-
-It is **user-friendly [plain text accounting](https://plaintextaccounting.org) software**,
-using human-readable plain text data files.
-It comes with [command line](hledger.md), [TUI](hledger-ui.md), and [web browser](hledger-web.md) interfaces,
-and there are also some compatible [phone apps](mobile.md).
-It is powerful enough for the most technical users, 
-but also usable by non-techies (especially with a little setup help).
-Command line skills are useful but not essential.
-You can enter data using 
-a data entry UI,
-or your favourite text editor/IDE,
-or by importing CSV data from banks.
-
-hledger is **dependable**. 
-Your financial data remains local, private, and free from vendor lock-in.
-It is stored as plain text files, which are 
-human readable,
-version controllable,
-scripting friendly,
-and future proof.
-hledger is thoroughly documented, and built with the high assurance [Haskell](https://haskell.org) programming language.
-We take quality seriously. [We will pay you $50](REGRESSIONS.md) if you find or fix a regression bug.
-
-hledger is **fast, lightweight, and versatile**.
-Using time-tested [double entry bookkeeping](accounting.md),
-with an easier-to-learn [sign convention](accounting-pta.md),
-and [easy reports](5-minute-quick-start.md#3-run-reports),
-it can track and report on:
-money, 
-investments, 
-cryptocurrencies, 
-time, 
-inventory, 
-or any other countable commodity.
-<!--
-Use it to:
-figure out personal finances..
-track your investments..
-run a business..
-run a non-profit..
-run a FOSS project..
-calculate and justify tax data..
-track time..
-learn double entry bookkeeping..
-manage a D&D game..
--->
-
-hledger is **actively maintained and used** (since 2007),
-with a [new release each quarter](RELEASING.md#hledger-release-types)
-and excellent free support. Paid support and customisation are also available.
-hledger is a long term project led by [Simon Michael](https://joyful.com) with many [contributors](CREDITS.md).
-
-See also
-**[What problems does hledger solve ?](what-problems-does-hledger-solve.md)**,
-**[Features](features.md)**,
-and the **[FAQ](faq.md)**,
-which answers questions like [How does hledger relate to Ledger ?](faq.md#how-does-hledger-relate-to-ledger-)
-<!-- and [Why are my revenue, liability, and equity balances negative ?](faq.md#why-are-my-revenue-income-liability-and-equity-balances-negative-). -->
-
-----
+- **[Why hledger ?](features.md)**, including
+  - [What problems does hledger solve ?](what-problems-does-hledger-solve.md)
+  - [How is it different from traditional accounting software ?](features.md#how-is-it-different-from-traditional-accounting-software-)
+  - [When might hledger not be a good choice ?](features.md#when-might-hledger-not-be-a-good-choice-)
+- **[FAQ](faq.md)**, including
+  - [How does hledger relate to Ledger ?](faq.md#how-does-hledger-relate-to-ledger-)
+  - [Isn't plain text hard to work with ?](faq.md#isnt-plain-text-hard-to-work-with-)
+  - [What helpers are available for my text editor or IDE ?](editors.md)
+  - [In Emacs, do I have to use hledger-mode ? Is ledger-mode only for Ledger ?](faq.md#in-emacs-do-i-have-to-use-hledger-mode--is-ledger-mode-only-for-ledger-)
+  - [Isn't importing from banks a pain ?](faq.md#isnt-importing-from-banks-a-pain-)
+  - [Where can I find hledger CSV rules for my financial institutions ?](faq.md#where-can-i-find-hledger-csv-rules-for-my-financial-institutions-)
+  - [There are so many docs, where do I even..](faq.md#there-are-so-many-docs-where-do-i-even-)
 
 <!-- ** Start ---------------------------------------------------------------->
 <!-- <a name="start"></a> -->
 
 ## Get started
 
-Welcome!
-This plain text accounting stuff is both useful and more fun than you'd think.
-
-**[Install](install.md)** tells how to get an up-to-date version of hledger quickly.
-  <!-- See also [Scripts and add-ons](scripts.md). -->
-  <!-- ([Release notes](relnotes.md)) -->
-
-
-
-**[Support](support.md)** lists our discussion fora. Don't hesitate to ask questions or report issues.
-
-**[Docs](doc.md)** lists our extensive documentation. This is a good place to visit next.
+- **[Install](install.md)** - How to quickly get hledger installed on your machine.
+- **[Support](support.md)** - Don't hesitate to share your questions or feedback.
+- **[Docs](doc.md)** - hledger's user documentation, a great place to visit next.
 
 ## Get involved
 
-[Add a github star](https://github.com/simonmichael/hledger/tree/master)
-to help make us a [notable Haskell app](https://joyful.com/Haskell#What%20are%20some%20Haskell%20apps%20?)!
-(As of 2025 we're [#19](ACHIEVEMENTS.md#stars).)
-
-Your financial support is invaluable and helps sustain this work.
-See **[Sponsor hledger](sponsor.md)**
-and [Finance](FINANCE.md).
-
-To contribute in other ways, see
-**[Contributor Quick Start](CONTRIBUTING.md)**
-and [Developer docs](dev.md).
-
-**[CREDITS](CREDITS.md)** shows many of the people who have contributed code over the years.
+- Add a **[Github star](https://github.com/simonmichael/hledger/tree/master)**
+  to help make us a [notable Haskell app](https://joyful.com/Haskell#What%20are%20some%20Haskell%20apps%20?) !
+- **[Sponsor hledger](sponsor.md)** - Thank you for helping to sustain this work.
+  Here's more about [Finance](FINANCE.md).
+- **[Contributor Quick Start](CONTRIBUTING.md)** and [Developer docs](dev.md).
+- **[CREDITS](CREDITS.md)** shows many of the people who have contributed code over the years.
 
 
 <!-- ** Site tips ------------------------------------------------------------>
 <a name="site"></a>
 
-<br>
-<br>
-
-----
-
-Tips for using this website:
+## Site tips
 
 - The lines button at top left toggles the site's navigation sidebar.
 - The paintbrush button changes the site theme.
@@ -219,37 +147,8 @@ Tips for using this website:
   `s` sidebar, `t` theme, `/` search, `1` home, `2` changes.
   You may need to first click the page body to set the focus.
 
-<!-- ** Old text ------------------------------------------------------------->
 
 <!--
-Older:
- 
-It can exchange with other PTA apps like [Ledger](ledger.md) and [Beancount](beancount.md),
-and web apps like [Fava](https://beancount.github.io/fava/) and [Paisa](https://paisa.fyi).
-
-[scripting-friendly](scripting.md).)
- 
-
-[funding](sponsor.md)
-
-- free GPLv3+ accounting software that runs on unix, mac, windows, and the web
-- based on readable, version-controllable, future-proof plain text files
-- the most user friendly [plain text accounting](https://plaintextaccounting.org) app
-- interoperable with [Ledger](ledger.md), [Beancount](beancount.md), [Fava](https://beancount.github.io/fava/), [Paisa](https://paisa.fyi), ...
-- fast, lightweight, and dependable (we pay $50 for [regression reports/fixes](REGRESSIONS.md))
-- local, not cloud-based (your private financial data remains under your control)
-- free from vendor lock-in
-- shipped with [command line](add.md), [terminal](ui.md), and [web](web.md) UIs
-- good at importing CSV from banks and other financial institutions
-- good for tracking money, investments, time, or any countable commodity
-- good for learning  more about [double entry bookkeeping](accounting.md)
-- comfortable for technical users, also usable by non-techies
-  (command line skills are useful but not essential)
-- automatable and [scripting-friendly](scripting.md)
-- built with the powerful, high assurance [Haskell language](https://www.haskell.org/)
-- actively used, developed and supported by [Simon Michael](https://joyful.com) and [contributors](CREDITS.md) since 2007
-- strengthened by community feedback and [funding](sponsor.md)
-
 [command lines](https://tutorial.djangogirls.org/en/intro_to_command_line/), 
 [text editors](https://www.codementor.io/@kmcgillivray/introduction-to-text-editors-and-the-command-line-j0upqatas) and 
 [version control](https://betterexplained.com/articles/a-visual-guide-to-version-control/) 
@@ -923,7 +822,7 @@ I've been using hledger for a few years to run my personal and company accounts 
 I'm guessing your friend will be too busy, disorganised, and non-software-oriented to deal with learning and managing backups, versions, double entry bookkeeping, plain text accounting, text editors, terminals, sharing access, etc. A google sheet makes most of those problems go away.
 --sm
 
-I just completely read the ledger vs. hledger thing and what you linked now. That pages is really a wealth of information and completely fair afaik which I really appreciate.
+I just completely read the ledger vs. hledger thing and what you linked now. That page is really a wealth of information and completely fair afaik which I really appreciate.
 --AppropriateCover7972
 
 - low IQ: just model the real world
