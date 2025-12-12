@@ -37,7 +37,7 @@
 
 <div id="tagline" style="margin-bottom:1em;">
 Robust, friendly, fast,<br>
-plain text accounting
+plain text accounting.
 </div>
 </div>
 <div style="display:flex; justify-content:center; align-items:flex-start; flex-wrap:wrap; margin-top:1em;">
@@ -825,9 +825,9 @@ I'm guessing your friend will be too busy, disorganised, and non-software-orient
 I just completely read the ledger vs. hledger thing and what you linked now. That page is really a wealth of information and completely fair afaik which I really appreciate.
 --AppropriateCover7972
 
-- low IQ: just model the real world
-- average IQ: i need a complex system to super accurately describe what i would be like as a fortune 500 company
-- high IQ: just model the real world
+Low IQ: "just model the real world".
+Average IQ: "i need a complex system to super accurately describe what i would be like as a fortune 500 company".
+High IQ: "just model the real world".
 --veeque
 
 Also great for "eyeball auditing". When Gnucash did something, I was never sure what actually happened. And sometimes it would crash. Was all my data safe? Hard to tell.
