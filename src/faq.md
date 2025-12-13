@@ -2,7 +2,8 @@
 
 If you have additions or suggestions, just click the "edit this page" link at the bottom,
 or let us know in the [chat](support).
-Here are some common questions you might have:
+
+Here are some common questions:
 
 - [How does hledger relate to Ledger ?](faq.md#how-does-hledger-relate-to-ledger-)
 - [Isn't plain text hard to work with ?](faq.md#isnt-plain-text-hard-to-work-with-)
