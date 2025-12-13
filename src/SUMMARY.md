@@ -12,13 +12,6 @@
 - [Contributor Quick Start](CONTRIBUTING.md)
 - [CREDITS](CREDITS.md)
 
-# MANUALS
-
-<!-- These manual links are rewritten to an appropriate version site build scripts -->
-- [hledger manual (dev)](dev/hledger.md)
-- [hledger-ui manual (dev)](dev/hledger-ui.md)
-- [hledger-web manual (dev)](dev/hledger-web.md)
-
 # HLEDGER BY EXAMPLE
 
 <!-- keep synced: hledger-by-example.md, SUMMARY.md, doc.md -->
@@ -40,6 +33,13 @@
 - [Importing new transactions](importing-new-transactions.md)
 - [Reading timeclock files](reading-timeclock-files.md)
 - [Reading timedot files](reading-timedot-files.md)
+
+# MANUALS
+
+<!-- These manual links are rewritten to an appropriate version site build scripts -->
+- [hledger manual (dev)](dev/hledger.md)
+- [hledger-ui manual (dev)](dev/hledger-ui.md)
+- [hledger-web manual (dev)](dev/hledger-web.md)
 
 # MORE USER DOCS
 

@@ -70,7 +70,7 @@ Read more at **[Why hledger ?](why.md)** and **[FAQ](faq.md)**.
 **Get started**
 
 - **[Install](install.md)** - quickly get hledger installed on your machine.
-- **[Docs](doc.md)**        - browse hledger's extensive user documentation.
+- **[Docs](doc.md)**        - browse hledger's extensive user documentation. Or start with **[hledger by example](hledger-by-example.md)**.
 - **[Support](support.md)** - don't hesitate to ask questions or share feedback.
 
 **Get involved**
@@ -79,7 +79,7 @@ Read more at **[Why hledger ?](why.md)** and **[FAQ](faq.md)**.
   us to help make us a [notable Haskell app](https://joyful.com/Haskell#What%20are%20some%20Haskell%20apps%20?) !
 - **[Sponsor hledger](sponsor.md)** - Thank you for helping to sustain this work.
   Here's more about [Finance](FINANCE.md).
-- **[Contributor Quick Start](CONTRIBUTING.md)** and [Developer docs](dev.md).
+- **[Contributor Quick Start](CONTRIBUTING.md)** and **[Developer docs](dev.md)**.
 - **[CREDITS](CREDITS.md)** shows many of the people who have contributed code over the years.
 
 **Site tips**
