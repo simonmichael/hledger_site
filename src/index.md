@@ -83,13 +83,13 @@ Read more at **[Why hledger ?](why.md)** and **[FAQ](faq.md)**.
 
 **Site tips**
 
-- The lines button at top left toggles the site's navigation sidebar.
-- The paintbrush button changes the site theme.
-- The magnifying-glass button searches this site.
-- The left and right arrow keys step through the pages (as listed in the sidebar).
-- [Access keys](https://en.wikipedia.org/wiki/Access_key#Access_in_different_browsers) are also available:
+- Click the lines button at top left to toggle the navigation sidebar.
+- Click the paintbrush to change the site theme.
+- Click the magnifying glass to search the site.
+- Left and right arrow keys step through the pages.
+- [Access keys](https://en.wikipedia.org/wiki/Access_key#Access_in_different_browsers):
   `s` sidebar, `t` theme, `/` search, `1` home, `2` changes.\
-  (You might need to click the page first.)
+  You might need to click the page first.
 
 
 
