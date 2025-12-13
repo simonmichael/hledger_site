@@ -98,7 +98,7 @@ Press the **left** or **right** arrow keys to step through pages.\
 [Access keys](https://en.wikipedia.org/wiki/Access_key#Access_in_different_browsers):
 **s** sidebar,
 **t** theme,
-**/** find in site,
+**f** find in site,
 **1** home,
 **2** changes\
 (you might need to click the page first).
