@@ -35,6 +35,10 @@
   font-size:90%;
 }
 .quote-author { white-space:nowrap; }
+#site-tips {
+  margin:3em;
+  text-align:center;
+}
 </style>
 
 <img id="coins" class="responsive-image" src="images/coins2-248.png" alt="hledger logo" />
@@ -86,14 +90,18 @@ Read more at **[Why hledger ?](why.md)** and **[FAQ](faq.md)**.
 - **[Contributor Quick Start](CONTRIBUTING.md)** and **[Developer docs](dev.md)**.
 - **[CREDITS](CREDITS.md)** shows many of the people who have contributed code over the years.
 
-**Site tips**
+<div id="site-tips">
 
-- Click the lines button at top left to toggle the navigation sidebar.
-- Click the paintbrush to change the site theme.
-- Click the magnifying glass to search the site.
-- Left and right arrow keys step through the pages.
-- [Access keys](https://en.wikipedia.org/wiki/Access_key#Access_in_different_browsers):
-  `s` sidebar, `t` theme, `/` search, `1` home, `2` changes.\
-  You might need to click the page first.
+Click the lines button at top left to toggle the navigation sidebar.\
+Click the paintbrush to change theme, or magnifying glass to search.\
+Press the **left** or **right** arrow keys to step through pages.\
+[Access keys](https://en.wikipedia.org/wiki/Access_key#Access_in_different_browsers):
+**s** sidebar,
+**t** theme,
+**/** find in site,
+**1** home,
+**2** changes\
+(you might need to click the page first).
 
+</div>
 <script src="js/quotes.js"></script>
