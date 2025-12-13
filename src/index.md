@@ -69,7 +69,7 @@ Read more at **[Why hledger ?](why.md)** and **[FAQ](faq.md)**.
 
 **Get started**
 
-- **[Install](install.md)** - quickly get hledger installed on your machine.
+- **[Install](install.md)** - quickly get hledger installed on your machine. Here's the [release notes](relnotes.md).
 - **[Docs](doc.md)**        - browse the documentation. Or start with **[hledger by example](hledger-by-example.md)** or the **[manual](hledger.md)**.
 - **[Support](support.md)** - ask questions or share feedback.
 

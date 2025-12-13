@@ -4,13 +4,13 @@ Why should you consider using hledger ? See below, and also the **[FAQ](faq.md)*
 
 <!-- toc -->
 
-## Summary
+## TLDR
 
 **[hledger](index.md)** is free, user-friendly accounting software designed to be:
 
 **Dependable** - Your data stays local, private, version-controlled, and future-proof.
 Plain text files work with your favorite text tools and never lock you in.
-Features interact as you'd expect.
+Features work as you'd expect.
 Built with a high-assurance programming language.
 
 **Fast and lightweight** - Starts instantly, processes thousands of transactions per second.
@@ -20,7 +20,7 @@ Single executable, no database, no configuration required.
 [double-entry bookkeeping](accounting.md). Scales from personal use to business accounting.
 
 **Actively maintained** - New releases quarterly since 2008, extensive documentation,
-active chat community. [We'll pay you $50](REGRESSIONS.md) if you find or fix a regression bug.
+active community. [We'll pay you $50](REGRESSIONS.md) if you find or fix a regression bug.
 
 ## How is it different from traditional accounting software ?
 
