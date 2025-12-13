@@ -88,8 +88,8 @@ Read more at **[Why hledger ?](why.md)** and **[FAQ](faq.md)**.
 - The magnifying-glass button searches this site.
 - The left and right arrow keys step through the pages (as listed in the sidebar).
 - [Access keys](https://en.wikipedia.org/wiki/Access_key#Access_in_different_browsers) are also available:
-  `s` sidebar, `t` theme, `/` search, `1` home, `2` changes.
-  You may need to first click the page body to set the focus.
+  `s` sidebar, `t` theme, `/` search, `1` home, `2` changes.\
+  (You might need to click the page first.)
 
 
 
