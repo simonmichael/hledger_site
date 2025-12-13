@@ -59,9 +59,11 @@ Fast introductions for folks comfortable with command line tools.
 - [2 minute quick start](2-minute-quick-start.md)
 - [5 minute quick start](5-minute-quick-start.md)
 - [10 minute quick start](10-minute-quick-start.md)
-- [hledger and Ledger](ledger.md) (for Ledger users)
 - [hledger manual: Common tasks](hledger.md#common-tasks)
+- [hledger manual: Journal cheatsheet](hledger.md#journal-cheatsheet)
 - [Workflows](workflows.md)
+- [hledger and Ledger](ledger.md), for Ledger users
+- [hledger and Beancount](beancount.md), for Beancount users
 
 ## Tutorials
 
