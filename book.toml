@@ -41,6 +41,7 @@ additional-js = [
   # Still needed here so they get installed. XXX
   "js/jquery-1.11.0.min.js",
   "js/site.js",
+  "js/quotes.js",
 ]
 no-section-label = true
 git-repository-url = "https://github.com/simonmichael/hledger_site"
