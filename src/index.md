@@ -79,36 +79,15 @@ In fact, hledger is a combination of
 - hands-on bookkeeping tutorial / refresher course / library
 - and a supportive community of fellow money wranglers.
 
-It can help you to..
-- understand bookkeeping
-- keep your financial records safe, correct, and private
-- untangle accounting messes
-- know your financial status
-- keep track of loans, due dates, invoices
-- forecast future activity and balances
-- search your financial history
-- categorise your spending
-- understand your patterns
-- make impactful changes and plans
-- track spending and saving goals
-- answer financial questions
-- explore what-if scenarios
-- produce detailed time reports
-- get data needed for tax preparation
-- convert/transform financial data
-- check the correctness of other systems
-- automate accounting tasks
-- create more clarity, balance, and peace of mind.
-
 More about it:
 
-  - [What problems does hledger solve ?](what-problems-does-hledger-solve.md)
-  - [How is it different from traditional accounting software ?](features.md#how-is-it-different-from-traditional-accounting-software-)
-  - [When might hledger not be a good choice ?](features.md#when-might-hledger-not-be-a-good-choice-)
 - **[Why hledger ?](why.md)**, including
+  - [How is it different from traditional accounting software ?](why.md#how-is-it-different-from-traditional-accounting-software-)
+  - [What problems does hledger solve ?](why.md#what-problems-does-hledger-solve-)
+  - [When might hledger not be a good choice ?](why.md#when-might-hledger-not-be-a-good-choice-)
 - **[FAQ](faq.md)**, including
-  - [How does hledger relate to Ledger ?](faq.md#how-does-hledger-relate-to-ledger-)
   - [Isn't plain text hard to work with ?](faq.md#isnt-plain-text-hard-to-work-with-)
+  - [How does hledger relate to Ledger ?](faq.md#how-does-hledger-relate-to-ledger-)
   - [What helpers are available for my text editor or IDE ?](editors.md)
   - [In Emacs, do I have to use hledger-mode ? Is ledger-mode only for Ledger ?](faq.md#in-emacs-do-i-have-to-use-hledger-mode--is-ledger-mode-only-for-ledger-)
   - [Isn't importing from banks a pain ?](faq.md#isnt-importing-from-banks-a-pain-)
