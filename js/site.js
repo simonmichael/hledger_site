@@ -8,15 +8,10 @@ if (typeof hs !== 'undefined') {
 }
 
 $(document).ready( function() {
-  // this happens too late to prevent visual popping
-  // sidebarHideAllPages();
+  // on manuals, show other versions & current version. Harmless on other pages.
   addDocVersions();
   highlightCurrentDocVersion();
 });
-
-function sidebarHideAllPages() {
-  $('#sidebar li:contains("ALL PAGES") ~ li, #sidebar li:contains("ALL PAGES")').hide();  // XXX requires jquery..
-}
 
 var currentrelease = '1.51';
 
