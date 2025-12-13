@@ -6,44 +6,19 @@
 </div>
 
 
-[hledger](index.md) is free, **user-friendly accounting software** that runs on unix, mac, windows, and the web,
-using human-readable plain text data files.
-It comes with [command line](hledger.md), [TUI](hledger-ui.md), and [web browser](hledger-web.md) interfaces,
-and there are also some compatible [phone apps](mobile.md).
-It is powerful enough for the most technical users, 
-but also usable by non-techies (especially with a little setup help).
-Command line skills are useful but not essential.
-You can enter data using 
-a data entry UI,
-or your favourite text editor/IDE,
-or by importing CSV data from banks.
+[hledger](index.md) is free, user-friendly accounting software designed to be:
 
-hledger is **dependable**. 
-Your financial data remains local, private, and free from vendor lock-in.
-It is stored as plain text files, which are 
-human readable,
-version controllable,
-scripting friendly,
-and future proof.
-hledger is thoroughly documented, and built with the high assurance [Haskell](https://haskell.org) programming language.
-We take quality seriously. [We will pay you $50](REGRESSIONS.md) if you find or fix a regression bug.
+**Dependable** - Your data stays local, private, version-controlled, and future-proof.
+Plain text files work with your favorite text tools and never lock you in.
 
-hledger is **fast, lightweight, and versatile**.
-Using time-tested [double entry bookkeeping](accounting.md),
-with an easier-to-learn [sign convention](accounting-pta.md),
-and [easy reports](5-minute-quick-start.md#3-run-reports),
-it can track and report on:
-money, 
-investments, 
-cryptocurrencies, 
-time, 
-inventory, 
-or any other countable commodity.
+**Fast and lightweight** - Starts instantly, processes 15k-25k transactions/second.
+Single executable, no database, no configuration required.
 
-hledger is **actively maintained and used** (since 2008),
-with a [new release each quarter](RELEASING.md#hledger-release-types)
-and excellent free support. Paid support and customisation are also available.
-hledger is a long term project led by [Simon Michael](https://joyful.com) with many [contributors](CREDITS.md).
+**Versatile** - Track money, investments, cryptocurrencies, time, or any commodity using battle-tested
+[double-entry bookkeeping](accounting.md). Scales from personal use to business accounting.
+
+**Actively maintained** - New releases quarterly since 2008, extensive documentation,
+active chat community. [We'll pay you $50](REGRESSIONS.md) if you find or fix a regression bug.
 
 ## How is it different from traditional accounting software ?
 
@@ -69,18 +44,15 @@ See [hledger and Ledger](ledger.md)
 and [hledger and Beancount](beancount.md).
 
 
-## What can hledger do for me ?
+## What can hledger do ?
 
 hledger can provide clarity and insight into your personal or business
-finances, time logs, or other dated quantitative data, with relatively
-little effort on your part.  You need only provide a list of
-transactions, as a plain text file in a simple human-readable
-format. (Or a CSV file plus some conversion rules.) From this hledger
-can generate a variety of useful reports and interactive views.
-There is also a growing ecosystem of complementary tools and apps,
-and if you are a programmer you can easily build your own integrations.
+finances, time logs, or other dated quantitative data. You provide a list of
+transactions (plain text or CSV), and hledger generates reports and interactive views.
 
-More specifically, it can help you to..
+### For your goals
+
+It can help you to:
 - understand bookkeeping
 - keep your financial records safe, correct, and private
 - untangle accounting messes
@@ -99,7 +71,37 @@ More specifically, it can help you to..
 - convert/transform financial data
 - check the correctness of other systems
 - automate accounting tasks
-- create more clarity, balance, and peace of mind.
+- create more clarity, balance, and peace of mind
+
+### Core capabilities
+
+hledger can:
+- list transactions, payees, currencies/commodities, accounts, statistics
+- show account hierarchies and subaccounts
+- show transactions affecting any account with running balances
+- make balance sheets, cashflow reports, income statements
+- show simple bar charts by period
+- show purchase costs/selling prices and market values in any currency
+- calculate rates of return for investments
+- make reports from timeclock, timedot, or CSV/SSV/TSV files
+- filter by time period, account, or any criteria
+- show multiple periods side by side
+- summarise accounts to any depth
+- rewrite or pivot account names to transform reports
+- output as plain text, HTML, CSV, TSV, JSON, SQL
+- run as a live-updating terminal UI for fast interactive exploration
+- run as a web app for remote/multi-user browsing and data entry
+- run as a JSON web API for custom integrations
+- combine multiple files and data sets
+- generate recurring transactions and forecasts by rule
+- generate extra postings (splits) on transactions by rule
+- make budget reports showing goals vs actual performance
+- generate interest transactions by rule
+- help you enter new transactions with prompts or a terminal UI
+- import and convert transactions from banks and other sources
+- be used as a library in Haskell scripts or programs
+
+More examples: [Charts and Graphs](charts.md) • [HTML reports](report-examples.md#income-statement-2012-01-012014-10-11) • [Working with other software](doc.md#other-software) • [Investing and trading](doc.md#investing-and-trading) • [Scripts and addons](scripts.md)
 
 ## What problems does hledger solve ?
 
@@ -345,58 +347,6 @@ It is [actively maintained], with regular [releases]
 and a [large chat room and other support resources](support.md).
 
 
-
-## What exactly can it do ?
-
-hledger can (as of 2023):
-
-- list your transactions, payees, currencies/commodities, accounts, statistics
-- show the hierarchy of accounts and subaccounts
-- show the transactions affecting any account, and calculate its running balance
-- make a balance sheet, showing your asset and liability account balances
-- make a cashflow report, showing changes in your cash assets
-- make an income statement, showing your revenues and expenses
-- show simple bar charts by period
-- show purchase costs/selling prices
-- show market values in any currency at any valuation date
-- calculate the rate of return of a savings account or investment
-- make reports from timeclock or timedot time logs
-- make reports from any CSV/SSV/TSV file
-- make reports from any data which you have converted to a hledger-readable format
-
-It can slice, dice, and present your data in different ways:
-
-- filter out just the items or time period you're interested in
-- show multiple periods side by side
-- summarise accounts to a certain depth to give the big picture
-- rewrite or pivot account names to transform reports
-- output reports as plain text, HTML, CSV, TSV, JSON, SQL...
-- run as a live-updating terminal UI, for fast interactive exploration
-- run as a web app, allowing remote/multi-user browsing and data entry
-- run as a JSON web API, for integrating with custom apps
-
-If you add a few directives to the file, hledger can:
-
-- combine multiple files / data sets
-- generate recurring transactions by rule
-- generate extra postings (splits) on transactions by rule
-- show a forecast of future activity, eg to help with planning
-- make a budget report, showing your budget goals and performance by account and period
-
-Also, it can:
-
-- generate interest transactions by rule
-- help you enter new transactions with prompts or a terminal UI
-- help you convert and import new transactions from external sources, eg banks
-- be used as a library in a quick Haskell script or compiled program
-
-Here are a few more examples of things it can do:
-
-- [Charts and Graphs](charts.md)
-- [HTML reports](report-examples.md#income-statement-2012-01-012014-10-11)
-- [Working with other software](doc.md#other-software)
-- [Investing and trading](doc.md#investing-and-trading)
-- [Scripts and addons](scripts.md)
 
 ## When might hledger not be a good choice ?
 
