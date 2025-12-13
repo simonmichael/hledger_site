@@ -102,10 +102,10 @@ It can help you to..
 
 More about it:
 
-- **[Why hledger ?](features.md)**, including
   - [What problems does hledger solve ?](what-problems-does-hledger-solve.md)
   - [How is it different from traditional accounting software ?](features.md#how-is-it-different-from-traditional-accounting-software-)
   - [When might hledger not be a good choice ?](features.md#when-might-hledger-not-be-a-good-choice-)
+- **[Why hledger ?](why.md)**, including
 - **[FAQ](faq.md)**, including
   - [How does hledger relate to Ledger ?](faq.md#how-does-hledger-relate-to-ledger-)
   - [Isn't plain text hard to work with ?](faq.md#isnt-plain-text-hard-to-work-with-)

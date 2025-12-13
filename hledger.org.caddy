@@ -129,6 +129,7 @@ hledger.org {
 	redir /regressions REGRESSIONS.html
 
 	# misc moved content and shortcut aliases
+	redir /features.html /why.html
 	redir /videos.html /doc.html#videos
 	redir /tracking-investments.html /track-investments.html
 	redir /cookbook.html /doc.html

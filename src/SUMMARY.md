@@ -70,7 +70,7 @@
 - [Editors](editors.md)
 - [Exporting from hledger](export.md)
 - [FAQ](faq.md)
-- [Features](features.md)
+- [Why hledger ?](why.md)
 - [Forecasting](forecasting.md)
 - [Foreign trip expenses](foreign-trip-expenses.md)
 - [hledger and Beancount](beancount.md)

@@ -31,7 +31,7 @@ See also:
 - [Release notes](relnotes.md)
 - [Developer docs](dev.md)
 - [What problems does hledger solve ?](what-problems-does-hledger-solve.md)
-- [Features](features.md)
+- [Why hledger ?](why.md)
 
 ## Too long, didn't read
 

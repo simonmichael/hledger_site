@@ -70,7 +70,7 @@ These features are common to both hledger and Ledger:
 
 For differences, see the detailed [PTA Feature Matrix](https://plaintextaccounting.org/#feature-matrix).
 
-The [Features](features.md) page introduces hledger's features for new users.
+The [Why hledger ?](why.md) page introduces hledger's features for new users.
 
 ### Performance differences
 
