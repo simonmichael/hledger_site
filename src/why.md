@@ -207,8 +207,9 @@ produce detailed time reports just as easily as financial reports.
 
 ### Easy to get started
 
-Within its scope - a Plain Text Accounting tool, which is by nature slightly technical -
-hledger aims to be intuitive, learnable and highly usable. It provides out of the box:
+Plain Text Accounting apps are usually slightly technical,
+but hledger aims to be intuitive, learnable and highly usable.
+It provides out of the box:
 - Multi-currency double-entry accounting using only a plain text file
 - [Assisted data entry](add.md) or [CSV import](import-csv.md)
 - Zero-setup [command line], [terminal], and [web] user interfaces
@@ -225,6 +226,12 @@ hledger comes with several user interfaces that just work:
 - **[Terminal UI](hledger-ui.md)** - a live-updating interface for quickly reviewing balances and transactions ([screencast](https://asciinema.org/a/29665))
 - **[Web UI](hledger-web.md)** - an easy web interface for terminal-free browsing and data entry. Runs locally or on a server ([demo](http://demo.hledger.org))
 - **[Haskell library](https://hackage.haskell.org/package/hledger-lib)** - write scripts, add-on commands, or applications as powerful as hledger itself.
+
+### Fast
+
+- Reports take a fraction of a second
+- `hledger-ui --watch` updates instantly as you edit
+- Processes 15k-25k transactions/second ([benchmark](ledger.md#performance))
 
 ### Dependable and robust
 
@@ -243,12 +250,6 @@ hledger strives to be absolutely dependable and never waste your time:
 hledger works well on Windows, Mac, and Unix systems, with official binaries provided for each.
 There is also a [mobile app](mobile.md).
 
-### Fast
-
-- Reports take a fraction of a second
-- `hledger-ui --watch` updates instantly as you edit
-- Processes 15k-25k transactions/second ([benchmark](ledger.md#performance))
-
 ### Compatible
 
 hledger was inspired by [Ledger CLI] and provides most of its features, in more depth and with fewer sharp edges. Ledger users will find the file formats and commands familiar,
@@ -257,14 +258,14 @@ and can often run both tools on the same data files ([more about origins and dif
 hledger can convert to/from [Beancount] format. Many [import tools](https://plaintextaccounting.org/#data-importconversion)
 exist for other applications. Data exports to CSV, JSON, or SQL.
 
-### Actively maintained and supported
-
-hledger is [actively maintained], with regular [releases] and [strong community support](support.md).
-
 ### Free Software
 
 [Free Software] with no purchase price or monthly fees, licensed under [GNU GPLv3+][gpl].
 You always have the right to run, inspect, modify, or share it.
+
+### Actively maintained and supported
+
+hledger is [actively maintained], with regular [releases] and [strong community support](support.md).
 
 
 ## When might hledger not be a good choice ?

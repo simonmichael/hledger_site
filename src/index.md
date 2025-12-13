@@ -59,15 +59,15 @@ plain text accounting.
 <a name="description"></a>
 
 **hledger** is friendly, fast, and dependable accounting software for tracking
-money, investments, cryptocurrencies, time, or any countable commodity. It uses human-readable
-**[plain text data](https://plaintextaccounting.org)** that you control.
+money, investments, cryptocurrencies, time, or any countable commodity.
+It uses human-readable **[plain text data](https://plaintextaccounting.org)** that you control.
 
 You can import CSV from banks, or enter data via web/terminal interfaces or your favorite text editor.
 hledger provides powerful reports and scales smoothly from simple to sophisticated needs.
 It works well with version control, scripts, and LLMs.
 Read more at **[Why hledger ?](why.md)** and **[FAQ](faq.md)**.
 
-**How to get started ?**
+**Get started**
 
 - **[Install](install.md)** - quickly get hledger installed on your machine.
 - **[Docs](doc.md)** - hledger's user documentation.

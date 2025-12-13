@@ -138,13 +138,7 @@ Some examples can be found at <https://plaintextaccounting.org/Choosing-accounts
 
 ### What can hledger do for me ?
 
-hledger can provide clarity and insight into your personal or business
-finances, time logs, or other dated quantitative data, with relatively
-little effort on your part.  You need only provide a list of
-transactions, as a plain text file in a simple human-readable
-format. (Or a CSV file plus some conversion rules.) From this hledger
-can generate a variety of useful reports and interactive views.  See
-[Why hledger ?](why.md).
+See [Why hledger ?](why.md) for capabilities and use cases.
 
 ### How could that help me ?
 
