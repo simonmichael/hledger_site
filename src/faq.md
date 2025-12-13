@@ -2,6 +2,17 @@
 
 If you have additions or suggestions, just click the "edit this page" link at the bottom,
 or let us know in the [chat](support).
+Here are some common questions you might have:
+
+- [How does hledger relate to Ledger ?](faq.md#how-does-hledger-relate-to-ledger-)
+- [Isn't plain text hard to work with ?](faq.md#isnt-plain-text-hard-to-work-with-)
+- [What helpers are available for my text editor or IDE ?](editors.md)
+- [In Emacs, do I have to use hledger-mode ? Is ledger-mode only for Ledger ?](faq.md#in-emacs-do-i-have-to-use-hledger-mode--is-ledger-mode-only-for-ledger-)
+- [Isn't importing from banks a pain ?](faq.md#isnt-importing-from-banks-a-pain-)
+- [Where can I find hledger CSV rules for my financial institutions ?](faq.md#where-can-i-find-hledger-csv-rules-for-my-financial-institutions-)
+- [There are so many docs, where do I even..](faq.md#there-are-so-many-docs-where-do-i-even-)
+
+All questions:
 
 <!-- toc -->
 

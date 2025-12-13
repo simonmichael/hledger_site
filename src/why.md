@@ -193,7 +193,14 @@ It's the most-used PTA app in
 
 ## Batteries are included
 
-hledger comes with multiple user interfaces that just work:
+hledger is a combination of
+
+- user-friendly, dependable accounting app
+- swiss army penknife and power tool for financial data
+- hands-on bookkeeping tutorial / refresher course / library
+- and a supportive community of fellow money wranglers.
+
+It comes with multiple user interfaces that just work:
 
 <style>
 table#screenshots td { 
@@ -336,6 +343,7 @@ It is licensed under [GNU GPLv3+][gpl], providing the strongest guarantee
 that you will always have the right to run, inspect, modify, or share it.
 It is [actively maintained], with regular [releases]
 and a [large chat room and other support resources](support.md).
+
 
 
 ## What exactly can it do ?
