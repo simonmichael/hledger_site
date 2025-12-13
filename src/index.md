@@ -76,10 +76,122 @@ hledger provides powerful reports and scales smoothly from simple to sophisticat
 It works well with version control, scripts, and LLMs.
 Read more at **[Why hledger ?](why.md)** and **[FAQ](faq.md)**.
 
+<details>
+<summary><b>A quick example</b></summary>
+
+```journal
+2025/12/01 Starting balance
+    equity
+    assets:checking            $1000
+
+2025/12/02 Grocery store
+    assets:checking
+    expenses:groceries        $64.50
+
+2025/12/03 Client payment
+    income:consulting
+    assets:checking         $1500
+
+2025/12/05 Rent
+    assets:checking
+    expenses:rent            $800
+```
+
+From this, hledger generates reports:
+
+```
+$ hledger aregister assets
+Transactions in assets and subaccounts:
+2025-12-01 Starting balance   equity                  $1000.00      $1000.00
+2025-12-02 Grocery store      ex:groceries             $-64.50       $935.50
+2025-12-03 Client payment     in:consulting           $1500.00      $2435.50
+2025-12-05 Rent               ex:rent                 $-800.00      $1635.50
+```
+```
+$ hledger balance
+            $1635.50  assets:checking
+           $-1000.00  equity
+              $64.50  expenses:groceries
+             $800.00  expenses:rent
+           $-1500.00  income:consulting
+--------------------
+                   0
+```
+```
+$ hledger is --tree --pretty
+Income Statement 2025-12-01..2025-12-05
+
+┌───────────────────╥────────────────────────┐
+│                   ║ 2025-12-01..2025-12-05 │
+╞═══════════════════╬════════════════════════╡
+│ Revenues          ║                        │
+├───────────────────╫────────────────────────┤
+│ income:consulting ║               $1500.00 │
+├───────────────────╫────────────────────────┤
+│                   ║               $1500.00 │
+╞═══════════════════╬════════════════════════╡
+│ Expenses          ║                        │
+├───────────────────╫────────────────────────┤
+│ expenses          ║                $864.50 │
+│   groceries       ║                 $64.50 │
+│   rent            ║                $800.00 │
+├───────────────────╫────────────────────────┤
+│                   ║                $864.50 │
+╞═══════════════════╬════════════════════════╡
+│ Net:              ║                $635.50 │
+└───────────────────╨────────────────────────┘
+```
+or allows other actions:
+```
+$ hledger add
+Adding transactions to journal file /Users/simon/.hledger.journal
+Any command line arguments will be used as defaults.
+Use tab key to complete, readline keys to edit, enter to accept defaults.
+An optional (CODE) may follow transaction dates.
+An optional ; COMMENT may follow descriptions or amounts.
+If you make a mistake, enter < at any prompt to go one step backward.
+To end a transaction, enter . when prompted.
+To quit, enter . at a date prompt or press control-d or control-c.
+Date [2025-12-13]:
+Description: groc
+Using this similar transaction for defaults:
+2025-12-02 Grocery store
+    assets:checking            $-64.50
+    expenses:groceries          $64.50
+
+Account 1 [assets:checking]:
+Amount  1 [$-64.50]: _
+```
+```
+$ hledger web
+...
+Serving web UI and json API at IP address 127.0.0.1 (local access), port 5000
+with base url http://127.0.0.1:5000
+This server will exit after 2m with no browser windows open (or press ctrl-c)
+Opening web browser...
+```
+```
+$ hledger check --strict
+hledger: Error: /Users/simon/.hledger.journal:2:
+  | 2025-12-01 Starting balance
+2 |     equity                   $-1000
+  |                              ^^^^^^
+  |     assets:checking           $1000
+
+Strict commodity checking is enabled, and
+commodity "$" has not been declared.
+Consider adding a commodity directive. Examples:
+
+commodity $1000.00
+commodity 1.000,00 $
+```
+
+</details>
+
 **Get started**
 
-- **[Install](install.md)** - quickly get hledger installed on your machine. Here's the [release notes](relnotes.md).
-- **[Docs](doc.md)** - browse the documentation. Or start with **[hledger by example](hledger-by-example.md)** or the **[manual](hledger.md)**.
+- **[Install](install.md)** - quickly get hledger installed. Here are [release notes](relnotes.md).
+- **[Docs](doc.md)** - browse documentation. Or jump to the **[hledger by example](hledger-by-example.md)** book or the **[manual](hledger.md)**.
 - **[Support](support.md)** - ask questions or share feedback.
 
 **Get involved**

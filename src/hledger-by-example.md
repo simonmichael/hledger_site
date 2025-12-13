@@ -1,6 +1,6 @@
 # hledger by example
 
-A growing "book" introducing hledger one step at a time.
+A small but growing book introducing hledger one step at a time.
 
 You can use the sidebar links, the left and right arrow buttons on this page,
 or the left and right arrow keys, to step through the pages.
