@@ -55,6 +55,7 @@ or [in your browser](https://tldr.inbrowser.app):
 
 Fast introductions for folks comfortable with command line tools.
 
+- [1 minute quick start](index.md)
 - [2 minute quick start](2-minute-quick-start.md)
 - [5 minute quick start](5-minute-quick-start.md)
 - [10 minute quick start](10-minute-quick-start.md)
