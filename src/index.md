@@ -80,21 +80,23 @@ Read more at **[Why hledger ?](why.md)** and **[FAQ](faq.md)**.
 <summary><b>A quick example</b></summary>
 
 ```journal
+; ~/.hledger.journal
+
 2025/12/01 Starting balance
     equity
-    assets:checking            $1000
+    assets:checking    $1000
 
 2025/12/02 Grocery store
     assets:checking
-    expenses:groceries        $64.50
+    expenses:groceries  $64.50
 
 2025/12/03 Client payment
     income:consulting
-    assets:checking         $1500
+    assets:checking    $1500
 
 2025/12/05 Rent
     assets:checking
-    expenses:rent            $800
+    expenses:rent     $800
 ```
 
 From this, hledger generates reports:
@@ -141,7 +143,7 @@ Income Statement 2025-12-01..2025-12-05
 │ Net:              ║                $635.50 │
 └───────────────────╨────────────────────────┘
 ```
-or allows other actions:
+or runs other actions:
 ```
 $ hledger add
 Adding transactions to journal file /Users/simon/.hledger.journal
@@ -184,6 +186,19 @@ Consider adding a commodity directive. Examples:
 
 commodity $1000.00
 commodity 1.000,00 $
+```
+```
+$ hledger
+   __   __       __            
+  / /  / /__ ___/ /__ ____ ____
+ / _ \/ / -_) _  / _ `/ -_) __/
+/_//_/_/\__/\_,_/\_, /\__/_/   
+                /___/          
+-------------------------------------------------------------------------------
+hledger 1.51.99-g67b206380-20251207, mac-aarch64
+Usage: hledger [COMMAND] [OPTIONS] [ARGS]
+Commands:
+...
 ```
 
 </details>
