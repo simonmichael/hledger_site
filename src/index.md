@@ -39,6 +39,9 @@
   margin:3em;
   text-align:center;
 }
+code::first-line {
+  font-weight:bold;
+}
 </style>
 
 <img id="coins" class="responsive-image" src="images/coins2-248.png" alt="hledger logo" />
@@ -83,8 +86,8 @@ Read more at **[Why hledger ?](why.md)** and **[FAQ](faq.md)**.
 ; ~/.hledger.journal
 
 2025-12-01 Starting balance
-    equity
-    assets:checking    $1000
+    equity            $-1000     ; <- $1000 moves from the "equity" account
+    assets:checking    $1000     ; <- to the "assets:checking" account
 
 2025-12-02 Grocery store
     assets:checking
@@ -147,13 +150,7 @@ or runs other actions:
 ```
 $ hledger add
 Adding transactions to journal file /Users/simon/.hledger.journal
-Any command line arguments will be used as defaults.
-Use tab key to complete, readline keys to edit, enter to accept defaults.
-An optional (CODE) may follow transaction dates.
-An optional ; COMMENT may follow descriptions or amounts.
-If you make a mistake, enter < at any prompt to go one step backward.
-To end a transaction, enter . when prompted.
-To quit, enter . at a date prompt or press control-d or control-c.
+...
 Date [2025-12-13]:
 Description: groc
 Using this similar transaction for defaults:
