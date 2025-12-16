@@ -73,6 +73,11 @@ is a powerful chart-making tool written in python.
 
 ![hledger-plot screenshot](images/charts-hledger-plot.png)
 
+### hledger-lit
+
+[hledger-lit](https://github.com/adept/hledger-lit) (2025)
+is a nice python web UI that makes several kinds of chart.
+
 ### hledger-sankeymatic
 
 At <https://sankeymatic.com> you can make flow diagrams in your browser,
