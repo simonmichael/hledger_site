@@ -132,6 +132,9 @@ Some downloading helpers can be found at
 - [SM's 2019 setup](sm-2019-setup.md)
 - [SM's time & task dashboard](time-and-task-dashboard.md)
 
+### phobo3s Excel
+- phobo3s's [Excel-based setup](https://forum.plaintextaccounting.org/t/using-hledger-together-with-excel/697), which calculates FIFO cost basis & gains
+
 ### Full-fledged hledger
 - Dmitry Astapov's [Full-fledged Hledger](https://github.com/adept/full-fledged-hledger), a CSV-first workflow tutorial
 
