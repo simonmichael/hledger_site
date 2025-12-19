@@ -66,6 +66,7 @@
 - [Converting time to money](time-to-money.md)
 - [Cost notation](cost-notation.md)
 - [Create a journal](create-a-journal.md)
+- [Cryptocurrency tax reporting](cctax.md)
 - [Currency conversion](currency-conversion.md)
 - [Editors](editors.md)
 - [Exporting from hledger](export.md)

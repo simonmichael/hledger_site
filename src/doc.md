@@ -306,6 +306,7 @@ If you don't find what you'll looking for here, try also:
 
 ### Taxes
 - [A tax reporting setup](tax-reporting-setup.md)
+- [Cryptocurrency tax reporting](cctax.md)
 
 ### Time tracking
 - [Converting time to money](time-to-money.md)
