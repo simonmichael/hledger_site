@@ -60,7 +60,7 @@ P 2025-12-19 00:00:00 ADA-USD 0.37601006031036376953125 USD
 
 You can omit the start or end options to fetch a range of dates.
 Some commodities will not have prices available on weekends.
-Some providers may require signup and an API key to get certain data.
+Some providers (eg alphavantage) may require signup and an API key to get certain data.
 
 
 ## bittytax_price
