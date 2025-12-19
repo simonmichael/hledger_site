@@ -73,6 +73,7 @@
 - [Why hledger ?](why.md)
 - [Forecasting](forecasting.md)
 - [Foreign trip expenses](foreign-trip-expenses.md)
+- [Getting prices](prices.md)
 - [hledger and Beancount](beancount.md)
 - [hledger and dsq/DataStation](dsq.md)
 - [hledger and GnuCash](gnucash.md)

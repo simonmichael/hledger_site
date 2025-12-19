@@ -191,6 +191,7 @@ If you don't find what you'll looking for here, try also:
 
 ### Data entry
 - [Create a journal](create-a-journal.md)
+- [Getting prices](prices.md)
 - [How to record journal entries](how-to-record.md)
 - [How to figure out journal entries](how-to-figure-out.md)
 - [Importing CSV data](import-csv.md)
