@@ -28,10 +28,9 @@ See also:
 
 - **[hledger FAQ](faq.md)**
 - [Plain Text Accounting FAQ](https://plaintextaccounting.org/FAQ)
+- [Why hledger ?](why.md)
 - [Release notes](relnotes.md)
 - [Developer docs](dev.md)
-- [What problems does hledger solve ?](what-problems-does-hledger-solve.md)
-- [Why hledger ?](why.md)
 
 ## Too long, didn't read
 
