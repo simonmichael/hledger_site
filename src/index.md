@@ -83,6 +83,10 @@ Read more at **[Why hledger ?](why.md)** and **[FAQ](faq.md)**.
 <details>
 <summary><b>A quick example</b></summary>
 
+Transactions are recorded in a journal file.
+You don't have to edit this directly, but many people do.
+This simple format, invented by the Ledger project, unlocks Plain Text Accounting and Double Entry Bookkeeping.
+
 ```journal
 ; ~/.hledger.journal
 
@@ -91,7 +95,7 @@ Read more at **[Why hledger ?](why.md)** and **[FAQ](faq.md)**.
     assets:checking    $1000     ; <- to the "assets:checking" account
 
 2025-12-02 Grocery store
-    assets:checking
+    assets:checking              ; <- if omitted, the amount is implied
     expenses:groceries  $64.50
 
 2025-12-03 Client payment
@@ -103,7 +107,7 @@ Read more at **[Why hledger ?](why.md)** and **[FAQ](faq.md)**.
     expenses:rent     $800
 ```
 
-From this, hledger generates reports:
+From it, hledger generates reports:
 
 ```
 $ hledger aregister assets
