@@ -85,7 +85,8 @@ Read more at **[Why hledger ?](why.md)** and **[FAQ](faq.md)**.
 
 Transactions are recorded in a journal file.
 You don't have to edit this directly, but many people do.
-This simple format, invented by the Ledger project, unlocks Plain Text Accounting and Double Entry Bookkeeping.
+This simple format, invented by the Ledger project, is the key
+to understanding Plain Text Accounting and Double Entry Bookkeeping.
 
 ```journal
 ; ~/.hledger.journal
@@ -95,7 +96,7 @@ This simple format, invented by the Ledger project, unlocks Plain Text Accountin
     assets:checking    $1000     ; <- to the "assets:checking" account
 
 2025-12-02 Grocery store
-    assets:checking              ; <- if omitted, the amount is implied
+    assets:checking              ; <- amount omitted, $-64.50 is implied
     expenses:groceries  $64.50
 
 2025-12-03 Client payment
