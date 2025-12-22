@@ -3,6 +3,7 @@
 .content h1 {
   font-family: Gabarito;
   font-size: 6em;
+  font-weight: normal;
   white-space:normal;
   text-align:center;
   margin: 0.5em 0 0;
