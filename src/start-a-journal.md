@@ -31,7 +31,8 @@ You can start the journal by running
 ```
 hledger add
 ```
-and adding a transaction (see the next page for an example). This will create the file if needed. 
+and adding a transaction (see the next page for an example).
+(If you're using hledger 1.50.3-1.51.1, `hledger add -f ~/.hledger.journal` is needed.)
 
 <!-- <br> -->
 
