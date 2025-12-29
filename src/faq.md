@@ -324,15 +324,15 @@ include other.journal
 # txns
 ```
 
-
 ### Why do I get an error with non-ascii text ?
 
 hledger uses the system's text encoding when reading non-ascii text.
-If no system encoding is configured, or if the data's encoding is different,
-hledger will give an error.
-Change your data's encoding with `iconv` (or powershell or notepad on Windows),
+If no system encoding is configured, or if the data's encoding is different, hledger will give an error.
+Run `hledger setup` to check this.
+When there's a problem, you can follow the advice shown there.
+In more detail: either change your data's encoding with `iconv` (or powershell or notepad on Windows),
 or configure your system's encoding to match your data.
-See [Install: Text encoding](install.md#text-encoding).
+See also [Install: Text encoding](install.md#text-encoding).
 
 ### How should I organise files ?
 

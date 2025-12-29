@@ -277,6 +277,10 @@ hledger uses the system's text encoding when reading data, and it expects data t
 So if no system encoding is configured, or if the data uses a different encoding,
 hledger will give an error when reading it.
 
+TLDR: run `hledger setup` to check this, and ensure your data files use the encoding it recommends.
+
+Here's more detail:
+
 How likely is this to affect you ?
 It depends on your platform and the data you are working with:
 
