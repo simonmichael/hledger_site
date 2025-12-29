@@ -298,6 +298,33 @@ and [Docs: Videos](doc.md#videos).
 
 See [hledger manual: Setting LEDGER_FILE](hledger.md#setting-ledger_file).
 
+### I'm on Windows, how do I keep my files in AppData\\Roaming ?
+
+You could set the LEDGER_FILE environment variable (see the link in the answer above).
+
+Or, you can create a file at the default location, that includes the rest.
+You can use relative include paths, like this
+(the first file must be named `.hledger.journal`, the other file names can be anything):
+
+```
+# \Users\USER\.hledger.journal
+include AppData\Roaming\hledger.journal
+```
+
+```
+# \Users\USER\AppData\Roaming\main.journal
+include other.journal
+
+# txns
+```
+
+```
+# \Users\USER\AppData\Roaming\other.journal
+
+# txns
+```
+
+
 ### Why do I get an error with non-ascii text ?
 
 hledger uses the system's text encoding when reading non-ascii text.
