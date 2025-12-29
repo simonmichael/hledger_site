@@ -328,11 +328,8 @@ include other.journal
 
 hledger uses the system's text encoding when reading non-ascii text.
 If no system encoding is configured, or if the data's encoding is different, hledger will give an error.
-Run `hledger setup` to check this.
-When there's a problem, you can follow the advice shown there.
-In more detail: either change your data's encoding with `iconv` (or powershell or notepad on Windows),
-or configure your system's encoding to match your data.
-See also [Install: Text encoding](install.md#text-encoding).
+Run `hledger setup` to check this, and use the text encoding it recommends.
+Or see [Install: Text encoding](install.md#text-encoding) for more detail.
 
 ### How should I organise files ?
 
