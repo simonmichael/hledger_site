@@ -308,20 +308,22 @@ You can use relative include paths, like this
 
 ```
 # \Users\USER\.hledger.journal
+
 include AppData\Roaming\hledger.journal
 ```
 
 ```
 # \Users\USER\AppData\Roaming\main.journal
+
 include other.journal
 
-# txns
+# ...
 ```
 
 ```
 # \Users\USER\AppData\Roaming\other.journal
 
-# txns
+# ...
 ```
 
 ### Why do I get an error with non-ascii text ?
