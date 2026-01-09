@@ -664,5 +664,7 @@ i started using hledger and it's really, really good wow --sekun
 
 I started a freelance business this year and hledger has really helped me get some peace of mind with regards to my financials. --Benedikt Ritter
 
+I've been using #hledger from @simonmic for a few years, and it's been better than any other personal finance tool I've tried --Luca Bello
+
 `;
 const quotes = quotesmd.trim().split('\n\n').map(q => q.replace(/^\*|\*$/g, '').trim());
