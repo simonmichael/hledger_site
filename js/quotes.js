@@ -666,5 +666,18 @@ I started a freelance business this year and hledger has really helped me get so
 
 I've been using #hledger from @simonmic for a few years, and it's been better than any other personal finance tool I've tried --Luca Bello
 
+I have just closed the books on 2025 and remain a wholehearted champion of hledger. I enjoy my accounting routines. I look forward to my accounting routines. And I am endlessly surprised that this is the case. --bitsonchips
+
+In a increasingly complex world, I appreciate the fact that having, earning, spending, saving, borrowing are simply transactions and hledger helps me keep my balance and keep an eye on the results of my family's efforts to live within our means and plan for the future. --bitsonchips
+
+Learning is a joy! Every once in a while I pick up a new command or some insight into finance and this feels powerful. --bitsonchips
+
+The problems of capitalism can be violent, pernicious, and sneaky af. My little routines with hledger keep those problems in perspective and help me feel like my family is building sufficient shelter in the storm. --bitsonchips
+
+It is elegant, reliable, useful, and important. --bitsonchips
+
+I can’t forget the joy it brought when I first fully ported my finances to hledger --teddpole
+
+
 `;
 const quotes = quotesmd.trim().split('\n\n').map(q => q.replace(/^\*|\*$/g, '').trim());
