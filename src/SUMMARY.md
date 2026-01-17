@@ -136,7 +136,6 @@
 - [EXAMPLES](EXAMPLES.md)
 - [FILES](FILES.md)
 - [FINANCE](FINANCE.md)
-- [Investment Accounting Feature Ladder](investment-accounting-features.md)
 - [ISSUES](ISSUES.md)
 - [JUST-MAKE-SHAKE](JUST-MAKE-SHAKE.md)
 - [MOCKUPS](MOCKUPS.md)
