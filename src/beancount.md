@@ -87,6 +87,7 @@ bean-report converts `@@` total costs to `@` unit costs.
 `@` costs are more standard and often more useful, eg when selling part of a lot.
 But this conversion tends to create imprecise entries, causing hledger to complain that transactions are unbalanced.
 You may need to manually adjust the decimals in such entries.
+(Or add an amountless expenses:rounding posting.)
 
 ### Double @
 
