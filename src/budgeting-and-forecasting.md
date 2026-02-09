@@ -208,7 +208,7 @@ into which you transfer money and from which you spend it.
 
 Note with this style of budgeting, you don't use periodic transactions or the `--budget` report -
 just regular transfers and regular balance reports.
-At the end of each period you can decide to remove or reallocate any surpluses, or let them roll over.b
+At the end of each period you can decide to remove or reallocate any surpluses, or let them roll over.
 
 A good place to keep the envelope accounts is under your regular checking or cash account,
 since it keeps the overall balance correct.
