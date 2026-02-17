@@ -678,6 +678,25 @@ It is elegant, reliable, useful, and important. --bitsonchips
 
 I can’t forget the joy it brought when I first fully ported my finances to hledger --teddpole
 
+Every time I use hledger during tax filing season: "WOW, hledger is so useful!" --SK
+
+csv import is God-sent --ivbaklan
+
+Thanks for showing one way of simplifying a task the software service vendors want us to think is impossible without their expensive costs and unpredictable terms and conditions. --RT-mn2pb
+
+As someone who's worked as an accountant since 1985, I'm going to have to play with this. --dingokidneys
+
+I've been using hledger + Plaid + OpenClaw to manage my finances and honestly it's replaced every budgeting app I've tried. Figured I'd share the setup. --Kenrick Beckett
+
+The other task was getting an overview over company finances. [Openclaw] set up a hledger, added some amounts, and keeps track of burn! Won’t replace an accountant, but super convenient to have everything accessible via one chat instead of across multiple apps.
+
+I use hledger for personal book-keeping. It used to take the better part of a day every month to enter my bank and CC transactions, but with LLMs, I've been able to classify entries into my chart-of-accounts in literal minutes. JSON specifically because scripting them is robust and easy. --Jasim
+
+I've been learning #plaintextaccounting for weeks; and just hit a eureka.
+Following the numbers, owning a car is almost always the wrong decision in a city with dependable public transport.
+The speed with which you get into debt may be quicker than the speed of the car itself.
+--Yāsky
+
 
 `;
 const quotes = quotesmd.trim().split('\n\n').map(q => q.replace(/^\*|\*$/g, '').trim());
