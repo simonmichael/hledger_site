@@ -124,7 +124,7 @@ Some downloading helpers can be found at
 <https://plaintextaccounting.org/#data-importconversion> (search for "download").
 
 
-## More advanced workflows
+## Custom workflows
 
 ### SM
 - [Export Lots workflow](https://github.com/simonmichael/hledger/tree/master/examples/investing/export-lots-workflow)
@@ -132,6 +132,10 @@ Some downloading helpers can be found at
 - [SM's 2023 setup](sm-2023-setup.md)
 - [SM's 2019 setup](sm-2019-setup.md)
 - [SM's time & task dashboard](time-and-task-dashboard.md)
+
+### hledger YouTube Business Template
+
+- Kaylee Beyene's [hledger-youtube-business](https://github.com/KayleeBeyene/hledger-youtube-business), a beginner-friendly hledger starter kit for YouTubers and Canadians.
 
 ### phobo3s Excel
 - phobo3s's [Excel-based setup](https://forum.plaintextaccounting.org/t/using-hledger-together-with-excel/697), which calculates FIFO cost basis & gains
