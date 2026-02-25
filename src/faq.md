@@ -11,7 +11,7 @@ Here are some common questions:
 - [In Emacs, do I have to use hledger-mode ? Is ledger-mode only for Ledger ?](faq.md#in-emacs-do-i-have-to-use-hledger-mode--is-ledger-mode-only-for-ledger-)
 - [Isn't importing from banks a pain ?](faq.md#isnt-importing-from-banks-a-pain-)
 - [Where can I find hledger CSV rules for my financial institutions ?](faq.md#where-can-i-find-hledger-csv-rules-for-my-financial-institutions-)
-- [There are so many docs, where do I even..](faq.md#there-are-so-many-docs-where-do-i-even-)
+- [There are so many docs, where do I even..](faq.md#there-are-so-many-docs-where-do-i-even)
 
 All questions:
 
