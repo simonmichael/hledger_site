@@ -15,7 +15,7 @@ For the popular text editors there are helper modes/extensions which can make ed
 hledger journal files much more convenient. These provide things like
 syntactic highlighting, auto indentation, and tab completion of
 account names.  You can find a list of these extensions at \
-<https://plaintextaccounting.org/#editor-support>.\
+<https://plaintextaccounting.org/#editor-plugins>.\
 The ones with "hledger" in their name are designed specifically for working with hledger journals, while the ones with "ledger" in their name are not, but can often work well with hledger as well (eg: ledger-mode).
 
 Here are more details and tips.
