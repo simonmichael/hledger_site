@@ -55,7 +55,7 @@ Two more amounts are used to describe changes in the above during a given period
 - **Revenue**     - Money flowing in
 - **Expenses**    - Money flowing out
 
-You may be accustomed to using the word Income instead Revenue.
+You may be accustomed to using the word Income instead of Revenue.
 That's fine, just remember that Income is sometimes used to mean Net
 Income, which is Revenue - Expenses.
 
