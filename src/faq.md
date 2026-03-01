@@ -217,7 +217,7 @@ See [hledger and Ledger](ledger.md).
 ### How does hledger relate to Beancount ?
 
 Beancount (begun in 2008) is the other "big 3" PTA app.
-Witten in the popular Python programming language, it's notable for
+Written in the popular Python programming language, it's notable for
 best-in-class capital gains tracking (as of 2025)
 and an excellent web app (Fava).
 
