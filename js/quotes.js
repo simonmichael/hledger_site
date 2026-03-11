@@ -697,6 +697,11 @@ Following the numbers, owning a car is almost always the wrong decision in a cit
 The speed with which you get into debt may be quicker than the speed of the car itself.
 --Yāsky
 
+It does it all in plain text, which really blew my mind. Entire expense reports, generated in an instant! It's super fast. Mind-bogglingly so. --Mike Key
+
+おお、hledgerなんとエレガントなソフト --noji
+
+
 
 `;
 const quotes = quotesmd.trim().split('\n\n').map(q => q.replace(/^\*|\*$/g, '').trim());
