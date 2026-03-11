@@ -50,6 +50,11 @@ They also provide some reports.
 Connects to a hledger-web server, which you must have running somewhere your phone can connect to (eg a VPS or a VPN).
 Ie it can potentially add transactions directly into your main accounting system, without needing an export/import step.
 
+<img width="23%" src="images/mole/350x-account-list.png" alt="MoLe account list" />
+<img width="23%" src="images/mole/350x-drawer-open.png" alt="MoLe drawer open" />
+<img width="23%" src="images/mole/350x-transaction-list.png" alt="MoLe transaction list" />
+<img width="23%" src="images/mole/350x-new-transaction-entry.png" alt="MoLe add transaction" />
+
 ### Cone (Android, 2019-2021)
 
 <https://github.com/bradyt/cone>\
