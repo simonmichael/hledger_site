@@ -1,7 +1,6 @@
 # Rewrite account names
 
-Here's an example of using
-[account aliases](hledger.md#account-aliases).
+Here's an example of using [account aliases](hledger.md#alias-directive).
 
 Say a sole proprietor has a `personal.journal`:
 ```journal
