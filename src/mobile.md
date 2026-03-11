@@ -20,8 +20,6 @@ Most of these are focussed on data entry, then export to a computer for reportin
 
 Exports a h/ledger journal.
 
-### Cashier II (progressive web app, 2022-2024)
-
 ### Cashier, Cashier II (progressive web apps, 2022-2024)
 
 Cashier:\
