@@ -66,7 +66,7 @@ The usual workflow is that every so often you manually initiate a CSV export fro
 Often the app starts up a temporary HTTP server, and you can fetch the data to your computer with curl.
 Then you can use hledger's usual CSV-reading or importing features.
 
-### GnuCash for Android
+### GnuCash (Android)
 
 <https://github.com/codinguser/gnucash-android>\
 [google play](https://play.google.com/store/apps/details?id=org.gnucash.android)
@@ -96,7 +96,7 @@ can be used to convert its CSV export to *ledger format.
 
 ## Apps with other ways to export
 
-### Money Manager Ex for Android (Android)
+### Money Manager Ex (Android)
 
 <http://android.moneymanagerex.org>,
 <https://github.com/moneymanagerex/android-money-manager-ex>\
