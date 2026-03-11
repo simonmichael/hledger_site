@@ -16,9 +16,13 @@ Most of these are focussed on data entry, then export to a computer for reportin
 ### NanoLedger (Android, 2023-)
 
 <https://github.com/chvp/NanoLedger>\
-<https://f-droid.org/packages/be.chvp.nanoledger>\
+<https://f-droid.org/packages/be.chvp.nanoledger>
 
 Exports a h/ledger journal.
+
+<img src="images/1-overview.png" alt="NanoLedger overview" />
+<img src="images/2-autocomplete.png" alt="NanoLedger autocomplete" />
+<img src="images/3-add.png" alt="NanoLedger add transaction" />
 
 ### Cashier, Cashier II (progressive web apps, 2022-2024)
 
@@ -89,7 +93,8 @@ Mobile UI for the mature GnuCash accounting software.
 <http://www.silverwaresoftware.com/XpenseTracker.html>
 
 Comprehensive and serviceable money & time tracking apps.
-[CSV rules](https://github.com/simonmichael/hledger/blob/master/examples/csv/xpensetracker.csv.rules),
+
+[CSV rules](https://github.com/simonmichael/hledger/blob/master/examples/csv/xpensetracker.csv.rules)\
 [Makefile](https://gist.github.com/simonmichael/06eed26bcc85c76d1604373418bc6c58)
 
 ### Eternity (IOS)
@@ -97,8 +102,8 @@ Comprehensive and serviceable money & time tracking apps.
 <http://www.komorian.com/eternity.html>
 
 An excellent time tracking app.
-These [CSV rules](https://github.com/simonmichael/hledger/blob/master/examples/csv/eternity.csv.rules)
-can be used to convert its CSV export to *ledger format.
+
+[CSV rules](https://github.com/simonmichael/hledger/blob/master/examples/csv/eternity.csv.rules)
 
 
 ## Apps with other ways to export
