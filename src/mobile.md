@@ -20,13 +20,22 @@ Most of these are focussed on data entry, then export to a computer for reportin
 
 Exports a h/ledger journal.
 
-### Cashier (progressive web app, 2022-2024)
+### Cashier II (progressive web app, 2022-2024)
 
-<https://github.com/MisterY/cashier>\
+### Cashier, Cashier II (progressive web apps, 2022-2024)
+
+Cashier:\
+<https://github.com/alensiljak/cashier>\
 [demo](https://cashier.alensiljak.eu.org)
 
-This can be used on a computer or a phone, including offline. 
-Exports a h/ledger journal.
+Cashier II:\
+<https://github.com/alensiljak/cashier-blazor>\
+[demo](https://cashier-ii.alensiljak.eu.org)
+
+These can be used on a computer or a phone, including offline. 
+They can optionally import data from h/ledger using a [server](https://github.com/alensiljak/cashier-server-rust).
+They export a new h/ledger journal.
+They also provide some reports.
 
 <img src="https://i.imgur.com/NdaUPtM.png" alt="Cashier options" width="30%" />
 <img src="https://i.imgur.com/NMmmde3.png" alt="Cashier new transaction screen" width="30%" />
