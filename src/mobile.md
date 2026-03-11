@@ -20,6 +20,17 @@ Most of these are focussed on data entry, then export to a computer for reportin
 
 Exports a h/ledger journal.
 
+### Cashier (progressive web app, 2022-2024)
+
+<https://github.com/MisterY/cashier>\
+[demo](https://cashier.alensiljak.eu.org)
+
+This can be used on a computer or a phone, including offline. 
+Exports a h/ledger journal.
+
+<img src="https://i.imgur.com/NdaUPtM.png" alt="Cashier options" width="30%" />
+<img src="https://i.imgur.com/NMmmde3.png" alt="Cashier new transaction screen" width="30%" />
+
 ### MoLe (Android, 2018-2024)
 
 <https://mole.ktnx.net>\
@@ -45,18 +56,6 @@ Cone vs NanoLedger:
 | Journal view screen      | Transactions can be sorted by new to old or reversed, and elements are colored | Transactions can only be sorted by new to old, and elements aren't colored           |
 | Transaction entry screen | The description field is free form                                           | The description field is split into status field, payee field and note field         |
 | Modify old transaction   | No                                                                             | Yes. You can edit or delete old transaction, or use it as the template for a new one |
-
-
-### Cashier (progressive web app)
-
-<https://github.com/MisterY/cashier>\
-[demo](https://cashier.alensiljak.eu.org)
-
-This can be used on a computer or a phone, including offline. 
-Exports a h/ledger journal.
-
-<img src="https://i.imgur.com/NdaUPtM.png" alt="Cashier options" width="30%" />
-<img src="https://i.imgur.com/NMmmde3.png" alt="Cashier new transaction screen" width="30%" />
 
 
 ## Apps with CSV export
