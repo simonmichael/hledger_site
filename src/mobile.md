@@ -20,9 +20,9 @@ Most of these are focussed on data entry, then export to a computer for reportin
 
 Exports a h/ledger journal.
 
-<img src="images/nanoledger/1-overview.png" alt="NanoLedger overview" />
-<img src="images/nanoledger/2-autocomplete.png" alt="NanoLedger autocomplete" />
-<img src="images/nanoledger/3-add.png" alt="NanoLedger add transaction" />
+<img width="30%" src="images/nanoledger/1-overview.png" alt="NanoLedger overview" />
+<img width="30%" src="images/nanoledger/2-autocomplete.png" alt="NanoLedger autocomplete" />
+<img width="30%" src="images/nanoledger/3-add.png" alt="NanoLedger add transaction" />
 
 ### Cashier, Cashier II (progressive web apps, 2022-2024)
 
