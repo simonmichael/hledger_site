@@ -84,9 +84,9 @@ Read more at **[Why hledger ?](why.md)** and **[FAQ](faq.md)**.
 <summary><b>A quick example</b></summary>
 
 Transactions are recorded in a journal file.
-You don't have to edit this directly, but many people do.
+You can edit this file yourself, or use one of several user interfaces.
 This simple format, invented by the Ledger project, is the key
-to understanding Plain Text Accounting and Double Entry Bookkeeping.
+to understanding Plain Text Accounting and Double Entry Bookkeeping:
 
 ```journal
 ; ~/.hledger.journal
@@ -108,7 +108,7 @@ to understanding Plain Text Accounting and Double Entry Bookkeeping.
     expenses:rent     $800
 ```
 
-From it, hledger generates reports:
+This file is all you need. From it, hledger generates reports:
 
 ```
 $ hledger aregister assets
