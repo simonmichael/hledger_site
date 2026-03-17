@@ -77,7 +77,7 @@ Beginner friendly, step by step guides.
 
 ## hledger by example
 
-A new, growing book of examples introducing hledger one step at a time.
+A growing book introducing hledger one step at a time.
 
 <!-- keep synced: hledger-by-example.md, SUMMARY.md, doc.md -->
 - **[hledger by example](hledger-by-example.md)**
