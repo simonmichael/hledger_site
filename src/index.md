@@ -209,7 +209,7 @@ Commands:
 **Get started**
 
 - **[Install](install.md)** - quickly get hledger installed. Here are [release notes](relnotes.md).
-- **[Docs](doc.md)** - learn what you need. **[hledger by example](hledger-by-example.md)** is a good place to start.
+- **[Docs](doc.md)** - many learning resources. **[hledger by example](hledger-by-example.md)** is a good place to start.
 - **[Support](support.md)** - ask questions or share feedback.
 
 **Get involved**
