@@ -158,10 +158,10 @@
                     <div class="left-buttons">
                         <!-- hledger customisation -->
                         <a href="https://github.com/simonmichael/hledger_site/commits/master" accesskey="2" title="what's new"></a>
-                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar" accesskey="s">
                             {{fa "solid" "bars"}}
                         </label>
-                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list" accesskey="t">
                             {{fa "solid" "paintbrush"}}
                         </button>
                         <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
@@ -173,7 +173,7 @@
                             <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
                         </ul>
                         {{#if search_enabled}}
-                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search. (Shortkey: f)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar" accesskey="f">
                             {{fa "solid" "magnifying-glass"}}
                         </button>
                         {{/if}}
@@ -186,17 +186,17 @@
 
                     <div class="right-buttons">
                         {{#if print_enable}}
-                        <a href="{{ path_to_root }}print.html" title="Print this book" aria-label="Print this book">
+                        <a href="{{ path_to_root }}print.html" title="Print this book" aria-label="Print this book" accesskey="p">
                             {{fa "solid" "print" "print-button"}}
                         </a>
                         {{/if}}
                         {{#if git_repository_url}}
-                        <a href="{{git_repository_url}}" title="Git repository" aria-label="Git repository">
+                        <a href="{{git_repository_url}}" title="Git repository" aria-label="Git repository" accesskey="r">
                             {{fa git_repository_icon_class git_repository_icon}}
                         </a>
                         {{/if}}
                         {{#if git_repository_edit_url}}
-                        <a href="{{git_repository_edit_url}}" title="Suggest an edit" aria-label="Suggest an edit" rel="edit">
+                        <a href="{{git_repository_edit_url}}" title="Suggest an edit" aria-label="Suggest an edit" rel="edit" accesskey="e">
                             {{fa "solid" "pencil" "git-edit-button"}}
                         </a>
                         {{/if}}
@@ -255,17 +255,8 @@
                     </style>
                     <div id="footer">
                         <div id="comments">
-                            Your questions and feedback make this project better!
-                            Please join
-                            <a href="https://matrix.hledger.org">#hledger:matrix.org</a> or
-                            <a href="https://irc.hledger.org">#hledger:libera.chat</a>,
-                            paste this page's full URL,
-                            write your comment
-                            (and if you have time, watch for a reply).
-                            {{#if git_repository_url}}
-                            Or,
-                            <a href="{{git_repository_url}}/edit/master/src/{{path}}">edit this page</a>.
-                            {{/if}}
+                            Your questions and comments make this project better!
+                            Please join the <a href="https://matrix.hledger.org">matrix</a> or <a href="https://irc.hledger.org">IRC</a> chat and ask/tell us.
                         </div>
                     </div>
                     {{!-- /CUSTOM --}}

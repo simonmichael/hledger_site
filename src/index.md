@@ -222,16 +222,17 @@ Commands:
 
 <div id="site-tips">
 
-Click the lines button at top left to toggle the navigation sidebar.\
-Click the paintbrush to change theme, or magnifying glass to search.\
-Press the **left** or **right** arrow keys to step through pages.\
 [Access keys](https://en.wikipedia.org/wiki/Access_key#Access_in_different_browsers):
+**1** home,
+**2** changes,
 **s** sidebar,
 **t** theme,
-**f** find in site,
-**1** home,
-**2** changes\
-(you might need to click the page first).
+**f** find,
+**p** print,
+**r** repo,
+**e** edit \
+You can also press the **left** or **right** arrow keys to step through pages.
+
 
 </div>
 <script src="js/quotes.js"></script>
