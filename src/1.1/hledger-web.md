@@ -1,9 +1,4 @@
 <div class="docversions"></div>
-<div class="pagetoc">
-
-<!-- toc -->
-</div>
-
 # hledger-web
 
 This doc is for version **1.1**. 

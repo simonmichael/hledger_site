@@ -1,10 +1,5 @@
 # Tutorial: hledger-ui
 
-<div class=pagetoc>
-
-<!-- toc -->
-</div>
-
 [hledger-ui](hledger-ui.md) is hledger's TUI (a full-window terminal interface).
 It's fast, efficient, and a bit more featureful than the web UI.
 

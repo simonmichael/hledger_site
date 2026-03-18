@@ -1,10 +1,5 @@
 # Accounting basics for PTA users
 
-<div class=pagetoc>
-
-<!-- toc -->
-</div>
-
 Here we'll give a quick hledger-oriented intro to some useful accounting concepts,
 using the journal file created in [Tutorial: hledger add](add.md).
 Also we'll discuss account hierarchy in hledger.

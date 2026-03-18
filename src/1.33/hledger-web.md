@@ -3,11 +3,6 @@
 
 # hledger-web
 
-<div class="pagetoc manual">
-
-<!-- toc -->
-</div>
-
 ## NAME
 
 hledger-web - robust, friendly plain text accounting (Web version)

@@ -1,10 +1,5 @@
 # 10 minute quick start
 
-<div class=pagetoc>
-
-<!-- toc -->
-</div>
-
 [full website]:   https://hledger.org
 [hledger]:        hledger.md
 [hledger manual]: hledger.md

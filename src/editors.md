@@ -1,10 +1,5 @@
 # Editors
 
-<div class=pagetoc>
-
-<!-- toc -->
-</div>
-
 If you edit your journals (and other hledger data files) with a [text
 editor](https://en.wikipedia.org/wiki/Text_editor), you want that
 frequent task to be as pleasant and non-tedious as possible. So it's

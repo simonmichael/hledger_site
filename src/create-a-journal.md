@@ -1,10 +1,5 @@
 # Create a journal
 
-<div class=pagetoc>
-
-<!-- toc -->
-</div>
-
 See also:
 [Input](hledger.md#input) and
 [Setting LEDGER_FILE](hledger.md#setting-ledger_file) and

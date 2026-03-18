@@ -1,10 +1,5 @@
 # Budgeting
 
-<!-- <div class=pagetoc> -->
-
-<!-- toc -->
-<!-- </div> -->
-
 ## All budgeting-related docs
 
 - [hledger > balance > Budget report](hledger.md#budget-report), hledger's built-in periodic budget report

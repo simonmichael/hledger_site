@@ -1,10 +1,5 @@
 # Time planning
 
-<div class=pagetoc>
-
-<!-- toc -->
-</div>
-
 Some notes relating to time tracking and budgeting.
 
 ## See also

@@ -1,10 +1,5 @@
 # Budgeting and forecasting (2018)
 
-<div class=pagetoc>
-
-<!-- toc -->
-</div>
-
 This is an old but still useful intro to budgeting with hledger.
 For more about budgeting, see also:
 

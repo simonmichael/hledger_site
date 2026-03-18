@@ -1,10 +1,5 @@
 # Calculate return on investment
 
-<div class=pagetoc>
-
-<!-- toc -->
-</div>
-
 A tutorial for the [roi](hledger.md#roi) (Return On Investment) command.
 
 ## Cash-only investments

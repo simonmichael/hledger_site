@@ -1,10 +1,5 @@
 # Tutorial: hledger add
 
-<div class=pagetoc>
-
-<!-- toc -->
-</div>
-
 Here we'll walk you through a simple way of using hledger,
 the command line interface and built-in [add](hledger.md#add) command.
 This works on all platforms with no further setup.

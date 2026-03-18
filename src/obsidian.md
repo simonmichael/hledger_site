@@ -1,8 +1,4 @@
 # hledger and Obsidian
-<div class=pagetoc>
-
-<!-- toc -->
-</div>
 
 ## ledger-obsidian
 

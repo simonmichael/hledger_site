@@ -1,10 +1,5 @@
 # Common journal entries
 
-<div class=pagetoc>
-
-<!-- toc -->
-</div>
-
 Here are entries for some common transactions.
 Check other pages, or https://wiki.plaintextaccounting.org for more detailed examples.
  

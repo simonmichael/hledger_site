@@ -1,10 +1,5 @@
 # Install
 
-<div class=pagetoc>
-
-<!-- toc -->
-</div>
-
 The current hledger release is **1.51.2**.
 Here are the **[release notes](release-notes.md)**.
 

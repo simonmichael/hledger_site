@@ -14,31 +14,6 @@
   text-shadow: 1px 1px black;
 }
 
-div.pagetoc {
-  float:right;
-  margin-left:2em;
-  max-width: 200px;
-  z-index:1;
-  position:relative;
-}
-div.pagetoc:before {
-  content: "Contents";
-  font-weight:bold;
-  padding-left:1em;
-}
-.pagetoc > ul    {
-  margin-top: 0;
-  width:15em;
-  /*font-size:small;*/
-}
-.pagetoc > ul ul {
-  padding-left:1em;
-}
-.pagetoc > ul li {
-  /*list-style:none;*/
-  text-indent:-0.3em;
-}
-
 code {
   font-family: Consolas, "Ubuntu Mono", Menlo, "DejaVu Sans Mono", monospace, monospace !important;
 /*  color:black !important; needs to be dark mode aware */
@@ -79,7 +54,7 @@ pre > code.language-timedot {
 /* .screenshot-right { 
   float:right; 
   clear:right;
-  max-width:200px; same as pagetoc
+  max-width:200px;
   text-align:right;
 } */
 

@@ -1,10 +1,5 @@
 # Forecasting
 
-<!-- <div class=pagetoc> -->
-
-<!-- toc -->
-<!-- </div> -->
-
 Some ways:
 
 - Enter future-dated transactions in your journal, commented out

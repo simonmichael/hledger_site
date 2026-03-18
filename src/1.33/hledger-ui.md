@@ -3,11 +3,6 @@
 
 # hledger-ui
 
-<div class="pagetoc manual">
-
-<!-- toc -->
-</div>
-
 ## NAME
 
 hledger-ui - robust, friendly plain text accounting (TUI version)

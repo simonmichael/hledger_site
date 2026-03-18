@@ -1,9 +1,4 @@
 <div class="docversions"></div>
-<div class="pagetoc">
-
-<!-- toc -->
-</div>
-
 # csv format
 
 This doc is for version **1.4**. 

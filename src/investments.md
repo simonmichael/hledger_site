@@ -1,10 +1,5 @@
 # Track investments (2020)
 
-<div class=pagetoc>
-
-<!-- toc -->
-</div>
-
 Here's a tutorial on tracking "investments" - stocks, cryptocurrencies, and similar - in hledger.
 This is a more in-depth version of [Tracking investments](track-investments.md),
 using hledger 1.17; older hledger versions may not match this doc.

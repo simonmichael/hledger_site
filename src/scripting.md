@@ -1,10 +1,5 @@
 # Scripting hledger
 
-<div class=pagetoc>
-
-<!-- toc -->
-</div>
-
 As a command line program, with plain text data formats, hledger is
 easy to extend and customise with scripts and add-on commands.
 This page describes some different kinds of scripting you can do around hledger.

@@ -1,10 +1,5 @@
 # Charts and Graphs
 
-<div class=pagetoc>
-
-<!-- toc -->
-</div>
-
 Tips and techniques for producing graphical charts from hledger data.
 
 **The most general, lowest-common-denominator way** is to produce simple [CSV output](hledger.md#output-format)

@@ -1,10 +1,5 @@
 # hledger and Beancount
 
-<div class=pagetoc>
-
-<!-- toc -->
-</div>
-
 Tips for co-using or converting between [Beancount](https://beancount.github.io) and hledger.
 If you are a Beancount user trying to use your data with hledger, or vice-versa,
 please [let me know](support.md) your experience so I can make this smoother.

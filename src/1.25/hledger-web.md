@@ -3,11 +3,6 @@
 
 # hledger-web
 
-<div class="pagetoc manual">
-
-<!-- toc -->
-</div>
-
 hledger-web is a web interface (WUI) for the hledger accounting tool.
 This manual is for hledger-web 1.25.
 

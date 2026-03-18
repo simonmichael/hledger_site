@@ -1,10 +1,5 @@
 # Tips for learning hledger
 
-<div class=pagetoc>
-
-<!-- toc -->
-</div>
-
 ## Pace yourself
 
 Starting out with plain text accounting and hledger,

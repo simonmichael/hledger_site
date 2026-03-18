@@ -3,11 +3,6 @@
 
 # hledger-ui
 
-<div class="pagetoc manual">
-
-<!-- toc -->
-</div>
-
 hledger-ui is a terminal interface (TUI) for the hledger accounting
 tool. This manual is for hledger-ui 1.24.
 

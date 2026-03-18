@@ -1,9 +1,4 @@
 # hledger and Ledger
-<div class=pagetoc>
-
-<!-- toc -->
-</div>
-
 hledger was inspired by the app that pioneered plain text accounting: Ledger (<https://ledger-cli.org>).
 This page describes differences between them, and a little [history](#history).
 

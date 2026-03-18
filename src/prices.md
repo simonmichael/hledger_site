@@ -1,10 +1,5 @@
 # Getting Prices
 
-<div class=pagetoc>
-
-<!-- toc -->
-</div>
-
 Here are some ways to download current or historical market prices for your commodities.
 
 ## pricehist

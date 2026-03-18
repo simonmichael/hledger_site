@@ -14,11 +14,6 @@ see https://hledger.org/DOCS.html, or ask the maintainer to help.
 
 # hledger-web
 
-<div class="pagetoc manual">
-
-<!-- toc -->
-</div>
-
 ## NAME
 
 hledger-web - web interface and API for `hledger`, a robust, friendly

@@ -3,10 +3,8 @@ CURRENT_RELEASE=1.51
 default: build
 
 # Install some required tools.
-# --force rebuilds mdbook-toc even if only mdbook changed, avoiding a warning.
 tools:
-	cargo install mdbook     --version 0.4.52 --force
-	cargo install mdbook-toc --version 0.11.0 --force
+	cargo install mdbook --version 0.5.2
 	if [ "$(uname -s)" = Darwin ]; then INSTALL="brew install"; else INSTALL="sudo apt install -y"; fi
 	$INSTALL npm && npm install -g static-sitemap-cli
 
@@ -106,8 +104,7 @@ clean:
 	mdbook clean
 
 # The following rules run `mdbook build` in a loop, which does not render the site completely:
-# - sidebar manual links will be without versions
-# - page TOCs will not be hyperlinked
+# - sidebar manual links will be without versions.
 # Manually running `make build` after it starts will fix these.
 
 # Run `mdbook serve` which renders the pages and serves them on http port 3000.

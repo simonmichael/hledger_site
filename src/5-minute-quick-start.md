@@ -1,10 +1,5 @@
 # 5 minute quick start
 
-<div class=pagetoc>
-
-<!-- toc -->
-</div>
-
 ### 1. Record transactions
 
 hledger reads transactions from a [journal file](hledger.md#input) -

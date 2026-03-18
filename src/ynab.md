@@ -1,9 +1,4 @@
 # hledger and You Need A Budget
-<div class=pagetoc>
-
-<!-- toc -->
-</div>
-
 <https://www.ynab.com>
 
 Related:

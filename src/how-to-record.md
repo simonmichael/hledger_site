@@ -1,10 +1,5 @@
 # How to record journal entries
 
-<div class=pagetoc>
-
-<!-- toc -->
-</div>
-
 There are many ways to create hledger journal entries.
 Here are some options:
 

@@ -1,10 +1,5 @@
 # Cost notation
 
-<div class=pagetoc>
-
-<!-- toc -->
-</div>
-
 Here is a little more background on cost notations, 
 moved here from [hledger manual > Cost reporting](https://hledger.org/dev/hledger.html#cost-reporting).
 

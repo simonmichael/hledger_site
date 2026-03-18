@@ -1,10 +1,5 @@
 # Calculate unrealized gain
 
-<div class=pagetoc>
-
-<!-- toc -->
-</div>
-
 This is a guide on calculating the unrealized capital gain/loss of investments,
 using the `balance --gain` report (currently unreleased and available only in the git repo).
 

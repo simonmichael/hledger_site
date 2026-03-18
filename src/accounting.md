@@ -1,10 +1,5 @@
 # Accounting: further study
 
-<div class=pagetoc>
-
-<!-- toc -->
-</div>
-
 Here are some useful links to learn more about bookkeeping, accounting and finance in general,
 beyond the [Accounting basics for PTA users](accounting-pta.md).
 

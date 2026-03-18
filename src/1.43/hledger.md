@@ -3,11 +3,6 @@
 
 # hledger
 
-<div class="pagetoc manual">
-
-<!-- toc -->
-</div>
-
 ## NAME
 
 hledger - a robust, friendly plain text accounting app (command line

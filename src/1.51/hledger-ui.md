@@ -14,11 +14,6 @@ see https://hledger.org/DOCS.html, or ask the maintainer to help.
 
 # hledger-ui
 
-<div class="pagetoc manual">
-
-<!-- toc -->
-</div>
-
 ## NAME
 
 hledger-ui - terminal interface (TUI) for `hledger`, a robust, friendly

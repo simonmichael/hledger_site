@@ -1,10 +1,5 @@
 # News
 
-<div class="pagetoc" style="white-space:nowrap;">
-
-<!-- toc -->
-</div>
-
 Share your hledger/PTA user notes, dev news, achievements or experiences in the [hledger matrix chat](support.md),
 every Friday morning or any time, tagged with `TWIH:`.
 

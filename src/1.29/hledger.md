@@ -3,11 +3,6 @@
 
 # hledger
 
-<div class="pagetoc manual">
-
-<!-- toc -->
-</div>
-
 *Quick links: [Commands](#part-4-commands), [Queries](#queries),
 [Regular expressions](#regular-expressions), [Period
 expressions](#period-expressions), [Journal](#journal), [Directive

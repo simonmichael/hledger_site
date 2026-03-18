@@ -3,11 +3,6 @@
 
 # hledger-web
 
-<div class="pagetoc manual">
-
-<!-- toc -->
-</div>
-
 ## NAME
 
 hledger-web - web interface and API for `hledger`, a robust, friendly

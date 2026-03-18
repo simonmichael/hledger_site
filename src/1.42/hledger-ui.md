@@ -3,11 +3,6 @@
 
 # hledger-ui
 
-<div class="pagetoc manual">
-
-<!-- toc -->
-</div>
-
 ## NAME
 
 hledger-ui - terminal interface (TUI) for `hledger`, a robust, friendly

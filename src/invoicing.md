@@ -1,10 +1,5 @@
 # Invoicing
 
-<div class=pagetoc>
-
-<!-- toc -->
-</div>
-
 Freelancers and businesses send invoices to clients to request payment.
 
 See [common journal entries](common-journal-entries.md) and

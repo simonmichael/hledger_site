@@ -1,10 +1,5 @@
 # Sponsor hledger
 
-<div class=pagetoc>
-
-<!-- toc -->
-</div>
-
 Building and supporting good software and documentation is very costly;
 hledger comes from thousands of skilled person-hours, sustained over 18+ years.
 Your support is invaluable and greatly appreciated!
