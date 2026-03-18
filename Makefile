@@ -5,10 +5,10 @@ default: build
 # Install some required tools.
 # --force rebuilds mdbook-toc even if only mdbook changed, avoiding a warning.
 tools:
-	cargo install mdbook --version 0.4.51 --force
-	cargo install mdbook-toc --force
-	sudo apt install -y npm && npm install -g static-sitemap-cli   # sscli
-
+	cargo install mdbook     --version 0.4.52 --force
+	cargo install mdbook-toc --version 0.11.0 --force
+	if [ "$(uname -s)" = Darwin ]; then INSTALL="brew install"; else INSTALL="sudo apt install -y"; fi
+	$INSTALL npm && npm install -g static-sitemap-cli
 
 # Render the current site and current dev and release manuals, saving them in out/ and out2/.
 # See notes below.
