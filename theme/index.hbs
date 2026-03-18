@@ -158,9 +158,11 @@
                     <div class="left-buttons">
                         <!-- hledger customisation -->
                         <a href="https://github.com/simonmichael/hledger_site/commits/master" accesskey="2" title="what's new"></a>
-                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar" accesskey="s">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
                             {{fa "solid" "bars"}}
                         </label>
+                        <!-- hledger customisation: accesskey that clicks the label to trigger full sidebar toggle -->
+                        <button id="mdbook-sidebar-accesskey" style="display:none" accesskey="s" onclick="document.getElementById('mdbook-sidebar-toggle').click()"></button>
                         <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list" accesskey="t">
                             {{fa "solid" "paintbrush"}}
                         </button>
