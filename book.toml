@@ -3,7 +3,6 @@ title = "hledger"
 authors = ["Simon Michael"]
 description = "plain text accounting, made easy"
 language = "en"
-multilingual = false
 #src = "src"
 
 [build]
@@ -15,10 +14,10 @@ use-default-preprocessors = true
 
 [preprocessor.links]
 
-[preprocessor.toc]
-# why does uncommenting this disable the TOC ?
-# marker = "<!-- toc -->"
-max-level = 3
+#[preprocessor.toc]
+# # why does uncommenting this disable the TOC ?
+# # marker = "<!-- toc -->"
+# max-level = 3
 
 [output.html]
 theme = "theme"
