@@ -58,6 +58,10 @@ pre > code.language-timedot {
   text-align:right;
 } */
 
+#footer {
+    text-align: center;
+}
+
 .right { 
   float:right; 
   clear:right;
