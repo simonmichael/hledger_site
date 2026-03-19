@@ -4,8 +4,15 @@ default: build
 
 # Install some required tools.
 tools:
-	cargo install mdbook --version 0.5.2
-	@which python3 >/dev/null || { echo "python3 is required for sitemap generation but not found"; exit 1; }
+	@printf "To build caddy for hledger.org:\n\
+	\n\
+	cd /usr/local/bin && \\ \n\
+	curl -o eget.sh https://zyedidia.github.io/eget.sh && \\ \n\
+	bash eget.sh && \\ \n\
+	eget caddyserver/xcaddy && \\ \n\
+	xcaddy build v2.11.2 --with github.com/caddyserver/transform-encoder --with github.com/caddy-dns/cloudflare\n\
+	\n\
+	"
 
 # Render the current site and current dev and release manuals, saving them in out/ and out2/.
 # See notes below.
