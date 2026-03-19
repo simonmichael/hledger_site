@@ -5,8 +5,7 @@ default: build
 # Install some required tools.
 tools:
 	cargo install mdbook --version 0.5.2
-	if [ "$(uname -s)" = Darwin ]; then INSTALL="brew install"; else INSTALL="sudo apt install -y"; fi
-	$INSTALL npm && npm install -g static-sitemap-cli
+	@which python3 >/dev/null || { echo "python3 is required for sitemap generation but not found"; exit 1; }
 
 # Render the current site and current dev and release manuals, saving them in out/ and out2/.
 # See notes below.
@@ -98,7 +97,7 @@ build7-%:
 #	@echo "building sitemap.xml"
 sitemap:
 	@for d in out2/*; do cp $$d/* out/`basename $$d`; done
-	@sscli -b https://hledger.org -r out/
+	@python3 sitemap.py -b https://hledger.org -r out/
 
 clean:
 	mdbook clean
