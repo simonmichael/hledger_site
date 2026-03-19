@@ -701,6 +701,9 @@ It does it all in plain text, which really blew my mind. Entire expense reports,
 
 おお、hledgerなんとエレガントなソフト --noji
 
+thank you SO much for making hledger! It's an amazing piece of software and a pleasure to work with. I've been a happy user for about 3 years --Juliano Solanho
+
+Just want to thank you again for hledger and all the docs you have written over time. They are pretty much the only reason I properly started book keeping und was able to stick with it for the last couple years. The flexibility is fantastic and most importantly its fun --goldledger
 
 
 `;
