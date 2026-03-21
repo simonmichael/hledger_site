@@ -93,11 +93,12 @@ build3-%:
 	fi
 	@perl -i -pe "s%^- +\[(hledger(|-ui|-web) manual)[^]]*?\]\([^/]*?/(hledger(|-ui|-web)\.md)%- [\1 ($*)]($*/\3%" src/SUMMARY.md
 	@mdbook build && mkdir -p out2 && cp -r out/$* out2
-	@# Preserve hashed assets so they survive the next mdbook build
-	@mkdir -p out/.assets out/.assets/css out/.assets/fonts && \
-	 cp -n out/*-*.js out/*-*.min.js out/*-*.css 2>/dev/null out/.assets/ || true; \
-	 cp -n out/css/*-*.css 2>/dev/null out/.assets/css/ || true; \
-	 cp -n out/fonts/*-*.css 2>/dev/null out/.assets/fonts/ || true
+	@# Preserve hashed assets so they survive the next mdbook build (which deletes out/)
+	@mkdir -p out2/.assets out2/.assets/css out2/.assets/fonts out2/.assets/js && \
+	 cp -n out/*-*.js out/*-*.min.js out/*-*.css 2>/dev/null out2/.assets/ || true; \
+	 cp -n out/css/*-*.css 2>/dev/null out2/.assets/css/ || true; \
+	 cp -n out/fonts/*-*.css 2>/dev/null out2/.assets/fonts/ || true; \
+	 cp -n out/js/*-*.js 2>/dev/null out2/.assets/js/ || true
 	@git checkout -- theme/index.hbs src/SUMMARY.md
 
 # Render the seven manuals for a specified hledger version <=1.21, as out2/VER/.
@@ -108,11 +109,12 @@ build7-%:
 	@sed -i -e 's/<\/title>/<\/title>\n<meta name="robots" content="noindex" \/>/' theme/index.hbs
 	@perl -i -p0e "s%^- +\[hledger manual.*?hledger-web\.md\)%- [hledger manual ($*)]($*/hledger.md)\n- [hledger-ui manual ($*)]($*/hledger-ui.md)\n- [hledger-web manual ($*)]($*/hledger-web.md)\n- [journal manual ($*)]($*/journal.md)\n- [csv manual ($*)]($*/csv.md)\n- [timeclock manual ($*)]($*/timeclock.md)\n- [timedot manual ($*)]($*/timedot.md)%ms" src/SUMMARY.md 
 	@mdbook build && mkdir -p out2 && cp -r out/$* out2
-	@# Preserve hashed assets so they survive the next mdbook build
-	@mkdir -p out/.assets out/.assets/css out/.assets/fonts && \
-	 cp -n out/*-*.js out/*-*.min.js out/*-*.css 2>/dev/null out/.assets/ || true; \
-	 cp -n out/css/*-*.css 2>/dev/null out/.assets/css/ || true; \
-	 cp -n out/fonts/*-*.css 2>/dev/null out/.assets/fonts/ || true
+	@# Preserve hashed assets so they survive the next mdbook build (which deletes out/)
+	@mkdir -p out2/.assets out2/.assets/css out2/.assets/fonts out2/.assets/js && \
+	 cp -n out/*-*.js out/*-*.min.js out/*-*.css 2>/dev/null out2/.assets/ || true; \
+	 cp -n out/css/*-*.css 2>/dev/null out2/.assets/css/ || true; \
+	 cp -n out/fonts/*-*.css 2>/dev/null out2/.assets/fonts/ || true; \
+	 cp -n out/js/*-*.js 2>/dev/null out2/.assets/js/ || true
 	@git checkout -- theme/index.hbs src/SUMMARY.md
 
 # Generate sitemap.xml, after copying the old manuals under out/ temporarily.
@@ -124,7 +126,7 @@ sitemap:
 # Restore hashed assets (JS/CSS) from all mdbook builds into out/,
 # so older manual versions' relative ../asset references don't 404.
 restore-assets:
-	@if [ -d out/.assets ]; then cp -rn out/.assets/* out/ 2>/dev/null; fi || true
+	@if [ -d out2/.assets ]; then cp -rn out2/.assets/* out/ 2>/dev/null; fi || true
 
 clean:
 	mdbook clean
