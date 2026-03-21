@@ -4,6 +4,8 @@ default: build
 
 # Install some required tools.
 tools:
+	@cargo install mdbook --version 0.5.2
+	@which python3 >/dev/null || { echo "python3 is required for sitemap generation but not found"; exit 1; }
 	@printf "To build caddy for hledger.org:\n\
 	\n\
 	cd /usr/local/bin && \\ \n\
