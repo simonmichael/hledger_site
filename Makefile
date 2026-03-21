@@ -25,6 +25,7 @@ build:
 	@make -s build3-dev
 	@make -s build3-1.52
 	@make -s sitemap
+	@make -s restore-assets
 
 # Render most versions of manuals (excluding old unpackaged versions). 
 #
@@ -77,6 +78,7 @@ all: \
 	build3-dev \
 	build3-1.52
 	@make -s sitemap
+	@make -s restore-assets
 
 # Render the three manuals for a specified hledger version >1.21 (or "dev"), as out2/VER/.
 # Their source should exist in src/VER/.
@@ -91,6 +93,11 @@ build3-%:
 	fi
 	@perl -i -pe "s%^- +\[(hledger(|-ui|-web) manual)[^]]*?\]\([^/]*?/(hledger(|-ui|-web)\.md)%- [\1 ($*)]($*/\3%" src/SUMMARY.md
 	@mdbook build && mkdir -p out2 && cp -r out/$* out2
+	@# Preserve hashed assets so they survive the next mdbook build
+	@mkdir -p out/.assets out/.assets/css out/.assets/fonts && \
+	 cp -n out/*-*.js out/*-*.min.js out/*-*.css 2>/dev/null out/.assets/ || true; \
+	 cp -n out/css/*-*.css 2>/dev/null out/.assets/css/ || true; \
+	 cp -n out/fonts/*-*.css 2>/dev/null out/.assets/fonts/ || true
 	@git checkout -- theme/index.hbs src/SUMMARY.md
 
 # Render the seven manuals for a specified hledger version <=1.21, as out2/VER/.
@@ -101,6 +108,11 @@ build7-%:
 	@sed -i -e 's/<\/title>/<\/title>\n<meta name="robots" content="noindex" \/>/' theme/index.hbs
 	@perl -i -p0e "s%^- +\[hledger manual.*?hledger-web\.md\)%- [hledger manual ($*)]($*/hledger.md)\n- [hledger-ui manual ($*)]($*/hledger-ui.md)\n- [hledger-web manual ($*)]($*/hledger-web.md)\n- [journal manual ($*)]($*/journal.md)\n- [csv manual ($*)]($*/csv.md)\n- [timeclock manual ($*)]($*/timeclock.md)\n- [timedot manual ($*)]($*/timedot.md)%ms" src/SUMMARY.md 
 	@mdbook build && mkdir -p out2 && cp -r out/$* out2
+	@# Preserve hashed assets so they survive the next mdbook build
+	@mkdir -p out/.assets out/.assets/css out/.assets/fonts && \
+	 cp -n out/*-*.js out/*-*.min.js out/*-*.css 2>/dev/null out/.assets/ || true; \
+	 cp -n out/css/*-*.css 2>/dev/null out/.assets/css/ || true; \
+	 cp -n out/fonts/*-*.css 2>/dev/null out/.assets/fonts/ || true
 	@git checkout -- theme/index.hbs src/SUMMARY.md
 
 # Generate sitemap.xml, after copying the old manuals under out/ temporarily.
@@ -108,6 +120,11 @@ build7-%:
 sitemap:
 	@for d in out2/*; do cp $$d/* out/`basename $$d`; done
 	@python3 sitemap.py -b https://hledger.org -r out/
+
+# Restore hashed assets (JS/CSS) from all mdbook builds into out/,
+# so older manual versions' relative ../asset references don't 404.
+restore-assets:
+	@if [ -d out/.assets ]; then cp -rn out/.assets/* out/ 2>/dev/null; fi || true
 
 clean:
 	mdbook clean
