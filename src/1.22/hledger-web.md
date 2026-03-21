@@ -3,6 +3,8 @@
 
 # hledger-web
 
+<div>
+<style>
 .highslide img {max-width:200px; border:thin grey solid; margin:0 0 1em 1em; }
 .highslide-caption {color:white; background-color:black;}
 </style>

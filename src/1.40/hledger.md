@@ -6622,7 +6622,7 @@ zero starting balance.
 
 ## PART 4: COMMANDS
 
-<a name="commands-overview">
+<a name="commands-overview"></a>
 
 Here are the standard [commands](#commands), which you can list by
 running `hledger`. If you have installed more [add-on

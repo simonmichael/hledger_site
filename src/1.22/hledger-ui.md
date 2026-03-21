@@ -3,6 +3,8 @@
 
 # hledger-ui
 
+<div>
+<style>
 .highslide img {max-width:200px; border:0;}
 .highslide-caption {color:white; background-color:black;}
 </style>
