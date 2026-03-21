@@ -99,7 +99,7 @@ build3-%:
 build7-%:
 	@echo "building site with the seven $* manuals in /$*"
 	@sed -i -e 's/<\/title>/<\/title>\n<meta name="robots" content="noindex" \/>/' theme/index.hbs
-	@perl -i -p0e "s%^- +\[hledger manual.*?hledger-web\.md\)%- [hledger manual (1.0)](1.0/hledger.md)\n- [hledger-ui manual (1.0)](1.0/hledger-ui.md)\n- [hledger-web manual (1.0)](1.0/hledger-web.md)\n- [journal manual (1.0)](1.0/journal.md)\n- [csv manual (1.0)](1.0/csv.md)\n- [timeclock manual (1.0)](1.0/timeclock.md)\n- [timedot manual (1.0)](1.0/timedot.md)%ms" src/SUMMARY.md 
+	@perl -i -p0e "s%^- +\[hledger manual.*?hledger-web\.md\)%- [hledger manual ($*)]($*/hledger.md)\n- [hledger-ui manual ($*)]($*/hledger-ui.md)\n- [hledger-web manual ($*)]($*/hledger-web.md)\n- [journal manual ($*)]($*/journal.md)\n- [csv manual ($*)]($*/csv.md)\n- [timeclock manual ($*)]($*/timeclock.md)\n- [timedot manual ($*)]($*/timedot.md)%ms" src/SUMMARY.md 
 	@mdbook build && mkdir -p out2 && cp -r out/$* out2
 	@git checkout -- theme/index.hbs src/SUMMARY.md
 
