@@ -75,6 +75,7 @@ to find and edit the transaction in my $EDITOR, no matter where that
 txn was located originally.  The other way round (going through the
 journal, then finding the physical invoice/receipt) turned out to be
 much slower.
+--Yann Büchau
 
 I spent some time trying to set up hledger so that I’d actually use
 it.  With multiple accounts it really got tedious but I loved the
