@@ -37,7 +37,7 @@ Docker (Linux, Mac, Windows) <!-- adept --> ([more](https://hub.docker.com/searc
 
 Windows \
 [![Scoop](https://repology.org/badge/version-for-repo/scoop/hledger.svg)](https://scoop.sh/#/apps?q=hledger) `scoop install hledger` \
-[![Winget](https://img.shields.io/badge/Winget_package-1.51.2-red.svg)](https://github.com/microsoft/winget-pkgs/tree/master/manifests/s/simonmichael/hledger) `winget install -e --id simonmichael.hledger` \
+[![Winget](https://img.shields.io/badge/Winget_package-1.52-brightgreen.svg)](https://github.com/microsoft/winget-pkgs/tree/master/manifests/s/simonmichael/hledger) `winget install -e --id simonmichael.hledger` \
 [![Chocolatey](https://repology.org/badge/version-for-repo/chocolatey/hledger.svg)](https://community.chocolatey.org/packages/hledger) `choco install hledger -y`
 <!--
 https://learn.microsoft.com/en-us/windows/package-manager/winget/#use-winget
@@ -78,10 +78,11 @@ Debian <!-- Clint --> ([more](https://packages.debian.org/search?searchon=names&
 [![Debian oldstable](https://img.shields.io/badge/Debian_oldstable_package-1.18.1-red.svg)](https://packages.debian.org/oldstable/hledger)
 
 Fedora ([more](https://src.fedoraproject.org/rpms/hledger)) \
-![Fedora_44](https://img.shields.io/badge/Fedora_44_package-1.40-red.svg) `dnf install hledger`\
+![Fedora_45](https://img.shields.io/badge/Fedora_44_package-1.43.2-red.svg) `dnf install hledger`\
+![Fedora_44](https://img.shields.io/badge/Fedora_44_package-1.43.2-red.svg)\
 ![Fedora_43](https://img.shields.io/badge/Fedora_43_package-1.40-red.svg)\
 ![Fedora_42](https://img.shields.io/badge/Fedora_42_package-1.32.3-red.svg)\
-![Fedora_41](https://img.shields.io/badge/Fedora_41_package-1.32.3-red.svg)
+<!-- ![Fedora_41](https://img.shields.io/badge/Fedora_41_package-1.32.3-red.svg) -->
 <!-- ![Fedora_40](https://img.shields.io/badge/Fedora_40_package-1.30.1-red.svg) -->
 <!-- ![Fedora_39](https://img.shields.io/badge/Fedora_39_package-1.30.1-red.svg)\ -->
 <!-- ![Fedora_38](https://img.shields.io/badge/Fedora_38_package-1.27.1-red.svg)\ -->
