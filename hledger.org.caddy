@@ -378,25 +378,7 @@ hledger.org {
 
 # SUBDOMAINS
 
-# old site
-# old.hledger.org {
-# file_server
-# root * /srv/hledger/site1/out
-# #tls {
-# #    dns cloudflare M2T-8BY-hbRsNEb8pa08ijrRcBwD89KGAyHlwO2h
-# #}
-# }
-
-# new site
-# new.hledger.org {
-# file_server
-# root * /srv/hledger/site2/out
-# ...
-# }
-
 # shortcut urls
-
-# These are all non-ssl http: for now
 
 # code repo
 code.hledger.org {
