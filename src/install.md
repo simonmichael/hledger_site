@@ -1,7 +1,7 @@
 # Install
 
 The current hledger release is **1.52**.
-(There is also a **2.0 preview 1** available.)
+(There is also a **2.0 preview 1** (version number: 1.99.1) available.)
 Here are the **[release notes](release-notes.md)**.
 
 You can install hledger by any of these methods:
