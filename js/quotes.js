@@ -706,6 +706,11 @@ thank you SO much for making hledger! It's an amazing piece of software and a pl
 
 Just want to thank you again for hledger and all the docs you have written over time. They are pretty much the only reason I properly started book keeping und was able to stick with it for the last couple years. The flexibility is fantastic and most importantly its fun --goldledger
 
+F*ck man, #codex with #hledger fixed my accounting with weird taxdoo / amazon fba bookings down to cent accuracy - every accounting firm wanted 20.000eur + for doing it.
+--Gerald Ha
+
+I haven't noticed any bugs that affect me in years of using it. --JuniperMesos
+
 
 `;
 const quotes = quotesmd.trim().split('\n\n').map(q => q.replace(/^\*|\*$/g, '').trim());
