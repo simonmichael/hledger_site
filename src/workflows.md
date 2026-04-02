@@ -122,7 +122,7 @@ Some downloading helpers can be found at
 ## Custom workflows
 
 ### SM
-- [Export Lots workflow](https://github.com/simonmichael/hledger/tree/master/examples/investing/export-lots-workflow)
+- [Export Lots workflow](https://github.com/simonmichael/hledger/tree/main/examples/investing/export-lots-workflow)
 - [hledger workflow 2025](https://joyful.com/hledger+workflow+2025)
 - [SM's 2023 setup](sm-2023-setup.md)
 - [SM's 2019 setup](sm-2019-setup.md)

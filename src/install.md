@@ -151,7 +151,7 @@ You will need
   it should not be just `C`, or unset.
   This is discussed more in [Text encoding](#text-encoding), below.
 
-Get the [hledger source code](https://github.com/simonmichael/hledger/commits/master) with [git](https://git-scm.com):
+Get the [hledger source code](https://github.com/simonmichael/hledger/commits/main) with [git](https://git-scm.com):
 
     git clone https://github.com/simonmichael/hledger
     cd hledger
@@ -343,7 +343,7 @@ $OutputEncoding = [console]::InputEncoding = [console]::OutputEncoding = New-Obj
 ### Completions
 
 If you use the bash or zsh shells, you can set up context-sensitive auto-completions for hledger command lines.
-(Here's how to [contribute other shells](https://github.com/simonmichael/hledger/tree/master/hledger/shell-completion#completions-for-other-shells).)
+(Here's how to [contribute other shells](https://github.com/simonmichael/hledger/tree/main/hledger/shell-completion#completions-for-other-shells).)
 
 #### bash
 
@@ -409,7 +409,7 @@ where we'll gladly share tips or receive your feedback.
 [ghcup]:           https://haskell.org/ghcup
 [stack]:           https://docs.haskellstack.org/en/stable/
 [cabal]:           https://cabal.readthedocs.io/en/stable/
-[hledger-install]: https://github.com/simonmichael/hledger/blob/master/hledger-install/hledger-install.sh
+[hledger-install]: https://github.com/simonmichael/hledger/blob/main/hledger-install/hledger-install.sh
 [WSL]:             https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux
 [nix]:             https://nixos.org
 [git]:             https://en.wikipedia.org/wiki/Git

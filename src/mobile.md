@@ -94,7 +94,7 @@ Mobile UI for the mature GnuCash accounting software.
 
 Comprehensive and serviceable money & time tracking apps.
 
-[CSV rules](https://github.com/simonmichael/hledger/blob/master/examples/csv/xpensetracker.csv.rules)\
+[CSV rules](https://github.com/simonmichael/hledger/blob/main/examples/csv/xpensetracker.csv.rules)\
 [Makefile](https://gist.github.com/simonmichael/06eed26bcc85c76d1604373418bc6c58)
 
 ### Eternity (IOS)
@@ -103,7 +103,7 @@ Comprehensive and serviceable money & time tracking apps.
 
 An excellent time tracking app.
 
-[CSV rules](https://github.com/simonmichael/hledger/blob/master/examples/csv/eternity.csv.rules)
+[CSV rules](https://github.com/simonmichael/hledger/blob/main/examples/csv/eternity.csv.rules)
 
 
 ## Apps with other ways to export

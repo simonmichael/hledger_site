@@ -289,7 +289,7 @@ and learn through hands-on practice.
 
 
 [blog posts]:                 https://plaintextaccounting.org/#articles-blog-posts
-[example files]:              https://github.com/simonmichael/hledger/tree/master/examples
+[example files]:              https://github.com/simonmichael/hledger/tree/main/examples
 [mail list]:                  https://groups.google.com/forum/#!forum/hledger
 [Ledger CLI]:                 https://ledger-cli.org
 [command line]:               hledger.md
@@ -319,6 +319,6 @@ and learn through hands-on practice.
 [ledger2beancount]:           https://github.com/beancount/ledger2beancount
 [gpl]:                        https://en.wikipedia.org/wiki/GNU_General_Public_License
 [library]:                    https://hackage.haskell.org/package/hledger-lib
-[script]:                     https://github.com/simonmichael/hledger/blob/master/bin/hledger-check-tag-files.hs
+[script]:                     https://github.com/simonmichael/hledger/blob/main/bin/hledger-check-tag-files.hs
 [free software]:              https://en.wikipedia.org/wiki/Free_software
 

@@ -62,7 +62,7 @@ Here are some options:
 
 ### From custom scripts
 - If you have custom scripts to help with tasks, make them print or append journal entries when appropriate.
-  Eg have your [invoicing script](https://github.com/simonmichael/hledger/tree/master/examples/invoicing/invoice-script) add an invoice transaction to the journal.
+  Eg have your [invoicing script](https://github.com/simonmichael/hledger/tree/main/examples/invoicing/invoice-script) add an invoice transaction to the journal.
 
 ## By converting data
 

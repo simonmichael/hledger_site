@@ -6,7 +6,7 @@
 
 - [Budgeting and forecasting (2018)](budgeting-and-forecasting.md), a older introduction
 
-- <https://github.com/simonmichael/hledger/tree/master/examples/budgeting>, annotated examples of journals implementing budgets
+- <https://github.com/simonmichael/hledger/tree/main/examples/budgeting>, annotated examples of journals implementing budgets
 
 - [plaintextaccounting.org: Budgeting](https://plaintextaccounting.org/Budgeting), more budgeting-related docs, for all PTA tools
 

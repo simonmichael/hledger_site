@@ -43,11 +43,11 @@ Or you can automate this somehow. There are few ready-made tools for this,
 because needs are so diverse.
 
 But you'll find some useful starter scripts in hledger's 
-[examples/invoicing](https://github.com/simonmichael/hledger/tree/master/examples/invoicing)
+[examples/invoicing](https://github.com/simonmichael/hledger/tree/main/examples/invoicing)
 directory.
 
 ## See also
 
-- [examples/invoicing/](https://github.com/simonmichael/hledger/tree/master/examples/invoicing)
+- [examples/invoicing/](https://github.com/simonmichael/hledger/tree/main/examples/invoicing)
 - <https://github.com/kairosdotapp/kairos>
 - <https://plaintextaccounting.org/Invoicing>

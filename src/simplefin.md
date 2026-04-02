@@ -13,7 +13,7 @@ You authenticate directly with your banks, operations are read only, SimpleFIN a
 
 Set up:
 
-1. Make a local copy of the [bin/simplefinsetup,simplefinjson,simplefincsv](https://github.com/simonmichael/hledger/tree/master/bin#simplefinsetup) scripts.
+1. Make a local copy of the [bin/simplefinsetup,simplefinjson,simplefincsv](https://github.com/simonmichael/hledger/tree/main/bin#simplefinsetup) scripts.
 2. Sign up with SimpleFIN, and copy the setup token.
 3. Paste the setup token into your `simplefinsetup` script, and run it to get a custom access url.
 4. Paste the access url into your `simplefinjson` script. Keep this url secret.

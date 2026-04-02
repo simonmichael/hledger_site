@@ -8,7 +8,7 @@ Here are some ways to download current or historical market prices for your comm
 for fetching currency, cryptocurrency and stock prices.
 It can print h/ledger or beancount-style price directives directly.
 
-[`hledger-pricehist`](https://github.com/simonmichael/hledger/blob/master/bin/hledger-pricehist)
+[`hledger-pricehist`](https://github.com/simonmichael/hledger/blob/main/bin/hledger-pricehist)
 is an optional small script to make it show up in the hledger commands list.
 
 Install:

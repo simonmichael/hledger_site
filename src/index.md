@@ -214,7 +214,7 @@ Commands:
 
 **Get involved**
 
-- **[Star us on Github](https://github.com/simonmichael/hledger/tree/master)**
+- **[Star us on Github](https://github.com/simonmichael/hledger/tree/main)**
   to help make us a [notable Haskell app](https://joyful.com/Haskell#What%20are%20some%20Haskell%20apps%20?)!
 - **[Sponsor hledger](sponsor.md)** to help sustain this work. Here's more about [Finance](FINANCE.md).
 - **[Contributor Quick Start](CONTRIBUTING.md)** and **[Developer docs](dev.md)**.

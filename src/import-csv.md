@@ -131,7 +131,7 @@ Full documentation of CSV conversion, and more rules examples, can be
 found in the [hledger manual][csv format].
 
 A collection of CSV rules can be found in [examples/csv/] in the main hledger repository.
-There is also a [Makefile](https://github.com/simonmichael/hledger/blob/master/examples/csv/Makefile)
+There is also a [Makefile](https://github.com/simonmichael/hledger/blob/main/examples/csv/Makefile)
 to help manage and import multiple CSV files. I keep journals, csv files and csv rules in one finance directory;
 the makefile moves downloaded csv files there and imports them. The procedure could be:
 
@@ -146,4 +146,4 @@ There are many other CSV conversion tools (nine CSV->*ledger tools at last count
 [csv format]: hledger.html#csv-format
 [print]: hledger.html#print
 [import]: hledger.html#import
-[examples/csv/]: https://github.com/simonmichael/hledger/tree/master/examples/csv
+[examples/csv/]: https://github.com/simonmichael/hledger/tree/main/examples/csv

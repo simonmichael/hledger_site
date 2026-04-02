@@ -193,8 +193,8 @@ If you don't find what you'll looking for here, try also:
 
 ### Examples
 
-- [examples/](https://github.com/simonmichael/hledger/tree/master/examples) - examples and snippets, old and new 
-- [examples/csv/](https://github.com/simonmichael/hledger/tree/master/examples/csv) - hledger CSV rules library
+- [examples/](https://github.com/simonmichael/hledger/tree/main/examples) - examples and snippets, old and new 
+- [examples/csv/](https://github.com/simonmichael/hledger/tree/main/examples/csv) - hledger CSV rules library
 
 ### Making charts
 - [Charts and Graphs](charts.md)

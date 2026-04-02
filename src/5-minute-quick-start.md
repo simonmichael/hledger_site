@@ -89,18 +89,18 @@ $
 Next, declare your top level accounts and their [type](hledger.md#account-types),
 eg like this
 (or in other languages:
-[ar](https://github.com/simonmichael/hledger/blob/master/examples/i18n/ar.journal)
-[da](https://github.com/simonmichael/hledger/blob/master/examples/i18n/da.journal)
-[de](https://github.com/simonmichael/hledger/blob/master/examples/i18n/de.journal)
-[en](https://github.com/simonmichael/hledger/blob/master/examples/i18n/en.journal)
-[es](https://github.com/simonmichael/hledger/blob/master/examples/i18n/es.journal)
-[fr](https://github.com/simonmichael/hledger/blob/master/examples/i18n/fr.journal)
-[ja](https://github.com/simonmichael/hledger/blob/master/examples/i18n/ja.journal)
-[ko](https://github.com/simonmichael/hledger/blob/master/examples/i18n/ko.journal)
-[no](https://github.com/simonmichael/hledger/blob/master/examples/i18n/no.journal)
-[pt](https://github.com/simonmichael/hledger/blob/master/examples/i18n/pt.journal)
-[se](https://github.com/simonmichael/hledger/blob/master/examples/i18n/se.journal)
-[zh](https://github.com/simonmichael/hledger/blob/master/examples/i18n/zh.journal)
+[ar](https://github.com/simonmichael/hledger/blob/main/examples/i18n/ar.journal)
+[da](https://github.com/simonmichael/hledger/blob/main/examples/i18n/da.journal)
+[de](https://github.com/simonmichael/hledger/blob/main/examples/i18n/de.journal)
+[en](https://github.com/simonmichael/hledger/blob/main/examples/i18n/en.journal)
+[es](https://github.com/simonmichael/hledger/blob/main/examples/i18n/es.journal)
+[fr](https://github.com/simonmichael/hledger/blob/main/examples/i18n/fr.journal)
+[ja](https://github.com/simonmichael/hledger/blob/main/examples/i18n/ja.journal)
+[ko](https://github.com/simonmichael/hledger/blob/main/examples/i18n/ko.journal)
+[no](https://github.com/simonmichael/hledger/blob/main/examples/i18n/no.journal)
+[pt](https://github.com/simonmichael/hledger/blob/main/examples/i18n/pt.journal)
+[se](https://github.com/simonmichael/hledger/blob/main/examples/i18n/se.journal)
+[zh](https://github.com/simonmichael/hledger/blob/main/examples/i18n/zh.journal)
 ...):
 
 ```journal
@@ -157,9 +157,9 @@ You can also use [strict mode](hledger.md#strict-mode),
 which enables both of these checks, 
 by adding `-s` to any command (or to your [config file](hledger.md#config-files)).
 
-Here's the [above journal](https://raw.githubusercontent.com/simonmichael/hledger/refs/heads/master/examples/quickstart.journal) in full.
+Here's the [above journal](https://raw.githubusercontent.com/simonmichael/hledger/refs/heads/main/examples/quickstart.journal) in full.
 
-<!-- [quickstart.journa]: https://github.com/simonmichael/hledger/blob/master/examples/quickstart.journal -->
+<!-- [quickstart.journa]: https://github.com/simonmichael/hledger/blob/main/examples/quickstart.journal -->
 
 ### 3. Run reports
 

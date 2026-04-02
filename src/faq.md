@@ -251,7 +251,7 @@ Also:
 
 - Look for a relevant page at [Cookbook > Other software](doc.md#other-software)
 - Otherwise, try to export CSV representing transactions - one record per transaction - and then use [hledger's CSV reader](import-csv.md).
-  Also look for [pre-existing CSV rules](https://github.com/simonmichael/hledger/tree/master/examples/csv) you can use.
+  Also look for [pre-existing CSV rules](https://github.com/simonmichael/hledger/tree/main/examples/csv) you can use.
 - Or, make a custom script or workflow to convert the old data to hledger's simple [journal format](hledger.md#journal-format).
 
 ### How could I export/migrate to...
@@ -585,7 +585,7 @@ Here's a [suggestion](https://groups.google.com/g/beancount/c/iJirO6GOMgU/m/8VDg
 
 ### Where can I find hledger CSV rules for my financial institutions ?
 
-Look for a suitable rules file in the [examples/csv/](https://github.com/simonmichael/hledger/tree/master/examples/csv) directory on github.
+Look for a suitable rules file in the [examples/csv/](https://github.com/simonmichael/hledger/tree/main/examples/csv) directory on github.
 Or you can [get the hledger source](https://hledger.org/install.html#build-in-a-source-checkout) and look in examples/csv/.
 
 If your financial institution is not there yet, please use these for inspiration,

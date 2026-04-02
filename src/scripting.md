@@ -202,7 +202,7 @@ These are scripts written in haskell, which use the same
 They can be simple interpreted scripts, or can grow as large and powerful as you need,
 and can be optionally compiled for more speed and durability.
 Example scripts and more tips can be found at
-<https://github.com/simonmichael/hledger/tree/master/bin/>.
+<https://github.com/simonmichael/hledger/tree/main/bin/>.
 
 hledger-lib scripts installed as add-ons (`hledger-newcmd.hs` in PATH) 
 are a good way to prototype new commands, perhaps to become builtin commands later.
