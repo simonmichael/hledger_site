@@ -40,6 +40,9 @@
   margin:3em;
   text-align:center;
 }
+#site-tips div p {
+  margin:0;
+}
 code::first-line {
   font-weight:bold;
 }
@@ -231,11 +234,15 @@ Commands:
 **p** print,
 **r** repo,
 **e** edit \
-You can also press the **left** or **right** arrow keys to step through pages.
+You can also press the **left** or **right** arrow keys to step through pages.\
+Tip: for quick lookups, configure bookmark shortcuts in your web browser:
+<div style="display:inline-block; text-align:left;">
 
-Tip: configure some bookmark hotkeys in your web browser:\
-`h FOO`  -> `https://hledger.org/FOO.html`\
-`hm FOO` -> `https://hledger.org/hledger.html#FOO`
+**h**&nbsp;&nbsp;&nbsp;&nbsp;FOO  -> `https://hledger.org/FOO.html`\
+**hm**&nbsp;FOO -> `https://hledger.org/hledger.html#FOO`\
+**hi**&nbsp;NNN   -> `https://github.com/simonmichael/hledger/issues/NNN`
+
+</div>
 
 </div>
 <script src="js/quotes.js"></script>
