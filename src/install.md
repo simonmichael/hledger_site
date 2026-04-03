@@ -82,7 +82,7 @@ Fedora ([more](https://src.fedoraproject.org/rpms/hledger)) \
 ![Fedora_45](https://img.shields.io/badge/Fedora_44_package-1.43.2-red.svg) `dnf install hledger`\
 ![Fedora_44](https://img.shields.io/badge/Fedora_44_package-1.43.2-red.svg)\
 ![Fedora_43](https://img.shields.io/badge/Fedora_43_package-1.40-red.svg)\
-![Fedora_42](https://img.shields.io/badge/Fedora_42_package-1.32.3-red.svg)\
+![Fedora_42](https://img.shields.io/badge/Fedora_42_package-1.32.3-red.svg)
 <!-- ![Fedora_41](https://img.shields.io/badge/Fedora_41_package-1.32.3-red.svg) -->
 <!-- ![Fedora_40](https://img.shields.io/badge/Fedora_40_package-1.30.1-red.svg) -->
 <!-- ![Fedora_39](https://img.shields.io/badge/Fedora_39_package-1.30.1-red.svg)\ -->
