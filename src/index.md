@@ -36,10 +36,6 @@
   font-size:90%;
 }
 .quote-author { white-space:nowrap; }
-#site-tips {
-  margin:2em;
-  text-align:center;
-}
 code::first-line {
   font-weight:bold;
 }
@@ -220,8 +216,8 @@ Commands:
 - **[Contributor Quick Start](CONTRIBUTING.md)** and **[Developer docs](dev.md)**.
 - **[CREDITS](CREDITS.md)** shows many of the people who have contributed code over the years.
 
-<div id="site-tips">
-<div style="display:inline-block; text-align:left;">
+<details>
+<summary><b>Site tips</b></summary>
 
 [Access keys](https://en.wikipedia.org/wiki/Access_key#Access_in_different_browsers):
 **1** home,
@@ -233,7 +229,8 @@ Commands:
 **r** repo,
 **e** edit \
 You can also press the **left** or **right** arrow keys to step through pages.\
-Tip: for quick lookups, configure bookmark keywords in your browser:
+
+For quick lookups, configure these bookmark keywords in your browser:
 
 **h** PAGE  -> `https://hledger.org/PAGE.html`\
 **hm** TOPIC -> `https://hledger.org/hledger.html#TOPIC`\
@@ -241,6 +238,7 @@ Tip: for quick lookups, configure bookmark keywords in your browser:
 **hi** NUM   -> `https://github.com/simonmichael/hledger/issues/NUM`\
 **hinew**  -> `https://github.com/simonmichael/hledger/issues/new`
 
-</div>
-</div>
+
+</details>
+
 <script src="js/quotes.js"></script>
