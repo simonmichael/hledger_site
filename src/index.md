@@ -235,12 +235,14 @@ Commands:
 **r** repo,
 **e** edit \
 You can also press the **left** or **right** arrow keys to step through pages.\
-Tip: for quick lookups, configure bookmark shortcuts in your web browser:
+Tip: for quick lookups, configure bookmark shortcuts in your browser:
 <div style="display:inline-block; text-align:left;">
 
-**h**&nbsp;&nbsp;&nbsp;&nbsp;FOO  -> `https://hledger.org/FOO.html`\
-**hm**&nbsp;FOO -> `https://hledger.org/hledger.html#FOO`\
-**hi**&nbsp;NNN   -> `https://github.com/simonmichael/hledger/issues/NNN`
+**h** PAGE  -> `https://hledger.org/PAGE.html`\
+**hm** TOPIC -> `https://hledger.org/hledger.html#TOPIC`\
+**hs** TOPIC -> `https://hledger.org/?search=TOPIC`\
+**hi** NUM   -> `https://github.com/simonmichael/hledger/issues/NUM`\
+**hinew**  -> `https://github.com/simonmichael/hledger/issues/new`
 
 </div>
 
