@@ -228,7 +228,7 @@ Commands:
 **p** print,
 **r** repo,
 **e** edit \
-You can also press the **left** or **right** arrow keys to step through pages.\
+You can also press the **left** or **right** arrow keys to step through pages.
 
 For quick lookups, configure these bookmark keywords in your browser:
 
