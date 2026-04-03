@@ -1881,7 +1881,7 @@ So in principle you could enable both `--infer-equity` and
 `--infer-costs` in your config file, and your reports would have the
 advantages of both.
 
-### Cost basis / lot syntax
+### Cost basis
 
 If you are buying some commodity to hold as an investment, it may be
 important to keep track of
@@ -1894,17 +1894,17 @@ important to keep track of
 
 In hledger we call these three the \"cost basis\"; and if an amount
 being acquired has a cost basis, we call it a \"lot\". Tax authorities
-often require that lots are tracked carefully and disposed of (sold) in
-a certain order.
+sometimes require that lots are tracked in detail and disposed of (sold)
+in a certain order.
 
 Note, though \"cost basis\" sounds similar to the \"cost\" (transacted
 price) discussed above, they are distinct concepts. In some transactions
 the transacted price and basis cost are the same, but in others they are
-not.
+not. So cost basis is recorded with its own syntax, called \"cost basis
+annotations\".
 
-So cost basis has its own syntax, also called \"lot syntax\". hledger\'s
-lot syntax is like Ledger\'s: one or more of the following annotations,
-following the main amount:
+hledger 1.x supports Ledger-style cost basis syntax: one or more of the
+following annotations, following the main amount:
 
 - `{LOTUNITCOST}` or `{{LOTTOTALCOST}}` (see [lot
   price](https://www.ledger-cli.org/3.0/doc/ledger3.html#Buying-and-Selling-Stock))
@@ -1913,13 +1913,16 @@ following the main amount:
 - `(LOTLABEL)` (see [lot
   note](https://www.ledger-cli.org/3.0/doc/ledger3.html#Lot-notes))
 
-hledger does not yet do anything with this lot syntax, except to
-preserve it and show it in `print`\'s `txt`, `beancount`, and `json`
-output. This means you can use this syntax in your hledger journals
-(plus an amountless extra posting to help transactions balance, if
-needed), then use the `print` command to export to Ledger or Beancount
-or rustledger, to use their lots/gains reports (see [Export Lots
-workflow](workflows.md#more-advanced-workflows)).
+hledger 1 does not provide automated lot/gains tracking, and ignores
+these cost basis annotations. But it will preserve and show them in
+`print`\'s `txt`, `beancount`, and `json` output. This means you can use
+this syntax in your journal (perhaps with an amountless extra posting to
+help transactions balance, if needed), then export to Ledger or
+Beancount or rustledger to do lots/gains reporting. See [Export Lots
+workflow](workflows.md#more-advanced-workflows).
+
+(hledger 2.x has lots/gains reporting built in. It also supports a more
+convenient Beancount-like `{DATE, "LABEL", COST}` syntax.)
 
 ### Balance assertions
 
@@ -2171,6 +2174,16 @@ problem, it\'s easy to fix:
   3.  or add a posting to absorb the imbalance (eg
       \"expenses:rounding\". Remember that one posting may [omit the
       amount](#postings); that\'s convenient here.)
+
+#### Gain postings
+
+The `Gain` [account type](#account-types) has a special behaviour:
+postings to Gain-type accounts are ignored by transaction balancing.
+
+This is useful in hledger 2, as part of its automated lots/gains
+tracking. Gain postings are usually not used in hledger 1; but they are
+supported for better compatibility with hledger 2. This makes it easier
+to keep a journal compatible with both hledger versions.
 
 ### Tags
 
@@ -2546,9 +2559,11 @@ hledger also uses a few subtypes:
 | `Gain`       | `G` | capital gains/losses (subtype of Revenue)        |
 
 As a convenience, hledger will detect most of these types automatically
-from english account names. But it\'s better to declare them explicitly
-by adding a `type:` [tag](#tags) in the account directives. The tag\'s
-value can be any of the types or one-letter abbreviations above.
+from english account names. (All except Gain. For more about Gain, see
+[Gain postings](#gain-postings).) But it\'s better to declare them
+explicitly by adding a `type:` [tag](#tags) in the account directives.
+The tag\'s value can be any of the types or one-letter abbreviations
+above.
 
 Here is a typical set of account type declarations. Subaccounts will
 inherit their parent\'s type, or can override it:
@@ -2565,7 +2580,7 @@ account assets:cash        ; type: C
 
 account equity:conversion  ; type: V
 
-account revenues:capital   ; type: G
+account revenues:gains     ; type: G
 ```
 
 This enables the easy [balancesheet](#balancesheet),
