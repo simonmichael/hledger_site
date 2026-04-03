@@ -233,6 +233,9 @@ Commands:
 **e** edit \
 You can also press the **left** or **right** arrow keys to step through pages.
 
+Tip: configure some bookmark hotkeys in your web browser:\
+`h FOO`  -> `https://hledger.org/FOO.html`\
+`hm FOO` -> `https://hledger.org/hledger.html#FOO`
 
 </div>
 <script src="js/quotes.js"></script>
