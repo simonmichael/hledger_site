@@ -219,6 +219,8 @@ Commands:
 <details>
 <summary><b>Site tips</b></summary>
 
+Use the three-lines button at top-left (or s access key) to toggle the site & page navigation sidebar.
+
 [Access keys](https://en.wikipedia.org/wiki/Access_key#Access_in_different_browsers):
 **1** home,
 **2** changes,

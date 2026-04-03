@@ -121,7 +121,7 @@
             const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
-                sidebar = sidebar || 'visible';
+                sidebar = sidebar || 'hidden';
             } else {
                 sidebar = 'hidden';
                 sidebar_toggle.checked = false;
