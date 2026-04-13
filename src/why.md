@@ -11,7 +11,7 @@ Why should you consider using hledger ? See below, and also the **[FAQ](faq.md)*
 **Dependable** - Your data stays local, private, version-controlled, and future-proof.
 Plain text files work with your favorite text tools and never lock you in.
 Features work as you'd expect.
-Built with a high-assurance programming language.
+[We'll pay you $50](REGRESSIONS.md) if you find or fix a regression bug.
 
 **Fast and light-weight** - Starts instantly, processes thousands of transactions per second.
 Single executable, no database, no configuration required.
@@ -23,8 +23,7 @@ Single executable, no database, no configuration required.
 
 **Scripting and automation friendly** - Plain text data formats, command line interfaces, CSV and JSON support.
 
-**Actively maintained** - New releases quarterly since 2008, extensive documentation,
-active community. [We'll pay you $50](REGRESSIONS.md) if you find or fix a regression bug.
+**Actively maintained** - New releases quarterly since 2008, extensive documentation, active support and community.
 
 ## How is it different from traditional accounting software ?
 
