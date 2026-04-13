@@ -13,11 +13,15 @@ Plain text files work with your favorite text tools and never lock you in.
 Features work as you'd expect.
 Built with a high-assurance programming language.
 
-**Fast and lightweight** - Starts instantly, processes thousands of transactions per second.
+**Fast and light-weight** - Starts instantly, processes thousands of transactions per second.
 Single executable, no database, no configuration required.
 
 **Versatile** - Track money, investments, cryptocurrencies, time, or any commodity using battle-tested
-[double-entry bookkeeping](accounting.md). Scales from personal use to business accounting.
+[double-entry bookkeeping](accounting.md). Scales from personal use to business or institutional accounting.
+
+**Easy to understand and use** - simple core concepts, multiple UIs with good usability.
+
+**Scripting and automation friendly** - Command line interfaces, CSV and JSON output, plain text data formats.
 
 **Actively maintained** - New releases quarterly since 2008, extensive documentation,
 active community. [We'll pay you $50](REGRESSIONS.md) if you find or fix a regression bug.
@@ -38,12 +42,13 @@ hledger is a **[plain text accounting]** system, which means:
 
 - The model of  operation is simple: put a log of transactions in, get reports out.
 
-- It is fast, lightweight, non-distracting, and great for learning more of double-entry bookkeeping and accounting.
+- It is light-weight, non-distracting, and great for learning more of double-entry bookkeeping and accounting.
 
 ## How is it different from other plain text accounting apps ?
 
 hledger has for many years been the most actively developed and supported PTA app.\
-It strives to also be the easiest to use, most robust, and best documented.\
+It tries to also be the easiest to use, most robust, and best documented.\
+It aims to make plain text accounting more accessible and to provide a consistently rock solid experience.\
 See also:
 
 - [hledger and Ledger](ledger.md)
