@@ -19,9 +19,9 @@ Single executable, no database, no configuration required.
 **Versatile** - Track money, investments, cryptocurrencies, time, or any commodity using battle-tested
 [double-entry bookkeeping](accounting.md). Scales from personal use to business or institutional accounting.
 
-**Easy to understand and use** - simple core concepts, multiple UIs with good usability.
+**Easy to understand and use** - Simple core concepts, multiple UIs with good usability.
 
-**Scripting and automation friendly** - Command line interfaces, CSV and JSON output, plain text data formats.
+**Scripting and automation friendly** - Plain text data formats, command line interfaces, CSV and JSON support.
 
 **Actively maintained** - New releases quarterly since 2008, extensive documentation,
 active community. [We'll pay you $50](REGRESSIONS.md) if you find or fix a regression bug.
