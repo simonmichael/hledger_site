@@ -711,6 +711,9 @@ F*ck man, #codex with #hledger fixed my accounting with weird taxdoo / amazon fb
 
 I haven't noticed any bugs that affect me in years of using it. --JuniperMesos
 
+now have a stockholm-syndrome love affair with hledger, which it took a lot of claude help for me to set up…but it's so pure --Lucre Snooker
+
+thank you for creating hledger! After more than ten years I switched from Gnucash to hledger and it made me much more productive. --Retujo
 
 `;
 const quotes = quotesmd.trim().split('\n\n').map(q => q.replace(/^\*|\*$/g, '').trim());
