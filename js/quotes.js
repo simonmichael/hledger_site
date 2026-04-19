@@ -715,5 +715,7 @@ now have a stockholm-syndrome love affair with hledger, which it took a lot of c
 
 thank you for creating hledger! After more than ten years I switched from Gnucash to hledger and it made me much more productive. --Retujo
 
+one of the few useful haskell app that is not a whitepaper --Goreng
+
 `;
 const quotes = quotesmd.trim().split('\n\n').map(q => q.replace(/^\*|\*$/g, '').trim());
