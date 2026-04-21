@@ -98,6 +98,8 @@ A growing book introducing hledger one step at a time.
 
 Short videos:
 
+- [TORGiren DevOpses: hledger part 1](https://www.youtube.com/watch?v=sq3E-TKufh0) (2026, 10m, Polish)
+- [O Clementino: Gerencie suas finanças como um hacker](https://www.youtube.com/watch?v=YG2I2Z8nfoo) (2026, 23m, Brazilian Portuguese)
 - [Hledger in 10 Minutes: The Ultimate CLI Tool](https://www.youtube.com/watch?v=hshDr2Af2RU) (2025, 5m)
 
 - [hledger fan's beginner lessons](https://youtube.com/channel/UCZLxXTjOqLzq4z5Jy0AyWSQ) (2019-2021, ~3m)
