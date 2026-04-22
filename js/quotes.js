@@ -717,5 +717,10 @@ thank you for creating hledger! After more than ten years I switched from Gnucas
 
 one of the few useful haskell app that is not a whitepaper --Goreng
 
+I wasn't aware this FLOSS tool was serenely floating in the 'verse. --arxaaron
+
+The thing I love about this software so far is there is also a separate application with a web interface and a tui so there are multiple ways to access and edit the journal file. This is convenient because I love using cli and tui but my hubby would prefer a gui since he is not a techie. Loving this software so far! --llpolluxll
+
+
 `;
 const quotes = quotesmd.trim().split('\n\n').map(q => q.replace(/^\*|\*$/g, '').trim());
