@@ -102,7 +102,7 @@ Account 2: assets
 Next, specify which account the money comes from. Just say `assets`.
 
 ```cli
-Amount  2 ? [$-10.0]: 
+Amount  2 [$-10]: 
 ```
 
 Now you're asked for the amount to "move" to or from the `assets` account.
@@ -110,7 +110,7 @@ As the default, hledger offers the amount required to "balance" the postings ent
 The minus sign indicates the money is moving from this account.
 (hledger uses the positive and negative sign instead of accounting's traditional "debit" and "credit" terminology.)
 In a balanced transaction, the sum of posted amounts is zero, in other words no money disappears into thin air.
-Press enter to accept the default. It has an extra decimal place, but never mind.
+Press enter to accept the default.
 
 ```cli
 Account 3 (or . or enter to finish this transaction): .
