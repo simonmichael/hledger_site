@@ -1,7 +1,8 @@
 # User Interfaces
 
 Here is an overview of the [user interfaces](https://plaintextaccounting.org/#ui-terminal) available for hledger.
-The official UIs, which are maintained within the hledger repo, are marked in bold.
+The official UIs are marked in bold.
+Last updated: 2026-04
 
 **Terminal**
 
@@ -30,54 +31,53 @@ The official UIs, which are maintained within the hledger repo, are marked in bo
 - [ledgeraccounting](https://github.com/thecount2a/ledgeraccounting) web UI for hledger: data entry, basic reports and budgets (python+js, 2018)
 - [nextcloud-hledger](https://github.com/37Rb/nextcloud-hledger) hledger UI on the Nextcloud file-sharing/web-app platform (php, 2021)
 
-**Mobile**
+**Android**
 
-- [NanoLedger](https://f-droid.org/en/packages/be.chvp.nanoledger) data entry app for h/ledger (Android, kotlin, 2023..)
+- [NanoLedger](https://f-droid.org/en/packages/be.chvp.nanoledger) data entry app for h/ledger (kotlin, 2023..)
 - [cashier](https://github.com/alensiljak/cashier) mobile or desktop client for ledger and hledger-web (Android/Desktop, [js](https://cashier.alensiljak.eu.org/#/home), 2019)
-- [MoLe](https://fossdroid.com/a/mole.html) mobile client for hledger-web (Android, [java](https://git.ktnx.net/?p=mobile-ledger.git), 2020)
+- [MoLe](https://fossdroid.com/a/mole.html) mobile client for hledger-web ([java](https://git.ktnx.net/?p=mobile-ledger.git), 2020)
 
 See also: [Mobile apps](mobile.md)
 
 ## Test matrix
 
-Not all UIs are equally mature and robust.
-Here is the start of a basic test matrix showing the status.
+Here is the start of a test matrix for the main UIs.
+Your help is welcome! Share updates in the chat room.
 
-|                   | install | basic | synthetic |
-|-------------------|---------|-------|-----------|
-| **Terminal**      |         |       |           |
-| hledger           | Y       | Y     | Y         |
-| hledger add       | Y       | Y     | Y         |
-| hledger-ui        | Y       | Y     | Y         |
-| dravik            | N*      |       |           |
-| hledger-edit      | Y       | Y     | Y         |
-| hledger-iadd      | Y       | Y     | Y         |
-| hledger-textual   | Y       | Y     | Y         |
-| ldash             | Y       | N*    | N*        |
-| puffin            | Y       | Y*    | Y*        |
-| **Graphical**     |         |       |           |
-| fruit-credits     |         |       |           |
-| hledger-macos     |         |       |           |
-| Surebeans         |         |       |           |
-| **Web**           |         |       |           |
-| hledger-web       | Y       | Y     | Y         |
-| hledger-webuix    |         |       |           |
-| muhasib-e-hledger |         |       |           |
-| Paisa             |         |       |           |
-| ledgeraccounting  |         |       |           |
-| nextcloud-hledger |         |       |           |
-| **Mobile**        |         |       |           |
-| NanoLedger        |         |       |           |
-| cashier           |         |       |           |
-| MoLe              |         |       |           |
+|                   | install | basic | synthetic | accounttypes |
+|-------------------|---------|-------|-----------|--------------|
+| **Terminal**      |         |       |           |              |
+| hledger           | Y       | Y     | Y         | Y            |
+| hledger-ui        | Y       | Y     | Y         | Y            |
+| hledger-iadd      | Y       | Y     | Y         | Y            |
+| hledger-textual   | Y       | Y     | Y         | Y            |
+| dravik            | N*      |       |           |              |
+| ldash             | Y       | N*    | N*        | N*           |
+| puffin            | Y       | Y*    | Y         | Y            |
+| **Graphical**     |         |       |           |              |
+| fruit-credits     |         |       |           |              |
+| hledger-macos     |         |       |           |              |
+| Surebeans         |         |       |           |              |
+| **Web**           |         |       |           |              |
+| hledger-web       | Y       | Y     | Y         | Y            |
+| hledger-webuix    |         |       |           |              |
+| muhasib-e-hledger |         |       |           |              |
+| ledgeraccounting  |         |       |           |              |
+| nextcloud-hledger |         |       |           |              |
+| Paisa             |         |       |           |              |
+| **Android**       |         |       |           |              |
+| NanoLedger        |         |       |           |              |
+| cashier           |         |       |           |              |
+| MoLe              |         |       |           |              |
 
 Tests:
 
 - **install** - did SM's latest install attempt succeed.
 - **basic** - does it read [bcexample.hledger](https://raw.githubusercontent.com/simonmichael/hledger/refs/heads/main/examples/bcexample.hledger),
-  a simple journal with conventional english account names, 1000 realistic transactions.
+  a simple multicommodity journal with conventional english account names, 1000 realistic transactions.
 - **synthetic** - does it read [1ktxns-100accts.journal](https://raw.githubusercontent.com/simonmichael/hledger/refs/heads/main/examples/1ktxns-100accts.journal),
-  a synthetic journal with unconventional account names, no account types, 1000 transactions, transacted prices and market prices.
+  a synthetic journal with unconventional account names and no account types, 1000 transactions, transacted prices and market prices.
+- **accounttypes** - does it work equally well with non-english/non-conventional account names which have types declared.
 
 Notes:
 
