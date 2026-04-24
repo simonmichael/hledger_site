@@ -237,6 +237,7 @@ Miscellaneous docs, tips and rough notes.
 - [Workflows](workflows.md)
 
 ### User interfaces
+- [User Interfaces](uis.md)
 - [hledger-web tips](hledger-web-tips.md)
 - [Mobile apps](mobile.md)
 - [PTA: Software: UI, console](https://plaintextaccounting.org/#ui-console)

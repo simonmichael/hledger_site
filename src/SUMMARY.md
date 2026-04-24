@@ -115,6 +115,7 @@
 - [Tutorial: hledger-ui](ui.md)
 - [Tutorial: hledger-web](web.md)
 - [Tutorial: Import CSV data](import-csv.md)
+- [User Interfaces](uis.md)
 - [Visualising discussion 2023](visualising2023.md)
 - [Workflows](workflows.md)
 
