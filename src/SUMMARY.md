@@ -41,7 +41,7 @@
 - [Reading timeclock files](reading-timeclock-files.md)
 - [Reading timedot files](reading-timedot-files.md)
 
-# MORE USER DOCS
+# MORE DOCS
 
 <!-- Pages must be listed here for mdbook to render them. -->
 <!-- Since mdbook 4.50 or so, duplicates must be avoided. -->
