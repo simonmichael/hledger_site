@@ -4,13 +4,12 @@
 
 - [Home](index.md)
 - [Install](install.md)
-- [Release notes](relnotes.md)
+<!-- - [Release notes](relnotes.md) -->
 - [Docs](doc.md)
 - [Support](support.md)
-- [Scripts and add-ons](scripts.md)
+<!-- - [Scripts and add-ons](scripts.md) -->
 - [Sponsor hledger](sponsor.md)
-- [Contributor Quick Start](CONTRIBUTING.md)
-- [CREDITS](CREDITS.md)
+<!-- - [CREDITS](CREDITS.md) -->
 
 # MANUALS
 
@@ -122,6 +121,7 @@
 # DEVELOPER DOCS
 
 - [Developer docs](dev.md)
+- [Contributor Quick Start](CONTRIBUTING.md)
 - [Developer FAQ](DEVFAQ.md)
 - [ACHIEVEMENTS](ACHIEVEMENTS.md)
 - [AI](AI.md)

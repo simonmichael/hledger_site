@@ -39,10 +39,10 @@ You can also view them locally with commands like
 
 Some other useful reference docs:
 
+- **[Release notes](relnotes.md)**
 - **[hledger FAQ](faq.md)**
 - [Plain Text Accounting FAQ](https://plaintextaccounting.org/FAQ)
 - [Why hledger ?](why.md)
-- [Release notes](relnotes.md)
 - [Developer docs](dev.md)
 
 ## Quick starts
@@ -230,7 +230,7 @@ Miscellaneous docs, tips and rough notes.
 - [Tags tutorial](tags-tutorial.md)
 
 ### Scripts and add-ons
-- [Scripts and add-ons](scripts.md)
+- **[Scripts and add-ons](scripts.md)**
 - [Scripting hledger](scripting.md)
 
 ### Setups and workflows
