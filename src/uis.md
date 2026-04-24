@@ -43,33 +43,33 @@ See also: [Mobile apps](mobile.md)
 Not all UIs are mature and robust.
 Here is the start of a basic test matrix showing the status.
 
-|                   | 1ktxns-100accts.journal |
-|-------------------|-------------------------|
-| **Terminal**      |                         |
-| hledger           | Y                       |
-| hledger add       | Y                       |
-| hledger-ui        | Y                       |
-| dravik            |                         |
-| hledger-edit      |                         |
-| hledger-iadd      |                         |
-| hledger-textual   |                         |
-| ldash             |                         |
-| puffin            |                         |
-| **Graphical**     |                         |
-| fruit-credits     |                         |
-| hledger-macos     |                         |
-| Surebeans         |                         |
-| **Web**           |                         |
-| hledger-web       | Y                       |
-| hledger-webuix    |                         |
-| muhasib-e-hledger |                         |
-| Paisa             |                         |
-| ledgeraccounting  |                         |
-| nextcloud-hledger |                         |
-| **Mobile**        |                         |
-| NanoLedger        |                         |
-| cashier           |                         |
-| MoLe              |                         |
+|                   | bcexample.hledger       | 1ktxns-100accts.journal |
+|-------------------|-------------------------|-------------------------|
+| **Terminal**      |                         |                         |
+| hledger           | Y                       | Y                       |
+| hledger add       | Y                       | Y                       |
+| hledger-ui        | Y                       | Y                       |
+| dravik            |                         |                         |
+| hledger-edit      |                         |                         |
+| hledger-iadd      |                         |                         |
+| hledger-textual   |                         |                         |
+| ldash             |                         |                         |
+| puffin            |                         |                         |
+| **Graphical**     |                         |                         |
+| fruit-credits     |                         |                         |
+| hledger-macos     |                         |                         |
+| Surebeans         |                         |                         |
+| **Web**           |                         |                         |
+| hledger-web       | Y                       | Y                       |
+| hledger-webuix    |                         |                         |
+| muhasib-e-hledger |                         |                         |
+| Paisa             |                         |                         |
+| ledgeraccounting  |                         |                         |
+| nextcloud-hledger |                         |                         |
+| **Mobile**        |                         |                         |
+| NanoLedger        |                         |                         |
+| cashier           |                         |                         |
+| MoLe              |                         |                         |
 
 Test notes:
 
