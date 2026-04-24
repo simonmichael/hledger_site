@@ -41,8 +41,8 @@ See also: [Mobile apps](mobile.md)
 
 ## Test matrix
 
-Here is the start of a test matrix for the main UIs.
-Your help is welcome! Share updates in the chat room.
+Here are some robustness tests for the main UIs.
+Help welcome! Share updates in the chat room.
 
 |                   | install | basic | synthetic | accounttypes |
 |-------------------|---------|-------|-----------|--------------|
