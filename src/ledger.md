@@ -58,6 +58,7 @@ These features are common to both hledger and Ledger:
 - periodic transactions
 - budget reporting
 - unrealised capital gains reporting
+- lot tracking and realised capital gains calculation
 - report filtering with flags and query arguments
 - basic output format customisation
 - commands: accounts, balance, commodities, payees, prices, print, register, stats, tags
