@@ -42,7 +42,8 @@ See also: [Mobile apps](mobile.md)
 ## Test matrix
 
 Here are some robustness tests for the main UIs.
-Help welcome! Share updates in the chat room.
+Best-scoring apps get higher position!
+Help welcome, share updates in the chat room.
 
 |                   | install | basic | synthetic | accounttypes |
 |-------------------|---------|-------|-----------|--------------|
@@ -51,9 +52,9 @@ Help welcome! Share updates in the chat room.
 | hledger-ui        | Y       | Y     | Y         | Y            |
 | hledger-iadd      | Y       | Y     | Y         | Y            |
 | hledger-textual   | Y       | Y     | Y         | Y            |
-| dravik            | N*      |       |           |              |
-| ldash             | Y       | N*    | N*        | N*           |
 | puffin            | Y       | Y*    | Y         | Y            |
+| ldash             | Y       | N*    | N*        | N*           |
+| dravik            | N*      |       |           |              |
 | **Graphical**     |         |       |           |              |
 | fruit-credits     |         |       |           |              |
 | hledger-macos     |         |       |           |              |
