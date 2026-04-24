@@ -4,6 +4,7 @@
 
 - [Home](index.md)
 - [Install](install.md)
+- [Release notes](relnotes.md) -->
 - [Docs](doc.md)
 - [Support](support.md)
 - [Sponsor hledger](sponsor.md)
@@ -92,7 +93,6 @@
 - [Multicurrency tutorial (2018)](multicurrency-tutorial.md)
 - [News](news.md)
 - [Project accounting](project-accounting.md)
-- [Release notes](relnotes.md) -->
 - [Report examples](report-examples.md)
 - [Reporting version control stats](reporting-version-control-stats.md)
 - [Rewrite account names](rewrite-account-names.md)
