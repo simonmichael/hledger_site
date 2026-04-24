@@ -43,37 +43,44 @@ See also: [Mobile apps](mobile.md)
 Not all UIs are mature and robust.
 Here is the start of a basic test matrix showing the status.
 
-|                   | bcexample.hledger       | 1ktxns-100accts.journal |
-|-------------------|-------------------------|-------------------------|
-| **Terminal**      |                         |                         |
-| hledger           | Y                       | Y                       |
-| hledger add       | Y                       | Y                       |
-| hledger-ui        | Y                       | Y                       |
-| dravik            |                         |                         |
-| hledger-edit      |                         |                         |
-| hledger-iadd      |                         |                         |
-| hledger-textual   |                         |                         |
-| ldash             |                         |                         |
-| puffin            |                         |                         |
-| **Graphical**     |                         |                         |
-| fruit-credits     |                         |                         |
-| hledger-macos     |                         |                         |
-| Surebeans         |                         |                         |
-| **Web**           |                         |                         |
-| hledger-web       | Y                       | Y                       |
-| hledger-webuix    |                         |                         |
-| muhasib-e-hledger |                         |                         |
-| Paisa             |                         |                         |
-| ledgeraccounting  |                         |                         |
-| nextcloud-hledger |                         |                         |
-| **Mobile**        |                         |                         |
-| NanoLedger        |                         |                         |
-| cashier           |                         |                         |
-| MoLe              |                         |                         |
+|                   | install | basic | synthetic |
+|-------------------|---------|-------|-----------|
+| **Terminal**      |         |       |           |
+| hledger           | Y       | Y     | Y         |
+| hledger add       | Y       | Y     | Y         |
+| hledger-ui        | Y       | Y     | Y         |
+| dravik            | N*      |       |           |
+| hledger-edit      | Y       | Y     | Y         |
+| hledger-iadd      | Y       | Y     | Y         |
+| hledger-textual   | Y       | Y     | Y         |
+| ldash             | Y       | N*    | N*        |
+| puffin            | Y       | Y*    | Y*        |
+| **Graphical**     |         |       |           |
+| fruit-credits     |         |       |           |
+| hledger-macos     |         |       |           |
+| Surebeans         |         |       |           |
+| **Web**           |         |       |           |
+| hledger-web       | Y       | Y     | Y         |
+| hledger-webuix    |         |       |           |
+| muhasib-e-hledger |         |       |           |
+| Paisa             |         |       |           |
+| ledgeraccounting  |         |       |           |
+| nextcloud-hledger |         |       |           |
+| **Mobile**        |         |       |           |
+| NanoLedger        |         |       |           |
+| cashier           |         |       |           |
+| MoLe              |         |       |           |
 
-Test notes:
+Tests:
 
-Some files to test. Does the app handle these without trouble ?
+- **install** - did SM's latest install attempt succeed.
+- **basic** - does it read [bcexample.hledger](https://raw.githubusercontent.com/simonmichael/hledger/refs/heads/main/examples/bcexample.hledger),
+  a simple journal with conventional english account names, 1000 realistic transactions.
+- **synthetic** - does it read [1ktxns-100accts.journal](https://raw.githubusercontent.com/simonmichael/hledger/refs/heads/main/examples/1ktxns-100accts.journal),
+  a synthetic journal with unconventional account names, no account types, 1000 transactions, transacted prices and market prices.
 
-- [bcexample.hledger](https://raw.githubusercontent.com/simonmichael/hledger/refs/heads/main/examples/bcexample.hledger) - a simple but realistic journal with 1000 transactions, originally from the Beancount project.
-- [1ktxns-100accts.journal](https://raw.githubusercontent.com/simonmichael/hledger/refs/heads/main/examples/1ktxns-100accts.journal) - a synthetic journal with 1000 transactions, transacted prices, and market prices.
+Notes:
+
+- dravik: Failed to build `pydantic-core==2.33.2`
+- ldash: attempt to divide by zero
+- puffin: could not navigate to past years
