@@ -70,7 +70,7 @@ xcancel.com:\
 [comments](https://hn.algolia.com/?query=hledger&sort=byDate&prefix=false&page=0&dateRange=all&type=comment)
 
 **Youtube**\
-["hledger" videos](https://www.youtube.com/results?search_query=hledger&sp=CAI%253D)
+["hledger" videos](https://www.youtube.com/results?search_query=hledger+-heath+-joker)
 (or [plaintextaccounting.org's list](https://plaintextaccounting.org/#videos))
 
 **Stack Exchange**\
