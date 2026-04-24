@@ -82,6 +82,7 @@ Tests:
 
 Notes:
 
-- dravik: Failed to build `pydantic-core==2.33.2`
-- ldash: attempt to divide by zero
+
 - puffin: could not navigate to past years
+- ldash: attempt to divide by zero
+- dravik: Failed to build `pydantic-core==2.33.2`
