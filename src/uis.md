@@ -40,7 +40,7 @@ See also: [Mobile apps](mobile.md)
 
 ## Test matrix
 
-Not all UIs are mature and robust.
+Not all UIs are equally mature and robust.
 Here is the start of a basic test matrix showing the status.
 
 |                   | install | basic | synthetic |
