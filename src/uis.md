@@ -75,5 +75,5 @@ Test notes:
 
 Some files to test. Does the app handle these without trouble ?
 
-- [bcexample.hledger](https://github.com/simonmichael/hledger/blob/main/examples/bcexample.hledger) - a simple but realistic journal with 1000 transactions, originally from the Beancount project.
-- [1ktxns-100accts.journal](https://github.com/simonmichael/hledger/blob/main/examples/1ktxns-100accts.journal) - a synthetic journal with 1000 transactions, transacted prices, and market prices.
+- [bcexample.hledger](https://raw.githubusercontent.com/simonmichael/hledger/refs/heads/main/examples/bcexample.hledger) - a simple but realistic journal with 1000 transactions, originally from the Beancount project.
+- [1ktxns-100accts.journal](https://raw.githubusercontent.com/simonmichael/hledger/refs/heads/main/examples/1ktxns-100accts.journal) - a synthetic journal with 1000 transactions, transacted prices, and market prices.
