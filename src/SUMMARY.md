@@ -4,12 +4,9 @@
 
 - [Home](index.md)
 - [Install](install.md)
-<!-- - [Release notes](relnotes.md) -->
 - [Docs](doc.md)
 - [Support](support.md)
-<!-- - [Scripts and add-ons](scripts.md) -->
 - [Sponsor hledger](sponsor.md)
-<!-- - [CREDITS](CREDITS.md) -->
 
 # MANUALS
 
@@ -95,12 +92,14 @@
 - [Multicurrency tutorial (2018)](multicurrency-tutorial.md)
 - [News](news.md)
 - [Project accounting](project-accounting.md)
+- [Release notes](relnotes.md) -->
 - [Report examples](report-examples.md)
 - [Reporting version control stats](reporting-version-control-stats.md)
 - [Rewrite account names](rewrite-account-names.md)
 - [Rewrite commodity symbols](rewrite-commodity-symbols.md)
 - [Save frequently used options](save-frequently-used-options.md)
 - [Scripting hledger](scripting.md)
+- [Scripts and add-ons](scripts.md)
 - [SM's 2019 setup](sm-2019-setup.md)
 - [SM's 2023 setup](sm-2023-setup.md)
 - [SM's time & task dashboard](time-and-task-dashboard.md)
@@ -131,6 +130,7 @@
 - [CLIMATE](CLIMATE.md)
 - [CODE](CODE.md)
 - [COMMITS](COMMITS.md)
+- [CREDITS](CREDITS.md)
 - [DECISIONS](DECISIONS.md)
 - [DEVWORKFLOWS](DEVWORKFLOWS.md)
 - [DOCS](DOCS.md)
