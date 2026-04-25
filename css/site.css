@@ -1,3 +1,7 @@
+/* https://stackoverflow.com/questions/73555768/how-to-change-width-of-content-area-in-mdbook */
+:root {
+  --content-max-width: 90%;
+}
 .content a[href]:not(:is(h1, h2, h3, h4, h5, h6)) {
   white-space: nowrap;
 }
