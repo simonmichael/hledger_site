@@ -4,12 +4,12 @@ There are some [example reports on the home page](index.md/#examples).
 
 Here are some more example reports using the [bcexample journal][bcexample] from beancount:
 
-[bcexample]: https://raw.githubusercontent.com/simonmichael/hledger/main/examples/bcexample.hledger
+[bcexample]: https://raw.githubusercontent.com/simonmichael/hledger/main/examples/bcexample.journal
 
 A yearly income statement, summarised to depth 3, sorted by amount:
 
 ```cli
-$ hledger -f examples/bcexample.hledger is -Y -3 -S
+$ hledger -f examples/bcexample.journal is -Y -3 -S
 Income Statement 2012-01-01..2014-10-11
 
                                 ||                                     2012                                      2013                                      2014 
@@ -51,7 +51,7 @@ Yearly balance sheets, with commodities converted to their year-end
 value in USD where possible:
 
 ```cli
-$ hledger -f examples/bcexample.hledger bs -Y -V --infer-value
+$ hledger -f examples/bcexample.journal bs -Y -V --infer-value
 Balance Sheet 2012-12-31..2014-12-31, valued at period ends
 
                             ||                 2012-12-31                  2013-12-31                   2014-12-31 
@@ -83,8 +83,8 @@ Balance Sheet 2012-12-31..2014-12-31, valued at period ends
 The same reports as HTML:
 
 ```cli
-$ hledger -f examples/bcexample.hledger is -Y -3 -S -o is.html
-$ hledger -f examples/bcexample.hledger bs -Y -V --infer-value -o bs.html
+$ hledger -f examples/bcexample.journal is -Y -3 -S -o is.html
+$ hledger -f examples/bcexample.journal bs -Y -V --infer-value -o bs.html
 $ open is.html bs.html
 ```
 

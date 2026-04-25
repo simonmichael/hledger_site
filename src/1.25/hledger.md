@@ -2512,7 +2512,7 @@ Examples:
 -   Wide layout. With many commodities, reports can be very wide:
 
     ```cli
-    $ hledger -f examples/bcexample.hledger bal assets:us:etrade -3 -T -Y --layout=wide
+    $ hledger -f examples/bcexample.journal bal assets:us:etrade -3 -T -Y --layout=wide
     Balance changes in 2012-01-01..2014-12-31:
 
                       ||                                          2012                                                     2013                                             2014                                                      Total 
@@ -2526,7 +2526,7 @@ Examples:
     commodities will be hidden:
 
     ```cli
-    $ hledger -f examples/bcexample.hledger bal assets:us:etrade -3 -T -Y --layout=wide,32
+    $ hledger -f examples/bcexample.journal bal assets:us:etrade -3 -T -Y --layout=wide,32
     Balance changes in 2012-01-01..2014-12-31:
 
                       ||                             2012                             2013                   2014                            Total 
@@ -2540,7 +2540,7 @@ Examples:
     each column), and account names are repeated:
 
     ```cli
-    $ hledger -f examples/bcexample.hledger bal assets:us:etrade -3 -T -Y --layout=tall
+    $ hledger -f examples/bcexample.journal bal assets:us:etrade -3 -T -Y --layout=tall
     Balance changes in 2012-01-01..2014-12-31:
 
                       ||       2012        2013         2014        Total 
@@ -2562,7 +2562,7 @@ Examples:
     commodity gets its own report row, account names are repeated:
 
     ```cli
-    $ hledger -f examples/bcexample.hledger bal assets:us:etrade -3 -T -Y --layout=bare
+    $ hledger -f examples/bcexample.journal bal assets:us:etrade -3 -T -Y --layout=bare
     Balance changes in 2012-01-01..2014-12-31:
 
                       || Commodity    2012    2013     2014    Total 
@@ -2585,7 +2585,7 @@ Examples:
     charts:
 
     ```cli
-    $ hledger -f examples/bcexample.hledger bal assets:us:etrade -3 -O csv --layout=bare
+    $ hledger -f examples/bcexample.journal bal assets:us:etrade -3 -O csv --layout=bare
     "account","commodity","balance"
     "Assets:US:ETrade","GLD","70.00"
     "Assets:US:ETrade","ITOT","17.00"
@@ -2605,7 +2605,7 @@ Examples:
     This kind of data is the easiest to process with other software:
 
     ```cli
-    $ hledger -f examples/bcexample.hledger bal assets:us:etrade -3 -Y -O csv --layout=tidy
+    $ hledger -f examples/bcexample.journal bal assets:us:etrade -3 -Y -O csv --layout=tidy
     "account","period","start_date","end_date","commodity","value"
     "Assets:US:ETrade","2012","2012-01-01","2012-12-31","GLD","0"
     "Assets:US:ETrade","2012","2012-01-01","2012-12-31","ITOT","10.00"

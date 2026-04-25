@@ -150,7 +150,7 @@ in a HTML file that uses the [Vega-Lite](https://vega.github.io/vega-lite/) java
 Charts can also be saved as SVG or PNG. Here's a detailed example:
 
 ```
-hledger -f examples/bcexample.hledger bal -O csv -N expenses -3 cur:USD \
+hledger -f examples/bcexample.journal bal -O csv -N expenses -3 cur:USD \
     | sed 's/ USD//' \
     | ploterific -m Bar -f account:N -f balance:Q -c account -o a.html \
     && open a.html
@@ -159,7 +159,7 @@ hledger -f examples/bcexample.hledger bal -O csv -N expenses -3 cur:USD \
 
 Let's break down that command line:
 
-- `-f examples/bcexample.hledger` - use this example file in the hledger repo. Omit this to use your default journal.
+- `-f examples/bcexample.journal` - use this example file in the hledger repo. Omit this to use your default journal.
 - `bal` - run a [balance report](hledger.md#balance)
 - `-O csv` - show it as [CSV](hledger.md#output-format) on stdout
 - `-N` - disable the final Total row
@@ -177,7 +177,7 @@ Let's break down that command line:
 Here is the same chart but with the colour set by the balance:
 
 ```
-hledger -f examples/bcexample.hledger bal -O csv -N expenses -3 cur:USD \
+hledger -f examples/bcexample.journal bal -O csv -N expenses -3 cur:USD \
     | sed 's/ USD//' \
     | ploterific -m Bar -f account:N -f balance:Q -c balance:Q -o a.html
 ```

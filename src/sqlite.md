@@ -4,7 +4,7 @@ With SQLite you can do full relational queries on your hledger data.
 
 Here we export all transactions to a database and run some queries:
 ```cli
-$ hledger -f examples/bcexample.hledger print -O sql | sqlite3 bcexample.db
+$ hledger -f examples/bcexample.journal print -O sql | sqlite3 bcexample.db
 $ sqlite3 bcexample.db -column -header
 SQLite version 3.37.0 2021-12-09 01:34:53
 Enter ".help" for usage hints.
@@ -85,7 +85,7 @@ id  txnidx  date1       date2  status  code  description                        
 
 (1. Well.. it's not *that* hard to get a decent result given typical data patterns:
 ```cli
-$ hledger -f examples/bcexample.hledger print Checking | hledger -f- areg -w80 Liabilities amt:'>0'
+$ hledger -f examples/bcexample.journal print Checking | hledger -f- areg -w80 Liabilities amt:'>0'
 Transactions in Liabilities and subaccounts:
 2012-01-08 Chase:Slate | Pay..  Li:US:Ch:Slate          140.36 USD    140.36 USD
 2012-02-11 Chase:Slate | Pay..  Li:US:Ch:Slate          725.96 USD    866.32 USD

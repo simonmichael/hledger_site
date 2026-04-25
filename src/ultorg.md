@@ -17,7 +17,7 @@ This method is perhaps the easiest.
 
 1. Export a hledger journal as CSV, eg:
     ```cli
-    $ hledger -f examples/bcexample.hledger print -o examples/bcexample.csv
+    $ hledger -f examples/bcexample.journal print -o examples/bcexample.csv
     ```
     or
     ```cli
@@ -44,7 +44,7 @@ This method requires Ultorg >=1.26. Note also [ultorg#53](https://github.com/ult
 
 1. Export a hledger journal as an Sqlite database. Eg:
     ```cli
-    $ hledger -f examples/bcexample.hledger print -O sql | sqlite3 bcexample.db
+    $ hledger -f examples/bcexample.journal print -O sql | sqlite3 bcexample.db
     ```
     or
     ```cli

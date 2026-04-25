@@ -2231,7 +2231,7 @@ when necessary. It can be useful for a cleaner display of reports with
 many commodities:
 
 ```cli
-$ hledger -f examples/bcexample.hledger bal assets:us:etrade -3 -T -Y
+$ hledger -f examples/bcexample.journal bal assets:us:etrade -3 -T -Y
 Balance changes in 2012-01-01..2014-12-31:
 
                   ||                             2012                             2013                   2014                            Total 
@@ -2240,7 +2240,7 @@ Balance changes in 2012-01-01..2014-12-31:
 ------------------++---------------------------------------------------------------------------------------------------------------------------
                   || 10.00 ITOT, 337.18 USD, 2 more..  70.00 GLD, 18.00 ITOT, 3 more..  -11.00 ITOT, 3 more..  70.00 GLD, 17.00 ITOT, 3 more.. 
 
-$ hledger -f examples/bcexample.hledger bal assets:us:etrade -3 -T -Y --commodity-column
+$ hledger -f examples/bcexample.journal bal assets:us:etrade -3 -T -Y --commodity-column
 Balance changes in 2012-01-01..2014-12-31:
 
                   || Commodity    2012    2013     2014    Total 
@@ -2262,12 +2262,12 @@ This flag also affects [CSV output](#output-format), which is useful for
 producing data that is easier to consume, eg when making charts:
 
 ```cli
-$ hledger -f examples/bcexample.hledger bal assets:us:etrade -3 -O csv
+$ hledger -f examples/bcexample.journal bal assets:us:etrade -3 -O csv
 "account","balance"
 "Assets:US:ETrade","70.00 GLD, 17.00 ITOT, 5120.50 USD, 36.00 VEA, 294.00 VHT"
 "total","70.00 GLD, 17.00 ITOT, 5120.50 USD, 36.00 VEA, 294.00 VHT"
 
-$ hledger -f examples/bcexample.hledger bal assets:us:etrade -3 -O csv --commodity-column
+$ hledger -f examples/bcexample.journal bal assets:us:etrade -3 -O csv --commodity-column
 "account","commodity","balance"
 "Assets:US:ETrade","GLD","70.00"
 "Assets:US:ETrade","ITOT","17.00"

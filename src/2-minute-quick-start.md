@@ -187,7 +187,7 @@ $ hledger-ui --forecast   # start the terminal UI (except on Windows)
 ![](images/home-ui-2.png)
 
 ```cli
-$ hledger-ui --tree -f examples/bcexample.hledger   # a multicurrency journal
+$ hledger-ui --tree -f examples/bcexample.journal   # a multicurrency journal
 ```
 ![](images/home-ui-3.png)
 
@@ -198,7 +198,7 @@ $ hledger-web    # start the web UI
 ![](images/home-web-2.png)
 
 ```cli
-$ hledger-web -f examples/bcexample.hledger    # from data by Martin Blais
+$ hledger-web -f examples/bcexample.journal    # from data by Martin Blais
 ```
 ![](images/home-web-3.png)
 
