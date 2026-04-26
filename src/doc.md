@@ -6,32 +6,67 @@ h3 { margin-top:0; }
 </style>
 
 hledger has a lot of documentation, to suit different needs.
-Docs can also be accessed from the site sidebar.
+You don't need to read them all.
+These docs can also be accessed from the site's sidebar.
 
-## TLDR
 
-You can get very brief help with a [tldr](https://tldr.sh) [client](https://tealdeer-rs.github.io/tealdeer/)
-or [in your browser](https://tldr.inbrowser.app):
+## Tutorials
 
-- [hledger](https://tldr.inbrowser.app/pages/common/hledger)
-- [hledger add](https://tldr.inbrowser.app/pages/common/hledger-add)
-- [hledger accounts](https://tldr.inbrowser.app/pages/common/hledger-accounts)
-- [hledger add](https://tldr.inbrowser.app/pages/common/hledger-add)
-- [hledger aregister](https://tldr.inbrowser.app/pages/common/hledger-aregister)
-- [hledger balance](https://tldr.inbrowser.app/pages/common/hledger-balance)
-- [hledger balancesheet](https://tldr.inbrowser.app/pages/common/hledger-balancesheet)
-- [hledger import](https://tldr.inbrowser.app/pages/common/hledger-import)
-- [hledger incomestatement](https://tldr.inbrowser.app/pages/common/hledger-incomestatement)
-- [hledger print](https://tldr.inbrowser.app/pages/common/hledger-print)
-- [hledger-ui](https://tldr.inbrowser.app/pages/common/hledger-ui)
-- [hledger-web](https://tldr.inbrowser.app/pages/common/hledger-web)
+Here are some beginner friendly, step by step tutorials.
 
-## Manuals
+- [Tutorial: hledger add](add.md)
+- [Tutorial: hledger-ui](ui.md)
+- [Tutorial: hledger-web](web.md)
+- [Tutorial: Import CSV data](import-csv.md)
+- **[Accounting basics for PTA users](accounting-pta.md)**
+- **[Tips for learning hledger](learn.md)**
 
-...but you should at least skim the manuals, so you'll know where to look in future.
-These are the authoritative official docs for hledger.
-You can also view them locally with commands like 
-`hledger help`, `hledger CMD --help`, `hledger-ui --info`, `man hledger-web`, etc.
+<!-- ## Quick starts -->
+
+Or if you're comfortable with the command line, you could try these:
+
+- [Home: A quick example](index.md)
+- [2 minute quick start](2-minute-quick-start.md)
+- [5 minute quick start](5-minute-quick-start.md)
+- [10 minute quick start](10-minute-quick-start.md)
+- [hledger manual: Common tasks](hledger.md#common-tasks)
+- [hledger manual: Journal cheatsheet](hledger.md#journal-cheatsheet)
+- [Workflows](workflows.md)
+- [hledger and Ledger](ledger.md), for Ledger users
+- [hledger and Beancount](beancount.md), for Beancount users
+
+Here are some notable blog posts:
+
+- [Amitai Burstein: Why We Chose Plain Text Accounting with Hledger](https://www.gizra.com/content/plain-text-accounting-hledger/) - getting started; hledger-ui
+- [Teo Si-Yan: Making sense of your finances with hledger reports](https://teosiyan.com/2025/07/09/hledger-commands) - basic reports
+- [Matt Maguire: Plain Text Accounting with Emacs](https://www.teachmaths.org/20250423-pta-emacs/),
+  [part 2](https://www.teachmaths.org/20250424-pta-emacs2/),
+  [part 3](https://www.teachmaths.org/20250530-pta-emacs3/)
+
+## Reference
+
+<!-- ## TLDR -->
+
+The [tldr](https://tldr.sh) tool, or hledger's built-in `--tldr` flag, shows brief command examples: \
+[hledger](https://tldr.inbrowser.app/pages/common/hledger) - 
+[hledger add](https://tldr.inbrowser.app/pages/common/hledger-add) - 
+[hledger accounts](https://tldr.inbrowser.app/pages/common/hledger-accounts) - 
+[hledger add](https://tldr.inbrowser.app/pages/common/hledger-add) - 
+[hledger aregister](https://tldr.inbrowser.app/pages/common/hledger-aregister) - 
+[hledger balance](https://tldr.inbrowser.app/pages/common/hledger-balance) - 
+[hledger balancesheet](https://tldr.inbrowser.app/pages/common/hledger-balancesheet) - 
+[hledger import](https://tldr.inbrowser.app/pages/common/hledger-import) - 
+[hledger incomestatement](https://tldr.inbrowser.app/pages/common/hledger-incomestatement) - 
+[hledger print](https://tldr.inbrowser.app/pages/common/hledger-print) - 
+[hledger-ui](https://tldr.inbrowser.app/pages/common/hledger-ui) - 
+[hledger-web](https://tldr.inbrowser.app/pages/common/hledger-web)
+
+<!-- ## Manuals -->
+
+The manuals are hledger's authoritative docs.
+You should at least skim their tables of contents.
+You can view them offline with commands like 
+`hledger help`, `hledger CMD --help`, `hledger-ui --info`, `man hledger-web`.
 
 - **[hledger manual](hledger.md)**
 - **[hledger-ui manual](hledger-ui.md)**
@@ -44,32 +79,6 @@ Some other useful reference docs:
 - [Plain Text Accounting FAQ](https://plaintextaccounting.org/FAQ)
 - [Why hledger ?](why.md)
 - [Developer docs](dev.md)
-
-## Quick starts
-
-If you're comfortable with the command line, and looking for a fast introduction, try these.
-
-- [Home: A quick example](index.md)
-- [2 minute quick start](2-minute-quick-start.md)
-- [5 minute quick start](5-minute-quick-start.md)
-- [10 minute quick start](10-minute-quick-start.md)
-- [hledger manual: Common tasks](hledger.md#common-tasks)
-- [hledger manual: Journal cheatsheet](hledger.md#journal-cheatsheet)
-- [Workflows](workflows.md)
-- [hledger and Ledger](ledger.md), for Ledger users
-- [hledger and Beancount](beancount.md), for Beancount users
-
-## Tutorials
-
-Here are more beginner friendly, step by step guides,
-including several ways to use hledger without typing commands.
-
-- **[Accounting basics for PTA users](accounting-pta.md)**
-- [Tutorial: hledger add](add.md)
-- [Tutorial: hledger-ui](ui.md)
-- [Tutorial: hledger-web](web.md)
-- [Tutorial: Import CSV data](import-csv.md)
-- **[Tips for learning hledger](learn.md)**
 
 ## hledger by example
 
@@ -97,16 +106,6 @@ It's not finished; let us know what you'd like to see added.
 - [Reading timedot files](reading-timedot-files.md)
 
 More examples, not part of the book, can be found [below](#examples).
-
-## Articles
-
-Some notable posts:
-
-- [Amitai Burstein: Why We Chose Plain Text Accounting with Hledger](https://www.gizra.com/content/plain-text-accounting-hledger/) - getting started; hledger-ui
-- [Teo Si-Yan: Making sense of your finances with hledger reports](https://teosiyan.com/2025/07/09/hledger-commands) - basic reports
-- [Matt Maguire: Plain Text Accounting with Emacs](https://www.teachmaths.org/20250423-pta-emacs/),
-  [part 2](https://www.teachmaths.org/20250424-pta-emacs2/),
-  [part 3](https://www.teachmaths.org/20250530-pta-emacs3/)
 
 ## Videos
 
@@ -171,7 +170,7 @@ See also:
 
 ## Cookbook
 
-Miscellaneous docs, tips and rough notes.
+Other docs, tips, and notes, are collected here.
 
 ### USING HLEDGER
 
