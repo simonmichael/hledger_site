@@ -47,8 +47,9 @@ Here are some notable blog posts:
 
 <!-- ## TLDR -->
 
-The [tldr](https://tldr.sh) tool, or hledger's built-in `--tldr` flag, shows brief command examples: \
-[hledger](https://tldr.inbrowser.app/pages/common/hledger) - 
+The [tldr](https://tldr.sh) tool, or hledger's built-in `--tldr` flag, shows brief command examples:
+
+- [hledger](https://tldr.inbrowser.app/pages/common/hledger) - 
 [hledger add](https://tldr.inbrowser.app/pages/common/hledger-add) - 
 [hledger accounts](https://tldr.inbrowser.app/pages/common/hledger-accounts) - 
 [hledger add](https://tldr.inbrowser.app/pages/common/hledger-add) - 
@@ -63,7 +64,7 @@ The [tldr](https://tldr.sh) tool, or hledger's built-in `--tldr` flag, shows bri
 
 <!-- ## Manuals -->
 
-The manuals are hledger's authoritative docs.
+The manuals are the authoritative docs.
 You should at least skim their tables of contents.
 You can view them offline with commands like 
 `hledger help`, `hledger CMD --help`, `hledger-ui --info`, `man hledger-web`.
@@ -174,16 +175,16 @@ Other docs, tips, and notes, are collected here.
 
 ### USING HLEDGER
 
-### Checking for errors
+#### Checking for errors
 - [Checking for errors](checking-for-errors.md)
 - [Balancing the accounting equation](balancing-the-accounting-equation.md)
 
-### Customising
+#### Customising
 - [Change account name separator](change-account-name-separator.md)
 - [Editor configuration](editors.md)
 - [Save frequently used options](save-frequently-used-options.md)
 
-### Data entry
+#### Data entry
 - [Create a journal](create-a-journal.md)
 - [Getting prices](prices.md)
 - [How to record journal entries](how-to-record.md)
@@ -191,16 +192,16 @@ Other docs, tips, and notes, are collected here.
 - [Importing CSV data](import-csv.md)
 - [Cost notation](cost-notation.md)
 
-### Examples
+#### Examples
 
 - [examples/](https://github.com/simonmichael/hledger/tree/main/examples) - examples and snippets, old and new 
 - [examples/csv/](https://github.com/simonmichael/hledger/tree/main/examples/csv) - hledger CSV rules library
 
-### Making charts
+#### Making charts
 - [Charts and Graphs](charts.md)
 - [Visualising discussion 2023](visualising2023.md)
 
-### Other software
+#### Other software
 - [Exporting from hledger](export.md)
 - [hledger and Beancount](beancount.md)
 - [hledger and dsq / DataStation](dsq.md)
@@ -216,11 +217,11 @@ Other docs, tips, and notes, are collected here.
 - [hledger and Ultorg](ultorg.md)
 - [hledger and YNAB](ynab.md)
 
-### Preserving your data
+#### Preserving your data
 - [Track changes with version control](track-changes-with-version-control.md)
 - [Backups](https://en.wikipedia.org/wiki/Backup), the 3-2-1 rule
 
-### Reporting
+#### Reporting
 - [Making sense of your finances with hledger reports](https://teosiyan.com/2025/07/09/hledger-commands)
 - [Report examples](report-examples.md)
 - [Reporting version control stats](reporting-version-control-stats.md)
@@ -228,14 +229,14 @@ Other docs, tips, and notes, are collected here.
 - [Rewrite commodity symbols](rewrite-commodity-symbols.md)
 - [Tags tutorial](tags-tutorial.md)
 
-### Scripts and add-ons
+#### Scripts and add-ons
 - **[Scripts and add-ons](scripts.md)**
 - [Scripting hledger](scripting.md)
 
-### Setups and workflows
+#### Setups and workflows
 - [Workflows](workflows.md)
 
-### User interfaces
+#### User interfaces
 - [User Interfaces](uis.md)
 - [hledger-web tips](hledger-web-tips.md)
 - [Mobile apps](mobile.md)
@@ -244,35 +245,35 @@ Other docs, tips, and notes, are collected here.
 
 ### ACCOUNTING
 
-### Accounting and bookkeeping
+#### Accounting and bookkeeping
 
 - [Accounting basics for PTA users](accounting-pta.md)
 - [Accounting: further study](accounting.md)
 - [Common journal entries](common-journal-entries.md)
 - [PTA: Choosing cash or accrual](https://plaintextaccounting.org/#choosing-cash-vs-accrual)
 
-### Borrowing and lending
+#### Borrowing and lending
 - [Borrowing and lending](loans.md)
 
-### Budgeting
+#### Budgeting
 - [Budgeting](budgeting.md)
 <!-- ### Depreciation -->
 <!-- [Depreciation](http://rantsideasstuff.com/posts/2018/07/08-depreciation-in-personal-finance-with-hledger) -->
 
-### Eco accounting
+#### Eco accounting
 - [PTA cookbook: Eco accounting](https://plaintextaccounting.org/Eco-accounting)
 
-### Forecasting
+#### Forecasting
 - [Forecasting](forecasting.md)
 
-### FOSS projects
+#### FOSS projects
 - [Youngbin Han: Plain Text Accounting with hledger](https://docs.google.com/presentation/d/17kkPlLOFhpwfEIhHfT0hJ1PRmZ6-Tq7JIAdTAhjp24A/preview?pru=AAABmo3qmB4*fWFiJB8Z7cZwQbc72JsTjA&slide=id.g38f1acd61f5_0_19) (slides)
 
-### Inventory tracking
+#### Inventory tracking
 - [Tracking and selling inventory](inventory.md)
 - [PTA wiki: Inventory](https://github.com/plaintextaccounting/plaintextaccounting/wiki/Inventory)
 
-### Investing and trading
+#### Investing and trading
 - [PTA Cookbook: Investing and trading](https://plaintextaccounting.org/Investing-and-trading)
 - [hledger manual: Cost reporting](hledger.md#cost-reporting)
 - [hledger manual: Value reporting](hledger.md#value-reporting)
@@ -286,31 +287,31 @@ Other docs, tips, and notes, are collected here.
 - [Track foreign stock capital gains using hledger](https://curiousbicycle.com/post/hledger-foreign-stock) 2023
 - [Full-fledged hledger: Manual lot tracking](https://github.com/adept/full-fledged-hledger/wiki/Manual-lot-tracking) 2024
 
-### Invoicing
+#### Invoicing
 - [Invoicing](invoicing.md)
 - [Project accounting](project-accounting.md)
 
-### Multiple currencies
+#### Multiple currencies
 - [Multicurrency tutorial](multicurrency-tutorial.md) (2018)
 - [Currency conversion](currency-conversion.md) (2021)
 - [hledger manual: Cost reporting](hledger.md#cost-reporting)
 - [hledger manual: Value reporting](hledger.md#value-reporting)
 
-### Non-profit accounting
+#### Non-profit accounting
 - [PTA: Non profit accounting](https://plaintextaccounting.org/Non-profit-accounting)
 
-### Taxes
+#### Taxes
 - [A tax reporting setup](tax-reporting-setup.md)
 - [Cryptocurrency tax reporting](cctax.md)
 
-### Time tracking
+#### Time tracking
 - [Converting time to money](time-to-money.md)
 - [Time planning](time-planning.md)
 
-### Trip expenses
+#### Trip expenses
 - [Foreign trip expenses](foreign-trip-expenses.md)
 
-### Shared expenses
+#### Shared expenses
 - [PTA: Shared finances](https://plaintextaccounting.org/Shared-finances)
 
 ## See also...
