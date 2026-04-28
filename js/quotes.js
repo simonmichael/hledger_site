@@ -492,7 +492,7 @@ I prefer hledger-web which is a beautiful way to look at our books. I have been 
 
 It's so great to see others enjoying hledger as much as I do. --HowlOfTheSun
 
-I have been using it for past few years. Its flawless and to the core. It rakes some time to adjust it as per our requirements but i would say that after about an year of usage, it starts making a lot of sense and gives what we wants. --jeetu77
+I have been using it for past few years. Its flawless and to the core. It takes some time to adjust it as per our requirements but i would say that after about an year of usage, it starts making a lot of sense and gives what we wants. --jeetu77
 
 I have gained so much benefit from hledger and PTA, I am grateful for all your (and others) work on it. --HowlOfTheSun
 
