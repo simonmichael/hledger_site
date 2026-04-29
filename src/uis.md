@@ -79,9 +79,9 @@ Help welcome, share updates in the chat room.
 | **[hledger]**       | haskell  | Y       | Y          | Y          | Y      | Y            | Y         | Y         |                                        |
 | **[hledger-ui]**    | haskell  | Y       | Y          | Y          | Y      | Y            | Y         | Y         |                                        |
 | [hledger-iadd]      | haskell  | Y       | Y          | Y          | Y      | Y            | Y         | Y         |                                        |
+| [ldash]             | rust     | Y       | Y          | Y          | Y      | Y            | Y         | Y         |                                        |
 | [puffin]            | go       | Y       | N          | N          | Y      | Y            | Y         | Y         |                                        |
 | [hledger-textual]   | python   | Y       | Y          | N          | Y      | Y            | Y         | Y         | writes directives to journal           |
-| [ldash]             | rust     | Y       | Y          | N          | Y      | Y            | N         | N         | divide by zero error                   |
 | [dravik]            | python   | N       |            |            |        |              |           |           | failed to build pydantic-core==2.33.2  |
 | **Graphical**       |          |         |            |            |        |              |           |           |                                        |
 | [Surebeans]         | C#       | Y       | Y          | Y          | N      | N            | N         | N         | needs a specific directory/file layout |
