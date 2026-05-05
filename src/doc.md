@@ -35,13 +35,14 @@ Or if you're comfortable with the command line, you could try these:
 - [hledger and Ledger](ledger.md), for Ledger users
 - [hledger and Beancount](beancount.md), for Beancount users
 
-Here are some notable blog posts:
+Here are some notable blog posts/articles:
 
 - [Amitai Burstein: Why We Chose Plain Text Accounting with Hledger](https://www.gizra.com/content/plain-text-accounting-hledger/) - getting started; hledger-ui
 - [Teo Si-Yan: Making sense of your finances with hledger reports](https://teosiyan.com/2025/07/09/hledger-commands) - basic reports
 - [Matt Maguire: Plain Text Accounting with Emacs](https://www.teachmaths.org/20250423-pta-emacs/),
   [part 2](https://www.teachmaths.org/20250424-pta-emacs2/),
   [part 3](https://www.teachmaths.org/20250530-pta-emacs3/)
+- [Linux Magazine: Tracking your finances with plain text accounting](https://www.linux-magazine.com/Issues/2024/285/hledger)
 
 ## Reference
 
