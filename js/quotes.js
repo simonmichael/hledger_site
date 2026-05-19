@@ -372,7 +372,7 @@ Simon is an amazing project owner. He and his documentation are the reasons I li
 
 Thank you for maintaining the compendium. I love hledger docs. --Aaron Fiore
 
-Emacs users should look into Flycheck integration, eg [flycheck-hledger](https://hledger.org/editors.html#flycheck-hledger) . Real time indication of parse and balance errors as you edit is nice! --sm
+Emacs users should look into Flycheck integration, eg flycheck-hledger. Real time indication of parse and balance errors as you edit is nice! --sm
 
 I use hledger only for the things I want reports of (taxes, utilities etc split with spouse, money spent on specific hobbies, etc; not restaurants etc).
 Entering everything into ledger is mind-numbingly boring.
@@ -722,6 +722,8 @@ I wasn't aware this FLOSS tool was serenely floating in the 'verse. --arxaaron
 The thing I love about this software so far is there is also a separate application with a web interface and a tui so there are multiple ways to access and edit the journal file. This is convenient because I love using cli and tui but my hubby would prefer a gui since he is not a techie. Loving this software so far! --llpolluxll
 
 It is a joy to use it (for many years now) and great to see it being continuously developed. --Clindbergh
+
+Your docs are amazing. Slightly overwhelming, but when I was finally ready to read it top to bottom, it definitely did the job and guiding me to where I needed to. Didn't take long to properly learn hledger with all the goodies --Lyz
 
 `;
 const quotes = quotesmd.trim().split('\n\n').map(q => q.replace(/^\*|\*$/g, '').trim());
