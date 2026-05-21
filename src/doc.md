@@ -166,8 +166,7 @@ Longer talks:
 
 See also:
 
-- [Youtube: latest "hledger" results](https://www.youtube.com/results?search_query=hledger&sp=CAISAhAB)
-  (beware, there's a ton of AI videos)
+- [Youtube: latest "hledger" videos](https://www.youtube.com/results?search_query=hledger+-heath+-joker+-letlive) (beware, there's a ton of AI slop videos - report them if bad)
 - [PTA: Videos](https://plaintextaccounting.org/#videos)
 
 ## Cookbook
