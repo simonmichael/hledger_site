@@ -14,7 +14,7 @@ See also:
 
 For some project and feature differences,
 see the [PTA apps](https://plaintextaccounting.org/#pta-apps) overview
-and [Feature matrix](https://plaintextaccounting.org/#feature-matrix).
+and [Feature matrix](https://plaintextaccounting.org/#pta-apps-feature-matrix).
 
 hledger focusses strongly on UX, reliability, and real-world practicality.
 It aims to be somewhat useful to non-techies and accounting beginners, as well as experts.
