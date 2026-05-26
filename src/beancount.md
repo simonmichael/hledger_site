@@ -54,7 +54,7 @@ The best way to export from hledger to Beancount is with hledger's [print](hledg
 This can be useful for viewing hledger data in [Fava](https://beancount.github.io/fava/), eg.
 In simple cases it can be:
 ```
-$ pip3 install fava
+$ uv tool install fava
 $ hledger print -o tmp.beancount
 $ fava tmp.beancount
 ```
@@ -65,7 +65,7 @@ The most reliable way to export Beancount data is with
 Beancount 2's [bean-report](https://beancount.github.io/docs/running_beancount_and_generating_reports.html#bean-report) tool.
 It's not available with Beancount 3, you'll need to install Beancount 2:
 ```
-$ pip3 install beancount==2.3.6
+$ uv tool install 'beancount<3'
 ```
 
 Then you can do
