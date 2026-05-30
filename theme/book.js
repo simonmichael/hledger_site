@@ -755,7 +755,7 @@ aria-label="Show hidden lines"></button>';
         text: function(trigger) {
             hideTooltip(trigger);
             const playground = trigger.closest('pre');
-            return playground_text(playground, false);
+            return playground_text(playground, false).replace(/\r\n/g, '\n');
         },
     });
 
