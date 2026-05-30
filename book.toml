@@ -35,6 +35,7 @@ additional-js = [
   "js/jquery-1.11.0.min.js",
   "js/site.js",
   "js/quotes.js",
+  "js/search-fix.js",
 ]
 no-section-label = true
 git-repository-url = "https://github.com/simonmichael/hledger_site"
