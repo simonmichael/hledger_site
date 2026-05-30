@@ -66,7 +66,7 @@ use-boolean-and = true
 # boost-hierarchy = 1
 # boost-paragraph = 1
 # expand = true
-heading-split-level = 4
+heading-split-level = 6
 # copy-js = true
 
 [output.html.redirect]
