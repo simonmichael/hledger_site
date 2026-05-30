@@ -64,6 +64,67 @@
   color: #000;
 }
 
+@media (prefers-color-scheme: dark) {
+  .hljs {
+    background: #1b1d1e;
+    color: #c5c5c5;
+  }
+
+  .hljs-comment,
+  .hljs-quote {
+    color: #7a7a7a;
+  }
+
+  .hljs-variable,
+  .hljs-template-variable,
+  .hljs-attribute,
+  .hljs-attr,
+  .hljs-tag,
+  .hljs-name,
+  .hljs-regexp,
+  .hljs-link,
+  .hljs-selector-id,
+  .hljs-selector-class {
+    color: #f97583;
+  }
+
+  .hljs-number,
+  .hljs-meta,
+  .hljs-built_in,
+  .hljs-builtin-name,
+  .hljs-literal,
+  .hljs-type,
+  .hljs-params {
+    color: #ffa657;
+  }
+
+  .hljs-string,
+  .hljs-symbol,
+  .hljs-bullet {
+    color: #85d89f;
+  }
+
+  .hljs-title,
+  .hljs-section {
+    color: #79b8ff;
+  }
+
+  .hljs-keyword,
+  .hljs-selector-tag {
+    color: #b392f0;
+  }
+
+  .hljs-addition {
+    color: #85d89f;
+    background-color: #1b3d23;
+  }
+
+  .hljs-deletion {
+    color: #f97583;
+    background-color: #3d1b1b;
+  }
+}
+
 .hljs-emphasis {
   font-style: italic;
 }

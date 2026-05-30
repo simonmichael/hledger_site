@@ -229,8 +229,12 @@ The transactions described above could easily be adapted for LIFO:
 just use a different lot for the initial sale. 
 
 ACB gets a bit more difficult. If we buy more stock, we essentially
-have to change the cost basis of our previous lots as well. The
-resulting journal might look a little like this:
+have to change the cost basis of our previous lots as well.
+
+With ACB you treat all shares of a commodity as a single pool:
+whenever you buy more, the average cost per share is recalculated,
+and whenever you sell, the gain/loss is computed against that
+average. A journal using this pool approach might look like this:
 
 ```
 2021-01-04 opening balances
@@ -242,18 +246,15 @@ P 2021-01-11 ABC $3
 P 2021-01-18 ABC $4
 
 2021-01-19 buying stock
-    assets:stocks:ABC:20210119   5 ABC @ $4.40
-    assets:cash               $-22.00
+    assets:stocks:ABC   5 ABC @ $4.40
+    assets:cash       $-22.00
 
 P 2021-01-25 ABC $5
 P 2021-02-01 ABC $6
 
 2021-02-02 buying more stock
-    assets:stocks:ABC:20210119  -5 ABC @ $4.40
-    assets:stocks:ABC:20210119   5 ABC @ $5.33
-    assets:stocks:ABC:20210202   4 ABC @ $5.33
-    assets:cash               $-26.00
-    equity:rounding
+    assets:stocks:ABC   4 ABC @ $6.50
+    assets:cash       $-26.00
 
 P 2021-02-08 ABC $5
 P 2021-02-15 ABC $6
@@ -261,24 +262,46 @@ P 2021-02-22 ABC $7
 
 2021-02-23 sell some stock
     assets:cash                $12.00
-    assets:stocks:ABC:20210119  -2 ABC @ $5.33
+    assets:stocks:ABC          -2 ABC @ $5.33  ; ACB = (5×4.40 + 4×6.50) / 9 ≈ $5.33
     income:capital gains
 
 P 2021-03-01 ABC $8
 
 2021-03-02 sell remaining stock
     assets:cash                $54.00
-    assets:stocks:ABC:20210119  -3 ABC @ $5.33
-    assets:stocks:ABC:20210202  -4 ABC @ $5.33
+    assets:stocks:ABC          -7 ABC @ $5.33
     income:capital gains
 ```
 
+The ACB ($5.33/share here) is computed by dividing the total cost
+($22 + $26 = $48) by the total shares (5 + 4 = 9). Each sale then
+uses this average as the cost basis. The comment on the sale posting
+documents how the ACB was derived.
+
+If you prefer, you can record the ACB recalculation explicitly as an
+adjustment transaction, which also serves as a balance assertion:
+
+```
+2021-02-02 buying more stock
+    assets:stocks:ABC           4 ABC @ $6.50
+    assets:cash               $-26.00
+
+2021-02-02 recost to ACB
+    assets:stocks:ABC          5 ABC @ $4.40  ; reverse old lot
+    assets:stocks:ABC         -5 ABC @ $4.40
+    assets:stocks:ABC          5 ABC @ $5.33  ; re-insert at ACB
+    assets:stocks:ABC          4 ABC @ $5.33  ; new lot at ACB
+    equity:rounding
+```
+
+This keeps the per-lot detail while ensuring the gain report
+consistently uses the pooled cost basis. The `equity:rounding`
+posting absorbs any rounding differences.
+
 If and how you deal with rounding depends on if and how you need to
 report your capital gains to your tax authority. You can avoid
-rounding errors by always using the `@@` symbol, but this essentially
-makes it impossible to sell only part of your shares (or you have to
-deal with rounding at time of sale instead of time of purchase). A
-journal might then look like this:
+rounding errors by always using the `@@` symbol (total cost per
+transaction), but this makes it harder to sell partial lots:
 
 ```
 2021-01-04 opening balances
@@ -296,9 +319,9 @@ P 2021-01-18 ABC $4
 P 2021-01-25 ABC $5
 P 2021-02-01 ABC $6
 
-2021-02-02 buying more stock
-    assets:stocks:ABC  -5 ABC @@ $22.00
-    assets:stocks:ABC   9 ABC @@ $48.00
+2021-02-02 recost to ACB
+    assets:stocks:ABC  -5 ABC @@ $22.00  ; reverse old lot
+    assets:stocks:ABC   9 ABC @@ $48.00  ; pooled: 5+4 shares, $22+$26 total
     assets:cash      $-26.00
 
 P 2021-02-08 ABC $5
@@ -306,8 +329,8 @@ P 2021-02-15 ABC $6
 P 2021-02-22 ABC $7
 P 2021-03-01 ABC $8
 
-2021-03-02 sell stock
+2021-03-02 sell remaining stock
     assets:cash                $70.00
-    assets:stocks:ABC:20210119  -9 ABC @@ $48.00
+    assets:stocks:ABC          -9 ABC @@ $48.00
     income:capital gains
 ```
