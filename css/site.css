@@ -24,6 +24,10 @@ code {
 pre > code.hljs {
   border:thin solid lightgrey;
 }
+
+pre {
+  overflow: hidden;
+}
 pre > code.language-cli {
   border:none;
   font-weight: bold;
