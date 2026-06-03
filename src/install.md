@@ -38,7 +38,7 @@ Docker (Linux, Mac, Windows) <!-- adept --> ([more](https://hub.docker.com/searc
 
 Windows \
 [![Scoop](https://repology.org/badge/version-for-repo/scoop/hledger.svg)](https://scoop.sh/#/apps?q=hledger) `scoop install hledger` \
-[![Winget](https://img.shields.io/badge/Winget_package-1.52-red.svg)](https://github.com/microsoft/winget-pkgs/tree/master/manifests/s/simonmichael/hledger) `winget install -e --id simonmichael.hledger` \
+[![Winget](https://img.shields.io/badge/Winget_package-1.52.1-green.svg)](https://github.com/microsoft/winget-pkgs/tree/master/manifests/s/simonmichael/hledger) `winget install -e --id simonmichael.hledger` \
 [![Chocolatey](https://repology.org/badge/version-for-repo/chocolatey/hledger.svg)](https://community.chocolatey.org/packages/hledger) `choco install hledger -y`
 <!--
 https://learn.microsoft.com/en-us/windows/package-manager/winget/#use-winget
@@ -121,6 +121,23 @@ Sandstorm (web) \
 Building hledger requires the GHC compiler and either the stack or cabal build tool
 which you can install with your package manager (brew, apt, winget..), with [ghcup], or with [stack] (simplest).
 Or, you can use docker. All this may need perhaps 4G of RAM and 4G or more of disk space.
+
+### Building outside the source tree
+
+Building from within the hledger source tree is the most reliable -
+any non-standard hints currently required for cabal or stack will be applied automatically.
+
+But if you want to build your own hledger binaries, without first getting a copy of the source with git,
+these commands are likely to work currently:
+
+    stack install hledger hledger-ui hledger-web
+
+or (tested with ghc 9.14.1):
+
+    cabal install hledger hledger-ui hledger-web --constraint 'ram<0' --allow-newer containers --overwrite-policy=always
+
+If those give trouble, check `cabal.project` or `stack*.yaml` at <https://github.com/simonmichael/hledger/tree/main> for other possible build hints.
+
 
 ### On Mac
 
