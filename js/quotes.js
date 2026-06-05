@@ -725,5 +725,7 @@ It is a joy to use it (for many years now) and great to see it being continuousl
 
 Your docs are amazing. Slightly overwhelming, but when I was finally ready to read it top to bottom, it definitely did the job and guiding me to where I needed to. Didn't take long to properly learn hledger with all the goodies --Lyz
 
+Here's an hledger appreciation tweet. It's absolutely the best software for plaintext accounting needs, and I'd even argue for many people's personal finance/accounting needs!  I've been using it for 9 years now, and it's both powerful and easy-to-use. --Pranesh Prakash
+
 `;
 const quotes = quotesmd.trim().split('\n\n').map(q => q.replace(/^\*|\*$/g, '').trim());
