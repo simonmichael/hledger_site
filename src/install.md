@@ -124,11 +124,8 @@ Or, you can use docker. All this may need perhaps 4G of RAM and 4G or more of di
 
 ### Building outside the source tree
 
-Building from within the hledger source tree is the most reliable -
-any non-standard hints currently required for cabal or stack will be applied automatically.
-
-But if you want to build your own hledger binaries, without first getting a copy of the source with git,
-these commands are likely to work currently:
+You can in theory use stack or cabal to build your own hledger binaries, 
+without first getting a copy of the source with git, using commands like these:
 
     stack install hledger hledger-ui hledger-web
 
@@ -136,8 +133,9 @@ or (tested with ghc 9.14.1):
 
     cabal install hledger hledger-ui hledger-web --constraint 'ram<0' --allow-newer containers --overwrite-policy=always
 
-If those give trouble, check `cabal.project` or `stack*.yaml` at <https://github.com/simonmichael/hledger/tree/main> for other possible build hints.
-
+But as of 2026-06 these can't be relied on;
+instead, you should get a copy of the hledger source and build from there (described below).
+This applies build hints which (a) work around current ecosystem breakages and (b) avoid some dependency-related hledger bugs.
 
 ### On Mac
 
