@@ -133,9 +133,9 @@ or (tested with ghc 9.14.1):
 
     cabal install hledger hledger-ui hledger-web --constraint 'ram<0' --allow-newer containers --overwrite-policy=always
 
-But as of 2026-06 these can't be relied on;
-instead, you should get a copy of the hledger source and build from there (described below).
-This applies build hints which (a) work around current ecosystem breakages and (b) avoid some dependency-related hledger bugs.
+But as of 2026-06 this can't be relied and should be avodied.
+Instead, get a copy of the hledger source and build from there, as described below.
+This will work around current ecosystem breakages and avoid some dependency-related hledger bugs.
 
 ### On Mac
 
