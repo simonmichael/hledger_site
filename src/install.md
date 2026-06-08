@@ -141,16 +141,15 @@ This will work around current ecosystem breakages and avoid some dependency-rela
 
 You will need the XCode Command Line Tools. Homebrew or macports will probably also be helpful.
 
-Old issues:
-- [mac m1: building with ghc 9+ requires extra include dir](https://gitlab.haskell.org/ghc/ghc/-/issues/20592)
+Possible issues:
+- [mac m1: ffitarget_arm64.h file not found](https://gitlab.haskell.org/ghc/ghc/-/issues/20592)
 
 
 ### On Unix/Linux
 
 You will need 
 
-1. The header files for certain C libraries, which stack/cabal can't install for you;
-   otherwise you'll see build errors like "cannot find -ltinfo".
+1. Certain C libraries, to avoid build errors like "cannot find -ltinfo".
    The exact package names will be specific to your system, but here are some likely install commands:
    - Debian-based systems: `apt install libgmp-dev libncurses-dev zlib1g-dev`
    - Older Debian systems: `apt install libgmp3-dev libncurses5-dev zlib1g-dev`
@@ -184,7 +183,7 @@ or with docker:
 
     cd docker; ./build.sh   # or build-dev.sh to keep build artifacts
 
-Old issues:
+Possible issues:
 - [arch: haskell build advice from Arch wiki](https://wiki.archlinux.org/index.php/Haskell)
 - [openbsd 6: exec: permission denied](https://deftly.net/posts/2017-10-12-using-cabal-on-openbsd.html)
 - [openbsd: stack install tips](https://github.com/commercialhaskell/stack/issues/3313#issuecomment-570353913)
@@ -223,12 +222,12 @@ Just run it again to continue (press up arrow, enter).
 On Windows, things work best if you build in the environment where you will use hledger.
 Eg don't build it in a WSL or MINGW window if you plan to use it in CMD or Powershell.
 
-Old issues:
+Possible issues:
 - [windows: cross-environment non-ascii display issues](https://github.com/simonmichael/hledger/issues/961#issuecomment-471229644)
 
 ### On Nix
 
-Old issues:
+Possible issues:
 - [nix: nix install on linux can fail with "cloning builder process: Operation not permitted"](https://github.com/simonmichael/hledger/issues/1030)
 - [nix: on Linux, nix-installed hledger won't handle non-ascii data](https://github.com/simonmichael/hledger/issues/1033)
 
