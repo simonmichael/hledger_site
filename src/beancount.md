@@ -59,6 +59,12 @@ $ hledger print -o tmp.beancount
 $ fava tmp.beancount
 ```
 
+Note if you are planning to do this, 
+it'll definitely be helpful to pick Beancount-compatible account and commodity and tag names,
+otherwise they'll be encoded and will look strange on the Beancount side.
+See <https://hledger.org/dev/hledger.html#beancount-output>.
+
+
 ## Beancount to hledger
 
 The most reliable way to export Beancount data is with 
