@@ -124,7 +124,6 @@ hledger.org {
 	redir /contrib /CONTRIBUTING.html
 	redir /ui /hledger-ui.html
 	redir /web /hledger-web.html
-	redir /hledger-install.sh https://raw.githubusercontent.com/simonmichael/hledger/master/hledger-install/hledger-install.sh
 
 	redir /regressionbounty REGRESSIONS.html
 	redir /regressions REGRESSIONS.html
