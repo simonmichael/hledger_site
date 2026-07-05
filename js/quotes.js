@@ -728,5 +728,16 @@ Your docs are amazing. Slightly overwhelming, but when I was finally ready to re
 Here's an hledger appreciation tweet. It's absolutely the best software for plaintext accounting needs, and I'd even argue for many people's personal finance/accounting needs!  I've been using it for 9 years now, and it's both powerful and easy-to-use. --Pranesh Prakash
 
 hledger is pretty cool and the more i dig into the built in help and the flags and switches, it just keeps me surprising me in the most joyful way. --dpreacher
+
+I just started playing with hledger 3 nights ago and I'm already seeing the possibilities and simplicity that this approach brings. --omniscient
+
+Settled on hledger for budgeting/accounting, with nanoledger on phone to add transactions, and a simple text editor to make tweaks. 
+I also have a termux shortcut to make a balance sheet report with a single button!
+It's working great, no fear of data corruption, all open source --Flat Bartender
+
+I actually really really like it. I tried ynab, I tried money manager ex, I tried gnucash, I tried pen and paper
+but hledger has like. that pen and paper simplicity with plain text files, and the convenience of a digital system, 
+and doesn't lock you into a specific method like ynab --Flat Bartender
+
 `;
 const quotes = quotesmd.trim().split('\n\n').map(q => q.replace(/^\*|\*$/g, '').trim());
