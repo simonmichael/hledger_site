@@ -1,107 +1,64 @@
 # Sponsor hledger
 
-Building and supporting good software and documentation is very costly;
-hledger comes from thousands of skilled person-hours, sustained over 18+ years.
-Your support is invaluable and greatly appreciated!
-Is it the right time for you to help ? Consider:
+hledger comes to you thanks to thousands of hours of dedicated work, sustained over ~20 years.
+Your support is invaluable and greatly appreciated !
+Is it time for you to help the project financially ?
 
-- Has this project been helpful to you or your organisation ?
-- Have you achieved enough financial success to be able to donate a little (or a lot) ?
-- Would you like to cultivate the psychological and spiritual benefits of giving back / paying forward ?
-- Would you like hledger to be around for a long time ? To remain actively supported ? To improve faster ?
-- Would you like to support our core mission ? Which is:
-  > **To help more people achieve financial literacy, discipline and freedom,
-  > and to help grow a shared global culture of accountability and sustainability.**\
-  (See also: [FAQ](faq.md#what-is-the-hledger-projects-current-mission-and-plans-))
+- Has it been helpful to you or your organisation ?
+- Have you achieved enough success to be able to donate a little (or a lot) ?
+- Would you like the psychological and spiritual benefits of giving back / paying forward ?
+- Do you want hledger to stick around, to remain actively supported, to improve faster ?
+- Do you want to support our [core mission](faq.md#what-is-the-hledger-projects-current-mission-and-plans-),
+  helping people around the world achieve more financial literacy, accountability and freedom ?
 
-See also: [FINANCE](FINANCE.md) overview and reports for the project.
+[FINANCE](FINANCE.md) describes the project's finances, including financial reports.
 
-## How to sponsor
-<!-- keep synced with README.md: -->
-It's easy, even if not yet as efficient as we'd like. 
-When choosing a donation method, you may want to check the [fees](#fees) (below).
-The hledger project is not a registered charity, so your donations may not be tax-deductible.
-The CFO (Simon) pays US and state income tax on all donations in addition to the fees.
+## How to donate
 
+### Github Sponsors
 
-### Sponsor the lead developer
+- <https://github.com/simonmichael/hledger> -> Sponsor button
+- Requirements: a github account
+- Payment methods: credit card, invoice
+- Fees: none for personal accounts, 3% for organizations using invoice, 6% for organizations using credit card
+- Goes to: Simon (not always labelled for hledger)
 
-These donations help support Simon, allowing me to do more hledger work. Thank you!
-You can also offer me bounties or consulting gigs.
+The most efficient method; no fees for personal accounts.
 
-- [![github](https://img.shields.io/badge/Sponsor_Simon_via-Github-limegreen "Sponsor the project leader via Github")](https://github.com/sponsors/simonmichael)
-- [![liberapay](https://img.shields.io/badge/Sponsor_Simon_via-Liberapay-limegreen "Sponsor the project leader via Liberapay")](https://liberapay.com/simonmichael)
-- [![paypal](https://img.shields.io/badge/Sponsor_Simon_via-Paypal-limegreen "Sponsor the project leader via Paypal")](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5J33NLXYXCYAY)
-  <!-- https://www.paypal.com/en_US/i/btn/x-click-but04.gif -->
+Custom-amount one-time donations are not labelled as hledger donations, so feel free to tell me about them.
 
-### Sponsor other developers
+### Liberapay
 
-You can find their names at [CREDITS](CREDITS.md), check their website or Github profile,
-and offer donations, bounties or paid work.
+- <https://liberapay.com/hledger> (a few of you might be using <https://liberapay.com/simonmichael>)
+- Requirements: a liberapay account
+- Payment methods: credit card, paypal
+- Fees: payment processor fee + optional Liberapay tip
+- Goes to: Simon (labelled for hledger)
 
-### Sponsor the hledger project
+An efficient method. Liberapay is a non-profit.
 
-These donations are [public](https://github.com/simonmichael/hledger_finance#reports)
-and managed by the hledger CFO (Simon), with input from the hledger team and community.
-So far, project funds have been used for project expenses, regression bounties,
-and one [social good](https://www.investopedia.com/terms/s/social_good.asp) donation.
+### Paypal
 
-- [![liberapay](https://img.shields.io/badge/Sponsor_hledger_via-Liberapay-limegreen "Sponsor the hledger project via Liberapay")](https://liberapay.com/hledger)
-- [![opencollective](https://img.shields.io/badge/Sponsor_hledger_via-Open_Collective-limegreen "Sponsor the hledger project via Liberapay")](https://opencollective.com/hledger#category-CONTRIBUTE)
+- <https://www.paypal.com/donate?hosted_button_id=5J33NLXYXCYAY>
+- Requirements: a paypal account
+- Payment methods: paypal, credit card
+- Fees: 0% to 3.5% + a fixed amount, depending on country and currency (typically 3%)
+- Goes to: Simon (labelled for hledger)
 
-### Sponsor specific tasks
+An efficient method.
 
-- [![issue bounty](https://img.shields.io/badge/Sponsor_a_task_via-the_issue_tracker-limegreen "Sponsor a task via the issue tracker")](https://github.com/simonmichael/hledger/issues?q=label:bounty)\
-  Post a bounty pledge on an [open issue](CONTRIBUTING.md#open-issues).
-  When resolved, pay the claimant directly (honour system).
-- [![opencollective bounty](https://img.shields.io/badge/Sponsor_a_task_via-Open_Collective-limegreen "Sponsor a task via Open Collective")](https://opencollective.com/hledger#category-CONTRIBUTE)\
-  Make a one-time donation via [Open Collective](#sponsor-the-hledger-project),
-  describing the bounty.
-  When resolved, the claimant submits a payment request for approval by the CFO
-  (see our [regression bounty process](https://hledger.org/regressionbounty)).
+### Open Collective
 
-### Fees
+- <https://opencollective.com/hledger>
+- Requirements: none
+- Payment methods: credit card, US bank direct debit, paypal, apple pay
+- Fees: payment processor fee + 10% fiscal host fee
+- Goes to: Open Source Collective, a US 501(c)(6) Mutual Benefit Corporation in the state of California, which makes controlled disbursements to hledger contributors.
 
-**Donation platforms:**
-
-<!-- https://docs.github.com/en/sponsors/receiving-sponsorships-through-github-sponsors/about-github-sponsors-for-open-source-contributors#sponsorship-payouts -->
-Github
-  - If donating from a personal account
-    - Charges no fees.
-  - If donating from an organization account
-    - Charges 3% platform fee.
-    - Charges 3% payment processing fee if paying via credit card.
-
-<!-- https://en.liberapay.com/about/ -->
-Liberapay
-  - Charges no platform fee, other than voluntary donations to their project (they are non-profit).
-  - Charges payment processor fees (Paypal or Stripe, see below).
-
-<!-- https://opencollective.com/pricing -->
-Open Collective
-  - Open Source Collective (fiscal host) charges 10% of contributions (and 15% of this goes to Open Collective).
-  - Open Collective may solicit a voluntary tip from contributions.
-  - Open Collective charges payment processor fees on contributions if paying with PayPal, Stripe, or Wise, see below.
-  - Expense payouts have no fees.
-
-**Payment processors:**
-
-Paypal
-- 0% to 3.5% + some fixed amount,
-  depending on whether you're paying in the same country, there's a currency conversion, etc.
-  Liberapay says: "the average fee percentages have been 3.1% for the payments processed by Stripe and 5% for the payments processed by PayPal."
-
-Stripe
-- 2.9% + 0.30 USD.
-
-Wise
-- Unclear.
-
-Our fiscal host on Open Collective currently is 
-[Open Source Collective](https://www.oscollective.org),
-"a non-profit umbrella organisation providing financial and legal infrastructure 
-for thousands of open source projects".
-So their fee is at least a sort of donation to support other free/open-source software.
+The most costly and most corporate-friendly method.
+Also the most transparent - all transactions appear in the collective's public ledger.
+Not recommended for small donors because of the high fee;
+it's best suited for institutional donors/grantors that need it.
 
 ## Sponsors
 
