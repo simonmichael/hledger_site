@@ -9,6 +9,12 @@ cd "$(dirname "$0")"
 # Show only sponsors who have donated at least this many US dollars in total.
 MIN_TOTAL_USD=100
 
+# Avatar height range in pixels. The smallest-eligible sponsor renders at
+# MIN_HEIGHT, the largest at MAX_HEIGHT, scaled by the square root of the
+# total contributed in between. Keep imageUrl(height:) below at >= 2*MAX_HEIGHT.
+MIN_HEIGHT=60
+MAX_HEIGHT=200
+
 # Open Collective account slugs to exclude regardless of amount
 # (the slug is the last part of the account's opencollective.com URL).
 EXCLUDE='[
@@ -27,7 +33,11 @@ QUERY='{ collective(slug: "hledger") {
 html=$(curl -sf https://api.opencollective.com/graphql/v2 \
   -H 'Content-Type: application/json' \
   -d "$(jq -n --arg q "$QUERY" '{query: $q}')" \
-| jq -r --argjson mincents $((MIN_TOTAL_USD * 100)) --argjson exclude "$EXCLUDE" '
+| jq -r \
+    --argjson mincents $((MIN_TOTAL_USD * 100)) \
+    --argjson exclude "$EXCLUDE" \
+    --argjson minh "$MIN_HEIGHT" \
+    --argjson maxh "$MAX_HEIGHT" '
   (.data.collective.members.nodes
    | map(select(.account != null and .account.slug != null))
    | unique_by(.account.slug)
@@ -38,11 +48,19 @@ html=$(curl -sf https://api.opencollective.com/graphql/v2 \
        and .totalDonations.valueInCents >= $mincents
        and (.account.slug as $s | $exclude | index($s) | not)))
    | sort_by(-.totalDonations.valueInCents)) as $all
-  | def avatar($height):
-      "<a href=\"\((.account.website // "https://opencollective.com/\(.account.slug)") | @html)\" title=\"\(.account.name | @html)\"><img src=\"\(.account.imageUrl | @html)\" alt=\"\(.account.name | @html)\" height=\"\($height)\"></a>";
-    ($all | map(select(.account.type == "ORGANIZATION"))[] | avatar(200)),
+  # Scale height by sqrt of the total contributed, from minh (at the
+  # display floor) to maxh (at the largest sponsors total).
+  | ($mincents | sqrt) as $lo
+  | (($all | map(.totalDonations.valueInCents) | max) // $mincents | sqrt) as $hi
+  | def height:
+      ((.totalDonations.valueInCents | sqrt) - $lo) as $s
+      | (if $hi > $lo then $s / ($hi - $lo) else 0 end) as $f
+      | ($minh + ($maxh - $minh) * $f | round);
+    def avatar:
+      "<a href=\"\((.account.website // "https://opencollective.com/\(.account.slug)") | @html)\" title=\"\(.account.name | @html)\"><img src=\"\(.account.imageUrl | @html)\" alt=\"\(.account.name | @html)\" height=\"\(height)\"></a>";
+    ($all | map(select(.account.type == "ORGANIZATION"))[] | avatar),
     "<br>",
-    ($all | map(select(.account.type != "ORGANIZATION"))[] | avatar(100))
+    ($all | map(select(.account.type != "ORGANIZATION"))[] | avatar)
 ')
 
 htmlfile=$(mktemp)
