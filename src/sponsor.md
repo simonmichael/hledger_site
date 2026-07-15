@@ -48,7 +48,7 @@ The most efficient method; no fees for personal accounts.
 - Requirements: none
 - Payment methods: credit card, US bank direct debit, paypal, apple pay
 - Fees: payment processor fee + 10% fiscal host fee
-- Goes to: Open Source Collective, which makes approved disbursements to hledger contributors.
+- Goes to: [Open Source Collective](https://oscollective.org), which makes approved disbursements to hledger contributors.
 
 The most costly method,
 and the most transparent (all transactions appear in the collective's public ledger).
