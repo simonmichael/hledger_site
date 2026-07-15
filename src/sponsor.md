@@ -48,11 +48,12 @@ The most efficient method; no fees for personal accounts.
 - Requirements: none
 - Payment methods: credit card, US bank direct debit, paypal, apple pay
 - Fees: payment processor fee + 10% fiscal host fee
-- Goes to: Open Source Collective, a US 501(c)(6) Mutual Benefit Corporation in the state of California, which makes approved disbursements to hledger contributors.
+- Goes to: Open Source Collective, which makes approved disbursements to hledger contributors.
 
-The most costly method, and the most transparent (all transactions appear in the collective's public ledger).
-Open Source Collective is a US 501(c)(6) Mutual Benefit Corporation in the state of California, which makes approved disbursements to hledger contributors.
-Not recommended for small donors because of the high fee; it's best suited for institutional donors that need it.
+The most costly method,
+the most transparent (all transactions appear in the collective's public ledger),
+and the most suited to institutional donors (Open Source Collective is a US 501(c)(6) Mutual Benefit Corporation in the state of California).
+Not recommended for small donors because of the high fee.
 
 ### Other
 
