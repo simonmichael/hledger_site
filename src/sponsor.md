@@ -56,8 +56,8 @@ Not recommended for small donors because of the high fee; it's best suited for i
 
 ### Other
 
-You can donate directly to specific contributors, eg by paypal to their email address.
-Or offer bounties, in the issue tracker.
+You can donate directly to [specific contributors](CREDITS.md), eg by paypal to their email address.
+Or offer bounties in the issue tracker.
 Or propose a paid project or consulting work.
 
 ## Sponsors
