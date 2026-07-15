@@ -1,8 +1,10 @@
 # Sponsor hledger
 
 hledger comes to you thanks to thousands of hours of dedicated work, sustained over ~20 years.
-Your support is invaluable and greatly appreciated !
-Is it time for you to help the project financially ?
+[FINANCE](FINANCE.md) describes the project's finances, including financial reports.
+
+Are you in a position to help the project financially ? 
+All support is greatly appreciated. Consider:
 
 - Has it been helpful to you or your organisation ?
 - Have you achieved enough success to be able to donate a little (or a lot) ?
@@ -11,7 +13,6 @@ Is it time for you to help the project financially ?
 - Do you want to support our [core mission](faq.md#what-is-the-hledger-projects-current-mission-and-plans-),
   helping people around the world achieve more financial literacy, accountability and freedom ?
 
-[FINANCE](FINANCE.md) describes the project's finances, including financial reports.
 
 ## How to donate
 
