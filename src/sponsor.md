@@ -3,7 +3,7 @@
 hledger comes to you thanks to thousands of hours of dedicated work, sustained over ~20 years.
 
 Are you in a position to help the project financially ? 
-[FINANCE](FINANCE.md) describes the project's finances, including financial reports.
+[FINANCE](FINANCE.md) describes how we use money, and our financial reports.
 All support is greatly appreciated. Consider:
 
 - Has it been helpful to you or your organisation ?
@@ -54,12 +54,17 @@ An efficient method.
 - Requirements: none
 - Payment methods: credit card, US bank direct debit, paypal, apple pay
 - Fees: payment processor fee + 10% fiscal host fee
-- Goes to: Open Source Collective, a US 501(c)(6) Mutual Benefit Corporation in the state of California, which makes controlled disbursements to hledger contributors.
+- Goes to: Open Source Collective, a US 501(c)(6) Mutual Benefit Corporation in the state of California, which makes approved disbursements to hledger contributors.
 
 The most costly and most corporate-friendly method.
 Also the most transparent - all transactions appear in the collective's public ledger.
 Not recommended for small donors because of the high fee;
 it's best suited for institutional donors/grantors that need it.
+
+### Other
+
+You can donate directly to specific contributors, eg by Paypal.
+Or you can offer bounties, in the issue tracker.
 
 ## Sponsors
 
