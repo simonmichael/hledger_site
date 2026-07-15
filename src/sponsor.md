@@ -26,8 +26,6 @@ All support is greatly appreciated. Consider:
 
 The most efficient method; no fees for personal accounts.
 
-Custom-amount one-time donations are not labelled as hledger donations, so feel free to tell me about them.
-
 ### Liberapay
 
 - <https://liberapay.com/hledger>
@@ -35,8 +33,6 @@ Custom-amount one-time donations are not labelled as hledger donations, so feel 
 - Payment methods: credit card, paypal
 - Fees: payment processor fee + optional Liberapay tip
 - Goes to: Simon
-
-An efficient method. Liberapay is a non-profit.
 
 ### Paypal
 
@@ -46,8 +42,6 @@ An efficient method. Liberapay is a non-profit.
 - Fees: 0% to 3.5% + a fixed amount, depending on country and currency (typically 3%)
 - Goes to: Simon
 
-An efficient method.
-
 ### Open Collective
 
 - <https://opencollective.com/hledger>
@@ -56,16 +50,15 @@ An efficient method.
 - Fees: payment processor fee + 10% fiscal host fee
 - Goes to: Open Source Collective, a US 501(c)(6) Mutual Benefit Corporation in the state of California, which makes approved disbursements to hledger contributors.
 
-The most costly and most corporate-friendly method.
-Also the most transparent - all transactions appear in the collective's public ledger.
-Not recommended for small donors because of the high fee;
-it's best suited for institutional donors/grantors that need it.
+The most costly method, and the most transparent (all transactions appear in the collective's public ledger).
+Open Source Collective is a US 501(c)(6) Mutual Benefit Corporation in the state of California, which makes approved disbursements to hledger contributors.
+Not recommended for small donors because of the high fee; it's best suited for institutional donors that need it.
 
 ### Other
 
 You can donate directly to specific contributors, eg by paypal to their email address.
 Or offer bounties, in the issue tracker.
-Or propose a paid project or offer consulting work.
+Or propose a paid project or consulting work.
 
 ## Sponsors
 
