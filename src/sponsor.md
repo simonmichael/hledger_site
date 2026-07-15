@@ -82,7 +82,6 @@ Thank you to our generous sponsors for their support. Some of these are:
 <a href="https://joyful.com" title="Joyful Systems"><img src="https://images.opencollective.com/joyfulsystems/d7ce8c3/logo/400.png" alt="Joyful Systems" height="200"></a>
 <br>
 <a href="https://www.olsensrevision.dk" title="Olsens Revision ApS"><img src="https://images.opencollective.com/olsensrevision/c629690/avatar/400.png" alt="Olsens Revision ApS" height="100"></a>
-<a href="https://opencollective.com/guest-9fd64724" title="gnidan"><img src="https://images.opencollective.com/guest-9fd64724/avatar/400.png" alt="gnidan" height="100"></a>
 <a href="https://opencollective.com/tony-xiao1" title="Tony Xiao"><img src="https://images.opencollective.com/tony-xiao1/a7aacdd/avatar/400.png" alt="Tony Xiao" height="100"></a>
 <a href="https://joyful.com/" title="Simon Michael"><img src="https://images.opencollective.com/simon/f44851a/avatar/400.png" alt="Simon Michael" height="100"></a>
 <a href="https://github.com/rhyanki" title="Rishi Hyanki"><img src="https://images.opencollective.com/rhyanki/avatar/400.png" alt="Rishi Hyanki" height="100"></a>
@@ -91,8 +90,5 @@ Thank you to our generous sponsors for their support. Some of these are:
 <a href="https://opencollective.com/richard-kelly" title="Richard Kelly"><img src="https://images.opencollective.com/richard-kelly/1b2c64c/avatar/400.png" alt="Richard Kelly" height="100"></a>
 <a href="https://opencollective.com/james-blachly" title="James Blachly"><img src="https://images.opencollective.com/james-blachly/ffc8288/avatar/400.png" alt="James Blachly" height="100"></a>
 <a href="https://opencollective.com/ken-ewing" title="Ken Ewing"><img src="https://images.opencollective.com/ken-ewing/b5ace9b/avatar/400.png" alt="Ken Ewing" height="100"></a>
-<a href="https://opencollective.com/user-4c0726ae" title="Frank"><img src="https://images.opencollective.com/user-4c0726ae/avatar/400.png" alt="Frank" height="100"></a>
-<a href="https://opencollective.com/guest-87be5777" title="Martin Rio"><img src="https://images.opencollective.com/guest-87be5777/avatar/400.png" alt="Martin Rio" height="100"></a>
-<a href="https://opencollective.com/guest-f1fc70f8" title="David"><img src="https://images.opencollective.com/guest-f1fc70f8/avatar/400.png" alt="David" height="100"></a>
 <a href="https://opencollective.com/marc11" title="Marc"><img src="https://images.opencollective.com/marc11/avatar/400.png" alt="Marc" height="100"></a>
 <!-- SPONSOR AVATARS END -->

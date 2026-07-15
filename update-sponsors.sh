@@ -34,6 +34,7 @@ html=$(curl -sf https://api.opencollective.com/graphql/v2 \
    | map(select(
        (.account.isIncognito | not)
        and (.account.name != "Guest" and .account.name != "Incognito")
+       and (.account.slug | test("^(guest|user)-[0-9a-f]{8}$") | not)
        and .totalDonations.valueInCents >= $mincents
        and (.account.slug as $s | $exclude | index($s) | not)))
    | sort_by(-.totalDonations.valueInCents)) as $all
