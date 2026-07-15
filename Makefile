@@ -123,6 +123,10 @@ sitemap:
 	@for d in out2/*; do cp $$d/* out/`basename $$d`; done
 	@python3 sitemap.py -b https://hledger.org -r out/
 
+# Regenerate the sponsor avatars in src/sponsor.md from the Open Collective API.
+sponsors:
+	@./update-sponsors.sh
+
 # Restore hashed assets (JS/CSS) from all mdbook builds into out/,
 # so older manual versions' relative ../asset references don't 404.
 restore-assets:
