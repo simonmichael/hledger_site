@@ -1,9 +1,9 @@
 # Sponsor hledger
 
 hledger comes to you thanks to thousands of hours of dedicated work, sustained over ~20 years.
-[FINANCE](FINANCE.md) describes the project's finances, including financial reports.
 
 Are you in a position to help the project financially ? 
+[FINANCE](FINANCE.md) describes the project's finances, including financial reports.
 All support is greatly appreciated. Consider:
 
 - Has it been helpful to you or your organisation ?
@@ -22,7 +22,7 @@ All support is greatly appreciated. Consider:
 - Requirements: a github account
 - Payment methods: credit card, invoice
 - Fees: none for personal accounts, 3% for organizations using invoice, 6% for organizations using credit card
-- Goes to: Simon (not always labelled for hledger)
+- Goes to: Simon
 
 The most efficient method; no fees for personal accounts.
 
@@ -34,7 +34,7 @@ Custom-amount one-time donations are not labelled as hledger donations, so feel 
 - Requirements: a liberapay account
 - Payment methods: credit card, paypal
 - Fees: payment processor fee + optional Liberapay tip
-- Goes to: Simon (labelled for hledger)
+- Goes to: Simon
 
 An efficient method. Liberapay is a non-profit.
 
@@ -44,7 +44,7 @@ An efficient method. Liberapay is a non-profit.
 - Requirements: a paypal account
 - Payment methods: paypal, credit card
 - Fees: 0% to 3.5% + a fixed amount, depending on country and currency (typically 3%)
-- Goes to: Simon (labelled for hledger)
+- Goes to: Simon
 
 An efficient method.
 
