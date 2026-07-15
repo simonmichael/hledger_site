@@ -51,8 +51,9 @@ The most efficient method; no fees for personal accounts.
 - Goes to: Open Source Collective, which makes approved disbursements to hledger contributors.
 
 The most costly method,
-the most transparent (all transactions appear in the collective's public ledger),
-and the most suited to institutional donors (Open Source Collective is a US 501(c)(6) Mutual Benefit Corporation in the state of California).
+and the most transparent (all transactions appear in the collective's public ledger).
+Open Source Collective is a US 501(c)(6) Mutual Benefit Corporation in the state of California.
+Top donors by this method get featured on this page (below).
 Not recommended for small donors because of the high fee.
 
 ### Other
