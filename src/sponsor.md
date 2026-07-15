@@ -54,7 +54,7 @@ The most costly method,
 and the most transparent (all transactions appear in the collective's public ledger).
 Open Source Collective is a US 501(c)(6) Mutual Benefit Corporation in the state of California.
 Top donors by this method get featured on this page (below).
-Not recommended for small donors because of the high fee.
+Not recommended for small donations because of the high fee.
 
 ### Other
 
