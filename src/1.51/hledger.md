@@ -1685,29 +1685,23 @@ A *decimal mark* can be written as a period or a comma:
     1.23
     1,23
 
-Both of these are common in [international number
-formats](https://en.wikipedia.org/wiki/Decimal_separator#Conventions_worldwide),
-so hledger is not biased towards one or the other. Because hledger also
-supports digit group marks (eg thousands separators), this means that a
-number like `1,000` or `1.000` containing just one period or comma is
-ambiguous. In such cases, hledger by default assumes it is a decimal
-mark, and will parse both of those as 1.
+Both of these are common in [international number formats][international number formats],
+so hledger is not biased towards one or the other.
+Because hledger also supports digit group marks (eg thousands separators),
+this means that a number like `1,000` or `1.000` containing just one period or comma is ambiguous.
+In such cases, hledger by default assumes it is a decimal mark, and will parse both of those as 1.
 
-To help hledger parse such ambiguous numbers more accurately, if you use
-digit group marks, we recommend declaring the decimal mark explicitly.
-The best way is to add a [`decimal-mark`](#decimal-mark-directive)
-directive at the top of each data file, like this:
+[international number formats]: https://en.wikipedia.org/wiki/Decimal_separator#Conventions_worldwide
 
-``` journal
-decimal-mark .
-```
+To help hledger parse such ambiguous numbers accurately,
+if you use digit group marks, we recommend declaring the decimal mark explicitly.
+You can declare it per commodity with [`commodity`](#commodity-directive) directives,
+or per file with a [`decimal-mark`](#decimal-mark-directive) directive at the top of each journal file
+(described below).
 
-Or you can declare it per commodity with
-[`commodity`](#commodity-directive) directives, described below.
-
-hledger also accepts numbers like `10.` with no digits after the decimal
-mark (and will sometimes display numbers that way to disambiguate them -
-see [Trailing decimal marks](#trailing-decimal-marks)).
+hledger also accepts numbers like `10.` with no digits after the decimal mark
+(and will sometimes display numbers that way to disambiguate them - see
+[Trailing decimal marks](#trailing-decimal-marks)).
 
 #### Digit group marks
 
@@ -2708,95 +2702,73 @@ $ hledger accounts --types -1 --alias assets=bassetts
 
 ### `commodity` directive
 
-The `commodity` directive performs several functions:
+`commodity` directives declare commodity symbols, which enables useful [error checking](#commodity-error-checking).
+Eg to declare `$` or `USD`, you could write `commodity $` or `commodity USD`.
 
-1.  It declares which commodity symbols may be used in the journal,
-    enabling useful error checking with [strict mode](#strict-mode) or
-    the check command. See [Commodity error
-    checking](#commodity-error-checking) below.
+But normally you should also write a sample amount:
+eg `commodity $1,000.00` or `commodity 1000.00 USD` or `commodity ₹ 1,00,00,000.00`.
+This also declares:
 
-2.  It declares how all amounts in this commodity should be displayed,
-    eg how many decimals to show. See [Commodity display
-    style](#commodity-display-style) above.
+- The [decimal mark](#decimal-marks) (period or comma) used for parsing this commodity's amounts,
+  from this directive until end of current file (actually: until end of current -f file tree),
+  unless overridden by a `decimal-mark` directive).
+- The preferred [commodity display style](#commodity-display-style) to show in reports.
+  Eg the symbol's position, the digit group marks if any, and the number of decimal digits.
 
-3.  (If no `decimal-mark` directive is in effect:) It sets the decimal
-    mark to expect (period or comma) when parsing amounts in this
-    commodity, in this file and files it includes, from the directive
-    until end of current file. See [Decimal marks](#decimal-marks)
-    above.
+The sample amount must include a decimal mark. So write it even if you want to show no decimal digits:
+`commodity $1,000.` or `commodity 1000. USD`.
 
-4.  It declares the precision with which this commodity\'s amounts
-    should be compared when checking for balanced transactions, anywhere
-    in this file and files it includes, until end of current file.
+You can also declare the no-symbol commodity: `commodity 1000.00` (or `commodity "" 1000.00`).
 
-Declaring commodities solves several common parsing/display problems, so
-we recommend it.
-
-Note that effects 3 and 4 above end at the end of the directive\'s file,
-and will not affect sibling or parent files. So if you are relying on
-them (especially 4) and using multiple files, placing your commodity
-directives in a top-level parent file might be important. Or, keep your
-decimal marks unambiguous and your entries well balanced and precise.
-
-Omitting the commodity symbol will set the display style for just the
-no-symbol commodity, not all commodities.
-
-Commodity styles can be [overridden](#commodity-styles) by the
-`-c/--commodity-style` command line option.
-
-(Related: [#793](https://github.com/simonmichael/hledger/issues/793))
+Commodity display styles can be [overridden](#commodity-styles) by the `-c/--commodity-style` command line option.
 
 #### Commodity directive syntax
 
-A commodity directive is normally the word `commodity` followed by a
-sample [amount](#amounts) (and optionally a comment). Only the amount\'s
-symbol and the number\'s format is significant. Eg:
+In more detail.
+A commodity directive is normally the word `commodity`
+followed by a sample [amount](#amounts) (only its format is significant),
+and optionally a comment.
+Eg:
 
-``` journal
+```journal
 commodity $1000.00
 commodity 1.000,00 EUR
 commodity 1 000 000.0000   ; the no-symbol commodity
 ```
 
-Commodities do not have tags (tags in the comment will be ignored).
+A commodity directive's sample amount must always include a decimal mark (period or comma).
+If you don't want to show any decimal digits, write the decimal mark at the end:
 
-A commodity directive\'s sample amount must always include a period or
-comma decimal mark (this rule helps disambiguate decimal marks and digit
-group marks). If you don\'t want to show any decimal digits, write the
-decimal mark at the end:
-
-``` journal
+```journal
 commodity 1000. AAAA       ; show AAAA with no decimals
 ```
 
-Commodity symbols containing spaces, numbers, or punctuation must be
-enclosed in double quotes, [as usual](#commodity):
+Commodity symbols containing spaces, numbers, or punctuation must be enclosed in double quotes, [as usual](#commodity):
 
-``` journal
+```journal
 commodity 1.0000 "AAAA 2023"
 ```
 
-Commodity directives normally include a sample amount, but can declare
-only a symbol (ie, just function 1 above):
+Commodity directives normally include a sample amount, but can declare only a symbol (ie, just function 1 above):
 
-``` journal
+```journal
 commodity $
 commodity INR
 commodity "AAAA 2023"
 commodity ""               ; the no-symbol commodity
 ```
 
-Commodity directives may also be written with an indented `format`
-subdirective, as in Ledger. The symbol is repeated and must be the same
-in both places. Other subdirectives are currently ignored:
+Commodity directives may also be written with an indented `format` subdirective, as in Ledger.
+The symbol is repeated and must be the same in both places.
+Other subdirectives are ignored:
 
-``` journal
+```journal
 ; display indian rupees with currency name on the left,
 ; thousands, lakhs and crores comma-separated,
 ; period as decimal point, and two decimal places.
 commodity INR
   format INR 1,00,00,000.00
-  an unsupported subdirective  ; ignored by hledger
+  other subdirective  ; ignored
 ```
 
 #### Commodity error checking
@@ -2807,25 +2779,26 @@ undeclared commodity symbol is used. (With one exception: zero amounts
 are always allowed to have no commodity symbol.) It works like [account
 error checking](#account-error-checking) (described above).
 
-### `decimal-mark` directive
+## `decimal-mark` directive
 
-You can use a `decimal-mark` directive - usually one per file, at the
-top of the file - to declare which character represents a decimal mark
-when parsing amounts in this file. It can look like
+You can use a `decimal-mark` directive to declare unambiguously which
+character (period or comma) represents a [decimal mark](#decimal-marks),
+for all subsequent amounts until the end of the current file.
+This helps when parsing ambiguous numbers (like `1.000` or `1,000` where you mean one thousand, not one).
 
-``` journal
+Eg, at the top of each journal file:
+
+```journal
 decimal-mark .
 ```
-
 or
-
-``` journal
+```journal
 decimal-mark ,
 ```
 
-This prevents any [ambiguity](#decimal-mark) when parsing numbers in the
-file, so we recommend it, especially if the file contains digit group
-marks (eg thousands separators).
+This directive only affects parsing, and it takes precedence over `commodity` directives.
+So you can declare preferred decimal marks for display,
+which may be different from the decimal mark(s) used in the data files.
 
 ### `include` directive
 
