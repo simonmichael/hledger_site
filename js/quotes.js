@@ -739,5 +739,8 @@ I actually really really like it. I tried ynab, I tried money manager ex, I trie
 but hledger has like. that pen and paper simplicity with plain text files, and the convenience of a digital system, 
 and doesn't lock you into a specific method like ynab --Flat Bartender
 
+Hledger came in super handy yet again. We are exploring life insurance policies now that we have a little one, and the broker was asking all about net worth, what we have and all that to help determine how much life insurance is needed, and I had all those numbers ready to go. He was impressed someone my age actually knew those numbers.
+--nenion
+
 `;
 const quotes = quotesmd.trim().split('\n\n').map(q => q.replace(/^\*|\*$/g, '').trim());
