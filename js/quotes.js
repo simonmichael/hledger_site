@@ -742,5 +742,50 @@ and doesn't lock you into a specific method like ynab --Flat Bartender
 Hledger came in super handy yet again. We are exploring life insurance policies now that we have a little one, and the broker was asking all about net worth, what we have and all that to help determine how much life insurance is needed, and I had all those numbers ready to go. He was impressed someone my age actually knew those numbers.
 --nenion
 
-`;
-const quotes = quotesmd.trim().split('\n\n').map(q => q.replace(/^\*|\*$/g, '').trim());
+I’ve been using hledger to manage my finances for the past week, and I find it to be a spectacular tool for this purpose. --Sufyaan
+
+Another reason I love hledger is that it works flawlessly on my phone using Termux. It’s identical to how it works on my desktop, which eliminates the need for a separate application. --Sufyaan
+
+I’m very happy with hledger. It has made me more conscious of my spending and fits my workflow perfectly. I highly recommend trying it out!
+--Sufyaan
+
+hledger comes with a CSV parser one can use to import and classify recurring transactions automagically.
+Having a proper DSL for this makes all the difference: I can easily add new rules and understand the old ones.
+In the end, I get a very consistent result, something my old bash scripts weren't great at.
+--Louis-Philippe Véronneau
+
+Migrating to hledger, I've cut down the time I spend on accounting from 1 hour per month to about 10 minutes, all while making my workflow much cleaner.
+--Louis-Philippe Véronneau
+
+ I've discovered Hledger in strict mode makes things easier.
+--Gemma Black
+
+Entering correct information the first time is far easier than trying to fix things after the fact.
+Thankfully with strict mode, we can't have little accidents like this.
+--Gemma Black
+
+I made myself a warm cup of tea, leaned back and started to read the website and related blogs until I knew enough to get started.
+And then I did it!
+--Marcel Kapfer
+
+Through the book-keeping, I get a clear overview of two things that I could not check easily before:
+How much money did I spend this month? Or: How much of my income is still left?
+How much money did I spend on what?
+--Marcel Kapfer
+
+I'm really satisfied with hledger! Even if it doesn't save me money directly (which was never really my goal)
+it makes me understand my transactions better and therefore maybe save me some bucks indirectly.
+But also just the insight I get is worth the few minutes that I need every day for maintaining the system.
+--Marcel Kapfer
+
+I’ve been using it for almost 2 years now and it works great.
+--Bill
+
+The reports I get with hledger are better than any tool I’ve ever used.
+--Bill
+
+out of any tool I’ve used I feel like hledger puts me in control of my finances.
+--Bill
+
+
+`; const quotes = quotesmd.trim().split('\n\n').map(q => q.replace(/^\*|\*$/g, '').trim());
