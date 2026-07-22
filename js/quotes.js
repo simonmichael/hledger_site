@@ -787,5 +787,10 @@ The reports I get with hledger are better than any tool I’ve ever used.
 out of any tool I’ve used I feel like hledger puts me in control of my finances.
 --Bill
 
+After using hledger for a month, I have noticed that it’s much faster to get information “out” compared to YNAB: 
+the information density of hledger’s output is higher, 
+fuzzy searching of accounts and transactions makes it review easier and, 
+I feel that by using hledger I have more tools available at my disposal.
+--Arto Jonsson
 
 `; const quotes = quotesmd.trim().split('\n\n').map(q => q.replace(/^\*|\*$/g, '').trim());
