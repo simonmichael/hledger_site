@@ -289,11 +289,9 @@ To avoid this, see [Install: Text encoding](install.md#text-encoding).
 
 ### Tabs and spaces
 
-In places which normally require two or more spaces (or tabs),
-eg between account name and amount,
-ledger will also accept a single tab character. 
-But hledger always requires two or more spaces or tabs (ensuring a visually distinct gap).
-So you might need to add a space in such cases.
+In places which normally require two or more spaces (or tabs), eg between account name and amount,
+ledger will accept a single tab character.
+hledger 2.x also accepts a single tab, for compatibility.
 
 ### Decimal mark
 
