@@ -48,7 +48,10 @@ Here are some notable blog posts/articles:
 
 <!-- ## TLDR -->
 
-The [tldr](https://tldr.sh) tool, or hledger's built-in `--tldr` flag, shows brief command examples:
+For brief command examples, use the built-in [tldr](https://tldr.sh) help:
+`hledger --tldr`, `hledger balance --tldr`, etc.
+If you install a [tldr viewer](https://github.com/tealdeer-rs/tealdeer) you'll get better output.
+You can also <!-- run `tldr hledger[-COMMAND]`, or  --> view it on the web:
 
 - [hledger](https://tldr.inbrowser.app/pages/common/hledger) - 
 [hledger add](https://tldr.inbrowser.app/pages/common/hledger-add) - 
