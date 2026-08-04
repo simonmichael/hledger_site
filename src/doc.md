@@ -51,7 +51,7 @@ Here are some notable blog posts/articles:
 For brief command examples, use the built-in [tldr](https://tldr.sh) help:
 `hledger --tldr`, `hledger balance --tldr`, etc.
 If you install a [tldr viewer](https://github.com/tealdeer-rs/tealdeer) you'll get better output.
-You can also <!-- run `tldr hledger[-COMMAND]`, or  --> view it online:
+You can also <!-- run `tldr hledger[-COMMAND]`, or  --> view these online:
 
 - [hledger](https://tldr.inbrowser.app/pages/common/hledger) - 
 [hledger add](https://tldr.inbrowser.app/pages/common/hledger-add) - 
