@@ -560,7 +560,7 @@ I switched to hledger because of the excellent and simple import framework for C
 hledger, however, has support for adding 'posting dates' as specially formatted comments. What's really clever is how it automatically chooses which date to sort the reports by depending on the query!
 --seabass-labrax
 
-It is a lot of work, especially if you're just starting out and there are gazillion things you own(lucky you). But it's worth it. You are always informed and it has changed my perspective on personal finance completely.
+It is a lot of work, especially if you're just starting out and there are gazillion things you own (lucky you). But it's worth it. You are always informed and it has changed my perspective on personal finance completely.
 --zipping1549
 
 I use 0.1% of hledger and that's enough for me. Thank you to the author for providing this powerful tool for free.
