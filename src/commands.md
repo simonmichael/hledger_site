@@ -1,6 +1,7 @@
 # Overview of commands
 
-To see an overview of hledger's commands, run `hledger commands` or just `hledger`.
+To see an overview of hledger's commands, run `hledger` with no arguments.
+To see the full commands list, run `hledger commands` or `hledger help commands` (newer versions).
 If you have hledger and just the hledger-ui and hledger-web addons installed,
 it will look something like this:
 ```

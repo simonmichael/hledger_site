@@ -49,7 +49,8 @@ Here are some notable blog posts/articles:
 <!-- ## TLDR -->
 
 For brief command examples, use the built-in [tldr](https://tldr.sh) help:
-`hledger --tldr`, `hledger balance --tldr`, etc.
+`hledger --tldr`, `hledger balance --tldr`, etc
+(or in newer versions: `hledger --examples`, `hledger balance --examples`).
 If you install a [tldr viewer](https://github.com/tealdeer-rs/tealdeer) you'll get better output.
 You can also <!-- run `tldr hledger[-COMMAND]`, or  --> view these online:
 
