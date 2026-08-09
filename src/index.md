@@ -207,7 +207,7 @@ You can see a read-only instance with more complex data at
 
 **Get started**
 
-Try it for yourself!
+Try it for yourself:
 
 - **[Install](install.md)** - quickly get hledger installed. Here are [release notes](relnotes.md).
 - **[Docs](doc.md)** - many learning resources. **[hledger by example](hledger-by-example.md)** is a good place to start.
@@ -215,8 +215,10 @@ Try it for yourself!
 
 **Get involved**
 
+Would you like to help ?
+
 - **[Star us on Github](https://github.com/simonmichael/hledger/tree/main)**
-  to help make us a [notable Haskell app](https://joyful.com/Haskell#What%20are%20some%20Haskell%20apps%20?)!
+  to help make us a [notable Haskell app](https://joyful.com/Haskell#What%20are%20some%20Haskell%20apps%20?).
 - **[Sponsor hledger](sponsor.md)** to help sustain this work. Here's more about [Finance](FINANCE.md).
 - **[Contributor Quick Start](CONTRIBUTING.md)** and **[Developer docs](dev.md)**.
 - **[CREDITS](CREDITS.md)** shows many of the people who have contributed code over the years.
