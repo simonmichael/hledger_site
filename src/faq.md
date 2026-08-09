@@ -1,6 +1,6 @@
 # Frequently Asked Questions
 
-Brief table of contents:
+Quick table of contents:
 
 - [ACCOUNTING](#accounting)
 - [THE HLEDGER PROJECT](#the-hledger-project)
@@ -14,7 +14,7 @@ Brief table of contents:
 - [SCRIPTING](#scripting)
 - [HLEDGER-UI](#hledger-ui)
 
-(The full TOC is in the site sidebar to the left; to open it, click the three-line button above.)
+The full TOC is in the site sidebar to the left; to open it, click the three-line button above.
 
 <!--
 Here are a few VFAQs:
