@@ -1,25 +1,33 @@
 # Frequently Asked Questions
 
-If you have additions or suggestions, just click the "edit this page" link at the bottom,
-or let us know in the [chat](support).
+Questions are listed in the site sidebar to the left; 
+to open it, click the three-line button above.
+If you have suggestions, let us know in the [chat](support), or click "edit this page"  at the bottom.
 
-Here are some common questions:
+[ACCOUNTING](#accounting) |
+[THE HLEDGER PROJECT](#the-hledger-project) |
+[HLEDGER AND PLAIN TEXT ACCOUNTING](#hledger-and-plain-text-accounting) |
+[HLEDGER AND OTHER SOFTWARE](#hledger-and-other-software) |
+[GETTING STARTED](#getting-started) |
+[JOURNALS](#journals) |
+[CSV](#csv) |
+[REPORTING](#reporting) |
+[CUSTOMISING](#customising) |
+[SCRIPTING](#scripting) |
+[HLEDGER-UI](#hledger-ui)
+
+<!--
+Here are a few VFAQs:
 
 - [How does hledger relate to Ledger ?](faq.md#how-does-hledger-relate-to-ledger-)
 - [Isn't plain text hard to work with ?](faq.md#isnt-plain-text-hard-to-work-with-)
-- [What helpers are available for my text editor or IDE ?](editors.md)
-- [In Emacs, do I have to use hledger-mode ? Is ledger-mode only for Ledger ?](faq.md#in-emacs-do-i-have-to-use-hledger-mode--is-ledger-mode-only-for-ledger-)
 - [Isn't importing from banks a pain ?](faq.md#isnt-importing-from-banks-a-pain-)
+- [In Emacs, do I have to use hledger-mode ? Is ledger-mode only for Ledger ?](faq.md#in-emacs-do-i-have-to-use-hledger-mode--is-ledger-mode-only-for-ledger-)
 - [Where can I find hledger CSV rules for my financial institutions ?](faq.md#where-can-i-find-hledger-csv-rules-for-my-financial-institutions-)
-- [There are so many docs, where do I even..](faq.md#there-are-so-many-docs-where-do-i-even)
-
-All questions:
-
-<!-- toc -->
-
-<!--
-FAQ answers should be useful and brief, linking to more detail if needed.
 -->
+
+
+<!-- FAQ answers should be useful and brief, linking to more detail if needed. -->
 
 ## ACCOUNTING
 
@@ -569,7 +577,7 @@ which can multiple amounts by a constant. Eg to (effectively) divide all food ex
 you could add this rule, and enable it with `--auto`:
 
 ```journal
-## Add a posting subtracting half from every food expense (good enough for expense reports)
+; Add a posting subtracting half from every food expense (good enough for expense reports)
 = revenues
     (expenses:food)  *-.5
 ```
@@ -602,7 +610,7 @@ If possible, add your new rules file to that directory and send a pull request.
 You can have one of the rules files skip that transaction.
 Eg if you have checking and savings CSVs, in savings.csv.rules you might have a rule like
 ```rules
-## already imported from checking
+; already imported from checking
 if TRANSFER FROM .*CHECKING
  skip
 ```
