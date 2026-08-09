@@ -1,20 +1,20 @@
 # Frequently Asked Questions
 
-Questions are listed in the site sidebar to the left; 
-to open it, click the three-line button above.
-If you have suggestions, let us know in the [chat](support), or click "edit this page"  at the bottom.
+Brief table of contents:
 
-[ACCOUNTING](#accounting) |
-[THE HLEDGER PROJECT](#the-hledger-project) |
-[HLEDGER AND PLAIN TEXT ACCOUNTING](#hledger-and-plain-text-accounting) |
-[HLEDGER AND OTHER SOFTWARE](#hledger-and-other-software) |
-[GETTING STARTED](#getting-started) |
-[JOURNALS](#journals) |
-[CSV](#csv) |
-[REPORTING](#reporting) |
-[CUSTOMISING](#customising) |
-[SCRIPTING](#scripting) |
-[HLEDGER-UI](#hledger-ui)
+- [ACCOUNTING](#accounting)
+- [THE HLEDGER PROJECT](#the-hledger-project)
+- [HLEDGER AND PLAIN TEXT ACCOUNTING](#hledger-and-plain-text-accounting)
+- [HLEDGER AND OTHER SOFTWARE](#hledger-and-other-software)
+- [GETTING STARTED](#getting-started)
+- [JOURNALS](#journals)
+- [CSV](#csv)
+- [REPORTING](#reporting)
+- [CUSTOMISING](#customising)
+- [SCRIPTING](#scripting)
+- [HLEDGER-UI](#hledger-ui)
+
+(The full TOC is in the site sidebar to the left; to open it, click the three-line button above.)
 
 <!--
 Here are a few VFAQs:
