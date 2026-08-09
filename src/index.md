@@ -71,28 +71,30 @@ Robust, friendly, fast,<br>plain text accounting.
 money, investments, cryptocurrencies, time, or any countable commodity.
 It uses human-readable **[plain text data](https://plaintextaccounting.org)** that you control.
 
-You can import CSV from banks, or enter data via web/terminal interfaces or your favorite text editor.
+You can import CSV data from banks, or enter data via web/terminal interfaces or your favorite text editor.
 hledger provides powerful reports and scales smoothly from simple to sophisticated needs.
 It works well with version control, scripts, and LLMs.
 Read more at **[Why hledger ?](why.md)** and **[FAQ](faq.md)**.
 
-<details>
-<summary><b>A quick example</b></summary>
+<!-- <details>
+<summary><b>A quick example</b> (click to open)</summary> -->
+<b>A quick example</b>
 
-Transactions are recorded in a journal file.
-You can edit this file yourself, or use one of several user interfaces.
+Transactions are recorded in a plain text file.
 This simple format, invented by the Ledger project, is the key
 to understanding Plain Text Accounting and Double Entry Bookkeeping:
+
+<div style="padding:0 1em;">
 
 ```journal
 ; ~/.hledger.journal
 
 2025-12-01 Starting balance
-    equity            $-1000     ; <- $1000 moves from the "equity" account
-    assets:checking    $1000     ; <- to the "assets:checking" account
+    equity            $-1000     ; <- $1000 moves from (-) the "equity" account
+    assets:checking    $1000     ; <- to (+) the "assets:checking" account
 
 2025-12-02 Grocery store
-    assets:checking              ; <- amount omitted, $-64.50 is implied
+    assets:checking              ; <- a missing amount is inferred ($-64.50)
     expenses:groceries  $64.50
 
 2025-12-03 Client payment
@@ -104,7 +106,11 @@ to understanding Plain Text Accounting and Double Entry Bookkeeping:
     expenses:rent     $800
 ```
 
-This file is all you need. From it, hledger generates reports:
+</div>
+
+This file is all you need. From it, hledger generates precise reports:
+
+<div style="padding:0 1em;">
 
 ```
 $ hledger aregister assets
@@ -148,7 +154,26 @@ Daily Income Statement 2025-12-02..2025-12-04
 │ Net:              ║    $-64.50 │   $1500.00 │   $-800.00 │  $635.50 │ $211.83 │
 └───────────────────╨────────────┴────────────┴────────────┴──────────┴─────────┘
 ```
+
+</div>
 or runs other actions:
+<div style="padding:0 1em;">
+
+```
+$ hledger check --strict
+hledger: Error: /Users/simon/.hledger.journal:2:
+  | 2025-12-01 Starting balance
+2 |     equity                   $-1000
+  |                              ^^^^^^
+  |     assets:checking           $1000
+
+Strict commodity checking is enabled, and
+commodity "$" has not been declared.
+Consider adding a commodity directive. Examples:
+
+commodity $1000.00
+commodity 1.000,00 $
+```
 ```
 $ hledger add
 Adding transactions to journal file /Users/simon/.hledger.journal
@@ -171,38 +196,18 @@ with base url http://127.0.0.1:5000
 This server will exit after 2m with no browser windows open (or press ctrl-c)
 Opening web browser...
 ```
-```
-$ hledger check --strict
-hledger: Error: /Users/simon/.hledger.journal:2:
-  | 2025-12-01 Starting balance
-2 |     equity                   $-1000
-  |                              ^^^^^^
-  |     assets:checking           $1000
 
-Strict commodity checking is enabled, and
-commodity "$" has not been declared.
-Consider adding a commodity directive. Examples:
+</div>
 
-commodity $1000.00
-commodity 1.000,00 $
-```
-```
-$ hledger
-   __   __       __            
-  / /  / /__ ___/ /__ ____ ____
- / _ \/ / -_) _  / _ `/ -_) __/
-/_//_/_/\__/\_,_/\_, /\__/_/   
-                /___/          
--------------------------------------------------------------------------------
-hledger 1.51.99-g67b206380-20251207, mac-aarch64
-Usage: hledger [COMMAND] [OPTIONS] [ARGS]
-Commands:
-...
-```
+hledger web is a simple web UI you can use locally or over the internet.
+You can see a read-only instance with more complex data at 
+**[demo.hledger.org](https://demo.hledger.org)**.
 
-</details>
+<!-- </details> -->
 
 **Get started**
+
+Try it for yourself!
 
 - **[Install](install.md)** - quickly get hledger installed. Here are [release notes](relnotes.md).
 - **[Docs](doc.md)** - many learning resources. **[hledger by example](hledger-by-example.md)** is a good place to start.
@@ -216,10 +221,13 @@ Commands:
 - **[Contributor Quick Start](CONTRIBUTING.md)** and **[Developer docs](dev.md)**.
 - **[CREDITS](CREDITS.md)** shows many of the people who have contributed code over the years.
 
-<details>
-<summary><b>Site tips</b></summary>
+<b>Site tips</b>
 
-Use the three-lines button at top-left (or s access key) to toggle the site & page navigation sidebar.
+Use the three-lines button at top left (or the **s** access key) to toggle the site navigation sidebar.
+
+<!-- <details>
+<summary>Click for more..</summary>
+<br> -->
 
 [Access keys](https://en.wikipedia.org/wiki/Access_key#Access_in_different_browsers):
 **1** home,
@@ -232,15 +240,14 @@ Use the three-lines button at top-left (or s access key) to toggle the site & pa
 **e** edit \
 You can also press the **left** or **right** arrow keys to step through pages.
 
-For quick lookups, configure these bookmark keywords in your browser:
+For quicker browsing, configure these bookmark keywords in your browser:
 
-**h** PAGE  -> `https://hledger.org/PAGE.html`\
-**hm** TOPIC -> `https://hledger.org/hledger.html#TOPIC`\
-**hs** TOPIC -> `https://hledger.org/?search=TOPIC`\
-**hi** NUM   -> `https://github.com/simonmichael/hledger/issues/NUM`\
-**hinew**  -> `https://github.com/simonmichael/hledger/issues/new`
+- **h** PAGE  -> `https://hledger.org/PAGE.html`
+- **hm** TOPIC -> `https://hledger.org/hledger.html#TOPIC`
+- **hs** TOPIC -> `https://hledger.org/?search=TOPIC`
+- **hi** NUM   -> `https://github.com/simonmichael/hledger/issues/NUM`
+- **hinew**  -> `https://github.com/simonmichael/hledger/issues/new`
 
-
-</details>
+<!-- </details> -->
 
 <script src="js/quotes.js"></script>
