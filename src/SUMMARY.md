@@ -7,7 +7,7 @@
 - [Release notes](relnotes.md) -->
 - [Docs](doc.md)
 - [Support](support.md)
-- [Sponsor hledger](sponsor.md)
+- [Sponsor](sponsor.md)
 
 # MANUALS
 

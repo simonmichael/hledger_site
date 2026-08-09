@@ -1,4 +1,4 @@
-# Sponsor hledger
+# Sponsor
 
 hledger comes to you thanks to thousands of hours of dedicated work, sustained over ~20 years.
 
