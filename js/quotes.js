@@ -793,4 +793,24 @@ fuzzy searching of accounts and transactions makes it review easier and,
 I feel that by using hledger I have more tools available at my disposal.
 --Arto Jonsson
 
+Finally got my budget back into Hledger, and I’ve got to say: for power users, it’s the GOAT budgeting tool.
+--DanielW_Kiwi
+
+We are going to be applying for a mortgage soon and it's so easy to extract all the reports I need from Hledger.
+--DanielW_Kiwi
+
+I've found Hledger so much better than anything visual that I've used. 
+I've tried paid solutions and always end up back at Hledgers. It's too powerful and quick.
+You have to understand what is going on more but that is part of the power.
+--DanielW_Kiwi
+
+Plain text accounting with hledger is the way to go. 
+Dark mode, easy to read journal files, easy to find mistakes, easy to fix mistakes repeatable commands for reports and account registers.
+--ScottCDunn
+
+I'm a gamer. I don't play Halo, or Bejeweled. I play hledger. 
+In this game, I look at every account, every transaction, and enter them into the ledger. 
+At the end, I check the balance on the ledger vs the account. If they match, I win!
+--ScottCDunn
+
 `; const quotes = quotesmd.trim().split('\n\n').map(q => q.replace(/^\*|\*$/g, '').trim());
