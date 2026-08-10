@@ -16,11 +16,13 @@ function getHourlyQuoteIndex() {
   return Math.floor(new Date().getTime() / (1000 * 60 * 60)) % quotes.length;
 }
 
-// Get the index of a random quote, different from the one currently shown.
+// Get the index of a random quote, different from both the one currently shown
+// and the current hourly quote.
 function getRandomQuoteIndex() {
-  if (quotes.length < 2) return 0;
+  const avoid = new Set([currentQuoteIndex, getHourlyQuoteIndex()]);
+  if (quotes.length <= avoid.size) return currentQuoteIndex;
   let n;
-  do { n = Math.floor(Math.random() * quotes.length); } while (n === currentQuoteIndex);
+  do { n = Math.floor(Math.random() * quotes.length); } while (avoid.has(n));
   return n;
 }
 
