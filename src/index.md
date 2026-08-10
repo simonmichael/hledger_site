@@ -29,8 +29,7 @@
   margin:0 0 0.5em;
 }
 .quote {
-  width: 80%;
-  margin: auto;
+  padding: 0 10%;
   text-align:center;
   font-style:italic;
   font-size:90%;
@@ -203,7 +202,7 @@ archiving /Users/simon/finance/2026/data/archive/wf-pchecking.2026-08-09.csv
 imported 8 new transactions from boi-ichecking.rules, chase.rules, paypal.rules, vanguard.rules, wf-bchecking.rules, wf-pchecking.rules to /Users/simon/finance/2026/2026.journal
 ```
 
-hledger ui is a terminal UI, requiring less typing:
+hledger ui is a terminal UI, so you don't have to type commands:
 
 ```
 $ hledger ui --help
