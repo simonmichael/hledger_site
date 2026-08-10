@@ -40,6 +40,7 @@
 code::first-line {
   font-weight:bold;
 }
+table h2 { margin-top: 0.5em; }
 </style>
 
 <img id="coins" class="responsive-image" src="images/coins2-248.png" alt="hledger logo" />
@@ -69,7 +70,7 @@ Robust, friendly, fast,<br>plain text accounting.
 ----
 
 **hledger** is friendly, fast, dependable, cross platform accounting software.
-It tracks money, investments, cryptocurrencies, time, or any countable commodity,
+It tracks money, investments, cryptocurrencies, time - or anything else countable -
 using human-readable **[plain text data](https://plaintextaccounting.org)** that you control.
 It works well for both simple and complex finances. 
 
@@ -302,7 +303,7 @@ hledger-ui [OPTIONS] [--cash|--bs|--is|--all|--register=ACCT] [QUERY]
 ...
 ```
 
-hledger web is a web UI, so you don't have to use the terminal.
+hledger web is a web UI, so you don't have to use the terminal. \
 You can see a read-only instance with more complex data here:
 **[demo.hledger.org](https://demo.hledger.org)**.
 
@@ -340,6 +341,7 @@ Would you like to help ?
 
 Toggle the useful navigation sidebar, with the three-lines button at top of page, or the **s** access key.
 
+</li>
 <li> 
 
 [Access keys](https://en.wikipedia.org/wiki/Access_key#Access_in_different_browsers) available:
@@ -353,6 +355,7 @@ Toggle the useful navigation sidebar, with the three-lines button at top of page
 **e** edit. \
 You can also press the **left** or **right** arrow keys to step through pages.
 
+</li>
 <li>
 
 For quicker browsing, configure these bookmark keywords in your browser.
@@ -365,6 +368,7 @@ For quicker browsing, configure these bookmark keywords in your browser.
 - **hi** NUM   -> `https://github.com/simonmichael/hledger/issues/NUM`
 - **hinew**  -> `https://github.com/simonmichael/hledger/issues/new`
 </details>
+</li>
 </ul>
 
 <script src="js/quotes.js"></script>
