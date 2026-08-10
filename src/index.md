@@ -278,11 +278,11 @@ Would you like to help ?
 <ul>
 <li> 
 
-Use the three-lines button at the top of the page (or the **s** access key) to toggle the site navigation sidebar.
+Toggle the useful navigation sidebar, with the three-lines button at top of page, or the **s** access key.
 
 <li> 
 
-[Access keys](https://en.wikipedia.org/wiki/Access_key#Access_in_different_browsers):
+[Access keys](https://en.wikipedia.org/wiki/Access_key#Access_in_different_browsers) available:
 **1** home,
 **2** changes,
 **s** sidebar,
@@ -290,12 +290,12 @@ Use the three-lines button at the top of the page (or the **s** access key) to t
 **f** find,
 **p** print,
 **r** repo,
-**e** edit \
+**e** edit. \
 You can also press the **left** or **right** arrow keys to step through pages.
 
 <li>
 
-For quicker browsing, you could configure these bookmark keywords in your browser.
+For quicker browsing, configure these bookmark keywords in your browser.
 
 <details><summary> Show: </summary>
 
