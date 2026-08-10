@@ -83,34 +83,34 @@ You can read more about it at **[Why hledger ?](why.md)** and **[FAQ](faq.md)**.
 
 Transactions are recorded in a plain text file.
 This simple format, invented by the Ledger project, is the key
-to understanding Plain Text Accounting and Double Entry Bookkeeping:
+to understanding Plain Text Accounting (and double entry bookkeeping):
 
 <!-- keep synced: home-page-example.journal -->
 ```journal
 ; ~/.hledger.journal (or $LEDGER_FILE)
 
-2025-12-01 set up starting balances
-    equity            $-1000     ; $1000 moves from the "equity" account (- means from)
-    assets:checking    $1000     ; to the "assets:checking" account      (+ means to)
-    assets:cash           $0
+2025-12-01 declare starting balances
+    equity
+    assets:checking    $1000     ; the assets:checking account started with $1000
+    assets:wallet         $0     ; the assets:wallet account started empty
 
 2025-12-01 cash gift received
-    income:gifts        $-50     ; $50 from the "income:gifts" account
-    assets:wallet        $50     ; to the "assets:wallet" account
+    income:gifts        $-50     ; $50 moved from the income:gifts account (- means from)
+    assets:wallet        $50     ; to the assets:wallet account            (+ means to)
 
 2025-12-02 rent paid
-    assets:checking              ; a missing amount is inferred ($-800 here)
-    expenses:rent       $800
+    assets:checking    $-800     ; from checking
+    expenses:rent       $800     ; to rent
 
-2025-12-03 Grocery store
+2025-12-03 Client payment received
+    income:consulting            ; a missing amount is inferred ($-1500 here)
+    assets:checking    $1500
+
+2025-12-04 Grocery store
     assets:checking              ; ($-64.50 here)
     expenses:groceries   $54.50
     expenses:home care    $7
     expenses:snacks       $3
-
-2025-12-04 Client payment received
-    income:consulting
-    assets:checking    $1500
 
 ```
 
@@ -119,10 +119,10 @@ This file is all you need. From it, hledger generates precise reports:
 ```
 $ hledger aregister checking
 Transactions in assets:checking and subaccounts:
-2025-12-01 set up starting b..  equity, as:cash           $1000.00      $1000.00
+2025-12-01 declare starting ..  equity, as:wallet         $1000.00      $1000.00
 2025-12-02 rent paid            ex:rent                   $-800.00       $200.00
-2025-12-03 Grocery store        ex:groceries, ex:h..       $-64.50       $135.50
-2025-12-04 Client payment re..  in:consulting             $1500.00      $1635.50
+2025-12-03 Client payment re..  in:consulting             $1500.00      $1700.00
+2025-12-04 Grocery store        ex:groceries, ex:h..       $-64.50      $1635.50
 ```
 ```
 $ hledger bs
@@ -153,40 +153,40 @@ Daily Income Statement 2025-12-01..2025-12-04
 ╞══════════════╬════════════╪════════════╪════════════╪════════════╪══════════╪═════════╡
 │ Revenues     ║            │            │            │            │          │         │
 ├──────────────╫────────────┼────────────┼────────────┼────────────┼──────────┼─────────┤
-│ income       ║     $50.00 │          0 │          0 │   $1500.00 │ $1550.00 │ $387.50 │
-│   consulting ║          0 │          0 │          0 │   $1500.00 │ $1500.00 │ $375.00 │
+│ income       ║     $50.00 │          0 │   $1500.00 │          0 │ $1550.00 │ $387.50 │
+│   consulting ║          0 │          0 │   $1500.00 │          0 │ $1500.00 │ $375.00 │
 │   gifts      ║     $50.00 │          0 │          0 │          0 │   $50.00 │  $12.50 │
 ├──────────────╫────────────┼────────────┼────────────┼────────────┼──────────┼─────────┤
-│              ║     $50.00 │          0 │          0 │   $1500.00 │ $1550.00 │ $387.50 │
+│              ║     $50.00 │          0 │   $1500.00 │          0 │ $1550.00 │ $387.50 │
 ╞══════════════╬════════════╪════════════╪════════════╪════════════╪══════════╪═════════╡
 │ Expenses     ║            │            │            │            │          │         │
 ├──────────────╫────────────┼────────────┼────────────┼────────────┼──────────┼─────────┤
-│ expenses     ║          0 │    $800.00 │     $64.50 │          0 │  $864.50 │ $216.12 │
+│ expenses     ║          0 │    $800.00 │          0 │     $64.50 │  $864.50 │ $216.12 │
 │   rent       ║          0 │    $800.00 │          0 │          0 │  $800.00 │ $200.00 │
-│   groceries  ║          0 │          0 │     $54.50 │          0 │   $54.50 │  $13.62 │
-│   home care  ║          0 │          0 │      $7.00 │          0 │    $7.00 │   $1.75 │
-│   snacks     ║          0 │          0 │      $3.00 │          0 │    $3.00 │   $0.75 │
+│   groceries  ║          0 │          0 │          0 │     $54.50 │   $54.50 │  $13.62 │
+│   home care  ║          0 │          0 │          0 │      $7.00 │    $7.00 │   $1.75 │
+│   snacks     ║          0 │          0 │          0 │      $3.00 │    $3.00 │   $0.75 │
 ├──────────────╫────────────┼────────────┼────────────┼────────────┼──────────┼─────────┤
-│              ║          0 │    $800.00 │     $64.50 │          0 │  $864.50 │ $216.12 │
+│              ║          0 │    $800.00 │          0 │     $64.50 │  $864.50 │ $216.12 │
 ╞══════════════╬════════════╪════════════╪════════════╪════════════╪══════════╪═════════╡
-│ Net:         ║     $50.00 │   $-800.00 │    $-64.50 │   $1500.00 │  $685.50 │ $171.38 │
+│ Net:         ║     $50.00 │   $-800.00 │   $1500.00 │    $-64.50 │  $685.50 │ $171.38 │
 └──────────────╨────────────┴────────────┴────────────┴────────────┴──────────┴─────────┘
 ```
 ```
 $ hledger is -tDTAS -o foo.html
 ```
-<table><tr><th colspan="7" style="text-align:left"><h2>Daily Income Statement 2025-12-01..2025-12-04</h2></th></tr><tr><th></th><th>2025-12-01</th><th>2025-12-02</th><th>2025-12-03</th><th>2025-12-04</th><th>Total</th><th>Average</th></tr><tr><td colspan="7" class="account"><b>Revenues</b></td></tr><tr><td class="account">income</td><td align="right" class="amount">$50.00</td><td align="right" class="amount">0</td><td align="right" class="amount">0</td><td align="right" class="amount">$1500.00</td><td align="right" class="amount rowtotal">$1550.00</td><td align="right" class="amount rowaverage">$387.50</td></tr><tr><td class="account">  consulting</td><td align="right" class="amount">0</td><td align="right" class="amount">0</td><td align="right" class="amount">0</td><td align="right" class="amount">$1500.00</td><td align="right" class="amount rowtotal">$1500.00</td><td align="right" class="amount rowaverage">$375.00</td></tr><tr><td class="account">  gifts</td><td align="right" class="amount">$50.00</td><td align="right" class="amount">0</td><td align="right" class="amount">0</td><td align="right" class="amount">0</td><td align="right" class="amount rowtotal">$50.00</td><td align="right" class="amount rowaverage">$12.50</td></tr><tr><td style="border-top:double black" class="account"><b>Total:</b></td><td style="border-top:double black" align="right" class="amount coltotal"><b>$50.00</b></td><td style="border-top:double black" align="right" class="amount coltotal"><b>0</b></td><td style="border-top:double black" align="right" class="amount coltotal"><b>0</b></td><td style="border-top:double black" align="right" class="amount coltotal"><b>$1500.00</b></td><td style="border-top:double black" align="right" class="amount coltotal"><b>$1550.00</b></td><td style="border-top:double black" align="right" class="amount colaverage"><b>$387.50</b></td></tr><tr><td colspan="7"> </td></tr><tr><td colspan="7" class="account"><b>Expenses</b></td></tr><tr><td class="account">expenses</td><td align="right" class="amount">0</td><td align="right" class="amount">$800.00</td><td align="right" class="amount">$64.50</td><td align="right" class="amount">0</td><td align="right" class="amount rowtotal">$864.50</td><td align="right" class="amount rowaverage">$216.12</td></tr><tr><td class="account">  rent</td><td align="right" class="amount">0</td><td align="right" class="amount">$800.00</td><td align="right" class="amount">0</td><td align="right" class="amount">0</td><td align="right" class="amount rowtotal">$800.00</td><td align="right" class="amount rowaverage">$200.00</td></tr><tr><td class="account">  groceries</td><td align="right" class="amount">0</td><td align="right" class="amount">0</td><td align="right" class="amount">$54.50</td><td align="right" class="amount">0</td><td align="right" class="amount rowtotal">$54.50</td><td align="right" class="amount rowaverage">$13.62</td></tr><tr><td class="account">  home care</td><td align="right" class="amount">0</td><td align="right" class="amount">0</td><td align="right" class="amount">$7.00</td><td align="right" class="amount">0</td><td align="right" class="amount rowtotal">$7.00</td><td align="right" class="amount rowaverage">$1.75</td></tr><tr><td class="account">  snacks</td><td align="right" class="amount">0</td><td align="right" class="amount">0</td><td align="right" class="amount">$3.00</td><td align="right" class="amount">0</td><td align="right" class="amount rowtotal">$3.00</td><td align="right" class="amount rowaverage">$0.75</td></tr><tr><td style="border-top:double black" class="account"><b>Total:</b></td><td style="border-top:double black" align="right" class="amount coltotal"><b>0</b></td><td style="border-top:double black" align="right" class="amount coltotal"><b>$800.00</b></td><td style="border-top:double black" align="right" class="amount coltotal"><b>$64.50</b></td><td style="border-top:double black" align="right" class="amount coltotal"><b>0</b></td><td style="border-top:double black" align="right" class="amount coltotal"><b>$864.50</b></td><td style="border-top:double black" align="right" class="amount colaverage"><b>$216.12</b></td></tr><tr><td colspan="7"> </td></tr><tr><td style="border-top:double black" class="account"><b>Net:</b></td><td style="border-top:double black" align="right" class="amount coltotal"><b>$50.00</b></td><td style="border-top:double black" align="right" class="amount coltotal"><b>$-800.00</b></td><td style="border-top:double black" align="right" class="amount coltotal"><b>$-64.50</b></td><td style="border-top:double black" align="right" class="amount coltotal"><b>$1500.00</b></td><td style="border-top:double black" align="right" class="amount coltotal"><b>$685.50</b></td><td style="border-top:double black" align="right" class="amount colaverage"><b>$171.38</b></td></tr></table>
+<table><tr><th colspan="7" style="text-align:left"><h2>Daily Income Statement 2025-12-01..2025-12-04</h2></th></tr><tr><th></th><th>2025-12-01</th><th>2025-12-02</th><th>2025-12-03</th><th>2025-12-04</th><th>Total</th><th>Average</th></tr><tr><td colspan="7" class="account"><b>Revenues</b></td></tr><tr><td class="account">income</td><td align="right" class="amount">$50.00</td><td align="right" class="amount">0</td><td align="right" class="amount">$1500.00</td><td align="right" class="amount">0</td><td align="right" class="amount rowtotal">$1550.00</td><td align="right" class="amount rowaverage">$387.50</td></tr><tr><td class="account">  consulting</td><td align="right" class="amount">0</td><td align="right" class="amount">0</td><td align="right" class="amount">$1500.00</td><td align="right" class="amount">0</td><td align="right" class="amount rowtotal">$1500.00</td><td align="right" class="amount rowaverage">$375.00</td></tr><tr><td class="account">  gifts</td><td align="right" class="amount">$50.00</td><td align="right" class="amount">0</td><td align="right" class="amount">0</td><td align="right" class="amount">0</td><td align="right" class="amount rowtotal">$50.00</td><td align="right" class="amount rowaverage">$12.50</td></tr><tr><td style="border-top:double black" class="account"><b>Total:</b></td><td style="border-top:double black" align="right" class="amount coltotal"><b>$50.00</b></td><td style="border-top:double black" align="right" class="amount coltotal"><b>0</b></td><td style="border-top:double black" align="right" class="amount coltotal"><b>$1500.00</b></td><td style="border-top:double black" align="right" class="amount coltotal"><b>0</b></td><td style="border-top:double black" align="right" class="amount coltotal"><b>$1550.00</b></td><td style="border-top:double black" align="right" class="amount colaverage"><b>$387.50</b></td></tr><tr><td colspan="7"> </td></tr><tr><td colspan="7" class="account"><b>Expenses</b></td></tr><tr><td class="account">expenses</td><td align="right" class="amount">0</td><td align="right" class="amount">$800.00</td><td align="right" class="amount">0</td><td align="right" class="amount">$64.50</td><td align="right" class="amount rowtotal">$864.50</td><td align="right" class="amount rowaverage">$216.12</td></tr><tr><td class="account">  rent</td><td align="right" class="amount">0</td><td align="right" class="amount">$800.00</td><td align="right" class="amount">0</td><td align="right" class="amount">0</td><td align="right" class="amount rowtotal">$800.00</td><td align="right" class="amount rowaverage">$200.00</td></tr><tr><td class="account">  groceries</td><td align="right" class="amount">0</td><td align="right" class="amount">0</td><td align="right" class="amount">0</td><td align="right" class="amount">$54.50</td><td align="right" class="amount rowtotal">$54.50</td><td align="right" class="amount rowaverage">$13.62</td></tr><tr><td class="account">  home care</td><td align="right" class="amount">0</td><td align="right" class="amount">0</td><td align="right" class="amount">0</td><td align="right" class="amount">$7.00</td><td align="right" class="amount rowtotal">$7.00</td><td align="right" class="amount rowaverage">$1.75</td></tr><tr><td class="account">  snacks</td><td align="right" class="amount">0</td><td align="right" class="amount">0</td><td align="right" class="amount">0</td><td align="right" class="amount">$3.00</td><td align="right" class="amount rowtotal">$3.00</td><td align="right" class="amount rowaverage">$0.75</td></tr><tr><td style="border-top:double black" class="account"><b>Total:</b></td><td style="border-top:double black" align="right" class="amount coltotal"><b>0</b></td><td style="border-top:double black" align="right" class="amount coltotal"><b>$800.00</b></td><td style="border-top:double black" align="right" class="amount coltotal"><b>0</b></td><td style="border-top:double black" align="right" class="amount coltotal"><b>$64.50</b></td><td style="border-top:double black" align="right" class="amount coltotal"><b>$864.50</b></td><td style="border-top:double black" align="right" class="amount colaverage"><b>$216.12</b></td></tr><tr><td colspan="7"> </td></tr><tr><td style="border-top:double black" class="account"><b>Net:</b></td><td style="border-top:double black" align="right" class="amount coltotal"><b>$50.00</b></td><td style="border-top:double black" align="right" class="amount coltotal"><b>$-800.00</b></td><td style="border-top:double black" align="right" class="amount coltotal"><b>$1500.00</b></td><td style="border-top:double black" align="right" class="amount coltotal"><b>$-64.50</b></td><td style="border-top:double black" align="right" class="amount coltotal"><b>$685.50</b></td><td style="border-top:double black" align="right" class="amount colaverage"><b>$171.38</b></td></tr></table>
 
 It can check for many kinds of error:
 
 ```
 $ hledger check --strict
 hledger: Error: /Users/simon/.hledger.journal:4:
-  | 2025-12-01 set up starting balances
-4 |     equity                                    $-1000  ; $1000 moves from the "equity" account (- means from)
+  | 2025-12-01 declare starting balances
+4 |     equity                                    $-1000
   |                                               ^^^^^^
-  |     assets:checking                            $1000  ; to the "assets:checking" account      (+ means to)
-  |     assets:cash                                   $0
+  |     assets:checking                            $1000  ; the assets:checking account started with $1000
+  |     assets:wallet                                 $0  ; the assets:wallet account started empty
 
 Strict commodity checking is enabled, and
 commodity "$" has not been declared.
@@ -274,7 +274,7 @@ This server will exit after 2m with no browser windows open (or press ctrl-c)
 Opening web browser...
 ```
 
-The help command is a quick way to view docs.
+Everything is documented, and the docs are easy to find.<!-- , and the help command is a quick way to view docs. -->
 
 ```
 $ hledger help impor
