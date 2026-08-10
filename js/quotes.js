@@ -1,6 +1,9 @@
 // The index of the quote currently being shown.
 let currentQuoteIndex = 0;
 
+// The indices of quotes shown since page load, to avoid repeats until all seen.
+let seenQuoteIndices = new Set();
+
 // Get the quote at the given index.
 function getQuoteAt(n) {
   const quote = quotes[n % quotes.length];
@@ -16,10 +19,15 @@ function getHourlyQuoteIndex() {
   return Math.floor(new Date().getTime() / (1000 * 60 * 60)) % quotes.length;
 }
 
-// Get the index of a random quote, different from both the one currently shown
-// and the current hourly quote.
+// Get the index of a random quote we haven't seen since page load, never the
+// current or hourly quote. Once all have been seen, start over.
 function getRandomQuoteIndex() {
-  const avoid = new Set([currentQuoteIndex, getHourlyQuoteIndex()]);
+  const hourly = getHourlyQuoteIndex();
+  if (seenQuoteIndices.size >= quotes.length) {
+    seenQuoteIndices = new Set([currentQuoteIndex, hourly]);
+  }
+  const avoid = new Set(seenQuoteIndices);
+  avoid.add(hourly);
   if (quotes.length <= avoid.size) return currentQuoteIndex;
   let n;
   do { n = Math.floor(Math.random() * quotes.length); } while (avoid.has(n));
@@ -33,6 +41,7 @@ function showQuote(n) {
   if (quotetextel && quoteauthorel) {
     const quote = getQuoteAt(n);
     currentQuoteIndex = n;
+    seenQuoteIndices.add(n);
     quotetextel.textContent   = quote.text;
     quoteauthorel.textContent = quote.author ? '-- ' + quote.author : '';
   }
