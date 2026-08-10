@@ -40,6 +40,16 @@ and adding a transaction (see the next page for an example).
 
 Or if you prefer, you can create the file yourself with your favourite text editor.
 
+Files containing non-ascii characters should use the system's text encoding.
+(See [Install: Text encoding](install.md#text-encoding).)
+This normally happens by default, but a pre-existing journal file could disrupt it;
+so if you think you might have one, move it out of the way first.
+Eg (on unix or Windows powershell):
+
+```
+mv ~/.hledger.journal ~/.hledger.journal.old
+```
+
 On unix systems, eg:
 ```
 emacs ~/.hledger.journal
@@ -48,9 +58,6 @@ or:
 ```
 touch ~/.hledger.journal
 ```
-
-Files containing non-ascii characters should use the system's text encoding.
-(See [Install: Text encoding](install.md#text-encoding).)
 
 <br>
 
