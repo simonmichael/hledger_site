@@ -47,24 +47,29 @@ function showQuote(n) {
   }
 }
 
-// Fade the quote out, swap in the quote at the given index, then fade back in.
-function transitionToQuote(n) {
-  const quoteel = document.querySelector('#quote');
-  if (quoteel) {
-    quoteel.style.opacity = '0';
-    setTimeout(() => {
-      showQuote(n);
-      quoteel.style.opacity = '1';
-    }, 200);
-  }
-}
+// Fade duration in ms for the hourly quote change; keep in sync with the
+// .quote opacity transition in index.md.
+const HOURLY_FADE_MS = 500;
 
-// Show the current hourly quote, and schedule an update on the next hour.
+// Show the current hourly quote instantly, and schedule an update on the next hour.
 function updateQuote() {
   const quoteel = document.querySelector('#quote');
   if (quoteel) {
     showQuote(getHourlyQuoteIndex());
     quoteel.style.display = 'block';
+    scheduleNextQuoteUpdate();
+  }
+}
+
+// Fade to the current hourly quote, and schedule an update on the next hour.
+function fadeToHourlyQuote() {
+  const quoteel = document.querySelector('#quote');
+  if (quoteel) {
+    quoteel.style.opacity = '0';
+    setTimeout(() => {
+      showQuote(getHourlyQuoteIndex());
+      quoteel.style.opacity = '1';
+    }, HOURLY_FADE_MS);
     scheduleNextQuoteUpdate();
   }
 }
@@ -76,9 +81,9 @@ function scheduleNextQuoteUpdate() {
   const msUntilNextHour = (60 - now.getMinutes()) * 60 * 1000 - now.getSeconds() * 1000 - now.getMilliseconds();
   // Set initial timeout to sync with the hour
   setTimeout(() => {
-    updateQuote();
+    fadeToHourlyQuote();
     // Then update every hour
-    setInterval(updateQuote, 60 * 60 * 1000);
+    setInterval(fadeToHourlyQuote, 60 * 60 * 1000);
   }, msUntilNextHour);
 }
 
@@ -88,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const quoteel = document.querySelector('#quote');
   if (quoteel) {
     updateQuote();
-    quoteel.addEventListener('click', () => transitionToQuote(getRandomQuoteIndex()));
+    quoteel.addEventListener('click', () => showQuote(getRandomQuoteIndex()));
   }
 });
 
