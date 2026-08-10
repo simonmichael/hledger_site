@@ -1,8 +1,8 @@
-// Get the current hourly quote.
-function getQuote() {
-  const now = new Date();
-  const t = now.getTime();
-  const n = Math.floor(t / (1000 * 60 * 60));
+// The index of the quote currently being shown.
+let currentQuoteIndex = 0;
+
+// Get the quote at the given index.
+function getQuoteAt(n) {
   const quote = quotes[n % quotes.length];
   const parts = quote.split(' --');
   return {
@@ -11,16 +11,49 @@ function getQuote() {
   };
 }
 
-// Show the current hourly quote, and schedule an update on the next hour.
-function updateQuote() {
-  const quoteel       = document.querySelector('#quote');
+// Get the index of the current hourly quote.
+function getHourlyQuoteIndex() {
+  return Math.floor(new Date().getTime() / (1000 * 60 * 60)) % quotes.length;
+}
+
+// Get the index of a random quote, different from the one currently shown.
+function getRandomQuoteIndex() {
+  if (quotes.length < 2) return 0;
+  let n;
+  do { n = Math.floor(Math.random() * quotes.length); } while (n === currentQuoteIndex);
+  return n;
+}
+
+// Render the quote at the given index in the quote element.
+function showQuote(n) {
   const quotetextel   = document.querySelector('#quote-text');
   const quoteauthorel = document.querySelector('#quote-author');
-  if (quoteel && quotetextel && quoteauthorel) {
-    const quote = getQuote();
+  if (quotetextel && quoteauthorel) {
+    const quote = getQuoteAt(n);
+    currentQuoteIndex = n;
     quotetextel.textContent   = quote.text;
     quoteauthorel.textContent = quote.author ? '-- ' + quote.author : '';
-    quoteel.style.display     = 'block';
+  }
+}
+
+// Fade the quote out, swap in the quote at the given index, then fade back in.
+function transitionToQuote(n) {
+  const quoteel = document.querySelector('#quote');
+  if (quoteel) {
+    quoteel.style.opacity = '0';
+    setTimeout(() => {
+      showQuote(n);
+      quoteel.style.opacity = '1';
+    }, 200);
+  }
+}
+
+// Show the current hourly quote, and schedule an update on the next hour.
+function updateQuote() {
+  const quoteel = document.querySelector('#quote');
+  if (quoteel) {
+    showQuote(getHourlyQuoteIndex());
+    quoteel.style.display = 'block';
     scheduleNextQuoteUpdate();
   }
 }
@@ -39,12 +72,12 @@ function scheduleNextQuoteUpdate() {
 }
 
 // On page load, show the current hourly quote, and start an hourly updater.
+// Clicking the quote shows a random one.
 document.addEventListener('DOMContentLoaded', () => {
-  const quoteel       = document.querySelector('#quote');
-  const quotetextel   = document.querySelector('#quote-text');
-  const quoteauthorel = document.querySelector('#quote-author');
-  if (quoteel && quotetextel && quoteauthorel) {
+  const quoteel = document.querySelector('#quote');
+  if (quoteel) {
     updateQuote();
+    quoteel.addEventListener('click', () => transitionToQuote(getRandomQuoteIndex()));
   }
 });
 

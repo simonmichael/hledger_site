@@ -34,6 +34,8 @@
   text-align:center;
   font-style:italic;
   font-size:90%;
+  cursor:pointer;
+  transition: opacity 0.5s ease;
 }
 .quote-author { white-space:nowrap; }
 code::first-line {
@@ -58,7 +60,7 @@ Robust, friendly, fast,<br>plain text accounting.
 <a  href="/images/web-bcexample.png"    class="highslide" onclick="return hs.expand(this, { captionText:'The hledger-web web user interface.' })"
 ><img src="images/web-bcexample.png"    width="200"                                                 alt="The hledger-web web user interface."></a>
 </div>
-<div id="quote" class="quote" title="Quote updates hourly.">
+<div id="quote" class="quote" title="The quote updates on the hour (or, click for another).">
   <span id="quote-text"></span> <span id="quote-author" class="quote-author"></span>
 </div>
 
