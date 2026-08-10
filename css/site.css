@@ -34,7 +34,7 @@ pre > code.language-cli {
 }
 pre > code.language-journal {
   border:thin solid green;
-  background-color: #dfd;
+  background-color: #e0ffd0;
   color:black !important;
 }
 pre > code.language-csv {
