@@ -22,6 +22,9 @@ code {
   font-family: Consolas, "Ubuntu Mono", Menlo, "DejaVu Sans Mono", monospace, monospace !important;
 /*  color:black !important; needs to be dark mode aware */
 }
+pre {
+  margin: 1em;
+}
 pre > code.hljs {
   border:thin solid lightgrey;
 }
@@ -31,7 +34,7 @@ pre > code.language-cli {
 }
 pre > code.language-journal {
   border:thin solid green;
-  background-color: greenyellow;
+  background-color: #dfd;
   color:black !important;
 }
 pre > code.language-csv {
@@ -84,4 +87,8 @@ pre > code.language-timedot {
 
 .clip-button {
     display:none;
+}
+
+summary {
+  cursor: pointer;
 }
