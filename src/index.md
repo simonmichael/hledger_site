@@ -76,18 +76,14 @@ hledger provides powerful reports and scales smoothly from simple to sophisticat
 It works well with version control, scripts, and LLMs.
 Read more at **[Why hledger ?](why.md)** and **[FAQ](faq.md)**.
 
-<!-- <details>
-<summary><b>A quick example</b> (click to open)</summary> -->
-<b>A quick example</b>
+### A quick example
 
 Transactions are recorded in a plain text file.
 This simple format, invented by the Ledger project, is the key
 to understanding Plain Text Accounting and Double Entry Bookkeeping:
 
-<div style="padding:0 1em;">
-
 ```journal
-; ~/.hledger.journal
+; ~/.hledger.journal (or $LEDGER_FILE)
 
 2025-12-01 Starting balance
     equity            $-1000     ; <- $1000 moves from (-) the "equity" account
@@ -106,11 +102,7 @@ to understanding Plain Text Accounting and Double Entry Bookkeeping:
     expenses:rent     $800
 ```
 
-</div>
-
 This file is all you need. From it, hledger generates precise reports:
-
-<div style="padding:0 1em;">
 
 ```
 $ hledger aregister assets
@@ -155,9 +147,7 @@ Daily Income Statement 2025-12-02..2025-12-04
 └───────────────────╨────────────┴────────────┴────────────┴──────────┴─────────┘
 ```
 
-</div>
-or runs other actions:
-<div style="padding:0 1em;">
+It can check for many kinds of error:
 
 ```
 $ hledger check --strict
@@ -174,6 +164,9 @@ Consider adding a commodity directive. Examples:
 commodity $1000.00
 commodity 1.000,00 $
 ```
+
+The add command walks you through adding a transaction:
+
 ```
 $ hledger add
 Adding transactions to journal file /Users/simon/.hledger.journal
@@ -188,6 +181,39 @@ Using this similar transaction for defaults:
 Account 1 [assets:checking]:
 Amount  1 [$-64.50]: _
 ```
+
+The get and import commands, suitably configured, can make importing from financial institutions simple.
+
+```
+$ hledger import --get
+cd /Users/simon/finance/2026/data && getdata
+getprices USD EUR 2026-01-01 2026-08-09 >/Users/simon/finance/2026/prices/EUR.prices
+..
+getprices USD VCEB 2026-01-01 2026-08-09 >/Users/simon/finance/2026/prices/VCEB.prices
+...
+running: simplefincsv ../data/simplefin.json 'chase bank'
+running: paypalcsv ../data/paypal.json
+archiving /Users/simon/finance/2026/data/archive/paypal.2026-08-09.csv
+running: simplefincsv ../data/simplefin.json 'wells fargo.*business checking'
+archiving /Users/simon/finance/2026/data/archive/wf-bchecking.2026-08-09.csv
+running: simplefincsv ../data/simplefin.json 'wells fargo.*everyday checking'
+archiving /Users/simon/finance/2026/data/archive/wf-pchecking.2026-08-09.csv
+imported 8 new transactions from boi-ichecking.rules, chase.rules, paypal.rules, vanguard.rules, wf-bchecking.rules, wf-pchecking.rules to /Users/simon/finance/2026/2026.journal
+```
+
+hledger ui is a terminal UI, requiring less typing:
+
+```
+$ hledger ui --help
+hledger-ui [OPTIONS] [--cash|--bs|--is|--all|--register=ACCT] [QUERY]
+  browse accounts, postings and entries in a full-window TUI
+...
+```
+
+hledger web is a web UI you can use locally or over the internet.
+You can see a read-only instance with more complex data at 
+**[demo.hledger.org](https://demo.hledger.org)**.
+
 ```
 $ hledger web
 ...
@@ -197,23 +223,47 @@ This server will exit after 2m with no browser windows open (or press ctrl-c)
 Opening web browser...
 ```
 
-</div>
+The help command is a quick way to view docs.
 
-hledger web is a simple web UI you can use locally or over the internet.
-You can see a read-only instance with more complex data at 
-**[demo.hledger.org](https://demo.hledger.org)**.
+```
+$ hledger help impor
+"impor" matches several manual sections; please be more specific:
+  Deduplicating, importing
+  import
+  Default import sources
+  Import dry run
+  First import
+  Importing balance assignments
+  Import and commodity styles
+  Import archiving
+  Import special cases
+  Import configurations to avoid
+```
+```
+$ hledger help examples import
 
-<!-- </details> -->
+  Import new transactions from one or more data files to the main journal.
+  More information: <https://hledger.org/hledger.html#import>.
 
-**Get started**
+  Import new transactions from `bank.csv`, using `bank.csv.rules` to convert:
+
+      hledger import path/to/bank.csv
+
+  Show what would be imported from these two files, without doing anything:
+
+      hledger import path/to/bank1.csv path/to/bank2.csv --dry-run
+...
+```
+
+### Get started
 
 Try it for yourself:
 
 - **[Install](install.md)** - quickly get hledger installed. Here are [release notes](relnotes.md).
-- **[Docs](doc.md)** - many learning resources. **[hledger by example](hledger-by-example.md)** is a good place to start.
+- **[Docs](doc.md)** - many learning resources. **[hledger by example](hledger-by-example.md)** is another good place to start.
 - **[Support](support.md)** - ask questions or share feedback.
 
-**Get involved**
+### Get involved
 
 Would you like to help ?
 
@@ -223,13 +273,14 @@ Would you like to help ?
 - **[Contributor Quick Start](CONTRIBUTING.md)** and **[Developer docs](dev.md)**.
 - **[CREDITS](CREDITS.md)** shows many of the people who have contributed code over the years.
 
-<b>Site tips</b>
+### Site tips
 
-Use the three-lines button at top left (or the **s** access key) to toggle the site navigation sidebar.
+<ul>
+<li> 
 
-<!-- <details>
-<summary>Click for more..</summary>
-<br> -->
+Use the three-lines button at the top of the page (or the **s** access key) to toggle the site navigation sidebar.
+
+<li> 
 
 [Access keys](https://en.wikipedia.org/wiki/Access_key#Access_in_different_browsers):
 **1** home,
@@ -242,14 +293,18 @@ Use the three-lines button at top left (or the **s** access key) to toggle the s
 **e** edit \
 You can also press the **left** or **right** arrow keys to step through pages.
 
-For quicker browsing, configure these bookmark keywords in your browser:
+<li>
+
+For quicker browsing, you could configure these bookmark keywords in your browser.
+
+<details><summary> Show: </summary>
 
 - **h** PAGE  -> `https://hledger.org/PAGE.html`
 - **hm** TOPIC -> `https://hledger.org/hledger.html#TOPIC`
 - **hs** TOPIC -> `https://hledger.org/?search=TOPIC`
 - **hi** NUM   -> `https://github.com/simonmichael/hledger/issues/NUM`
 - **hinew**  -> `https://github.com/simonmichael/hledger/issues/new`
-
-<!-- </details> -->
+</details>
+</ul>
 
 <script src="js/quotes.js"></script>
