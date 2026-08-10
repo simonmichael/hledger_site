@@ -68,14 +68,16 @@ Robust, friendly, fast,<br>plain text accounting.
 
 ----
 
-**hledger** is friendly, fast, and dependable accounting software for tracking
-money, investments, cryptocurrencies, time, or any countable commodity.
-It uses human-readable **[plain text data](https://plaintextaccounting.org)** that you control.
+**hledger** is friendly, fast, and dependable accounting software, for both simple and complex finances. 
+It tracks money, investments, cryptocurrencies, time, or any countable commodity,
+using human-readable **[plain text data](https://plaintextaccounting.org)** that you control.
 
-You can import CSV data from banks, or enter data via web/terminal interfaces or your favorite text editor.
-hledger provides powerful reports and scales smoothly from simple to sophisticated needs.
-It works well with version control, scripts, and LLMs.
-Read more at **[Why hledger ?](why.md)** and **[FAQ](faq.md)**.
+You can enter data with your favorite text editor or a UI, or import data from banks and other places.
+You can use just hledger and nothing else, or combine it with other tools, like version control, scripts, and LLMs.
+
+hledger is Free Software created by [Simon Michael](https://joyful.com) and [contributors](CREDITS.md),
+supported and improving continuously since its first release in 2007.
+You can read more about it at **[Why hledger ?](why.md)** and **[FAQ](faq.md)**.
 
 ### A quick example
 
@@ -83,80 +85,108 @@ Transactions are recorded in a plain text file.
 This simple format, invented by the Ledger project, is the key
 to understanding Plain Text Accounting and Double Entry Bookkeeping:
 
+<!-- keep synced: home-page-example.journal -->
 ```journal
 ; ~/.hledger.journal (or $LEDGER_FILE)
 
-2025-12-01 Starting balance
-    equity            $-1000     ; <- $1000 moves from (-) the "equity" account
-    assets:checking    $1000     ; <- to (+) the "assets:checking" account
+2025-12-01 set up starting balances
+    equity            $-1000     ; $1000 moves from the "equity" account (- means from)
+    assets:checking    $1000     ; to the "assets:checking" account      (+ means to)
+    assets:cash           $0
 
-2025-12-02 Grocery store
-    assets:checking              ; <- a missing amount is inferred ($-64.50)
-    expenses:groceries  $64.50
+2025-12-01 cash gift received
+    income:gifts        $-50     ; $50 from the "income:gifts" account
+    assets:wallet        $50     ; to the "assets:wallet" account
 
-2025-12-03 Client payment
+2025-12-02 rent paid
+    assets:checking              ; a missing amount is inferred ($-800 here)
+    expenses:rent       $800
+
+2025-12-03 Grocery store
+    assets:checking              ; ($-64.50 here)
+    expenses:groceries   $54.50
+    expenses:home care    $7
+    expenses:snacks       $3
+
+2025-12-04 Client payment received
     income:consulting
     assets:checking    $1500
 
-2025-12-04 Rent
-    assets:checking
-    expenses:rent     $800
 ```
 
 This file is all you need. From it, hledger generates precise reports:
 
 ```
-$ hledger aregister assets
-Transactions in assets and subaccounts:
-2025-12-01 Starting balance   equity                  $1000.00      $1000.00
-2025-12-02 Grocery store      ex:groceries             $-64.50       $935.50
-2025-12-03 Client payment     in:consulting           $1500.00      $2435.50
-2025-12-04 Rent               ex:rent                 $-800.00      $1635.50
+$ hledger aregister checking
+Transactions in assets:checking and subaccounts:
+2025-12-01 set up starting b..  equity, as:cash           $1000.00      $1000.00
+2025-12-02 rent paid            ex:rent                   $-800.00       $200.00
+2025-12-03 Grocery store        ex:groceries, ex:h..       $-64.50       $135.50
+2025-12-04 Client payment re..  in:consulting             $1500.00      $1635.50
 ```
 ```
-$ hledger balance
-            $1635.50  assets:checking
-           $-1000.00  equity
-              $64.50  expenses:groceries
-             $800.00  expenses:rent
-           $-1500.00  income:consulting
---------------------
-                   0
-```
-```
-$ hledger is --pretty --tree --daily --row-total --average --begin 2025/12/2
-Daily Income Statement 2025-12-02..2025-12-04
+$ hledger bs
+Balance Sheet 2025-12-04
 
-┌───────────────────╥────────────┬────────────┬────────────┬──────────┬─────────┐
-│                   ║ 2025-12-02 │ 2025-12-03 │ 2025-12-04 │    Total │ Average │
-╞═══════════════════╬════════════╪════════════╪════════════╪══════════╪═════════╡
-│ Revenues          ║            │            │            │          │         │
-├───────────────────╫────────────┼────────────┼────────────┼──────────┼─────────┤
-│ income:consulting ║          0 │   $1500.00 │          0 │ $1500.00 │ $500.00 │
-├───────────────────╫────────────┼────────────┼────────────┼──────────┼─────────┤
-│                   ║          0 │   $1500.00 │          0 │ $1500.00 │ $500.00 │
-╞═══════════════════╬════════════╪════════════╪════════════╪══════════╪═════════╡
-│ Expenses          ║            │            │            │          │         │
-├───────────────────╫────────────┼────────────┼────────────┼──────────┼─────────┤
-│ expenses          ║     $64.50 │          0 │    $800.00 │  $864.50 │ $288.17 │
-│   groceries       ║     $64.50 │          0 │          0 │   $64.50 │  $21.50 │
-│   rent            ║          0 │          0 │    $800.00 │  $800.00 │ $266.67 │
-├───────────────────╫────────────┼────────────┼────────────┼──────────┼─────────┤
-│                   ║     $64.50 │          0 │    $800.00 │  $864.50 │ $288.17 │
-╞═══════════════════╬════════════╪════════════╪════════════╪══════════╪═════════╡
-│ Net:              ║    $-64.50 │   $1500.00 │   $-800.00 │  $635.50 │ $211.83 │
-└───────────────────╨────────────┴────────────┴────────────┴──────────┴─────────┘
+                 || 2025-12-04 
+=================++============
+ Assets          ||            
+-----------------++------------
+ assets:checking ||   $1635.50 
+ assets:wallet   ||     $50.00 
+-----------------++------------
+                 ||   $1685.50 
+=================++============
+ Liabilities     ||            
+-----------------++------------
+-----------------++------------
+                 ||          0 
+=================++============
+ Net:            ||   $1685.50 
 ```
+```
+$ hledger is --pretty --tree --daily --row-total --average --sort-amount
+Daily Income Statement 2025-12-01..2025-12-04
+
+┌──────────────╥────────────┬────────────┬────────────┬────────────┬──────────┬─────────┐
+│              ║ 2025-12-01 │ 2025-12-02 │ 2025-12-03 │ 2025-12-04 │    Total │ Average │
+╞══════════════╬════════════╪════════════╪════════════╪════════════╪══════════╪═════════╡
+│ Revenues     ║            │            │            │            │          │         │
+├──────────────╫────────────┼────────────┼────────────┼────────────┼──────────┼─────────┤
+│ income       ║     $50.00 │          0 │          0 │   $1500.00 │ $1550.00 │ $387.50 │
+│   consulting ║          0 │          0 │          0 │   $1500.00 │ $1500.00 │ $375.00 │
+│   gifts      ║     $50.00 │          0 │          0 │          0 │   $50.00 │  $12.50 │
+├──────────────╫────────────┼────────────┼────────────┼────────────┼──────────┼─────────┤
+│              ║     $50.00 │          0 │          0 │   $1500.00 │ $1550.00 │ $387.50 │
+╞══════════════╬════════════╪════════════╪════════════╪════════════╪══════════╪═════════╡
+│ Expenses     ║            │            │            │            │          │         │
+├──────────────╫────────────┼────────────┼────────────┼────────────┼──────────┼─────────┤
+│ expenses     ║          0 │    $800.00 │     $64.50 │          0 │  $864.50 │ $216.12 │
+│   rent       ║          0 │    $800.00 │          0 │          0 │  $800.00 │ $200.00 │
+│   groceries  ║          0 │          0 │     $54.50 │          0 │   $54.50 │  $13.62 │
+│   home care  ║          0 │          0 │      $7.00 │          0 │    $7.00 │   $1.75 │
+│   snacks     ║          0 │          0 │      $3.00 │          0 │    $3.00 │   $0.75 │
+├──────────────╫────────────┼────────────┼────────────┼────────────┼──────────┼─────────┤
+│              ║          0 │    $800.00 │     $64.50 │          0 │  $864.50 │ $216.12 │
+╞══════════════╬════════════╪════════════╪════════════╪════════════╪══════════╪═════════╡
+│ Net:         ║     $50.00 │   $-800.00 │    $-64.50 │   $1500.00 │  $685.50 │ $171.38 │
+└──────────────╨────────────┴────────────┴────────────┴────────────┴──────────┴─────────┘
+```
+```
+$ hledger is -tDTAS -o foo.html
+```
+<table><tr><th colspan="7" style="text-align:left"><h2>Daily Income Statement 2025-12-01..2025-12-04</h2></th></tr><tr><th></th><th>2025-12-01</th><th>2025-12-02</th><th>2025-12-03</th><th>2025-12-04</th><th>Total</th><th>Average</th></tr><tr><td colspan="7" class="account"><b>Revenues</b></td></tr><tr><td class="account">income</td><td align="right" class="amount">$50.00</td><td align="right" class="amount">0</td><td align="right" class="amount">0</td><td align="right" class="amount">$1500.00</td><td align="right" class="amount rowtotal">$1550.00</td><td align="right" class="amount rowaverage">$387.50</td></tr><tr><td class="account">  consulting</td><td align="right" class="amount">0</td><td align="right" class="amount">0</td><td align="right" class="amount">0</td><td align="right" class="amount">$1500.00</td><td align="right" class="amount rowtotal">$1500.00</td><td align="right" class="amount rowaverage">$375.00</td></tr><tr><td class="account">  gifts</td><td align="right" class="amount">$50.00</td><td align="right" class="amount">0</td><td align="right" class="amount">0</td><td align="right" class="amount">0</td><td align="right" class="amount rowtotal">$50.00</td><td align="right" class="amount rowaverage">$12.50</td></tr><tr><td style="border-top:double black" class="account"><b>Total:</b></td><td style="border-top:double black" align="right" class="amount coltotal"><b>$50.00</b></td><td style="border-top:double black" align="right" class="amount coltotal"><b>0</b></td><td style="border-top:double black" align="right" class="amount coltotal"><b>0</b></td><td style="border-top:double black" align="right" class="amount coltotal"><b>$1500.00</b></td><td style="border-top:double black" align="right" class="amount coltotal"><b>$1550.00</b></td><td style="border-top:double black" align="right" class="amount colaverage"><b>$387.50</b></td></tr><tr><td colspan="7"> </td></tr><tr><td colspan="7" class="account"><b>Expenses</b></td></tr><tr><td class="account">expenses</td><td align="right" class="amount">0</td><td align="right" class="amount">$800.00</td><td align="right" class="amount">$64.50</td><td align="right" class="amount">0</td><td align="right" class="amount rowtotal">$864.50</td><td align="right" class="amount rowaverage">$216.12</td></tr><tr><td class="account">  rent</td><td align="right" class="amount">0</td><td align="right" class="amount">$800.00</td><td align="right" class="amount">0</td><td align="right" class="amount">0</td><td align="right" class="amount rowtotal">$800.00</td><td align="right" class="amount rowaverage">$200.00</td></tr><tr><td class="account">  groceries</td><td align="right" class="amount">0</td><td align="right" class="amount">0</td><td align="right" class="amount">$54.50</td><td align="right" class="amount">0</td><td align="right" class="amount rowtotal">$54.50</td><td align="right" class="amount rowaverage">$13.62</td></tr><tr><td class="account">  home care</td><td align="right" class="amount">0</td><td align="right" class="amount">0</td><td align="right" class="amount">$7.00</td><td align="right" class="amount">0</td><td align="right" class="amount rowtotal">$7.00</td><td align="right" class="amount rowaverage">$1.75</td></tr><tr><td class="account">  snacks</td><td align="right" class="amount">0</td><td align="right" class="amount">0</td><td align="right" class="amount">$3.00</td><td align="right" class="amount">0</td><td align="right" class="amount rowtotal">$3.00</td><td align="right" class="amount rowaverage">$0.75</td></tr><tr><td style="border-top:double black" class="account"><b>Total:</b></td><td style="border-top:double black" align="right" class="amount coltotal"><b>0</b></td><td style="border-top:double black" align="right" class="amount coltotal"><b>$800.00</b></td><td style="border-top:double black" align="right" class="amount coltotal"><b>$64.50</b></td><td style="border-top:double black" align="right" class="amount coltotal"><b>0</b></td><td style="border-top:double black" align="right" class="amount coltotal"><b>$864.50</b></td><td style="border-top:double black" align="right" class="amount colaverage"><b>$216.12</b></td></tr><tr><td colspan="7"> </td></tr><tr><td style="border-top:double black" class="account"><b>Net:</b></td><td style="border-top:double black" align="right" class="amount coltotal"><b>$50.00</b></td><td style="border-top:double black" align="right" class="amount coltotal"><b>$-800.00</b></td><td style="border-top:double black" align="right" class="amount coltotal"><b>$-64.50</b></td><td style="border-top:double black" align="right" class="amount coltotal"><b>$1500.00</b></td><td style="border-top:double black" align="right" class="amount coltotal"><b>$685.50</b></td><td style="border-top:double black" align="right" class="amount colaverage"><b>$171.38</b></td></tr></table>
 
 It can check for many kinds of error:
 
 ```
 $ hledger check --strict
-hledger: Error: /Users/simon/.hledger.journal:2:
-  | 2025-12-01 Starting balance
-2 |     equity                   $-1000
-  |                              ^^^^^^
-  |     assets:checking           $1000
+hledger: Error: /Users/simon/.hledger.journal:4:
+  | 2025-12-01 set up starting balances
+4 |     equity                                    $-1000  ; $1000 moves from the "equity" account (- means from)
+  |                                               ^^^^^^
+  |     assets:checking                            $1000  ; to the "assets:checking" account      (+ means to)
+  |     assets:cash                                   $0
 
 Strict commodity checking is enabled, and
 commodity "$" has not been declared.
@@ -172,19 +202,39 @@ The add command walks you through adding a transaction:
 $ hledger add
 Adding transactions to journal file /Users/simon/.hledger.journal
 ...
-Date [2025-12-13]:
-Description: groc
+Date [2025-12-13]: 
+Description: groceries
 Using this similar transaction for defaults:
 2025-12-02 Grocery store
-    assets:checking            $-64.50
-    expenses:groceries          $64.50
+    assets:checking                             $-64.50  ; a missing amount is inferred ($-64.50 here)
+    expenses:groceries                           $54.50
+    expenses:home care                            $7
+    expenses:snacks                               $3
 
-Account 1 [assets:checking]:
-Amount  1 [$-64.50]: _
+Account 1 [assets:checking]: 
+Amount  1 [$-64.50]: $-85
+Account 2 [expenses:groceries]: 
+Amount  2 [$85]: $75.10
+Account 3 [expenses:home care]: expenses:misc
+Amount  3 [$9.90]: 
+Account 4 (or . to finish this transaction) [expenses:snacks]: .
+2025-12-13 groceries
+    assets:checking                             $-85
+    expenses:groceries                           $75.10
+    expenses:misc                                 $9.90
+
+Save this transaction to the journal ? [y]: 
 ```
 
-The get and import commands, suitably configured, can make importing from financial institutions simple.
+The get and import commands, with a little configuration, simplify importing from financial institutions.
 
+```
+$ hledger import --get
+no /Users/simon/data/getdata script, skipping data fetch
+no /Users/simon/prices/getprices script, skipping prices fetch
+hledger: Error: please specify one or more data files to import from,
+or add .rules files in a rules/ directory next to the journal.
+```
 ```
 $ hledger import --get
 cd /Users/simon/finance/2026/data && getdata
@@ -211,8 +261,8 @@ hledger-ui [OPTIONS] [--cash|--bs|--is|--all|--register=ACCT] [QUERY]
 ...
 ```
 
-hledger web is a web UI you can use locally or over the internet.
-You can see a read-only instance with more complex data at 
+hledger web is a web UI, so you don't have to use the terminal.
+You can see a read-only instance with more complex data here:
 **[demo.hledger.org](https://demo.hledger.org)**.
 
 ```
