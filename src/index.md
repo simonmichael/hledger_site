@@ -177,7 +177,7 @@ Daily Income Statement 2025-12-01..2025-12-04
 ```
 in multiple formats:
 ```
-$ hledger help | grep formats
+$ hledger help | grep formats   # hledger main
 Input formats   journal csv tsv ssv rules timeclock timedot
 Output formats  txt html journal csv tsv fods ledger beancount sql json
 ```
@@ -238,14 +238,14 @@ Save this transaction to the journal ? [y]:
 The get and import commands, with a little configuration, simplify importing from financial institutions.
 
 ```
-$ hledger import --get
+$ hledger import --get   # hledger 1.99.3
 no /Users/simon/data/getdata script, skipping data fetch
 no /Users/simon/prices/getprices script, skipping prices fetch
 hledger: Error: please specify one or more data files to import from,
 or add .rules files in a rules/ directory next to the journal.
 ```
 ```
-$ hledger import --get
+$ hledger import --get   # hledger 1.99.3
 cd /Users/simon/finance/2026/data && getdata
 getprices USD EUR 2026-01-01 2026-08-09 >/Users/simon/finance/2026/prices/EUR.prices
 ..
@@ -264,7 +264,7 @@ imported 8 new transactions from boi-ichecking.rules, chase.rules, paypal.rules,
 Everything is documented, and the docs are easy to find.<!-- , and the help command is a quick way to view docs. -->
 
 ```
-$ hledger help impor
+$ hledger help impor   # hledger main
 "impor" matches several manual sections; please be more specific:
   Deduplicating, importing
   import
@@ -278,7 +278,7 @@ $ hledger help impor
   Import configurations to avoid
 ```
 ```
-$ hledger help examples import
+$ hledger help examples import   # hledger main
 
   Import new transactions from one or more data files to the main journal.
   More information: <https://hledger.org/hledger.html#import>.
