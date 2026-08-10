@@ -68,9 +68,10 @@ Robust, friendly, fast,<br>plain text accounting.
 
 ----
 
-**hledger** is friendly, fast, and dependable accounting software, for both simple and complex finances. 
+**hledger** is friendly, fast, dependable, cross platform accounting software.
 It tracks money, investments, cryptocurrencies, time, or any countable commodity,
 using human-readable **[plain text data](https://plaintextaccounting.org)** that you control.
+It works well for both simple and complex finances. 
 
 You can download one binary and use hledger with nothing else needed;
 or combine it with other tools, like version control, scripts, and LLMs.
