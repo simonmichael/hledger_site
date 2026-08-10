@@ -72,8 +72,10 @@ Robust, friendly, fast,<br>plain text accounting.
 It tracks money, investments, cryptocurrencies, time, or any countable commodity,
 using human-readable **[plain text data](https://plaintextaccounting.org)** that you control.
 
-You can enter data with your favorite text editor or a UI, or import data from banks and other places.
-You can use just hledger and nothing else, or combine it with other tools, like version control, scripts, and LLMs.
+You can download one binary and use hledger with nothing else needed;
+or combine it with other tools, like version control, scripts, and LLMs.
+You can enter data with your favorite text editor, or use a UI,
+or import data from banks and other places.
 
 hledger is Free Software created by [Simon Michael](https://joyful.com) and [contributors](CREDITS.md),
 supported and improving continuously since its first release in 2007.
@@ -81,7 +83,7 @@ You can read more about it at **[Why hledger ?](why.md)** and **[FAQ](faq.md)**.
 
 ### A quick example
 
-Transactions are recorded in a plain text file.
+Transactions are movements of money, recorded in a plain text file.
 This simple format, invented by the Ledger project, is the key
 to understanding Plain Text Accounting (and double entry bookkeeping):
 
@@ -172,12 +174,18 @@ Daily Income Statement 2025-12-01..2025-12-04
 │ Net:         ║     $50.00 │   $-800.00 │   $1500.00 │    $-64.50 │  $685.50 │ $171.38 │
 └──────────────╨────────────┴────────────┴────────────┴────────────┴──────────┴─────────┘
 ```
+in multiple formats:
+```
+$ hledger help | grep formats
+Input formats   journal csv tsv ssv rules timeclock timedot
+Output formats  txt html journal csv tsv fods ledger beancount sql json
+```
 ```
 $ hledger is -tDTAS -o foo.html
 ```
 <table><tr><th colspan="7" style="text-align:left"><h2>Daily Income Statement 2025-12-01..2025-12-04</h2></th></tr><tr><th></th><th>2025-12-01</th><th>2025-12-02</th><th>2025-12-03</th><th>2025-12-04</th><th>Total</th><th>Average</th></tr><tr><td colspan="7" class="account"><b>Revenues</b></td></tr><tr><td class="account">income</td><td align="right" class="amount">$50.00</td><td align="right" class="amount">0</td><td align="right" class="amount">$1500.00</td><td align="right" class="amount">0</td><td align="right" class="amount rowtotal">$1550.00</td><td align="right" class="amount rowaverage">$387.50</td></tr><tr><td class="account">  consulting</td><td align="right" class="amount">0</td><td align="right" class="amount">0</td><td align="right" class="amount">$1500.00</td><td align="right" class="amount">0</td><td align="right" class="amount rowtotal">$1500.00</td><td align="right" class="amount rowaverage">$375.00</td></tr><tr><td class="account">  gifts</td><td align="right" class="amount">$50.00</td><td align="right" class="amount">0</td><td align="right" class="amount">0</td><td align="right" class="amount">0</td><td align="right" class="amount rowtotal">$50.00</td><td align="right" class="amount rowaverage">$12.50</td></tr><tr><td style="border-top:double black" class="account"><b>Total:</b></td><td style="border-top:double black" align="right" class="amount coltotal"><b>$50.00</b></td><td style="border-top:double black" align="right" class="amount coltotal"><b>0</b></td><td style="border-top:double black" align="right" class="amount coltotal"><b>$1500.00</b></td><td style="border-top:double black" align="right" class="amount coltotal"><b>0</b></td><td style="border-top:double black" align="right" class="amount coltotal"><b>$1550.00</b></td><td style="border-top:double black" align="right" class="amount colaverage"><b>$387.50</b></td></tr><tr><td colspan="7"> </td></tr><tr><td colspan="7" class="account"><b>Expenses</b></td></tr><tr><td class="account">expenses</td><td align="right" class="amount">0</td><td align="right" class="amount">$800.00</td><td align="right" class="amount">0</td><td align="right" class="amount">$64.50</td><td align="right" class="amount rowtotal">$864.50</td><td align="right" class="amount rowaverage">$216.12</td></tr><tr><td class="account">  rent</td><td align="right" class="amount">0</td><td align="right" class="amount">$800.00</td><td align="right" class="amount">0</td><td align="right" class="amount">0</td><td align="right" class="amount rowtotal">$800.00</td><td align="right" class="amount rowaverage">$200.00</td></tr><tr><td class="account">  groceries</td><td align="right" class="amount">0</td><td align="right" class="amount">0</td><td align="right" class="amount">0</td><td align="right" class="amount">$54.50</td><td align="right" class="amount rowtotal">$54.50</td><td align="right" class="amount rowaverage">$13.62</td></tr><tr><td class="account">  home care</td><td align="right" class="amount">0</td><td align="right" class="amount">0</td><td align="right" class="amount">0</td><td align="right" class="amount">$7.00</td><td align="right" class="amount rowtotal">$7.00</td><td align="right" class="amount rowaverage">$1.75</td></tr><tr><td class="account">  snacks</td><td align="right" class="amount">0</td><td align="right" class="amount">0</td><td align="right" class="amount">0</td><td align="right" class="amount">$3.00</td><td align="right" class="amount rowtotal">$3.00</td><td align="right" class="amount rowaverage">$0.75</td></tr><tr><td style="border-top:double black" class="account"><b>Total:</b></td><td style="border-top:double black" align="right" class="amount coltotal"><b>0</b></td><td style="border-top:double black" align="right" class="amount coltotal"><b>$800.00</b></td><td style="border-top:double black" align="right" class="amount coltotal"><b>0</b></td><td style="border-top:double black" align="right" class="amount coltotal"><b>$64.50</b></td><td style="border-top:double black" align="right" class="amount coltotal"><b>$864.50</b></td><td style="border-top:double black" align="right" class="amount colaverage"><b>$216.12</b></td></tr><tr><td colspan="7"> </td></tr><tr><td style="border-top:double black" class="account"><b>Net:</b></td><td style="border-top:double black" align="right" class="amount coltotal"><b>$50.00</b></td><td style="border-top:double black" align="right" class="amount coltotal"><b>$-800.00</b></td><td style="border-top:double black" align="right" class="amount coltotal"><b>$1500.00</b></td><td style="border-top:double black" align="right" class="amount coltotal"><b>$-64.50</b></td><td style="border-top:double black" align="right" class="amount coltotal"><b>$685.50</b></td><td style="border-top:double black" align="right" class="amount colaverage"><b>$171.38</b></td></tr></table>
 
-It can check for many kinds of error:
+It can check that your data is correct, in many ways:
 
 ```
 $ hledger check --strict
@@ -252,28 +260,6 @@ archiving /Users/simon/finance/2026/data/archive/wf-pchecking.2026-08-09.csv
 imported 8 new transactions from boi-ichecking.rules, chase.rules, paypal.rules, vanguard.rules, wf-bchecking.rules, wf-pchecking.rules to /Users/simon/finance/2026/2026.journal
 ```
 
-hledger ui is a terminal UI, so you don't have to type commands:
-
-```
-$ hledger ui --help
-hledger-ui [OPTIONS] [--cash|--bs|--is|--all|--register=ACCT] [QUERY]
-  browse accounts, postings and entries in a full-window TUI
-...
-```
-
-hledger web is a web UI, so you don't have to use the terminal.
-You can see a read-only instance with more complex data here:
-**[demo.hledger.org](https://demo.hledger.org)**.
-
-```
-$ hledger web
-...
-Serving web UI and json API at IP address 127.0.0.1 (local access), port 5000
-with base url http://127.0.0.1:5000
-This server will exit after 2m with no browser windows open (or press ctrl-c)
-Opening web browser...
-```
-
 Everything is documented, and the docs are easy to find.<!-- , and the help command is a quick way to view docs. -->
 
 ```
@@ -304,6 +290,28 @@ $ hledger help examples import
 
       hledger import path/to/bank1.csv path/to/bank2.csv --dry-run
 ...
+```
+
+hledger ui is a terminal UI, so you don't have to type commands:
+
+```
+$ hledger ui --help
+hledger-ui [OPTIONS] [--cash|--bs|--is|--all|--register=ACCT] [QUERY]
+  browse accounts, postings and entries in a full-window TUI
+...
+```
+
+hledger web is a web UI, so you don't have to use the terminal.
+You can see a read-only instance with more complex data here:
+**[demo.hledger.org](https://demo.hledger.org)**.
+
+```
+$ hledger web
+...
+Serving web UI and json API at IP address 127.0.0.1 (local access), port 5000
+with base url http://127.0.0.1:5000
+This server will exit after 2m with no browser windows open (or press ctrl-c)
+Opening web browser...
 ```
 
 ### Get started
