@@ -92,3 +92,17 @@ pre > code.language-timedot {
 summary {
   cursor: pointer;
 }
+
+#mdbook-sidebar .chapter-item {
+  padding-left: 0.5em;
+  margin-block-start: 0;
+}
+#mdbook-sidebar .section {
+  line-height: normal;
+  padding-inline-start: 1em;
+}
+#mdbook-sidebar div.on-this-page {
+  border-inline-start:none;
+  margin-left:0;
+  padding-left:0;
+}
