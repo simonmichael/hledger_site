@@ -12,7 +12,7 @@ See also:
 
 ## Differences
 
-hledger focusses strongly on UX, reliability, and real-world practicality.
+hledger focusses strongly on user experience, reliability, and real-world practicality.
 It aims to be somewhat useful to non-techies and accounting beginners, as well as experts.
 It is written in Haskell, which helps with correctness and maintainability.
 
