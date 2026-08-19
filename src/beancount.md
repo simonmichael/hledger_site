@@ -12,10 +12,6 @@ See also:
 
 ## Differences
 
-For some project and feature differences,
-see the [PTA apps](https://plaintextaccounting.org/#pta-apps) overview
-and [Feature matrix](https://plaintextaccounting.org/#pta-apps-feature-matrix).
-
 hledger focusses strongly on UX, reliability, and real-world practicality.
 It aims to be somewhat useful to non-techies and accounting beginners, as well as experts.
 It is written in Haskell, which helps with correctness and maintainability.
@@ -47,6 +43,9 @@ Compared to Beancount, hledger has
 [Beancount's journal syntax](https://beancount.github.io/docs/beancount_language_syntax.html) is similar to 
 [hledger's](hledger.md#journal),
 but different enough that neither can read the other's files directly.
+
+See also: the [PTA apps](https://plaintextaccounting.org/#pta-apps) overview
+and [Feature matrix](https://plaintextaccounting.org/#pta-apps-feature-matrix).
 
 
 ## hledger to Beancount
