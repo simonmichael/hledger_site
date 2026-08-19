@@ -22,25 +22,27 @@ It is written in Haskell, which helps with correctness and maintainability.
 
 Compared to hledger, Beancount has
 
-- a more active mail list
 - a better web app (Fava)
-- more automated lot tracking for investment transactions
-- a data format extendable by plugins
-- a Python API
+- more plugins, and more ease of customising by plugin
+- a more active mail list
+
+Also, compared to hledger 1, Beancount has more support for tracking investments and capital gains.
+(As of the hledger 2 prereleases (1.99.\*), it's the other way around.)
 
 Compared to Beancount, hledger has
 
-- more active chat rooms
-- more active maintenance and support. There's a new release every quarter.
-- good installability (a clear best version, a single binary to install, easy install on Windows)
+- more installability: a clear best version, a single binary to install, easy install on Windows
 - more speed
+- more built-in features: data entry, CSV import, Beancount/Ledger export, time logging, REPL, TUI, WUI, JSON server..
+- more ease of use: standard financial reports, multi-period reports, query syntax..
 - up-to-date docs
+- a single reference manual, viewable offline
+- fully documented data formats
 - more beginner resources
-- a single reference manual, viewable in multiple formats and offline
-- easier, built in features: data entry, CSV import, reports, query syntax, multi-period reports, time logging
-- multiple officially-supported user interfaces (CLI, TUI, web, HTTP-JSON), and export to Fava
-- fully documented future-proof data formats
-- a Haskell API
+- more active chat rooms
+- more maintenance and support
+- more frequent releases
+
 
 [Beancount's journal syntax](https://beancount.github.io/docs/beancount_language_syntax.html) is similar to 
 [hledger's](hledger.md#journal),
