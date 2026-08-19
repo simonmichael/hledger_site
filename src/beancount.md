@@ -23,7 +23,7 @@ Compared to hledger, Beancount has
 - a more active mail list
 
 Also, compared to hledger 1, Beancount has more support for tracking investments and capital gains.
-(As of the hledger 2 prereleases (1.99.\*), it's the other way around.)
+As of the hledger 2 prereleases, it's the other way around.
 
 Compared to Beancount, hledger has
 
