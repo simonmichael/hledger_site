@@ -29,7 +29,7 @@ Compared to Beancount, hledger has
 
 - more installability: a clear best version, a single binary to install, easy install on Windows
 - more speed
-- more built-in features: data entry, CSV import, Beancount/Ledger export, time logging, REPL, TUI, WUI, JSON server..
+- more built-in features: data entry, CSV import, time logging, REPL, TUI, WUI, JSON server..
 - more ease of use: standard financial reports, multi-period reports, query syntax..
 - up-to-date docs
 - a single reference manual, viewable offline
@@ -43,6 +43,8 @@ Compared to Beancount, hledger has
 [Beancount's journal syntax](https://beancount.github.io/docs/beancount_language_syntax.html) is similar to 
 [hledger's](hledger.md#journal),
 but different enough that neither can read the other's files directly.
+Beancount can export most data to hledger format,
+and hledger can export all data to Beancount format.
 
 See also: the [PTA apps](https://plaintextaccounting.org/#pta-apps) overview
 and [Feature matrix](https://plaintextaccounting.org/#pta-apps-feature-matrix).
