@@ -193,6 +193,7 @@ Work smoothly and steadily. Don't rush.
 I just discovered hledger about a month ago after being fed up with YNAB's costs and issues. I love hledger. It's amazing. Thank you for all your hard work! --megagram
 
 Use physical order to create mental order.
+--sm
 
 Thank you for writing hledger (and -ui and -web), it's wonderful work. --Michael Iles
 
@@ -265,6 +266,7 @@ Switched to beancount ... I really didn’t lose any of my reporting flows that 
 After coming from hledger, I did try firefly, but, stuck with hledger due to how amazingly powerful it is with nothing but a text input.
 
 A little daily-ish data-entry-and-reconciling ritual, with a pleasant tool setup, can be quite satisfying! I actually look forward to it. (That right there is part of my PTA success story. I used to suffer a lot of stress around all things finance.)
+--sm
 
 Thank you for creating such an awesome tool. I absolutely love hledger. I've been using it for more than a year, and I've become more responsible with my finances as a result. Before I started using hledger, I knew nothing about accounting. In fact, I was oblivious of my personal finances. Now, I've not only started keeping track of my finances, but I've also started investing and keeping a budget. --aaditmshah
 
@@ -736,7 +738,7 @@ Thanks for showing one way of simplifying a task the software service vendors wa
 
 As someone who's worked as an accountant since 1985, I'm going to have to play with this. --dingokidneys
 
-I've been using hledger + Plaid + OpenClaw to manage my finances and honestly it's replaced every budgeting app I've tried. Figured I'd share the setup. --Kenrick Beckett
+I've been using hledger + Plaid + OpenClaw to manage my finances and honestly it's replaced every budgeting app I've tried. --Kenrick Beckett
 
 The other task was getting an overview over company finances. [Openclaw] set up a hledger, added some amounts, and keeps track of burn! Won’t replace an accountant, but super convenient to have everything accessible via one chat instead of across multiple apps.
 
@@ -861,5 +863,50 @@ I'm a gamer. I don't play Halo, or Bejeweled. I play hledger.
 In this game, I look at every account, every transaction, and enter them into the ledger. 
 At the end, I check the balance on the ledger vs the account. If they match, I win!
 --ScottCDunn
+
+I've never looked forward to accounting like this.
+--ScottCDunn
+
+just recently I found the way to prepare for my business tax declaration with hledger by streamlining the tax form fields and (h)leder account names.
+Really love plaintext accounting. Am curious how it turns out.
+--mro
+
+I get so much joy from reading posts like this, where people find PTA for the first time.
+It totally revolutionized how I deal with money when I discovered it ~5 years ago and I'm glad it's still doing the same to people even today.
+--lalitm
+
+hledger is genuinely my favorite tool, and it's the only accounting software that stuck with me
+--olex
+
+hledger lover here. I use it for fairly basic bookkeeping, so i havent used the fancier features. Love the reporting tools.
+I made a very simple syntax file for vim too, so i catch things like not having two spaces between an account and an amount.
+--rondahlgren
+
+I do all my accounting with hledger too. 3 years and counting now!
+I have a cron job which periodically uses the hledger-output-to-beancount builtin command to write a beancount journal
+(plus some tweaking to make it right), and a fava server using that file.
+... Long story short, if I visit ledger.localhost on my machine I see fava up to date with my hledger finances.
+--romes
+
+hledger powers the accounting for my company. It's fantastic software and I recommend it highly.
+--jtobin
+
+having the accounting data in plain text files and using a tool like hledger to process them is really very convenient.
+All the usual CLI tools like grep, sed, awk, ... work like a charm.
+And you might think that it would be slow to parse all files each and every time hledger is invoked but it is actually quite okay:
+In my case, 8915 transactions spread over 72 files containing data from the last 13 years are parsed and processed in about a second!
+--gettalong
+
+If you use hledger to it's full extent you can see how much you really pay in taxes (down to the pennies if you choose) including payroll taxes, and what your real tax rate is. Great for personal finance nerds.
+--pragmatic
+
+Downloaded a CSV file from my bank, imported it into hledger, and I was good to go. 
+The wiki is also super detailed and user friendly, and everything is actively maintained (active commits in repository, updated wiki pages, etc). 
+--njha
+
+I’ve found the perfect balance with csv imports, specifically using the hledger csv importer.
+It provides tons of power to pre-categorize transactions, and human error of entering the wrong amount/date are completely eliminated!
+--benj
+
 
 `; const quotes = quotesmd.trim().split('\n\n').map(q => q.replace(/^\*|\*$/g, '').trim());
