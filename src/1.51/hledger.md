@@ -2779,7 +2779,7 @@ undeclared commodity symbol is used. (With one exception: zero amounts
 are always allowed to have no commodity symbol.) It works like [account
 error checking](#account-error-checking) (described above).
 
-## `decimal-mark` directive
+### `decimal-mark` directive
 
 You can use a `decimal-mark` directive to declare unambiguously which
 character (period or comma) represents a [decimal mark](#decimal-marks),
