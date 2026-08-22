@@ -18,7 +18,7 @@
 
 # HLEDGER BY EXAMPLE
 
-<!-- keep synced: hledger-by-example.md, SUMMARY.md, doc.md -->
+<!-- keep synced: hledger-by-example.md, SUMMARY.md -->
 - [hledger by example](hledger-by-example.md)
 - [Get hledger installed](get-hledger-installed.md)
 - [Check your setup](check-your-setup.md)

@@ -6,11 +6,37 @@ h3 { margin-top:0; }
 </style>
 
 hledger has a lot of documentation, to suit different needs.
-You don't need to read them all.
+(You don't need to read them all.)
 These docs can also be accessed from the site's sidebar.
 
 
-## Tutorials
+## Examples
+
+- **[hledger by example](hledger-by-example.md)**
+  is a book introducing hledger gradually, through examples.
+
+- At the command line, you can see brief examples by running `hledger --tldr`, `hledger balance --tldr`, etc
+  (or in newer versions, `hledger --examples`, `hledger balance --examples`).\
+  If you install a [tldr viewer](https://github.com/tealdeer-rs/tealdeer) you'll get better output.
+  Or, view them online:\
+  [hledger](https://tldr.inbrowser.app/pages/common/hledger), 
+  [hledger add](https://tldr.inbrowser.app/pages/common/hledger-add), 
+  [hledger accounts](https://tldr.inbrowser.app/pages/common/hledger-accounts), 
+  [hledger add](https://tldr.inbrowser.app/pages/common/hledger-add), 
+  [hledger aregister](https://tldr.inbrowser.app/pages/common/hledger-aregister), 
+  [hledger balance](https://tldr.inbrowser.app/pages/common/hledger-balance), 
+  [hledger balancesheet](https://tldr.inbrowser.app/pages/common/hledger-balancesheet), 
+  [hledger import](https://tldr.inbrowser.app/pages/common/hledger-import), 
+  [hledger incomestatement](https://tldr.inbrowser.app/pages/common/hledger-incomestatement), 
+  [hledger print](https://tldr.inbrowser.app/pages/common/hledger-print), 
+  [hledger-ui](https://tldr.inbrowser.app/pages/common/hledger-ui), 
+  [hledger-web](https://tldr.inbrowser.app/pages/common/hledger-web)
+
+- More example files can be found in the
+  [examples/](https://github.com/simonmichael/hledger/tree/main/examples) directory.
+
+
+## Intros
 
 Here are some beginner friendly, step by step tutorials.
 
@@ -20,8 +46,6 @@ Here are some beginner friendly, step by step tutorials.
 - [Tutorial: Import CSV data](import-csv.md)
 - **[Accounting basics for PTA users](accounting-pta.md)**
 - **[Tips for learning hledger](learn.md)**
-
-<!-- ## Quick starts -->
 
 Or if you're comfortable with the command line, you could try these:
 
@@ -46,29 +70,6 @@ Here are some notable blog posts/articles:
 
 ## Reference
 
-<!-- ## TLDR -->
-
-For brief command examples, use the built-in [tldr](https://tldr.sh) help:
-`hledger --tldr`, `hledger balance --tldr`, etc
-(or in newer versions: `hledger --examples`, `hledger balance --examples`).
-If you install a [tldr viewer](https://github.com/tealdeer-rs/tealdeer) you'll get better output.
-You can also <!-- run `tldr hledger[-COMMAND]`, or  --> view these online:
-
-- [hledger](https://tldr.inbrowser.app/pages/common/hledger) - 
-[hledger add](https://tldr.inbrowser.app/pages/common/hledger-add) - 
-[hledger accounts](https://tldr.inbrowser.app/pages/common/hledger-accounts) - 
-[hledger add](https://tldr.inbrowser.app/pages/common/hledger-add) - 
-[hledger aregister](https://tldr.inbrowser.app/pages/common/hledger-aregister) - 
-[hledger balance](https://tldr.inbrowser.app/pages/common/hledger-balance) - 
-[hledger balancesheet](https://tldr.inbrowser.app/pages/common/hledger-balancesheet) - 
-[hledger import](https://tldr.inbrowser.app/pages/common/hledger-import) - 
-[hledger incomestatement](https://tldr.inbrowser.app/pages/common/hledger-incomestatement) - 
-[hledger print](https://tldr.inbrowser.app/pages/common/hledger-print) - 
-[hledger-ui](https://tldr.inbrowser.app/pages/common/hledger-ui) - 
-[hledger-web](https://tldr.inbrowser.app/pages/common/hledger-web)
-
-<!-- ## Manuals -->
-
 The manuals are the authoritative hledger docs; you should skim their tables of contents at least.
 To view them offline, run commands like
 `hledger help`, `hledger help balance`, `hledger balance -h`, `man hledger`, `info hledger`, etc.
@@ -85,33 +86,6 @@ Some other useful reference docs:
 - [Plain Text Accounting FAQ](https://plaintextaccounting.org/FAQ)
 - [Why hledger ?](why.md)
 - [Developer docs](dev.md)
-
-## hledger by example
-
-This is a book introducing hledger gradually through examples.
-It's not finished; let us know what you'd like to see added.
-
-<!-- keep synced: hledger-by-example.md, SUMMARY.md, doc.md -->
-- **[hledger by example](hledger-by-example.md)**
-- [Get hledger installed](get-hledger-installed.md)
-- [Check your setup](check-your-setup.md)
-- [Start a journal](start-a-journal.md)
-- [Add a transaction: starting balances](add-a-transaction.md)
-- [Journal entries](journal-entries.md)
-- [Account names](account-names.md)
-- [More transactions](more-transactions.md)
-- [Overview of commands](commands.md)
-- [print: show whole transactions](print-.md)
-- [register: show detailed changes](register.md)
-- [balance: show account totals](balance.md)
-- [balancesheet: assets and liabilities](balancesheet.md)
-- [incomestatement: revenues and expenses](incomestatement.md)
-- [Reading CSV files](reading-csv-files.md)
-- [Importing new transactions](importing-new-transactions.md)
-- [Reading timeclock files](reading-timeclock-files.md)
-- [Reading timedot files](reading-timedot-files.md)
-
-More examples, not part of the book, can be found [below](#examples).
 
 ## Videos
 
