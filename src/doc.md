@@ -5,11 +5,12 @@ h2 { margin-top:2em; }
 h3 { margin-top:0; }
 </style>
 
-hledger has lots of docs, listed below and in the site's sidebar,
-covering different needs (you don't need to read all of them).
-You can also view some of these offline, from the command line.
+hledger has lots of docs, covering different needs.
+They are listed below, and also in the site's sidebar.
+(But don't worry - you don't need to read all of them.)
+You can read some of them offline too, using hledger's `help` command or `--help` flag.
 
-## Examples
+## Getting started
 
 - **[hledger by example](hledger-by-example.md)**
   is a book introducing hledger gradually, through examples.
@@ -31,13 +32,7 @@ You can also view some of these offline, from the command line.
   [hledger-ui](https://tldr.inbrowser.app/pages/common/hledger-ui), 
   [hledger-web](https://tldr.inbrowser.app/pages/common/hledger-web)
 
-- More example files can be found in the
-  [examples/](https://github.com/simonmichael/hledger/tree/main/examples) directory.
-
-
-## Intros
-
-Here are some beginner friendly, step by step tutorials:
+Or here are some beginner friendly tutorials, showing four ways of working with hledger:
 
 - [Tutorial: hledger add](add.md)
 - [Tutorial: hledger-ui](ui.md)
@@ -61,25 +56,25 @@ Or if you're comfortable with the command line, you could try these:
 - [hledger and Ledger](ledger.md) (if you know Ledger)
 - [hledger and Beancount](beancount.md) (if you know Beancount)
 
-Here are some notable blog posts/articles:
+Or, here are some notable blog posts/articles to read:
 
-- [Amitai Burstein: Why We Chose Plain Text Accounting with Hledger](https://www.gizra.com/content/plain-text-accounting-hledger/) - getting started; hledger-ui
-- [Teo Si-Yan: Making sense of your finances with hledger reports](https://teosiyan.com/2025/07/09/hledger-commands) - basic reports
-- [Matt Maguire: Plain Text Accounting with Emacs](https://www.teachmaths.org/20250423-pta-emacs/),
-  [part 2](https://www.teachmaths.org/20250424-pta-emacs2/),
+- [Sumner Evans: Plain Text Accounting is Pretty Cool](https://sumnerevans.com/posts/money/plain-text-accounting/)
+- [Amitai Burstein: Why We Chose Plain Text Accounting with Hledger](https://www.gizra.com/content/plain-text-accounting-hledger/)
+- [Teo Si-Yan: Making sense of your finances with hledger reports](https://teosiyan.com/2025/07/09/hledger-commands)
+- [Matt Maguire: Plain Text Accounting with Emacs](https://www.teachmaths.org/20250423-pta-emacs/) -
+  [part 2](https://www.teachmaths.org/20250424-pta-emacs2/) -
   [part 3](https://www.teachmaths.org/20250530-pta-emacs3/)
-- [Linux Magazine: Tracking your finances with plain text accounting](https://www.linux-magazine.com/Issues/2024/285/hledger)
+<!-- - [Linux Magazine: Tracking your finances with plain text accounting](https://www.linux-magazine.com/Issues/2024/285/hledger) -->
 
 ## Reference
 
 The manuals are the authoritative hledger docs.
-You should at least skim their tables of contents, to get an overview of hledger:
 
-- **[hledger manual](hledger.md)**
+- **[hledger manual](hledger.md)** (The big one! For an overview, go there, then look in the sidebar.)
 - **[hledger-ui manual](hledger-ui.md)**
 - **[hledger-web manual](hledger-web.md)**
 
-Or you can view them offline, using commands like:\
+You can also read these offline, using commands like:\
 `hledger help`, 
 `hledger help -l`, 
 `hledger help -l print`, 
@@ -98,11 +93,6 @@ Some other useful reference docs:
 
 Short videos:
 
-- nontproject intros
-  - [You Need to Know Double-Entry Bookkeeping for Personal Finance, part 1](https://www.youtube.com/watch?v=L-JdL7cCiSQ) (2026, 8m, Bangla)
-  - [You Need to Learn hledger for Personal Finance: Beginners Guide, part 2](https://www.youtube.com/watch?v=NERD28IGwRE) (2026, 20m, Bangla)
-  - [Generate hledger Reports Like a Pro: Beginners Guide, part 3](https://www.youtube.com/watch?v=P3aPgROtkUc) (2026, 15m, Bangla)
-- [TORGiren DevOpses: hledger part 1](https://www.youtube.com/watch?v=sq3E-TKufh0) (2026, 10m, Polish)
 - [Coder Kaylee: Hledger in 10 Minutes: The Ultimate CLI Tool](https://www.youtube.com/watch?v=hshDr2Af2RU) (2025, 5m)
 - [hledger fan: beginner lessons](https://youtube.com/channel/UCZLxXTjOqLzq4z5Jy0AyWSQ) (2019-2021, ~3m)
   - [The Basics: An hledger Transaction](https://www.youtube.com/watch?v=SSz09ThShrs)
@@ -122,13 +112,18 @@ Short videos:
   - [hledger: shortcuts part 3](https://www.youtube.com/watch?v=_3pHNICDgHc)
   - [hledger add](https://www.youtube.com/watch?v=oel7fBv1frI)
   - [hledger iadd](https://www.youtube.com/watch?v=ZuCT9EzryaI)
+- nontproject intros
+  - [You Need to Know Double-Entry Bookkeeping for Personal Finance, part 1](https://www.youtube.com/watch?v=L-JdL7cCiSQ) (2026, 8m, in bangla)
+  - [You Need to Learn hledger for Personal Finance: Beginners Guide, part 2](https://www.youtube.com/watch?v=NERD28IGwRE) (2026, 20m, in bangla)
+  - [Generate hledger Reports Like a Pro: Beginners Guide, part 3](https://www.youtube.com/watch?v=P3aPgROtkUc) (2026, 15m, in bangla)
+- [TORGiren DevOpses: hledger part 1](https://www.youtube.com/watch?v=sq3E-TKufh0) (2026, 10m, in polish)
 
 Longer talks:
 
-- [O Clementino: Faça o Emacs olhar para o dinheiro usando o Embark](https://www.youtube.com/watch?v=4pvjwgvOtgA) (2026, 16m, brazilian portuguese)
-- [O Clementino: Gerencie suas finanças como um hacker](https://www.youtube.com/watch?v=YG2I2Z8nfoo) (2026, 23m, brazilian portuguese)
+- [O Clementino: Faça o Emacs olhar para o dinheiro usando o Embark](https://www.youtube.com/watch?v=4pvjwgvOtgA) (2026, 16m, in brazilian portuguese)
+- [O Clementino: Gerencie suas finanças como um hacker](https://www.youtube.com/watch?v=YG2I2Z8nfoo) (2026, 23m, in brazilian portuguese)
 - [Youngbin Han @ FOSS for All](https://docs.google.com/presentation/d/17kkPlLOFhpwfEIhHfT0hJ1PRmZ6-Tq7JIAdTAhjp24A/preview?pru=AAABmo3qmB4*fWFiJB8Z7cZwQbc72JsTjA&slide=id.g38f1acd61f5_0_19)
-  (2025, slides, korean and english) \
+  (2025, slides, in korean and english) \
   Plain Text Accounting with hledger \
   with short videos of
   [add](https://www.youtube.com/watch?v=rh5EFnm0t_M) and
@@ -306,7 +301,7 @@ Other docs, tips, and notes, are collected here.
 
 ## See also...
 
-If you still haven't found what you're looking for, try these:
+If you still haven't found what you're looking for, try these: 
 
 - [Plain Text Accounting Cookbook](https://plaintextaccounting.org/Cookbook)
 - [PTA forum: hledger tag](https://forum.plaintextaccounting.org/tag/hledger)
