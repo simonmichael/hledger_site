@@ -5,10 +5,9 @@ h2 { margin-top:2em; }
 h3 { margin-top:0; }
 </style>
 
-hledger has a lot of documentation, to suit different needs.
-(You don't need to read them all.)
-These docs can also be accessed from the site's sidebar.
-
+hledger has lots of docs, listed below and in the site's sidebar,
+covering different needs (you don't need to read all of them).
+You can also view some of these offline, from the command line.
 
 ## Examples
 
@@ -38,26 +37,29 @@ These docs can also be accessed from the site's sidebar.
 
 ## Intros
 
-Here are some beginner friendly, step by step tutorials.
+Here are some beginner friendly, step by step tutorials:
 
 - [Tutorial: hledger add](add.md)
 - [Tutorial: hledger-ui](ui.md)
 - [Tutorial: hledger-web](web.md)
 - [Tutorial: Import CSV data](import-csv.md)
-- **[Accounting basics for PTA users](accounting-pta.md)**
-- **[Tips for learning hledger](learn.md)**
+
+And some general tips:
+
+- [Accounting basics for PTA users](accounting-pta.md)
+- [Tips for learning hledger](learn.md)
 
 Or if you're comfortable with the command line, you could try these:
 
-- [Home: A quick example](index.md)
+- [A quick example](index.md#a-quick-example) (on the home page)
 - [2 minute quick start](2-minute-quick-start.md)
 - [5 minute quick start](5-minute-quick-start.md)
 - [10 minute quick start](10-minute-quick-start.md)
 - [hledger manual: Common tasks](hledger.md#common-tasks)
 - [hledger manual: Journal cheatsheet](hledger.md#journal-cheatsheet)
 - [Workflows](workflows.md)
-- [hledger and Ledger](ledger.md), for Ledger users
-- [hledger and Beancount](beancount.md), for Beancount users
+- [hledger and Ledger](ledger.md) (if you know Ledger)
+- [hledger and Beancount](beancount.md) (if you know Beancount)
 
 Here are some notable blog posts/articles:
 
@@ -70,19 +72,24 @@ Here are some notable blog posts/articles:
 
 ## Reference
 
-The manuals are the authoritative hledger docs; you should skim their tables of contents at least.
-To view them offline, run commands like
-`hledger help`, `hledger help balance`, `hledger balance -h`, `man hledger`, `info hledger`, etc.
-Or view them online:
+The manuals are the authoritative hledger docs.
+You should at least skim their tables of contents, to get an overview of hledger:
 
 - **[hledger manual](hledger.md)**
 - **[hledger-ui manual](hledger-ui.md)**
 - **[hledger-web manual](hledger-web.md)**
 
+Or you can view them offline, using commands like:\
+`hledger help`, 
+`hledger help -l`, 
+`hledger help -l print`, 
+`hledger help print`, 
+`hledger print -h`
+
 Some other useful reference docs:
 
-- **[Release notes](relnotes.md)**
-- **[hledger FAQ](faq.md)**
+- [Release notes](relnotes.md)
+- [hledger FAQ](faq.md)
 - [Plain Text Accounting FAQ](https://plaintextaccounting.org/FAQ)
 - [Why hledger ?](why.md)
 - [Developer docs](dev.md)
