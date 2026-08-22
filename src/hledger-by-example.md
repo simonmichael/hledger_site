@@ -1,10 +1,12 @@
 # hledger by example
 
-A small but growing book introducing (some of) hledger, one step at a time.
+A small but growing book introducing hledger, one step at a time.
+(For other hledger docs, see [Docs](doc.md).)
 
-You can use the sidebar links, the left and right arrow buttons on this page,
-or the left and right arrow keys, to step through the pages.
-Eg press the right arrow key now to step to the next page.
+Reading the book in order is helpful, but not essential.
+You can use the the left and right arrow keys, 
+or the arrow buttons below, to step through the pages.
+Eg press the right arrow key now to see the next.
 
 <!-- keep synced: hledger-by-example.md, SUMMARY.md -->
 - [Get hledger installed](get-hledger-installed.md)
