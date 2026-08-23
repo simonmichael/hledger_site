@@ -26,10 +26,10 @@ Eg press the right arrow key now to see the next.
 - [Show assets and liabilities](balancesheet.md)
 - [Show revenues and expenses](incomestatement.md)
 - [Flexible account summing with `balance`](balance.md)
-- [Read CSV files](reading-csv-files.md)
+- [Read CSV files](read-csv-files.md)
 - [Import new transactions](import-new-transactions.md)
-- [Read timeclock files](reading-timeclock-files.md)
-- [Read timedot files](reading-timedot-files.md)
+- [Read timeclock files](read-timeclock-files.md)
+- [Read timedot files](read-timedot-files.md)
 <!--
 - [Account types]
 - [accounts: list accounts]
