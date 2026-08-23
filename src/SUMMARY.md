@@ -34,7 +34,7 @@
 - [Overview of commands](commands.md)
 - [Show whole transactions](print-.md)
 - [Show detailed changes](register.md)
-- [Accounting basics for PTA users](accounting-pta.md)
+- [Accounting basics for PTA users](accounting-basics.md)
 - [Show assets and liabilities](balancesheet.md)
 - [Show revenues and expenses](incomestatement.md)
 - [Flexible account summing](balance.md)

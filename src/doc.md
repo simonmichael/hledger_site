@@ -221,7 +221,7 @@ Other docs, tips, and notes, are collected here.
 
 #### Accounting and bookkeeping
 
-- [Accounting basics for PTA users](accounting-pta.md)
+- [Accounting basics for PTA users](accounting-basics.md)
 - [Accounting: further study](accounting.md)
 - [Common journal entries](common-journal-entries.md)
 - [PTA: Choosing cash or accrual](https://plaintextaccounting.org/#choosing-cash-vs-accrual)

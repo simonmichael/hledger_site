@@ -35,7 +35,7 @@ Here are a few VFAQs:
 
 [Accounting](https://en.wikipedia.org/wiki/Accounting) means keeping track of the flow and whereabouts of things you value, 
 such as money or time, and using this information for insight, planning and decision-making.
-Here's our [Accounting basics](accounting-pta.md)
+Here's our [Accounting basics](accounting-basics.md)
 and [Accounting: further study](accounting.md#accounting-links) pages.
 
 ### Why might I want to do accounting ?
@@ -356,7 +356,7 @@ use negative and positive numbers instead of credit and debit terminology.
 Certain hledger reports (`balancesheet`, `incomestatement`, `cashflow`)
 and flags (`--invert`) can show them as positive when needed.
 See: 
-- [Accounting basics for PTA users](accounting-pta.md)
+- [Accounting basics for PTA users](accounting-basics.md)
 - [PTA FAQ: Where are debits and credits ?](https://plaintextaccounting.org/FAQ#where-are-debits-and-credits)
 - [PTA FAQ: Why do some balances look negative ?](https://plaintextaccounting.org/FAQ#why-do-some-balances-look-negative)
 

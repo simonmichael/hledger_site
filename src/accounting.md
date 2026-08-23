@@ -1,7 +1,7 @@
 # Accounting: further study
 
 Here are some useful links to learn more about bookkeeping, accounting and finance in general,
-beyond the [Accounting basics for PTA users](accounting-pta.md).
+beyond the [Accounting basics for PTA users](accounting-basics.md).
 
 ## General
 
