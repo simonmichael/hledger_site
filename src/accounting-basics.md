@@ -1,8 +1,7 @@
 # Accounting basics for PTA users
 
-Here we'll give a quick hledger-oriented intro to some useful accounting concepts,
-using the journal file created in [Tutorial: hledger add](add.md).
-Also we'll discuss account hierarchy in hledger.
+An interlude: here is a quick intro to some useful accounting concepts,
+for hledger (and plain text accounting) users.
 
 
 ## Debits and Credits
@@ -74,9 +73,10 @@ $ hledger register desc:supermarket expenses
 But descriptions are irregular, so eg the report above misses
 [the $5 purchase on the following day](add.md#record-a-transaction-by-editing).
 
-Instead, bookkeepers usually subdivide the top-level accounts into subaccounts, subsubaccounts, etc.
+So we usually subdivide the top-level accounts into subaccounts, subsubaccounts, etc.
 which can be used in transactions to record more specific categories.
 This forms a hierarchy or tree of accounts, called the Chart of Accounts. 
+
 Here's a simple example where `assets`, `revenue` and `expenses` each have a few subaccounts:
 
 ```
@@ -94,40 +94,11 @@ expenses
   supplies
 ```
 
-In some organisations and accounting systems (eg, QuickBooks), the
-tree structure is de-emphasised, so the above is represented more
-like:
+You don't have to use a hierarchy; you may prefer a flat list of account names.
+But it helps keep things organised and precise.
 
-```
- Account name      Account type
- ------------------------------- 
- checking          ASSET
- cash              ASSET
- business income   REVENUE
- gifts received    REVENUE
- food              EXPENSE
- rent              EXPENSE
- supplies          EXPENSE
-```
-
-In others, the tree structure is encoded as decimal account numbers, something like this:
-
-```
-1000 assets
-1100   checking
-1200   cash
-2000 liabilities
-3000 equity
-4000 revenue
-4100   business income
-4200   gifts received
-5000 expenses
-5100   food
-5200   rent
-5300   supplies
-```
-
-With hledger, tree structure is implied by writing account names like `ACCOUNT:SUBACCOUNT`.
+With hledger, tree structure is implied by colons in account names.
+Eg `assets:checking` or `revenues:business income`.
 
 
 <br>
