@@ -5,7 +5,9 @@ And you'll want to have it installed somewhere in your system's PATH, so that yo
 
 [Install](install.md) shows all the ways to get hledger installed on your computer.
 But here's a quick way: install the official release binaries, 
-by copy/pasting the appropriate command below into a terminal window.
+by copy/pasting the appropriate command below into a [terminal] window.
+
+[terminal]: https://itconnect.uw.edu/learn/workshops/online-tutorials/web-publishing/what-is-a-terminal/
 
 On a Linux machine with an intel processor:
 ```

@@ -13,7 +13,7 @@ Eg press the right arrow key now to see the next.
 - [Get hledger installed](get-hledger-installed.md)
 - [Check your setup](check-your-setup.md)
 - [Start a journal](start-a-journal.md)
-- [Add a transaction: starting balances](add-a-transaction.md)
+- [Set starting balances](set-starting-balances.md)
 - [add: adding transactions](add.md)
 - [web: use the web interface](web.md)
 - [ui: use the terminal UI](ui.md)
