@@ -1,4 +1,4 @@
-# Importing new transactions
+# Import new transactions
 
 The [import](hledger.md#import) command detects just the new transactions in some input files,
 and adds them to the main journal.

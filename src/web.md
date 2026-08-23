@@ -1,7 +1,7 @@
-# web: use the web interface
+# Use the web UI
 
-[hledger-web](hledger-web.md) is hledger's web browser-based UI.
-It's probably the easiest way to get started with hledger.
+[hledger-web](hledger-web.md) is hledger's official web browser-based UI.
+It's simple but robust, and probably the easiest way to get started with hledger.
 Eg on windows, you can download and unpack hledger.zip and double click on hledger-web.exe.
 
 You can see screenshots below, or there's a live demo (in read-only mode) at

@@ -1,4 +1,4 @@
-# register: show detailed changes
+# Show detailed changes with `register`
 
 `register` shows individual postings, and their running total:
 ```

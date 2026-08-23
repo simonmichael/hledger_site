@@ -1,4 +1,4 @@
-# add: add transactions
+# Add transactions with `add`
 
 <!--
 We'll use hledger's `add` command to append a new transaction to the journal file,

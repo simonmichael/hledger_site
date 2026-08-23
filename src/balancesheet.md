@@ -1,7 +1,7 @@
-# balancesheet: assets and liabilities
+# Show assets and liabilities
 
-`balancesheet`, also known as `bs`, shares many of the features of the `balance` command, but it is simpler: 
-it shows historical balances of asset and liability accounts, each in their own section.
+The `balancesheet`command, usually abbreviated to `bs`,
+shows historical balances of asset and liability accounts, each in their own section.
 This and the next command we'll show are the two most important accounting reports.
 
 

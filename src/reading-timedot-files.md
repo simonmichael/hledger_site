@@ -1,4 +1,4 @@
-# Reading timedot files
+# Read timedot files
 
 Or in [timedot](hledger.md#timedot) format:
 

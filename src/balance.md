@@ -1,7 +1,12 @@
-# balance: show account totals
+# Flexible account summing with `balance`
 
+The `balance` command can show essentially the same information as `balancesheet` or `incomestatement`, 
+though without the subdivision by account types.
+It can also show other things.
+It is a flexible, general-purpose, per-account summing command, with a lot of options.
 
-`balance` shows (by default) the total *balance change* per account, usually for multiple accounts at once:
+By default it shows accounts and their *total balance change*,
+using the original simple output style used by Ledger's balance command (amounts on the left):
 
 ```
 $ hledger balance
@@ -17,9 +22,8 @@ $ hledger balance
                    0  
 ```
 
-The `balance` command is quite flexible.
-The above is its original output style (as in Ledger), with amounts on the left; it is simple.
-Specifying a *report interval*, like monthly, enables more flexible tabular output, with a title.
+Specifying a *report interval*, like `--monthly`/`-M` or `--yearly`/`-Y`, 
+enables more flexible tabular output, with a title.
 Eg here are the changes broken down by month:
 
 ```
@@ -269,9 +273,6 @@ Ending balances (historical) in 2025-01-01..2025-01-04:
  2025-01-03 || 1100 USD     -200 USD 
  2025-01-04 ||  850 USD     -200 USD 
 ```
-
-`balance` has a lot of options.
-Next, we'll see two specialised balance-like reports that are easier to use.
 
 <br>
 

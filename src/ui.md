@@ -1,6 +1,6 @@
-# ui: use the terminal UI
+# Use the terminal UI
 
-[hledger-ui](hledger-ui.md) is hledger's (default) TUI (a full-window terminal interface).
+[hledger-ui](hledger-ui.md) is hledger's official TUI (a full-window terminal interface).
 It's fast, efficient, and provides some different features compared to the web UI.
 
 ## Check your installation

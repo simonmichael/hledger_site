@@ -1,4 +1,4 @@
-# Reading timeclock files
+# Read timeclock files
 
 hledger can also read time logs, in [timeclock](hledger.md#timeclock) format:
 

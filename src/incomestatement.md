@@ -1,7 +1,7 @@
-# incomestatement: revenues and expenses
+# Show revenues and expenses
 
-`incomestatement`, also known as `is`, shares many of the features of the `balance` command, but it is simpler: 
-it shows changes in revenue (income) and expense accounts, each in their own section.
+The `incomestatement`command, usually abbreviated  to `is`, 
+shows changes in revenue (income) and expense accounts, each in their own section.
 This and `balancesheet` are the two most important financial reports.
 ```
 $ hledger is

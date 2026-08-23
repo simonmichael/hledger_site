@@ -1,4 +1,4 @@
-# Reading CSV files
+# Read CSV files
 
 Most banks and financial institutions provide data in CSV (comma-separated values, or character-separated values) format.
 hledger can read from any [CSV](hledger.md#csv) (or SSV, TSV, or other character-separated) file representing transactions. Eg:
