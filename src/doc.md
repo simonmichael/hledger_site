@@ -6,14 +6,13 @@ h3 { margin-top:0; }
 </style>
 
 hledger has lots of docs, covering different needs.
-(Don't worry, you don't need to read them all. And see [Tips for learning hledger](learn.md).)
+(If it seems like a lot, see [Tips for learning hledger](learn.md).)
+Here are three good places to start:
 
-For getting started, there are a few options.
+- **[hledger by example](hbe.md)** -
+  a book introducing hledger gradually, through examples.
 
-- **[hledger by example](hbe.md)**
-  is a book introducing hledger gradually, through examples.
-
-These intros assume you're comfortable with the command line; they go a little faster.
+Or one of these faster-paced intros:
 
 - **[A quick example](index.md#a-quick-example)** (on the home page)
 - [2 minute quick start](2-minute-quick-start.md)
@@ -26,11 +25,24 @@ These intros assume you're comfortable with the command line; they go a little f
 - [hledger and Ledger](ledger.md) (if you know Ledger)
 - [hledger and Beancount](beancount.md) (if you know Beancount)
 
-You can see brief examples at the command line,
-by running `hledger --tldr`, `hledger balance --tldr`, etc
-(or in newer versions: `hledger help examples`, `hledger help examples balance`).
+Or the complete, authoritative reference manuals:
+
+- **[hledger manual](hledger.md)**
+- [hledger-ui manual](hledger-ui.md)
+- [hledger-web manual](hledger-web.md)
+
+You also can read the manuals offline, using commands like
+`hledger help`, 
+`hledger help -l`, 
+`hledger help -l print`, 
+`hledger help print`, 
+`hledger print -h`.
+
+And you can see brief command examples by running
+`hledger --tldr`, `hledger balance --tldr`, etc.
+(Or in newer versions: `hledger help examples`, `hledger help examples balance`.)
 If you install a [tldr viewer](https://github.com/tealdeer-rs/tealdeer) you'll get better output.
-Or view them online:
+Or you can view these online:
 
 - [hledger](https://tldr.inbrowser.app/pages/common/hledger), 
 [hledger add](https://tldr.inbrowser.app/pages/common/hledger-add), 
@@ -55,28 +67,14 @@ Here are some notable blog posts/articles:
   [part 3](https://www.teachmaths.org/20250530-pta-emacs3/)
 <!-- - [Linux Magazine: Tracking your finances with plain text accounting](https://www.linux-magazine.com/Issues/2024/285/hledger) -->
 
-## Reference
-
-The manuals are the authoritative hledger documentation.
-
-- **[hledger manual](hledger.md)** (The big doc. For an overview of hledger, go here and read the sidebar.)
-- **[hledger-ui manual](hledger-ui.md)**
-- **[hledger-web manual](hledger-web.md)**
-
-You can also read the manuals offline, using commands like:\
-`hledger help`, 
-`hledger help -l`, 
-`hledger help -l print`, 
-`hledger help print`, 
-`hledger print -h`
-
-Some other useful reference docs:
+Some other useful docs:
 
 - **[Plain Text Accounting FAQ](https://plaintextaccounting.org/FAQ)**
+- [Why hledger ?](why.md)
 - **[hledger FAQ](faq.md)**
 - [Release notes](relnotes.md)
-- [Why hledger ?](why.md)
 - [Developer docs](dev.md)
+
 
 ## Videos
 
@@ -145,7 +143,7 @@ See also:
 
 ## Cookbook
 
-Other docs, tips, and notes, are collected here.
+Additional docs, tips, and notes.
 
 ### USING HLEDGER
 
