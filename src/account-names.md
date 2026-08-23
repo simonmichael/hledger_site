@@ -123,4 +123,4 @@ Start with a simple one, and expect it to grow and evolve as your needs change.
 
 <br>
 
-(Part of [hledger by example](hledger-by-example.md).)
+(Part of [hledger by example](hbe.md).)

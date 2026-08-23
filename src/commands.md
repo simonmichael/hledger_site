@@ -90,4 +90,4 @@ Next, we'll explore some reports.
 
 <br>
 
-(Part of [hledger by example](hledger-by-example.md).)
+(Part of [hledger by example](hbe.md).)

@@ -32,4 +32,4 @@ Balance changes in 2023-02-01..2023-02-02:
 
 <br>
 
-(Part of [hledger by example](hledger-by-example.md))
+(Part of [hledger by example](hbe.md))

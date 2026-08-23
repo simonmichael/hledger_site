@@ -35,4 +35,4 @@ For more detail, see: [Tutorial: Import CSV data](import-csv.md)
 
 <br>
 
-(Part of [hledger by example](hledger-by-example.md).)
+(Part of [hledger by example](hbe.md).)

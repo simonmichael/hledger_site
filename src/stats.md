@@ -19,4 +19,4 @@ Runtime stats       : 0.22 s elapsed, 5 txns/s, 3 MB live, 13 MB alloc
 
 <br>
 
-(Part of [hledger by example](hledger-by-example.md).)
+(Part of [hledger by example](hbe.md).)

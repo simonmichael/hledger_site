@@ -45,4 +45,4 @@ Press the right arrow key again (or click the right arrow button) to step to the
 
 <br>
 
-(Part of [hledger by example](hledger-by-example.md).)
+(Part of [hledger by example](hbe.md).)

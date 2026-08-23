@@ -10,7 +10,7 @@ hledger has lots of docs, covering different needs.
 
 For getting started, there are a few options.
 
-- **[hledger by example](hledger-by-example.md)**
+- **[hledger by example](hbe.md)**
   is a book introducing hledger gradually, through examples.
 
 These intros assume you're comfortable with the command line; they go a little faster.

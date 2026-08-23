@@ -34,4 +34,4 @@ Many users find it easier to think of the signs and the direction of flow betwee
 
 <br>
 
-(Part of [hledger by example](hledger-by-example.md).)
+(Part of [hledger by example](hbe.md).)

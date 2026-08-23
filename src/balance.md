@@ -276,4 +276,4 @@ Ending balances (historical) in 2025-01-01..2025-01-04:
 
 <br>
 
-(Part of [hledger by example](hledger-by-example.md).)
+(Part of [hledger by example](hbe.md).)

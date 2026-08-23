@@ -106,4 +106,4 @@ $ hledger print date:2025-01-03..
 
 <br>
 
-(Part of [hledger by example](hledger-by-example.md).)
+(Part of [hledger by example](hbe.md).)

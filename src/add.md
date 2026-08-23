@@ -215,4 +215,4 @@ entry.  Hold down the control key and press d once to exit.
 
 <br>
 
-(Part of [hledger by example](hledger-by-example.md).)
+(Part of [hledger by example](hbe.md).)

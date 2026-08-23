@@ -8,7 +8,7 @@ You can use the the left and right arrow keys,
 or the arrow buttons below, to step through the pages.
 Eg press the right arrow key now to see the next.
 
-<!-- keep synced: hledger-by-example.md, SUMMARY.md -->
+<!-- keep synced: hbe.md, SUMMARY.md -->
 
 - [Get hledger installed](get-hledger-installed.md)
 - [Check your setup](check-your-setup.md)

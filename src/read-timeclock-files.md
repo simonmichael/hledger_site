@@ -18,4 +18,4 @@ $ hledger -f 2023.timeclock register -D
 
 <br>
 
-(Part of [hledger by example](hledger-by-example.md).)
+(Part of [hledger by example](hbe.md).)

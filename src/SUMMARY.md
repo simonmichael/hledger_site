@@ -18,9 +18,9 @@
 
 # HLEDGER BY EXAMPLE
 
-<!-- keep synced: hledger-by-example.md, SUMMARY.md -->
+<!-- keep synced: hbe.md, SUMMARY.md -->
 
-- [hledger by example](hledger-by-example.md)
+- [hledger by example](hbe.md)
 - [Get hledger installed](get-hledger-installed.md)
 - [Check your setup](check-your-setup.md)
 - [Start a journal](start-a-journal.md)

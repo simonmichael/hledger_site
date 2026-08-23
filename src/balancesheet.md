@@ -55,4 +55,4 @@ There's a variant of this report which also shows equity balances: `balancesheet
 
 <br>
 
-(Part of [hledger by example](hledger-by-example.md).)
+(Part of [hledger by example](hbe.md).)
