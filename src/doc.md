@@ -6,13 +6,9 @@ h3 { margin-top:0; }
 </style>
 
 hledger has lots of docs, covering different needs.
-They are listed below, and also in the site's sidebar.
-(But don't worry - you don't need to read all of them.)
-You can read some of them offline too, using hledger's `help` command or `--help` flag.
+(Don't worry, you don't need to read them all. And see [Tips for learning hledger](learn.md).)
 
-## Getting started
-
-Here are a few options.
+For getting started, there are a few options.
 
 - **[hledger by example](hledger-by-example.md)**
   is a book introducing hledger gradually, through examples.
@@ -30,10 +26,11 @@ These intros assume you're comfortable with the command line; they go a little f
 - [hledger and Ledger](ledger.md) (if you know Ledger)
 - [hledger and Beancount](beancount.md) (if you know Beancount)
 
-You can see brief command examples by running `hledger --tldr`, `hledger balance --tldr`, etc
-(or in newer versions, `hledger --examples`, `hledger balance --examples`).
-(If you install a [tldr viewer](https://github.com/tealdeer-rs/tealdeer) you'll get better output.)
-Or, view them online:
+You can see brief examples at the command line,
+by running `hledger --tldr`, `hledger balance --tldr`, etc
+(or in newer versions: `hledger help examples`, `hledger help examples balance`).
+If you install a [tldr viewer](https://github.com/tealdeer-rs/tealdeer) you'll get better output.
+Or view them online:
 
 - [hledger](https://tldr.inbrowser.app/pages/common/hledger), 
 [hledger add](https://tldr.inbrowser.app/pages/common/hledger-add), 
@@ -48,13 +45,7 @@ Or, view them online:
 [hledger-ui](https://tldr.inbrowser.app/pages/common/hledger-ui), 
 [hledger-web](https://tldr.inbrowser.app/pages/common/hledger-web)
 
-
-Some general tips:
-
-- **[Accounting basics for PTA users](accounting-pta.md)**
-- [Tips for learning hledger](learn.md)
-
-Some notable blog posts/articles:
+Here are some notable blog posts/articles:
 
 - [Sumner Evans: Plain Text Accounting is Pretty Cool](https://sumnerevans.com/posts/money/plain-text-accounting/)
 - [Amitai Burstein: Why We Chose Plain Text Accounting with Hledger](https://www.gizra.com/content/plain-text-accounting-hledger/)

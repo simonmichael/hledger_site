@@ -23,6 +23,7 @@ Eg press the right arrow key now to see the next.
 - [Overview of commands](commands.md)
 - [Show whole transactions](print-.md)
 - [Show detailed changes](register.md)
+- [Accounting basics for PTA users](accounting-pta.md)
 - [Show assets and liabilities](balancesheet.md)
 - [Show revenues and expenses](incomestatement.md)
 - [Flexible account summing](balance.md)

@@ -127,96 +127,9 @@ In others, the tree structure is encoded as decimal account numbers, something l
 5300   supplies
 ```
 
-## A digression: subaccounts in hledger
-
 With hledger, tree structure is implied by writing account names like `ACCOUNT:SUBACCOUNT`.
-Try it: edit your journal file and change the account names like so:
-
-```cli
-$ cat ~/.hledger.journal
-
-2015/05/25 trip to the supermarket
-    expenses:supplies           $10
-    assets:checking            $-10
-
-2015/05/26 forgot the bread
-    expenses:food            $5
-    assets:cash
-```
-
-hledger will infer the chart of accounts from these names.
-The `accounts` command will list all accounts posted to:
-```cli
-$ hledger accounts
-assets:cash
-assets:checking
-expenses:food
-expenses:supplies
-```
-
-and `accounts --tree` will show the tree structure, indenting subaccounts below their parents (and eliding the common part of their names):
-```cli
-$ hledger accounts --tree
-assets
-  cash
-  checking
-expenses
-  food
-  supplies
-```
-
-Similarly, the `balance` command shows a flat list of accounts and their balance changes, by default:
-```cli
-$ hledger balance
-                 $-5  assets:cash
-                $-10  assets:checking
-                  $5  expenses:food
-                 $10  expenses:supplies
---------------------
-                   0
-```
-
-And with `--tree`, it shows the account hierarchy:
-
-```cli
-$ hledger balance --tree
-                $-15  assets
-                 $-5    cash
-                $-10    checking
-                 $15  expenses
-                  $5    food
-                 $10    supplies
---------------------
-                   0
-```
-In tree mode, the balance reported for parent accounts includes the balances of any subaccounts.
-Eg above, the $15 expenses balance is the sum of the subaccount balances ($5 expenses:food and $10 expenses:supplies).
-
-hledger accepts whatever account names you choose, so you can use as much or as little account hierarchy as you need.
-Most users have at least two levels of accounts.
-You can limit the amount of detail in a balance report by hiding accounts below a certain depth:
-
-```cli
-$ hledger balance --depth 1
-                $-15  assets
-                 $15  expenses
---------------------
-                   0
-```
 
 
+<br>
 
-
-
-<!--
-
-### Transactions
-
-A transaction is a movement of money from some account(s) to some
-other account(s).  There are many common types of transaction.  A
-purchase is where money moves from an asset account to an expense
-account.  Eg, buying food.
-
--->
-
-<!-- TODO make date-independent -->
+(Part of [hledger by example](hledger-by-example.md).)
