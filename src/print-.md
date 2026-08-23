@@ -1,4 +1,4 @@
-# Show whole transactions with `print`
+# Show whole transactions
 
 The `print` command shows whole transactions (journal entries), much as they appear in the journal:
 ```

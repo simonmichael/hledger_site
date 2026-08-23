@@ -1,4 +1,4 @@
-# Flexible account summing with `balance`
+# Flexible account summing
 
 The `balance` command can show essentially the same information as `balancesheet` or `incomestatement`, 
 though without the subdivision by account types.
