@@ -1,4 +1,4 @@
-# Tutorial: hledger-web
+# web: use the web interface
 
 [hledger-web](hledger-web.md) is hledger's web browser-based UI.
 It's probably the easiest way to get started with hledger.
@@ -170,3 +170,8 @@ you can do a surprising amount with hledger-web.
 You can also change
 [permissions](hledger-web.md#permissions) to enable
 [edit/upload/download access](hledger-web.md#editing-uploading-downloading).
+
+
+<br>
+
+(Part of [hledger by example](hledger-by-example.md).)

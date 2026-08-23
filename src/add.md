@@ -1,4 +1,4 @@
-# Tutorial: hledger add
+# add: adding transactions
 
 Here we'll walk you through a simple way of using hledger,
 the command line interface and built-in [add](hledger.md#add) command.

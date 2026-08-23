@@ -9,10 +9,14 @@ or the arrow buttons below, to step through the pages.
 Eg press the right arrow key now to see the next.
 
 <!-- keep synced: hledger-by-example.md, SUMMARY.md -->
+
 - [Get hledger installed](get-hledger-installed.md)
 - [Check your setup](check-your-setup.md)
 - [Start a journal](start-a-journal.md)
 - [Add a transaction: starting balances](add-a-transaction.md)
+- [add: adding transactions](add.md)
+- [web: use the web interface](web.md)
+- [ui: use the terminal UI](ui.md)
 - [Journal entries](journal-entries.md)
 - [Account names](account-names.md)
 - [More transactions](more-transactions.md)
@@ -23,7 +27,7 @@ Eg press the right arrow key now to see the next.
 - [balancesheet: assets and liabilities](balancesheet.md)
 - [incomestatement: revenues and expenses](incomestatement.md)
 - [Reading CSV files](reading-csv-files.md)
-- [Importing new transactions](importing-new-transactions.md)
+- [import: import new transactions](import-new-transactions.md)
 - [Reading timeclock files](reading-timeclock-files.md)
 - [Reading timedot files](reading-timedot-files.md)
 <!--

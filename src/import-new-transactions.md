@@ -29,7 +29,7 @@ $ hledger aregister checking
 2023-02-23 TRANSFER TO SAVINGS  as:ba:savings              $-10.00      $2040.00
 ```
 
-See also: [Tutorial: Import CSV data](import-csv.md)
+For more detail, see: [Tutorial: Import CSV data](import-csv.md)
 
 <br>
 

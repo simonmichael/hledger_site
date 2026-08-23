@@ -12,51 +12,49 @@ You can read some of them offline too, using hledger's `help` command or `--help
 
 ## Getting started
 
+Here are a few options.
+
 - **[hledger by example](hledger-by-example.md)**
   is a book introducing hledger gradually, through examples.
 
-- At the command line, you can see brief examples by running `hledger --tldr`, `hledger balance --tldr`, etc
-  (or in newer versions, `hledger --examples`, `hledger balance --examples`).\
-  If you install a [tldr viewer](https://github.com/tealdeer-rs/tealdeer) you'll get better output.
-  Or, view them online:\
-  [hledger](https://tldr.inbrowser.app/pages/common/hledger), 
-  [hledger add](https://tldr.inbrowser.app/pages/common/hledger-add), 
-  [hledger accounts](https://tldr.inbrowser.app/pages/common/hledger-accounts), 
-  [hledger add](https://tldr.inbrowser.app/pages/common/hledger-add), 
-  [hledger aregister](https://tldr.inbrowser.app/pages/common/hledger-aregister), 
-  [hledger balance](https://tldr.inbrowser.app/pages/common/hledger-balance), 
-  [hledger balancesheet](https://tldr.inbrowser.app/pages/common/hledger-balancesheet), 
-  [hledger import](https://tldr.inbrowser.app/pages/common/hledger-import), 
-  [hledger incomestatement](https://tldr.inbrowser.app/pages/common/hledger-incomestatement), 
-  [hledger print](https://tldr.inbrowser.app/pages/common/hledger-print), 
-  [hledger-ui](https://tldr.inbrowser.app/pages/common/hledger-ui), 
-  [hledger-web](https://tldr.inbrowser.app/pages/common/hledger-web)
+These intros assume you're comfortable with the command line; they go a little faster.
 
-Or here are some beginner friendly tutorials, showing four ways of working with hledger:
-
-- [Tutorial: hledger add](add.md)
-- [Tutorial: hledger-ui](ui.md)
-- [Tutorial: hledger-web](web.md)
-- [Tutorial: Import CSV data](import-csv.md)
-
-And some general tips:
-
-- [Accounting basics for PTA users](accounting-pta.md)
-- [Tips for learning hledger](learn.md)
-
-Or if you're comfortable with the command line, you could try these:
-
-- [A quick example](index.md#a-quick-example) (on the home page)
+- **[A quick example](index.md#a-quick-example)** (on the home page)
 - [2 minute quick start](2-minute-quick-start.md)
 - [5 minute quick start](5-minute-quick-start.md)
 - [10 minute quick start](10-minute-quick-start.md)
 - [hledger manual: Common tasks](hledger.md#common-tasks)
 - [hledger manual: Journal cheatsheet](hledger.md#journal-cheatsheet)
 - [Workflows](workflows.md)
+- [Tutorial: Import CSV data](import-csv.md)
 - [hledger and Ledger](ledger.md) (if you know Ledger)
 - [hledger and Beancount](beancount.md) (if you know Beancount)
 
-Or, here are some notable blog posts/articles to read:
+You can see brief command examples by running `hledger --tldr`, `hledger balance --tldr`, etc
+(or in newer versions, `hledger --examples`, `hledger balance --examples`).
+(If you install a [tldr viewer](https://github.com/tealdeer-rs/tealdeer) you'll get better output.)
+Or, view them online:
+
+- [hledger](https://tldr.inbrowser.app/pages/common/hledger), 
+[hledger add](https://tldr.inbrowser.app/pages/common/hledger-add), 
+[hledger accounts](https://tldr.inbrowser.app/pages/common/hledger-accounts), 
+[hledger add](https://tldr.inbrowser.app/pages/common/hledger-add), 
+[hledger aregister](https://tldr.inbrowser.app/pages/common/hledger-aregister), 
+[hledger balance](https://tldr.inbrowser.app/pages/common/hledger-balance), 
+[hledger balancesheet](https://tldr.inbrowser.app/pages/common/hledger-balancesheet), 
+[hledger import](https://tldr.inbrowser.app/pages/common/hledger-import), 
+[hledger incomestatement](https://tldr.inbrowser.app/pages/common/hledger-incomestatement), 
+[hledger print](https://tldr.inbrowser.app/pages/common/hledger-print), 
+[hledger-ui](https://tldr.inbrowser.app/pages/common/hledger-ui), 
+[hledger-web](https://tldr.inbrowser.app/pages/common/hledger-web)
+
+
+Some general tips:
+
+- **[Accounting basics for PTA users](accounting-pta.md)**
+- [Tips for learning hledger](learn.md)
+
+Some notable blog posts/articles:
 
 - [Sumner Evans: Plain Text Accounting is Pretty Cool](https://sumnerevans.com/posts/money/plain-text-accounting/)
 - [Amitai Burstein: Why We Chose Plain Text Accounting with Hledger](https://www.gizra.com/content/plain-text-accounting-hledger/)
@@ -68,13 +66,13 @@ Or, here are some notable blog posts/articles to read:
 
 ## Reference
 
-The manuals are the authoritative hledger docs.
+The manuals are the authoritative hledger documentation.
 
-- **[hledger manual](hledger.md)** (The big one! For an overview, go there, then look in the sidebar.)
+- **[hledger manual](hledger.md)** (The big doc. For an overview of hledger, go here and read the sidebar.)
 - **[hledger-ui manual](hledger-ui.md)**
 - **[hledger-web manual](hledger-web.md)**
 
-You can also read these offline, using commands like:\
+You can also read the manuals offline, using commands like:\
 `hledger help`, 
 `hledger help -l`, 
 `hledger help -l print`, 
@@ -83,9 +81,9 @@ You can also read these offline, using commands like:\
 
 Some other useful reference docs:
 
+- **[Plain Text Accounting FAQ](https://plaintextaccounting.org/FAQ)**
+- **[hledger FAQ](faq.md)**
 - [Release notes](relnotes.md)
-- [hledger FAQ](faq.md)
-- [Plain Text Accounting FAQ](https://plaintextaccounting.org/FAQ)
 - [Why hledger ?](why.md)
 - [Developer docs](dev.md)
 

@@ -1,7 +1,7 @@
-# Tutorial: hledger-ui
+# ui: use the terminal UI
 
-[hledger-ui](hledger-ui.md) is hledger's TUI (a full-window terminal interface).
-It's fast, efficient, and a bit more featureful than the web UI.
+[hledger-ui](hledger-ui.md) is hledger's (default) TUI (a full-window terminal interface).
+It's fast, efficient, and provides some different features compared to the web UI.
 
 ## Check your installation
 
@@ -242,3 +242,9 @@ or GNU info (`i`):
 [![](images/hledger-ui/Screen%20Shot%202020-03-24%20at%205.47.14%20PM.png)](images/hledger-ui/Screen%20Shot%202020-03-24%20at%205.47.14%20PM.png)
 
 Press `q` to return to hledger-ui.
+
+
+
+<br>
+
+(Part of [hledger by example](hledger-by-example.md).)

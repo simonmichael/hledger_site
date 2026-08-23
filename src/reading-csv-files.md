@@ -36,7 +36,6 @@ $ hledger -f bank.csv print
 
 ```
 
-See also: [Tutorial: Import CSV data](import-csv.md)
 
 <br>
 
