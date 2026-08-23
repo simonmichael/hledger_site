@@ -1,4 +1,4 @@
-# Accounting basics for PTA users
+# Accounting basics
 
 An interlude: here is a quick intro to some useful accounting concepts,
 for hledger (and plain text accounting) users.
