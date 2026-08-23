@@ -14,7 +14,7 @@ $ hledger import bank.csv
 imported 2 new transactions from bank.csv
 ```
 
-And if we run it again on the same file, those transactions are not re-imported.
+And if we run it again on the same file, those transactions are not re-imported:
 
 ```cli
 $ hledger import bank.csv
@@ -28,6 +28,8 @@ $ hledger aregister checking
 2023-02-22 DEPOSIT              in:unknown                  $50.00      $2050.00
 2023-02-23 TRANSFER TO SAVINGS  as:ba:savings              $-10.00      $2040.00
 ```
+
+(It uses a hidden file, `.latest.bank.csv`, to remember which dates have been processed.)
 
 For more detail, see: [Tutorial: Import CSV data](import-csv.md)
 
