@@ -644,9 +644,7 @@ I enter transactions manually as part of a routine. Checking-weekly, Savings-mon
 I've been using hledger for a few years to run my personal and company accounts and I think it is superb.
 --livmackintosh
 
-"Watch your pennies and the dollars will take care of themselves."
-
-"If you can manage your brain, you can manage your fortune."
+Watch your pennies and the dollars will take care of themselves.
 
 #plaintextaccounting isn't the best solution for all situations; nothing is!
 I'm guessing your friend will be too busy, disorganised, and non-software-oriented to deal with learning and managing backups, versions, double entry bookkeeping, plain text accounting, text editors, terminals, sharing access, etc. A google sheet makes most of those problems go away.
