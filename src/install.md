@@ -2,8 +2,8 @@
 
 The current stable hledger release is **1.52.2**.
 
-hledger 2.0 is in process and will be released some time in 2026;
-the current 2.0 preview release is **1.99.3** (AKA 2.0 preview 3).
+hledger 2.0 is in process and will be released some time in 2026.\
+The current 2.0 preview release is **1.99.3** (AKA 2.0 preview 3).
 
 Here are the **[release notes](release-notes.md)** for all releases.
 
