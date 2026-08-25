@@ -41,7 +41,7 @@ Docker (Linux, Mac, Windows) <!-- adept --> ([more](https://hub.docker.com/searc
 
 Windows \
 [![Scoop](https://repology.org/badge/version-for-repo/scoop/hledger.svg)](https://scoop.sh/#/apps?q=hledger) `scoop install hledger` \
-[![Winget](https://img.shields.io/badge/Winget_package-1.52.1-red.svg)](https://github.com/microsoft/winget-pkgs/tree/master/manifests/s/simonmichael/hledger) `winget install -e --id simonmichael.hledger` \
+[![Winget](https://img.shields.io/badge/Winget_package-1.52.2-brightgreen.svg)](https://github.com/microsoft/winget-pkgs/tree/master/manifests/s/simonmichael/hledger) `winget install -e --id simonmichael.hledger` \
 [![Chocolatey](https://repology.org/badge/version-for-repo/chocolatey/hledger.svg)](https://community.chocolatey.org/packages/hledger) `choco install hledger -y`
 <!--
 https://learn.microsoft.com/en-us/windows/package-manager/winget/#use-winget
@@ -77,12 +77,12 @@ Arch \
 
 Debian <!-- Clint --> ([more](https://packages.debian.org/search?searchon=names&keywords=hledger)): \
 [![Debian unstable](https://repology.org/badge/version-for-repo/debian_unstable/hledger.svg)](https://packages.debian.org/unstable/hledger) `apt install hledger hledger-ui hledger-web`\
-[![Debian testing](https://img.shields.io/badge/Debian_testing_package-1.32.3-red.svg)](https://packages.debian.org/testing/hledger)\
-[![Debian stable](https://img.shields.io/badge/Debian_stable_package-1.25-red.svg)](https://packages.debian.org/stable/hledger)\
-[![Debian oldstable](https://img.shields.io/badge/Debian_oldstable_package-1.18.1-red.svg)](https://packages.debian.org/oldstable/hledger)
+[![Debian testing](https://img.shields.io/badge/Debian_testing_package-1.52.1-red.svg)](https://packages.debian.org/testing/hledger)\
+[![Debian stable](https://img.shields.io/badge/Debian_stable_package-1.32.3-red.svg)](https://packages.debian.org/stable/hledger)\
+[![Debian oldstable](https://img.shields.io/badge/Debian_oldstable_package-1.25-red.svg)](https://packages.debian.org/oldstable/hledger)
 
 Fedora ([more](https://src.fedoraproject.org/rpms/hledger)) \
-![Fedora_45](https://img.shields.io/badge/Fedora_44_package-1.43.2-red.svg) `dnf install hledger`\
+![Fedora_45](https://img.shields.io/badge/Fedora_45_package-1.43.2-red.svg) `dnf install hledger`\
 ![Fedora_44](https://img.shields.io/badge/Fedora_44_package-1.43.2-red.svg)\
 ![Fedora_43](https://img.shields.io/badge/Fedora_43_package-1.40-red.svg)\
 ![Fedora_42](https://img.shields.io/badge/Fedora_42_package-1.32.3-red.svg)
@@ -92,10 +92,10 @@ Fedora ([more](https://src.fedoraproject.org/rpms/hledger)) \
 <!-- ![Fedora_38](https://img.shields.io/badge/Fedora_38_package-1.27.1-red.svg)\ -->
 
 Gentoo <!-- ezzie --> \
-[![Gentoo](https://img.shields.io/badge/Gentoo_package-1.50.2-red.svg)](https://gentoo.zugaina.org/Search?search=hledger) `eselect repository enable haskell && emerge hledger hledger-ui hledger-web`
+[![Gentoo](https://img.shields.io/badge/Gentoo_package-1.52.1-red.svg)](https://gentoo.zugaina.org/Search?search=hledger) `eselect repository enable haskell && emerge hledger hledger-ui hledger-web`
 
 Raspberry Pi (unaudited) <!-- nobodyinperson --> \
-![Raspberry Pi release binaries](https://img.shields.io/badge/Raspberry_Pi_release_binaries-1.22.2-red.svg)
+![Raspberry Pi release binaries](https://img.shields.io/badge/Raspberry_Pi_release_binaries-1.22.1-red.svg)
 [hledger-linux-arm32v7.zip](https://github.com/simonmichael/hledger/releases/tag/1.22.1) \
 ![Raspberry Pi contributed binaries](https://img.shields.io/badge/Raspberry_Pi_contributed_binaries-1.18.1-red.svg)
 [hledger-aarch64-manjaro.gz](https://github.com/simonmichael/hledger/releases/tag/1.18.1) ,
