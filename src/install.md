@@ -36,9 +36,6 @@ or use a download tool like [eget](https://github.com/zyedidia/eget?tab=readme-o
 Homebrew (Mac, Linux) <!-- chenrui ? --> \
 [![Homebrew](https://repology.org/badge/version-for-repo/homebrew/hledger.svg)](https://formulae.brew.sh/formula/hledger) `brew install hledger`
 
-Docker (Linux, Mac, Windows) <!-- adept --> ([more](https://hub.docker.com/search?q=hledger&type=image&sort=updated_at&order=desc)) \
-[![Docker](https://img.shields.io/badge/Docker_image-1.52.1-e05d44.svg)](https://hub.docker.com/r/dastapov/hledger) `docker pull dastapov/hledger`
-
 Windows \
 [![Scoop](https://repology.org/badge/version-for-repo/scoop/hledger.svg)](https://scoop.sh/#/apps?q=hledger) `scoop install hledger` \
 [![Winget](https://img.shields.io/badge/Winget_package-1.52.2-brightgreen.svg)](https://github.com/microsoft/winget-pkgs/tree/master/manifests/s/simonmichael/hledger) `winget install -e --id simonmichael.hledger` \
@@ -50,6 +47,9 @@ Installs to `C:\Users\Simon\AppData\Local\Microsoft\WinGet\Links\hledger.exe`.\
 On ARM machines this runs via emulation (slower than normal).\
 hledger-ui and hledger-web aren't available via winget yet.
 -->
+
+Docker (Linux, Mac, Windows) <!-- adept --> ([more](https://hub.docker.com/search?q=hledger&type=image&sort=updated_at&order=desc)) \
+[![Docker](https://img.shields.io/badge/Docker_image-1.52.1-e05d44.svg)](https://hub.docker.com/r/dastapov/hledger) `docker pull dastapov/hledger`
 
 BSD \
 [![freebsd ports](https://repology.org/badge/version-for-repo/freebsd/hledger.svg)](https://www.freshports.org/search.php?query=hledger) `pkg install hs-hledger hs-hledger-ui hs-hledger-web` \
