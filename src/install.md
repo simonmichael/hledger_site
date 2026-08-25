@@ -1,7 +1,8 @@
 # Install
 
-The current stable hledger release is **1.52.2**,
-and the current preview release for hledger 2.x is **1.99.3** (2.0 preview 3).
+The current stable hledger release is **1.52.2**.
+hledger 2.0 is in process and will be released some time in 2026;
+the current 2.0 preview release is **1.99.3** (2.0 preview 3).
 Here are the **[release notes](release-notes.md)**.
 
 You can install hledger by any of these methods:
