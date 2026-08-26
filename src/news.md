@@ -248,7 +248,7 @@ and fixed breakage in the hledger-install.sh script on non-windows platforms.
 - doc updates: github release windows install instructions, check command, Contributor Quick Start, Developer FAQ, misc site tweaks
 - examples: custom paypal csv rules
 
-[#2149]: https://github.com/simonmichael/hledger/issues/2149
+[#2149]: https://github.com/plaintextaccounting/hledger/issues/2149
 
 **Misc**
 
@@ -348,7 +348,7 @@ Feel free to share interesting links (they don't have to be new) at the PTA foru
 
 *I combine hledger csv output with Jupyter to generate the specific reports and charts I need. I.e business specific versus combined for taxes. --abhiyerra*
 
-[#2178]: https://github.com/simonmichael/hledger/issues/2178
+[#2178]: https://github.com/plaintextaccounting/hledger/issues/2178
 
 ---
 
@@ -392,9 +392,9 @@ Feel free to share interesting links (they don't have to be new) at the PTA foru
 *I use hledger and I love it. It has a learning curve (especially if you're new to double entry accounting) but it's rewarding.*
 
 [hledger-txnsbycat.hs]: https://hledger.org/scripts.html#hledger-txnsbycaths
-[#2191]: https://github.com/simonmichael/hledger/issues/2191
-[#2190]: https://github.com/simonmichael/hledger/issues/2190
-[#2189]: https://github.com/simonmichael/hledger/issues/2189
+[#2191]: https://github.com/plaintextaccounting/hledger/issues/2191
+[#2190]: https://github.com/plaintextaccounting/hledger/issues/2190
+[#2189]: https://github.com/plaintextaccounting/hledger/issues/2189
 
 ---
 
@@ -677,7 +677,7 @@ Accounts vs tags, --serve-api and -X, balance assertion order, hledger.org tls c
 ## This Week In Hledger 2024-02-08
 
 **sm**
-I worked on refactoring and debugging the budget report for <https://github.com/simonmichael/hledger/issues/2071>.
+I worked on refactoring and debugging the budget report for <https://github.com/plaintextaccounting/hledger/issues/2071>.
 Also, tweaked `close` tags, docs, and added to the PTA FAQ: <https://plaintextaccounting.org/FAQ#where-are-debits-and-credits-why-are-some-balances-negative>.
 I shared this time report that I like:
 
@@ -711,13 +711,13 @@ Foreign currency accounting, adding custom tags with `close`, multiple postings 
 **Misc**
 
 Zegnat fixed line breaks in error messages displayed in hledger-web, making them much clearer:
-<https://github.com/simonmichael/hledger/pull/2163>
+<https://github.com/plaintextaccounting/hledger/pull/2163>
 
 reesmichael1 made `ssv:` and `tsv:` work as file path prefixes, like `csv:`:
-<https://github.com/simonmichael/hledger/pull/2165>
+<https://github.com/plaintextaccounting/hledger/pull/2165>
 
 jmtd made a dark theme for hledger-ui, testers welcome:
-<https://github.com/simonmichael/hledger/pull/2167>
+<https://github.com/plaintextaccounting/hledger/pull/2167>
 
 brplot is a fast plotting tool for command line or wasm: 
 <https://news.ycombinator.com/item?id=39319191>
@@ -771,7 +771,7 @@ Heavy work on
 - 2153 a performance regression that has been with us since 1.29
 
 And benchmarking generally. You can read some interesting new performance findings
-and help to verify or correct them at https://github.com/simonmichael/hledger/issues/2153.
+and help to verify or correct them at https://github.com/plaintextaccounting/hledger/issues/2153.
 
 **Robert Nielsen**
 [Creating phony hledger transactions](https://hledgerfan.com/creating-phony-hledger-transactions/)
@@ -836,7 +836,7 @@ hamess has annotated the new features in version 1.32's manuals.
 This week I worked mostly on support and thinking/writing about improvements to `close` and the new file/periodic files workflow.
 I introduced some new terminology to distinguish *starting/ending files* vs *opening/closing accounts*, which are unrelated events.
 I added new `--assert` and `--assign` modes to `close` and clarified a problem with using balance assignments for starting balances.
-I reviewed status and proposed some changes at [Better UX around starting and ending files ? #2151](https://github.com/simonmichael/hledger/issues/2151) -
+I reviewed status and proposed some changes at [Better UX around starting and ending files ? #2151](https://github.com/plaintextaccounting/hledger/issues/2151) -
 please take a look and give your thoughts if you're interested in this.
 
 Over on <https://plaintextaccounting.org> I checked and fixed the remaining broken links;
@@ -955,9 +955,9 @@ Once a month I download a bunch of statements, run a script and have all of the 
 
 
 
-[#2148]: https://github.com/simonmichael/hledger/issues/2148
-[#1056]: https://github.com/simonmichael/hledger/issues/1056
-[#815]: https://github.com/simonmichael/hledger/issues/815
+[#2148]: https://github.com/plaintextaccounting/hledger/issues/2148
+[#1056]: https://github.com/plaintextaccounting/hledger/issues/1056
+[#815]: https://github.com/plaintextaccounting/hledger/issues/815
 
 ---
 
@@ -965,7 +965,7 @@ Once a month I download a bunch of statements, run a script and have all of the 
 ## This Week In Hledger 2023-12-29
 
 **sm:**
-Fixed a tricky csv rule parsing regression [#2134](https://github.com/simonmichael/hledger/issues/2134) and a debug logging bug.
+Fixed a tricky csv rule parsing regression [#2134](https://github.com/plaintextaccounting/hledger/issues/2134) and a debug logging bug.
 
 Improved the project Justfile, improved docs.
 I also improved and "described" my time and task tracking dashboard;
@@ -1283,10 +1283,10 @@ dev news, achievements or experiences in the hledger matrix chat.
 Dev
 
 This week I completed the months-long yak shave that became Precisiongeddon, and it has landed in master;
-see <https://github.com/simonmichael/hledger/pull/2111> for details.
+see <https://github.com/plaintextaccounting/hledger/pull/2111> for details.
 Heads up: this can change default precisions shown especially by cost and value reports - 
 all for the better hopefully, but any pre-release testing is welcome. 
-There's a linux binary at <https://github.com/simonmichael/hledger/actions/runs/6804488282>.
+There's a linux binary at <https://github.com/plaintextaccounting/hledger/actions/runs/6804488282>.
 
 CI (continuous integration) workflows on github have been optimised a bit:
 - Scheduled weekly builds have been disabled, as they were propagating
@@ -1298,9 +1298,9 @@ CI (continuous integration) workflows on github have been optimised a bit:
 
 Fixed:
 - amounts in value reports can sometimes be shown unstyled / with zero decimal digits,
-  <https://github.com/simonmichael/hledger/issues/2105>
+  <https://github.com/plaintextaccounting/hledger/issues/2105>
 - auto postings break redundant equity/cost detection and transaction balancing,
-  <https://github.com/simonmichael/hledger/issues/2110>
+  <https://github.com/plaintextaccounting/hledger/issues/2110>
   
 My time log for the week shows 69% enhancement, 27% cleanup, 5% support.
 
@@ -1324,7 +1324,7 @@ Some notable commits:
 
 There's new interest and design discussion for referencing the matched account name
 in auto postings, and I have added to lukasbestle's $20 bounty to make it $100:
-<https://github.com/simonmichael/hledger/issues/1975>
+<https://github.com/plaintextaccounting/hledger/issues/1975>
 
 **Robert Nielsen:**
 For more advanced hledger aficionados, here is a diagram showing just
@@ -1477,9 +1477,9 @@ Week In Matrix).
 
 Merged
 
-- [feat: balance: Add only-summary flag (#1012) #2086](https://github.com/simonmichael/hledger/pull/2086) (Stephen Morgan)
-- [feat: CSV rule negation #2088](https://github.com/simonmichael/hledger/pull/2088) (bobobo1618)
-- [imp: web: include account declaration info in accounts JSON #2097](https://github.com/simonmichael/hledger/pull/2097) (S. Zeid)
+- [feat: balance: Add only-summary flag (#1012) #2086](https://github.com/plaintextaccounting/hledger/pull/2086) (Stephen Morgan)
+- [feat: CSV rule negation #2088](https://github.com/plaintextaccounting/hledger/pull/2088) (bobobo1618)
+- [imp: web: include account declaration info in accounts JSON #2097](https://github.com/plaintextaccounting/hledger/pull/2097) (S. Zeid)
 
 WIP
 

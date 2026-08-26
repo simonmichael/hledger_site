@@ -194,7 +194,7 @@ fi
 
 **TODO** – Add common hledger reports as custom reports
 
-[#367 ledger-mode setup for hledger needs documenting](https://github.com/simonmichael/hledger/issues/367) has
+[#367 ledger-mode setup for hledger needs documenting](https://github.com/plaintextaccounting/hledger/issues/367) has
 more tips to be collected here.  
 [hledger-related issues](https://github.com/ledger/ledger-mode/issues?q=label:hledger)
 

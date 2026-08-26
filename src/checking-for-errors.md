@@ -112,4 +112,4 @@ Some options (from <https://www.reddit.com/r/plaintextaccounting/comments/180a11
 
 5. <https://hledger.org/scripts.html#hledger-check-fancyassertions> might help.
 
-6. [support account lifetimes ? #1389](https://github.com/simonmichael/hledger/issues/1389) is the place to work on better support for this.
+6. [support account lifetimes ? #1389](https://github.com/plaintextaccounting/hledger/issues/1389) is the place to work on better support for this.

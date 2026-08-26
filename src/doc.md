@@ -166,8 +166,8 @@ Additional docs, tips, and notes.
 
 #### Examples
 
-- [examples/](https://github.com/simonmichael/hledger/tree/main/examples) - examples and snippets, old and new 
-- [examples/csv/](https://github.com/simonmichael/hledger/tree/main/examples/csv) - hledger CSV rules library
+- [examples/](https://github.com/plaintextaccounting/hledger/tree/main/examples) - examples and snippets, old and new 
+- [examples/csv/](https://github.com/plaintextaccounting/hledger/tree/main/examples/csv) - hledger CSV rules library
 
 #### Making charts
 - [Charts and Graphs](charts.md)

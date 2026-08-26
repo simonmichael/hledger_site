@@ -112,4 +112,4 @@ And [Michael Peter: My plain text accounting workflow with hledger](https://root
 hledger print -O sql | sed 's/id serial/id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL/g' | sqlite3 ledger.db
 ```
 
-([#2017](https://github.com/simonmichael/hledger/issues/2017))
+([#2017](https://github.com/plaintextaccounting/hledger/issues/2017))

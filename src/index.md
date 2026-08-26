@@ -328,7 +328,7 @@ Try it for yourself:
 
 Would you like to help ?
 
-- **[Star us on Github](https://github.com/simonmichael/hledger/tree/main)**
+- **[Star us on Github](https://github.com/plaintextaccounting/hledger/tree/main)**
   to help make us a [notable Haskell app](https://joyful.com/Haskell#What%20are%20some%20Haskell%20apps%20?).
 - **[Sponsor hledger](sponsor.md)** to help sustain this work. Here's more about [Finance](FINANCE.md).
 - **[Contributor Quick Start](CONTRIBUTING.md)** and **[Developer docs](dev.md)**.
@@ -365,8 +365,8 @@ For quicker browsing, configure these bookmark keywords in your browser.
 - **h** PAGE  -> `https://hledger.org/PAGE.html`
 - **hm** TOPIC -> `https://hledger.org/hledger.html#TOPIC`
 - **hs** TOPIC -> `https://hledger.org/?search=TOPIC`
-- **hi** NUM   -> `https://github.com/simonmichael/hledger/issues/NUM`
-- **hinew**  -> `https://github.com/simonmichael/hledger/issues/new`
+- **hi** NUM   -> `https://github.com/plaintextaccounting/hledger/issues/NUM`
+- **hinew**  -> `https://github.com/plaintextaccounting/hledger/issues/new`
 </details>
 </li>
 </ul>

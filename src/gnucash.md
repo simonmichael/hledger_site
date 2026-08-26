@@ -18,7 +18,7 @@ XML, general SQL (sqlite/mysql/postgres), or sqlite only:
 
 Some related discussion:
 
-- [Import gnucash Files #332](https://github.com/simonmichael/hledger/issues/332)
+- [Import gnucash Files #332](https://github.com/plaintextaccounting/hledger/issues/332)
 - [reddit: command line vs GUI](https://www.reddit.com/r/plaintextaccounting/comments/16xhjm5/command_line_vs_gui) (2023) how to export from hledger to gnucash
 - [HN: GnuCash Tutorial and Concepts Guide](https://news.ycombinator.com/item?id=37954925) (2023) someone using gnucash and hledger together
 - [reddit: Current working gnucash exporter?](https://www.reddit.com/r/plaintextaccounting/comments/r64oye/current_working_gnucash_exporter/) (2021)

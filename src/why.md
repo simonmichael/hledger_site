@@ -293,7 +293,7 @@ and learn through hands-on practice.
 
 
 [blog posts]:                 https://plaintextaccounting.org/#articles-blog-posts
-[example files]:              https://github.com/simonmichael/hledger/tree/main/examples
+[example files]:              https://github.com/plaintextaccounting/hledger/tree/main/examples
 [mail list]:                  https://groups.google.com/forum/#!forum/hledger
 [Ledger CLI]:                 https://ledger-cli.org
 [command line]:               hledger.md
@@ -306,7 +306,7 @@ and learn through hands-on practice.
 [output format]:              hledger.md#output-format
 [download]:                   install.md#binary-packages
 [build]:                      install.md#building-from-source
-[actively maintained]:        https://github.com/simonmichael/hledger/graphs/contributors
+[actively maintained]:        https://github.com/plaintextaccounting/hledger/graphs/contributors
 [releases]:                   https://hledger.org/release-notes
 [plain text accounting]:      http://plaintextaccounting.org
 [plain text accounting apps]: https://plaintextaccounting.org/#plain-text-accounting-apps
@@ -323,6 +323,6 @@ and learn through hands-on practice.
 [ledger2beancount]:           https://github.com/beancount/ledger2beancount
 [gpl]:                        https://en.wikipedia.org/wiki/GNU_General_Public_License
 [library]:                    https://hackage.haskell.org/package/hledger-lib
-[script]:                     https://github.com/simonmichael/hledger/blob/main/bin/hledger-check-tag-files.hs
+[script]:                     https://github.com/plaintextaccounting/hledger/blob/main/bin/hledger-check-tag-files.hs
 [free software]:              https://en.wikipedia.org/wiki/Free_software
 

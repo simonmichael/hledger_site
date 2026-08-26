@@ -259,7 +259,7 @@ Also:
 
 - Look for a relevant page at [Cookbook > Other software](doc.md#other-software)
 - Otherwise, try to export CSV representing transactions - one record per transaction - and then use [hledger's CSV reader](import-csv.md).
-  Also look for [pre-existing CSV rules](https://github.com/simonmichael/hledger/tree/main/examples/csv) you can use.
+  Also look for [pre-existing CSV rules](https://github.com/plaintextaccounting/hledger/tree/main/examples/csv) you can use.
 - Or, make a custom script or workflow to convert the old data to hledger's simple [journal format](hledger.md#journal-format).
 
 ### How could I export/migrate to...
@@ -562,15 +562,15 @@ There must be at least two spaces between an account name and anything that foll
 
 Directives vary in their scope, ie which journal entries and which input files they affect. The differences are partly due to historical accident, and partly by design, so that reordering files, or adding another file, does not change their meaning. See [journal format > Directives and multiple files](hledger.md#directives-and-multiple-files).
 Related discussion:
-[#217](https://github.com/simonmichael/hledger/issues/217),
-[#510](https://github.com/simonmichael/hledger/issues/510),
-[#1007](https://github.com/simonmichael/hledger/issues/1007).
+[#217](https://github.com/plaintextaccounting/hledger/issues/217),
+[#510](https://github.com/plaintextaccounting/hledger/issues/510),
+[#1007](https://github.com/plaintextaccounting/hledger/issues/1007).
 
 ### Can I use arithmetic expressions in journal entries ?
 
 Eg, [Ledger-style amount expressions](https://ledger-cli.org/doc/ledger3.html#Expression-amounts) ?
 Generally no, hledger doesn't allow this.
-(If you want it, you could revive PR [#934](https://github.com/simonmichael/hledger/pull/934).)
+(If you want it, you could revive PR [#934](https://github.com/plaintextaccounting/hledger/pull/934).)
 
 In some cases, you can emulate it with [auto postings](https://hledger.org/hledger.html#auto-postings),
 which can multiple amounts by a constant. Eg to (effectively) divide all food expenses by 2,
@@ -593,7 +593,7 @@ Here's a [suggestion](https://groups.google.com/g/beancount/c/iJirO6GOMgU/m/8VDg
 
 ### Where can I find hledger CSV rules for my financial institutions ?
 
-Look for a suitable rules file in the [examples/csv/](https://github.com/simonmichael/hledger/tree/main/examples/csv) directory on github.
+Look for a suitable rules file in the [examples/csv/](https://github.com/plaintextaccounting/hledger/tree/main/examples/csv) directory on github.
 Or you can [get the hledger source](https://hledger.org/install.html#build-in-a-source-checkout) and look in examples/csv/.
 
 If your financial institution is not there yet, please use these for inspiration,
@@ -775,7 +775,7 @@ The output will normally be a valid journal, but it can have a different meaning
 Workarounds:
 
 - Whenever you use `-f -` to read `hledger print` output, also add `-I` to ignore balance assertions.
-  And write these flags separately (`-If-` [does not work](https://github.com/simonmichael/hledger/issues/2059)). So:
+  And write these flags separately (`-If-` [does not work](https://github.com/plaintextaccounting/hledger/issues/2059)). So:
   ```cli
   $ hledger print ... | hledger -f- -I ...
   ```
@@ -824,7 +824,7 @@ For more flexibility, you could use [direnv](https://direnv.net) to customise LE
 hledger will not search parent directories for a journal file,
 though there's probably a tool that will.
 
-Related: [#2194](https://github.com/simonmichael/hledger/issues/2194)
+Related: [#2194](https://github.com/plaintextaccounting/hledger/issues/2194)
 
 With the new config file support, you could add `-f FILE` to a `hledger.conf` file in or above this directory.
 

@@ -123,7 +123,7 @@ Tips:
 
 - The rules for inferring types from account names are as follows (using [Regular expressions](#regular-expressions)). \
   If they don't work for you, just ignore them and declare your types with `type:` tags.
-  <!-- monospace to work around https://github.com/simonmichael/hledger/issues/1573 -->
+  <!-- monospace to work around https://github.com/plaintextaccounting/hledger/issues/1573 -->
   ```
   If account's name contains this case insensitive regular expression | its type is
   --------------------------------------------------------------------|-------------

@@ -18,7 +18,7 @@ All support is greatly appreciated. Consider:
 
 ### Github Sponsors
 
-- <https://github.com/simonmichael/hledger> -> Sponsor button
+- <https://github.com/plaintextaccounting/hledger> -> Sponsor button
 - Requirements: a github account
 - Payment methods: credit card, invoice
 - Fees: none for personal accounts, 3% for organizations using invoice, 6% for organizations using credit card

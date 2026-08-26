@@ -23,13 +23,13 @@ Official release binaries for Linux, Mac, and Windows are provided in the hledge
 You can click the badge below to install them manually,
 or copy-paste the install command from [Get hledger installed](get-hledger-installed.md),
 or use a download tool like [eget](https://github.com/zyedidia/eget?tab=readme-ov-file#how-to-get-eget):
-<!-- ([![RSS](images/rss.png) RSS feed](https://github.com/simonmichael/hledger/releases.atom)). -->
+<!-- ([![RSS](images/rss.png) RSS feed](https://github.com/plaintextaccounting/hledger/releases.atom)). -->
 
 [![hledger release binaries](https://img.shields.io/badge/hledger_release_binaries-1.52.2-brightgreen.svg)][release binaries]
 `eget simonmichael/hledger --all`
 
-[release binaries]:    https://github.com/simonmichael/hledger/releases/tag/1.52.2
-[prerelease binaries]: https://github.com/simonmichael/hledger/releases/tag/nightly
+[release binaries]:    https://github.com/plaintextaccounting/hledger/releases/tag/1.52.2
+[prerelease binaries]: https://github.com/plaintextaccounting/hledger/releases/tag/nightly
 
 ## Packaged binaries
 
@@ -57,9 +57,9 @@ BSD \
 
 Nix (Linux, Mac) <!-- maralorn, chvp --> 
 ([Troubleshooting](https://hledger.org/hledger.html#troubleshooting),
-[#1030](https://github.com/simonmichael/hledger/issues/1030),
-[#1033](https://github.com/simonmichael/hledger/issues/1033),
-[#2089](https://github.com/simonmichael/hledger/issues/2089)) \
+[#1030](https://github.com/plaintextaccounting/hledger/issues/1030),
+[#1033](https://github.com/plaintextaccounting/hledger/issues/1033),
+[#2089](https://github.com/plaintextaccounting/hledger/issues/2089)) \
 [![Nix](https://repology.org/badge/version-for-repo/nix_unstable/hledger.svg)](https://search.nixos.org/packages?channel=unstable&from=0&size=50&sort=relevance&type=packages&query=hledger)
 `nix-shell -p hledger hledger-ui hledger-web` 
 
@@ -96,10 +96,10 @@ Gentoo <!-- ezzie --> \
 
 Raspberry Pi (unaudited) <!-- nobodyinperson --> \
 ![Raspberry Pi release binaries](https://img.shields.io/badge/Raspberry_Pi_release_binaries-1.22.1-e05d44.svg)
-[hledger-linux-arm32v7.zip](https://github.com/simonmichael/hledger/releases/tag/1.22.1) \
+[hledger-linux-arm32v7.zip](https://github.com/plaintextaccounting/hledger/releases/tag/1.22.1) \
 ![Raspberry Pi contributed binaries](https://img.shields.io/badge/Raspberry_Pi_contributed_binaries-1.18.1-e05d44.svg)
-[hledger-aarch64-manjaro.gz](https://github.com/simonmichael/hledger/releases/tag/1.18.1) ,
-[hledger-armhf32-debian.gz](https://github.com/simonmichael/hledger/releases/tag/1.18)
+[hledger-aarch64-manjaro.gz](https://github.com/plaintextaccounting/hledger/releases/tag/1.18.1) ,
+[hledger-armhf32-debian.gz](https://github.com/plaintextaccounting/hledger/releases/tag/1.18)
 
 Ubuntu ([more](https://packages.ubuntu.com/search?suite=all&searchon=names&keywords=hledger)) \
 [![ubuntu_25_10](https://repology.org/badge/version-for-repo/ubuntu_25_10/hledger.svg)](https://packages.ubuntu.com/questing/hledger) `apt install hledger hledger-ui hledger-web`\
@@ -168,9 +168,9 @@ You will need
   it should not be just `C`, or unset.
   This is discussed more in [Text encoding](#text-encoding), below.
 
-Get the [hledger source code](https://github.com/simonmichael/hledger/commits/main) with [git](https://git-scm.com):
+Get the [hledger source code](https://github.com/plaintextaccounting/hledger/commits/main) with [git](https://git-scm.com):
 
-    git clone https://github.com/simonmichael/hledger
+    git clone https://github.com/plaintextaccounting/hledger
     cd hledger
     git checkout 1.52.2   # switch to the latest release tag (optional)
 
@@ -209,7 +209,7 @@ Install [git]:
 
 Get the hledger source:
 
-    git clone https://github.com/simonmichael/hledger
+    git clone https://github.com/plaintextaccounting/hledger
     cd hledger
     git checkout 1.52.2   # switch to the latest release tag (optional)
 
@@ -226,13 +226,13 @@ On Windows, things work best if you build in the environment where you will use 
 Eg don't build it in a WSL or MINGW window if you plan to use it in CMD or Powershell.
 
 Possible issues:
-- [windows: cross-environment non-ascii display issues](https://github.com/simonmichael/hledger/issues/961#issuecomment-471229644)
+- [windows: cross-environment non-ascii display issues](https://github.com/plaintextaccounting/hledger/issues/961#issuecomment-471229644)
 
 ### On Nix
 
 Possible issues:
-- [nix: nix install on linux can fail with "cloning builder process: Operation not permitted"](https://github.com/simonmichael/hledger/issues/1030)
-- [nix: on Linux, nix-installed hledger won't handle non-ascii data](https://github.com/simonmichael/hledger/issues/1033)
+- [nix: nix install on linux can fail with "cloning builder process: Operation not permitted"](https://github.com/plaintextaccounting/hledger/issues/1030)
+- [nix: on Linux, nix-installed hledger won't handle non-ascii data](https://github.com/plaintextaccounting/hledger/issues/1033)
 
 ### On Android
 
@@ -340,7 +340,7 @@ $ echo $LANG
 C.UTF-8
 ```
 
-For Nix users, the procedure is [different](https://github.com/simonmichael/hledger/issues/1033#issuecomment-1062506027),
+For Nix users, the procedure is [different](https://github.com/plaintextaccounting/hledger/issues/1033#issuecomment-1062506027),
 eg you might need to set `LOCALE_ARCHIVE` instead.
 Likewise for GUIX users.
 
@@ -360,7 +360,7 @@ $OutputEncoding = [console]::InputEncoding = [console]::OutputEncoding = New-Obj
 ### Completions
 
 If you use the bash or zsh shells, you can set up context-sensitive auto-completions for hledger command lines.
-(Here's how to [contribute other shells](https://github.com/simonmichael/hledger/tree/main/hledger/shell-completion#completions-for-other-shells).)
+(Here's how to [contribute other shells](https://github.com/plaintextaccounting/hledger/tree/main/hledger/shell-completion#completions-for-other-shells).)
 
 #### bash
 
@@ -426,7 +426,7 @@ where we'll gladly share tips or receive your feedback.
 [ghcup]:           https://haskell.org/ghcup
 [stack]:           https://docs.haskellstack.org/en/stable/
 [cabal]:           https://cabal.readthedocs.io/en/stable/
-[hledger-install]: https://github.com/simonmichael/hledger/blob/main/hledger-install/hledger-install.sh
+[hledger-install]: https://github.com/plaintextaccounting/hledger/blob/main/hledger-install/hledger-install.sh
 [WSL]:             https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux
 [nix]:             https://nixos.org
 [git]:             https://en.wikipedia.org/wiki/Git

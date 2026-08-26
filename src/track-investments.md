@@ -75,7 +75,7 @@ Ending balances (historical) in 2017/01/01-2017/01/02:
 ```
 
 There are still limitations in the value reporting that hledger can currently do.
-More information can be found in [Github issue #131](https://github.com/simonmichael/hledger/issues/131) and [Github issue #329](https://github.com/simonmichael/hledger/issues/329).
+More information can be found in [Github issue #131](https://github.com/plaintextaccounting/hledger/issues/131) and [Github issue #329](https://github.com/plaintextaccounting/hledger/issues/329).
 
 You may want to investigate the output after adding more prices to the journal file.
 ```journal
@@ -138,7 +138,7 @@ Ending balances (historical) in 2017/01/01-2017/01/04:
 - Beancount guides (general double-entry accounting advice from another tool)
     - [Cookbook][beancount_cookbook]: Account naming, basic trading transactions
     - [Trading guide][beancount_trading]: More complicated trading transactions, discussion on tricky cost basis adjustments
-- [Github #624 on investment tracking](https://github.com/simonmichael/hledger/issues/624)
+- [Github #624 on investment tracking](https://github.com/plaintextaccounting/hledger/issues/624)
 - [Discussion on investment modeling from the mailing list](https://groups.google.com/forum/#!topic/hledger/e8Ss7ZL4ADI)
 
 [beancount_cookbook]: http://furius.ca/beancount/doc/cookbook

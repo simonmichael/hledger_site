@@ -11,24 +11,24 @@ by copy/pasting the appropriate command below into a [terminal] window.
 
 On a Linux machine with an intel processor:
 ```
-curl -sL https://github.com/simonmichael/hledger/releases/download/1.50/hledger-linux-x64.tar.gz | tar -xzv -f- -C/usr/local/bin hledger hledger-ui hledger-web
+curl -sL https://github.com/plaintextaccounting/hledger/releases/download/1.50/hledger-linux-x64.tar.gz | tar -xzv -f- -C/usr/local/bin hledger hledger-ui hledger-web
 ```
 
 On a modern mac with an ARM ("M") processor:
 ```
-curl -sL https://github.com/simonmichael/hledger/releases/download/1.50/hledger-mac-arm64.tar.gz | tar -xzv -f- -C/usr/local/bin hledger hledger-ui hledger-web
+curl -sL https://github.com/plaintextaccounting/hledger/releases/download/1.50/hledger-mac-arm64.tar.gz | tar -xzv -f- -C/usr/local/bin hledger hledger-ui hledger-web
 ```
 
 On an older mac with an intel processor:
 ```
-curl -sL https://github.com/simonmichael/hledger/releases/download/1.50/hledger-mac-x64.tar.gz | tar -xzv -f- -C/usr/local/bin hledger hledger-ui hledger-web
+curl -sL https://github.com/plaintextaccounting/hledger/releases/download/1.50/hledger-mac-x64.tar.gz | tar -xzv -f- -C/usr/local/bin hledger hledger-ui hledger-web
 ```
 
 On a Windows machine with an intel or ARM processor:\
 (To get a terminal window, type: Windows-R, powershell, Return)
 ```
 cd ~
-curl https://github.com/simonmichael/hledger/releases/download/1.50/hledger-windows-x64.zip -OutFile hledger-windows-x64.zip
+curl https://github.com/plaintextaccounting/hledger/releases/download/1.50/hledger-windows-x64.zip -OutFile hledger-windows-x64.zip
 Expand-Archive hledger-windows-x64.zip -Force -DestinationPath AppData\Roaming\local\bin
 ```
 

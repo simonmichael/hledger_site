@@ -10,7 +10,7 @@ See also:
 
 - [Which PTA app should I choose ? (PTA FAQ)](https://plaintextaccounting.org/Getting-started-FAQ#which-pta-app-should-i-choose)
 - [ledger vs hledger (reddit, 2022)](https://www.reddit.com/r/plaintextaccounting/comments/ztdk0o/ledger_vs_hledger/)
-- [easy Ledger file reading (#1962)](https://github.com/simonmichael/hledger/issues/1962)
+- [easy Ledger file reading (#1962)](https://github.com/plaintextaccounting/hledger/issues/1962)
 
 ## Differences
 
@@ -102,8 +102,8 @@ Tue Feb  8 11:03:57 HST 2022
 
 Newer hledger versions are slower than this.
 hledger 1.29-1.32.2 have a performance bug which can be seen with large files,
-[#2153](https://github.com/simonmichael/hledger/issues/2153)
-(see eg [2153#issuecomment-1912942305](https://github.com/simonmichael/hledger/issues/2153#issuecomment-1912942305) benchmarks).
+[#2153](https://github.com/plaintextaccounting/hledger/issues/2153)
+(see eg [2153#issuecomment-1912942305](https://github.com/plaintextaccounting/hledger/issues/2153#issuecomment-1912942305) benchmarks).
 
 2024's hledger 1.40 on macbook air m1 runs at roughly 16k txns/s for me:
 
@@ -166,7 +166,7 @@ More independent benchmarking is needed, help welcome.
 - hledger provides more short flags (`-b`, `-e`, `-p`, `-D`, `-W`, `-M`, `-Q`, `-Y`) and the `date:` query argument for setting report period and interval, and all of these combine nicely.
 
 - hledger handles the transaction/posting status mark more precisely,
-  fixing a [recurring source of confusion](https://github.com/simonmichael/hledger/issues/564):
+  fixing a [recurring source of confusion](https://github.com/plaintextaccounting/hledger/issues/564):
   It calls the three statuses "unmarked", "pending", "cleared",
   and provides corresponding `--unmarked`/`-U`, `--pending`/`-P`, and `--cleared`/`-C` flags, which can be combined.
   Ledger's `-U`, which matches things not cleared, is `-UP` in hledger.
@@ -180,7 +180,7 @@ if you restrict yourself to compatible features,
 perhaps keeping non-compatible features in separate files.
 
 A typical gnarly old Ledger file will not work with hledger as-is.
-Here are some of the roadbumps to expect (see also: [#1752](https://github.com/simonmichael/hledger/issues/1752)):
+Here are some of the roadbumps to expect (see also: [#1752](https://github.com/plaintextaccounting/hledger/issues/1752)):
 
 - Some features are supported only by one or the other (Ledger's `(AMOUNTEXPR)`, `((VALUEEXPR))`.. , hledger's `==`, `=*`, `==*`..)
 - Some will be accepted but ignored, perhaps causing transactions not to balance (`{LOTCOST}`, `{=LOTFIXEDCOST}`, `[LOTDATE]`, `(LOTNOTE)`..)
