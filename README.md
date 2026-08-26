@@ -1,7 +1,7 @@
 ## hledger site repo
 
 This is the repository for the hledger.org website.
-(If you're looking for the main hledger code repo, see <https://github.com/simonmichael/hledger>.)
+(If you're looking for the main hledger code repo, see <https://github.com/plaintextaccounting/hledger>.)
 <!-- (Or the hledger project finance repo at <https://github.com/simonmichael/hledger_finance>.) -->
 
 It contains the configuration and most of the content source files for the site.
