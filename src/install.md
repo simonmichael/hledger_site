@@ -1,6 +1,6 @@
 # Install
 
-The current stable hledger release is **1.52.2**.
+The current stable hledger release is **1.52.3**.
 
 hledger 2.0 is in process and will be released some time in 2026.\
 The current preview release is **1.99.3** (AKA 2.0 preview 3).
@@ -25,10 +25,10 @@ or copy-paste the install command from [Get hledger installed](get-hledger-insta
 or use a download tool like [eget](https://github.com/zyedidia/eget?tab=readme-ov-file#how-to-get-eget):
 <!-- ([![RSS](images/rss.png) RSS feed](https://github.com/plaintextaccounting/hledger/releases.atom)). -->
 
-[![hledger release binaries](https://img.shields.io/badge/hledger_release_binaries-1.52.2-brightgreen.svg)][release binaries]
+[![hledger release binaries](https://img.shields.io/badge/hledger_release_binaries-1.52.3-brightgreen.svg)][release binaries]
 `eget simonmichael/hledger --all`
 
-[release binaries]:    https://github.com/plaintextaccounting/hledger/releases/tag/1.52.2
+[release binaries]:    https://github.com/plaintextaccounting/hledger/releases/tag/1.52.3
 [prerelease binaries]: https://github.com/plaintextaccounting/hledger/releases/tag/nightly
 
 ## Packaged binaries
@@ -172,7 +172,7 @@ Get the [hledger source code](https://github.com/plaintextaccounting/hledger/com
 
     git clone https://github.com/plaintextaccounting/hledger
     cd hledger
-    git checkout 1.52.2   # switch to the latest release tag (optional)
+    git checkout 1.52.3   # switch to the latest release tag (optional)
 
 Then build and install with stack:
 
@@ -211,7 +211,7 @@ Get the hledger source:
 
     git clone https://github.com/plaintextaccounting/hledger
     cd hledger
-    git checkout 1.52.2   # switch to the latest release tag (optional)
+    git checkout 1.52.3   # switch to the latest release tag (optional)
 
 Build and install hledger:
 
