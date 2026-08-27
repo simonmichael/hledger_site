@@ -49,7 +49,7 @@ hledger-ui and hledger-web aren't available via winget yet.
 -->
 
 Docker (Linux, Mac, Windows) <!-- adept --> ([more](https://hub.docker.com/search?q=hledger&type=image&sort=updated_at&order=desc)) \
-[![Docker](https://img.shields.io/badge/Docker_image-1.52.1-e05d44.svg)](https://hub.docker.com/r/dastapov/hledger) `docker pull dastapov/hledger`
+[![Docker](https://img.shields.io/badge/Docker_image-1.52.3-brightgreen.svg)](https://hub.docker.com/r/dastapov/hledger) `docker pull dastapov/hledger`
 
 BSD \
 [![freebsd ports](https://repology.org/badge/version-for-repo/freebsd/hledger.svg)](https://www.freshports.org/search.php?query=hledger) `pkg install hs-hledger hs-hledger-ui hs-hledger-web` \
