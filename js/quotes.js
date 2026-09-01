@@ -906,5 +906,8 @@ I’ve found the perfect balance with csv imports, specifically using the hledge
 It provides tons of power to pre-categorize transactions, and human error of entering the wrong amount/date are completely eliminated!
 --benj
 
+I'm a complete idiot for not properly checking out hledger before last week.
+--Râu Cao
+
 
 `; const quotes = quotesmd.trim().split('\n\n').map(q => q.replace(/^\*|\*$/g, '').trim());
