@@ -909,5 +909,12 @@ It provides tons of power to pre-categorize transactions, and human error of ent
 I'm a complete idiot for not properly checking out hledger before last week.
 --Râu Cao
 
+Just doing a tax return with hledger. With LLMs it's incredible!
+--Gemma Black
+
+One piece of software that is really great is hledger
+--Mihai Maruseac
+
+
 
 `; const quotes = quotesmd.trim().split('\n\n').map(q => q.replace(/^\*|\*$/g, '').trim());
