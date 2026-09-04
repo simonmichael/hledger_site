@@ -2844,19 +2844,9 @@ whole section, or at least the following tips:
     non-forecasted transaction\'s date.
 4.  Forecasted transactions will end 6 months from today, by default.
     See below for the exact start/end rules.
-5.  [period expressions](#period-expressions) can be tricky. Their
-    documentation needs improvement, but is worth studying.
-6.  Some period expressions with a repeating interval must begin on a
-    natural boundary of that interval. Eg in `weekly from DATE`, DATE
-    must be a monday. `~ weekly from 2019/10/1` (a tuesday) will give an
-    error.
-7.  Other period expressions with an interval are automatically expanded
-    to cover a whole number of that interval. (This is done to improve
-    reports, but it also affects periodic transactions. Yes, it\'s a bit
-    inconsistent with the above.) Eg: <br>
-    `~ every 10th day of month from 2023/01`, which is equivalent to
-    <br> `~ every 10th day of month from 2023/01/01`, will be adjusted
-    to start on 2019/12/10.
+5.  [Period expressions](#period-expressions) with [report
+    intervals](#report-intervals) can be tricky; note how they make
+    start/end [date adjustments](#date-adjustments).
 
 #### Periodic rule syntax
 
