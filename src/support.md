@@ -58,12 +58,7 @@ hledger issues are tracked in the hledger repos on github. There are some shortc
 [#hledger](https://x.com/search?q=%23hledger&src=typed_query&f=live),
 [hledger](https://x.com/search?q=hledger&src=typed_query&f=live),
 [#plaintextaccounting](https://x.com/search?q=%23plaintextaccounting&src=typed_query&f=live),
-[plaintextaccounting](https://x.com/search?q=plaintextaccounting&src=typed_query&f=live) \
-xcancel.com:\
-[#hledger](https://xcancel.com/search?f=tweets&q=%23hledger),
-[hledger](https://xcancel.com/search?f=tweets&q=hledger),
-[#plaintextaccounting](https://xcancel.com/search?f=tweets&q=%23plaintextaccounting),
-[plaintextaccounting](https://xcancel.com/search?f=tweets&q=plaintextaccounting)
+[plaintextaccounting](https://x.com/search?q=plaintextaccounting&src=typed_query&f=live)
 
 **Hacker News**\
 [stories](https://hn.algolia.com/?query=hledger&sort=byDate&prefix&page=0&dateRange=all&type=story) and
