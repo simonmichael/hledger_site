@@ -688,14 +688,12 @@ hledger aregister cash cash 'amt:<0'
 
 ### How do I show the full entries for an account's deposits/withdrawals ?
 
-Expanding the above reports to show the full transactions is difficult, because `print` is a
-transaction-based report, whose query [matches if any postings are matched](hledger.md#combining-query-terms).
+Since hledger 1.43, you can use [any:](https://hledger.org/dev/hledger.html#any-query):
+```cli
+hledger print any:'cash amt:>0'
+```
 
-For now the best approach is to run `hledger print -x ACCT` and filter the output yourself,
-keeping only transactions where ACCT and a negative (or positive) amount appear on the same line.
-This requires a tool such as awk, and a regular expression that's good enough for your data.
-It's difficult to do this 100% reliably, avoiding false matches in descriptions, comments, subaccount names, balance assertions, commodity symbols.
-But here's an example that will work for most of us:
+With older hledger versions:
 
 Show transactions where a cash account was increased:
 ```cli
@@ -706,19 +704,13 @@ or decreased:
 hledger print -x cash | awk '/:cash.*?  [^=]*-/' RS="\n\n" ORS="\n\n"
 ```
 
-You can also do this kind of filtering with `C-c C-f` in Emacs ledger-mode, which is easier.
-
-New: with a hledger dev build, you can [now do](https://hledger.org/dev/hledger.html#boolean-queries)
-```cli
-hledger print any:'cash amt:>0'
-```
+You can also do this kind of filtering in Emacs ledger-mode, with `C-c C-f` and a regular expression.
 
 
-### How do I show transactions between one account and another account ?
 
-To show one transaction per line:
+### How do I show transactions involving two particular accounts ?
 
-Use `aregister ACCT1`, with the other account as the query:
+Use `aregister ACCT1 ACCT2`:
 ```cli
 hledger aregister checking expenses:tax
 ```
@@ -735,16 +727,15 @@ Use `print` with an `expr:` query (requires hledger >=1.30):
 hledger print expr:'checking AND expenses:tax'
 ```
 
-Or with hledger <1.30, you can emulate that with `not:not:`:
+Or, you can emulate that with `not:not:`:
 ```cli
 hledger print checking not:not:expenses:tax
 ```
 
-### How do I show a register or balance report between one account and another ?
+### How do I show balance changes from transactions involving two particular accounts ?
 
-The above won't work with the `register` or balance commands because
-these are posting-based reports - their query selects postings, not whole transactions.
-Instead, run a print report to select transactions to use in a second report, like so:
+The balance commands see individual postings, not whole transactions, so using `expr:` as above won't work.
+Instead do a first pass with print, selecting transactions to use in the second report:
 
 ```cli
 hledger print checking | hledger -f- -I register expenses:tax
@@ -760,6 +751,18 @@ hledger print liabilities:mastercard | hledger -f- -I incomestatement
 
 Complex multi-account transactions could muddle these reports a little;
 if that's a problem you might need to exclude those transactions or split them up.
+
+Or, with hledger main you can use `any:`.
+This shows all tax transactions paid from a "checking" account:
+
+```cli
+hledger balance expr:'checking AND any:expenses:tax'
+```
+
+or more simply:
+```cli
+hledger balance checking any:expenses:tax
+```
 
 
 ### What are some gotchas with piping `hledger print` into another hledger command ?
