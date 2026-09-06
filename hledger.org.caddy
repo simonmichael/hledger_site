@@ -467,7 +467,8 @@ unassignedprs.hledger.org {
 }
 # old trello board
 trello.hledger.org {
-	redir https://trello.com/board/hledger-planning-board/5127f6bb0698a36663002981
+	#redir https://trello.com/board/hledger-planning-board/5127f6bb0698a36663002981
+	redir https://trello.com/b/5KXMLMEg/hledger-backlog-wishlist
 }
 ci.hledger.org {
 	redir https://github.com/plaintextaccounting/hledger/actions
