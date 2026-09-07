@@ -915,6 +915,9 @@ Just doing a tax return with hledger. With LLMs it's incredible!
 One piece of software that is really great is hledger
 --Mihai Maruseac
 
+I've been using hledger for a little over six months now. It's really transformed my personal and business finances, putting me in a much better position to make informed decisions.
+--Arthur Cinader
+
 
 
 `; const quotes = quotesmd.trim().split('\n\n').map(q => q.replace(/^\*|\*$/g, '').trim());
