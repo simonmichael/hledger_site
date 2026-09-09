@@ -371,4 +371,3 @@ For quicker browsing, configure these bookmark keywords in your browser.
 </li>
 </ul>
 
-<script src="js/quotes.js"></script>
