@@ -1,6 +1,6 @@
 # Install
 
-The current stable hledger release is **1.52.3**.
+The current stable hledger release is **1.52.4**.
 
 hledger 2.0 is in process and will be released some time in 2026.\
 The current preview release is **1.99.3** (AKA 2.0 preview 3).
@@ -25,10 +25,10 @@ or copy-paste the install command from [Get hledger installed](get-hledger-insta
 or use a download tool like [eget](https://github.com/zyedidia/eget?tab=readme-ov-file#how-to-get-eget):
 <!-- ([![RSS](images/rss.png) RSS feed](https://github.com/hledgerorg/hledger/releases.atom)). -->
 
-[![hledger release binaries](https://img.shields.io/badge/hledger_release_binaries-1.52.3-brightgreen.svg)][release binaries]
+[![hledger release binaries](https://img.shields.io/badge/hledger_release_binaries-1.52.4-brightgreen.svg)][release binaries]
 `eget hledgerorg/hledger --all`
 
-[release binaries]:    https://github.com/hledgerorg/hledger/releases/tag/1.52.3
+[release binaries]:    https://github.com/hledgerorg/hledger/releases/tag/1.52.4
 [prerelease binaries]: https://github.com/hledgerorg/hledger/releases/tag/nightly
 
 ## Packaged binaries
@@ -38,7 +38,7 @@ Homebrew (Mac, Linux) <!-- chenrui ? --> \
 
 Windows \
 [![Scoop](https://repology.org/badge/version-for-repo/scoop/hledger.svg)](https://scoop.sh/#/apps?q=hledger) `scoop install hledger` \
-[![Winget](https://img.shields.io/badge/Winget_package-1.52.3-brightgreen.svg)](https://github.com/microsoft/winget-pkgs/tree/master/manifests/s/hledgerorg/hledger) `winget install -e --id simonmichael.hledger` \
+[![Winget](https://img.shields.io/badge/Winget_package-1.52.3-e05d44.svg)](https://github.com/microsoft/winget-pkgs/tree/master/manifests/s/hledgerorg/hledger) `winget install -e --id simonmichael.hledger` \
 [![Chocolatey](https://repology.org/badge/version-for-repo/chocolatey/hledger.svg)](https://community.chocolatey.org/packages/hledger) `choco install hledger -y`
 <!--
 https://learn.microsoft.com/en-us/windows/package-manager/winget/#use-winget
@@ -49,7 +49,7 @@ hledger-ui and hledger-web aren't available via winget yet.
 -->
 
 Docker (Linux, Mac, Windows) <!-- adept --> ([more](https://hub.docker.com/search?q=hledger&type=image&sort=updated_at&order=desc)) \
-[![Docker](https://img.shields.io/badge/Docker_image-1.52.3-brightgreen.svg)](https://hub.docker.com/r/dastapov/hledger) `docker pull dastapov/hledger`
+[![Docker](https://img.shields.io/badge/Docker_image-1.52.3-e05d44.svg)](https://hub.docker.com/r/dastapov/hledger) `docker pull dastapov/hledger`
 
 BSD \
 [![freebsd ports](https://repology.org/badge/version-for-repo/freebsd/hledger.svg)](https://www.freshports.org/search.php?query=hledger) `pkg install hs-hledger hs-hledger-ui hs-hledger-web` \
@@ -176,7 +176,7 @@ Get the [hledger source code](https://github.com/hledgerorg/hledger/commits/main
 
     git clone https://github.com/hledgerorg/hledger
     cd hledger
-    git checkout 1.52.3   # switch to the latest release tag (optional)
+    git checkout 1.52.4   # switch to the latest release tag (optional)
 
 Then build and install with stack:
 
@@ -215,7 +215,7 @@ Get the hledger source:
 
     git clone https://github.com/hledgerorg/hledger
     cd hledger
-    git checkout 1.52.3   # switch to the latest release tag (optional)
+    git checkout 1.52.4   # switch to the latest release tag (optional)
 
 Build and install hledger:
 
