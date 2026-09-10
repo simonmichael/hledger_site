@@ -1646,7 +1646,7 @@ hledger-lib library for journal parsing, reporting, command-line
 options, etc.
 
 Here are some hledger add-ons available from Hackage, the
-[extra](https://github.com/simonmichael/hledger/tree/master/extra)
+[extra](https://github.com/hledgerorg/hledger/tree/master/extra)
 directory in the hledger source, or elsewhere:
 
 ### api
@@ -1968,7 +1968,7 @@ $ LEDGER_FILE=unique.journal hledger print-unique
 Prints all journal entries, adding specified custom postings to matched
 entries.
 
-[hledger-rewrite.hs](https://github.com/simonmichael/hledger/blob/master/extra/hledger-rewrite.hs),
+[hledger-rewrite.hs](https://github.com/hledgerorg/hledger/blob/master/extra/hledger-rewrite.hs),
 in hledger's extra directory (compilation optional), adds postings to
 existing transactions, optionally with an amount based on the existing
 transaction's first amount. See the script for more details.

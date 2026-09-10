@@ -386,11 +386,11 @@ code.hledger.org {
 }
 # site repo
 site.hledger.org {
-	redir https://github.com/simonmichael/hledger_site
+	redir https://github.com/hledgerorg/hledger_site
 }
 # finance repo
 finance.hledger.org {
-	redir https://github.com/simonmichael/hledger_finance
+	redir https://github.com/hledgerorg/hledger_finance
 }
 # github projects
 projects.hledger.org {
@@ -474,10 +474,10 @@ ci.hledger.org {
 	redir https://github.com/hledgerorg/hledger/actions
 }
 # travis.hledger.org {
-#  redir https://travis-ci.org/simonmichael/hledger
+#  redir https://travis-ci.org/hledgerorg/hledger
 # }
 # appveyor.hledger.org {
-#  redir https://ci.appveyor.com/project/simonmichael/hledger
+#  redir https://ci.appveyor.com/project/hledgerorg/hledger
 # }
 # azure.hledger.org {
 #  redir https://dev.azure.com/simonmic/hledger/_build
@@ -529,7 +529,7 @@ paste.hledger.org {
 #  redir https://pasteboard.co/
 # }
 waffle.hledger.org {
-	redir https://waffle.io/simonmichael/hledger?source=simonmichael%2Fhledger
+	redir https://waffle.io/hledgerorg/hledger?source=simonmichael%2Fhledger
 }
 stars.hledger.org {
 	redir https://hledger.org/ACHIEVEMENTS.html#stars

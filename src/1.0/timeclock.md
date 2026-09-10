@@ -44,7 +44,7 @@ $ hledger -f t.timeclock print
 ```
 
 Here is a
-[sample.timeclock](https://raw.github.com/simonmichael/hledger/master/data/sample.timeclock)
+[sample.timeclock](https://raw.github.com/hledgerorg/hledger/master/data/sample.timeclock)
 to download and some queries to try:
 
 ``` {.shell}

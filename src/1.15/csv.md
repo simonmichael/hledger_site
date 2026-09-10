@@ -68,7 +68,7 @@ A more complete example:
     amount      -%amount
 
 For more examples, see [Convert CSV
-files](https://github.com/simonmichael/hledger/wiki/Convert-CSV-files).
+files](https://github.com/hledgerorg/hledger/wiki/Convert-CSV-files).
 
 ## CSV RULES
 
@@ -164,7 +164,7 @@ Field assignments can be used instead of or in addition to a field list.
 
 Note, interpolation strips any outer whitespace, so a CSV value like
 `" 1 "` becomes `1` when interpolated
-([\#1051](https://github.com/simonmichael/hledger/issues/1051)).
+([\#1051](https://github.com/hledgerorg/hledger/issues/1051)).
 
 ### conditional block
 
@@ -280,7 +280,7 @@ generate a [balance assertion](journal.html#balance-assertions) (or if
 the amount is left empty, a [balance
 assignment](journal.html#balance-assignments)), on the first or second
 posting, whenever the running balance field is non-empty. (TODO:
-[\#1000](https://github.com/simonmichael/hledger/issues/1000))
+[\#1000](https://github.com/hledgerorg/hledger/issues/1000))
 
 ### Reading multiple CSV files
 

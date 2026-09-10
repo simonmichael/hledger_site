@@ -26,7 +26,7 @@ or use a download tool like [eget](https://github.com/zyedidia/eget?tab=readme-o
 <!-- ([![RSS](images/rss.png) RSS feed](https://github.com/hledgerorg/hledger/releases.atom)). -->
 
 [![hledger release binaries](https://img.shields.io/badge/hledger_release_binaries-1.52.3-brightgreen.svg)][release binaries]
-`eget simonmichael/hledger --all`
+`eget hledgerorg/hledger --all`
 
 [release binaries]:    https://github.com/hledgerorg/hledger/releases/tag/1.52.3
 [prerelease binaries]: https://github.com/hledgerorg/hledger/releases/tag/nightly
@@ -38,7 +38,7 @@ Homebrew (Mac, Linux) <!-- chenrui ? --> \
 
 Windows \
 [![Scoop](https://repology.org/badge/version-for-repo/scoop/hledger.svg)](https://scoop.sh/#/apps?q=hledger) `scoop install hledger` \
-[![Winget](https://img.shields.io/badge/Winget_package-1.52.3-brightgreen.svg)](https://github.com/microsoft/winget-pkgs/tree/master/manifests/s/simonmichael/hledger) `winget install -e --id simonmichael.hledger` \
+[![Winget](https://img.shields.io/badge/Winget_package-1.52.3-brightgreen.svg)](https://github.com/microsoft/winget-pkgs/tree/master/manifests/s/hledgerorg/hledger) `winget install -e --id simonmichael.hledger` \
 [![Chocolatey](https://repology.org/badge/version-for-repo/chocolatey/hledger.svg)](https://community.chocolatey.org/packages/hledger) `choco install hledger -y`
 <!--
 https://learn.microsoft.com/en-us/windows/package-manager/winget/#use-winget
@@ -386,11 +386,11 @@ If you use the bash or zsh shells, you can set up context-sensitive auto-complet
 
     If not, eg because your system's hledger package does not yet include the bash completions, or if they are not up to date, 
     or if you have installed hledger by other means, then install the 
-    [latest hledger bash completions](https://raw.githubusercontent.com/simonmichael/hledger/1.50-branch/hledger/shell-completion/hledger-completion.bash)
+    [latest hledger bash completions](https://raw.githubusercontent.com/hledgerorg/hledger/1.50-branch/hledger/shell-completion/hledger-completion.bash)
     yourself, under your XDG_DATA_HOME directory. Eg:
 
     ```
-    curl https://raw.githubusercontent.com/simonmichael/hledger/1.50-branch/hledger/shell-completion/hledger-completion.bash \
+    curl https://raw.githubusercontent.com/hledgerorg/hledger/1.50-branch/hledger/shell-completion/hledger-completion.bash \
       -o ~/.local/share/bash-completion/completions/hledger --create-dirs
     ```
 

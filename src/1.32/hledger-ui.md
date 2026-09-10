@@ -536,7 +536,7 @@ There are currently some limitations with `--watch`:
 
 It may not work correctly for you, depending on platform or system
 configuration. (Eg
-[#836](https://github.com/simonmichael/hledger/issues/836).)
+[#836](https://github.com/hledgerorg/hledger/issues/836).)
 
 At least on mac, there can be a slow build-up of CPU usage over time,
 until the program is restarted (or, suspending and restarting with
@@ -545,7 +545,7 @@ until the program is restarted (or, suspending and restarting with
 It will not detect file changes made by certain editors, such as
 Jetbrains IDEs or `gedit`, or on certain less common filesystems. (To
 work around, press `g` to reload manually, or try
-[#1617](https://github.com/simonmichael/hledger/issues/1617)\'s
+[#1617](https://github.com/hledgerorg/hledger/issues/1617)\'s
 `fs.inotify.max_user_watches` workaround and let us know.)
 
 If you are viewing files mounted from another machine, the system clocks

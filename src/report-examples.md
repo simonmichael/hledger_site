@@ -4,7 +4,7 @@ There are some [example reports on the home page](index.md/#examples).
 
 Here are some more example reports using the [bcexample journal][bcexample] from beancount:
 
-[bcexample]: https://raw.githubusercontent.com/simonmichael/hledger/main/examples/bcexample.journal
+[bcexample]: https://raw.githubusercontent.com/hledgerorg/hledger/main/examples/bcexample.journal
 
 A yearly income statement, summarised to depth 3, sorted by amount:
 

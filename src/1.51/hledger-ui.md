@@ -453,14 +453,14 @@ history.
   configuration. On some unix systems, increasing
   fs.inotify.max_user_watches or fs.file-max parameters in
   /etc/sysctl.conf might help.
-  ([#836](https://github.com/simonmichael/hledger/issues/836))
+  ([#836](https://github.com/hledgerorg/hledger/issues/836))
 - It may not detect changes made from outside a virtual machine, ie by
   an editor running on the host system.
 - It may not detect file changes on certain less common filesystems.
 - It may use increasing CPU and RAM over time, especially with large
   files. (This is probably not \--watch specific, you may be able to
   reproduce it by pressing `g` repeatedly.)
-  ([#1825](https://github.com/simonmichael/hledger/issues/1825))
+  ([#1825](https://github.com/hledgerorg/hledger/issues/1825))
 
 Tips/workarounds:
 

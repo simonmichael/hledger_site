@@ -325,7 +325,7 @@ what you get from `/transactions` or `/accounttransactions`.
 Another way to generate test data is with the
 `readJsonFile`/`writeJsonFile` helpers in Hledger.Web.Json, which can
 write or read most of hledger's [data
-types](https://github.com/simonmichael/hledger/blob/master/hledger-lib/Hledger/Data/Types.hs)
+types](https://github.com/hledgerorg/hledger/blob/master/hledger-lib/Hledger/Data/Types.hs)
 to or from a file. Eg here we write the first transaction of a sample
 journal:
 
@@ -338,7 +338,7 @@ $ python -m json.tool <txn.json >txn.pretty.json  # optional: make human-readabl
 ```
 
 ([sample output &
-discussion](https://github.com/simonmichael/hledger/issues/316#issuecomment-465858507))
+discussion](https://github.com/hledgerorg/hledger/issues/316#issuecomment-465858507))
 
 And here's how to test adding that with curl:
 

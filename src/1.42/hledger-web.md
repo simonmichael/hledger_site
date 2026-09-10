@@ -345,7 +345,7 @@ and click on the various data types, eg
 [Transaction](https://hackage.haskell.org/package/hledger-lib-1.17.1/docs/Hledger-Data-Types.html#t:Transaction).
 And for a higher level understanding, see the [journal
 docs](hledger.html#journal). There is also a basic [OpenAPI
-specification](https://github.com/simonmichael/hledger/blob/master/hledger-web/config/openapi.yaml).
+specification](https://github.com/hledgerorg/hledger/blob/master/hledger-web/config/openapi.yaml).
 
 In some cases there is outer JSON corresponding to a \"Report\" type. To
 understand that, go to the [Hledger.Web.Handler.MiscR

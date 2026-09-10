@@ -444,17 +444,17 @@ history.
   configuration. On some unix systems, increasing
   fs.inotify.max_user_watches or fs.file-max parameters in
   /etc/sysctl.conf might help.
-  ([#836](https://github.com/simonmichael/hledger/issues/836))
+  ([#836](https://github.com/hledgerorg/hledger/issues/836))
 - It may not detect file changes made by certain tools, such as
   Jetbrains IDEs or gedit.
-  ([#1617](https://github.com/simonmichael/hledger/issues/1617))
+  ([#1617](https://github.com/hledgerorg/hledger/issues/1617))
 - It may not detect changes made from outside a virtual machine, ie by
   an editor running on the host system.
 - It may not detect file changes on certain less common filesystems.
 - It may use increasing CPU and RAM over time, especially with large
   files. (This is probably not \--watch specific, you may be able to
   reproduce it by pressing `g` repeatedly.)
-  ([#1825](https://github.com/simonmichael/hledger/issues/1825))
+  ([#1825](https://github.com/hledgerorg/hledger/issues/1825))
 
 Tips/workarounds:
 
@@ -487,7 +487,7 @@ above).
 
 The Transaction screen does not update after file changes, even if you
 press `g`, until you exit and re-enter it.
-([#2288](https://github.com/simonmichael/hledger/issues/2288))
+([#2288](https://github.com/hledgerorg/hledger/issues/2288))
 
 If you press `g` with large files, there could be a noticeable pause
 with the UI unresponsive.

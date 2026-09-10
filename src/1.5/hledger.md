@@ -2202,7 +2202,7 @@ is a good way to start making your own!
 
 #### autosync
 
-[hledger-autosync](https://github.com/simonmichael/hledger/blob/master/bin/hledger-autosync)
+[hledger-autosync](https://github.com/hledgerorg/hledger/blob/master/bin/hledger-autosync)
 is a symbolic link for easily running
 [ledger-autosync](https://pypi.python.org/pypi/ledger-autosync), if
 installed. ledger-autosync does deduplicating conversion of OFX data and
@@ -2212,17 +2212,17 @@ Connect](http://wiki.gnucash.org/wiki/OFX_Direct_Connect_Bank_Settings).
 
 #### budget
 
-[hledger-budget.hs](https://github.com/simonmichael/hledger/blob/master/bin/hledger-budget.hs#L10)
+[hledger-budget.hs](https://github.com/hledgerorg/hledger/blob/master/bin/hledger-budget.hs#L10)
 adds more budget-tracking features to hledger.
 
 #### chart
 
-[hledger-chart.hs](https://github.com/simonmichael/hledger/blob/master/bin/hledger-chart.hs#L47)
+[hledger-chart.hs](https://github.com/hledgerorg/hledger/blob/master/bin/hledger-chart.hs#L47)
 is an old pie chart generator, in need of some love.
 
 #### check
 
-[hledger-check.hs](https://github.com/simonmichael/hledger/blob/master/bin/hledger-check.hs)
+[hledger-check.hs](https://github.com/hledgerorg/hledger/blob/master/bin/hledger-check.hs)
 checks more powerful account balance assertions.
 
 ## ENVIRONMENT

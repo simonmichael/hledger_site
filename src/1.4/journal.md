@@ -541,7 +541,7 @@ There are several ways to record a transaction price:
 Amounts with transaction prices can be displayed in the transaction
 price's commodity by using the
 [`-B/--cost`](hledger.html#reporting-options) flag (except for
-[\#551](https://github.com/simonmichael/hledger/issues/551)) ("B" is
+[\#551](https://github.com/hledgerorg/hledger/issues/551)) ("B" is
 from "cost Basis"). Eg for the above, here is how -B affects the balance
 report:
 

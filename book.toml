@@ -37,8 +37,8 @@ additional-js = [
   "js/quotes.js",
 ]
 no-section-label = true
-git-repository-url = "https://github.com/simonmichael/hledger_site"
-edit-url-template  = "https://github.com/simonmichael/hledger_site/edit/master/{path}"
+git-repository-url = "https://github.com/hledgerorg/hledger_site"
+edit-url-template  = "https://github.com/hledgerorg/hledger_site/edit/master/{path}"
 # git-repository-icon = "fa-github"
 # site-url = "/"
 # cname = "hledger.org"

@@ -470,9 +470,9 @@ does not support it). Here are some that we know of:
 
 -   Certain editors: saving with `gedit`, and perhaps any Gnome
     application, won't be detected
-    ([\#1617](https://github.com/simonmichael/hledger/issues/1617)).
+    ([\#1617](https://github.com/hledgerorg/hledger/issues/1617)).
     Jetbrains IDEs, such as IDEA, also may not work
-    ([\#911](https://github.com/simonmichael/hledger/issues/911)).
+    ([\#911](https://github.com/hledgerorg/hledger/issues/911)).
 
 -   Certain unusual filesystems might not be supported. (All the usual
     ones on unix, mac and windows are supported.)

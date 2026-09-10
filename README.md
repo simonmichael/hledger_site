@@ -2,7 +2,7 @@
 
 This is the repository for the hledger.org website.
 (If you're looking for the main hledger code repo, see <https://github.com/hledgerorg/hledger>.)
-<!-- (Or the hledger project finance repo at <https://github.com/simonmichael/hledger_finance>.) -->
+<!-- (Or the hledger project finance repo at <https://github.com/hledgerorg/hledger_finance>.) -->
 
 It contains the configuration and most of the content source files for the site.
 (But most dev docs and the dev version of the manuals are symlinked from the main hledger repo.)

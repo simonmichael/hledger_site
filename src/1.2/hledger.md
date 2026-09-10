@@ -1900,7 +1900,7 @@ is a good way to start making your own!
 
 #### autosync
 
-[hledger-autosync](https://github.com/simonmichael/hledger/blob/master/bin/hledger-autosync)
+[hledger-autosync](https://github.com/hledgerorg/hledger/blob/master/bin/hledger-autosync)
 is a symbolic link for easily running
 [ledger-autosync](https://pypi.python.org/pypi/ledger-autosync), if
 installed. ledger-autosync does deduplicating conversion of OFX data and
@@ -1910,53 +1910,53 @@ Connect](http://wiki.gnucash.org/wiki/OFX_Direct_Connect_Bank_Settings).
 
 #### budget
 
-[hledger-budget.hs](https://github.com/simonmichael/hledger/blob/master/bin/hledger-budget.hs#L10)
+[hledger-budget.hs](https://github.com/hledgerorg/hledger/blob/master/bin/hledger-budget.hs#L10)
 adds more budget-tracking features to hledger.
 
 #### chart
 
-[hledger-chart.hs](https://github.com/simonmichael/hledger/blob/master/bin/hledger-chart.hs#L47)
+[hledger-chart.hs](https://github.com/hledgerorg/hledger/blob/master/bin/hledger-chart.hs#L47)
 is an old pie chart generator, in need of some love.
 
 #### check
 
-[hledger-check.hs](https://github.com/simonmichael/hledger/blob/master/bin/hledger-check.hs)
+[hledger-check.hs](https://github.com/hledgerorg/hledger/blob/master/bin/hledger-check.hs)
 checks more powerful account balance assertions.
 
 #### check-dates
 
-[hledger-check-dates.hs](https://github.com/simonmichael/hledger/blob/master/bin/hledger-check-dates.hs#L15)
+[hledger-check-dates.hs](https://github.com/hledgerorg/hledger/blob/master/bin/hledger-check-dates.hs#L15)
 checks that journal entries are ordered by date.
 
 #### check-dupes
 
-[hledger-check-dupes.hs](https://github.com/simonmichael/hledger/blob/master/bin/hledger-check-dupes.hs#L21)
+[hledger-check-dupes.hs](https://github.com/hledgerorg/hledger/blob/master/bin/hledger-check-dupes.hs#L21)
 checks for account names sharing the same leaf name.
 
 #### equity
 
-[hledger-equity.hs](https://github.com/simonmichael/hledger/blob/master/bin/hledger-equity.hs#L17)
+[hledger-equity.hs](https://github.com/hledgerorg/hledger/blob/master/bin/hledger-equity.hs#L17)
 prints balance-resetting transactions, useful for bringing account
 balances across file boundaries.
 
 #### prices
 
-[hledger-prices.hs](https://github.com/simonmichael/hledger/blob/master/bin/hledger-prices.hs)
+[hledger-prices.hs](https://github.com/hledgerorg/hledger/blob/master/bin/hledger-prices.hs)
 prints all prices from the journal.
 
 #### print-unique
 
-[hledger-print-unique.hs](https://github.com/simonmichael/hledger/blob/master/bin/hledger-print-unique.hs#L15)
+[hledger-print-unique.hs](https://github.com/hledgerorg/hledger/blob/master/bin/hledger-print-unique.hs#L15)
 prints transactions which do not reuse an already-seen description.
 
 #### register-match
 
-[hledger-register-match.hs](https://github.com/simonmichael/hledger/blob/master/bin/hledger-register-match.hs#L23)
+[hledger-register-match.hs](https://github.com/hledgerorg/hledger/blob/master/bin/hledger-register-match.hs#L23)
 helps ledger-autosync detect already-seen transactions when importing.
 
 #### rewrite
 
-[hledger-rewrite.hs](https://github.com/simonmichael/hledger/blob/master/bin/hledger-rewrite.hs#L28)
+[hledger-rewrite.hs](https://github.com/hledgerorg/hledger/blob/master/bin/hledger-rewrite.hs#L28)
 Adds one or more custom postings to matched transactions.
 
 ## ENVIRONMENT

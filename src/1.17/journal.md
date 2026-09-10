@@ -432,7 +432,7 @@ ambiguous. Are these group marks or decimal marks ?
     1.000
 
 hledger will treat them both as decimal marks by default (cf
-[\#793](https://github.com/simonmichael/hledger/issues/793)). If you use
+[\#793](https://github.com/hledgerorg/hledger/issues/793)). If you use
 digit group marks, to prevent confusion and undetected typos we
 recommend you write [commodity directives](#declaring-commodities) at
 the top of the file to explicitly declare the decimal mark (and
@@ -753,7 +753,7 @@ based on a subset of Ledger's, but there are many differences (and also
 some differences between hledger versions).
 
 Directives' behaviour and interactions can get a little bit
-[complex](https://github.com/simonmichael/hledger/issues/793), so here
+[complex](https://github.com/hledgerorg/hledger/issues/793), so here
 is a table summarising the directives and their effects, with links to
 more detailed docs.
 
@@ -1494,7 +1494,7 @@ Currently, transaction modifiers are applied / auto postings are added:
 
 Note this means that journal entries must be balanced both before and
 after auto postings are added. This changed in hledger 1.12+; see
-[\#893](https://github.com/simonmichael/hledger/issues/893) for
+[\#893](https://github.com/hledgerorg/hledger/issues/893) for
 background.
 
 #### Auto posting tags

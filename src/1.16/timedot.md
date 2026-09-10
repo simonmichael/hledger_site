@@ -113,7 +113,7 @@ $ hledger -f t.timedot --alias /\\./=: bal date:2016/2/4
 ```
 
 Here is a
-[sample.timedot](https://raw.github.com/simonmichael/hledger/master/examples/sample.timedot).
+[sample.timedot](https://raw.github.com/hledgerorg/hledger/master/examples/sample.timedot).
 <!-- to download and some queries to try: -->
 
 <!-- ```cli -->

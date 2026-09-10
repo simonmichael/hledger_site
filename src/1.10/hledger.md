@@ -263,7 +263,7 @@ You can save a set of command line options/arguments in a file, one per
 line, and then reuse them by writing `@FILENAME` in a command line. To
 prevent this expansion of `@`-arguments, precede them with a `--`
 argument. For more, see [Save frequently used
-options](https://github.com/simonmichael/hledger/wiki/Save-frequently-used-options).
+options](https://github.com/hledgerorg/hledger/wiki/Save-frequently-used-options).
 
 ### Special characters
 
@@ -1509,7 +1509,7 @@ Note, the `-S/--sort-amount` flag is not yet fully supported with
 `--budget`.
 
 For more examples, see [Budgeting and
-Forecasting](https://github.com/simonmichael/hledger/wiki/Budgeting%20and%20forecasting).
+Forecasting](https://github.com/hledgerorg/hledger/wiki/Budgeting%20and%20forecasting).
 
 #### Output format
 
@@ -2286,7 +2286,7 @@ is a good way to start making your own!
 
 #### autosync
 
-[hledger-autosync](https://github.com/simonmichael/hledger/blob/master/bin/hledger-autosync)
+[hledger-autosync](https://github.com/hledgerorg/hledger/blob/master/bin/hledger-autosync)
 is a symbolic link for easily running
 [ledger-autosync](https://pypi.python.org/pypi/ledger-autosync), if
 installed. ledger-autosync does deduplicating conversion of OFX data and
@@ -2296,12 +2296,12 @@ Connect](http://wiki.gnucash.org/wiki/OFX_Direct_Connect_Bank_Settings).
 
 #### chart
 
-[hledger-chart.hs](https://github.com/simonmichael/hledger/blob/master/bin/hledger-chart.hs#L47)
+[hledger-chart.hs](https://github.com/hledgerorg/hledger/blob/master/bin/hledger-chart.hs#L47)
 is an old pie chart generator, in need of some love.
 
 #### check
 
-[hledger-check.hs](https://github.com/simonmichael/hledger/blob/master/bin/hledger-check.hs)
+[hledger-check.hs](https://github.com/hledgerorg/hledger/blob/master/bin/hledger-check.hs)
 checks more powerful account balance assertions.
 
 ## ENVIRONMENT

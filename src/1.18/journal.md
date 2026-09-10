@@ -440,7 +440,7 @@ ambiguous. Are these group marks or decimal marks ?
     1.000
 
 hledger will treat them both as decimal marks by default (cf
-[\#793](https://github.com/simonmichael/hledger/issues/793)). If you use
+[\#793](https://github.com/hledgerorg/hledger/issues/793)). If you use
 digit group marks, to prevent confusion and undetected typos we
 recommend you write [commodity directives](#declaring-commodities) at
 the top of the file to explicitly declare the decimal mark (and
@@ -783,7 +783,7 @@ based on a subset of Ledger's, but there are many differences (and also
 some differences between hledger versions).
 
 Directives' behaviour and interactions can get a little bit
-[complex](https://github.com/simonmichael/hledger/issues/793), so here
+[complex](https://github.com/hledgerorg/hledger/issues/793), so here
 is a table summarising the directives and their effects, with links to
 more detailed docs.
 
@@ -798,7 +798,7 @@ more detailed docs.
 | [`include`](#including-other-files)        |                     |               | include entries/directives from another file                                                      | what the included directives affect                                                                                                                                                                                       |
 | [`P`](#market-prices)                      |                     |               | declare a market price for a commodity                                                            | amounts of that commodity in reports, when -V is used                                                                                                                                                                     |
 | [`Y`](#default-year)                       |                     |               | declare a year for yearless dates                                                                 | following inline/included entries until end of current file                                                                                                                                                               |
-| [`=`](#auto-postings)                      |                     |               | declare an auto posting rule, adding postings to other transactions                               | all entries in parent/current/child files (but not sibling files, see [\#1212](https://github.com/simonmichael/hledger/issues/1212))                                                                                      |
+| [`=`](#auto-postings)                      |                     |               | declare an auto posting rule, adding postings to other transactions                               | all entries in parent/current/child files (but not sibling files, see [\#1212](https://github.com/hledgerorg/hledger/issues/1212))                                                                                      |
 
 And some definitions:
 
@@ -1566,7 +1566,7 @@ $ hledger print --auto
 An auto posting rule can affect any transaction in the current file, or
 in any parent file or child file. Note, currently it will not affect
 sibling files (when multiple `-f`/`--file` are used - see
-[\#1212](https://github.com/simonmichael/hledger/issues/1212)).
+[\#1212](https://github.com/hledgerorg/hledger/issues/1212)).
 
 #### Auto postings and dates
 
@@ -1584,7 +1584,7 @@ Currently, auto postings are added:
 
 Note this means that journal entries must be balanced both before and
 after auto postings are added. This changed in hledger 1.12+; see
-[\#893](https://github.com/simonmichael/hledger/issues/893) for
+[\#893](https://github.com/hledgerorg/hledger/issues/893) for
 background.
 
 #### Auto posting tags

@@ -845,7 +845,7 @@ This requires a well-configured environment. Here are some tips:
     standard CMD.EXE environment (like the binaries on our download
     page) might show display problems when run in a cygwin or msys
     terminal, and vice versa. (See eg
-    [\#961](https://github.com/simonmichael/hledger/issues/961#issuecomment-471229644)).
+    [\#961](https://github.com/hledgerorg/hledger/issues/961#issuecomment-471229644)).
 
 ### Input files
 
@@ -959,7 +959,7 @@ Some notes about JSON output:
 -   Our JSON is rather large and verbose, as it is quite a faithful
     representation of hledger's internal data types. To understand the
     JSON, read the Haskell type definitions, which are mostly in
-    https://github.com/simonmichael/hledger/blob/master/hledger-lib/Hledger/Data/Types.hs.
+    https://github.com/hledgerorg/hledger/blob/master/hledger-lib/Hledger/Data/Types.hs.
 
 <!-- -->
 
@@ -971,7 +971,7 @@ Some notes about JSON output:
     don't limit the number of integer digits, but that part is under
     your control. We hope this approach will not cause problems in
     practice; if you find otherwise, please let us know. (Cf
-    [\#1195](https://github.com/simonmichael/hledger/issues/1195))
+    [\#1195](https://github.com/hledgerorg/hledger/issues/1195))
 
 Notes about SQL output:
 
@@ -1674,8 +1674,8 @@ Here is a reference for how valuation is supposed to affect each part of
 hledger's reports (and a glossary). (It's wide, you'll have to scroll
 sideways.) It may be useful when troubleshooting. If you find problems,
 please report them, ideally with a reproducible example. Related:
-[\#329](https://github.com/simonmichael/hledger/issues/329),
-[\#1083](https://github.com/simonmichael/hledger/issues/1083).
+[\#329](https://github.com/hledgerorg/hledger/issues/329),
+[\#1083](https://github.com/hledgerorg/hledger/issues/1083).
 
 | Report type                                     | `-B`, `--value=cost`                          | `-V`, `-X`                                       | `--value=then`                                        | `--value=end`                                      | `--value=DATE`, `--value=now`           |
 |-------------------------------------------------|-----------------------------------------------|--------------------------------------------------|-------------------------------------------------------|----------------------------------------------------|-----------------------------------------|
@@ -1870,7 +1870,7 @@ Date [2015/05/22]: <CTRL-D> $
 
 On Microsoft Windows, the add command makes sure that no part of the
 file path ends with a period, as that would cause problems
-([\#1056](https://github.com/simonmichael/hledger/issues/1056)).
+([\#1056](https://github.com/hledgerorg/hledger/issues/1056)).
 
 ### aregister
 
@@ -3444,7 +3444,7 @@ from `hledger print`.
 
 See also:
 
-https://github.com/simonmichael/hledger/issues/99
+https://github.com/hledgerorg/hledger/issues/99
 
 ##### rewrite vs. print --auto
 

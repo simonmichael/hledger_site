@@ -22,7 +22,7 @@ hledger's journal format is a compatible subset, mostly, of [ledger's
 journal
 format](http://ledger-cli.org/3.0/doc/ledger3.html#Journal-Format), so
 hledger can work with
-[compatible](https://github.com/simonmichael/hledger/wiki/FAQ#file-formats)
+[compatible](https://github.com/hledgerorg/hledger/wiki/FAQ#file-formats)
 ledger journal files as well. It's safe, and encouraged, to run both
 hledger and ledger on the same journal file, eg to validate the results
 you're getting.
@@ -727,7 +727,7 @@ based on a subset of Ledger's, but there are many differences (and also
 some differences between hledger versions).
 
 Directives' behaviour and interactions can get a little bit
-[complex](https://github.com/simonmichael/hledger/issues/793), so here
+[complex](https://github.com/hledgerorg/hledger/issues/793), so here
 is a table summarising the directives and their effects, with links to
 more detailed docs.
 
@@ -1123,7 +1123,7 @@ directives](#declaring-accounts). They do not affect account names being
 entered via hledger add or hledger-web.
 
 See also [Cookbook: Rewrite account
-names](https://github.com/simonmichael/hledger/wiki/Rewrite-account-names).
+names](https://github.com/hledgerorg/hledger/wiki/Rewrite-account-names).
 
 ##### Basic aliases
 
@@ -1326,7 +1326,7 @@ in [budget reports](/manual.html#budget-report).
 
 For more details, see: [balance: Budget
 report](manual.html#budget-report) and [Cookbook: Budgeting and
-Forecasting](https://github.com/simonmichael/hledger/wiki/Budgeting-and-forecasting).
+Forecasting](https://github.com/hledgerorg/hledger/wiki/Budgeting-and-forecasting).
 
 <a name="automated-postings"></a>
 

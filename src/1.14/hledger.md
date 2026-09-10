@@ -268,7 +268,7 @@ You can save a set of command line options/arguments in a file, one per
 line, and then reuse them by writing `@FILENAME` in a command line. To
 prevent this expansion of `@`-arguments, precede them with a `--`
 argument. For more, see [Save frequently used
-options](https://github.com/simonmichael/hledger/wiki/Save-frequently-used-options).
+options](https://github.com/hledgerorg/hledger/wiki/Save-frequently-used-options).
 
 ### Special characters in arguments and queries
 
@@ -1117,7 +1117,7 @@ By default, accounts are displayed hierarchically, with subaccounts
 indented below their parent. At each level of the tree, accounts are
 sorted by [account code](/manual.html#declaring-accounts) if any, then
 by account name. Or with `-S/--sort-amount`, by their balance amount.
-(Note: `-S` has a [problem](https://github.com/simonmichael/hledger/issues/1279) in hledger 1.11-1.18).
+(Note: `-S` has a [problem](https://github.com/hledgerorg/hledger/issues/1279) in hledger 1.11-1.18).
 
 "Boring" accounts, which contain a single interesting subaccount and no
 balance of their own, are elided into the following line for more
@@ -1487,7 +1487,7 @@ Budget performance in 2017/11/01-2017/12/31:
 ```
 
 For more examples, see [Budgeting and
-Forecasting](https://github.com/simonmichael/hledger/wiki/Budgeting%20and%20forecasting).
+Forecasting](https://github.com/hledgerorg/hledger/wiki/Budgeting%20and%20forecasting).
 
 ##### Nested budgets
 
@@ -2308,7 +2308,7 @@ from `hledger print`.
 
 See also:
 
-https://github.com/simonmichael/hledger/issues/99
+https://github.com/hledgerorg/hledger/issues/99
 
 ##### rewrite vs. print --auto
 
@@ -2492,7 +2492,7 @@ is a good way to start making your own!
 
 #### autosync
 
-[hledger-autosync](https://github.com/simonmichael/hledger/blob/master/bin/hledger-autosync)
+[hledger-autosync](https://github.com/hledgerorg/hledger/blob/master/bin/hledger-autosync)
 is a symbolic link for easily running
 [ledger-autosync](https://pypi.python.org/pypi/ledger-autosync), if
 installed. ledger-autosync does deduplicating conversion of OFX data and
@@ -2502,12 +2502,12 @@ Connect](http://wiki.gnucash.org/wiki/OFX_Direct_Connect_Bank_Settings).
 
 #### chart
 
-[hledger-chart.hs](https://github.com/simonmichael/hledger/blob/master/bin/hledger-chart.hs#L47)
+[hledger-chart.hs](https://github.com/hledgerorg/hledger/blob/master/bin/hledger-chart.hs#L47)
 is an old pie chart generator, in need of some love.
 
 #### check
 
-[hledger-check.hs](https://github.com/simonmichael/hledger/blob/master/bin/hledger-check.hs)
+[hledger-check.hs](https://github.com/hledgerorg/hledger/blob/master/bin/hledger-check.hs)
 checks more powerful account balance assertions.
 
 ## ENVIRONMENT

@@ -393,7 +393,7 @@ This requires a well-configured environment. Here are some tips:
     standard CMD.EXE environment (like the binaries on our download
     page) might show display problems when run in a cygwin or msys
     terminal, and vice versa. (See eg
-    [\#961](https://github.com/simonmichael/hledger/issues/961#issuecomment-471229644)).
+    [\#961](https://github.com/hledgerorg/hledger/issues/961#issuecomment-471229644)).
 
 ### Regular expressions
 
@@ -878,7 +878,7 @@ This form is mainly intended for use with `--forecast`, to generate
 week. It may be less useful with `-p`, since it divides each week into
 subperiods of unequal length. (Because gaps between periods are not
 allowed; if you'd like to change this, see
-[\#1632](https://github.com/simonmichael/hledger/pull/1632).)
+[\#1632](https://github.com/hledgerorg/hledger/pull/1632).)
 
 Examples:
 
@@ -1025,7 +1025,7 @@ $ hledger print assets:cash | hledger -f- -I balance expenses:food
 ```
 
 If you are interested in full boolean expressions for queries, see
-[\#203](https://github.com/simonmichael/hledger/issues/203).
+[\#203](https://github.com/hledgerorg/hledger/issues/203).
 
 ### Queries and command options
 
@@ -1045,7 +1045,7 @@ When amounts are converted to other commodities in [cost](#costing) or
 [value](#valuation) reports, `cur:` and `amt:` match the old commodity
 symbol and the old amount quantity, not the new ones (except in hledger
 1.22.0 where it's reversed, see
-[\#1625](https://github.com/simonmichael/hledger/issues/1625)).
+[\#1625](https://github.com/hledgerorg/hledger/issues/1625)).
 
 ### Querying with account aliases
 
@@ -1060,7 +1060,7 @@ When amounts are converted to other commodities in [cost](#costing) or
 symbol, and not the old one, and `amt:` matches the new quantity, and
 not the old one. Note: this changed in hledger 1.22, previously it was
 the reverse, see the discussion at
-[\#1625](https://github.com/simonmichael/hledger/issues/1625).
+[\#1625](https://github.com/hledgerorg/hledger/issues/1625).
 
 ## COSTING
 
@@ -1414,8 +1414,8 @@ Here is a reference for how valuation is supposed to affect each part of
 hledger's reports (and a glossary). (It's wide, you'll have to scroll
 sideways.) It may be useful when troubleshooting. If you find problems,
 please report them, ideally with a reproducible example. Related:
-[\#329](https://github.com/simonmichael/hledger/issues/329),
-[\#1083](https://github.com/simonmichael/hledger/issues/1083).
+[\#329](https://github.com/hledgerorg/hledger/issues/329),
+[\#1083](https://github.com/hledgerorg/hledger/issues/1083).
 
 | Report type                                         | `-B`, `--cost`                                                   | `-V`, `-X`                                                        | `--value=then`                                                                                | `--value=end`                                                     | `--value=DATE`, `--value=now`           |
 |-----------------------------------------------------|------------------------------------------------------------------|-------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|-------------------------------------------------------------------|-----------------------------------------|
@@ -1614,7 +1614,7 @@ Some notes about JSON output:
 -   Our JSON is rather large and verbose, as it is quite a faithful
     representation of hledger's internal data types. To understand the
     JSON, read the Haskell type definitions, which are mostly in
-    https://github.com/simonmichael/hledger/blob/master/hledger-lib/Hledger/Data/Types.hs.
+    https://github.com/hledgerorg/hledger/blob/master/hledger-lib/Hledger/Data/Types.hs.
 
 <!-- -->
 
@@ -1626,7 +1626,7 @@ Some notes about JSON output:
     don't limit the number of integer digits, but that part is under
     your control. We hope this approach will not cause problems in
     practice; if you find otherwise, please let us know. (Cf
-    [\#1195](https://github.com/simonmichael/hledger/issues/1195))
+    [\#1195](https://github.com/hledgerorg/hledger/issues/1195))
 
 Notes about SQL output:
 
@@ -1874,7 +1874,7 @@ Date [2015/05/22]: <CTRL-D> $
 
 On Microsoft Windows, the add command makes sure that no part of the
 file path ends with a period, as that would cause problems
-([\#1056](https://github.com/simonmichael/hledger/issues/1056)).
+([\#1056](https://github.com/hledgerorg/hledger/issues/1056)).
 
 ### aregister
 
@@ -2039,7 +2039,7 @@ journal period (more on this below).
 
 Accounts are sorted by [declaration order](#declaring-accounts) if any,
 and then alphabetically by account name. For instance (using
-[examples/sample.journal](https://github.com/simonmichael/hledger/blob/master/examples/sample.journal)):
+[examples/sample.journal](https://github.com/hledgerorg/hledger/blob/master/examples/sample.journal)):
 
 ```cli
 $ hledger -f examples/sample.journal bal
@@ -3036,7 +3036,7 @@ therefore optional:
 
 A few more checks are are available as separate [add-on
 commands](#add-on-commands), in
-<https://github.com/simonmichael/hledger/tree/master/bin>:
+<https://github.com/hledgerorg/hledger/tree/master/bin>:
 
 -   **hledger-check-tagfiles** - all tag values containing / (a forward
     slash) exist as file paths
@@ -3676,10 +3676,10 @@ There are some situations where print's output can become unparseable:
 -   [Valuation](#valuation) affects posting amounts but not [balance
     assertion](#balance-assertions) or [balance
     assignment](#balance-assignments) amounts, potentially causing those
-    to [fail](https://github.com/simonmichael/hledger/issues/1429).
+    to [fail](https://github.com/hledgerorg/hledger/issues/1429).
 -   [Auto postings](#auto-postings) can generate postings with [too many
     missing
-    amounts](https://github.com/simonmichael/hledger/issues/1276).
+    amounts](https://github.com/hledgerorg/hledger/issues/1276).
 
 Normally, the journal entry's explicit or implicit amount style is
 preserved. For example, when an amount is omitted in the journal, it
@@ -4033,7 +4033,7 @@ from `hledger print`.
 
 See also:
 
-https://github.com/simonmichael/hledger/issues/99
+https://github.com/hledgerorg/hledger/issues/99
 
 #### rewrite vs. print --auto
 
@@ -4086,7 +4086,7 @@ Note, in some cases this report can fail, for these reasons:
 Examples:
 
 -   Using roi to compute total return of investment in stocks:
-    https://github.com/simonmichael/hledger/blob/master/examples/roi-unrealised.ledger
+    https://github.com/hledgerorg/hledger/blob/master/examples/roi-unrealised.ledger
 
 -   Cookbook -\> [Return on Investment](return-on-investment.html)
 
@@ -4310,7 +4310,7 @@ have a big advantage: they can use the same hledger library functions
 that built-in commands use for command-line options, parsing and
 reporting. Some experimental/example add-on scripts can be found in the
 hledger repo's [bin/
-directory](https://github.com/simonmichael/hledger/tree/master/bin).
+directory](https://github.com/hledgerorg/hledger/tree/master/bin).
 
 Note in a hledger command line, add-on command flags must have a double
 dash (`--`) preceding them. Eg you must write:
@@ -5185,7 +5185,7 @@ based on a subset of Ledger's, but there are many differences (and also
 some differences between hledger versions).
 
 Directives' behaviour and interactions can get a little bit
-[complex](https://github.com/simonmichael/hledger/issues/793), so here
+[complex](https://github.com/hledgerorg/hledger/issues/793), so here
 is a table summarising the directives and their effects, with links to
 more detailed docs.
 
@@ -5201,7 +5201,7 @@ more detailed docs.
 | [`payee`](#declaring-payees)               |                     |               | declare a payee name                                                                              | following entries until end of current file                                                                                                                                                                               |
 | [`P`](#market-prices)                      |                     |               | declare a market price for a commodity                                                            | amounts of that commodity in reports, when -V is used                                                                                                                                                                     |
 | [`Y`](#default-year)                       |                     |               | declare a year for yearless dates                                                                 | following entries until end of current file                                                                                                                                                                               |
-| [`=`](#auto-postings)                      |                     |               | declare an auto posting rule, adding postings to other transactions                               | all entries in parent/current/child files (but not sibling files, see [\#1212](https://github.com/simonmichael/hledger/issues/1212))                                                                                      |
+| [`=`](#auto-postings)                      |                     |               | declare an auto posting rule, adding postings to other transactions                               | all entries in parent/current/child files (but not sibling files, see [\#1212](https://github.com/hledgerorg/hledger/issues/1212))                                                                                      |
 
 And some definitions:
 
@@ -5329,7 +5329,7 @@ parsing and display.
 
 Generally you should put them at the top of your journal file (since for
 function 2, they affect only following amounts, cf
-[\#793](https://github.com/simonmichael/hledger/issues/793)).
+[\#793](https://github.com/hledgerorg/hledger/issues/793)).
 
 A commodity directive is just the word `commodity` followed by a sample
 [amount](#amounts), like this:
@@ -6110,7 +6110,7 @@ $ hledger print --auto
 An auto posting rule can affect any transaction in the current file, or
 in any parent file or child file. Note, currently it will not affect
 sibling files (when multiple `-f`/`--file` are used - see
-[\#1212](https://github.com/simonmichael/hledger/issues/1212)).
+[\#1212](https://github.com/hledgerorg/hledger/issues/1212)).
 
 #### Auto postings and dates
 
@@ -6128,7 +6128,7 @@ Currently, auto postings are added:
 
 Note this means that journal entries must be balanced both before and
 after auto postings are added. This changed in hledger 1.12+; see
-[\#893](https://github.com/simonmichael/hledger/issues/893) for
+[\#893](https://github.com/hledgerorg/hledger/issues/893) for
 background.
 
 #### Auto posting tags
@@ -6202,7 +6202,7 @@ tutorial on hledger.org.
 
 Here are some sample hledger CSV rules files. See also the full
 collection at:\
-<https://github.com/simonmichael/hledger/tree/master/examples/csv>
+<https://github.com/hledgerorg/hledger/tree/master/examples/csv>
 
 #### Basic
 
@@ -6596,7 +6596,7 @@ Tips:
 
 -   Interpolation strips outer whitespace (so a CSV value like `" 1 "`
     becomes `1` when interpolated)
-    ([\#1051](https://github.com/simonmichael/hledger/issues/1051)).
+    ([\#1051](https://github.com/hledgerorg/hledger/issues/1051)).
 -   Interpolations always refer to a CSV field - you can't interpolate a
     hledger field. (See [Referencing other
     fields](#referencing-other-fields) below).
@@ -7398,7 +7398,7 @@ $ hledger -f t.timeclock print
 ```
 
 Here is a
-[sample.timeclock](https://raw.github.com/simonmichael/hledger/master/examples/sample.timeclock)
+[sample.timeclock](https://raw.github.com/hledgerorg/hledger/master/examples/sample.timeclock)
 to download and some queries to try:
 
 ```cli
@@ -7600,7 +7600,7 @@ $ hledger -f a.timedot --alias /\\./=: bal --tree
 ```
 
 A
-[sample.timedot](https://raw.github.com/simonmichael/hledger/master/examples/sample.timedot)
+[sample.timedot](https://raw.github.com/hledgerorg/hledger/master/examples/sample.timedot)
 file.
 
 ## COMMON TASKS

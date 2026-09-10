@@ -11,7 +11,7 @@
 | **[hledger mail list](https://list.hledger.org/)**      | usually fairly quiet
 | **[Mastodon #hledger](https://fosstodon.org/tags/hledger)**      | quick and with a wider reach
 | **[hledger bug tracker](https://bugs.hledger.org/)**    | for the hledger software
-| **[website bug tracker](https://github.com/simonmichael/hledger_site/issues?utf8=%E2%9C%93&q=)** | for the hledger.org website
+| **[website bug tracker](https://github.com/hledgerorg/hledger_site/issues?utf8=%E2%9C%93&q=)** | for the hledger.org website
 | **[PTA forum](https://forum.plaintextaccounting.org/)** | good for longer hledger/PTA content and searchability
 | **[PTA reddit](https://reddit.com/r/plaintextaccounting/)** | consider using the forum instead
 
@@ -36,8 +36,8 @@ hledger issues are tracked in the hledger repos on github. There are some shortc
 [issues.hledger.org/new](https://issues.hledger.org/new) (report a new issue) \
 [prs.hledger.org](https://prs.hledger.org/) (all pull requests) \
 [open issues by category](ISSUES.html#open-issues) \
-[website issues](https://github.com/simonmichael/hledger_site/issues?utf8=%E2%9C%93&q=) \
-[finance issues](https://github.com/simonmichael/hledger_finance/issues?utf8=%E2%9C%93&q=)
+[website issues](https://github.com/hledgerorg/hledger_site/issues?utf8=%E2%9C%93&q=) \
+[finance issues](https://github.com/hledgerorg/hledger_finance/issues?utf8=%E2%9C%93&q=)
 
 **Maintainer**\
 [simon@joyful.com](mailto:simon@joyful.com)

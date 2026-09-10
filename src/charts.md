@@ -106,7 +106,7 @@ done | cut -f1,6,7 | gsed -E -e 's/\$//' -e 's/([^\t]*)\t([^\t]*)\t([^\t]*)/\1 [
 
 [hledger-vega](https://github.com/xitian9/hledger-vega) (2022) is a set of scripts for producing custom charts
 from your hledger reports, using the powerful [vega-lite](https://vega.github.io/vega-lite/).
-<!-- <https://nest.pijul.com/simonmichael/hledger-vega> is another variant -->
+<!-- <https://nest.pijul.com/hledgerorg/hledger-vega> is another variant -->
 
 ![hledger-vega screenshot](images/charts-hledger-vega.png)
 

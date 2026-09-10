@@ -226,7 +226,7 @@ caddy-fmt:
 	caddy fmt hledger.org.caddy
 
 # hledger.org deploy webhook
-WEBHOOK_MANAGE_URL=https://github.com/simonmichael/hledger_site/settings/hooks/134395816
+WEBHOOK_MANAGE_URL=https://github.com/hledgerorg/hledger_site/settings/hooks/134395816
 
 webhook-settings:
 	@echo $(WEBHOOK_MANAGE_URL)?tab=settings

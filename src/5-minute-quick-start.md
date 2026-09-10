@@ -157,7 +157,7 @@ You can also use [strict mode](hledger.md#strict-mode),
 which enables both of these checks, 
 by adding `-s` to any command (or to your [config file](hledger.md#config-files)).
 
-Here's the [above journal](https://raw.githubusercontent.com/simonmichael/hledger/refs/heads/main/examples/quickstart.journal) in full.
+Here's the [above journal](https://raw.githubusercontent.com/hledgerorg/hledger/refs/heads/main/examples/quickstart.journal) in full.
 
 <!-- [quickstart.journa]: https://github.com/hledgerorg/hledger/blob/main/examples/quickstart.journal -->
 

@@ -376,7 +376,7 @@ This requires a well-configured environment. Here are some tips:
     standard CMD.EXE environment (like the binaries on our download
     page) might show display problems when run in a cygwin or msys
     terminal, and vice versa. (See eg
-    [\#961](https://github.com/simonmichael/hledger/issues/961#issuecomment-471229644)).
+    [\#961](https://github.com/hledgerorg/hledger/issues/961#issuecomment-471229644)).
 
 ### Input files
 
@@ -988,8 +988,8 @@ hledger's reports. It's work in progress, but may be useful for
 troubleshooting or reporting bugs. See also the definitions and notes
 below. If you find problems, please report them, ideally with a
 reproducible example. Related:
-[\#329](https://github.com/simonmichael/hledger/issues/329),
-[\#1083](https://github.com/simonmichael/hledger/issues/1083).
+[\#329](https://github.com/hledgerorg/hledger/issues/329),
+[\#1083](https://github.com/hledgerorg/hledger/issues/1083).
 
 <table>
 <colgroup>
@@ -1497,7 +1497,7 @@ Date [2015/05/22]: <CTRL-D> $
 
 On Microsoft Windows, the add command makes sure that no part of the
 file path ends with a period, as it can cause data loss on that platform
-(cf [\#1056](https://github.com/simonmichael/hledger/issues/1056)).
+(cf [\#1056](https://github.com/hledgerorg/hledger/issues/1056)).
 
 ### balance
 
@@ -1552,7 +1552,7 @@ By default, accounts are displayed hierarchically, with subaccounts
 indented below their parent. At each level of the tree, accounts are
 sorted by [account code](/journal.html#declaring-accounts) if any, then
 by account name. Or with `-S/--sort-amount`, by their balance amount.
-(Note: `-S` has a [problem](https://github.com/simonmichael/hledger/issues/1279) in hledger 1.11-1.18).
+(Note: `-S` has a [problem](https://github.com/hledgerorg/hledger/issues/1279) in hledger 1.11-1.18).
 
 "Boring" accounts, which contain a single interesting subaccount and no
 balance of their own, are elided into the following line for more
@@ -1958,7 +1958,7 @@ Budget performance in 2017/11/01-2017/12/31:
 ```
 
 For more examples, see [Budgeting and
-Forecasting](https://github.com/simonmichael/hledger/wiki/Budgeting%20and%20forecasting).
+Forecasting](https://github.com/hledgerorg/hledger/wiki/Budgeting%20and%20forecasting).
 
 ##### Nested budgets
 
@@ -2901,7 +2901,7 @@ from `hledger print`.
 
 See also:
 
-https://github.com/simonmichael/hledger/issues/99
+https://github.com/hledgerorg/hledger/issues/99
 
 ##### rewrite vs. print --auto
 
@@ -3084,7 +3084,7 @@ and tweaking these is a good way to start making your own!
 
 #### autosync
 
-[hledger-autosync](https://github.com/simonmichael/hledger/blob/master/bin/hledger-autosync)
+[hledger-autosync](https://github.com/hledgerorg/hledger/blob/master/bin/hledger-autosync)
 is a symbolic link for easily running
 [ledger-autosync](https://pypi.python.org/pypi/ledger-autosync), if
 installed. ledger-autosync does deduplicating conversion of OFX data and
@@ -3094,12 +3094,12 @@ Connect](http://wiki.gnucash.org/wiki/OFX_Direct_Connect_Bank_Settings).
 
 #### chart
 
-[hledger-chart.hs](https://github.com/simonmichael/hledger/blob/master/bin/hledger-chart.hs#L47)
+[hledger-chart.hs](https://github.com/hledgerorg/hledger/blob/master/bin/hledger-chart.hs#L47)
 is an old pie chart generator, in need of some love.
 
 #### check
 
-[hledger-check.hs](https://github.com/simonmichael/hledger/blob/master/bin/hledger-check.hs)
+[hledger-check.hs](https://github.com/hledgerorg/hledger/blob/master/bin/hledger-check.hs)
 checks more powerful account balance assertions.
 
 ## ENVIRONMENT

@@ -107,14 +107,14 @@ Help welcome, share updates in the chat room.
 
 **otheryears** - easy to view data outside the current year ?
 
-**sample** - does it read [sample2.journal](https://raw.githubusercontent.com/simonmichael/hledger/refs/heads/main/examples/sample2.journal),
+**sample** - does it read [sample2.journal](https://raw.githubusercontent.com/hledgerorg/hledger/refs/heads/main/examples/sample2.journal),
 a small journal with a few transactions, conventional english account names (lower case), and balance assertions.
 
-**accounttypes** - does it work with non-english/non-conventional account names, [using account types](https://raw.githubusercontent.com/simonmichael/hledger/refs/heads/main/examples/accounttypes.journal).
+**accounttypes** - does it work with non-english/non-conventional account names, [using account types](https://raw.githubusercontent.com/hledgerorg/hledger/refs/heads/main/examples/accounttypes.journal).
 
-**bcexample** - does it read [bcexample.journal](https://raw.githubusercontent.com/simonmichael/hledger/refs/heads/main/examples/bcexample.journal),
+**bcexample** - does it read [bcexample.journal](https://raw.githubusercontent.com/hledgerorg/hledger/refs/heads/main/examples/bcexample.journal),
 a medium sized journal with 1000 transactions, conventional english account names (capitalised), and multiple commodities.
 
-**synthetic** - does it read [1ktxns-100accts.journal](https://raw.githubusercontent.com/simonmichael/hledger/refs/heads/main/examples/1ktxns-100accts.journal),
+**synthetic** - does it read [1ktxns-100accts.journal](https://raw.githubusercontent.com/hledgerorg/hledger/refs/heads/main/examples/1ktxns-100accts.journal),
 a synthetic journal with 1000 transactions, unconventional account names, and transacted prices and market prices.
 

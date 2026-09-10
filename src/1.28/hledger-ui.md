@@ -531,8 +531,8 @@ Here are some current limitations to be aware of:
 Changes might not be detected with certain editors, possibly including
 Jetbrains IDEs, `gedit`, other Gnome applications; or on certain unusual
 filesystems.
-([#1617](https://github.com/simonmichael/hledger/issues/1617),
-[#911](https://github.com/simonmichael/hledger/issues/911)). To work
+([#1617](https://github.com/hledgerorg/hledger/issues/1617),
+[#911](https://github.com/hledgerorg/hledger/issues/911)). To work
 around, reload manually by pressing `g` in the hledger-ui window. (Or
 see #1617 for another workaround, and let us know if it works for you.)
 

@@ -49,7 +49,7 @@ tutorial on hledger.org.
 
 Here are some sample hledger CSV rules files. See also the full
 collection at:\
-<https://github.com/simonmichael/hledger/tree/master/examples/csv>
+<https://github.com/hledgerorg/hledger/tree/master/examples/csv>
 
 ### Basic
 
@@ -499,7 +499,7 @@ comment note: %somefield - %anotherfield, date: %1
 
 Interpolation strips outer whitespace (so a CSV value like `" 1 "`
 becomes `1` when interpolated)
-([\#1051](https://github.com/simonmichael/hledger/issues/1051)). See
+([\#1051](https://github.com/hledgerorg/hledger/issues/1051)). See
 TIPS below for more about referencing other fields.
 
 ### `separator`

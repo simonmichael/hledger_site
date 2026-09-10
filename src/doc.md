@@ -119,7 +119,7 @@ Longer talks:
   Plain text accounting for fun and profit
 - [Simon Michael @ HaskellerZ meetup](https://www.youtube.com/watch?v=6PKmZSHxu0c) (2021, 2h) <!-- apr 29 --> \
   Inside hledger: an architectural tour and how-to,
-  [slides](https://rawcdn.githack.com/simonmichael/hledger/4013a81af8dd2804c73ecac18fb3e7e4745a4275/doc/haskellerz/haskellerz.slidy.html)
+  [slides](https://rawcdn.githack.com/hledgerorg/hledger/4013a81af8dd2804c73ecac18fb3e7e4745a4275/doc/haskellerz/haskellerz.slidy.html)
 - [Conversations in Code, Episode 3: Introduction to Plain Text Accounting](https://open.spotify.com/episode/2SmAVEXhh2LJP9saVLDqOy) (2020, 1h, audio only),
   [discussion](https://www.reddit.com/r/plaintextaccounting/comments/ivrbdu/announcing_a_new_podcast_fossopensource_related/)
 - [Intproject Mi: Учет сделок с проводками в текстовом формате](https://www.youtube.com/watch?v=1qrFjSVav2Q) (2019, 34m)

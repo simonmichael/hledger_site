@@ -68,7 +68,7 @@ A more complete example:
     amount      -%amount
 
 For more examples, see [Convert CSV
-files](https://github.com/simonmichael/hledger/wiki/Convert-CSV-files).
+files](https://github.com/hledgerorg/hledger/wiki/Convert-CSV-files).
 
 ## CSV RULES
 

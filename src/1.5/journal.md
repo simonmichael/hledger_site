@@ -20,7 +20,7 @@ readable by both hledger and humans.
 
 hledger's journal format is a compatible subset, mostly of [ledger's journal
 format](http://ledger-cli.org/3.0/doc/ledger3.html#Journal-Format), so
-hledger can work with [compatible](https://github.com/simonmichael/hledger/wiki/FAQ#file-formats)
+hledger can work with [compatible](https://github.com/hledgerorg/hledger/wiki/FAQ#file-formats)
 ledger journal files as well. It's safe, and encouraged, to run both
 hledger and ledger on the same journal file, eg to validate the results
 you're getting.
@@ -558,7 +558,7 @@ There are several ways to record a transaction price:
 Amounts with transaction prices can be displayed in the transaction
 price's commodity by using the
 [`-B/--cost`](hledger.html#reporting-options) flag (except for
-[\#551](https://github.com/simonmichael/hledger/issues/551)) ("B" is
+[\#551](https://github.com/hledgerorg/hledger/issues/551)) ("B" is
 from "cost Basis"). Eg for the above, here is how -B affects the balance
 report:
 
