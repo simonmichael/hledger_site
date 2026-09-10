@@ -382,7 +382,7 @@ hledger.org {
 
 # code repo
 code.hledger.org {
-	redir https://github.com/plaintextaccounting/hledger
+	redir https://github.com/hledgerorg/hledger
 }
 # site repo
 site.hledger.org {
@@ -394,7 +394,7 @@ finance.hledger.org {
 }
 # github projects
 projects.hledger.org {
-	redir https://github.com/plaintextaccounting/hledger/projects
+	redir https://github.com/hledgerorg/hledger/projects
 }
 # mail list
 mail.hledger.org list.hledger.org {
@@ -410,29 +410,29 @@ matrix.hledger.org {
 }
 # hledger enhancement proposals/hledger improvement proposals
 hep.hledger.org hip.hledger.org {
-	redir https://github.com/plaintextaccounting/hledger/issues/462
+	redir https://github.com/hledgerorg/hledger/issues/462
 }
 release.hledger.org {
-	redir https://github.com/plaintextaccounting/hledger/releases/latest
+	redir https://github.com/hledgerorg/hledger/releases/latest
 }
 nightly.hledger.org {
-	redir https://github.com/plaintextaccounting/hledger/releases/nightly
+	redir https://github.com/hledgerorg/hledger/releases/nightly
 }
 issues.hledger.org {
 	# all issues (bugs, PRs, etc)
-	#redir / https://github.com/plaintextaccounting/hledger/issues?q=is%3Aissue
+	#redir / https://github.com/hledgerorg/hledger/issues?q=is%3Aissue
 	# the ISSUES page
 	redir / https://hledger.org/ISSUES.html
 	# new generic issue form
-	redir /new https://github.com/plaintextaccounting/hledger/issues/new
+	redir /new https://github.com/hledgerorg/hledger/issues/new
 }
 bugs.hledger.org {
 	# all bugs
-	redir / "https://github.com/plaintextaccounting/hledger/issues?q=is:issue+label:A-BUG"
+	redir / "https://github.com/hledgerorg/hledger/issues?q=is:issue+label:A-BUG"
 	# all regression bugs
-	redir /regressions https://github.com/plaintextaccounting/hledger/issues?q=label:regression
+	redir /regressions https://github.com/hledgerorg/hledger/issues?q=label:regression
 	# new bug form
-	redir /new https://github.com/plaintextaccounting/hledger/issues/new?labels=A=BUG&template=a-bug.md
+	redir /new https://github.com/hledgerorg/hledger/issues/new?labels=A=BUG&template=a-bug.md
 	# TODO:
 	# bugs.hledger.org/N
 }
@@ -442,28 +442,28 @@ bugs.hledger.org {
 # }
 # open wishlist issues
 wishes.hledger.org {
-	redir "https://github.com/plaintextaccounting/hledger/issues?q=is:issue+is:open+label:A-WISH"
+	redir "https://github.com/hledgerorg/hledger/issues?q=is:issue+is:open+label:A-WISH"
 }
 regressions.hledger.org {
 	redir "https://hledger.org/REGRESSIONS.html"
 }
 # open pull requests
 prs.hledger.org {
-	redir https://github.com/plaintextaccounting/hledger/pulls?q=is:open
+	redir https://github.com/hledgerorg/hledger/pulls?q=is:open
 }
 # draft open pull requests
 draftprs.hledger.org {
-	redir https://github.com/plaintextaccounting/hledger/pulls?q=is:open+is%3Adraft
+	redir https://github.com/hledgerorg/hledger/pulls?q=is:open+is%3Adraft
 }
 # ready open pull requests - not marked draft by contributor, not labelled needs-* by maintainer
 readyprs.hledger.org {
-	redir https://github.com/plaintextaccounting/hledger/pulls?q=is:open+-is:draft+-label:needs-changes+-label:needs-clarification+-label:needs-code+-label:needs-debugging+-label:needs-design+-label:needs-discussion+-label:needs-docs+-label:needs-history-cleanup+-label:needs-impact-analysis+-label:needs-mockup/screenshot+-label:needs-other-task+-label:needs-rebase+-label:needs-repro+-label:needs-research+-label:needs-review+-label:needs-testing+-label:needs-tests+-label:needs-value-proposition
+	redir https://github.com/hledgerorg/hledger/pulls?q=is:open+-is:draft+-label:needs-changes+-label:needs-clarification+-label:needs-code+-label:needs-debugging+-label:needs-design+-label:needs-discussion+-label:needs-docs+-label:needs-history-cleanup+-label:needs-impact-analysis+-label:needs-mockup/screenshot+-label:needs-other-task+-label:needs-rebase+-label:needs-repro+-label:needs-research+-label:needs-review+-label:needs-testing+-label:needs-tests+-label:needs-value-proposition
 }
 assignedprs.hledger.org {
-	redir https://github.com/plaintextaccounting/hledger/pulls?q=is%3Aopen+assignee%3A*
+	redir https://github.com/hledgerorg/hledger/pulls?q=is%3Aopen+assignee%3A*
 }
 unassignedprs.hledger.org {
-	redir https://github.com/plaintextaccounting/hledger/pulls?q=is%3Aopen+no%3Aassignee
+	redir https://github.com/hledgerorg/hledger/pulls?q=is%3Aopen+no%3Aassignee
 }
 # old trello board
 trello.hledger.org {
@@ -471,7 +471,7 @@ trello.hledger.org {
 	redir https://trello.com/b/5KXMLMEg/hledger-backlog-wishlist
 }
 ci.hledger.org {
-	redir https://github.com/plaintextaccounting/hledger/actions
+	redir https://github.com/hledgerorg/hledger/actions
 }
 # travis.hledger.org {
 #  redir https://travis-ci.org/simonmichael/hledger
@@ -535,7 +535,7 @@ stars.hledger.org {
 	redir https://hledger.org/ACHIEVEMENTS.html#stars
 }
 wiki.hledger.org {
-	redir https://github.com/plaintextaccounting/hledger/wiki
+	redir https://github.com/hledgerorg/hledger/wiki
 }
 comments.hledger.org {
 	reverse_proxy localhost:8042
