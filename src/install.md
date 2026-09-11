@@ -1,6 +1,6 @@
 # Install
 
-The current stable hledger release is **1.52.4**.\
+The current stable hledger release is **1.52.4**. <!-- for setup command: "current hledger release" --> \
 The current preview release is **1.99.4** (2.0 preview 4).
 
 Both versions are suitable for daily use. hledger 1 is receiving only essential fixes;
