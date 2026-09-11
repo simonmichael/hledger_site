@@ -28,7 +28,9 @@ or use a download tool like [eget](https://github.com/zyedidia/eget?tab=readme-o
 <!-- ([![RSS](images/rss.png) RSS feed](https://github.com/hledgerorg/hledger/releases.atom)). -->
 
 [![hledger release binaries](https://img.shields.io/badge/hledger_release_binaries-1.52.4-brightgreen.svg)][release binaries]
-`eget hledgerorg/hledger --all`
+`eget hledgerorg/hledger --all`\
+[![hledger preview binaries](https://img.shields.io/badge/hledger_release_binaries-1.99.4-brightgreen.svg)][release binaries]
+`eget hledgerorg/hledger --all --pre-release`
 
 [release binaries]:    https://github.com/hledgerorg/hledger/releases/tag/1.52.4
 [prerelease binaries]: https://github.com/hledgerorg/hledger/releases/tag/nightly
