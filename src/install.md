@@ -6,8 +6,8 @@ The current preview release is **1.99.4** (2.0 preview 4).
 Both versions are suitable for daily use. hledger 1 is receiving only essential fixes;
 the hledger 2 previews are strictly better, highly compatible,
 and by using the latest you help make the final 2.0 release (coming later this year) better.
-
-Here are the **[release notes](release-notes.md)** for all releases.
+We also have some notes on AI usage.
+See the full **[release notes](release-notes.md)** for all releases.
 
 You can install hledger by any of these methods:
 
