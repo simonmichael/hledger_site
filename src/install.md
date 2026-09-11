@@ -1,9 +1,11 @@
 # Install
 
-The current stable hledger release is **1.52.4**.
+The current stable hledger release is **1.52.4**.\
+The current preview release is **1.99.4** (2.0 preview 4).
 
-hledger 2.0 is in process and will be released some time in 2026.\
-The current preview release is **1.99.3** (AKA 2.0 preview 3).
+Both versions are suitable for daily use. hledger 1 is receiving only essential fixes;
+the hledger 2 previews are strictly better, highly compatible,
+and by using the latest you help make the final 2.0 release (coming later this year) better.
 
 Here are the **[release notes](release-notes.md)** for all releases.
 
